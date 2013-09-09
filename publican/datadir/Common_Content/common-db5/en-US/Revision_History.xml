@@ -8,9 +8,11 @@
 				<revnumber>3.0-0</revnumber>
 				 <date>Mon Mar 12 2012</date>
 				 <author>
-					<firstname>Jeff</firstname>
-					 <surname>Fearn</surname>
-					 <email>jfearn@redhat.com</email>
+				 	<personname>
+						<firstname>Jeff</firstname>
+						 <surname>Fearn</surname>
+					</personname>
+					<email>jfearn@redhat.com</email>
 				</author>
 				 <revdescription>
 					<simplelist>

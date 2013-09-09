@@ -232,6 +232,8 @@ datadir/Common_Content/common-db5/pot/Feedback.pot
 datadir/Common_Content/common-db5/pot/Program_Listing.pot
 datadir/Common_Content/common-db5/pot/Revision_History.pot
 datadir/Common_Content/common-db5/publican.cfg
+datadir/Common_Content/common-db5/xsl/html-pdf.xsl
+datadir/Common_Content/common-db5/xsl/html.xsl
 datadir/Common_Content/common-db5/zanata.xml
 datadir/Common_Content/common/ar-SA/Conventions.po
 datadir/Common_Content/common/ar-SA/css/lang.css
@@ -647,6 +649,8 @@ etc/publican-website.cfg
 fdl.txt
 lib/Publican.pm
 lib/Publican/Builder.pm
+lib/Publican/Builder/DocBook4.pm
+lib/Publican/Builder/DocBook5.pm
 lib/Publican/CreateBook.pm
 lib/Publican/CreateBrand.pm
 lib/Publican/Localise.pm
@@ -718,6 +722,7 @@ t/100.CreateBook.t
 t/110.CreateBrand.t
 t/200.XmlClean.t
 t/300.Builder.t
+t/310.DB5Builder.t
 t/410.Translate.t
 t/900.publican.t
 t/910.publican.Users_Guide.t

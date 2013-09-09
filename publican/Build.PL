@@ -80,7 +80,7 @@ my $class = Module::Build->subclass(
             eval {
                 require Publican;
                 $Publican::SINGLETON = undef;
-                require Publican::Builder;
+                require Publican::Builder::DocBook4;
             };
             unless($@){
                 my $cwd = getcwd();
@@ -88,7 +88,7 @@ my $class = Module::Build->subclass(
                 my $path = "$cwd/blib/datadir/Common_Content";
 
                 my $publican = Publican->new({NOCOLOURS => $self->args('nocolours'), common_config => "$cwd/datadir"});
-                my $builder = Publican::Builder->new();
+                my $builder = Publican::Builder::DocBook4->new();
                 $builder->build(
                     { formats => 'xml', langs => $common_langs, publish => 1, pub_dir => 'publish' } );
                 mkpath("$path");
@@ -108,7 +108,7 @@ my $class = Module::Build->subclass(
             eval {
                 require Publican;
                 $Publican::SINGLETON = undef;
-                require Publican::Builder;
+                require Publican::Builder::DocBook5;
             };
             unless($@){
                 my $cwd = getcwd();
@@ -116,7 +116,7 @@ my $class = Module::Build->subclass(
                 my $path = "$cwd/blib/datadir/Common_Content";
 
                 my $publican = Publican->new({ NOCOLOURS => $self->args('nocolours'), common_config => "$cwd/datadir"});
-                my $builder = Publican::Builder->new();
+                my $builder = Publican::Builder::DocBook5->new();
                 $builder->build(
                     { formats => 'xml', langs => $common_langs, publish => 1, pub_dir => 'publish' } );
                 rcopy( "publish/*", "$path/.");
@@ -177,11 +177,13 @@ my $class = Module::Build->subclass(
             $self->config_data('templates', abs_path('blib/templates'));
             $self->config_data('book_templates', abs_path('blib/book_templates'));
             $self->config_data('docdir', abs_path('pod1'));
-## BUGBUG TODO This hack is so the tessting works with publican uninstalled. BZ #908956
+## BUGBUG TODO This hack is so the testing works with publican uninstalled. BZ #908956
 ## The real fix is to either move book_templates to the brand or give it it's own conf setting
             symlink(abs_path('blib/book_templates'), abs_path('blib/datadir')."/Common_Content/common/book_templates");
+            symlink(abs_path('blib/book_templates'), abs_path('blib/datadir')."/Common_Content/common-db5/book_templates");
             $self->SUPER::ACTION_test();
 	    unlink(abs_path('blib/datadir')."/Common_Content/common/book_templates");
+	    unlink(abs_path('blib/datadir')."/Common_Content/common-db5/book_templates");
             $self->config_data('etc', $self->install_path('etc'));
             $self->config_data('datadir', $self->install_path('datadir'));
             $self->config_data('web', $self->install_path('web'));

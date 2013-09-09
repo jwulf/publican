@@ -92,9 +92,10 @@ sub new {
     $config->param( 'edition', delete( $args->{edition} ) || '0' );
     $config->param( 'product',
         delete( $args->{product} ) || 'Documentation' );
-    $config->param( 'brand',    delete( $args->{brand} ) || 'common' );
-    $config->param( 'xml_lang', delete( $args->{lang} )  || 'en-US' );
-    $config->param( 'type',     delete( $args->{type} )  || 'Book' );
+    $config->param( 'brand',    delete( $args->{brand} )  || 'common' );
+    $config->param( 'xml_lang', delete( $args->{lang} )   || 'en-US' );
+    $config->param( 'type',     delete( $args->{type} )   || 'Book' );
+    $config->param( 'dtdver',   delete( $args->{dtdver} ) || '4.5' );
 
     if ( %{$args} ) {
         croak(
@@ -133,6 +134,7 @@ sub create {
     my $brand   = $self->{config}->param('brand');
     my $lang    = $self->{config}->param('xml_lang');
     my $type    = $self->{config}->param('type');
+    my $dtdver  = $self->{config}->param('dtdver');
 
     my $lctype = lc($type);
 
@@ -143,153 +145,170 @@ sub create {
 
     mkpath("$name/$lang/images");
 
-    my %files = (
-        'Author_Group' => {
-            types => 'Book Set Article',
-            node  => XML::Element->new_from_lol(
-                [   'authorgroup',
-                    [   'author',
-                        [   'firstname',
-                            maketext('Enter your first name here.')
-                        ],
-                        [ 'surname', maketext('Enter your surname here.') ],
-                        [   'affiliation',
-                            [   'orgname',
-                                maketext(
-                                    q|Enter your organisation's name here.|)
+    my %files;
+    if ( $dtdver =~ /^5/ ) {
+        if ( $brand eq 'common' ) {
+            $brand = 'common-db5';
+            $self->{config}->param( 'brand', 'common-db5' );
+        }
+        %files = (
+            'Author_Group' => {
+                types => 'Book Set Article',
+                node  => XML::Element->new_from_lol(
+                    [   'authorgroup',
+                        [   'author',
+                            [   'personname',
+                                [   'firstname',
+                                    maketext('Enter your first name here.')
+                                ],
+                                [   'surname',
+                                    maketext('Enter your surname here.')
+                                ],
                             ],
-                            [   'orgdiv',
+                            [   'affiliation',
+                                [   'orgname',
+                                    maketext(
+                                        q|Enter your organisation's name here.|
+                                    )
+                                ],
+                                [   'orgdiv',
+                                    maketext(
+                                        'Enter your organisational division here.'
+                                    )
+                                ],
+                            ],
+                            [   'email',
+                                maketext('Enter your email address here.')
+                            ],
+                        ],
+                    ],
+                ),
+            },
+            'Book' => {
+                types => 'Book',
+                node  => XML::Element->new_from_lol(
+                    [   'book',
+                        [   'xi:include',
+                            {   href => 'Book_Info.xml',
+                                'xmlns:xi' =>
+                                    'http://www.w3.org/2001/XInclude'
+                            }
+                        ],
+                        [   'xi:include',
+                            {   href => 'Preface.xml',
+                                'xmlns:xi' =>
+                                    'http://www.w3.org/2001/XInclude'
+                            }
+                        ],
+                        [   'xi:include',
+                            {   href => 'Chapter.xml',
+                                'xmlns:xi' =>
+                                    'http://www.w3.org/2001/XInclude'
+                            }
+                        ],
+                        [   'xi:include',
+                            {   href => 'Revision_History.xml',
+                                'xmlns:xi' =>
+                                    'http://www.w3.org/2001/XInclude'
+                            }
+                        ],
+                        ['index'],
+                    ],
+                ),
+            },
+            'Article' => {
+                types => 'Article',
+                node  => XML::Element->new_from_lol(
+                    [   'article',
+                        [   'xi:include',
+                            {   href => 'Article_Info.xml',
+                                'xmlns:xi' =>
+                                    'http://www.w3.org/2001/XInclude'
+                            }
+                        ],
+                        [ 'para', maketext('This is a test paragraph') ],
+                        [   'xi:include',
+                            {   href => 'Revision_History.xml',
+                                'xmlns:xi' =>
+                                    'http://www.w3.org/2001/XInclude'
+                            }
+                        ],
+                        ['index'],
+                    ],
+                ),
+            },
+            'Set' => {
+                types => 'Set',
+                node  => XML::Element->new_from_lol(
+                    [   'set',
+                        [   'xi:include',
+                            {   href => 'Set_Info.xml',
+                                'xmlns:xi' =>
+                                    'http://www.w3.org/2001/XInclude'
+                            }
+                        ],
+                        [   'remark',
+                            maketext(
+                                'NOTE: the href does not contain a language! This is CORRECT!'
+                            )
+                        ],
+                        [   'remark',
+                            '<xi:include href="My_Other_Book/My_Other_Book.xml" xmlns:xi="http://www.w3.org/2001/XInclude">'
+                        ],
+                        ['setindex'],
+                    ],
+                ),
+            },
+            "$type" . "_Info" => {
+                types => 'Book Set Article',
+                node  => XML::Element->new_from_lol(
+                    [   'info',
+                        [ 'title', $bookname ],
+                        [   'subtitle',
+                            maketext('Enter a short description here.')
+                        ],
+                        [ 'productname',   $product ],
+                        [ 'productnumber', $version ],
+                        [ 'edition',       $edition ],
+                        [   'abstract',
+                            [   'para',
                                 maketext(
-                                    'Enter your organisational division here.'
+                                    q|A short overview and summary of the book's subject and purpose, traditionally no more than one paragraph long. Note: the abstract will appear in the front matter of your book and will also be placed in the description field of the book's RPM spec file.|
                                 )
                             ],
                         ],
-                        [   'email',
-                            maketext('Enter your email address here.')
+##                        [   'corpauthor',
+#                            [   'inlinemediaobject',
+#                                [   'imageobject',
+#                                    [   'imagedata',
+#                                        {   format => 'SVG',
+#                                            fileref =>
+#                                                'Common_Content/images/title_logo.svg'
+#                                        }
+#                                    ],
+#                                ],
+#                            ],
+#                        ],
+                        [   'xi:include',
+                            {   href => 'Common_Content/Legal_Notice.xml',
+                                'xmlns:xi' =>
+                                    'http://www.w3.org/2001/XInclude'
+                            }
+                        ],
+                        [   'xi:include',
+                            {   href => 'Author_Group.xml',
+                                'xmlns:xi' =>
+                                    'http://www.w3.org/2001/XInclude'
+                            }
                         ],
                     ],
-                ],
-            ),
-        },
-        'Book' => {
-            types => 'Book',
-            node  => XML::Element->new_from_lol(
-                [   'book',
-                    [   'xi:include',
-                        {   href       => 'Book_Info.xml',
-                            'xmlns:xi' => 'http://www.w3.org/2001/XInclude'
-                        }
-                    ],
-                    [   'xi:include',
-                        {   href       => 'Preface.xml',
-                            'xmlns:xi' => 'http://www.w3.org/2001/XInclude'
-                        }
-                    ],
-                    [   'xi:include',
-                        {   href       => 'Chapter.xml',
-                            'xmlns:xi' => 'http://www.w3.org/2001/XInclude'
-                        }
-                    ],
-                    [   'xi:include',
-                        {   href       => 'Revision_History.xml',
-                            'xmlns:xi' => 'http://www.w3.org/2001/XInclude'
-                        }
-                    ],
-                    ['index'],
-                ],
-            ),
-        },
-        'Article' => {
-            types => 'Article',
-            node  => XML::Element->new_from_lol(
-                [   'article',
-                    [   'xi:include',
-                        {   href       => 'Article_Info.xml',
-                            'xmlns:xi' => 'http://www.w3.org/2001/XInclude'
-                        }
-                    ],
-                    [ 'para', maketext('This is a test paragraph') ],
-                    [   'xi:include',
-                        {   href       => 'Revision_History.xml',
-                            'xmlns:xi' => 'http://www.w3.org/2001/XInclude'
-                        }
-                    ],
-                    ['index'],
-                ],
-            ),
-        },
-        'Set' => {
-            types => 'Set',
-            node  => XML::Element->new_from_lol(
-                [   'set',
-                    [   'xi:include',
-                        {   href       => 'Set_Info.xml',
-                            'xmlns:xi' => 'http://www.w3.org/2001/XInclude'
-                        }
-                    ],
-                    [   'remark',
-                        maketext(
-                            'NOTE: the href does not contain a language! This is CORRECT!'
-                        )
-                    ],
-                    [   'remark',
-                        '<xi:include href="My_Other_Book/My_Other_Book.xml" xmlns:xi="http://www.w3.org/2001/XInclude">'
-                    ],
-                    ['setindex'],
-                ],
-            ),
-        },
-        "$type"
-            . "_Info" => {
-            types => 'Book Set Article',
-            node  => XML::Element->new_from_lol(
-                [   $lctype . 'info',
-                    [ 'title', $bookname ],
-                    [   'subtitle',
-                        maketext('Enter a short description here.')
-                    ],
-                    [ 'productname',   $product ],
-                    [ 'productnumber', $version ],
-                    [ 'edition',       $edition ],
-                    [ 'pubsnumber',    '0' ],
-                    [   'abstract',
-                        [   'para',
-                            maketext(
-                                q|A short overview and summary of the book's subject and purpose, traditionally no more than one paragraph long. Note: the abstract will appear in the front matter of your book and will also be placed in the description field of the book's RPM spec file.|
-                            )
-                        ],
-                    ],
-                    [   'corpauthor',
-                        [   'inlinemediaobject',
-                            [   'imageobject',
-                                [   'imagedata',
-                                    {   format => 'SVG',
-                                        fileref =>
-                                            'Common_Content/images/title_logo.svg'
-                                    }
-                                ],
-                            ],
-                        ],
-                    ],
-                    [   'xi:include',
-                        {   href       => 'Common_Content/Legal_Notice.xml',
-                            'xmlns:xi' => 'http://www.w3.org/2001/XInclude'
-                        }
-                    ],
-                    [   'xi:include',
-                        {   href       => 'Author_Group.xml',
-                            'xmlns:xi' => 'http://www.w3.org/2001/XInclude'
-                        }
-                    ],
-                ],
-            ),
+                ),
             },
-        'Revision_History' => {
-            types => 'Book Set Article',
-            node  => XML::Element->new_from_lol(
-                [   'appendix',
-                    [ 'title', maketext('Revision History') ],
-                    [   'simpara',
+            'Revision_History' => {
+                types => 'Book Set Article',
+                node  => XML::Element->new_from_lol(
+                    [   'appendix',
+                        [ 'title', maketext('Revision History') ],
                         [   'revhistory',
                             [   'revision',
                                 [ 'revnumber', '0.0-0' ],
@@ -297,16 +316,20 @@ sub create {
                                     DateTime->today()->strftime("%a %b %e %Y")
                                 ],
                                 [   'author',
-                                    [   'firstname',
-                                        maketext(
-                                            'Enter your first name here.')
-                                    ],
-                                    [   'surname',
-                                        maketext('Enter your surname here.')
+                                    [   'personname',
+                                        [   'firstname',
+                                            maketext(
+                                                'Enter your first name here.')
+                                        ],
+                                        [   'surname',
+                                            maketext(
+                                                'Enter your surname here.')
+                                        ],
                                     ],
                                     [   'email',
                                         maketext(
-                                            'Enter your email address here.')
+                                            'Enter your email address here.'
+                                        )
                                     ],
                                 ],
                                 [   'revdescription',
@@ -321,68 +344,335 @@ sub create {
                             ],
                         ],
                     ],
-                ],
-            ),
-        },
-        'Chapter' => {
-            types => 'Book',
-            node  => XML::Element->new_from_lol(
-                [   'chapter',
-                    [ 'title', maketext('Test Chapter') ],
-                    [ 'para',  maketext('This is a test paragraph') ],
-                    [   'section',
-                        [ 'title', maketext('Test Section 1') ],
-                        [   'para',
-                            maketext('This is a test paragraph in a section')
+                ),
+            },
+            'Chapter' => {
+                types => 'Book',
+                node  => XML::Element->new_from_lol(
+                    [   'chapter',
+                        [ 'title', maketext('Test Chapter') ],
+                        [ 'para',  maketext('This is a test paragraph') ],
+                        [   'section',
+                            [ 'title', maketext('Test Section 1') ],
+                            [   'para',
+                                maketext(
+                                    'This is a test paragraph in a section')
+                            ],
                         ],
-                    ],
-                    [   'section',
-                        [ 'title', maketext('Test Section 2') ],
-                        [   'para',
-                            maketext('This is a test paragraph in Section 2'),
-                            [   'orderedlist',
-                                [   'listitem',
-                                    [   'para',
-                                        maketext('This is a test listitem.')
+                        [   'section',
+                            [ 'title', maketext('Test Section 2') ],
+                            [   'para',
+                                maketext(
+                                    'This is a test paragraph in Section 2'),
+                                [   'orderedlist',
+                                    [   'listitem',
+                                        [   'para',
+                                            maketext(
+                                                'This is a test listitem.')
+                                        ],
                                     ],
                                 ],
                             ],
                         ],
                     ],
-                ],
-            ),
-        },
-        'Preface' => {
-            types => 'Book Set',
-            node  => XML::Element->new_from_lol(
-                [   'preface',
-                    [ 'title', maketext('Preface') ],
-                    [   'xi:include',
-                        {   href       => 'Common_Content/Conventions.xml',
-                            'xmlns:xi' => 'http://www.w3.org/2001/XInclude'
-                        }
-                    ],
-                    [   'xi:include',
-                        {   href       => 'Feedback.xml',
-                            'xmlns:xi' => 'http://www.w3.org/2001/XInclude'
-                        },
-                        [   'xi:fallback',
-                            {   'xmlns:xi' =>
+                ),
+            },
+            'Preface' => {
+                types => 'Book Set',
+                node  => XML::Element->new_from_lol(
+                    [   'preface',
+                        [ 'title', maketext('Preface') ],
+                        [   'xi:include',
+                            {   href => 'Common_Content/Conventions.xml',
+                                'xmlns:xi' =>
+                                    'http://www.w3.org/2001/XInclude'
+                            }
+                        ],
+                        [   'xi:include',
+                            {   href => 'Feedback.xml',
+                                'xmlns:xi' =>
                                     'http://www.w3.org/2001/XInclude'
                             },
-                            [   'xi:include',
-                                {   href => 'Common_Content/Feedback.xml',
-                                    'xmlns:xi' =>
+                            [   'xi:fallback',
+                                {   'xmlns:xi' =>
                                         'http://www.w3.org/2001/XInclude'
                                 },
+                                [   'xi:include',
+                                    {   href => 'Common_Content/Feedback.xml',
+                                        'xmlns:xi' =>
+                                            'http://www.w3.org/2001/XInclude'
+                                    },
+                                ],
                             ],
                         ],
                     ],
-                ],
-            ),
-        },
+                ),
+            },
 
-    );
+        );
+    }
+    else {
+        %files = (
+            'Author_Group' => {
+                types => 'Book Set Article',
+                node  => XML::Element->new_from_lol(
+                    [   'authorgroup',
+                        [   'author',
+                            [   'firstname',
+                                maketext('Enter your first name here.')
+                            ],
+                            [   'surname',
+                                maketext('Enter your surname here.')
+                            ],
+                            [   'affiliation',
+                                [   'orgname',
+                                    maketext(
+                                        q|Enter your organisation's name here.|
+                                    )
+                                ],
+                                [   'orgdiv',
+                                    maketext(
+                                        'Enter your organisational division here.'
+                                    )
+                                ],
+                            ],
+                            [   'email',
+                                maketext('Enter your email address here.')
+                            ],
+                        ],
+                    ],
+                ),
+            },
+            'Book' => {
+                types => 'Book',
+                node  => XML::Element->new_from_lol(
+                    [   'book',
+                        [   'xi:include',
+                            {   href => 'Book_Info.xml',
+                                'xmlns:xi' =>
+                                    'http://www.w3.org/2001/XInclude'
+                            }
+                        ],
+                        [   'xi:include',
+                            {   href => 'Preface.xml',
+                                'xmlns:xi' =>
+                                    'http://www.w3.org/2001/XInclude'
+                            }
+                        ],
+                        [   'xi:include',
+                            {   href => 'Chapter.xml',
+                                'xmlns:xi' =>
+                                    'http://www.w3.org/2001/XInclude'
+                            }
+                        ],
+                        [   'xi:include',
+                            {   href => 'Revision_History.xml',
+                                'xmlns:xi' =>
+                                    'http://www.w3.org/2001/XInclude'
+                            }
+                        ],
+                        ['index'],
+                    ],
+                ),
+            },
+            'Article' => {
+                types => 'Article',
+                node  => XML::Element->new_from_lol(
+                    [   'article',
+                        [   'xi:include',
+                            {   href => 'Article_Info.xml',
+                                'xmlns:xi' =>
+                                    'http://www.w3.org/2001/XInclude'
+                            }
+                        ],
+                        [ 'para', maketext('This is a test paragraph') ],
+                        [   'xi:include',
+                            {   href => 'Revision_History.xml',
+                                'xmlns:xi' =>
+                                    'http://www.w3.org/2001/XInclude'
+                            }
+                        ],
+                        ['index'],
+                    ],
+                ),
+            },
+            'Set' => {
+                types => 'Set',
+                node  => XML::Element->new_from_lol(
+                    [   'set',
+                        [   'xi:include',
+                            {   href => 'Set_Info.xml',
+                                'xmlns:xi' =>
+                                    'http://www.w3.org/2001/XInclude'
+                            }
+                        ],
+                        [   'remark',
+                            maketext(
+                                'NOTE: the href does not contain a language! This is CORRECT!'
+                            )
+                        ],
+                        [   'remark',
+                            '<xi:include href="My_Other_Book/My_Other_Book.xml" xmlns:xi="http://www.w3.org/2001/XInclude">'
+                        ],
+                        ['setindex'],
+                    ],
+                ),
+            },
+            "$type"
+                . "_Info" => {
+                types => 'Book Set Article',
+                node  => XML::Element->new_from_lol(
+                    [   $lctype . 'info',
+                        [ 'title', $bookname ],
+                        [   'subtitle',
+                            maketext('Enter a short description here.')
+                        ],
+                        [ 'productname',   $product ],
+                        [ 'productnumber', $version ],
+                        [ 'edition',       $edition ],
+                        [ 'pubsnumber',    '0' ],
+                        [   'abstract',
+                            [   'para',
+                                maketext(
+                                    q|A short overview and summary of the book's subject and purpose, traditionally no more than one paragraph long. Note: the abstract will appear in the front matter of your book and will also be placed in the description field of the book's RPM spec file.|
+                                )
+                            ],
+                        ],
+                        [   'corpauthor',
+                            [   'inlinemediaobject',
+                                [   'imageobject',
+                                    [   'imagedata',
+                                        {   format => 'SVG',
+                                            fileref =>
+                                                'Common_Content/images/title_logo.svg'
+                                        }
+                                    ],
+                                ],
+                            ],
+                        ],
+                        [   'xi:include',
+                            {   href => 'Common_Content/Legal_Notice.xml',
+                                'xmlns:xi' =>
+                                    'http://www.w3.org/2001/XInclude'
+                            }
+                        ],
+                        [   'xi:include',
+                            {   href => 'Author_Group.xml',
+                                'xmlns:xi' =>
+                                    'http://www.w3.org/2001/XInclude'
+                            }
+                        ],
+                    ],
+                ),
+                },
+            'Revision_History' => {
+                types => 'Book Set Article',
+                node  => XML::Element->new_from_lol(
+                    [   'appendix',
+                        [ 'title', maketext('Revision History') ],
+                        [   'simpara',
+                            [   'revhistory',
+                                [   'revision',
+                                    [ 'revnumber', '0.0-0' ],
+                                    [   'date',
+                                        DateTime->today()
+                                            ->strftime("%a %b %e %Y")
+                                    ],
+                                    [   'author',
+                                        [   'firstname',
+                                            maketext(
+                                                'Enter your first name here.')
+                                        ],
+                                        [   'surname',
+                                            maketext(
+                                                'Enter your surname here.')
+                                        ],
+                                        [   'email',
+                                            maketext(
+                                                'Enter your email address here.'
+                                            )
+                                        ],
+                                    ],
+                                    [   'revdescription',
+                                        [   'simplelist',
+                                            [   'member',
+                                                maketext(
+                                                    'Initial creation by publican'
+                                                )
+                                            ],
+                                        ],
+                                    ],
+                                ],
+                            ],
+                        ],
+                    ],
+                ),
+            },
+            'Chapter' => {
+                types => 'Book',
+                node  => XML::Element->new_from_lol(
+                    [   'chapter',
+                        [ 'title', maketext('Test Chapter') ],
+                        [ 'para',  maketext('This is a test paragraph') ],
+                        [   'section',
+                            [ 'title', maketext('Test Section 1') ],
+                            [   'para',
+                                maketext(
+                                    'This is a test paragraph in a section')
+                            ],
+                        ],
+                        [   'section',
+                            [ 'title', maketext('Test Section 2') ],
+                            [   'para',
+                                maketext(
+                                    'This is a test paragraph in Section 2'),
+                                [   'orderedlist',
+                                    [   'listitem',
+                                        [   'para',
+                                            maketext(
+                                                'This is a test listitem.')
+                                        ],
+                                    ],
+                                ],
+                            ],
+                        ],
+                    ],
+                ),
+            },
+            'Preface' => {
+                types => 'Book Set',
+                node  => XML::Element->new_from_lol(
+                    [   'preface',
+                        [ 'title', maketext('Preface') ],
+                        [   'xi:include',
+                            {   href => 'Common_Content/Conventions.xml',
+                                'xmlns:xi' =>
+                                    'http://www.w3.org/2001/XInclude'
+                            }
+                        ],
+                        [   'xi:include',
+                            {   href => 'Feedback.xml',
+                                'xmlns:xi' =>
+                                    'http://www.w3.org/2001/XInclude'
+                            },
+                            [   'xi:fallback',
+                                {   'xmlns:xi' =>
+                                        'http://www.w3.org/2001/XInclude'
+                                },
+                                [   'xi:include',
+                                    {   href => 'Common_Content/Feedback.xml',
+                                        'xmlns:xi' =>
+                                            'http://www.w3.org/2001/XInclude'
+                                    },
+                                ],
+                            ],
+                        ],
+                    ],
+                ),
+            },
+
+        );
+    }
 
     debug_msg("TODO: consolidate XML methods with Builder\n");
 
@@ -405,7 +695,7 @@ sub create {
             maketext( "Could not open [_1] for output!", $out_file, $@ ) );
 
         print( $OUTDOC Publican::Builder::dtd_string(
-                { tag => $node_type, dtdver => '4.5', cleaning => 1 }
+                { tag => $node_type, dtdver => $dtdver, cleaning => 1 }
             )
         );
 

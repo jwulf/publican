@@ -15,6 +15,8 @@ use Publican;
 use Publican::CreateBook;
 use Publican::CreateBrand;
 use Publican::Builder;
+use Publican::Builder::DocBook4;
+use Publican::Builder::DocBook5;
 use Publican::XmlClean;
 use Publican::TreeView;
 use Publican::WebSite;
@@ -159,7 +161,8 @@ my %options = (
         'Override the tool to use when creating PDFs. Valid options are wkhtmltopdf and fop.'
     ),
     'pub_dir=s' =>
-        maketext(q|Directory to publish files to. Defaults to publish.|)
+        maketext(q|Directory to publish files to. Defaults to publish.|),
+    'dtdver=s' => maketext('The version of the DocBook DTD to use')
 );
 
 # Options all actions use
@@ -220,7 +223,7 @@ my %actions = (
         'brief'   => maketext('Create a new book, set, or article'),
         'options' => [
             'name',  'version', 'edition', 'product',
-            'brand', 'lang',    'type'
+            'brand', 'lang',    'type', 'dtdver'
         ],
     },
     'create_brand' => {
@@ -508,7 +511,7 @@ if ( $action eq 'create' ) {
         }
     );
 
-    my $builder = Publican::Builder->new();
+    my $builder = Publican::Builder::DocBook4->new();
     $builder->clean_ids();
 
     $dir = undef;
@@ -929,7 +932,20 @@ if ( $action eq 'lang_stats' ) {
 }
 
 if ( $action eq 'build' ) {
-    my $builder = Publican::Builder->new( { novalid => $opts{novalid} } );
+
+    my $dtdver = $publican->param('dtdver');
+    my $builder;
+
+    if ( $dtdver =~ m/^5/ ) {
+        $builder = Publican::Builder::DocBook5->new(
+            { novalid => $opts{novalid} } );
+
+    }
+    else {
+        $builder = Publican::Builder::DocBook4->new(
+            { novalid => $opts{novalid} } );
+    }
+
     $builder->build(
         {   formats         => $opts{formats},
             langs           => $opts{langs},
@@ -961,7 +977,7 @@ if ( $action eq 'add_revision' ) {
 }
 
 if ( $action eq 'package' ) {
-    my $builder = Publican::Builder->new();
+    my $builder = Publican::Builder::DocBook4->new();
     if ( $publican->param('type') eq 'brand' ) {
         $builder->package_brand( { binary => $opts{binary} } );
     }

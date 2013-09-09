@@ -11,8 +11,11 @@ BEGIN {
 diag("Testing Publican $Publican::VERSION");
 
 rmtree(
-    [   'foo',      'foo2',           'Test_Book', 'Test_Article',
-        'Test_Set', 'User_Guide/tmp', 'foo3',      'Users_Guide/blib',
+    [   'foo',       'foo2',
+        'Test_Book', 'Test_Article',
+        'Test_Set',  'User_Guide/tmp',
+        'foo3',      'Users_Guide/blib',
+        'Test_DB5_Book',
     ]
 );
 

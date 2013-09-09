@@ -34,8 +34,10 @@
 \.#
 \.rej$
 \bfoo2\b
+\bfoo3\b
 \bTest_Article\b
 \bTest_Book\b
+\bTest_DB5_Book\b
 \bTest_Set\b
 \bUsers_Guide-DB5\b
 \.log$

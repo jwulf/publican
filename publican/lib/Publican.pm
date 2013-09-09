@@ -232,7 +232,7 @@ my %PARAMS = (
     },
     'ec_provider' => {
         descr => maketext(
-            'Eclipse plugin provider. Defaults to "Publican-[_1]"', $VERSION
+            'Eclipse plugin provider. Defaults to "Publican-[_1]"', '$VERSION'
         ),
     },
     extras_dir => {

@@ -218,6 +218,9 @@ git merge devel
 git push
 git tag -a Release-3.2.1 -m "Release Version 3.2.1"
 git push origin --tags
+perl Build.PL
+./Build
+./Build srpm
 
 5: Upload to public site
 
