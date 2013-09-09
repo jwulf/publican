@@ -62,7 +62,7 @@ _publican()
 					options=''
 					;;
 				create)
-					options='--brand --edition --lang --name --product --type --version '
+					options='--brand --dtdver --edition --lang --name --product --type --version '
 					;;
 				create_brand)
 					options='--lang --name '

@@ -1,5 +1,8 @@
 #!/usr/bin/perl -CA
 
+eval 'exec /usr/bin/perl -CA -S $0 ${1+"$@"}'
+    if 0;    # not running under some shell
+
 #BUGBUG -CAS should allow removing utf8::encode, utf8::decode from Translate.pm
 # See: http://perldoc.perl.org/perlrun.html#*-C-[_number/list_]*
 # or binmode STDIN, ":encoding(UTF-8)";
@@ -223,7 +226,7 @@ my %actions = (
         'brief'   => maketext('Create a new book, set, or article'),
         'options' => [
             'name',  'version', 'edition', 'product',
-            'brand', 'lang',    'type', 'dtdver'
+            'brand', 'lang',    'type',    'dtdver'
         ],
     },
     'create_brand' => {
@@ -495,7 +498,8 @@ if ( $action eq 'create' ) {
             product => $opts{product},
             brand   => $opts{brand},
             lang    => $opts{lang},
-            type    => $opts{type}
+            type    => $opts{type},
+            dtdver  => $opts{dtdver},
         }
     );
     $creator->create();
@@ -511,7 +515,14 @@ if ( $action eq 'create' ) {
         }
     );
 
-    my $builder = Publican::Builder::DocBook4->new();
+    my $builder;
+    if ( $opts{dtdver} && $opts{dtdver} =~ /^5/ ) {
+        $builder = Publican::Builder::DocBook5->new();
+    }
+    else {
+        $builder = Publican::Builder::DocBook4->new();
+    }
+
     $builder->clean_ids();
 
     $dir = undef;
@@ -882,7 +893,14 @@ if ( $action eq 'clean_set' ) {
 }
 
 if ( $action eq 'clean_ids' ) {
-    my $builder = Publican::Builder->new();
+    my $dtdver = $publican->param('dtdver');
+    my $builder;
+    if ( $dtdver =~ /^5/ ) {
+        $builder = Publican::Builder::DocBook5->new();
+    }
+    else {
+        $builder = Publican::Builder::DocBook4->new();
+    }
     $builder->clean_ids();
 }
 

@@ -78,7 +78,7 @@ Create a new Publican::Builder::DocBook5 object.
 sub new {
     my ( $this, $args ) = @_;
     my $class = ref($this) || $this;
-    my $self = $class->SUPER::new( $args );
+    my $self = $class->SUPER::new($args);
 
     bless $self, $class;
 
@@ -519,7 +519,10 @@ sub setup_xml {
                     );
 
                 print( $OUTDOC dtd_string(
-                        { tag => 'appendix', dtdver => $self->{publican}->param('dtdver'), cleaning => 1 }
+                        {   tag      => 'appendix',
+                            dtdver   => $self->{publican}->param('dtdver'),
+                            cleaning => 1
+                        }
                     )
                 );
 
@@ -1989,7 +1992,8 @@ sub clean_ids {
     #    }
 
     my @xml_files = dir_list( $self->{publican}->param('xml_lang'), '*.xml' );
-    my $cleaner = Publican::XmlClean->new( { clean_id => 1 } );
+    my $cleaner
+        = Publican::XmlClean->new( { clean_id => 1, id_attr => 'xml:id' } );
     my $extras = $self->{publican}->param('extras_dir');
 
     foreach my $xml_file ( sort(@xml_files) ) {

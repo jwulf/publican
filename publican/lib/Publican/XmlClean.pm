@@ -285,6 +285,7 @@ sub new {
     $config->param( 'exclude_ent', ( delete( $args->{exclude_ent} ) ) || 0 );
     $config->param( 'cleaning',
         ( delete( $args->{cleaning} ) ) || $config->param('clean_id') );
+    $config->param( 'id_attr', ( delete( $args->{id_attr} ) ) || 'id' );
 
     if ( %{$args} ) {
         croak(
@@ -387,7 +388,7 @@ sub Clean_ID {
 
         # keep_id means keep the current ID without modification.
         if ( $MAP_OUT{$tag}->{keep_id} ) {
-            $my_id = $node->id() || "";
+            $my_id = $node->attr( $self->{config}->param('id_attr') ) || "";
         }
         elsif ( !$MAP_OUT{$tag}->{no_id} ) {
             foreach my $child ( $node->content_refs_list() ) {
@@ -427,15 +428,18 @@ sub Clean_ID {
             $my_id = substr( $tag, 0, 4 ) . "-$my_id";
         }
 
-        if ( $node->id() && $node->id() ne $my_id ) {
-            $UPDATED_IDS{ $node->id() } = $my_id;
+        if (   $node->attr( $self->{config}->param('id_attr') )
+            && $node->attr( $self->{config}->param('id_attr') ) ne $my_id )
+        {
+            $UPDATED_IDS{ $node->attr( $self->{config}->param('id_attr') ) }
+                = $my_id;
         }
 
         if ( $my_id eq "" ) {
             $my_id = undef;
         }
 
-        $node->attr( 'id', $my_id );
+        $node->attr( $self->{config}->param('id_attr'), $my_id );
     }
 
     return;
@@ -1166,7 +1170,7 @@ sub set_unique_ids {
                     $tag = $node->{'_tag'};
 
                     if (   $start
-                        && $node->id()
+                        && $node->attr( $self->{config}->param('id_attr') )
                         && !$node->attr('conformance') )
                     {    # on the way in
                         $node->attr( 'conformance', ++$unique_id );

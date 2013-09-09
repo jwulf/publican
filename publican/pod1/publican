@@ -154,6 +154,7 @@ create
         --brand=<BRAND>           The brand to use
         --lang=<LANG>             The language the XML will be written in
         --type=<TYPE>             The type (book, article, or set)
+        --dtdver=<DTDVER>         The version of the DocBook DTD to use
 
 
 create_brand

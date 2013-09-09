@@ -5,9 +5,11 @@
 				version="1.0"
 				exclude-result-prefixes="exsl">
 
-<xsl:import href="http://docbook.sourceforge.net/release/xsl-ns/current/xhtml/docbook.xsl"/>
-<xsl:import href="http://docbook.sourceforge.net/release/xsl-ns/current/xhtml/chunk.xsl"/>
+<xsl:import href="http://docbook.sourceforge.net/release/xsl-ns/current/xhtml5/docbook.xsl"/>
+<xsl:import href="http://docbook.sourceforge.net/release/xsl-ns/current/xhtml5/chunk.xsl"/>
+
 <xsl:param name="html.stylesheet"><xsl:if test="$embedtoc = 0 ">Common_Content/css/default.css</xsl:if></xsl:param>
 <xsl:param name="html.stylesheet.type" select="'text/css'"/>
 <xsl:param name="html.stylesheet.print"><xsl:if test="$embedtoc = 0 ">Common_Content/css/print.css</xsl:if></xsl:param>
+
 </xsl:stylesheet>
