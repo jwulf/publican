@@ -1,22 +1,22 @@
 * {
-	widows: 4 !important;
-	orphans: 4 !important;
+    widows: 4 !important;
+    orphans: 4 !important;
 }
 
 body, h1, h2, h3, h4, h5, h6, pre, li, div {
-	line-height: 1.29em;
+    line-height: 1.29em;
 }
 
 body {
-	background-color: white;
-	margin:0 auto;
-	font-family: "liberation sans", "Myriad ", "Bitstream Vera Sans", "Lucida Grande", "Luxi Sans", "Trebuchet MS", helvetica, verdana, arial, sans-serif;
-	font-size: 14px;
-	max-width: 770px;
-	color: black;
+    background-color: white;
+    margin:0 auto;
+    font-family: "liberation sans", "Myriad ", "Bitstream Vera Sans", "Lucida Grande", "Luxi Sans", "Trebuchet MS", helvetica, verdana, arial, sans-serif;
+    font-size: 14px;
+    max-width: 770px;
+    color: black;
 }
 body > header {
-	margin:0 auto;
+    margin:0 auto;
     background-color: white;
     max-width: 45em;
     margin-top: 0;
@@ -28,13 +28,13 @@ body > footer {
 }
 
 div.warning, div.note, div.important, div.tip, div.important {
-	color: black;
-	margin: 0px;
-	padding: 0px;
-	background: none;
-	background-color: white;
-	margin-bottom: 1em;
-	page-break-inside: avoid;
+    color: black;
+    margin: 0px;
+    padding: 0px;
+    background: none;
+    background-color: white;
+    margin-bottom: 1em;
+    page-break-inside: avoid;
 }
 
 .command, .filename, .keycap, .classname, .literal {
@@ -43,7 +43,7 @@ div.warning, div.note, div.important, div.tip, div.important {
 }
 
 .application, .guimenu, .guisubmenu, .guimenuitem, .abstract-title {
-	font-weight: bold;
+    font-weight: bold;
 }
 
 

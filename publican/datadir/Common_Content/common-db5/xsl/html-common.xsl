@@ -19,7 +19,7 @@
 <xsl:param name="admon.graphics.path">
     <xsl:choose>
       <xsl:when test="$embedtoc != 0">
-        <xsl:value-of select="concat($tocpath, '/../', $brand, '/', $langpath, '/images')"/>
+        <xsl:value-of select="concat($tocpath, '/../', $brand, '/', $langpath, '/images/')"/>
       </xsl:when>
       <xsl:otherwise>
 		<xsl:text>Common_Content/images/</xsl:text>
