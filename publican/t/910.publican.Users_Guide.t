@@ -14,7 +14,7 @@ $coverdb = qq|-MDevel::Cover=-db,$cover_db| if ($cover_db);
 my $lib      = abs_path('blib/lib');
 my $publican = abs_path('blib/script/publican');
 
-my @perl_args = ( 'perl', '-CA', '-I', $lib );
+my @perl_args = ( 'perl', '-CAS', '-I', $lib );
 push @perl_args, $coverdb if defined $coverdb;
 
 my @common_opts = ( '--quiet' );

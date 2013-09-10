@@ -1254,7 +1254,7 @@ sub get_author_list {
     $xml_doc->parse_file($file);
 
     foreach my $author (
-        $xml_doc->root()->look_down( "_tag", qr/author|corpauthor/ ) )
+        $xml_doc->root()->look_down( "_tag", qr/^(?:author|corpauthor)$/ ) )
     {
         if ( $author->tag() eq 'corpauthor' ) {
             my $name;

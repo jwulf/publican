@@ -232,6 +232,7 @@ datadir/Common_Content/common-db5/pot/Feedback.pot
 datadir/Common_Content/common-db5/pot/Program_Listing.pot
 datadir/Common_Content/common-db5/pot/Revision_History.pot
 datadir/Common_Content/common-db5/publican.cfg
+datadir/Common_Content/common-db5/xsl/html-common.xsl
 datadir/Common_Content/common-db5/xsl/html-pdf.xsl
 datadir/Common_Content/common-db5/xsl/html-single.xsl
 datadir/Common_Content/common-db5/xsl/html.xsl
