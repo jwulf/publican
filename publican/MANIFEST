@@ -235,6 +235,7 @@ datadir/Common_Content/common-db5/publican.cfg
 datadir/Common_Content/common-db5/xsl/html-pdf.xsl
 datadir/Common_Content/common-db5/xsl/html-single.xsl
 datadir/Common_Content/common-db5/xsl/html.xsl
+datadir/Common_Content/common-db5/xsl/pdf.xsl
 datadir/Common_Content/common-db5/zanata.xml
 datadir/Common_Content/common/ar-SA/Conventions.po
 datadir/Common_Content/common/ar-SA/css/lang.css
