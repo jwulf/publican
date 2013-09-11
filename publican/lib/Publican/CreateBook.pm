@@ -277,18 +277,18 @@ sub create {
                                 )
                             ],
                         ],
-##                        [   'corpauthor',
-#                            [   'inlinemediaobject',
-#                                [   'imageobject',
-#                                    [   'imagedata',
-#                                        {   format => 'SVG',
-#                                            fileref =>
-#                                                'Common_Content/images/title_logo.svg'
-#                                        }
-#                                    ],
-#                                ],
-#                            ],
-#                        ],
+                        [   'orgname',
+                            [   'inlinemediaobject',
+                                [   'imageobject',
+                                    [   'imagedata',
+                                        {   format => 'SVG',
+                                            fileref =>
+                                                'Common_Content/images/title_logo.svg'
+                                        }
+                                    ],
+                                ],
+                            ],
+                        ],
                         [   'xi:include',
                             {   href => 'Common_Content/Legal_Notice.xml',
                                 'xmlns:xi' =>

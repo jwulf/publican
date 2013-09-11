@@ -499,6 +499,9 @@ sub print_xml {
         }
 
         if ( $dtdver =~ m/^5/ ) {
+            $xml_doc->attr( 'xmlns', 'http://docbook.org/ns/docbook' );
+            $xml_doc->attr( 'xmlns:xlink', 'http://www.w3.org/1999/xlink' );
+            $xml_doc->attr( 'version', $dtdver );
             $xml_doc->attr( 'xml:lang', $lang );
         }
 
@@ -1001,9 +1004,11 @@ sub process_file {
     $xml_doc->store_pis(1);
     $xml_doc->store_cdata(1);
 ##debug_msg("here 1");
+eval {
+    $xml_doc->parse_file($file);
+};
 
-    $xml_doc->parse_file($file)
-        || croak( maketext( "Can't open file '[_1]' [_2]", $file, $@ ) );
+    croak( maketext( "Can't open file '[_1]' [_2]", $file, $@ ) ) if($@);
 ##debug_msg("here 2");
 
     $self->validate_tables($xml_doc);

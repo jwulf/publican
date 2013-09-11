@@ -1225,6 +1225,8 @@ sub get_subtitle {
 
 Return the author list for the supplied language.
 
+BUGBUG This is docbook 4/5 specific and should be moved.
+
 =cut
 
 sub get_author_list {
@@ -1254,9 +1256,9 @@ sub get_author_list {
     $xml_doc->parse_file($file);
 
     foreach my $author (
-        $xml_doc->root()->look_down( "_tag", qr/^(?:author|corpauthor)$/ ) )
+        $xml_doc->root()->look_down( "_tag", qr/^(?:author|corpauthor|orgname)$/ ) )
     {
-        if ( $author->tag() eq 'corpauthor' ) {
+        if ( $author->tag() =~ /^(?:corpauthor|orgname)$/ ) {
             my $name;
 
             eval { $name = $author->as_text; };
@@ -1304,6 +1306,8 @@ sub get_author_list {
 
 Return the contributor hash for the supplied language.
 
+BUGBUG This is docbook 4/5 specific and should be moved.
+
 =cut
 
 sub get_contributors {
@@ -1334,7 +1338,7 @@ sub get_contributors {
     $xml_doc->parse_file($file);
 
     foreach my $node ( $xml_doc->root()
-        ->look_down( "_tag", qr/^(?:author|editor|othercredit|corpauthor)$/ )
+        ->look_down( "_tag", qr/^(?:author|editor|othercredit|corpauthor|orgname)$/ )
         )
     {
         my %person;
@@ -1616,6 +1620,7 @@ Parameters:
 	dtdver	 The DTD version
 	ent_file An entity file to include (optional)
 
+BUGBUG: Thios is docbook 4/5 specific and should be moved
 =cut
 
 sub dtd_string {
@@ -1696,6 +1701,8 @@ ENT
     $dtd .= <<DTDTAIL;
 ]>
 DTDTAIL
+
+    $dtd = "<?xml version='1.0' encoding='utf-8' ?>\n" if ( $dtdver =~ m/^5/ );
 
     return ($dtd);
 }
