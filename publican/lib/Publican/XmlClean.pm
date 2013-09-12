@@ -12,12 +12,7 @@ use Term::ANSIColor qw(:constants);
 use Publican::Builder;
 use File::Inplace;
 use DBI;
-
-## Testing collation
-my $test_collate = 1;
-if ($test_collate) {
-    use Unicode::Collate;
-}
+use Data::Dumper;
 
 use vars qw( $VERSION );
 
@@ -499,11 +494,41 @@ sub print_xml {
         }
 
         if ( $dtdver =~ m/^5/ ) {
-            $xml_doc->attr( 'xmlns', 'http://docbook.org/ns/docbook' );
+            $xml_doc->attr( 'xmlns',       'http://docbook.org/ns/docbook' );
             $xml_doc->attr( 'xmlns:xlink', 'http://www.w3.org/1999/xlink' );
-            $xml_doc->attr( 'version', $dtdver );
-            $xml_doc->attr( 'xml:lang', $lang );
+            $xml_doc->attr( 'version',     $dtdver );
+            $xml_doc->attr( 'xml:lang',    $lang );
         }
+
+        my $doctype;
+        foreach my $node ( $xml_doc->look_down( '_tag', '~declaration' ) ) {
+            $node->detach();
+            unless ($docname) {
+
+                if ( $node->attr('type') && $node->attr('type') eq 'DOCTYPE' )
+                {
+                    $doctype = q|<!DOCTYPE | . $node->attr('mytag');
+                    $doctype .= q| PUBLIC "| . $node->attr('pid') . q|"|
+                        if ( $node->attr('pid')
+                        && $node->attr('pid') ne 'pid' );
+                    $doctype .= q| "| . $node->attr('uri') . q|"|
+                        if ( $node->attr('uri')
+                        && $node->attr('uri') ne 'uri' );
+                    $doctype .= qq| [\n|;
+                }
+                else {
+                    $doctype
+                        .= q|<!ENTITY |
+                        . $node->attr('name') . q| "|
+                        . $node->attr('value')
+                        . qq|">\n|;
+                }
+            }
+
+            #             print(STDERR Dumper($node));
+        }
+
+        $doctype .= qq|]>\n| if ($doctype);
 
         my $type = $xml_doc->attr("_tag");
         $file =~ m|^(.*/xml/)|;
@@ -537,14 +562,19 @@ sub print_xml {
             }
         }
 
-        print( $OUTDOC Publican::dtd_string(
-                {   tag      => $type,
-                    dtdver   => $dtdver,
-                    ent_file => $ent_file,
-                    cleaning => $cleaning,
-                }
-            )
-        );
+        if ($doctype) {
+            print( $OUTDOC $doctype );
+        }
+        else {
+            print( $OUTDOC Publican::dtd_string(
+                    {   tag      => $type,
+                        dtdver   => $dtdver,
+                        ent_file => $ent_file,
+                        cleaning => $cleaning,
+                    }
+                )
+            );
+        }
 
         #debug_msg("is utf8: " . utf8::is_utf8($text) . "\n");
         print( $OUTDOC $text );
@@ -934,40 +964,6 @@ sub validate_tables {
     return;
 }
 
-=head2 sort_glossaries
-
-Sort glosslists
-
-=cut
-
-sub sort_glossaries {
-    my ( $self, $xml_doc ) = @_;
-
-    return unless ($test_collate);
-
-    my $Collator = Unicode::Collate->new();
-
-    if ($xml_doc) {
-        foreach
-            my $glosslist ( $xml_doc->root->look_down( "_tag", "glosslist" ) )
-        {
-            my @glossentries = sort( {
-                    $Collator->cmp(
-                        $a->look_down( "_tag", "glossterm" )->as_text(),
-                        $b->look_down( "_tag", "glossterm" )->as_text()
-                    )
-            } $glosslist->look_down( "_tag", "glossentry" ) );
-
-            foreach my $glossentry (@glossentries) {
-                $glossentry->detach();
-                $glosslist->push_content($glossentry);
-            }
-        }
-    }
-
-    return;
-}
-
 =head2 process_file
 
 Create XML::TreeBuilder object and perform operations.
@@ -1003,16 +999,14 @@ sub process_file {
     $xml_doc->store_comments(1);
     $xml_doc->store_pis(1);
     $xml_doc->store_cdata(1);
+    $xml_doc->store_declarations(1);
 ##debug_msg("here 1");
-eval {
-    $xml_doc->parse_file($file);
-};
+    eval { $xml_doc->parse_file($file); };
 
-    croak( maketext( "Can't open file '[_1]' [_2]", $file, $@ ) ) if($@);
+    croak( maketext( "Can't open file '[_1]' [_2]", $file, $@ ) ) if ($@);
 ##debug_msg("here 2");
 
     $self->validate_tables($xml_doc);
-    $self->sort_glossaries($xml_doc);
 
     if ($update_includes) {
         $self->update_include($xml_doc);

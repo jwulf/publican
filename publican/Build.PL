@@ -330,7 +330,7 @@ my $builder = $class->new(
         'XML::LibXML'                            => 1.67,
         'XML::LibXSLT'                           => 1.67,
         'XML::Simple'                            => 0,
-        'XML::TreeBuilder'                       => 4.2,
+        'XML::TreeBuilder'                       => 4.4,
         'Text::CSV_XS'                           => 0,
     },
     requires => {
@@ -377,7 +377,7 @@ my $builder = $class->new(
         'XML::LibXML'                            => 1.67,
         'XML::LibXSLT'                           => 1.67,
         'XML::Simple'                            => 0,
-        'XML::TreeBuilder'                       => 4.2,
+        'XML::TreeBuilder'                       => 4.4,
         'Text::CSV_XS'                           => 0,
     },
     add_to_cleanup => [

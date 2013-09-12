@@ -1620,7 +1620,7 @@ Parameters:
 	dtdver	 The DTD version
 	ent_file An entity file to include (optional)
 
-BUGBUG: Thios is docbook 4/5 specific and should be moved
+BUGBUG: This is docbook 4/5 specific and should be moved
 =cut
 
 sub dtd_string {
@@ -1642,11 +1642,6 @@ sub dtd_string {
 
     my $uri = qq|http://www.oasis-open.org/docbook/xml/$dtdver/docbookx.dtd|;
     my $dtd_type = qq|-//OASIS//DTD DocBook XML V$dtdver//EN|;
-
-    if ( $dtdver =~ m/^5/ ) {
-        $dtd_type = qq|-//OASIS//DTD DocBook XML $dtdver//EN|;
-        $uri      = qq|http://docbook.org/xml/$dtdver/rng/docbook.rng|;
-    }
 
     # TODO Maynot be necessary
     if ( $^O eq 'MSWin32' ) {
@@ -1680,6 +1675,13 @@ sub dtd_string {
 <!DOCTYPE $tag PUBLIC "$dtd_type" "$uri" [
 DTDHEAD
 
+    if ( $dtdver =~ m/^5/ ) {
+$dtd = <<DTDHEAD;
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE $tag [
+DTDHEAD
+    }
+
     # handle entity file
     if ($ent_file) {
         if ($cleaning) {
@@ -1701,8 +1703,6 @@ ENT
     $dtd .= <<DTDTAIL;
 ]>
 DTDTAIL
-
-    $dtd = "<?xml version='1.0' encoding='utf-8' ?>\n" if ( $dtdver =~ m/^5/ );
 
     return ($dtd);
 }

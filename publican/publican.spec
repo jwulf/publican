@@ -16,7 +16,7 @@
 
 Name:           publican
 Version:        3.2.1
-Release:        0%{?dist}.t8
+Release:        0%{?dist}.t10
 Summary:        Common files and scripts for publishing with DocBook XML
 # For a breakdown of the licensing, refer to LICENSE
 License:        (GPLv2+ or Artistic) and CC0
@@ -87,7 +87,7 @@ BuildRequires:  perl(Time::localtime)
 BuildRequires:  perl(XML::LibXML) => 1.67
 BuildRequires:  perl(XML::LibXSLT) => 1.67
 BuildRequires:  perl(XML::Simple)
-BuildRequires:  perl(XML::TreeBuilder) => 4.2
+BuildRequires:  perl(XML::TreeBuilder) => 4.4
 BuildRequires:  wkhtmltopdf >= 0.10.0_rc2-5
 BuildRequires:  docbook-style-xsl >= 1.77.1
 BuildRequires:  desktop-file-utils
