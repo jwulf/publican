@@ -100,7 +100,7 @@ msgid "This denotes words or phrases encountered on a system, including applicat
 msgstr "Isto denota parolas o phrases que on incontra in un systema, includente nomines de applicationes, texto de quadro de dialogo, buttones etiquettate, etiquettas de quadratos de selection e buttones de option, titulos de menu e submenu. Per exemplo: "
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "Choose <menuchoice><guimenu>System</guimenu><guisubmenu>Preferences</guisubmenu><guimenuitem>Mouse</guimenuitem></menuchoice> from the main menu bar to launch <application>Mouse Preferences</application>. In the <guilabel>Buttons</guilabel> tab, select the <guilabel>Left-handed mouse</guilabel> check box and click <guibutton>Close</guibutton> to switch the primary mouse button from the left to the right (making the mouse suitable for use in the left hand)."
 msgstr "Selige <menuchoice><guimenu>Systema</guimenu><guisubmenu>Preferentia</guisubmenu><guimenuitem>Mouse</guimenuitem></menuchoice> del barra de menu principal pro lancear <application>Preferentias de Mouse</application>. In le scheda <guilabel>Buttones</guilabel>, clicca sur le quadrato de selection <guilabel>Mouse sinistromane</guilabel> e clicca sur <guibutton>Clouder</guibutton> pro cambiar le button primari del mouse de sinistra a dextera (rendente le mouse convenibile pro uso con le mano sinistre)."
 

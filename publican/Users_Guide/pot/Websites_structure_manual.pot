@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2013-08-06 09:04+1000\n"
-"PO-Revision-Date: 2013-08-06 09:04+1000\n"
+"POT-Creation-Date: 2013-09-12 15:22+1000\n"
+"PO-Revision-Date: 2013-09-12 15:22+1000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: None\n"
 "MIME-Version: 1.0\n"
@@ -30,12 +30,12 @@ msgstr ""
 #. Tag: screen
 #, no-c-format
 msgid "<prompt>$</prompt> <command>mkdir ~/docsite</command>\n"
-"<command>cd ~/docsite</command>"
+"<prompt>$</prompt> <command>cd ~/docsite</command>"
 msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "Run <command>publican create_site</command>, specifying the following parameters:"
+msgid "Run <prompt>$</prompt> <command>publican create_site</command>, specifying the following parameters:"
 msgstr ""
 
 #. Tag: para
@@ -165,7 +165,7 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "Optionally, configure a <firstterm>dump file</firstterm> for the website. <application>Publican</application> can output an XML file that provides complete site content details for delivery of other services, such as web feeds or customised search pages. The file is updated whenever a book is installed or removed from the site, or the <command>publican update_site</command> command is run. Configure the <parameter>dump</parameter>, <parameter>dump_file</parameter>, and <parameter>zip_dump</parameter> parameters as follows:"
+msgid "Optionally, configure a <firstterm>dump file</firstterm> for the website. <application>Publican</application> can output an XML file that provides complete site content details for delivery of other services, such as web feeds or customised search pages. The file is updated whenever a book is installed or removed from the site, or the <prompt>$</prompt> <command>publican update_site</command> command is run. Configure the <parameter>dump</parameter>, <parameter>dump_file</parameter>, and <parameter>zip_dump</parameter> parameters as follows:"
 msgstr ""
 
 #. Tag: term
@@ -215,7 +215,7 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "Normally, <application>Publican</application> updates the site's tables of contents every time a documentation package is added or removed. On a site with a large number of documents on it (more than a few hundred), or where documents are updated very frequently (dozens of updates per week), this process is very demanding on a server. On a large or busy site, we recommend that you set this parameter and then periodically update the tables of contents with the <command>publican update_site</command> command."
+msgid "Normally, <application>Publican</application> updates the site's tables of contents every time a documentation package is added or removed. On a site with a large number of documents on it (more than a few hundred), or where documents are updated very frequently (dozens of updates per week), this process is very demanding on a server. On a large or busy site, we recommend that you set this parameter and then periodically update the tables of contents with the <prompt>$</prompt> <command>publican update_site</command> command."
 msgstr ""
 
 #. Tag: para
@@ -230,7 +230,7 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "This file will be symlinked as <parameter>toc_path</parameter>/toc.js with the <command>publican update_site</command> command. This path should be relative to the <parameter>toc_path</parameter> parameter."
+msgid "This file will be symlinked as <parameter>toc_path</parameter>/toc.js with the <prompt>$</prompt> <command>publican update_site</command> command. This path should be relative to the <parameter>toc_path</parameter> parameter."
 msgstr ""
 
 #. Tag: para
@@ -255,7 +255,7 @@ msgstr ""
 
 #. Tag: screen
 #, no-c-format
-msgid "<prompt>$</prompt><command>cd</command> <replaceable>brandsrc_dir</replaceable>"
+msgid "<prompt>$</prompt> <command>cd</command> <replaceable>brandsrc_dir</replaceable>"
 msgstr ""
 
 #. Tag: para
@@ -265,7 +265,7 @@ msgstr ""
 
 #. Tag: screen
 #, no-c-format
-msgid "<prompt>$</prompt><command>publican build --formats=xml --langs=all --publish</command>"
+msgid "<prompt>$</prompt> <command>publican build --formats=xml --langs=all --publish</command>"
 msgstr ""
 
 #. Tag: para
@@ -275,7 +275,7 @@ msgstr ""
 
 #. Tag: screen
 #, no-c-format
-msgid "<prompt>$</prompt><command>publican install_brand --web --path=</command><replaceable>path_to_site_root_dir</replaceable>"
+msgid "<prompt>$</prompt> <command>publican install_brand --web --path=</command><replaceable>path_to_site_root_dir</replaceable>"
 msgstr ""
 
 #. Tag: para
@@ -290,7 +290,7 @@ msgstr ""
 
 #. Tag: screen
 #, no-c-format
-msgid "<prompt>$</prompt><command>publican update_site --site_config</command> <replaceable>path_to_site_cfg</replaceable>"
+msgid "<prompt>$</prompt> <command>publican update_site</command>"
 msgstr ""
 
 #. Tag: para

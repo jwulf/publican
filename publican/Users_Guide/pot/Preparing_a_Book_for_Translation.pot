@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2013-08-06 09:04+1000\n"
-"PO-Revision-Date: 2013-08-06 09:04+1000\n"
+"POT-Creation-Date: 2013-09-12 15:22+1000\n"
+"PO-Revision-Date: 2013-09-12 15:22+1000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: None\n"
 "MIME-Version: 1.0\n"
@@ -60,7 +60,7 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "Use the <command>publican print_unused</command> command to generate a list of XML files that are not used in your document."
+msgid "Use the <prompt>$</prompt> <command>publican print_unused</command> command to generate a list of XML files that are not used in your document."
 msgstr ""
 
 #. Tag: para

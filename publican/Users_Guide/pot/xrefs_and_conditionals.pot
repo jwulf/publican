@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2013-08-06 09:04+1000\n"
-"PO-Revision-Date: 2013-08-06 09:04+1000\n"
+"POT-Creation-Date: 2013-09-12 15:22+1000\n"
+"PO-Revision-Date: 2013-09-12 15:22+1000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: None\n"
 "MIME-Version: 1.0\n"
@@ -19,6 +19,6 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "If an <sgmltag>&lt;xref&gt;</sgmltag> points to content not included in the build due to conditional tagging, the build will fail. For example, with <command>condition: upstream</command> set in the <filename>publican.cfg</filename> file, <command>publican build --formats=pdf --langs=en-US</command> will fail if the book has the tag <sgmltag>&lt;xref linkend=\"betasection\"&gt;</sgmltag> pointing to <sgmltag>&lt;section id=\"betasection\" condition=\"beta\"&gt;</sgmltag>."
+msgid "If an <sgmltag>&lt;xref&gt;</sgmltag> points to content not included in the build due to conditional tagging, the build will fail. For example, with <prompt>$</prompt> <command>condition: upstream</command> set in the <filename>publican.cfg</filename> file, <prompt>$</prompt> <command>publican build --formats=pdf --langs=en-US</command> will fail if the book has the tag <sgmltag>&lt;xref linkend=\"betasection\"&gt;</sgmltag> pointing to <sgmltag>&lt;section id=\"betasection\" condition=\"beta\"&gt;</sgmltag>."
 msgstr ""
 

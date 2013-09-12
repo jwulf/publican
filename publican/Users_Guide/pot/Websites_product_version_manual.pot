@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2013-08-06 09:04+1000\n"
-"PO-Revision-Date: 2013-08-06 09:04+1000\n"
+"POT-Creation-Date: 2013-09-12 15:22+1000\n"
+"PO-Revision-Date: 2013-09-12 15:22+1000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: None\n"
 "MIME-Version: 1.0\n"
@@ -24,7 +24,7 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "Change into a convenient directory and run the following <command>publican create</command> command:"
+msgid "Change into a convenient directory and run the following <prompt>$</prompt> <command>publican create</command> command:"
 msgstr ""
 
 #. Tag: screen
@@ -159,7 +159,7 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "If you publish documentation in more than one language, create a set of POT files and a set of PO files for each language with the <command>publican update_pot</command> and <command>publican update_po</command> commands."
+msgid "If you publish documentation in more than one language, create a set of POT files and a set of PO files for each language with the <prompt>$</prompt> <command>publican update_pot</command> and <command>publican update_po</command> commands."
 msgstr ""
 
 #. Tag: para
@@ -170,11 +170,11 @@ msgstr ""
 #. Tag: screen
 #, no-c-format
 msgid "<prompt>$</prompt> <command>publican build --publish --formats html-single --embedtoc --langs all</command> \n"
-"<command>publican install_book --site_config ~/docsite/foomaster.cfg --lang <replaceable>Language_Code</replaceable></command>"
+"<prompt>$</prompt> <command>publican install_book --site_config ~/docsite/foomaster.cfg --lang <replaceable>Language_Code</replaceable></command>"
 msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "Note that you can build all languages at the same time, but must install the product page or version page for each language with a separate <command>publican install_book</command> command."
+msgid "Note that you can build all languages at the same time, but must install the product page or version page for each language with a separate <prompt>$</prompt> <command>publican install_book</command> command."
 msgstr ""
 

@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2013-08-06 09:04+1000\n"
-"PO-Revision-Date: 2013-08-06 09:04+1000\n"
+"POT-Creation-Date: 2013-09-12 15:22+1000\n"
+"PO-Revision-Date: 2013-09-12 15:22+1000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: None\n"
 "MIME-Version: 1.0\n"
@@ -24,7 +24,7 @@ msgstr ""
 
 #. Tag: term
 #, no-c-format
-msgid "<command>publican --help</command>"
+msgid "<prompt>$</prompt> <command>publican --help</command>"
 msgstr ""
 
 #. Tag: para
@@ -34,7 +34,7 @@ msgstr ""
 
 #. Tag: term
 #, no-c-format
-msgid "<command>publican --man</command>"
+msgid "<prompt>$</prompt> <command>publican --man</command>"
 msgstr ""
 
 #. Tag: para
@@ -44,7 +44,7 @@ msgstr ""
 
 #. Tag: term
 #, no-c-format
-msgid "<command>publican --help_actions</command>"
+msgid "<prompt>$</prompt> <command>publican --help_actions</command>"
 msgstr ""
 
 #. Tag: para
@@ -54,7 +54,7 @@ msgstr ""
 
 #. Tag: term
 #, no-c-format
-msgid "<command>publican --v</command>"
+msgid "<prompt>$</prompt> <command>publican --v</command>"
 msgstr ""
 
 #. Tag: para
@@ -99,7 +99,7 @@ msgstr ""
 
 #. Tag: term
 #, no-c-format
-msgid "<command>publican add_revision</command>"
+msgid "<prompt>$</prompt> <command>publican add_revision</command>"
 msgstr ""
 
 #. Tag: para
@@ -179,7 +179,7 @@ msgstr ""
 
 #. Tag: term
 #, no-c-format
-msgid "<command>publican build</command>"
+msgid "<prompt>$</prompt> <command>publican build</command>"
 msgstr ""
 
 #. Tag: para
@@ -339,7 +339,7 @@ msgstr ""
 
 #. Tag: term
 #, no-c-format
-msgid "<command>publican clean</command>"
+msgid "<prompt>$</prompt> <command>publican clean</command>"
 msgstr ""
 
 #. Tag: para
@@ -349,7 +349,7 @@ msgstr ""
 
 #. Tag: term
 #, no-c-format
-msgid "<command>publican clean_ids</command>"
+msgid "<prompt>$</prompt> <command>publican clean_ids</command>"
 msgstr ""
 
 #. Tag: para
@@ -359,7 +359,7 @@ msgstr ""
 
 #. Tag: term
 #, no-c-format
-msgid "<command>publican clean_set</command>"
+msgid "<prompt>$</prompt> <command>publican clean_set</command>"
 msgstr ""
 
 #. Tag: para
@@ -369,7 +369,7 @@ msgstr ""
 
 #. Tag: term
 #, no-c-format
-msgid "<command>publican create</command>"
+msgid "<prompt>$</prompt> <command>publican create</command>"
 msgstr ""
 
 #. Tag: para
@@ -449,7 +449,7 @@ msgstr ""
 
 #. Tag: term
 #, no-c-format
-msgid "<command>publican create_brand</command>"
+msgid "<prompt>$</prompt> <command>publican create_brand</command>"
 msgstr ""
 
 #. Tag: para
@@ -509,7 +509,7 @@ msgstr ""
 
 #. Tag: term
 #, no-c-format
-msgid "<command>publican help_config</command>"
+msgid "<prompt>$</prompt> <command>publican help_config</command>"
 msgstr ""
 
 #. Tag: para
@@ -539,7 +539,7 @@ msgstr ""
 
 #. Tag: term
 #, no-c-format
-msgid "<command>publican install_brand</command>"
+msgid "<prompt>$</prompt> <command>publican install_brand</command>"
 msgstr ""
 
 #. Tag: para
@@ -559,7 +559,7 @@ msgstr ""
 
 #. Tag: term
 #, no-c-format
-msgid "<command>publican lang_stats</command>"
+msgid "<prompt>$</prompt> <command>publican lang_stats</command>"
 msgstr ""
 
 #. Tag: para
@@ -579,7 +579,7 @@ msgstr ""
 
 #. Tag: term
 #, no-c-format
-msgid "<command>publican migrate_site</command>"
+msgid "<prompt>$</prompt> <command>publican migrate_site</command>"
 msgstr ""
 
 #. Tag: para
@@ -599,7 +599,7 @@ msgstr ""
 
 #. Tag: term
 #, no-c-format
-msgid "<command>publican package</command>"
+msgid "<prompt>$</prompt> <command>publican package</command>"
 msgstr ""
 
 #. Tag: para
@@ -684,7 +684,7 @@ msgstr ""
 
 #. Tag: term
 #, no-c-format
-msgid "<command>publican print_tree</command>"
+msgid "<prompt>$</prompt> <command>publican print_tree</command>"
 msgstr ""
 
 #. Tag: para
@@ -729,7 +729,7 @@ msgstr ""
 
 #. Tag: term
 #, no-c-format
-msgid "<command>publican rename</command>"
+msgid "<prompt>$</prompt> <command>publican rename</command>"
 msgstr ""
 
 #. Tag: para
@@ -764,7 +764,7 @@ msgstr ""
 
 #. Tag: term
 #, no-c-format
-msgid "<command>publican update_pot</command>"
+msgid "<prompt>$</prompt> <command>publican update_pot</command>"
 msgstr ""
 
 #. Tag: para
@@ -774,7 +774,7 @@ msgstr ""
 
 #. Tag: term
 #, no-c-format
-msgid "<command>publican update_po</command>"
+msgid "<prompt>$</prompt> <command>publican update_po</command>"
 msgstr ""
 
 #. Tag: para

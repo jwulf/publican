@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2013-08-06 09:04+1000\n"
-"PO-Revision-Date: 2013-08-06 09:04+1000\n"
+"POT-Creation-Date: 2013-09-12 15:22+1000\n"
+"PO-Revision-Date: 2013-09-12 15:22+1000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: None\n"
 "MIME-Version: 1.0\n"
@@ -24,12 +24,12 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "Run <command>publican update_po --langs=<replaceable>language</replaceable></command>, where <replaceable>language</replaceable> is the code for the new language that you want to add. You can add more than one language at a time, with the language codes separated by commas. For example, <command>publican update_po --langs=ja-JP</command> creates the Japanese language directory and Japanese PO files, and <command>publican update_po --langs=ja-JP,ko-KR</command> creates directories and PO files for both Japanese and Korean."
+msgid "Run <prompt>$</prompt> <command>publican update_po --langs=<replaceable>language</replaceable></command>, where <replaceable>language</replaceable> is the code for the new language that you want to add. You can add more than one language at a time, with the language codes separated by commas. For example, <command>publican update_po --langs=ja-JP</command> creates the Japanese language directory and Japanese PO files, and <command>publican update_po --langs=ja-JP,ko-KR</command> creates directories and PO files for both Japanese and Korean."
 msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "What if I do not want to use the country code? For example, can I run <command>publican update_po --langs=es,de,fr</command>?"
+msgid "What if I do not want to use the country code? For example, can I run <prompt>$</prompt> <command>publican update_po --langs=es,de,fr</command>?"
 msgstr ""
 
 #. Tag: para
@@ -44,7 +44,7 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "Run the <command>publican update_po --langs=all</command> command."
+msgid "Run the <prompt>$</prompt> <command>publican update_po --langs=all</command> command."
 msgstr ""
 
 #. Tag: para
@@ -54,7 +54,7 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "Run the <command>publican build --help</command> command."
+msgid "Run the <prompt>$</prompt> <command>publican build --help</command> command."
 msgstr ""
 
 #. Tag: para
@@ -64,7 +64,7 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "Run the <command>publican help_config</command> command in a directory that holds any <application>Publican</application> document."
+msgid "Run the <prompt>$</prompt> <command>publican help_config</command> command in a directory that holds any <application>Publican</application> document."
 msgstr ""
 
 #. Tag: para
@@ -114,7 +114,7 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "Try building a PDF version of a different document — perhaps a fresh one that you create with the <command>publican create</command> command. If the problem is not just with one particular document, you probably have a mismatch between the <application>Java Runtime Environment</application> (JRE) and the <application>Java Development Kit</application> (JDK) in use on your system. If you have a JDK installed, <application>FOP</application> requires that the JDK is of the same version as the JRE. Furthermore, <application>FOP</application> cannot use the <application>GNU Compiler for Java</application> (GCJ)."
+msgid "Try building a PDF version of a different document — perhaps a fresh one that you create with the <prompt>$</prompt> <command>publican create</command> command. If the problem is not just with one particular document, you probably have a mismatch between the <application>Java Runtime Environment</application> (JRE) and the <application>Java Development Kit</application> (JDK) in use on your system. If you have a JDK installed, <application>FOP</application> requires that the JDK is of the same version as the JRE. Furthermore, <application>FOP</application> cannot use the <application>GNU Compiler for Java</application> (GCJ)."
 msgstr ""
 
 #. Tag: para
@@ -179,7 +179,7 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "The default memory allocated for Java is not big enough to build your PDF. You need to increase the memory allocated to <application>FOP</application>. Before running <command>publican build</command> run <command>echo \"FOP_OPTS='-Xms50m -Xmx700m'\" &gt; ~/.foprc</command>. This sets the initial heap space to 50&nbsp;MB and allows it to grow to a maximum of 700&nbsp;MB."
+msgid "The default memory allocated for Java is not big enough to build your PDF. You need to increase the memory allocated to <application>FOP</application>. Before running <prompt>$</prompt> <command>publican build</command> run <command>echo \"FOP_OPTS='-Xms50m -Xmx700m'\" &gt; ~/.foprc</command>. This sets the initial heap space to 50&nbsp;MB and allows it to grow to a maximum of 700&nbsp;MB."
 msgstr ""
 
 #. Tag: para
@@ -313,8 +313,10 @@ msgstr ""
 
 #. Tag: screen
 #, no-c-format
-msgid "*                 soft    nofile          8192\n"
-"					*                 hard    nofile          8192"
+msgid "\n"
+"*                 soft    nofile          8192\n"
+"*                 hard    nofile          8192\n"
+"					"
 msgstr ""
 
 #. Tag: para

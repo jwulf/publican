@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2013-08-06 09:04+1000\n"
-"PO-Revision-Date: 2013-08-06 09:04+1000\n"
+"POT-Creation-Date: 2013-09-12 15:22+1000\n"
+"PO-Revision-Date: 2013-09-12 15:22+1000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: None\n"
 "MIME-Version: 1.0\n"
@@ -49,6 +49,6 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "On large or busy sites, we recommend that you set the <parameter>manual_toc_update</parameter> parameter in the site's configuration file. With this parameter set, you must run the <command>publican update_site</command> command after installing, updating, or removing documents. Refer to <xref linkend=\"sect-Users_Guide-Website-structure-cfg_and_db-manual\" /> for more information."
+msgid "On large or busy sites, we recommend that you set the <parameter>manual_toc_update</parameter> parameter in the site's configuration file. With this parameter set, you must run the <prompt>$</prompt> <command>publican update_site</command> command after installing, updating, or removing documents. Refer to <xref linkend=\"sect-Users_Guide-Website-structure-cfg_and_db-manual\" /> for more information."
 msgstr ""
 

@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2013-08-06 09:04+1000\n"
-"PO-Revision-Date: 2013-08-06 09:04+1000\n"
+"POT-Creation-Date: 2013-09-12 15:22+1000\n"
+"PO-Revision-Date: 2013-09-12 15:22+1000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: None\n"
 "MIME-Version: 1.0\n"
@@ -54,7 +54,7 @@ msgstr ""
 
 #. Tag: screen
 #, no-c-format
-msgid "<prompt>#</prompt> <command>yum install publican</command>"
+msgid "<prompt>#</prompt> <command>yum install publican-web publican-$brand-web</command>"
 msgstr ""
 
 #. Tag: para
@@ -144,7 +144,7 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "Optionally, configure a <firstterm>dump file</firstterm> for the website. <application>Publican</application> can output an XML file that provides complete site content details for delivery of other services, such as web feeds or customised search pages. The file is updated whenever a book is installed or removed from the site, or the <command>publican update_site</command> command is run. Configure the <parameter>dump</parameter>, <parameter>dump_file</parameter>, and <parameter>zip_dump</parameter> parameters as follows:"
+msgid "Optionally, configure a <firstterm>dump file</firstterm> for the website. <application>Publican</application> can output an XML file that provides complete site content details for delivery of other services, such as web feeds or customised search pages. The file is updated whenever a book is installed or removed from the site, or the <prompt>$</prompt> <command>publican update_site</command> command is run. Configure the <parameter>dump</parameter>, <parameter>dump_file</parameter>, and <parameter>zip_dump</parameter> parameters as follows:"
 msgstr ""
 
 #. Tag: term
@@ -199,6 +199,6 @@ msgstr ""
 
 #. Tag: screen
 #, no-c-format
-msgid "<prompt>$</prompt> <command>publican update_site --site_config /etc/publican-website.cfg</command>"
+msgid "<prompt>$</prompt> <command>publican update_site</command>"
 msgstr ""
 

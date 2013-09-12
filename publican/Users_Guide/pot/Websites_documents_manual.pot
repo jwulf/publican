@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2013-08-06 09:04+1000\n"
-"PO-Revision-Date: 2013-08-06 09:04+1000\n"
+"POT-Creation-Date: 2013-09-12 15:22+1000\n"
+"PO-Revision-Date: 2013-09-12 15:22+1000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: None\n"
 "MIME-Version: 1.0\n"
@@ -25,12 +25,12 @@ msgstr ""
 #. Tag: screen
 #, no-c-format
 msgid "<prompt>$</prompt> <command>publican build --embedtoc --formats=<replaceable>list_of_formats</replaceable> --langs=<replaceable>language_codes</replaceable> --publish</command> \n"
-"<command>publican install_book --site_config <replaceable>path_to_site_configuration_file</replaceable>.cfg --lang <replaceable>language_code</replaceable></command>"
+"<prompt>$</prompt> <command>publican install_book --site_config <replaceable>path_to_site_configuration_file</replaceable>.cfg --lang <replaceable>language_code</replaceable></command>"
 msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "Note that you can run a single <command>publican build</command> command for all languages that you want to publish, but must run a separate <command>publican install_book</command> for each language. You must include <literal>html</literal> as one of the formats in the <command>publican build</command> command; optionally, include any or all of the following formats in a comma-separated list: <literal>html-single</literal>, <literal>pdf</literal>, and <literal>epub</literal>."
+msgid "Note that you can run a single <prompt>$</prompt> <command>publican build</command> command for all languages that you want to publish, but must run a separate <command>publican install_book</command> for each language. You must include <literal>html</literal> as one of the formats in the <command>publican build</command> command; optionally, include any or all of the following formats in a comma-separated list: <literal>html-single</literal>, <literal>pdf</literal>, and <literal>epub</literal>."
 msgstr ""
 
 #. Tag: para

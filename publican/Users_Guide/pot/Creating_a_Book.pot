@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2013-08-06 09:04+1000\n"
-"PO-Revision-Date: 2013-08-06 09:04+1000\n"
+"POT-Creation-Date: 2013-09-12 15:22+1000\n"
+"PO-Revision-Date: 2013-09-12 15:22+1000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: None\n"
 "MIME-Version: 1.0\n"
@@ -24,12 +24,12 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "Use the <command>publican create</command> command to create a new document, including all the necessary files for the document."
+msgid "Use the <prompt>$</prompt> <command>publican create</command> command to create a new document, including all the necessary files for the document."
 msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "The <command>publican create</command> command accepts several options, detailed in this chapter. When an option can accept a value, separate the option from the value with a space or an equals sign; for example, <command>publican create --name New_Book</command> or <command>publican create --name=New_Book</command>."
+msgid "The <prompt>$</prompt> <command>publican create</command> command accepts several options, detailed in this chapter. When an option can accept a value, separate the option from the value with a space or an equals sign; for example, <command>publican create --name New_Book</command> or <command>publican create --name=New_Book</command>."
 msgstr ""
 
 #. Tag: term
@@ -39,7 +39,7 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "print a list of all <command>publican create</command> command options."
+msgid "print a list of all <prompt>$</prompt> <command>publican create</command> command options."
 msgstr ""
 
 #. Tag: term
@@ -49,7 +49,7 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "set <replaceable>Doc_Name</replaceable> as the name of the book or article. This variable must not contain any spaces. For example, the command <command>create_book --name Test_Book</command> creates a book named <literal>Test_Book</literal> with all the necessary files to build the book, and sets the <parameter>BOOKID</parameter> in the <filename>Test_Book.ent</filename> file."
+msgid "set <replaceable>Doc_Name</replaceable> as the name of the book or article. This variable must not contain any spaces. For example, the command <prompt>$</prompt> <command>create_book --name Test_Book</command> creates a book named <literal>Test_Book</literal> with all the necessary files to build the book, and sets the <parameter>BOOKID</parameter> in the <filename>Test_Book.ent</filename> file."
 msgstr ""
 
 #. Tag: term
@@ -124,13 +124,13 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "Before running the <command>publican create</command> command, use the <command>cd</command> command to change into the directory where you want the book to be created. For example, to create a book named <literal>Test_Book</literal> in the <filename>my_books/</filename> directory, run the following commands:"
+msgid "Before running the <prompt>$</prompt> <command>publican create</command> command, use the <prompt>$</prompt> <command>cd</command> command to change into the directory where you want the book to be created. For example, to create a book named <literal>Test_Book</literal> in the <filename>my_books/</filename> directory, run the following commands:"
 msgstr ""
 
 #. Tag: screen
 #, no-c-format
 msgid "<prompt>$</prompt> <command>cd my_books/</command> \n"
-"<command>publican create --name Test_Book</command>"
+"<prompt>$</prompt> <command>publican create --name Test_Book</command>"
 msgstr ""
 
 #. Tag: para
@@ -161,7 +161,7 @@ msgstr ""
 #. Tag: screen
 #, no-c-format
 msgid "<prompt>$</prompt> <command>cd Test_Book/</command>\n"
-"<command>ls</command>"
+"<prompt>$</prompt> <command>ls</command>"
 msgstr ""
 
 #. Tag: screen

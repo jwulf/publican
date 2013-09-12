@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2013-08-06 09:04+1000\n"
-"PO-Revision-Date: 2013-08-06 09:04+1000\n"
+"POT-Creation-Date: 2013-09-12 15:22+1000\n"
+"PO-Revision-Date: 2013-09-12 15:22+1000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: None\n"
 "MIME-Version: 1.0\n"
@@ -39,7 +39,7 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "To package a brand, use the <command>publican package</command> command in the brand directory. When used without any further options, <application>Publican</application> produces an SRPM package. The options for packaging a brand are as follows:"
+msgid "To package a brand, use the <prompt>$</prompt> <command>publican package</command> command in the brand directory. When used without any further options, <application>Publican</application> produces an SRPM package. The options for packaging a brand are as follows:"
 msgstr ""
 
 #. Tag: term

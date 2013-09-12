@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2013-08-06 09:04+1000\n"
-"PO-Revision-Date: 2013-08-06 09:04+1000\n"
+"POT-Creation-Date: 2013-09-12 15:22+1000\n"
+"PO-Revision-Date: 2013-09-12 15:22+1000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: None\n"
 "MIME-Version: 1.0\n"
@@ -105,17 +105,17 @@ msgstr ""
 
 #. Tag: title
 #, no-c-format
-msgid "The <command>publican package</command> command"
+msgid "The <prompt>$</prompt> <command>publican package</command> command"
 msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "Use the <command>publican package --lang=<replaceable>Language_Code</replaceable></command> command to package documents for distribution in the language that you specify with the <option>--lang</option> option. Refer to <xref linkend=\"appe-Users_Guide-Language_codes\" /> for more information about language codes."
+msgid "Use the <prompt>$</prompt> <command>publican package --lang=<replaceable>Language_Code</replaceable></command> command to package documents for distribution in the language that you specify with the <option>--lang</option> option. Refer to <xref linkend=\"appe-Users_Guide-Language_codes\" /> for more information about language codes."
 msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "If you run <command>publican package</command> with no options other than the mandatory <option>--lang</option> option, <application>Publican</application> produces a web SRPM package. The full range of options for <command>publican package</command> is as follows:"
+msgid "If you run <prompt>$</prompt> <command>publican package</command> with no options other than the mandatory <option>--lang</option> option, <application>Publican</application> produces a web SRPM package. The full range of options for <command>publican package</command> is as follows:"
 msgstr ""
 
 #. Tag: term
@@ -215,7 +215,7 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "After you run the <command>publican package</command> command, <application>Publican</application> outputs completed SRPM packages to the document's <filename>tmp/rpm</filename> directory, and completed binary RPM packages to the document's <filename>tmp/rpm/noarch</filename> directory."
+msgid "After you run the <prompt>$</prompt> <command>publican package</command> command, <application>Publican</application> outputs completed SRPM packages to the document's <filename>tmp/rpm</filename> directory, and completed binary RPM packages to the document's <filename>tmp/rpm/noarch</filename> directory."
 msgstr ""
 
 #. Tag: para
@@ -261,7 +261,7 @@ msgstr ""
 
 #. Tag: title
 #, no-c-format
-msgid "The <command>publican package</command> command — Example usage"
+msgid "The <prompt>$</prompt> <command>publican package</command> command — Example usage"
 msgstr ""
 
 #. Tag: para
@@ -271,7 +271,7 @@ msgstr ""
 
 #. Tag: term
 #, no-c-format
-msgid "<command>publican package --lang=cs-CZ</command>"
+msgid "<prompt>$</prompt> <command>publican package --lang=cs-CZ</command>"
 msgstr ""
 
 #. Tag: para
@@ -281,7 +281,7 @@ msgstr ""
 
 #. Tag: term
 #, no-c-format
-msgid "<command>publican package --desktop --lang=cs-CZ</command>"
+msgid "<prompt>$</prompt> <command>publican package --desktop --lang=cs-CZ</command>"
 msgstr ""
 
 #. Tag: para
@@ -291,7 +291,7 @@ msgstr ""
 
 #. Tag: term
 #, no-c-format
-msgid "<command>publican package --binary --lang=cs-CZ</command>"
+msgid "<prompt>$</prompt> <command>publican package --binary --lang=cs-CZ</command>"
 msgstr ""
 
 #. Tag: para
@@ -301,7 +301,7 @@ msgstr ""
 
 #. Tag: term
 #, no-c-format
-msgid "<command>publican package --desktop --binary --lang=cs-CZ</command>"
+msgid "<prompt>$</prompt> <command>publican package --desktop --binary --lang=cs-CZ</command>"
 msgstr ""
 
 #. Tag: para
@@ -311,7 +311,7 @@ msgstr ""
 
 #. Tag: term
 #, no-c-format
-msgid "<command>publican package --desktop --short_sighted --lang=cs-CZ</command>"
+msgid "<prompt>$</prompt> <command>publican package --desktop --short_sighted --lang=cs-CZ</command>"
 msgstr ""
 
 #. Tag: para

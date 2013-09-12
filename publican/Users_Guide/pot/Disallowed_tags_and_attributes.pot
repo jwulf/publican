@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2013-08-06 09:04+1000\n"
-"PO-Revision-Date: 2013-08-06 09:04+1000\n"
+"POT-Creation-Date: 2013-09-12 15:22+1000\n"
+"PO-Revision-Date: 2013-09-12 15:22+1000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: None\n"
 "MIME-Version: 1.0\n"
@@ -44,7 +44,7 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "Use the command <command>publican print_known</command> to print a list of tags that <application>Publican</application> supports, and the command <command>publican print_banned</command> to print a list of tags that are banned in <application>Publican</application>."
+msgid "Use the command <prompt>$</prompt> <command>publican print_known</command> to print a list of tags that <application>Publican</application> supports, and the command <command>publican print_banned</command> to print a list of tags that are banned in <application>Publican</application>."
 msgstr ""
 
 #. Tag: title
