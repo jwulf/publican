@@ -3,10 +3,12 @@
 Name:          [% book_title %]-web-[% lang %]
 Version:       [% rpmver %]
 Release:       [% rpmrel %]%{?dist}
-[%- IF translation == 1 -%]Summary:      [% language %] translation of [% book_title %]
-Summary([% lang %]):       [% full_subtitle %][%- END %]
-[%- IF translation != 1 %]
-Summary:       [% full_subtitle %][%- END %]
+[%- IF translation %]
+Summary:      [% language %] translation of [% book_title %]
+Summary([% lang %]):       [% full_subtitle %]
+[%- ELSE %]
+Summary:       [% full_subtitle %]
+[%- END %]
 Group:         Documentation
 License:       [% license %]
 URL:           [% url %]
@@ -16,8 +18,9 @@ BuildRoot:     %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildRequires: publican >= [% spec_version %]
 BuildRequires: desktop-file-utils
 Requires:      publican >= [% spec_version %]
-[%- IF brand != 'publican-common' -%]
-BuildRequires: [% brand %][%- END %]
+[%- IF brand != 'publican-common' %]
+BuildRequires: [% brand %]
+[%- END %]
 [%- IF web_obsoletes -%]
 Obsoletes:    [% web_obsoletes %]
 [%- END %]
@@ -27,7 +30,7 @@ Requires:    [% web_req %]
 Requires:      [% brand %]-web
 
 %description
-[%- IF translation -%]
+[%- IF translation %]
 [% language %] translation of [% book_title %]
 
 %description -l [% lang %]
@@ -83,7 +86,7 @@ cp [% lang %]/images/icon.svg  $RPM_BUILD_ROOT/usr/share/icons/hicolor/scalable/
 [%- END %]
 
 
-cat > [% book_title %]-[% lang %]-[% rpmver %].desktop &lt;&lt;'EOF'
+cat > [% book_title %]-[% lang %]-[% rpmver %].desktop <<'EOF'
 [Desktop Entry]
 Name=[% prod %] [% prodver %]: [% docname %]
 Comment=[% full_subtitle %]

@@ -11,12 +11,11 @@
 %define my_vendor %(test %{OTHER} == 1 && echo "fedora" || echo "redhat")
 
 %define TESTS 1
-%define brand common
 %define wwwdir /var/www/html/docs
 
 Name:           publican
 Version:        3.2.1
-Release:        0%{?dist}.t11
+Release:        0%{?dist}.t13
 Summary:        Common files and scripts for publishing with DocBook XML
 # For a breakdown of the licensing, refer to LICENSE
 License:        (GPLv2+ or Artistic) and CC0
@@ -209,10 +208,10 @@ done
 %find_lang %{name}
 
 # Package web common files
-mkdir -p -m755 $RPM_BUILD_ROOT/%{wwwdir}/%{brand}
+mkdir -p -m755 $RPM_BUILD_ROOT/%{wwwdir}/common
 dir=`pwd`
 cd datadir/Common_Content/common
-%{__perl} -CAS -I $dir/blib/lib $dir/blib/script/publican install_brand --web --path=$RPM_BUILD_ROOT/%{wwwdir}/%{brand}
+%{__perl} -CAS -I $dir/blib/lib $dir/blib/script/publican install_brand --web --path=$RPM_BUILD_ROOT/%{wwwdir}/common
 cd -
 mkdir -p -m755 $RPM_BUILD_ROOT/%{wwwdir}/common-db5
 cd datadir/Common_Content/common-db5
@@ -264,7 +263,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files common-web
 %defattr(-,root,root,-)
-%{wwwdir}/%{brand}
+%{wwwdir}/common
 
 %files common-db5-web
 %defattr(-,root,root,-)

@@ -435,8 +435,6 @@ my $builder = $class->new(
         'datadir/xsl/epub.xsl'          => 'datadir/xsl/epub.xsl',
         'datadir/xsl/eclipse.xsl'       => 'datadir/xsl/eclipse.xsl',
         'datadir/xsl/man.xsl'           => 'datadir/xsl/man.xsl',
-        'datadir/xsl/abstract.xsl'      => 'datadir/xsl/abstract.xsl',
-        'datadir/xsl/subtitle.xsl'      => 'datadir/xsl/subtitle.xsl',
         'datadir/xsl/merge_revisions.xsl' =>
             'datadir/xsl/merge_revisions.xsl',
         'datadir/xsl/db4-upgrade.xsl' => 'datadir/xsl/db4-upgrade.xsl',
