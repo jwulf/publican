@@ -8,8 +8,6 @@ BEGIN {
     use_ok('Publican::CreateBook');
 }
 
-diag("Testing Publican::CreateBook $Publican::CreateBook::VERSION");
-
 my $creator = Publican::CreateBook->new( { name => 'Test_Book' } );
 isa_ok( $creator, 'Publican::CreateBook', 'creating a Publican::CreateBook' );
 

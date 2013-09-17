@@ -643,6 +643,8 @@ sub _load_config {
         croak( maketext( "Can't locate required file: [_1]", $info_file ) )
             if ( !-f $info_file );
 
+## BUGBUG DocBook specific stuff should be moved to the DocBook sub classes
+
         my $xml_doc = XML::TreeBuilder->new();
         $xml_doc->parse_file($info_file);
 
@@ -1059,7 +1061,7 @@ sub get_all_langs {
         if ( -d $dir ) {
             next
                 if ( $dir
-                =~ /^(\.|\.\.|pot|$tmp_dir|xsl|\..*|CVS|publish|book_templates|trans_drop)$/
+                =~ /^(\.|\.\.|pot|$tmp_dir|xsl|\..*|CVS|publish|book_templates|trans_drop|rpm_templates)$/
                 );
 
             if ( valid_lang($dir) ) {
@@ -1135,6 +1137,8 @@ sub maketext {
 
 Return the abstract for the supplied language with all white space truncated.
 
+## BUGBUG this should be moved to the DocBook sub classes
+
 =cut
 
 sub get_abstract {
@@ -1160,10 +1164,17 @@ sub get_abstract {
     croak( maketext("abstract can not be calculated before building.") )
         unless ( -f $info_file );
 
-    my $xsl_file = $self->param('common_config') . "/xsl/abstract.xsl";
+    my $xml_doc = XML::TreeBuilder->new(
+        { 'NoExpand' => "0", 'ErrorContext' => "2" } );
+    $xml_doc->parse_file($info_file);
 
-    my $abstract = $self->run_xslt(
-        { xml_file => $info_file, xsl_file => $xsl_file } );
+    my $abs = $xml_doc->look_down('_tag', 'abstract') || croak(maketext("die die die"));
+#    my $xsl_file = $self->param('common_config') . "/xsl/abstract.xsl";
+
+#    my $abstract = $self->run_xslt(
+#        { xml_file => $info_file, xsl_file => $xsl_file } );
+
+    my $abstract = $abs->as_text();
 
     # tidy up white space
     $abstract =~ s/^[ \t]*//gm;
@@ -1180,6 +1191,8 @@ sub get_abstract {
 =head2 get_subtitle
 
 Return the subtitle for the supplied language with white space truncated.
+
+## BUGBUG this should be moved to the DocBook sub classes
 
 =cut
 
@@ -1225,7 +1238,7 @@ sub get_subtitle {
 
 Return the author list for the supplied language.
 
-BUGBUG This is docbook 4/5 specific and should be moved.
+## BUGBUG this should be moved to the DocBook sub classes
 
 =cut
 
@@ -1306,7 +1319,7 @@ sub get_author_list {
 
 Return the contributor hash for the supplied language.
 
-BUGBUG This is docbook 4/5 specific and should be moved.
+## BUGBUG this should be moved to the DocBook sub classes
 
 =cut
 
@@ -1380,6 +1393,8 @@ sub get_contributors {
 
 Return the contributor hash for the supplied language.
 
+## BUGBUG this should be moved to the DocBook sub classes
+
 =cut
 
 sub get_keywords {
@@ -1421,6 +1436,8 @@ sub get_keywords {
 
 Return the legal notice for the supplied language.
 
+## BUGBUG this should be moved to the DocBook sub classes
+
 =cut
 
 sub get_legalnotice {
@@ -1458,6 +1475,8 @@ sub get_legalnotice {
 =head2 get_draft
 
 Is the book in draft mode?.
+
+## BUGBUG this should be moved to the DocBook sub classes
 
 =cut
 
@@ -1620,7 +1639,8 @@ Parameters:
 	dtdver	 The DTD version
 	ent_file An entity file to include (optional)
 
-BUGBUG: This is docbook 4/5 specific and should be moved
+## BUGBUG this should be moved to the DocBook sub classes
+
 =cut
 
 sub dtd_string {
@@ -1741,6 +1761,8 @@ sub print_banned_tags {
 =head2 add_revision
 
 Add a full entry in to the revision history.
+
+## BUGBUG this should be moved to the DocBook sub classes
 
 =cut
 
@@ -1883,6 +1905,8 @@ Get the current edition (version) and release from the Revision History file.
 Parameters: language, bump.
 
 If bump is set the returned revision will increment before it's returned.
+
+## BUGBUG this should be moved to the DocBook sub classes
 
 =cut
 

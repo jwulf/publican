@@ -14,17 +14,9 @@ use File::Inplace;
 use DBI;
 use Data::Dumper;
 
-use vars qw( $VERSION );
-
-$VERSION = '0.2';
-
 =head1 NAME
 
 Publican::XmlClean - A module to reformat XML to Publican standards
-
-=head1 VERSION
-
-This document describes Publican::XmlClean version $VERSION
 
 =head1 SYNOPSIS
 

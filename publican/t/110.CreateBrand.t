@@ -10,7 +10,6 @@ BEGIN {
     rmtree(['publican-Test_Brand']) if(-e 'publican-Test_Brand');
 }
 
-diag("Testing Publican::CreateBrand $Publican::CreateBrand::VERSION");
 my $creator;
 eval { $creator = Publican::CreateBrand->new( { name => 'Test_Brand' } ); };
 my $e = $@;

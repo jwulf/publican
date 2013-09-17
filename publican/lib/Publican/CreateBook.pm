@@ -12,10 +12,6 @@ use Term::ANSIColor qw(:constants);
 use Publican;
 use Publican::Builder;
 
-use vars qw( $VERSION );
-
-$VERSION = '0.2';
-
 # Icon used for menu
 my $icon = q{<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" width="32" height="32" id="svg3017">
@@ -41,11 +37,6 @@ my $icon = q{<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 =head1 NAME
 
 Publican::CreateBook - A module for generating documentation boilerplate
-
-=head1 VERSION
-
-This document describes Publican::CreateBook version $VERSION
-
 
 =head1 SYNOPSIS
 

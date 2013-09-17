@@ -10,8 +10,6 @@ BEGIN {
     use_ok('Publican::XmlClean');
 }
 
-diag("Testing Publican::XmlClean $Publican::XmlClean::VERSION");
-
 my $dir = pushd("Test_Book");
 
 my $publican = Publican->new(

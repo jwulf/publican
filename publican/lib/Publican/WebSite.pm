@@ -20,8 +20,6 @@ use XML::Simple;
 use Archive::Zip qw( :ERROR_CODES :CONSTANTS );
 use Publican::ConfigData;
 
-our $VERSION = '1.4';
-
 my $DB_NAME           = 'books';
 my $DEFAULT_LANG      = 'en-US';
 my $DEFAULT_TMPL_PATH = Publican::ConfigData->config('templates');
@@ -2027,12 +2025,6 @@ __END__
 =head1 NAME
 
 Publican::WebSite - Manage a documentation website
-
-
-=head1 VERSION
-
-This document describes Publican::WebSite version 0.0.1
-
 
 =head1 SYNOPSIS
 

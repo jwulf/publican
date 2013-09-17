@@ -80,9 +80,12 @@ my $class = Module::Build->subclass(
             eval {
                 require Publican;
                 $Publican::SINGLETON = undef;
+                require Publican::Builder::DocBook;
                 require Publican::Builder::DocBook4;
             };
-            unless($@){
+            if($@){
+                warn($@);
+            } else {
                 my $cwd = getcwd();
                 my $dir = pushd('datadir/Common_Content/common');
                 my $path = "$cwd/blib/datadir/Common_Content";
@@ -108,9 +111,12 @@ my $class = Module::Build->subclass(
             eval {
                 require Publican;
                 $Publican::SINGLETON = undef;
+                require Publican::Builder::DocBook;
                 require Publican::Builder::DocBook5;
             };
-            unless($@){
+            if($@){
+                warn("$@, $!");
+            } else {
                 my $cwd = getcwd();
                 my $dir = pushd('datadir/Common_Content/common-db5');
                 my $path = "$cwd/blib/datadir/Common_Content";
@@ -176,19 +182,15 @@ my $class = Module::Build->subclass(
             $self->config_data('web', abs_path('blib/web'));
             $self->config_data('templates', abs_path('blib/templates'));
             $self->config_data('book_templates', abs_path('blib/book_templates'));
+            $self->config_data('rpm_templates', abs_path('blib/rpm_templates'));
             $self->config_data('docdir', abs_path('pod1'));
-## BUGBUG TODO This hack is so the testing works with publican uninstalled. BZ #908956
-## The real fix is to either move book_templates to the brand or give it it's own conf setting
-            symlink(abs_path('blib/book_templates'), abs_path('blib/datadir')."/Common_Content/common/book_templates");
-            symlink(abs_path('blib/book_templates'), abs_path('blib/datadir')."/Common_Content/common-db5/book_templates");
             $self->SUPER::ACTION_test();
-	    unlink(abs_path('blib/datadir')."/Common_Content/common/book_templates");
-	    unlink(abs_path('blib/datadir')."/Common_Content/common-db5/book_templates");
             $self->config_data('etc', $self->install_path('etc'));
             $self->config_data('datadir', $self->install_path('datadir'));
             $self->config_data('web', $self->install_path('web'));
             $self->config_data('templates', $self->install_path('templates'));
             $self->config_data('book_templates', $self->install_path('book_templates'));
+            $self->config_data('rpm_templates', $self->install_path('rpm_templates'));
             $self->config_data('docdir', $self->install_path('docdir'));
         }
         sub ACTION_update_pod {
@@ -327,8 +329,8 @@ my $builder = $class->new(
         'Term::ANSIColor'                        => 0,
         'Text::Wrap'                             => 0,
         'Time::localtime'                        => 0,
-        'XML::LibXML'                            => 1.67,
-        'XML::LibXSLT'                           => 1.67,
+        'XML::LibXML'                            => 1.70,
+        'XML::LibXSLT'                           => 1.70,
         'XML::Simple'                            => 0,
         'XML::TreeBuilder'                       => 4.4,
         'Text::CSV_XS'                           => 0,
@@ -410,6 +412,7 @@ my $builder = $class->new(
         'web'            => '/usr/share/publican/sitetemplate',
         'templates'      => '/usr/share/publican/templates',
         'book_templates' => '/usr/share/publican/book_templates',
+        'rpm_templates'  => '/usr/share/publican/rpm_templates',
         'etc'            => '/etc',
         'completion'     => '/etc/bash_completion.d',
         'docdir'         => '/usr/share/doc/',
@@ -425,7 +428,6 @@ my $builder = $class->new(
         'datadir/xsl/html-pdf.xsl'      => 'datadir/xsl/html-pdf.xsl',
         'datadir/xsl/html.xsl'          => 'datadir/xsl/html.xsl',
         'datadir/xsl/txt.xsl'           => 'datadir/xsl/txt.xsl',
-        'datadir/xsl/web-spec.xsl'      => 'datadir/xsl/web-spec.xsl',
         'datadir/xsl/web-home-spec.xsl' => 'datadir/xsl/web-home-spec.xsl',
         'datadir/xsl/defaults.xsl'      => 'datadir/xsl/defaults.xsl',
         'datadir/xsl/html-single.xsl'   => 'datadir/xsl/html-single.xsl',
@@ -485,6 +487,8 @@ my $builder = $class->new(
         'book_templates/toc-xsl.tmpl'   => 'book_templates/toc-xsl.tmpl',
         'book_templates/titlepage.tmpl' => 'book_templates/titlepage.tmpl',
     },
+    rpm_templates_files =>
+        { 'rpm_templates/spec.tmpl' => 'rpm_templates/spec.tmpl', },
     etc_files =>
         { 'etc/publican-website.cfg' => 'etc/publican-website.cfg', },
     completion_files => { 'completion/_publican' => 'completion/_publican', },
@@ -500,6 +504,8 @@ if ( $^O eq 'darwin' ) {
         'templates' => '/opt/local/share/publican/templates' );
     $builder->install_path(
         'book_templates' => '/opt/local/share/publican/book_templates' );
+    $builder->install_path(
+        'rpm_templates' => '/opt/local/share/publican/rpm_templates' );
     $builder->install_path( 'etc' => '/opt/local/etc' );
     $builder->install_path(
         'completion' => '/opt/local/etc/bash_completion.d' );
@@ -510,6 +516,7 @@ $builder->add_build_element('data');
 $builder->add_build_element('web');
 $builder->add_build_element('templates');
 $builder->add_build_element('book_templates');
+$builder->add_build_element('rpm_templates');
 $builder->add_build_element('etc');
 $builder->add_build_element('completion');
 $builder->config_data( 'etc',       $builder->install_path('etc') );
@@ -518,6 +525,8 @@ $builder->config_data( 'web',       $builder->install_path('web') );
 $builder->config_data( 'templates', $builder->install_path('templates') );
 $builder->config_data( 'book_templates',
     $builder->install_path('book_templates') );
+$builder->config_data( 'rpm_templates',
+    $builder->install_path('rpm_templates') );
 $builder->config_data( 'docdir', $builder->install_path('docdir') );
 
 $builder->create_build_script();

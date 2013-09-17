@@ -14,7 +14,7 @@ else {
 ## This check fails to differentiate between parameters and class variables
 ## This is not changing a class variable :/
 ##  $config->param( 'lang', delete( $args->{lang} ) ) if ( $args->{lang} );
-        -exclude => ['ProhibitAccessOfPrivateData']
+        -exclude => ['ProhibitAccessOfPrivateData', 'ProhibitLeadingZeros']
     );
 }
 

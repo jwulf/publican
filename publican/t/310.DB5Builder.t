@@ -23,7 +23,7 @@ my $publican = Publican->new(
 my $builder = Publican::Builder::DocBook5->new();
 isa_ok( $builder, 'Publican::Builder::DocBook5', 'creating a Publican::Builder::DocBook5' );
 
-eval { $builder->build( { formats => "html,pdf,html-single", langs => "en-US", pub_dir => 'publishing', embedtoc  => 1} ) };
+eval { $builder->build( { formats => "html,pdf,html-single,txt", langs => "en-US", publish => 1, pub_dir => 'publishing', embedtoc  => 1} ) };
 my $e = $@;
 ok( ( not $e ), "build a DB5 book" );
 diag($e) if $e;

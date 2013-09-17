@@ -12,8 +12,6 @@ BEGIN {
     #use_ok( 'Publican::Builder' );
 }
 
-diag("Testing Publican::Translate $Publican::Translate::VERSION");
-
 #my $dir = pushd("Users_Guide");
 my $dir = pushd("Test_Book");
 

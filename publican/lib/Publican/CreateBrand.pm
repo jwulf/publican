@@ -12,9 +12,8 @@ use Publican;
 use Publican::Builder;
 use Term::ANSIColor qw(:constants uncolor);
 
-use vars qw( $VERSION $MAX_COUNT );
+use vars qw( $MAX_COUNT );
 
-$VERSION   = '0.2';
 $MAX_COUNT = 29;
 
 my $INIT_VERSION = '0.1';
@@ -25,11 +24,6 @@ my $PUBLICAN_NAME = 'publican';
 =head1 NAME
 
 Publican::CreateBrand - A module for generating new brand boilerplate.
-
-=head1 VERSION
-
-This document describes Publican::CreateBrand version 0.1 
-
 
 =head1 SYNOPSIS
 

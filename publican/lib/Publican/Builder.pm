@@ -41,11 +41,10 @@ use Sort::Versions;
 use Template;
 use Encode qw(is_utf8 decode_utf8 encode_utf8);
 
-use vars qw(@ISA $VERSION @EXPORT @EXPORT_OK);
-our ($INVALID, %LANG_MAP);
+use vars qw(@ISA @EXPORT @EXPORT_OK);
+our ( $INVALID, %LANG_MAP );
 @EXPORT = qw($INVALID %LANG_MAP del_unwanted_dirs del_unwanted_xml);
-$VERSION = '0.2';
-@ISA     = qw(Exporter);
+@ISA    = qw(Exporter);
 
 $INVALID = 1;
 
@@ -105,11 +104,6 @@ $columns = $DEFAULT_WRAP;
 
 Publican::Builder - A module to Convert XML to various output formats
 
-
-=head1 VERSION
-
-This document describes Publican::Builder version 0.1
-
 =head1 SYNOPSIS
 
     use Publican::Builder;
@@ -149,6 +143,22 @@ sub new {
     $self->{publican}   = Publican->new();
     $self->{translator} = Publican::Translate->new();
     $self->{validate}   = !$novalid;
+    my $common_content = $self->{publican}->param('common_content');
+    my $common_config  = $self->{publican}->param('common_config');
+    my $brand          = $self->{publican}->param('brand');
+    my $brand_path     = $self->{publican}->param('brand_dir')
+        || $common_content . "/$brand";
+
+
+    my $tmpl_path = Publican::ConfigData->config('rpm_templates');
+    $tmpl_path = "$brand_path/rpm_templates:$tmpl_path"
+        if ( -d "$brand_path/rpm_templates" );
+
+    my $conf = { INCLUDE_PATH => $tmpl_path, };
+
+    #    $conf->{DEBUG} = Template::Constants::DEBUG_ALL;# if ($debug);
+    # create Template object
+    $self->{template} = Template->new($conf) or croak( Template->error() );
 
     return $self;
 }
@@ -163,6 +173,7 @@ Valid formats: eclipse epub html html-single html-desktop man pdf txt
 
 sub build {
     my ( $self, $args ) = @_;
+    logger( "build should be sub-classed!" . "\n", RED );
 
     return;
 }
@@ -225,145 +236,8 @@ unset XML_DEBUG_CATALOG
 
 sub validate_xml {
     my ( $self, $args ) = @_;
-    my $lang = delete( $args->{lang} )
-        || croak( maketext("lang is a mandatory argument") );
-
-    if ( %{$args} ) {
-        croak(
-            maketext(
-                "unknown arguments: [_1]", join( ", ", keys %{$args} )
-            )
-        );
-    }
-
-    my $docname   = $self->{publican}->param('docname');
-    my $dtdver    = $self->{publican}->param('dtdver');
-    my $main_file = $self->{publican}->param('mainfile');
-
-    if (   ( $self->{publican}->param('ignored_translations') )
-        && ( $self->{publican}->param('ignored_translations') =~ m/$lang/ ) )
-    {
-        logger(
-            maketext( "Bypassing test for language: [_1]", $lang ) . "\n" );
-        return (0);
-    }
-
-    my $tmp_dir = $self->{publican}->param('tmp_dir');
-
-    my $dir = pushd("$tmp_dir/$lang/xml");
-
-    # 1.69 blows up if you pass some paramaters in
-    my $parser;
-    if ( $XML::LibXML::VERSION >= 1.70 ) {
-        $parser = XML::LibXML->new(
-            {   pedantic_parser   => 1,
-                suppress_errors   => 0,
-                suppress_warnings => 1,
-                line_numbers      => 1,
-                expand_xinclude   => 1
-            }
-        );
-    }
-    else {
-        $parser = XML::LibXML->new();
-        $parser->line_numbers(1);
-        $parser->expand_xinclude(1);
-    }
-
-    croak(
-        maketext( "Cannot locate main XML file: '[_1]'", "$main_file.xml" ) )
-        unless ( -f "$main_file.xml" );
-
-    my $source;
-    eval { $source = $parser->parse_file("$main_file.xml"); };
-
-    if ($@) {
-        if ( ref($@) ) {
-
-            # handle a structured error (XML::LibXML::Error object)
-            croak(
-                maketext(
-                    "FATAL ERROR: [_1]:[_2] in [_3] on line [_4]: [_5]",
-                    $@->domain(),
-                    $@->code(),
-                    $@->file(),
-                    $@->line(),
-                    $@->message(),
-                )
-            );
-        }
-        else {
-            croak( maketext( "FATAL ERROR: [_1]", $@ ) );
-        }
-    }
-
-## TODO should version be a variable?
-    my $dtd_type = qq|-//OASIS//DTD DocBook XML V$dtdver//EN|;
-    my $dtd_path
-        = qq|http://www.oasis-open.org/docbook/xml/$dtdver/docbookx.dtd|;
-
-    if ( $dtdver =~ m/^5/ ) {
-        $dtd_type = qq|-//OASIS//DTD DocBook XML $dtdver//EN|;
-        $dtd_path = qq|http://docbook.org/xml/$dtdver/rng/docbook.rng|;
-    }
-
-    if ( $^O eq 'MSWin32' ) {
-        eval { require Win32::TieRegistry; };
-        croak(
-            maketext(
-                "Failed to load Win32::TieRegistry module. Error: [_1]", $@
-            )
-        ) if ($@);
-
-        my $key = new Win32::TieRegistry( "LMachine\\Software\\Publican",
-            { Delimiter => "\\" } );
-        if ( $key and $key->GetValue("dtd_path") ) {
-            $dtd_path
-                = 'file:///' . $key->GetValue("dtd_path") . '/docbookx.dtd';
-            $dtd_path =~ s/ /%20/g;
-            $dtd_path =~ s/\\/\//g;
-        }
-        else {
-            $dtd_path = 'file:///C:/publican/DTD/docbookx.dtd';
-        }
-    }
-
-    $dtd_type = $self->{publican}->param('dtd_type')
-        if ( $self->{publican}->param('dtd_type') );
-    $dtd_path = $self->{publican}->param('dtd_uri')
-        if ( $self->{publican}->param('dtd_uri') );
-
-    if ( $dtdver !~ m/^5/ ) {
-        my $dtd = XML::LibXML::Dtd->new( $dtd_type, $dtd_path );
-
-        unless ( $source->is_valid($dtd) ) {
-            logger( maketext("DTD Validation failed: ") . "\n", RED );
-            croak( $source->validate($dtd) );
-        }
-        logger("DTD Validation OK\n");
-    }
-    else {
-## BUGBUG how does this get localised?
-# e.g. even though /usr/share/xml/docbook5/schema/rng/5.0/catalog.xml contains a local link
-# setting location = http://docbook.org/xml/5.0/rng/docbook.rng still does a web look up :(
-## BUGBUG also need to change header ... entities?
-# http://www.docbook.org/xml/5.1b2/rng/docbook.rng
-# http://www.docbook.org/xml/5.0/rng/docbook.rng
-# wget http://docbook.org/xml/5.1b2/tools/db4-upgrade.xsl
-# for file in `ls *.xml`; do echo "$file"; xsltproc ../../db4-upgrade-publican.xsl $file > $file.tmp;mv $file.tmp $file; echo; done
-        my $rngschema = XML::LibXML::RelaxNG->new(
-            location => "http://docbook.org/xml/$dtdver/rng/docbook.rng" );
-        eval { $rngschema->validate($source); };
-        if ($@) {
-            logger( maketext("RelaxNG Validation failed: ") . "\n", RED );
-            croak($!);
-        }
-        logger("RelaxNG Validation OK\n");
-    }
-
-    $dir = undef;
-
-    return (0);
+    logger( "validate_xml should be sub-classed!" . "\n", RED );
+    return;
 }
 
 =head2 package_brand
@@ -404,7 +278,9 @@ sub package_brand {
         rcopy( $file, "$tmp_dir/tar/$tardir/." ) if ( -f $file );
     }
 
-    foreach my $dir ( split( /,/, $langs ), 'pot', 'xsl', 'book_templates' ) {
+    foreach my $dir ( split( /,/, $langs ),
+        'pot', 'xsl', 'book_templates', 'rpm_templates' )
+    {
         dircopy( "$dir", "$tmp_dir/tar/$tardir/$dir" ) if ( -d $dir );
     }
 
@@ -681,7 +557,7 @@ sub package {
 
     if ( $lang ne $xml_lang ) {
         $release = undef;
-
+## BUGBUG this should be moved to the DocBook sub classes
         my $rev_file = "$lang/Revision_History.xml";
         $rev_file = "$lang/" . $self->{publican}->param('rev_file')
             if ( $self->{publican}->param('rev_file') );
@@ -763,7 +639,7 @@ sub package {
     my $license       = $self->{publican}->param('license');
     my $brand         = lc( $self->{publican}->param('brand') );
     my $doc_url       = $self->{publican}->param('doc_url');
-    my $src_url       = $self->{publican}->param('src_url');
+    my $src_url       = $self->{publican}->param('src_url') || "";
     my $dt_obsoletes  = $self->{publican}->param('dt_obsoletes') || "";
     my $dt_requires   = $self->{publican}->param('dt_requires') || "";
     my $web_obsoletes = $self->{publican}->param('web_obsoletes') || "";
@@ -823,6 +699,7 @@ sub package {
 
     my $log = $self->change_log( { lang => $lang } );
 
+## BUGBUG this should be moved to the DocBook sub classes
     my $full_abstract = $self->{publican}->get_abstract( { lang => $lang } );
     $full_abstract =~ s/\p{Z}+/ /g;
 
@@ -834,13 +711,14 @@ sub package {
     # Escape single quotes to prevent bash breaking
     $full_abstract =~ s/"/\\"/g;
 
+## BUGBUG this should be moved to the DocBook sub classes
     my $full_subtitle = $self->{publican}->get_subtitle( { lang => $lang } );
     $full_subtitle =~ s/"/\\"/g;
     $full_subtitle =~ s/\p{Z}+/ /g;
     chomp($full_subtitle);
 
-    my %xslt_opts = (
-        'book-title'      => $name_start,
+    my %vars = (
+        book_title        => $name_start,
         lang              => $lang,
         prod              => $product,
         prodver           => $version,
@@ -897,32 +775,15 @@ sub package {
         return;
     }
 
-    logger(
-        "\t" . maketext( "Using XML::LibXSLT on [_1]", $xsl_file ) . "\n" );
-
-    my $parser    = XML::LibXML->new();
-    my $xslt      = XML::LibXSLT->new();
-    my $info_file = "$tmp_dir/$lang/xml/$type" . '_Info.xml';
-    $info_file = "$tmp_dir/$lang/xml/" . $self->{publican}->param('info_file')
-        if ( $self->{publican}->param('info_file') );
-
-    my $source    = $parser->parse_file($info_file);
-    my $style_doc = $parser->parse_file($xsl_file);
-
-    my $stylesheet = $xslt->parse_stylesheet($style_doc);
-
-    my $results = $stylesheet->transform( $source,
-        XML::LibXSLT::xpath_to_string(%xslt_opts) );
-
-    my $outfile;
     my $spec_name = "$tmp_dir/rpm/$name_start-web-$lang.spec";
     $spec_name = "$tmp_dir/rpm/$name_start-$lang.spec"
         if ( $desktop or $short_sighted );
-
-    open( $outfile, ">:encoding(UTF-8)", "$spec_name" )
-        || croak( maketext( "Can't open spec file: [_1]", $@ ) );
-    print( $outfile $stylesheet->output_string($results) );
-    close($outfile);
+   
+    $self->{template}->process(
+        'spec.tmpl', \%vars,
+        $spec_name,
+        binmode => ':encoding(UTF-8)'
+    ) or croak( $self->{template}->error() );
 
     $self->build_rpm( { spec => $spec_name, binary => $binary } );
 
@@ -933,33 +794,43 @@ sub package {
 
 Determine if the labels use in the web navigation are different from the names used for packaging.
 
+This should be sub-classed.
+
 =cut
 
 sub web_labels {
     my ( $self, $args ) = @_;
-
+    logger( "web_labels should be sub-classed!\n", RED );
     return;
 }
+
+=head2 setup_xml
+
+Create the proper directory structure for the XML, including copying in Brand files.
+
+This should be sub-classed.
+
+=cut
 
 sub setup_xml {
     my ( $self, $args ) = @_;
-            logger(
-                maketext(
-                    "setup_xml should be sub-classed!")
-                    . "\n",
-                RED
-            );
+    logger( "setup_xml should be sub-classed!" . "\n", RED );
     return;
 }
 
+=head2 clean_ids
+
+Travers over the source XML and update the id's to match the standard format.
+
+Updates all existing PO files with the new xref links.
+
+This should be sub-classed.
+
+=cut
+
 sub clean_ids {
     my ( $self, $args ) = @_;
-            logger(
-                maketext(
-                    "clean_ids should be sub-classed!")
-                    . "\n",
-                RED
-            );
+    logger( "clean_ids should be sub-classed!" . "\n", RED );
     return;
 }
 
@@ -967,10 +838,13 @@ sub clean_ids {
 
 Generate an RPM style change log from $xml_lang/Revision_History.xml
 
+This should be sub-classed.
+
 =cut
 
 sub change_log {
     my ( $self, $args ) = @_;
+    logger( "change_log should be sub-classed!" . "\n", RED );
 
     return;
 }
@@ -1109,26 +983,6 @@ sub build_set_books {
 
     return;
 }
-
-=head2  NAME
-
-Description
-
-=cut
-
-=for
-sub NAME {
-    my ( $self, $args ) = @_;
-
-#    my $lang = delete( $args->{lang} ) || croak(maketext("lang is a mandatory argument"));
-#
-#    if ( %{$args} ) {
-#        croak( maketext("unknown arguments: [_1]", join( ", ", keys %{$arg}) ));
-#    }
-
-    return;
-}
-=cut
 
 1;    # Magic true value required at end of module
 __END__

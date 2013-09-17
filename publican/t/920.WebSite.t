@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 
-use Test::More tests => 8;
+use Test::More tests => 9;
 use File::pushd;
 use File::Path;
 
@@ -72,4 +72,14 @@ is( $result, 0, 'report on the content of a Website' );
 $result = system( @perl_args, $publican, 'update_site', '--site_config', $site_config,
     @common_opts );
 is( $result, 0, 'refresh the website structure' );
+
+
+my $CFG;
+open($CFG, ">>", $site_config) || die($!);
+print($CFG "\nweb_style: 2\n");
+close($CFG);
+
+$result = system( @perl_args, $publican, 'update_site', '--site_config', $site_config,
+    @common_opts );
+is( $result, 0, 'refresh the website 2 structure' );
 

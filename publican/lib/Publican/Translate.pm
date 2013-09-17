@@ -16,10 +16,6 @@ use XML::TreeBuilder;
 use String::Similarity;
 use Encode qw(is_utf8 decode_utf8 encode_utf8);
 
-use vars qw($VERSION);
-
-$VERSION = '0.2';
-
 # What tags do we translate?
 my $TRANSTAGS
     = qr/^(?:ackno|bridgehead|caption|conftitle|contrib|entry|firstname|glossterm|indexterm|jobtitle|keyword|label|lastname|lineannotation|lotentry|member|orgdiv|orgname|othername|para|phrase|productname|refclass|refdescriptor|refentrytitle|refmiscinfo|refname|refpurpose|releaseinfo|revremark|screeninfo|secondaryie|seealsoie|seeie|seg|segtitle|simpara|subtitle|surname|term|termdef|tertiaryie|textobject|title|titleabbrev|screen|programlisting|literallayout)$/;
@@ -34,12 +30,6 @@ my $VERBATIM = qr/^(?:screen|programlisting|literallayout)$/;
 =head1 NAME
 
 Publican::Translate - Module for manipulating POT and PO files.
-
-
-=head1 VERSION
-
-This document describes Publican::Translate version $VERSION
-
 
 =head1 SYNOPSIS
 

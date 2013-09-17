@@ -646,12 +646,12 @@ datadir/xsl/pdf.xsl
 datadir/xsl/subtitle.xsl
 datadir/xsl/txt.xsl
 datadir/xsl/web-home-spec.xsl
-datadir/xsl/web-spec.xsl
 datadir/xsl/xhtml-common.xsl
 etc/publican-website.cfg
 fdl.txt
 lib/Publican.pm
 lib/Publican/Builder.pm
+lib/Publican/Builder/DocBook.pm
 lib/Publican/Builder/DocBook4.pm
 lib/Publican/Builder/DocBook5.pm
 lib/Publican/CreateBook.pm
@@ -720,6 +720,7 @@ pod1/publican
 publican.desktop
 publican.spec
 README
+rpm_templates/spec.tmpl
 t/000.load.t
 t/100.CreateBook.t
 t/110.CreateBrand.t

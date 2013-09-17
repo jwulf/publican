@@ -5,22 +5,13 @@ use warnings;
 use Carp;
 use XML::TreeBuilder;
 use Publican;
-use vars qw($VERSION);
 use File::pushd;
 use Term::ANSIColor qw(:constants);
 use File::Basename;
 
-$VERSION = 0.1;
-
 =head1 NAME
 
 Publican::TreeView - Dumper for XInclude project structure.
-
-
-=head1 VERSION
-
-This document describes Publican::TreeView version 0.1
-
 
 =head1 SYNOPSIS
 
