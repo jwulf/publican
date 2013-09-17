@@ -1059,8 +1059,16 @@ if ( $action eq 'install_book' ) {
         my $name_label    = $publican->param('web_name_label');
         my $sort_order    = $publican->param('sort_order');
 
-        my $subtitle = $publican->get_subtitle( { lang => $lang } );
-        my $abstract = $publican->get_abstract( { lang => $lang } );
+        my $builder;
+        if ( $opts{dtdver} && $opts{dtdver} =~ /^5/ ) {
+            $builder = Publican::Builder::DocBook5->new();
+        }
+        else {
+            $builder = Publican::Builder::DocBook4->new();
+        }
+
+        my $subtitle = $builder->get_subtitle( { lang => $lang } );
+        my $abstract = $builder->get_abstract( { lang => $lang } );
 
         croak(
             maketext(

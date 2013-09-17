@@ -700,7 +700,7 @@ sub package {
     my $log = $self->change_log( { lang => $lang } );
 
 ## BUGBUG this should be moved to the DocBook sub classes
-    my $full_abstract = $self->{publican}->get_abstract( { lang => $lang } );
+    my $full_abstract = $self->get_abstract( { lang => $lang } );
     $full_abstract =~ s/\p{Z}+/ /g;
 
     # Wrap description for RPM style requirements
@@ -712,7 +712,7 @@ sub package {
     $full_abstract =~ s/"/\\"/g;
 
 ## BUGBUG this should be moved to the DocBook sub classes
-    my $full_subtitle = $self->{publican}->get_subtitle( { lang => $lang } );
+    my $full_subtitle = $self->get_subtitle( { lang => $lang } );
     $full_subtitle =~ s/"/\\"/g;
     $full_subtitle =~ s/\p{Z}+/ /g;
     chomp($full_subtitle);

@@ -43,7 +43,7 @@ use Encode qw(is_utf8 decode_utf8 encode_utf8);
 
 use vars qw(@ISA @EXPORT @EXPORT_OK);
 
-@ISA     = qw(Publican::Builder);
+@ISA = qw(Publican::Builder);
 
 =head1 NAME
 
@@ -72,7 +72,7 @@ Create a new Publican::Builder::DocBook object.
 sub new {
     my ( $this, $args ) = @_;
     my $class = ref($this) || $this;
-    my $self = $class->SUPER::new( $args );
+    my $self = $class->SUPER::new($args);
 
     bless $self, $class;
 
@@ -514,7 +514,7 @@ sub transform {
         my $template = Template->new($tconf)
             or croak( Template->error() );
 
-        my $subtitle = $self->{publican}->get_subtitle( { lang => $lang } );
+        my $subtitle = $self->get_subtitle( { lang => $lang } );
         $subtitle =~ s/"/\\"/g;
         $subtitle =~ s/\p{Z}+/ /g;
         chomp($subtitle);
@@ -537,16 +537,14 @@ sub transform {
             : $self->{publican}->param('docname');
         $name =~ s/_/ /g;
 
-        my @authors = $self->{publican}->get_author_list( { lang => $lang } );
-        my $contributors
-            = $self->{publican}->get_contributors( { lang => $lang } );
-        my $legalnotice
-            = $self->{publican}->get_legalnotice( { lang => $lang } );
-        my $abstract = $self->{publican}->get_abstract( { lang => $lang } );
+        my @authors = $self->get_author_list( { lang => $lang } );
+        my $contributors = $self->get_contributors( { lang => $lang } );
+        my $legalnotice = $self->get_legalnotice( { lang => $lang } );
+        my $abstract = $self->get_abstract( { lang => $lang } );
         $abstract =~ s/\p{Z}+/ /g;
 
-        my @keywords = $self->{publican}->get_keywords( { lang => $lang } );
-        my $draft = $self->{publican}->get_draft( { lang => $lang } );
+        my @keywords = $self->get_keywords( { lang => $lang } );
+        my $draft = $self->get_draft( { lang => $lang } );
 
         my $xml_file = "$tmp_dir/$lang/xml/" . ucfirst($type) . '_Info.xml';
         $xml_file
@@ -690,7 +688,7 @@ sub transform {
             && $self->{publican}->param('web_style') == 2 )
         {
 
-            #            $xslt_opts{'body.only'} = 1;
+##            $xslt_opts{'body.only'} = 1;
         }
     }
 
@@ -847,6 +845,7 @@ sub transform {
     my $style_doc = $parser->parse_file($xsl_file);
 
 ## BUGBUG get Win32 working with Publican::ConfigData
+## BUGBUG also get catalog working!
     if ( $^O eq 'MSWin32' ) {
         eval { require Win32::TieRegistry; };
         croak(
@@ -2236,6 +2235,408 @@ sub change_log {
     }
 
     return ($log);
+}
+
+=head2 get_abstract
+
+Return the abstract for the supplied language with all white space truncated.
+
+## BUGBUG this should be moved to the DocBook sub classes
+
+=cut
+
+sub get_abstract {
+    my ( $self, $args ) = @_;
+
+    my $lang = delete( $args->{lang} )
+        || croak( maketext("lang is a mandatory argument") );
+
+    if ( %{$args} ) {
+        croak(
+            maketext(
+                "unknown arguments: [_1]", join( ", ", keys %{$args} )
+            )
+        );
+    }
+
+    my $tmp_dir = $self->{publican}->param('tmp_dir');
+    my $info_file
+        = "$tmp_dir/$lang/xml/"
+        . $self->{publican}->param('type')
+        . '_Info.xml';
+    $info_file = "$tmp_dir/$lang/xml/" . $self->{publican}->param('info_file')
+        if ( $self->{publican}->param('info_file') );
+
+    croak( maketext("abstract can not be calculated before building.") )
+        unless ( -f $info_file );
+
+    my $xml_doc = XML::TreeBuilder->new(
+        { 'NoExpand' => "0", 'ErrorContext' => "2" } );
+    $xml_doc->parse_file($info_file);
+
+    my $abs = $xml_doc->look_down( '_tag', 'abstract' )
+        || croak(
+        maketext(
+            "Can not locate '[_1]' tag in file '[_2]'", 'abstract',
+            $info_file
+        )
+        );
+
+    my $abstract = $abs->as_text();
+
+    # tidy up white space
+    $abstract =~ s/^[ \t]*//gm;
+    $abstract =~ s/^\n\n+//;
+    $abstract =~ s/\n\n+$//;
+    $abstract =~ s/\n\n\n/\n\n/g;
+    $abstract =~ s/[ \t][ \t]+/ /gm;
+
+    # RPM doesn't like non-breaking-space
+    $abstract =~ s/\x{A0}/ /gm;
+    return ($abstract);
+}
+
+=head2 get_subtitle
+
+Return the subtitle for the supplied language with white space truncated.
+
+## BUGBUG this should be moved to the DocBook sub classes
+
+=cut
+
+sub get_subtitle {
+    my ( $self, $args ) = @_;
+
+    my $lang = delete( $args->{lang} )
+        || croak( maketext("lang is a mandatory argument") );
+
+    if ( %{$args} ) {
+        croak(
+            maketext(
+                "unknown arguments: [_1]", join( ", ", keys %{$args} )
+            )
+        );
+    }
+
+    my $tmp_dir = $self->{publican}->param('tmp_dir');
+    my $info_file
+        = "$tmp_dir/$lang/xml/"
+        . $self->{publican}->param('type')
+        . '_Info.xml';
+    $info_file = "$tmp_dir/$lang/xml/" . $self->{publican}->param('info_file')
+        if ( $self->{publican}->param('info_file') );
+
+    croak( maketext("subtitle can not be calculated before building.") )
+        unless ( -f $info_file );
+
+    my $xml_doc = XML::TreeBuilder->new(
+        { 'NoExpand' => "0", 'ErrorContext' => "2" } );
+    eval { $xml_doc->parse_file($info_file); };
+    if ($@) {
+        croak( maketext( "FATAL ERROR: [_1]", $@ ) );
+    }
+
+    my $st = $xml_doc->look_down( '_tag', 'subtitle' )
+        || croak(
+        maketext(
+            "Can not locate '[_1]' tag in file '[_2]'", 'subtitle',
+            $info_file
+        )
+        );
+
+    my $subtitle = $st->as_text();
+
+    # tidy up white space
+    $subtitle =~ s/^\s*//gm;
+
+    # RPM doesn't like non-breaking-space
+    $subtitle =~ s/\x{A0}/ /gm;
+    $subtitle =~ s/\s+/ /;
+    $subtitle =~ s/\s*$//gm;
+
+    return ($subtitle);
+}
+
+=head2 get_author_list
+
+Return the author list for the supplied language.
+
+## BUGBUG this should be moved to the DocBook sub classes
+
+=cut
+
+sub get_author_list {
+    my ( $self, $args ) = @_;
+
+    my $lang = delete( $args->{lang} )
+        || croak( maketext("lang is a mandatory argument") );
+
+    if ( %{$args} ) {
+        croak(
+            maketext(
+                "unknown arguments: [_1]", join( ", ", keys %{$args} )
+            )
+        );
+    }
+
+    my @authors;
+
+    my $tmp_dir = $self->{publican}->param('tmp_dir');
+    my $file    = "$tmp_dir/$lang/xml/Author_Group.xml";
+
+    croak( maketext("ERROR: Cannot find Author file Author_Group.xml.") )
+        unless ( -f $file );
+
+    my $xml_doc = XML::TreeBuilder->new(
+        { 'NoExpand' => "0", 'ErrorContext' => "2" } );
+    $xml_doc->parse_file($file);
+
+    foreach my $author ( $xml_doc->root()
+        ->look_down( "_tag", qr/^(?:author|corpauthor|orgname)$/ ) )
+    {
+        if ( $author->tag() =~ /^(?:corpauthor|orgname)$/ ) {
+            my $name;
+
+            eval { $name = $author->as_text; };
+            if ($@) {
+                croak(
+                    maketext(
+                        "corpauthor can not be converted to text as expected."
+                    )
+                );
+            }
+            push( @authors, "$name" );
+        }
+        else {
+            my ( $fn, $sn );
+            eval { $fn = $author->look_down( "_tag", 'firstname' )->as_text; };
+            if ($@) {
+                croak(
+                    maketext(
+                        "Author’s firstname not found in Author_Group.xml as expected."
+                    )
+                );
+            }
+
+            eval { $sn = $author->look_down( "_tag", 'surname' )->as_text; };
+            if ($@) {
+                croak(
+                    maketext(
+                        "Author’s surname not found in Author_Group.xml as expected."
+                    )
+                );
+            }
+
+            push( @authors, "$fn $sn" );
+        }
+    }
+
+    unless (@authors) {
+        croak( maketext("Did not find any authors in Author_Group.xml") );
+    }
+
+    return (@authors);
+}
+
+=head2 get_contributors
+
+Return the contributor hash for the supplied language.
+
+## BUGBUG this should be moved to the DocBook sub classes
+
+=cut
+
+sub get_contributors {
+    my ( $self, $args ) = @_;
+
+    my $lang = delete( $args->{lang} )
+        || croak( maketext("lang is a mandatory argument") );
+
+    if ( %{$args} ) {
+        croak(
+            maketext(
+                "unknown arguments: [_1]", join( ", ", keys %{$args} )
+            )
+        );
+    }
+
+    my %contributors;
+
+    my $tmp_dir = $self->{publican}->param('tmp_dir');
+    my $file    = "$tmp_dir/$lang/xml/Author_Group.xml";
+
+    croak(
+        maketext("contributor list can not be calculated before building.") )
+        unless ( -f $file );
+
+    my $xml_doc = XML::TreeBuilder->new(
+        { 'NoExpand' => "0", 'ErrorContext' => "2" } );
+    $xml_doc->parse_file($file);
+
+    foreach my $node (
+        $xml_doc->root()->look_down(
+            "_tag", qr/^(?:author|editor|othercredit|corpauthor|orgname)$/
+        )
+        )
+    {
+        my %person;
+        if ( $node->attr('class') ) {
+            my $role = $node->attr('class');
+            if ( $role eq "copyeditor" ) {
+                $person{role} = maketext("Copy Editor");
+            }
+            elsif ( $role eq "graphicdesigner" ) {
+                $person{role} = maketext("Graphic Designer");
+            }
+            elsif ( $role eq "productioneditor" ) {
+                $person{role} = maketext("Production Editor");
+            }
+            elsif ( $role eq "technicaleditor" ) {
+                $person{role} = maketext("Technical Editor");
+            }
+            elsif ( $role eq "translator" ) {
+                $person{role} = maketext("Translator");
+            }
+        }
+
+        my @fields
+            = qw/firstname surname email contrib orgname orgdiv corpauthor/;
+        foreach my $field (@fields) {
+            my $field_node = $node->look_down( "_tag", $field );
+            if ($field_node) {
+                $person{$field} = $field_node->as_text();
+            }
+        }
+
+        push( @{ $contributors{ $node->tag() } }, \%person );
+    }
+
+    return ( \%contributors );
+}
+
+=head2 get_keywords
+
+Return the contributor hash for the supplied language.
+
+## BUGBUG this should be moved to the DocBook sub classes
+
+=cut
+
+sub get_keywords {
+    my ( $self, $args ) = @_;
+
+    my $lang = delete( $args->{lang} )
+        || croak( maketext("lang is a mandatory argument") );
+
+    if ( %{$args} ) {
+        croak(
+            maketext(
+                "unknown arguments: [_1]", join( ", ", keys %{$args} )
+            )
+        );
+    }
+
+    my @keywords;
+
+    my $tmp_dir = $self->{publican}->param('tmp_dir');
+    my $info    = ( $self->{publican}->param('info_file')
+            || $self->{publican}->param('type') . '_Info.xml' );
+    my $file = "$tmp_dir/$lang/xml/$info";
+
+    croak( maketext("keyword list can not be calculated before building.") )
+        unless ( -f $file );
+
+    my $xml_doc = XML::TreeBuilder->new(
+        { 'NoExpand' => "0", 'ErrorContext' => "2" } );
+    $xml_doc->parse_file($file);
+
+    foreach my $node ( $xml_doc->root()->look_down( "_tag", 'keyword' ) ) {
+        push( @keywords, $node->as_text() );
+    }
+
+    return (@keywords);
+}
+
+=head2 get_legalnotice
+
+Return the legal notice for the supplied language.
+
+## BUGBUG this should be moved to the DocBook sub classes
+
+=cut
+
+sub get_legalnotice {
+    my ( $self, $args ) = @_;
+
+    my $lang = delete( $args->{lang} )
+        || croak( maketext("lang is a mandatory argument") );
+
+    if ( %{$args} ) {
+        croak(
+            maketext(
+                "unknown arguments: [_1]", join( ", ", keys %{$args} )
+            )
+        );
+    }
+
+    my @keywords;
+
+    my $tmp_dir = $self->{publican}->param('tmp_dir');
+    my $file    = "$tmp_dir/$lang/xml/Common_Content/Legal_Notice.xml";
+
+    croak( maketext("Legal notice can not be calculated before building.") )
+        unless ( -f $file );
+
+    my $xml_doc = XML::TreeBuilder->new(
+        { 'NoExpand' => "0", 'ErrorContext' => "2" } );
+    $xml_doc->parse_file($file);
+
+    return (
+        $xml_doc->root()->look_down( "_tag", 'legalnotice' )->as_text() );
+}
+
+=head2 get_draft
+
+Is the book in draft mode?.
+
+## BUGBUG this should be moved to the DocBook sub classes
+
+=cut
+
+sub get_draft {
+    my ( $self, $args ) = @_;
+
+    my $lang = delete( $args->{lang} )
+        || croak( maketext("lang is a mandatory argument") );
+
+    if ( %{$args} ) {
+        croak(
+            maketext(
+                "unknown arguments: [_1]", join( ", ", keys %{$args} )
+            )
+        );
+    }
+
+    my $main_file = $self->{publican}->param('mainfile');
+    my $draft     = 0;
+
+    my $tmp_dir = $self->{publican}->param('tmp_dir');
+    my $file    = "$tmp_dir/$lang/xml/$main_file.xml";
+
+    croak(
+        maketext(
+            "Main XML file ([_1]) can not be calculated before building.",
+            "$main_file.xml"
+        )
+    ) unless ( -f $file );
+
+    my $xml_doc = XML::TreeBuilder->new(
+        { 'NoExpand' => "0", 'ErrorContext' => "2" } );
+    $xml_doc->parse_file($file);
+
+    $draft = ( $xml_doc->root()->attr('status')
+            && $xml_doc->root()->attr('status') eq 'draft' );
+    return ($draft);
 }
 
 1;    # Magic true value required at end of module

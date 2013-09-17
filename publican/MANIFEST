@@ -629,7 +629,6 @@ datadir/Common_Content/common/zh-TW/Revision_History.xml
 datadir/default.db
 datadir/fop/fop.xconf
 datadir/rpmlint.cfg
-datadir/xsl/abstract.xsl
 datadir/xsl/carousel.xsl
 datadir/xsl/db4-upgrade.xsl
 datadir/xsl/defaults.xsl
@@ -643,7 +642,6 @@ datadir/xsl/html.xsl
 datadir/xsl/man.xsl
 datadir/xsl/merge_revisions.xsl
 datadir/xsl/pdf.xsl
-datadir/xsl/subtitle.xsl
 datadir/xsl/txt.xsl
 datadir/xsl/web-home-spec.xsl
 datadir/xsl/xhtml-common.xsl
