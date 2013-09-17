@@ -29,6 +29,7 @@ use Cwd qw(abs_path cwd);
 use File::Basename;
 use File::HomeDir;
 use Publican::ConfigData;
+use Encode qw(is_utf8 decode_utf8 encode_utf8);
 
 my $VERSION           = "$Publican::VERSION";
 my $LANG_PATTERN      = q|__LANG__|;
@@ -748,13 +749,18 @@ if ( -f $configfile ) {
         || croak(
         maketext( "Failed to load user config file: [_1]", $configfile ) );
 
-    $opts{firstname} = $user_cfg->param('firstname')
+    $opts{firstname} = decode_utf8( $user_cfg->param('firstname') )
         unless ( $opts{firstname} );
-    $opts{surname} = $user_cfg->param('surname') unless ( $opts{surname} );
-    $opts{email}   = $user_cfg->param('email')   unless ( $opts{email} );
-    $opts{lang}    = $user_cfg->param('lang')    unless ( $opts{lang} );
-    $opts{formats} = $user_cfg->param('formats') unless ( $opts{formats} );
-    $opts{langs}   = $user_cfg->param('langs')   unless ( $opts{langs} );
+    $opts{surname} = decode_utf8( $user_cfg->param('surname') )
+        unless ( $opts{surname} );
+    $opts{email} = decode_utf8( $user_cfg->param('email') )
+        unless ( $opts{email} );
+    $opts{lang} = decode_utf8( $user_cfg->param('lang') )
+        unless ( $opts{lang} );
+    $opts{formats} = decode_utf8( $user_cfg->param('formats') )
+        unless ( $opts{formats} );
+    $opts{langs} = decode_utf8( $user_cfg->param('langs') )
+        unless ( $opts{langs} );
 }
 
 if ( defined( $opts{src_dir} ) ) {
