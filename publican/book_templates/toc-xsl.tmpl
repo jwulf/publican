@@ -19,6 +19,9 @@
         	background-position: center;
 	  }
 [%- END -%]
+          body {
+	    font-family: "liberation sans", "Myriad ", "Bitstream Vera Sans", "Lucida Grande", "Luxi Sans", "Trebuchet MS", helvetica, verdana, arial, sans-serif;
+	  }
           h1 {
             text-align: center;
             font-size: 20px;
@@ -28,8 +31,10 @@
           div { }
           span.page {
             float: right;
-            padding-left: 2em !important;
-            margin-left: 2em !important;
+            padding-left: 1em;
+            background: white;
+            position: relative;
+            z-index: 1;
           }
           li li span.filler {
             border-style: none !important;
@@ -60,8 +65,14 @@
           a {
             text-decoration:none;
             color: black;
-            padding-right: 0.5em;
           }
+          body > ul {
+	  }
+	  body > ul > li >div> a:first-child {
+            padding-right: 1em;
+            background: white;
+          }
+
           body > ul > li:before {
             float: left;
             width: 0;
@@ -112,3 +123,4 @@
     </li>
   </xsl:template>
 </xsl:stylesheet>
+
