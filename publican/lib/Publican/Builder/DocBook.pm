@@ -580,12 +580,15 @@ sub transform {
             legaltitle    => decode_utf8( $locale->maketext("Legal Notice") ),
             abstract      => $abstract,
             abstracttitle => decode_utf8( $locale->maketext("Abstract") ),
-            keywords      => \@keywords,
             keywordtitle  => decode_utf8( $locale->maketext("Keywords") ),
             toctitle => decode_utf8( $locale->maketext("Table of Contents") ),
             logo     => ( $logo || 'Common_Content/images/title_logo.svg' ),
             buildpath => abs_path("$tmp_dir/$lang/html-pdf"),
         };
+
+        if (@keywords) {
+            $vars->{keywords} = \@keywords;
+        }
 
         if ($edition) {
             $vars->{edition} = decode_utf8(

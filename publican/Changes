@@ -7,6 +7,7 @@ NEXT UNRELEASED
 - Change Cover page font. BZ #1006134
 - Fix TOC leader in PDF. BZ #1006056
 - Fix PDF Legal Notice trademarks & formatting. BZ #970851
+- Fix keyword lable showing in PDF when there are no keywords. BZ #1007146
 
 3.2.1 Wed Sep 04 2013
 - Fix empty images dir causing packaging fail. BZ #995896
