@@ -6,8 +6,8 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<link rel="stylesheet" href="Common_Content/css/pdf.css" type="text/css" />
 </head>
-<body class="cover">
-    <div [%- IF draft -%]class="draft"[%- END -%]>
+<body class="cover[%- IF draft -%] draft[%- END -%]">
+    <div class="titlepage1[%- IF draft -%] draft[%- END -%]">
 	<div class="logo" style="background-image:url([% logo %])"></div>
 	<div class="leader">
 		<div class="product">[%- product -%]</div>
@@ -23,8 +23,7 @@
 	[%- END %]
 	</div>
     </div>
-<div class="titlepages">
-    <div [%- IF draft -%]class="draft"[%- END -%]>
+    <div class="titlepage2[%- IF draft -%] draft[%- END -%]">
 	<div class="title">
 		<span class="product">[%- product -%]</span> <span class="version">[%- version -%]</span> <span class="docname">[%- docname -%]</span>
 	</div>
@@ -93,11 +92,11 @@
 	[%- END %]
 	</div>
 	[%- END %]
+    </div>
+    <div class="titlepage3[%- IF draft -%] draft[%- END -%]">
 	<div class="legalnotice">
 		<h1>[%- legaltitle -%]</h1>
-		<div>
-			[%- legalnotice -%]
-		</div>
+		[%- legalnotice -%]
 	</div>
 
 	[%- IF keywords -%]

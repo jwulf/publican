@@ -2282,7 +2282,7 @@ sub get_abstract {
         )
         );
 
-    my $abstract = $abs->as_text();
+    my $abstract = $abs->as_HTML();
 
     # tidy up white space
     $abstract =~ s/^[ \t]*//gm;
@@ -2523,8 +2523,10 @@ sub get_legalnotice {
         { 'NoExpand' => "0", 'ErrorContext' => "2" } );
     $xml_doc->parse_file($file);
 
-    return (
-        $xml_doc->root()->look_down( "_tag", 'legalnotice' )->as_text() );
+    my $ln = $xml_doc->root()->look_down( "_tag", 'legalnotice' );
+    $ln->detach();
+    my $html = $self->to_html( { xml_doc => $ln } );
+    return ($html);
 }
 
 =head2 get_draft
@@ -2569,6 +2571,1000 @@ sub get_draft {
     $draft = ( $xml_doc->root()->attr('status')
             && $xml_doc->root()->attr('status') eq 'draft' );
     return ($draft);
+}
+
+=head2 to_html
+
+Convert an XML::Element node containing DocBook XML directly to HTML text.
+
+=cut
+
+sub to_html {
+    my ( $self, $args ) = @_;
+
+    my $xml_doc = delete( $args->{xml_doc} )
+        || croak( maketext("xml_doc is a mandatory argument") );
+
+    if ( %{$args} ) {
+        croak(
+            maketext(
+                "unknown arguments: [_1]", join( ", ", keys %{$args} )
+            )
+        );
+    }
+    my $text;
+
+    my %titles;
+
+    my %MAP_OUT = (
+## structural
+        article => { tag => 'section' },
+        book    => { tag => 'section' },
+        part    => { tag => 'section' },
+        set     => { tag => 'section' },
+##sections
+        appendix   => { tag => 'section' },
+        chapter    => { tag => 'section' },
+        refsect1   => { tag => 'section' },
+        refsect2   => { tag => 'section' },
+        refsect3   => { tag => 'section' },
+        refsection => { tag => 'section' },
+        sect1      => { tag => 'section' },
+        sect2      => { tag => 'section' },
+        sect3      => { tag => 'section' },
+        sect4      => { tag => 'section' },
+        sect5      => { tag => 'section' },
+        section    => { tag => 'section' },
+        toc        => { tag => 'section' },
+
+## blocks
+        abstract         => { tag => 'div' },
+        acknowledgements => { tag => 'div' },
+        address          => { tag => 'address' },
+        annotation       => { tag => 'div' },
+        answer           => { tag => 'div' },
+        bibliodiv        => { tag => 'div' },
+        biblioentry      => { tag => 'div' },
+        bibliography     => { tag => 'div' },
+        bibliolist       => { tag => 'div' },
+        bibliomixed      => { tag => 'div' },
+        bibliomset       => { tag => 'div' },
+        biblioset        => { tag => 'div' },
+        blockquote       => { tag => 'blockquote' },
+        bridgehead       => { tag => 'div' },
+        callout          => { tag => 'div' },
+        calloutlist      => { tag => 'div' },
+        caption          => { tag => 'div' },
+        caution          => { tag => 'div' },
+        colophon         => { tag => 'div' },
+        constraintdef    => { tag => 'div' },
+        corpauthor       => { tag => 'div' },
+        cover            => { tag => 'div' },
+        epigraph         => { tag => 'div' },
+        equation         => { tag => 'div' },
+        example          => { tag => 'div' },
+        figure           => { tag => 'figure' },
+        formalpara       => { tag => 'div' },
+        glossary         => { tag => 'div' },
+        glossdef         => { tag => 'div' },
+        glossdiv         => { tag => 'div' },
+        glossentry       => { tag => 'div' },
+        glosslist        => { tag => 'div' },
+        glosssee         => { tag => 'div' },
+        glossseealso     => { tag => 'div' },
+        imageobjectco    => { tag => 'div' },
+        important        => { tag => 'section' },
+        index            => { tag => 'div' },
+        indexdiv         => { tag => 'div' },
+        indexentry       => { tag => 'div' },
+        informalequation => { tag => 'div' },
+        informalexample  => { tag => 'div' },
+        informalfigure   => { tag => 'div' },
+        informaltable    => { tag => 'div' },
+        itemizedlist     => { tag => 'ul' },
+        legalnotice      => { tag => 'div' },
+        listitem => { tags => { default => 'li', varlistentry => 'dd' } },
+        literallayout     => { tag => 'div' },
+        mediaobject       => { tag => 'div' },
+        member            => { tag => 'li' },
+        msg               => { tag => 'div' },
+        msgentry          => { tag => 'div' },
+        msgexplan         => { tag => 'div' },
+        msgmain           => { tag => 'div' },
+        msgset            => { tag => 'div' },
+        note              => { tag => 'section' },
+        orderedlist       => { tag => 'ol' },
+        para              => { tag => 'div' },
+        partintro         => { tag => 'div' },
+        personblurb       => { tag => 'div' },
+        preface           => { tag => 'section' },
+        primaryie         => { tag => 'div' },
+        printhistory      => { tag => 'div' },
+        procedure         => { tag => 'ol' },
+        productionset     => { tag => 'div' },
+        programlisting    => { tag => 'pre' },
+        programlistingco  => { tag => 'div' },
+        qandadiv          => { tag => 'div' },
+        qandaentry        => { tag => 'li' },
+        qandaset          => { tag => 'ol' },
+        refentry          => { tag => 'div' },
+        refentrytitle     => { tag => 'div' },
+        reference         => { tag => 'div' },
+        refnamediv        => { tag => 'div' },
+        refsynopsisdiv    => { tag => 'div' },
+        revhistory        => { tag => 'div' },
+        revision          => { tag => 'div' },
+        screen            => { tag => 'pre' },
+        screenco          => { tag => 'div' },
+        screenshot        => { tag => 'div' },
+        secondaryie       => { tag => 'div' },
+        seealsoie         => { tag => 'div' },
+        seeie             => { tag => 'div' },
+        setindex          => { tag => 'div' },
+        sidebar           => { tag => 'aside' },
+        simpara           => { tag => 'p' },
+        simplelist        => { tag => 'ul' },
+        simplemsgentry    => { tag => 'div' },
+        simplesect        => { tag => 'div' },
+        step              => { tag => 'li' },
+        stepalternatives  => { tag => 'li' },
+        substeps          => { tag => 'ol' },
+        subtitle          => { tag => 'h2' },
+        synopfragment     => { tag => 'div' },
+        synopfragmentref  => { tag => 'div' },
+        task              => { tag => 'div' },
+        taskprerequisites => { tag => 'div' },
+        taskrelated       => { tag => 'div' },
+        tasksummary       => { tag => 'div' },
+        term              => { tag => 'dt' },
+        tertiaryie        => { tag => 'div' },
+        tip               => { tag => 'section' },
+        title             => { tag => 'h1' },
+        tocdiv            => { tag => 'div' },
+        tocentry          => { tag => 'div' },
+        variablelist      => { tag => 'dl' },
+        varlistentry      => { tag => 'RWC' },
+        warning           => { tag => 'section' },
+
+## inline
+        abbrev            => { tag => 'abbr' },
+        accel             => { tag => 'span' },
+        acronym           => { tag => 'span' },
+        anchor            => { tag => 'span' },
+        application       => { tag => 'span' },
+        artpagenums       => { tag => 'span' },
+        authorinitials    => { tag => 'span' },
+        bibliocoverage    => { tag => 'span' },
+        biblioid          => { tag => 'span' },
+        bibliomisc        => { tag => 'span' },
+        biblioref         => { tag => 'span' },
+        bibliorelation    => { tag => 'span' },
+        bibliosource      => { tag => 'span' },
+        citation          => { tag => 'span' },
+        citebiblioid      => { tag => 'span' },
+        citerefentry      => { tag => 'span' },
+        citetitle         => { tag => 'span' },
+        city              => { tag => 'span' },
+        classname         => { tag => 'span' },
+        co                => { tag => 'span' },
+        code              => { tag => 'span' },
+        command           => { tag => 'span' },
+        computeroutput    => { tag => 'samp' },
+        constant          => { tag => 'span' },
+        coref             => { tag => 'span' },
+        country           => { tag => 'span' },
+        database          => { tag => 'span' },
+        date              => { tag => 'span' },
+        email             => { tag => 'a' },
+        emphasis          => { tag => 'span' },
+        envar             => { tag => 'span' },
+        errorcode         => { tag => 'span' },
+        errorname         => { tag => 'span' },
+        errortext         => { tag => 'span' },
+        errortype         => { tag => 'span' },
+        exceptionname     => { tag => 'span' },
+        fax               => { tag => 'span' },
+        filename          => { tag => 'span' },
+        firstname         => { tag => 'span' },
+        firstterm         => { tag => 'span' },
+        foreignphrase     => { tag => 'span' },
+        funcdef           => { tag => 'span' },
+        funcparams        => { tag => 'span' },
+        function          => { tag => 'span' },
+        glossterm         => { tag => 'span' },
+        group             => { tag => 'span' },
+        guibutton         => { tag => 'span' },
+        guiicon           => { tag => 'span' },
+        guilabel          => { tag => 'span' },
+        guimenu           => { tag => 'span' },
+        guimenuitem       => { tag => 'span' },
+        guisubmenu        => { tag => 'span' },
+        hardware          => { tag => 'span' },
+        holder            => { tag => 'span' },
+        honorific         => { tag => 'span' },
+        initializer       => { tag => 'span' },
+        inlineequation    => { tag => 'span' },
+        inlinemediaobject => { tag => 'div' },
+        interfacename     => { tag => 'span' },
+        keycap            => { tag => 'span' },
+        keycode           => { tag => 'span' },
+        keycombo          => { tag => 'span' },
+        keysym            => { tag => 'span' },
+        lhs               => { tag => 'span' },
+        lineage           => { tag => 'span' },
+        lineannotation    => { tag => 'span' },
+        link              => { tag => 'span' },
+        literal           => { tag => 'span' },
+        manvolnum         => { tag => 'span' },
+        markup            => { tag => 'span' },
+        mathphrase        => { tag => 'span' },
+        menuchoice        => { tag => 'span' },
+        methodname        => { tag => 'span' },
+        methodparam       => { tag => 'span' },
+        modifier          => { tag => 'span' },
+        mousebutton       => { tag => 'span' },
+        nonterminal       => { tag => 'span' },
+        olink             => { tag => 'span' },
+        ooclass           => { tag => 'span' },
+        ooexception       => { tag => 'span' },
+        oointerface       => { tag => 'span' },
+        option            => { tag => 'span' },
+        optional          => { tag => 'span' },
+        orgdiv            => { tag => 'span' },
+        orgname           => { tag => 'span' },
+        otheraddr         => { tag => 'span' },
+        othername         => { tag => 'span' },
+        package           => { tag => 'span' },
+        pagenums          => { tag => 'span' },
+        paramdef          => { tag => 'span' },
+        parameter         => { tag => 'span' },
+        phone             => { tag => 'span' },
+        phrase            => { tag => 'span' },
+        pob               => { tag => 'span' },
+        postcode          => { tag => 'span' },
+        productname       => { tag => 'span' },
+        productnumber     => { tag => 'span' },
+        prompt            => { tag => 'span' },
+        property          => { tag => 'span' },
+        pubdate           => { tag => 'span' },
+        quote             => { tag => 'span' },
+        refpurpose        => { tag => 'span' },
+        replaceable       => { tag => 'span' },
+        returnvalue       => { tag => 'span' },
+        revnumber         => { tag => 'span' },
+        rhs               => { tag => 'span' },
+        sbr               => { tag => 'span' },
+        seriesvolnums     => { tag => 'span' },
+        shortcut          => { tag => 'span' },
+        state             => { tag => 'span' },
+        street            => { tag => 'span' },
+        subscript         => { tag => 'span' },
+        superscript       => { tag => 'span' },
+        surname           => { tag => 'span' },
+        symbol            => { tag => 'span' },
+        systemitem        => { tag => 'span' },
+        tag               => { tag => 'span' },
+        termdef           => { tag => 'span' },
+        varname           => { tag => 'span' },
+        void              => { tag => 'span' },
+        volumenum         => { tag => 'span' },
+        wordasword        => { tag => 'span' },
+        xref              => { tag => 'a', attrs => { linkend => 'href' } },
+        year              => { tag => 'span' },
+
+        # © ®
+## inline or block
+        affiliation    => { tag => 'div' },
+        alt            => { tag => 'div' },
+        arg            => { tag => 'div' },
+        attribution    => { tag => 'div' },
+        author         => { tag => 'div' },
+        authorgroup    => { tag => 'div' },
+        collab         => { tag => 'div' },
+        imageobject    => { tag => 'div' },
+        issuenum       => { tag => 'div' },
+        jobtitle       => { tag => 'div' },
+        msgaud         => { tag => 'div' },
+        msginfo        => { tag => 'div' },
+        msglevel       => { tag => 'div' },
+        msgorig        => { tag => 'div' },
+        msgrel         => { tag => 'div' },
+        msgsub         => { tag => 'div' },
+        msgtext        => { tag => 'div' },
+        org            => { tag => 'div' },
+        othercredit    => { tag => 'div' },
+        person         => { tag => 'div' },
+        personname     => { tag => 'div' },
+        publisher      => { tag => 'div' },
+        publishername  => { tag => 'div' },
+        refclass       => { tag => 'div' },
+        refdescriptor  => { tag => 'div' },
+        refmiscinfo    => { tag => 'div' },
+        refname        => { tag => 'div' },
+        releaseinfo    => { tag => 'div' },
+        remark         => { tag => 'div' },
+        revdescription => { tag => 'div' },
+        revremark      => { tag => 'div' },
+        shortaffil     => { tag => 'div' },
+        subject        => { tag => 'div' },
+        subjectset     => { tag => 'div' },
+        subjectterm    => { tag => 'div' },
+        textdata       => { tag => 'div' },
+        textobject     => { tag => 'div' },
+        titleabbrev    => { tag => 'div' },
+        token          => { tag => 'div' },
+        trademark      => { tag => 'span', content => ' ®' },
+        type           => { tag => 'div' },
+        uri            => { tag => 'div' },
+        userinput      => { tag => 'span' },
+        varargs        => { tag => 'div' },
+        videodata      => { tag => 'div' },
+        videoobject    => { tag => 'div' },
+
+## Complex
+        classsynopsisinfo   => { tag  => 'div' },
+        funcsynopsisinfo    => { tag  => 'div' },
+        synopsis            => { tag  => 'div' },
+        arc                 => { tag  => 'div' },
+        area                => { tag  => 'div' },
+        areaset             => { tag  => 'div' },
+        areaspec            => { tag  => 'div' },
+        audiodata           => { tag  => 'div' },
+        audioobject         => { tag  => 'div' },
+        classsynopsis       => { tag  => 'div' },
+        cmdsynopsis         => { tag  => 'div' },
+        col                 => { tag  => 'col' },
+        colgroup            => { tag  => 'colgroup' },
+        colspec             => { tag  => 'col' },
+        confdates           => { tag  => 'div' },
+        confgroup           => { tag  => 'div' },
+        confnum             => { tag  => 'div' },
+        confsponsor         => { tag  => 'div' },
+        conftitle           => { tag  => 'div' },
+        constraint          => { tag  => 'div' },
+        constructorsynopsis => { tag  => 'div' },
+        contractnum         => { tag  => 'div' },
+        contractsponsor     => { tag  => 'div' },
+        contrib             => { tag  => 'div' },
+        copyright           => { tag  => 'span', content => ' ©' },
+        dedication          => { tag  => 'div' },
+        destructorsynopsis  => { tag  => 'div' },
+        edition             => { tag  => 'div' },
+        editor              => { tag  => 'div' },
+        entry               => { tags => { default => 'td', thead => 'th' } },
+        entrytbl            => { tag  => 'table' },
+        extendedlink        => { tag  => 'div' },
+        fieldsynopsis       => { tag  => 'div' },
+        footnote            => { tag  => 'div' },
+        footnoteref         => { tag  => 'div' },
+        funcprototype       => { tag  => 'div' },
+        funcsynopsis        => { tag  => 'div' },
+        imagedata       => { tag => 'img', attrs => { fileref => 'src' } },
+        indexterm       => { tag => 'div' },
+        info            => { tag => 'div' },
+        itermset        => { tag => 'div' },
+        keyword         => { tag => 'div' },
+        keywordset      => { tag => 'div' },
+        label           => { tag => 'div' },
+        locator         => { tag => 'div' },
+        methodsynopsis  => { tag => 'div' },
+        primary         => { tag => 'div' },
+        production      => { tag => 'div' },
+        productionrecap => { tag => 'div' },
+        question        => { tag => 'div' },
+        refmeta         => { tag => 'div' },
+        row             => { tag => 'tr' },
+        secondary       => { tag => 'div' },
+        see             => { tag => 'div' },
+        seealso         => { tag => 'div' },
+        seg             => { tag => 'div' },
+        seglistitem     => { tag => 'div' },
+        segmentedlist   => { tag => 'div' },
+        segtitle        => { tag => 'div' },
+        spanspec        => { tag => 'div' },
+        table           => { tag => 'table' },
+        tbody           => { tag => 'tbody' },
+        td              => { tag => 'td' },
+        tertiary        => { tag => 'div' },
+        tfoot           => { tag => 'tfoot' },
+        tgroup          => { tag => 'colgroup' },
+        th              => { tag => 'th' },
+        thead           => { tag => 'thead' },
+        tr              => { tag => 'tr' },
+        mml             => { tag => 'div' },
+        svg             => { tag => 'div' },
+
+## db4 ... if we feel like it?
+        bookinfo => { tag => 'div' },
+        ulink    => { tag => 'a', attrs => { url => 'href' } },
+        sgmltag  => { tag => 'span' },
+    );
+
+    my $empty_element_map = $xml_doc->_empty_element_map;
+    $empty_element_map->{img} = 1;
+    $empty_element_map->{col} = 1;
+
+## Loop through all tags and change them
+## 'tag' means there is only one choice
+## 'tags' means the new class depends on parent or grand parent
+    foreach my $node ( $xml_doc->root()->look_down( '_tag', qr/.*/ ) ) {
+        my $tag = $node->tag();
+        my $newtag;
+        my $content = undef;
+        if ( defined( $MAP_OUT{$tag}->{'tags'} ) ) {
+            my $par_tag   = $node->parent->tag();
+            my $par_class = ( $node->parent->attr('class') || '' );
+            my $gp_tag    = $node->parent->parent->tag();
+            if ( defined( $MAP_OUT{$tag}->{'tags'}->{$par_tag} ) ) {
+                $newtag = $MAP_OUT{$tag}->{'tags'}->{$par_tag};
+            }
+            elsif ( defined( $MAP_OUT{$tag}->{'tags'}->{$par_class} ) ) {
+                $newtag = $MAP_OUT{$tag}->{'tags'}->{$par_class};
+            }
+            elsif ( defined( $MAP_OUT{$tag}->{'tags'}->{$gp_tag} ) ) {
+                $newtag = $MAP_OUT{$tag}->{'tags'}->{$gp_tag};
+            }
+            else {
+                $newtag = $MAP_OUT{$tag}->{'tags'}->{'default'};
+            }
+        }
+        elsif ( defined( $MAP_OUT{$tag}->{'tag'} ) ) {
+            $newtag = $MAP_OUT{$tag}->{'tag'};
+        }
+        else {
+            logger( maktext( "Unknow tag: [_1]", $tag ) . "\n", RED );
+            next;
+        }
+
+        $node->tag($newtag);
+        my $class = $tag;
+
+        # status becomes class
+        if ( $node->attr('status') ) {
+            $class .= " " . $node->attr('status');
+            $node->attr( 'status', undef );
+        }
+
+        # role becomes class
+        if ( $node->attr('role') ) {
+            $class .= " " . $node->attr('role');
+            $node->attr( 'role', undef );
+        }
+
+        # extra admonition class for styling
+        $class .= ' admonition'
+            if ( $tag =~ /(?:note|warning|tip|important|caution)/ );
+
+        $node->attr( 'class', $class ) unless ( $node->attr('class') );
+
+    # get rid of some unused attributes
+    # BUGBUG some of these may need to be acted on
+    # BUGBUG some of these are used for profiling and _do_ need to be acted on
+        $node->attr( 'conformance', undef );
+        $node->attr( 'format',      undef );
+        $node->attr( 'remap',       undef );
+        $node->attr( 'scheme',      undef );
+        $node->attr( 'spacing',     undef );
+        $node->attr( 'frame',       undef );
+        $node->attr( 'xml:base',    undef );
+        $node->attr( 'scalefit',    undef );
+        $node->attr( 'colsep',      undef );
+        $node->attr( 'rowsep',      undef );
+        $node->attr( 'align',       undef );
+        $node->attr( 'colname',     undef );
+        $node->attr( 'cols',        undef );
+        $node->attr( 'colnum',      undef );
+        $node->attr( 'colwidth',    undef );
+
+        # Some attributes map directly
+        if ( defined( $MAP_OUT{$tag}->{'attrs'} ) ) {
+            foreach my $attr ( keys( %{ $MAP_OUT{$tag}->{'attrs'} } ) ) {
+                if ( $node->attr($attr) ) {
+                    $node->attr( $MAP_OUT{$tag}->{'attrs'}->{$attr},
+                        $node->attr($attr) );
+                    $node->attr( $attr, undef );
+                }
+            }
+        }
+
+        if ( $tag eq 'email' ) {
+            $node->attr( 'href', 'mailto:' . $node->as_text() );
+        }
+
+        if ( $MAP_OUT{$tag}->{content} ) {
+            if (   ( $tag eq 'trademark' )
+                && ( $node->attr('class') eq 'copyright' ) )
+            {
+                $node->push_content( $MAP_OUT{copyright}->{content} );
+            }
+            else {
+                $node->push_content( $MAP_OUT{$tag}->{content} );
+            }
+        }
+
+    }
+
+    # Some tags are supurflous and can be removed
+    foreach my $node ( $xml_doc->root()->look_down( '_tag', 'RWC' ) ) {
+        $node->replace_with_content();
+    }
+
+    # table tweaks
+    foreach my $node ( $xml_doc->root()->look_down( '_tag', 'table' ) ) {
+
+        # move thead and tbody out of tgroup
+        if ( my $colgroup = $node->look_down( '_tag', 'colgroup' ) ) {
+            if ( my $tbody = $colgroup->look_down( '_tag', 'tbody' ) ) {
+                $colgroup->postinsert($tbody);
+            }
+            if ( my $thead = $colgroup->look_down( '_tag', 'thead' ) ) {
+                $colgroup->postinsert($thead);
+            }
+        }
+    }
+
+##BUGBUG image alt text if it exists
+    foreach my $node ( $xml_doc->root()->look_down( '_tag', 'img' ) ) {
+        $node->attr( 'alt', 'FIXME' );
+    }
+
+    # remove p tag in revhistory
+    foreach
+        my $node ( $xml_doc->root()->look_down( 'class', qr/revhistory/ ) )
+    {
+        if ( $node->parent && $node->parent->tag() eq 'p' ) {
+            $node->parent->replace_with_content();
+        }
+    }
+
+    my @headings = ( 'div', { class => 'toc' } );
+
+##$self->headings({xml_doc => $xml_doc, headings => \@headings});
+    $self->links( { xml_doc => $xml_doc } );
+##$self->footnotes({xml_doc => $xml_doc});
+    $self->highlight2( { xml_doc => $xml_doc } );
+    $self->number_lines( { xml_doc => $xml_doc } );
+##$self->toc({xml_doc => $xml_doc, headings => \@headings});
+
+## BUGBUG no header/footer yet
+    #print <<EOL;
+    #<!DOCTYPE HTML>
+    #<html>
+    #<head>
+    #	<title>TEST</title>
+    #	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    #	<link rel="stylesheet" href="test.css" type="text/css">
+    #</head>
+    #<body>
+    #EOL
+    $text = $xml_doc->root()->as_XML();
+
+    #print $xml_doc->root()->as_XML(), "\n</body>\n</html>";
+
+    return ($text);
+}
+
+=head2 headings
+
+Create an array of all headings in DocBook XML.
+
+=cut
+
+sub headings {
+    my ( $self, $args ) = @_;
+
+    my $xml_doc = delete( $args->{xml_doc} )
+        || croak( maketext("xml_doc is a mandatory argument") );
+    my $headings = delete( $args->{headings} )
+        || croak( maketext("headings is a mandatory argument") );
+
+    if ( %{$args} ) {
+        croak(
+            maketext(
+                "unknown arguments: [_1]", join( ", ", keys %{$args} )
+            )
+        );
+    }
+
+    # move some titles outside the thing they mark.
+    # Add label texts
+    my $chapter    = 0;
+    my @section    = ( 0, 0, 0, 0, 0 );
+    my $sect_depth = 0;
+    my $table      = 0;
+    my $proc       = 0;
+    my $example    = 0;
+    my $appendix   = 0;
+    my $number;
+    my $ina = undef;
+
+    foreach my $node ( $xml_doc->root()->look_down( '_tag', 'h1' ) ) {
+        my $pclass = $node->parent->attr('class');
+
+        if ( $node->parent && $node->parent->tag() =~ /(?:table|ol)/ ) {
+
+            # move this after list
+            $node->parent->preinsert($node);
+        }
+
+        if ( $pclass =~ m/(^chapter| chapter)/ ) {
+            $ina = 'chapter';
+            $node->tag('h1');
+            $chapter++;
+            @section = ( 0, 0, 0, 0, 0 );
+            $number  = $chapter;
+            $table   = 0;
+            $proc    = 0;
+            $example = 0;
+            my $text = "$number. " . $node->as_text();
+            $node->delete_content();
+            $node->push_content( ucfirst($pclass) . " $text" );
+            push(
+                @{$headings},
+                [   'div',
+                    [ 'a', { href => '#' . $node->parent->id() }, $text ]
+                ]
+            );
+        }
+        elsif ( $pclass =~ m/(^appendix| appendix)/ ) {
+            $ina = 'appendix';
+            $node->tag('h1');
+            $appendix++;
+            @section = ( 0, 0, 0, 0, 0 );
+            $number  = chr( 64 + $appendix );
+            $table   = 0;
+            $proc    = 0;
+            $example = 0;
+
+            my $text = "$number. " . $node->as_text();
+            $node->delete_content();
+            $node->push_content("Appendix $text");
+            push(
+                @{$headings},
+                [   'div',
+                    [ 'a', { href => '#' . $node->parent->id() }, $text ]
+                ]
+            );
+        }
+        elsif ( $pclass =~ m/(^preface| preface)/ ) {
+            $ina = 'preface';
+            my $text = $node->as_text();
+            push(
+                @{$headings},
+                [   'div',
+                    [ 'a', { href => '#' . $node->parent->id() }, $text ]
+                ]
+            );
+        }
+        elsif ( $pclass =~ m/(^section| section)/ ) {
+            my $cont = $chapter;
+
+            $cont = chr( 64 + $appendix ) if ( $ina eq 'appendix' );
+
+            my @ans = $node->look_up( 'class', qr/^section| section/ );
+            my $depth = $#ans;
+            $section[$depth]++;
+            $sect_depth = $depth;
+            for ( my $i = $depth + 1; $i <= $#section; $i++ ) {
+                $section[$i] = 0;
+            }
+            if ( $ina eq 'preface' ) {
+                $number
+                    = join( '.', map { Roman($_) } @section[ 0 .. $depth ] );
+            }
+            else {
+                $number = "$cont." . join( '.', @section[ 0 .. $depth ] );
+            }
+
+            $node->tag( 'h' . ( $depth + 2 ) );
+            my $text = "$number. " . $node->as_text();
+            if ( $ina ne 'preface' ) {
+                $node->delete_content();
+                $node->push_content( ucfirst($pclass) . " $text" );
+            }
+            else {
+                my $txt
+                    = '<tmp>'
+                    . ucfirst($pclass)
+                    . " <span class='roman'>$number.</span> "
+                    . $node->as_text()
+                    . '</tmp>';
+                $node->delete_content();
+                $node->push_content(
+                    XML::TreeBuilder->new()->parse($txt)->detach_content() );
+            }
+            push(
+                @{$headings},
+                [   'div',
+                    { class => $node->tag() },
+                    [ 'a', { href => '#' . $node->parent->id() }, $text ]
+                ]
+            );
+
+        }
+        elsif ( $pclass =~ m/(^table| table)/ ) {
+            my $text = "Table $chapter.$table. " . $node->as_text();
+            $node->delete_content();
+            $node->push_content($text);
+            $node->attr( 'class', $node->attr('class') . ' table formal' );
+            $table++;
+        }
+        elsif ( $pclass =~ m/(^procedure| procedure)/ ) {
+            my $text = "Procedure $chapter.$proc. " . $node->as_text();
+            $node->delete_content();
+            $node->push_content($text);
+            $node->attr( 'class',
+                $node->attr('class') . ' procedure formal' );
+            $proc++;
+        }
+        elsif ( $pclass =~ m/(^example| example)/ ) {
+            my $text = "Example $chapter.$example. " . $node->as_text();
+            $node->delete_content();
+            $node->push_content($text);
+            $node->attr( 'class', $node->attr('class') . ' formal example' );
+            $example++;
+        }
+    }
+
+    return;
+}
+
+=head2 headings
+
+Create an array of all headings in DocBook XML.
+
+=cut
+
+sub links {
+    my ( $self, $args ) = @_;
+
+    my $xml_doc = delete( $args->{xml_doc} )
+        || croak( maketext("xml_doc is a mandatory argument") );
+
+    if ( %{$args} ) {
+        croak(
+            maketext(
+                "unknown arguments: [_1]", join( ", ", keys %{$args} )
+            )
+        );
+    }
+
+    # BUGBUG xref/link for internal links needs proper text
+    foreach my $node ( $xml_doc->root()->look_down( '_tag', 'a' ) ) {
+        if ( $node->is_empty() ) {
+            my $text = $node->attr('href');
+
+            if ( $node->attr('class') =~ /xref/ ) {
+                my $title;
+                my $target = $xml_doc->root()
+                    ->look_down( 'id', $node->attr('href') );
+                if (   $target
+                    && ( $title = $target->look_down( 'class', qr/title/ ) )
+                    && $title->parent->same_as($target) )
+                {
+                    $text = $title->as_text();
+                }
+                else {
+                    print STDERR "No title for " . $node->attr('href') . "\n";
+                }
+                $node->attr( 'href', '#' . $node->attr('href') );
+            }
+            $node->push_content($text);
+        }
+    }
+
+    return;
+}
+
+=head2 headings
+
+Create an array of all headings in DocBook XML.
+
+=cut
+
+sub footnotes {
+    my ( $self, $args ) = @_;
+
+    my $xml_doc = delete( $args->{xml_doc} )
+        || croak( maketext("xml_doc is a mandatory argument") );
+
+    if ( %{$args} ) {
+        croak(
+            maketext(
+                "unknown arguments: [_1]", join( ", ", keys %{$args} )
+            )
+        );
+    }
+    my $footers = 0;
+
+    # BUGBUG xref/link for internal links needs proper text
+    foreach my $node ( $xml_doc->root()->look_down( 'class', qr/footnote/ ) )
+    {
+        $footers++;
+
+        my @content = $node->detach_content();
+        my $footer  = XML::TreeBuilder->new(
+            { 'NoExpand' => "1", 'ErrorContext' => "2" } );
+        $footer->parse(
+            qq|<div class="footnote"><a id="footer.$footers" href="#ref.$footers">$footers</a></div>|
+        );
+        $footer->push_content(@content);
+
+        my $block = $node->look_up( 'class', qr/section|chapter|appendix/ );
+        $block->push_content($footer);
+
+        my $anchor = XML::TreeBuilder->new(
+            { 'NoExpand' => "1", 'ErrorContext' => "2" } );
+        $anchor->parse(
+            qq|<tmp><sup>[<a id="ref.$footers" href="#footer.$footers">$footers</a>]</sup></tmp>|
+        );
+        $node->replace_with( $anchor->detach_content() )->delete();
+    }
+
+    return;
+}
+
+=head2 headings
+
+Create an array of all headings in DocBook XML.
+
+=cut
+
+sub highlight2 {
+    my ( $self, $args ) = @_;
+
+    my $xml_doc = delete( $args->{xml_doc} )
+        || croak( maketext("xml_doc is a mandatory argument") );
+
+    if ( %{$args} ) {
+        croak(
+            maketext(
+                "unknown arguments: [_1]", join( ", ", keys %{$args} )
+            )
+        );
+    }
+    my $hl = new Syntax::Highlight::Engine::Kate(
+        substitutions => {
+            "<" => "&lt;",
+            ">" => "&gt;",
+            "&" => "&amp;",
+        },
+        format_table => {
+            Alert        => [ "<span class='Alert'>",        "</span>" ],
+            BaseN        => [ "<span class='BaseN'>",        "</span>" ],
+            BString      => [ "<span class='BString'>",      "</span>" ],
+            Char         => [ "<span class='Char'>",         "</span>" ],
+            Comment      => [ "<span class='Comment'>",      "</span>" ],
+            DataType     => [ "<span class='DataType'>",     "</span>" ],
+            DecVal       => [ "<span class='DecVal'>",       "</span>" ],
+            Error        => [ "<span class='Error'>",        "</span>" ],
+            Float        => [ "<span class='Float'>",        "</span>" ],
+            Function     => [ "<span class='Function'>",     "</span>" ],
+            IString      => [ "<span class='IString'>",      "</span>" ],
+            Keyword      => [ "<span class='Keyword'>",      "</span>" ],
+            Normal       => [ "",                            "" ],
+            Operator     => [ "<span class='Operator'>",     "</span>" ],
+            Others       => [ "<span class='Others'>",       "</span>" ],
+            RegionMarker => [ "<span class='RegionMarker'>", "</span>" ],
+            Reserved     => [ "<span class='Reserved'>",     "</span>" ],
+            String       => [ "<span class='String'>",       "</span>" ],
+            Variable     => [ "<span class='Variable'>",     "</span>" ],
+            Warning      => [ "<span class='Warning'>",      "</span>" ],
+        },
+    );
+
+    foreach my $node ( $xml_doc->root()
+        ->look_down( 'class', qr/programlisting/, 'language', qr/.+/ ) )
+    {
+        my $language = $node->attr('language');
+        my $lang_module = $hl->languagePlug( $language, 1 ) || croak(
+            "\n\t"
+                . maketext(
+                "'[_1]' is not a valid language for highlighting. Language names are case sensitive.",
+                $language
+                )
+                . "\n"
+        );
+
+        my $modname = "Syntax::Highlight::Engine::Kate::$lang_module";
+        my $plug;
+        ## This has to be a string to stop use being run in BEGIN
+        eval "use $modname; \$plug = new $modname(engine => \$hl);";
+
+        if ( defined($plug) ) {
+            $language = $plug->language();
+        }
+        else {
+            croak(
+                maketext(
+                    "Cannot create plugin for language '[_1]': [_2]",
+                    $language, $@
+                )
+            );
+        }
+
+        $hl->language($language);
+
+        my $text = $hl->highlightText( $node->as_text() );
+        $node->delete_content();
+        my $txt = XML::TreeBuilder->new(
+            { 'NoExpand' => "1", 'ErrorContext' => "2" } );
+        $txt->parse(qq|<pre class="programlisting">$text</pre>|);
+        $node->push_content( $txt->root()->detach_content() );
+        $node->attr( 'language', undef );
+    }
+
+    return;
+}
+
+=head2 headings
+
+Create an array of all headings in DocBook XML.
+
+=cut
+
+sub number_lines {
+    my ( $self, $args ) = @_;
+
+    my $xml_doc = delete( $args->{xml_doc} )
+        || croak( maketext("xml_doc is a mandatory argument") );
+
+    if ( %{$args} ) {
+        croak(
+            maketext(
+                "unknown arguments: [_1]", join( ", ", keys %{$args} )
+            )
+        );
+    }
+    foreach my $node (
+        $xml_doc->root()->look_down(
+            'class', qr/programlisting/, 'linenumbering', 'numbered'
+        )
+        )
+    {
+        my $count     = ( $node->attr('startinglinenumber') || 1 );
+        my $text      = $node->as_XML();
+        my $num_lines = () = ( $text =~ /^/mg );
+        my $format    = '%' . length("$num_lines") . 's:' . chr(160);
+        $text =~ s/^/sprintf("$format",$count++)/egm;
+        $text =~ s/^(\d*[^<]*)(<[^>]*>)/$2$1/;
+        $node->delete_content();
+        my $txt = XML::TreeBuilder->new(
+            { 'NoExpand' => "1", 'ErrorContext' => "2" } );
+        $txt->parse(qq|$text|);
+        $node->push_content( $txt->root()->detach_content() );
+    }
+
+    return;
+}
+
+=head2 toc
+
+Create an HTML5 TOC.
+
+=cut
+
+sub toc {
+    my ( $self, $args ) = @_;
+
+    my $xml_doc = delete( $args->{xml_doc} )
+        || croak( maketext("xml_doc is a mandatory argument") );
+    my $headings = delete( $args->{headings} )
+        || croak( maketext("headings is a mandatory argument") );
+
+    if ( %{$args} ) {
+        croak(
+            maketext(
+                "unknown arguments: [_1]", join( ", ", keys %{$args} )
+            )
+        );
+    }
+    my $toc = XML::Element->new_from_lol($headings);
+    my $node = $xml_doc->root()->look_down( 'class', qr/info/ );
+
+    $node->postinsert($toc);
+    return;
+
 }
 
 1;    # Magic true value required at end of module
