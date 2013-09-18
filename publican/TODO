@@ -1,25 +1,19 @@
 DocBook 5 support:
 
-1: Split xsl for DocBook 4/5
+Database Updates:
+	889031
+	901560
+	979846
 
-2: Replace XSL not related to upstream output with Template::Toolkit files
-
-3: Subclass to separate version specific logic
-
-lib/
-|-- Publican
-|   |-- Builder.pm
-|   |-- CreateBook.pm
-|   |-- CreateBrand.pm
-|   |-- Localise.pm
-|   |-- Translate.pm
-|   |-- TreeView.pm
-|   |-- WebSite.pm
-|   `-- XmlClean.pm
-`-- Publican.pm
-
-
-
+PDF:
+	970851
+	1006056
+	1006134
+	1006135
+	1007146
+	808041
+	1006796
+	884943
 
 *********************************************************
 
@@ -31,9 +25,9 @@ Refactor EPUB output using EBook::EPUB or EBook::Tools
 Support MOBI output using EBook::MOBI
 
 
-Document migrating a P2 wedsite to P3:
+Document migrating a P2 web site to P3:
 
-$ publican migrate_site --site_config homepage.cfg 
+$ publican migrate_site --site_config homepage.cfg
 
 
 Document creating a P3 web site from scratch:
@@ -41,7 +35,7 @@ Document creating a P3 web site from scratch:
 $ mkdir $path_to_make_web_site_in
 $ cd $path_to_make_web_site_in
 $ publican create_site --site_config tester.cfg --db_file tester.db --toc_path ./docs
-$ publican site_stats --site_config tester.cfg 
+$ publican site_stats --site_config tester.cfg
 
 The database contains books that cover 0 products, 0 languages,  totaling 0 packages
 

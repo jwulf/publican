@@ -619,6 +619,87 @@ sub validate_xml {
     return (0);
 }
 
+=head2 get_author_list
+
+Return the author list for the supplied language.
+
+## BUGBUG this should be moved to the DocBook sub classes
+
+=cut
+
+sub get_author_list {
+    my ( $self, $args ) = @_;
+
+    my $lang = delete( $args->{lang} )
+        || croak( maketext("lang is a mandatory argument") );
+
+    if ( %{$args} ) {
+        croak(
+            maketext(
+                "unknown arguments: [_1]", join( ", ", keys %{$args} )
+            )
+        );
+    }
+
+    my @authors;
+
+    my $tmp_dir = $self->{publican}->param('tmp_dir');
+    my $file    = "$tmp_dir/$lang/xml/Author_Group.xml";
+
+    croak( maketext("ERROR: Cannot find Author file Author_Group.xml.") )
+        unless ( -f $file );
+
+    my $xml_doc = XML::TreeBuilder->new(
+        { 'NoExpand' => "0", 'ErrorContext' => "2" } );
+    $xml_doc->parse_file($file);
+
+    foreach my $author ( $xml_doc->root()
+        ->look_down( "_tag", qr/^(?:author|orgname)$/ ) )
+    {
+        if ( $author->tag() =~ /^(?:orgname)$/ ) {
+            my $name;
+
+            eval { $name = $author->as_text; };
+            if ($@) {
+                croak(
+                    maketext(
+                        "corpauthor can not be converted to text as expected."
+                    )
+                );
+            }
+            push( @authors, "$name" );
+        }
+        else {
+            my ( $fn, $sn );
+            eval { $fn = $author->look_down( "_tag", 'firstname' )->as_text; };
+            if ($@) {
+                croak(
+                    maketext(
+                        "Author’s firstname not found in Author_Group.xml as expected."
+                    )
+                );
+            }
+
+            eval { $sn = $author->look_down( "_tag", 'surname' )->as_text; };
+            if ($@) {
+                croak(
+                    maketext(
+                        "Author’s surname not found in Author_Group.xml as expected."
+                    )
+                );
+            }
+
+            push( @authors, "$fn $sn" );
+        }
+    }
+
+    unless (@authors) {
+        croak( maketext("Did not find any authors in Author_Group.xml") );
+    }
+
+    return (@authors);
+}
+
 1;    # Magic true value required at end of module
 __END__
 

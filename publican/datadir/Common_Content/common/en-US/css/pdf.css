@@ -8,8 +8,7 @@ body.cover {
 	height: 100%;
 	background-color: white;
 	padding: 0px;
-	font-family: "overpass", sans-serif;
-	font-weight:300;
+	font-family: "liberation sans", "Myriad ", "Bitstream Vera Sans", "Lucida Grande", "Luxi Sans", "Trebuchet MS", helvetica, verdana, arial, sans-serif;
 	font-size: 14px;
 	margin: 0 auto;
 	max-width: 100%;

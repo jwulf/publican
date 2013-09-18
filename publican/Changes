@@ -3,7 +3,8 @@ NEXT UNRELEASED
 - Fix duplicate first author in PDF. BZ #996351
 - Include DocBook 5-compatible templates. BZ #697366
 - Fix UTF8 issue in ~/.publican.cfg. BZ #987325
-- Rpleace abstract and subtitle xsl. BZ #953675
+- Replace abstract and subtitle xsl. BZ #953675
+- Change Cover page font. BZ #1006134
 
 3.2.1 Wed Sep 04 2013
 - Fix empty images dir causing packaging fail. BZ #995896
