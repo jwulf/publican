@@ -106,7 +106,7 @@ publican update_db --del --lang="[% lang %]" --formats="[% web_formats_comma %]"
 fi
 
 %post -n [% book_title %]-web-[% lang %]
-publican update_db --add --lang="[% lang %]" --formats="[% web_formats_comma %]" --name="[% docname %]" --version="[% prodver %]" --product="[% prod %]" --subtitle="[% full_subtitle %]" --abstract="[% full_abstract %]" [% IF name_label.defined %]--name_label="[% name_label %]"[% END %] [% IF version_label != '' %]--version_label="[% version_label %] "[% END %] [% IF product_label != '' %]--product_label="[% product_label %] "[% END %] --site_config="[% web_cfg %]" [% IF sort_order != '' %]--sort_order="[% sort_order %] "[% END %]
+publican update_db --add --lang="[% lang %]" --formats="[% web_formats_comma %]" --name="[% docname %]" --version="[% prodver %]" --product="[% prod %]" --subtitle="[% full_subtitle %]" --abstract="[% full_abstract %]" [% IF name_label.defined %]--name_label="[% name_label %]"[% END %] [% IF version_label != '' %]--version_label="[% version_label %] "[% END %] [% IF product_label != '' %]--product_label="[% product_label %] "[% END %] --site_config="[% web_cfg %]" [% IF sort_order != '' %]--sort_order="[% sort_order %] "[% END %] --book_version="[% book_version %]" [% IF book_src_lang != '' %]--book_src_lang="[% book_src_lang %]"[% END %] [% IF book_src_version != '' %]--book_src_version="[% book_src_version %]"[% END %]
 
 # Update Icon cache if it exists
 %post -n [% book_title %]-[% lang %]

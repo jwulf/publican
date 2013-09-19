@@ -8,6 +8,8 @@ NEXT UNRELEASED
 - Fix TOC leader in PDF. BZ #1006056
 - Fix PDF Legal Notice trademarks & formatting. BZ #970851
 - Fix keyword lable showing in PDF when there are no keywords. BZ #1007146
+- Indicate whether a translation is older in the web GUI. BZ #889031
+- Include time in update_date. BZ #979846 
 
 3.2.1 Wed Sep 04 2013
 - Fix empty images dir causing packaging fail. BZ #995896

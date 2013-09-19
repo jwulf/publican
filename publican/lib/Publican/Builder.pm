@@ -554,8 +554,13 @@ sub package {
     $embedtoc = "" if ( $self->{publican}->param('no_embedtoc') );
 
     $web_formats =~ s/,/ /g;
+    my $book_src_version = undef;
+    my $book_src_lang = undef;
 
     if ( $lang ne $xml_lang ) {
+        $book_src_version = '0.0-0'; # BUGBUG set this
+	$book_src_lang = $xml_lang;
+
         $release = undef;
 ## BUGBUG this should be moved to the DocBook sub classes
         my $rev_file = "$lang/Revision_History.xml";
@@ -691,6 +696,7 @@ sub package {
     $self->{publican}->{config}->param( 'release', $release );
     $self->{publican}->{config}->param( 'edition', $edition );
 
+
     my $dir = pushd("$tmp_dir/tar");
     my @files = dir_list( $tardir, '*' );
     Archive::Tar->create_archive( "../rpm/$tardir-$release.tgz", 9, @files );
@@ -752,6 +758,9 @@ sub package {
         spec_version      => $Publican::SPEC_VERSION,
         embedtoc          => $embedtoc,
         sort_order        => $sort_order,
+	book_version      => "$edition-$release",
+	book_src_version  => $book_src_version,
+	book_src_lang     => $book_src_lang,
     );
 
     # \p{Z} is unicode white space, which is a super set of ascii white space.

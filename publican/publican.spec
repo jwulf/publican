@@ -14,8 +14,8 @@
 %define wwwdir /var/www/html/docs
 
 Name:           publican
-Version:        3.2.1
-Release:        0%{?dist}.t20
+Version:        4.0.0_1
+Release:        0%{?dist}.t5
 Summary:        Common files and scripts for publishing with DocBook XML
 # For a breakdown of the licensing, refer to LICENSE
 License:        (GPLv2+ or Artistic) and CC0
@@ -94,6 +94,8 @@ BuildRequires:  gettext
 BuildRequires:  perl(Text::CSV_XS)
 BuildRequires:  perl(Sort::Versions)
 BuildRequires:  perl(DBD::SQLite)
+BuildRequires:  docbook5-schemas
+BuildRequires:  docbook5-style-xsl >= 1.78.1
 
 # Most of these are handled automatically
 Requires:       perl(:MODULE_COMPAT_%(eval "`%{__perl} -V:version`"; echo $version))
@@ -108,6 +110,9 @@ Requires:       perl-Template-Toolkit
 Requires:       perl(DBD::SQLite)
 Requires:       perl(Text::CSV_XS)
 Requires:       perl(Syntax::Highlight::Engine::Kate) >= 0.07-5
+Requires:       docbook5-schemas
+Requires:       docbook5-style-xsl >= 1.78.1
+
 # Not reall required, but sometimes koji pulls in a conflicting dep...
 Requires:       perl(Compress::Zlib) => 2.030
 
@@ -227,14 +232,14 @@ cd -
 # hack to allow branch directory BZ #800252
 CATALOG=%{_sysconfdir}/xml/catalog
 %{_bindir}/xmlcatalog --noout --add "rewriteURI" \
- "https://fedorahosted.org/released/publican/xsl/docbook4/" \
- "file://%{_datadir}/publican/xsl/"  $CATALOG
+"https://fedorahosted.org/released/publican/xsl/docbook4/" \
+"file://%{_datadir}/publican/xsl/"  $CATALOG
 
 %postun
 if [ "$1" = 0 ]; then
   CATALOG=%{_sysconfdir}/xml/catalog
   %{_bindir}/xmlcatalog --noout --del \
-   "file://%{_datadir}/publican/xsl/docbook4/" $CATALOG
+  "https://fedorahosted.org/released/publican/xsl/docbook4/" $CATALOG
 fi
 
 %clean

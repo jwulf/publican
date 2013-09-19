@@ -51,7 +51,7 @@ is( $result, 0, 'build the Users Guide' );
 $result
     = system( @perl_args, $publican, 'build', '--formats',
     'html,html-single,html-desktop,pdf,txt,eclipse,epub,drupal-book',
-    '--langs', 'en-US', '--publish', @common_opts );
+    '--langs', 'en-US', '--publish', '--embedtoc', @common_opts );
 
 is( $result, 0, 'build the Users Guide in all formats' );
 

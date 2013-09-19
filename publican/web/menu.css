@@ -1525,7 +1525,7 @@ body:hover #menu {
 	left: 0em;
 }
 
-#floatingtoc .toc {
+#floatingtoc > .toc {
 	overflow: auto;
 	width: 70% !important;
  	padding: 2em;
@@ -1696,7 +1696,7 @@ body.draft > div.index  {
 	display: none !important;
 }
 
-#floatingtoc .toc {
+#floatingtoc > .toc {
 	max-width: 50% !important;
 	left: 25% !important;
 	margin-left: 0px !important;

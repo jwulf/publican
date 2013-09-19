@@ -125,7 +125,8 @@ my %tmpl_strings = (
     Document_Language     => $locale->maketext('Document Language'),
     Document_Home         => $locale->maketext('Document Home'),
     Product_Documentation => $locale->maketext('Product Documentation'),
-    Support => $locale->maketext('Support'),
+    Support               => $locale->maketext('Support'),
+    OUTOFDATE             => $locale->maketext('OUTOFDATE'),
 );
 
 sub new {
@@ -159,7 +160,7 @@ sub new {
             $site_config
         )
     );
-    my $host      = $config->param('host')      || 'http://localhost/';
+    my $host      = $config->param('host')      || 'http://localhost/docs';
     my $search    = $config->param('search')    || undef;
     my $title     = $config->param('title')     || 'Documentation';
     my $dump      = $config->param('dump')      || undef;
@@ -260,9 +261,11 @@ CREATE TABLE IF NOT EXISTS $DB_NAME (
 	version_label text(255),
 	name_label text(255),
 	sort_order INTEGER DEFAULT 50,
-	update_date text(10),
 	subtitle text,
 	abstract text,
+	book_version text(10),
+	book_src_lang text(10),
+	update_date DATETIME default current_timestamp,
 	UNIQUE(language, product, version, name)
 )
 CREATE_TABLE
@@ -295,12 +298,15 @@ sub update_or_add_entry {
         : croak "update_or_add_entry: version required";
     my $name    = delete $arg->{name}    || croak "name required";
     my $formats = delete $arg->{formats} || croak "formats required";
-    my $product_label = delete $arg->{product_label};
-    my $version_label = delete $arg->{version_label};
-    my $name_label    = delete $arg->{name_label};
-    my $subtitle      = delete $arg->{subtitle};
-    my $abstract      = delete $arg->{abstract};
-    my $sort_order    = delete $arg->{sort_order};
+    my $product_label    = delete $arg->{product_label};
+    my $version_label    = delete $arg->{version_label};
+    my $name_label       = delete $arg->{name_label};
+    my $subtitle         = delete $arg->{subtitle};
+    my $abstract         = delete $arg->{abstract};
+    my $sort_order       = delete $arg->{sort_order};
+    my $book_version     = delete $arg->{book_version};
+    my $book_src_lang    = delete $arg->{book_src_lang};
+    my $book_src_version = delete $arg->{book_src_version};
 
     if ( %{$arg} ) {
         croak "unknown args: " . join( ", ", keys %{$arg} );
@@ -318,34 +324,40 @@ sub update_or_add_entry {
 
     if ($id) {
         $rc = $self->update_entry(
-            {   ID            => $id,
-                language      => $language,
-                product       => $product,
-                version       => $version,
-                name          => $name,
-                formats       => $formats,
-                product_label => $product_label,
-                version_label => $version_label,
-                name_label    => $name_label,
-                subtitle      => $subtitle,
-                abstract      => $abstract,
-                sort_order    => $sort_order,
+            {   ID               => $id,
+                language         => $language,
+                product          => $product,
+                version          => $version,
+                name             => $name,
+                formats          => $formats,
+                product_label    => $product_label,
+                version_label    => $version_label,
+                name_label       => $name_label,
+                subtitle         => $subtitle,
+                abstract         => $abstract,
+                sort_order       => $sort_order,
+                book_version     => $book_version,
+                book_src_lang    => $book_src_lang,
+                book_src_version => $book_src_version,
             }
         );
     }
     else {
         $rc = $self->add_entry(
-            {   language      => $language,
-                product       => $product,
-                version       => $version,
-                name          => $name,
-                formats       => $formats,
-                product_label => $product_label,
-                version_label => $version_label,
-                name_label    => $name_label,
-                subtitle      => $subtitle,
-                abstract      => $abstract,
-                sort_order    => $sort_order,
+            {   language         => $language,
+                product          => $product,
+                version          => $version,
+                name             => $name,
+                formats          => $formats,
+                product_label    => $product_label,
+                version_label    => $version_label,
+                name_label       => $name_label,
+                subtitle         => $subtitle,
+                abstract         => $abstract,
+                sort_order       => $sort_order,
+                book_version     => $book_version,
+                book_src_lang    => $book_src_lang,
+                book_src_version => $book_src_version,
             }
         );
     }
@@ -364,33 +376,39 @@ sub add_entry {
         : croak "add_entry: version required";
     my $name    = delete $arg->{name}    || croak "name required";
     my $formats = delete $arg->{formats} || croak "formats required";
-    my $product_label = delete $arg->{product_label};
-    my $version_label = delete $arg->{version_label};
-    my $name_label    = delete $arg->{name_label};
-    my $subtitle      = delete $arg->{subtitle};
-    my $abstract      = delete $arg->{abstract};
-    my $sort_order    = delete $arg->{sort_order};
+    my $product_label    = delete $arg->{product_label};
+    my $version_label    = delete $arg->{version_label};
+    my $name_label       = delete $arg->{name_label};
+    my $subtitle         = delete $arg->{subtitle};
+    my $abstract         = delete $arg->{abstract};
+    my $sort_order       = delete $arg->{sort_order};
+    my $book_version     = delete $arg->{book_version};
+    my $book_src_lang    = delete $arg->{book_src_lang};
+    my $book_src_version = delete $arg->{book_src_version};
 
     if ( %{$arg} ) {
         croak "unknown args: " . join( ", ", keys %{$arg} );
     }
 
-    my $update_date = DateTime->today()->ymd();
-
     $formats = lc $formats;
     $abstract =~ s/\n/ /gm;
 
     my $sql = <<INSERT_ENTRY;
-        INSERT INTO $DB_NAME 
-               (language, product, version, name, formats, product_label, version_label, name_label, update_date, subtitle, abstract, sort_order) 
-               VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        INSERT INTO $DB_NAME ( 
+		language, product, version, name, formats, product_label,
+		version_label, name_label, subtitle, abstract, sort_order,
+		book_version, book_src_lang, book_src_version
+	) 
+	VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
 INSERT_ENTRY
 
     return $self->_dbh->do(
-        $sql,           undef,       $language,    $product,
-        $version,       $name,       $formats,     $product_label,
-        $version_label, $name_label, $update_date, $subtitle,
-        $abstract,      $sort_order
+        $sql,        undef,          $language,
+        $product,    $version,       $name,
+        $formats,    $product_label, $version_label,
+        $name_label, $subtitle,      $abstract,
+        $sort_order, $book_version,  $book_src_lang,
+        $book_src_version
     );
 }
 
@@ -406,33 +424,39 @@ sub update_entry {
         : croak "update_entry: version required";
     my $name    = delete $arg->{name}    || croak "name required";
     my $formats = delete $arg->{formats} || croak "formats required";
-    my $product_label = delete $arg->{product_label};
-    my $version_label = delete $arg->{version_label};
-    my $name_label    = delete $arg->{name_label};
-    my $subtitle      = delete $arg->{subtitle};
-    my $abstract      = delete $arg->{abstract};
-    my $sort_order    = delete $arg->{sort_order};
+    my $product_label    = delete $arg->{product_label};
+    my $version_label    = delete $arg->{version_label};
+    my $name_label       = delete $arg->{name_label};
+    my $subtitle         = delete $arg->{subtitle};
+    my $abstract         = delete $arg->{abstract};
+    my $sort_order       = delete $arg->{sort_order};
+    my $book_version     = delete $arg->{book_version};
+    my $book_src_lang    = delete $arg->{book_src_lang};
+    my $book_src_version = delete $arg->{book_src_version};
 
     if ( %{$arg} ) {
         croak "unknown args: " . join( ", ", keys %{$arg} );
     }
-
-    my $update_date = DateTime->today()->ymd();
 
     $formats = lc $formats;
     $abstract =~ s/\n/ /gm;
 
     my $sql = <<INSERT_ENTRY;
         UPDATE $DB_NAME SET
-               language = ?, product = ?, version = ?, name = ?, formats = ?, product_label = ?, version_label = ?, name_label = ?, update_date = ?, subtitle = ?, abstract = ?, sort_order = ?
+		language = ?, product = ?, version = ?, name = ?, formats = ?,
+		product_label = ?, version_label = ?, name_label = ?, update_date = current_timestamp,
+		subtitle = ?, abstract = ?, sort_order = ?, book_version = ?,
+		book_src_lang = ?, book_src_version = ?
                WHERE ID = $ID
 INSERT_ENTRY
 
     return $self->_dbh->do(
-        $sql,           undef,       $language,    $product,
-        $version,       $name,       $formats,     $product_label,
-        $version_label, $name_label, $update_date, $subtitle,
-        $abstract,      $sort_order
+        $sql,        undef,          $language,
+        $product,    $version,       $name,
+        $formats,    $product_label, $version_label,
+        $name_label, $subtitle,      $abstract,
+        $sort_order, $book_version,  $book_src_lang,
+        $book_src_version
     );
 }
 
@@ -512,26 +536,33 @@ sub get_hash_ref {
     $direction = 'ASC' if ( $def_lang gt $language );
 
     my $sql = <<GET_LIST;
-        SELECT ID,
-               language, 
-               product, 
-               version, 
-               name, 
-               formats,
-               product_label, 
-               version_label, 
-               name_label,
-               update_date,
-               subtitle,
-               abstract,
-               sort_order
-          FROM $DB_NAME 
-         WHERE (language = ? or language = ?)
-      GROUP BY language, product, version, name
-      ORDER BY language $direction,
-               product, 
-               version DESC, 
-               name
+        SELECT $DB_NAME.ID,
+               $DB_NAME.language, 
+               $DB_NAME.product, 
+               $DB_NAME.version, 
+               $DB_NAME.name, 
+               $DB_NAME.formats,
+               $DB_NAME.product_label, 
+               $DB_NAME.version_label, 
+               $DB_NAME.name_label,
+               $DB_NAME.update_date,
+               $DB_NAME.subtitle,
+               $DB_NAME.abstract,
+               $DB_NAME.sort_order,
+               $DB_NAME.book_version,
+               b2.book_version as orig_ver
+          FROM $DB_NAME
+          LEFT JOIN $DB_NAME as b2 ON
+                    $DB_NAME.book_src_lang = b2.language
+		AND $DB_NAME.product = b2.product
+		AND $DB_NAME.version = b2.version
+		AND $DB_NAME.name =b2.name
+         WHERE ($DB_NAME.language = ? or $DB_NAME.language = ?)
+      GROUP BY $DB_NAME.language, $DB_NAME.product, $DB_NAME.version, $DB_NAME.name
+      ORDER BY $DB_NAME.language $direction,
+               $DB_NAME.product, 
+               $DB_NAME.version DESC, 
+               $DB_NAME.name
 GET_LIST
 
     my $sth = $self->_dbh->prepare($sql);
@@ -540,10 +571,10 @@ GET_LIST
     my %list;
 
     while (
-        my ($id,         $lang,        $product,       $version,
-            $name,       $formats,     $product_label, $version_label,
-            $name_label, $update_date, $subtitle,      $abstract,
-            $sort_order
+        my ($id,         $lang,         $product,       $version,
+            $name,       $formats,      $product_label, $version_label,
+            $name_label, $update_date,  $subtitle,      $abstract,
+            $sort_order, $book_version, $orig_ver
         )
         = $sth->fetchrow()
         )
@@ -570,6 +601,10 @@ GET_LIST
         $list{$product}{$version}{$name}{subtitle}   = $subtitle;
         $list{$product}{$version}{$name}{abstract}   = $abstract;
         $list{$product}{$version}{$name}{sort_order} = $sort_order;
+        $list{$product}{$version}{$name}{behind}
+            = !( ( defined($orig_ver) )
+            && ( $orig_ver ne '' )
+            && ( version_sort( $a = $orig_ver, $b = $book_version ) > 0 ) );
     }
 
     $sth->finish();
@@ -1304,9 +1339,12 @@ sub splash_pages {
         $direction = 'ASC' if ( $def_lang lt $language );
 
         my $sql = <<SQL;
-SELECT distinct product, version, name, language, name_label, version_label, product_label, formats, langs, abstract, subtitle, sort_order
+SELECT distinct product, version, name, language, name_label, version_label, product_label, formats, langs, abstract, subtitle, sort_order, book_version, orig_ver
 FROM (
-  SELECT product, version, name, language, name_label, version_label, product_label, abstract, subtitle, formats, sort_order, 
+  SELECT books.product, books.version, books.name, books.language,
+  books.name_label, books.version_label, books.product_label, books.abstract,
+  books.subtitle, books.formats, books.sort_order, books.book_version,
+  b2.book_version as orig_ver, 
     (
       SELECT GROUP_CONCAT(distinct language)
       FROM books as books2
@@ -1320,9 +1358,14 @@ FROM (
       ORDER BY books2.language
     ) as langs
   FROM books
-  WHERE language = ? OR language = ?
-  GROUP BY product, version, name, language
-  ORDER BY product, version, name, language $direction
+      LEFT JOIN books as b2 ON
+            books.book_src_lang = b2.language
+	AND books.product = b2.product
+	AND books.version = b2.version
+	AND books.name =b2.name
+  WHERE books.language = ? OR books.language = ?
+  GROUP BY books.product, books.version, books.name, books.language
+  ORDER BY books.product, books.version, books.name, books.language $direction
 )
 GROUP BY product, version, name
 ORDER BY product, version desc, name
@@ -1515,6 +1558,17 @@ SQL
             $book_lang_vars->{book_clean} =~ s/_/ /g;
             $book_lang_vars->{book_clean} =~ s/^\s*//g;
             $book_lang_vars->{langs} = \@lang_array;
+
+            if (   ( defined( $record->{orig_ver} ) )
+                && ( $record->{orig_ver} ne '' ) )
+            {
+                my $val = version_sort(
+                    $a = $record->{orig_ver},
+                    $b = $record->{book_version}
+                );
+
+                $book_lang_vars->{behind} = ( $val > 0 );
+            }
 
             $self->{Template}->process(
                 'books_lang_menu.tmpl',

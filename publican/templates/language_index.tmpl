@@ -145,7 +145,7 @@ $(document).ready(function() {
 					<div class="bottom_versions section" id="[% prod %]-[% ver.replace('\.', '-') %]">
 					    [%- FOREACH  c_book = i_sort(cur_ver) %][% booker = book_list.${prod}.${ver}.${c_book} %]
 						<div class="bottom_books[% IF lang != booker.lang %] untranslated [% lang %][% END %]">
-							<a href="[% host %]/[% booker.lang %]/[% booker.product %]/[% booker.version %]/html/[% booker.book %]/index.html">[% booker.book_clean %][% IF lang != booker.lang %] <span>[% trans_strings.Untranslated %]</span>[% END %]<span class="subtitle">[% booker.subtitle %]</span></a>
+							<a href="[% host %]/[% booker.lang %]/[% booker.product %]/[% booker.version %]/html/[% booker.book %]/index.html">[% booker.book_clean %][% IF lang != booker.lang %] <span>[% trans_strings.Untranslated %]</span>[% END %][% IF booker.behind %]<span class="socery">[% trans_strings.OUTOFDATE %]</span>[% END %]<span class="subtitle">[% booker.subtitle %]</span></a>
 						</div>
 					    [%- END %]
 					</div>

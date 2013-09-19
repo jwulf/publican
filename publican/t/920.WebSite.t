@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 
-use Test::More tests => 9;
+use Test::More tests => 10;
 use File::pushd;
 use File::Path;
 
@@ -62,6 +62,12 @@ is( $result, 0, 'install the Users Guide on the website' );
 $result = system( @perl_args, $publican, 'remove_book', '--site_config', $site_config, '--lang',
     'en-US', @common_opts );
 is( $result, 0, 'remove the Users Guide on the website' );
+
+$result
+    = system( @perl_args, $publican, 'install_book', '--site_config', $site_config, '--lang',
+    'en-US', @common_opts );
+is( $result, 0, 'install the Users Guide on the website' );
+
 
 $dir = undef;
 
