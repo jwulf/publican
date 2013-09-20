@@ -10,7 +10,7 @@
 [% END %]
 
      [%- IF format == 'pdf' || format == 'epub' %]
-        <a href="[% host %]/[% booklang %]/[% product %]/[% version %]/[%format %]/[% book %]/[% product %]-[% version %]-[% book %]-[% lang %].[% format %]">[% text %]</a>
+        <a href="[% host %]/[% booklang %]/[% product %]/[% version %]/[%format %]/[% book %]/[% product %]-[% version %]-[% book %]-[% booklang %].[% format %]">[% text %]</a>
      [%- ELSIF format == 'txt' %]
         <a href="[% host %]/[% booklang %]/[% product %]/[% version %]/[%format %]/[% book %]/[% book %].[% format %]">[% text %]</a>
      [%- ELSE %]
