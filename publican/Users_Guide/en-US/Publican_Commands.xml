@@ -261,6 +261,15 @@
 
 				</varlistentry>
 				 <varlistentry>
+					<term>copy_web_brand</term>
+					 <listitem>
+						<para>
+							copy a brand's installed web content to another site.
+						</para>
+
+					</listitem>
+				</varlistentry>
+				 <varlistentry>
 					<term>lang_stats --lang=<replaceable>language_code</replaceable></term>
 					 <listitem>
 						<para>

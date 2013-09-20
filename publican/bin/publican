@@ -164,8 +164,13 @@ my %options = (
     'pub_dir=s' =>
         maketext(q|Directory to publish files to. Defaults to publish.|),
     'dtdver=s' => maketext('The version of the DocBook DTD to use'),
-    'book_version=s' => maketext('The version number of the book being installed.'),
-    'book_src_lang=s' => maketext('The language this translation is based on.'),
+    'book_version=s' =>
+        maketext('The version number of the book being installed.'),
+    'book_src_lang=s' =>
+        maketext('The language this translation is based on.'),
+    'old_site_config=s' => maketext(
+        'WebSite configuration file to use when copying content between sites.'
+    ),
 );
 
 # Options all actions use
@@ -252,6 +257,11 @@ my %actions = (
         'brief'   => maketext('Install a brand to the supplied location'),
         'options' => [ 'path', 'web', 'pub_dir' ],
     },
+    'copy_web_brand' => {
+        'brief' =>
+            maketext("Copy a brand's installed web content to another site"),
+        'options' => [ 'brand', 'site_config', 'old_site_config' ],
+    },
     'help_config' => {
         'brief'   => maketext('Display help text for the configuration file'),
         'options' => [],
@@ -293,7 +303,8 @@ my %actions = (
             'name',          'formats',
             'subtitle',      'abstract',
             'product_label', 'version_label',
-            'name_label',    'sort_order', 'book_version', 'book_src_lang'
+            'name_label',    'sort_order',
+            'book_version',  'book_src_lang'
         ],
     },
     'add_revision' => {
@@ -664,7 +675,7 @@ if ( $action eq 'update_db' ) {
     my $subtitle = $opts{subtitle} || undef;
     my $abstract = $opts{abstract} || undef;
 
-    my $book_version = $opts{book_version} || undef;
+    my $book_version  = $opts{book_version}  || undef;
     my $book_src_lang = $opts{book_src_lang} || undef;
 
     if ($add) {
@@ -696,8 +707,8 @@ if ( $action eq 'update_db' ) {
                 subtitle      => $subtitle,
                 abstract      => $abstract,
                 sort_order    => $sort_order,
-                book_version    => $book_version,
-                book_src_lang    => $book_src_lang,
+                book_version  => $book_version,
+                book_src_lang => $book_src_lang,
             }
         );
     }
@@ -714,6 +725,46 @@ if ( $action eq 'update_db' ) {
 ## BUGBUG TODO only update langauges that have been updated
     # make sure OPDS is correct...
     $ws->regen_all_toc();
+
+    exit(0);
+}
+
+if ( $action eq 'copy_web_brand' ) {
+    my $brand = $opts{brand}
+        || croak( maketext( "[_1] is a required argument", 'brand' ) );
+    my $site_config = $opts{site_config}
+        || croak( maketext( "[_1] is a required argument", 'site_config' ) );
+    my $old_site_config = $opts{old_site_config}
+        || croak(
+        maketext( "[_1] is a required argument", 'old_site_config' ) );
+
+    my $old_config = new Config::Simple();
+    $old_config->syntax('http');
+    $old_config->read($old_site_config)
+        || croak("Failed to load config file: $old_site_config");
+
+    my $old_path = $old_config->param('toc_path')
+        || croak(
+        maketext(
+            "[_1] is a mandatory field in a site configuration file",
+            'toc_path'
+        )
+        );
+
+    my $new_config = new Config::Simple();
+    $new_config->syntax('http');
+    $new_config->read($site_config)
+        || croak("Failed to load config file: $site_config");
+
+    my $new_path = $new_config->param('toc_path')
+        || croak(
+        maketext(
+            "[_1] is a mandatory field in a site configuration file",
+            'toc_path'
+        )
+        );
+
+    rcopy( "$old_path/$brand", "$new_path/$brand" );
 
     exit(0);
 }
