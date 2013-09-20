@@ -22,19 +22,19 @@ msgstr ""
 "\n"
 "Немає невикористаних файлів XML"
 
-#: bin/publican:610
+#: bin/publican:621
 msgid "$ cd path/to/brand"
 msgstr "$ cd шлях/до/позначки"
 
-#: bin/publican:611
+#: bin/publican:622
 msgid "$ publican build --formats=xml --langs=all --publish"
 msgstr "$ publican build --formats=xml --langs=all --publish"
 
-#: bin/publican:616
+#: bin/publican:627
 msgid "$ publican install_brand --web --path=/path/to/site/%{brand}"
 msgstr "$ publican install_brand --web --path=/шлях/до/сайта/%{brand}"
 
-#: bin/publican:620
+#: bin/publican:631
 msgid "$ publican update_site --site_config /path/to/site/config"
 msgstr "$ publican update_site --site_config /шлях/до/сайта/config"
 
@@ -52,7 +52,7 @@ msgstr "%1 завершила роботу з виведенням значен�
 
 # translation auto-copied from project Publican, version 3, document publican
 #. ('toc_path')
-#: lib/Publican/WebSite.pm:150
+#: bin/publican:749 bin/publican:762 lib/Publican/WebSite.pm:150
 msgid "%1 is a mandatory field in a site configuration file"
 msgstr "%1 є обов’язковим полем у файлі налаштування сайта"
 
@@ -75,11 +75,14 @@ msgstr "%1 є обов’язковим полем у файлі налашту�
 #. ('subtitle')
 #. ('abstract')
 #. ('book_version')
+#. ('brand')
+#. ('old_site_config')
 #. ('path')
-#: bin/publican:1063 bin/publican:1172 bin/publican:453 bin/publican:546
-#: bin/publican:548 bin/publican:550 bin/publican:649 bin/publican:651
-#: bin/publican:656 bin/publican:659 bin/publican:661 bin/publican:671
-#: bin/publican:673 bin/publican:676 bin/publican:786
+#: bin/publican:1114 bin/publican:1223 bin/publican:464 bin/publican:557
+#: bin/publican:559 bin/publican:561 bin/publican:660 bin/publican:662
+#: bin/publican:667 bin/publican:670 bin/publican:672 bin/publican:682
+#: bin/publican:684 bin/publican:687 bin/publican:734 bin/publican:736
+#: bin/publican:739 bin/publican:837
 msgid "%1 is a required argument"
 msgstr "%1 є обов’язковим аргументом"
 
@@ -95,7 +98,7 @@ msgstr "%1 є обов’язковим параметром для add_revision
 
 # translation auto-copied from project Publican, version 3, document publican
 #. ($action)
-#: bin/publican:445
+#: bin/publican:456
 msgid "'%1' is an unknown action!"
 msgstr "«%1» є невідомою дією!"
 
@@ -199,7 +202,7 @@ msgid "Abstract for a book"
 msgstr "Реферат книги"
 
 # translation auto-copied from project Publican, version 3, document publican
-#: bin/publican:433
+#: bin/publican:444
 msgid "Action required!"
 msgstr "Потрібна дія!"
 
@@ -207,11 +210,11 @@ msgstr "Потрібна дія!"
 msgid "Add a database entry"
 msgstr "Додати запис бази даних"
 
-#: bin/publican:300
+#: bin/publican:311
 msgid "Add an entry to the revision history"
 msgstr "Додати запис до журналу версій"
 
-#: bin/publican:287
+#: bin/publican:297
 msgid "Add or remove database entries. Used for processing pre-build books, such as when building packages."
 msgstr "Додати або вилучити записи бази даних. Використовується для обробки попередньо зібраних книг, зокрема під час збирання пакунків."
 
@@ -351,14 +354,14 @@ msgstr "Не вдалося створити каталог: %1"
 #. ($info_file)
 #. ($rev_file)
 #. ($xml_file)
-#: bin/publican:1101 lib/Publican.pm:1540 lib/Publican.pm:645
+#: bin/publican:1152 lib/Publican.pm:1540 lib/Publican.pm:645
 #: lib/Publican/Builder.pm:568 lib/Publican/Builder/DocBook.pm:2069
 #: lib/Publican/Builder/DocBook.pm:553
 msgid "Can't locate required file: %1"
 msgstr "Не вдалося виявити потрібний файл: %1"
 
 # translation auto-copied from project Publican, version 3, document publican
-#: bin/publican:1047
+#: bin/publican:1098
 msgid "Can't locate srpm, packaging aborted"
 msgstr "Не вдалося виявити srpm, пакування перервано"
 
@@ -381,7 +384,7 @@ msgstr "Не вдалося відкрити файл %1. Помилка: %2"
 
 # translation auto-copied from project Publican, version 3, document publican
 #. ($file,$@)
-#: bin/fix-zanata-map:69 bin/publican:1230 lib/Publican/XmlClean.pm:998
+#: bin/fix-zanata-map:69 bin/publican:1281 lib/Publican/XmlClean.pm:998
 msgid "Can't open file '%1' %2"
 msgstr "Не вдалося відкрити файл «%1» %2"
 
@@ -444,15 +447,15 @@ msgstr "Не вдалося виявити основний файл XML: «%1»
 msgid "Cannot locate main XML file: '%1'"
 msgstr "Не вдалося виявити основний файл XML: «%1»"
 
-#: bin/publican:1254
+#: bin/publican:1305
 msgid "Cannot locate productname tag in Info file!"
 msgstr "Не вдалося знайти теґ productname у файлі Info!"
 
-#: bin/publican:1263
+#: bin/publican:1314
 msgid "Cannot locate productnumber tag in Info file!"
 msgstr "Не вдалося знайти теґ productnumber у файлі Info!"
 
-#: bin/publican:1245
+#: bin/publican:1296
 msgid "Cannot locate title tag in Info file!"
 msgstr "Не вдалося знайти теґ title у файлі Info!"
 
@@ -462,7 +465,7 @@ msgstr "Виберіть засіб форматування, який буде 
 
 # translation auto-copied from project Publican, version 3, document publican
 #. ($publican->param('tmp_dir'))
-#: bin/publican:878
+#: bin/publican:929
 msgid "Clean: Removing %1 and publish directories."
 msgstr "Очищення: вилучення %1 та каталогу «publish»."
 
@@ -492,7 +495,7 @@ msgid "Conditions on which to prune XML before transformation."
 msgstr "Умови, за яких слід пропускати XML перед перетворенням."
 
 # translation auto-copied from project Publican, version 3, document publican
-#: bin/publican:557
+#: bin/publican:568
 msgid "Config file exists, you must supply a non-existent filename."
 msgstr "Файл налаштувань вже існує, вам слід вказати назву, яку ще не було використано."
 
@@ -515,6 +518,10 @@ msgstr "Обмеження: %1"
 #: lib/Publican/Builder/DocBook.pm:2421
 msgid "Copy Editor"
 msgstr "Редактор"
+
+#: bin/publican:262
+msgid "Copy a brand's installed web content to another site"
+msgstr ""
 
 #. ($lang)
 #: lib/Publican/Translate.pm:297
@@ -597,17 +604,17 @@ msgid "Could not open search file for output: %1"
 msgstr "Не вдалося відкрити файл пошуку для виведення даних: %1"
 
 # translation auto-copied from project Publican, version 3, document publican
-#: bin/publican:265
+#: bin/publican:275
 msgid "Create a new WebSite in the supplied location."
 msgstr "Створити веб-сайт за вказаною адресою."
 
 # translation auto-copied from project Publican, version 3, document publican
-#: bin/publican:226
+#: bin/publican:231
 msgid "Create a new book, set, or article"
 msgstr "Створити нову книгу, набір або статтю"
 
 # translation auto-copied from project Publican, version 3, document publican
-#: bin/publican:233
+#: bin/publican:238
 msgid "Create a new brand"
 msgstr "Створити нову позначку"
 
@@ -695,7 +702,7 @@ msgid "Display help message"
 msgstr "Показати довідкове повідомленняяяяяяяяяяяяяяяяя"
 
 # translation auto-copied from project Publican, version 3, document publican
-#: bin/publican:256
+#: bin/publican:266
 msgid "Display help text for the configuration file"
 msgstr "Показати довідкове повідомлення для файла налаштувань"
 
@@ -874,7 +881,7 @@ msgid "Failed to load config file: %1"
 msgstr "Не вдалося завантажити файл налаштувань: %1"
 
 #. ($configfile)
-#: bin/publican:754
+#: bin/publican:805
 msgid "Failed to load user config file: %1"
 msgstr "Не вдалося завантажити файл налаштувань користувача: %1"
 
@@ -982,12 +989,12 @@ msgid "Initial creation by publican"
 msgstr "Дата створення за допомогою publican"
 
 # translation auto-copied from project Publican, version 3, document publican
-#: bin/publican:274
+#: bin/publican:284
 msgid "Install a book in to a WebSite."
 msgstr "Встановити книгу на веб-сайт."
 
 # translation auto-copied from project Publican, version 3, document publican
-#: bin/publican:252
+#: bin/publican:257
 msgid "Install a brand to the supplied location"
 msgstr "Встановити позначку за вказаною адресою"
 
@@ -1031,7 +1038,7 @@ msgstr "Вказано некоректну мову: %1"
 
 # translation auto-copied from project Publican, version 3, document publican
 #. ($opt)
-#: bin/publican:348
+#: bin/publican:359
 msgid "Invalid option '%1' in $actions{$action}->{options}"
 msgstr "Некоректний параметр «%1» у $actions{$action}->{options}"
 
@@ -1087,7 +1094,7 @@ msgstr ""
 msgid "Merging %1 >> %2 -> %3"
 msgstr "Об’єднання %1 >> %2 -> %3"
 
-#: bin/publican:312
+#: bin/publican:323
 msgid "Migrate a website DataBase from Publican < 3 to Publican 3."
 msgstr "Перенести базу даних сайта з Publican < 3 на Publican 3."
 
@@ -1130,7 +1137,7 @@ msgstr "Назва цього пакунка. Значення буде отри
 msgid "No unused Image files"
 msgstr "Немає невикористаних файлів зображень"
 
-#: bin/publican:607
+#: bin/publican:618
 msgid ""
 "Now that your site is migrated you will need to rebuild your brands and install the brands web payload on your site.\n"
 "\n"
@@ -1144,12 +1151,12 @@ msgstr ""
 msgid "OUTOFDATE"
 msgstr ""
 
-#: bin/publican:645
+#: bin/publican:656
 msgid "One of add or del is required when updating the database"
 msgstr "Для оновлення бази даних слід використовувати одну з команд, «add» або «del»"
 
 # translation auto-copied from project Publican, version 3, document publican
-#: bin/publican:456
+#: bin/publican:467
 msgid "Options:"
 msgstr "Параметри:"
 
@@ -1237,7 +1244,7 @@ msgid "PO file '%1' not found! Using base XML!"
 msgstr "Не знайдено файла PO «%1»! Використання базового XML!"
 
 # translation auto-copied from project Publican, version 3, document publican
-#: bin/publican:237
+#: bin/publican:242
 msgid "Package a language for shipping"
 msgstr "Запакувати мову для поширення"
 
@@ -1285,26 +1292,26 @@ msgid "Preprocessing xml files...\n"
 msgstr ""
 
 # translation auto-copied from project Publican, version 3, document publican
-#: bin/publican:214
+#: bin/publican:219
 msgid "Print a list of QA'd DocBook tags"
 msgstr "Вивести список перевірених теґів DocBook"
 
 # translation auto-copied from project Publican, version 3, document publican
-#: bin/publican:210
+#: bin/publican:215
 msgid "Print a list of banned DocBook tags"
 msgstr "Вивести список заблокованих теґів DocBook"
 
-#: bin/publican:222
+#: bin/publican:227
 msgid "Print a list of unused Image files"
 msgstr "Вивести список невикористаних файлів зображень"
 
 # translation auto-copied from project Publican, version 3, document publican
-#: bin/publican:218
+#: bin/publican:223
 msgid "Print a list of unused XML files"
 msgstr "Вивести список невикористаних файлів XML"
 
 # translation auto-copied from project Publican, version 3, document publican
-#: bin/publican:206
+#: bin/publican:211
 msgid "Print a tree of the xi:includes"
 msgstr "Вивести ієрархію xi:includes"
 
@@ -1370,26 +1377,26 @@ msgid "Remaining hours for %1"
 msgstr "Залишилося годин для %1"
 
 # translation auto-copied from project Publican, version 3, document publican
-#: bin/publican:278
+#: bin/publican:288
 msgid "Remove a book from a WebSite."
 msgstr "Вилучити книгу з веб-сайта."
 
 # translation auto-copied from project Publican, version 3, document publican
-#: bin/publican:192
+#: bin/publican:197
 msgid "Remove all temporary files and directories"
 msgstr "Вилучити всі тимчасові файли і каталоги"
 
 # translation auto-copied from project Publican, version 3, document publican
-#: bin/publican:197
+#: bin/publican:202
 msgid "Remove local copies of remote set books"
 msgstr "Вилучити локальні копії віддаленого набору книг"
 
-#: bin/publican:307
+#: bin/publican:318
 msgid "Rename a publican book"
 msgstr "Перейменувати книгу publican"
 
 # translation auto-copied from project Publican, version 3, document publican
-#: bin/publican:282
+#: bin/publican:292
 msgid "Report on the contents of a WebSite"
 msgstr "Вивести звіт щодо вмісту веб-сайта"
 
@@ -1409,18 +1416,18 @@ msgid "Revision number to use for a revision."
 msgstr "Номер модифікації, яким буде позначено модифікацію."
 
 # translation auto-copied from project Publican, version 3, document publican
-#: bin/publican:202
+#: bin/publican:207
 msgid "Run clean ids for source XML"
 msgstr "Виконати вилучення ідентифікаторів з початкового XML"
 
 # translation auto-copied from project Publican, version 3, document publican
 #. ($0)
-#: bin/publican:399
+#: bin/publican:410
 msgid "Run: '%1 <action> --help' for details on action usage"
 msgstr "Відайте команду «%1 <дія> --help», що дізнатися більше про використання дії"
 
 # translation auto-copied from project Publican, version 3, document publican
-#: bin/publican:871
+#: bin/publican:922
 msgid "Running clean process to ensure stale content is not bundled in packages."
 msgstr "Запуск процесу очищення з метою вилучення непотрібних даних з пакунків."
 
@@ -1465,7 +1472,7 @@ msgstr "Показати меню"
 msgid "Skipping unknown language: %1"
 msgstr "Пропущено невідому мову: %1"
 
-#: bin/publican:317
+#: bin/publican:328
 msgid "Snapshot the source language for use in translation."
 msgstr ""
 
@@ -1573,7 +1580,7 @@ msgstr "Редакція книги, статті або набору книг"
 msgid "The language the XML will be written in"
 msgstr "Мова, якою буде записано XML"
 
-#: bin/publican:168
+#: bin/publican:170
 msgid "The language this translation is based on."
 msgstr ""
 
@@ -1606,7 +1613,7 @@ msgid "The type (book, article, or set)"
 msgstr "Тип (книга, стаття чи набір книг)"
 
 # translation auto-copied from project Publican, version 3, document publican
-#: bin/publican:167
+#: bin/publican:168
 #, fuzzy
 msgid "The version number of the book being installed."
 msgstr "Версія продукту"
@@ -1685,7 +1692,7 @@ msgstr "Загалом пакунків"
 msgid "Total for %1"
 msgstr "Загалом для %1"
 
-#: bin/publican:183
+#: bin/publican:188
 msgid "Transform XML to other formats (pdf, html, html-single, drupal-book, etc)"
 msgstr ""
 
@@ -1758,17 +1765,17 @@ msgid "Untranslated"
 msgstr "Не перекладено"
 
 # translation auto-copied from project Publican, version 3, document publican
-#: bin/publican:270
+#: bin/publican:280
 msgid "Update an existing sites templates."
 msgstr "Оновити вже створені шаблони сайтів."
 
 # translation auto-copied from project Publican, version 3, document publican
-#: bin/publican:248
+#: bin/publican:253
 msgid "Update the PO files"
 msgstr "Оновити файли PO"
 
 # translation auto-copied from project Publican, version 3, document publican
-#: bin/publican:244
+#: bin/publican:249
 msgid "Update the POT files"
 msgstr "Оновити файли POT"
 
@@ -1793,7 +1800,7 @@ msgid "Using XML::LibXSLT on %1"
 msgstr "Використання XML::LibXSLT для %1"
 
 # translation auto-copied from project Publican, version 3, document publican
-#: bin/publican:392
+#: bin/publican:403
 msgid "Valid actions are:"
 msgstr "Можливі дії:"
 
@@ -1889,6 +1896,12 @@ msgid "WebSite configuration file to use or create."
 msgstr "Файл налаштувань веб-сата який слід використати або створити."
 
 # translation auto-copied from project Publican, version 3, document publican
+#: bin/publican:172
+#, fuzzy
+msgid "WebSite configuration file to use when copying content between sites."
+msgstr "Файл налаштувань веб-сата який слід використати або створити."
+
+# translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican/WebSite.pm:93
 msgid "Welcome"
 msgstr "Вітаємо"
@@ -1913,7 +1926,7 @@ msgstr "Вам слід змінити значення параметра HOLDE
 msgid "abstract can not be calculated before building."
 msgstr "неможливо визначити резюме до побудови документа."
 
-#: bin/publican:989
+#: bin/publican:1040
 msgid "add_revision does not work for brands."
 msgstr "add_revision не працює для версій системи."
 
@@ -1930,13 +1943,13 @@ msgid "authorgroup not found in %1"
 msgstr "у %1 не знайдено автогрупи"
 
 # translation auto-copied from project Publican, version 3, document publican
-#: bin/publican:1057
+#: bin/publican:1108
 msgid "can't find 'publish' directory"
 msgstr "не вдалося знайти каталог «publish»"
 
 # translation auto-copied from project Publican, version 3, document publican
 #. ($opts{pub_dir},$lang)
-#: bin/publican:1085
+#: bin/publican:1136
 msgid "can't find publish directory '%1/%2'"
 msgstr "не вдалося знайти каталог «publish»"
 
@@ -1986,7 +1999,7 @@ msgid "deleted empty pot file: %1\n"
 msgstr ""
 
 # translation auto-copied from project Publican, version 3, document publican
-#: bin/publican:790
+#: bin/publican:841
 msgid "destination must exist"
 msgstr "адреса призначення має існувати"
 
@@ -2103,7 +2116,7 @@ msgid "match_strings requires 2 arguments %1, %2."
 msgstr "match_strings слід передати 2 параметри: %1, %2."
 
 # translation auto-copied from project Publican, version 3, document publican
-#: bin/publican:491 lib/Publican/CreateBook.pm:81
+#: bin/publican:502 lib/Publican/CreateBook.pm:81
 #: lib/Publican/CreateBrand.pm:62
 msgid "name is a required parameter"
 msgstr "«name» є обов’язковим параметром"
@@ -2162,7 +2175,7 @@ msgid "pub_dir is a mandatory argument"
 msgstr "po_file є обов’язковим параметром"
 
 #. (scalar@ARGV,join( ' & ', @ARGV ))
-#: bin/publican:368
+#: bin/publican:379
 msgid "publican only accepts one action you supplied '%1': %2\n"
 msgstr "publican приймає одну з вказаних вами дій, «%1»: %2\n"
 
@@ -2172,7 +2185,7 @@ msgid "regex is a required argument"
 msgstr "regex є обов’язковим параметром"
 
 # translation auto-copied from project Publican, version 3, document publican
-#: bin/publican:260
+#: bin/publican:270
 msgid "report PO statistics"
 msgstr "вивести звіт щодо статистики PO"
 
@@ -2343,7 +2356,7 @@ msgid "xsl_file is a mandatory argument"
 msgstr "xsl_file є обов’язковим параметром"
 
 # translation auto-copied from project Publican, version 3, document publican
-#: bin/publican:788
+#: bin/publican:839
 msgid "you need to publish the brand first"
 msgstr "спочатку вам слід оприлюднити позначку"
 

@@ -23,19 +23,19 @@ msgstr ""
 "\n"
 "No hay archivos XML sin utilizar"
 
-#: bin/publican:610
+#: bin/publican:621
 msgid "$ cd path/to/brand"
 msgstr "$ cd ruta/a/marca"
 
-#: bin/publican:611
+#: bin/publican:622
 msgid "$ publican build --formats=xml --langs=all --publish"
 msgstr "$ publican build --formats=xml --langs=all --publish"
 
-#: bin/publican:616
+#: bin/publican:627
 msgid "$ publican install_brand --web --path=/path/to/site/%{brand}"
 msgstr "$ publican install_brand --web --path=/path/to/site/%{brand}"
 
-#: bin/publican:620
+#: bin/publican:631
 msgid "$ publican update_site --site_config /path/to/site/config"
 msgstr "$ publican update_site --site_config /path/to/site/config"
 
@@ -50,7 +50,7 @@ msgid "%1 exited with value %2"
 msgstr "%1 salió con valor %2"
 
 #. ('toc_path')
-#: lib/Publican/WebSite.pm:150
+#: bin/publican:749 bin/publican:762 lib/Publican/WebSite.pm:150
 msgid "%1 is a mandatory field in a site configuration file"
 msgstr "%1 es un campo obligatorio en un archivo de configuración del sitio"
 
@@ -71,11 +71,14 @@ msgstr "%1  es un campo obligatorio en un sitio de archivo de configuración. Re
 #. ('subtitle')
 #. ('abstract')
 #. ('book_version')
+#. ('brand')
+#. ('old_site_config')
 #. ('path')
-#: bin/publican:1063 bin/publican:1172 bin/publican:453 bin/publican:546
-#: bin/publican:548 bin/publican:550 bin/publican:649 bin/publican:651
-#: bin/publican:656 bin/publican:659 bin/publican:661 bin/publican:671
-#: bin/publican:673 bin/publican:676 bin/publican:786
+#: bin/publican:1114 bin/publican:1223 bin/publican:464 bin/publican:557
+#: bin/publican:559 bin/publican:561 bin/publican:660 bin/publican:662
+#: bin/publican:667 bin/publican:670 bin/publican:672 bin/publican:682
+#: bin/publican:684 bin/publican:687 bin/publican:734 bin/publican:736
+#: bin/publican:739 bin/publican:837
 msgid "%1 is a required argument"
 msgstr "%1 es un argumento requerido"
 
@@ -90,7 +93,7 @@ msgid "%1 is a required option for add_revision"
 msgstr "%1 es una opción para add_revision"
 
 #. ($action)
-#: bin/publican:445
+#: bin/publican:456
 msgid "'%1' is an unknown action!"
 msgstr "'%1' es una acción desconocida"
 
@@ -181,7 +184,7 @@ msgstr ""
 msgid "Abstract for a book"
 msgstr "Resumen para un libro"
 
-#: bin/publican:433
+#: bin/publican:444
 msgid "Action required!"
 msgstr "¡Acción requerida!"
 
@@ -189,11 +192,11 @@ msgstr "¡Acción requerida!"
 msgid "Add a database entry"
 msgstr "Añadir una entrada de base de datos"
 
-#: bin/publican:300
+#: bin/publican:311
 msgid "Add an entry to the revision history"
 msgstr "Añadir una entrada a historial de revisiones"
 
-#: bin/publican:287
+#: bin/publican:297
 msgid "Add or remove database entries. Used for processing pre-build books, such as when building packages."
 msgstr "Añadir o retirar entradas de base de datos. Sirve para procesar libros precompilados,  como cuando se crean paquetes."
 
@@ -314,13 +317,13 @@ msgstr "No se puede crear directorio: %1"
 #. ($info_file)
 #. ($rev_file)
 #. ($xml_file)
-#: bin/publican:1101 lib/Publican.pm:1540 lib/Publican.pm:645
+#: bin/publican:1152 lib/Publican.pm:1540 lib/Publican.pm:645
 #: lib/Publican/Builder.pm:568 lib/Publican/Builder/DocBook.pm:2069
 #: lib/Publican/Builder/DocBook.pm:553
 msgid "Can't locate required file: %1"
 msgstr "No se puede localizar archivo: %1"
 
-#: bin/publican:1047
+#: bin/publican:1098
 msgid "Can't locate srpm, packaging aborted"
 msgstr "No se puede localizar srpm, empaquetamiento abortado."
 
@@ -340,7 +343,7 @@ msgid "Can't open file %1. Error: %2"
 msgstr "No se puede abrir archivo %1. Error: %2"
 
 #. ($file,$@)
-#: bin/fix-zanata-map:69 bin/publican:1230 lib/Publican/XmlClean.pm:998
+#: bin/fix-zanata-map:69 bin/publican:1281 lib/Publican/XmlClean.pm:998
 msgid "Can't open file '%1' %2"
 msgstr "No se puede abrir archivo '%1' %2"
 
@@ -394,15 +397,15 @@ msgstr "No se puede localizar archivo principal XML:'%1'"
 msgid "Cannot locate main XML file: '%1'"
 msgstr "No se puede localizar archivo principal XML:'%1'"
 
-#: bin/publican:1254
+#: bin/publican:1305
 msgid "Cannot locate productname tag in Info file!"
 msgstr "¡No se puede localizar etiqueta productname en archivo Info!"
 
-#: bin/publican:1263
+#: bin/publican:1314
 msgid "Cannot locate productnumber tag in Info file!"
 msgstr "¡No se puede localizar etiqueta productnumber en archivo Info!"
 
-#: bin/publican:1245
+#: bin/publican:1296
 msgid "Cannot locate title tag in Info file!"
 msgstr "¡No se puede localizar etiqueta title en archivo Info!"
 
@@ -411,7 +414,7 @@ msgid "Choose the formatter to use when creating txt output."
 msgstr "Elegir el formateador a usar al crear salida TXT"
 
 #. ($publican->param('tmp_dir'))
-#: bin/publican:878
+#: bin/publican:929
 msgid "Clean: Removing %1 and publish directories."
 msgstr "Limpiar: Retiro de %1 y publicar directorios."
 
@@ -435,7 +438,7 @@ msgstr "Lista de idiomas separados por comas, por ejemplo: en-US,de-DE,all"
 msgid "Conditions on which to prune XML before transformation."
 msgstr "Condiciones en las cuales podar XML antes de la transformación."
 
-#: bin/publican:557
+#: bin/publican:568
 msgid "Config file exists, you must supply a non-existent filename."
 msgstr "Archivo Config ya existe, provea un nombre de archivo que no exista."
 
@@ -455,6 +458,10 @@ msgstr "Restricción: %1"
 
 #: lib/Publican/Builder/DocBook.pm:2421
 msgid "Copy Editor"
+msgstr ""
+
+#: bin/publican:262
+msgid "Copy a brand's installed web content to another site"
 msgstr ""
 
 #. ($lang)
@@ -529,15 +536,15 @@ msgstr "No se pudo abrir archivo de icono. %1"
 msgid "Could not open search file for output: %1"
 msgstr "¡No se pudo abrir archivo de búsqueda para salida: %1"
 
-#: bin/publican:265
+#: bin/publican:275
 msgid "Create a new WebSite in the supplied location."
 msgstr "Crear un nuevo sitio  Web en el sitio provisto"
 
-#: bin/publican:226
+#: bin/publican:231
 msgid "Create a new book, set, or article"
 msgstr "Crear un nuevo libro, set o artículo"
 
-#: bin/publican:233
+#: bin/publican:238
 msgid "Create a new brand"
 msgstr "Crear una nueva marca"
 
@@ -614,7 +621,7 @@ msgstr "Mostrar toda la página de manual"
 msgid "Display help message"
 msgstr "Mostrar el mensaje de ayuda"
 
-#: bin/publican:256
+#: bin/publican:266
 msgid "Display help text for the configuration file"
 msgstr ""
 
@@ -776,7 +783,7 @@ msgid "Failed to load config file: %1"
 msgstr ""
 
 #. ($configfile)
-#: bin/publican:754
+#: bin/publican:805
 msgid "Failed to load user config file: %1"
 msgstr ""
 
@@ -868,11 +875,11 @@ msgstr ""
 msgid "Initial creation by publican"
 msgstr ""
 
-#: bin/publican:274
+#: bin/publican:284
 msgid "Install a book in to a WebSite."
 msgstr ""
 
-#: bin/publican:252
+#: bin/publican:257
 msgid "Install a brand to the supplied location"
 msgstr ""
 
@@ -910,7 +917,7 @@ msgid "Invalid language supplied: %1"
 msgstr ""
 
 #. ($opt)
-#: bin/publican:348
+#: bin/publican:359
 msgid "Invalid option '%1' in $actions{$action}->{options}"
 msgstr ""
 
@@ -960,7 +967,7 @@ msgstr ""
 msgid "Merging %1 >> %2 -> %3"
 msgstr ""
 
-#: bin/publican:312
+#: bin/publican:323
 msgid "Migrate a website DataBase from Publican < 3 to Publican 3."
 msgstr ""
 
@@ -1001,7 +1008,7 @@ msgstr ""
 msgid "No unused Image files"
 msgstr ""
 
-#: bin/publican:607
+#: bin/publican:618
 msgid ""
 "Now that your site is migrated you will need to rebuild your brands and install the brands web payload on your site.\n"
 "\n"
@@ -1012,11 +1019,11 @@ msgstr ""
 msgid "OUTOFDATE"
 msgstr ""
 
-#: bin/publican:645
+#: bin/publican:656
 msgid "One of add or del is required when updating the database"
 msgstr ""
 
-#: bin/publican:456
+#: bin/publican:467
 msgid "Options:"
 msgstr ""
 
@@ -1093,7 +1100,7 @@ msgstr ""
 msgid "PO file '%1' not found! Using base XML!"
 msgstr ""
 
-#: bin/publican:237
+#: bin/publican:242
 msgid "Package a language for shipping"
 msgstr ""
 
@@ -1134,23 +1141,23 @@ msgstr ""
 msgid "Preprocessing xml files...\n"
 msgstr ""
 
-#: bin/publican:214
+#: bin/publican:219
 msgid "Print a list of QA'd DocBook tags"
 msgstr ""
 
-#: bin/publican:210
+#: bin/publican:215
 msgid "Print a list of banned DocBook tags"
 msgstr ""
 
-#: bin/publican:222
+#: bin/publican:227
 msgid "Print a list of unused Image files"
 msgstr ""
 
-#: bin/publican:218
+#: bin/publican:223
 msgid "Print a list of unused XML files"
 msgstr ""
 
-#: bin/publican:206
+#: bin/publican:211
 msgid "Print a tree of the xi:includes"
 msgstr ""
 
@@ -1207,23 +1214,23 @@ msgstr ""
 msgid "Remaining hours for %1"
 msgstr ""
 
-#: bin/publican:278
+#: bin/publican:288
 msgid "Remove a book from a WebSite."
 msgstr ""
 
-#: bin/publican:192
+#: bin/publican:197
 msgid "Remove all temporary files and directories"
 msgstr ""
 
-#: bin/publican:197
+#: bin/publican:202
 msgid "Remove local copies of remote set books"
 msgstr ""
 
-#: bin/publican:307
+#: bin/publican:318
 msgid "Rename a publican book"
 msgstr ""
 
-#: bin/publican:282
+#: bin/publican:292
 msgid "Report on the contents of a WebSite"
 msgstr ""
 
@@ -1241,16 +1248,16 @@ msgstr ""
 msgid "Revision number to use for a revision."
 msgstr ""
 
-#: bin/publican:202
+#: bin/publican:207
 msgid "Run clean ids for source XML"
 msgstr ""
 
 #. ($0)
-#: bin/publican:399
+#: bin/publican:410
 msgid "Run: '%1 <action> --help' for details on action usage"
 msgstr ""
 
-#: bin/publican:871
+#: bin/publican:922
 msgid "Running clean process to ensure stale content is not bundled in packages."
 msgstr ""
 
@@ -1288,7 +1295,7 @@ msgstr ""
 msgid "Skipping unknown language: %1"
 msgstr ""
 
-#: bin/publican:317
+#: bin/publican:328
 msgid "Snapshot the source language for use in translation."
 msgstr ""
 
@@ -1386,7 +1393,7 @@ msgstr ""
 msgid "The language the XML will be written in"
 msgstr ""
 
-#: bin/publican:168
+#: bin/publican:170
 msgid "The language this translation is based on."
 msgstr ""
 
@@ -1414,7 +1421,7 @@ msgstr ""
 msgid "The type (book, article, or set)"
 msgstr ""
 
-#: bin/publican:167
+#: bin/publican:168
 msgid "The version number of the book being installed."
 msgstr ""
 
@@ -1480,7 +1487,7 @@ msgstr "Total de paquetes"
 msgid "Total for %1"
 msgstr "Total para %1"
 
-#: bin/publican:183
+#: bin/publican:188
 msgid "Transform XML to other formats (pdf, html, html-single, drupal-book, etc)"
 msgstr ""
 
@@ -1541,15 +1548,15 @@ msgstr ""
 msgid "Untranslated"
 msgstr "Aún sin traducir"
 
-#: bin/publican:270
+#: bin/publican:280
 msgid "Update an existing sites templates."
 msgstr ""
 
-#: bin/publican:248
+#: bin/publican:253
 msgid "Update the PO files"
 msgstr ""
 
-#: bin/publican:244
+#: bin/publican:249
 msgid "Update the POT files"
 msgstr ""
 
@@ -1570,7 +1577,7 @@ msgstr ""
 msgid "Using XML::LibXSLT on %1"
 msgstr ""
 
-#: bin/publican:392
+#: bin/publican:403
 msgid "Valid actions are:"
 msgstr ""
 
@@ -1653,6 +1660,10 @@ msgstr ""
 msgid "WebSite configuration file to use or create."
 msgstr ""
 
+#: bin/publican:172
+msgid "WebSite configuration file to use when copying content between sites."
+msgstr ""
+
 #: lib/Publican/WebSite.pm:93
 msgid "Welcome"
 msgstr ""
@@ -1675,7 +1686,7 @@ msgstr ""
 msgid "abstract can not be calculated before building."
 msgstr ""
 
-#: bin/publican:989
+#: bin/publican:1040
 msgid "add_revision does not work for brands."
 msgstr ""
 
@@ -1690,12 +1701,12 @@ msgstr ""
 msgid "authorgroup not found in %1"
 msgstr ""
 
-#: bin/publican:1057
+#: bin/publican:1108
 msgid "can't find 'publish' directory"
 msgstr ""
 
 #. ($opts{pub_dir},$lang)
-#: bin/publican:1085
+#: bin/publican:1136
 msgid "can't find publish directory '%1/%2'"
 msgstr "No se puede abrir directorio: %1"
 
@@ -1738,7 +1749,7 @@ msgstr ""
 msgid "deleted empty pot file: %1\n"
 msgstr ""
 
-#: bin/publican:790
+#: bin/publican:841
 msgid "destination must exist"
 msgstr ""
 
@@ -1841,7 +1852,7 @@ msgstr ""
 msgid "match_strings requires 2 arguments %1, %2."
 msgstr ""
 
-#: bin/publican:491 lib/Publican/CreateBook.pm:81
+#: bin/publican:502 lib/Publican/CreateBook.pm:81
 #: lib/Publican/CreateBrand.pm:62
 msgid "name is a required parameter"
 msgstr ""
@@ -1893,7 +1904,7 @@ msgid "pub_dir is a mandatory argument"
 msgstr "'path' es un argumento obligatorio  "
 
 #. (scalar@ARGV,join( ' & ', @ARGV ))
-#: bin/publican:368
+#: bin/publican:379
 msgid "publican only accepts one action you supplied '%1': %2\n"
 msgstr ""
 
@@ -1901,7 +1912,7 @@ msgstr ""
 msgid "regex is a required argument"
 msgstr ""
 
-#: bin/publican:260
+#: bin/publican:270
 msgid "report PO statistics"
 msgstr ""
 
@@ -2051,7 +2062,7 @@ msgstr ""
 msgid "xsl_file is a mandatory argument"
 msgstr ""
 
-#: bin/publican:788
+#: bin/publican:839
 msgid "you need to publish the brand first"
 msgstr ""
 

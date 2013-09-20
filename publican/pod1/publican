@@ -26,6 +26,7 @@ Valid actions are:
     clean         Remove all temporary files and directories
     clean_ids     Run clean ids for source XML
     clean_set     Remove local copies of remote set books
+    copy_web_brand  Copy a brand's installed web content to another site
     create        Create a new book, set, or article
     create_brand  Create a new brand
     create_site   Create a new WebSite in the supplied location.
@@ -134,6 +135,22 @@ clean_set
         --nocolours               Disable ANSI colourisation of logging.
         --quiet                   Disable all logging.
         --brand_dir=s             Directory to source brand files from.
+
+
+copy_web_brand
+    Copy a brand's installed web content to another site
+
+	Options:
+        --help                    Display help message
+        --config=s                Use a nonstandard config file
+        --common_config=s         Override path to Common_Config directory
+        --common_content=s        Override path to Common_Content directory
+        --nocolours               Disable ANSI colourisation of logging.
+        --quiet                   Disable all logging.
+        --brand_dir=s             Directory to source brand files from.
+        --brand=<BRAND>           The brand to use
+        --site_config=<SITE_CONFIG>    WebSite configuration file to use or create.
+        --old_site_config=<OLD_SITE_CONFIG>    WebSite configuration file to use when copying content between sites.
 
 
 create
