@@ -166,7 +166,6 @@ my %options = (
     'dtdver=s' => maketext('The version of the DocBook DTD to use'),
     'book_version=s' => maketext('The version number of the book being installed.'),
     'book_src_lang=s' => maketext('The language this translation is based on.'),
-    'book_src_version=s' => maketext('The version number of the source langauge this translation is based on.'),
 );
 
 # Options all actions use
@@ -294,7 +293,7 @@ my %actions = (
             'name',          'formats',
             'subtitle',      'abstract',
             'product_label', 'version_label',
-            'name_label',    'sort_order', 'book_version', 'book_src_lang', 'book_src_version'
+            'name_label',    'sort_order', 'book_version', 'book_src_lang'
         ],
     },
     'add_revision' => {
@@ -667,7 +666,6 @@ if ( $action eq 'update_db' ) {
 
     my $book_version = $opts{book_version} || undef;
     my $book_src_lang = $opts{book_src_lang} || undef;
-    my $book_src_version = $opts{book_src_version} || undef;
 
     if ($add) {
         croak( maketext( "[_1] is a required argument", 'subtitle' ) )
@@ -700,7 +698,6 @@ if ( $action eq 'update_db' ) {
                 sort_order    => $sort_order,
                 book_version    => $book_version,
                 book_src_lang    => $book_src_lang,
-                book_src_version    => $book_src_version,
             }
         );
     }

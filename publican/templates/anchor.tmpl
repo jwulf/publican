@@ -1,0 +1,19 @@
+[% text = name %]
+[% IF lang != booklang %]
+	[% text = text _ " <span>${trans_strings.Untranslated}</span>" %]
+[% END %]
+[% IF behind %]
+	[% text = text _ " <span class='socery'>${trans_strings.OUTOFDATE}</span>" %]
+[% END %]
+[% IF subtitle %]
+	[% text = text _ " <span class='subtitle'>${subtitle}</span>" %]
+[% END %]
+
+     [%- IF format == 'pdf' || format == 'epub' %]
+        <a href="[% host %]/[% booklang %]/[% product %]/[% version %]/[%format %]/[% book %]/[% product %]-[% version %]-[% book %]-[% lang %].[% format %]">[% text %]</a>
+     [%- ELSIF format == 'txt' %]
+        <a href="[% host %]/[% booklang %]/[% product %]/[% version %]/[%format %]/[% book %]/[% book %].[% format %]">[% text %]</a>
+     [%- ELSE %]
+        <a [% IF class %]class="[% class %]" [% END %][% IF onclick %]onclick="[% onclick %]" [% END %]href="[% host %]/[% booklang %]/[% product %]/[% version %]/[%format %]/[% book %]/index.html">[% text %]</a>
+     [%- END %]
+

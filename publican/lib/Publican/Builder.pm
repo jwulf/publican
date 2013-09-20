@@ -554,11 +554,9 @@ sub package {
     $embedtoc = "" if ( $self->{publican}->param('no_embedtoc') );
 
     $web_formats =~ s/,/ /g;
-    my $book_src_version = undef;
     my $book_src_lang = undef;
 
     if ( $lang ne $xml_lang ) {
-        $book_src_version = '0.0-0'; # BUGBUG set this
 	$book_src_lang = $xml_lang;
 
         $release = undef;
@@ -759,7 +757,6 @@ sub package {
         embedtoc          => $embedtoc,
         sort_order        => $sort_order,
 	book_version      => "$edition-$release",
-	book_src_version  => $book_src_version,
 	book_src_lang     => $book_src_lang,
     );
 

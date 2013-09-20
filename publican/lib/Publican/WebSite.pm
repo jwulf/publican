@@ -306,7 +306,6 @@ sub update_or_add_entry {
     my $sort_order       = delete $arg->{sort_order};
     my $book_version     = delete $arg->{book_version};
     my $book_src_lang    = delete $arg->{book_src_lang};
-    my $book_src_version = delete $arg->{book_src_version};
 
     if ( %{$arg} ) {
         croak "unknown args: " . join( ", ", keys %{$arg} );
@@ -338,7 +337,6 @@ sub update_or_add_entry {
                 sort_order       => $sort_order,
                 book_version     => $book_version,
                 book_src_lang    => $book_src_lang,
-                book_src_version => $book_src_version,
             }
         );
     }
@@ -357,7 +355,6 @@ sub update_or_add_entry {
                 sort_order       => $sort_order,
                 book_version     => $book_version,
                 book_src_lang    => $book_src_lang,
-                book_src_version => $book_src_version,
             }
         );
     }
@@ -384,7 +381,6 @@ sub add_entry {
     my $sort_order       = delete $arg->{sort_order};
     my $book_version     = delete $arg->{book_version};
     my $book_src_lang    = delete $arg->{book_src_lang};
-    my $book_src_version = delete $arg->{book_src_version};
 
     if ( %{$arg} ) {
         croak "unknown args: " . join( ", ", keys %{$arg} );
@@ -397,9 +393,9 @@ sub add_entry {
         INSERT INTO $DB_NAME ( 
 		language, product, version, name, formats, product_label,
 		version_label, name_label, subtitle, abstract, sort_order,
-		book_version, book_src_lang, book_src_version
+		book_version, book_src_lang
 	) 
-	VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
 INSERT_ENTRY
 
     return $self->_dbh->do(
@@ -407,8 +403,7 @@ INSERT_ENTRY
         $product,    $version,       $name,
         $formats,    $product_label, $version_label,
         $name_label, $subtitle,      $abstract,
-        $sort_order, $book_version,  $book_src_lang,
-        $book_src_version
+        $sort_order, $book_version,  $book_src_lang
     );
 }
 
@@ -432,7 +427,6 @@ sub update_entry {
     my $sort_order       = delete $arg->{sort_order};
     my $book_version     = delete $arg->{book_version};
     my $book_src_lang    = delete $arg->{book_src_lang};
-    my $book_src_version = delete $arg->{book_src_version};
 
     if ( %{$arg} ) {
         croak "unknown args: " . join( ", ", keys %{$arg} );
@@ -446,7 +440,7 @@ sub update_entry {
 		language = ?, product = ?, version = ?, name = ?, formats = ?,
 		product_label = ?, version_label = ?, name_label = ?, update_date = current_timestamp,
 		subtitle = ?, abstract = ?, sort_order = ?, book_version = ?,
-		book_src_lang = ?, book_src_version = ?
+		book_src_lang = ?
                WHERE ID = $ID
 INSERT_ENTRY
 
@@ -455,8 +449,7 @@ INSERT_ENTRY
         $product,    $version,       $name,
         $formats,    $product_label, $version_label,
         $name_label, $subtitle,      $abstract,
-        $sort_order, $book_version,  $book_src_lang,
-        $book_src_version
+        $sort_order, $book_version,  $book_src_lang
     );
 }
 
@@ -958,7 +951,6 @@ SEARCH
                 push( @{$urls}, $url );
             }
 
-#            foreach my $book ( sort( insensitive_sort keys( %{ $list2->{$product}{$version} } ) ) )
             foreach my $book ( i_sort( $list2->{$product}{$version} ) ) {
                 my $book_label = $book;
                 my %book_data;
@@ -1546,6 +1538,13 @@ SQL
             $book_lang_vars->{subtitle}      = $record->{subtitle};
             $book_lang_vars->{book_label} =~ s/_/ /g;
             $book_lang_vars->{sort_order} = $record->{sort_order};
+
+            foreach my $format ( sort (insensitive_sort split( /,/, $record->{formats} ) ) ){
+                $book_lang_vars->{base_format} = $format;
+                if($format =~ m/^html/) {
+                    last;
+                }
+            }
 
             if ( defined $record->{name_label}
                 && $record->{name_label} ne "" )

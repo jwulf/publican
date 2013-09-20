@@ -2,7 +2,9 @@
 [%- IF langs.size > 0 %]
 <ul id="book_lang_menu_list" class="hidden">
 [%- FOREACH langs %]
-  <li><a href="[% host %]/[% lang %]/[% product %]/[% version %]/html/[% book %]/index.html">[% lang_name %]</a></li>
+  <li>
+    [% INCLUDE anchor.tmpl host=host lang=lang booklang=lang product=product version=version format=base_format book=book name=lang_name %]
+  </li>
 [%- END %]
 </ul>
 [%- END %]

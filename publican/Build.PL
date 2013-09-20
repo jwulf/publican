@@ -455,6 +455,7 @@ my $builder = $class->new(
         'web/static.css'              => 'web/static.css',
     },
     templates_files => {
+        'templates/anchor.tmpl' => 'templates/anchor.tmpl',
         'templates/books_index.tmpl' => 'templates/books_index.tmpl',
         'templates/books_format_menu.tmpl' =>
             'templates/books_format_menu.tmpl',
