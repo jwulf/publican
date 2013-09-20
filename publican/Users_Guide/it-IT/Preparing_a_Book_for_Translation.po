@@ -42,8 +42,8 @@ msgid "Generate <firstterm>portable object template</firstterm> (POT) files from
 msgstr "Generare i file <firstterm>POT</firstterm> (Portable Object Template) dai file XML:"
 
 #. Tag: screen
-#, no-c-format
-msgid "$ <command>publican update_pot</command>\n"
+#, no-c-format, fuzzy
+msgid "<prompt>$</prompt> <command>publican update_pot</command>\n"
 msgstr "$ <command>publican update_pot</command>\n"
 
 #. Tag: para
@@ -62,8 +62,8 @@ msgid "<application>Publican</application> generates a POT file for every XML fi
 msgstr "<application>Publican</application> genera un file POT per ogni file XML presente della cartella dei file XML, che siano usati o meno nel documento. Se si trasformano in POT file XML non usati, si spreca il tempo e lo sforzo dei volontari traduttori, e si spreca denaro per le traduzioni commissionate a pagamento."
 
 #. Tag: para
-#, no-c-format
-msgid "Use the <command>publican print_unused</command> command to generate a list of XML files that are not used in your document."
+#, no-c-format, fuzzy
+msgid "Use the <prompt>$</prompt> <command>publican print_unused</command> command to generate a list of XML files that are not used in your document."
 msgstr "Usare il comando <command>publican print_unused</command> per visualizzare l'elenco dei file XML non usati nel documento."
 
 #. Tag: para
@@ -72,8 +72,8 @@ msgid "Generate <firstterm>portable object</firstterm> (PO) files from the POT f
 msgstr "Generare dai file POT, i file <firstterm>PO</firstterm> (Portable Object) per poter avviare la traduzione in una particolare lingua."
 
 #. Tag: screen
-#, no-c-format
-msgid "$ <command>publican update_po --langs=<replaceable>language_code</replaceable></command>\n"
+#, no-c-format, fuzzy
+msgid "<prompt>$</prompt> <command>publican update_po --langs=<replaceable>language_code</replaceable></command>\n"
 msgstr "$ <command>publican update_po --langs=<replaceable>codice_lingua</replaceable></command>\n"
 
 #. Tag: para
@@ -82,8 +82,8 @@ msgid "where <replaceable>language_code</replaceable> is the code for the target
 msgstr "dove <replaceable>codice_lingua</replaceable> è il codice per la lingua target. Fare riferimento all'<xref linkend=\"appe-Users_Guide-Language_codes\" /> per maggiori informazioni su questi codici. Si possono fornire codici linguistici multipli, separati da virgole, in modo da generare i file PO per più lingue. Per esempio:"
 
 #. Tag: screen
-#, no-c-format
-msgid "$ <command>publican update_po --langs=hi-IN,pt-BR,ru-RU,zh-CN</command>\n"
+#, no-c-format, fuzzy
+msgid "<prompt>$</prompt> <command>publican update_po --langs=hi-IN,pt-BR,ru-RU,zh-CN</command>\n"
 msgstr "$ <command>publican update_po --langs=hi-IN,it-IT,ru-RU,zh-CN</command>\n"
 
 #. Tag: para
@@ -92,8 +92,8 @@ msgid "If this is the first time that PO files have been created for a particula
 msgstr "Se è la prima volta che i file PO vengono creati per una lingua, <application>Publican</application> crea una nuova sottocartella, il cui nome coincide con il codice linguistico specificato con l'opzione <option>--langs=</option>. La sottocartella contiene un file PO per ciascun file POT nella sottocartella <filename>pot</filename>. Se <application>Publican</application> ha creato i file PO precedentemente, <application>Publican</application> aggiorna i file PO esistenti per rispecchiare i cambiamenti apportati ai file POT dall'ultimo aggiornamento dei file PO. E' possibile aggiornare i file PO esistenti in tutte le sottocartelle, usando l'opzione <option>--langs=all</option>:"
 
 #. Tag: screen
-#, no-c-format
-msgid "$ <command>publican update_po --langs=all</command>\n"
+#, no-c-format, fuzzy
+msgid "<prompt>$</prompt> <command>publican update_po --langs=all</command>\n"
 msgstr "$ <command>publican update_po --langs=all</command>\n"
 
 #. Tag: title
@@ -122,8 +122,8 @@ msgid "Build the document in the target language, for example:"
 msgstr "Creare il documento per la lingua desiderata, per esempio:"
 
 #. Tag: screen
-#, no-c-format
-msgid "$ <command>publican build --formats=html,html-single,pdf --langs=is-IS,nb-NO</command>\n"
+#, no-c-format, fuzzy
+msgid "<prompt>$</prompt> <command>publican build --formats=html,html-single,pdf --langs=is-IS,nb-NO</command>\n"
 msgstr "$ <command>publican build --formats=html,html-single,pdf --langs=it-IT,nb-NO</command>\n"
 
 #. Tag: para
@@ -132,8 +132,8 @@ msgid "or package it in the target language, for example:"
 msgstr "o il pacchetto per la lingua desiderata, per esempio:"
 
 #. Tag: screen
-#, no-c-format
-msgid "$ <command>publican package --lang=is-IS</command>\n"
+#, no-c-format, fuzzy
+msgid "<prompt>$</prompt> <command>publican package --lang=is-IS</command>\n"
 msgstr "$ <command>publican package --lang=it-IT</command>\n"
 
 #. Tag: para

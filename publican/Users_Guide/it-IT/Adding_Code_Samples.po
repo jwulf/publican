@@ -42,8 +42,8 @@ msgid "Create the extras directory"
 msgstr "Creare la cartella extras"
 
 #. Tag: screen
-#, no-c-format
-msgid "<command>mkdir <filename>en-US/extras</filename></command>\n"
+#, no-c-format, fuzzy
+msgid "<prompt>$</prompt> <command>mkdir <filename>en-US/extras</filename></command>\n"
 msgstr "<command>mkdir <filename>en-US/extras</filename></command>\n"
 
 #. Tag: para
@@ -52,8 +52,8 @@ msgid "Copy the code file to the extras directory"
 msgstr "Copiare il file del codice nella cartella extras"
 
 #. Tag: screen
-#, no-c-format
-msgid "<command>cp <filename>~/samples/foo.c en-US/extras/.</filename></command>\n"
+#, no-c-format, fuzzy
+msgid "<prompt>$</prompt> <command>cp <filename>~/samples/foo.c en-US/extras/.</filename></command>\n"
 msgstr "<command>cp <filename>~/samples/foo.c en-US/extras/.</filename></command>\n"
 
 #. Tag: para

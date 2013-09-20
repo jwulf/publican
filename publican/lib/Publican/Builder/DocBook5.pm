@@ -250,6 +250,12 @@ sub setup_xml {
                     $trans_rev_tree->look_down( '_tag', "revision" )
                     );
 
+                if (   $self->{publican}->param('rev_dir')
+                    && $self->{publican}->param('rev_dir') =~ /^asc/i )
+                {
+                    @revisions = reverse(@revisions);
+                }
+
                 $node->push_content(@revisions);
                 my $OUTDOC;
                 open( $OUTDOC, ">:encoding(UTF-8)",
@@ -653,8 +659,8 @@ sub get_author_list {
         { 'NoExpand' => "0", 'ErrorContext' => "2" } );
     $xml_doc->parse_file($file);
 
-    foreach my $author ( $xml_doc->root()
-        ->look_down( "_tag", qr/^(?:author|orgname)$/ ) )
+    foreach my $author (
+        $xml_doc->root()->look_down( "_tag", qr/^(?:author|orgname)$/ ) )
     {
         if ( $author->tag() =~ /^(?:orgname)$/ ) {
             my $name;

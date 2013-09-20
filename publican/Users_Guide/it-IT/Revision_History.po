@@ -23,6 +23,36 @@ msgstr "Cronologia revisioni"
 
 #. Tag: firstname
 #, no-c-format
+msgid "Zac"
+msgstr ""
+
+#. Tag: surname
+#, no-c-format
+msgid "Dover"
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Added command prompts to all commands - BZ#880456"
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Added quotes around the web_formats list - BZ#839141"
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Replaced a broken link to kate plugins page on CPAN with a working link - BZ#973461"
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Updated web site instructions - BZ#979224"
+msgstr ""
+
+#. Tag: firstname
+#, no-c-format
 msgid "Jeff"
 msgstr "Jeff"
 
@@ -32,8 +62,8 @@ msgid "Fearn"
 msgstr "Fearn"
 
 #. Tag: member
-#, no-c-format
-msgid "Publican 3.2.0"
+#, no-c-format, fuzzy
+msgid "Publican 3.0"
 msgstr ""
 
 #. Tag: member
@@ -42,13 +72,13 @@ msgid "Document site config option 'toc_js'"
 msgstr ""
 
 #. Tag: member
-#, no-c-format
-msgid "Document build option --pdftool"
+#, no-c-format, fuzzy
+msgid "Document build option --pub_dir"
 msgstr ""
 
 #. Tag: member
-#, no-c-format
-msgid "Document build option --pdftool"
+#, no-c-format, fuzzy
+msgid "Document build option --pub_dir"
 msgstr ""
 
 #. Tag: firstname
@@ -67,8 +97,8 @@ msgid "Add Section on Installing Publican on OpenSuse 12"
 msgstr ""
 
 #. Tag: member
-#, no-c-format
-msgid "Publican 3.2.0"
+#, no-c-format, fuzzy
+msgid "Publican 3.0"
 msgstr ""
 
 #. Tag: firstname

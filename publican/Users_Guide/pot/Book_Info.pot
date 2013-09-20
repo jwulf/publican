@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2013-09-12 15:22+1000\n"
-"PO-Revision-Date: 2013-09-12 15:22+1000\n"
+"POT-Creation-Date: 2013-09-20 14:44+1000\n"
+"PO-Revision-Date: 2013-09-20 14:44+1000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: None\n"
 "MIME-Version: 1.0\n"
@@ -24,12 +24,12 @@ msgstr ""
 
 #. Tag: productname
 #, no-c-format
-msgid "Publican"
+msgid "&PRODUCT;"
 msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "This book will help you install <application>Publican</application>. It also provides instructions for using Publican to create and publish DocBook XML-based books, articles and book sets. This guide assumes that you are already familiar with DocBook XML."
+msgid "This book will help you install <application>&PRODUCT;</application>. It also provides instructions for using Publican to create and publish DocBook XML-based books, articles and book sets. This guide assumes that you are already familiar with DocBook XML."
 msgstr ""
 
 #. Tag: keyword

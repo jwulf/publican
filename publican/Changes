@@ -11,6 +11,7 @@ NEXT UNRELEASED
 - Indicate whether a translation is older in the web GUI. BZ #889031
 - Include time in update_date. BZ #979846 
 - Support web site navigation for books without HTML. BZ #885916
+- Support ascending Revision History. BZ #999578
 
 3.2.1 Wed Sep 04 2013
 - Fix empty images dir causing packaging fail. BZ #995896

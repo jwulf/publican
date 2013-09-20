@@ -27,13 +27,13 @@ msgid "How do I add a language to my book?"
 msgstr "Come si aggiunge una lingua ad un libro?"
 
 #. Tag: para
-#, no-c-format
-msgid "Run <command>publican update_po --langs=<replaceable>language</replaceable></command>, where <replaceable>language</replaceable> is the code for the new language that you want to add. You can add more than one language at a time, with the language codes separated by commas. For example, <command>publican update_po --langs=ja-JP</command> creates the Japanese language directory and Japanese PO files, and <command>publican update_po --langs=ja-JP,ko-KR</command> creates directories and PO files for both Japanese and Korean."
+#, no-c-format, fuzzy
+msgid "Run <prompt>$</prompt> <command>publican update_po --langs=<replaceable>language</replaceable></command>, where <replaceable>language</replaceable> is the code for the new language that you want to add. You can add more than one language at a time, with the language codes separated by commas. For example, <command>publican update_po --langs=ja-JP</command> creates the Japanese language directory and Japanese PO files, and <command>publican update_po --langs=ja-JP,ko-KR</command> creates directories and PO files for both Japanese and Korean."
 msgstr "Eseguendo il comando <command>publican update_po --langs=<replaceable>codice_linguistico</replaceable></command>, dove <replaceable>codice_linguistico</replaceable> è il codice della lingua che si vuole aggiungere. Si possono aggiungere più lingue per volta, sperando i codici linguistici con virgole. Per esempio, <command>publican update_po --langs=ja-JP</command> crea la cartella per la lingua giapponese ed i file PO in giapponese, mentre <command>publican update_po --langs=ja-JP,ko-KR</command> crea cartelle e file PO per la lingua giapponese e coreana."
 
 #. Tag: para
-#, no-c-format
-msgid "What if I do not want to use the country code? For example, can I run <command>publican update_po --langs=es,de,fr</command>?"
+#, no-c-format, fuzzy
+msgid "What if I do not want to use the country code? For example, can I run <prompt>$</prompt> <command>publican update_po --langs=es,de,fr</command>?"
 msgstr "E se non si specifica il codice di nazione? Per esempio, si può eseguire <command>publican update_po --langs=es,de,fr</command>?"
 
 #. Tag: para
@@ -47,8 +47,8 @@ msgid "How do I update all po files?"
 msgstr "Come si aggiornano tutti i file PO?"
 
 #. Tag: para
-#, no-c-format
-msgid "Run the <command>publican update_po --langs=all</command> command."
+#, no-c-format, fuzzy
+msgid "Run the <prompt>$</prompt> <command>publican update_po --langs=all</command> command."
 msgstr "Eseguendo il comando <command>publican update_po --langs=all</command>."
 
 #. Tag: para
@@ -57,8 +57,8 @@ msgid "Where can I get a complete list of <application>Publican</application>'s 
 msgstr "Come si ottiene l'elenco completo delle opzioni di <emphasis>build</emphasis> di <application>Publican</application>?"
 
 #. Tag: para
-#, no-c-format
-msgid "Run the <command>publican build --help</command> command."
+#, no-c-format, fuzzy
+msgid "Run the <prompt>$</prompt> <command>publican build --help</command> command."
 msgstr "Eseguendo il comando <command>publican build --help</command>."
 
 #. Tag: para
@@ -67,8 +67,8 @@ msgid "Where can I get a complete list of parameters that can be set in the <fil
 msgstr "Come si ottiene l'elenco completo dei parametri configurabili nel file <filename>publican.cfg</filename>?"
 
 #. Tag: para
-#, no-c-format
-msgid "Run the <command>publican help_config</command> command in a directory that holds any <application>Publican</application> document."
+#, no-c-format, fuzzy
+msgid "Run the <prompt>$</prompt> <command>publican help_config</command> command in a directory that holds any <application>Publican</application> document."
 msgstr "Eseguendo il comando <command>publican help_config</command> in una cartella contenente un documento di <application>Publican</application>."
 
 #. Tag: para
@@ -117,8 +117,8 @@ msgid "I can build HTML documents fine, but when I try to build PDF documents, I
 msgstr "I documenti HTML vengono creati regolarmente, ma provando a creare documenti PDF, si solleva un'eccezione <computeroutput>java.lang.NullPointerException</computeroutput> senza produzione di file PDF. Cos'è che non va?"
 
 #. Tag: para
-#, no-c-format
-msgid "Try building a PDF version of a different document — perhaps a fresh one that you create with the <command>publican create</command> command. If the problem is not just with one particular document, you probably have a mismatch between the <application>Java Runtime Environment</application> (JRE) and the <application>Java Development Kit</application> (JDK) in use on your system. If you have a JDK installed, <application>FOP</application> requires that the JDK is of the same version as the JRE. Furthermore, <application>FOP</application> cannot use the <application>GNU Compiler for Java</application> (GCJ)."
+#, no-c-format, fuzzy
+msgid "Try building a PDF version of a different document — perhaps a fresh one that you create with the <prompt>$</prompt> <command>publican create</command> command. If the problem is not just with one particular document, you probably have a mismatch between the <application>Java Runtime Environment</application> (JRE) and the <application>Java Development Kit</application> (JDK) in use on your system. If you have a JDK installed, <application>FOP</application> requires that the JDK is of the same version as the JRE. Furthermore, <application>FOP</application> cannot use the <application>GNU Compiler for Java</application> (GCJ)."
 msgstr "Provare a creare un file PDF con un diverso documento — meglio se con un nuovo documento creato con il comando <command>publican create</command>. Se il problema persiste, allora probabilmente nel sistema in uso, esiste un conflitto tra <application>JRE</application> (Java Runtime Environment) e <application>JDK</application> (Java Development Kit). Se è presente una JDK, <application>FOP</application> richiede che la JDK abbia la stessa versione della JRE. Inoltre, <application>FOP</application> non può usare la <application>GCJ</application> (GNU Compiler for Java)."
 
 #. Tag: para
@@ -127,9 +127,9 @@ msgid "Run <command>alternatives --config java</command> and <command>alternativ
 msgstr "Eseguire <command>alternatives --config java</command> e <command>alternatives --config javac</command> per determinare la JRE e JDK in uso, poi selezionare le versioni corrispondenti e quelle prive dell'elemento <literal>gcj</literal> nel loro nome. Per esempio, la seguente configurazione Java visualizza una JRE ed una JDK corrispondente che consentono di creare file PDF: "
 
 #. Tag: screen
-#, no-c-format
+#, no-c-format, fuzzy
 msgid ""
-"$ alternatives --config java\n"
+"<prompt>$</prompt> <command>alternatives --config java</command>\n"
 "\n"
 "There are 3 programs which provide 'java'.\n"
 "\n"
@@ -154,9 +154,9 @@ msgstr ""
 "Enter to keep the current selection[+], or type selection number:"
 
 #. Tag: screen
-#, no-c-format
+#, no-c-format, fuzzy
 msgid ""
-"$ alternatives --config javac\n"
+"<prompt>$</prompt> <command>alternatives --config javac</command>\n"
 "\n"
 "There are 3 programs which provide 'javac'.\n"
 "\n"
@@ -206,8 +206,8 @@ msgid "I get an error <computeroutput>Exception in thread \"main\" java.lang.Out
 msgstr "Creando un file PDF si solleva un'eccezione <computeroutput>Exception in thread \"main\" java.lang.OutOfMemoryError: Java heap space</computeroutput>. Cos'è che non va?"
 
 #. Tag: para
-#, no-c-format
-msgid "The default memory allocated for Java is not big enough to build your PDF. You need to increase the memory allocated to <application>FOP</application>. Before running <command>publican build</command> run <command>echo \"FOP_OPTS='-Xms50m -Xmx700m'\" &gt; ~/.foprc</command>. This sets the initial heap space to 50&nbsp;MB and allows it to grow to a maximum of 700&nbsp;MB."
+#, no-c-format, fuzzy
+msgid "The default memory allocated for Java is not big enough to build your PDF. You need to increase the memory allocated to <application>FOP</application>. Before running <prompt>$</prompt> <command>publican build</command> run <command>echo \"FOP_OPTS='-Xms50m -Xmx700m'\" &gt; ~/.foprc</command>. This sets the initial heap space to 50&nbsp;MB and allows it to grow to a maximum of 700&nbsp;MB."
 msgstr "La memoria allocata per Java, in modo predefinito, è insufficiente a creare il PDF. Occorre aumentare la memoria allocata per <application>FOP</application>. Prima di eseguire <command>publican build</command>, eseguire <command>echo \"FOP_OPTS='-Xms50m -Xmx700m'\" &gt; ~/.foprc</command>. Ciò imposta lo spazio iniziale della memoria heap a 50&nbsp;MB e permette di aumentare fino ad un massimo di 700&nbsp;MB."
 
 #. Tag: para
@@ -287,8 +287,8 @@ msgid "Note that <application>Syntax::Highlight::Engine::Kate</application> is v
 msgstr "Notare che il modulo <application>Syntax::Highlight::Engine::Kate</application> è molto rigoroso con i nomi dei linguaggi ed è case sensitive. Quindi, <sgmltag>&lt;programlisting language=\"Java\"&gt;</sgmltag> funziona, ma <sgmltag>&lt;programlisting language=\"java\"&gt;</sgmltag> e <sgmltag>&lt;programlisting language=\"JAVA\"&gt;</sgmltag> non funzionano. Il messaggio d'errore specifica il problema relativo all'attributo del linguaggio."
 
 #. Tag: para
-#, no-c-format
-msgid "Refer to <ulink url=\"http://search.cpan.org/~szabgab/Syntax-Highlight-Engine-Kate-0.06/lib/Syntax/Highlight/Engine/Kate.pm#PLUGINS\" /> for the full list of languages that <application>Syntax::Highlight::Engine::Kate</application> supports, including their expected capitalization and punctuation."
+#, no-c-format, fuzzy
+msgid "Refer to <ulink url=\"http://search.cpan.org/dist/Syntax-Highlight-Engine-Kate/lib/Syntax/Highlight/Engine/Kate.pm#PLUGINS\" /> for the full list of languages that <application>Syntax::Highlight::Engine::Kate</application> supports, including their expected capitalization and punctuation."
 msgstr "Fare riferimento a <ulink url=\"http://search.cpan.org/~szabgab/Syntax-Highlight-Engine-Kate-0.06/lib/Syntax/Highlight/Engine/Kate.pm#PLUGINS\" /> per l'elenco completo dei linguaggi supportati da <application>Syntax::Highlight::Engine::Kate</application>, insieme al corretto uso delle lettere maiuscole e della punteggiatura."
 
 #. Tag: para
@@ -330,6 +330,35 @@ msgstr ""
 #, no-c-format
 msgid "Restart your terminal or run <command>source ~/.bashrc</command>."
 msgstr "Riavviare il terminale o eseguire <command>source ~/.bashrc</command>."
+
+#. Tag: para
+#, no-c-format
+msgid "Why am I having trouble building my large book?"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Probably because the kernel can deal with only a certain number of file handles at a time, and you have exceeded that number. On some linuxes you can run <command>ulimit -n 8192</command> to change the limit for the current shell."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "To make this permanent, open <filename>/etc/security/limits.conf</filename> and add these two lines:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"\n"
+"*                 soft    nofile          8192\n"
+"*                 hard    nofile          8192\n"
+"					"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Then save, and log in again for the changes to take effect."
+msgstr ""
 
 #. Tag: para
 #, no-c-format

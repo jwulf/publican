@@ -54,8 +54,8 @@ msgstr ""
 "\n"
 
 #. Tag: para
-#, no-c-format
-msgid "and this chapter is included in <filename>User_Guide.xml</filename> with an <sgmltag>&lt;xi:include&gt;</sgmltag> tag, the document will not build with <command>condition: Ubuntu</command> set in the <filename>publican.cfg</filename> file."
+#, no-c-format, fuzzy
+msgid "and this chapter is included in <filename>User_Guide.xml</filename> with an <sgmltag>&lt;xi:include&gt;</sgmltag> tag, the document will not build with <prompt>$</prompt> <command>condition: Ubuntu</command> set in the <filename>publican.cfg</filename> file."
 msgstr "ed il capitolo è incluso in <filename>User_Guide.xml</filename> con un tag <sgmltag>&lt;xi:include&gt;</sgmltag>, il documento non compila se è presente l'impostazione <command>condition: Ubuntu</command> nel file <filename>publican.cfg</filename>."
 
 #. Tag: para

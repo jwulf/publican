@@ -19,7 +19,7 @@ msgid "xrefs and conditional tagging"
 msgstr "xref e tag condizionale"
 
 #. Tag: para
-#, no-c-format
-msgid "If an <sgmltag>&lt;xref&gt;</sgmltag> points to content not included in the build due to conditional tagging, the build will fail. For example, with <command>condition: upstream</command> set in the <filename>publican.cfg</filename> file, <command>publican build --formats=pdf --langs=en-US</command> will fail if the book has the tag <sgmltag>&lt;xref linkend=\"betasection\"&gt;</sgmltag> pointing to <sgmltag>&lt;section id=\"betasection\" condition=\"beta\"&gt;</sgmltag>."
+#, no-c-format, fuzzy
+msgid "If an <sgmltag>&lt;xref&gt;</sgmltag> points to content not included in the build due to conditional tagging, the build will fail. For example, with <prompt>$</prompt> <command>condition: upstream</command> set in the <filename>publican.cfg</filename> file, <prompt>$</prompt> <command>publican build --formats=pdf --langs=en-US</command> will fail if the book has the tag <sgmltag>&lt;xref linkend=\"betasection\"&gt;</sgmltag> pointing to <sgmltag>&lt;section id=\"betasection\" condition=\"beta\"&gt;</sgmltag>."
 msgstr "Se un <sgmltag>&lt;xref&gt;</sgmltag> punta ad un contenuto escluso nella compilazione da un tag condizionale, la compilazione fallisce. Per esempio, con l'impostazione <command>condition: upstream</command> nel file <filename>publican.cfg</filename>, il comando <command>publican build --formats=pdf --langs=en-US</command> fallisce se il libro ha un tag <sgmltag>&lt;xref linkend=\"betasection\"&gt;</sgmltag> che punta alla <sgmltag>&lt;section id=\"betasection\" condition=\"beta\"&gt;</sgmltag>."
 

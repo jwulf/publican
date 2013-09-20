@@ -27,13 +27,13 @@ msgid "On your workstation, change into the directory that contains the source f
 msgstr "Sulla workstation, spostarsi nella cartella contenente i sorgenti del documento ed eseguire:"
 
 #. Tag: screen
-#, no-c-format
-msgid "<command>publican package --binary --lang <replaceable>language_code</replaceable></command>"
+#, no-c-format, fuzzy
+msgid "<prompt>$</prompt> <command>publican package --binary --lang <replaceable>language_code</replaceable></command>"
 msgstr "<command>publican package --binary --lang <replaceable>codice_lingua</replaceable></command>"
 
 #. Tag: para
-#, no-c-format
-msgid "<application>Publican</application> builds an RPM package and places it in the <filename>/tmp/rpms/noarch/</filename> directory of the document. Note that by default, <application>Publican</application> generates an RPM package to install on a server that runs Red Hat Enterprise Linux&nbsp;5. To build an RPM package to install on a server that runs a different operating system, set the <parameter>os_ver</parameter> parameter in the document's <filename>publican.cfg</filename> file."
+#, no-c-format, fuzzy
+msgid "<application>Publican</application> builds an RPM package and places it in the <filename>/tmp/rpms/noarch/</filename> directory of the document. By default, <application>Publican</application> builds the RPM package for the operating system within which you are running <application>Publican</application>. To build an RPM package to install on a server that runs a different operating system, set the <parameter>os_ver</parameter> parameter in the document's <filename>publican.cfg</filename> file."
 msgstr "<application>Publican</application> crea un pacchetto RPM, salvandolo nella cartella <filename>/tmp/rpms/noarch/</filename> del documento. Notare che per impostazione predefinita, <application>Publican</application> genera un pacchetto RPM da installare su un server che esegua Red Hat Enterprise Linux&nbsp;5. Per creare un RPM da installare su un server con un sistema operativo differente, impostare il parametro <parameter>os_var</parameter> nel file <filename>publican.cfg</filename> del documento."
 
 #. Tag: para
@@ -52,7 +52,7 @@ msgid "Remove a document from the webserver with the <command>rpm -e</command> o
 msgstr "Rimuovere un documento dal server web, con il comando <command>rpm -e</command> o <command>yum erase</command>."
 
 #. Tag: para
-#, no-c-format
-msgid "On large or busy sites, we recommend that you set the <parameter>manual_toc_update</parameter> parameter in the site's configuration file. With this parameter set, you must run the <command>publican update_site</command> command after installing, updating, or removing documents. Refer to <xref linkend=\"sect-Users_Guide-Website-structure-cfg_and_db-manual\" /> for more information."
+#, no-c-format, fuzzy
+msgid "On large or busy sites, we recommend that you set the <parameter>manual_toc_update</parameter> parameter in the site's configuration file. With this parameter set, you must run the <prompt>$</prompt> <command>publican update_site</command> command after installing, updating, or removing documents. Refer to <xref linkend=\"sect-Users_Guide-Website-structure-cfg_and_db-manual\" /> for more information."
 msgstr "Su siti di grandi dimensioni o molto occupati, si raccomanda di impostare il parametro <parameter>manual_toc_update</parameter> nel file di configurazione. Una volta settato, occorre eseguire il comando <command>publican update_site</command> dopo aver installato, aggiornato o rimosso documenti. Fare riferimento alla <xref linkend=\"sect-Users_Guide-Website-structure-cfg_and_db-manual\" />, per maggiori informazioni."
 

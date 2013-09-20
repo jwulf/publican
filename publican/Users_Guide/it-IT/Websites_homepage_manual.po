@@ -27,13 +27,13 @@ msgid "The <application>Publican</application>-generated home page is the locali
 msgstr "La home page generata da <application>Publican</application> è la pagina di localizzazione a cui sono indirizzati i visitatori dallo JavaScript del sito e che fornisce lo stile alla struttura del sito web. La home page è strutturata come un <sgmltag>&lt;article&gt;</sgmltag> DocBook ma con un parametro ulteriore <parameter>web_type:&nbsp;home</parameter> nel proprio file <filename>publican.cfg</filename>. Nella sua struttura e presentazione, la home page assomiglia ad un articolo di <application>Publican</application>. Per creare la home page:"
 
 #. Tag: para
-#, no-c-format
-msgid "Change into a convenient directory and run the following <command>publican create</command> command:"
+#, no-c-format, fuzzy
+msgid "Change into a convenient directory and run the following <prompt>$</prompt> <command>publican create</command> command:"
 msgstr "Spostarsi in una cartella opportuna ed eseguire il comando di <command>publican create</command>:"
 
 #. Tag: screen
-#, no-c-format
-msgid "<command>publican create --type Article --name <replaceable>page_name</replaceable></command>"
+#, no-c-format, fuzzy
+msgid "<prompt>$</prompt> <command>publican create --type Article --name <replaceable>page_name</replaceable></command>"
 msgstr "<command>publican create --type Article --name <replaceable>nome_pagina</replaceable></command>"
 
 #. Tag: para
@@ -42,8 +42,8 @@ msgid "For example:"
 msgstr "Per esempio:"
 
 #. Tag: screen
-#, no-c-format
-msgid "<command>publican create --type Article --name Home_Page</command>"
+#, no-c-format, fuzzy
+msgid "<prompt>$</prompt> <command>publican create --type Article --name Home_Page</command>"
 msgstr "<command>publican create --type Article --name Home_Page</command>"
 
 #. Tag: para
@@ -57,14 +57,14 @@ msgid "Change into the article directory:"
 msgstr "Spostarsi nella cartella dell'articolo:"
 
 #. Tag: screen
-#, no-c-format
-msgid "<command>cd <replaceable>page_name</replaceable></command>"
+#, no-c-format, fuzzy
+msgid "<prompt>$</prompt> <command>cd <replaceable>page_name</replaceable></command>"
 msgstr "<command>cd <replaceable>nome_pagina</replaceable></command>"
 
 #. Tag: screen
 #, no-c-format
-msgid "<command>cd Home_Page</command>"
-msgstr "<command>cd Home_Page</command>"
+msgid "<prompt>$</prompt> <command>cd Home_Page</command>"
+msgstr ""
 
 #. Tag: para
 #, no-c-format
@@ -142,8 +142,8 @@ msgid "&lt;title role=\"producttitle\"&gt;FooMaster Documentation&lt;/title&gt;"
 msgstr "&lt;title role=\"producttitle\"&gt;FooMaster Documentation&lt;/title&gt;"
 
 #. Tag: para
-#, no-c-format
-msgid "If you publish documentation in more than one language, create a set of POT files and a set of PO files for each language with the <command>publican update_pot</command> and <command>publican update_po</command> commands."
+#, no-c-format, fuzzy
+msgid "If you publish documentation in more than one language, create a set of POT files and a set of PO files for each language with the <prompt>$</prompt> <command>publican update_pot</command> and <command>publican update_po</command> commands."
 msgstr "Se si pubblica documentazione in più lingue, creare un set di file POT ed un set di file PO per ciascuna lingua usando i comandi <command>publican update_pot</command> e <command>publican update_po</command>."
 
 #. Tag: para
@@ -162,16 +162,21 @@ msgid "Build the home page in single-page HTML format with the <option>--embedto
 msgstr "Creare la home page in formato HTML su singola pagina con l'opzione <option>--embedtoc</option> ed installarla nella struttura del sito. Per esempio:"
 
 #. Tag: screen
-#, no-c-format
+#, no-c-format, fuzzy
 msgid ""
-"<command>publican build --publish --formats html-single --embedtoc --langs all</command> \n"
-"<command>publican install_book --site_config ~/docsite/foomaster.cfg --lang <replaceable>Language_Code</replaceable></command>"
+"<prompt>$</prompt> <command>publican build --publish --formats html-single --embedtoc --langs all</command> \n"
+"<prompt>$</prompt> <command>publican install_book --site_config ~/docsite/foomaster.cfg --lang <replaceable>Language_Code</replaceable></command>"
 msgstr ""
 "<command>publican build --publish --formats html-single --embedtoc --langs all</command> \n"
 "<command>publican install_book --site_config ~/docsite/foomaster.cfg --lang <replaceable>Codice_Lingua</replaceable></command>"
 
 #. Tag: para
-#, no-c-format
-msgid "Note that you can build all languages at the same time, but must install the home page for each language with a separate <command>publican install_book</command> command."
+#, no-c-format, fuzzy
+msgid "Note that you can build all languages at the same time, but must install the home page for each language with a separate <prompt>$</prompt> <command>publican install_book</command> command."
 msgstr "Notare che è possibile creare con un unico comando, gli HTML per tutte le lingue, ma occorre installare la home page di ciascuna lingua con un comando <command>publican install_book</command>, individuale."
+
+#. Tag: screen
+#, no-c-format
+#~ msgid "<command>cd Home_Page</command>"
+#~ msgstr "<command>cd Home_Page</command>"
 

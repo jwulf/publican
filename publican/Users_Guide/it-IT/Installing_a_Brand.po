@@ -52,8 +52,8 @@ msgid "Change into the directory in which you created or unpacked the brand:"
 msgstr "Spostarsi nella cartella contenente il brand estratto:"
 
 #. Tag: screen
-#, no-c-format
-msgid "<command>cd publican-<replaceable>brand</replaceable></command>\n"
+#, no-c-format, fuzzy
+msgid "<prompt>$</prompt> <command>cd publican-<replaceable>brand</replaceable></command>\n"
 msgstr "<command>cd publican-<replaceable>brand</replaceable></command>\n"
 
 #. Tag: para
@@ -67,8 +67,8 @@ msgid "Build the brand:"
 msgstr "Compilare il brand:"
 
 #. Tag: screen
-#, no-c-format
-msgid "<command>publican build --formats xml --langs all --publish</command>\n"
+#, no-c-format, fuzzy
+msgid "<prompt>$</prompt> <command>publican build --formats xml --langs all --publish</command>\n"
 msgstr "<command>publican build --formats xml --langs all --publish</command>\n"
 
 #. Tag: para
@@ -77,8 +77,8 @@ msgid "Install the brand:"
 msgstr "Installare il brand:"
 
 #. Tag: screen
-#, no-c-format
-msgid "<command>sudo publican install_brand --path <replaceable>path</replaceable></command>\n"
+#, no-c-format, fuzzy
+msgid "<prompt>$</prompt> <command>sudo publican install_brand --path <replaceable>path</replaceable></command>\n"
 msgstr "<command>sudo publican install_brand --path <replaceable>path</replaceable></command>\n"
 
 #. Tag: para
@@ -87,8 +87,8 @@ msgid "where <replaceable>path</replaceable> is the path to the <application>Pub
 msgstr "dove <replaceable>path</replaceable> è il percorso ai file Common Content di <application>Publican</application>. Per esempio, su un sistema Linux, eseguire:"
 
 #. Tag: screen
-#, no-c-format
-msgid "<command>sudo publican install_brand --path /usr/share/publican/Common_Content</command>\n"
+#, no-c-format, fuzzy
+msgid "<prompt>$</prompt> <command>sudo publican install_brand --path /usr/share/publican/Common_Content</command>\n"
 msgstr "<command>sudo publican install_brand --path /usr/share/publican/Common_Content</command>\n"
 
 #. Tag: para
@@ -97,8 +97,8 @@ msgid "or on a Windows system, run"
 msgstr "o su un sistema Windows, eseguire:"
 
 #. Tag: screen
-#, no-c-format
-msgid "<command>publican install_brand --path \"C:/Program Files/Publican/Common_Content\"</command>\n"
+#, no-c-format, fuzzy
+msgid "<prompt>$</prompt> <command>publican install_brand --path \"C:/Program Files/Publican/Common_Content\"</command>\n"
 msgstr "<command>publican install_brand --path \"C:/Program Files/Publican/Common_Content\"</command>\n"
 
 #. Tag: title

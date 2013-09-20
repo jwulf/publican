@@ -27,17 +27,17 @@ msgid "To install a document on a website that you are building manually, change
 msgstr "Per installare un documento su un sito web da creare manualmente, spostarsi nella cartella contenente il sorgente del documento ed eseguire:"
 
 #. Tag: screen
-#, no-c-format
+#, no-c-format, fuzzy
 msgid ""
-"<command>publican build --embedtoc --formats=<replaceable>list_of_formats</replaceable> --langs=<replaceable>language_codes</replaceable> --publish</command> \n"
-"<command>publican install_book --site_config <replaceable>path_to_site_configuration_file</replaceable>.cfg --lang <replaceable>language_code</replaceable></command>"
+"<prompt>$</prompt> <command>publican build --embedtoc --formats=<replaceable>list_of_formats</replaceable> --langs=<replaceable>language_codes</replaceable> --publish</command> \n"
+"<prompt>$</prompt> <command>publican install_book --site_config <replaceable>path_to_site_configuration_file</replaceable>.cfg --lang <replaceable>language_code</replaceable></command>"
 msgstr ""
 "<command>publican build --embedtoc --formats=<replaceable>lista_dei_formati</replaceable> --langs=<replaceable>codici_lingua</replaceable> --publish</command> \n"
 "<command>publican install_book --site_config <replaceable>percorso_al_file_di_configurazione_del_sito</replaceable>.cfg --lang <replaceable>codici_lingua</replaceable></command>"
 
 #. Tag: para
-#, no-c-format
-msgid "Note that you can run a single <command>publican build</command> command for all languages that you want to publish, but must run a separate <command>publican install_book</command> for each language. You must include <literal>html</literal> as one of the formats in the <command>publican build</command> command; optionally, include any or all of the following formats in a comma-separated list: <literal>html-single</literal>, <literal>pdf</literal>, and <literal>epub</literal>."
+#, no-c-format, fuzzy
+msgid "Note that you can run a single <prompt>$</prompt> <command>publican build</command> command for all languages that you want to publish, but must run a separate <command>publican install_book</command> for each language. You must include <literal>html</literal> as one of the formats in the <command>publican build</command> command; optionally, include any or all of the following formats in a comma-separated list: <literal>html-single</literal>, <literal>pdf</literal>, and <literal>epub</literal>."
 msgstr "Notare che è possibile creare con un unico comando di <command>publican build</command>, le pubblicazioni per tutte le lingue, ma che occorre un comando <command>publican install_book</command>, individuale per ciascuna lingua. Nel comando <command>publican build</command>, occorre includere <literal>html</literal> come uno dei formato d'uscita ; opzionalmente, è possibile includere anche uno o più dei seguenti formati, separandoli con virgole: <literal>html-single</literal>, <literal>pdf</literal> ed <literal>epub</literal>."
 
 #. Tag: para
@@ -51,8 +51,8 @@ msgid "To remove a document, change into the directory that contains the source 
 msgstr "Per rimuovere un documento, spostarsi nella cartella contenente i sorgenti del documento ed eseguire:"
 
 #. Tag: screen
-#, no-c-format
-msgid "<command>publican remove_book --site_config <replaceable>path_to_site_configuration_file</replaceable>.cfg --lang <replaceable>language_code</replaceable></command>"
+#, no-c-format, fuzzy
+msgid "<prompt>$</prompt> <command>publican remove_book --site_config <replaceable>path_to_site_configuration_file</replaceable>.cfg --lang <replaceable>language_code</replaceable></command>"
 msgstr "<command>publican remove_book --site_config <replaceable>percorso_al_file_di_configurazione_del_sito</replaceable>.cfg --lang <replaceable>codice_lingua</replaceable></command>"
 
 #. Tag: para

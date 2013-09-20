@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2013-09-12 15:22+1000\n"
-"PO-Revision-Date: 2013-09-12 15:22+1000\n"
+"POT-Creation-Date: 2013-09-20 14:44+1000\n"
+"PO-Revision-Date: 2013-09-20 14:44+1000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: None\n"
 "MIME-Version: 1.0\n"
@@ -714,6 +714,16 @@ msgstr ""
 #. Tag: para
 #, no-c-format
 msgid "specifies the repository from which to fetch remote books that form part of a distributed set. Refer to <xref linkend=\"sect-Users_Guide-Using_sets-Distributed_sets\" />."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "<parameter>rev_dir</parameter>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "override the default Revision History file direction. By default <application>Publican</application> assumes the Revision History is sorted in descending order, newest versions at teh top, if you wish to change this and have the oldest revisions at the top, then set this parameter to <literal>asc</literal> or <literal>ascending</literal>."
 msgstr ""
 
 #. Tag: term

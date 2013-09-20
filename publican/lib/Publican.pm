@@ -18,6 +18,7 @@ use Cwd qw(abs_path);
 use Data::Dumper;
 use File::Copy::Recursive;
 use Encode qw(is_utf8 decode_utf8 encode_utf8);
+use Sort::Versions;
 
 use vars
     qw(@ISA $VERSION @EXPORT @EXPORT_OK $SINGLETON $LOCALISE $SPEC_VERSION);
@@ -303,6 +304,10 @@ my %PARAMS = (
         descr => maketext(
             'Type of repository in which books that form part of a remote set are stored. Supported types: SVN.'
         ),
+    },
+    rev_dir => {
+        descr => maketext(
+            q|By default Revision History is sorted in descending order. Set this to 'asc' or 'ascending' to reverse the sort.|),
     },
     rev_file =>
         { descr => maketext('Override the default Revision History file.'), },
@@ -1429,26 +1434,19 @@ sub add_revision {
                 [ 'surname',   $surname ],
                 [ 'email',     $email ],
             ],
-            [   'revdescription',
-                [   'simplelist',
-                    map {
-                        [   'member',
-                            eval {
-                                XML::TreeBuilder->new(
-                                    {   'NoExpand'     => "1",
-                                        'ErrorContext' => "2"
-                                    }
-                                )->parse("<rubbish>$_</rubbish>");
-                            }
-                        ]
-                        } @{$members},
-                ],
-            ],
+            [ 'revdescription', ['simplelist'], ],
         ],
     );
 
-    foreach my $node ( $revision->root()->look_down( "_tag", 'rubbish' ) ) {
-        $node->replace_with_content()->delete();
+    my $list = $revision->root()->look_down( "_tag", 'simplelist' );
+    foreach my $member ( @{$members} ) {
+        my $mem = XML::TreeBuilder->new(
+            {   'NoExpand'     => "1",
+                'ErrorContext' => "2"
+            }
+        );
+        $mem->parse("<member>$member</member>");
+        $list->push_content($mem);
     }
 
     my $dtdver    = $self->param('dtdver');
@@ -1488,7 +1486,12 @@ sub add_revision {
         croak( maketext( "revhistory not found in [_1]", $rev_file ) );
     }
 
-    $node->unshift_content($revision);
+    if ( $self->param('rev_dir') && $self->param('rev_dir') =~ /^asc/i ) {
+        $node->push_content($revision);
+    }
+    else {
+        $node->unshift_content($revision);
+    }
 
     my $OUTDOC;
     open( $OUTDOC, ">:encoding(UTF-8)", "$rev_file" )
@@ -1543,12 +1546,11 @@ sub get_ed_rev {
         croak( maketext( "FATAL ERROR: [_1]: [_2]", $rev_file, $@ ) );
     }
 
-    my $VR = eval {
-        $rev_doc->root()->look_down( "_tag", "revnumber" )->as_text();
-    };
-    if ($@) {
-        croak( maketext( "revnumber not found in [_1]", $rev_file ) );
-    }
+    my @revs = map { $_->as_text() }
+        sort { versioncmp( $b->as_text(), $a->as_text() ) }
+        ( $rev_doc->root()->look_down( "_tag", "revnumber" ) );
+
+    my $VR = shift(@revs);
 
     $VR =~ /^([0-9.]*)-([0-9.]*)$/ || croak(
         maketext(
