@@ -402,7 +402,7 @@ part nop
 	<xsl:attribute name="border-left-width">3pt</xsl:attribute>
 	<xsl:attribute name="border-left-style">solid</xsl:attribute>
 	<xsl:attribute name="border-left-color">#aaaaaa</xsl:attribute>
-	<xsl:attribute name="keep-together.within-column"></xsl:attribute>
+	<xsl:attribute name="keep-together.within-column">auto</xsl:attribute>
 	<xsl:attribute name="margin-left">0em</xsl:attribute>
 	<xsl:attribute name="padding-left">0.8em</xsl:attribute>
 	<xsl:attribute name="padding-top">0em</xsl:attribute>
