@@ -803,6 +803,7 @@ Users_Guide/en-US/images/drupal_import_task.png
 Users_Guide/en-US/images/drupal_node_import_settings.png
 Users_Guide/en-US/images/icon.svg
 Users_Guide/en-US/images/logos/engops.png
+Users_Guide/en-US/images/test—image.png
 Users_Guide/en-US/Installing_a_Brand.xml
 Users_Guide/en-US/Installing_Publican.xml
 Users_Guide/en-US/Installing_Publican_OpenSuse.xml
@@ -872,6 +873,7 @@ Users_Guide/it-IT/Permitted_numbers.po
 Users_Guide/it-IT/Preface.po
 Users_Guide/it-IT/Preparing_a_Book_for_Translation.po
 Users_Guide/it-IT/Publican_cfg_parameters.po
+Users_Guide/it-IT/Publican_cfg_parameters_order_by_alpha.po
 Users_Guide/it-IT/Publican_Commands.po
 Users_Guide/it-IT/Publican_Defaults.po
 Users_Guide/it-IT/Renaming_a_document.po

@@ -1,6 +1,7 @@
 <?xml version='1.0'?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:d="http://docbook.org/ns/docbook"
   version="1.0"
   exclude-result-prefixes=""
   extension-element-prefixes=""
@@ -104,6 +105,288 @@ part toc
         <div id="navigation"><xsl:text> </xsl:text></div>
         <div id="floatingtoc" class="hidden"><xsl:text> </xsl:text></div>
   </xsl:if>
+</xsl:template>
+
+<!-- HTML5: replace border="0" with border="" -->
+<!-- HTML5: No @summary allowed -->
+<!-- HTML5: replace many table atts with CSS styles -->
+<xsl:template match="d:tgroup" name="tgroup">
+  <xsl:if test="not(@cols) or @cols = '' or string(number(@cols)) = 'NaN'">
+    <xsl:message terminate="yes">
+      <xsl:text>Error: CALS tables must specify the number of columns.</xsl:text>
+    </xsl:message>
+  </xsl:if>
+
+  <xsl:variable name="summary">
+    <xsl:call-template name="pi.dbhtml_table-summary"/>
+  </xsl:variable>
+
+  <xsl:variable name="cellspacing">
+    <xsl:call-template name="pi.dbhtml_cellspacing"/>
+  </xsl:variable>
+
+  <xsl:variable name="cellpadding">
+    <xsl:call-template name="pi.dbhtml_cellpadding"/>
+  </xsl:variable>
+
+  <!-- First generate colgroup with attributes -->
+  <xsl:variable name="colgroup.with.attributes">
+    <colgroup>
+      <xsl:call-template name="generate.colgroup">
+        <xsl:with-param name="cols" select="@cols"/>
+      </xsl:call-template>
+    </colgroup>
+  </xsl:variable>
+
+  <!-- then modify colgroup attributes with extension -->
+  <xsl:variable name="colgroup.with.extension">
+    <xsl:choose>
+      <xsl:when test="$use.extensions != 0
+                      and $tablecolumns.extension != 0">
+        <xsl:choose>
+          <xsl:when test="function-available('stbl:adjustColumnWidths')">
+            <xsl:copy-of select="stbl:adjustColumnWidths($colgroup.with.attributes)"/>
+          </xsl:when>
+          <xsl:when test="function-available('xtbl:adjustColumnWidths')">
+            <xsl:copy-of select="xtbl:adjustColumnWidths($colgroup.with.attributes)"/>
+          </xsl:when>
+          <xsl:when test="function-available('ptbl:adjustColumnWidths')">
+            <xsl:copy-of select="ptbl:adjustColumnWidths($colgroup.with.attributes)"/>
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:message terminate="yes">
+              <xsl:text>No adjustColumnWidths function available.</xsl:text>
+            </xsl:message>
+          </xsl:otherwise>
+        </xsl:choose>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:copy-of select="$colgroup.with.attributes"/>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:variable>
+
+  <!-- Now convert to @style -->
+  <xsl:variable name="colgroup">
+    <xsl:call-template name="colgroup.with.style">
+      <xsl:with-param name="colgroup" select="$colgroup.with.extension"/>
+    </xsl:call-template>
+  </xsl:variable>
+
+  <xsl:variable name="explicit.table.width">
+    <xsl:call-template name="pi.dbhtml_table-width">
+      <xsl:with-param name="node" select=".."/>
+    </xsl:call-template>
+  </xsl:variable>
+
+  <xsl:variable name="table.width.candidate">
+    <xsl:choose>
+      <xsl:when test="$explicit.table.width != ''">
+        <xsl:value-of select="$explicit.table.width"/>
+      </xsl:when>
+      <xsl:when test="$default.table.width = ''">
+        <xsl:text>100%</xsl:text>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:value-of select="$default.table.width"/>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:variable>
+
+
+  <xsl:variable name="table.width">
+    <xsl:if test="$default.table.width != ''
+                  or $explicit.table.width != ''">
+      <xsl:choose>
+        <xsl:when test="contains($table.width.candidate, '%')">
+          <xsl:value-of select="$table.width.candidate"/>
+        </xsl:when>
+        <xsl:when test="$use.extensions != 0
+                        and $tablecolumns.extension != 0">
+          <xsl:choose>
+            <xsl:when test="function-available('stbl:convertLength')">
+              <xsl:value-of select="stbl:convertLength($table.width.candidate)"/>
+            </xsl:when>
+            <xsl:when test="function-available('xtbl:convertLength')">
+              <xsl:value-of select="xtbl:convertLength($table.width.candidate)"/>
+            </xsl:when>
+            <xsl:otherwise>
+              <xsl:message terminate="yes">
+                <xsl:text>No convertLength function available.</xsl:text>
+              </xsl:message>
+            </xsl:otherwise>
+          </xsl:choose>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:value-of select="$table.width.candidate"/>
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:if>
+  </xsl:variable>
+
+  <!-- assemble a table @style -->
+  <xsl:variable name="table.style">
+
+    <xsl:if test="$cellspacing != '' or $html.cellspacing != ''">
+      <xsl:text>cellspacing: </xsl:text>
+      <xsl:choose>
+        <xsl:when test="$cellspacing != ''">
+          <xsl:value-of select="$cellspacing"/>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:value-of select="$html.cellspacing"/>
+        </xsl:otherwise>
+      </xsl:choose>
+      <xsl:text>; </xsl:text>
+    </xsl:if>
+
+    <xsl:if test="$cellpadding != '' or $html.cellpadding != ''">
+      <xsl:text>cellpadding: </xsl:text>
+      <xsl:choose>
+        <xsl:when test="$cellpadding != ''">
+          <xsl:value-of select="$cellpadding"/>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:value-of select="$html.cellpadding"/>
+        </xsl:otherwise>
+      </xsl:choose>
+      <xsl:text>; </xsl:text>
+    </xsl:if>
+
+    <xsl:choose>
+      <xsl:when test="string-length($table.width) != 0">
+        <xsl:text>width: </xsl:text>
+        <xsl:value-of select="$table.width"/>
+        <xsl:text>; </xsl:text>
+      </xsl:when>
+      <xsl:when test="../@pgwide=1 or local-name(.) = 'entrytbl'">
+        <xsl:text>width: 100%; </xsl:text>
+      </xsl:when>
+      <xsl:otherwise>
+      </xsl:otherwise>
+    </xsl:choose>
+
+    <xsl:choose>
+      <xsl:when test="../@frame='all' or (not(../@frame) and $default.table.frame='all')">
+        <xsl:text>border-collapse: collapse; </xsl:text>
+        <xsl:call-template name="border">
+          <xsl:with-param name="side" select="'top'"/>
+          <xsl:with-param name="style" select="$table.frame.border.style"/>
+          <xsl:with-param name="color" select="$table.frame.border.color"/>
+          <xsl:with-param name="thickness" select="$table.frame.border.thickness"/>
+        </xsl:call-template>
+        <xsl:call-template name="border">
+          <xsl:with-param name="side" select="'bottom'"/>
+          <xsl:with-param name="style" select="$table.frame.border.style"/>
+          <xsl:with-param name="color" select="$table.frame.border.color"/>
+          <xsl:with-param name="thickness" select="$table.frame.border.thickness"/>
+        </xsl:call-template>
+        <xsl:call-template name="border">
+          <xsl:with-param name="side" select="'left'"/>
+          <xsl:with-param name="style" select="$table.frame.border.style"/>
+          <xsl:with-param name="color" select="$table.frame.border.color"/>
+          <xsl:with-param name="thickness" select="$table.frame.border.thickness"/>
+        </xsl:call-template>
+        <xsl:call-template name="border">
+          <xsl:with-param name="side" select="'right'"/>
+          <xsl:with-param name="style" select="$table.frame.border.style"/>
+          <xsl:with-param name="color" select="$table.frame.border.color"/>
+          <xsl:with-param name="thickness" select="$table.frame.border.thickness"/>
+        </xsl:call-template>
+      </xsl:when>
+      <xsl:when test="../@frame='topbot' or (not(../@frame) and $default.table.frame='topbot')">
+        <xsl:text>border-collapse: collapse;</xsl:text>
+        <xsl:call-template name="border">
+          <xsl:with-param name="side" select="'top'"/>
+          <xsl:with-param name="style" select="$table.frame.border.style"/>
+          <xsl:with-param name="color" select="$table.frame.border.color"/>
+          <xsl:with-param name="thickness" select="$table.frame.border.thickness"/>
+        </xsl:call-template>
+        <xsl:call-template name="border">
+          <xsl:with-param name="side" select="'bottom'"/>
+          <xsl:with-param name="style" select="$table.frame.border.style"/>
+          <xsl:with-param name="color" select="$table.frame.border.color"/>
+          <xsl:with-param name="thickness" select="$table.frame.border.thickness"/>
+        </xsl:call-template>
+      </xsl:when>
+      <xsl:when test="../@frame='top' or (not(../@frame) and $default.table.frame='top')">
+        <xsl:text>border-collapse: collapse;</xsl:text>
+        <xsl:call-template name="border">
+          <xsl:with-param name="side" select="'top'"/>
+          <xsl:with-param name="style" select="$table.frame.border.style"/>
+          <xsl:with-param name="color" select="$table.frame.border.color"/>
+          <xsl:with-param name="thickness" select="$table.frame.border.thickness"/>
+        </xsl:call-template>
+      </xsl:when>
+      <xsl:when test="../@frame='bottom' or (not(../@frame) and $default.table.frame='bottom')">
+        <xsl:text>border-collapse: collapse;</xsl:text>
+        <xsl:call-template name="border">
+          <xsl:with-param name="side" select="'bottom'"/>
+          <xsl:with-param name="style" select="$table.frame.border.style"/>
+          <xsl:with-param name="color" select="$table.frame.border.color"/>
+          <xsl:with-param name="thickness" select="$table.frame.border.thickness"/>
+        </xsl:call-template>
+      </xsl:when>
+      <xsl:when test="../@frame='sides' or (not(../@frame) and $default.table.frame='sides')">
+        <xsl:text>border-collapse: collapse;</xsl:text>
+        <xsl:call-template name="border">
+          <xsl:with-param name="side" select="'left'"/>
+          <xsl:with-param name="style" select="$table.frame.border.style"/>
+          <xsl:with-param name="color" select="$table.frame.border.color"/>
+          <xsl:with-param name="thickness" select="$table.frame.border.thickness"/>
+        </xsl:call-template>
+        <xsl:call-template name="border">
+          <xsl:with-param name="side" select="'right'"/>
+          <xsl:with-param name="style" select="$table.frame.border.style"/>
+          <xsl:with-param name="color" select="$table.frame.border.color"/>
+          <xsl:with-param name="thickness" select="$table.frame.border.thickness"/>
+        </xsl:call-template>
+      </xsl:when>
+      <xsl:when test="../@frame='none'">
+        <xsl:text>border: none;</xsl:text>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:text>border-collapse: collapse;</xsl:text>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:variable>
+
+  <xsl:variable name="colclass">
+    <xsl:choose>
+      <xsl:when test="@cols &lt; 4"><xsl:text>lt-4-cols</xsl:text></xsl:when>
+      <xsl:when test="@cols &lt; 9"><xsl:text>gt-4-cols</xsl:text></xsl:when>
+      <xsl:otherwise><xsl:text>gt-8-cols</xsl:text></xsl:otherwise>
+    </xsl:choose>
+  </xsl:variable>
+
+  <xsl:variable name="rowclass">
+    <xsl:choose>
+      <xsl:when test="count(row) &lt; 7"><xsl:text>lt-7-rows</xsl:text></xsl:when>
+      <xsl:when test="count(row) &lt; 15"><xsl:text>gt-8-rows</xsl:text></xsl:when>
+      <xsl:otherwise><xsl:text>gt-14-rows</xsl:text></xsl:otherwise>
+    </xsl:choose>
+  </xsl:variable>
+
+  <table>
+    <xsl:attribute name="class">
+      <xsl:value-of select="$colclass"/><xsl:text> </xsl:text><xsl:value-of select="$rowclass"/>
+    </xsl:attribute>
+    <xsl:copy-of select="$colgroup"/>
+
+    <xsl:apply-templates select="d:thead"/>
+    <xsl:apply-templates select="d:tfoot"/>
+    <xsl:apply-templates select="d:tbody"/>
+
+    <xsl:if test=".//d:footnote|../d:title//d:footnote">
+      <tbody class="footnotes">
+        <tr>
+          <td colspan="{@cols}">
+            <xsl:apply-templates select=".//d:footnote|../d:title//d:footnote" mode="table.footnote.mode"/>
+          </td>
+        </tr>
+      </tbody>
+    </xsl:if>
+  </table>
 </xsl:template>
 
 </xsl:stylesheet>

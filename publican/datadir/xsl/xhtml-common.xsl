@@ -1980,7 +1980,27 @@ valign: <xsl:value-of select="@valign"/></xsl:message>
     </xsl:call-template>
   </xsl:variable>
 
+  <xsl:variable name="colclass">
+    <xsl:choose>
+      <xsl:when test="@cols &lt; 4"><xsl:text>lt4-cols</xsl:text></xsl:when>
+      <xsl:when test="@cols &lt; 9"><xsl:text>gt-4-cols</xsl:text></xsl:when>
+      <xsl:otherwise><xsl:text>gt-8-cols</xsl:text></xsl:otherwise>
+    </xsl:choose>
+  </xsl:variable>
+
+  <xsl:variable name="rowclass">
+    <xsl:choose>
+      <xsl:when test="count(row) &lt; 7"><xsl:text>lt-7-rows</xsl:text></xsl:when>
+      <xsl:when test="count(row) &lt; 15"><xsl:text>gt-8-rows</xsl:text></xsl:when>
+      <xsl:otherwise><xsl:text>gt-14-rows</xsl:text></xsl:otherwise>
+    </xsl:choose>
+  </xsl:variable>
+
   <table>
+    <xsl:attribute name="class">
+      <xsl:value-of select="$colclass"/><xsl:text> </xsl:text><xsl:value-of select="$rowclass"/>
+    </xsl:attribute>
+
     <xsl:choose>
       <!-- If there's a textobject/phrase for the table summary, use it -->
       <xsl:when test="../textobject/phrase">

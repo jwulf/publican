@@ -164,3 +164,24 @@ a:visited {
 .toc a:hover, .qandaset a:hover {
     border-bottom: 1px dotted;
 }
+
+table.lt-4-cols.lt-7-rows td {
+	border: none;
+}
+/*to simplify layout*/
+
+
+table.lt-4-cols.gt-14-rows tr:nth-child(odd) {
+	background-color: #fafafa;
+}
+/* to keep simple but stripe rows */ 
+
+
+.gt-8-cols td {
+	border-left: 1px solid #ccc;
+}
+
+.gt-8-cols td:first-child {
+	border-left: 0;
+}
+

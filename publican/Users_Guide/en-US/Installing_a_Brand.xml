@@ -68,7 +68,48 @@
 		</step>
 
 	</procedure>
-	
+	 <table>
+		<title>Current Brands and their packages</title>
+		 <tgroup cols="2">
+			<colspec colnum="1" colwidth="1*"></colspec>
+			 <colspec colnum="2" colwidth="2*"></colspec>
+			 <thead>
+				<row>
+					<entry>
+						Brand
+					</entry>
+					 <entry>
+						License of Common Content files
+					</entry>
+
+				</row>
+
+			</thead>
+			 <tbody>
+				<row>
+					<entry>
+						common
+					</entry>
+					 <entry>
+						<ulink url="http://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</ulink>
+					</entry>
+
+				</row>
+				 <row>
+					<entry>
+						RedHat
+					</entry>
+					 <entry>
+						<ulink url="http://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA 3.0</ulink>
+					</entry>
+
+				</row>
+			</tbody>
+
+		</tgroup>
+
+	</table>
+
 	 <table conformance="189" id="tabl-Users_Guide-Installing_a_brand-Current_Brands_and_their_packages">
 		<title>Current Brands and their packages</title>
 		 <tgroup cols="5">
