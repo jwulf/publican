@@ -33,7 +33,14 @@ div.warning, div.note, div.important, div.tip, div.important {
     background: none;
     background-color: white;
     margin-bottom: 1em;
+    border-radius: 11px 11px 11px 11px;
     page-break-inside: avoid;
+    background-color: #F5F5F5;
+    border-style: none;
+    box-shadow: 0 2px 5px #AAAAAA inset;
+    color: #000000;
+    padding: 0.5em;
+    
 }
 
 div.warning th, div.note th, div.important th, div.tip th, div.important th {
@@ -83,6 +90,10 @@ th, td {
     vertical-align: top;
 }
 
+.revhistory > table {
+    border: none;
+}
+
 div.navfooter {
     color: #999999;
 }
@@ -123,7 +134,33 @@ div.navfooter table tr:first-child td {
     font-size: 1em;
 }
 
+.inlinemediaobject  {
+	display: block;
+	text-align: center;
+}
+
 img {
     max-width: 100%;
 }
 
+a {
+    outline: medium none;
+}
+
+a:link {
+    color: #3366CC;
+    text-decoration: none;
+}
+a:visited {
+    color: #003366;
+    text-decoration: none;
+}
+
+.toc a, .qandaset a {
+    border: medium none;
+    font-weight: normal;
+}
+
+.toc a:hover, .qandaset a:hover {
+    border-bottom: 1px dotted;
+}
