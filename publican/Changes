@@ -14,6 +14,7 @@ NEXT UNRELEASED
 - Support ascending Revision History. BZ #999578
 - Add ability to compy installed brand web content to another site. BZ #967664
 - Fix PDF example.properties template. BZ #999586
+- Fix PUG PDF format for OpenSuse. BZ #999581
 
 3.2.1 Wed Sep 04 2013
 - Fix empty images dir causing packaging fail. BZ #995896
