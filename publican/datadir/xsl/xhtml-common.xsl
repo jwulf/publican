@@ -1982,7 +1982,7 @@ valign: <xsl:value-of select="@valign"/></xsl:message>
 
   <xsl:variable name="colclass">
     <xsl:choose>
-      <xsl:when test="@cols &lt; 4"><xsl:text>lt4-cols</xsl:text></xsl:when>
+      <xsl:when test="@cols &lt; 4"><xsl:text>lt-4-cols</xsl:text></xsl:when>
       <xsl:when test="@cols &lt; 9"><xsl:text>gt-4-cols</xsl:text></xsl:when>
       <xsl:otherwise><xsl:text>gt-8-cols</xsl:text></xsl:otherwise>
     </xsl:choose>
