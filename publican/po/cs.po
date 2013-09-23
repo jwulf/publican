@@ -98,7 +98,13 @@ msgid "'%1' is an unknown action!"
 msgstr "'%1' je neznámá akce!"
 
 #. ($language)
-#: lib/Publican/Builder/DocBook.pm:1725 lib/Publican/Builder/DocBook.pm:3466
+#: lib/Publican/Builder/DocBook.pm:1725
+#, fuzzy
+msgid "'%1' is not a valid language for highlighting."
+msgstr "'%1' není platným jazykem pro zvýraznění. U názvů jazyků se rozlišují velká a malá písmena."
+
+#. ($language)
+#: lib/Publican/Builder/DocBook.pm:3466
 msgid "'%1' is not a valid language for highlighting. Language names are case sensitive."
 msgstr "'%1' není platným jazykem pro zvýraznění. U názvů jazyků se rozlišují velká a malá písmena."
 

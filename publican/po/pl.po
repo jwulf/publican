@@ -107,7 +107,14 @@ msgstr "\"%1\" jest nieznaną czynnością."
 
 # translation auto-copied from project Publican, version 3, document publican
 #. ($language)
-#: lib/Publican/Builder/DocBook.pm:1725 lib/Publican/Builder/DocBook.pm:3466
+#: lib/Publican/Builder/DocBook.pm:1725
+#, fuzzy
+msgid "'%1' is not a valid language for highlighting."
+msgstr "\"%1\" nie jest prawidłowym językiem do wyróżniania elementów składni. Małe i wielkie litery w nazwach języków są rozróżniane."
+
+# translation auto-copied from project Publican, version 3, document publican
+#. ($language)
+#: lib/Publican/Builder/DocBook.pm:3466
 msgid "'%1' is not a valid language for highlighting. Language names are case sensitive."
 msgstr "\"%1\" nie jest prawidłowym językiem do wyróżniania elementów składni. Małe i wielkie litery w nazwach języków są rozróżniane."
 

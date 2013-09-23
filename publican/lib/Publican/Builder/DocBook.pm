@@ -1722,7 +1722,7 @@ sub highlight {
     my $lang_module = $hl->languagePlug( $language, 1 ) || croak(
         "\n\t"
             . maketext(
-            "'[_1]' is not a valid language for highlighting. Language names are case sensitive.",
+            "'[_1]' is not a valid language for highlighting.",
             $language
             )
             . "\n"
