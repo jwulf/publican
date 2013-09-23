@@ -31,6 +31,9 @@ use File::HomeDir;
 use Publican::ConfigData;
 use Encode qw(is_utf8 decode_utf8 encode_utf8);
 
+binmode STDIN, ":encoding(UTF-8)";
+binmode STDOUT, ":encoding(UTF-8)";
+
 my $VERSION           = "$Publican::VERSION";
 my $LANG_PATTERN      = q|__LANG__|;
 my $WEB_TEMPLATE_PATH = Publican::ConfigData->config('web');

@@ -1774,3 +1774,8 @@ top: 32px !important;
         position: relative !important;
         top: -32px !important;
 }
+
+.behind {
+	opacity: 0.5;
+	font-style: italic;
+}

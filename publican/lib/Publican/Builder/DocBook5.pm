@@ -613,10 +613,11 @@ sub validate_xml {
 # for file in `ls *.xml`; do echo "$file"; xsltproc ../../db4-upgrade-publican.xsl $file > $file.tmp;mv $file.tmp $file; echo; done
     my $rngschema = XML::LibXML::RelaxNG->new(
         location => "http://docbook.org/xml/$dtdver/rng/docbook.rng" );
-    eval { $rngschema->validate($source); };
-    if ($@) {
+    my $result;
+    eval { $result = $rngschema->validate($source); };
+    if ($result != 0 && $@) {
         logger( maketext("RelaxNG Validation failed: ") . "\n", RED );
-        croak($!);
+        croak("$@\n$!\n");
     }
     logger("RelaxNG Validation OK\n");
 

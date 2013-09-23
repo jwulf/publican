@@ -1552,9 +1552,12 @@ sub get_ed_rev {
 
     my $VR = shift(@revs);
 
+    croak( maketext("FATAL ERROR: revnumber missing or empty, it must match the required format of '[_1]'",
+            '^([0-9.]*)-([0-9.]*)$/')) if(!$VR || $VR eq '');
+
     $VR =~ /^([0-9.]*)-([0-9.]*)$/ || croak(
         maketext(
-            "revnumber ([_1]) does not match the required format of '[_2]'",
+            "FATAL ERROR: revnumber ([_1]) does not match the required format of '[_2]'",
             $VR, '^([0-9.]*)-([0-9.]*)$/'
         )
     );

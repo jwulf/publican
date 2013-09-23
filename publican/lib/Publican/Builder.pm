@@ -758,6 +758,7 @@ sub package {
         sort_order        => $sort_order,
 	book_version      => "$edition-$release",
 	book_src_lang     => $book_src_lang,
+        img_dir           => $self->{publican}->param('img_dir'),
     );
 
     # \p{Z} is unicode white space, which is a super set of ascii white space.

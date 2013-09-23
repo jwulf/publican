@@ -126,7 +126,7 @@ my %tmpl_strings = (
     Document_Home         => $locale->maketext('Document Home'),
     Product_Documentation => $locale->maketext('Product Documentation'),
     Support               => $locale->maketext('Support'),
-    OUTOFDATE             => $locale->maketext('OUTOFDATE'),
+    Behind             => $locale->maketext('behind'),
 );
 
 sub new {

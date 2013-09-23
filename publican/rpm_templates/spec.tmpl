@@ -82,7 +82,7 @@ for icon in `ls [% lang %]/icons/*x*.png`; do
 done
 cp [% lang %]/icons/icon.svg  $RPM_BUILD_ROOT/usr/share/icons/hicolor/scalable/apps/[% book_title %]-[% lang %].svg;
 [%- ELSE %]
-cp [% lang %]/images/icon.svg  $RPM_BUILD_ROOT/usr/share/icons/hicolor/scalable/apps/[% book_title %]-[% lang %].svg;
+cp [% lang %]/[% img_dir %]/icon.svg  $RPM_BUILD_ROOT/usr/share/icons/hicolor/scalable/apps/[% book_title %]-[% lang %].svg;
 [%- END %]
 
 

@@ -23,7 +23,7 @@
   <div class="book_formats">
 [% FOREACH  format = formats %]
     <div class="format_[% format %]">
-      [% INCLUDE anchor.tmpl host=host lang=lang booklang=book.lang product=book.product version=book.version format=format book=book.book name=format %]
+      [% INCLUDE anchor.tmpl host=host lang=lang booklang=book.lang product=book.product version=book.version format=format book=book.book name=format behind=book.behind %]
     </div>
 [%- END %]
   </div>
