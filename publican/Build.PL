@@ -1,7 +1,6 @@
 use strict;
 use warnings;
 use Module::Build;
-use File::Spec;
 use 5.008;
 
 my $class = Module::Build->subclass(
@@ -34,7 +33,7 @@ my $class = Module::Build->subclass(
             my $self = shift;
             $self->ACTION_srpm || die;
             my $os_ver = $self->args('os_ver');
-            use File::Find::Rule;
+            require File::Find::Rule;
             my $rule = File::Find::Rule->new;
             $rule->file->name("*.src.rpm");
             my @rpm_files = $rule->in($dir);
@@ -55,7 +54,7 @@ my $class = Module::Build->subclass(
         sub ACTION_local {
             my $self = shift;
             $self->ACTION_rpm || die;
-            use File::Find::Rule;
+            require File::Find::Rule;
             my $rule = File::Find::Rule->new;
             $rule->file->name("*.rpm");
             $rule->file->not_name("*.src.rpm");
@@ -64,19 +63,18 @@ my $class = Module::Build->subclass(
         }
         sub process_brand_template_files {
             my $self = shift;
-            use File::Find::Rule;
-            use File::Copy::Recursive qw(rcopy);
+            require File::Find::Rule;
+            require File::Copy::Recursive;
             my $cwd = getcwd();
             my $path = "$cwd/blib/datadir/Common_Content/brand-template";
             mkpath("$path");
-            rcopy( "datadir/Common_Content/brand-template/*", "$path/.");
+            File::Copy::Recursive::rcopy( "datadir/Common_Content/brand-template/*", "$path/.");
         }
         sub ACTION_common_files {
             my $self = shift;
             $self->depends_on('build');
             use lib File::Spec->catdir('blib/lib');
             use File::Path;
-            use File::Copy::Recursive qw(rcopy);
             eval {
                 require Publican;
                 $Publican::SINGLETON = undef;
@@ -95,8 +93,8 @@ my $class = Module::Build->subclass(
                 $builder->build(
                     { formats => 'xml', langs => $common_langs, publish => 1, pub_dir => 'publish' } );
                 mkpath("$path");
-                rcopy( "publish/*", "$path/.");
-                rcopy('publican.cfg', "$path/common/.");
+                Publican::rcopy( "publish/*", "$path/.");
+                Publican::rcopy('publican.cfg', "$path/common/.");
                 $dir = undef;
                 $builder = undef;
                 $publican = undef;
@@ -107,7 +105,6 @@ my $class = Module::Build->subclass(
             $self->depends_on('build');
             use lib File::Spec->catdir('blib/lib');
             use File::Path;
-            use File::Copy::Recursive qw(rcopy);
             eval {
                 require Publican;
                 $Publican::SINGLETON = undef;
@@ -125,8 +122,8 @@ my $class = Module::Build->subclass(
                 my $builder = Publican::Builder::DocBook5->new();
                 $builder->build(
                     { formats => 'xml', langs => $common_langs, publish => 1, pub_dir => 'publish' } );
-                rcopy( "publish/*", "$path/.");
-                rcopy('publican.cfg', "$path/common-db5/.");
+                Publican::rcopy( "publish/*", "$path/.");
+                Publican::rcopy('publican.cfg', "$path/common-db5/.");
                 $dir = undef;
                 $builder = undef;
                 $publican = undef;
@@ -142,7 +139,7 @@ my $class = Module::Build->subclass(
         }
         sub ACTION_update_po {
             my $self = shift;
-            use File::Find::Rule;
+            require File::Find::Rule;
             my @po_files = find(
                 maxdepth  => 1,
                 file => name => "*.po",
