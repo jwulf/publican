@@ -21,6 +21,7 @@ NEXT UNRELEASED
 - Fix image path for icon.svg. BZ #1011222
 - Fix print_unused not handling include from higher directories. BZ #1004955
 - Fix SVG fallback to PNG. BZ #990823
+- Fix subtitle font size. BZ #987431
 
 3.2.1 Wed Sep 04 2013
 - Fix empty images dir causing packaging fail. BZ #995896
@@ -32,8 +33,8 @@ NEXT UNRELEASED
 - Fix translations updates missing from common PO files. #1000935
 
 3.2.0 Thu Aug 8 2013
-- Add spaces to web-spec.xsl to work around newer libxml2 eating white space in spec files  BZ #982424
-- Fix typos in common content BZ #952490 #974918
+- Add spaces to web-spec.xsl to work around newer libxml2 eating white space in spec files.  BZ #982424
+- Fix typos in common content. BZ #952490 #974918
 - Stop menu bouncing. BZ #953716
 - Fix ID missing from admonitions. BZ #966494
 - Support corpauthor for PDF. BZ #908666

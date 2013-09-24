@@ -215,7 +215,7 @@ h2 {
 }
 
 
-div.subtitle, h2.subtitle, h3.subtitle {
+.book div.subtitle, .book h2.subtitle, .book h3.subtitle {
 	margin-top: 1em;
 	margin-bottom: 1em;
 	font-size: 18px;
