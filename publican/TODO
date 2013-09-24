@@ -12,6 +12,13 @@ PDF:
 		~/Source/dist-git/Red_Hat_Network_Satellite-Installation_Guide-5.5-web-en-US/Red_Hat_Network_Satellite-Installation_Guide-5.5-web-en-US-3
 	884943  - Requires wkhtmltopdf-qt update and testing
 
+
+Updated Deps:
+
+	docbook5-style-xsl
+	XML::TreeBuilder
+	XML::Catalog
+
 *********************************************************
 
 

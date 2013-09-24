@@ -19,6 +19,7 @@ NEXT UNRELEASED
 - Add css styles for table sizes. BZ #1005640
 - Tidy up Build.PL for better CPAN support. BZ #999259
 - Fix image path for icon.svg. BZ #1011222
+- Fix print_unused not handling include from higher directories. BZ #1004955
 
 3.2.1 Wed Sep 04 2013
 - Fix empty images dir causing packaging fail. BZ #995896

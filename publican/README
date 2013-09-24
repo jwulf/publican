@@ -43,7 +43,7 @@ Q: How do I profile publican?
 
 A: Devel::NYTProf is a good option.
 
-$ perl -d:NYTProf /usr/bin/publican build --langs en-US --formats html
+$ perl -CAS -d:NYTProf /usr/bin/publican build --langs en-US --formats html
 $ nytprofhtml
 $ firefox nytprof/index.html 
 
@@ -59,11 +59,10 @@ Q: How do I build publican from source?
 
 A: It depends on your platform.
 
-Get the source: svn co http://svn.fedorahosted.org/svn/publican/trunk/publican
+Get the source: git clone git://git.fedorahosted.org/git/publican.git
 
 CPAN
-    cd publican
-    Currently you have to manually install File::pushd from CPAN first
+    cd publican/publican
     $ perl Build.PL
         if this complains about missing deps run
         $ ./Build installdeps
@@ -72,16 +71,17 @@ CPAN
     $ sudo ./Build install
 
 RHEL/Fedora
-    cd publican
+    cd publican/publican
     $ perl Build.PL
         if this complains about missing deps,  on Fedora 10+, and RHEL 6, run
-        $ yum-builddep publican 
+        $ sudo yum-builddep publican.spec 
+    $ ./Build
     $ ./Build rpm
 
 Debian
     The publican package deb files are in the debian package repo
     http://packages.debian.org/search?keywords=publican
-    $ cd publican
+    $ cd publican/publican
     $ sudo apt-get install \
 libfile-pushd-perl \
 libconfig-simple-perl \
@@ -103,6 +103,8 @@ libdbd-sqlite-perl \
 libdevel-cover-perl \
 libdbd-sqlite3-perl
 
+    $ perl Build.PL
+    $ ./Build
     $ ./Build dist
 TODO: put the tgz where?
     $ debuild
@@ -118,7 +120,7 @@ Windows:
     Install gitbash
 	http://msysgit.googlecode.com/
 
-    Set-Up ssh
+    Set-Up ssh in gitbash shell
 	copy keys to ~/.ssh
 	ssh-agent /bin/bash.exe
 	ssh-add ~/.ssh/id_rsa

@@ -8,6 +8,8 @@ use Publican;
 use File::pushd;
 use Term::ANSIColor qw(:constants);
 use File::Basename;
+use Cwd qw(realpath);
+use File::Spec qw(abs2rel);
 
 =head1 NAME
 
@@ -159,7 +161,11 @@ sub print_unused {
                 $self->print_unused(
                     { 'in_file' => "$path$filename", path => $path, } );
             }
-            $self->{used_files}->{qq|'$path$filename'|} = 1;
+
+            $filename = Cwd::realpath("$path$filename");
+            $filename = File::Spec->abs2rel($filename);
+
+            $self->{used_files}->{qq|'$filename'|} = 1;
         }
     }
 
