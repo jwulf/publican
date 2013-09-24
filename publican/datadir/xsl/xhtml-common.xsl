@@ -1629,8 +1629,7 @@ valign: <xsl:value-of select="@valign"/></xsl:message>
               </xsl:call-template>
             </embed>
           </xsl:if>
-<!-- Added this line to fix object breaking IE7 BZ #486501 -->
-          <xsl:text> </xsl:text><xsl:value-of select="$alt"/>
+          <img src="{substring-before($output_filename,'.svg')}.png" alt="{$alt}"/>
         </object>
       </xsl:when>
       <xsl:otherwise>
