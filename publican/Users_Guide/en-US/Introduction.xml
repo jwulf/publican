@@ -3,7 +3,7 @@
 <!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
 %BOOK_ENTITIES;
 ]>
-<preface conformance="190" id="pref-Users_Guide-Introduction">
+<preface conformance="190" id="pref-&ATTRTEST;-Introduction">
 	<title>Introduction</title>
 	 <indexterm>
 		<primary>Introduction 1</primary>

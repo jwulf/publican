@@ -307,7 +307,8 @@ my %PARAMS = (
     },
     rev_dir => {
         descr => maketext(
-            q|By default Revision History is sorted in descending order. Set this to 'asc' or 'ascending' to reverse the sort.|),
+            q|By default Revision History is sorted in descending order. Set this to 'asc' or 'ascending' to reverse the sort.|
+        ),
     },
     rev_file =>
         { descr => maketext('Override the default Revision History file.'), },
@@ -648,7 +649,27 @@ sub _load_config {
 ## BUGBUG DocBook specific stuff should be moved to the DocBook sub classes
 
         my $xml_doc = XML::TreeBuilder->new();
-        $xml_doc->parse_file($info_file);
+        eval { $xml_doc->parse_file($info_file); };
+
+        if ($@) {
+            if ( ref($@) ) {
+
+                # handle a structured error (XML::LibXML::Error object)
+                croak(
+                    maketext(
+                        "FATAL ERROR: [_1]:[_2] in [_3] on line [_4]: [_5]",
+                        $@->domain(),
+                        $@->code(),
+                        $@->file(),
+                        $@->line(),
+                        $@->message(),
+                    )
+                );
+            }
+            else {
+                croak( maketext( "FATAL ERROR: [_1]: [_2]", $info_file, $@ ) );
+            }
+        }
 
         my $docname = $config->param('docname');
 
@@ -1178,11 +1199,32 @@ sub run_xslt {
             );
         }
         else {
-            croak( maketext( "FATAL ERROR: [_1]", $@ ) );
+            croak( maketext( "FATAL ERROR: [_1]: [_2]", $xml_file, $@ ) );
         }
     }
 
-    my $style_doc = $parser->parse_file($xsl_file);
+    my $style_doc;   
+    eval { $style_doc = $parser->parse_file($xsl_file); };
+
+    if ($@) {
+        if ( ref($@) ) {
+
+            # handle a structured error (XML::LibXML::Error object)
+            croak(
+                maketext(
+                    "FATAL ERROR: [_1]:[_2] in [_3] on line [_4]: [_5]",
+                    $@->domain(),
+                    $@->code(),
+                    $@->file(),
+                    $@->line(),
+                    $@->message(),
+                )
+            );
+        }
+        else {
+            croak( maketext( "FATAL ERROR: [_1]: [_2]", $xsl_file, $@ ) );
+        }
+    }
 
     if ( $^O eq 'MSWin32' ) {
         eval { require Win32::TieRegistry; };
@@ -1464,7 +1506,27 @@ sub add_revision {
     my $rev_doc = new_tree();
 
     if ( -f $rev_file ) {
-        $rev_doc->parse_file($rev_file);
+        eval { $rev_doc->parse_file($rev_file); };
+
+        if ($@) {
+            if ( ref($@) ) {
+
+                # handle a structured error (XML::LibXML::Error object)
+                croak(
+                    maketext(
+                        "FATAL ERROR: [_1]:[_2] in [_3] on line [_4]: [_5]",
+                        $@->domain(),
+                        $@->code(),
+                        $@->file(),
+                        $@->line(),
+                        $@->message(),
+                    )
+                );
+            }
+            else {
+                croak( maketext( "FATAL ERROR: [_1]: [_2]", $rev_file, $@ ) );
+            }
+        }
     }
     else {
         $rev_doc->root()->tag('appendix');
@@ -1542,8 +1604,25 @@ sub get_ed_rev {
 
     my $rev_doc = XML::TreeBuilder->new();
     eval { $rev_doc->parse_file($rev_file); };
+
     if ($@) {
-        croak( maketext( "FATAL ERROR: [_1]: [_2]", $rev_file, $@ ) );
+        if ( ref($@) ) {
+
+            # handle a structured error (XML::LibXML::Error object)
+            croak(
+                maketext(
+                    "FATAL ERROR: [_1]:[_2] in [_3] on line [_4]: [_5]",
+                    $@->domain(),
+                    $@->code(),
+                    $@->file(),
+                    $@->line(),
+                    $@->message(),
+                )
+            );
+        }
+        else {
+            croak( maketext( "FATAL ERROR: [_1]: [_2]", $rev_file, $@ ) );
+        }
     }
 
     my @revs = map { $_->as_text() }
@@ -1552,13 +1631,18 @@ sub get_ed_rev {
 
     my $VR = shift(@revs);
 
-    croak( maketext("FATAL ERROR: revnumber missing or empty, it must match the required format of '[_1]'",
-            '^([0-9.]*)-([0-9.]*)$/')) if(!$VR || $VR eq '');
+    croak(
+        maketext(
+            "FATAL ERROR: revnumber missing or empty, it must match the required format of '[_1]'",
+            '^([0-9.]*)-([0-9.]*)$/'
+        )
+    ) if ( !$VR || $VR eq '' );
 
     $VR =~ /^([0-9.]*)-([0-9.]*)$/ || croak(
         maketext(
             "FATAL ERROR: revnumber ([_1]) does not match the required format of '[_2]'",
-            $VR, '^([0-9.]*)-([0-9.]*)$/'
+            $VR,
+            '^([0-9.]*)-([0-9.]*)$/'
         )
     );
 
