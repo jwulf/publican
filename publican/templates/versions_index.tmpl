@@ -12,7 +12,7 @@
   <div class="bottom_versions">
 [% FOREACH  booker = book_list %]
     <div class="bottom_books[% IF lang != booker.value.lang %] untranslated [% lang %][% END %]">
-      [% INCLUDE anchor.tmpl host=host lang=lang booklang=booker.value.lang product=product version=booker.value.version format=booker.value.base_format book=booker.value.book name=booker.value.book_clean subtitle=booker.value.subtitle behind=booker.value.behind %]
+      [% INCLUDE anchor.tmpl host=host lang=lang booklang=booker.value.lang product=product version=booker.value.version format=booker.value.base_format book=booker.value.book name=booker.value.book_clean subtitle=booker.value.subtitle srcnewer=booker.value.srcnewer %]
     </div>
 [%- END %]
   </div>

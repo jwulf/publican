@@ -66,12 +66,10 @@ part toc
 <xsl:template name="user.head.content">
   <xsl:param name="node" select="."/>
   <xsl:if test="$embedtoc = 1">
-    <link rel="stylesheet" type="text/css"><xsl:attribute name="href"><xsl:value-of select="$tocpath"/>/../common-db5/<xsl:value-of select="$langpath"/>/css/menu.css</xsl:attribute></link>
-    <link rel="stylesheet" type="text/css"><xsl:attribute name="href"><xsl:value-of select="$tocpath"/>/../menu.css</xsl:attribute></link>
+    <link rel="stylesheet" type="text/css"><xsl:attribute name="href"><xsl:value-of select="$tocpath"/>/../chrome.css</xsl:attribute></link>
+    <link rel="stylesheet" type="text/css"><xsl:attribute name="href"><xsl:value-of select="$tocpath"/>/../db5.css</xsl:attribute></link>
+    <link rel="stylesheet" type="text/css"><xsl:attribute name="href"><xsl:value-of select="$tocpath"/>/../<xsl:value-of select="$brand"/>/<xsl:value-of select="$langpath"/>/css/brand.css</xsl:attribute></link>
     <link rel="stylesheet" type="text/css"><xsl:attribute name="href"><xsl:value-of select="$tocpath"/>/../print.css</xsl:attribute><xsl:attribute name="media">print</xsl:attribute></link>
-    <xsl:if test="$brand != 'common-db5'">
-      <link rel="stylesheet" type="text/css"><xsl:attribute name="href"><xsl:value-of select="$tocpath"/>/../<xsl:value-of select="$brand"/>/<xsl:value-of select="$langpath"/>/css/menu.css</xsl:attribute></link>
-    </xsl:if>
     <script type="text/javascript">
     	<xsl:attribute name="src"><xsl:value-of select="$tocpath"/>/labels.js</xsl:attribute>
     	<xsl:text> </xsl:text>
@@ -99,6 +97,7 @@ part toc
     </script>
   </xsl:if>
 </xsl:template>
+
 <xsl:template name="user.header.content">
   <xsl:param name="node" select="."/>
   <xsl:if test="$embedtoc = 1">

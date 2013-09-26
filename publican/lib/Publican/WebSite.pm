@@ -126,7 +126,7 @@ my %tmpl_strings = (
     Document_Home         => $locale->maketext('Document Home'),
     Product_Documentation => $locale->maketext('Product Documentation'),
     Support               => $locale->maketext('Support'),
-    Behind             => $locale->maketext('behind'),
+    SrcIsNewer            => $locale->maketext('English is newer'),
 );
 
 sub new {
@@ -594,7 +594,7 @@ GET_LIST
         $list{$product}{$version}{$name}{subtitle}   = $subtitle;
         $list{$product}{$version}{$name}{abstract}   = $abstract;
         $list{$product}{$version}{$name}{sort_order} = $sort_order;
-        $list{$product}{$version}{$name}{behind}
+        $list{$product}{$version}{$name}{srcnewer}
             = !( ( defined($orig_ver) )
             && ( $orig_ver ne '' )
             && ( version_sort( $a = $orig_ver, $b = $book_version ) > 0 ) );
@@ -1566,7 +1566,7 @@ SQL
                     $b = $record->{book_version}
                 );
 
-                $book_lang_vars->{behind} = ( $val > 0 );
+                $book_lang_vars->{srcnewer} = ( $val > 0 );
             }
 
             $self->{Template}->process(

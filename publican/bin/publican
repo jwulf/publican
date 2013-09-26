@@ -852,11 +852,11 @@ if ( $action eq 'install_brand' ) {
             dircopy( "$ln/css", "$opts{path}/$ln/css" )
                 if ( -d "$ln/css" );
 
-            unless ( -f "$opts{path}/$ln/css/menu.css" ) {
+            unless ( -f "$opts{path}/$ln/css/brand-web.css" ) {
                 my $DUMMY_FILE;
-                open( $DUMMY_FILE, '>', "$opts{path}/$ln/css/menu.css" )
+                open( $DUMMY_FILE, '>', "$opts{path}/$ln/css/brand-web.css" )
                     || croak(
-                    "can't open file for output: $opts{path}/$ln/css/menu.css"
+                    "can't open file for output: $opts{path}/$ln/css/brand-web.css"
                     );
                 close($DUMMY_FILE);
             }

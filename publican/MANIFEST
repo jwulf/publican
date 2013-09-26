@@ -119,7 +119,7 @@ datadir/Common_Content/brand-template/images/yellow.png
 datadir/Common_Content/common-db5/en-US/Conventions.xml
 datadir/Common_Content/common-db5/en-US/css/common.css
 datadir/Common_Content/common-db5/en-US/css/default.css
-datadir/Common_Content/common-db5/en-US/css/menu.css
+datadir/Common_Content/common-db5/en-US/css/brand.css
 datadir/Common_Content/common-db5/en-US/css/print.css
 datadir/Common_Content/common-db5/en-US/Feedback.xml
 datadir/Common_Content/common-db5/en-US/images/1.png
@@ -240,7 +240,7 @@ datadir/Common_Content/common-db5/xsl/pdf.xsl
 datadir/Common_Content/common-db5/zanata.xml
 datadir/Common_Content/common/ar-SA/Conventions.po
 datadir/Common_Content/common/ar-SA/css/lang.css
-datadir/Common_Content/common/ar-SA/css/menu.css
+datadir/Common_Content/common/ar-SA/css/brand.css
 datadir/Common_Content/common/ar-SA/Feedback.po
 datadir/Common_Content/common/ar-SA/Program_Listing.po
 datadir/Common_Content/common/ar-SA/Revision_History.po
@@ -303,7 +303,7 @@ datadir/Common_Content/common/el-GR/Revision_History.xml
 datadir/Common_Content/common/en-US/Conventions.xml
 datadir/Common_Content/common/en-US/css/common.css
 datadir/Common_Content/common/en-US/css/default.css
-datadir/Common_Content/common/en-US/css/menu.css
+datadir/Common_Content/common/en-US/css/brand.css
 datadir/Common_Content/common/en-US/css/pdf.css
 datadir/Common_Content/common/en-US/css/print.css
 datadir/Common_Content/common/en-US/Feedback.xml
@@ -419,7 +419,7 @@ datadir/Common_Content/common/es-ES/Revision_History.po
 datadir/Common_Content/common/es-ES/Revision_History.xml
 datadir/Common_Content/common/fa-IR/Conventions.po
 datadir/Common_Content/common/fa-IR/css/lang.css
-datadir/Common_Content/common/fa-IR/css/menu.css
+datadir/Common_Content/common/fa-IR/css/brand.css
 datadir/Common_Content/common/fa-IR/Feedback.po
 datadir/Common_Content/common/fa-IR/Program_Listing.po
 datadir/Common_Content/common/fa-IR/Revision_History.po
@@ -441,7 +441,7 @@ datadir/Common_Content/common/gu-IN/Revision_History.po
 datadir/Common_Content/common/gu-IN/Revision_History.xml
 datadir/Common_Content/common/he-IL/Conventions.po
 datadir/Common_Content/common/he-IL/css/lang.css
-datadir/Common_Content/common/he-IL/css/menu.css
+datadir/Common_Content/common/he-IL/css/brand.css
 datadir/Common_Content/common/he-IL/Feedback.po
 datadir/Common_Content/common/he-IL/Program_Listing.po
 datadir/Common_Content/common/he-IL/Revision_History.po
@@ -902,12 +902,13 @@ web/images/gradient2.png
 web/images/open.png
 web/images/page.png
 web/index.html
-web/interactive.css
 web/jquery-1.7.1.min.js
 web/jquery.jcarousel.min.js
-web/menu.css
+web/chrome.css
+web/db4.css
+web/db5.css
 web/print.css
-web/static.css
+web/splash.css
 win_build.pl
 win_catalog.xml
 windows/pp-opts
