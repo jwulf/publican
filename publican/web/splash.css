@@ -387,35 +387,6 @@ body[dir="rtl"] .book_formats div a {
     margin: 0 !important;
     padding: 0;
 }
-.breadcrumb ul {
-    background-color: rgba(110, 110, 110, 0.95) !important;
-    left: 0;
-    margin: 22px 0 !important;
-    text-indent: 16px;
-    top: 0;
-}
-body[dir="rtl"] .breadcrumb ul {
-    left: auto;
-    right: 0;
-}
-.breadcrumb ul li {
-    margin: 0;
-    padding: 0;
-}
-.breadcrumb ul a {
-    display: block;
-    height: 32px;
-    line-height: 32px;
-    padding-right: 16px;
-    text-decoration: none;
-}
-body[dir="rtl"] .breadcrumb ul a {
-    padding-left: 16px;
-    padding-right: 0;
-}
-.breadcrumb ul a:hover {
-    background-color: #333333;
-}
 .bottom_versions {
     margin: 0 !important;
     padding: 0 !important;

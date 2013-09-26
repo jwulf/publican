@@ -218,6 +218,37 @@ body[dir="rtl"] .breadcrumb:after {
 body[dir="rtl"] .breadcrumb:hover:after {
     border-color: transparent #666666 transparent transparent;
 }
+.breadcrumb ul {
+    background-color: rgba(110, 110, 110, 0.95) !important;
+    left: 0;
+    margin: 22px 0 !important;
+    text-indent: 16px;
+    top: 0;
+}
+body[dir="rtl"] .breadcrumb ul {
+    left: auto;
+    right: 0;
+}
+.breadcrumb ul li {
+    margin: 0;
+    padding: 0;
+}
+.breadcrumb ul a {
+    display: block;
+    height: 32px;
+    line-height: 32px;
+    padding-right: 16px;
+    text-decoration: none;
+}
+body[dir="rtl"] .breadcrumb ul a {
+    padding-left: 16px;
+    padding-right: 0;
+}
+.breadcrumb ul a:hover {
+    background-color: #333333;
+}
+
+
 #book_menu, #product_menu, #version_menu {
 }
 #book_lang_menu, #book_format_menu {
