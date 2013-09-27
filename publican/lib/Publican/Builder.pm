@@ -149,7 +149,6 @@ sub new {
     my $brand_path     = $self->{publican}->param('brand_dir')
         || $common_content . "/$brand";
 
-
     my $tmpl_path = Publican::ConfigData->config('rpm_templates');
     $tmpl_path = "$brand_path/rpm_templates:$tmpl_path"
         if ( -d "$brand_path/rpm_templates" );
@@ -370,52 +369,40 @@ sub package_home {
 
     $embedtoc = "" if ( $self->{publican}->param('no_embedtoc') );
 
-    my %xslt_opts = (
-        'book-title' => $name_start,
-        'brand'      => $brand,
-        'prod'       => $product,
-        'prodver'    => $version,
-        'rpmver'     => $edition,
-        'rpmrel'     => $release,
-        'docname'    => $docname,
-        'license'    => $license,
-        'url'        => $doc_url,
-        'src_url'    => $src_url,
-        'log'        => $log,
-        tmpdir       => $tmp_dir,
-        web_dir      => $web_dir,
-        web_type     => $web_type,
-        spec_version => $Publican::SPEC_VERSION,
-        embedtoc     => $embedtoc,
+    my $full_subtitle = $self->get_subtitle( { lang => $xml_lang, use_source => 1 } );
+    $full_subtitle =~ s/"/\\"/g;
+    $full_subtitle =~ s/\p{Z}+/ /g;
+    chomp($full_subtitle);
+
+    my %vars = (
+        'book_title'  => $name_start,
+        'brand'       => $brand,
+        'prod'        => $product,
+        'prodver'     => $version,
+        'rpmver'      => $edition,
+        'rpmrel'      => $release,
+        'docname'     => $docname,
+        'license'     => $license,
+        'url'         => $doc_url,
+        'src_url'     => $src_url,
+        'log'         => $log,
+        tmpdir        => $tmp_dir,
+        web_dir       => $web_dir,
+        web_type      => $web_type,
+        spec_version  => $Publican::SPEC_VERSION,
+        embedtoc      => $embedtoc,
+        full_subtitle => $full_subtitle,
+        GROUPS        => ( -e "$xml_lang/Groups.xml" ? 1 : 0 ),
     );
 
-    logger(
-        "\t" . maketext( "Using XML::LibXSLT on [_1]", $xsl_file ) . "\n" );
-
-    my $parser    = XML::LibXML->new();
-    my $xslt      = XML::LibXSLT->new();
-    my $info_file = "$xml_lang/$type" . '_Info.xml';
-    $info_file = "$xml_lang/" . $self->{publican}->param('info_file')
-        if ( $self->{publican}->param('info_file') );
-
-    my $source    = $parser->parse_file($info_file);
-    my $style_doc = $parser->parse_file($xsl_file);
-
-    my $stylesheet = $xslt->parse_stylesheet($style_doc);
-
-    my $results = $stylesheet->transform( $source,
-        XML::LibXSLT::xpath_to_string(%xslt_opts) );
-
-    my $outfile;
     my $spec_name = "$tmp_dir/rpm/$name_start-web-$web_type.spec";
 
-    open( $outfile, ">:encoding(UTF-8)", "$spec_name" )
-        || croak( maketext( "Can't open spec file: [_1]", $@ ) );
-    print( $outfile $stylesheet->output_string($results) );
-    close($outfile);
+    $self->{template}->process( 'splash.tmpl', \%vars, $spec_name,
+        binmode => ':encoding(UTF-8)' )
+        or croak( $self->{template}->error() );
 
     $self->build_rpm(
-        {   spec   => "$tmp_dir/rpm/$name_start-web-$web_type.spec",
+        {   spec   => $spec_name,
             binary => $binary
         }
     );
@@ -557,7 +544,7 @@ sub package {
     my $book_src_lang = undef;
 
     if ( $lang ne $xml_lang ) {
-	$book_src_lang = $xml_lang;
+        $book_src_lang = $xml_lang;
 
         $release = undef;
 ## BUGBUG this should be moved to the DocBook sub classes
@@ -694,7 +681,6 @@ sub package {
     $self->{publican}->{config}->param( 'release', $release );
     $self->{publican}->{config}->param( 'edition', $edition );
 
-
     my $dir = pushd("$tmp_dir/tar");
     my @files = dir_list( $tardir, '*' );
     Archive::Tar->create_archive( "../rpm/$tardir-$release.tgz", 9, @files );
@@ -756,8 +742,8 @@ sub package {
         spec_version      => $Publican::SPEC_VERSION,
         embedtoc          => $embedtoc,
         sort_order        => $sort_order,
-	book_version      => "$edition-$release",
-	book_src_lang     => $book_src_lang,
+        book_version      => "$edition-$release",
+        book_src_lang     => $book_src_lang,
         img_dir           => $self->{publican}->param('img_dir'),
     );
 
@@ -785,12 +771,10 @@ sub package {
     my $spec_name = "$tmp_dir/rpm/$name_start-web-$lang.spec";
     $spec_name = "$tmp_dir/rpm/$name_start-$lang.spec"
         if ( $desktop or $short_sighted );
-   
-    $self->{template}->process(
-        'spec.tmpl', \%vars,
-        $spec_name,
-        binmode => ':encoding(UTF-8)'
-    ) or croak( $self->{template}->error() );
+
+    $self->{template}->process( 'spec.tmpl', \%vars, $spec_name,
+        binmode => ':encoding(UTF-8)' )
+        or croak( $self->{template}->error() );
 
     $self->build_rpm( { spec => $spec_name, binary => $binary } );
 

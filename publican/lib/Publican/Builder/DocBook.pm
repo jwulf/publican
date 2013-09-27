@@ -265,10 +265,63 @@ sub build {
                                 print( $outfile $stylesheet->output_string(
                                         $results) );
                                 close($outfile);
+                                unlink("$tmp_dir/$lang/xml/Ads.xml");
                             }
                         }
                         elsif ( $web_type =~ m/^product$/i ) {
                             $path = "$pub_dir/home/$lang/$product";
+
+                            if ( -f "$tmp_dir/$lang/xml/Groups.xml" ) {
+				my $tmpl_dir = "$pub_dir/datadir/$lang/$product";
+                                mkpath($tmpl_dir);
+                                my $xml_doc = XML::TreeBuilder->new(
+                                    {   'NoExpand'     => "0",
+                                        'ErrorContext' => "2"
+                                    }
+                                );
+                                eval {
+                                    $xml_doc->parse_file(
+                                        "$tmp_dir/$lang/xml/Groups.xml");
+                                };
+                                if ($@) {
+                                    croak(
+                                        maketext( "FATAL ERROR: [_1]", $@ ) );
+                                }
+
+                                foreach my $node (
+                                    $xml_doc->look_down(
+                                        '_tag', 'varlistentry'
+                                    )
+                                    )
+                                {
+                                    my $sort = $node->attr('role');
+                                    croak(
+                                        maketext(
+                                            "varlistentry must have it's attribute 'role' set to an integer"
+                                        )
+                                        )
+                                        if ( !defined($sort)
+                                        || $sort !~ /^\d+$/ );
+                                    my $term
+                                        = $node->look_down( '_tag', 'term' )
+                                        ->as_text();
+                                    my $text = $node->look_down( '_tag',
+                                        'listitem' )->as_text();
+                                    my $OUT;
+                                    open( $OUT, ">", "$tmpl_dir/$sort.tmpl")
+                                        || croak( maketext("BURP") );
+                                    print( $OUT <<EOL
+\t\t\t\t\t\t<div class="bottom_versions group" id="[% prod %]-[% ver.replace('\\.', '-')%]-$sort">
+\t\t\t\t\t\t\t<span>$term</span>
+\t\t\t\t\t\t\t<span>$text</span>
+\t\t\t\t\t\t</div>
+EOL
+                                    );
+                                    close($OUT);
+                                }
+
+                                unlink("$tmp_dir/$lang/xml/Groups.xml");
+                            }
                         }
                         elsif ( $web_type =~ m/^version$/i ) {
                             $path = "$pub_dir/home/$lang/$product/$version";
@@ -1721,10 +1774,8 @@ sub highlight {
 
     my $lang_module = $hl->languagePlug( $language, 1 ) || croak(
         "\n\t"
-            . maketext(
-            "'[_1]' is not a valid language for highlighting.",
-            $language
-            )
+            . maketext( "'[_1]' is not a valid language for highlighting.",
+            $language )
             . "\n"
     );
 
@@ -2313,6 +2364,8 @@ sub get_subtitle {
     my $lang = delete( $args->{lang} )
         || croak( maketext("lang is a mandatory argument") );
 
+    my $use_source = delete( $args->{use_source} );
+
     if ( %{$args} ) {
         croak(
             maketext(
@@ -2320,16 +2373,28 @@ sub get_subtitle {
             )
         );
     }
+    my $info_file;
 
-    my $tmp_dir = $self->{publican}->param('tmp_dir');
-    my $info_file
-        = "$tmp_dir/$lang/xml/"
-        . $self->{publican}->param('type')
-        . '_Info.xml';
-    $info_file = "$tmp_dir/$lang/xml/" . $self->{publican}->param('info_file')
-        if ( $self->{publican}->param('info_file') );
+    if ($use_source) {
+        $info_file
+            = "$lang/" . $self->{publican}->param('type') . '_Info.xml';
 
-    croak( maketext("subtitle can not be calculated before building.") )
+        $info_file = "$lang/" . $self->{publican}->param('info_file')
+            if ( $self->{publican}->param('info_file') );
+
+    }
+    else {
+        my $tmp_dir = $self->{publican}->param('tmp_dir');
+        $info_file
+            = "$tmp_dir/$lang/xml/"
+            . $self->{publican}->param('type')
+            . '_Info.xml';
+        $info_file
+            = "$tmp_dir/$lang/xml/" . $self->{publican}->param('info_file')
+            if ( $self->{publican}->param('info_file') );
+    }
+
+    croak( maketext( "Info file missing: [_1]", $info_file ) )
         unless ( -f $info_file );
 
     my $xml_doc = XML::TreeBuilder->new(

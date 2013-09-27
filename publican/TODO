@@ -19,6 +19,17 @@ Updated Deps:
 	XML::TreeBuilder
 	XML::Catalog
 
+<variablelist>
+  <varlistentry role="55">
+    <term>Lemons and other sweet fruit</term>
+    <listitem>
+      <para>here be dragons</para>
+    </listitem>
+  </varlistentry>
+</variablelist>
+
+Splash Pages include the brand style and they should not. Force this to be only the content inside teh body.
+
 *********************************************************
 
 

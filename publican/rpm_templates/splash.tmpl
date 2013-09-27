@@ -1,0 +1,51 @@
+%define wwwdir [% web_dir %]
+
+Name:          [% book_title %]-web-[% web_type %]
+Version:       [% rpmver %]
+Release:       [% rpmrel %]%{?dist}
+Summary:       [% full_subtitle %]
+Group:         Documentation
+License:       [% license %]
+URL:           [% url %]
+Source:        [% src_url %]%{name}-%{version}-[% rpmrel %].tgz
+BuildArch:     noarch
+BuildRoot:     %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
+BuildRequires: publican >= [% spec_version %]
+Requires:      publican >= [% spec_version %]
+BuildRequires: [% brand %]
+Requires:      [% brand %]-web
+
+%description
+This is Publican Website [% web_type %] page using the brand: [% brand %]
+
+%prep
+%setup -q
+
+%build
+publican build --nocolours [% embedtoc %] --formats="html-single" --langs=all --publish
+
+%install
+rm -rf $RPM_BUILD_ROOT
+mkdir -p $RPM_BUILD_ROOT/%{wwwdir}
+cp -rf publish/home/* $RPM_BUILD_ROOT/%{wwwdir}/.
+[%- IF GROUPS %]
+mkdir -p $RPM_BUILD_ROOT/%{_datadir}/publican/templates/groups
+cp -rf publish/datadir/*  $RPM_BUILD_ROOT/%{_datadir}/publican/templates/groups/.
+[%- END %]
+
+%clean
+rm -rf $RPM_BUILD_ROOT
+
+%post
+publican update_site
+
+%files
+%defattr(-,root,root,-)
+%{wwwdir}/*
+[%- IF GROUPS %]
+%{_datadir}/*
+[%- END %]
+
+%changelog
+[% log %]
+

@@ -117,9 +117,9 @@ datadir/Common_Content/brand-template/images/warning.svg
 datadir/Common_Content/brand-template/images/watermark-draft.png
 datadir/Common_Content/brand-template/images/yellow.png
 datadir/Common_Content/common-db5/en-US/Conventions.xml
+datadir/Common_Content/common-db5/en-US/css/brand.css
 datadir/Common_Content/common-db5/en-US/css/common.css
 datadir/Common_Content/common-db5/en-US/css/default.css
-datadir/Common_Content/common-db5/en-US/css/brand.css
 datadir/Common_Content/common-db5/en-US/css/print.css
 datadir/Common_Content/common-db5/en-US/Feedback.xml
 datadir/Common_Content/common-db5/en-US/images/1.png
@@ -239,8 +239,8 @@ datadir/Common_Content/common-db5/xsl/html.xsl
 datadir/Common_Content/common-db5/xsl/pdf.xsl
 datadir/Common_Content/common-db5/zanata.xml
 datadir/Common_Content/common/ar-SA/Conventions.po
-datadir/Common_Content/common/ar-SA/css/lang.css
 datadir/Common_Content/common/ar-SA/css/brand.css
+datadir/Common_Content/common/ar-SA/css/lang.css
 datadir/Common_Content/common/ar-SA/Feedback.po
 datadir/Common_Content/common/ar-SA/Program_Listing.po
 datadir/Common_Content/common/ar-SA/Revision_History.po
@@ -301,9 +301,9 @@ datadir/Common_Content/common/el-GR/Program_Listing.po
 datadir/Common_Content/common/el-GR/Revision_History.po
 datadir/Common_Content/common/el-GR/Revision_History.xml
 datadir/Common_Content/common/en-US/Conventions.xml
+datadir/Common_Content/common/en-US/css/brand.css
 datadir/Common_Content/common/en-US/css/common.css
 datadir/Common_Content/common/en-US/css/default.css
-datadir/Common_Content/common/en-US/css/brand.css
 datadir/Common_Content/common/en-US/css/pdf.css
 datadir/Common_Content/common/en-US/css/print.css
 datadir/Common_Content/common/en-US/Feedback.xml
@@ -418,8 +418,8 @@ datadir/Common_Content/common/es-ES/Program_Listing.po
 datadir/Common_Content/common/es-ES/Revision_History.po
 datadir/Common_Content/common/es-ES/Revision_History.xml
 datadir/Common_Content/common/fa-IR/Conventions.po
-datadir/Common_Content/common/fa-IR/css/lang.css
 datadir/Common_Content/common/fa-IR/css/brand.css
+datadir/Common_Content/common/fa-IR/css/lang.css
 datadir/Common_Content/common/fa-IR/Feedback.po
 datadir/Common_Content/common/fa-IR/Program_Listing.po
 datadir/Common_Content/common/fa-IR/Revision_History.po
@@ -440,8 +440,8 @@ datadir/Common_Content/common/gu-IN/Program_Listing.po
 datadir/Common_Content/common/gu-IN/Revision_History.po
 datadir/Common_Content/common/gu-IN/Revision_History.xml
 datadir/Common_Content/common/he-IL/Conventions.po
-datadir/Common_Content/common/he-IL/css/lang.css
 datadir/Common_Content/common/he-IL/css/brand.css
+datadir/Common_Content/common/he-IL/css/lang.css
 datadir/Common_Content/common/he-IL/Feedback.po
 datadir/Common_Content/common/he-IL/Program_Listing.po
 datadir/Common_Content/common/he-IL/Revision_History.po
@@ -719,6 +719,7 @@ publican.desktop
 publican.spec
 README
 rpm_templates/spec.tmpl
+rpm_templates/splash.tmpl
 t/000.load.t
 t/100.CreateBook.t
 t/110.CreateBrand.t
@@ -894,6 +895,9 @@ Users_Guide/it-IT/Websites_structure_rpm.po
 Users_Guide/it-IT/xrefs_and_conditionals.po
 Users_Guide/publican.cfg
 Users_Guide/zanata.xml
+web/chrome.css
+web/db4.css
+web/db5.css
 web/default.js
 web/images/arrows.png
 web/images/close.png
@@ -904,9 +908,6 @@ web/images/page.png
 web/index.html
 web/jquery-1.7.1.min.js
 web/jquery.jcarousel.min.js
-web/chrome.css
-web/db4.css
-web/db5.css
 web/print.css
 web/splash.css
 win_build.pl

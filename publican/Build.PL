@@ -486,7 +486,8 @@ my $builder = $class->new(
         'book_templates/titlepage.tmpl' => 'book_templates/titlepage.tmpl',
     },
     rpm_templates_files =>
-        { 'rpm_templates/spec.tmpl' => 'rpm_templates/spec.tmpl', },
+        { 'rpm_templates/spec.tmpl' => 'rpm_templates/spec.tmpl',
+        'rpm_templates/splash.tmpl' => 'rpm_templates/splash.tmpl', },
     etc_files =>
         { 'etc/publican-website.cfg' => 'etc/publican-website.cfg', },
     completion_files => { 'completion/_publican' => 'completion/_publican', },

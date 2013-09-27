@@ -17,10 +17,9 @@ BuildArch:      noarch
 BuildRoot:     %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildRequires: publican >= [% spec_version %]
 BuildRequires: desktop-file-utils
-Requires:      publican >= [% spec_version %]
-[%- IF brand != 'publican-common' %]
 BuildRequires: [% brand %]
-[%- END %]
+Requires:      publican >= [% spec_version %]
+Requires:      [% brand %]-web
 [%- IF web_obsoletes -%]
 Obsoletes:    [% web_obsoletes %]
 [%- END %]

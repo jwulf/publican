@@ -593,7 +593,7 @@ GET_LIST
             || '2000-01-01';
         $list{$product}{$version}{$name}{subtitle}   = $subtitle;
         $list{$product}{$version}{$name}{abstract}   = $abstract;
-        $list{$product}{$version}{$name}{sort_order} = $sort_order;
+        $list{$product}{$version}{$name}{sort_order} = ($sort_order || 50);
         $list{$product}{$version}{$name}{srcnewer}
             = !( ( defined($orig_ver) )
             && ( $orig_ver ne '' )
@@ -1537,7 +1537,7 @@ SQL
             $book_lang_vars->{trans_strings} = $vars;
             $book_lang_vars->{subtitle}      = $record->{subtitle};
             $book_lang_vars->{book_label} =~ s/_/ /g;
-            $book_lang_vars->{sort_order} = $record->{sort_order};
+            $book_lang_vars->{sort_order} = ($record->{sort_order} || 50);
 
             foreach my $format ( sort (insensitive_sort split( /,/, $record->{formats} ) ) ){
                 $book_lang_vars->{base_format} = $format;
