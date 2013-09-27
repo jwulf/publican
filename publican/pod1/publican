@@ -536,6 +536,7 @@ List::MoreUtils
 List::Util
 Locale::Language
 Locale::Maketext::Gettext
+Locale::Maketext::Lexicon
 Locale::PO
 Module::Build
 Pod::Usage

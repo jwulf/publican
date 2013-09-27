@@ -140,7 +140,7 @@ my $class = Module::Build->subclass(
         sub ACTION_update_po {
             my $self = shift;
             require File::Find::Rule;
-            my @po_files = find(
+            my @po_files = File::Find::Rule::find(
                 maxdepth  => 1,
                 file => name => "*.po",
                 in        => 'po',
@@ -331,6 +331,7 @@ my $builder = $class->new(
         'XML::Simple'                            => 0,
         'XML::TreeBuilder'                       => 4.4,
         'Text::CSV_XS'                           => 0,
+        'Locale::Maketext::Lexicon'              => 0,
     },
     requires => {
         'Archive::Tar'                           => 1.84,
