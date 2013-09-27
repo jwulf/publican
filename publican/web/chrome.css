@@ -368,4 +368,6 @@ body.menu_embeded {
 .menu_embeded #title.hidden {
     display: block;
 }
-
+.untranslated, .srcnewer {
+    font-style: italic;
+} 

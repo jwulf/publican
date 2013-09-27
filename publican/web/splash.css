@@ -199,15 +199,15 @@ body[dir="rtl"] .book_formats {
     margin-bottom: 20px;
 }
 
-.untranslated {
+.untranslated, .srcnewer {
     font-style: italic;
 }
-.untranslated span {
+.untranslated span, .srcnewer span {
     margin-left: 10px;
     opacity: 0.5;
     padding-right: 5px !important;
 }
-body[dir="rtl"] .untranslated span {
+body[dir="rtl"] .untranslated span, body[dir="rtl"] .srcnewer span {
     margin-left: 0;
     margin-right: 10px;
     padding-left: 5px !important;
