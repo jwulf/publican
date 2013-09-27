@@ -146,8 +146,8 @@ $(document).ready(function() {
 					    [%- FOREACH  c_book = i_sort(cur_ver) %][% booker = book_list.${prod}.${ver}.${c_book} %]
 [%- IF loop.first %]
 [%- TRY %]
-[% INCLUDE "groups/datadir/${lang}/${prod}/${booker.sort_order}.tmpl" %]
-[%- CATCH %]
+[% INCLUDE "groups/${lang}/${prod}/${booker.sort_order}.tmpl" %]
+[%- CATCH file %]
 [%- END %]
 [%- END %]
 						<div class="bottom_books[% IF lang != booker.lang %] untranslated [% lang %][% END %]">

@@ -311,7 +311,7 @@ sub build {
                                     open( $OUT, ">", "$tmpl_dir/$sort.tmpl")
                                         || croak( maketext("BURP") );
                                     print( $OUT <<EOL
-\t\t\t\t\t\t<div class="bottom_versions group" id="[% prod %]-[% ver.replace('\\.', '-')%]-$sort">
+\t\t\t\t\t\t<div class="group" id="[% prod %]-[% ver.replace('\\.', '-')%]-$sort">
 \t\t\t\t\t\t\t<span>$term</span>
 \t\t\t\t\t\t\t<span>$text</span>
 \t\t\t\t\t\t</div>

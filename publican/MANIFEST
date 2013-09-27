@@ -643,7 +643,6 @@ datadir/xsl/man.xsl
 datadir/xsl/merge_revisions.xsl
 datadir/xsl/pdf.xsl
 datadir/xsl/txt.xsl
-datadir/xsl/web-home-spec.xsl
 datadir/xsl/xhtml-common.xsl
 etc/publican-website.cfg
 fdl.txt
@@ -920,4 +919,3 @@ windows/publican2.ico
 xt/author/perlcritic.t
 xt/author/pod-coverage.t
 xt/author/pod.t
-META.json

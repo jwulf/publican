@@ -426,7 +426,6 @@ my $builder = $class->new(
         'datadir/xsl/html-pdf.xsl'      => 'datadir/xsl/html-pdf.xsl',
         'datadir/xsl/html.xsl'          => 'datadir/xsl/html.xsl',
         'datadir/xsl/txt.xsl'           => 'datadir/xsl/txt.xsl',
-        'datadir/xsl/web-home-spec.xsl' => 'datadir/xsl/web-home-spec.xsl',
         'datadir/xsl/defaults.xsl'      => 'datadir/xsl/defaults.xsl',
         'datadir/xsl/html-single.xsl'   => 'datadir/xsl/html-single.xsl',
         'datadir/xsl/pdf.xsl'           => 'datadir/xsl/pdf.xsl',
