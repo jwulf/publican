@@ -143,10 +143,13 @@ $(document).ready(function() {
 				<div class="article">
 				    [%- FOREACH  ver = v_sort(book_list.${prod}) %][% cur_ver = book_list.${prod}.${ver} %]
 					<div class="bottom_versions section" id="[% prod %]-[% ver.replace('\.', '-') %]">
+[%- tmpl_list = {} -%]
 					    [%- FOREACH  c_book = i_sort(cur_ver) %][% booker = book_list.${prod}.${ver}.${c_book} %]
-[%- IF loop.first %]
+[%- path = "groups/${lang}/${prod}/${booker.sort_order}.tmpl" -%]
+[%- UNLESS  tmpl_list.${path}  %]
+[%- tmpl_list.${path} = 1 %]
 [%- TRY %]
-[% INCLUDE "groups/${lang}/${prod}/${booker.sort_order}.tmpl" %]
+[% INCLUDE $path %]
 [%- CATCH file %]
 [%- END %]
 [%- END %]
