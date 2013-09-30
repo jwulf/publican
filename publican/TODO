@@ -1,9 +1,3 @@
-DocBook 5 support:
-	Styles ...
-
-Database Updates:
-	901560 - Need Info
-
 PDF:
 	1006135 - Need Info
 	808041  - Need Info
@@ -18,19 +12,6 @@ Updated Deps:
 	docbook5-style-xsl
 	XML::TreeBuilder
 	XML::Catalog
-
-Need to document how it al works in the PUG.
-
-<variablelist>
-  <varlistentry role="50">
-    <term>Lemons and other sweet fruit</term>
-    <listitem>
-      <para>here be dragons</para>
-    </listitem>
-  </varlistentry>
-</variablelist>
-
-
 
 *********************************************************
 

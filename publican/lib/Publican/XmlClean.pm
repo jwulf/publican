@@ -266,7 +266,7 @@ sub new {
         if ( $args->{update_includes} );
     $config->param( 'clean_id', ( delete( $args->{clean_id} ) ) || 0 );
     $config->param( 'donotset_lang',
-        ( delete( $args->{donotset_lang} ) ) || 1 );
+        ( delete( $args->{donotset_lang} ) ) || 0 );
     $config->param( 'distributed_set',
         ( delete( $args->{distributed_set} ) ) || 0 );
     $config->param( 'exclude_ent', ( delete( $args->{exclude_ent} ) ) || 0 );
