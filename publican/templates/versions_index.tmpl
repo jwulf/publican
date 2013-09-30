@@ -6,11 +6,20 @@
 <script type="text/javascript">var current_product = "[% product %]"; var current_version= "[% version %]"; var current_book= "Books"</script>
 <h1>[% title %]</h1>
 <div id="version_top_box" class="version_top_box"></div>
-<script type="text/javascript">$("#version_top_box").load("splash.html");</script>
+<script type="text/javascript">$("#version_top_box").load("splash.html  .article");</script>
 <div class="main_content">
 <div class="version_bottom_box">
   <div class="bottom_versions">
+[%- tmpl_list = {} -%]
 [% FOREACH  booker = book_list %]
+[%- path = "groups/${lang}/${product}/${booker.value.sort_order}.tmpl" -%]
+[%- UNLESS  tmpl_list.${path}  %]
+[%- tmpl_list.${path} = 1 %]
+[%- TRY %]
+[% INCLUDE $path %]
+[%- CATCH file %]
+[%- END %]
+[%- END %]
     <div class="bottom_books[% IF lang != booker.value.lang %] untranslated [% lang %][% END %]">
       [% INCLUDE anchor.tmpl host=host lang=lang booklang=booker.value.lang product=product version=booker.value.version format=booker.value.base_format book=booker.value.book name=booker.value.book_clean subtitle=booker.value.subtitle srcnewer=booker.value.srcnewer %]
     </div>

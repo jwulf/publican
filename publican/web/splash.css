@@ -709,7 +709,6 @@ body, html {
 }
 
 .group span{
-  font-size: 0.75em;
     display: block;
 }
 .group span:first-child {

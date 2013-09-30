@@ -19,6 +19,8 @@ Updated Deps:
 	XML::TreeBuilder
 	XML::Catalog
 
+Need to document how it al works in the PUG.
+
 <variablelist>
   <varlistentry role="50">
     <term>Lemons and other sweet fruit</term>
@@ -28,15 +30,7 @@ Updated Deps:
   </varlistentry>
 </variablelist>
 
-Splash Pages include the brand style and they should not. Force this to be only the content inside the body.
 
-Need to add it to the other navigation pages and decide how to apply it to the menu.
-
-Need to document how it al works in the PUG.
-
-Need to stop the splash pages pulling in the brand CSS file.
-
-Make sure sort order tmpl is only included once
 
 *********************************************************
 
