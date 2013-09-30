@@ -1,16 +1,16 @@
 DocBook 5 support:
+	Styles ...
 
 Database Updates:
-	889031 - In progress
 	901560 - Need Info
 
 PDF:
 	1006135 - Need Info
 	808041  - Need Info
-	1006796 - Requires wkhtmltopdf-qt update and testing
+	-1006796 - Requires wkhtmltopdf-qt update and testing
 		"9.9. Automating Synchronization"
 		~/Source/dist-git/Red_Hat_Network_Satellite-Installation_Guide-5.5-web-en-US/Red_Hat_Network_Satellite-Installation_Guide-5.5-web-en-US-3
-	884943  - Requires wkhtmltopdf-qt update and testing
+	-884943  - Requires wkhtmltopdf-qt update and testing
 
 
 Updated Deps:
@@ -20,7 +20,7 @@ Updated Deps:
 	XML::Catalog
 
 <variablelist>
-  <varlistentry role="55">
+  <varlistentry role="50">
     <term>Lemons and other sweet fruit</term>
     <listitem>
       <para>here be dragons</para>
@@ -28,7 +28,7 @@ Updated Deps:
   </varlistentry>
 </variablelist>
 
-Splash Pages include the brand style and they should not. Force this to be only the content inside teh body.
+Splash Pages include the brand style and they should not. Force this to be only the content inside the body.
 
 *********************************************************
 

@@ -8,6 +8,11 @@ html {
 body, h1, h2, h3, h4, h5, h6, pre, li, div {
 }
 
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 1em;
+    margin-bottom: 0.4em;
+}
+
 body {
     border: 40px solid #EEEEEE;
     background-color: #EEEEEE;
@@ -35,6 +40,10 @@ body[dir="rtl"] > footer {
 }
 .hidden {
     display: none !important;
+}
+
+p {
+    margin-top: 0.5em;
 }
 
 div.warning, div.note, div.important, div.tip, div.important {
@@ -127,14 +136,14 @@ div.navfooter table tr:first-child td a {
 }
 
 div.navfooter table tr:first-child td:last-child a {
-    background: url("../images/stock-go-forward.png") no-repeat scroll right 120% transparent;
+    background: url("common-db5/en-US/images/stock-go-forward.png") no-repeat scroll right 120% transparent;
     padding-bottom: 4px;
     padding-right: 28px;
     padding-top: 3px;
 }
 
 div.navfooter table tr:first-child td:first-child a {
-    background: url("../images/stock-go-back.png") no-repeat scroll left 120% transparent;
+    background: url("common-db5/en-US/images/stock-go-back.png") no-repeat scroll left 120% transparent;
     padding: 3px 0.5em 4px 28px;
 }
 
