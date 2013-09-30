@@ -205,3 +205,11 @@ table.lt-4-cols.gt-14-rows tr:nth-child(odd) {
 	border-left: 0;
 }
 
+ul.toc {
+	list-style: none;
+}
+
+ul.toc ul {
+	margin-bottom: 0.5em;
+	list-style: none;
+}

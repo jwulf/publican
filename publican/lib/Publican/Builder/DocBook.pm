@@ -310,10 +310,19 @@ sub build {
                                     my $OUT;
                                     open( $OUT, ">", "$tmpl_dir/$sort.tmpl")
                                         || croak( maketext("BURP") );
+
                                     print( $OUT <<EOL
 \t\t\t\t\t\t<div class="group" id="[% prod %]-[% ver.replace('\\.', '-')%]-$sort">
 \t\t\t\t\t\t\t<span>$term</span>
+EOL
+                                    );
+
+                                    print( $OUT <<EOL
 \t\t\t\t\t\t\t<span>$text</span>
+EOL
+                                    ) if($text && $text ne "");
+
+                                    print( $OUT <<EOL
 \t\t\t\t\t\t</div>
 EOL
                                     );
