@@ -306,6 +306,7 @@ datadir/Common_Content/common/en-US/Conventions.xml
 datadir/Common_Content/common/en-US/css/brand.css
 datadir/Common_Content/common/en-US/css/common.css
 datadir/Common_Content/common/en-US/css/default.css
+datadir/Common_Content/common/en-US/css/epub.css
 datadir/Common_Content/common/en-US/css/pdf.css
 datadir/Common_Content/common/en-US/css/print.css
 datadir/Common_Content/common/en-US/Feedback.xml

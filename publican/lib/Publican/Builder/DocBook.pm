@@ -987,22 +987,13 @@ sub transform {
             "$tmp_dir/$lang/xml/Common_Content",
             "$tmp_dir/$lang/$format/OEBPS/Common_Content"
         );
-##        dircopy( "$xml_lang/files", "$tmp_dir/$lang/$format/OEBPS/files" )
-##            if ( -e "$xml_lang/files" );
-##        dircopy( "$lang/files", "$tmp_dir/$lang/$format/OEBPS/files" )
-##            if ( -e "$lang/files" );
 
-##        mkpath("$tmp_dir/$lang/$format/OEBPS/Common_Content/css");
-##        fcopy(
-##            "$tmp_dir/$lang/xml/Common_Content/css/print.css",
-##            "$tmp_dir/$lang/$format/OEBPS/Common_Content/css/print.css"
-##        );
-##        mkpath("$tmp_dir/$lang/$format/OEBPS/Common_Content/images");
-##        fcopy(
-##            "$tmp_dir/$lang/xml/Common_Content/images/title_logo.svg",
-##            "$tmp_dir/$lang/$format/OEBPS/Common_Content/images/title_logo.svg"
-##        );
         unlink("$tmp_dir/$lang/$format/OEBPS/$images/icon.svg");
+        unlink("$tmp_dir/$lang/$format/OEBPS/Common_Content/css/brand.css");
+        unlink("$tmp_dir/$lang/$format/OEBPS/Common_Content/css/common.css");
+        unlink("$tmp_dir/$lang/$format/OEBPS/Common_Content/css/default.css");
+        unlink("$tmp_dir/$lang/$format/OEBPS/Common_Content/css/overrides.css");
+        unlink("$tmp_dir/$lang/$format/OEBPS/Common_Content/css/pdf.css");
 
         unless (
             -f "$tmp_dir/$lang/$format/OEBPS/Common_Content/css/lang.css" )
@@ -1010,22 +1001,6 @@ sub transform {
             my $OUTDOC;
             open( $OUTDOC, ">:encoding(UTF-8)",
                 "$tmp_dir/$lang/$format/OEBPS/Common_Content/css/lang.css" )
-                || croak(
-                maketext(
-                    "Could not open [_1] for output!",
-                    "\$tmp_dir/\$lang/\$format/OEBPS/Common_Content/css/lang.css"
-                )
-                );
-            close($OUTDOC);
-        }
-        unless (
-            -f "$tmp_dir/$lang/$format/OEBPS/Common_Content/css/overrides.css"
-            )
-        {
-            my $OUTDOC;
-            open( $OUTDOC, ">:encoding(UTF-8)",
-                "$tmp_dir/$lang/$format/OEBPS/Common_Content/css/overrides.css"
-                )
                 || croak(
                 maketext(
                     "Could not open [_1] for output!",
@@ -1043,7 +1018,7 @@ sub transform {
             "$tmp_dir/$lang/$format/OEBPS/Common_Content" );
 
         my @files
-            = dir_list( "$tmp_dir/$lang/$format/OEBPS/Common_Content", '*' );
+            = dir_list( "$tmp_dir/$lang/$format/OEBPS", '*' );
         my $content_file = "$tmp_dir/$lang/$format/OEBPS/content.opf";
         my $tree         = XML::TreeBuilder->new(
             { 'NoExpand' => "1", 'ErrorContext' => "2" } );
@@ -1055,15 +1030,16 @@ sub transform {
         }
 
         foreach my $file (@files) {
-            next
-                if ( $file =~ /title_logo.svg/
-                || $file =~ /print.css/
-                || $file =~ /default.css/ );
             $file =~ s/^.*OEBPS\///g;
             $file =~ /(...)$/;
             my $ext = $1;
             my $id  = $file;
             $id =~ s/\//-/g;
+
+            my $exists;
+            eval { $exists = $tree->root()->look_down( 'href', "$file" ); };
+
+            if(!defined($exists)) {
             $node->push_content(
                 [   'item',
                     {   href         => "$file",
@@ -1072,6 +1048,7 @@ sub transform {
                     }
                 ]
             );
+            }
         }
 
         my $OUTDOC;
@@ -2014,7 +1991,6 @@ sub insertCallouts {
                         $gfx_node = XML::LibXML::Element->new('img');
                         $gfx_node->setAttribute( 'class',  'callout' );
                         $gfx_node->setAttribute( 'alt',    $index );
-                        $gfx_node->setAttribute( 'border', '0' );
                         $gfx_node->setAttribute( 'src',
                             "Common_Content/images/$index.png" );
                     }

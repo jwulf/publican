@@ -24,6 +24,10 @@ NEXT UNRELEASED
 - Fix subtitle font size. BZ #987431
 - Support grouping of books within a version. BZ #901560
 - Remove bold from titles in Indic scripts. BZ #1006135
+- Overhaul EPUB, basic CSS, harcode chunking, fix errors. BZ #883159
+- Fix duplicate file listing in EPUB. BZ #875119
+- Fix objects in EPUB not in catalog. BZ #875125
+- Fix duplicate ID's in EPUBs. BZ #875116
 
 3.2.1 Wed Sep 04 2013
 - Fix empty images dir causing packaging fail. BZ #995896

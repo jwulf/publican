@@ -13,8 +13,8 @@
 <xsl:param name="epub.oebps.dir" select="'OEBPS/'"/> 
 <xsl:param name="chunker.output.doctype-public" select="'-//W3C//DTD XHTML 1.1//EN'"/>
 <xsl:param name="chunker.output.doctype-system" select="'http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd'"/>
-
-<!--xsl:param name="html.stylesheet" select="''"/-->
+<xsl:param name="html.stylesheet">Common_Content/css/epub.css</xsl:param>
+<xsl:param name="html.stylesheet.print"></xsl:param>
 
 <xsl:param name="generate.toc">
 set nop
@@ -31,6 +31,8 @@ sect5 nop
 section nop
 part nop
 </xsl:param>
+<xsl:param name="chunk.section.depth" select="0"/>
+<xsl:param name="chunk.first.sections" select="0"/>
 
 <!-- Why is this spammed everywhere? It's not valid in most locations -->
 <xsl:template name="generate.html.lang">
@@ -63,14 +65,6 @@ part nop
           <xsl:attribute name="media-type">text/css</xsl:attribute>
           <xsl:attribute name="id">css</xsl:attribute>
           <xsl:attribute name="href"><xsl:value-of select="$html.stylesheet"/></xsl:attribute>
-        </xsl:element>
-      </xsl:if>
-
-      <xsl:if test="$html.stylesheet.print != ''">
-        <xsl:element namespace="http://www.idpf.org/2007/opf" name="item">
-          <xsl:attribute name="media-type">text/css</xsl:attribute>
-          <xsl:attribute name="id">print-css</xsl:attribute>
-          <xsl:attribute name="href"><xsl:value-of select="$html.stylesheet.print"/></xsl:attribute>
         </xsl:element>
       </xsl:if>
 
@@ -134,20 +128,4 @@ part nop
       <xsl:call-template name="opf.calloutlist"/>
     </xsl:element>
   </xsl:template>
-
-  <xsl:template name="opf.calloutlist">
-    <xsl:variable name="format">
-      <xsl:call-template name="guess-media-type">
-        <xsl:with-param name="ext" select="$callout.graphics.extension"/>
-      </xsl:call-template>
-    </xsl:variable>  
-    <xsl:if test="(//calloutlist|//co)">
-      <xsl:call-template name="opf.reference.callout">
-        <xsl:with-param name="conum" select="1"/>
-        <xsl:with-param name="format" select="$format"/>
-      </xsl:call-template>
-    </xsl:if>
-  </xsl:template>
-
-
 </xsl:stylesheet>

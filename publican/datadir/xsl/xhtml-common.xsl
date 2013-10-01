@@ -20,18 +20,19 @@
 
 <!-- Admonition Graphics -->
 <xsl:param name="admon.graphics" select="1"/>
+<xsl:param name="callouts.extension" select="1"/>
 <xsl:param name="admon.style" select="''"/>
 <xsl:param name="admon.graphics.path">
     <xsl:choose>
       <xsl:when test="$embedtoc != 0">
-        <xsl:value-of select="concat($tocpath, '/../', $brand, '/', $langpath, '/images')"/>
+        <xsl:value-of select="concat($tocpath, '/../', $brand, '/', $langpath, '/images/')"/>
       </xsl:when>
       <xsl:otherwise>
 		<xsl:text>Common_Content/images/</xsl:text>
       </xsl:otherwise>
     </xsl:choose>
 </xsl:param>
-<xsl:param name="callout.graphics.path"><xsl:value-of select="$admon.graphics.path"/><xsl:text>/</xsl:text></xsl:param>
+<xsl:param name="callout.graphics.path"><xsl:value-of select="$admon.graphics.path"/></xsl:param>
 
 <xsl:param name="package" select="''"/>
 
@@ -52,7 +53,7 @@
 <xsl:output method="xml" indent="yes"/>
 <xsl:param name="highlight.source" select="1"/>
 <xsl:param name="use.extensions" select="1"/>
-<xsl:param name="tablecolumns.extension">1</xsl:param>
+<xsl:param name="tablecolumns.extension" select="1"/>
 
 <xsl:param name="qanda.in.toc" select="0"/>
 <xsl:param name="segmentedlist.as.table" select="1"/>
@@ -496,11 +497,6 @@ Version: 1.72.0
         </xsl:attribute>
       </xsl:if>
 
-      <xsl:if test="@spacing='compact'">
-        <xsl:attribute name="compact">
-          <xsl:value-of select="@spacing"/>
-        </xsl:attribute>
-      </xsl:if>
       <xsl:apply-templates select="listitem | comment()[preceding-sibling::listitem] | processing-instruction()[preceding-sibling::listitem]"/>
     </ul>
   </div>
@@ -544,13 +540,11 @@ Version: 1.72.0
   <xsl:copy-of select="$link"/>
 </xsl:template>
 
-
 <xsl:template match="*" mode="class.attribute">
   <xsl:param name="class" select="local-name(.)"/>
   <!-- permit customization of class attributes -->
   <!-- Use element name by default -->
-  <xsl:attribute name="class">
-    <!--xsl:value-of select="$class"/-->
+  <xsl:variable name="class.value">
     <xsl:apply-templates select="." mode="class.value">
       <xsl:with-param name="class" select="$class"/>
     </xsl:apply-templates>
@@ -558,7 +552,13 @@ Version: 1.72.0
         <xsl:text> </xsl:text>
         <xsl:value-of select="@role"/>
     </xsl:if>
-  </xsl:attribute>
+  </xsl:variable>
+
+  <xsl:if test="string-length(normalize-space($class.value)) != 0">
+    <xsl:attribute name="class">
+      <xsl:value-of select="$class.value"/>
+    </xsl:attribute>
+  </xsl:if>
 </xsl:template>
 
 <!--
@@ -1059,11 +1059,11 @@ Version: 1.72.0
           <xsl:with-param name="class" select="$class"/>
         </xsl:apply-templates>
       </xsl:if>
-      <xsl:if test="@id or @xml:id">
+      <!--xsl:if test="@id or @xml:id">
         <xsl:attribute name="id">
           <xsl:value-of select="(@id|@xml:id)[1]"/>
         </xsl:attribute>
-      </xsl:if>
+      </xsl:if-->
       <xsl:copy-of select="$content"/>
     </div>
   </xsl:variable>
@@ -2238,7 +2238,14 @@ snip border rubbish. BZ #875967
       </a>
     </xsl:when>
     <xsl:otherwise>
-      <xsl:apply-templates select="." mode="callout-bug"/>
+      <span>
+        <xsl:if test="@id or @xml:id">
+          <xsl:attribute name="id">
+            <xsl:value-of select="(@id|@xml:id)[1]"/>
+          </xsl:attribute>
+        </xsl:if>
+        <xsl:apply-templates select="." mode="callout-bug"/>
+      </span>
     </xsl:otherwise>
   </xsl:choose>
 </xsl:template>
@@ -2256,12 +2263,7 @@ snip border rubbish. BZ #875967
 
   <xsl:choose>
     <xsl:when test="$callout.graphics != 0                     and $conum &lt;= $callout.graphics.number.limit">
-      <img class="callout" src="{$callout.graphics.path}{$conum}{$callout.graphics.extension}" alt="{$conum}" border="0">
-        <xsl:if test="@id or @xml:id">
-          <xsl:attribute name="id">
-            <xsl:value-of select="(@id|@xml:id)[1]"/>
-          </xsl:attribute>
-        </xsl:if>
+      <img class="callout" src="{$callout.graphics.path}{$conum}{$callout.graphics.extension}" alt="{$conum}">
       </img>
     </xsl:when>
     <xsl:when test="$callout.unicode != 0                     and $conum &lt;= $callout.unicode.number.limit">
