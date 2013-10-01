@@ -1735,7 +1735,7 @@ div.toc > dl > dt {
 }
 
 li.step > a:first-child {
-	display: none;
+	display: block;
 }
 
 .stepalternatives {
