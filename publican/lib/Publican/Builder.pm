@@ -369,7 +369,8 @@ sub package_home {
 
     $embedtoc = "" if ( $self->{publican}->param('no_embedtoc') );
 
-    my $full_subtitle = $self->get_subtitle( { lang => $xml_lang, use_source => 1 } );
+    my $full_subtitle
+        = $self->get_subtitle( { lang => $xml_lang, use_source => 1 } );
     $full_subtitle =~ s/"/\\"/g;
     $full_subtitle =~ s/\p{Z}+/ /g;
     chomp($full_subtitle);
@@ -865,7 +866,7 @@ sub get_books {
     }
 
     croak( maketext( "Unknown set SCM: [_1]", $scm ) )
-        unless ( $scm =~ /^(svn|svn)$/ );
+        unless ( $scm =~ /^(svn|git)$/ );
 
     my $books = $self->{publican}->param('books')
         || croak(
@@ -883,20 +884,31 @@ sub get_books {
     foreach my $book ( split( " ", $books ) ) {
         if ( !-d $book ) {
             logger( maketext( "Fetching [_1] from scm", $book ) . "\n" );
-            if ( $scm eq 'svn' ) {
-                debug_msg(
-                    "TODO: should be using Alien::SVN or similar to access SVN!\n"
-                );
-                if ( system("svn export --quiet $repo/$book $book") != 0 ) {
-                    croak(
+                my $result;
+                if ( $scm eq 'svn' ) {
+                    $result = system("svn export --quiet $repo/$book $book");
+                }
+                else {
+## BUGBUG assuming we stuff the full git repo in to this param.
+## e.g.
+## books: "book1 book2"
+## repo: '"book1=git://git.example.org/book1.git""book2=git://git.examnple.com/git/book2.git"'
+                    $repo =~ /$book="([^"]+)"/;
+                    my $git_url = $1 || croak(
                         maketext(
-                            "Fatal Error: SVN export failed. Book: [_1]. Error Number: [_2]",
-                            $book,
-                            $?
+                            "Cannot find GIT url for book [_1]", $book
                         )
                     );
+                    $result = system("git clone --quiet $git_url $book");
                 }
-            }
+
+                croak(
+                    maketext(
+                        "Fatal Error: Export failed. Book: [_1]. Error Number: [_2]",
+                        $book,
+                        $?
+                    )
+                );
         }
     }
 

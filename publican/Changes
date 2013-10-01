@@ -29,6 +29,8 @@ NEXT UNRELEASED
 - Fix objects in EPUB not in catalog. BZ #875125
 - Fix duplicate ID's in EPUBs. BZ #875116
 - Fix ConfigData not being reset after testing on all platforms. BZ #999427
+- Fix links to step not functioning. BZ #1009015
+- Support GIT for distributed sets. BZ #864226
 
 3.2.1 Wed Sep 04 2013
 - Fix empty images dir causing packaging fail. BZ #995896

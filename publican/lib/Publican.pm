@@ -302,7 +302,7 @@ my %PARAMS = (
     },
     scm => {
         descr => maketext(
-            'Type of repository in which books that form part of a remote set are stored. Supported types: SVN.'
+            'Type of repository in which books that form part of a remote set are stored. Supported types: SVN, GIT.'
         ),
     },
     rev_dir => {
