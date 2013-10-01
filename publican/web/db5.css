@@ -213,3 +213,15 @@ ul.toc ul {
 	margin-bottom: 0.5em;
 	list-style: none;
 }
+
+img {
+    max-width: 100%;
+}
+
+li.step > a:first-child {
+	display: block;
+}
+
+div.label, div.data {
+	display: inline;
+}

@@ -112,7 +112,7 @@
 
 		<mediaobject>
 			<imageobject>
-				<imagedata fileref="images/drupal_enable_node_import.png" format="PNG" scalefit="1" width="870" />
+				<imagedata fileref="images/drupal_enable_node_import.png" format="PNG"  />
 			</imageobject>
 		</mediaobject>
 		<important>
@@ -153,7 +153,7 @@
 			</para>
 			<mediaobject>
 				<imageobject>
-					<imagedata fileref="images/drupal_add_menu.png" format="PNG" scalefit="1" width="870" />
+					<imagedata fileref="images/drupal_add_menu.png" format="PNG"  />
 				</imageobject>
 			</mediaobject>
 			<itemizedlist>
@@ -175,7 +175,7 @@
 
 			<mediaobject>
 				<imageobject>
-					<imagedata fileref="images/drupal_node_import_settings.png" format="PNG" scalefit="1" width="870" />
+					<imagedata fileref="images/drupal_node_import_settings.png" format="PNG"  />
 				</imageobject>
 			</mediaobject>
 			<itemizedlist>
@@ -257,7 +257,7 @@
 					</para>
 					<mediaobject>
 						<imageobject>
-							<imagedata fileref="images/drupal_import_task.png" format="PNG" scalefit="1" width="870" />
+							<imagedata fileref="images/drupal_import_task.png" format="PNG"  />
 						</imageobject>
 					</mediaobject>
 				</step>
@@ -267,7 +267,7 @@
 					</para>
 					<mediaobject>
 						<imageobject>
-								<imagedata fileref="images/drupal_import_progress.png" format="PNG" scalefit="1" width="870" />
+								<imagedata fileref="images/drupal_import_progress.png" format="PNG"  />
 						</imageobject>
 					</mediaobject>
 				</step>
@@ -277,7 +277,7 @@
 					</para>
 					<mediaobject>
 						<imageobject>
-								<imagedata fileref="images/drupal_book.png" format="PNG" scalefit="1" />
+								<imagedata fileref="images/drupal_book.png" format="PNG" />
 						</imageobject>
 					</mediaobject>
 				</step>

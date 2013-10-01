@@ -451,3 +451,15 @@ div.admonition {
     margin: 0;
     padding: 1.5em 1em 1em 2em;
 }
+
+img {
+    max-width: 100%;
+}
+
+li.step > a:first-child {
+	display: block;
+}
+
+div.label, div.data {
+	display: inline;
+}

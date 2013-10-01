@@ -892,7 +892,7 @@ sub get_books {
 ## BUGBUG assuming we stuff the full git repo in to this param.
 ## e.g.
 ## books: "book1 book2"
-## repo: '"book1=git://git.example.org/book1.git""book2=git://git.examnple.com/git/book2.git"'
+## repo: '"book1=git://git.example.org/book1.git""book2=git://git.example.com/git/book2.git"'
                     $repo =~ /$book="([^"]+)"/;
                     my $git_url = $1 || croak(
                         maketext(
