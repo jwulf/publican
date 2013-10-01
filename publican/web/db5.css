@@ -5,8 +5,6 @@
 html {
 	overflow-y: scroll;
 }
-body, h1, h2, h3, h4, h5, h6, pre, li, div {
-}
 
 h1, h2, h3, h4, h5, h6 {
     margin-top: 1em;
@@ -218,10 +216,49 @@ img {
     max-width: 100%;
 }
 
-li.step > a:first-child {
-	display: block;
+
+div.question {
+	margin-top: 1em;
+	margin-bottom: 0.5em;
 }
 
-div.label, div.data {
+li.step > a:first-child,
+div.question > a:first-child {
+	display: block;
+}
+div.label,
+div.data,
+div.data > div.para {
 	display: inline;
 }
+div.label {
+	font-weight: bold;
+}
+div.data {
+	margin-left: 0.5em;
+}
+
+div.revhistory th, div.revhistory > table > tbody > tr:nth-child(even)  {
+	font-weight: bold;
+}
+
+div.revhistory table.simplelist {
+	margin-bottom: 1em;
+}
+
+hr {
+	width: 100%;
+}
+
+.footnotes {
+	font-size: 0.8em;
+}
+
+.footnote div {
+	margin: 0px;
+}
+
+.footnote sup {
+	vertical-align: middle;
+}
+
