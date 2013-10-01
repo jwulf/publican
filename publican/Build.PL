@@ -189,6 +189,7 @@ my $class = Module::Build->subclass(
             $self->config_data('book_templates', $self->install_path('book_templates'));
             $self->config_data('rpm_templates', $self->install_path('rpm_templates'));
             $self->config_data('docdir', $self->install_path('docdir'));
+            $self->SUPER::ACTION_config_data();
         }
         sub ACTION_update_pod {
             my ($self) = @_;

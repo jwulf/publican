@@ -28,6 +28,7 @@ NEXT UNRELEASED
 - Fix duplicate file listing in EPUB. BZ #875119
 - Fix objects in EPUB not in catalog. BZ #875125
 - Fix duplicate ID's in EPUBs. BZ #875116
+- Fix ConfigData not being reset after testing on all platforms. BZ #999427
 
 3.2.1 Wed Sep 04 2013
 - Fix empty images dir causing packaging fail. BZ #995896
