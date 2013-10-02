@@ -120,6 +120,7 @@ datadir/Common_Content/common-db5/en-US/Conventions.xml
 datadir/Common_Content/common-db5/en-US/css/brand.css
 datadir/Common_Content/common-db5/en-US/css/common.css
 datadir/Common_Content/common-db5/en-US/css/default.css
+datadir/Common_Content/common-db5/en-US/css/epub.css
 datadir/Common_Content/common-db5/en-US/css/print.css
 datadir/Common_Content/common-db5/en-US/Feedback.xml
 datadir/Common_Content/common-db5/en-US/images/1.png
@@ -232,6 +233,7 @@ datadir/Common_Content/common-db5/pot/Feedback.pot
 datadir/Common_Content/common-db5/pot/Program_Listing.pot
 datadir/Common_Content/common-db5/pot/Revision_History.pot
 datadir/Common_Content/common-db5/publican.cfg
+datadir/Common_Content/common-db5/xsl/epub.xsl
 datadir/Common_Content/common-db5/xsl/html-common.xsl
 datadir/Common_Content/common-db5/xsl/html-pdf.xsl
 datadir/Common_Content/common-db5/xsl/html-single.xsl

@@ -314,7 +314,7 @@ part nop
     </xsl:otherwise>
   </xsl:choose>
 
-  <xsl:if test="($draft.mode = 'yes' or ($draft.mode = 'maybe' and (ancestor-or-self::set | ancestor-or-self::book | ancestor-or-self::article)[1]/@status = 'draft'))">
+  <xsl:if test="($context = 'title-numbered' or $context = 'title-unnumbered') and ($draft.mode = 'yes' or ($draft.mode = 'maybe' and (ancestor-or-self::set | ancestor-or-self::book | ancestor-or-self::article)[1]/@status = 'draft'))">
     <xsl:text> [</xsl:text>
     <xsl:call-template name="gentext">
       <xsl:with-param name="key" select="'Draft'"/>

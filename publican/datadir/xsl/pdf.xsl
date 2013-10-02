@@ -1542,7 +1542,7 @@ Version:1.72
 </xsl:template>
 
 <xsl:template match="replaceable">
-  <xsl:call-template name="inline.italicmonoseq"/>
+  <xsl:call-template name="inline.italicseq"/>
 </xsl:template>
 
 <!--

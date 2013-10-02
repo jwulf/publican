@@ -9,7 +9,6 @@ div.editor div.editor,
 div.contrib div.contrib,
 .title,
 .titlepage .edition {
-	color: #336699;
 }
 
 div.para {
@@ -106,3 +105,11 @@ div.para {
 	color: #0000ff;
 }
 
+b, strong {
+	font-weight: bolder;
+}
+
+code.command {
+	font-family: monospace;
+	font-weight: bolder;
+}

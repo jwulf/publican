@@ -13,6 +13,7 @@
 		xmlns:perl="urn:perl"
 		xmlns:sverb="http://nwalsh.com/xslt/ext/com.nwalsh.saxon.Verbatim"
 		xmlns:xverb="xalan://com.nwalsh.xalan.Verbatim"
+		xmlns:d="http://docbook.org/ns/docbook"
 		version="1.0"
 		exclude-result-prefixes="sverb xverb xlink exsl stext xtext simg ximg"
 		extension-element-prefixes="stext xtext perl ptbl xtbl stbl"
@@ -2561,6 +2562,10 @@ Fix double footnote in bibliography. BZ #653447
       <xsl:call-template name="process.footnotes"/>
     </xsl:if>
   </div>
+</xsl:template>
+
+<xsl:template match="d:replaceable" priority="1">
+  <xsl:call-template name="inline.italicseq"/>
 </xsl:template>
 
 </xsl:stylesheet>

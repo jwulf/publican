@@ -388,5 +388,9 @@ part toc
   </table>
 </xsl:template>
 
+<xsl:template match="d:replaceable" priority="1">
+  <xsl:call-template name="inline.italicseq"/>
+</xsl:template>
+
 </xsl:stylesheet>
 
