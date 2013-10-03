@@ -330,9 +330,10 @@ my $builder = $class->new(
         'XML::LibXML'                            => 1.70,
         'XML::LibXSLT'                           => 1.70,
         'XML::Simple'                            => 0,
-        'XML::TreeBuilder'                       => 4.4,
+        'XML::TreeBuilder'                       => 5.0,
         'Text::CSV_XS'                           => 0,
         'Locale::Maketext::Lexicon'              => 0,
+	version => 0.77,
     },
     requires => {
         'Archive::Tar'                           => 1.84,
@@ -378,8 +379,9 @@ my $builder = $class->new(
         'XML::LibXML'                            => 1.67,
         'XML::LibXSLT'                           => 1.67,
         'XML::Simple'                            => 0,
-        'XML::TreeBuilder'                       => 4.4,
+        'XML::TreeBuilder'                       => 5.0,
         'Text::CSV_XS'                           => 0,
+	version => 0.77,
     },
     add_to_cleanup => [
         'publican-*',

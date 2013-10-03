@@ -4,7 +4,7 @@ use strict;
 use warnings;
 use 5.008;
 use Carp;
-use XML::TreeBuilder;
+use XML::TreeBuilder 5.0;
 use Config::Simple '-strict';
 use Publican;
 use File::Path;

@@ -1,11 +1,3 @@
-PDF:
-	808041  - Need Info
-	-1006796 - Requires wkhtmltopdf-qt update and testing
-		"9.9. Automating Synchronization"
-		~/Source/dist-git/Red_Hat_Network_Satellite-Installation_Guide-5.5-web-en-US/Red_Hat_Network_Satellite-Installation_Guide-5.5-web-en-US-3
-	-884943  - Requires wkhtmltopdf-qt update and testing
-
-
 Updated Deps:
 
 	docbook5-style-xsl
@@ -22,9 +14,7 @@ $ java -jar ~/Downloads/epubcheck/epubcheck-3.0b2.jar build/en-US/Publican-4.0-U
 
 List of unscheduled things we should look at doing:
 
-Refactor EPUB output using EBook::EPUB or EBook::Tools
-
-Support MOBI output using EBook::MOBI
+... Support MOBI output using EBook::MOBI
 
 
 Document migrating a P2 web site to P3:

@@ -19,20 +19,21 @@ use Data::Dumper;
 use File::Copy::Recursive;
 use Encode qw(is_utf8 decode_utf8 encode_utf8);
 use Sort::Versions;
+use version;
 
 use vars
     qw(@ISA $VERSION @EXPORT @EXPORT_OK $SINGLETON $LOCALISE $SPEC_VERSION);
 
 $File::Copy::Recursive::KeepMode = 0;
 
-$VERSION = '4.0.0_1';
+$VERSION = version->declare('v4.0.0_1');
 @ISA     = qw(Exporter);
 
 @EXPORT
     = qw(dir_list debug_msg get_all_langs logger help_config maketext new_tree dtd_string rcopy dircopy fcopy rcopy_glob fmove);
 
 # Track when the SPEC file generation is incompatible.
-$SPEC_VERSION = '4.0.0';
+$SPEC_VERSION = '4.0';
 
 my $DEFAULT_CONFIG_FILE = 'publican.cfg';
 my $DEBUG               = undef;

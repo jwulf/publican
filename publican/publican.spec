@@ -96,6 +96,7 @@ BuildRequires:  perl(Sort::Versions)
 BuildRequires:  perl(DBD::SQLite)
 BuildRequires:  docbook5-schemas
 BuildRequires:  docbook5-style-xsl >= 1.78.1
+BuildRequires:  perl(version) >= 0.77
 
 # Most of these are handled automatically
 Requires:       perl(:MODULE_COMPAT_%(eval "`%{__perl} -V:version`"; echo $version))
