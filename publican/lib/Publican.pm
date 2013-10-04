@@ -26,14 +26,14 @@ use vars
 
 $File::Copy::Recursive::KeepMode = 0;
 
-$VERSION = version->declare('v4.0.0_1');
+$VERSION = version->declare('v3.9.9');
 @ISA     = qw(Exporter);
 
 @EXPORT
     = qw(dir_list debug_msg get_all_langs logger help_config maketext new_tree dtd_string rcopy dircopy fcopy rcopy_glob fmove);
 
 # Track when the SPEC file generation is incompatible.
-$SPEC_VERSION = '4.0';
+$SPEC_VERSION = '3.9';
 
 my $DEFAULT_CONFIG_FILE = 'publican.cfg';
 my $DEBUG               = undef;

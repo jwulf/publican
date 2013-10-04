@@ -14,8 +14,8 @@
 %define wwwdir /var/www/html/docs
 
 Name:           publican
-Version:        4.0.0_1
-Release:        0%{?dist}.t56
+Version:        3.9.9
+Release:        0%{?dist}
 Summary:        Common files and scripts for publishing with DocBook XML
 # For a breakdown of the licensing, refer to LICENSE
 License:        (GPLv2+ or Artistic) and CC0
@@ -276,6 +276,9 @@ rm -rf $RPM_BUILD_ROOT
 %{wwwdir}/common-db5
 
 %changelog
+* Friday Oct 4  2013 Jeff Fearn <jfearn@redhat.com> 3.9.9-0
+- Publican 4.0 RC1
+
 * Wed Sep 04 2013 Jeff Fearn <jfearn@redhat.com> 3.2.1-0
 - Fix empty images dir causing packaging fail. BZ #996349
 - Fix draft background being in front. BZ #996361
