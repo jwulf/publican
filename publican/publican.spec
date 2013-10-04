@@ -86,7 +86,7 @@ BuildRequires:  perl(Time::localtime)
 BuildRequires:  perl(XML::LibXML) => 1.70
 BuildRequires:  perl(XML::LibXSLT) => 1.70
 BuildRequires:  perl(XML::Simple)
-BuildRequires:  perl(XML::TreeBuilder) => 4.4
+BuildRequires:  perl(XML::TreeBuilder) => 5.0
 BuildRequires:  wkhtmltopdf >= 0.10.0_rc2-5
 BuildRequires:  docbook-style-xsl >= 1.77.1
 BuildRequires:  desktop-file-utils
@@ -106,7 +106,7 @@ Requires:       rpm-build
 Requires:       docbook-style-xsl >= 1.77.1
 Requires:       perl(XML::LibXML)  >=  1.67
 Requires:       perl(XML::LibXSLT) >=  1.67
-Requires:       perl(XML::TreeBuilder) >= 4.0
+Requires:       perl(XML::TreeBuilder) >= 5.0
 Requires:       perl-Template-Toolkit
 Requires:       perl(DBD::SQLite)
 Requires:       perl(Text::CSV_XS)
