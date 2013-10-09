@@ -4,6 +4,8 @@ Updated Deps:
 	XML::TreeBuilder
 	XML::Catalog
 
+Locale::Maketext::Lexicon add to BuildRequires
+
 EPUB:
 
 $ java -jar ~/Downloads/epubcheck/epubcheck-3.0b2.jar build/en-US/Publican-4.0-Users_Guide-en-US.epub 

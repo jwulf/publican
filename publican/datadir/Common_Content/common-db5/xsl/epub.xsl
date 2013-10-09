@@ -6,8 +6,7 @@
 				exclude-result-prefixes="exsl">
 
 <xsl:import href="http://docbook.sourceforge.net/release/xsl/current/epub/docbook.xsl"/>
-<xsl:import href="defaults.xsl"/>
-<xsl:import href="xhtml-common.xsl"/>
+<xsl:import href="html-common.xsl"/>
 <xsl:param name="suppress.navigation" select="1"/>
 <xsl:param name="tablecolumns.extensions" select="1"/>
 <xsl:param name="epub.oebps.dir" select="'OEBPS/'"/> 

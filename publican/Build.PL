@@ -129,6 +129,27 @@ my $class = Module::Build->subclass(
                 $publican = undef;
             }
         }
+        sub ACTION_locale_files {
+            my $self = shift;
+            use File::Path;
+            require File::Find::Rule;
+            require Locale::Msgfmt;
+            my $cwd = getcwd();
+            my @po_files = File::Find::Rule::find(
+                maxdepth => 1,
+                file     => name => "*.po",
+                in       => 'po',
+                relative => 0,
+            );
+            # BUGBUG TODO switch to internal merge code
+            foreach my $po_file (@po_files) {
+                $po_file =~ m/po\/(.*)\.po/;
+                my $lang=$1;
+                my $dir = qq|$cwd/blib/locale/$lang/LC_MESSAGES|;
+                mkpath($dir) unless(-d $dir);
+                Locale::Msgfmt::msgfmt({in => $po_file, out=> "$dir/publican.mo"});
+            }
+        }
         sub ACTION_update_pot {
             my $self = shift;
             # BUGBUG TODO call Locale::Maketext::Extract::Run directly
@@ -142,7 +163,7 @@ my $class = Module::Build->subclass(
             require File::Find::Rule;
             my @po_files = File::Find::Rule::find(
                 maxdepth  => 1,
-                file => name => "*.po",
+                file      => name => "*.po",
                 in        => 'po',
                 relative  => 0,
             );
@@ -153,7 +174,7 @@ my $class = Module::Build->subclass(
         }
         sub ACTION_authortest {
             my ($self) = @_;
-            $self->depends_on('build');
+##            $self->depends_on('build');
             $self->depends_on('distmeta');
             $self->test_files( qw< t xt/author > );
             $self->recursive_test_files(1);
@@ -170,6 +191,7 @@ my $class = Module::Build->subclass(
             $self->SUPER::ACTION_build();
             $self->depends_on('common_files');
             $self->depends_on('commondb5_files');
+            $self->depends_on('locale_files');
         }
         sub ACTION_test {
             my ($self) = @_;
@@ -333,7 +355,8 @@ my $builder = $class->new(
         'XML::TreeBuilder'                       => 5.0,
         'Text::CSV_XS'                           => 0,
         'Locale::Maketext::Lexicon'              => 0,
-	version => 0.77,
+        version                                  => 0.77,
+        'Locale::Msgfmt'                         => 0,
     },
     requires => {
         'Archive::Tar'                           => 1.84,
@@ -381,7 +404,8 @@ my $builder = $class->new(
         'XML::Simple'                            => 0,
         'XML::TreeBuilder'                       => 5.0,
         'Text::CSV_XS'                           => 0,
-	version => 0.77,
+        version                                  => 0.77,
+        'Locale::Msgfmt'                         => 0,
     },
     add_to_cleanup => [
         'publican-*',
@@ -417,6 +441,7 @@ my $builder = $class->new(
         'etc'            => '/etc',
         'completion'     => '/etc/bash_completion.d',
         'docdir'         => '/usr/share/doc/',
+        'locale'         => '/usr/share/locale',
     },
     data_files => {
         'datadir/rpmlint.cfg'   => 'datadir/rpmlint.cfg',
@@ -424,17 +449,17 @@ my $builder = $class->new(
         'datadir/fop/fop.xconf' => 'datadir/fop/fop.xconf',
         'datadir/xsl/dt_htmlsingle_spec.xsl' =>
             'datadir/xsl/dt_htmlsingle_spec.xsl',
-        'datadir/xsl/carousel.xsl'      => 'datadir/xsl/carousel.xsl',
-        'datadir/xsl/xhtml-common.xsl'  => 'datadir/xsl/xhtml-common.xsl',
-        'datadir/xsl/html-pdf.xsl'      => 'datadir/xsl/html-pdf.xsl',
-        'datadir/xsl/html.xsl'          => 'datadir/xsl/html.xsl',
-        'datadir/xsl/txt.xsl'           => 'datadir/xsl/txt.xsl',
-        'datadir/xsl/defaults.xsl'      => 'datadir/xsl/defaults.xsl',
-        'datadir/xsl/html-single.xsl'   => 'datadir/xsl/html-single.xsl',
-        'datadir/xsl/pdf.xsl'           => 'datadir/xsl/pdf.xsl',
-        'datadir/xsl/epub.xsl'          => 'datadir/xsl/epub.xsl',
-        'datadir/xsl/eclipse.xsl'       => 'datadir/xsl/eclipse.xsl',
-        'datadir/xsl/man.xsl'           => 'datadir/xsl/man.xsl',
+        'datadir/xsl/carousel.xsl'     => 'datadir/xsl/carousel.xsl',
+        'datadir/xsl/xhtml-common.xsl' => 'datadir/xsl/xhtml-common.xsl',
+        'datadir/xsl/html-pdf.xsl'     => 'datadir/xsl/html-pdf.xsl',
+        'datadir/xsl/html.xsl'         => 'datadir/xsl/html.xsl',
+        'datadir/xsl/txt.xsl'          => 'datadir/xsl/txt.xsl',
+        'datadir/xsl/defaults.xsl'     => 'datadir/xsl/defaults.xsl',
+        'datadir/xsl/html-single.xsl'  => 'datadir/xsl/html-single.xsl',
+        'datadir/xsl/pdf.xsl'          => 'datadir/xsl/pdf.xsl',
+        'datadir/xsl/epub.xsl'         => 'datadir/xsl/epub.xsl',
+        'datadir/xsl/eclipse.xsl'      => 'datadir/xsl/eclipse.xsl',
+        'datadir/xsl/man.xsl'          => 'datadir/xsl/man.xsl',
         'datadir/xsl/merge_revisions.xsl' =>
             'datadir/xsl/merge_revisions.xsl',
         'datadir/xsl/db4-upgrade.xsl' => 'datadir/xsl/db4-upgrade.xsl',
@@ -456,7 +481,7 @@ my $builder = $class->new(
         'web/splash.css'              => 'web/splash.css',
     },
     templates_files => {
-        'templates/anchor.tmpl' => 'templates/anchor.tmpl',
+        'templates/anchor.tmpl'      => 'templates/anchor.tmpl',
         'templates/books_index.tmpl' => 'templates/books_index.tmpl',
         'templates/books_format_menu.tmpl' =>
             'templates/books_format_menu.tmpl',
@@ -487,9 +512,10 @@ my $builder = $class->new(
         'book_templates/toc-xsl.tmpl'   => 'book_templates/toc-xsl.tmpl',
         'book_templates/titlepage.tmpl' => 'book_templates/titlepage.tmpl',
     },
-    rpm_templates_files =>
-        { 'rpm_templates/spec.tmpl' => 'rpm_templates/spec.tmpl',
-        'rpm_templates/splash.tmpl' => 'rpm_templates/splash.tmpl', },
+    rpm_templates_files => {
+        'rpm_templates/spec.tmpl'   => 'rpm_templates/spec.tmpl',
+        'rpm_templates/splash.tmpl' => 'rpm_templates/splash.tmpl',
+    },
     etc_files =>
         { 'etc/publican-website.cfg' => 'etc/publican-website.cfg', },
     completion_files => { 'completion/_publican' => 'completion/_publican', },
@@ -510,6 +536,7 @@ if ( $^O eq 'darwin' ) {
     $builder->install_path( 'etc' => '/opt/local/etc' );
     $builder->install_path(
         'completion' => '/opt/local/etc/bash_completion.d' );
+    $builder->install_path( 'locale' => '/opt/local/share/locale' );
 }
 
 $builder->add_build_element('brand_template');
@@ -520,6 +547,7 @@ $builder->add_build_element('book_templates');
 $builder->add_build_element('rpm_templates');
 $builder->add_build_element('etc');
 $builder->add_build_element('completion');
+$builder->add_build_element('locale');
 $builder->config_data( 'etc',       $builder->install_path('etc') );
 $builder->config_data( 'datadir',   $builder->install_path('datadir') );
 $builder->config_data( 'web',       $builder->install_path('web') );
@@ -529,6 +557,7 @@ $builder->config_data( 'book_templates',
 $builder->config_data( 'rpm_templates',
     $builder->install_path('rpm_templates') );
 $builder->config_data( 'docdir', $builder->install_path('docdir') );
+$builder->config_data( 'locale', $builder->install_path('locale') );
 
 $builder->create_build_script();
 
