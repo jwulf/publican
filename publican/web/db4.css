@@ -277,6 +277,12 @@ div.subtitle, h2.subtitle, h3.subtitle {
     margin-top: 1em;
     text-align: center;
 }
+
+.titlepage .edition {
+    text-align: center;
+    font-weight: bold;
+}
+
 .authorgroup div {
     clear: both;
     text-align: center;
