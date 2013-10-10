@@ -331,7 +331,7 @@ p, div.para, div.formalpara {
 pre {
     border-radius: 11px 11px 11px 11px;
     page-break-inside: avoid;
-   background-color: #F5F5F5;
+    background-color: #F5F5F5;
     border-style: none;
     box-shadow: 0 2px 5px #AAAAAA inset;
     color: #000000;
@@ -342,6 +342,8 @@ pre {
     padding: 0.5em 1em;
     white-space: pre-wrap;
     word-wrap: break-word;
+    -moz-tab-size: 4;
+    tab-size: 4;
 }
 
 .perl_Alert {

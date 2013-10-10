@@ -95,6 +95,8 @@ pre {
     padding: 0.5em 1em;
     white-space: pre-wrap;
     word-wrap: break-word;
+    -moz-tab-size: 4;
+    tab-size: 4;
 }
 
 table {
