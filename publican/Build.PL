@@ -6,7 +6,6 @@ use 5.008;
 my $class = Module::Build->subclass(
     class => 'My::Builder',
     code  => q{
-        use File::pushd;
         use Cwd;
         my $dir = cwd() . '/tmp/rpm';
         my $common_langs = 'all';
@@ -80,6 +79,7 @@ my $class = Module::Build->subclass(
                 $Publican::SINGLETON = undef;
                 require Publican::Builder::DocBook;
                 require Publican::Builder::DocBook4;
+                require File::pushd;
             };
             if($@){
                 warn($@);
@@ -110,6 +110,7 @@ my $class = Module::Build->subclass(
                 $Publican::SINGLETON = undef;
                 require Publican::Builder::DocBook;
                 require Publican::Builder::DocBook5;
+                require File::pushd;
             };
             if($@){
                 warn("$@, $!");
