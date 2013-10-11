@@ -884,31 +884,29 @@ sub get_books {
     foreach my $book ( split( " ", $books ) ) {
         if ( !-d $book ) {
             logger( maketext( "Fetching [_1] from scm", $book ) . "\n" );
-                my $result;
-                if ( $scm eq 'svn' ) {
-                    $result = system("svn export --quiet $repo/$book $book");
-                }
-                else {
+            my $result;
+            if ( $scm eq 'svn' ) {
+                $result = system("svn export --quiet $repo/$book $book");
+            }
+            else {
 ## BUGBUG assuming we stuff the full git repo in to this param.
 ## e.g.
 ## books: "book1 book2"
 ## repo: '"book1=git://git.example.org/book1.git""book2=git://git.example.com/git/book2.git"'
-                    $repo =~ /$book="([^"]+)"/;
-                    my $git_url = $1 || croak(
-                        maketext(
-                            "Cannot find GIT url for book [_1]", $book
-                        )
-                    );
-                    $result = system("git clone --quiet $git_url $book");
-                }
+                $repo =~ /$book=([^'"]+)["']/;
+                my $git_url = $1
+                    || croak(
+                    maketext( "Cannot find GIT url for book [_1]", $book ) );
+                $result = system("git clone --quiet $git_url $book");
+            }
 
-                croak(
-                    maketext(
-                        "Fatal Error: Export failed. Book: [_1]. Error Number: [_2]",
-                        $book,
-                        $?
-                    )
-                );
+            croak(
+                maketext(
+                    "Fatal Error: Export failed. Book: [_1]. Error Number: [_2]",
+                    $book,
+                    $?
+                )
+            ) if ($result);
         }
     }
 
