@@ -85,7 +85,7 @@ my $class = Module::Build->subclass(
                 warn($@);
             } else {
                 my $cwd = getcwd();
-                my $dir = pushd('datadir/Common_Content/common');
+                my $dir = File::pushd::pushd("$cwd/datadir/Common_Content/common");
                 my $path = "$cwd/blib/datadir/Common_Content";
 
                 my $publican = Publican->new({NOCOLOURS => $self->args('nocolours'), common_config => "$cwd/datadir"});
@@ -116,7 +116,7 @@ my $class = Module::Build->subclass(
                 warn("$@, $!");
             } else {
                 my $cwd = getcwd();
-                my $dir = pushd('datadir/Common_Content/common-db5');
+                my $dir = File::pushd::pushd('datadir/Common_Content/common-db5');
                 my $path = "$cwd/blib/datadir/Common_Content";
 
                 my $publican = Publican->new({ NOCOLOURS => $self->args('nocolours'), common_config => "$cwd/datadir"});
