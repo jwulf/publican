@@ -272,7 +272,8 @@ sub build {
                             $path = "$pub_dir/home/$lang/$product";
 
                             if ( -f "$tmp_dir/$lang/xml/Groups.xml" ) {
-				my $tmpl_dir = "$pub_dir/datadir/$lang/$product";
+                                my $tmpl_dir
+                                    = "$pub_dir/datadir/$lang/$product";
                                 mkpath($tmpl_dir);
                                 my $xml_doc = XML::TreeBuilder->new(
                                     {   'NoExpand'     => "0",
@@ -308,7 +309,7 @@ sub build {
                                     my $text = $node->look_down( '_tag',
                                         'listitem' )->as_text();
                                     my $OUT;
-                                    open( $OUT, ">", "$tmpl_dir/$sort.tmpl")
+                                    open( $OUT, ">", "$tmpl_dir/$sort.tmpl" )
                                         || croak( maketext("BURP") );
 
                                     print( $OUT <<EOL
@@ -320,7 +321,7 @@ EOL
                                     print( $OUT <<EOL
 \t\t\t\t\t\t\t<span>$text</span>
 EOL
-                                    ) if($text && $text ne "");
+                                    ) if ( $text && $text ne "" );
 
                                     print( $OUT <<EOL
 \t\t\t\t\t\t</div>
@@ -602,7 +603,8 @@ sub transform {
         my @authors = $self->get_author_list( { lang => $lang } );
         my $contributors = $self->get_contributors( { lang => $lang } );
         my $legalnotice = $self->get_legalnotice( { lang => $lang } );
-        my $abstract = $self->get_abstract( { lang => $lang } );
+        my $abstract
+            = $self->get_abstract( { lang => $lang, format => 'xml' } );
         $abstract =~ s/\p{Z}+/ /g;
 
         my @keywords = $self->get_keywords( { lang => $lang } );
@@ -992,7 +994,8 @@ sub transform {
         unlink("$tmp_dir/$lang/$format/OEBPS/Common_Content/css/brand.css");
         unlink("$tmp_dir/$lang/$format/OEBPS/Common_Content/css/common.css");
         unlink("$tmp_dir/$lang/$format/OEBPS/Common_Content/css/default.css");
-        unlink("$tmp_dir/$lang/$format/OEBPS/Common_Content/css/overrides.css");
+        unlink(
+            "$tmp_dir/$lang/$format/OEBPS/Common_Content/css/overrides.css");
         unlink("$tmp_dir/$lang/$format/OEBPS/Common_Content/css/pdf.css");
 
         unless (
@@ -1017,8 +1020,7 @@ sub transform {
         finddepth( \&del_unwanted_xml,
             "$tmp_dir/$lang/$format/OEBPS/Common_Content" );
 
-        my @files
-            = dir_list( "$tmp_dir/$lang/$format/OEBPS", '*' );
+        my @files        = dir_list( "$tmp_dir/$lang/$format/OEBPS", '*' );
         my $content_file = "$tmp_dir/$lang/$format/OEBPS/content.opf";
         my $tree         = XML::TreeBuilder->new(
             { 'NoExpand' => "1", 'ErrorContext' => "2" } );
@@ -1039,15 +1041,15 @@ sub transform {
             my $exists;
             eval { $exists = $tree->root()->look_down( 'href', "$file" ); };
 
-            if(!defined($exists)) {
-            $node->push_content(
-                [   'item',
-                    {   href         => "$file",
-                        'media-type' => "image/$ext",
-                        id           => $id
-                    }
-                ]
-            );
+            if ( !defined($exists) ) {
+                $node->push_content(
+                    [   'item',
+                        {   href         => "$file",
+                            'media-type' => "image/$ext",
+                            id           => $id
+                        }
+                    ]
+                );
             }
         }
 
@@ -1989,8 +1991,8 @@ sub insertCallouts {
 
                     if ( $format eq 'HTML' ) {
                         $gfx_node = XML::LibXML::Element->new('img');
-                        $gfx_node->setAttribute( 'class',  'callout' );
-                        $gfx_node->setAttribute( 'alt',    $index );
+                        $gfx_node->setAttribute( 'class', 'callout' );
+                        $gfx_node->setAttribute( 'alt',   $index );
                         $gfx_node->setAttribute( 'src',
                             "Common_Content/images/$index.png" );
                     }
@@ -2289,6 +2291,7 @@ sub get_abstract {
 
     my $lang = delete( $args->{lang} )
         || croak( maketext("lang is a mandatory argument") );
+    my $format = delete( $args->{format} ) || 'text';
 
     if ( %{$args} ) {
         croak(
@@ -2321,7 +2324,17 @@ sub get_abstract {
         )
         );
 
-    my $abstract = $abs->as_HTML();
+    my $abstract = '';
+
+    if ( $format eq 'html' ) {
+        $abstract = $abs->as_HTML();
+    }
+    elsif ( $format eq 'xml' ) {
+        $abstract = $abs->as_XML();
+    }
+    else {
+        $abstract = $abs->as_text();
+    }
 
     # tidy up white space
     $abstract =~ s/^[ \t]*//gm;
