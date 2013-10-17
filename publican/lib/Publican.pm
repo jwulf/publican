@@ -22,7 +22,7 @@ use Sort::Versions;
 use version;
 
 use vars
-    qw(@ISA $VERSION @EXPORT @EXPORT_OK $SINGLETON $LOCALISE $SPEC_VERSION);
+    qw(@ISA $VERSION @EXPORT @EXPORT_OK $SINGLETON $LOCALISE $SPEC_VERSION %PARAMS);
 
 $File::Copy::Recursive::KeepMode = 0;
 
@@ -81,7 +81,7 @@ my %PARAM_OLD = (
 
 # All the valid fields in the publican.cfg file
 # constraint: a regex to validate the content
-my %PARAMS = (
+%PARAMS = (
 
     arch => {
         descr => maketext('Arch to filter output on.'),
@@ -478,7 +478,7 @@ my %PARAMS = (
         descr => maketext(
             'The author name to be shown in drupal book page. It must be a valid drupal username.'
         ),
-        default => 'Redhat',
+        default => 'Publican',
     },
     drupal_menu_title => {
         descr => maketext(
@@ -613,11 +613,12 @@ sub _load_config {
         if ( defined $tmp ) {
             if ( ref $tmp eq "ARRAY" ) {
                 if ( $#{$tmp} >= 0 ) {
-                    $config->param( $key, join( ',', @{ $Config{$key} } ) );
+                    $config->param( $key,
+                        decode_utf8( join( ',', @{ $Config{$key} } ) ) );
                 }
             }
             elsif ( $tmp ne "" ) {
-                $config->param( $key, $tmp );
+                $config->param( $key, decode_utf8($tmp) );
             }
         }
         elsif ( defined $PARAMS{$key}->{default} ) {
@@ -668,7 +669,8 @@ sub _load_config {
                 );
             }
             else {
-                croak( maketext( "FATAL ERROR: [_1]: [_2]", $info_file, $@ ) );
+                croak(
+                    maketext( "FATAL ERROR: [_1]: [_2]", $info_file, $@ ) );
             }
         }
 
@@ -1204,7 +1206,7 @@ sub run_xslt {
         }
     }
 
-    my $style_doc;   
+    my $style_doc;
     eval { $style_doc = $parser->parse_file($xsl_file); };
 
     if ($@) {
@@ -1240,7 +1242,7 @@ sub run_xslt {
         my $key = new Win32::TieRegistry( "LMachine\\Software\\Publican",
             { Delimiter => "\\" } );
 
-        my $new_href = 'file:///D:/Data/temp/Redhat/docbook-xsl-1.75.2';
+        my $new_href = 'file:///D:/Data/temp/Publican/docbook-xsl-1.75.2';
         if ( $key and $key->GetValue("xsl_path") ) {
             $new_href = 'file:///' . $key->GetValue("xsl_path");
             $new_href =~ s/ /%20/g;

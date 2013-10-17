@@ -35,6 +35,7 @@ NEXT UNRELEASED
 - Bold and Center titlepage edition. BZ #1017548
 - Fix broken use of pushd in Build.PL. BZ #1018608
 - Remove XML from spec file abstract. BZ #1018796
+- Fix UTF8 in publican.cfg not being handled. BZ #1020059
 
 3.2.1 Wed Sep 04 2013
 - Fix empty images dir causing packaging fail. BZ #995896

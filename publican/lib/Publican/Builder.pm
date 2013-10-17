@@ -615,14 +615,6 @@ sub package {
 
     $self->{publican}->{config}->param( 'xml_lang', $lang );
 
-    # Need to remove scm from packaged set to avoid fetching from repo
-    my $tmp_scm = undef;
-
-    if ( $type eq 'Set' && $self->{publican}->{config}->param('scm') ) {
-        $tmp_scm = $self->{publican}->{config}->param('scm');
-        $self->{publican}->{config}->delete('scm');
-    }
-
     my $common_config = $self->{publican}->param('common_config');
     my $xsl_file      = $common_config . "/xsl/web-spec.xsl";
     $xsl_file = $common_config . "/xsl/dt_htmlsingle_spec.xsl" if ($desktop);
@@ -652,35 +644,52 @@ sub package {
     $menu_category =~ s/__LANG__/$lang/g;
     $menu_category .= ';' if ( $menu_category !~ /;\s*$/ );
 
+    my %Config = $self->{publican}->{config}->vars();
+    my $config = new Config::Simple();
+    $config->syntax('http');
+    foreach my $key ( keys(%Config) ) {
+        # skip invalid parameters
+        next unless(defined($Publican::PARAMS{$key}));
+
+        # skip limited parameters
+        next
+            if (
+            defined $Publican::PARAMS{$key}->{limit_to}
+            && (lc( $self->{publican}->param('type') ) ne
+                lc( $Publican::PARAMS{$key}->{limit_to} ) )
+            );
+
+        # skip defaults
+        next
+            if (
+            defined $Publican::PARAMS{$key}->{default}
+            && (lc( $Publican::PARAMS{$key}->{default} ) eq
+                lc( $Config{$key} ) )
+            );
+
+        next if ( $Config{$key} eq "" );
+
+        $config->param( $key, encode_utf8( $Config{$key} ) );
+    }
+
     # store lables for rebuilding translated content
-    $self->{publican}->{config}
-        ->param( 'web_product_label', $web_product_label )
+    $config->param( 'web_product_label', encode_utf8($web_product_label) )
         if ($web_product_label);
-    $self->{publican}->{config}
-        ->param( 'web_version_label', $web_version_label )
+    $config->param( 'web_version_label', encode_utf8($web_version_label) )
         if ($web_version_label);
-    $self->{publican}->{config}->param( 'web_name_label', $web_name_label )
+    $config->param( 'web_name_label', encode_utf8($web_name_label) )
         if ($web_name_label);
 
-    $self->{publican}->{config}->param( 'release', $release );
+    $config->param( 'release', $release );
 
     # don't override these
-    $self->{publican}->{config}->delete('common_config');
-    my $common_content = $self->{publican}->param('common_content');
-    $self->{publican}->{config}->delete('common_content');
-    $self->{publican}->{config}->delete('release');
-    $self->{publican}->{config}->delete('edition');
-    $self->{publican}->{config}->delete('brand_dir');
-    $self->{publican}->{config}->delete('cover_image');
-
-    $self->{publican}->{config}->write("$tmp_dir/tar/$tardir/publican.cfg");
-
-    $self->{publican}->{config}->param( 'common_config',  $common_config );
-    $self->{publican}->{config}->param( 'common_content', $common_content );
-    $self->{publican}->{config}->param( 'xml_lang',       $xml_lang );
-    $self->{publican}->{config}->param( 'scm',     $tmp_scm ) if ($tmp_scm);
-    $self->{publican}->{config}->param( 'release', $release );
-    $self->{publican}->{config}->param( 'edition', $edition );
+    $config->delete('common_config');
+    $config->delete('common_content');
+    $config->delete('release');
+    $config->delete('edition');
+    $config->delete('brand_dir');
+    $config->delete('cover_image');
+    $config->write("$tmp_dir/tar/$tardir/publican.cfg");
 
     my $dir = pushd("$tmp_dir/tar");
     my @files = dir_list( $tardir, '*' );
@@ -1047,3 +1056,4 @@ L<https://bugzilla.redhat.com/bugzilla/enter_bug.cgi?product=Publican&component=
 =head1 AUTHOR
 
 Jeff Fearn  C<< <jfearn@redhat.com> >>
+
