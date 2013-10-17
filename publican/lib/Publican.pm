@@ -30,7 +30,7 @@ $VERSION = version->declare('v3.9.9');
 @ISA     = qw(Exporter);
 
 @EXPORT
-    = qw(dir_list debug_msg get_all_langs logger help_config maketext new_tree dtd_string rcopy dircopy fcopy rcopy_glob fmove);
+    = qw(dir_list debug_msg get_all_langs logger help_config maketext new_tree dtd_string rcopy dircopy fcopy rcopy_glob fmove dirmove);
 
 # Track when the SPEC file generation is incompatible.
 $SPEC_VERSION = '3.9';
@@ -1751,6 +1751,26 @@ sub dircopy {
         || croak(
         maketext(
             "Can not copy directory [_1] to [_2] due to error: [_3]",
+            $from, $to, $@
+        )
+        );
+
+    return;
+}
+
+=head2 dirmove
+
+UTF8 escape calls to File::Copy::Recursive
+
+=cut
+
+sub dirmove {
+    my ( $from, $to ) = @_;
+
+    File::Copy::Recursive::dirmove( encode_utf8($from), encode_utf8($to) )
+        || croak(
+        maketext(
+            "Can not move directory [_1] to [_2] due to error: [_3]",
             $from, $to, $@
         )
         );
