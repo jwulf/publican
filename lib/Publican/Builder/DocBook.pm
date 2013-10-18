@@ -561,7 +561,8 @@ sub transform {
             '15mm',           '--margin-right',
             '15mm',           '--header-html',
             $header,          '--footer-html',
-            $footer
+            $footer,          '--load-error-handling',
+            'ignore'
         );
 
         if ( $self->{publican}->param('wkhtmltopdf_opts') ) {
@@ -629,14 +630,16 @@ sub transform {
         };
 
         my $vars = {
-            draft       => $draft,
-            product     => decode_utf8($prod),
-            docname     => decode_utf8($name),
-            version     => decode_utf8($ver),
-            release     => decode_utf8( $self->{publican}->param('release') ),
-            subtitle    => decode_utf8($subtitle),
-            authors     => \@authors,
-            editorlabel => decode_utf8( $locale->maketext("Edited by") ),
+            draft   => $draft,
+            product => decode_utf8( encode_utf8($prod) ),
+            docname => decode_utf8( encode_utf8($name) ),
+            version => decode_utf8( encode_utf8($ver) ),
+            release => decode_utf8(
+                encode_utf8( $self->{publican}->param('release') )
+            ),
+            subtitle     => decode_utf8( encode_utf8($subtitle) ),
+            authors      => \@authors,
+            editorlabel  => decode_utf8( $locale->maketext("Edited by") ),
             contributors => $contributors,
             contriblabel =>
                 decode_utf8( $locale->maketext("With contributions from") ),
@@ -2139,7 +2142,7 @@ sub web_labels {
     #    }
 
     $web_product_label =~ s/"/\\"/g if ($web_product_label);
-    $web_name_label    =~ s/"/\\"/g if ($web_name_label);
+    $web_name_label =~ s/"/\\"/g    if ($web_name_label);
     $web_version_label =~ s/"/\\"/g if ($web_version_label);
 
     if ( $web_name_label && $web_name_label eq $docname ) {
@@ -2234,7 +2237,8 @@ sub change_log {
         $node = $revision->look_down( '_tag', 'email' )
             || croak(
             maketext(
-                "Missing mandatory field '[_1]' in revision history.", 'email'
+                "Missing mandatory field '[_1]' in revision history.",
+                'email'
             )
             );
         my $email = $node->as_trimmed_text();
