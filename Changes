@@ -37,6 +37,7 @@ NEXT UNRELEASED
 - Remove XML from spec file abstract. BZ #1018796
 - Fix UTF8 in publican.cfg not being handled. BZ #1020059
 - Fix Indic PDF build on F19. BZ #1018024
+- Fix UTF8 encoding for title in Revision_History.xml BZ #1020570
 
 3.2.1 Wed Sep 04 2013
 - Fix empty images dir causing packaging fail. BZ #995896

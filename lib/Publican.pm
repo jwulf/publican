@@ -1535,7 +1535,7 @@ sub add_revision {
         $rev_doc->root()->tag('appendix');
         my $rev_hist
             = XML::Element->new_from_lol(
-            [ 'title', $locale->maketext('Revision History') ],
+            [ 'title', decode_utf8($locale->maketext('Revision History')) ],
             );
 
         $rev_doc->root()->push_content($rev_hist);
