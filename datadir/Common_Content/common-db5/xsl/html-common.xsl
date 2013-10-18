@@ -65,6 +65,7 @@ part toc
 <!-- duplicated from xhtml-docbook.xsl -->
 <xsl:template name="user.head.content">
   <xsl:param name="node" select="."/>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <xsl:if test="$embedtoc = 1">
     <link rel="stylesheet" type="text/css"><xsl:attribute name="href"><xsl:value-of select="$tocpath"/>/../chrome.css</xsl:attribute></link>
     <link rel="stylesheet" type="text/css"><xsl:attribute name="href"><xsl:value-of select="$tocpath"/>/../db5.css</xsl:attribute></link>
