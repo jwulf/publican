@@ -142,7 +142,6 @@ my $class = Module::Build->subclass(
                 in       => 'po',
                 relative => 0,
             );
-            # BUGBUG TODO switch to internal merge code
             foreach my $po_file (@po_files) {
                 $po_file =~ m/po\/(.*)\.po/;
                 my $lang=$1;

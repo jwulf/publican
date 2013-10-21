@@ -15,7 +15,7 @@
 
 Name:           publican
 Version:        3.9.9
-Release:        0%{?dist}.t16
+Release:        0%{?dist}.t18
 Summary:        Common files and scripts for publishing with DocBook XML
 # For a breakdown of the licensing, refer to LICENSE
 License:        (GPLv2+ or Artistic) and CC0
@@ -98,6 +98,7 @@ BuildRequires:  docbook5-schemas
 BuildRequires:  docbook5-style-xsl >= 1.78.1
 BuildRequires:  perl(version) >= 0.77
 BuildRequires:  perl(Locale::Msgfmt)
+BuildRequires:  perl(Locale::Maketext::Lexicon)
 
 # Most of these are handled automatically
 Requires:       perl(:MODULE_COMPAT_%(eval "`%{__perl} -V:version`"; echo $version))

@@ -1988,8 +1988,8 @@ valign: <xsl:value-of select="@valign"/></xsl:message>
 
   <xsl:variable name="rowclass">
     <xsl:choose>
-      <xsl:when test="count(row) &lt; 7"><xsl:text>lt-7-rows</xsl:text></xsl:when>
-      <xsl:when test="count(row) &lt; 15"><xsl:text>gt-7-rows</xsl:text></xsl:when>
+      <xsl:when test="count(tbody/row) &lt; 7"><xsl:text>lt-7-rows</xsl:text></xsl:when>
+      <xsl:when test="count(tbody/row) &lt; 15"><xsl:text>gt-7-rows</xsl:text></xsl:when>
       <xsl:otherwise><xsl:text>gt-14-rows</xsl:text></xsl:otherwise>
     </xsl:choose>
   </xsl:variable>
