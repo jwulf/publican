@@ -150,6 +150,9 @@ my $class = Module::Build->subclass(
                 mkpath($dir) unless(-d $dir);
                 Locale::Msgfmt::msgfmt({in => $po_file, out=> "$dir/publican.mo"});
             }
+            my $dir = qq|$cwd/blib/locale/en_US/LC_MESSAGES|;
+            mkpath($dir) unless(-d $dir);
+            Locale::Msgfmt::msgfmt({in => "po/publican.pot", out=> qq|$cwd/blib/locale/en_US/LC_MESSAGES/publican.mo|});
         }
         sub ACTION_update_pot {
             my $self = shift;
@@ -242,14 +245,14 @@ Command Options
     -v			Display the version of Publican
 EOL
 
-            my $pod = qx|perl -CAS -I blib/lib bin/publican --help_actions|;
+            my $pod = qx|perl -CDAS -I blib/lib bin/publican --help_actions|;
             print($POD_FILE $pod);
             print($POD_FILE <<EOL);
 =head1 INTERFACE 
 
 EOL
 
-            $pod = qx|perl -CAS -I blib/lib bin/publican --help all|;
+            $pod = qx|perl -CDAS -I blib/lib bin/publican --help all|;
             my $version = $self->dist_version;
             print($POD_FILE $pod, "\n");
             print($POD_FILE <<EOL);
@@ -290,7 +293,7 @@ EOL
 
             close($POD_FILE);
 
-            $self->do_system('perl -CAS -I blib/lib bin/publican --bash');
+            $self->do_system('perl -CDAS -I blib/lib bin/publican --bash');
             return;
         }
     }

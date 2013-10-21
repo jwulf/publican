@@ -43,7 +43,7 @@ Q: How do I profile publican?
 
 A: Devel::NYTProf is a good option.
 
-$ perl -CAS -d:NYTProf /usr/bin/publican build --langs en-US --formats html
+$ perl -CDAS -d:NYTProf /usr/bin/publican build --langs en-US --formats html
 $ nytprofhtml
 $ firefox nytprof/index.html 
 

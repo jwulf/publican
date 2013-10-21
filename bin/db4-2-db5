@@ -1,4 +1,4 @@
-#!/usr/bin/perl -CAS
+#!/usr/bin/perl -CDAS
 
 use strict;
 use warnings;

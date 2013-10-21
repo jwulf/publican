@@ -15,7 +15,7 @@
 
 Name:           publican
 Version:        3.9.9
-Release:        0%{?dist}.t14
+Release:        0%{?dist}.t16
 Summary:        Common files and scripts for publishing with DocBook XML
 # For a breakdown of the licensing, refer to LICENSE
 License:        (GPLv2+ or Artistic) and CC0
@@ -188,7 +188,7 @@ Website style for common brand for DocBook5 content
 %build
 %{__perl} Build.PL installdirs=vendor --nocolours=1
 ./Build --nocolours=1
-dir=`pwd` && cd Users_Guide && %{__perl} -CAS -I $dir/blib/lib $dir/blib/script/publican build \
+dir=`pwd` && cd Users_Guide && %{__perl} -CDAS -I $dir/blib/lib $dir/blib/script/publican build \
     --formats=html-desktop --publish --langs=all \
     --common_config="$dir/blib/datadir" \
     --common_content="$dir/blib/datadir/Common_Content" --nocolours
@@ -206,17 +206,17 @@ sed -i -e 's|@@ICON@@|%{_docdir}/%{name}-doc-%{version}/en-US/images/icon.svg|' 
 
 desktop-file-install --vendor="%{my_vendor}" --dir=$RPM_BUILD_ROOT%{_datadir}/applications %{name}.desktop
 
-%find_lang %{name}
+%find_lang %{name} --with-man
 
 # Package web common files
 mkdir -p -m755 $RPM_BUILD_ROOT/%{wwwdir}/common
 dir=`pwd`
 cd datadir/Common_Content/common
-%{__perl} -CAS -I $dir/blib/lib $dir/blib/script/publican install_brand --web --path=$RPM_BUILD_ROOT/%{wwwdir}/common
+%{__perl} -CDAS -I $dir/blib/lib $dir/blib/script/publican install_brand --web --path=$RPM_BUILD_ROOT/%{wwwdir}/common
 cd -
 mkdir -p -m755 $RPM_BUILD_ROOT/%{wwwdir}/common-db5
 cd datadir/Common_Content/common-db5
-%{__perl} -CAS -I $dir/blib/lib $dir/blib/script/publican install_brand --web --path=$RPM_BUILD_ROOT/%{wwwdir}/common-db5
+%{__perl} -CDAS -I $dir/blib/lib $dir/blib/script/publican install_brand --web --path=$RPM_BUILD_ROOT/%{wwwdir}/common-db5
 cd -
 
 %check

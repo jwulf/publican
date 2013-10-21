@@ -4,6 +4,8 @@
 ,v$
 \B\.svn\b
 \B\.cvsignore$
+\B\.git\b
+\B\.gitignore$
 
 # Avoid Makemaker generated and utility files.
 \bMakefile$
@@ -16,6 +18,7 @@
 \bUsers_Guide/pot\b
 \bUsers_Guide/de-DE\b
 \bSplash_Page\b
+\bmenu_example\b
 
 # Avoid Module::Build generated and utility files.
 \bBuild$

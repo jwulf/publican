@@ -1,9 +1,4 @@
-#!/usr/bin/perl -CAS
-
-#BUGBUG -CAS should allow removing utf8::encode, utf8::decode from Translate.pm
-# See: http://perldoc.perl.org/perlrun.html#*-C-[_number/list_]*
-# or binmode STDIN, ":encoding(UTF-8)";
-# http://en.wikibooks.org/wiki/Perl_Programming/Unicode_UTF-8
+#!/usr/bin/perl -CDAS
 
 use warnings;
 use strict;
@@ -31,8 +26,8 @@ use File::HomeDir;
 use Publican::ConfigData;
 use Encode qw(is_utf8 decode_utf8 encode_utf8);
 
-binmode STDIN, ":encoding(UTF-8)";
-binmode STDOUT, ":encoding(UTF-8)";
+#binmode STDIN, ":encoding(UTF-8)";
+#binmode STDOUT, ":encoding(UTF-8)";
 
 my $VERSION           = "$Publican::VERSION";
 my $LANG_PATTERN      = q|__LANG__|;
