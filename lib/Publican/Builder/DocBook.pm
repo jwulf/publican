@@ -309,7 +309,7 @@ sub build {
                                     my $text = $node->look_down( '_tag',
                                         'listitem' )->as_text();
                                     my $OUT;
-                                    open( $OUT, ">", "$tmpl_dir/$sort.tmpl" )
+                                    open( $OUT, ">:encoding(UTF-8)", "$tmpl_dir/$sort.tmpl" )
                                         || croak( maketext("BURP") );
 
                                     print( $OUT <<EOL

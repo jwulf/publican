@@ -196,7 +196,7 @@ sub new {
     $self->{debug}             = $debug;
     $self->{web_style}         = $web_style;
 
-    my $conf = { INCLUDE_PATH => $tmpl_path, };
+    my $conf = { INCLUDE_PATH => $tmpl_path, ENCODING => 'utf8', };
 
     #    $conf->{DEBUG} = Template::Constants::DEBUG_ALL if ($debug);
     $conf->{DEBUG} = Template::Constants::DEBUG_VARS if ($debug);
