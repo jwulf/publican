@@ -114,6 +114,7 @@
 			<imageobject>
 				<imagedata fileref="images/drupal_enable_node_import.png" format="PNG"  />
 			</imageobject>
+			<textobject><phrase>testing longdesc</phrase></textobject>
 		</mediaobject>
 		<important>
 			<title>Important — Enable Drupal Core Modules</title>

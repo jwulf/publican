@@ -45,7 +45,6 @@
 <xsl:param name="chunker.output.indent" select="'no'"/>
 <xsl:param name="html.longdesc.link" select="0"/>
 <xsl:param name="html.longdesc" select="0"/>
-<xsl:param name="html.longdesc.embed" select="1"/>
 <xsl:param name="html.stylesheet"><xsl:if test="$embedtoc = 0 ">Common_Content/css/default.css</xsl:if></xsl:param>
 <xsl:param name="html.stylesheet.type" select="'text/css'"/>
 <xsl:param name="html.stylesheet.print"><xsl:if test="$embedtoc = 0 ">Common_Content/css/print.css</xsl:if></xsl:param>
@@ -560,77 +559,6 @@ Version: 1.72.0
       <xsl:value-of select="$class.value"/>
     </xsl:attribute>
   </xsl:if>
-</xsl:template>
-
-<!--
-From: xhtml/graphics.xsl
-Reason:  allow long descr to be inline
-Version: 1.72.0
--->
-<xsl:template match="imagedata">
-  <xsl:variable name="filename">
-    <xsl:call-template name="mediaobject.filename">
-      <xsl:with-param name="object" select=".."/>
-    </xsl:call-template>
-  </xsl:variable>
-
-  <xsl:choose>
-    <xsl:when test="@format='linespecific'">
-      <xsl:choose>
-        <xsl:when test="$use.extensions != '0'                         and $textinsert.extension != '0'">
-          <xsl:choose>
-            <xsl:when test="element-available('stext:insertfile')">
-              <stext:insertfile href="{$filename}" encoding="{$textdata.default.encoding}"/>
-            </xsl:when>
-            <xsl:when test="element-available('xtext:insertfile')">
-              <xtext:insertfile href="{$filename}"/>
-            </xsl:when>
-            <xsl:otherwise>
-              <xsl:message terminate="yes">
-                <xsl:text>No insertfile extension available.</xsl:text>
-              </xsl:message>
-            </xsl:otherwise>
-          </xsl:choose>
-        </xsl:when>
-        <xsl:otherwise>
-          <a xlink:type="simple" xlink:show="embed" xlink:actuate="onLoad" href="{$filename}"/>
-        </xsl:otherwise>
-      </xsl:choose>
-    </xsl:when>
-    <xsl:otherwise>
-      <xsl:variable name="longdesc.uri">
-        <xsl:call-template name="longdesc.uri">
-          <xsl:with-param name="mediaobject" select="ancestor::imageobject/parent::*"/>
-        </xsl:call-template>
-      </xsl:variable>
-
-      <xsl:variable name="phrases" select="ancestor::mediaobject/textobject[phrase]                             |ancestor::inlinemediaobject/textobject[phrase]                             |ancestor::mediaobjectco/textobject[phrase]"/>
-
-      <xsl:call-template name="process.image">
-        <xsl:with-param name="alt">
-          <xsl:apply-templates select="$phrases[not(@role) or @role!='tex'][1]"/>
-        </xsl:with-param>
-        <xsl:with-param name="longdesc">
-          <xsl:call-template name="write.longdesc">
-            <xsl:with-param name="mediaobject" select="ancestor::imageobject/parent::*"/>
-          </xsl:call-template>
-        </xsl:with-param>
-      </xsl:call-template>
-
-      <xsl:if test="$html.longdesc != 0 and $html.longdesc.link != 0                     and ancestor::imageobject/parent::*/textobject[not(phrase)]">
-        <xsl:call-template name="longdesc.link">
-          <xsl:with-param name="longdesc.uri" select="$longdesc.uri"/>
-        </xsl:call-template>
-      </xsl:if>
-      <xsl:if test="$html.longdesc.embed != 0 and ancestor::imageobject/parent::*/textobject[not(phrase)]">
-        <div xmlns="http://www.w3.org/1999/xhtml" class="longdesc">
-            <xsl:for-each select="ancestor::imageobject/parent::*/textobject[not(phrase)]">
-              <xsl:apply-templates select="./*"/>
-            </xsl:for-each>
-        </div>
-      </xsl:if>
-    </xsl:otherwise>
-  </xsl:choose>
 </xsl:template>
 
 <!--

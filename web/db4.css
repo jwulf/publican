@@ -316,7 +316,7 @@ code {
 }
 
 code.option {
-    font-weight: normal;
+    font-weight: bold;
 }
 code.prompt {
     font-weight: normal;
@@ -515,5 +515,17 @@ hr {
 
 .footnote sup {
 	vertical-align: middle;
+}
+
+.example {
+	background-color: #ffffff;
+	border-left: 3px solid #aaaaaa;
+	padding-top: 1px;
+	padding-bottom: 0.1em;
+	padding-left: 1em;
+}
+
+.package, .citetitle {
+	font-style: italic;
 }
 
