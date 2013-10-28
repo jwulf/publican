@@ -692,7 +692,7 @@ msgstr ""
 
 #: lib/Publican/WebSite.pm:129
 msgid "English is newer"
-msgstr ""
+msgstr "ഇംഗ്ലീഷ് പതിപ്പുില്‍ ഏറ്റവും പുതിയ വിവരങ്ങളുണ്ടു്"
 
 #: lib/Publican/CreateBook.pm:259 lib/Publican/CreateBook.pm:519
 msgid "Enter a short description here."
