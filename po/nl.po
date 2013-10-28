@@ -687,7 +687,7 @@ msgstr "Onder redactie van"
 #. ($edition)
 #: lib/Publican/Builder/DocBook.pm:595
 msgid "Edition %1"
-msgstr ""
+msgstr "Uitgave %1"
 
 #: bin/publican:118
 msgid "Embed the web site TOC object in the generated HTML"

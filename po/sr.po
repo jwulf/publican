@@ -683,7 +683,7 @@ msgstr "Уредио(ла)"
 #. ($edition)
 #: lib/Publican/Builder/DocBook.pm:595
 msgid "Edition %1"
-msgstr ""
+msgstr "Издање %1"
 
 #: bin/publican:118
 msgid "Embed the web site TOC object in the generated HTML"

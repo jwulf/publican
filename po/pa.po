@@ -684,7 +684,7 @@ msgstr "ਸੰਪਾਦਨ ਕੀਤਾ"
 #. ($edition)
 #: lib/Publican/Builder/DocBook.pm:595
 msgid "Edition %1"
-msgstr ""
+msgstr "ਪ੍ਰਕਾਸ਼ਨ %1"
 
 #: bin/publican:118
 msgid "Embed the web site TOC object in the generated HTML"

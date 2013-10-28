@@ -786,7 +786,7 @@ msgstr "Redakcja: "
 #. ($edition)
 #: lib/Publican/Builder/DocBook.pm:595
 msgid "Edition %1"
-msgstr ""
+msgstr "Wydanie %1"
 
 # translation auto-copied from project Publican, version 3, document publican
 #: bin/publican:118
