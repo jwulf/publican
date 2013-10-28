@@ -3082,7 +3082,7 @@ sub to_html {
             $newtag = $MAP_OUT{$tag}->{'tag'};
         }
         else {
-            logger( maktext( "Unknow tag: [_1]", $tag ) . "\n", RED );
+            logger( maketext( "Unknow tag: [_1]", $tag ) . "\n", RED );
             next;
         }
 
