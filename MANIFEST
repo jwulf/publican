@@ -721,6 +721,7 @@ po/sr@Latn.po
 po/sv.po
 po/ta.po
 po/te.po
+po/test.po
 po/th.po
 po/uk.po
 po/zanata.xml
@@ -932,4 +933,3 @@ windows/publican2.ico
 xt/author/perlcritic.t
 xt/author/pod-coverage.t
 xt/author/pod.t
-META.json

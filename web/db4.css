@@ -115,13 +115,14 @@ body.draft > div.book, body.draft > div.article, body.draft > div.set, body.draf
 .hidden {
     display: none !important;
 }
+
 #floatingtoc .toc {
     bottom: 3em;
     left: 25% !important;
     margin-left: 0 !important;
     max-width: 50% !important;
     padding: 1em;
-    position: absolute !important;
+/*    position: absolute !important; */
 }
 
 .toc_embeded #floatingtoc .toc {
@@ -130,7 +131,7 @@ body.draft > div.book, body.draft > div.article, body.draft > div.set, body.draf
     position: absolute !important;
     width: 40em !important;
 }
-.title a:first-child {
+.title > a:first-child {
     position: relative !important;
     top: -32px !important;
 }
@@ -316,7 +317,7 @@ code {
 }
 
 code.option {
-    font-weight: bold;
+    font-weight: normal;
 }
 code.prompt {
     font-weight: normal;
@@ -404,6 +405,36 @@ pre {
     color: #0000FF;
 }
 
+ul {
+    list-style-image: url("common/en-US/images/dot.png");
+    list-style-type: circle;
+    padding-left: 1.6em;
+}
+
+ul ul {
+    list-style-image: url("common/en-US/images/dot2.png");
+    list-style-type: circle;
+}
+
+ol.1 {
+	list-style-type: decimal;
+}
+
+ol.a {
+	list-style-type: lower-alpha;
+}
+
+ol.i {
+	list-style-type: lower-roman;
+}
+ol.A {
+	list-style-type: upper-alpha;
+}
+
+ol.I {
+	list-style-type: upper-roman;
+}
+
 div.warning:before {
     content: url("common/en-US/images/warning.png");
     padding-left: 5px;
@@ -480,13 +511,15 @@ div.question {
 li.step > a:first-child,
 div.question > a:first-child {
 	display: block;
+
 }
 div.label,
 div.data,
 div.data > div.para {
 	display: inline;
 }
-div.label {
+div.label,
+span.term {
 	font-weight: bold;
 }
 div.data {
@@ -517,15 +550,31 @@ hr {
 	vertical-align: middle;
 }
 
-.example {
-	background-color: #ffffff;
-	border-left: 3px solid #aaaaaa;
-	padding-top: 1px;
-	padding-bottom: 0.1em;
-	padding-left: 1em;
+ul.stepalternatives {
+	list-style-type: upper-alpha;
+	list-style-image: none;
 }
 
-.package, .citetitle {
-	font-style: italic;
+.procedure ol,
+ul.stepalternatives {
+	counter-reset: item;
+	list-style-position: outside;
+	list-style-type: none;
+	list-style-image: none;
+}
+
+li.step {
+}
+
+li.step:before {
+	content: counters(item, ".") ". ";
+	counter-increment: item;
+	display:inline-block;
+}
+
+li.step > div:first-child {
+	margin-top: -16px;
+	margin-left: 0.5em;
+	display:inline-block;
 }
 

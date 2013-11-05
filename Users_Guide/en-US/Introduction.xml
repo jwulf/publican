@@ -152,4 +152,103 @@ array.
 </equation>
 </para>
                           -->
+<procedure><title>An Example Procedure</title>
+<step>
+  <para>
+    A Step
+  </para>
+</step>
+<step>
+  <para>
+    Another Step
+  </para>
+  <substeps>
+    <step>
+      <para>
+        Substeps can be nested indefinitely deep.
+      </para>
+    </step>
+    <step>
+      <para>
+        Substeps can be nested indefinitely deep.
+      </para>
+    </step>
+    <step>
+      <para>
+        Substeps can be nested indefinitely deep.
+      </para>
+    </step>
+    <step>
+      <para>
+        Substeps can be nested indefinitely deep.
+      </para>
+    </step>
+    <step>
+      <para>
+        Substeps can be nested indefinitely deep.
+      </para>
+    </step>
+  </substeps>
+</step>
+<step>
+	<stepalternatives>
+		<step>
+		<para>
+		Try this-a-way
+		</para>
+		</step>
+		<step>
+		<para>
+		or that-a-way
+		</para>
+		</step>
+	</stepalternatives>
+</step>
+<step>
+  <para>
+    A Final Step
+  </para>
+</step>
+</procedure>
+
+<variablelist><title>Font Filename Extensions</title>
+<varlistentry><term><filename>TTF</filename></term>
+<listitem>
+<para>
+TrueType fonts.
+</para>
+</listitem>
+</varlistentry>
+<varlistentry><term><filename>PFA</filename></term>
+              <term><filename>PFB</filename></term>
+<listitem>
+<para>
+PostScript fonts.  <filename>PFA</filename> files are common on 
+<acronym>UNIX</acronym> systems, <filename>PFB</filename> files
+are more common on Windows systems.
+</para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<variablelist><title>Font Filename Extensions</title>
+<varlistentry><term>TTF</term>
+<listitem>
+<para>
+TrueType fonts.
+</para>
+</listitem>
+</varlistentry>
+<varlistentry><term>PFA</term>
+              <term>PFB</term>
+<listitem>
+<para>
+PostScript fonts.  <filename>PFA</filename> files are common on 
+<acronym>UNIX</acronym> systems, <filename>PFB</filename> files
+are more common on Windows systems.
+</para>
+</listitem>
+</varlistentry>
+</variablelist>
+
 </preface>

@@ -149,9 +149,9 @@ my $class = Module::Build->subclass(
                 mkpath($dir) unless(-d $dir);
                 Locale::Msgfmt::msgfmt({in => $po_file, out=> "$dir/publican.mo"});
             }
-            my $dir = qq|$cwd/blib/locale/en_US/LC_MESSAGES|;
-            mkpath($dir) unless(-d $dir);
-            Locale::Msgfmt::msgfmt({in => "po/publican.pot", out=> qq|$cwd/blib/locale/en_US/LC_MESSAGES/publican.mo|});
+#            my $dir = qq|$cwd/blib/locale/en_US/LC_MESSAGES|;
+#            mkpath($dir) unless(-d $dir);
+#            Locale::Msgfmt::msgfmt({in => "po/publican.pot", out=> qq|$cwd/blib/locale/en_US/LC_MESSAGES/publican.mo|});
         }
         sub ACTION_update_pot {
             my $self = shift;

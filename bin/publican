@@ -77,10 +77,10 @@ my $bash_comp    = undef;
 
 #Getopt::Long::Configure("debug");
 
-## BUGBUG how do we get this after install?
-my @pod_paths = (
-    './pod1', Publican::ConfigData->config('docdir') . "/publican-$VERSION"
-);
+my $ver = $VERSION;
+$ver =~ s/v//g;
+my @pod_paths
+    = ( './pod1', Publican::ConfigData->config('docdir') . "/publican-$ver" );
 
 # Global options
 my %opts = (
@@ -466,13 +466,14 @@ sub _help_action {
     foreach my $option ( @utility_opts, @{ $actions{$cmd}->{options} } ) {
         debug_msg("TODO: does printf work for right to left languages?\n");
         if ( $options{$option} ) {
-            printf( "        --%-20s    %s\n", $option, $options{$option} );
+            printf( "        --%-20s    %s\n",
+                $option, maketext( $options{$option} ) );
         }
         else {
             printf(
                 "        --%-20s    %s\n",
                 "$option=<" . uc($option) . ">",
-                ( $options{"$option=s"} || $options{"$option=s@"} )
+                maketext( $options{"$option=s"} || $options{"$option=s@"} )
             );
         }
     }

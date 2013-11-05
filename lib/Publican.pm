@@ -1150,7 +1150,7 @@ sub maketext {
     my @params = @_;
 
     if ($LOCALISE) {
-        return ( $LOCALISE->maketext( $string, @params ) );
+        return ( decode_utf8($LOCALISE->maketext( $string, @params ) ) );
     }
     else {
         carp( RED, "Warning localisation not enabled!\n", RESET );
