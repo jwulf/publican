@@ -202,12 +202,14 @@ body[dir="rtl"] .book_formats {
 .untranslated, .srcnewer {
     font-style: italic;
 }
-.untranslated span, .srcnewer span {
+
+.untranslated span, span.srcnewer {
     margin-left: 10px;
     opacity: 0.5;
     padding-right: 5px !important;
 }
-body[dir="rtl"] .untranslated span, body[dir="rtl"] .srcnewer span {
+
+body[dir="rtl"] .untranslated span, body[dir="rtl"] span.srcnewer {
     margin-left: 0;
     margin-right: 10px;
     padding-left: 5px !important;
