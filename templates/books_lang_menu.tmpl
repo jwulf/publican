@@ -3,7 +3,7 @@
 <ul id="book_lang_menu_list" class="hidden">
 [%- FOREACH langs %]
   <li>
-    [% INCLUDE anchor.tmpl host=host lang=lang booklang=lang product=product version=version format=base_format book=book name=lang_name srcnewer=srcnewer %]
+    [% INCLUDE anchor.tmpl subtitle=0 host=host lang=lang booklang=lang product=product version=version format=base_format book=book name=lang_name srcnewer=srcnewer %]
   </li>
 [%- END %]
 </ul>
