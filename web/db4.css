@@ -15,6 +15,7 @@ body {
 	margin: 0;
 	padding: 0 10px;
 	font-family: "liberation sans", "Myriad ", "Bitstream Vera Sans", "Lucida Grande", "Luxi Sans", "Trebuchet MS", helvetica, verdana, arial, sans-serif;
+	line-height: 1.2em;
 }
 
 body.toc_embeded {
@@ -556,6 +557,7 @@ ul.stepalternatives {
 }
 
 .procedure ol,
+.procedure ul,
 ul.stepalternatives {
 	counter-reset: item;
 	list-style-position: outside;
@@ -570,11 +572,14 @@ li.step:before {
 	content: counters(item, ".") ". ";
 	counter-increment: item;
 	display:inline-block;
+	position: relative;
+	width: 12em;
+	right: 12.5em;
+	text-align: right;
+	vertical-align: text-bottom;
 }
 
 li.step > div:first-child {
 	margin-top: -16px;
-	margin-left: 0.5em;
-	display:inline-block;
 }
 
