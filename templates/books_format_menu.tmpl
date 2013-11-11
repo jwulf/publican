@@ -1,0 +1,9 @@
+<div>[% trans_strings.Formats %]</div>
+<ul id="book_format_menu_list" class="hidden">
+[%- FOREACH  format = formats %]
+    <li>
+	[% INCLUDE anchor.tmpl host=host lang=lang booklang=book.lang product=book.product version=book.version format=format book=book.book name=format %]
+    </li>
+[%- END %]
+</ul>
+

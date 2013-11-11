@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>[% title %]</title>
+<link rel="stylesheet" href="[% host %]/chrome.css" type="text/css" />
+<link rel="stylesheet" href="[% host %]/splash.css" type="text/css" />
+<meta name="generator" content="publican [% publican_version %]" />
+<script type="text/javascript">
+    var current_product = "[%- IF product %][% product %][% ELSE %]Products[% END %]";
+    var current_version = "[%- IF version %][% version %][% ELSE %]Versions[% END %]";
+    var current_book = "[%- IF book.book %][% book.book %][% ELSE %]Books[% END %]";
+</script>
+<script type="text/javascript" src="[% host %]/[% lang %]/labels.js"></script>
+<script type="text/javascript" src="[% host %]/toc.js"></script>
+<script type="text/javascript" src="[% host %]/jquery-1.7.1.min.js"></script>
+</head>
+<body class="menu" [%- IF lang.match('(?:he-IL|fa-IR|ar-SA)') %] dir="rtl"[% END %]>
+<div id="wrapper">
+	<div id="menu">
+		<div id="lang_menu" class="breadcrumb">
+			<a href="[% host %]/[% lang %]/index.html">[% site_title %]</a>
+		</div>
+		<div id="product_menu" class="breadcrumb" onmouseover="work=1; expand_menu('product_menu_list');" onmouseout="work=1; retract_menu('product_menu_list');">
+			Products
+		</div>
+	    [%- IF ver_menu %]
+		<div id="version_menu" class="breadcrumb" onmouseover="work=1; expand_menu('version_menu_list');" onmouseout="work=1; retract_menu('version_menu_list');">
+			Versions
+		</div>
+	    [%- END %]
+	    [%- IF book_menu %]
+		<div id="book_menu" class="breadcrumb" onmouseover="work=1; expand_menu('book_menu_list');" onmouseout="work=1; retract_menu('book_menu_list');">
+			Books
+		</div>
+	    [%- END %]
+	    [%- IF book_lang_menu %]
+		<div id="book_format_menu" onmouseover="work=1; expand_menu('book_format_menu_list');" onmouseout="work=1; retract_menu('book_format_menu_list');">
+			Formats
+		</div>
+		<div id="book_lang_menu"  onmouseover="work=1; expand_menu('book_lang_menu_list');" onmouseout="work=1; retract_menu('book_lang_menu_list');">
+			Translations
+		</div>
+	    [%- END %]
+	    [%- IF lang_menu %]
+		<div id="lang_menu_2"  onmouseover="work=1; expand_menu('lang_menu_list');" onmouseout="work=1; retract_menu('lang_menu_list');">
+		    [%- FOREACH lang_t = langs %]
+			[%- IF lang_t.lang == lang %]
+			<div>[% lang_t.lang_name %]</div>
+			[%- END %]
+		    [%- END %]
+			<ul id="lang_menu_list" class="hidden">
+			    [%- FOREACH lang_t = langs %]
+	 			<li><a href="[% host %]/[% lang_t.lang %]/[% lang_menu %]">[% lang_t.lang_name %]</a></li>
+			    [%- END %]
+			</ul>
+		</div>
+	    [%- END %]
+		<div id="search_box">
+			[% search %]
+		</div>
+		<script type="text/javascript">
+			$("#product_menu").load("[% host %]/[% lang %]/products_menu.html");
+		    [%- IF ver_menu %]
+			$("#version_menu").load("[% host %]/[% lang %]/[% product %]/versions_menu.html");
+		    [%- END %]
+		    [%- IF book_menu %]
+			$("#book_menu").load("[% host %]/[% lang %]/[% product %]/[% version %]/books_menu.html");
+		    [%- END %]
+		    [%- IF book_lang_menu %]
+			$("#book_lang_menu").load("[% host %]/[% lang %]/[% product %]/[% version %]/[% book.book %]/lang_menu.html");
+			$("#book_format_menu").load("[% host %]/[% lang %]/[% product %]/[% version %]/[% book.book %]/format_menu.html");
+		    [%- END %]
+		</script>
+	</div><!-- end menu -->
+

@@ -1,0 +1,37 @@
+[%- title = labels.${product}.label -%]
+[%- ver_menu = 1 -%]
+[%- lang_menu = product _ "/index.html" -%]
+[% INCLUDE 'web_2_head.tmpl' %]
+<script type="text/javascript">
+	var current_product = "[% product %]";
+	var current_version= "Versions";
+</script>
+<h1>[% labels.${product}.label %]</h1>
+<div id="product_top_box" class="product_top_box"></div>
+<script type="text/javascript">$("#product_top_box").load("splash.html  .article");</script>
+<div class="product_bottom_box">
+	[% FOREACH  ver = v_sort(book_list) %][% cur_ver = book_list.${ver} %]
+	<div class="bottom_versions">
+		<div class="title">
+			<span><a href="[% host %]/[% lang %]/[% product %]/[% ver %]/index.html">[% labels.${product}.${ver}.label %]</a></span>
+		</div>
+[%- tmpl_list = {} -%]
+		[% FOREACH  c_book = i_sort(cur_ver) %][% booker = book_list.${ver}.${c_book} %]
+[%- path = "groups/${lang}/${product}/${booker.sort_order}.tmpl" -%]
+[%- UNLESS  tmpl_list.${path}  %]
+[%- tmpl_list.${path} = 1 %]
+[%- TRY %]
+[% INCLUDE $path %]
+[%- CATCH file %]
+[%- END %]
+[%- END %]
+		<div class="bottom_books[% IF lang != booker.lang %] untranslated [% lang %][% END %]">
+			[% INCLUDE anchor.tmpl host=host lang=lang booklang=booker.lang product=product version=booker.version format=booker.base_format book=booker.book name=booker.book_clean subtitle=booker.subtitle srcnewer=booker.srcnewer subtitle=booker.subtitle %]
+		</div>
+		[%- END %]
+	</div>
+	[%- END %]
+</div>
+
+[% INCLUDE 'web_2_footer.tmpl' %]
+

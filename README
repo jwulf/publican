@@ -1,0 +1,236 @@
+README for Publican
+
+Publican is a DocBook publication system, not just a DocBook processing tool.
+As well as ensuring your DocBook XML is valid, publican works to ensure
+your XML is up to publishable standard.
+
+Web:  http://publican.fedorahosted.org/
+Mail: https://www.redhat.com/mailman/listinfo/publican-list
+Source: http://svn.fedorahosted.org/svn/publican
+Bugs: https://bugzilla.redhat.com/bugzilla/enter_bug.cgi?product=Publican
+
+Assumptions: DocBook xml, *nix, en-US source language.
+
+Q: What actions are there?
+
+A: publican --help
+
+Q: How do I update the POT files for translation?
+
+A: publican update_pot
+
+Q: How do I add a language?
+
+A: publican update_po --langs=<xx-YY>
+
+This will create the language directory and the language specific po files.
+
+Q: How do I update all po files?
+
+A: publican update_po --langs=all
+
+Q: What Book specific options can I use?
+
+A: publican --help_config
+
+Q: Where are the common files located?
+
+A: By default they are in /usr/share/publican
+
+Publican now uses Build::ConfigData to contorl this. If the default paths are not correct modify the Build time options, via the command line or in Build.PL to set them. Checkout how the options in Build.PL are modified for 'darwin' and do the same for your OS. If you submit a bug with your OS details we will include it.
+
+Q: How do I profile publican?
+
+A: Devel::NYTProf is a good option.
+
+$ perl -CDAS -d:NYTProf /usr/bin/publican build --langs en-US --formats html
+$ nytprofhtml
+$ firefox nytprof/index.html 
+
+Q: How do I control where publican looks for files when it's installed?
+
+A: You can override the default paths by specifiying them on the commmand line or in the Build.PL file.
+
+e.g.
+
+perl Build.PL --install_path datadir=/opt/foo/publican --install_path  web=/opt/bar/sitetemplate
+
+Q: How do I build publican from source?
+
+A: It depends on your platform.
+
+Get the source: git clone git://git.fedorahosted.org/git/publican.git
+
+CPAN
+    cd publican/publican
+    $ perl Build.PL
+        if this complains about missing deps run
+        $ ./Build installdeps
+    $ ./Build
+    $ ./Build test
+    $ sudo ./Build install
+
+RHEL/Fedora
+    cd publican/publican
+    $ perl Build.PL
+        if this complains about missing deps,  on Fedora 10+, and RHEL 6, run
+        $ sudo yum-builddep publican.spec 
+    $ ./Build
+    $ ./Build rpm
+
+Debian
+    The publican package deb files are in the debian package repo
+    http://packages.debian.org/search?keywords=publican
+    $ cd publican/publican
+    $ sudo apt-get install \
+libfile-pushd-perl \
+libconfig-simple-perl \
+libxml-treebuilder-perl \
+libfile-find-rule-perl \
+libmakefile-parser-perl \
+liblocale-maketext-gettext-perl \
+perlmagick \
+libimage-size-perl \
+libdatetime-perl \
+liblocale-po-perl \
+libxml-libxslt-perl \
+libdatetime-format-dateparse-perl \
+libsyntax-highlight-engine-kate-perl \
+libtest-perl-critic-perl \
+libtest-pod-coverage-perl \
+libtest-exception-perl \
+libdbd-sqlite-perl \
+libdevel-cover-perl \
+libdbd-sqlite3-perl
+
+    $ perl Build.PL
+    $ ./Build
+    $ ./Build dist
+TODO: put the tgz where?
+    $ debuild
+
+Windows:
+    Make a dir to work in, Publican assumes:
+	mkdir c:\publican
+	cd c:\publican
+
+    Install a decent editor
+	http://www.vim.org/download.php#pc
+
+    Install gitbash
+	http://msysgit.googlecode.com/
+
+    Set-Up ssh in gitbash shell
+	copy keys to ~/.ssh
+	ssh-agent /bin/bash.exe
+	ssh-add ~/.ssh/id_rsa
+
+    clone source repo
+	git clone ssh://git.fedorahosted.org/git/publican.git
+
+    Fetch DocBook files
+	mkdir c:\publican\DTD
+	http://www.docbook.org/xml/4.5/docbook-xml-4.5.zip
+
+	mkdir C:/publican/docbook-xsl-1.76.1
+	http://downloads.sourceforge.net/project/docbook/docbook-xsl/1.76.1/docbook-xsl-1.76.1.zip
+
+    Install Perl http://strawberryperl.com/
+	cpan tool
+	install Module::Build Config::Simple Perl::Critic XML::TreeBuilder Locale::Maketext::Gettext
+
+	http://search.cpan.org/CPAN/authors/id/C/CH/CHIPT/File-Inplace-0.20.tar.gz
+        https://rt.cpan.org/Public/Bug/Display.html?id=63940
+	https://rt.cpan.org/Ticket/Attachment/869125/450100/win32.diff
+	blah blah
+
+	install Locale::PO String::Similarity DateTime::Format::DateParse Syntax::Highlight::Engine::Kate HTML::FormatText
+	install HTML::FormatText::WithLinks::AndTables Test::Pod PAR::Packer
+
+    Install NSIS
+        http://nsis.sourceforge.net/Download
+        http://nsis.sourceforge.net/Environmental_Variables:_append,_prepend,_and_remove_entries
+	C:\Program Files\NSIS\Include
+
+        http://nsis.sourceforge.net/NsUnzip_plugin
+	C:\Program Files\NSIS\Plugins
+
+    $ cd publican
+    $ set XML_CATALOG_FILES=c:\publican\publican\publican\win_catalog.xml
+    $ perl win_build.pl
+
+
+Q: How do I push new strings to Zanata or retrieve new translations?
+
+A: You need to install the Zanata client (on Fedora, yum install zanata-python-client). Then, to update the translation source on Zanata from the newest version of the POT file:
+ 
+$ zanata push --push-type source
+
+and to retrieve new translations:
+
+$ zanata pull
+
+
+TODO:
+
+what about a real list of valid langauges?
+
+    wget http://www.iana.org/assignments/language-subtag-registry
+
+    grep -A 1 -B 0 -P '^Type: (language|redundant)' language-subtag-registry | grep -P '^(Subtag|Tag)' | perl -p -e 's/^(Subtag|Tag):\s*//gi' | wc -l
+
+    sub valid_lang looks good
+        http://cpansearch.perl.org/src/TOBYINK/XRD-Parser-0.101/lib/XRD/Parser.pm
+
+
+Release Process:
+
+1: Get updated sources
+
+git checkout devel
+./Build realclean
+git pull
+
+2: Update versions
+
+gvim lib/Publican.pm 
+	Set $VERSION
+gvim Changes 
+	Set release date
+gvim publican.spec 
+	Set Version:
+	Reset Release: to 0, remove any .t*
+	Copy Changes entry to %changelog
+
+3: Test code
+
+perl Build.PL
+./Build manifest
+./Build
+./Build test
+./Build realclean
+
+4: Commit version changes and merge code to master
+
+git commit -a -m"Release version 3.2.1"
+git push
+git checkout master
+git pull
+git merge devel
+git push
+git tag -a Release-3.2.1 -m "Release Version 3.2.1"
+git push origin --tags
+perl Build.PL
+./Build
+./Build srpm
+
+5: Upload to public site
+
+scp Publican-v3.2.1.tar.gz fedorahosted.org:publican
+scp publican.spec fedorahosted.org:publican
+scp tmp/rpm/publican-3.2.1-0.el6.src.rpm fedorahosted.org:publican
+
+6: Bug Rudi to do release announcement
+
+Poke him!
+

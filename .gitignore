@@ -13,11 +13,14 @@ Makefile.old
 MANIFEST.bak
 MYMETA.yml
 MYMETA.json
+META.json
+META.yml
 nytprof.out
 pm_to_blib
 build/
 Test_Article/
 Test_Book/
+Test_DB5_Book/
 Test_Set/
 publish/
 datadir/Common_Content/common-db5/publish/
@@ -25,4 +28,6 @@ tmp/
 publican-Test_Brand/
 *~
 .directory
-
+foo2/
+foo3/
+Publican-v*.tar.gz

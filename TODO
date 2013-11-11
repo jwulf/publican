@@ -1,0 +1,84 @@
+Updated Deps:
+
+	docbook5-style-xsl
+	XML::TreeBuilder
+	XML::Catalog
+
+Locale::Maketext::Lexicon add to BuildRequires
+
+EPUB:
+
+$ java -jar ~/Downloads/epubcheck/epubcheck-3.0b2.jar build/en-US/Publican-4.0-Users_Guide-en-US.epub 
+
+
+*********************************************************
+
+
+List of unscheduled things we should look at doing:
+
+... Support MOBI output using EBook::MOBI
+
+
+Document migrating a P2 web site to P3:
+
+$ publican migrate_site --site_config homepage.cfg
+
+
+Document creating a P3 web site from scratch:
+
+$ mkdir $path_to_make_web_site_in
+$ cd $path_to_make_web_site_in
+$ publican create_site --site_config tester.cfg --db_file tester.db --toc_path ./docs
+$ publican site_stats --site_config tester.cfg
+
+The database contains books that cover 0 products, 0 languages,  totaling 0 packages
+
+$ cd $path to publican common_files
+$ publican build --formats xml --publish
+$ mkdir /home/jfearn/Source/test/testsite/docs/common
+$ publican install_brand --web --path /home/jfearn/Source/test/testsite/docs/common 
+
+$ cd $path_to_welcome_page
+$ publican build --publish --formats html-single --embedtoc --langs en-US
+$ publican install_book --lang en-US --site_config /home/jfearn/Source/test/testsite/tester.cfg
+
+$ cd $book_soure_dir
+$ publican build --publish --embedtoc --formats html,pdf,html-single,epub,txt --lang en-US
+
+$ publican site_stats --site_config tester.cfg 
+
+The database contains books that cover 1 products, 1 languages,  totaling 1 packages
+
+
+Actions without tests:
+
+clean_set
+create_brand
+install_brand
+migrate_site
+rename
+update_db
+
+
+/usr/share/perl5/Locale/Maketext/Gettext.pm
+        # convert gettext %1 to maketext [_1]
+        $stro =~ s/\%(\d)+/\[_$1\]/g;
+        $strt =~ s/\%(\d)+/\[_$1\]/g;
+
+
+
+GIT
+
+Chase up tig!
+branch rename
+generate Changes file from git log ... requires hygeine
+
+Release Process:
+
+git merge
+git tag
+...
+scp to hosted
+...
+
+
