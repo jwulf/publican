@@ -1,24 +1,22 @@
 # AUTHOR <EMAIL@ADDRESS>, YEAR.
 # translation of Conventions.po to Punjabi
 # Jaswinder Singh <jsingh@redhat.com>, 2007, 2009.
-# asaini <asaini@redhat.com>, 2013. #zanata
+# jassy <jassy@fedoraproject.org>, 2012. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: Conventions\n"
-"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-09-29T05:30:03\n"
-"PO-Revision-Date: 2013-09-02 02:16-0400\n"
-"Last-Translator: asaini <asaini@redhat.com>\n"
-"Language-Team: Punjabi/Panjabi <kde-i18n-doc@kde.org>\n"
+"Project-Id-Version: 0\n"
+"POT-Creation-Date: 2013-11-13 16:27+1000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2013-09-02 02:16-0400\n"
+"Last-Translator: asaini <asaini@redhat.com>\n"
+"Language-Team: Punjabi/Panjabi <kde-i18n-doc@kde.org>\n"
 "Language: pa\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Zanata 2.2.2\n"
+"X-Generator: Zanata 3.0.3\n"
 
-# translation auto-copied from project Publican Common, version 3, document
-# Conventions
+# translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: title
 #, no-c-format
 msgid "Document Conventions"
@@ -28,18 +26,33 @@ msgstr "ਦਸਤਾਵੇਜ਼ ਸ਼ਰਤਾਂ"
 # Conventions
 #. Tag: para
 #, no-c-format
-msgid "This manual uses several conventions to highlight certain words and phrases and draw attention to specific pieces of information."
-msgstr "ਇਹ ਦਸਤਾਵੇਜ਼ ਕੁਝ ਸ਼ਬਦਾਂ ਅਤੇ ਪੈਰ੍ਹਿਆਂ ਨੂੰ ਉਘ੍ਹਾੜਨ ਲਈ ਕਈ ਕੰਨਵੈਂਸ਼ਮਨਜ਼ ਵਰਤਦਾ ਹੈ ਅਤੇ ਖਾਸ ਜਾਣਕਾਰੀ ਵਿਖਾਉਂਦਾ ਹੈ।"
+msgid ""
+"This manual uses several conventions to highlight certain words and phrases "
+"and draw attention to specific pieces of information."
+msgstr ""
+"ਇਹ ਦਸਤਾਵੇਜ਼ ਕੁਝ ਸ਼ਬਦਾਂ ਅਤੇ ਪੈਰ੍ਹਿਆਂ ਨੂੰ ਉਘ੍ਹਾੜਨ ਲਈ ਕਈ ਕੰਨਵੈਂਸ਼ਮਨਜ਼ ਵਰਤਦਾ ਹੈ ਅਤੇ "
+"ਖਾਸ ਜਾਣਕਾਰੀ ਵਿਖਾਉਂਦਾ ਹੈ।"
 
 # translation auto-copied from project Publican Common, version 3, document
 # Conventions
 #. Tag: para
 #, no-c-format
-msgid "In PDF and paper editions, this manual uses typefaces drawn from the <ulink url=\"https://fedorahosted.org/liberation-fonts/\">Liberation Fonts</ulink> set. The Liberation Fonts set is also used in HTML editions if the set is installed on your system. If not, alternative but equivalent typefaces are displayed. Note: Red Hat Enterprise Linux 5 and later include the Liberation Fonts set by default."
-msgstr "PDF ਅਤੇ ਪੇਪਰ ਐਡੀਸ਼ਨ ਵਿੱਚ, ਇਹ ਦਸਤਾਵੇਜ਼ ਟਾਈਪਫੇਸ ਵਰਤਦਾ ਹੈ ਜੋ <ulink url=\"https://fedorahosted.org/liberation-fonts/\">Liberation Fonts</ulink> ਸੈੱਟ ਤੋਂ ਲਏ ਗਏ ਹਨ। ਲਿਬਰੇਸ਼ਨ ਫੌਂਟ ਸੈੱਟ ਨੂੰ HTML ਐਡੀਸ਼ਨਾਂ ਵਿੱਚ ਵੀ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ ਜੇ ਸੈੱਟ ਤੁਹਾਡੇ ਸਿਸਟਮ ਤੇ ਇੰਸਟਾਲ ਕੀਤਾ ਹੈ। ਜੇ ਨਹੀਂ, ਮਿਲਦੇ-ਜੁਲਦੇ ਟਾਈਪਫੇਸ ਵਿਖਾਏ ਜਾਂਦੇ ਹਨ। ਸੂਚਨਾ: Red Hat Enterprise Linux 5 ਅਤੇ ਬਾਅਦ ਵਾਲਿਆਂ ਵਿੱਚ ਮੂਲ ਹੀ ਲਿਬਰੇਸ਼ਨ ਫੌਂਟ ਸ਼ਾਮਿਲ ਹੁੰਦੇ ਹਨ।"
+msgid ""
+"In PDF and paper editions, this manual uses typefaces drawn from the <ulink "
+"url=\"https://fedorahosted.org/liberation-fonts/\">Liberation Fonts</ulink> "
+"set. The Liberation Fonts set is also used in HTML editions if the set is "
+"installed on your system. If not, alternative but equivalent typefaces are "
+"displayed. Note: Red Hat Enterprise Linux 5 and later include the Liberation "
+"Fonts set by default."
+msgstr ""
+"PDF ਅਤੇ ਪੇਪਰ ਐਡੀਸ਼ਨ ਵਿੱਚ, ਇਹ ਦਸਤਾਵੇਜ਼ ਟਾਈਪਫੇਸ ਵਰਤਦਾ ਹੈ ਜੋ <ulink url=\"https://"
+"fedorahosted.org/liberation-fonts/\">Liberation Fonts</ulink> ਸੈੱਟ ਤੋਂ ਲਏ ਗਏ "
+"ਹਨ। ਲਿਬਰੇਸ਼ਨ ਫੌਂਟ ਸੈੱਟ ਨੂੰ HTML ਐਡੀਸ਼ਨਾਂ ਵਿੱਚ ਵੀ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ ਜੇ ਸੈੱਟ ਤੁਹਾਡੇ "
+"ਸਿਸਟਮ ਤੇ ਇੰਸਟਾਲ ਕੀਤਾ ਹੈ। ਜੇ ਨਹੀਂ, ਮਿਲਦੇ-ਜੁਲਦੇ ਟਾਈਪਫੇਸ ਵਿਖਾਏ ਜਾਂਦੇ ਹਨ। ਸੂਚਨਾ: "
+"Red Hat Enterprise Linux 5 ਅਤੇ ਬਾਅਦ ਵਾਲਿਆਂ ਵਿੱਚ ਮੂਲ ਹੀ ਲਿਬਰੇਸ਼ਨ ਫੌਂਟ ਸ਼ਾਮਿਲ "
+"ਹੁੰਦੇ ਹਨ।"
 
-# translation auto-copied from project Publican Common, version 3, document
-# Conventions
+# translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: title
 #, no-c-format
 msgid "Typographic Conventions"
@@ -49,11 +62,15 @@ msgstr "ਟਾਈਪੋਗਰਾਫਿਕ ਕੰਨਵੈਂਸ਼ਨਜ਼"
 # Conventions
 #. Tag: para
 #, no-c-format
-msgid "Four typographic conventions are used to call attention to specific words and phrases. These conventions, and the circumstances they apply to, are as follows."
-msgstr "ਚਾਰ ਟਾਈਪੋਗਰਾਫਿਕ ਕੰਨਵੈਂਸ਼ਨਜ਼ ਖਾਸ ਸ਼ਬਦ ਅਤੇ ਪੈਰ੍ਹੇ ਨੂੰ ਵਿਖਾਉਣ ਲਈ ਵਰਤੀਆਂ ਜਾਂਦੀਆਂ ਹਨ। ਇਹ ਕੰਨਵੈਂਸ਼ਨਾਂ, ਅਤੇ ਹਾਲਤਾਂ ਜਿਨਾਂ ਵਿੱਚ ਇਹ ਲਾਗੂ ਹੁੰਦੀਆਂ ਹਨ, ਇਸ ਤਰਾਂ ਹਨ।"
+msgid ""
+"Four typographic conventions are used to call attention to specific words "
+"and phrases. These conventions, and the circumstances they apply to, are as "
+"follows."
+msgstr ""
+"ਚਾਰ ਟਾਈਪੋਗਰਾਫਿਕ ਕੰਨਵੈਂਸ਼ਨਜ਼ ਖਾਸ ਸ਼ਬਦ ਅਤੇ ਪੈਰ੍ਹੇ ਨੂੰ ਵਿਖਾਉਣ ਲਈ ਵਰਤੀਆਂ ਜਾਂਦੀਆਂ "
+"ਹਨ। ਇਹ ਕੰਨਵੈਂਸ਼ਨਾਂ, ਅਤੇ ਹਾਲਤਾਂ ਜਿਨਾਂ ਵਿੱਚ ਇਹ ਲਾਗੂ ਹੁੰਦੀਆਂ ਹਨ, ਇਸ ਤਰਾਂ ਹਨ।"
 
-# translation auto-copied from project Publican Common, version 3, document
-# Conventions
+# translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: para
 #, no-c-format
 msgid "<literal>Mono-spaced Bold</literal>"
@@ -61,28 +78,47 @@ msgstr "<literal>ਮੋਨੋ-ਸਪੇਸ ਬੋਲਡ</literal>"
 
 #. Tag: para
 #, no-c-format
-msgid "Used to highlight system input, including shell commands, file names and paths. Also used to highlight keys and key combinations. For example:"
-msgstr "ਸਿਸਟਮ ਇੰਪੁੱਟ, ਜਿਵੇਂ ਸ਼ੈੱਲ ਕਮਾਂਡਾਂ, ਫਾਈਲ ਨਾਂ ਅਤੇ ਟਿਕਾਣੇ ਆਦਿ ਨੂੰ ਵਿਖਾਉਣ ਲਈ ਵਰਤੀ ਜਾਂਦੀ ਹੈ। ਕੀਕੈਪਸ ਅਤੇ ਕੀ-ਸੰਜੋਗ ਵਿਖਾਉਣ ਲਈ ਵੀ ਵਰਤੀ ਜਾਂਦੀ ਹੈ। ਉਦਾਹਰਣ ਲਈ:"
+msgid ""
+"Used to highlight system input, including shell commands, file names and "
+"paths. Also used to highlight keys and key combinations. For example:"
+msgstr ""
+"ਸਿਸਟਮ ਇੰਪੁੱਟ, ਜਿਵੇਂ ਸ਼ੈੱਲ ਕਮਾਂਡਾਂ, ਫਾਈਲ ਨਾਂ ਅਤੇ ਟਿਕਾਣੇ ਆਦਿ ਨੂੰ ਵਿਖਾਉਣ ਲਈ ਵਰਤੀ "
+"ਜਾਂਦੀ ਹੈ। ਕੀਕੈਪਸ ਅਤੇ ਕੀ-ਸੰਜੋਗ ਵਿਖਾਉਣ ਲਈ ਵੀ ਵਰਤੀ ਜਾਂਦੀ ਹੈ। ਉਦਾਹਰਣ ਲਈ:"
 
 # translation auto-copied from project Publican Common, version 3, document
 # Conventions
 #. Tag: para
 #, no-c-format
-msgid "To see the contents of the file <filename>my_next_bestselling_novel</filename> in your current working directory, enter the <command>cat my_next_bestselling_novel</command> command at the shell prompt and press <keycap>Enter</keycap> to execute the command."
-msgstr "ਤੁਹਾਡੀ ਮੌਜੂਦਾ ਵਰਕਿੰਗ ਡਾਇਰੈਕਟਰੀ ਵਿੱਚ <filename>my_next_bestselling_novel</filename> ਫਾਈਲ ਦੇ ਸੰਖੇਪ ਵੇਖਣ ਲਈ, ਸ਼ੈੱਲ ਪਰੌਂਪਟ ਤੇ <command>cat my_next_bestselling_novel</command> ਦਿਓ ਅਤੇ ਕਮਾਂਡ ਚਲਾਉਣ ਲਈ <keycap>Enter</keycap> ਦਬਾਓ।"
+msgid ""
+"To see the contents of the file <filename>my_next_bestselling_novel</"
+"filename> in your current working directory, enter the <command>cat "
+"my_next_bestselling_novel</command> command at the shell prompt and press "
+"<keycap>Enter</keycap> to execute the command."
+msgstr ""
+"ਤੁਹਾਡੀ ਮੌਜੂਦਾ ਵਰਕਿੰਗ ਡਾਇਰੈਕਟਰੀ ਵਿੱਚ <filename>my_next_bestselling_novel</"
+"filename> ਫਾਈਲ ਦੇ ਸੰਖੇਪ ਵੇਖਣ ਲਈ, ਸ਼ੈੱਲ ਪਰੌਂਪਟ ਤੇ <command>cat "
+"my_next_bestselling_novel</command> ਦਿਓ ਅਤੇ ਕਮਾਂਡ ਚਲਾਉਣ ਲਈ <keycap>Enter</"
+"keycap> ਦਬਾਓ।"
 
 #. Tag: para
 #, no-c-format
-msgid "The above includes a file name, a shell command and a key, all presented in mono-spaced bold and all distinguishable thanks to context."
-msgstr "ਉੱਪਰ ਫਾਈਲ ਨਾਂ, ਇੱਕ ਸ਼ੈੱਲ ਕਮਾਂਡ ਅਤੇ ਕੀਕੈਪ ਦਿੱਤੇ ਗਏ ਹਨ, ਸਭ ਮੋਨੋ-ਸਪੇਸ ਬੋਲਡ ਵਿੱਚ ਦਿੱਤੇ ਗਏ ਹਨ ਅਤੇ ਸਭ ਪ੍ਰਸੰਗ ਸਹਿਤ ਦਿੱਤੇ ਹਨ।"
+msgid ""
+"The above includes a file name, a shell command and a key, all presented in "
+"mono-spaced bold and all distinguishable thanks to context."
+msgstr ""
+"ਉੱਪਰ ਫਾਈਲ ਨਾਂ, ਇੱਕ ਸ਼ੈੱਲ ਕਮਾਂਡ ਅਤੇ ਕੀਕੈਪ ਦਿੱਤੇ ਗਏ ਹਨ, ਸਭ ਮੋਨੋ-ਸਪੇਸ ਬੋਲਡ ਵਿੱਚ "
+"ਦਿੱਤੇ ਗਏ ਹਨ ਅਤੇ ਸਭ ਪ੍ਰਸੰਗ ਸਹਿਤ ਦਿੱਤੇ ਹਨ।"
 
 #. Tag: para
 #, no-c-format
-msgid "Key combinations can be distinguished from an individual key by the plus sign that connects each part of a key combination. For example:"
-msgstr "ਬਟਨ ਕੰਬੀਨੇਸ਼ਨ ਹਰੇਕ ਬਟਨ ਤੇ ਚਿੰਨ੍ਹ ਤੋਂ ਵੱਖਰਾ ਹੋ ਸਕਦਾ ਹੈ ਜੋ ਬਟਨ ਕੰਬੀਨੇਸ਼ਨ ਦੇ ਹਰੇਕ ਭਾਗ ਨੂੰ ਜੋੜਦਾ ਹੈ। ਉਦਾਹਰਣ ਲਈ:"
+msgid ""
+"Key combinations can be distinguished from an individual key by the plus "
+"sign that connects each part of a key combination. For example:"
+msgstr ""
+"ਬਟਨ ਕੰਬੀਨੇਸ਼ਨ ਹਰੇਕ ਬਟਨ ਤੇ ਚਿੰਨ੍ਹ ਤੋਂ ਵੱਖਰਾ ਹੋ ਸਕਦਾ ਹੈ ਜੋ ਬਟਨ ਕੰਬੀਨੇਸ਼ਨ ਦੇ ਹਰੇਕ "
+"ਭਾਗ ਨੂੰ ਜੋੜਦਾ ਹੈ। ਉਦਾਹਰਣ ਲਈ:"
 
-# translation auto-copied from project Publican Common, version 3, document
-# Conventions
+# translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: para
 #, no-c-format
 msgid "Press <keycap>Enter</keycap> to execute the command."
@@ -90,133 +126,257 @@ msgstr "ਕਮਾਂਡ ਚਲਾਉਣ ਲਈ <keycap>Enter</keycap> ਦਬਾ�
 
 #. Tag: para
 #, no-c-format
-msgid "Press <keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap><keycap>F2</keycap></keycombo> to switch to a virtual terminal."
-msgstr "ਆਭਾਸੀ ਟਰਮੀਨਲ ਤੇ ਜਾਣ ਲਈ <keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap><keycap>F2</keycap></keycombo> ਦਬਾਓ।"
+msgid ""
+"Press <keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap><keycap>F2</"
+"keycap></keycombo> to switch to a virtual terminal."
+msgstr ""
+"ਆਭਾਸੀ ਟਰਮੀਨਲ ਤੇ ਜਾਣ ਲਈ <keycombo><keycap>Ctrl</keycap><keycap>Alt</"
+"keycap><keycap>F2</keycap></keycombo> ਦਬਾਓ।"
 
 #. Tag: para
 #, no-c-format
-msgid "The first example highlights a particular key to press. The second example highlights a key combination: a set of three keys pressed simultaneously."
-msgstr "ਪਹਿਲਾ ਪੈਰ੍ਹਾ ਖਾਸ ਕੀਕੈਪ ਨੂੰ ਵਿਖਾਉਂਦਾ ਹੈ ਜੋ ਦਬਾਉਣਾ ਹੈ। ਦੂਜਾ ਦੋ ਕੁੰਜੀ ਸੰਜੋਗਾਂ ਨੂੰ ਵਿਖਾਉਂਦਾ ਹੈ (ਹਰੇਕ ਤਿੰਨ ਕੀਕੈਪਾਂ ਦਾ ਸੈੱਟ ਹੈ ਜੋ ਇੱਕੋ ਸਮੇਂ ਦਬਾਉਣੀਆਂ ਹਨ)।"
+msgid ""
+"The first example highlights a particular key to press. The second example "
+"highlights a key combination: a set of three keys pressed simultaneously."
+msgstr ""
+"ਪਹਿਲਾ ਪੈਰ੍ਹਾ ਖਾਸ ਕੀਕੈਪ ਨੂੰ ਵਿਖਾਉਂਦਾ ਹੈ ਜੋ ਦਬਾਉਣਾ ਹੈ। ਦੂਜਾ ਦੋ ਕੁੰਜੀ ਸੰਜੋਗਾਂ "
+"ਨੂੰ ਵਿਖਾਉਂਦਾ ਹੈ (ਹਰੇਕ ਤਿੰਨ ਕੀਕੈਪਾਂ ਦਾ ਸੈੱਟ ਹੈ ਜੋ ਇੱਕੋ ਸਮੇਂ ਦਬਾਉਣੀਆਂ ਹਨ)।"
 
 # translation auto-copied from project Publican Common, version 3, document
 # Conventions
 #. Tag: para
 #, no-c-format
-msgid "If source code is discussed, class names, methods, functions, variable names and returned values mentioned within a paragraph will be presented as above, in <literal>mono-spaced bold</literal>. For example:"
-msgstr "ਜੇ ਸੋਰਸ ਕੋਡ ਦਿੱਤਾ ਹੈ, ਕਲਾਸ ਨਾਂ, ਢੰਗ, ਫੰਕਸ਼ਨ, ਵੇਰੀਏਬਲ ਨਾਂ ਅਤੇ ਪੈਰ੍ਹੇ ਵਿੱਚ ਰਿਟਰਨ ਕੀਤੇ ਮੁੱਲ ਉੱਪਰ ਦਿੱਤੇ ਵਾਂਗ ਵਿਖਾਏ ਜਾਣਗੇ, <literal>ਮੋਨੋ-ਸਪੇਸ ਬੋਲਡ</literal> ਵਿੱਚ। ਉਦਾਹਰਣ ਲਈ:"
+msgid ""
+"If source code is discussed, class names, methods, functions, variable names "
+"and returned values mentioned within a paragraph will be presented as above, "
+"in <literal>mono-spaced bold</literal>. For example:"
+msgstr ""
+"ਜੇ ਸੋਰਸ ਕੋਡ ਦਿੱਤਾ ਹੈ, ਕਲਾਸ ਨਾਂ, ਢੰਗ, ਫੰਕਸ਼ਨ, ਵੇਰੀਏਬਲ ਨਾਂ ਅਤੇ ਪੈਰ੍ਹੇ ਵਿੱਚ "
+"ਰਿਟਰਨ ਕੀਤੇ ਮੁੱਲ ਉੱਪਰ ਦਿੱਤੇ ਵਾਂਗ ਵਿਖਾਏ ਜਾਣਗੇ, <literal>ਮੋਨੋ-ਸਪੇਸ ਬੋਲਡ</"
+"literal> ਵਿੱਚ। ਉਦਾਹਰਣ ਲਈ:"
 
 # translation auto-copied from project Publican Common, version 3, document
 # Conventions
 #. Tag: para
 #, no-c-format
-msgid "File-related classes include <classname>filesystem</classname> for file systems, <classname>file</classname> for files, and <classname>dir</classname> for directories. Each class has its own associated set of permissions."
-msgstr "ਫਾਈਲ-ਸੰਬੰਧੀ ਕਲਾਸਾਂ ਵਿੱਚ ਫਾਈਲ ਸਿਸਟਮਾਂ ਲਈ <classname>filesystem</classname>, ਫਾਈਲਾਂ ਲਈ <classname>file</classname>, ਅਤੇ ਡਾਇਰੈਕਟਰੀਆਂ ਲਈ <classname>dir</classname> ਸ਼ਾਮਿਲ ਹਨ। ਹਰੇਕ ਕਲਾਸ ਦੇ ਆਪਣੇ ਸੰਬੰਧਿਤ ਅਧਿਕਾਰ ਹੁੰਦੇ ਹਨ।"
+msgid ""
+"File-related classes include <classname>filesystem</classname> for file "
+"systems, <classname>file</classname> for files, and <classname>dir</"
+"classname> for directories. Each class has its own associated set of "
+"permissions."
+msgstr ""
+"ਫਾਈਲ-ਸੰਬੰਧੀ ਕਲਾਸਾਂ ਵਿੱਚ ਫਾਈਲ ਸਿਸਟਮਾਂ ਲਈ <classname>filesystem</classname>, "
+"ਫਾਈਲਾਂ ਲਈ <classname>file</classname>, ਅਤੇ ਡਾਇਰੈਕਟਰੀਆਂ ਲਈ <classname>dir</"
+"classname> ਸ਼ਾਮਿਲ ਹਨ। ਹਰੇਕ ਕਲਾਸ ਦੇ ਆਪਣੇ ਸੰਬੰਧਿਤ ਅਧਿਕਾਰ ਹੁੰਦੇ ਹਨ।"
 
-# translation auto-copied from project Publican Common, version 3, document
-# Conventions
+# translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: para
 #, no-c-format
 msgid "<application>Proportional Bold</application>"
 msgstr "<application>ਪਰੋਪੋਰਸ਼ਨਲ ਬੋਲਡ</application>"
 
+# translation auto-copied from project Publican Common, version 3, document Conventions
+#. Tag: para
+#, no-c-format
+msgid ""
+"This denotes words or phrases encountered on a system, including application "
+"names; dialog-box text; labeled buttons; check-box and radio-button labels; "
+"menu titles and submenu titles. For example:"
+msgstr ""
+"This denotes words or phrases encountered on a system, including application "
+"names; dialog-box text; labeled buttons; check-box and radio-button labels; "
+"menu titles and submenu titles. For example:"
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"Choose <menuchoice><guimenu>System</guimenu><guisubmenu>Preferences</"
+"guisubmenu><guimenuitem>Mouse</guimenuitem></menuchoice> from the main menu "
+"bar to launch <application>Mouse Preferences</application>. In the "
+"<guilabel>Buttons</guilabel> tab, select the <guilabel>Left-handed mouse</"
+"guilabel> check box and click <guibutton>Close</guibutton> to switch the "
+"primary mouse button from the left to the right (making the mouse suitable "
+"for use in the left hand)."
+msgstr ""
+" <application>ਮਾਊਸ ਤਰਜੀਹਾਂ</application> ਚਲਾਉਣ ਲਈ ਮੁੱਖ ਮੇਨੂ ਪੱਟੀ ਵਿੱਚੋਂ "
+"<menuchoice><guimenu>ਸਿਸਟਮ</guimenu><guisubmenu>ਤਰਜੀਹਾਂ</"
+"guisubmenu><guimenuitem>ਮਾਊਸ</guimenuitem></menuchoice> ਚੁਣੋ। ਮੁੱਢਲੇ ਮਾਊਸ "
+"ਬਟਨ ਨੂੰ ਖੱਬੇ ਤੋਂ ਸੱਜੇ ਬਦਲਣ (ਮਾਊਸ ਨੂੰ ਖੱਬੇ ਹੱਥ ਨਾਲ ਕੰਮ ਕਰਨ ਲਈ ਉਪਯੋਗੀ ਬਣਾਉਣ) "
+"ਲਈ <guilabel>ਬਟਨ</guilabel> ਟੈਬ ਵਿੱਚੋਂ <guilabel>ਖੱਬ ਹੱਥ ਲਈ ਮਾਊਸ</guilabel> "
+"ਚੈੱਕ ਬਕਸਾ ਚੁਣੋ ਅਤੇ <guibutton>ਬੰਦ ਕਰੋ</guibutton> ਕਲਿੱਕ ਕਰੋ।"
+
+#. Tag: para
+#, no-c-format
+msgid ""
+"To insert a special character into a <application>gedit</application> file, "
+"choose <menuchoice><guimenu>Applications</guimenu><guisubmenu>Accessories</"
+"guisubmenu><guimenuitem>Character Map</guimenuitem></menuchoice> from the "
+"main menu bar. Next, choose <menuchoice><guimenu>Search</"
+"guimenu><guimenuitem>Find…</guimenuitem></menuchoice> from the "
+"<application>Character Map</application> menu bar, type the name of the "
+"character in the <guilabel>Search</guilabel> field and click "
+"<guibutton>Next</guibutton>. The character you sought will be highlighted in "
+"the <guilabel>Character Table</guilabel>. Double-click this highlighted "
+"character to place it in the <guilabel>Text to copy</guilabel> field and "
+"then click the <guibutton>Copy</guibutton> button. Now switch back to your "
+"document and choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Paste</"
+"guimenuitem></menuchoice> from the <application>gedit</application> menu bar."
+""
+msgstr ""
+"ਇੱਕ <application>gedit</application> ਫਾਈਲ ਵਿੱਚ ਖਾਸ ਅੱਖਰ ਜੋੜਨ ਲਈ, ਮੁੱਖ ਮੇਨੂ "
+"ਵਿੱਚੋਂ <menuchoice><guimenu>ਐਪਲੀਕੇਸ਼ਨ</guimenu><guisubmenu>ਸਹਾਇਕ</"
+"guisubmenu><guimenuitem>ਅੱਖਰ ਮੈਪ</guimenuitem></menuchoice> ਤੇ ਜਾਓ। ਅੱਗੇ, "
+"<menuchoice><guimenu>ਖੋਜ</guimenu><guimenuitem>ਲੱਭੋ…</guimenuitem></"
+"menuchoice> ਚੁਣੋ <application>ਅੱਖਰ ਮੈਪ</application> ਮੇਨੂ ਵਿੱਚੋਂ, "
+"<guilabel>ਖੋਜ</guilabel> ਵਿੱਚ ਅੱਖਰ ਦਾ ਨਾਂ ਟਾਈਪ ਕਰੋ ਅਤੇ <guibutton>ਅੱਗੇ</"
+"guibutton> ਦਬਾਓ। ਅੱਖਰ ਜੋ ਤੁਸੀਂ ਖੋਜੇ ਹਨ <guilabel>ਅੱਖਰ ਸਾਰਣੀ</guilabel> ਵਿੱਚ "
+"ਦਿਸਣਗੇ। ਇਸ ਉਘਾੜੇ ਹੋਏ ਅੱਖਰ ਨੂੰ <guilabel>ਕਾਪੀ ਲਈ ਟੈਕਸਟ</guilabel> ਖੇਤਰ ਵਿੱਚ "
+"ਲਿਜਾਣ ਲਈ ਦੂਹਰਾ-ਕਲਿੱਕ ਕਰੋ ਅਤੇ ਫਿਰ <guibutton>ਕਾਪੀ</guibutton> ਬਟਨ ਦਬਾਓ। ਹੁਣ "
+"ਵਾਪਿਸ ਆਪਣੇ ਦਸਤਾਵੇਜ ਵਿੱਚ ਜਾਓ ਅਤੇ <menuchoice><guimenu>ਸੋਧ</"
+"guimenu><guimenuitem>ਚਿਪਕਾਓ</guimenuitem></menuchoice>ਚੁਣੋ "
+"<application>gedit</application> ਮੇਨੂ ਵਿੱਚੋਂ।"
+
 # translation auto-copied from project Publican Common, version 3, document
 # Conventions
 #. Tag: para
 #, no-c-format
-msgid "This denotes words or phrases encountered on a system, including application names; dialog box text; labeled buttons; check-box and radio button labels; menu titles and sub-menu titles. For example:"
-msgstr "This denotes words or phrases encountered on a system, including application names; dialog box text; labeled buttons; check-box and radio button labels; menu titles and sub-menu titles. For example:"
+msgid ""
+"The above text includes application names; system-wide menu names and items; "
+"application-specific menu names; and buttons and text found within a GUI "
+"interface, all presented in proportional bold and all distinguishable by "
+"context."
+msgstr ""
+"ਉੱਪਰਲੇ ਪਾਠ ਵਿੱਚ ਐਪਲੀਕੇਸ਼ਨ ਨਾਂ; ਸਿਸਟਮ-ਸੰਬੰਧੀ ਮੇਨੂ ਨਾਂ ਅਤੇ ਇਕਾਈਆਂ; ਐਪਲੀਕੇਸ਼ਨ-"
+"ਸੰਬੰਧੀ ਮੇਨੂ ਨਾਂ; ਅਤੇ ਬਟਨ ਅਤੇ GUI ਇੰਟਰਫੇਸ ਵਿਚਲਾ ਪਾਠ ਸ਼ਾਮਿਲ ਹੁੰਦੇ ਹਨ, ਸਭ "
+"ਪਰੋਪੋਰਸ਼ਨਲ ਬੋਲਡ ਵਿੱਚ ਵਿਖਾਉਂਦੇ ਹੁੰਦੇ ਹਨ ਅਤੇ ਪ੍ਰਸੰਗ ਸਾਹਿਤ ਵੱਖ ਕੀਤੇ ਹੁੰਦੇ ਹਨ।"
 
-#, no-c-format
-msgid "Choose <menuchoice><guimenu>System</guimenu><guisubmenu>Preferences</guisubmenu><guimenuitem>Mouse</guimenuitem></menuchoice> from the main menu bar to launch <application>Mouse Preferences</application>. In the <guilabel>Buttons</guilabel> tab, select the <guilabel>Left-handed mouse</guilabel> check box and click <guibutton>Close</guibutton> to switch the primary mouse button from the left to the right (making the mouse suitable for use in the left hand)."
-msgstr " <application>ਮਾਊਸ ਤਰਜੀਹਾਂ</application> ਚਲਾਉਣ ਲਈ ਮੁੱਖ ਮੇਨੂ ਪੱਟੀ ਵਿੱਚੋਂ <menuchoice><guimenu>ਸਿਸਟਮ</guimenu><guisubmenu>ਤਰਜੀਹਾਂ</guisubmenu><guimenuitem>ਮਾਊਸ</guimenuitem></menuchoice> ਚੁਣੋ। ਮੁੱਢਲੇ ਮਾਊਸ ਬਟਨ ਨੂੰ ਖੱਬੇ ਤੋਂ ਸੱਜੇ ਬਦਲਣ (ਮਾਊਸ ਨੂੰ ਖੱਬੇ ਹੱਥ ਨਾਲ ਕੰਮ ਕਰਨ ਲਈ ਉਪਯੋਗੀ ਬਣਾਉਣ) ਲਈ <guilabel>ਬਟਨ</guilabel> ਟੈਬ ਵਿੱਚੋਂ <guilabel>ਖੱਬ ਹੱਥ ਲਈ ਮਾਊਸ</guilabel> ਚੈੱਕ ਬਕਸਾ ਚੁਣੋ ਅਤੇ <guibutton>ਬੰਦ ਕਰੋ</guibutton> ਕਲਿੱਕ ਕਰੋ।"
-
+# translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: para
 #, no-c-format
-msgid "To insert a special character into a <application>gedit</application> file, choose <menuchoice><guimenu>Applications</guimenu><guisubmenu>Accessories</guisubmenu><guimenuitem>Character Map</guimenuitem></menuchoice> from the main menu bar. Next, choose <menuchoice><guimenu>Search</guimenu><guimenuitem>Find…</guimenuitem></menuchoice> from the <application>Character Map</application> menu bar, type the name of the character in the <guilabel>Search</guilabel> field and click <guibutton>Next</guibutton>. The character you sought will be highlighted in the <guilabel>Character Table</guilabel>. Double-click this highlighted character to place it in the <guilabel>Text to copy</guilabel> field and then click the <guibutton>Copy</guibutton> button. Now switch back to your document and choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Paste</guimenuitem></menuchoice> from the <application>gedit</application> menu bar."
-msgstr "ਇੱਕ <application>gedit</application> ਫਾਈਲ ਵਿੱਚ ਖਾਸ ਅੱਖਰ ਜੋੜਨ ਲਈ, ਮੁੱਖ ਮੇਨੂ ਵਿੱਚੋਂ <menuchoice><guimenu>ਐਪਲੀਕੇਸ਼ਨ</guimenu><guisubmenu>ਸਹਾਇਕ</guisubmenu><guimenuitem>ਅੱਖਰ ਮੈਪ</guimenuitem></menuchoice> ਤੇ ਜਾਓ। ਅੱਗੇ, <menuchoice><guimenu>ਖੋਜ</guimenu><guimenuitem>ਲੱਭੋ…</guimenuitem></menuchoice> ਚੁਣੋ <application>ਅੱਖਰ ਮੈਪ</application> ਮੇਨੂ ਵਿੱਚੋਂ, <guilabel>ਖੋਜ</guilabel> ਵਿੱਚ ਅੱਖਰ ਦਾ ਨਾਂ ਟਾਈਪ ਕਰੋ ਅਤੇ <guibutton>ਅੱਗੇ</guibutton> ਦਬਾਓ। ਅੱਖਰ ਜੋ ਤੁਸੀਂ ਖੋਜੇ ਹਨ <guilabel>ਅੱਖਰ ਸਾਰਣੀ</guilabel> ਵਿੱਚ ਦਿਸਣਗੇ। ਇਸ ਉਘਾੜੇ ਹੋਏ ਅੱਖਰ ਨੂੰ <guilabel>ਕਾਪੀ ਲਈ ਟੈਕਸਟ</guilabel> ਖੇਤਰ ਵਿੱਚ ਲਿਜਾਣ ਲਈ ਦੂਹਰਾ-ਕਲਿੱਕ ਕਰੋ ਅਤੇ ਫਿਰ <guibutton>ਕਾਪੀ</guibutton> ਬਟਨ ਦਬਾਓ। ਹੁਣ ਵਾਪਿਸ ਆਪਣੇ ਦਸਤਾਵੇਜ ਵਿੱਚ ਜਾਓ ਅਤੇ <menuchoice><guimenu>ਸੋਧ</guimenu><guimenuitem>ਚਿਪਕਾਓ</guimenuitem></menuchoice>ਚੁਣੋ <application>gedit</application> ਮੇਨੂ ਵਿੱਚੋਂ।"
+msgid ""
+"<command><replaceable>Mono-spaced Bold Italic</replaceable></command> or "
+"<application><replaceable>Proportional Bold Italic</replaceable></"
+"application>"
+msgstr ""
+"<command><replaceable>Mono-spaced Bold Italic</replaceable></command> ਜਾਂ "
+"<application><replaceable>ਪਰੋਪੋਰਸ਼ਨਲ ਬੋਲਡ ਇਟਾਲਿਕ</replaceable></application>"
 
 # translation auto-copied from project Publican Common, version 3, document
 # Conventions
 #. Tag: para
 #, no-c-format
-msgid "The above text includes application names; system-wide menu names and items; application-specific menu names; and buttons and text found within a GUI interface, all presented in proportional bold and all distinguishable by context."
-msgstr "ਉੱਪਰਲੇ ਪਾਠ ਵਿੱਚ ਐਪਲੀਕੇਸ਼ਨ ਨਾਂ; ਸਿਸਟਮ-ਸੰਬੰਧੀ ਮੇਨੂ ਨਾਂ ਅਤੇ ਇਕਾਈਆਂ; ਐਪਲੀਕੇਸ਼ਨ-ਸੰਬੰਧੀ ਮੇਨੂ ਨਾਂ; ਅਤੇ ਬਟਨ ਅਤੇ GUI ਇੰਟਰਫੇਸ ਵਿਚਲਾ ਪਾਠ ਸ਼ਾਮਿਲ ਹੁੰਦੇ ਹਨ, ਸਭ ਪਰੋਪੋਰਸ਼ਨਲ ਬੋਲਡ ਵਿੱਚ ਵਿਖਾਉਂਦੇ ਹੁੰਦੇ ਹਨ ਅਤੇ ਪ੍ਰਸੰਗ ਸਾਹਿਤ ਵੱਖ ਕੀਤੇ ਹੁੰਦੇ ਹਨ।"
+msgid ""
+"Whether mono-spaced bold or proportional bold, the addition of italics "
+"indicates replaceable or variable text. Italics denotes text you do not "
+"input literally or displayed text that changes depending on circumstance. "
+"For example:"
+msgstr ""
+"ਮੋਨੋ-ਸਪੇਸ ਬੋਲਡ ਜਾਂ ਪਰੋਪੋਰਸ਼ਨਲ ਬੋਲਡ ਹੋਵੇ, ਇਟਾਲਿਕ ਸ਼ਾਮਿਲ ਕਰਨ ਨਾਲ ਹਟਾਉਣ ਯੋਗ ਜਾਂ "
+"ਤਬਦੀਲੀ ਯੋਗ ਪਾਠ ਦਿਸਦਾ ਹੈ। ਇਟਾਲਿਕ ਉਹ ਪਾਠ ਹੈ ਜੋ ਤੁਸੀਂ ਇੰਪੁੱਟ ਨਹੀਂ ਕੀਤਾ ਜਾਂ ਪਾਠ "
+"ਵਿਖਾਉਂਦਾ ਹੈ ਜੋ ਤਬਦੀਲ ਹੋਇਆ ਹੈ ਹਾਲਤ ਤੇ ਨਿਰਭਰ ਕਰਦਾ ਹੈ। ਉਦਾਹਰਣ ਲਈ:"
+
+# translation auto-copied from project Publican Common, version 3, document Conventions
+#. Tag: para
+#, no-c-format
+msgid ""
+"To connect to a remote machine using ssh, type <command>ssh "
+"<replaceable>username</replaceable>@<replaceable>domain.name</replaceable></"
+"command> at a shell prompt. If the remote machine is <filename>example.com</"
+"filename> and your username on that machine is john, type <command>ssh "
+"john@example.com</command>."
+msgstr ""
+"ssh ਵਰਤ ਕੇ ਰਿਮੋਟ ਮਸ਼ੀਨ ਨਾਲ ਜੁੜਨ ਲਈ, ਸ਼ੈੱਲ ਪਰੌਂਪਟ ਤੇ <command>ssh "
+"<replaceable>username</replaceable>@<replaceable>domain.name</replaceable></"
+"command> ਲਿਖੋ। ਜੇ ਰਿਮੋਟ ਮਸ਼ੀਨ <filename>example.com</filename> ਹੈ ਅਤੇ ਉਸ ਮਸ਼ੀਨ "
+"ਤੇ ਤੁਹਾਡਾ ਯੂਜ਼ਰ-ਨਾਂ john ਹੈ, ਤਾਂ <command>ssh john@example.com</command> "
+"ਲਿਖੋ।"
 
 # translation auto-copied from project Publican Common, version 3, document
 # Conventions
 #. Tag: para
 #, no-c-format
-msgid "<command><replaceable>Mono-spaced Bold Italic</replaceable></command> or <application><replaceable>Proportional Bold Italic</replaceable></application>"
-msgstr "<command><replaceable>Mono-spaced Bold Italic</replaceable></command> ਜਾਂ <application><replaceable>ਪਰੋਪੋਰਸ਼ਨਲ ਬੋਲਡ ਇਟਾਲਿਕ</replaceable></application>"
+msgid ""
+"The <command>mount -o remount <replaceable>file-system</replaceable></"
+"command> command remounts the named file system. For example, to remount the "
+"<filename>/home</filename> file system, the command is <command>mount -o "
+"remount /home</command>."
+msgstr ""
+"<command>mount -o remount <replaceable>file-system</replaceable></command> "
+"ਕਮਾਂਡ ਦਿੱਤੇ-ਨਾਂ ਵਾਲੇ ਫਾਈਲ ਸਿਸਟਮ ਨੂੰ ਮੁੜ ਤੋਂ ਮਾਊਂਟ ਕਰਦਾ ਹੈ। ਉਦਾਹਰਨ ਲਈ, "
+"<filename>/home</filename> ਫਾਈਲ ਸਿਸਟਮ ਨੂੰ ਮਾਊਂਟ ਕਰਨ ਲਈ, ਕਮਾਂਡ ਹੈ "
+"<command>mount -o remount /home</command>।"
 
 # translation auto-copied from project Publican Common, version 3, document
 # Conventions
 #. Tag: para
 #, no-c-format
-msgid "Whether mono-spaced bold or proportional bold, the addition of italics indicates replaceable or variable text. Italics denotes text you do not input literally or displayed text that changes depending on circumstance. For example:"
-msgstr "ਮੋਨੋ-ਸਪੇਸ ਬੋਲਡ ਜਾਂ ਪਰੋਪੋਰਸ਼ਨਲ ਬੋਲਡ ਹੋਵੇ, ਇਟਾਲਿਕ ਸ਼ਾਮਿਲ ਕਰਨ ਨਾਲ ਹਟਾਉਣ ਯੋਗ ਜਾਂ ਤਬਦੀਲੀ ਯੋਗ ਪਾਠ ਦਿਸਦਾ ਹੈ। ਇਟਾਲਿਕ ਉਹ ਪਾਠ ਹੈ ਜੋ ਤੁਸੀਂ ਇੰਪੁੱਟ ਨਹੀਂ ਕੀਤਾ ਜਾਂ ਪਾਠ ਵਿਖਾਉਂਦਾ ਹੈ ਜੋ ਤਬਦੀਲ ਹੋਇਆ ਹੈ ਹਾਲਤ ਤੇ ਨਿਰਭਰ ਕਰਦਾ ਹੈ। ਉਦਾਹਰਣ ਲਈ:"
+msgid ""
+"To see the version of a currently installed package, use the <command>rpm -q "
+"<replaceable>package</replaceable></command> command. It will return a "
+"result as follows: <command><replaceable>package-version-release</"
+"replaceable></command>."
+msgstr ""
+"ਮੌਜੂਦਾ ਇੰਸਟਾਲ ਕੀਤੀ ਪੰਡ(package) ਦਾ ਸੰਸਕਰਣ ਵੇਖਣ ਲਈ, <command>rpm -q "
+"<replaceable>package</replaceable></command> ਕਮਾਂਡ ਵਰਤੋ। ਇਹ ਇਸ ਤਰਾਂ ਦਾ ਨਤੀਜਾ "
+"ਦੇਵੇਗਾ: <command><replaceable>package-version-release</replaceable></"
+"command>।"
+
+# translation auto-copied from project Publican Common, version 3, document Conventions, author jassy
+#. Tag: para
+#, no-c-format
+msgid ""
+"Note the words in bold italics above: username, domain.name, file-system, "
+"package, version and release. Each word is a placeholder, either for text "
+"you enter when issuing a command or for text displayed by the system."
+msgstr ""
+"ਗੂੜ੍ਹੇ ਟੇਡੇ ਸ਼ਬਦ — ਯੂਜ਼ਰ-ਨਾਂ, ਡੋਮੇਨ.ਨਾਂ, ਫਾਇਲ-ਸਿਸਮਟ, ਪੈਕੇਜ, ਵਰਜਨ ਅਤੇ ਰੀਲੀਜ਼। "
+"ਹਰੇਕ ਸ਼ਬਦ ਇੱਕ ਪਲੇਸਹੋਲਟਡ ਹੈ, ਜਾਂ ਤਾਂ ਤੁਹਾਡੇ ਟੈਕਸਟ ਲਈ ਜਦੋਂ ਕਮਾਂਡ ਦਿੱਤੀ ਸੀ ਜਾਂ "
+"ਸਿਸਟਮ ਲਈ।"
 
 # translation auto-copied from project Publican Common, version 3, document
 # Conventions
 #. Tag: para
 #, no-c-format
-msgid "To connect to a remote machine using ssh, type <command>ssh <replaceable>username</replaceable>@<replaceable>domain.name</replaceable></command> at a shell prompt. If the remote machine is <filename>example.com</filename> and your username on that machine is john, type <command>ssh john@example.com</command>."
-msgstr "ssh ਵਰਤ ਕੇ ਰਿਮੋਟ ਮਸ਼ੀਨ ਨਾਲ ਜੁੜਨ ਲਈ, ਸ਼ੈੱਲ ਪਰੌਂਪਟ ਤੇ <command>ssh <replaceable>username</replaceable>@<replaceable>domain.name</replaceable></command> ਲਿਖੋ। ਜੇ ਰਿਮੋਟ ਮਸ਼ੀਨ <filename>example.com</filename> ਹੈ ਅਤੇ ਉਸ ਮਸ਼ੀਨ ਤੇ ਤੁਹਾਡਾ ਯੂਜ਼ਰ-ਨਾਂ john ਹੈ, ਤਾਂ <command>ssh john@example.com</command> ਲਿਖੋ।"
+msgid ""
+"Aside from standard usage for presenting the title of a work, italics "
+"denotes the first use of a new and important term. For example:"
+msgstr ""
+"ਇੱਕ ਕੰਮ ਦਾ ਸਿਰਲੇਖ ਿੇਖਾਉਣ ਲਈ ਸਟੈਂਡਰਡ ਵਰਤੋਂ ਤੋਂ ਉਲਟ, ਇਟਾਲਿਕ ਨਵੀਂ ਅਤੇ ਜਰੂਰੀ "
+"ਜਾਣਕਾਰੀ ਨੂੰ ਵਿਖਾਉਣ ਲਈ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ। ਉਦਾਹਰਣ ਲਈ:"
 
-# translation auto-copied from project Publican Common, version 3, document
-# Conventions
-#. Tag: para
-#, no-c-format
-msgid "The <command>mount -o remount <replaceable>file-system</replaceable></command> command remounts the named file system. For example, to remount the <filename>/home</filename> file system, the command is <command>mount -o remount /home</command>."
-msgstr "<command>mount -o remount <replaceable>file-system</replaceable></command> ਕਮਾਂਡ ਦਿੱਤੇ-ਨਾਂ ਵਾਲੇ ਫਾਈਲ ਸਿਸਟਮ ਨੂੰ ਮੁੜ ਤੋਂ ਮਾਊਂਟ ਕਰਦਾ ਹੈ। ਉਦਾਹਰਨ ਲਈ, <filename>/home</filename> ਫਾਈਲ ਸਿਸਟਮ ਨੂੰ ਮਾਊਂਟ ਕਰਨ ਲਈ, ਕਮਾਂਡ ਹੈ <command>mount -o remount /home</command>।"
-
-# translation auto-copied from project Publican Common, version 3, document
-# Conventions
-#. Tag: para
-#, no-c-format
-msgid "To see the version of a currently installed package, use the <command>rpm -q <replaceable>package</replaceable></command> command. It will return a result as follows: <command><replaceable>package-version-release</replaceable></command>."
-msgstr "ਮੌਜੂਦਾ ਇੰਸਟਾਲ ਕੀਤੀ ਪੰਡ(package) ਦਾ ਸੰਸਕਰਣ ਵੇਖਣ ਲਈ, <command>rpm -q <replaceable>package</replaceable></command> ਕਮਾਂਡ ਵਰਤੋ। ਇਹ ਇਸ ਤਰਾਂ ਦਾ ਨਤੀਜਾ ਦੇਵੇਗਾ: <command><replaceable>package-version-release</replaceable></command>।"
-
-#. Tag: para
-#, no-c-format
-msgid "Note the words in bold italics above — username, domain.name, file-system, package, version and release. Each word is a placeholder, either for text you enter when issuing a command or for text displayed by the system."
-msgstr "ਗੂੜ੍ਹੇ ਟੇਡੇ ਸ਼ਬਦ — ਯੂਜ਼ਰ-ਨਾਂ, ਡੋਮੇਨ.ਨਾਂ, ਫਾਇਲ-ਸਿਸਮਟ, ਪੈਕੇਜ, ਵਰਜਨ ਅਤੇ ਰੀਲੀਜ਼। ਹਰੇਕ ਸ਼ਬਦ ਇੱਕ ਪਲੇਸਹੋਲਟਡ ਹੈ, ਜਾਂ ਤਾਂ ਤੁਹਾਡੇ ਟੈਕਸਟ ਲਈ ਜਦੋਂ ਕਮਾਂਡ ਦਿੱਤੀ ਸੀ ਜਾਂ ਸਿਸਟਮ ਲਈ।"
-
-# translation auto-copied from project Publican Common, version 3, document
-# Conventions
-#. Tag: para
-#, no-c-format
-msgid "Aside from standard usage for presenting the title of a work, italics denotes the first use of a new and important term. For example:"
-msgstr "ਇੱਕ ਕੰਮ ਦਾ ਸਿਰਲੇਖ ਿੇਖਾਉਣ ਲਈ ਸਟੈਂਡਰਡ ਵਰਤੋਂ ਤੋਂ ਉਲਟ, ਇਟਾਲਿਕ ਨਵੀਂ ਅਤੇ ਜਰੂਰੀ ਜਾਣਕਾਰੀ ਨੂੰ ਵਿਖਾਉਣ ਲਈ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ। ਉਦਾਹਰਣ ਲਈ:"
-
-# translation auto-copied from project Publican Common, version 3, document
-# Conventions
+# translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: para
 #, no-c-format
 msgid "Publican is a <firstterm>DocBook</firstterm> publishing system."
 msgstr "Publican ਇੱਕ <firstterm>DocBook</firstterm> ਪਬਲਿਸ਼ ਕਰਨ ਵਾਲਾ ਸਿਸਟਮ ਹੈ।"
 
-# translation auto-copied from project Publican Common, version 3, document
-# Conventions
+# translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: title
 #, no-c-format
 msgid "Pull-quote Conventions"
 msgstr "ਸਵਲਾ-ਲਵੋ ਕੰਨਵੈਂਸ਼ਨਜ਼"
 
-# translation auto-copied from project Publican Common, version 3, document
-# Conventions
+# translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: para
 #, no-c-format
-msgid "Terminal output and source code listings are set off visually from the surrounding text."
-msgstr "ਟਰਮੀਨਲ ਆਊਟਪੁੱਟ ਅਤੇ ਸੋਰਸ ਕੋਡ ਸੂਚੀ ਨੂੰ ਆਸੇ ਪਾਸੇ ਦੇ ਪਾਠ ਤੋਂ ਅਦਿੱਖ ਕੀਤੇ ਹਨ।"
+msgid ""
+"Terminal output and source code listings are set off visually from the "
+"surrounding text."
+msgstr ""
+"ਟਰਮੀਨਲ ਆਊਟਪੁੱਟ ਅਤੇ ਸੋਰਸ ਕੋਡ ਸੂਚੀ ਨੂੰ ਆਸੇ ਪਾਸੇ ਦੇ ਪਾਠ ਤੋਂ ਅਦਿੱਖ ਕੀਤੇ ਹਨ।"
 
 # translation auto-copied from project Publican Common, version 3, document
 # Conventions
 #. Tag: para
 #, no-c-format
-msgid "Output sent to a terminal is set in <computeroutput>mono-spaced roman</computeroutput> and presented thus:"
-msgstr "ਟਰਮੀਨਲ ਤੇ ਭੇਜੀ ਆਊਟਪੁੱਟ <computeroutput>ਮੋਨੋ-ਸਪੇਸ ਰੋਮਨ</computeroutput> ਵਿੱਚ ਸੈੱਟ ਕੀਤੇ ਹਨ ਅਤੇ ਵਿਖਾਏ ਗਏ ਹਨ:"
+msgid ""
+"Output sent to a terminal is set in <computeroutput>mono-spaced roman</"
+"computeroutput> and presented thus:"
+msgstr ""
+"ਟਰਮੀਨਲ ਤੇ ਭੇਜੀ ਆਊਟਪੁੱਟ <computeroutput>ਮੋਨੋ-ਸਪੇਸ ਰੋਮਨ</computeroutput> ਵਿੱਚ "
+"ਸੈੱਟ ਕੀਤੇ ਹਨ ਅਤੇ ਵਿਖਾਏ ਗਏ ਹਨ:"
 
+# translation auto-copied from project Publican Common, version 3, document Conventions, author jassy
 #. Tag: screen
 #, no-c-format
 msgid ""
@@ -230,8 +390,12 @@ msgstr ""
 # Conventions
 #. Tag: para
 #, no-c-format
-msgid "Source-code listings are also set in <computeroutput>mono-spaced roman</computeroutput> but add syntax highlighting as follows:"
-msgstr "ਸਰੋਤ ਕੋਡ ਸੂਚੀ ਵੀ <computeroutput>ਮੋਨੋ-ਸਪੇਸ ਰੋਮਨ</computeroutput> ਵਿੱਚ ਸੈੱਟ ਕੀਤੇ ਹਨ ਪਰ ਸੈਂਟੇਕਸ ਇਸ ਤਰਾਂ ਵਿਖਾਇਆ ਗਿਆ ਹੈ:"
+msgid ""
+"Source-code listings are also set in <computeroutput>mono-spaced roman</"
+"computeroutput> but add syntax highlighting as follows:"
+msgstr ""
+"ਸਰੋਤ ਕੋਡ ਸੂਚੀ ਵੀ <computeroutput>ਮੋਨੋ-ਸਪੇਸ ਰੋਮਨ</computeroutput> ਵਿੱਚ ਸੈੱਟ "
+"ਕੀਤੇ ਹਨ ਪਰ ਸੈਂਟੇਕਸ ਇਸ ਤਰਾਂ ਵਿਖਾਇਆ ਗਿਆ ਹੈ:"
 
 # translation auto-copied from project Publican Common, version 3, document
 # Conventions
@@ -244,27 +408,46 @@ msgstr "ਸੂਚਨਾਵਾਂ ਅਤੇ ਚੇਤਾਵਨੀਆਂ"
 # Conventions
 #. Tag: para
 #, no-c-format
-msgid "Finally, we use three visual styles to draw attention to information that might otherwise be overlooked."
-msgstr "ਅੰਤ ਵਿੱਚ, ਅਸੀਂ ਜਾਣਕਾਰੀ ਵਿਖਾਉਣ ਲਈ ਤਿੰਨ ਦਰਿਸ਼ ਸਟਾਈਲ ਵਰਤਦੇ ਹਾਂ ਜੋ ਵਰਤੇ ਜਾ ਸਕਦੇ ਹਨ।"
+msgid ""
+"Finally, we use three visual styles to draw attention to information that "
+"might otherwise be overlooked."
+msgstr ""
+"ਅੰਤ ਵਿੱਚ, ਅਸੀਂ ਜਾਣਕਾਰੀ ਵਿਖਾਉਣ ਲਈ ਤਿੰਨ ਦਰਿਸ਼ ਸਟਾਈਲ ਵਰਤਦੇ ਹਾਂ ਜੋ ਵਰਤੇ ਜਾ ਸਕਦੇ "
+"ਹਨ।"
 
 # translation auto-copied from project Publican Common, version 3, document
 # Conventions
 #. Tag: para
 #, no-c-format
-msgid "Notes are tips, shortcuts or alternative approaches to the task at hand. Ignoring a note should have no negative consequences, but you might miss out on a trick that makes your life easier."
-msgstr "ਸੂਚਨਾ ਅਤੇ ਟਿੱਪਣੀਆਂ, ਸ਼ਾਰਟਕੱਟ ਜਾਂ ਹੋਰ ਤਰੀਕੇ ਜੋ ਵਰਤ ਸਕਦੇ ਹਾਂ। ਸੂਚਨਾ ਅਣਡਿੱਠਾ ਕਰਨ ਨਾਲ ਕੋਈ ਨਕਾਰਤਮਕ ਪ੍ਰਭਾਵ ਨਹੀਂ ਪੈਂਦਾ, ਪਰ ਜਿੰਗਦੀ ਸੌਖੀ ਬਣਾਉਣ ਦਾ ਮੌਕਾ ਲੰਘ ਸਕਦਾ ਹੈ।"
+msgid ""
+"Notes are tips, shortcuts or alternative approaches to the task at hand. "
+"Ignoring a note should have no negative consequences, but you might miss out "
+"on a trick that makes your life easier."
+msgstr ""
+"ਸੂਚਨਾ ਅਤੇ ਟਿੱਪਣੀਆਂ, ਸ਼ਾਰਟਕੱਟ ਜਾਂ ਹੋਰ ਤਰੀਕੇ ਜੋ ਵਰਤ ਸਕਦੇ ਹਾਂ। ਸੂਚਨਾ ਅਣਡਿੱਠਾ ਕਰਨ "
+"ਨਾਲ ਕੋਈ ਨਕਾਰਤਮਕ ਪ੍ਰਭਾਵ ਨਹੀਂ ਪੈਂਦਾ, ਪਰ ਜਿੰਗਦੀ ਸੌਖੀ ਬਣਾਉਣ ਦਾ ਮੌਕਾ ਲੰਘ ਸਕਦਾ ਹੈ।"
 
 # translation auto-copied from project Publican Common, version 3, document
 # Conventions
 #. Tag: para
 #, no-c-format
-msgid "Important boxes detail things that are easily missed: configuration changes that only apply to the current session, or services that need restarting before an update will apply. Ignoring a box labeled 'Important' will not cause data loss but may cause irritation and frustration."
-msgstr "ਜਰੂਰੀ ਬਾਕਸ ਵੇਰਵਾ ਚੀਜਾਂ ਅਸਾਨੀ ਨਾਲ ਰੱਦ ਕੀਤੀਆਂ ਜਾ ਸਕਦੀਆਂ ਹਨ: ਸੰਰਚਨਾ ਤਬਦੀਲੀਆਂ ਜੋ ਸਿਰਫ ਮੌਜੂਦਾ ਸ਼ੈਸ਼ਨ ਤੇ ਲਾਗੂ ਹੁੰਦੇ ਹਨ, ਜਾਂ ਸਰਵਿਸ ਜਿਸਨੂੰ ਅੱਪਡੇਟ ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ ਮੁੜ-ਚਾਲੂ ਕਰਨ ਦੀ ਲੋੜ ਹੈ। 'ਜਰੂਰੀ' ਲੇਬਲ ਵਾਲਾ ਬਾਕਸ ਰੱਦ ਕਰਨ ਨਾਲ ਡਾਟਾ ਖਰਾਬ ਨਹੀਂ ਹੁੰਦਾ ਪਰ ਹੋਰ ਖਰਾਬੀ ਹੋ ਸਕਦੀ ਹੈ।"
+msgid ""
+"Important boxes detail things that are easily missed: configuration changes "
+"that only apply to the current session, or services that need restarting "
+"before an update will apply. Ignoring a box labeled “Important” will not "
+"cause data loss but may cause irritation and frustration."
+msgstr ""
+"ਜਰੂਰੀ ਬਾਕਸ ਵੇਰਵਾ ਚੀਜਾਂ ਅਸਾਨੀ ਨਾਲ ਰੱਦ ਕੀਤੀਆਂ ਜਾ ਸਕਦੀਆਂ ਹਨ: ਸੰਰਚਨਾ ਤਬਦੀਲੀਆਂ ਜੋ "
+"ਸਿਰਫ ਮੌਜੂਦਾ ਸ਼ੈਸ਼ਨ ਤੇ ਲਾਗੂ ਹੁੰਦੇ ਹਨ, ਜਾਂ ਸਰਵਿਸ ਜਿਸਨੂੰ ਅੱਪਡੇਟ ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ "
+"ਮੁੜ-ਚਾਲੂ ਕਰਨ ਦੀ ਲੋੜ ਹੈ। 'ਜਰੂਰੀ' ਲੇਬਲ ਵਾਲਾ ਬਾਕਸ ਰੱਦ ਕਰਨ ਨਾਲ ਡਾਟਾ ਖਰਾਬ ਨਹੀਂ "
+"ਹੁੰਦਾ ਪਰ ਹੋਰ ਖਰਾਬੀ ਹੋ ਸਕਦੀ ਹੈ।"
 
-# translation auto-copied from project Publican Common, version 3, document
-# Conventions
+# translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: para
 #, no-c-format
-msgid "Warnings should not be ignored. Ignoring warnings will most likely cause data loss."
-msgstr "ਚੇਤਾਵਨੀਆਂ ਰੱਦ ਨਹੀਂ ਹੋਣੀਆਂ ਚਾਹੀਦੀਆਂ। ਚੇਤਾਵਨੀਆਂ ਰੱਦ ਕਰਨ ਨਾਲ ਡਾਟਾ ਖਰਾਬ ਹੋ ਸਕਦਾ ਹੈ।"
-
+msgid ""
+"Warnings should not be ignored. Ignoring warnings will most likely cause "
+"data loss."
+msgstr ""
+"ਚੇਤਾਵਨੀਆਂ ਰੱਦ ਨਹੀਂ ਹੋਣੀਆਂ ਚਾਹੀਦੀਆਂ। ਚੇਤਾਵਨੀਆਂ ਰੱਦ ਕਰਨ ਨਾਲ ਡਾਟਾ ਖਰਾਬ ਹੋ ਸਕਦਾ "
+"ਹੈ।"

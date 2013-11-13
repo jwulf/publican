@@ -69,7 +69,7 @@
 		</para>
 
 		<para>
-		This denotes words or phrases encountered on a system, including application names; dialog box text; labeled buttons; check-box and radio button labels; menu titles and sub-menu titles. For example:
+		This denotes words or phrases encountered on a system, including application names; dialog-box text; labeled buttons; check-box and radio-button labels; menu titles and submenu titles. For example:
 		</para>
 
 		<blockquote>
@@ -109,7 +109,7 @@
 		</blockquote>
 		
 		<para>
-		Note the words in bold italics above — username, domain.name, file-system, package, version and release. Each word is a placeholder, either for text you enter when issuing a command or for text displayed by the system.
+		Note the words in bold italics above: username, domain.name, file-system, package, version and release. Each word is a placeholder, either for text you enter when issuing a command or for text displayed by the system.
 		</para>
 
 		<para>
@@ -162,7 +162,7 @@ books_tests  Desktop1  downloads      images  notes  scripts  svgs</screen>
 		
 		<important>
 		<para>
-		Important boxes detail things that are easily missed: configuration changes that only apply to the current session, or services that need restarting before an update will apply. Ignoring a box labeled 'Important' will not cause data loss but may cause irritation and frustration.
+		Important boxes detail things that are easily missed: configuration changes that only apply to the current session, or services that need restarting before an update will apply. Ignoring a box labeled “Important” will not cause data loss but may cause irritation and frustration.
 		</para>
 		</important>
 		

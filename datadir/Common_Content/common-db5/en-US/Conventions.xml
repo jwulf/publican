@@ -8,7 +8,7 @@
 	</para>
 	
 	<para>
-	In PDF and paper editions, this manual uses typefaces drawn from the <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://fedorahosted.org/liberation-fonts/">Liberation Fonts</link> set. The Liberation Fonts set is also used in HTML editions if the set is installed on your system. If not, alternative but equivalent typefaces are displayed. Note: Red Hat Enterprise Linux 5 and later includes the Liberation Fonts set by default.
+	In PDF and paper editions, this manual uses typefaces drawn from the <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://fedorahosted.org/liberation-fonts/">Liberation Fonts</link> set. The Liberation Fonts set is also used in HTML editions if the set is installed on your system. If not, alternative but equivalent typefaces are displayed. Note: Red Hat Enterprise Linux 5 and later include the Liberation Fonts set by default.
 	</para>
 
 	<section><info><title>Typographic Conventions</title></info>
@@ -23,7 +23,7 @@
 		</para>
 
 		<para>
-		Used to highlight system input, including shell commands, file names and paths. Also used to highlight keycaps and key combinations. For example:
+		Used to highlight system input, including shell commands, file names and paths. Also used to highlight keys and key combinations. For example:
 		</para>
 
 		<blockquote>
@@ -33,10 +33,10 @@
 		</blockquote>
 
 		<para>
-		The above includes a file name, a shell command and a keycap, all presented in mono-spaced bold and all distinguishable thanks to context.
+		The above includes a file name, a shell command and a key, all presented in mono-spaced bold and all distinguishable thanks to context.
 		</para>
 		<para>
-		Key combinations can be distinguished from keycaps by the plus sign that connects each part of a key combination. For example:
+		Key combinations can be distinguished from an individual key by the plus sign that connects each part of a key combination. For example:
 		</para>
 
 		<blockquote>
@@ -50,7 +50,7 @@
 		</blockquote>
 
 		<para>
-		The first paragraph highlights the particular keycap to press. The second highlights two key combinations (each a set of three keycaps with each set pressed simultaneously).
+		The first example highlights a particular key to press. The second example highlights a key combination: a set of three keys pressed simultaneously.
 		</para>
 
 		<para>
@@ -68,12 +68,12 @@
 		</para>
 
 		<para>
-		This denotes words or phrases encountered on a system, including application names; dialog box text; labeled buttons; check-box and radio button labels; menu titles and sub-menu titles. For example:
+		This denotes words or phrases encountered on a system, including application names; dialog-box text; labeled buttons; check-box and radio-button labels; menu titles and submenu titles. For example:
 		</para>
 
 		<blockquote>
 			<para>
-			Choose <menuchoice><guimenu>System</guimenu><guisubmenu>Preferences</guisubmenu><guimenuitem>Mouse</guimenuitem></menuchoice> from the main menu bar to launch <application>Mouse Preferences</application>. In the <guilabel>Buttons</guilabel> tab, click the <guilabel>Left-handed mouse</guilabel> check box and click <guibutton>Close</guibutton> to switch the primary mouse button from the left to the right (making the mouse suitable for use in the left hand).
+			Choose <menuchoice><guimenu>System</guimenu><guisubmenu>Preferences</guisubmenu><guimenuitem>Mouse</guimenuitem></menuchoice> from the main menu bar to launch <application>Mouse Preferences</application>. In the <guilabel>Buttons</guilabel> tab, select the <guilabel>Left-handed mouse</guilabel> check box and click <guibutton>Close</guibutton> to switch the primary mouse button from the left to the right (making the mouse suitable for use in the left hand).
 			</para>
 
 			<para>
@@ -153,23 +153,19 @@ books_tests  Desktop1  downloads      images  notes  scripts  svgs</screen>
 		Finally, we use three visual styles to draw attention to information that might otherwise be overlooked.
 		</para>
 		
-		<note><info><title>Note</title></info>
-		
+		<note>
 		<para>
 		Notes are tips, shortcuts or alternative approaches to the task at hand. Ignoring a note should have no negative consequences, but you might miss out on a trick that makes your life easier.
 		</para>
 		</note>
 		
-		<important><info><title>Important</title></info>
-		
+		<important>
 		<para>
-		Important boxes detail things that are easily missed: configuration changes that only apply to the current session, or services that need restarting before an update will apply. Ignoring a box labeled 'Important' will not cause data loss but may cause irritation and frustration.
+		Important boxes detail things that are easily missed: configuration changes that only apply to the current session, or services that need restarting before an update will apply. Ignoring a box labeled “Important” will not cause data loss but may cause irritation and frustration.
 		</para>
 		</important>
 		
-		
-		<warning><info><title>Warning</title></info>
-		
+		<warning>
 		<para>
 		Warnings should not be ignored. Ignoring warnings will most likely cause data loss.
 		</para>

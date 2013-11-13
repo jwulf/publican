@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2013-09-12 15:26+1000\n"
-"PO-Revision-Date: 2013-09-12 15:26+1000\n"
+"POT-Creation-Date: 2013-11-13 16:27+1000\n"
+"PO-Revision-Date: 2013-11-13 16:27+1000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: None\n"
 "MIME-Version: 1.0\n"
@@ -94,7 +94,7 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "This denotes words or phrases encountered on a system, including application names; dialog box text; labeled buttons; check-box and radio button labels; menu titles and sub-menu titles. For example:"
+msgid "This denotes words or phrases encountered on a system, including application names; dialog-box text; labeled buttons; check-box and radio-button labels; menu titles and submenu titles. For example:"
 msgstr ""
 
 #. Tag: para
@@ -139,7 +139,7 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "Note the words in bold italics above — username, domain.name, file-system, package, version and release. Each word is a placeholder, either for text you enter when issuing a command or for text displayed by the system."
+msgid "Note the words in bold italics above: username, domain.name, file-system, package, version and release. Each word is a placeholder, either for text you enter when issuing a command or for text displayed by the system."
 msgstr ""
 
 #. Tag: para
@@ -195,7 +195,7 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "Important boxes detail things that are easily missed: configuration changes that only apply to the current session, or services that need restarting before an update will apply. Ignoring a box labeled 'Important' will not cause data loss but may cause irritation and frustration."
+msgid "Important boxes detail things that are easily missed: configuration changes that only apply to the current session, or services that need restarting before an update will apply. Ignoring a box labeled “Important” will not cause data loss but may cause irritation and frustration."
 msgstr ""
 
 #. Tag: para

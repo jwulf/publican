@@ -1,0 +1,34 @@
+# AUTHOR <EMAIL@ADDRESS>, YEAR.
+# translation of Feedback.po to
+msgid ""
+msgstr ""
+"Project-Id-Version: 0\n"
+"POT-Creation-Date: 2013-11-13 16:27+1000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2008-10-08 01:20-0400\n"
+"Last-Translator: \n"
+"Language-Team: <it@li.org>\n"
+"Language: it\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"X-Generator: Zanata 3.0.3\n"
+
+# translation auto-copied from project Publican Common, version 3, document Feedback
+#. Tag: title
+#, no-c-format
+msgid "We Need Feedback!"
+msgstr "Inviateci i vostri commenti!"
+
+# translation auto-copied from project Publican Common, version 3, document Feedback
+#. Tag: indexterm
+#, no-c-format
+msgid "<primary>feedback</primary> <secondary>contact information for this manual</secondary>"
+msgstr "<primary>commento</primary> <secondary>informazioni di contatto per questo manuale</secondary>"
+
+# translation auto-copied from project Publican Common, version 3, document Feedback
+#. Tag: para
+#, no-c-format
+msgid "You should over ride this by creating your own local Feedback.xml file."
+msgstr "Potreste sovrascriverlo tramite la creazione di un vostro file Feedback.xml locale."
+
