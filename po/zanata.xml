@@ -2,7 +2,7 @@
 <config xmlns="http://zanata.org/namespace/config/">
   <url>https://translate.zanata.org/zanata/</url>
   <project>publican</project>
-  <project-version>3</project-version>
+  <project-version>4</project-version>
   <project-type>gettext</project-type>
 
   <locales>
@@ -10,7 +10,7 @@
     <locale>as</locale>
     <locale>ast</locale>
     <locale>bg</locale>
-    <locale>bn-IN</locale>
+    <locale map-from="bn_IN">bn-IN</locale>
     <locale>bs</locale>
     <locale>ca</locale>
     <locale>cs</locale>
@@ -43,7 +43,7 @@
     <locale>pa</locale>
     <locale>pl</locale>
     <locale map-from="pt">pt-PT</locale>
-    <locale>pt-BR</locale>
+    <locale map-from="pt_BR">pt-BR</locale>
     <locale>ru</locale>
     <locale>si</locale>
     <locale>sk</locale>

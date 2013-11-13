@@ -162,13 +162,13 @@ Windows:
 
 Q: How do I push new strings to Zanata or retrieve new translations?
 
-A: You need to install the Zanata client (on Fedora, yum install zanata-python-client). Then, to update the translation source on Zanata from the newest version of the POT file:
+A: You need to install Maven (on Fedora, yum install maven). Then, to update the translation source on Zanata from the newest version of the POT file, change into the po directory and run:
  
-$ zanata push --push-type source
+$ mvn zanata:push
 
 and to retrieve new translations:
 
-$ zanata pull
+$ mvn zanata:pull
 
 
 TODO:
