@@ -303,6 +303,14 @@
 			</listitem>
 		</varlistentry>
 		<varlistentry>
+			<term>Update Debian installation instructions</term>
+			<listitem>
+				<para>
+					The Debian installation instructions published in previous versions of the <citetitle>Publican Users' Guide</citetitle> were out-of-date and potentially dangerous. The Guide now includes instructions based on the <firstterm>apt pinning</firstterm> mechanism. <ulink url="https://bugzilla.redhat.com/show_bug.cgi?id=1013934">BZ#1013934</ulink>
+				</para>
+			</listitem>
+		</varlistentry>
+		<varlistentry>
 			<term>Build.PL does not compile .po files and doesn't install resulting .mo files</term>
 			<listitem>
 				<para>
@@ -398,6 +406,10 @@
 				</para>
 			</listitem>
 		</varlistentry>
+		
+
+
+
 	</variablelist>
 	<xi:include href="Revision_History.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
 	<index />

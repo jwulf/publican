@@ -3,7 +3,7 @@
 <!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
 %BOOK_ENTITIES;
 ]>
-<chapter conformance="204" id="chap-Users_Guide-Publican_commands">
+<chapter conformance="204" id="chap-Publican-Users_Guide-Publican_commands">
 	<title>Publican commands</title>
 	 <para>
 		<application>Publican</application> is a command-line tool. To use <application>Publican</application> on a computer with a Linux operating system, you must either start a terminal emulator program (such as <application>GNOME Terminal</application> or <application>Konsole</application>) or switch to a virtual console. To use <application>Publican</application> on a computer with a Windows operating system, run the <prompt>$</prompt> <command>cmd</command> command from the <guimenu>Start menu</guimenu> to open a command prompt.
@@ -45,7 +45,7 @@
 		</variablelist>
 
 	</para>
-	 <section conformance="205" id="sect-Users_Guide-Publican_commands-Command_options">
+	 <section conformance="205" id="sect-Publican-Users_Guide-Publican_commands-Command_options">
 		<title>Command options</title>
 		 <para>
 			The options for the <prompt>$</prompt> <command>publican</command> command are: 
@@ -127,7 +127,7 @@
 
 	</section>
 	
-	 <section conformance="206" id="sect-Users_Guide-Publican_commands-Actions">
+	 <section conformance="206" id="sect-Publican-Users_Guide-Publican_commands-Actions">
 		<title>Actions</title>
 		 <para>
 			<application>Publican</application> can perform the following actions: 
@@ -142,11 +142,11 @@
 					</listitem>
 
 				</varlistentry>
-				<varlistentry>
+				 <varlistentry>
 					<term>build</term>
 					 <listitem>
 						<para>
-							transforms XML to other formats (for example: PDF, single-page HTML, or multiple-page HTML). Refer to <xref linkend="sect-Users_Guide-Building_a_document" /> for more details and a description of the available options.
+							transforms XML to other formats (for example: PDF, single-page HTML, or multiple-page HTML). Refer to <xref linkend="sect-Publican-Users_Guide-Building_a_document" /> for more details and a description of the available options.
 						</para>
 
 					</listitem>
@@ -176,15 +176,17 @@
 							 <para>
 								If you do not have the current versions of the PO files checked out before running <prompt>$</prompt> <command>publican clean_ids</command>, the XML and PO files will no longer be in synchrony with each other. In this case, all links in the PO files must be manually updated.
 							</para>
+
 						</warning>
-						<important>
+						 <important>
 							<title>Important — ID conflicts can occur</title>
-							<para>
+							 <para>
 								The <prompt>$</prompt> <command>publican clean_ids</command> command is intended to facilitate building a DocBook structure around documents ported from other formats such as HTML. However, <command>publican clean_ids</command> is file-based and and only has access to information in the XML file that it is currently processing and to the document name. Therefore, nodes of the same type that have the same title receive the same IDs. These duplicate IDs will prevent the document from building.
 							</para>
-							<para>
+							 <para>
 								Use the <prompt>$</prompt> <command>publican clean_ids</command> command to assist you in laying out your document, but expect that some manual adjustment to IDs might be necessary. We recommend that you do not run <command>publican clean_ids</command> on an already well established document.
 							</para>
+
 						</important>
 
 					</listitem>
@@ -194,7 +196,7 @@
 					<term>clean_set</term>
 					 <listitem>
 						<para>
-							removes local copies of remote books in a distributed set. Refer to <xref linkend="sect-Users_Guide-Using_sets-Distributed_sets" /> for details of using distributed sets.
+							removes local copies of remote books in a distributed set. Refer to <xref linkend="sect-Publican-Users_Guide-Using_sets-Distributed_sets" /> for details of using distributed sets.
 						</para>
 
 					</listitem>
@@ -204,7 +206,7 @@
 					<term>create</term>
 					 <listitem>
 						<para>
-							creates a new book, article, or set. Refer to <xref linkend="chap-Users_Guide-Creating_a_document" /> for details of creating a book or article, and to <xref linkend="chap-Users_Guide-Using_sets" /> for details of using sets.
+							creates a new book, article, or set. Refer to <xref linkend="chap-Publican-Users_Guide-Creating_a_document" /> for details of creating a book or article, and to <xref linkend="chap-Publican-Users_Guide-Using_sets" /> for details of using sets.
 						</para>
 
 					</listitem>
@@ -214,17 +216,17 @@
 					<term>create_brand</term>
 					 <listitem>
 						<para>
-							creates a new brand. Refer to <xref linkend="sect-Users_Guide-Creating_a_brand" /> for details of creating a brand.
+							creates a new brand. Refer to <xref linkend="sect-Publican-Users_Guide-Creating_a_brand" /> for details of creating a brand.
 						</para>
 
 					</listitem>
 
 				</varlistentry>
-				<varlistentry>
+				 <varlistentry>
 					<term>create_site</term>
 					 <listitem>
 						<para>
-							creates a documentation website. Refer to <xref linkend="sect-Users_Guide-Website" /> for details.
+							creates a documentation website. Refer to <xref linkend="chap-Publican-Users_Guide-Building_a_website_with_Publican" /> for details.
 						</para>
 
 					</listitem>
@@ -234,7 +236,7 @@
 					<term>help_config</term>
 					 <listitem>
 						<para>
-							displays help text for the configuration file contained in each book or brand, <filename>publican.cfg</filename>. Refer to <xref linkend="sect-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file" /> for more detail.
+							displays help text for the configuration file contained in each book or brand, <filename>publican.cfg</filename>. Refer to <xref linkend="sect-Publican-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file" /> for more detail.
 						</para>
 
 					</listitem>
@@ -244,7 +246,7 @@
 					<term>install_book</term>
 					 <listitem>
 						<para>
-							installs a document on a documentation website. Refer to <xref linkend="sect-Users_Guide-Website" /> for details.
+							installs a document on a documentation website. Refer to <xref linkend="chap-Publican-Users_Guide-Building_a_website_with_Publican" /> for details.
 						</para>
 
 					</listitem>
@@ -254,7 +256,7 @@
 					<term>install_brand</term>
 					 <listitem>
 						<para>
-							configures a brand for installation. Refer to <xref linkend="sect-Users_Guide-Installing_a_brand" /> for details of installing a brand.
+							configures a brand for installation. Refer to <xref linkend="sect-Publican-Users_Guide-Installing_a_brand" /> for details of installing a brand.
 						</para>
 
 					</listitem>
@@ -268,12 +270,13 @@
 						</para>
 
 					</listitem>
+
 				</varlistentry>
 				 <varlistentry>
 					<term>lang_stats --lang=<replaceable>language_code</replaceable></term>
 					 <listitem>
 						<para>
-							generates a translation report for the language specified by <replaceable>language_code</replaceable>. For every PO file generated by <application>Publican</application>, a table displays the number of untranslated strings in all <literal>msgid</literal>s; the number of fuzzy strings (counts the strings contained in <literal>msgid</literal>s whose content changed since the last POT generation) and the number of translated strings, coinciding after translation, with the the number of strings contained in the <literal>msgid</literal>. 
+							generates a translation report for the language specified by <replaceable>language_code</replaceable>. For every PO file generated by <application>Publican</application>, a table displays the number of untranslated strings in all <literal>msgid</literal>s; the number of fuzzy strings (counts the strings contained in <literal>msgid</literal>s whose content changed since the last POT generation) and the number of translated strings, coinciding after translation, with the the number of strings contained in the <literal>msgid</literal>.
 						</para>
 
 					</listitem>
@@ -293,7 +296,7 @@
 					<term>package</term>
 					 <listitem>
 						<para>
-							packages a book, article, set, or brand for shipping as an RPM package. Refer to <xref linkend="sect-Users_Guide-Packaging_a_book" /> and <xref linkend="sect-Users_Guide-Packaging_a_brand" /> for more detail.
+							packages a book, article, set, or brand for shipping as an RPM package. Refer to <xref linkend="sect-Publican-Users_Guide-Packaging_a_document" /> and <xref linkend="sect-Publican-Users_Guide-Packaging_a_brand" /> for more detail.
 						</para>
 
 					</listitem>
@@ -303,7 +306,7 @@
 					<term>print_banned</term>
 					 <listitem>
 						<para>
-							prints a list of DocBook tags banned by <application>Publican</application>. Refer to <xref linkend="appe-Users_Guide-Disallowed_elements_and_attributes" /> for a discussion of banned tags.
+							prints a list of DocBook tags banned by <application>Publican</application>. Refer to <xref linkend="appe-Publican-Users_Guide-Disallowed_elements_and_attributes" /> for a discussion of banned tags.
 						</para>
 
 					</listitem>
@@ -313,7 +316,7 @@
 					<term>print_known</term>
 					 <listitem>
 						<para>
-							prints a list of DocBook tags supported by <application>Publican</application>. <firstterm>Supported</firstterm> are those tags whose output has undergone at least cursory verification for quality when used in <application>Publican</application> — refer to <xref linkend="appe-Users_Guide-Disallowed_elements_and_attributes" />.
+							prints a list of DocBook tags supported by <application>Publican</application>. <firstterm>Supported</firstterm> are those tags whose output has undergone at least cursory verification for quality when used in <application>Publican</application> — refer to <xref linkend="appe-Publican-Users_Guide-Disallowed_elements_and_attributes" />.
 						</para>
 
 					</listitem>
@@ -353,7 +356,7 @@
 					<term>remove_book</term>
 					 <listitem>
 						<para>
-							removes a document from a documentation website. Refer to <xref linkend="sect-Users_Guide-Website" /> for details.
+							removes a document from a documentation website. Refer to <xref linkend="chap-Publican-Users_Guide-Building_a_website_with_Publican" /> for details.
 						</para>
 
 					</listitem>
@@ -378,12 +381,12 @@
 
 					</listitem>
 
-				 </varlistentry>
-				  <varlistentry>
+				</varlistentry>
+				 <varlistentry>
 					<term>update_po</term>
 					 <listitem>
 						<para>
-							updates the <firstterm>portable object</firstterm> (PO) files. Refer to <xref linkend="sect-Users_Guide-Preparing_a_document_for_translation" /> for more detail.
+							updates the <firstterm>portable object</firstterm> (PO) files. Refer to <xref linkend="sect-Publican-Users_Guide-Preparing_a_document_for_translation" /> for more detail.
 						</para>
 
 					</listitem>
@@ -393,7 +396,7 @@
 					<term>update_pot</term>
 					 <listitem>
 						<para>
-							updates the <firstterm>portable object template</firstterm> (POT) files. Refer to <xref linkend="sect-Users_Guide-Preparing_a_document_for_translation" /> for more detail.
+							updates the <firstterm>portable object template</firstterm> (POT) files. Refer to <xref linkend="sect-Publican-Users_Guide-Preparing_a_document_for_translation" /> for more detail.
 						</para>
 
 					</listitem>
@@ -403,13 +406,12 @@
 					<term>update_site</term>
 					 <listitem>
 						<para>
-							updates the templated content of the documentation website. Refer to <xref linkend="sect-Users_Guide-Website" /> for details.
+							updates the templated content of the documentation website. Refer to <xref linkend="chap-Publican-Users_Guide-Building_a_website_with_Publican" /> for details.
 						</para>
 
 					</listitem>
 
 				</varlistentry>
-
 
 			</variablelist>
 
@@ -419,3 +421,4 @@
 	
 
 </chapter>
+

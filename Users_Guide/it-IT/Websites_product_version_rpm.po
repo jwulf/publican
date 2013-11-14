@@ -28,8 +28,8 @@ msgstr "Le pagine di prodotto e le pagine di versione generate con <application>
 
 #. Tag: para
 #, no-c-format, fuzzy
-msgid "On a workstation, create a product or version page using the procedure described in <xref linkend=\"sect-Users_Guide-Website-structure-product-version-manual\" />."
-msgstr "Usando il procedimento della <xref linkend=\"sect-Users_Guide-Website-structure-product-version-manual\" />, su una macchina creare una pagina prodotto o di versione."
+msgid "On a workstation, create a product or version page using the procedure described in <xref linkend=\"sect-Publican-Users_Guide-Creating_installing_and_updating_product_pages_and_version_pages\" />."
+msgstr "Usando il procedimento della <xref linkend=\"sect-Publican-Users_Guide-Creating_installing_and_updating_product_pages_and_version_pages\" />, su una macchina creare una pagina prodotto o di versione."
 
 #. Tag: para
 #, no-c-format

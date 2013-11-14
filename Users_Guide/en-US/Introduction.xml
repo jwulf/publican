@@ -3,25 +3,19 @@
 <!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
 %BOOK_ENTITIES;
 ]>
-<preface conformance="190" id="pref-&BOOKNAME;-Introduction">
+<preface conformance="190" id="pref-Publican-Users_Guide-Introduction">
 	<title>Introduction</title>
 	 <indexterm>
 		<primary>Introduction 1</primary>
+
 	</indexterm>
 	 <para>
-		<indexterm>
-			<primary>Introduction 2</primary>
-		</indexterm>
-		 <application>Publican</application> <indexterm>
-			<primary>Introduction 3</primary>
-			<secondary>Introduction 3</secondary>
-		</indexterm>
-		is a tool for publishing material authored in DocBook XML. This guide explains how to create and build books and articles using <application>Publican</application>. It is not a general DocBook XML tutorial; refer to <citetitle>DocBook: The Definitive Guide</citetitle> by Norman Walsh and Leonard Muellner, available at <ulink url="&DOCBOOK-URL;" /> for more general help with DocBook XML.
+		<indexterm><primary>Introduction 2</primary></indexterm> <application>Publican</application> <indexterm><primary>Introduction 3</primary> <secondary>Introduction 3</secondary></indexterm> is a tool for publishing material authored in DocBook XML. This guide explains how to create and build books and articles using <application>Publican</application>. It is not a general DocBook XML tutorial; refer to <citetitle>DocBook: The Definitive Guide</citetitle> by Norman Walsh and Leonard Muellner, available at <ulink url="&DOCBOOK-URL;" /> for more general help with DocBook XML.
 	</para>
 	 <para>
 		<application>Publican</application> began life as an internal tool used by Red Hat's Documentation Group (now known as Engineering Content Services). On occasion, this legacy is visible.
 	</para>
-	 <formalpara conformance="191" id="form-Users_Guide-Introduction-Design">
+	 <formalpara conformance="191" id="form-Publican-Users_Guide-Introduction-Design">
 		<title>Design</title>
 		 <para>
 			<application>Publican</application> is a publication system, not just a DocBook processing tool. As well as ensuring your DocBook XML is valid, <application>Publican</application> works to ensure your XML is up to publishable standard.
@@ -32,16 +26,15 @@
 		The branding functionality allows you to create your own presentation rules and look, overriding many parts of the default style to meet your publishing needs. Choices executed in code, however, are not changeable.
 	</para>
 	 <para>
-		Entities, for example, can be validly defined in any XML file. However, to ensure the DTD declaration is present, valid and standardized, <application>Publican</application> rewrites the declaration in every XML file before it builds a book or article. Consequently, all entities declared in all XML files are lost. <application>Publican</application>, therefore, requires you define entities in the <filename><replaceable>Doc_Name</replaceable>.ent</filename> file (refer to <xref linkend="sect-Users_Guide-Files_in_the_book_directory-Doc_Name.ent" />).
+		Entities, for example, can be validly defined in any XML file. However, to ensure the DTD declaration is present, valid and standardized, <application>Publican</application> rewrites the declaration in every XML file before it builds a book or article. Consequently, all entities declared in all XML files are lost. <application>Publican</application>, therefore, requires you define entities in the <filename><replaceable>Doc_Name</replaceable>.ent</filename> file (refer to <xref linkend="sect-Publican-Users_Guide-Files_in_the_book_directory-Doc_Name.ent" />).
 	</para>
 	 <para>
 		As publishing workflows grow, unrestrained entity definition leads to entity duplication and other practices that cause maintenance difficulties. Consolidating entity definitions in a single, predictable place alleviates these maintenance issues and helps the automation of the build process stay robust.
 	</para>
 	 <para>
-		Entities also present an essentially insurmountable obstacle to quality translation (refer to <xref linkend="sect-Users_Guide-Entities_and_translation" />). Consequently, while we are not reducing the <filename><replaceable>Doc_Name</replaceable>.ent</filename> file's functionality, we are no longer considering requests to add functionality or features associated with entity use. 
+		Entities also present an essentially insurmountable obstacle to quality translation (refer to <xref linkend="sect-Publican-Users_Guide-Entities_and_translation" />). Consequently, while we are not reducing the <filename><replaceable>Doc_Name</replaceable>.ent</filename> file's functionality, we are no longer considering requests to add functionality or features associated with entity use.
 	</para>
-<!--                            https://bugzilla.redhat.com/show_bug.cgi?id=604255                            -->
-<!--                           example>
+	<!--                             https://bugzilla.redhat.com/show_bug.cgi?id=604255                             --><!--                            example>
   <title>"Hello world!" in C++</title>
   <programlisting language="C++"><![CDATA[
 #include <qpid/messaging/Connection.h>
@@ -111,7 +104,7 @@ efficient than acknowledging messages individually.</para>
 all senders and receivers managed by each session.</para>
     </callout>
   </calloutlist>
-</example                           --> <!--                           programlistingco>
+</example                            --> <!--                            programlistingco>
     <areaspec>
  <area id="index1" coords="2 65"/>
  <area id="index2" coords="3 11"/>
@@ -136,8 +129,7 @@ array.
      </para>
  </callout>
     </calloutlist>
-</programlistingco                           --> 
-<!--                          
+</programlistingco                            --><!--                           
 <para>
 <equation>
 <title>My MathML example</title>
@@ -151,104 +143,116 @@ array.
 </mml:math>
 </equation>
 </para>
-                          -->
-<procedure><title>An Example Procedure</title>
-<step>
-  <para>
-    A Step
-  </para>
-</step>
-<step>
-  <para>
-    Another Step
-  </para>
-  <substeps>
-    <step>
-      <para>
-        Substeps can be nested indefinitely deep.
-      </para>
-    </step>
-    <step>
-      <para>
-        Substeps can be nested indefinitely deep.
-      </para>
-    </step>
-    <step>
-      <para>
-        Substeps can be nested indefinitely deep.
-      </para>
-    </step>
-    <step>
-      <para>
-        Substeps can be nested indefinitely deep.
-      </para>
-    </step>
-    <step>
-      <para>
-        Substeps can be nested indefinitely deep.
-      </para>
-    </step>
-  </substeps>
-</step>
-<step>
-	<stepalternatives>
+                           -->
+	<procedure id="proc-Publican-Users_Guide-Introduction-An_Example_Procedure">
+		<title>An Example Procedure</title>
 		<step>
-		<para>
-		Try this-a-way
-		</para>
+			<para>
+				A Step
+			</para>
 		</step>
 		<step>
-		<para>
-		or that-a-way
-		</para>
+			<para>
+				Another Step
+			</para>
+			 <substeps>
+				<step>
+					<para>
+						Substeps can be nested indefinitely deep.
+					</para>
+
+				</step>
+				 <step>
+					<para>
+						Substeps can be nested indefinitely deep.
+					</para>
+
+				</step>
+				 <step>
+					<para>
+						Substeps can be nested indefinitely deep.
+					</para>
+
+				</step>
+				 <step>
+					<para>
+						Substeps can be nested indefinitely deep.
+					</para>
+
+				</step>
+				 <step>
+					<para>
+						Substeps can be nested indefinitely deep.
+					</para>
+
+				</step>
+
+			</substeps>
 		</step>
-	</stepalternatives>
-</step>
-<step>
-  <para>
-    A Final Step
-  </para>
-</step>
-</procedure>
+		<step>
+			<stepalternatives>
+				<step>
+					<para>
+						Try this-a-way
+					</para>
 
-<variablelist><title>Font Filename Extensions</title>
-<varlistentry><term><filename>TTF</filename></term>
-<listitem>
-<para>
-TrueType fonts.
-</para>
-</listitem>
-</varlistentry>
-<varlistentry><term><filename>PFA</filename></term>
-              <term><filename>PFB</filename></term>
-<listitem>
-<para>
-PostScript fonts.  <filename>PFA</filename> files are common on 
-<acronym>UNIX</acronym> systems, <filename>PFB</filename> files
-are more common on Windows systems.
-</para>
-</listitem>
-</varlistentry>
-</variablelist>
+				</step>
+				 <step>
+					<para>
+						or that-a-way
+					</para>
 
-<variablelist><title>Font Filename Extensions</title>
-<varlistentry><term>TTF</term>
-<listitem>
-<para>
-TrueType fonts.
-</para>
-</listitem>
-</varlistentry>
-<varlistentry><term>PFA</term>
-              <term>PFB</term>
-<listitem>
-<para>
-PostScript fonts.  <filename>PFA</filename> files are common on 
-<acronym>UNIX</acronym> systems, <filename>PFB</filename> files
-are more common on Windows systems.
-</para>
-</listitem>
-</varlistentry>
-</variablelist>
+				</step>
+
+			</stepalternatives>
+		</step>
+		<step>
+			<para>
+				A Final Step
+			</para>
+		</step>
+	</procedure>
+	
+	 <variablelist id="vari-Publican-Users_Guide-Introduction-Font_Filename_Extensions">
+		<title>Font Filename Extensions</title>
+		<varlistentry>
+			<term><filename>TTF</filename></term>
+			<listitem>
+				<para>
+					TrueType fonts.
+				</para>
+			</listitem>
+		</varlistentry>
+		<varlistentry>
+			<term><filename>PFA</filename></term>
+			 <term><filename>PFB</filename></term>
+			<listitem>
+				<para>
+					PostScript fonts. <filename>PFA</filename> files are common on <acronym>UNIX</acronym> systems, <filename>PFB</filename> files are more common on Windows systems.
+				</para>
+			</listitem>
+		</varlistentry>
+	</variablelist>
+	 <variablelist id="vari-Publican-Users_Guide-Introduction-Font_Filename_Extensions-2">
+		<title>Font Filename Extensions</title>
+		<varlistentry>
+			<term>TTF</term>
+			<listitem>
+				<para>
+					TrueType fonts.
+				</para>
+			</listitem>
+		</varlistentry>
+		<varlistentry>
+			<term>PFA</term>
+			 <term>PFB</term>
+			<listitem>
+				<para>
+					PostScript fonts. <filename>PFA</filename> files are common on <acronym>UNIX</acronym> systems, <filename>PFB</filename> files are more common on Windows systems.
+				</para>
+			</listitem>
+		</varlistentry>
+	</variablelist>
 
 </preface>
+

@@ -3,9 +3,9 @@
 <!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
 %BOOK_ENTITIES;
 ]>
-<chapter conformance="181" id="chap-Users_Guide-Installing_Publican">
+<chapter conformance="181" id="chap-Publican-Users_Guide-Installing_Publican">
 	<title>Installing Publican</title>
-	 <section conformance="182" id="sect-Users_Guide-Installing_Publican-Installing_Publican_on_Linux">
+	 <section conformance="182" id="sect-Publican-Users_Guide-Installing_Publican-Linux_operating_systems">
 		<title>Linux operating systems</title>
 		 <important>
 			<title>Important — Availability in repositories</title>
@@ -14,7 +14,7 @@
 			</para>
 
 		</important>
-		 <section conformance="183" id="sect-Users_Guide-Linux_operating_systems-Fedora">
+		 <section conformance="183" id="sect-Publican-Users_Guide-Linux_operating_systems-Fedora">
 			<title>Fedora</title>
 			 <procedure>
 				<step>
@@ -34,8 +34,7 @@
 						Run the following command to install the <package>publican</package> package and the <package>publican-doc</package> documentation package:
 					</para>
 					 
-<screen><prompt>$</prompt> <command> yum install publican publican-doc</command>
-</screen>
+<screen><prompt>$</prompt> <command> yum install publican publican-doc</command></screen>
 
 				</step>
 
@@ -45,15 +44,14 @@
 				Several brand packages are available for use with <application>Publican</application>. Run the following command as the root user to install packages for building branded books:
 			</para>
 			 
-<screen><prompt>$</prompt> <command> yum install publican-<replaceable>brand</replaceable></command>
-</screen>
+<screen><prompt>$</prompt> <command> yum install publican-<replaceable>brand</replaceable></command></screen>
 			 <para>
-				Replace <replaceable>brand</replaceable> with, for example, <literal>redhat</literal>, <literal>fedora</literal>, <literal>jboss</literal>, <literal>ovirt</literal>, or <literal>gimp</literal>. Refer to <xref linkend="chap-Users_Guide-Branding" /> for more information on branding.
+				Replace <replaceable>brand</replaceable> with, for example, <literal>redhat</literal>, <literal>fedora</literal>, <literal>jboss</literal>, <literal>ovirt</literal>, or <literal>gimp</literal>. Refer to <xref linkend="chap-Publican-Users_Guide-Branding" /> for more information on branding.
 			</para>
 
 		</section>
 		
-		 <section conformance="184" id="sect-Users_Guide-Linux_operating_systems-Red_Hat_Enterprise_Linux_5">
+		 <section conformance="184" id="sect-Publican-Users_Guide-Linux_operating_systems-Red_Hat_Enterprise_Linux_5">
 			<title>Red Hat Enterprise Linux 5</title>
 			 <important>
 				<title>Important — Unsupported software</title>
@@ -87,8 +85,7 @@
 						Run the following command to install the <package>publican</package> package and the <package>publican-doc</package> documentation package:
 					</para>
 					 
-<screen><prompt>$</prompt> <command> yum install publican publican-doc</command>
-</screen>
+<screen><prompt>$</prompt> <command> yum install publican publican-doc</command></screen>
 
 				</step>
 
@@ -98,23 +95,15 @@
 				Several brand packages are available for use with <application>Publican</application>. Run the following command as the root user to install packages for building branded books:
 			</para>
 			 
-<screen><prompt>$</prompt> <command> yum install publican-<replaceable>brand</replaceable></command>
-</screen>
+<screen><prompt>$</prompt> <command> yum install publican-<replaceable>brand</replaceable></command></screen>
 			 <para>
-				Replace <replaceable>brand</replaceable> with, for example, <literal>redhat</literal>, <literal>fedora</literal>, <literal>jboss</literal>, <literal>ovirt</literal>, or <literal>gimp</literal>. Refer to <xref linkend="chap-Users_Guide-Branding" /> for more information on branding.
+				Replace <replaceable>brand</replaceable> with, for example, <literal>redhat</literal>, <literal>fedora</literal>, <literal>jboss</literal>, <literal>ovirt</literal>, or <literal>gimp</literal>. Refer to <xref linkend="chap-Publican-Users_Guide-Branding" /> for more information on branding.
 			</para>
 
 		</section>
 		
-		 <section conformance="185" id="sect-Users_Guide-Linux_operating_systems-Ubuntu">
+		 <section conformance="185" id="sect-Publican-Users_Guide-Linux_operating_systems-Ubuntu">
 			<title>Ubuntu</title>
-			 <important>
-				<title> Important — New in 10.4 "Lucid Lynx"</title>
-				 <para>
-					<application>Publican</application> is new in Ubuntu 10.4 "Lucid Lynx".
-				</para>
-
-			</important>
 			 <procedure>
 				<step>
 					<para>
@@ -126,9 +115,8 @@
 					<para>
 						Run the following command to install the <package>publican</package> package:
 					</para>
-					
-<screen><prompt>$</prompt> <command>sudo apt-get install publican</command>
-</screen>
+					 
+<screen><prompt>$</prompt> <command>sudo apt-get install publican</command></screen>
 
 				</step>
 
@@ -137,90 +125,12 @@
 
 		</section>
 		
-		 <section conformance="186" id="sect-Users_Guide-Linux_operating_systems-Debian">
-			<title>Debian</title>
-			 <warning>
-				<title> Warning — Complete this procedure </title>
-				 <para>
-					Complete every step of this procedure. If you do not undo the changes that you make to the <filename>/etc/apt/sources.list</filename> file as described, your system might become unstable.
-				</para>
+		 <xi:include href="Installing_Publican_Debian.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
+		 <xi:include href="Installing_Publican_OpenSuse.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
 
-			</warning>
-			 <para>
-				<application>Publican</application> is not available in the current stable version of Debian (version 5.0, "Lenny"), but is available in the current testing version ("Squeeze"). To install <application>Publican</application> on a computer that runs Debian, temporarily enable access to the <literal>squeeze</literal> repository. When you enable access to this repository, you allow your computer to install newer software and newer versions of existing software than what is available in the current stable version of Debian. However, not all of the software available in the testing repository has completed quality assurance testing yet. If you do not disable access to this repository after you install <application>Publican</application>, the next time that your system updates, it will replace software packages on your system with newer but possibly untested versions of those packages that it downloads from the testing repository.
-			</para>
-			 <procedure>
-				<step>
-					<para>
-						Open a terminal.
-					</para>
-
-				</step>
-				 <step>
-					<para>
-						Open your <filename>/etc/apt/sources.list</filename> file in a text editor. For example, to edit the file in <application>gedit</application> run:
-					</para>
-					 
-<screen><prompt>$</prompt> <command>sudo gedit /etc/apt/sources.list</command>
-</screen>
-
-				</step>
-				 <step>
-					<para>
-						Add the following line to the end of the file:
-					</para>
-					 
-<programlisting>deb http://ftp.debian.org/debian/ squeeze main
-
-</programlisting>
-
-				</step>
-				 <step>
-					<para>
-						Save the file and close the text editor.
-					</para>
-
-				</step>
-				 <step>
-					<para>
-						Run the following command to update the list of packages available to your computer:
-					</para>
-					 
-<screen><prompt>$</prompt> <command>sudo apt-get update</command>
-</screen>
-
-				</step>
-				 <step>
-					<para>
-						Run the following command to install the <package>publican</package> package:
-					</para>
-					 
-<screen><prompt>$</prompt> <command>sudo apt-get install publican</command>
-</screen>
-
-				</step>
-				 <step>
-					<para>
-						Open your <filename>/etc/apt/sources.list</filename> file again, and delete the extra line that you added in this procedure.
-					</para>
-
-				</step>
-
-			</procedure>
-			
-			 <para>
-				Note that until the release of "Squeeze" as the stable version of Debian, you must manually enable and disable access to the testing repository as described in this procedure whenever a new version of <application>Publican</application> becomes available in the testing repository. You can find up-to-date information about the status of <application>Publican</application> for Debian at <ulink url="http://packages.debian.org/squeeze/publican" />, including the version number of <application>Publican</application> available in the repository (2.1 at the time of writing).
-			</para>
-			 <para>
-				When "Squeeze" becomes the stable version of Debian, you will not need to enable or disable access to extra repositories to install <application>Publican</application> on systems that run that version of the operating system.
-			</para>
-
-		</section>
-		
-		<xi:include href="Installing_Publican_OpenSuse.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
 	</section>
 	
-	 <section conformance="187" id="sect-Users_Guide-Installing_Publican-Windows_operating_systems">
+	 <section conformance="187" id="sect-Publican-Users_Guide-Installing_Publican-Windows_operating_systems">
 		<title>Windows operating systems</title>
 		 <procedure>
 			<step>
@@ -252,7 +162,7 @@
 			</step>
 			 <step>
 				<para>
-					The installer offers to install several components: <application>Publican</application> itself (labeled <literal>Main</literal> in the installer window), a number of <firstterm>brands</firstterm> (including <literal>RedHat</literal>, <literal>JBoss</literal>, and <literal>fedora</literal>), and two DocBook components (the DocBook <firstterm>Data Type Definition</firstterm> (DTD) and DocBook <firstterm>Extensible Stylesheet Language</firstterm> (XSL) stylesheets). The three brands are grouped under the collapsible heading <literal>Brands</literal> and the DocBook components are grouped under the collapsible heading <literal>DocBook</literal> in the installer window. Refer to <xref linkend="chap-Users_Guide-Branding" /> for an explanation of brands in <application>Publican</application>. <application>Publican</application> uses the DTD and the XSL stylesheets to render XML documents in other presentation formats (such as HTML and PDF). If you do not install these components, <application>Publican</application> must download this data from the Internet every time it processes a document, which creates lengthy delays.
+					The installer offers to install several components: <application>Publican</application> itself (labeled <literal>Main</literal> in the installer window), a number of <firstterm>brands</firstterm> (including <literal>RedHat</literal>, <literal>JBoss</literal>, and <literal>fedora</literal>), and two DocBook components (the DocBook <firstterm>Data Type Definition</firstterm> (DTD) and DocBook <firstterm>Extensible Stylesheet Language</firstterm> (XSL) stylesheets). The three brands are grouped under the collapsible heading <literal>Brands</literal> and the DocBook components are grouped under the collapsible heading <literal>DocBook</literal> in the installer window. Refer to <xref linkend="chap-Publican-Users_Guide-Branding" /> for an explanation of brands in <application>Publican</application>. <application>Publican</application> uses the DTD and the XSL stylesheets to render XML documents in other presentation formats (such as HTML and PDF). If you do not install these components, <application>Publican</application> must download this data from the Internet every time it processes a document, which creates lengthy delays.
 				</para>
 				 <para>
 					All components are selected by default. Click the checkboxes to deselect any components that you do <emphasis>not</emphasis> require and click <guibutton>Next</guibutton> to continue.
@@ -289,136 +199,181 @@
 
 	</section>
 	
-	<section conformance="235" id="sect-Users_Guide-Installing_Publican-Installing_Publican_on_OSX_Lion">
+	 <section conformance="235" id="sect-Publican-Users_Guide-Installing_Publican-OSX_Lion">
 		<title>OSX Lion</title>
-		<procedure>
+		 <procedure>
 			<step>
 				<para>
 					Install <application>Xcode</application> from Mac App store.
 				</para>
-				<note>
+				 <note>
 					<para>
 						<application>Xcode</application> is about 4GB. Be prepared to wait. It has things you need, though.
 					</para>
+
 				</note>
+
 			</step>
-			<step>
+			 <step>
 				<para>
 					Install <application>Macports</application> from <ulink url="http://guide.macports.org/chunked/installing.macports.html" />. Everything you install with it goes into <filename>/opt/local</filename>, away from your normal OS files.
 				</para>
+
 			</step>
-			<step>
+			 <step>
 				<para>
 					Open a terminal.
 				</para>
+
 			</step>
-			<step>
+			 <step>
 				<para>
 					Install dependencies for publican, which are available as ports:
 				</para>
-					<screen><prompt>$</prompt><command>sudo port install</command> <option>docbook-xml docbook-xsl docbook-sgml-4.2 perl5 bash-completion p5-file-pushd p5-config-simple p5-file-find-rule p5-file-slurp p5-class-trigger p5-time-hires p5-list-moreutils p5-ipc-run3 p5-class-accessor p5-test-perl-critic p5-xml-libxslt p5-locale-gettext p5-image-size p5-file-copy-recursive p5-datetime p5-archive-zip p5-timedate p5-html-format p5-dbd-sqlite p5-xml-simple p5-devel-cover p5-test-pod p5-test-pod-coverage p5-template-toolkit</option> 
-					</screen>
+				 
+<screen><prompt>$</prompt><command>sudo port install</command> <option>docbook-xml docbook-xsl docbook-sgml-4.2 perl5 bash-completion p5-file-pushd p5-config-simple p5-file-find-rule p5-file-slurp p5-class-trigger p5-time-hires p5-list-moreutils p5-ipc-run3 p5-class-accessor p5-test-perl-critic p5-xml-libxslt p5-locale-gettext p5-image-size p5-file-copy-recursive p5-datetime p5-archive-zip p5-timedate p5-html-format p5-dbd-sqlite p5-xml-simple p5-devel-cover p5-test-pod p5-test-pod-coverage p5-template-toolkit</option> 
+</screen>
+
 			</step>
-			<step>
+			 <step>
 				<para>
 					Install CPAN modules for dependencies which can't be satisfied with ports. Note: this step will generate lots of messages, including warnings. Don't worry about them.
 				</para>
-					<screen><prompt>$</prompt><command>sudo cpan</command><option>Locale::Maketext::Gettext Locale::PO DateTime::Format::DateParse Syntax::Highlight::Engine::Kate XML::TreeBuilder File::Inplace String::Similarity HTML::FormatText::WithLinks::AndTables</option></screen> 
+				 
+<screen><prompt>$</prompt><command>sudo cpan</command><option>Locale::Maketext::Gettext Locale::PO DateTime::Format::DateParse Syntax::Highlight::Engine::Kate XML::TreeBuilder File::Inplace String::Similarity HTML::FormatText::WithLinks::AndTables</option></screen>
+
 			</step>
-			<step>
+			 <step>
 				<para>
-					Install FOP if you want PDFs to work: 
+					Install FOP if you want PDFs to work:
 				</para>
-					<screen><prompt>$</prompt> <command>sudo port install</command> <option>fop</option></screen>
-					<screen><prompt>$</prompt> <command>echo</command> <option>"FOP_OPTS='-Xms50m -Xmx700m'" &gt; ~/.foprc</option></screen>
+				 
+<screen><prompt>$</prompt> <command>sudo port install</command> <option>fop</option></screen>
+				 
+<screen><prompt>$</prompt> <command>echo</command> <option>"FOP_OPTS='-Xms50m -Xmx700m'" &gt; ~/.foprc</option></screen>
+
 			</step>
-			<step>
+			 <step>
 				<para>
 					Check out Publican Main branch. This command should be run from your user home directory, for instance <filename>/Users/yourusername</filename>
 				</para>
-					<screen><prompt>$</prompt> <command>git clone</command> <option>git://git.fedorahosted.org/publican.git</option></screen>
+				 
+<screen><prompt>$</prompt> <command>git clone</command> <option>git://git.fedorahosted.org/publican.git</option></screen>
+
 			</step>
-			<step>
+			 <step>
 				<para>
 					Change directories:
 				</para>
-					<screen><prompt>$</prompt> <command>cd</command> <option>publican/publican</option></screen>
+				 
+<screen><prompt>$</prompt> <command>cd</command> <option>publican/publican</option></screen>
+
 			</step>
-			<step>
+			 <step>
 				<para>
 					This directory should contain a file named <filename>Build.pl</filename>. Verify that you are in the correct directory, then run the following command. Ignore all the messages you get.
 				</para>
-					<screen><prompt>$</prompt> <command>perl ./Build.PL</command></screen>
-					<screen><prompt>$</prompt> <command>./Build</command></screen>
+				 
+<screen><prompt>$</prompt> <command>perl ./Build.PL</command></screen>
+				 
+<screen><prompt>$</prompt> <command>./Build</command></screen>
+
 			</step>
-			<step>
+			 <step>
 				<para>
 					Run the following command to install <application>Publican</application> and put all of its bits into <filename>/opt/local</filename>:
 				</para>
-					<screen><prompt>$</prompt> <command>sudo ./Build install</command></screen>
+				 
+<screen><prompt>$</prompt> <command>sudo ./Build install</command></screen>
+
 			</step>
+
 		</procedure>
-		<procedure>
+		
+		 <procedure id="proc-Publican-Users_Guide-OSX_Lion-Create_and_build_a_book">
 			<title>Create and build a book</title>
-			<step>
-				<screen><prompt>$</prompt> <command>publican create</command> <option>--name=testbook</option></screen>
+			 <step>
+				
+<screen><prompt>$</prompt> <command>publican create</command> <option>--name=testbook</option></screen>
+
 			</step>
-			<step>
-				<screen><prompt>$</prompt> <command>cd testbook</command></screen>
+			 <step>
+				
+<screen><prompt>$</prompt> <command>cd testbook</command></screen>
+
 			</step>
-			<step>
-				<screen><prompt>$</prompt> <command>publican build</command> <option>--formats=html --langs=en-US</option></screen>
+			 <step>
+				
+<screen><prompt>$</prompt> <command>publican build</command> <option>--formats=html --langs=en-US</option></screen>
+
 			</step>
-			<step>
+			 <step>
 				<para>
 					Open the <filename>tmp/en-US/html/index.html</filename> file in a browser to prove that it built correctly.
 				</para>
+
 			</step>
+
 		</procedure>
-		<procedure>
+		
+		 <procedure id="proc-Publican-Users_Guide-OSX_Lion-Install_a_brand">
 			<title>Install a brand</title>
-			<step>
+			 <step>
 				<para>
 					Fix the permissions of the Commons Brand. You have to do this only once. This is a bug that will be addressed eventually.
 				</para>
-					<screen><prompt>$</prompt> <command>find /opt/local/share/publican</command> <option>-type f</option> |<command>xargs sudo chmod 644</command></screen>
+				 
+<screen><prompt>$</prompt> <command>find /opt/local/share/publican</command> <option>-type f</option> |<command>xargs sudo chmod 644</command></screen>
+
 			</step>
-			<step>
+			 <step>
 				<para>
 					Either check out the SVN for your brand, or get a pre-built brand from a friend.
 				</para>
-				<substeps role="alternatives">
+				 <substeps role="alternatives">
 					<step>
 						<para>
 							The SVN location for the brands supplied by Red Hat is <ulink url="http://svn.fedorahosted.org/svn/publican" />
 						</para>
+
 					</step>
-					<step>
+					 <step>
 						<para>
 							If you use a pre-built brand, extract it as necessary.
 						</para>
+
 					</step>
+
 				</substeps>
+
 			</step>
-			<step>
+			 <step>
 				<para>
 					If you got the brand from SVN, build it.
 				</para>
-					<screen><prompt>$</prompt> <command>cd publican/publican-jboss</command></screen>
-					<screen><prompt>$</prompt> <command>publican build</command> <option>--formats=xml --langs=all --publish</option></screen>
+				 
+<screen><prompt>$</prompt> <command>cd publican/publican-jboss</command></screen>
+				 
+<screen><prompt>$</prompt> <command>publican build</command> <option>--formats=xml --langs=all --publish</option></screen>
+
 			</step>
-			<step>
+			 <step>
 				<para>
 					Install the brand.
 				</para>
-					<screen><prompt>$</prompt> <command>sudo publican install_brand</command> <option>--path=/opt/local/share/publican/Common_Content</option></screen>
-				<para>
+				 
+<screen><prompt>$</prompt> <command>sudo publican install_brand</command> <option>--path=/opt/local/share/publican/Common_Content</option></screen>
+				 <para>
 					You can now use the brand in your books by editing your book's <filename>publican.cfg</filename> file or specifying the <option>--brand</option> option when creating your book.
 				</para>
+
 			</step>
+
 		</procedure>
+		
+
 	</section>
-
-
+	
 
 </chapter>
+

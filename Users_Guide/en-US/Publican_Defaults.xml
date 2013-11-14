@@ -3,62 +3,88 @@
 <!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
 %BOOK_ENTITIES;
 ]>
-<chapter conformance="207" id="chap-Users_Guide-Publican_Defaults">
+<chapter conformance="207" id="chap-Publican-Users_Guide-Publican_defaults">
 	<title>Publican defaults</title>
+	 <para>
+		Users can set their own default values for <application>Publican</application> in <filename>~/.publican.cfg</filename>. Currently, <application>Publican</application> supports the following values:
+	</para>
+	 <itemizedlist>
+		<listitem>
+			<para>
+				firstname
+			</para>
 
-	<para>Users can set their own default values for <application>Publican</application> in <filename>~/.publican.cfg</filename>. Currently, <application>Publican</application> supports the following values:</para>
+		</listitem>
+		 <listitem>
+			<para>
+				surname
+			</para>
 
-	<itemizedlist>
-		<listitem>
-			<para>firstname</para>
 		</listitem>
-		<listitem>
-		  <para>surname</para>
+		 <listitem>
+			<para>
+				email
+			</para>
+
 		</listitem>
-		<listitem>
-		  <para>email</para>
+		 <listitem>
+			<para>
+				formats
+			</para>
+
 		</listitem>
-		<listitem>
-		  <para>formats</para>
+		 <listitem>
+			<para>
+				lang
+			</para>
+
 		</listitem>
-		<listitem>
-		  <para>lang</para>
+		 <listitem>
+			<para>
+				langs
+			</para>
+
 		</listitem>
-		<listitem>
-		  <para>langs</para>
-		</listitem>
+
 	</itemizedlist>
+	 <note>
+		<para>
+			This file is completely different to <filename>publican.cfg</filename> that is used to build a book. It does not accept the same parameters.
+		</para>
 
-	<note>
-		<para>This file is completely different to <filename>publican.cfg</filename> that is used to build a book. It does not accept the same parameters.</para>
 	</note>
-
-	<section conformance="208" id="chap-Users_Guide-Publican_Defaults-Examples">
+	 <section conformance="208" id="sect-Publican-Users_Guide-Publican_defaults-Publican_default_examples">
 		<title>Publican default examples</title>
-			<para>Users can set <replaceable>formats</replaceable>, <replaceable>lang</replaceable>, and <replaceable>langs</replaceable> to their standard build parameters.</para>
-
-			<example>
-				<title>Setting formats and lang</title>
+		 <para>
+			Users can set <replaceable>formats</replaceable>, <replaceable>lang</replaceable>, and <replaceable>langs</replaceable> to their standard build parameters.
+		</para>
+		 <example id="exam-Publican-Users_Guide-Publican_default_examples-Setting_formats_and_lang">
+			<title>Setting formats and lang</title>
+			
 <screen><prompt>$</prompt> <command>echo 'formats: "html,html-single,pdf,txt"' &gt;&gt; ~/.publican.cfg</command>
 <prompt>$</prompt> <command>echo 'langs: "en-US"' &gt;&gt; ~/.publican.cfg</command>
 <prompt>$</prompt> <command>publican build</command>
 <computeroutput>Setting up en-US</computeroutput>
 <computeroutput>[...]</computeroutput>
-<computeroutput>	Finished txt</computeroutput></screen> 
-			</example>
+<computeroutput> Finished txt</computeroutput></screen>
 
-		<para><application>Publican</application> 3.0 allows you to add a revision history entry from the command line. You can set your user details in <filename>~/.publican.cfg</filename>.</para>
-
-		<example>
+		</example>
+		 <para>
+			<application>Publican</application> 3.0 allows you to add a revision history entry from the command line. You can set your user details in <filename>~/.publican.cfg</filename>.
+		</para>
+		 <example id="exam-Publican-Users_Guide-Publican_default_examples-Setting_user_details">
 			<title>Setting user details</title>
+			
 <screen><prompt>$</prompt> <command>echo 'firstname: "Dude"' &gt;&gt; ~/.publican.cfg</command> 
 <prompt>$</prompt> <command>echo 'surname: "McPants"' &gt;&gt; ~/.publican.cfg</command> 
 <prompt>$</prompt> <command>echo 'email: "dude.mcpants@awesome.com"' &gt;&gt; ~/.publican.cfg</command> 
 <prompt>$</prompt> <command>publican add_revision --member "Updated examples in chapter 2." \</command>
 <command>--member "Removed obsolete example in sect 4.1"</command></screen>
+
 		</example>
 
 	</section>
-
+	
 
 </chapter>
+

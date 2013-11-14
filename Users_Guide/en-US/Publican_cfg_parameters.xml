@@ -3,7 +3,7 @@
 <!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
 %BOOK_ENTITIES;
 ]>
-<appendix conformance="209" id="appe-Users_Guide-publican.cfg_parameters">
+<appendix conformance="209" id="appe-Publican-Users_Guide-publican.cfg_parameters">
 	<title>publican.cfg parameters</title>
 	 <para>
 		Every book, article, document set, or brand has a <filename>publican.cfg</filename> file in its root directory. Parameters that can be set in the <filename>publican.cfg</filename> file are:
@@ -109,9 +109,9 @@
 			</listitem>
 
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term><parameter>bridgehead_in_toc</parameter></term>
-			  <listitem>
+			 <listitem>
 				<para>
 					whether <sgmltag>bridgehead</sgmltag>s should be included in tables of contents. (Default: <literal>0</literal> — <sgmltag>bridgehead</sgmltag>s are not included in tables of contents).
 				</para>
@@ -211,7 +211,7 @@
 		</varlistentry>
 		 <varlistentry>
 			<term><parameter>def_lang</parameter></term>
-			  <listitem>
+			 <listitem>
 				<para>
 					the default language for a <application>Publican</application>-managed website. Tables of contents for languages other than the default language will link to documents in the default language when translations are not available. (Default: <literal>en-US</literal> — American English)
 				</para>
@@ -243,7 +243,7 @@
 			<term><parameter>dt_requires</parameter></term>
 			 <listitem>
 				<para>
-				  a package that the desktop package requires, for example, a documentation menu package. Refer to <xref linkend="desktop_menus" />.
+					a package that the desktop package requires, for example, a documentation menu package. Refer to <xref linkend="sect-Publican-Users_Guide-Desktop_menu_entries_for_documents" />.
 				</para>
 
 			</listitem>
@@ -265,12 +265,15 @@
 				<para>
 					Override Type for DocType. Must be a complete string.
 				</para>
-				<note>
+				 <note>
 					<para>
 						This parameter is only permitted in a brand.
 					</para>
+
 				</note>
+
 			</listitem>
+
 		</varlistentry>
 		 <varlistentry>
 			<term><parameter>dtd_uri</parameter></term>
@@ -278,12 +281,15 @@
 				<para>
 					Override URI for DocType. Must be a complete string.
 				</para>
-				<note>
+				 <note>
 					<para>
 						This parameter is only permitted in a brand.
 					</para>
+
 				</note>
+
 			</listitem>
+
 		</varlistentry>
 		 <varlistentry>
 			<term><parameter>ec_id</parameter></term>
@@ -323,6 +329,7 @@
 				</para>
 
 			</listitem>
+
 		</varlistentry>
 		 <varlistentry>
 			<term><parameter>generate_section_toc_level</parameter></term>
@@ -352,6 +359,7 @@
 				</para>
 
 			</listitem>
+
 		</varlistentry>
 		 <varlistentry>
 			<term><parameter>info_file</parameter></term>
@@ -379,10 +387,12 @@
 				<para>
 					the name of the XML file in your document that contains the root XML node <sgmltag>&lt;article&gt;</sgmltag>, <sgmltag>&lt;book&gt;</sgmltag>, or <sgmltag>&lt;set&gt;</sgmltag>, and the name of the corresponding <filename>.ent</filename> file that contains the document's entities. For example, if you set <literal>mainfile: master</literal>, <application>Publican</application> looks for the root XML node in <filename>master.xml</filename> and the document entities in <filename>master.ent</filename>.
 				</para>
-				<para>
+				 <para>
 					If <parameter>mainfile</parameter> is not set, <application>Publican</application> looks for the root XML node in a file that matches the <sgmltag>&lt;title&gt;</sgmltag> of the document set in the <filename>Article_Info.xml</filename>, <filename>Book_Info.xml</filename>, or <filename>Set_Info.xml</filename> file, and looks for the document entities in a file with a corresponding name.
-				</para> 
+				</para>
+
 			</listitem>
+
 		</varlistentry>
 		 <varlistentry>
 			<term><parameter>max_image_width</parameter></term>
@@ -395,18 +405,17 @@
 			</listitem>
 
 		</varlistentry>
-		<varlistentry>
-		<term><parameter>menu_category</parameter></term>
-				<listitem>
-					<para>
-					  the desktop menu category (as defined by a corresponding <filename>.menu</filename> file) in which a document should appear when installed from a desktop RPM package. Refer to <xref linkend="desktop_menus" />.
-					</para>
+		 <varlistentry>
+			<term><parameter>menu_category</parameter></term>
+			 <listitem>
+				<para>
+					the desktop menu category (as defined by a corresponding <filename>.menu</filename> file) in which a document should appear when installed from a desktop RPM package. Refer to <xref linkend="sect-Publican-Users_Guide-Desktop_menu_entries_for_documents" />.
+				</para>
 
-				</listitem>
+			</listitem>
 
-			</varlistentry>
-		<varlistentry>
-
+		</varlistentry>
+		 <varlistentry>
 			<term><parameter>os_ver</parameter></term>
 			 <listitem>
 				<para>
@@ -556,37 +565,36 @@
 			</listitem>
 
 		</varlistentry>
-		
-		<varlistentry>
+		 <varlistentry>
 			<term><parameter>web_formats</parameter></term>
-			  <listitem>
+			 <listitem>
 				<para>
-					a comma-separated list of formats to include in the web RPM package. Refer to <xref linkend="sect-Users_Guide-Packaging_a_book-The_publican_package_command" />.
+					a comma-separated list of formats to include in the web RPM package. Refer to <xref linkend="sect-Publican-Users_Guide-Packaging_a_document-The_publican_package_command" />.
 				</para>
 
 			</listitem>
 
 		</varlistentry>
-		
-		<varlistentry>
+		 <varlistentry>
 			<term><parameter>web_home</parameter></term>
-			  <listitem>
+			 <listitem>
 				<para>
-					specifies that the document is the home page of a documentation website, not a standard document. 
+					specifies that the document is the home page of a documentation website, not a standard document.
 				</para>
-				<important>
-						<title>Important — <literal>web_home</literal> is deprecated</title>
-						<para>
-							In <application>Publican</application>&nbsp;2.2, <literal>web_home</literal> is replaced by <literal>web_type: home</literal>. Support for <literal>web_home</literal> will be removed in a future version of <application>Publican</application>.
-						</para>
+				 <important>
+					<title>Important — <literal>web_home</literal> is deprecated</title>
+					 <para>
+						In <application>Publican</application>&nbsp;2.2, <literal>web_home</literal> is replaced by <literal>web_type: home</literal>. Support for <literal>web_home</literal> will be removed in a future version of <application>Publican</application>.
+					</para>
+
 				</important>
 
 			</listitem>
 
 		</varlistentry>
-		  <varlistentry>
+		 <varlistentry>
 			<term><parameter>web_name_label</parameter></term>
-			  <listitem>
+			 <listitem>
 				<para>
 					overrides the book name as it appears on the menu of a <application>Publican</application>-managed website.
 				</para>
@@ -606,7 +614,7 @@
 		</varlistentry>
 		 <varlistentry>
 			<term><parameter>web_product_label</parameter></term>
-			  <listitem>
+			 <listitem>
 				<para>
 					overrides the product name as it appears on the menu of a <application>Publican</application>-managed website.
 				</para>
@@ -614,32 +622,29 @@
 			</listitem>
 
 		</varlistentry>
-		
-		<varlistentry>
+		 <varlistentry>
 			<term><parameter>web_type</parameter></term>
-			  <listitem>
+			 <listitem>
 				<para>
-					specifies that the document is descriptive content for a <application>Publican</application>-managed website rather than product documentation. This content includes the home page of the website (<literal>web_type:&nbsp;home</literal>), product description pages  (<literal>web_type:&nbsp;product</literal>), and version description pages  (<literal>web_type:&nbsp;version</literal>). Refer to <xref linkend="sect-Users_Guide-Website" />.
+					specifies that the document is descriptive content for a <application>Publican</application>-managed website rather than product documentation. This content includes the home page of the website (<literal>web_type:&nbsp;home</literal>), product description pages (<literal>web_type:&nbsp;product</literal>), and version description pages (<literal>web_type:&nbsp;version</literal>). Refer to <xref linkend="chap-Publican-Users_Guide-Building_a_website_with_Publican" />.
 				</para>
 
 			</listitem>
 
 		</varlistentry>
-		
-		
-		  <varlistentry>
+		 <varlistentry>
 			<term><parameter>web_version_label</parameter></term>
-			  <listitem>
+			 <listitem>
 				<para>
-					overrides the version number as it appears on the menu of a <application>Publican</application>-managed website. 
+					overrides the version number as it appears on the menu of a <application>Publican</application>-managed website.
 				</para>
 
 			</listitem>
 
 		</varlistentry>
-		  <varlistentry>
+		 <varlistentry>
 			<term><parameter>wkhtmltopdf_opts</parameter></term>
-			  <listitem>
+			 <listitem>
 				<para>
 					Extra options to pass to <application>wkhtmltopdf</application>. e.g. <literal>wkhtmltopdf_opts:&nbsp;"-O&nbsp;landscape&nbsp;-s&nbsp;A3"</literal>
 				</para>
@@ -647,5 +652,7 @@
 			</listitem>
 
 		</varlistentry>
+
 	</variablelist>
 </appendix>
+

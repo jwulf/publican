@@ -98,8 +98,8 @@ msgstr "<sgmltag>&lt;language&gt;</sgmltag>"
 
 #. Tag: para
 #, no-c-format
-msgid "The language code for the document. Refer to <xref linkend=\"appe-Users_Guide-Language_codes\" /> for more information about language codes in XML."
-msgstr "Il codice linguistico per il documento. Fare riferimento all'<xref linkend=\"appe-Users_Guide-Language_codes\" />, per maggiori informazioni su questi codici in XML."
+msgid "The language code for the document. Refer to <xref linkend=\"appe-Publican-Users_Guide-Language_codes\" /> for more information about language codes in XML."
+msgstr "Il codice linguistico per il documento. Fare riferimento all'<xref linkend=\"appe-Publican-Users_Guide-Language_codes\" />, per maggiori informazioni su questi codici in XML."
 
 #. Tag: term
 #, no-c-format

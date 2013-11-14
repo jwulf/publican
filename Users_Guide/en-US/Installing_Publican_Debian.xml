@@ -1,0 +1,202 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+<!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
+%BOOK_ENTITIES;
+]>
+<section conformance="186" id="sect-Publican-Users_Guide-Debian">
+	<title>Debian</title>
+	 <para>
+		This procedure will install the <application>publican</application> version that is in your default Debian repository. It will also install a large number of packages that <application>publican</application> depends on, like Java, XML and image processing libraries and many ancillary Perl modules.
+	</para>
+	 <procedure>
+		<step>
+			<para>
+				Open a terminal.
+			</para>
+
+		</step>
+		 <step>
+			<para>
+				Change to the root user: <command> su - </command>
+			</para>
+
+		</step>
+		 <step>
+			<para>
+				Run the following command to install the <package>publican</package> package:
+			</para>
+			 
+<screen><prompt>$</prompt> <command>apt-get install publican</command></screen>
+
+		</step>
+		 <step>
+			<para>
+				Run the following command to determine what version of <package>publican</package> is installed:
+			</para>
+			 
+<screen><prompt>$</prompt> <command>publican -v</command>
+<computeroutput>version=2.8</computeroutput></screen>
+
+		</step>
+
+	</procedure>
+	
+	 <important>
+		<title> Important — Installing more recent packages using Apt-Pinning</title>
+		 <para>
+			If you need a more recent release of <package>publican</package> than installed by the procedure above, you can query if there other versions available: <ulink url="http://packages.debian.org/publican" />.
+		</para>
+		 <para>
+			To date, there has not been any backport (<ulink url="http://backports.debian.org/Instructions/" />) available for <application>publican</application>, so we need to use Apt Pinning <ulink url="https://wiki.debian.org/AptPreferences" />
+		</para>
+		 <para>
+			Alternatively, you could run Debian testing or unstable in a virtual machine, chroot or linux container.
+		</para>
+
+	</important>
+	 <para>
+		Assuming there is a more recent version of <application>publican</application> available in the testing repository, and that you are running the current stable, then you can upgrade by:
+	</para>
+	 <procedure>
+		<step>
+			<para>
+				Open a terminal.
+			</para>
+
+		</step>
+		 <step>
+			<para>
+				Change to the root user: <command> su - </command>
+			</para>
+
+		</step>
+		 <step>
+			<para>
+				Open your <filename>/etc/apt/sources.list</filename> file in a text editor. For example, to edit the file in <application>gedit</application> run:
+			</para>
+			 
+<screen><prompt>$</prompt> <command>gedit /etc/apt/sources.list</command></screen>
+
+		</step>
+		 <step>
+			<para>
+				Add the following line to the end of the file:
+			</para>
+			 
+<programlisting>#### testing  #########
+deb http://ftp.us.debian.org/debian testing main contrib non-free</programlisting>
+
+		</step>
+		 <step>
+			<para>
+				Save the file and close the text editor.
+			</para>
+
+		</step>
+		 <step>
+			<para>
+				Open (or create) your <filename>/etc/apt/preferences</filename> file in a text editor. For example, to edit the file in <application>gedit</application> run:
+			</para>
+			 
+<screen><prompt>$</prompt> <command>gedit /etc/apt/preferences</command></screen>
+
+		</step>
+		 <step>
+			<para>
+				Add the following line to the end of the file:
+			</para>
+			 
+<programlisting>Package: *
+Pin: release a=stable
+Pin-Priority: 900
+
+Package: *
+Pin: release a=testing
+Pin-Priority: 400
+
+Package: *
+Pin: release o=Debian
+Pin-Priority: -10</programlisting>
+
+		</step>
+		 <step>
+			<para>
+				Save the file and close the text editor.
+			</para>
+
+		</step>
+		 <step>
+			<para>
+				Run the following command to update the list of packages available to your computer:
+			</para>
+			 
+<screen><prompt>$</prompt> <command>apt-get update</command></screen>
+
+		</step>
+		 <step>
+			<para>
+				Run the following command to try to install the testing version of <package>publican</package> package, and any updated dependancies:
+			</para>
+			 
+<screen><prompt>$</prompt> <command>apt-get -t testing install publican</command></screen>
+
+		</step>
+
+	</procedure>
+	
+	 <para>
+		Because Apt Pinning mixes 2 different debian streams in an un-tested way, incompatibilities may happen. For example, you may get a warning like: 
+<screen><prompt>$</prompt> <command>publican</command>
+<computeroutput>Warning: program compiled against libxml 209 using older 208</computeroutput>
+<computeroutput>Warning: XML::LibXML compiled against libxml2 20901, but runtime libxml2 is older 20800</computeroutput>
+<computeroutput>Warning: program compiled against libxml 209 using older 208</computeroutput>
+<computeroutput>Warning: XML::LibXSLT compiled against libxslt 10128, but runtime libxslt is older 10126</computeroutput>
+<computeroutput>Can't open publican: No such file or directory at /usr/bin/publican line 430.</computeroutput></screen>
+		 Which indicates that you might need to upgrade libxml2 and libxslt to the testing repository version too. This can be done by searching to find the likely library:
+	</para>
+	 <procedure>
+		<step>
+			<para>
+				
+<screen><prompt>$</prompt> <command>apt-get search libxslt</command>
+<computeroutput>gambas3-gb-xml-xslt - Gambas XSLT component</computeroutput>
+<computeroutput>libidzebra-2.0-mod-alvis - IDZebra filter alvis (XSLT filter for XML)</computeroutput>
+<computeroutput>libidzebra-2.0-mod-dom - IDZebra filter 'dom' (XML DOM internal document model with XSLT)</computeroutput>
+<computeroutput>libical-parser-html-perl - generates HTML calendars from iCalendars</computeroutput>
+<computeroutput>libxsltc-java - XSL Transformations (XSLT) compiler from Xalan-Java</computeroutput>
+<computeroutput>libxml-filter-xslt-perl - Perl module for XSLT as a SAX Filter</computeroutput>
+<computeroutput>libxml-libxslt-perl - Perl interface to the GNOME libxslt library</computeroutput>
+<computeroutput>libxslt1-dbg - XSLT 1.0 processing library - debugging symbols</computeroutput>
+<computeroutput>libxslt1-dev - XSLT 1.0 processing library - development kit</computeroutput>
+<computeroutput>libxslt1.1 - XSLT 1.0 processing library - runtime library</computeroutput>
+<computeroutput>python-libxslt1 - Python bindings for libxslt1</computeroutput>
+<computeroutput>python-libxslt1-dbg - Python bindings for libxslt1 (debug extension)</computeroutput>
+<computeroutput>python-lxml - pythonic binding for the libxml2 and libxslt libraries</computeroutput>
+<computeroutput>python-lxml-dbg - pythonic binding for the libxml2 and libxslt libraries (debug extension)</computeroutput>
+<computeroutput>python-lxml-doc - pythonic binding for the libxml2 and libxslt libraries (documentation)</computeroutput>
+<computeroutput>python3-lxml - pythonic binding for the libxml2 and libxslt libraries</computeroutput>
+<computeroutput>python3-lxml-dbg - pythonic binding for the libxml2 and libxslt libraries (debug extension)</computeroutput>
+<computeroutput>php5-xsl - XSL module for php5</computeroutput>
+<computeroutput>libsp-gxmlcpp-dev - S+P C++ wrapper for Gnome libxml2/libxslt</computeroutput>
+<computeroutput>libsp-gxmlcpp1 - S+P C++ wrapper for Gnome libxml2/libxslt</computeroutput>
+<computeroutput>swfmill - xml2swf and swf2xml processor</computeroutput>
+<computeroutput>libxslthl-java - XSLT syntax highlighting</computeroutput></screen>
+				 (and the same again for libxml2)
+			</para>
+
+		</step>
+		 <step>
+			<para>
+				And then upgrading those packages to testing. 
+<screen><prompt>$</prompt> <command>apt-get -t testing upgrade libxml2 libxslt1.1</command></screen>
+
+			</para>
+
+		</step>
+
+	</procedure>
+	
+
+</section>
+
+

@@ -3,21 +3,25 @@
 <!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
 %BOOK_ENTITIES;
 ]>
-<section conformance="119" id="sect-Users_Guide-Adding_files">
+<section conformance="119" id="sect-Publican-Users_Guide-Adding_files">
 	<title>Adding files</title>
 	 <para>
-		<application>Publican</application> allows you to include arbitrary files together with your documents. These files are included in RPM packages that you build with <application>Publican</application> and are installed on users' systems alongside the document itself. For example, you might want to include multimedia files of tutorials that complement the document, or sample files of source code or other materials that allow users to work through the examples or tutorials in a document. 
-	 </para>
+		<application>Publican</application> allows you to include arbitrary files together with your documents. These files are included in RPM packages that you build with <application>Publican</application> and are installed on users' systems alongside the document itself. For example, you might want to include multimedia files of tutorials that complement the document, or sample files of source code or other materials that allow users to work through the examples or tutorials in a document.
+	</para>
 	 <para>
 		To ship arbitrary files with a document, create a directory named <filename>files</filename> in the language directory for the original language (e.g. <literal>en-US</literal>) of the book (e.g. <filename>My_Book</filename>).
 	</para>
-	<para>
+	 <para>
 		In the directory <filename>My_Book</filename>:
 	</para>
+	 
 <screen><prompt>$</prompt> <command>mkdir en-US/files</command></screen>
-	<para>
+	 <para>
 		Copy the files to the directory <filename>files</filename>:
 	</para>
-<screen><prompt>$</prompt> <command>cp arbitrary_files en-US/files</command></screen> 
 	 
+<screen><prompt>$</prompt> <command>cp arbitrary_files en-US/files</command></screen>
+
 </section>
+
+

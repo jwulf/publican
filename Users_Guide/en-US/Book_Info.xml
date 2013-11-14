@@ -3,7 +3,7 @@
 <!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
 %BOOK_ENTITIES;
 ]>
-<bookinfo conformance="121" id="book-Users_Guide-Users_Guide">
+<bookinfo conformance="121" id="book-Publican-Users_Guide-Users_Guide">
 	<title>Users' Guide</title>
 	 <subtitle>Publishing books, articles, papers and multi-volume sets with DocBook XML</subtitle>
 	 <productname>&PRODUCT;</productname>
@@ -12,9 +12,10 @@
 		<para>
 			This book will help you install <application>&PRODUCT;</application>. It also provides instructions for using Publican to create and publish DocBook XML-based books, articles and book sets. This guide assumes that you are already familiar with DocBook XML.
 		</para>
-		<para>
+		 <para>
 			This is a test for testing test stuff.
 		</para>
+
 	</abstract>
 	 <keywordset>
 		<keyword>publican</keyword>
@@ -36,7 +37,7 @@
 	 <corpauthor>
 		<inlinemediaobject>
 			<imageobject>
-				<imagedata fileref="Common_Content/images/title_logo.svg" />
+				<imagedata fileref="Common_Content/images/title_logo.svg" format="SVG" />
 			</imageobject>
 			 <textobject>
 				<phrase>Team &PRODUCT;</phrase>
@@ -47,19 +48,20 @@
 	</corpauthor>
 	 <mediaobject role="cover">
 		<imageobject remap="lrg" role="front-large">
-			<imagedata fileref="images/cover_thumbnail.png" />
+			<imagedata fileref="images/cover_thumbnail.png" format="PNG" />
 		</imageobject>
 		 <imageobject remap="s" role="front">
-			<imagedata fileref="images/cover_thumbnail.png" />
+			<imagedata fileref="images/cover_thumbnail.png" format="PNG" />
 		</imageobject>
 		 <imageobject remap="xs" role="front-small">
-			<imagedata fileref="images/cover_thumbnail.png" />
+			<imagedata fileref="images/cover_thumbnail.png" format="PNG" />
 		</imageobject>
 		 <imageobject remap="cs" role="thumbnail">
-			<imagedata fileref="images/cover_thumbnail.png" />
+			<imagedata fileref="images/cover_thumbnail.png" format="PNG" />
 		</imageobject>
 
 	</mediaobject>
 	 <xi:include href="Common_Content/Legal_Notice.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
 	 <xi:include href="Author_Group.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
 </bookinfo>
+

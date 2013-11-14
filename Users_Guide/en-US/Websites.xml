@@ -3,251 +3,295 @@
 <!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
 %BOOK_ENTITIES;
 ]>
-<chapter conformance="217" id="sect-Users_Guide-Website">
+<chapter conformance="217" id="chap-Publican-Users_Guide-Building_a_website_with_Publican">
 	<title>Building a website with Publican</title>
-	<para>
-		<application>Publican</application> not only builds documents for publication but can build and manage a documentation website as well. For a suite of documents that you maintain by yourself, you can use <application>Publican</application> to build a site on your local system; you can then upload the site to a webserver by whatever means you choose. This approach does not scale well, however, so for team-based documentation projects, <application>Publican</application> can generate RPM packages of documentation to install on the webserver. To install <application>Publican</application>-generated RPM packages on a webserver, <application>Publican</application> (version 2.1 or higher) and <application>rpm</application> must be installed on the server. If you build and maintain the website on a workstation and upload it to a webserver for publication,  <application>Publican</application> and <application>rpm</application> do not need to be installed on the webserver.
+	 <para>
+		<application>Publican</application> not only builds documents for publication but can build and manage a documentation website as well. For a suite of documents that you maintain by yourself, you can use <application>Publican</application> to build a site on your local system; you can then upload the site to a webserver by whatever means you choose. This approach does not scale well, however, so for team-based documentation projects, <application>Publican</application> can generate RPM packages of documentation to install on the webserver. To install <application>Publican</application>-generated RPM packages on a webserver, <application>Publican</application> (version 2.1 or higher) and <application>rpm</application> must be installed on the server. If you build and maintain the website on a workstation and upload it to a webserver for publication, <application>Publican</application> and <application>rpm</application> do not need to be installed on the webserver.
 	</para>
-	<para>
+	 <para>
 		The websites that <application>Publican</application> creates consist of four parts: the website structure, a home page, product and version description pages, and the documents published on the site. The website structure itself consists of:
 	</para>
-	<itemizedlist>
+	 <itemizedlist>
 		<listitem>
 			<para>
 				a configuration file.
 			</para>
+
 		</listitem>
-		<listitem>
+		 <listitem>
 			<para>
 				an SQLite database file.
 			</para>
+
 		</listitem>
-		<listitem>
+		 <listitem>
 			<para>
 				a subdirectory for the published documents, which contains:
 			</para>
-			<itemizedlist>
+			 <itemizedlist>
 				<listitem>
 					<para>
 						<filename>index.html</filename> — an index page that redirects to localized versions of a home page for the site.
 					</para>
+
 				</listitem>
-				<listitem>
+				 <listitem>
 					<para>
 						<filename>interactive.css</filename> — a CSS stylesheet that contains styles for the navigation menu.
 					</para>
+
 				</listitem>
-				<listitem>
+				 <listitem>
 					<para>
 						<filename>opds.xml</filename> — an Open Publication Distribution System (OPDS) catalog to allow compliant eBook readers to find EPUB documents on your site easily.
 					</para>
+
 				</listitem>
-				<listitem>
+				 <listitem>
 					<para>
-						<filename>Sitemap</filename> — A Sitemap is a list of the URLs from your website and metadata about them, like update history, change frequency, and importance relative to other URLs in the site. A Sitemap can be supplied to many major search engines, where it is used to help their crawlers index your site more intelligently. A Sitemap does not guarantee that your site will be ranked higher in search results. However, it does help search engines to return the most relevant results from your website in response to user queries. For more information on Sitemaps, visit  <ulink url="http://www.sitemaps.org/">sitemaps.org</ulink>. 
+						<filename>Sitemap</filename> — A Sitemap is a list of the URLs from your website and metadata about them, like update history, change frequency, and importance relative to other URLs in the site. A Sitemap can be supplied to many major search engines, where it is used to help their crawlers index your site more intelligently. A Sitemap does not guarantee that your site will be ranked higher in search results. However, it does help search engines to return the most relevant results from your website in response to user queries. For more information on Sitemaps, visit <ulink url="http://www.sitemaps.org/">sitemaps.org</ulink>.
 					</para>
+
 				</listitem>
-				<listitem>
+				 <listitem>
 					<para>
-					  <filename>site_overrides.css</filename> — a CSS stylesheet that overrides the styles contained in <filename>interactive.css</filename> to provide site-specific styles. This file is not created by the site creation process, but must be added manually later, or supplied by the site <firstterm>home page</firstterm>.
+						<filename>site_overrides.css</filename> — a CSS stylesheet that overrides the styles contained in <filename>interactive.css</filename> to provide site-specific styles. This file is not created by the site creation process, but must be added manually later, or supplied by the site <firstterm>home page</firstterm>.
 					</para>
+
 				</listitem>
-				<listitem>
+				 <listitem>
 					<para>
 						<filename>defualt.js</filename> — a JavaScript script that directs visitors to localized content based on the locale set in their browser and which controls the presentation of the navigation menu.
 					</para>
+
 				</listitem>
-				<listitem>
+				 <listitem>
 					<para>
 						subdirectories for each language in which you publish. Initially, this contains <filename>opds.xml</filename> and <filename>toc.html</filename>. Later it also contains <filename>opds-<replaceable>product</replaceable>.xml</filename>:
 					</para>
-					<itemizedlist>
+					 <itemizedlist>
 						<listitem>
 							<para>
 								<filename>opds.xml</filename> — an OPDS catalog of EPUB documents in this language.
 							</para>
+
 						</listitem>
-						<listitem>
+						 <listitem>
 							<para>
 								<filename>opds-<replaceable>product</replaceable>.xml</filename> — an OPDS catalog of EPUB documents for each product for which you publish documentation in this language. Within each product catalog, documentation is divided into <sgmltag>&lt;category&gt;</sgmltag>s for different versions of the same product.
 							</para>
+
 						</listitem>
-						<listitem>
+						 <listitem>
 							<para>
 								<filename>toc.html</filename> — the table of contents for that language, initially without links to any documents.
 							</para>
+
 						</listitem>
-						<listitem>
+						 <listitem>
 							<para>
 								A subdirectory for each product for which you publish documentation in this language.
 							</para>
+
 						</listitem>
+
 					</itemizedlist>
+
 				</listitem>
+
 			</itemizedlist>
+
 		</listitem>
+
 	</itemizedlist>
-	<para>
-		Optionally, the site structure might also include a <firstterm>dump file</firstterm> — an XML file that provides complete site content details for delivery of other services, such as web feeds or customised search pages. The site structure might also contain a zipped version of the dump file. Refer to <xref linkend="sect-Users_Guide-Website-structure-cfg_and_db-manual" /> and <xref linkend="sect-Users_Guide-Website-structure-cfg_and_db-rpm" /> for details of creating a dump file, and to <xref linkend="dump_file" /> for a description of the dump file contents.
+	 <para>
+		Optionally, the site structure might also include a <firstterm>dump file</firstterm> — an XML file that provides complete site content details for delivery of other services, such as web feeds or customised search pages. The site structure might also contain a zipped version of the dump file. Refer to <xref linkend="sect-Publican-Users_Guide-Creating_the_website_structure" /> and <xref linkend="sect-Publican-Users_Guide-Creating_the_website_structure" /> for details of creating a dump file, and to <xref linkend="appe-Publican-Users_Guide-Contents_of_the_website_dump_file" /> for a description of the dump file contents.
 	</para>
-	
-	<section conformance="218" id="sect-Users_Guide-Website-manual">
+	 <section conformance="218" id="sect-Publican-Users_Guide-Building_a_website_with_Publican-Building_a_website_manually">
 		<title>Building a website manually</title>
-		
-		<xi:include href="Websites_structure_manual.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
-		
-		<xi:include href="Websites_homepage_manual.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
-		
-		<xi:include href="Websites_product_version_manual.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
-		
-		<xi:include href="Websites_documents_manual.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
-		
+		 <xi:include href="Websites_structure_manual.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
+		 <xi:include href="Websites_homepage_manual.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
+		 <xi:include href="Websites_product_version_manual.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
+		 <xi:include href="Websites_documents_manual.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
+
 	</section>
 	
-	<section conformance="219" id="sect-Users_Guide-Website-rpm">
+	 <section conformance="219" id="sect-Publican-Users_Guide-Building_a_website_with_Publican-Building_a_website_using_RPM_packages">
 		<title>Building a website using RPM packages</title>
-		
-		<xi:include href="Websites_structure_rpm.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
-		
-		<xi:include href="Websites_homepage_rpm.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
-		
-		<xi:include href="Websites_product_version_rpm.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
-		
-		<xi:include href="Websites_documents_rpm.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
-	      </section>
-		<section conformance="220" id="sect-Users_Guide-Sitemap_Submission">
+		 <xi:include href="Websites_structure_rpm.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
+		 <xi:include href="Websites_homepage_rpm.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
+		 <xi:include href="Websites_product_version_rpm.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
+		 <xi:include href="Websites_documents_rpm.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
+
+	</section>
+	
+	 <section conformance="220" id="sect-Publican-Users_Guide-Building_a_website_with_Publican-Submitting_Your_Sitemap_to_Search_Engines">
 		<title>Submitting Your Sitemap to Search Engines</title>
-		<para>
-		  A Publican website includes an XML Sitemap file. The Sitemap can be submitted to many major search engines, in order to help them index your website more intelligently and thoroughly. Each search engine has its own submission procedure. This section includes documentation on how to submit a Sitemap to Google and Bing. 
+		 <para>
+			A Publican website includes an XML Sitemap file. The Sitemap can be submitted to many major search engines, in order to help them index your website more intelligently and thoroughly. Each search engine has its own submission procedure. This section includes documentation on how to submit a Sitemap to Google and Bing.
 		</para>
-		<section conformance="221" id="sect-Users_Guide-Sitemap_Submission-Google">
-		<title>Submitting Your Sitemap to Google.</title>
-		<procedure conformance="222" id="proc-Users_Guide-Sitemap_Submission-Google">
-		  <title>To Submit Your Sitemap to Google:</title>
-		  <step>
-		    <para>
-		      Sign up for a Google account at <ulink url="http://www.google.com/webmasters/tools/home">Google Webmaster Tools</ulink>. If you already have a Google account, you can use it.
-		    </para>
-		  </step>
-		  <step>
-		    <para>
-		      Sign in to your Google Webmaster Tools account at this URL: <ulink url="http://www.google.com/webmasters/tools/home">http://www.google.com/webmasters/tools/home</ulink>. 
-		    </para>
-		  </step>
-		  <step>
-		    <para>
-		      First you must verify you are the owner of your Publican site. Click the <guibutton>Add A Site</guibutton> button. 
-		    </para>
-		  </step>
-		  <step>
-		    <para>
-		      A dialog box is displayed for you to <guilabel>Add a site</guilabel> with. Enter the URL of your Publican site in the text entry field and click <guibutton>Continue</guibutton>. 
-		    </para>
-		  </step>
-		  <step>
-		    <para>
-		      Follow the instructions that display and upload the HTML file that Google provides to the document root of your website. 
-		    </para>
-		  </step>
-		  <step>
-		    <para>
-		      When you have confirmed that the provided HTML file has been uploaded to the required location by accessing it in a web browser, click the <guibutton>Verify</guibutton> button. 
-		    </para>
-		  </step>
-		  <step>
-		    <para>
-		      When you have successfully verified the ownership of your Publican website to Google, return to the Webmaster Tools home page. Your Publican site is listed. Click on it. 
-		    </para>
-		  </step>
-		  <step>
-		    <para>
-		      You are taken to the Webmaster Tools configuration page for your Publican site. On the left side of the page there is a menu. Click on the <guilabel>Site configuration</guilabel> menu entry to expand it. Its expanded contents includes a <guilabel>Sitemaps</guilabel> entry. Click it. 
-		    </para>
-		  </step>
-		  <step>
-		    <para>
-		      You are taken to a Sitemap submission page. Click the <guibutton>Submit a Sitemap</guibutton> button. 
-		    </para>
-		  </step>
-		  <step>
-		    <para>
-		      A text entry field displays, including the base URL of your Publican site, with room to enter the URL of your Sitemap XML file. Enter its location and click the <guibutton>Submit Sitemap</guibutton> button. The details of the Sitemap are displayed in a table. 
-		    </para>
-		  </step>
-		  <step>
-		    <formalpara>
-		      <title>Result</title>
-		    <para>
-		      The Sitemap for your Publican site has been successfully submitted to Google.
-		    </para>
-		  </formalpara>
-		  </step>
-		</procedure>	
-	      </section>
-	      <section conformance="223" id="sect-Users_Guide-Sitemap_Submission-Bing">
-		<title>Submitting Your Sitemap to Bing.</title>
-		<procedure conformance="224" id="proc-Users_Guide-Sitemap_Submission-Bing">
-		  <title>To Submit Your Sitemap to Bing:</title>
-		  <step>
-		    <para>
-		      Sign up for a Bing Webmaster Tools account at <ulink url="http://www.bing.com/toolbox/webmaster/">Bing Webmaster Tools</ulink>. If you already have a Windows LiveID account, you can use it.
-		    </para>
-		  </step>
-		  <step>
-		    <para>
-		      Sign in to your Bing Webmaster Tools account at this URL: <ulink url="http://www.bing.com/toolbox/webmaster/">http://www.bing.com/toolbox/webmaster/</ulink>. 
-		    </para>
-		  </step>
-		  <step>
-		    <para>
-		      Click the <guibutton>Add Site</guibutton> button. 
-		    </para>
-		  </step>
-		  <step>
-		    <para>
-		      The <guilabel>Add Site</guilabel> dialog box is displayed. Enter the URL of your Publican site in the text entry field and click <guibutton>Submit</guibutton>. 
-		    </para>
-		  </step>
-		  <step>
-		    <para>
-		      The <guilabel>Verify Ownership</guilabel> dialog displays, with three options. Follow the instructions given when the <guilabel>Option 1: Place an XML file on your web server</guilabel> has been expanded. Upload the <systemitem>BingSiteAuth.xml</systemitem> file that Bing provides to the document root of your website. 
-		    </para>
-		  </step>
-		  <step>
-		    <para>
-		      When you have confirmed that the provided <systemitem>BingSiteAuth.xml</systemitem> file has been uploaded to the required location by accessing it in a web browser, click the <guibutton>Verify</guibutton> button. 
-		    </para>
-		  </step>
-		  <step>
-		    <para>
-		      When you have successfully verified your ownership of your Publican website to Bing, return to the Bing Webmaster Tools home page. Your Publican site is listed. Click on it. 
-		    </para>
-		  </step>
-		  <step>
-		    <para>
-		      Select the <guibutton>Crawl</guibutton> tab. 
-		    </para>
-		  </step>
-		  <step>
-		    <para>
-		      Select <guilabel>Sitemaps</guilabel> and then <guilabel>Add Feed</guilabel>.
-		    </para>
-		  </step>
-		  <step>
-		    <para>
-		      The <guilabel>Add Feed</guilabel> dialog displays. Enter the URL of your Sitemap file and click <guibutton>Submit</guibutton>. The details of the Sitemap are displayed. 
-		    </para>
-		  </step>
-		  <step>
-		    <formalpara>
-		      <title>Result:</title>
-		    <para>
-		      The Sitemap for your Publican site has been successfully submitted to Bing.
-		    </para>
-		  </formalpara>
-		  </step>
-		</procedure>	
-	      </section>
-	      
-	    </section>
+		 <section conformance="221" id="sect-Publican-Users_Guide-Submitting_Your_Sitemap_to_Search_Engines-Submitting_Your_Sitemap_to_Google.">
+			<title>Submitting Your Sitemap to Google.</title>
+			 <procedure conformance="222" id="proc-Publican-Users_Guide-Submitting_Your_Sitemap_to_Google.-To_Submit_Your_Sitemap_to_Google">
+				<title>To Submit Your Sitemap to Google:</title>
+				 <step>
+					<para>
+						Sign up for a Google account at <ulink url="http://www.google.com/webmasters/tools/home">Google Webmaster Tools</ulink>. If you already have a Google account, you can use it.
+					</para>
+
+				</step>
+				 <step>
+					<para>
+						Sign in to your Google Webmaster Tools account at this URL: <ulink url="http://www.google.com/webmasters/tools/home">http://www.google.com/webmasters/tools/home</ulink>.
+					</para>
+
+				</step>
+				 <step>
+					<para>
+						First you must verify you are the owner of your Publican site. Click the <guibutton>Add A Site</guibutton> button.
+					</para>
+
+				</step>
+				 <step>
+					<para>
+						A dialog box is displayed for you to <guilabel>Add a site</guilabel> with. Enter the URL of your Publican site in the text entry field and click <guibutton>Continue</guibutton>.
+					</para>
+
+				</step>
+				 <step>
+					<para>
+						Follow the instructions that display and upload the HTML file that Google provides to the document root of your website.
+					</para>
+
+				</step>
+				 <step>
+					<para>
+						When you have confirmed that the provided HTML file has been uploaded to the required location by accessing it in a web browser, click the <guibutton>Verify</guibutton> button.
+					</para>
+
+				</step>
+				 <step>
+					<para>
+						When you have successfully verified the ownership of your Publican website to Google, return to the Webmaster Tools home page. Your Publican site is listed. Click on it.
+					</para>
+
+				</step>
+				 <step>
+					<para>
+						You are taken to the Webmaster Tools configuration page for your Publican site. On the left side of the page there is a menu. Click on the <guilabel>Site configuration</guilabel> menu entry to expand it. Its expanded contents includes a <guilabel>Sitemaps</guilabel> entry. Click it.
+					</para>
+
+				</step>
+				 <step>
+					<para>
+						You are taken to a Sitemap submission page. Click the <guibutton>Submit a Sitemap</guibutton> button.
+					</para>
+
+				</step>
+				 <step>
+					<para>
+						A text entry field displays, including the base URL of your Publican site, with room to enter the URL of your Sitemap XML file. Enter its location and click the <guibutton>Submit Sitemap</guibutton> button. The details of the Sitemap are displayed in a table.
+					</para>
+
+				</step>
+				 <step>
+					<formalpara id="form-Publican-Users_Guide-To_Submit_Your_Sitemap_to_Google-Result">
+						<title>Result</title>
+						 <para>
+							The Sitemap for your Publican site has been successfully submitted to Google.
+						</para>
+
+					</formalpara>
+
+				</step>
+
+			</procedure>
+			
+
+		</section>
+		
+		 <section conformance="223" id="sect-Publican-Users_Guide-Submitting_Your_Sitemap_to_Search_Engines-Submitting_Your_Sitemap_to_Bing.">
+			<title>Submitting Your Sitemap to Bing.</title>
+			 <procedure conformance="224" id="proc-Publican-Users_Guide-Submitting_Your_Sitemap_to_Bing.-To_Submit_Your_Sitemap_to_Bing">
+				<title>To Submit Your Sitemap to Bing:</title>
+				 <step>
+					<para>
+						Sign up for a Bing Webmaster Tools account at <ulink url="http://www.bing.com/toolbox/webmaster/">Bing Webmaster Tools</ulink>. If you already have a Windows LiveID account, you can use it.
+					</para>
+
+				</step>
+				 <step>
+					<para>
+						Sign in to your Bing Webmaster Tools account at this URL: <ulink url="http://www.bing.com/toolbox/webmaster/">http://www.bing.com/toolbox/webmaster/</ulink>.
+					</para>
+
+				</step>
+				 <step>
+					<para>
+						Click the <guibutton>Add Site</guibutton> button.
+					</para>
+
+				</step>
+				 <step>
+					<para>
+						The <guilabel>Add Site</guilabel> dialog box is displayed. Enter the URL of your Publican site in the text entry field and click <guibutton>Submit</guibutton>.
+					</para>
+
+				</step>
+				 <step>
+					<para>
+						The <guilabel>Verify Ownership</guilabel> dialog displays, with three options. Follow the instructions given when the <guilabel>Option 1: Place an XML file on your web server</guilabel> has been expanded. Upload the <systemitem>BingSiteAuth.xml</systemitem> file that Bing provides to the document root of your website.
+					</para>
+
+				</step>
+				 <step>
+					<para>
+						When you have confirmed that the provided <systemitem>BingSiteAuth.xml</systemitem> file has been uploaded to the required location by accessing it in a web browser, click the <guibutton>Verify</guibutton> button.
+					</para>
+
+				</step>
+				 <step>
+					<para>
+						When you have successfully verified your ownership of your Publican website to Bing, return to the Bing Webmaster Tools home page. Your Publican site is listed. Click on it.
+					</para>
+
+				</step>
+				 <step>
+					<para>
+						Select the <guibutton>Crawl</guibutton> tab.
+					</para>
+
+				</step>
+				 <step>
+					<para>
+						Select <guilabel>Sitemaps</guilabel> and then <guilabel>Add Feed</guilabel>.
+					</para>
+
+				</step>
+				 <step>
+					<para>
+						The <guilabel>Add Feed</guilabel> dialog displays. Enter the URL of your Sitemap file and click <guibutton>Submit</guibutton>. The details of the Sitemap are displayed.
+					</para>
+
+				</step>
+				 <step>
+					<formalpara id="form-Publican-Users_Guide-To_Submit_Your_Sitemap_to_Bing-Result">
+						<title>Result:</title>
+						 <para>
+							The Sitemap for your Publican site has been successfully submitted to Bing.
+						</para>
+
+					</formalpara>
+
+				</step>
+
+			</procedure>
+			
+
+		</section>
+		
+
+	</section>
+
 </chapter>
+

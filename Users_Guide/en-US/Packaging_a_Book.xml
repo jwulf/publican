@@ -3,42 +3,41 @@
 <!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
 %BOOK_ENTITIES;
 ]>
-<section conformance="193" id="sect-Users_Guide-Packaging_a_book">
+<section conformance="193" id="sect-Publican-Users_Guide-Packaging_a_document">
 	<title>Packaging a document</title>
 	 <xi:include href="Applicable_to_RPM_only.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
-	 <note conformance="234" id="Note-Customizing-output">
+	 <note conformance="234">
 		<title>Note — Customizing output</title>
 		 <para>
-			The parameters set in the document configuration file (by default, <filename>publican.cfg</filename>) allow you to control many aspects of the way in which a document is presented and packaged — refer to <xref linkend="sect-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file" />.
+			The parameters set in the document configuration file (by default, <filename>publican.cfg</filename>) allow you to control many aspects of the way in which a document is presented and packaged — refer to <xref linkend="sect-Publican-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file" />.
 		</para>
 		 <para>
 			If you maintain multiple versions of a document, you can create a configuration file for each version. When packaging the document, you can use the <option>--config</option> to specify which configuration file (and therefore which set of parameters) to use in a particular build, for example:
 		</para>
 		 
-<screen><prompt>$</prompt> <command>publican package --lang hi-IN --config community.cfg</command>
-</screen>
+<screen><prompt>$</prompt> <command>publican package --lang hi-IN --config community.cfg</command></screen>
 
 	</note>
 	 <para>
 		<application>Publican</application> not only builds documentation, but it can package built content for distribution to individual workstations and to web servers as <firstterm>RPM packages</firstterm>. RPM packages are used to distribute software to computers with Linux operating systems that use the <application>RPM Package Manager</application>. These operating systems include Red Hat Enterprise Linux, Fedora, Mandriva Linux, SUSE Linux Enterprise, openSUSE, Turbolinux, and Yellow Dog Linux, to name just a few.
 	</para>
-	 <section conformance="194" id="sect-Users_Guide-Packaging_a_book-Types_of_RPM_packages">
+	 <section conformance="194" id="sect-Publican-Users_Guide-Packaging_a_document-Types_of_RPM_packages">
 		<title>Types of RPM packages</title>
 		 <para>
 			<application>Publican</application> can produce both <firstterm>source RPM packages</firstterm> (<firstterm>SRPM packages</firstterm>) and <firstterm>binary RPM packages</firstterm>. Furthermore, both SRPM packages and binary RPM packages can be configured to deploy to workstations or web servers.
 		</para>
-		 <section conformance="195" id="sect-Users_Guide-Types_of_RPM_packages-Source_RPM_packages_and_binary_RPM_packages">
+		 <section conformance="195" id="sect-Publican-Users_Guide-Types_of_RPM_packages-Source_RPM_packages_and_binary_RPM_packages">
 			<title>Source RPM packages and binary RPM packages</title>
 			 <para>
-			   SRPM packages contain the source code used to generate software rather than the software itself. To use an SRPM package, a computer must <firstterm>compile</firstterm> the source code into software — or in this case, into documents. SRPM packages of <application>Publican</application> documents contain XML files and a <firstterm>spec file</firstterm> rather than finished documents in formats such as HTML and PDF. You cannot install documentation directly from SRPM packages with current versions of the <application>RPM Package Manager</application>.
-			 </para>
+				SRPM packages contain the source code used to generate software rather than the software itself. To use an SRPM package, a computer must <firstterm>compile</firstterm> the source code into software — or in this case, into documents. SRPM packages of <application>Publican</application> documents contain XML files and a <firstterm>spec file</firstterm> rather than finished documents in formats such as HTML and PDF. You cannot install documentation directly from SRPM packages with current versions of the <application>RPM Package Manager</application>.
+			</para>
 			 <para>
-			   Conversely, binary RPM packages contain software — or in this case, a document — that is ready to copy to a location in the computer's file system and use immediately. The contents of the binary RPM package do not need to be compiled by the computer onto which they are installed. Therefore, when installing documentation solely for local use the computer does not need to have <application>Publican</application> installed. Installing <application>Publican</application>-generated documentation on a webserver  <emphasis>does</emphasis> requires <application>Publican</application> to be installed, but for reasons other than compiling the source code. Refer to <xref linkend="sect-Users_Guide-Types_of_RPM_packages-Desktop_packages_and_web_packages" /> for a description of the differences between documentation installed for local use (<firstterm>desktop RPMs</firstterm>) and documentation installed to serve as web content (<firstterm>web RPMs</firstterm>).
+				Conversely, binary RPM packages contain software — or in this case, a document — that is ready to copy to a location in the computer's file system and use immediately. The contents of the binary RPM package do not need to be compiled by the computer onto which they are installed. Therefore, when installing documentation solely for local use the computer does not need to have <application>Publican</application> installed. Installing <application>Publican</application>-generated documentation on a webserver <emphasis>does</emphasis> requires <application>Publican</application> to be installed, but for reasons other than compiling the source code. Refer to <xref linkend="sect-Publican-Users_Guide-Types_of_RPM_packages-Desktop_packages_and_web_packages" /> for a description of the differences between documentation installed for local use (<firstterm>desktop RPMs</firstterm>) and documentation installed to serve as web content (<firstterm>web RPMs</firstterm>).
 			</para>
 
 		</section>
 		
-		 <section conformance="196" id="sect-Users_Guide-Types_of_RPM_packages-Desktop_packages_and_web_packages">
+		 <section conformance="196" id="sect-Publican-Users_Guide-Types_of_RPM_packages-Desktop_packages_and_web_packages">
 			<title>Desktop packages and web packages</title>
 			 <para>
 				<application>Publican</application> can package documents for reading on a computer workstation (a <firstterm>desktop RPM package</firstterm>) or to install on a web server and publish on the World Wide Web (a <firstterm>web RPM package</firstterm>). The desktop RPM package of a <application>Publican</application> document and the web RPM package of the same document differ in that the desktop RPM package installs documentation only for local use on a computer, while the web RPM installs documentation for local use, but also to be served to the World Wide Web.
@@ -47,37 +46,40 @@
 				Desktop (binary) RPM packages of <application>Publican</application> documents contain the documentation in single-page HTML format. Documents distributed in these packages are installed in a subdirectory of <filename>/usr/share/doc/</filename>, the location specified by the <citetitle>Filesystem Hierarchy Standard</citetitle> (<citetitle>FHS</citetitle>) for &lsquo;Miscellaneous documentation&rsquo;.<footnote> <para>
 					Refer to <ulink url="http://www.pathname.com/fhs/pub/fhs-2.3.html#USRSHAREARCHITECTUREINDEPENDENTDATA">http://www.pathname.com/fhs/pub/fhs-2.3.html#USRSHAREARCHITECTUREINDEPENDENTDATA</ulink>
 				</para>
-			      </footnote> The desktop RPM package also contains a <firstterm>desktop file</firstterm>, to be placed in <filename>/usr/share/applications/</filename>. This file enables <firstterm>desktop environments</firstterm> to add the installed document to their menus for ease of reference by users. By default, the menu item appears under <menuchoice><guimenu>System</guimenu><guisubmenu>Documentation</guisubmenu></menuchoice> on the GNOME desktop. To customize the placement of the menu item, create a documentation menu package to supply <filename>.directory</filename> and <filename>.menu</filename> files and set the <parameter>dt_requires</parameter> and <parameter>menu_category</parameter> parameters in the <filename>publican.cfg</filename> file to require this package and supply the appropriate menu category. Refer to <xref linkend="desktop_menus" />
+				 </footnote> The desktop RPM package also contains a <firstterm>desktop file</firstterm>, to be placed in <filename>/usr/share/applications/</filename>. This file enables <firstterm>desktop environments</firstterm> to add the installed document to their menus for ease of reference by users. By default, the menu item appears under <menuchoice><guimenu>System</guimenu><guisubmenu>Documentation</guisubmenu></menuchoice> on the GNOME desktop. To customize the placement of the menu item, create a documentation menu package to supply <filename>.directory</filename> and <filename>.menu</filename> files and set the <parameter>dt_requires</parameter> and <parameter>menu_category</parameter> parameters in the <filename>publican.cfg</filename> file to require this package and supply the appropriate menu category. Refer to <xref linkend="sect-Publican-Users_Guide-Desktop_menu_entries_for_documents" />
 			</para>
 			 <para>
 				By default, web RPM packages of <application>Publican</application> documents contain the documentation in single-page HTML, multi-page HTML, EPUB, and PDF formats. The formats included vary if:
 			</para>
-			<itemizedlist>
+			 <itemizedlist>
 				<listitem>
 					<para>
 						you publish documentation in a language in which PDF output is not currently supported. <application>Publican</application> relies on <application>FOP</application> to generate PDF output. <application>FOP</application> does not presently support right-to-left text (for example, Arabic, Persian, or Hebrew). Furthermore, because <application>FOP</application> cannot presently specify fonts on a character-by-character basis, a lack of available fonts in Indic scripts that also include Latin glyphs prevents <application>Publican</application> from reliably generating PDF output in Indic languages. By default, <application>Publican</application> does not include PDF files in web RPM packages generated in Arabic, Persian, Hebrew, or any Indic language.
 					</para>
+
 				</listitem>
-				<listitem>
+				 <listitem>
 					<para>
 						your book or your brand contains the <parameter>web_formats</parameter> parameter. The value of this parameter overrides the default formats that <application>Publican</application> packages. For example, to publish the document only as single-page HTML, PDF, and text, set <literal>web_formats: "html-single,pdf,txt"</literal>
 					</para>
+
 				</listitem>
+
 			</itemizedlist>
-			<para>
+			 <para>
 				Built content is installed in subdirectories of <filename>/var/www/html/</filename>, a common <firstterm>document root</firstterm> for web servers. Note that the web SRPM package generates both a web binary RPM package and desktop binary RPM package.
 			</para>
 
 		</section>
-		<xi:include href="Desktop_menus.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
 		
+		 <xi:include href="Desktop_menus.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
 
 	</section>
 	
-	 <section conformance="197" id="sect-Users_Guide-Packaging_a_book-The_publican_package_command">
+	 <section conformance="197" id="sect-Publican-Users_Guide-Packaging_a_document-The_publican_package_command">
 		<title>The <prompt>$</prompt> <command>publican package</command> command</title>
 		 <para>
-			Use the <prompt>$</prompt> <command>publican package --lang=<replaceable>Language_Code</replaceable></command> command to package documents for distribution in the language that you specify with the <option>--lang</option> option. Refer to <xref linkend="appe-Users_Guide-Language_codes" /> for more information about language codes.
+			Use the <prompt>$</prompt> <command>publican package --lang=<replaceable>Language_Code</replaceable></command> command to package documents for distribution in the language that you specify with the <option>--lang</option> option. Refer to <xref linkend="appe-Publican-Users_Guide-Language_codes" /> for more information about language codes.
 		</para>
 		 <para>
 			If you run <prompt>$</prompt> <command>publican package</command> with no options other than the mandatory <option>--lang</option> option, <application>Publican</application> produces a web SRPM package. The full range of options for <command>publican package</command> is as follows:
@@ -170,54 +172,53 @@
 				</listitem>
 
 			</varlistentry>
+
 		</variablelist>
 		 <para>
 			After you run the <prompt>$</prompt> <command>publican package</command> command, <application>Publican</application> outputs completed SRPM packages to the document's <filename>tmp/rpm</filename> directory, and completed binary RPM packages to the document's <filename>tmp/rpm/noarch</filename> directory.
 		</para>
 		 <para>
-		   By default, <application>Publican</application> documentation packages are named:
-		 </para>
-<literallayout><filename><replaceable>productname</replaceable>-<replaceable>title</replaceable>-<replaceable>productnumber</replaceable>-<replaceable>[web]-</replaceable><replaceable>language</replaceable>-<replaceable>edition</replaceable>-<replaceable>pubsnumber</replaceable>.
-<replaceable>[.[build_target].noarch]</replaceable>.<replaceable>file_extension</replaceable></filename>.</literallayout>
+			By default, <application>Publican</application> documentation packages are named:
+		</para>
+		
+<literallayout><filename><replaceable>productname</replaceable>-<replaceable>title</replaceable>-<replaceable>productnumber</replaceable>-<replaceable>[web]-</replaceable><replaceable>language</replaceable>-<replaceable>edition</replaceable>-<replaceable>pubsnumber</replaceable>. <replaceable>[.[build_target].noarch]</replaceable>.<replaceable>file_extension</replaceable></filename>.</literallayout>
 		 <para>
-		     <application>Publican</application> uses the information in the document's configuration file (by default, <filename>publican.cfg</filename>)  to supply the various parameters in the file name, and then information in the <filename>Book_Info.xml</filename> file for any parameters missing from the configuration file. Refer to <xref linkend="sect-Users_Guide-Files_in_the_book_directory" /> for details of the parameters used in these files. Additionally, note that: 
-		 </para>
-			<itemizedlist>
-				<listitem>
-					<para>
-						web RPM packages include the element <literal>-web-</literal> between the product version and the language code.
-					</para>
+			<application>Publican</application> uses the information in the document's configuration file (by default, <filename>publican.cfg</filename>) to supply the various parameters in the file name, and then information in the <filename>Book_Info.xml</filename> file for any parameters missing from the configuration file. Refer to <xref linkend="sect-Publican-Users_Guide-Files_in_the_book_directory" /> for details of the parameters used in these files. Additionally, note that:
+		</para>
+		 <itemizedlist>
+			<listitem>
+				<para>
+					web RPM packages include the element <literal>-web-</literal> between the product version and the language code.
+				</para>
 
-				</listitem>
-				 <listitem>
-					<para>
-						SRPM packages have the file extension <literal>.src.rpm</literal> but binary RPM packages have the file extension <literal>.rpm</literal>
-					</para>
+			</listitem>
+			 <listitem>
+				<para>
+					SRPM packages have the file extension <literal>.src.rpm</literal> but binary RPM packages have the file extension <literal>.rpm</literal>
+				</para>
 
-				</listitem>
-				 <listitem>
-					<para>
-						binary RPM packages include <literal><replaceable>build_target</replaceable>.noarch</literal> before the file extension, where <replaceable>build_target</replaceable> represents the operating system and version that the package is built for as set by the <parameter>os_ver</parameter> parameter in the <filename>publican.cfg</filename> file. The <literal>noarch</literal> element specifies that the package can be installed on any system, regardless of the system architecture.
-					</para>
+			</listitem>
+			 <listitem>
+				<para>
+					binary RPM packages include <literal><replaceable>build_target</replaceable>.noarch</literal> before the file extension, where <replaceable>build_target</replaceable> represents the operating system and version that the package is built for as set by the <parameter>os_ver</parameter> parameter in the <filename>publican.cfg</filename> file. The <literal>noarch</literal> element specifies that the package can be installed on any system, regardless of the system architecture.
+				</para>
 
-				</listitem>
-				 <listitem>
-					<para>
-						use of the <option>--short_sighted</option> option removes the <literal>-<replaceable>productnumber</replaceable>-</literal> from the package name.
-					</para>
+			</listitem>
+			 <listitem>
+				<para>
+					use of the <option>--short_sighted</option> option removes the <literal>-<replaceable>productnumber</replaceable>-</literal> from the package name.
+				</para>
 
-				</listitem>
-				<listitem>
-					<para>
-						packages of translated documents take their release numbers from the <parameter>Project-Id-Version</parameter> parameter in the <filename>Article_Info.po</filename> or <filename>Book_Info.po</filename> file. This release number is specific to a particular language and bears no relationship to the release numbers of the same document in the original language or any other language. 
-					</para>
+			</listitem>
+			 <listitem>
+				<para>
+					packages of translated documents take their release numbers from the <parameter>Project-Id-Version</parameter> parameter in the <filename>Article_Info.po</filename> or <filename>Book_Info.po</filename> file. This release number is specific to a particular language and bears no relationship to the release numbers of the same document in the original language or any other language.
+				</para>
 
-				</listitem>
+			</listitem>
 
-			</itemizedlist>
-
-
-		 <section conformance="198" id="sect-Users_Guide-The_publican_package_command-The_publican_package_command_Example_usage">
+		</itemizedlist>
+		 <section conformance="198" id="sect-Publican-Users_Guide-The_publican_package_command-The_publican_package_command_Example_usage">
 			<title>The <prompt>$</prompt> <command>publican package</command> command — Example usage</title>
 			 <para>
 				The following examples illustrate some common options, illustrated with the <citetitle>Foomaster 9 Configuration Guide</citetitle>, edition 2, revision 6.
@@ -283,3 +284,5 @@
 	
 
 </section>
+
+

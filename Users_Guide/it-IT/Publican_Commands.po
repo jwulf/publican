@@ -174,8 +174,8 @@ msgstr "build"
 
 #. Tag: para
 #, no-c-format
-msgid "transforms XML to other formats (for example: PDF, single-page HTML, or multiple-page HTML). Refer to <xref linkend=\"sect-Users_Guide-Building_a_document\" /> for more details and a description of the available options."
-msgstr "trasforma i file XML in altri formati (per esempio: PDF, HTML su pagina singola o HTML su pagine multiple). Fare riferimento alla <xref linkend=\"sect-Users_Guide-Building_a_document\" /> per maggiori dettagli ed una descrizione delle opzioni disponibili."
+msgid "transforms XML to other formats (for example: PDF, single-page HTML, or multiple-page HTML). Refer to <xref linkend=\"sect-Publican-Users_Guide-Building_a_document\" /> for more details and a description of the available options."
+msgstr "trasforma i file XML in altri formati (per esempio: PDF, HTML su pagina singola o HTML su pagine multiple). Fare riferimento alla <xref linkend=\"sect-Publican-Users_Guide-Building_a_document\" /> per maggiori dettagli ed una descrizione delle opzioni disponibili."
 
 #. Tag: term
 #, no-c-format
@@ -234,8 +234,8 @@ msgstr "clean_set"
 
 #. Tag: para
 #, no-c-format
-msgid "removes local copies of remote books in a distributed set. Refer to <xref linkend=\"sect-Users_Guide-Using_sets-Distributed_sets\" /> for details of using distributed sets."
-msgstr "rimuove le copie locali di libri remoti facenti parte di un set distribuito. Vedere la <xref linkend=\"sect-Users_Guide-Using_sets-Distributed_sets\" /> per i dettagli sull'uso di set distribuiti."
+msgid "removes local copies of remote books in a distributed set. Refer to <xref linkend=\"sect-Publican-Users_Guide-Using_sets-Distributed_sets\" /> for details of using distributed sets."
+msgstr "rimuove le copie locali di libri remoti facenti parte di un set distribuito. Vedere la <xref linkend=\"sect-Publican-Users_Guide-Using_sets-Distributed_sets\" /> per i dettagli sull'uso di set distribuiti."
 
 #. Tag: term
 #, no-c-format
@@ -244,8 +244,8 @@ msgstr "create"
 
 #. Tag: para
 #, no-c-format
-msgid "creates a new book, article, or set. Refer to <xref linkend=\"chap-Users_Guide-Creating_a_document\" /> for details of creating a book or article, and to <xref linkend=\"chap-Users_Guide-Using_sets\" /> for details of using sets."
-msgstr "crea un nuovo libro, articolo o un nuovo set. Vedere il <xref linkend=\"chap-Users_Guide-Creating_a_document\" /> per i dettagli su come creare un libro o articolo, ed il <xref linkend=\"chap-Users_Guide-Using_sets\" /> per i dettagli sull'uso dei set."
+msgid "creates a new book, article, or set. Refer to <xref linkend=\"chap-Publican-Users_Guide-Creating_a_document\" /> for details of creating a book or article, and to <xref linkend=\"chap-Publican-Users_Guide-Using_sets\" /> for details of using sets."
+msgstr "crea un nuovo libro, articolo o un nuovo set. Vedere il <xref linkend=\"chap-Publican-Users_Guide-Creating_a_document\" /> per i dettagli su come creare un libro o articolo, ed il <xref linkend=\"chap-Publican-Users_Guide-Using_sets\" /> per i dettagli sull'uso dei set."
 
 #. Tag: term
 #, no-c-format
@@ -254,8 +254,8 @@ msgstr "create_brand"
 
 #. Tag: para
 #, no-c-format
-msgid "creates a new brand. Refer to <xref linkend=\"sect-Users_Guide-Creating_a_brand\" /> for details of creating a brand."
-msgstr "crea un nuovo brand. Fare riferimento alla <xref linkend=\"sect-Users_Guide-Creating_a_brand\" /> per i dettagli."
+msgid "creates a new brand. Refer to <xref linkend=\"sect-Publican-Users_Guide-Creating_a_brand\" /> for details of creating a brand."
+msgstr "crea un nuovo brand. Fare riferimento alla <xref linkend=\"sect-Publican-Users_Guide-Creating_a_brand\" /> per i dettagli."
 
 #. Tag: term
 #, no-c-format
@@ -264,8 +264,8 @@ msgstr "create_site"
 
 #. Tag: para
 #, no-c-format
-msgid "creates a documentation website. Refer to <xref linkend=\"sect-Users_Guide-Website\" /> for details."
-msgstr "crea un sito web di documentazione. Fare riferimento al <xref linkend=\"sect-Users_Guide-Website\" /> per i dettagli."
+msgid "creates a documentation website. Refer to <xref linkend=\"chap-Publican-Users_Guide-Building_a_website_with_Publican\" /> for details."
+msgstr "crea un sito web di documentazione. Fare riferimento al <xref linkend=\"chap-Publican-Users_Guide-Building_a_website_with_Publican\" /> per i dettagli."
 
 #. Tag: term
 #, no-c-format
@@ -274,8 +274,8 @@ msgstr "help_config"
 
 #. Tag: para
 #, no-c-format
-msgid "displays help text for the configuration file contained in each book or brand, <filename>publican.cfg</filename>. Refer to <xref linkend=\"sect-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file\" /> for more detail."
-msgstr "visualizza un elenco di parametri di configurazione del file <filename>publican.cfg</filename>, contenuto in ciascun libro o brand. Fare riferimento alla <xref linkend=\"sect-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file\" /> per maggiori dettagli."
+msgid "displays help text for the configuration file contained in each book or brand, <filename>publican.cfg</filename>. Refer to <xref linkend=\"sect-Publican-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file\" /> for more detail."
+msgstr "visualizza un elenco di parametri di configurazione del file <filename>publican.cfg</filename>, contenuto in ciascun libro o brand. Fare riferimento alla <xref linkend=\"sect-Publican-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file\" /> per maggiori dettagli."
 
 #. Tag: term
 #, no-c-format
@@ -284,8 +284,8 @@ msgstr "install_book"
 
 #. Tag: para
 #, no-c-format
-msgid "installs a document on a documentation website. Refer to <xref linkend=\"sect-Users_Guide-Website\" /> for details."
-msgstr "installa un documento su un sito web di documentazione. Vedere il <xref linkend=\"sect-Users_Guide-Website\" /> per i dettagli."
+msgid "installs a document on a documentation website. Refer to <xref linkend=\"chap-Publican-Users_Guide-Building_a_website_with_Publican\" /> for details."
+msgstr "installa un documento su un sito web di documentazione. Vedere il <xref linkend=\"chap-Publican-Users_Guide-Building_a_website_with_Publican\" /> per i dettagli."
 
 #. Tag: term
 #, no-c-format
@@ -294,8 +294,8 @@ msgstr "install_brand"
 
 #. Tag: para
 #, no-c-format
-msgid "configures a brand for installation. Refer to <xref linkend=\"sect-Users_Guide-Installing_a_brand\" /> for details of installing a brand."
-msgstr "configura l'installazione di un brand. Fare riferimento alla <xref linkend=\"sect-Users_Guide-Installing_a_brand\" /> per i dettagli. "
+msgid "configures a brand for installation. Refer to <xref linkend=\"sect-Publican-Users_Guide-Installing_a_brand\" /> for details of installing a brand."
+msgstr "configura l'installazione di un brand. Fare riferimento alla <xref linkend=\"sect-Publican-Users_Guide-Installing_a_brand\" /> per i dettagli. "
 
 #. Tag: term
 #, no-c-format
@@ -324,8 +324,8 @@ msgstr "package"
 
 #. Tag: para
 #, no-c-format
-msgid "packages a book, article, set, or brand for shipping as an RPM package. Refer to <xref linkend=\"sect-Users_Guide-Packaging_a_book\" /> and <xref linkend=\"sect-Users_Guide-Packaging_a_brand\" /> for more detail."
-msgstr "crea un pacchetto un RPM di un libro, articolo, set o brand. Vedere la <xref linkend=\"sect-Users_Guide-Packaging_a_book\" /> e la <xref linkend=\"sect-Users_Guide-Packaging_a_brand\" /> per maggiori dettagli."
+msgid "packages a book, article, set, or brand for shipping as an RPM package. Refer to <xref linkend=\"sect-Publican-Users_Guide-Packaging_a_document\" /> and <xref linkend=\"sect-Publican-Users_Guide-Packaging_a_brand\" /> for more detail."
+msgstr "crea un pacchetto un RPM di un libro, articolo, set o brand. Vedere la <xref linkend=\"sect-Publican-Users_Guide-Packaging_a_document\" /> e la <xref linkend=\"sect-Publican-Users_Guide-Packaging_a_brand\" /> per maggiori dettagli."
 
 #. Tag: term
 #, no-c-format
@@ -334,8 +334,8 @@ msgstr "print_banned"
 
 #. Tag: para
 #, no-c-format
-msgid "prints a list of DocBook tags banned by <application>Publican</application>. Refer to <xref linkend=\"appe-Users_Guide-Disallowed_elements_and_attributes\" /> for a discussion of banned tags."
-msgstr "visualizza l'elenco dei tag di DocBook non raccomandati da <application>Publican</application>. Vedere l'<xref linkend=\"appe-Users_Guide-Disallowed_elements_and_attributes\" /> per una discussione sull'uso di tag non raccomandati."
+msgid "prints a list of DocBook tags banned by <application>Publican</application>. Refer to <xref linkend=\"appe-Publican-Users_Guide-Disallowed_elements_and_attributes\" /> for a discussion of banned tags."
+msgstr "visualizza l'elenco dei tag di DocBook non raccomandati da <application>Publican</application>. Vedere l'<xref linkend=\"appe-Publican-Users_Guide-Disallowed_elements_and_attributes\" /> per una discussione sull'uso di tag non raccomandati."
 
 #. Tag: term
 #, no-c-format
@@ -344,8 +344,8 @@ msgstr "print_known"
 
 #. Tag: para
 #, no-c-format
-msgid "prints a list of DocBook tags supported by <application>Publican</application>. <firstterm>Supported</firstterm> are those tags whose output has undergone at least cursory verification for quality when used in <application>Publican</application> — refer to <xref linkend=\"appe-Users_Guide-Disallowed_elements_and_attributes\" />."
-msgstr "visualizza l'elenco dei tag di DocBook supportati da <application>Publican</application>. I tag <firstterm>supportati</firstterm> sono quelli che hanno superato una minima verifica di qualità per l'uso in <application>Publican</application>. Fare riferimento all'<xref linkend=\"appe-Users_Guide-Disallowed_elements_and_attributes\" />."
+msgid "prints a list of DocBook tags supported by <application>Publican</application>. <firstterm>Supported</firstterm> are those tags whose output has undergone at least cursory verification for quality when used in <application>Publican</application> — refer to <xref linkend=\"appe-Publican-Users_Guide-Disallowed_elements_and_attributes\" />."
+msgstr "visualizza l'elenco dei tag di DocBook supportati da <application>Publican</application>. I tag <firstterm>supportati</firstterm> sono quelli che hanno superato una minima verifica di qualità per l'uso in <application>Publican</application>. Fare riferimento all'<xref linkend=\"appe-Publican-Users_Guide-Disallowed_elements_and_attributes\" />."
 
 #. Tag: term
 #, no-c-format
@@ -384,8 +384,8 @@ msgstr "remove_book"
 
 #. Tag: para
 #, no-c-format
-msgid "removes a document from a documentation website. Refer to <xref linkend=\"sect-Users_Guide-Website\" /> for details."
-msgstr "rimuove un documento da un sito web di documentazione. Vedere il <xref linkend=\"sect-Users_Guide-Website\" /> per i dettagli."
+msgid "removes a document from a documentation website. Refer to <xref linkend=\"chap-Publican-Users_Guide-Building_a_website_with_Publican\" /> for details."
+msgstr "rimuove un documento da un sito web di documentazione. Vedere il <xref linkend=\"chap-Publican-Users_Guide-Building_a_website_with_Publican\" /> per i dettagli."
 
 #. Tag: term
 #, no-c-format
@@ -414,8 +414,8 @@ msgstr "update_po"
 
 #. Tag: para
 #, no-c-format
-msgid "updates the <firstterm>portable object</firstterm> (PO) files. Refer to <xref linkend=\"sect-Users_Guide-Preparing_a_document_for_translation\" /> for more detail."
-msgstr "aggiorna i file <firstterm>PO</firstterm> (Portable Object). Vedere la <xref linkend=\"sect-Users_Guide-Preparing_a_document_for_translation\" /> per maggiori dettagli."
+msgid "updates the <firstterm>portable object</firstterm> (PO) files. Refer to <xref linkend=\"sect-Publican-Users_Guide-Preparing_a_document_for_translation\" /> for more detail."
+msgstr "aggiorna i file <firstterm>PO</firstterm> (Portable Object). Vedere la <xref linkend=\"sect-Publican-Users_Guide-Preparing_a_document_for_translation\" /> per maggiori dettagli."
 
 #. Tag: term
 #, no-c-format
@@ -424,8 +424,8 @@ msgstr "update_pot"
 
 #. Tag: para
 #, no-c-format
-msgid "updates the <firstterm>portable object template</firstterm> (POT) files. Refer to <xref linkend=\"sect-Users_Guide-Preparing_a_document_for_translation\" /> for more detail."
-msgstr "aggiorna i file <firstterm>POT</firstterm> (Portable Object Template). Vedere la <xref linkend=\"sect-Users_Guide-Preparing_a_document_for_translation\" /> per maggiori dettagli."
+msgid "updates the <firstterm>portable object template</firstterm> (POT) files. Refer to <xref linkend=\"sect-Publican-Users_Guide-Preparing_a_document_for_translation\" /> for more detail."
+msgstr "aggiorna i file <firstterm>POT</firstterm> (Portable Object Template). Vedere la <xref linkend=\"sect-Publican-Users_Guide-Preparing_a_document_for_translation\" /> per maggiori dettagli."
 
 #. Tag: term
 #, no-c-format
@@ -434,8 +434,8 @@ msgstr "update_site"
 
 #. Tag: para
 #, no-c-format
-msgid "updates the templated content of the documentation website. Refer to <xref linkend=\"sect-Users_Guide-Website\" /> for details."
-msgstr "aggiorna i template del sito web di documentazione. Consultare il <xref linkend=\"sect-Users_Guide-Website\" /> per i dettagli."
+msgid "updates the templated content of the documentation website. Refer to <xref linkend=\"chap-Publican-Users_Guide-Building_a_website_with_Publican\" /> for details."
+msgstr "aggiorna i template del sito web di documentazione. Consultare il <xref linkend=\"chap-Publican-Users_Guide-Building_a_website_with_Publican\" /> per i dettagli."
 
 #. Tag: para
 #, no-c-format

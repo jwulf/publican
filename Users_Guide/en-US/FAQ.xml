@@ -3,7 +3,7 @@
 <!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
 %BOOK_ENTITIES;
 ]>
-<chapter conformance="156" id="chap-Users_Guide-Frequently_Asked_Questions">
+<chapter conformance="156" id="chap-Publican-Users_Guide-Frequently_Asked_Questions">
 	<title>Frequently Asked Questions</title>
 	 <qandaset>
 		<qandaentry>
@@ -96,7 +96,6 @@
 			</answer>
 
 		</qandaentry>
-
 		 <qandaentry>
 			<question>
 				<para>
@@ -134,7 +133,7 @@
 			</answer>
 
 		</qandaentry>
-		<qandaentry>
+		 <qandaentry>
 			<question>
 				<para>
 					I can build HTML documents fine, but when I try to build PDF documents, I get errors like <computeroutput>java.lang.NullPointerException</computeroutput> and no PDF file is produced. What is wrong?
@@ -145,9 +144,10 @@
 				<para>
 					Try building a PDF version of a different document — perhaps a fresh one that you create with the <prompt>$</prompt> <command>publican create</command> command. If the problem is not just with one particular document, you probably have a mismatch between the <application>Java Runtime Environment</application> (JRE) and the <application>Java Development Kit</application> (JDK) in use on your system. If you have a JDK installed, <application>FOP</application> requires that the JDK is of the same version as the JRE. Furthermore, <application>FOP</application> cannot use the <application>GNU Compiler for Java</application> (GCJ).
 				</para>
-				<para>
+				 <para>
 					Run <command>alternatives --config java</command> and <command>alternatives --config javac</command> to determine which JRE and JDK are in use, then select versions that match and which do not have <literal>gcj</literal> in their name. For example, the following Java configuration shows a matching JRE and JDK that allow PDFs to build:
 				</para>
+				 
 <screen><prompt>$</prompt> <command>alternatives --config java</command>
 
 There are 3 programs which provide 'java'.
@@ -159,7 +159,7 @@ There are 3 programs which provide 'java'.
  + 3           /usr/lib/jvm/jre-1.6.0-openjdk.x86_64/bin/java
 
 Enter to keep the current selection[+], or type selection number:</screen>
-
+				 
 <screen><prompt>$</prompt> <command>alternatives --config javac</command>
 
 There are 3 programs which provide 'javac'.
@@ -170,18 +170,18 @@ There are 3 programs which provide 'javac'.
    2           /usr/lib/jvm/java-1.6.0-openjdk/bin/javac
    3           /usr/lib/jvm/java-1.5.0-gcj/bin/javac
 
-Enter to keep the current selection[+], or type selection number: </screen>
-				<para>
-					You might need to install an extra JDK if you do not have a JDK on your system that matches any of the JREs. 
+Enter to keep the current selection[+], or type selection number:</screen>
+				 <para>
+					You might need to install an extra JDK if you do not have a JDK on your system that matches any of the JREs.
 				</para>
-				<para>
+				 <para>
 					Some Java installations do not set up the <command>alternatives</command> environment correctly. No fix has been determined for this situation.
 				</para>
 
 			</answer>
 
 		</qandaentry>
-		<qandaentry>
+		 <qandaentry>
 			<question>
 				<para>
 					I get an error saying <application>Batik</application> is not in the classpath but <application>Batik</application> is installed! What is wrong?
@@ -196,7 +196,7 @@ Enter to keep the current selection[+], or type selection number: </screen>
 			</answer>
 
 		</qandaentry>
-		<qandaentry>
+		 <qandaentry>
 			<question>
 				<para>
 					I get an error <computeroutput>Exception in thread "main" java.lang.OutOfMemoryError: Java heap space</computeroutput> when trying to build PDF. What is wrong?
@@ -237,11 +237,13 @@ Enter to keep the current selection[+], or type selection number: </screen>
 				<para>
 					Early versions of <application>Publican</application> (up to and including 0.45) ran a spell check while transforming a document's XML. Due to negative feedback from users, this feature was dropped.
 				</para>
-				<para>
-					Run the following bash script in the root directory of your document to check spellings in your XML files with the <application>aspell</application> command-line spell checker. 
+				 <para>
+					Run the following bash script in the root directory of your document to check spellings in your XML files with the <application>aspell</application> command-line spell checker.
 				</para>
+				 
 <programlisting language="Bash"><xi:include href="extras/proof.sh" parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" />
 </programlisting>
+
 			</answer>
 
 		</qandaentry>
@@ -289,8 +291,7 @@ Enter to keep the current selection[+], or type selection number: </screen>
 				 
 <screen><computeroutput>undefined language: JAVA at /usr/lib/perl5/vendor_perl/5.10.0/Syntax/Highlight/Engine/Kate.pm</computeroutput>
 <computeroutput>line 615.</computeroutput>
-<computeroutput>cannot create plugin for language 'JAVA'</computeroutput>
-</screen>
+<computeroutput>cannot create plugin for language 'JAVA'</computeroutput></screen>
 				 <para>
 					Note that <application>Syntax::Highlight::Engine::Kate</application> is very strict about names of languages and is case sensitive. Therefore, <sgmltag>&lt;programlisting language="Java"&gt;</sgmltag> works, but <sgmltag>&lt;programlisting language="java"&gt;</sgmltag> and <sgmltag>&lt;programlisting language="JAVA"&gt;</sgmltag> do not. The error message that you receive identifies the problematic language attribute.
 				</para>
@@ -312,30 +313,38 @@ Enter to keep the current selection[+], or type selection number: </screen>
 				<para>
 					Support for bash command-line completion is a new feature in <application>Publican&nbsp;2.2</application>. To enable this feature:
 				</para>
-				<procedure>
+				 <procedure>
 					<step>
 						<para>
 							Install the package or packages that provide bash completion for your operating system. For example, on Fedora, run <command>sudo yum install bash-completion</command>.
 						</para>
+
 					</step>
-					<step>
+					 <step>
 						<para>
 							Add the following to your <filename>~/.bashrc</filename> file:
 						</para>
+						 
 <programlisting language="Bash">
 # Use bash-completion, if available
 if [ -f /etc/bash_completion ]; then
         . /etc/bash_completion
 fi
 </programlisting>
+
 					</step>
-					<step>
+					 <step>
 						<para>
 							Restart your terminal or run <command>source ~/.bashrc</command>.
 						</para>
+
 					</step>
+
 				</procedure>
+				
+
 			</answer>
+
 		</qandaentry>
 		 <qandaentry>
 			<question>
@@ -348,16 +357,18 @@ fi
 				<para>
 					Probably because the kernel can deal with only a certain number of file handles at a time, and you have exceeded that number. On some linuxes you can run <command>ulimit -n 8192</command> to change the limit for the current shell.
 				</para>
-				<para>
+				 <para>
 					To make this permanent, open <filename>/etc/security/limits.conf</filename> and add these two lines:
 				</para>
-					<screen>
+				 
+<screen>
 *                 soft    nofile          8192
 *                 hard    nofile          8192
-					</screen>
-				<para>
+</screen>
+				 <para>
 					Then save, and log in again for the changes to take effect.
 				</para>
+
 			</answer>
 
 		</qandaentry>
@@ -379,3 +390,4 @@ fi
 
 	</qandaset>
 </chapter>
+

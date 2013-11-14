@@ -3,7 +3,7 @@
 <!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
 %BOOK_ENTITIES;
 ]>
-<appendix conformance="192" id="appe-Users_Guide-Language_codes">
+<appendix conformance="192" id="appe-Publican-Users_Guide-Language_codes">
 	<title>Language codes</title>
 	 <important>
 		<title>Region subtags</title>
@@ -421,3 +421,4 @@
 
 	</itemizedlist>
 </appendix>
+

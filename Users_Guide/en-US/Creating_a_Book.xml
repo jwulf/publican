@@ -3,7 +3,7 @@
 <!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
 %BOOK_ENTITIES;
 ]>
-<chapter conformance="131" id="chap-Users_Guide-Creating_a_document">
+<chapter conformance="131" id="chap-Publican-Users_Guide-Creating_a_document">
 	<title>Creating a document</title>
 	 <para>
 		This chapter describes creating books and articles: the main configuration files, example document files, and how to build a document.
@@ -39,7 +39,7 @@
 			<term><option>--lang<replaceable> Language_Code</replaceable></option></term>
 			 <listitem>
 				<para>
-					set <replaceable>Language_Code</replaceable> as the language code of the language in which the book or article will be authored. If you do not specify a language code, <application>Publican</application> defaults to <literal>en-US</literal> (American English). The <option>--lang</option> option sets the <parameter>xml_lang</parameter> in the <filename>publican.cfg</filename> file and creates a directory with this name in the document directory. When initially created, this directory contains some boilerplate XML files. Refer to <xref linkend="sect-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file" /> for more information on <filename>publican.cfg</filename> parameters and <xref linkend="appe-Users_Guide-Language_codes" /> for more detail on language codes.
+					set <replaceable>Language_Code</replaceable> as the language code of the language in which the book or article will be authored. If you do not specify a language code, <application>Publican</application> defaults to <literal>en-US</literal> (American English). The <option>--lang</option> option sets the <parameter>xml_lang</parameter> in the <filename>publican.cfg</filename> file and creates a directory with this name in the document directory. When initially created, this directory contains some boilerplate XML files. Refer to <xref linkend="sect-Publican-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file" /> for more information on <filename>publican.cfg</filename> parameters and <xref linkend="appe-Publican-Users_Guide-Language_codes" /> for more detail on language codes.
 				</para>
 
 			</listitem>
@@ -49,7 +49,7 @@
 			<term><option>--version<replaceable> version</replaceable></option></term>
 			 <listitem>
 				<para>
-					set <replaceable>version</replaceable> as the version number of the product that the book describes. For example, for Red Hat Enterprise Linux&nbsp;5.1 you would use <literal>5.1</literal>. The default version is <literal>0.1</literal>. The <option>--version</option> option sets the <sgmltag>&lt;productnumber&gt;</sgmltag> tag in the <filename>Book_Info.xml</filename> or <filename>Article_Info.xml</filename> file. For more information refer to <xref linkend="sect-Users_Guide-Files_in_the_book_directory-Book_Info.xml" />.
+					set <replaceable>version</replaceable> as the version number of the product that the book describes. For example, for Red Hat Enterprise Linux&nbsp;5.1 you would use <literal>5.1</literal>. The default version is <literal>0.1</literal>. The <option>--version</option> option sets the <sgmltag>&lt;productnumber&gt;</sgmltag> tag in the <filename>Book_Info.xml</filename> or <filename>Article_Info.xml</filename> file. For more information refer to <xref linkend="sect-Publican-Users_Guide-Files_in_the_book_directory-Book_Info.xml" />.
 				</para>
 
 			</listitem>
@@ -59,7 +59,7 @@
 			<term><option>--edition<replaceable> edition</replaceable></option></term>
 			 <listitem>
 				<para>
-					set <replaceable>edition</replaceable> as the edition number of the book. This number indicates to users when a new edition of the book is released. The initial <firstterm>general availability</firstterm> (GA) release of the book should be edition <literal>1.0</literal>. The default value is <literal>0</literal>. The <option>--edition</option> option sets the <sgmltag>&lt;edition&gt;</sgmltag> tag in the <filename>Book_Info.xml</filename> or <filename>Article_Info.xml</filename> file. For more information refer to <xref linkend="sect-Users_Guide-Files_in_the_book_directory-Book_Info.xml" />.
+					set <replaceable>edition</replaceable> as the edition number of the book. This number indicates to users when a new edition of the book is released. The initial <firstterm>general availability</firstterm> (GA) release of the book should be edition <literal>1.0</literal>. The default value is <literal>0</literal>. The <option>--edition</option> option sets the <sgmltag>&lt;edition&gt;</sgmltag> tag in the <filename>Book_Info.xml</filename> or <filename>Article_Info.xml</filename> file. For more information refer to <xref linkend="sect-Publican-Users_Guide-Files_in_the_book_directory-Book_Info.xml" />.
 				</para>
 
 			</listitem>
@@ -79,7 +79,7 @@
 			<term><option>--type Article --name<replaceable> Article_Name</replaceable></option></term>
 			 <listitem>
 				<para>
-					create an article instead of a book. Replace <replaceable>Article_Name</replaceable> with the article name. This variable must not contain any spaces. The <option>--type</option> option sets the <parameter>type</parameter> in the <filename>publican.cfg</filename> file. Refer to <xref linkend="sect-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file" /> for more information on <filename>publican.cfg</filename> parameters.
+					create an article instead of a book. Replace <replaceable>Article_Name</replaceable> with the article name. This variable must not contain any spaces. The <option>--type</option> option sets the <parameter>type</parameter> in the <filename>publican.cfg</filename> file. Refer to <xref linkend="sect-Publican-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file" /> for more information on <filename>publican.cfg</filename> parameters.
 				</para>
 
 			</listitem>
@@ -89,7 +89,7 @@
 			<term><option>--type Set --name<replaceable> Set_Name</replaceable></option></term>
 			 <listitem>
 				<para>
-					create a set of documents instead of a book. Replace <replaceable>Set_Name</replaceable> with the set name. This variable must not contain any spaces. The <option>--type</option> option sets the <parameter>type</parameter> in the <filename>publican.cfg</filename> file. Refer to <xref linkend="sect-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file" /> for more information on <filename>publican.cfg</filename> parameters and to <xref linkend="chap-Users_Guide-Using_sets" /> for details on using sets.
+					create a set of documents instead of a book. Replace <replaceable>Set_Name</replaceable> with the set name. This variable must not contain any spaces. The <option>--type</option> option sets the <parameter>type</parameter> in the <filename>publican.cfg</filename> file. Refer to <xref linkend="sect-Publican-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file" /> for more information on <filename>publican.cfg</filename> parameters and to <xref linkend="chap-Publican-Users_Guide-Using_sets" /> for details on using sets.
 				</para>
 
 			</listitem>
@@ -99,7 +99,7 @@
 			<term><option>--brand <replaceable>brand</replaceable></option></term>
 			 <listitem>
 				<para>
-				  set <replaceable>brand</replaceable> as the <firstterm>brand</firstterm> to use to style the output of this document, for example, <literal>RedHat</literal>, <literal>fedora</literal>, <literal>JBoss</literal>, <literal>oVirt</literal>, or <literal>GIMP</literal>. The default value is <literal>common</literal>, a default brand shipped with <application>Publican</application>. The <option>--brand</option> option sets the <parameter>brand</parameter> parameter in the <filename>publican.cfg</filename> file. Refer to <xref linkend="sect-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file" /> for more information on <filename>publican.cfg</filename> parameters. This option requires the appropriate <application>Publican</application> brand package to be installed. For example, to build Red Hat branded books, you must install the <package>publican-redhat</package> package. Refer to <xref linkend="sect-Users_Guide-Installing_a_brand" /> for instructions on installing brand packages for <application>Publican</application>. If you do not specify a brand, <application>Publican</application> uses its built-in, default brand. Refer to <xref linkend="chap-Users_Guide-Branding" /> for more information.
+					set <replaceable>brand</replaceable> as the <firstterm>brand</firstterm> to use to style the output of this document, for example, <literal>RedHat</literal>, <literal>fedora</literal>, <literal>JBoss</literal>, <literal>oVirt</literal>, or <literal>GIMP</literal>. The default value is <literal>common</literal>, a default brand shipped with <application>Publican</application>. The <option>--brand</option> option sets the <parameter>brand</parameter> parameter in the <filename>publican.cfg</filename> file. Refer to <xref linkend="sect-Publican-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file" /> for more information on <filename>publican.cfg</filename> parameters. This option requires the appropriate <application>Publican</application> brand package to be installed. For example, to build Red Hat branded books, you must install the <package>publican-redhat</package> package. Refer to <xref linkend="sect-Publican-Users_Guide-Installing_a_brand" /> for instructions on installing brand packages for <application>Publican</application>. If you do not specify a brand, <application>Publican</application> uses its built-in, default brand. Refer to <xref linkend="chap-Publican-Users_Guide-Branding" /> for more information.
 				</para>
 
 			</listitem>
@@ -110,24 +110,29 @@
 	 <para>
 		Before running the <prompt>$</prompt> <command>publican create</command> command, use the <prompt>$</prompt> <command>cd</command> command to change into the directory where you want the book to be created. For example, to create a book named <literal>Test_Book</literal> in the <filename>my_books/</filename> directory, run the following commands:
 	</para>
+	 
 <screen><prompt>$</prompt> <command>cd my_books/</command> 
 <prompt>$</prompt> <command>publican create --name Test_Book</command></screen>
 	 <para>
 		To see the results of this command on a computer with a Linux operating system, run the following:
 	</para>
+	 
 <screen><prompt>$</prompt> <command>ls</command></screen>
 	 <para>
 		The output should be similar to the following:
 	</para>
+	 
 <screen><computeroutput>Test_Book/</computeroutput></screen>
-	<para>
+	 <para>
 		To see the contents of the new <filename>Test_Book/</filename> directory on a computer with a Linux operating system, run the following:
 	</para>
+	 
 <screen><prompt>$</prompt> <command>cd Test_Book/</command>
 <prompt>$</prompt> <command>ls</command></screen>
 	 <para>
 		The output should be similar to the following:
 	</para>
+	 
 <screen><computeroutput>en-US/ publican.cfg</computeroutput></screen>
 	 <xi:include href="Files_in_the_Book_Directory.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
 	 <xi:include href="Adding_Images.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
@@ -140,3 +145,4 @@
 	 <xi:include href="Conditionaltagging.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
 	 <xi:include href="Draft.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
 </chapter>
+

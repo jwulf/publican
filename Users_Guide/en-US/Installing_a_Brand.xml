@@ -3,13 +3,13 @@
 <!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
 %BOOK_ENTITIES;
 ]>
-<section conformance="188" id="sect-Users_Guide-Installing_a_brand">
+<section conformance="188" id="sect-Publican-Users_Guide-Installing_a_brand">
 	<title>Installing a brand</title>
 	 <para>
 		<application>Publican</application> brands for Fedora, Genome, and oVirt documents are available as RPM packages in Fedora. Similarly, Red Hat internally distributes RPM packages containing <application>Publican</application> brands for GIMP, JBoss, and Red Hat documents. Providing that you have access to the relevant repositories, you can install these brands on a computer that runs Red Hat Enterprise Linux or Fedora — or an operating system derived from either — with the command <command>yum install publican-<replaceable>brand</replaceable></command> or with a graphical package manager such as <application>PackageKit</application>.
 	</para>
 	 <para>
-	   If you use <application>Publican</application> on an operating system that does not use RPM packages, your documentation project might provide its brand in another format. Whatever the format in which the brand is supplied, you must place the brand files in a subdirectory of the <application>Publican</application> <filename>Common_Content</filename> directory. By default, this directory is located at <filename>/usr/share/publican/Common_Content</filename> on Linux operating systems and at <filename>%SystemDrive%/%ProgramFiles%/Publican/Common_Content</filename> on Windows operating systems — typically, <filename>C:/Program Files/Publican/Common_Content</filename>
+		If you use <application>Publican</application> on an operating system that does not use RPM packages, your documentation project might provide its brand in another format. Whatever the format in which the brand is supplied, you must place the brand files in a subdirectory of the <application>Publican</application> <filename>Common_Content</filename> directory. By default, this directory is located at <filename>/usr/share/publican/Common_Content</filename> on Linux operating systems and at <filename>%SystemDrive%/%ProgramFiles%/Publican/Common_Content</filename> on Windows operating systems — typically, <filename>C:/Program Files/Publican/Common_Content</filename>
 	</para>
 	 <para>
 		Each currently available brand is distributed under a brand-specific license as follows:
@@ -29,8 +29,7 @@
 				Change into the directory in which you created or unpacked the brand:
 			</para>
 			 
-<screen><prompt>$</prompt> <command>cd publican-<replaceable>brand</replaceable></command>
-</screen>
+<screen><prompt>$</prompt> <command>cd publican-<replaceable>brand</replaceable></command></screen>
 			 <para>
 				where <replaceable>brand</replaceable> is the name of the brand.
 			</para>
@@ -41,8 +40,7 @@
 				Build the brand:
 			</para>
 			 
-<screen><prompt>$</prompt> <command>publican build --formats xml --langs all --publish</command>
-</screen>
+<screen><prompt>$</prompt> <command>publican build --formats xml --langs all --publish</command></screen>
 
 		</step>
 		 <step>
@@ -50,25 +48,23 @@
 				Install the brand:
 			</para>
 			 
-<screen><prompt>$</prompt> <command>sudo publican install_brand --path <replaceable>path</replaceable></command>
-</screen>
+<screen><prompt>$</prompt> <command>sudo publican install_brand --path <replaceable>path</replaceable></command></screen>
 			 <para>
 				where <replaceable>path</replaceable> is the path to the <application>Publican</application> Common Content files. For example, on a Linux system, run:
 			</para>
 			 
-<screen><prompt>$</prompt> <command>sudo publican install_brand --path /usr/share/publican/Common_Content</command>
-</screen>
+<screen><prompt>$</prompt> <command>sudo publican install_brand --path /usr/share/publican/Common_Content</command></screen>
 			 <para>
 				or on a Windows system, run
 			</para>
 			 
-<screen><prompt>$</prompt> <command>publican install_brand --path "C:/Program Files/Publican/Common_Content"</command>
-</screen>
+<screen><prompt>$</prompt> <command>publican install_brand --path "C:/Program Files/Publican/Common_Content"</command></screen>
 
 		</step>
 
 	</procedure>
-	 <table conformance="189" id="tabl-Users_Guide-Installing_a_brand-Current_Brands_and_their_packages">
+	
+	 <table conformance="189" id="tabl-Publican-Users_Guide-Installing_a_brand-Current_Brands_and_their_packages">
 		<title>Current Brands and their packages</title>
 		 <tgroup cols="5">
 			<colspec colnum="1" colwidth="1*"></colspec>
@@ -84,7 +80,7 @@
 					 <entry>
 						License of Common Content files
 					</entry>
-					<entry>
+					 <entry>
 						Default license for documents
 					</entry>
 					 <entry>
@@ -230,7 +226,9 @@
 		</tgroup>
 
 	</table>
-	<para>
+	 <para>
 		Note the difference in licensing between the common content files provided in the common brand (CC0) and the default license set for books generated with the common brand (GFDL). The CC0 license allows you to redistribute and relicense the files that make up the common brand (including the CSS and image files) to suit your project. <application>Publican</application> suggests the GFDL for documentation by default because <application>Publican</application> is developed primarily to build documentation for software. The GFDL is compatible with the GPL, which is the most commonly used license for open-source software.
 	</para>
 </section>
+
+

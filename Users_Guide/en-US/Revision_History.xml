@@ -3,10 +3,27 @@
 <!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
 %BOOK_ENTITIES;
 ]>
-<appendix conformance="211" id="appe-Users_Guide-Revision_History">
+<appendix conformance="211" id="appe-Publican-Users_Guide-Revision_History">
 	<title>Revision History</title>
 	 <simpara>
 		<revhistory>
+			<revision>
+				<revnumber>4.0-1</revnumber>
+				 <date>Thu Nov 14 2013</date>
+				 <author>
+					<firstname>Svein</firstname>
+					 <surname>Dowdeit</surname>
+					 <email>SvenDowideit@home.org.au</email>
+
+				</author>
+				 <revdescription>
+					<simplelist>
+						<member>Updated Debian installation instructions - BZ#1013934</member>
+					</simplelist>
+
+				</revdescription>
+
+			</revision>
 			<revision>
 				<revnumber>3.2-1</revnumber>
 				 <date>Thu Jul 11 2013</date>
@@ -14,74 +31,78 @@
 					<firstname>Zac</firstname>
 					 <surname>Dover</surname>
 					 <email>zdover@redhat.com</email>
+
 				</author>
 				 <revdescription>
 					<simplelist>
-					  <member>Added command prompts to all commands - BZ#880456</member>
-					  <member>Added quotes around the web_formats list - BZ#839141
-					 </member>
-					  <member>Replaced a broken link to kate plugins page on CPAN with a working link - BZ#973461
-					 </member>
-					 <member>Updated web site instructions - BZ#979224
-					 </member>
-					 
+						<member>Added command prompts to all commands - BZ#880456</member>
+						 <member>Added quotes around the web_formats list - BZ#839141</member>
+						 <member>Replaced a broken link to kate plugins page on CPAN with a working link - BZ#973461</member>
+						 <member>Updated web site instructions - BZ#979224</member>
+
 					</simplelist>
 
 				</revdescription>
 
 			</revision>
-			<revision>
+			 <revision>
 				<revnumber>3.2-0</revnumber>
 				 <date>Thu Jul 11 2013</date>
 				 <author>
 					<firstname>Jeff</firstname>
 					 <surname>Fearn</surname>
 					 <email>jfearn@redhat.com</email>
+
 				</author>
 				 <revdescription>
 					<simplelist>
-					  <member>Publican 3.2.0</member>
-					  <member>Document site config option 'toc_js'</member>
-					  <member>Document build option --pdftool</member>
-					  <member>Document build option --pub_dir</member>
+						<member>Publican 3.2.0</member>
+						 <member>Document site config option 'toc_js'</member>
+						 <member>Document build option --pdftool</member>
+						 <member>Document build option --pub_dir</member>
+
 					</simplelist>
 
 				</revdescription>
 
 			</revision>
-			<revision>
+			 <revision>
 				<revnumber>3.1-0</revnumber>
 				 <date>Tue Jan 8 2013</date>
 				 <author>
 					<firstname>Norman</firstname>
 					 <surname>Dunbar</surname>
 					 <email>norman@dunbar-it.co.uk</email>
+
 				</author>
 				 <revdescription>
 					<simplelist>
-					  <member>Add Section on Installing Publican on OpenSuse 12</member>
+						<member>Add Section on Installing Publican on OpenSuse 12</member>
+
 					</simplelist>
 
 				</revdescription>
 
 			</revision>
-			<revision>
+			 <revision>
 				<revnumber>3.0-0</revnumber>
 				 <date>Mon Feb 20 2012</date>
 				 <author>
 					<firstname>Jeff</firstname>
 					 <surname>Fearn</surname>
 					 <email>jfearn@redhat.com</email>
+
 				</author>
 				 <revdescription>
 					<simplelist>
-					  <member>Publican 3.0</member>
+						<member>Publican 3.0</member>
+
 					</simplelist>
 
 				</revdescription>
 
 			</revision>
-			<revision>
+			 <revision>
 				<revnumber>2.7-1</revnumber>
 				 <date>Tue Sep 6 2011</date>
 				 <author>
@@ -92,13 +113,14 @@
 				</author>
 				 <revdescription>
 					<simplelist>
-					  <member>Improve documentation of standalone &lt;set&gt; usage</member>
+						<member>Improve documentation of standalone &lt;set&gt; usage</member>
+
 					</simplelist>
 
 				</revdescription>
 
 			</revision>
-			<revision>
+			 <revision>
 				<revnumber>2.6-1</revnumber>
 				 <date>Mon Jul 18 2011</date>
 				 <author>
@@ -109,20 +131,21 @@
 				</author>
 				 <revdescription>
 					<simplelist>
-					  <member>Document new manual_toc_update parameter -- BZ#719573</member>
-					  <member>Document new update_db action -- BZ#661948</member>
-					  <member>Document new rename action -- BZ#694698</member>
-					  <member>Document new mainfile parameter -- BZ#688585</member>
-					  <member>Include advice about multiple config files for conditionalised books -- BZ#657132</member>
-					  <member>Fix broken command example -- BZ#663211</member>
-					  <member>Incorporate proofreading fixes from Luigi Votta <email>lewis41@fedoraproject.org</email> BZ#657576, BZ#663399</member>
+						<member>Document new manual_toc_update parameter -- BZ#719573</member>
+						 <member>Document new update_db action -- BZ#661948</member>
+						 <member>Document new rename action -- BZ#694698</member>
+						 <member>Document new mainfile parameter -- BZ#688585</member>
+						 <member>Include advice about multiple config files for conditionalised books -- BZ#657132</member>
+						 <member>Fix broken command example -- BZ#663211</member>
+						 <member>Incorporate proofreading fixes from Luigi Votta <email>lewis41@fedoraproject.org</email>
+						 BZ#657576, BZ#663399</member>
+
 					</simplelist>
 
 				</revdescription>
 
 			</revision>
-
-			<revision>
+			 <revision>
 				<revnumber>2.4-1</revnumber>
 				 <date>Wed Dec 1 2010</date>
 				 <author>
@@ -133,17 +156,19 @@
 				</author>
 				 <revdescription>
 					<simplelist>
-					  <member>Incorporate proofreading fixes from Luigi Votta <email>lewis41@fedoraproject.org</email> BZ#657576</member>
-					  <member>Document not shipping PDFs in known broken languages</member>
-					  <member>Document the web_formats parameter</member>
-					  <member>Document customising desktop menus</member>
-					  <member>Document site_overrides.css</member>
+						<member>Incorporate proofreading fixes from Luigi Votta <email>lewis41@fedoraproject.org</email>
+						 BZ#657576</member>
+						 <member>Document not shipping PDFs in known broken languages</member>
+						 <member>Document the web_formats parameter</member>
+						 <member>Document customising desktop menus</member>
+						 <member>Document site_overrides.css</member>
+
 					</simplelist>
 
 				</revdescription>
 
 			</revision>
-			<revision>
+			 <revision>
 				<revnumber>2.3-0</revnumber>
 				 <date>Mon Oct 25 2010</date>
 				 <author>
@@ -155,14 +180,15 @@
 				 <revdescription>
 					<simplelist>
 						<member>Document website dump files</member>
-						<member>Document bump command</member>
-						<member>Update image width behaviour</member>
+						 <member>Document bump command</member>
+						 <member>Update image width behaviour</member>
+
 					</simplelist>
 
 				</revdescription>
 
 			</revision>
-			<revision>
+			 <revision>
 				<revnumber>2.3-0</revnumber>
 				 <date>Tue Oct 5 2010</date>
 				 <author>
@@ -174,20 +200,21 @@
 				 <revdescription>
 					<simplelist>
 						<member>Update lang_stats to include multiple languages</member>
-						<member>Correct details for web_logo.png BZ#638153</member>
-						<member>Correct list of characters usable in product names and document titles</member>
-						<member>Document new web_type parameter and relocate web_host and web_search parameters to site config file</member>
-						<member>Describe OPDS catalogs</member>
-						<member>Document product and version pages</member>
-						<member>Document man page as an output format</member>
-						<member>Document bridgehead_in_toc parameter</member>
-						<member>Correction -- def_langs is a site config parameter, not a homepage config file parameter</member>
+						 <member>Correct details for web_logo.png BZ#638153</member>
+						 <member>Correct list of characters usable in product names and document titles</member>
+						 <member>Document new web_type parameter and relocate web_host and web_search parameters to site config file</member>
+						 <member>Describe OPDS catalogs</member>
+						 <member>Document product and version pages</member>
+						 <member>Document man page as an output format</member>
+						 <member>Document bridgehead_in_toc parameter</member>
+						 <member>Correction -- def_langs is a site config parameter, not a homepage config file parameter</member>
+
 					</simplelist>
 
 				</revdescription>
 
 			</revision>
-			<revision>
+			 <revision>
 				<revnumber>2.2-0</revnumber>
 				 <date>Thu Aug 19 2010</date>
 				 <author>
@@ -199,14 +226,15 @@
 				 <revdescription>
 					<simplelist>
 						<member>Expand on including code samples BZ#604255</member>
-						<member>Clarify clean_ids BZ#612819</member>
-						<member>Document --novalid BZ#616142</member>
+						 <member>Clarify clean_ids BZ#612819</member>
+						 <member>Document --novalid BZ#616142</member>
+
 					</simplelist>
 
 				</revdescription>
 
 			</revision>
-			<revision>
+			 <revision>
 				<revnumber>2.1-1</revnumber>
 				 <date>Fri Jul 16 2010</date>
 				 <author>
@@ -218,13 +246,14 @@
 				 <revdescription>
 					<simplelist>
 						<member>Correct and clarify website instructions BZ#614259</member>
-						<member>Clarify use of Product-Version-Id for packaging</member>
+						 <member>Clarify use of Product-Version-Id for packaging</member>
+
 					</simplelist>
 
 				</revdescription>
 
 			</revision>
-			<revision>
+			 <revision>
 				<revnumber>1.6-1</revnumber>
 				 <date>Mon May 24 2010</date>
 				 <author>
@@ -236,6 +265,7 @@
 				 <revdescription>
 					<simplelist>
 						<member>Update Ubuntu installation instructions</member>
+
 					</simplelist>
 
 				</revdescription>
@@ -526,3 +556,4 @@
 
 	</simpara>
 </appendix>
+

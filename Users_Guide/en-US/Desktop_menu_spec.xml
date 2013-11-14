@@ -3,16 +3,18 @@
 <!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
 %BOOK_ENTITIES;
 ]>
-<appendix conformance="133" id="desktop_menu_spec">
+<appendix conformance="133" id="appe-Publican-Users_Guide-Sample_spec_file_for_desktop_menu_package">
 	<title>Sample spec file for desktop menu package</title>
-	<para>
-	  The following spec file is an example of how you could package a <firstterm>desktop entry</firstterm> (<filename>.directory</filename>) file and a <firstterm>desktop menu</firstterm> (<filename>.menu</filename>) file in an RPM package for shipping. Refer to <xref linkend="desktop_menus" /> for the structure of these files.
+	 <para>
+		The following spec file is an example of how you could package a <firstterm>desktop entry</firstterm> (<filename>.directory</filename>) file and a <firstterm>desktop menu</firstterm> (<filename>.menu</filename>) file in an RPM package for shipping. Refer to <xref linkend="sect-Publican-Users_Guide-Desktop_menu_entries_for_documents" /> for the structure of these files.
 	</para>
-	<para>
-	  This example assumes a desktop entry file named <filename>menu-example.directory</filename>, a desktop menu file named <filename>menu-example.menu</filename>, and a readme file named <filename>README</filename> are located in a directory named <filename>menu-example-0</filename> that is archived as <filename>menu-example-0.tgz</filename>.
+	 <para>
+		This example assumes a desktop entry file named <filename>menu-example.directory</filename>, a desktop menu file named <filename>menu-example.menu</filename>, and a readme file named <filename>README</filename> are located in a directory named <filename>menu-example-0</filename> that is archived as <filename>menu-example-0.tgz</filename>.
 	</para>
-	<para>
-	  When built, this results in a package named <package>menu-example</package>.
+	 <para>
+		When built, this results in a package named <package>menu-example</package>.
 	</para>
+	 
 <programlisting><xi:include href="extras/menu-example.spec" parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" /></programlisting>
 </appendix>
+

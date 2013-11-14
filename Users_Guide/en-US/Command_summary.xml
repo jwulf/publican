@@ -3,9 +3,9 @@
 <!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
 %BOOK_ENTITIES;
 ]>
-<appendix conformance="126" id="appe-Users_Guide-Command_summary">
+<appendix conformance="126" id="appe-Publican-Users_Guide-Command_summary">
 	<title>Command summary</title>
-	 <variablelist conformance="127" id="vari-Users_Guide-Command_summary-Command_options">
+	 <variablelist conformance="127" id="vari-Publican-Users_Guide-Command_summary-Command_options">
 		<title>Command options</title>
 		 <varlistentry>
 			<term><prompt>$</prompt> <command>publican --help</command></term>
@@ -79,7 +79,7 @@
 		</varlistentry>
 
 	</variablelist>
-	 <variablelist conformance="128" id="vari-Users_Guide-Command_summary-Actions">
+	 <variablelist conformance="128" id="vari-Publican-Users_Guide-Command_summary-Actions">
 		<title>Actions</title>
 		 <varlistentry>
 			<term><prompt>$</prompt> <command>publican add_revision</command></term>
@@ -88,7 +88,7 @@
 					adds an entry in <filename>Revision_History.xml</filename>. Options:
 				</para>
 				 <variablelist>
-					 <varlistentry>
+					<varlistentry>
 						<term>--lang=<replaceable>LANG</replaceable></term>
 						 <listitem>
 							<para>
@@ -158,6 +158,7 @@
 						</listitem>
 
 					</varlistentry>
+
 				</variablelist>
 
 			</listitem>
@@ -240,7 +241,7 @@
 						</listitem>
 
 					</varlistentry>
-					<varlistentry>
+					 <varlistentry>
 						<term>--formats=<replaceable>FORMATS</replaceable></term>
 						 <listitem>
 							<para>
@@ -320,12 +321,13 @@
 						</listitem>
 
 					</varlistentry>
+
 				</variablelist>
 
 			</listitem>
 
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term><prompt>$</prompt> <command>publican clean</command></term>
 			 <listitem>
 				<para>
@@ -471,14 +473,13 @@
 			</listitem>
 
 		</varlistentry>
-		
-		<varlistentry>
+		 <varlistentry>
 			<term>publican create_site</term>
-			  <listitem>
+			 <listitem>
 				<para>
 					creates a documentation website. Options:
 				</para>
-				<variablelist>
+				 <variablelist>
 					<varlistentry>
 						<term>--site_config</term>
 						 <listitem>
@@ -519,13 +520,12 @@
 						</listitem>
 
 					</varlistentry>
+
 				</variablelist>
 
 			</listitem>
 
 		</varlistentry>
-		
-		
 		 <varlistentry>
 			<term><prompt>$</prompt> <command>publican help_config</command></term>
 			 <listitem>
@@ -538,11 +538,11 @@
 		</varlistentry>
 		 <varlistentry>
 			<term>publican install_book</term>
-			  <listitem>
+			 <listitem>
 				<para>
 					installs a document on a documentation website.
 				</para>
-				<variablelist>
+				 <variablelist>
 					<varlistentry>
 						<term>--site_config</term>
 						 <listitem>
@@ -563,9 +563,8 @@
 						</listitem>
 
 					</varlistentry>
-					
-				</variablelist>
 
+				</variablelist>
 
 			</listitem>
 
@@ -600,7 +599,7 @@
 					copy a brand's installed web content to another site. Options:
 				</para>
 				 <variablelist>
-					 <varlistentry>
+					<varlistentry>
 						<term>--brand</term>
 						 <listitem>
 							<para>
@@ -610,7 +609,7 @@
 						</listitem>
 
 					</varlistentry>
-					<varlistentry>
+					 <varlistentry>
 						<term>--old_site_config=<replaceable>site_config</replaceable></term>
 						 <listitem>
 							<para>
@@ -618,8 +617,9 @@
 							</para>
 
 						</listitem>
+
 					</varlistentry>
-					<varlistentry>
+					 <varlistentry>
 						<term>--site_config=<replaceable>site_config</replaceable></term>
 						 <listitem>
 							<para>
@@ -627,7 +627,9 @@
 							</para>
 
 						</listitem>
+
 					</varlistentry>
+
 				</variablelist>
 
 			</listitem>
@@ -819,11 +821,11 @@
 		</varlistentry>
 		 <varlistentry>
 			<term>publican remove_book</term>
-			  <listitem>
+			 <listitem>
 				<para>
-					removes a document from a documentation website. 
+					removes a document from a documentation website.
 				</para>
-				<variablelist>
+				 <variablelist>
 					<varlistentry>
 						<term>--site_config</term>
 						 <listitem>
@@ -844,20 +846,19 @@
 						</listitem>
 
 					</varlistentry>
-					
-				</variablelist>
 
+				</variablelist>
 
 			</listitem>
 
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term><prompt>$</prompt> <command>publican rename</command></term>
 			 <listitem>
 				<para>
 					renames a document. Options:
 				</para>
-				<variablelist>
+				 <variablelist>
 					<varlistentry>
 						<term>--name</term>
 						 <listitem>
@@ -868,7 +869,7 @@
 						</listitem>
 
 					</varlistentry>
-					<varlistentry>
+					 <varlistentry>
 						<term>--product</term>
 						 <listitem>
 							<para>
@@ -878,7 +879,7 @@
 						</listitem>
 
 					</varlistentry>
-					<varlistentry>
+					 <varlistentry>
 						<term>--version</term>
 						 <listitem>
 							<para>
@@ -894,14 +895,13 @@
 			</listitem>
 
 		</varlistentry>
-		
-		<varlistentry>
+		 <varlistentry>
 			<term>publican site_stats --site_config=<replaceable>name_of_site_config_file</replaceable></term>
-			  <listitem>
+			 <listitem>
 				<para>
 					generates a site report for a documentation website. Option:
 				</para>
-				<variablelist>
+				 <variablelist>
 					<varlistentry>
 						<term>--site_config</term>
 						 <listitem>
@@ -912,13 +912,12 @@
 						</listitem>
 
 					</varlistentry>
+
 				</variablelist>
 
 			</listitem>
-		</varlistentry>
 
-		
-		
+		</varlistentry>
 		 <varlistentry>
 			<term><prompt>$</prompt> <command>publican update_pot</command></term>
 			 <listitem>
@@ -946,7 +945,7 @@
 						</listitem>
 
 					</varlistentry>
-					<varlistentry>
+					 <varlistentry>
 						<term>--msgmerge</term>
 						 <listitem>
 							<para>
@@ -956,6 +955,7 @@
 						</listitem>
 
 					</varlistentry>
+
 				</variablelist>
 
 			</listitem>
@@ -963,11 +963,11 @@
 		</varlistentry>
 		 <varlistentry>
 			<term>publican update_site --site_config=<replaceable>name_of_site_config_file</replaceable>.cfg</term>
-			  <listitem>
+			 <listitem>
 				<para>
 					regenerates the templated content of a documentation website. Option:
 				</para>
-				<variablelist>
+				 <variablelist>
 					<varlistentry>
 						<term>--site_config</term>
 						 <listitem>
@@ -978,183 +978,227 @@
 						</listitem>
 
 					</varlistentry>
-				</variablelist>
 
+				</variablelist>
 
 			</listitem>
 
 		</varlistentry>
 
 	</variablelist>
-	<section>
+	 <section id="sect-Publican-Users_Guide-Command_summary-Internal_commands">
 		<title>Internal commands</title>
-		<para>
+		 <para>
 			<application>Publican</application> uses the commands documented in this section internally. There is normally no need to run them manually.
 		</para>
-		<variablelist>
+		 <variablelist>
 			<varlistentry>
 				<term>publican update_db --add</term>
-				<listitem>
+				 <listitem>
 					<para>
 						Adds entries to the database of a <application>Publican</application>-generated website, with the following options:
 					</para>
-					<variablelist>
+					 <variablelist>
 						<varlistentry>
 							<term>--site_config</term>
-							<listitem>
+							 <listitem>
 								<para>
 									name of the site configuration file.
 								</para>
+
 							</listitem>
+
 						</varlistentry>
-						<varlistentry>
+						 <varlistentry>
 							<term>--lang</term>
-							<listitem>
+							 <listitem>
 								<para>
 									the language in which the document is published.
 								</para>
+
 							</listitem>
+
 						</varlistentry>
-						<varlistentry>
+						 <varlistentry>
 							<term>--formats</term>
-							<listitem>
+							 <listitem>
 								<para>
 									a comma-separated list of the formats in which the document is published, for example, <literal>pdf,html-single</literal>
 								</para>
+
 							</listitem>
+
 						</varlistentry>
-						<varlistentry>
+						 <varlistentry>
 							<term>--name</term>
-							<listitem>
+							 <listitem>
 								<para>
 									the title of the document.
 								</para>
+
 							</listitem>
+
 						</varlistentry>
-						<varlistentry>
+						 <varlistentry>
 							<term>--name_label</term>
-							<listitem>
+							 <listitem>
 								<para>
 									the title of the document, as it should appear in the site's tables of contents.
 								</para>
+
 							</listitem>
+
 						</varlistentry>
-						<varlistentry>
+						 <varlistentry>
 							<term>--product</term>
-							<listitem>
+							 <listitem>
 								<para>
 									the product that the document describes.
 								</para>
+
 							</listitem>
+
 						</varlistentry>
-						<varlistentry>
+						 <varlistentry>
 							<term>--product_label</term>
-							<listitem>
+							 <listitem>
 								<para>
 									the product that the document describes, as it should appear in the site's tables of contents.
 								</para>
+
 							</listitem>
+
 						</varlistentry>
-						<varlistentry>
+						 <varlistentry>
 							<term>--version</term>
-							<listitem>
+							 <listitem>
 								<para>
 									the version of the product that the document describes.
 								</para>
+
 							</listitem>
+
 						</varlistentry>
-						<varlistentry>
+						 <varlistentry>
 							<term>--version_label</term>
-							<listitem>
+							 <listitem>
 								<para>
 									the version of the product that the document describes, as it should appear in the site's tables of contents.
 								</para>
+
 							</listitem>
+
 						</varlistentry>
-						<varlistentry>
+						 <varlistentry>
 							<term>--subtitle</term>
-							<listitem>
+							 <listitem>
 								<para>
 									the subtitle of the document.
 								</para>
+
 							</listitem>
+
 						</varlistentry>
-						<varlistentry>
+						 <varlistentry>
 							<term>--abstract</term>
-							<listitem>
+							 <listitem>
 								<para>
 									the abstract of the document.
 								</para>
+
 							</listitem>
+
 						</varlistentry>
+
 					</variablelist>
-					<para>
+					 <para>
 						For example:
 					</para>
+					 
 <programlisting>publican update_db --add --lang en-US --formats html,pdf --name Foo \
 --name_label "foo is good" --version 0.1 --version_label UNUSED \
 --product Bar --product_label "To the bar" \
 --subtitle "A guide to Bar Foo" \
 --abstract "There once was a Foo from Bar ..." \
 --site_config /usr/share/bar/foo.cfg</programlisting>
-				</listitem>
-			</varlistentry>
 
-			<varlistentry>
+				</listitem>
+
+			</varlistentry>
+			 <varlistentry>
 				<term>publican update_db --del</term>
-				<listitem>
+				 <listitem>
 					<para>
 						removes entries from the database of a <application>Publican</application>-generated website, with the following options:
 					</para>
-					<variablelist>
+					 <variablelist>
 						<varlistentry>
 							<term>--site_config</term>
-							<listitem>
+							 <listitem>
 								<para>
 									name of the site configuration file.
 								</para>
+
 							</listitem>
+
 						</varlistentry>
-						<varlistentry>
+						 <varlistentry>
 							<term>--lang</term>
-							<listitem>
+							 <listitem>
 								<para>
 									the language in which the document is published.
 								</para>
+
 							</listitem>
+
 						</varlistentry>
-						<varlistentry>
+						 <varlistentry>
 							<term>--name</term>
-							<listitem>
+							 <listitem>
 								<para>
 									the title of the document.
 								</para>
+
 							</listitem>
+
 						</varlistentry>
-						<varlistentry>
+						 <varlistentry>
 							<term>--product</term>
-							<listitem>
+							 <listitem>
 								<para>
 									the product that the document describes.
 								</para>
+
 							</listitem>
+
 						</varlistentry>
-						<varlistentry>
+						 <varlistentry>
 							<term>--version</term>
-							<listitem>
+							 <listitem>
 								<para>
 									the version of the product that the document describes.
 								</para>
+
 							</listitem>
+
 						</varlistentry>
+
 					</variablelist>
-					<para>
+					 <para>
 						For example:
 					</para>
+					 
 <programlisting>publican update_db --del --lang en-US --name Foo --version 0.1 --product Bar \
 --site_config /usr/share/bar/foo.cfg</programlisting>
+
 				</listitem>
+
 			</varlistentry>
+
 		</variablelist>
+
 	</section>
+	
+
 </appendix>
+
