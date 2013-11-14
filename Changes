@@ -50,6 +50,7 @@ NEXT UNRELEASED
 - Update CLI translations
 - Various fixes to Common Content + update Common Content translation. BZ #1027248
 - Update and correct Debian installation instructions. BZ #1013934
+- Correct OpenSUSE installation instructions. BZ #1013934
 
 3.2.1 Wed Sep 04 2013
 - Fix empty images dir causing packaging fail. BZ #995896

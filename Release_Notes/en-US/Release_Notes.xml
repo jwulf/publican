@@ -223,6 +223,14 @@
 			</listitem>
 		</varlistentry>
 		<varlistentry>
+			<term>Corrected OpenSUSE installation instructions</term>
+			<listitem>
+				<para>
+					The OpenSUSE installation instructions included an incorrect command; this is now corrected. <ulink url="https://bugzilla.redhat.com/show_bug.cgi?id=1000534">BZ#1000534</ulink>
+				</para>
+			</listitem>
+		</varlistentry>
+		<varlistentry>
 			<term>Publican print_unused incorrectly detects files from higher levels in the directory structure (but within the book) as unused.</term>
 			<listitem>
 				<para>
@@ -403,6 +411,14 @@
 			<listitem>
 				<para>
 					A previous version of Publican attempted to chunk content inside a &lt;refentry&gt; tag. However, this directly conflicted with parts of xhtml-common such that chunking did not occur at all, and Publican ceased to work. Publican no longer attempts to chunk &lt;refentry&gt; content. <ulink url="https://bugzilla.redhat.com/show_bug.cgi?id=1026563">BZ#1026563</ulink>
+				</para>
+			</listitem>
+		</varlistentry>
+		<varlistentry>
+			<term>Minor fixes to Users' Guide</term>
+			<listitem>
+				<para>
+					The <citetitle>Publican Users' Guide</citetitle> contained typos and other minor errors, now corrected. <ulink url="https://bugzilla.redhat.com/show_bug.cgi?id=1000534">BZ#1000534</ulink>
 				</para>
 			</listitem>
 		</varlistentry>

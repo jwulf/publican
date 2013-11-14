@@ -61,7 +61,7 @@
 				</listitem>
 				 <listitem>
 					<para>
-						<filename>defualt.js</filename> — a JavaScript script that directs visitors to localized content based on the locale set in their browser and which controls the presentation of the navigation menu.
+						<filename>default.js</filename> — a JavaScript script that directs visitors to localized content based on the locale set in their browser and which controls the presentation of the navigation menu.
 					</para>
 
 				</listitem>
@@ -194,19 +194,16 @@
 					</para>
 
 				</step>
-				 <step>
-					<formalpara id="form-Publican-Users_Guide-To_Submit_Your_Sitemap_to_Google-Result">
+				
+
+			</procedure>
+			 <formalpara id="form-Publican-Users_Guide-To_Submit_Your_Sitemap_to_Google-Result">
 						<title>Result</title>
 						 <para>
 							The Sitemap for your Publican site has been successfully submitted to Google.
 						</para>
 
-					</formalpara>
-
-				</step>
-
-			</procedure>
-			
+				</formalpara>
 
 		</section>
 		
@@ -274,19 +271,18 @@
 					</para>
 
 				</step>
-				 <step>
-					<formalpara id="form-Publican-Users_Guide-To_Submit_Your_Sitemap_to_Bing-Result">
+				
+
+				
+
+			</procedure>
+			 <formalpara id="form-Publican-Users_Guide-To_Submit_Your_Sitemap_to_Bing-Result">
 						<title>Result:</title>
 						 <para>
 							The Sitemap for your Publican site has been successfully submitted to Bing.
 						</para>
 
-					</formalpara>
-
-				</step>
-
-			</procedure>
-			
+				</formalpara>
 
 		</section>
 		

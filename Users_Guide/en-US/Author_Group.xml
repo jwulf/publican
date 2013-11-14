@@ -31,6 +31,11 @@
 		 <surname>Dowdeit</surname>
 		 <contrib>Debian installation instructions</contrib>
 	</author>
+	<author>
+		<firstname>Norman</firstname>
+		 <surname>Dunbar</surname>
+		 <contrib>OpenSUSE installation instructions</contrib>
+	</author>
 	 <author>
 		<firstname>Brian</firstname>
 		 <surname>Forté</surname>
@@ -61,7 +66,6 @@
 			 <orgdiv>Engineering Content Services</orgdiv>
 
 		</affiliation>
-		 <email>r.landmann@redhat.com</email>
 
 	</author>
 	 <author>
