@@ -378,7 +378,7 @@
 		</para>
 		 <important>
 			<para>
-				Brands that supply XSL files need to change the relative path to a URI.
+				Brands with custom XSLT need to change the relative path of referencing XSL templates to a URI.
 			</para>
 
 		</important>

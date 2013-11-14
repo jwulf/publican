@@ -9,6 +9,23 @@
 		<revhistory>
 			
 			<revision>
+				<revnumber>4.0-3</revnumber>
+				 <date>Thu Nov 14 2013</date>
+				 <author>
+					<firstname>Roman</firstname>
+					 <surname>Joost</surname>
+					 <email>rjoost@redhat.com</email>
+
+				</author>
+				 <revdescription>
+					<simplelist>
+						<member>Clarify where relative paths are used in brand instructions  - BZ#1028815</member>
+					</simplelist>
+
+				</revdescription>
+
+			</revision>
+			<revision>
 				<revnumber>4.0-2</revnumber>
 				 <date>Thu Nov 14 2013</date>
 				 <author>
@@ -37,6 +54,7 @@
 				 <revdescription>
 					<simplelist>
 						<member>Updated Debian installation instructions - BZ#1013934</member>
+						<member>Add Docker installation instructions - BZ#1015943</member>
 					</simplelist>
 
 				</revdescription>

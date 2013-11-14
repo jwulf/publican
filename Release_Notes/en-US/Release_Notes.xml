@@ -319,6 +319,14 @@
 			</listitem>
 		</varlistentry>
 		<varlistentry>
+			<term>Add Docker installation instructions</term>
+			<listitem>
+				<para>
+					The <citetitle>Publican Users' Guide</citetitle> now includes instructions for installing Publican in a Docker container. <ulink url="https://bugzilla.redhat.com/show_bug.cgi?id=1015943">BZ#1015943</ulink>
+				</para>
+			</listitem>
+		</varlistentry>
+		<varlistentry>
 			<term>Build.PL does not compile .po files and doesn't install resulting .mo files</term>
 			<listitem>
 				<para>
@@ -342,7 +350,7 @@
 				</para>
 			</listitem>
 		</varlistentry>
-		<varlistentry>
+		<varlistentry>13934
 			<term>Building Publican 4.0 in Fedora 19 throws undefined subroutine error</term>
 			<listitem>
 				<para>
@@ -411,6 +419,14 @@
 			<listitem>
 				<para>
 					A previous version of Publican attempted to chunk content inside a &lt;refentry&gt; tag. However, this directly conflicted with parts of xhtml-common such that chunking did not occur at all, and Publican ceased to work. Publican no longer attempts to chunk &lt;refentry&gt; content. <ulink url="https://bugzilla.redhat.com/show_bug.cgi?id=1026563">BZ#1026563</ulink>
+				</para>
+			</listitem>
+		</varlistentry>
+		<varlistentry>
+			<term>Clarify where relative paths are used in brand instructions</term>
+			<listitem>
+				<para>
+					Previous versions of the <citetitle>Publican Users' Guide</citetitle> contained a vague warning about using relative paths in custom XSL files. The warning has now been made more specific. <ulink url="https://bugzilla.redhat.com/show_bug.cgi?id=1028815">BZ#1028815</ulink>
 				</para>
 			</listitem>
 		</varlistentry>
