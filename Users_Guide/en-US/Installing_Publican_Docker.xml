@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+<!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
+]>
+		 <section conformance="" id="sect-Users_Guide-Linux_operating_systems-Docker">
+			<title>Docker container</title>
+				<note>
+					<para>
+						This installation procedure assumes you have already installed a working docker (see <ulink url="http://docker.io" />) environment.
+					</para>
+				</note>
+			<para>
+				Docker is a lightweight Jail (currently using LXC) that allows you to install and run <application>publican</application> without installing your main Linux installation with all its dependencies.
+			</para>
+			 <procedure>
+				<step>
+					<para>
+						Open a terminal.
+					</para>
+
+				</step>
+				 <step>
+					<para>
+						Download and install the <application>svendowideit/publican</application> container from <ulink url="https://index.docker.io/u/svendowideit/publican/" />:
+<screen><prompt>$</prompt> <command>docker pull svendowideit/publican</command></screen>
+						This will take some time, as it downloads a fedora based container, and then the dependencies needed for publican
+					</para>
+
+				</step>
+				 <step>
+					<para>
+						Add a publican bash alias to simplify your usage:
+					</para>
+<screen><prompt>$</prompt> <command>echo 'alias publican="docker run -t -i -v $(pwd):/mnt svendowideit/publican"' >> ~/.bashrc</command></screen>
+					<para>
+						This alias assumes that you are running <application>publican</application> in the documentation root directory (the one with the publican.cfg file in it.
+					</para>
+				</step>
+				 <step>
+					<para>
+						now you can use <application>publican</application> as per the documentation:
+					</para>
+<screen><prompt>$</prompt> <command>publican --version </command>
+<computeroutput>version=3.2.1</computeroutput></screen>
+				</step>
+			</procedure>
+			
+		</section>
