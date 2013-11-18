@@ -21,7 +21,7 @@ msgstr ""
 #. Tag: title
 #, no-c-format
 msgid "We Need Feedback!"
-msgstr "Vos commentaires sont importants&nbsp;!"
+msgstr "Vos commentaires sont importants !"
 
 # translation auto-copied from project Publican Common, version 3, document Feedback
 #. Tag: indexterm
