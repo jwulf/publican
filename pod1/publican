@@ -43,6 +43,7 @@ Valid actions are:
     print_unused_images  Print a list of unused Image files
     remove_book   Remove a book from a WebSite.
     rename        Rename a publican book
+    report        Print a readability report for the source text.
     site_stats    Report on the contents of a WebSite
     trans_drop    Snapshot the source language for use in translation.
     update_db     Add or remove database entries. Used for processing pre-build books, such as when building packages.
@@ -396,6 +397,19 @@ rename
         --version=<VERSION>       The version of the product
 
 
+report
+    Print a readability report for the source text.
+
+	Options:
+        --help                    Display help message
+        --config=s                Use a nonstandard config file
+        --common_config=s         Override path to Common_Config directory
+        --common_content=s        Override path to Common_Content directory
+        --nocolours               Disable ANSI colourisation of logging.
+        --quiet                   Disable all logging.
+        --brand_dir=s             Directory to source brand files from.
+
+
 site_stats
     Report on the contents of a WebSite
 
@@ -532,11 +546,13 @@ HTML::FormatText::WithLinks::AndTables
 HTML::TreeBuilder
 I18N::LangTags::List
 IO::String
+Lingua::EN::Fathom
 List::MoreUtils
 List::Util
 Locale::Language
 Locale::Maketext::Gettext
 Locale::Maketext::Lexicon
+Locale::Msgfmt
 Locale::PO
 Module::Build
 Pod::Usage
@@ -556,6 +572,7 @@ XML::LibXML
 XML::LibXSLT
 XML::Simple
 XML::TreeBuilder
+version
 
 =head1 INCOMPATIBILITIES
 
@@ -567,7 +584,7 @@ No bugs have been reported.
 
 Please report any bugs or feature requests to
 C<publican-list@redhat.com>, or through the web interface at
-L<https://bugzilla.redhat.com/bugzilla/enter_bug.cgi?product=Publican&component=publican&version=v4.0.0_1>.
+L<https://bugzilla.redhat.com/bugzilla/enter_bug.cgi?product=Publican&component=publican&version=v3.9.9>.
 
 =head1 AUTHOR
 

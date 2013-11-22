@@ -8,7 +8,7 @@ _publican()
 	cur=`_get_cword`
         brands=`ls /usr/share/publican/Common_Content`
 
-	commands='add_revision build clean clean_ids clean_set copy_web_brand create create_brand create_site help_config install_book install_brand lang_stats migrate_site package print_banned print_known print_tree print_unused print_unused_images remove_book rename site_stats trans_drop update_db update_po update_pot update_site'
+	commands='add_revision build clean clean_ids clean_set copy_web_brand create create_brand create_site help_config install_book install_brand lang_stats migrate_site package print_banned print_known print_tree print_unused print_unused_images remove_book rename report site_stats trans_drop update_db update_po update_pot update_site'
 
 	if [[ $COMP_CWORD -eq 1 ]] ; then
 		if [[ "$cur" == -* ]]; then
@@ -111,6 +111,9 @@ _publican()
 					;;
 				rename)
 					options='--name --product --version '
+					;;
+				report)
+					options=''
 					;;
 				site_stats)
 					options='--site_config '

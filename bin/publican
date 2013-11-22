@@ -25,6 +25,7 @@ use File::Basename;
 use File::HomeDir;
 use Publican::ConfigData;
 use Encode qw(is_utf8 decode_utf8 encode_utf8);
+use Lingua::EN::Fathom;
 
 #binmode STDIN, ":encoding(UTF-8)";
 #binmode STDOUT, ":encoding(UTF-8)";
@@ -324,6 +325,11 @@ my %actions = (
     'trans_drop' => {
         'brief' =>
             maketext('Snapshot the source language for use in translation.'),
+        'options' => [],
+    },
+    'report' => {
+        'brief' =>
+            maketext('Print a readability report for the source text.'),
         'options' => [],
     },
 );
@@ -1321,6 +1327,37 @@ if ( $action eq 'rename' ) {
 
     # clean up memory
     $xml_doc->root()->delete();
+}
+
+if ( $action eq 'report' ) {
+    my $dtdver = $publican->param('dtdver');
+    my $builder;
+    my $lang = $publican->param('xml_lang');
+    my $tmp_dir           = $publican->param('tmp_dir');
+    my $docname           = $publican->param('docname');
+
+    if ( $dtdver =~ m/^5/ ) {
+        $builder = Publican::Builder::DocBook5->new(
+            { novalid => $opts{novalid} } );
+
+    }
+    else {
+        $builder = Publican::Builder::DocBook4->new(
+            { novalid => $opts{novalid} } );
+    }
+
+    $builder->build(
+        {   formats         => 'txt',
+            langs           => $publican->param('xml_lang'),
+            pub_dir => $opts{pub_dir},
+        }
+    );
+
+    my $file = "$tmp_dir/$lang/txt/$docname.txt";
+
+    my $text = new Lingua::EN::Fathom;
+    $text->analyse_file($file);
+    print($text->report);
 }
 
 exit(0);

@@ -360,6 +360,7 @@ my $builder = $class->new(
         'Locale::Maketext::Lexicon'              => 0,
         version                                  => 0.77,
         'Locale::Msgfmt'                         => 0,
+        'Lingua::EN::Fathom'                     => 0,
     },
     requires => {
         'Archive::Tar'                           => 1.84,
@@ -409,6 +410,7 @@ my $builder = $class->new(
         'Text::CSV_XS'                           => 0,
         version                                  => 0.77,
         'Locale::Msgfmt'                         => 0,
+        'Lingua::EN::Fathom'                     => 0,
     },
     add_to_cleanup => [
         'publican-*',
