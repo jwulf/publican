@@ -361,7 +361,7 @@ pre {
     color: #FF00FF;
 }
 .perl_Comment {
-    color: #FF00FF;
+    color: #888888;
 }
 .perl_DataType {
     color: #0000FF;
