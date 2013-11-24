@@ -56,7 +56,7 @@ NEXT UNRELEASED
 - Update and clarify translation instructions BZ #1021287 
 - Expose glossterm in PO files to support sortas attribute. BZ #1030591
 - Add report action to print readability statistics. BZ #1031364
-- Chance comment in syntax highlight to light grey. BZ #1030718
+- Change comment in syntax highlight to light grey. BZ #1030718
 
 3.2.1 Wed Sep 04 2013
 - Fix empty images dir causing packaging fail. BZ #995896
