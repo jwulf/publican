@@ -120,20 +120,28 @@
 		</para>
 
 	</section>
-<!--	<section id="sect-Publican-Users_Guide-Preparing_a_document_for_translation-Translating_Glossaries">
+	<section id="sect-Publican-Users_Guide-Preparing_a_document_for_translation-Translating_Glossaries">
 		<title>Translating Indexes and Glossaries</title>
 		 <para>
 			 DocBook automatically collates and sorts <sgmltag>&lt;glossentry&gt;</sgmltag> elements into a book's glossary; and <sgmltag>&lt;primary&gt;</sgmltag>, <sgmltag>&lt;secondary&gt;</sgmltag>, and <sgmltag>&lt;tertiary&gt;</sgmltag> <sgmltag>&lt;indexterm&gt;</sgmltag> elements into a book's index. Entries are sorted automatically, and although this system works well for languages written with an alphabet, abugida, or syllabic script, languages written with logograms sort less well.  
 		</para>
 		<para>
-			To manually adjust the sort order of a glossary entry or index entry, use DocBook's <sgmltag>sortas</sgmltag> attribute. For example, to ensure that the Japanese word 暗号化 sorts correctly, you could specify:
+			To manually adjust the sort order of a glossary entry or index entry, manually add DocBook's <sgmltag>sortas</sgmltag> attribute to the XML element. For example, to ensure that the Japanese word 暗号化 sorts correctly in an index, specify:
 		</para>
 <programlisting>#. Tag: indexterm
 #, no-c-format
 msgid "&lt;primary&gt;encryption&lt;/primary&gt;"
 msgstr "&lt;primary sortas="あんごうか"&gt;暗号化&lt;/primary&gt;"</programlisting>
+		<para>
+			Similarly, to ensure that the Japanese word 暗号化 sorts correctly in a glossary, specify:
+		</para>
+<programlisting>#. Tag: glossentry
+#, no-c-format
+msgid "&lt;glossterm&gt;encryption&lt;/glossterm&gt;"
+msgstr "&lt;glossterm sortas="あんごうか"&gt;暗号化&lt;/glossterm&gt;"</programlisting>
 
-	</section> -->
+
+	</section>
 	
 
 </section>

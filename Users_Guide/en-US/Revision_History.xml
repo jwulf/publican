@@ -9,7 +9,7 @@
 		<revhistory>
 			<revision>
 				<revnumber>4.0-4</revnumber>
-				 <date>Mon Nov 18 2013</date>
+				 <date>Mon Nov 25 2013</date>
 				 <author>
 					<firstname>Rüdiger</firstname>
 					 <surname>Landmann</surname>
@@ -19,6 +19,7 @@
 				 <revdescription>
 					<simplelist>
 						<member>Improve instructions for translation BZ#1021287</member>
+						<member>Document use of "sortas" for indexes and glossaries</member>
 					</simplelist>
 
 				</revdescription>
