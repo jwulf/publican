@@ -57,7 +57,7 @@ foreach my $xml_file ( sort(@xml_files) ) {
     my $outfile;
     my $ad_file = "$xml_file";
 
-    open( $outfile, ">", "$xml_file" )
+    open( $outfile, ">:encoding(UTF-8)", "$xml_file" )
         || croak( maketext( "Can't open ad file: [_1]", $@ ) );
     print( $outfile $stylesheet->output_string($results) );
     close($outfile);
