@@ -3,7 +3,10 @@
   xmlns="http://www.w3.org/1999/xhtml"
   xmlns:d="http://docbook.org/ns/docbook"
   version="1.0"
-  exclude-result-prefixes=""
+  xmlns:stbl="http://nwalsh.com/xslt/ext/com.nwalsh.saxon.Table"
+  xmlns:xtbl="xalan://com.nwalsh.xalan.Table"
+  xmlns:ptbl="http://nwalsh.com/xslt/ext/xsltproc/python/Table"
+  exclude-result-prefixes="stbl xtbl ptbl"
   extension-element-prefixes=""
 >
 <xsl:param name="embedtoc"  select="'0'"/>
@@ -13,7 +16,7 @@
 <xsl:param name="pop_name"  select="''"/>
 <xsl:param name="brand"     select="''"/>
 <xsl:param name="langpath"  select="''"/>
-
+<xsl:param name="tablecolumns.extensions" select="0"/>
 <!-- Admonition Graphics -->
 <xsl:param name="admon.graphics" select="1"/>
 <xsl:param name="admon.style" select="''"/>
