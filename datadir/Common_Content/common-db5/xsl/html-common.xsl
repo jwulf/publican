@@ -16,7 +16,7 @@
 <xsl:param name="pop_name"  select="''"/>
 <xsl:param name="brand"     select="''"/>
 <xsl:param name="langpath"  select="''"/>
-<xsl:param name="tablecolumns.extensions" select="0"/>
+<xsl:param name="tablecolumns.extension" select="0"/>
 <!-- Admonition Graphics -->
 <xsl:param name="admon.graphics" select="1"/>
 <xsl:param name="admon.style" select="''"/>
