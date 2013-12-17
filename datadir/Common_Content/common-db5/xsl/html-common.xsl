@@ -17,6 +17,8 @@
 <xsl:param name="brand"     select="''"/>
 <xsl:param name="langpath"  select="''"/>
 <xsl:param name="tablecolumns.extension" select="0"/>
+<xsl:param name="use.embed.for.svg" select="1"/>
+
 <!-- Admonition Graphics -->
 <xsl:param name="admon.graphics" select="1"/>
 <xsl:param name="admon.style" select="''"/>

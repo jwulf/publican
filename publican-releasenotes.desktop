@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Publican - Release Notes
+Comment=Release Notes for publican.
+Exec=xdg-open @@FILE@@
+Icon=@@ICON@@
+Categories=Documentation;X-Red-Hat-Base;
+Type=Application
+Encoding=UTF-8
+Terminal=false

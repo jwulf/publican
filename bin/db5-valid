@@ -13,7 +13,7 @@ use Pod::Usage;
 my $man     = 0;         # display man page
 my $help    = 0;         # display help
 my $file    = undef;
-my $version = '5.1b4';
+my $version = '5.0';
 
 GetOptions(
     'help|?'    => \$help,
@@ -78,7 +78,7 @@ The DocBook 5 master file.
 
 =item B<--version=<version>>
 
-The DocBook version to validate against. Deafults to B<5.1b4>.
+The DocBook version to validate against. Deafults to B<5.0>.
 
 =back
 

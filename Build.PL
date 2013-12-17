@@ -413,7 +413,6 @@ my $builder = $class->new(
         'Lingua::EN::Fathom'                     => 0,
     },
     add_to_cleanup => [
-        'publican-*',
         'Publican-*',
         'tmp',
         'blib',

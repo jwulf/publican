@@ -10,12 +10,12 @@
 # required for desktop file install
 %define my_vendor %(test %{OTHER} == 1 && echo "fedora" || echo "redhat")
 
-%define TESTS 1
+%define TESTS 0
 %define wwwdir /var/www/html/docs
 
 Name:           publican
 Version:        3.9.9
-Release:        0%{?dist}.t35
+Release:        0%{?dist}.t36
 Summary:        Common files and scripts for publishing with DocBook XML
 # For a breakdown of the licensing, refer to LICENSE
 License:        (GPLv2+ or Artistic) and CC0
@@ -168,6 +168,14 @@ This guide explains how to  to create and build books and articles
 using publican. It is not a DocBook XML tutorial and concentrates
 solely on using the publican tools.
 
+%package releasenotes
+Group:          Documentation
+Summary:        Release notes for the Publican package
+Requires:       xdg-utils
+
+%description releasenotes
+Release notes for Publican %{version}.
+
 %package common-web
 Group:          Documentation
 Summary:        Website style for common brand
@@ -189,9 +197,19 @@ Website style for common brand for DocBook5 content
 
 %build
 %{__perl} Build.PL installdirs=vendor --nocolours=1
+
 ./Build --nocolours=1
-dir=`pwd` && cd Users_Guide && %{__perl} -CDAS -I $dir/blib/lib $dir/blib/script/publican build \
-    --formats=html-desktop --publish --langs=all \
+dir=`pwd`
+
+cd Users_Guide && %{__perl} -CDAS -I $dir/blib/lib $dir/blib/script/publican build \
+    --formats=html-desktop --publish --langs=en-US \
+    --common_config="$dir/blib/datadir" \
+    --common_content="$dir/blib/datadir/Common_Content" --nocolours
+
+cd $dir
+
+cd Release_Notes && %{__perl} -CDAS -I $dir/blib/lib $dir/blib/script/publican build \
+    --formats=html-desktop --publish --langs=en-US \
     --common_config="$dir/blib/datadir" \
     --common_content="$dir/blib/datadir/Common_Content" --nocolours
 
@@ -205,8 +223,11 @@ find $RPM_BUILD_ROOT -depth -type d -exec rmdir {} 2>/dev/null \;
 
 sed -i -e 's|@@FILE@@|%{_docdir}/%{name}-doc-%{version}/en-US/index.html|' %{name}.desktop
 sed -i -e 's|@@ICON@@|%{_docdir}/%{name}-doc-%{version}/en-US/images/icon.svg|' %{name}.desktop
+sed -i -e 's|@@FILE@@|%{_docdir}/%{name}-releasenotes-%{version}/en-US/index.html|' %{name}-releasenotes.desktop
+sed -i -e 's|@@ICON@@|%{_docdir}/%{name}-releasenotes-%{version}/en-US/images/icon.svg|' %{name}-releasenotes.desktop
 
 desktop-file-install --vendor="%{my_vendor}" --dir=$RPM_BUILD_ROOT%{_datadir}/applications %{name}.desktop
+desktop-file-install --vendor="%{my_vendor}" --dir=$RPM_BUILD_ROOT%{_datadir}/applications %{name}-releasenotes.desktop
 
 %find_lang %{name} --with-man
 
@@ -262,6 +283,12 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root,-)
 %doc Users_Guide/publish/desktop/*
 %{_datadir}/applications/%{my_vendor}-%{name}.desktop
+%doc fdl.txt
+
+%files releasenotes
+%defattr(-,root,root,-)
+%doc Release_Notes/publish/desktop/*
+%{_datadir}/applications/%{my_vendor}-%{name}-releasenotes.desktop
 %doc fdl.txt
 
 %files common-web
