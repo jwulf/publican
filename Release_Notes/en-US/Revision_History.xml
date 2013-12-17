@@ -2,7 +2,7 @@
 <!-- Converted by db4-upgrade version 1.0 -->
 <appendix xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="appe-Documentation-Release_Notes-Revision_History"><info><title>Revision History</title></info>
 	
-	<simpara>
+
 		<revhistory>
 			<revision>
 				<revnumber>1.0-1</revnumber>
@@ -15,5 +15,5 @@
 				</revdescription>
 			</revision>
 		</revhistory>
-	</simpara>
+
 </appendix>
