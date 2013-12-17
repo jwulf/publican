@@ -639,7 +639,7 @@ sub validate_xml {
     my $dtd = XML::LibXML::Dtd->new( $dtd_type, $dtd_path );
 
     unless ( $source->is_valid($dtd) ) {
-        logger( maketext("DTD Validation failed: ") . "\n", RED );
+        logger( maketext("DTD Validation failed for '$dir/$main_file.xml': ") . "\n", RED );
         croak( $source->validate($dtd) );
     }
     logger("DTD Validation OK\n");

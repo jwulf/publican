@@ -615,7 +615,7 @@ sub validate_xml {
         location => "http://docbook.org/xml/$dtdver/rng/docbook.rng" );
     eval { $rngschema->validate($source); };
     if ($@) {
-        logger( maketext("RelaxNG Validation failed: ") . "\n", RED );
+        logger( maketext("RelaxNG Validation failed for '$dir/$main_file.xml': ") . "\n", RED );
         croak("$@\n$!\n");
     }
     logger("RelaxNG Validation OK\n");
