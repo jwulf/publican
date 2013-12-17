@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2013-09-20 14:44+1000\n"
-"PO-Revision-Date: 2013-09-20 14:44+1000\n"
+"POT-Creation-Date: 2013-12-17 12:50+1000\n"
+"PO-Revision-Date: 2013-12-17 12:50+1000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: None\n"
 "MIME-Version: 1.0\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "The following spec file is an example of how you could package a <firstterm>desktop entry</firstterm> (<filename>.directory</filename>) file and a <firstterm>desktop menu</firstterm> (<filename>.menu</filename>) file in an RPM package for shipping. Refer to <xref linkend=\"desktop_menus\" /> for the structure of these files."
+msgid "The following spec file is an example of how you could package a <firstterm>desktop entry</firstterm> (<filename>.directory</filename>) file and a <firstterm>desktop menu</firstterm> (<filename>.menu</filename>) file in an RPM package for shipping. Refer to <xref linkend=\"sect-Publican-Users_Guide-Desktop_menu_entries_for_documents\" /> for the structure of these files."
 msgstr ""
 
 #. Tag: para

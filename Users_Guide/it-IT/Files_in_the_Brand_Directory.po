@@ -22,7 +22,7 @@ msgid "Files in the brand directory"
 msgstr "File nella directory brand"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "Running the <prompt>$</prompt> <command>publican create_brand --name=<replaceable>brand</replaceable> --lang=<replaceable>language_code</replaceable></command> command creates a directory structure and the required files. The brand directory initially contains:"
 msgstr "L'esecuzione del comando <command>publican create_brand --name=<replaceable>brand</replaceable> --lang=<replaceable>codice_linguistico</replaceable></command> crea la struttura delle cartelle e i file necessari. La cartella brand, inizialmente contiene:"
 
@@ -102,7 +102,7 @@ msgid "<parameter>version</parameter>"
 msgstr "<parameter>version</parameter>"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "specifies the version number for the brand. When you create the brand with <prompt>$</prompt> <command>publican create_brand</command>, the version number is set to <literal>0.1</literal>. Update the version number here in the brand <filename>publican.cfg</filename> file and in the <filename>publican-<replaceable>brand</replaceable>.spec</filename> file when you prepare a new version of the brand."
 msgstr "specifica il numero di versione del brand. Quando si crea un brand con il comando <command>publican create_brand</command>, la versione è impostata a <literal>0.1</literal>. Aggiornare questo numero di versione presente  in <filename>publican.cfg</filename> e in <filename>publican.spec</filename> del brand, in occasione della preparazione di una nuova versione del brand."
 
@@ -117,7 +117,7 @@ msgid "<parameter>xml_lang</parameter>"
 msgstr "<parameter>xml_lang</parameter>"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "specifies the language of the source XML files for the brand's Common Content, for example, <literal>en-US</literal>, as set by the <option>--lang</option> option for <prompt>$</prompt> <command>publican create_brand</command>."
 msgstr "specifica la lingua dei file sorgenti XML per il Common Content del brand, per esempio <literal>en-US</literal>, come impostato nell'opzione <option>--lang</option> del comando <command>publican create_brand</command>."
 
@@ -127,13 +127,13 @@ msgid "<parameter>release</parameter>"
 msgstr "<parameter>release</parameter>"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "specifies the release number for the brand. When you create the brand with <prompt>$</prompt> <command>publican create_brand</command>, the release number is set to <literal>0</literal>. Update the version number here in the brand <filename>publican.cfg</filename> file and in the <filename>publican-<replaceable>brand</replaceable>.spec</filename> file when you prepare a new release of an existing version of the brand."
 msgstr "specifica il numero di release per il brand. Quando si crea un brand con il comando <command>publican create_brand</command>, la release è impostata a <literal>0</literal>. Aggiornare il numero di release nei file <filename>publican.cfg</filename> e <filename>publican-<replaceable>brand</replaceable>.spec</filename> , in occasione della preparazione di una nuova release per un brand esistente."
 
 #. Tag: term
-#, no-c-format
-msgid "<parameter>web_dir</parameter>"
+#, no-c-format, fuzzy
+msgid "<parameter>web_req</parameter>"
 msgstr "<parameter>brand</parameter>"
 
 #. Tag: para
@@ -142,12 +142,12 @@ msgid "when set to <literal>type: brand</literal>, this parameter identifies the
 msgstr "impostato a <literal>type: brand</literal>, questo parametro identifica il contenuto nella cartella come un brand invece che come un libro, articolo o set."
 
 #. Tag: term
-#, no-c-format
-msgid "<parameter>web_dir</parameter>"
+#, no-c-format, fuzzy
+msgid "<parameter>web_req</parameter>"
 msgstr "<parameter>brand</parameter>"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "specifies the name of the brand, as set by the <option>--name</option> option for <prompt>$</prompt> <command>publican create_brand</command>."
 msgstr "specifica il nome del brand, come impostato dall'opzione <option>--name</option> nel comando <command>publican create_brand</command>."
 
@@ -162,8 +162,8 @@ msgid "the full path for the <application>Publican</application> site configurat
 msgstr ""
 
 #. Tag: term
-#, no-c-format
-msgid "<parameter>web_dir</parameter>"
+#, no-c-format, fuzzy
+msgid "<parameter>web_req</parameter>"
 msgstr "<parameter>brand</parameter>"
 
 #. Tag: para
@@ -172,8 +172,8 @@ msgid "the full path to where files will be installed. You must also set <replac
 msgstr ""
 
 #. Tag: term
-#, no-c-format
-msgid "<parameter>web_dir</parameter>"
+#, no-c-format, fuzzy
+msgid "<parameter>web_req</parameter>"
 msgstr "<parameter>brand</parameter>"
 
 #. Tag: para
@@ -423,6 +423,11 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "Brands that supply XSL files need to change the relative path to a URI."
+msgid "Brands with custom XSLT need to change the relative path of referencing XSL templates to a URI."
 msgstr ""
+
+#. Tag: para
+#, no-c-format
+#~ msgid "Brands that supply XSL files need to change the relative path to a URI."
+#~ msgstr ""
 

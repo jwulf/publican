@@ -39,7 +39,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "Run <prompt>$</prompt> <command>publican create_site</command>, specifying the following parameters:"
 msgstr "Eseguire <command>publican create_site</command>, specificando i seguenti parametri:"
 
@@ -74,7 +74,7 @@ msgid "For example:"
 msgstr "Per esempio:"
 
 #. Tag: screen
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "<prompt>$</prompt> <command>publican create_site --site_config foomaster.cfg --db_file foomaster.db --toc_path html/docs</command>"
 msgstr "<command>publican create_site --site_config foomaster.cfg --db_file foomaster.db --toc_path html/docs</command>"
 
@@ -169,7 +169,7 @@ msgid "With <parameter>def_lang</parameter> set to <literal>fr-FR</literal>, vis
 msgstr "Impostando il parametro <parameter>def_lang</parameter> con il codice <literal>it-IT</literal>, i visitatori che visualizzano il menu di navigazione, per esempio in spagnolo, vengono diretti alla versione italiana del documento se non è presente una traduzione in spagnolo."
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "Optionally, configure a <firstterm>dump file</firstterm> for the website. <application>Publican</application> can output an XML file that provides complete site content details for delivery of other services, such as web feeds or customised search pages. The file is updated whenever a book is installed or removed from the site, or the <prompt>$</prompt> <command>publican update_site</command> command is run. Configure the <parameter>dump</parameter>, <parameter>dump_file</parameter>, and <parameter>zip_dump</parameter> parameters as follows:"
 msgstr "Opzionalmente, configurare un <firstterm>file dump</firstterm> per il sito web. <application>Publican</application> può produrre un file XML con i dettagli completi del contenuto del sito per offrire altri servizi, come feed web o pagine di ricerca personalizzate. Questo file viene aggiornato ad ogni installazione o rimozione di un libro dal sito, oppure eseguendo il comando <command>publican update_site</command>. Configurare come indicato di seguito, i parametri <parameter>dump</parameter>, <parameter>dump_file</parameter> e <parameter>zip_dump</parameter>:"
 
@@ -219,7 +219,7 @@ msgid "manual_toc_update: 1"
 msgstr "manual_toc_update: 1"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "Normally, <application>Publican</application> updates the site's tables of contents every time a documentation package is added or removed. On a site with a large number of documents on it (more than a few hundred), or where documents are updated very frequently (dozens of updates per week), this process is very demanding on a server. On a large or busy site, we recommend that you set this parameter and then periodically update the tables of contents with the <prompt>$</prompt> <command>publican update_site</command> command."
 msgstr "Normalmente, <application>Publican</application> aggiorna le tabelle dei contenuti del sito, ogniqualvolta viene aggiunto o rimosso un pacchetto di documentazione. Su un sito con un gran numero di documenti (più di un centinaio), o in cui i documenti sono spesso aggiornati (dozzine per settimana), questo processo è oneroso di risorse. Su un sito di grandi dimensioni o molto occupato, si raccomanda di impostare questo parametro e poi di aggiornare periodicamente le tabelle dei contenuti con il comando <command>publican update_site</command>."
 
@@ -234,7 +234,7 @@ msgid "toc_js: \"mybrand/scripts/megafoo.js\""
 msgstr ""
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "This file will be symlinked as <parameter>toc_path</parameter>/toc.js with the <prompt>$</prompt> <command>publican update_site</command> command. This path should be relative to the <parameter>toc_path</parameter> parameter."
 msgstr ""
 
@@ -244,7 +244,7 @@ msgid "Create an empty file named <filename>site_overrides.css</filename> in the
 msgstr "Creare un file vuoto di nome  <filename>site_overrides.css</filename> nella cartella specificata con l'opzione <option>doc_path</option> (la cartella che contiene il foglio di stile <filename>interactive.css</filename> e le cartelle linguistiche). Se si desidera usare degli stili specifici alternativi a quelli forniti da <filename>interactive.css</filename>, aggiungere un file <filename>site_overrides.css</filename> al documento che fornisce la <firstterm>home page</firstterm>  del sito — vedere la <xref linkend=\"sect-Publican-Users_Guide-Creating_installing_and_updating_the_home_page\" />. Se non si usa uno stile specifico, il file vuoto aggiunto impedirà la comparsa dell'errore 404 sul server. Su un sistema Linux, spostarsi nella cartella specificata con l'opzione <option>doc_path</option> ed eseguire:"
 
 #. Tag: screen
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "<prompt>$</prompt> <command>touch site_overrides.css</command>"
 msgstr "<command>touch site_overrides.css</command>"
 
@@ -304,7 +304,7 @@ msgid "To make <application>Publican</application> refresh the site structure at
 msgstr "Per aggiornare la struttura del sito, eseguire:"
 
 #. Tag: screen
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "<prompt>$</prompt> <command>publican update_site --site_config <replaceable>path_to_site_configuration_file</replaceable>.cfg</command>"
 msgstr "<command>publican update_site --site_config <replaceable>percorso_al_file_di_configuration_del_sito</replaceable>.cfg</command>"
 

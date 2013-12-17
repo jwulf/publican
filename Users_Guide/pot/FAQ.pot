@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2013-09-20 14:44+1000\n"
-"PO-Revision-Date: 2013-09-20 14:44+1000\n"
+"POT-Creation-Date: 2013-12-17 12:50+1000\n"
+"PO-Revision-Date: 2013-12-17 12:50+1000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: None\n"
 "MIME-Version: 1.0\n"
@@ -149,7 +149,7 @@ msgid "<prompt>$</prompt> <command>alternatives --config javac</command>\n"
 "   2           /usr/lib/jvm/java-1.6.0-openjdk/bin/javac\n"
 "   3           /usr/lib/jvm/java-1.5.0-gcj/bin/javac\n"
 "\n"
-"Enter to keep the current selection[+], or type selection number: "
+"Enter to keep the current selection[+], or type selection number:"
 msgstr ""
 
 #. Tag: para
@@ -247,8 +247,7 @@ msgstr ""
 #, no-c-format
 msgid "<computeroutput>undefined language: JAVA at /usr/lib/perl5/vendor_perl/5.10.0/Syntax/Highlight/Engine/Kate.pm</computeroutput>\n"
 "<computeroutput>line 615.</computeroutput>\n"
-"<computeroutput>cannot create plugin for language 'JAVA'</computeroutput>\n"
-""
+"<computeroutput>cannot create plugin for language 'JAVA'</computeroutput>"
 msgstr ""
 
 #. Tag: para
@@ -316,7 +315,7 @@ msgstr ""
 msgid "\n"
 "*                 soft    nofile          8192\n"
 "*                 hard    nofile          8192\n"
-"					"
+""
 msgstr ""
 
 #. Tag: para

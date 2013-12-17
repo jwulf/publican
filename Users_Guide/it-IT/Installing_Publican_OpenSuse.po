@@ -88,7 +88,7 @@ msgid "Install the dependencies that are available from various online repositor
 msgstr ""
 
 #. Tag: screen
-#, no-c-format, fuzzy
+#, no-c-format
 msgid ""
 "<prompt>$</prompt> <command>sudo zypper install perl-Config-Simple perl-DateTime \\\n"
 "perl-DateTime-Format-DateParse perl-DBD-SQLite perl-DBI \\\n"
@@ -109,7 +109,7 @@ msgid "Use <application>cpan</application> to install the remaining dependencies
 msgstr ""
 
 #. Tag: screen
-#, no-c-format, fuzzy
+#, no-c-format
 msgid ""
 "<prompt>$</prompt> <command>sudo sh\n"
 "cpan File::pushd File::Copy::Recursive Locale::PO pp \\\n"
@@ -124,7 +124,7 @@ msgid "Download the source code:"
 msgstr ""
 
 #. Tag: screen
-#, no-c-format, fuzzy
+#, no-c-format
 msgid ""
 "<prompt>$</prompt> <command>cd ~\n"
 "mkdir -p SourceCode/publican\n"
@@ -167,7 +167,7 @@ msgid "If not, then use <application>cpan</application> (as root) to install the
 msgstr ""
 
 #. Tag: screen
-#, no-c-format, fuzzy
+#, no-c-format
 msgid ""
 "<prompt>$</prompt> <command>sudo sh\n"
 "cpan File::pushd\n"
@@ -256,7 +256,7 @@ msgid "If you intend to create indices in your generated pdf documents, you are 
 msgstr ""
 
 #. Tag: screen
-#, no-c-format, fuzzy
+#, no-c-format
 msgid ""
 "<prompt>$</prompt> <command>JFEARN=http://jfearn.fedorapeople.org/wkhtmltopdf/f15\n"
 "MYSYSTEM=i686\n"
@@ -277,7 +277,7 @@ msgid "Once downloaded, install both rpms as follows:"
 msgstr ""
 
 #. Tag: screen
-#, no-c-format, fuzzy
+#, no-c-format
 msgid ""
 "<prompt>$</prompt> <command>sudo sh\n"
 "rpm -ivh wkhtmltopdf-qt*\n"
@@ -302,7 +302,7 @@ msgid "The final stage is to install Publican, even though the testing stage had
 msgstr ""
 
 #. Tag: screen
-#, no-c-format, fuzzy
+#, no-c-format
 msgid ""
 "<prompt>$</prompt> <command>sudo sh\n"
 "./Build test\n"
@@ -321,7 +321,7 @@ msgid "Test the installed <application>Publican</application> build:"
 msgstr ""
 
 #. Tag: screen
-#, no-c-format, fuzzy
+#, no-c-format
 msgid ""
 "<prompt>$</prompt> <command>publican create --type=book --product=testing --version=1.2.3 --name=TestPublican</command>\n"
 "  Processing file en-US/Author_Group.xml -&gt; en-US/Author_Group.xml\n"

@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2013-09-20 14:44+1000\n"
-"PO-Revision-Date: 2013-09-20 14:44+1000\n"
+"POT-Creation-Date: 2013-12-17 12:50+1000\n"
+"PO-Revision-Date: 2013-12-17 12:50+1000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: None\n"
 "MIME-Version: 1.0\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "After you create a brand (as described in <xref linkend=\"sect-Users_Guide-Creating_a_brand\" />), <application>Publican</application> can help you to distribute the brand to members of your documentation project as <firstterm>RPM packages</firstterm>. RPM packages are used to distribute software to computers with Linux operating systems that use the <application>RPM Package Manager</application>. These operating systems include Red Hat Enterprise Linux, Fedora, Mandriva Linux, SUSE Linux Enterprise, openSUSE, Turbolinux, and Yellow Dog Linux, to name just a few."
+msgid "After you create a brand (as described in <xref linkend=\"sect-Publican-Users_Guide-Creating_a_brand\" />), <application>Publican</application> can help you to distribute the brand to members of your documentation project as <firstterm>RPM packages</firstterm>. RPM packages are used to distribute software to computers with Linux operating systems that use the <application>RPM Package Manager</application>. These operating systems include Red Hat Enterprise Linux, Fedora, Mandriva Linux, SUSE Linux Enterprise, openSUSE, Turbolinux, and Yellow Dog Linux, to name just a few."
 msgstr ""
 
 #. Tag: para
@@ -74,7 +74,7 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "The <option>--lang</option>, <option>--desktop</option> and <option>--short_sighted</option> options that apply when you package books (described in <xref linkend=\"sect-Users_Guide-Packaging_a_book\" />) are meaningless when you package brands. In particular, note that although the <option>--lang</option> option is mandatory when you package a book, you do not need to use it when you package a brand."
+msgid "The <option>--lang</option>, <option>--desktop</option> and <option>--short_sighted</option> options that apply when you package books (described in <xref linkend=\"sect-Publican-Users_Guide-Packaging_a_document\" />) are meaningless when you package brands. In particular, note that although the <option>--lang</option> option is mandatory when you package a book, you do not need to use it when you package a brand."
 msgstr ""
 
 #. Tag: para
@@ -89,7 +89,7 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "<application>Publican</application> uses the information in the <filename>publican.cfg</filename> file to supply the various parameters in the file name. Refer to <xref linkend=\"sect-Users_Guide-Files_in_the_brand_directory-The_publican.cfg_file\" /> for details of configuring this file. Additionally:"
+msgid "<application>Publican</application> uses the information in the <filename>publican.cfg</filename> file to supply the various parameters in the file name. Refer to <xref linkend=\"sect-Publican-Users_Guide-Files_in_the_brand_directory-The_publican.cfg_file\" /> for details of configuring this file. Additionally:"
 msgstr ""
 
 #. Tag: para

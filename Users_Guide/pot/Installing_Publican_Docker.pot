@@ -1,0 +1,75 @@
+# 
+# AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 0\n"
+"POT-Creation-Date: 2013-12-17 12:50+1000\n"
+"PO-Revision-Date: 2013-12-17 12:50+1000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: None\n"
+"MIME-Version: 1.0\n"
+"Content-Type: application/x-publican; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Docker container"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "This installation procedure assumes you have already installed a working docker (see <ulink url=\"http://docker.io\" />) environment."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Docker is a lightweight Jail (currently using LXC) that allows you to install and run <application>publican</application> without installing your main Linux installation with all its dependencies."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Open a terminal."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Download and install the <application>svendowideit/publican</application> container from <ulink url=\"https://index.docker.io/u/svendowideit/publican/\" />:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "<prompt>$</prompt> <command>docker pull svendowideit/publican</command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "This will take some time, as it downloads a fedora based container, and then the dependencies needed for publican"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Add a publican bash alias to simplify your usage:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "<prompt>$</prompt> <command>echo 'alias publican=\"docker run -t -i -v $(pwd):/mnt svendowideit/publican\"' &gt;&gt; ~/.bashrc</command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "This alias assumes that you are running <application>publican</application> in the documentation root directory (the one with the publican.cfg file in it."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "now you can use <application>publican</application> as per the documentation:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "<prompt>$</prompt> <command>publican --version </command>\n"
+"<computeroutput>version=3.2.1</computeroutput>"
+msgstr ""
+

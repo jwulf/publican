@@ -44,7 +44,7 @@ msgid "displays the manual page"
 msgstr "visualizza le pagine di man relative"
 
 #. Tag: term
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "<prompt>$</prompt> <command>publican --help_actions</command>"
 msgstr "<command>publican --help_actions</command>"
 
@@ -89,8 +89,8 @@ msgid "<option>--quiet</option>"
 msgstr "<option>--quiet</option>"
 
 #. Tag: para
-#, no-c-format
-msgid "disables all logging."
+#, no-c-format, fuzzy
+msgid "disable all logging."
 msgstr "disabilita tutti i messaggi di log"
 
 #. Tag: title
@@ -99,7 +99,7 @@ msgid "Actions"
 msgstr "Azioni"
 
 #. Tag: term
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "<prompt>$</prompt> <command>publican add_revision</command>"
 msgstr "<command>publican rename</command>"
 
@@ -244,8 +244,8 @@ msgid "--quiet"
 msgstr ""
 
 #. Tag: para
-#, no-c-format
-msgid "disables all logging."
+#, no-c-format, fuzzy
+msgid "disable all logging."
 msgstr "disabilita tutti i messaggi di log"
 
 #. Tag: term
@@ -309,8 +309,8 @@ msgid "skips DTD validation when building a document."
 msgstr "salta il controllo di vaidità DTD durante la creazione di un documento"
 
 #. Tag: term
-#, no-c-format, fuzzy
-msgid "--pub_dir=<replaceable>PUB_DIR</replaceable>"
+#, no-c-format
+msgid "--src_dir=<replaceable>SRC_DIR</replaceable>"
 msgstr ""
 
 #. Tag: para
@@ -329,8 +329,8 @@ msgid "Override the tool to use when creating PDFs. Valid options are wkhtmltopd
 msgstr ""
 
 #. Tag: term
-#, no-c-format, fuzzy
-msgid "--pub_dir=<replaceable>PUB_DIR</replaceable>"
+#, no-c-format
+msgid "--src_dir=<replaceable>SRC_DIR</replaceable>"
 msgstr ""
 
 #. Tag: para
@@ -359,7 +359,7 @@ msgid "indents XML files neatly, and rebuilds element IDs."
 msgstr "indenta ordinatamente i file XML e ricrea gli ID degli elementi"
 
 #. Tag: term
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "<prompt>$</prompt> <command>publican clean_set</command>"
 msgstr "<command>publican clean_set</command>"
 
@@ -450,7 +450,7 @@ msgstr "il tipo di documento — article, book, o set"
 
 #. Tag: term
 #, no-c-format, fuzzy
-msgid "<prompt>$</prompt> <command>publican create_brand</command>"
+msgid "<prompt>$</prompt> <command>publican copy_web_brand</command>"
 msgstr "<command>publican create_brand</command>"
 
 #. Tag: para
@@ -509,7 +509,7 @@ msgid "path to the template directory (by default, <filename>/usr/share/publican
 msgstr "percorso alla cartella template (<filename>/usr/share/publican/templates</filename>, per impostazione)"
 
 #. Tag: term
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "<prompt>$</prompt> <command>publican help_config</command>"
 msgstr "<command>publican help_config</command>"
 
@@ -539,7 +539,7 @@ msgid "the language of the document to install (mandatory)."
 msgstr "la lingua del documento da installare (necessario)"
 
 #. Tag: term
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "<prompt>$</prompt> <command>publican install_brand</command>"
 msgstr "<command>publican install_brand</command>"
 
@@ -560,6 +560,41 @@ msgstr "percorso ai file Common Content di <application>Publican</application>. 
 
 #. Tag: term
 #, no-c-format, fuzzy
+msgid "<prompt>$</prompt> <command>publican copy_web_brand</command>"
+msgstr "<command>publican create_brand</command>"
+
+#. Tag: para
+#, no-c-format
+msgid "copy a brand's installed web content to another site. Options:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "the brand to copy."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "--old_site_config=<replaceable>site_config</replaceable>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "website configuration file to copy brand web content from."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "--old_site_config=<replaceable>site_config</replaceable>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "website configuration file to copy brand web content to."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
 msgid "<prompt>$</prompt> <command>publican lang_stats</command>"
 msgstr "<command>publican lang_stats</command>"
 
@@ -579,18 +614,13 @@ msgid "a comma-separated list of languages for which the report will be generate
 msgstr "una lista di lingue, separate da virgole"
 
 #. Tag: term
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "<prompt>$</prompt> <command>publican migrate_site</command>"
 msgstr "<command>publican create</command>"
 
 #. Tag: para
 #, no-c-format
 msgid "migrates a website database from <application>Publican</application> 2.x to <application>Publican</application> 3. Options:"
-msgstr ""
-
-#. Tag: term
-#, no-c-format
-msgid "--site_config=<replaceable>site_config</replaceable>"
 msgstr ""
 
 #. Tag: para
@@ -664,8 +694,8 @@ msgid "builds the package as a binary RPM package rather than a source RPM packa
 msgstr "crea il pacchetto RPM binario invece del pacchetto SRPM sorgente"
 
 #. Tag: term
-#, no-c-format, fuzzy
-msgid "publican print_unused"
+#, no-c-format
+msgid "publican print_banned"
 msgstr "publican print_banned"
 
 #. Tag: para
@@ -684,7 +714,7 @@ msgid "prints a list of DocBook tags supported by <application>Publican</applica
 msgstr "visualizza l'elenco dei tag DocBook supportati da <application>Publican</application>."
 
 #. Tag: term
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "<prompt>$</prompt> <command>publican print_tree</command>"
 msgstr "<command>publican print_tree</command>"
 
@@ -694,13 +724,13 @@ msgid "displays a tree of the XML files included in a document."
 msgstr "viusalizza la struttura ad albero dei file XML di un documento"
 
 #. Tag: term
-#, no-c-format, fuzzy
-msgid "publican print_unused"
+#, no-c-format
+msgid "publican print_banned"
 msgstr "publican print_banned"
 
 #. Tag: para
-#, no-c-format
-msgid "prints a list of the XML files <emphasis>not</emphasis> included with the <sgmltag>&lt;xi:include&gt;</sgmltag> tag in a book, article, or set."
+#, no-c-format, fuzzy
+msgid "prints a list of the image files <emphasis>not</emphasis> referenced by an <sgmltag>&lt;imagedata&gt;</sgmltag> tag in a book, article, or set."
 msgstr "visualizza l'elenco dei file XML <emphasis>non</emphasis> inclusi in tag <sgmltag>&lt;xi:include&gt;</sgmltag> in un libro, articolo o set"
 
 #. Tag: term
@@ -709,8 +739,8 @@ msgid "publican print_unused_images"
 msgstr "publican print_unused"
 
 #. Tag: para
-#, no-c-format
-msgid "prints a list of the XML files <emphasis>not</emphasis> included with the <sgmltag>&lt;xi:include&gt;</sgmltag> tag in a book, article, or set."
+#, no-c-format, fuzzy
+msgid "prints a list of the image files <emphasis>not</emphasis> referenced by an <sgmltag>&lt;imagedata&gt;</sgmltag> tag in a book, article, or set."
 msgstr "visualizza l'elenco dei file XML <emphasis>non</emphasis> inclusi in tag <sgmltag>&lt;xi:include&gt;</sgmltag> in un libro, articolo o set"
 
 #. Tag: term
@@ -764,7 +794,7 @@ msgid "generates a site report for a documentation website. Option:"
 msgstr "genera un report statistico di un sito per documentazione. Opzione"
 
 #. Tag: term
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "<prompt>$</prompt> <command>publican update_pot</command>"
 msgstr "<command>publican update_pot</command>"
 
@@ -774,7 +804,7 @@ msgid "updates the POT files in a document."
 msgstr "aggiorna i file POT in un documento"
 
 #. Tag: term
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "<prompt>$</prompt> <command>publican update_po</command>"
 msgstr "<command>publican update_po</command>"
 

@@ -23,6 +23,76 @@ msgstr "Cronologia revisioni"
 
 #. Tag: firstname
 #, no-c-format
+msgid "Rüdiger"
+msgstr "Rüdiger"
+
+#. Tag: surname
+#, no-c-format
+msgid "Landmann"
+msgstr "Landmann"
+
+#. Tag: member
+#, no-c-format
+msgid "Improve instructions for translation BZ#1021287"
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Document use of \"sortas\" for indexes and glossaries"
+msgstr ""
+
+#. Tag: firstname
+#, no-c-format
+msgid "Roman"
+msgstr ""
+
+#. Tag: surname
+#, no-c-format
+msgid "Joost"
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Clarify where relative paths are used in brand instructions - BZ#1028815"
+msgstr ""
+
+#. Tag: firstname
+#, no-c-format
+msgid "Roman"
+msgstr ""
+
+#. Tag: surname
+#, no-c-format
+msgid "Dunbar"
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Corrected OpenSUSE installation instructions - BZ#1000534"
+msgstr ""
+
+#. Tag: firstname
+#, no-c-format
+msgid "Svein"
+msgstr ""
+
+#. Tag: surname
+#, no-c-format
+msgid "Dowdeit"
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Updated Debian installation instructions - BZ#1013934"
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Add Docker installation instructions - BZ#1015943"
+msgstr ""
+
+#. Tag: firstname
+#, no-c-format
 msgid "Zac"
 msgstr ""
 
@@ -62,8 +132,8 @@ msgid "Fearn"
 msgstr "Fearn"
 
 #. Tag: member
-#, no-c-format, fuzzy
-msgid "Publican 3.0"
+#, no-c-format
+msgid "Publican 3.2.0"
 msgstr ""
 
 #. Tag: member
@@ -72,23 +142,13 @@ msgid "Document site config option 'toc_js'"
 msgstr ""
 
 #. Tag: member
-#, no-c-format, fuzzy
-msgid "Document build option --pub_dir"
+#, no-c-format
+msgid "Document build option --pdftool"
 msgstr ""
 
 #. Tag: member
-#, no-c-format, fuzzy
-msgid "Document build option --pub_dir"
-msgstr ""
-
-#. Tag: firstname
 #, no-c-format
-msgid "Norman"
-msgstr ""
-
-#. Tag: surname
-#, no-c-format
-msgid "Dunbar"
+msgid "Document build option --pdftool"
 msgstr ""
 
 #. Tag: member
@@ -97,8 +157,8 @@ msgid "Add Section on Installing Publican on OpenSuse 12"
 msgstr ""
 
 #. Tag: member
-#, no-c-format, fuzzy
-msgid "Publican 3.0"
+#, no-c-format
+msgid "Publican 3.2.0"
 msgstr ""
 
 #. Tag: firstname
@@ -115,16 +175,6 @@ msgstr "Newton"
 #, no-c-format
 msgid "Improve documentation of standalone &lt;set&gt; usage"
 msgstr "Integrata la documentazione sull'uso di &lt;set&gt; a sé stanti"
-
-#. Tag: firstname
-#, no-c-format
-msgid "Rüdiger"
-msgstr "Rüdiger"
-
-#. Tag: surname
-#, no-c-format
-msgid "Landmann"
-msgstr "Landmann"
 
 #. Tag: member
 #, no-c-format

@@ -27,7 +27,7 @@ msgid "<application>Publican</application>-generated product pages and version p
 msgstr "Le pagine di prodotto e le pagine di versione generate con <application>Publican</application>, sono pagine localizzabili che offrono una panoramica generale, rispettivamente, su un prodotto o una versione. I visitatori accedono a queste pagine cliccando su prodotto o versione nel menu di navigazione. Le pagine sono strutturate come un <sgmltag>&lt;article&gt;</sgmltag> DocBook con un ulteriore parametro <parameter>web_type:&nbsp;product</parameter> o <parameter>web_type:&nbsp;version</parameter> nel proprio file <filename>publican.cfg</filename>. Nella loro struttura e presentazione, le pagine prodotto e quelle di versione sono pressoché identiche ad ogni altro articolo prodotto con <application>Publican</application>, i cui pacchetti vengono creati allo stesso modo."
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "On a workstation, create a product or version page using the procedure described in <xref linkend=\"sect-Publican-Users_Guide-Creating_installing_and_updating_product_pages_and_version_pages\" />."
 msgstr "Usando il procedimento della <xref linkend=\"sect-Publican-Users_Guide-Creating_installing_and_updating_product_pages_and_version_pages\" />, su una macchina creare una pagina prodotto o di versione."
 
@@ -37,12 +37,12 @@ msgid "In the directory in which you created the product page or version page, r
 msgstr "Nella cartella contenente la pagina prodotto o di versione, eseguire:"
 
 #. Tag: screen
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "<prompt>$</prompt> <command>publican package --binary</command>"
 msgstr "<command>publican package --binary</command>"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "<application>Publican</application> builds an RPM package and places it in the <filename>/tmp/rpms/noarch/</filename> directory of the product page or version page. By default, <application>Publican</application> builds the RPM package for the operating system within which you are running <application>Publican</application>. To build an RPM package to install on a server that runs a different operating system, set the <parameter>os_ver</parameter> parameter in the <filename>publican.cfg</filename> file of the product page or version page."
 msgstr "<application>Publican</application> crea un pacchetto RPM, salvandolo nella cartella <filename>/tmp/rpms/noarch/</filename> della pagina prodotto o di versione. Notare che per impostazione predefinita, <application>Publican</application> genera un pacchetto RPM da installare su un server che esegua Red Hat Enterprise Linux&nbsp;5. Per creare un RPM da installare su un server con un sistema operativo differente, impostare il parametro <parameter>os_var</parameter> nel file <filename>publican.cfg</filename> della pagina prodotto o di versione."
 

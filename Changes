@@ -58,6 +58,7 @@ NEXT UNRELEASED
 - Add report action to print readability statistics. BZ #1031364
 - Change comment in syntax highlight to light grey. BZ #1030718
 - Document use of "sortas" for indexes and glossaries in PUG
+- Fix newline in translation affecting output. BZ #1036150
 
 3.2.1 Wed Sep 04 2013
 - Fix empty images dir causing packaging fail. BZ #995896

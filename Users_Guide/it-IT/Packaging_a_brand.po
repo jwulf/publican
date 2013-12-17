@@ -42,7 +42,7 @@ msgid "Conversely, binary RPM packages contain software — in this case, a <app
 msgstr "Al contrario, i pacchetti RPM di binari contengono software — in questo caso, un brand di <application>Publican</application> — pronto per essere salvato nel file system del computer ed immediatamente usato. I contenuti del pacchetto RPM binario non devono essere prima compilati sul sistema da installare, e quindi il sistema non deve aver <application>Publican</application>, installato."
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "To package a brand, use the <prompt>$</prompt> <command>publican package</command> command in the brand directory. When used without any further options, <application>Publican</application> produces an SRPM package. The options for packaging a brand are as follows:"
 msgstr "Per creare il pacchetto di un brand, usare il comando <command>publican package</command> nella cartella del brand. Quando usato senza opzioni, <application>Publican</application> crea un pacchetto SRPM. Le opzioni disponibili sono:"
 

@@ -73,14 +73,14 @@ msgid "Setting formats and lang"
 msgstr ""
 
 #. Tag: screen
-#, no-c-format
+#, no-c-format, fuzzy
 msgid ""
 "<prompt>$</prompt> <command>echo 'formats: \"html,html-single,pdf,txt\"' &gt;&gt; ~/.publican.cfg</command>\n"
 "<prompt>$</prompt> <command>echo 'langs: \"en-US\"' &gt;&gt; ~/.publican.cfg</command>\n"
 "<prompt>$</prompt> <command>publican build</command>\n"
 "<computeroutput>Setting up en-US</computeroutput>\n"
 "<computeroutput>[...]</computeroutput>\n"
-"<computeroutput>	Finished txt</computeroutput>"
+"<computeroutput> Finished txt</computeroutput>"
 msgstr ""
 
 #. Tag: para

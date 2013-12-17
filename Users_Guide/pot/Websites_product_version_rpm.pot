@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2013-09-20 14:44+1000\n"
-"PO-Revision-Date: 2013-09-20 14:44+1000\n"
+"POT-Creation-Date: 2013-12-17 12:50+1000\n"
+"PO-Revision-Date: 2013-12-17 12:50+1000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: None\n"
 "MIME-Version: 1.0\n"
@@ -24,7 +24,7 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "On a workstation, create a product or version page using the procedure described in <xref linkend=\"sect-Users_Guide-Website-structure-product-version-manual\" />."
+msgid "On a workstation, create a product or version page using the procedure described in <xref linkend=\"sect-Publican-Users_Guide-Creating_installing_and_updating_product_pages_and_version_pages\" />."
 msgstr ""
 
 #. Tag: para

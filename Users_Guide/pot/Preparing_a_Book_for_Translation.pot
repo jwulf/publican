@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2013-09-20 14:44+1000\n"
-"PO-Revision-Date: 2013-09-20 14:44+1000\n"
+"POT-Creation-Date: 2013-12-17 12:50+1000\n"
+"PO-Revision-Date: 2013-12-17 12:50+1000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: None\n"
 "MIME-Version: 1.0\n"
@@ -14,7 +14,7 @@ msgstr ""
 
 #. Tag: title
 #, no-c-format
-msgid "Preparing a document for translation"
+msgid "Translating a document"
 msgstr ""
 
 #. Tag: para
@@ -34,13 +34,27 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
+msgid "Optional but recommended: <firstterm>drop</firstterm> the document to translation. Run:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "<prompt>$</prompt> <command>publican trans_drop</command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<application>Publican</application> creates a new subdirectory, named <filename>trans_drop/</filename>. The <filename>trans_drop/</filename> subdirectory contains a snapshot of the source files of the document. When the <filename>trans_drop/</filename> directory is present in a documentation project, <application>Publican</application> uses its content as the basis for the commands documented later in this procedure."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
 msgid "Generate <firstterm>portable object template</firstterm> (POT) files from the XML files:"
 msgstr ""
 
 #. Tag: screen
 #, no-c-format
-msgid "<prompt>$</prompt> <command>publican update_pot</command>\n"
-""
+msgid "<prompt>$</prompt> <command>publican update_pot</command>"
 msgstr ""
 
 #. Tag: para
@@ -70,30 +84,32 @@ msgstr ""
 
 #. Tag: screen
 #, no-c-format
-msgid "<prompt>$</prompt> <command>publican update_po --langs=<replaceable>language_code</replaceable></command>\n"
-""
+msgid "<prompt>$</prompt> <command>publican update_po --langs=<replaceable>language_code</replaceable></command>"
 msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "where <replaceable>language_code</replaceable> is the code for the target language. Refer to <xref linkend=\"appe-Users_Guide-Language_codes\" /> for more information about language codes. You can provide multiple language codes, separated by commas, to generate PO files for more than one language at a time. For example:"
+msgid "where <replaceable>language_code</replaceable> is the code for the target language. Refer to <xref linkend=\"appe-Publican-Users_Guide-Language_codes\" /> for more information about language codes. You can provide multiple language codes, separated by commas, to generate PO files for more than one language at a time. For example:"
 msgstr ""
 
 #. Tag: screen
 #, no-c-format
-msgid "<prompt>$</prompt> <command>publican update_po --langs=hi-IN,pt-BR,ru-RU,zh-CN</command>\n"
-""
+msgid "<prompt>$</prompt> <command>publican update_po --langs=hi-IN,pt-BR,ru-RU,zh-CN</command>"
 msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "If this is the first time that PO files have been created for a particular language, <application>Publican</application> creates a new subdirectory, named with the language code that you specified with the <option>--langs=</option> option. This subdirectory holds a PO file for each POT file in <filename>pot</filename> subdirectory. If <application>Publican</application> has created PO files for this language previously, <application>Publican</application> updates the existing PO files to reflect any changes in the POT files since the PO files were last updated. You can update existing PO files in every subdirectory with the <option>--langs=all</option> option:"
+msgid "If this is the first time that PO files have been created for a particular language, <application>Publican</application> creates a new subdirectory, named with the language code that you specified with the <option>--langs=</option> option. This subdirectory holds a PO file for each POT file in <filename>pot</filename> subdirectory, plus a <filename>Revision_History.xml</filename> file that tracks the history of this particular translation. When created for the first time, the <filename>Revision_History.xml</filename> file records the date on which the PO files for this translation were created, and the version of the source language XML (taken from the source language's <filename>Revision_History.xml</filename> file) on which this translation is therefore based."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "If <application>Publican</application> has created PO files for this language previously, <application>Publican</application> updates the existing PO files to reflect any changes in the POT files since the PO files were last updated, and adds a new entry to the translation's <filename>Revision_History.xml</filename> file to record the date on which the PO files for this translation were refreshed, and the version of the source language XML on which the revision is based. You can update existing PO files in every subdirectory with the <option>--langs=all</option> option:"
 msgstr ""
 
 #. Tag: screen
 #, no-c-format
-msgid "<prompt>$</prompt> <command>publican update_po --langs=all</command>\n"
-""
+msgid "<prompt>$</prompt> <command>publican update_po --langs=all</command>"
 msgstr ""
 
 #. Tag: title
@@ -113,7 +129,17 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "Translators translate the <firstterm>strings</firstterm> contained in the PO files."
+msgid "Translate the <firstterm>strings</firstterm> contained in the PO files."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "If you are updating a previously published translation <emphasis>of this revision in the source language</emphasis>, use <application>Publican</application>'s <command>publican add_revision</command> command to describe your changes or corrections. <application>Publican</application> updates the <filename>Revision_History.xml</filename> file for you."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "If the document has changed in its original language, use the <command>publican trans_drop</command>, <command>publican update_pot</command>, and <command>publican update_po</command> commands as described earlier in this procedure instead."
 msgstr ""
 
 #. Tag: para
@@ -123,8 +149,7 @@ msgstr ""
 
 #. Tag: screen
 #, no-c-format
-msgid "<prompt>$</prompt> <command>publican build --formats=html,html-single,pdf --langs=is-IS,nb-NO</command>\n"
-""
+msgid "<prompt>$</prompt> <command>publican build --formats=html,html-single,pdf --langs=is-IS,nb-NO</command>"
 msgstr ""
 
 #. Tag: para
@@ -134,34 +159,12 @@ msgstr ""
 
 #. Tag: screen
 #, no-c-format
-msgid "<prompt>$</prompt> <command>publican package --lang=is-IS</command>\n"
-""
+msgid "<prompt>$</prompt> <command>publican package --lang=is-IS</command>"
 msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "You can build the document in all languages for which you have translations with the <option>--langs=all</option> option, but note that you must package each language individually. Refer to <xref linkend=\"sect-Users_Guide-Building_a_document\" /> for more information on building a document, and <xref linkend=\"sect-Users_Guide-Packaging_a_book\" /> on packaging a document."
-msgstr ""
-
-#. Tag: title
-#, no-c-format
-msgid "Important — set Project-Id-Version for packaging"
-msgstr ""
-
-#. Tag: para
-#, no-c-format
-msgid "The release number of RPM packages for translated documents is set by the <parameter>Project-Id-Version</parameter> parameter in the <filename>Article_Info.po</filename> or <filename>Book_Info.po</filename> file. For example, release <literal>3</literal> of a book in Japanese would have the following set at the start of the <filename>ja-JP/Book_Info.po</filename> file:"
-msgstr ""
-
-#. Tag: programlisting
-#, no-c-format
-msgid "\"Project-Id-Version: 3\n"
-"\""
-msgstr ""
-
-#. Tag: para
-#, no-c-format
-msgid "Note that the release number of a package in a particular language does not bear any relationship to the release number of the package for the same document in its original language or in any other language. The release number is specific to one particular language only."
+msgid "You can build the document in all languages for which you have translations with the <option>--langs=all</option> option, but note that you must package each language individually. Refer to <xref linkend=\"sect-Publican-Users_Guide-Building_a_document\" /> for more information on building a document, and <xref linkend=\"sect-Publican-Users_Guide-Packaging_a_document\" /> on packaging a document."
 msgstr ""
 
 #. Tag: title
@@ -172,5 +175,41 @@ msgstr ""
 #. Tag: para
 #, no-c-format
 msgid "Translation takes place after a book has been finalized. You do not need to know who will translate your book in order to give them credit. Create <filename>$translation/Author_Group.xml</filename> and add a valid DocBook authorgroup. The translator can add their details to this file and <application>Publican</application> will append it to <filename>$source_lang/Author_Group.xml</filename> when the book is build. This allows authors to finalize the original text without needing to know who will translate the book."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Translating Indexes and Glossaries"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "DocBook automatically collates and sorts <sgmltag>&lt;glossentry&gt;</sgmltag> elements into a book's glossary; and <sgmltag>&lt;primary&gt;</sgmltag>, <sgmltag>&lt;secondary&gt;</sgmltag>, and <sgmltag>&lt;tertiary&gt;</sgmltag> <sgmltag>&lt;indexterm&gt;</sgmltag> elements into a book's index. Entries are sorted automatically, and although this system works well for languages written with an alphabet, abugida, or syllabic script, languages written with logograms sort less well."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "To manually adjust the sort order of a glossary entry or index entry, manually add DocBook's <sgmltag>sortas</sgmltag> attribute to the XML element. For example, to ensure that the Japanese word 暗号化 sorts correctly in an index, specify:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "#. Tag: indexterm\n"
+"#, no-c-format\n"
+"msgid \"&lt;primary&gt;encryption&lt;/primary&gt;\"\n"
+"msgstr \"&lt;primary sortas=\"あんごうか\"&gt;暗号化&lt;/primary&gt;\""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Similarly, to ensure that the Japanese word 暗号化 sorts correctly in a glossary, specify:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "#. Tag: glossentry\n"
+"#, no-c-format\n"
+"msgid \"&lt;glossterm&gt;encryption&lt;/glossterm&gt;\"\n"
+"msgstr \"&lt;glossterm sortas=\"あんごうか\"&gt;暗号化&lt;/glossterm&gt;\""
 msgstr ""
 

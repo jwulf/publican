@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2013-09-20 14:44+1000\n"
-"PO-Revision-Date: 2013-09-20 14:44+1000\n"
+"POT-Creation-Date: 2013-12-17 12:50+1000\n"
+"PO-Revision-Date: 2013-12-17 12:50+1000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: None\n"
 "MIME-Version: 1.0\n"
@@ -559,6 +559,41 @@ msgstr ""
 
 #. Tag: term
 #, no-c-format
+msgid "<prompt>$</prompt> <command>publican copy_web_brand</command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "copy a brand's installed web content to another site. Options:"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "the brand to copy."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "--old_site_config=<replaceable>site_config</replaceable>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "website configuration file to copy brand web content from."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "--site_config=<replaceable>site_config</replaceable>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "website configuration file to copy brand web content to."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
 msgid "<prompt>$</prompt> <command>publican lang_stats</command>"
 msgstr ""
 
@@ -585,11 +620,6 @@ msgstr ""
 #. Tag: para
 #, no-c-format
 msgid "migrates a website database from <application>Publican</application> 2.x to <application>Publican</application> 3. Options:"
-msgstr ""
-
-#. Tag: term
-#, no-c-format
-msgid "--site_config=<replaceable>site_config</replaceable>"
 msgstr ""
 
 #. Tag: para

@@ -47,7 +47,7 @@ msgid "Finally, a small group of elements and attributes are <firstterm>disallow
 msgstr "Infine, un ristretto gruppo di elementi ed attributi sono <firstterm>non permessi</firstterm>. Questi elementi ed attributi sono elencati in basso, accompagnati da una spiegazione del motivo del divieto."
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "Use the command <prompt>$</prompt> <command>publican print_known</command> to print a list of tags that <application>Publican</application> supports, and the command <command>publican print_banned</command> to print a list of tags that are banned in <application>Publican</application>."
 msgstr "Usare il comando <command>publican print_known</command> per visualizzare l'elenco dei tag supportati da <application>Publican</application>, ed il comando <command>publican print_banned</command> per visualizzare l'elenco dei tag non permessi in <application>Publican</application>."
 

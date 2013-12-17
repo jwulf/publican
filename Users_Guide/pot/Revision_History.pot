@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2013-09-20 14:44+1000\n"
-"PO-Revision-Date: 2013-09-20 14:44+1000\n"
+"POT-Creation-Date: 2013-12-17 12:50+1000\n"
+"PO-Revision-Date: 2013-12-17 12:50+1000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: None\n"
 "MIME-Version: 1.0\n"
@@ -15,6 +15,76 @@ msgstr ""
 #. Tag: title
 #, no-c-format
 msgid "Revision History"
+msgstr ""
+
+#. Tag: firstname
+#, no-c-format
+msgid "Rüdiger"
+msgstr ""
+
+#. Tag: surname
+#, no-c-format
+msgid "Landmann"
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Improve instructions for translation BZ#1021287"
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Document use of \"sortas\" for indexes and glossaries"
+msgstr ""
+
+#. Tag: firstname
+#, no-c-format
+msgid "Roman"
+msgstr ""
+
+#. Tag: surname
+#, no-c-format
+msgid "Joost"
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Clarify where relative paths are used in brand instructions - BZ#1028815"
+msgstr ""
+
+#. Tag: firstname
+#, no-c-format
+msgid "Norman"
+msgstr ""
+
+#. Tag: surname
+#, no-c-format
+msgid "Dunbar"
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Corrected OpenSUSE installation instructions - BZ#1000534"
+msgstr ""
+
+#. Tag: firstname
+#, no-c-format
+msgid "Svein"
+msgstr ""
+
+#. Tag: surname
+#, no-c-format
+msgid "Dowdeit"
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Updated Debian installation instructions - BZ#1013934"
+msgstr ""
+
+#. Tag: member
+#, no-c-format
+msgid "Add Docker installation instructions - BZ#1015943"
 msgstr ""
 
 #. Tag: firstname
@@ -77,16 +147,6 @@ msgstr ""
 msgid "Document build option --pub_dir"
 msgstr ""
 
-#. Tag: firstname
-#, no-c-format
-msgid "Norman"
-msgstr ""
-
-#. Tag: surname
-#, no-c-format
-msgid "Dunbar"
-msgstr ""
-
 #. Tag: member
 #, no-c-format
 msgid "Add Section on Installing Publican on OpenSuse 12"
@@ -110,16 +170,6 @@ msgstr ""
 #. Tag: member
 #, no-c-format
 msgid "Improve documentation of standalone &lt;set&gt; usage"
-msgstr ""
-
-#. Tag: firstname
-#, no-c-format
-msgid "Rüdiger"
-msgstr ""
-
-#. Tag: surname
-#, no-c-format
-msgid "Landmann"
 msgstr ""
 
 #. Tag: member

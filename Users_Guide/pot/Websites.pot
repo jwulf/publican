@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2013-09-20 14:44+1000\n"
-"PO-Revision-Date: 2013-09-20 14:44+1000\n"
+"POT-Creation-Date: 2013-12-17 12:50+1000\n"
+"PO-Revision-Date: 2013-12-17 12:50+1000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: None\n"
 "MIME-Version: 1.0\n"
@@ -69,7 +69,7 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "<filename>defualt.js</filename> — a JavaScript script that directs visitors to localized content based on the locale set in their browser and which controls the presentation of the navigation menu."
+msgid "<filename>default.js</filename> — a JavaScript script that directs visitors to localized content based on the locale set in their browser and which controls the presentation of the navigation menu."
 msgstr ""
 
 #. Tag: para
@@ -99,7 +99,7 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "Optionally, the site structure might also include a <firstterm>dump file</firstterm> — an XML file that provides complete site content details for delivery of other services, such as web feeds or customised search pages. The site structure might also contain a zipped version of the dump file. Refer to <xref linkend=\"sect-Users_Guide-Website-structure-cfg_and_db-manual\" /> and <xref linkend=\"sect-Users_Guide-Website-structure-cfg_and_db-rpm\" /> for details of creating a dump file, and to <xref linkend=\"dump_file\" /> for a description of the dump file contents."
+msgid "Optionally, the site structure might also include a <firstterm>dump file</firstterm> — an XML file that provides complete site content details for delivery of other services, such as web feeds or customised search pages. The site structure might also contain a zipped version of the dump file. Refer to <xref linkend=\"sect-Publican-Users_Guide-Creating_the_website_structure\" /> and <xref linkend=\"sect-Publican-Users_Guide-Creating_the_website_structure\" /> for details of creating a dump file, and to <xref linkend=\"appe-Publican-Users_Guide-Contents_of_the_website_dump_file\" /> for a description of the dump file contents."
 msgstr ""
 
 #. Tag: title

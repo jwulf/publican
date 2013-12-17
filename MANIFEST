@@ -751,6 +751,7 @@ datadir/Common_Content/common/pl-PL/Feedback.po
 datadir/Common_Content/common/pl-PL/Program_Listing.po
 datadir/Common_Content/common/pl-PL/Revision_History.po
 datadir/Common_Content/common/pl-PL/Revision_History.xml
+datadir/Common_Content/common/pom.xml
 datadir/Common_Content/common/pot/Conventions.pot
 datadir/Common_Content/common/pot/Feedback.pot
 datadir/Common_Content/common/pot/Program_Listing.pot
@@ -905,6 +906,7 @@ po/nl.po
 po/or.po
 po/pa.po
 po/pl.po
+po/pom.xml
 po/pt.po
 po/pt_BR.po
 po/publican.pot
@@ -1072,6 +1074,8 @@ Users_Guide/it-IT/Files_in_the_Brand_Directory.po
 Users_Guide/it-IT/Image_width.po
 Users_Guide/it-IT/Installing_a_Brand.po
 Users_Guide/it-IT/Installing_Publican.po
+Users_Guide/it-IT/Installing_Publican_Debian.po
+Users_Guide/it-IT/Installing_Publican_Docker.po
 Users_Guide/it-IT/Installing_Publican_OpenSuse.po
 Users_Guide/it-IT/Introduction.po
 Users_Guide/it-IT/Language_Codes.po

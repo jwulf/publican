@@ -22,7 +22,7 @@ msgid "Packages other than RPM packages"
 msgstr "Altri pacchetti non RPM"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "This section discusses packaging documents for distribution through the <application>RPM Package Manager</application>. However, when you use the <prompt>$</prompt> <command>publican package</command> command, <application>Publican</application> generates a tarball that you can use to build a package to distribute through different package manager software. If you run <command>publican package</command> on a computer on which <application>rpmbuild</application> is not installed, <application>Publican</application> still generates the tarball, even though it cannot then generate an RPM package from that tarball."
 msgstr "Questa sezione descrive i pacchetti di documenti distribuiti con il <application>Gestore di pacchetti RPM</application>. Quando si usa il comando <command>publican package</command>, <application>Publican</application> genera un tarball che può essere usato per ricavare un pacchetto, da distribuire con un gestore di pacchetti software differente. Se si esegue <command>publican package</command> su un sistema senza <application>rpmbuild</application> installato, <application>Publican</application> genera ancora il tarball anche se non può creare da esso il pacchetto RPM."
 

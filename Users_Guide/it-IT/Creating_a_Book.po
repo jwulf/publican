@@ -28,12 +28,12 @@ msgid "This chapter describes creating books and articles: the main configuratio
 msgstr "Questo capitolo descrive come creare libri ed articoli: i file di configurazione principali, i file in un documento d'esempio, e come compilare un documento."
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "Use the <prompt>$</prompt> <command>publican create</command> command to create a new document, including all the necessary files for the document."
 msgstr "Usare il comando <command>publican create</command> per creare un nuovo documento corredato di tutti i file necessari."
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "The <prompt>$</prompt> <command>publican create</command> command accepts several options, detailed in this chapter. When an option can accept a value, separate the option from the value with a space or an equals sign; for example, <command>publican create --name New_Book</command> or <command>publican create --name=New_Book</command>."
 msgstr "Il comando <command>publican create</command> accetta diverse opzioni, come indicato in questo capitolo. Quando una opzione accetta un valore, separare il valore con uno spazio o con il segno di uguale; per esempio, <command>publican create --name New_Book</command> o <command>publican create --name=New_Book</command>."
 
@@ -43,7 +43,7 @@ msgid "<option>--help</option>"
 msgstr "<option>--help</option>"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "print a list of all <prompt>$</prompt> <command>publican create</command> command options."
 msgstr "visualizza l'elenco di tutte le opzioni del comando <command>publican create</command>."
 
@@ -53,7 +53,7 @@ msgid "<option>--name<replaceable> Doc_Name</replaceable></option>"
 msgstr "<option>--name<replaceable> Nome_Doc</replaceable></option>"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "set <replaceable>Doc_Name</replaceable> as the name of the book or article. This variable must not contain any spaces. For example, the command <prompt>$</prompt> <command>create_book --name Test_Book</command> creates a book named <literal>Test_Book</literal> with all the necessary files to build the book, and sets the <parameter>BOOKID</parameter> in the <filename>Test_Book.ent</filename> file."
 msgstr "assegna <replaceable>Nome_Doc</replaceable> al nome del libro o articolo. Questa variabile non deve contenere spazi. Per esempio, il comando <command>create_book --name Test_Book</command> crea un libro di nome <literal>Test_Book</literal> con tutti i file necessari per creare il libro, ed imposta il parametro <parameter>BOOKID</parameter> nel file <filename>Test_Book.ent</filename>."
 
@@ -128,12 +128,12 @@ msgid "set <replaceable>brand</replaceable> as the <firstterm>brand</firstterm> 
 msgstr "assegna lo stile di presentazione o <replaceable>brand</replaceable>, per esempio <literal>RedHat</literal>, <literal>fedora</literal>, <literal>JBoss</literal>, <literal>oVirt</literal> o <literal>GIMP</literal> del documento. Il valore predefinito è <literal>common</literal>, il brand integrato in <application>Publican</application>. L'opzione <option>--brand</option> imposta il parametro <parameter>brand</parameter> nel file di configurazione <filename>publican.cfg</filename>. Fare riferimento alla <xref linkend=\"sect-Publican-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file\" /> per maggiori informazioni sui parametri del file <filename>publican.cfg</filename>. Questa opzione richiede che sia installato l'appropriato pacchetto di brand di <application>Publican</application>. Per esempio, per compilare libri con <emphasis>brand</emphasis> Red Hat, occorre installare il pacchetto <package>publican-redhat</package>. Fare riferimento alla <xref linkend=\"sect-Publican-Users_Guide-Installing_a_brand\" /> per istruzioni su come installare pacchetti di brand per l'uso in <application>Publican</application>. Vedere il <xref linkend=\"chap-Publican-Users_Guide-Branding\" /> per maggiori informazioni."
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "Before running the <prompt>$</prompt> <command>publican create</command> command, use the <prompt>$</prompt> <command>cd</command> command to change into the directory where you want the book to be created. For example, to create a book named <literal>Test_Book</literal> in the <filename>my_books/</filename> directory, run the following commands:"
 msgstr "Prima di eseguire il comando <command>publican create</command>, spostarsi (con il comando shell <command>cd</command>), nella directory in cui si vuole venga creato il libro. Per esempio, per creare un libro di nome <literal>Libro_di_Prova</literal> nella directory <filename>miei_libri/</filename>, eseguire i seguenti comandi:"
 
 #. Tag: screen
-#, no-c-format, fuzzy
+#, no-c-format
 msgid ""
 "<prompt>$</prompt> <command>cd my_books/</command> \n"
 "<prompt>$</prompt> <command>publican create --name Test_Book</command>"

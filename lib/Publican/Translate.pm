@@ -1097,6 +1097,7 @@ sub po_unformat {
     else {
         $string =~ s/^\"//msg;      # strip sol quotes added by msguniq etc
         $string =~ s/\"$//msg;      # strip sol quotes added by msguniq etc
+        $string =~ s/\\n/ /msg;     # strip eol quotes added by msguniq etc
         $string =~ s/\n//msg;       # strip eol quotes added by msguniq etc
         $string =~ s/^[\t ]*//msg
             ;    # strip the leading spaces left from the msgid "" line

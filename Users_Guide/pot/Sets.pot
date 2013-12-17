@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2013-09-20 14:44+1000\n"
-"PO-Revision-Date: 2013-09-20 14:44+1000\n"
+"POT-Creation-Date: 2013-12-17 12:50+1000\n"
+"PO-Revision-Date: 2013-12-17 12:50+1000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: None\n"
 "MIME-Version: 1.0\n"
@@ -113,6 +113,7 @@ msgstr ""
 #. Tag: programlisting
 #, no-c-format
 msgid "<xi:include href=\"extras/Set_Name.xmlt\" parse=\"text\" xmlns:xi=\"http://www.w3.org/2001/XInclude\" />\n"
+"				\n"
 "\n"
 ""
 msgstr ""
@@ -133,7 +134,7 @@ msgid "\n"
 "&lt;remark&gt;NOTE: the href does not contain a language! This is CORRECT!&lt;/remark&gt;\n"
 "&lt;remark&gt;&lt;xi:include href=\"My_Other_Book/My_Other_Book.xml\" xmlns:xi=\"http://www.w3.org/2001/XInclude\"&gt;&lt;/remark&gt;\n"
 "&lt;setindex&gt;&lt;/setindex&gt;\n"
-"               "
+""
 msgstr ""
 
 #. Tag: para
@@ -145,7 +146,7 @@ msgstr ""
 #, no-c-format
 msgid "\n"
 "&lt;xi:include href=\"Common_Content/Conventions.xml\" xmlns:xi=\"http://www.w3.org/2001/XInclude\" /&gt;\n"
-"               "
+""
 msgstr ""
 
 #. Tag: para
@@ -157,7 +158,7 @@ msgstr ""
 #, no-c-format
 msgid "\n"
 "&lt;xi:include href=\"../../Common_Content/Conventions.xml\" xmlns:xi=\"http://www.w3.org/2001/XInclude\" /&gt;\n"
-"               "
+""
 msgstr ""
 
 #. Tag: para
@@ -199,7 +200,7 @@ msgid "\n"
 "    |   `-- Set_Info.xml\n"
 "    `-- publican.cfg\n"
 "\n"
-"         "
+""
 msgstr ""
 
 #. Tag: para
@@ -232,7 +233,7 @@ msgid "\n"
 "    |   |-- Revision_History.xml\n"
 "    |   `-- Set_Info.xml\n"
 "    `-- publican.cfg\n"
-"         "
+""
 msgstr ""
 
 #. Tag: title
@@ -294,15 +295,6 @@ msgstr ""
 #. Tag: para
 #, no-c-format
 msgid "To make your set XML valid, you will need to comment out the following lines in <filename>My_Set.xml</filename>"
-msgstr ""
-
-#. Tag: programlisting
-#, no-c-format
-msgid "\n"
-"&lt;remark&gt;NOTE: the href does not contain a language! This is CORRECT!&lt;/remark&gt;\n"
-"&lt;remark&gt;&lt;xi:include href=\"My_Other_Book/My_Other_Book.xml\" xmlns:xi=\"http://www.w3.org/2001/XInclude\"&gt;&lt;/remark&gt;\n"
-"&lt;setindex&gt;&lt;/setindex&gt;\n"
-"            "
 msgstr ""
 
 #. Tag: para

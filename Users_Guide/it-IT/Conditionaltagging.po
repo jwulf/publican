@@ -32,7 +32,7 @@ msgid "<application>Publican</application> makes it easy to manage differences b
 msgstr "<application>Publican</application> semplifica la gestione delle differenze tra versioni multiple di un libro, permettendo di usare una sorgente unica per tutte le versioni. Il <firstterm>tagging condizionale</firstterm> garantisce che il contenuto di una versione specifica, compaia soltanto nella versione stabilita; ossia, permette di <firstterm>condizionare</firstterm> il contenuto."
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "To conditionalize content in a book, use the tag attribute <prompt>$</prompt> <command>condition</command>. For example, let's say the book <citetitle>How To Use Product Foo</citetitle> has an \"upstream\", \"enterprise\", and \"beta\" version:"
 msgstr "Per condizionare il contenuto di un libro, usare il tag <command>condition</command>. Per esempio, si supponga che il libro <citetitle>How To Use Product Foo</citetitle> abbia una versione \"upstream\", una versione \"enterprise\" e una versione \"beta\"."
 
@@ -72,7 +72,7 @@ msgstr ""
 "&lt;/para&gt;"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "To build a specific version (and thereby capture all content conditionalized for that version), add the <prompt>$</prompt> <command>condition: <replaceable>version</replaceable></command> parameter to the <filename>publican.cfg</filename> file and run the <prompt>$</prompt> <command>publican build</command> command as normal. For example, if you add <literal>condition: upstream</literal> to the <filename>publican.cfg</filename> file of <citetitle>How To Use Product Foo</citetitle> and run:"
 msgstr "Per compilare una versione specifica (e quindi catturare solo il contenuto relativo a questa versione), aggiungere il parametro <command>condition: <replaceable>versione</replaceable></command> al file <filename>publican.cfg</filename> ed eseguire il comando <command>publican build</command>, ormai noto. Per esempio, aggiungendo <command>condition: upstream</command> al file <filename>publican.cfg</filename> dell'HOWTO <citetitle>How To Use Product Foo</citetitle>, e poi eseguendo:"
 
@@ -175,7 +175,7 @@ msgid "As an alternative to conditionals, consider maintaining separate versions
 msgstr "In alternativa ai tag condizionali, si consideri di mantenere versioni separate di un libro, in rami separati di un repository con controllo di versione. In tal modo, è anche possibile condividere file XML e PO tra i vari rami; inoltre alcuni sistemi di controllo versione permettono di condividere correttamente le modifiche tra branch."
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "If you maintain two versions of a book in the same repository, we recommend using a separate config file for each version. For example, the <filename>upstream.cfg</filename> file might contain the condition <literal>condition: upstream</literal> and the <filename>enterprise.cfg</filename> file might contain the condition <literal>condition: enterprise</literal>. You could then specify the version of the document to build or package with the <option>--config</option>; for example, <prompt>$</prompt> <command>publican package --lang en-US --config upstream.cfg</command>. Using two separate config files saves you from having to edit the one config file each time you build or package a document."
 msgstr "Se si mantengono due versioni di un libro nello stesso repository, si raccomanda di usare un file di configurazione distinto per ciascuna versione. Per esempio, il file <filename>upstream.cfg</filename> potrebbe contenere la condizione <literal>condition: upstream</literal> e il file <filename>enterprise.cfg</filename> la condizione <literal>condition: enterprise</literal>. Si potrebbe allora specificare di compilare una versione del documento, con l'opzione <option>--config</option>; per esempio, <command>publican package --lang en-US --config upstream.cfg</command>. Usare due file di configurazione separati, evita di dover modificare ogni volta il file di configurazione, per la compilazione di un libro o pacchetto."
 

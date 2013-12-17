@@ -28,9 +28,14 @@ msgid "&PRODUCT;"
 msgstr ""
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "This book will help you install <application>&PRODUCT;</application>. It also provides instructions for using Publican to create and publish DocBook XML-based books, articles and book sets. This guide assumes that you are already familiar with DocBook XML."
 msgstr "Questo manuale illustra come installare <application>Publican</application>. Inoltre fornisce istruzioni sull'uso di Publican per creare e pubblicare libri, articoli e raccolte di volumi basati su DocBook XML. Questa guida assume che si sia già familiari con DocBook XML."
+
+#. Tag: para
+#, no-c-format
+msgid "This is a test for testing test stuff."
+msgstr ""
 
 #. Tag: keyword
 #, no-c-format

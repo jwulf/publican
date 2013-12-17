@@ -24,8 +24,8 @@ msgid "<primary>Introduction 1</primary>"
 msgstr "<primary>Introduzione 1</primary>"
 
 #. Tag: para
-#, no-c-format
-msgid "<indexterm> <primary>Introduction 2</primary> </indexterm> <application>Publican</application> <indexterm> <primary>Introduction 3</primary> <secondary>Introduction 3</secondary> </indexterm> is a tool for publishing material authored in DocBook XML. This guide explains how to create and build books and articles using <application>Publican</application>. It is not a general DocBook XML tutorial; refer to <citetitle>DocBook: The Definitive Guide</citetitle> by Norman Walsh and Leonard Muellner, available at <ulink url=\"http://www.docbook.org/tdg/en/html/docbook.html\" /> for more general help with DocBook XML."
+#, no-c-format, fuzzy
+msgid "<indexterm><primary>Introduction 2</primary></indexterm> <application>Publican</application> <indexterm><primary>Introduction 3</primary> <secondary>Introduction 3</secondary></indexterm> is a tool for publishing material authored in DocBook XML. This guide explains how to create and build books and articles using <application>Publican</application>. It is not a general DocBook XML tutorial; refer to <citetitle>DocBook: The Definitive Guide</citetitle> by Norman Walsh and Leonard Muellner, available at <ulink url=\"&DOCBOOK-URL;\" /> for more general help with DocBook XML."
 msgstr "<indexterm> <primary>Introduzione 2</primary> </indexterm> <application>Publican</application> <indexterm> <primary>Introduzione 3</primary> </indexterm> è uno strumento per pubblicare materiale scritto in DocBook XML. Questa guida spiega come creare e compilare libri ed articoli usando <application>Publican</application>. Non si tratta di un tutorial su DocBook XML; per supporto su DocBook XML, fare invece riferimento alla Guida <citetitle>DocBook: The Definitive Guide</citetitle> di Norman Walsh e Leonard Muellner, disponibile su <ulink url=\"http://www.docbook.org/tdg/en/html/docbook.html\" />."
 
 #. Tag: para

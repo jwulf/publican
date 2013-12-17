@@ -53,7 +53,7 @@ msgstr "Spostarsi nella cartella contenente il brand estratto:"
 
 #. Tag: screen
 #, no-c-format, fuzzy
-msgid "<prompt>$</prompt> <command>cd publican-<replaceable>brand</replaceable></command>\n"
+msgid "<prompt>$</prompt> <command>cd publican-<replaceable>brand</replaceable></command>"
 msgstr "<command>cd publican-<replaceable>brand</replaceable></command>\n"
 
 #. Tag: para
@@ -68,7 +68,7 @@ msgstr "Compilare il brand:"
 
 #. Tag: screen
 #, no-c-format, fuzzy
-msgid "<prompt>$</prompt> <command>publican build --formats xml --langs all --publish</command>\n"
+msgid "<prompt>$</prompt> <command>publican build --formats xml --langs all --publish</command>"
 msgstr "<command>publican build --formats xml --langs all --publish</command>\n"
 
 #. Tag: para
@@ -78,7 +78,7 @@ msgstr "Installare il brand:"
 
 #. Tag: screen
 #, no-c-format, fuzzy
-msgid "<prompt>$</prompt> <command>sudo publican install_brand --path <replaceable>path</replaceable></command>\n"
+msgid "<prompt>$</prompt> <command>sudo publican install_brand --path <replaceable>path</replaceable></command>"
 msgstr "<command>sudo publican install_brand --path <replaceable>path</replaceable></command>\n"
 
 #. Tag: para
@@ -88,7 +88,7 @@ msgstr "dove <replaceable>path</replaceable> è il percorso ai file Common Conte
 
 #. Tag: screen
 #, no-c-format, fuzzy
-msgid "<prompt>$</prompt> <command>sudo publican install_brand --path /usr/share/publican/Common_Content</command>\n"
+msgid "<prompt>$</prompt> <command>sudo publican install_brand --path /usr/share/publican/Common_Content</command>"
 msgstr "<command>sudo publican install_brand --path /usr/share/publican/Common_Content</command>\n"
 
 #. Tag: para
@@ -98,7 +98,7 @@ msgstr "o su un sistema Windows, eseguire:"
 
 #. Tag: screen
 #, no-c-format, fuzzy
-msgid "<prompt>$</prompt> <command>publican install_brand --path \"C:/Program Files/Publican/Common_Content\"</command>\n"
+msgid "<prompt>$</prompt> <command>publican install_brand --path \"C:/Program Files/Publican/Common_Content\"</command>"
 msgstr "<command>publican install_brand --path \"C:/Program Files/Publican/Common_Content\"</command>\n"
 
 #. Tag: title

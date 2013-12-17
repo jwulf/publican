@@ -147,7 +147,7 @@ msgid "With <parameter>def_lang</parameter> set to <literal>fr-FR</literal>, vis
 msgstr "Impostando il parametro <parameter>def_lang</parameter> con il codice <literal>it-IT</literal>, i visitatori che visualizzano il menu di navigazione, per esempio in spagnolo, vengono diretti alla versione italiana del documento se non è presente una traduzione in spagnolo."
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "Optionally, configure a <firstterm>dump file</firstterm> for the website. <application>Publican</application> can output an XML file that provides complete site content details for delivery of other services, such as web feeds or customised search pages. The file is updated whenever a book is installed or removed from the site, or the <prompt>$</prompt> <command>publican update_site</command> command is run. Configure the <parameter>dump</parameter>, <parameter>dump_file</parameter>, and <parameter>zip_dump</parameter> parameters as follows:"
 msgstr "Opzionalmente, configurare un <firstterm>file dump</firstterm> per il sito web. <application>Publican</application> può produrre un file XML con i dettagli completi del contenuto del sito per offrire altri servizi, come feed web o pagine di ricerca personalizzate. Questo file viene aggiornato ad ogni installazione o rimozione di un libro dal sito, oppure eseguendo il comando <command>publican update_site</command>. Configurare come indicato di seguito, i parametri <parameter>dump</parameter>, <parameter>dump_file</parameter> e <parameter>zip_dump</parameter>:"
 
@@ -192,7 +192,7 @@ msgid "Create an empty file named <filename>site_overrides.css</filename>. If yo
 msgstr "Creare un file vuoto di nome  <filename>site_overrides.css</filename>. Se si desidera usare degli stili specifici alternativi a quelli forniti da <filename>interactive.css</filename>, aggiungere un file <filename>site_overrides.css</filename> al documento che fornisce la <firstterm>home page</firstterm>  del sito — vedere la <xref linkend=\"sect-Publican-Users_Guide-Creating_installing_and_updating_the_home_page\" />. Se non si usa uno stile specifico, il file vuoto aggiunto impedirà la comparsa dell'errore 404 sul server. Su un sistema Linux, eseguire:"
 
 #. Tag: screen
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "<prompt>#</prompt> <command>touch /var/www/html/docs/site_overrides.css</command>"
 msgstr "<command>touch /var/www/html/docs/site_overrides.css</command>"
 
