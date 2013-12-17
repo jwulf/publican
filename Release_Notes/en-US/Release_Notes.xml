@@ -350,7 +350,7 @@
 				</para>
 			</listitem>
 		</varlistentry>
-		<varlistentry>13934
+		<varlistentry>
 			<term>Building Publican 4.0 in Fedora 19 throws undefined subroutine error</term>
 			<listitem>
 				<para>
