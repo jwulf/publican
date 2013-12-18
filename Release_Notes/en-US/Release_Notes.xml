@@ -159,7 +159,7 @@
 			<term>Entities in attributes improved</term>
 			<listitem>
 				<para>
-					Previously, Publican incorrectly dropped entities in some attributes (for instance, when an entity was in the url attribute of an ulink tag). This meant that, though the entity was present in the docbook source, it was not present in the built HTML. This was due to a bug in XML:Treebuilder.  XML:Treebuilder has been patched, and Publican 4 no longer drops entities due to this bug. <uri xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=994686">https://bugzilla.redhat.com/show_bug.cgi?id=994686</uri>
+					Previously, Publican incorrectly dropped entities in some attributes (for instance, when an entity was in the url attribute of an ulink tag). This meant that, though the entity was present in the docbook source, it was not present in the built HTML. This was due to a bug in XML:Treebuilder.  XML:Treebuilder has been patched, and Publican 4 no longer drops entities due to this bug. <uri xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=994686">BZ#994686</uri>
 				</para>
 			</listitem>
 		</varlistentry>
@@ -247,7 +247,7 @@
 			<term>Identify table sizes with classes</term>
 			<listitem>
 				<para>
-					Publican can now distinguish between tables of different sizes and apply different classes as necessary. This lets Publican apply more appropriate styles when drawing tables, such as drawing a thinner vertical line when more columns are present. <uri xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=1005640">https://bugzilla.redhat.com/show_bug.cgi?id=1005640</uri>
+					Publican can now distinguish between tables of different sizes and apply different classes as necessary. This lets Publican apply more appropriate styles when drawing tables, such as drawing a thinner vertical line when more columns are present. <uri xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=1005640">BZ#1005640</uri>
 				</para>
 			</listitem>
 		</varlistentry>
@@ -432,6 +432,54 @@
 			<listitem>
 				<para>
 					The <citetitle>Publican Users' Guide</citetitle> contained typos and other minor errors, now corrected. <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=1000534">BZ#1000534</link>
+				</para>
+			</listitem>
+		</varlistentry>
+		<varlistentry>
+			<term>Minor fixes to Common Content</term>
+			<listitem>
+				<para>
+					The <citetitle>Document Conventions</citetitle> in the common content contained some minor inconsistencies in style, for example, hyphenation. The conventions are now more internally consistent. <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=1027248">BZ#1027248</link>
+				</para>
+			</listitem>
+		</varlistentry>
+		<varlistentry>
+			<term>Clarify translation instructions</term>
+			<listitem>
+				<para>
+					The <citetitle>Publican Users' Guide</citetitle> has been updated to clarify the suggested translation workflow. Specifically, the guide now describes how to use the <command>publican drop_trans</command> command to freeze content for translation.  <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=1021287">BZ#1021287</link>
+				</para>
+			</listitem>
+		</varlistentry>
+		<varlistentry>
+			<term>Expose glossterm in PO files</term>
+			<listitem>
+				<para>
+					Publican now exposes the <tag>&lt;glossterm&gt;</tag> tag in PO files for translation. This allows translators to use the <tag>sortas</tag> attribute to fine-tune how this term will be sorted in a glosary. See the <citetitle>Publican Users' Guide</citetitle> for more information on how to use this attribute. <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=1030591">BZ#1030591</link>
+				</para>
+			</listitem>
+		</varlistentry>
+		<varlistentry>
+			<term>Readability statistics</term>
+			<listitem>
+				<para>
+					Publican can now generate readability statistics on a book. Run the <command>publican report</command> on a book to generate Fog, Flesch, and Flesch-Kincaid statistics on the text. <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=1031364">BZ#1031364</link>
+				</para>
+			</listitem>
+		</varlistentry>
+		<varlistentry>
+			<term>Syntax highlighting now makes code comments light grey</term>
+			<listitem>
+				<para>
+					Previously, comments in code samples were syntax-highlighted bright pink. Now, comments are highlighted in light grey. <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=1030718">BZ#1030718</link>
+				</para>
+			</listitem>
+		</varlistentry>
+		<varlistentry>
+			<term>Newline sequences now properly escaped in translations</term>
+			<listitem>
+				<para>
+					Previously, Publican treated the newline escape sequences <literal>\n</literal> as normal text when it processed PO files. Therefore, if the sequence appeared in the msgstr, it would appear verbatim in the built output. Now, Publican properly escapes this sequence and does not build it into output. <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=1036150">BZ#1036150</link>
 				</para>
 			</listitem>
 		</varlistentry>
