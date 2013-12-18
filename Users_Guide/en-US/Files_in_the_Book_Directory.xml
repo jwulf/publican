@@ -501,8 +501,13 @@
 				<term><parameter>edition</parameter></term>
 				 <listitem>
 					<para>
-						specifies the edition number for this document. If set, this value overrides the content of the <sgmltag>&lt;edition&gt;</sgmltag> tag in the <filename>Book_Info.xml</filename> file when you package a document. This value must include only digits and the period (&lsquo;0&rsquo;&ndash;&lsquo;9&rsquo; and &lsquo;.&rsquo;).
+						specifies the edition number for this document.
 					</para>
+					<note>
+						<para>
+							The <sgmltag>&lt;edition&gt;</sgmltag> tag was required by versions of Publican prior to 2.0, which used it to generate the version of a documentation package. This tag is now completely optional and does not affect packaging in any way.
+						</para>
+					</note>
 
 				</listitem>
 

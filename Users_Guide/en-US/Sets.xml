@@ -133,7 +133,7 @@
 			</step>
 			 <step>
 				<para>
-					Test your set by running the <prompt>$</prompt> <command>publican build --formats=test --langs=en-US</command> command.
+					Test your set by running the <command>publican build --formats=test --langs=en-US</command> command.
 				</para>
 
 			</step>
@@ -261,11 +261,11 @@ scm: SVN
 			</step>
 			 <step>
 				<para>
-					Test your set by running the <prompt>$</prompt> <command>publican build --formats=test --langs=en-US</command> command.
+					Test your set by running the <command>publican build --formats=test --langs=en-US</command> command.
 				</para>
 				 <important>
 					<para>
-						When building a set, the <prompt>$</prompt> <command>publican clean_ids</command> command will be run over each book because of the constraint that IDs must be unique across all books. Be careful of creating IDs that rely on content that may not be available when building books independently of the set.
+						When building a set, the <command>publican clean_ids</command> command will be run over each book because of the constraint that IDs must be unique across all books. Be careful of creating IDs that rely on content that may not be available when building books independently of the set.
 					</para>
 
 				</important>

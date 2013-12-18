@@ -12,9 +12,7 @@
 		<para>
 			This book will help you install <application>&PRODUCT;</application>. It also provides instructions for using Publican to create and publish DocBook XML-based books, articles and book sets. This guide assumes that you are already familiar with DocBook XML.
 		</para>
-		 <para>
-			This is a test for testing test stuff.
-		</para>
+
 
 	</abstract>
 	 <keywordset>
