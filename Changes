@@ -1,3 +1,6 @@
+NEXT UNRELEASED
+- Add abstract to release notes so PDF builds
+
 4.0.0 Wed Dec 18 2013
 - Support DocBook 5 as input format. BZ #1005042
 - Fix duplicate first author in PDF. BZ #996351

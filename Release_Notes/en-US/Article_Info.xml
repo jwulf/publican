@@ -5,9 +5,6 @@
 	
 	<productname>Publican</productname>
 	<productnumber>4.0</productnumber>
-	<edition>0</edition>
-	<biblioid class="pubsnumber">0</biblioid>
-	
 	<author><orgname>
 		<inlinemediaobject>
 			<imageobject>
@@ -15,6 +12,11 @@
 			</imageobject>
 		</inlinemediaobject>
 	</orgname></author>
+	<abstract>
+		<para>This document describes the enhancements and fixes included in Publican 4.0.</para>
+		<para>Publican is available for download at <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://fedorahosted.org/publican/">https://fedorahosted.org/publican/</link>.</para>
+		<para>The Publican User Guide is available at <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://jfearn.fedorapeople.org/en-US/Publican/4.0/html/Users_Guide/index.html">http://jfearn.fedorapeople.org/en-US/Publican/4.0/html/Users_Guide/index.html</link>.</para>
+	</abstract>
 	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Common_Content/Legal_Notice.xml"/>
 	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Author_Group.xml"/>
 </info>
