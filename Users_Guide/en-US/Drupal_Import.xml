@@ -324,12 +324,12 @@
 					<para>
 						The book link should be showing in the specified menu block now.
 					</para>
-					<!--  <mediaobject>
+					<!--   <mediaobject>
 						<imageobject>
 							<imagedata fileref="images/drupal_book.png" format="PNG" />
 						</imageobject>
 
-</mediaobject>  -->
+</mediaobject>   -->
 
 				</step>
 
