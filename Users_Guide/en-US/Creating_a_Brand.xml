@@ -27,5 +27,3 @@
 	 
 <screen><prompt>$</prompt> <command>grep -r 'SETUP' *</command></screen>
 </section>
-
-

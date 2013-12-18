@@ -58,7 +58,7 @@
 		 <para>
 			Users can set <replaceable>formats</replaceable>, <replaceable>lang</replaceable>, and <replaceable>langs</replaceable> to their standard build parameters.
 		</para>
-		 <example id="exam-Publican-Users_Guide-Publican_default_examples-Setting_formats_and_lang">
+		 <example conformance="251" id="exam-Publican-Users_Guide-Publican_default_examples-Setting_formats_and_lang">
 			<title>Setting formats and lang</title>
 			
 <screen><prompt>$</prompt> <command>echo 'formats: "html,html-single,pdf,txt"' &gt;&gt; ~/.publican.cfg</command>
@@ -72,7 +72,7 @@
 		 <para>
 			<application>Publican</application> 3.0 allows you to add a revision history entry from the command line. You can set your user details in <filename>~/.publican.cfg</filename>.
 		</para>
-		 <example id="exam-Publican-Users_Guide-Publican_default_examples-Setting_user_details">
+		 <example conformance="252" id="exam-Publican-Users_Guide-Publican_default_examples-Setting_user_details">
 			<title>Setting user details</title>
 			
 <screen><prompt>$</prompt> <command>echo 'firstname: "Dude"' &gt;&gt; ~/.publican.cfg</command> 
@@ -87,4 +87,3 @@
 	
 
 </chapter>
-

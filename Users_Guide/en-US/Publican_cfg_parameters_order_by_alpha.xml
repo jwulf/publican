@@ -113,7 +113,7 @@
 				<para>
 					controls the section depth at which <application>Publican</application> no longer splits sub-subsections onto a new page when rendering HTML. By default, this value is set to <literal>4</literal>.
 				</para>
-				 <example id="exam-Publican-Users_Guide-publican.cfg_parameters-Controlling_the_section_depth_with_chunk_section_depth">
+				 <example conformance="253" id="exam-Publican-Users_Guide-publican.cfg_parameters-Controlling_the_section_depth_with_chunk_section_depth">
 					<title>Controlling the section depth with chunk_section_depth</title>
 					 <variablelist>
 						<varlistentry>
@@ -411,7 +411,7 @@
 				<para>
 					controls the section depth at which <application>Publican</application> will generate a table of contents. At the default value of <literal>0</literal>, <application>Publican</application> will generate tables of contents at the start of the document and in parts, chapters, and appendixes, but not in sections. If (for example) the value is set to <literal>1</literal>, tables of contents also appear in each "level 1" section, such as sections 1.1, 1.2, 2.1, and 2.2. If set to <literal>2</literal>, tables of contents also appear in "level 2" sections, such as sections 1.1.1, 1.1.2, and 1.2.1.
 				</para>
-				 <example id="exam-Publican-Users_Guide-publican.cfg_parameters-Setting_the_section_depth_at_which_tables_of_contents_appear">
+				 <example conformance="254" id="exam-Publican-Users_Guide-publican.cfg_parameters-Setting_the_section_depth_at_which_tables_of_contents_appear">
 					<title>Setting the section depth at which tables of contents appear</title>
 					 <variablelist>
 						<varlistentry>
@@ -682,7 +682,7 @@
 				<para>
 					controls the depth of sections that <application>Publican</application> includes in the main table of contents. By default, this value is set to <literal>2</literal>. With the default setting, sections 1.1 and 1.1.1 will appear in the main table of contents, but section 1.1.1.1 will not. (Note that the first digit in these examples represents a chapter, not a section).
 				</para>
-				 <example id="exam-Publican-Users_Guide-publican.cfg_parameters-Controlling_the_depth_of_sections_in_the_main_table_of_contents">
+				 <example conformance="255" id="exam-Publican-Users_Guide-publican.cfg_parameters-Controlling_the_depth_of_sections_in_the_main_table_of_contents">
 					<title>Controlling the depth of sections in the main table of contents</title>
 					 <variablelist>
 						<varlistentry>
@@ -863,4 +863,3 @@
 
 	</variablelist>
 </appendix>
-

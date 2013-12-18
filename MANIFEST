@@ -927,6 +927,8 @@ pod1/publican
 publican-releasenotes.desktop
 publican.desktop
 publican.spec
+publican/META.yml
+publican/MYMETA.yml
 README
 Release_Notes/en-US/Article_Info.xml
 Release_Notes/en-US/Author_Group.xml

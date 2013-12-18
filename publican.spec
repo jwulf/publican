@@ -14,8 +14,8 @@
 %define wwwdir /var/www/html/docs
 
 Name:           publican
-Version:        3.9.9
-Release:        0%{?dist}.t36
+Version:        4.0.0
+Release:        0%{?dist}
 Summary:        Common files and scripts for publishing with DocBook XML
 # For a breakdown of the licensing, refer to LICENSE
 License:        (GPLv2+ or Artistic) and CC0
@@ -300,6 +300,68 @@ rm -rf $RPM_BUILD_ROOT
 %{wwwdir}/common-db5
 
 %changelog
+* Wed Dec 18 2013 Rüdiger Landmann <rlandmann@redhat.com> 4.0.0-0
+- Support DocBook 5 as input format. BZ #1005042
+- Fix duplicate first author in PDF. BZ #996351
+- Include DocBook 5-compatible templates. BZ #697366
+- Fix UTF8 issue in ~/.publican.cfg. BZ #987325
+- Replace abstract and subtitle xsl. BZ #953675
+- Change Cover page font. BZ #1006134
+- Fix TOC leader in PDF. BZ #1006056
+- Fix PDF Legal Notice trademarks & formatting. BZ #970851
+- Fix keyword lable showing in PDF when there are no keywords. BZ #1007146
+- Indicate whether a translation is older in the web GUI. BZ #889031
+- Include time in update_date. BZ #979846 
+- Support web site navigation for books without HTML. BZ #885916
+- Support ascending Revision History. BZ #999578
+- Add ability to compy installed brand web content to another site. BZ #967664
+- Fix PDF example.properties template. BZ #999586
+- Fix PUG PDF format for OpenSuse. BZ #999581
+- Simplify highlight error message. BZ #987059
+- Add css styles for table sizes. BZ #1005640
+- Tidy up Build.PL for better CPAN support. BZ #999259
+- Fix image path for icon.svg. BZ #1011222
+- Fix print_unused not handling include from higher directories. BZ #1004955
+- Fix SVG fallback to PNG. BZ #990823
+- Fix subtitle font size. BZ #987431
+- Support grouping of books within a version. BZ #901560
+- Remove bold from titles in Indic scripts. BZ #1006135
+- Overhaul EPUB, basic CSS, harcode chunking, fix errors. BZ #883159
+- Fix duplicate file listing in EPUB. BZ #875119
+- Fix objects in EPUB not in catalog. BZ #875125
+- Fix duplicate ID's in EPUBs. BZ #875116
+- Fix ConfigData not being reset after testing on all platforms. BZ #999427
+- Fix links to step not functioning. BZ #1009015
+- Support GIT for distributed sets. BZ #864226
+- Fix Build.PL not handling .mo files. BZ #1016421
+- Bold and Center titlepage edition. BZ #1017548
+- Fix broken use of pushd in Build.PL. BZ #1018608
+- Remove XML from spec file abstract. BZ #1018796
+- Fix UTF8 in publican.cfg not being handled. BZ #1020059
+- Fix Indic PDF build on F19. BZ #1018024
+- Fix UTF8 encoding for title in Revision_History.xml BZ #1020570
+- Fix browser not detecting UTF8 on HTML5 files with .html extension. BZ #1018659
+- Fix styling of DB4 example, package, & option. Remove html.longdesc.embed xsl. BZ #1023248
+- Fix UTF8 in Groups.xml. BZ #1022575
+- Add translations for "Edition" BZ# 1007141
+- Add translations for "English is newer"  BZ #889031
+- Fix broken or-IN translation.
+- Update DB4 CSS steps, stepalts, OLs, term. BZ #1026173
+- Remove chunk override from html.xsl. BZ #1026563
+- Fix path to POD. BZ #1026563
+- Update CLI translations
+- Various fixes to Common Content + update Common Content translation. BZ #1027248
+- Update and correct Debian installation instructions. BZ #1013934
+- Correct OpenSUSE installation instructions. BZ #1000534
+- Add Docker installation instructions. BZ #1015943
+- Clarify where relative paths are used in brand instructions  - BZ #1028815
+- Update and clarify translation instructions BZ #1021287 
+- Expose glossterm in PO files to support sortas attribute. BZ #1030591
+- Add report action to print readability statistics. BZ #1031364
+- Change comment in syntax highlight to light grey. BZ #1030718
+- Document use of "sortas" for indexes and glossaries in PUG
+- Fix newline in translation affecting output. BZ #1036150
+
 * Fri Oct 4  2013 Jeff Fearn <jfearn@redhat.com> 3.9.9-0
 - Publican 4.0 RC1
 

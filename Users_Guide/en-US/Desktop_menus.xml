@@ -97,7 +97,7 @@
 			</listitem>
 
 		</itemizedlist>
-		 <example id="exam-Publican-Users_Guide-Creating_an_desktop_menu_package-Example_.directory_file">
+		 <example conformance="239" id="exam-Publican-Users_Guide-Creating_an_desktop_menu_package-Example_.directory_file">
 			<title>Example .directory file</title>
 			 <para>
 				The following file, <filename>menu-example.directory</filename> illustrates the structure of a desktop entry file.
@@ -173,7 +173,7 @@
 			</listitem>
 
 		</itemizedlist>
-		 <example id="exam-Publican-Users_Guide-Creating_an_desktop_menu_package-Example_.menu_file">
+		 <example conformance="240" id="exam-Publican-Users_Guide-Creating_an_desktop_menu_package-Example_.menu_file">
 			<title>Example .menu file</title>
 			 <para>
 				The following file, <filename>menu-example.menu</filename> illustrates the structure of a desktop menu file.
@@ -227,5 +227,3 @@
 	
 
 </section>
-
-

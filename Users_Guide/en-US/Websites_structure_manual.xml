@@ -256,5 +256,3 @@
 	
 <screen><prompt>$</prompt> <command>publican update_site --site_config <replaceable>path_to_site_configuration_file</replaceable>.cfg</command></screen>
 </section>
-
-

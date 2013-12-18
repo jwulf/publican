@@ -120,7 +120,7 @@
 		</para>
 
 	</section>
-	<section id="sect-Publican-Users_Guide-Preparing_a_document_for_translation-Translating_Glossaries">
+	<section conformance="250" id="sect-Publican-Users_Guide-Preparing_a_document_for_translation-Translating_Glossaries">
 		<title>Translating Indexes and Glossaries</title>
 		 <para>
 			 DocBook automatically collates and sorts <sgmltag>&lt;glossentry&gt;</sgmltag> elements into a book's glossary; and <sgmltag>&lt;primary&gt;</sgmltag>, <sgmltag>&lt;secondary&gt;</sgmltag>, and <sgmltag>&lt;tertiary&gt;</sgmltag> <sgmltag>&lt;indexterm&gt;</sgmltag> elements into a book's index. Entries are sorted automatically, and although this system works well for languages written with an alphabet, abugida, or syllabic script, languages written with logograms sort less well.  
@@ -145,5 +145,3 @@ msgstr "&lt;glossterm sortas="あんごうか"&gt;暗号化&lt;/glossterm&gt;"</
 	
 
 </section>
-
-

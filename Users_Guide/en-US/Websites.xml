@@ -197,7 +197,7 @@
 				
 
 			</procedure>
-			 <formalpara id="form-Publican-Users_Guide-To_Submit_Your_Sitemap_to_Google-Result">
+			 <formalpara conformance="256" id="form-Publican-Users_Guide-To_Submit_Your_Sitemap_to_Google-Result">
 						<title>Result</title>
 						 <para>
 							The Sitemap for your Publican site has been successfully submitted to Google.
@@ -276,7 +276,7 @@
 				
 
 			</procedure>
-			 <formalpara id="form-Publican-Users_Guide-To_Submit_Your_Sitemap_to_Bing-Result">
+			 <formalpara conformance="257" id="form-Publican-Users_Guide-To_Submit_Your_Sitemap_to_Bing-Result">
 						<title>Result:</title>
 						 <para>
 							The Sitemap for your Publican site has been successfully submitted to Bing.
@@ -290,4 +290,3 @@
 	</section>
 
 </chapter>
-

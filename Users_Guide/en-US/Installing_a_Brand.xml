@@ -230,5 +230,3 @@
 		Note the difference in licensing between the common content files provided in the common brand (CC0) and the default license set for books generated with the common brand (GFDL). The CC0 license allows you to redistribute and relicense the files that make up the common brand (including the CSS and image files) to suit your project. <application>Publican</application> suggests the GFDL for documentation by default because <application>Publican</application> is developed primarily to build documentation for software. The GFDL is compatible with the GPL, which is the most commonly used license for open-source software.
 	</para>
 </section>
-
-

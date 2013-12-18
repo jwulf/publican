@@ -2,7 +2,7 @@
 <!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
 <!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
 ]>
-		 <section id="sect-Users_Guide-Linux_operating_systems-Docker">
+<section conformance="249" id="sect-Users_Guide-Linux_operating_systems-Docker">
 			<title>Docker container</title>
 				<note>
 					<para>
@@ -31,7 +31,7 @@
 					<para>
 						Add a publican bash alias to simplify your usage:
 					</para>
-<screen><prompt>$</prompt> <command>echo 'alias publican="docker run -t -i -v $(pwd):/mnt svendowideit/publican"' >> ~/.bashrc</command></screen>
+<screen><prompt>$</prompt> <command>echo 'alias publican="docker run -t -i -v $(pwd):/mnt svendowideit/publican"' &gt;&gt; ~/.bashrc</command></screen>
 					<para>
 						This alias assumes that you are running <application>publican</application> in the documentation root directory (the one with the publican.cfg file in it.
 					</para>

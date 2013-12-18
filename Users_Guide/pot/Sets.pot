@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2013-12-17 12:50+1000\n"
-"PO-Revision-Date: 2013-12-17 12:50+1000\n"
+"POT-Creation-Date: 2013-12-18 11:30+1000\n"
+"PO-Revision-Date: 2013-12-18 11:30+1000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: None\n"
 "MIME-Version: 1.0\n"
@@ -168,7 +168,7 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "Test your set by running the <prompt>$</prompt> <command>publican build --formats=test --langs=en-US</command> command."
+msgid "Test your set by running the <command>publican build --formats=test --langs=en-US</command> command."
 msgstr ""
 
 #. Tag: para
@@ -299,6 +299,6 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "When building a set, the <prompt>$</prompt> <command>publican clean_ids</command> command will be run over each book because of the constraint that IDs must be unique across all books. Be careful of creating IDs that rely on content that may not be available when building books independently of the set."
+msgid "When building a set, the <command>publican clean_ids</command> command will be run over each book because of the constraint that IDs must be unique across all books. Be careful of creating IDs that rely on content that may not be available when building books independently of the set."
 msgstr ""
 

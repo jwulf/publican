@@ -291,7 +291,7 @@
 
 		</procedure>
 		
-		 <procedure id="proc-Publican-Users_Guide-OSX_Lion-Create_and_build_a_book">
+		 <procedure conformance="247" id="proc-Publican-Users_Guide-OSX_Lion-Create_and_build_a_book">
 			<title>Create and build a book</title>
 			 <step>
 				
@@ -317,7 +317,7 @@
 
 		</procedure>
 		
-		 <procedure id="proc-Publican-Users_Guide-OSX_Lion-Install_a_brand">
+		 <procedure conformance="248" id="proc-Publican-Users_Guide-OSX_Lion-Install_a_brand">
 			<title>Install a brand</title>
 			 <step>
 				<para>
@@ -377,4 +377,3 @@
 	
 
 </chapter>
-

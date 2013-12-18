@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2013-12-17 12:50+1000\n"
-"PO-Revision-Date: 2013-12-17 12:50+1000\n"
+"POT-Creation-Date: 2013-12-18 11:30+1000\n"
+"PO-Revision-Date: 2013-12-18 11:30+1000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: None\n"
 "MIME-Version: 1.0\n"
@@ -524,7 +524,12 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "specifies the edition number for this document. If set, this value overrides the content of the <sgmltag>&lt;edition&gt;</sgmltag> tag in the <filename>Book_Info.xml</filename> file when you package a document. This value must include only digits and the period (&lsquo;0&rsquo;&ndash;&lsquo;9&rsquo; and &lsquo;.&rsquo;)."
+msgid "specifies the edition number for this document."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "The <sgmltag>&lt;edition&gt;</sgmltag> tag was required by versions of Publican prior to 2.0, which used it to generate the version of a documentation package. This tag is now completely optional and does not affect packaging in any way."
 msgstr ""
 
 #. Tag: term

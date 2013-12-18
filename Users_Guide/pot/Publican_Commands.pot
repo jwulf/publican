@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2013-12-17 12:50+1000\n"
-"PO-Revision-Date: 2013-12-17 12:50+1000\n"
+"POT-Creation-Date: 2013-12-18 11:30+1000\n"
+"PO-Revision-Date: 2013-12-18 11:30+1000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: None\n"
 "MIME-Version: 1.0\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "<application>Publican</application> is a command-line tool. To use <application>Publican</application> on a computer with a Linux operating system, you must either start a terminal emulator program (such as <application>GNOME Terminal</application> or <application>Konsole</application>) or switch to a virtual console. To use <application>Publican</application> on a computer with a Windows operating system, run the <prompt>$</prompt> <command>cmd</command> command from the <guimenu>Start menu</guimenu> to open a command prompt."
+msgid "<application>Publican</application> is a command-line tool. To use <application>Publican</application> on a computer with a Linux operating system, you must either start a terminal emulator program (such as <application>GNOME Terminal</application> or <application>Konsole</application>) or switch to a virtual console. To use <application>Publican</application> on a computer with a Windows operating system, run the <command>cmd</command> command from the <guimenu>Start menu</guimenu> to open a command prompt."
 msgstr ""
 
 #. Tag: para
@@ -64,7 +64,7 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "The options for the <prompt>$</prompt> <command>publican</command> command are:"
+msgid "The options for the <command>publican</command> command are:"
 msgstr ""
 
 #. Tag: term

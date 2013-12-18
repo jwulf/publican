@@ -986,7 +986,7 @@
 		</varlistentry>
 
 	</variablelist>
-	 <section id="sect-Publican-Users_Guide-Command_summary-Internal_commands">
+	 <section conformance="238" id="sect-Publican-Users_Guide-Command_summary-Internal_commands">
 		<title>Internal commands</title>
 		 <para>
 			<application>Publican</application> uses the commands documented in this section internally. There is normally no need to run them manually.
@@ -1201,4 +1201,3 @@
 	
 
 </appendix>
-

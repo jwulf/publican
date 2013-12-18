@@ -39,5 +39,3 @@
 		To update the home page, build a new package with a higher <sgmltag>&lt;edition&gt;</sgmltag> number or <sgmltag>&lt;pubsnumber&gt;</sgmltag> in the <filename>Article_Info.xml</filename>. <application>Publican</application> uses these values to set the version and release numbers for the RPM package. When you install this package on your webserver, <application>yum</application> can replace the old version with the new when you run <command>yum localinstall</command> for a local package, or <command>yum update</command> for a package fetched from a repository.
 	</para>
 </section>
-
-

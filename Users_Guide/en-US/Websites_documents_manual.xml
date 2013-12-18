@@ -26,5 +26,3 @@
 		When you have installed the documents, the website is ready to upload to your webserver by whatever process you usually use, for example <application>scp</application>, <application>rsync</application>, or an FTP client.
 	</para>
 </section>
-
-

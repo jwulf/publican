@@ -304,5 +304,3 @@ msgstr "Jedoch ergibt ein sorgfältiges Lesen des Nachworts für &lt;citetitle&g
 		Now multiply such problems by the more than 40 languages that <application>Publican</application> currently supports. Other than the few non-translated strings that <application>Publican</application> specifies by default in the <filename><replaceable>Doc_Name</replaceable>.ent</filename> file, entities might prove useful for version numbers of products. Beyond that, the use of entities is tantamount to a conscious effort to inhibit and reduce the quality of translations. Furthermore, readers of your document in a language that inflects nouns (whether for case, definiteness, or other reasons) will not know that the bad grammar is the result of XML entities that you set — they will probably assume that the translator is incompetent.
 	</para>
 </section>
-
-

@@ -26,5 +26,3 @@
 		On large or busy sites, we recommend that you set the <parameter>manual_toc_update</parameter> parameter in the site's configuration file. With this parameter set, you must run the <prompt>$</prompt> <command>publican update_site</command> command after installing, updating, or removing documents. Refer to <xref linkend="sect-Publican-Users_Guide-Creating_the_website_structure" /> for more information.
 	</para>
 </section>
-
-

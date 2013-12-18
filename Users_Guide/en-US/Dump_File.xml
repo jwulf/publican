@@ -163,7 +163,7 @@
 		</varlistentry>
 
 	</variablelist>
-	 <example id="exam-Publican-Users_Guide-Contents_of_the_website_dump_file-Sample_records_from_a_DUMP.xml_file">
+	 <example conformance="241" id="exam-Publican-Users_Guide-Contents_of_the_website_dump_file-Sample_records_from_a_DUMP.xml_file">
 		<title>Sample records from a <filename>DUMP.xml</filename> file</title>
 		 <para>
 			These two records from a <filename>DUMP.xml</filename> file show the same book, the <citetitle>Red Hat Enterprise Linux 5 Installation Guide</citetitle>, in two different formats and two different languages — an English PDF version and a French multi-page HTML version.
@@ -172,7 +172,7 @@
 <programlisting language="XML"><xi:include href="extras/DUMP.xmlt" parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" /></programlisting>
 
 	</example>
-	 <section id="sect-Publican-Users_Guide-Contents_of_the_website_dump_file-Computing_URLs_from_the_dump_file">
+	 <section conformance="242" id="sect-Publican-Users_Guide-Contents_of_the_website_dump_file-Computing_URLs_from_the_dump_file">
 		<title>Computing URLs from the dump file</title>
 		 <para>
 			Using the following fields, you can compute the URL of any document on the site:
@@ -279,4 +279,3 @@
 	
 
 </appendix>
-
