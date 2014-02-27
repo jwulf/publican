@@ -869,7 +869,6 @@ lib/Publican/WebSite.pm
 lib/Publican/XmlClean.pm
 LICENSE
 MANIFEST			This list of files
-META.yml
 perltidyrc
 po/ar.po
 po/as.po
