@@ -721,6 +721,10 @@ sub get_author_list {
         }
     }
 
+    unless (@authors) {
+        croak( maketext("Did not find any authors in Author_Group.xml") );
+    }
+
     return (@authors);
 }
 

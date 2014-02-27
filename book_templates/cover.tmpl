@@ -30,7 +30,6 @@
 	<div class="subtitle">[%- subtitle -%]
 	[% IF edition -%]<div class="edition">[%- edition -%]</div>[%- END %]
 	</div>
-	[%- IF contributors.author %]
 	<div class="authors">
 	[%- FOREACH contributor = contributors.author %]
 		<div class="contributor">
@@ -54,7 +53,6 @@
 		</div>
 	[%- END %]
 	</div>
-	[%- END %]
 	[%- IF contributors.editor %]
 	<div class="editors">
 		<h1>[%- editorlabel -%]</h1>
