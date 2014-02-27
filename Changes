@@ -1,5 +1,6 @@
 NEXT UNRELEASED
 - Add abstract to release notes so PDF builds
+- Fix RPM upgrade not pulling in required XML::TreeBuilder version. BZ #1053609
 
 4.0.0 Wed Dec 18 2013
 - Support DocBook 5 as input format. BZ #1005042
