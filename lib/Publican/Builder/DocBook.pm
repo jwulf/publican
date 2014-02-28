@@ -878,7 +878,7 @@ sub transform {
         \&insertCallouts );
     XML::LibXSLT->register_function( 'urn:perl', 'numberLines',
         \&numberLines );
-    XML::LibXSLT->max_depth(1000);
+    XML::LibXSLT->max_depth(10000);
 
     my $security = XML::LibXSLT::Security->new();
     $security->register_callback( create_dir => sub { 1; } );
