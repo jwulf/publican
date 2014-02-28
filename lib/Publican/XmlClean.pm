@@ -635,8 +635,8 @@ sub my_as_XML {
     $tree->traverse(
         sub {
             ( $node, $start ) = @_;
-            if ( ref $node ) {     # it's an element
-                                   # delete internal attrs
+            if ( ref $node ) {    # it's an element
+                                  # delete internal attrs
                 $node->attr( 'depth', undef );
                 $node->attr( 'name',  undef );
 
@@ -644,7 +644,7 @@ sub my_as_XML {
 
                 #print(STDERR "tag: $tag\n");
 
-                if ($start) {      # on the way in
+                if ($start) {     # on the way in
                     if ( $banned_tags{$tag} ) {
                         croak(
                             maketext(
@@ -942,12 +942,14 @@ sub validate_tables {
                 ) . "\n";
 
             foreach my $row ( $node->look_down( "_tag", "row" ) ) {
-                my @entries = $row->look_down( "_tag", "entry" );
+                my @entries = $row->look_down( "_tag", qr/(?:entry|entrytbl)/,
+                    sub { $_[0]->depth() == ( $row->depth() + 1 ) } );
+## BUGBUG this is incomplete, it should check colwidths
                 if ( @entries > $cols ) {
                     croak maketext(
                         "*ERROR: Fatal Table Error* Table ([_1]) contains invalid data\nAttribute cols ([_2]) does not match number of entry elements ([_3])",
-                        $title, $cols, @entries )
-                        . "\n";
+                        $title, $cols, scalar @entries
+                    ) . "\n";
                 }
             }
         }
