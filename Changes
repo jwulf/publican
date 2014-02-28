@@ -4,6 +4,7 @@ NEXT UNRELEASED
 - Allow PDF to build without any authors. BZ #1050975
 - Increase XML::LibXSLT::max_depth to 10K. BZ #1035525
 - Include entrytbl in cols count. BZ #1069405
+- Add 'td' to translatable blocks list. BZ #1059938
 
 4.0.0 Wed Dec 18 2013
 - Support DocBook 5 as input format. BZ #1005042

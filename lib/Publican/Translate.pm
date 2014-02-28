@@ -18,7 +18,7 @@ use Encode qw(is_utf8 decode_utf8 encode_utf8);
 
 # What tags do we translate?
 my $TRANSTAGS
-    = qr/^(?:ackno|bridgehead|caption|conftitle|contrib|entry|firstname|glossentry|indexterm|jobtitle|keyword|label|lastname|lineannotation|lotentry|member|orgdiv|orgname|othername|para|phrase|productname|refclass|refdescriptor|refentrytitle|refmiscinfo|refname|refpurpose|releaseinfo|revremark|screeninfo|secondaryie|seealsoie|seeie|seg|segtitle|simpara|subtitle|surname|term|termdef|tertiaryie|textobject|title|titleabbrev|screen|programlisting|literallayout)$/;
+    = qr/^(?:ackno|bridgehead|caption|conftitle|contrib|entry|firstname|glossentry|indexterm|jobtitle|keyword|label|lastname|lineannotation|lotentry|member|orgdiv|orgname|othername|para|phrase|productname|refclass|refdescriptor|refentrytitle|refmiscinfo|refname|refpurpose|releaseinfo|revremark|screeninfo|secondaryie|seealsoie|seeie|seg|segtitle|simpara|subtitle|surname|td|term|termdef|tertiaryie|textobject|title|titleabbrev|screen|programlisting|literallayout)$/;
 
 # Blocks that contain translatable tags that need to be kept inline
 my $IGNOREBLOCKS
