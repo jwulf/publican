@@ -674,7 +674,8 @@ sub my_as_XML {
                     if (( $MAP_OUT{$tag}->{'newline'} )
                         && (   ( not defined $MAP_OUT{$tag}->{mixed_mode} )
                             || ( not $MAP_OUT{$tag}->{mixed_mode} )
-                            || ( not $node->look_up( '_tag', 'para' ) ) )
+                            || (not $node->look_up( '_tag', qr/para|entry/ ) )
+                        )
                         )
                     {
                         push( @xml, "\n", $indent x $depth );
@@ -688,9 +689,11 @@ sub my_as_XML {
                    # Check to make sure the block is starting on it's own line
                    # If not add a new line and indent
                         if (( $xml[$#xml] && $xml[$#xml] =~ /\S/ )
-                            && ( ( not defined $MAP_OUT{$tag}->{mixed_mode} )
+                            && (( not defined $MAP_OUT{$tag}->{mixed_mode} )
                                 || ( not $MAP_OUT{$tag}->{mixed_mode} )
-                                || ( not $node->look_up( '_tag', 'para' ) ) )
+                                || (not $node->look_up( '_tag',
+                                        qr/para|entry/ ) )
+                            )
                             )
                         {
                             push( @xml, "\n", $indent x $depth );
@@ -747,9 +750,11 @@ sub my_as_XML {
                     {
                         push( @xml, $node->starttag_XML( undef, 1 ) );
                         if ($MAP_OUT{$tag}->{newline_after}
-                            && ( ( not defined $MAP_OUT{$tag}->{mixed_mode} )
+                            && (( not defined $MAP_OUT{$tag}->{mixed_mode} )
                                 || ( not $MAP_OUT{$tag}->{mixed_mode} )
-                                || ( not $node->look_up( '_tag', 'para' ) ) )
+                                || (not $node->look_up( '_tag',
+                                        qr/para|entry/ ) )
+                            )
                             )
                         {
                             push( @xml, "\n", $indent x $depth );
@@ -768,9 +773,11 @@ sub my_as_XML {
                         }
                         elsif (
                             ( not $MAP_OUT{$tag}->{verbatim} )
-                            && ( ( not defined $MAP_OUT{$tag}->{mixed_mode} )
+                            && (( not defined $MAP_OUT{$tag}->{mixed_mode} )
                                 || ( not $MAP_OUT{$tag}->{mixed_mode} )
-                                || ( not $node->look_up( '_tag', 'para' ) ) )
+                                || (not $node->look_up( '_tag',
+                                        qr/para|entry/ ) )
+                            )
                             )
                         {
                             push( @xml, "\n", $indent x $depth );
@@ -801,7 +808,8 @@ sub my_as_XML {
                             }
                             elsif (( defined $MAP_OUT{$tag}->{mixed_mode} )
                                 && ( $MAP_OUT{$tag}->{mixed_mode} )
-                                && ( $node->look_up( '_tag', 'para' ) ) )
+                                && ($node->look_up( '_tag', qr/para|entry/ ) )
+                                )
                             {
                                 $depth--;
                             }
@@ -833,7 +841,8 @@ sub my_as_XML {
                     if (( $MAP_OUT{$tag}->{newline_after} )
                         && (   ( not defined $MAP_OUT{$tag}->{mixed_mode} )
                             || ( not $MAP_OUT{$tag}->{mixed_mode} )
-                            || ( not $node->look_up( '_tag', 'para' ) ) )
+                            || (not $node->look_up( '_tag', qr/para|entry/ ) )
+                        )
                         )
                     {
                         push( @xml, "\n", $indent x $depth );
@@ -842,7 +851,8 @@ sub my_as_XML {
                     if (( $MAP_OUT{$tag}->{block} )
                         && (   ( not defined $MAP_OUT{$tag}->{mixed_mode} )
                             || ( not $MAP_OUT{$tag}->{mixed_mode} )
-                            || ( not $node->look_up( '_tag', 'para' ) ) )
+                            || (not $node->look_up( '_tag', qr/para|entry/ ) )
+                        )
                         )
                     {
                         push( @xml, "\n", $indent x $depth );
