@@ -1280,6 +1280,8 @@ sub new_tree {
 
     my $xml_doc = XML::TreeBuilder->new(
         { 'NoExpand' => "1", 'ErrorContext' => "2" } );
+    $xml_doc->store_pis(1);
+
     my $empty_element_map = $xml_doc->_empty_element_map;
     $empty_element_map->{'xref'}       = 1;
     $empty_element_map->{'index'}      = 1;
