@@ -7,6 +7,7 @@ NEXT UNRELEASED
 - Add 'td' to translatable blocks list. BZ #1059938
 - Treat entry like para for mixedmode tags. BZ #1039382
 - Add blank page after cover page in PDF. BZ #1050770
+- Fix replaceable override in DB 4.5 XSL. BZ #1054462
 
 4.0.0 Wed Dec 18 2013
 - Support DocBook 5 as input format. BZ #1005042

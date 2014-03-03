@@ -2492,7 +2492,7 @@ Fix double footnote in bibliography. BZ #653447
   </div>
 </xsl:template>
 
-<xsl:template match="d:replaceable" priority="1">
+<xsl:template match="replaceable" priority="1">
   <xsl:call-template name="inline.italicseq"/>
 </xsl:template>
 
