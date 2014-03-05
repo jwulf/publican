@@ -16,6 +16,7 @@
 	<div class="docname">[%- docname -%]</div>
 	<div class="subtitle">[%- subtitle -%]
 	[% IF edition -%]<div class="edition">[%- edition -%]</div>[%- END %]
+	[% IF releaseinfo -%]<div class="releaseinfo">[%- releaseinfo -%]</div>[%- END %]
 	</div>
 	<div class="authors">
 	[%- FOREACH author = authors %]

@@ -1653,7 +1653,8 @@ pre {
 	font-style: italic;
 }
 
-.titlepage .edition {
+.titlepage .edition,
+.titlepage .releaseinfo {
 	color: #336699;
 	background-color: transparent;
 	margin-top: 1em;

@@ -268,7 +268,10 @@ div.producttitle {
 	text-align: center;
 	padding-top: 12px;
 }
-div.subtitle, h2.subtitle, h3.subtitle {
+
+div.subtitle,
+h2.subtitle,
+h3.subtitle {
     font-size: 18px;
     margin-bottom: 1em;
     margin-top: 1em;
@@ -280,7 +283,8 @@ div.subtitle, h2.subtitle, h3.subtitle {
     text-align: center;
 }
 
-.titlepage .edition {
+.titlepage .edition,
+.titlepage .releaseinfo {
     text-align: center;
     font-weight: bold;
 }

@@ -628,6 +628,9 @@ sub transform {
         my $edition = eval {
             $xml_doc->root()->look_down( "_tag", "edition" )->as_text();
         };
+        my $releaseinfo = eval {
+            $xml_doc->root()->look_down( "_tag", "releaseinfo" )->as_text();
+        };
 
         my $vars = {
             draft   => $draft,
@@ -660,6 +663,9 @@ sub transform {
         if ($edition) {
             $vars->{edition} = decode_utf8(
                 $locale->maketext( 'Edition [_1]', $edition ) );
+        }
+        if ($releaseinfo) {
+            $vars->{releaseinfo} = decode_utf8( $releaseinfo );
         }
 
         $template->process(
