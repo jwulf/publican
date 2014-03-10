@@ -10,6 +10,8 @@ NEXT UNRELEASED
 - Fix replaceable override in DB 4.5 XSL. BZ #1054462
 - Store processing instructions. BZ #1045463
 - Add releaseinfo support. BZ #1050789
+- Add suppor5t for wkhtmltopdf 0.12.0
+- Add non-minified JS files. BZ #1062109
 
 4.0.0 Wed Dec 18 2013
 - Support DocBook 5 as input format. BZ #1005042

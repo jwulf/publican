@@ -1127,7 +1127,9 @@ web/images/gradient2.png
 web/images/open.png
 web/images/page.png
 web/index.html
+web/jquery-1.7.1.js
 web/jquery-1.7.1.min.js
+web/jquery.jcarousel.js
 web/jquery.jcarousel.min.js
 web/print.css
 web/splash.css
