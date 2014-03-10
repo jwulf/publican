@@ -185,7 +185,7 @@ my %MAP_OUT = (
     computeroutput => {},
     guimenuitem    => {},
     textobject     => { block => 1 },
-    varlistentry   => { block => 1 },
+    varlistentry   => { block => 1, id_node => 'term' },
     term           => { newline_after => 1 },
     colspec        => { newline_after => 1 },
     areaspec       => { block => 1 },

@@ -12,6 +12,7 @@ NEXT UNRELEASED
 - Add releaseinfo support. BZ #1050789
 - Add suppor5t for wkhtmltopdf 0.12.0
 - Add non-minified JS files. BZ #1062109
+- Use term as ID node for varlistentry. BZ #1050836
 
 4.0.0 Wed Dec 18 2013
 - Support DocBook 5 as input format. BZ #1005042
