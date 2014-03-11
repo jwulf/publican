@@ -14,6 +14,7 @@ NEXT UNRELEASED
 - Add non-minified JS files. BZ #1062109
 - Use term as ID node for varlistentry. BZ #1050836
 - Fix acroread search and image issues. BZ #1038393 #1065810
+- Add line numbering to DB5 html output. BZ #1074709
 
 4.0.0 Wed Dec 18 2013
 - Support DocBook 5 as input format. BZ #1005042
