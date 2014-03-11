@@ -309,7 +309,8 @@ sub build {
                                     my $text = $node->look_down( '_tag',
                                         'listitem' )->as_text();
                                     my $OUT;
-                                    open( $OUT, ">:encoding(UTF-8)", "$tmpl_dir/$sort.tmpl" )
+                                    open( $OUT, ">:encoding(UTF-8)",
+                                        "$tmpl_dir/$sort.tmpl" )
                                         || croak( maketext("BURP") );
 
                                     print( $OUT <<EOL
@@ -552,16 +553,16 @@ sub transform {
             if ( -f "$brand_path/book_templates/footer.html" );
 
         my @wkhtmltopdf_args = (
-            $wkhtmltopdf_cmd, '--javascript-delay',
-            0,                '--header-spacing',
-            5,                '--footer-spacing',
-            5,                '--margin-top',
-            20,               '--margin-bottom',
-            20,               '--margin-left',
-            '15mm',           '--margin-right',
-            '15mm',           '--header-html',
-            $header,          '--footer-html',
-            $footer,          '--load-error-handling',
+            $wkhtmltopdf_cmd,       '--javascript-delay',
+            0,                      '--header-spacing',
+            5,                      '--footer-spacing',
+            5,                      '--margin-top',
+            20,                     '--margin-bottom',
+            20,                     '--margin-left',
+            '15mm',                 '--margin-right',
+            '15mm',                 '--header-html',
+            $header,                '--footer-html',
+            $footer,                '--load-error-handling',
             'ignore'
         );
 
@@ -665,7 +666,7 @@ sub transform {
                 $locale->maketext( 'Edition [_1]', $edition ) );
         }
         if ($releaseinfo) {
-            $vars->{releaseinfo} = decode_utf8( $releaseinfo );
+            $vars->{releaseinfo} = decode_utf8($releaseinfo);
         }
 
         $template->process(

@@ -2496,4 +2496,26 @@ Fix double footnote in bibliography. BZ #653447
   <xsl:call-template name="inline.italicseq"/>
 </xsl:template>
 
+<xsl:template name="anchor">
+  <xsl:param name="node" select="."/>
+  <xsl:param name="conditional" select="1"/>
+
+  <xsl:choose>
+    <xsl:when test="$generate.id.attributes != 0">
+      <!-- No named anchors output when this param is set -->
+    </xsl:when>
+    <xsl:when test="$conditional = 0 or $node/@id or $node/@xml:id">
+      <a>
+        <xsl:attribute name="id">
+          <xsl:call-template name="object.id">
+            <xsl:with-param name="object" select="$node"/>
+          </xsl:call-template>
+        </xsl:attribute>
+        <!-- need a zero-width non-breaking space because webkit doesn't render empty anchors -->
+        &#xfeff;
+      </a>
+    </xsl:when>
+  </xsl:choose>
+</xsl:template>
+
 </xsl:stylesheet>

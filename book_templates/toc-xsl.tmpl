@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="1.0"
+<xsl:stylesheet version="2.0"
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-                xmlns:outline="http://code.google.com/p/wkhtmltopdf/outline"
+                xmlns:outline="http://wkhtmltopdf.org/outline"
                 xmlns="http://www.w3.org/1999/xhtml">
   <xsl:output doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"
               doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"
               indent="yes" />
   <xsl:template match="outline:outline">
-    <xsl:variable name="outilelist"></xsl:variable>
     <html>
       <head>
         <title>[%- toctitle %]</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <style>
 [%- IF draft -%]
 	  .draft {
@@ -18,7 +18,7 @@
 		background-repeat: repeat-y;
         	background-position: center;
 	  }
-[%- END -%]
+[%- END %]
           body {
 	    font-family: "liberation sans", "Myriad ", "Bitstream Vera Sans", "Lucida Grande", "Luxi Sans", "Trebuchet MS", helvetica, verdana, arial, sans-serif;
 	  }
@@ -28,7 +28,6 @@
             font-family: sans-serif;
             font-weight: bold;
           }
-          div { }
           span.page {
             float: right;
             padding-left: 1em;
@@ -39,25 +38,24 @@
           li li span.filler {
             border-style: none !important;
           }
-          li {list-style: none;}
+          li {
+            list-style: none;
+          }
           ul {
             font-size: 14px;
             font-family: sans-serif;
             overflow-x: hidden;
+            padding-left: 0em;
           }
 
-          li div{
+          li div {
             margin-top: 1em;
             font-weight: bold;
           }
           li li div {
             font-weight: normal;
             margin-top: 0.1em;
-            width: 100%
-          }
-          ul ul { }
-          ul {
-            padding-left: 0em;
+            width: 100%;
           }
           ul ul {
             padding-left: 1em;
@@ -66,14 +64,14 @@
             text-decoration:none;
             color: black;
           }
-          body > ul {
+          body ul {
 	  }
-	  body > ul > li >div> a:first-child {
+	  a:first-child {
             padding-right: 1em;
             background: white;
           }
 
-          body > ul > li:before {
+          li div:before {
             float: left;
             width: 0;
             white-space: nowrap;
@@ -93,11 +91,17 @@
  ". . . . . . . . . . . . . . . . . . . . "
  ". . . . . . . . . . . . . . . . . . . . ";
           }
- </style>
+          li li div:before {
+            content: "";
+          }
+      </style>
       </head>
-      <body [%- IF draft -%]class="draft"[%- END -%]>
+      <body[%- IF draft -%] class="draft"[%- END -%]>
         <h1>[%- toctitle -%]</h1>
-        <ul><xsl:apply-templates select="outline:item/outline:item"/></ul>
+        <ul>
+          <xsl:comment>added to prevent self-closing tags in QtXmlPatterns</xsl:comment>
+          <xsl:apply-templates select="outline:item/outline:item"/>
+        </ul>
       </body>
     </html>
   </xsl:template>
@@ -118,6 +122,7 @@
         </div>
       </xsl:if>
       <ul>
+        <xsl:comment>added to prevent self-closing tags in QtXmlPatterns</xsl:comment>
         <xsl:apply-templates select="outline:item"/>
       </ul>
     </li>
