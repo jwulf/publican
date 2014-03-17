@@ -9,10 +9,10 @@
 		<primary>Introduction 1</primary>
 
 	</indexterm>
-	 <para>
+	 <para revisionflag="changed">
 		<indexterm><primary>Introduction 2</primary></indexterm> <application>Publican</application> <indexterm><primary>Introduction 3</primary> <secondary>Introduction 3</secondary></indexterm> is a tool for publishing material authored in DocBook XML. This guide explains how to create and build books and articles using <application>Publican</application>. It is not a general DocBook XML tutorial; refer to <citetitle>DocBook: The Definitive Guide</citetitle> by Norman Walsh and Leonard Muellner, available at <ulink url="&DOCBOOK-URL;" /> for more general help with DocBook XML.
 	</para>
-	 <para>
+	 <para revisionflag="added">
 		<application>Publican</application> began life as an internal tool used by Red Hat's Documentation Group (now known as Engineering Content Services). On occasion, this legacy is visible.
 	</para>
 	 <formalpara conformance="191" id="form-Publican-Users_Guide-Introduction-Design">
@@ -22,7 +22,7 @@
 		</para>
 
 	</formalpara>
-	 <para>
+	 <para revisionflag="deleted">
 		The branding functionality allows you to create your own presentation rules and look, overriding many parts of the default style to meet your publishing needs. Choices executed in code, however, are not changeable.
 	</para>
 	 <para>

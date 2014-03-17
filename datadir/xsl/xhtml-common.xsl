@@ -552,6 +552,10 @@ Version: 1.72.0
         <xsl:text> </xsl:text>
         <xsl:value-of select="@role"/>
     </xsl:if>
+    <xsl:if test="@revisionflag and ($draft.mode = 'yes' or ($draft.mode = 'maybe' and (ancestor-or-self::set | ancestor-or-self::book | ancestor-or-self::article)[1]/@status = 'draft'))">
+        <xsl:text> </xsl:text>
+        <xsl:value-of select="@revisionflag"/>
+    </xsl:if>
   </xsl:variable>
 
   <xsl:if test="string-length(normalize-space($class.value)) != 0">
@@ -981,13 +985,11 @@ Version: 1.72.0
   <xsl:param name="content"/>
 
   <xsl:variable name="p">
-    <div class="para">
+    <div>
       <xsl:call-template name="dir"/>
-      <xsl:if test="$class != ''">
         <xsl:apply-templates select="." mode="class.attribute">
-          <xsl:with-param name="class" select="$class"/>
+          <xsl:with-param name="class" select="'para'"/>
         </xsl:apply-templates>
-      </xsl:if>
       <!--xsl:if test="@id or @xml:id">
         <xsl:attribute name="id">
           <xsl:value-of select="(@id|@xml:id)[1]"/>

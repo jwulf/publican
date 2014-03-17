@@ -553,16 +553,16 @@ sub transform {
             if ( -f "$brand_path/book_templates/footer.html" );
 
         my @wkhtmltopdf_args = (
-            $wkhtmltopdf_cmd,       '--javascript-delay',
-            0,                      '--header-spacing',
-            5,                      '--footer-spacing',
-            5,                      '--margin-top',
-            20,                     '--margin-bottom',
-            20,                     '--margin-left',
-            '15mm',                 '--margin-right',
-            '15mm',                 '--header-html',
-            $header,                '--footer-html',
-            $footer,                '--load-error-handling',
+            $wkhtmltopdf_cmd, '--javascript-delay',
+            0,                '--header-spacing',
+            5,                '--footer-spacing',
+            5,                '--margin-top',
+            20,               '--margin-bottom',
+            20,               '--margin-left',
+            '15mm',           '--margin-right',
+            '15mm',           '--header-font-name', 'liberationsans"', '--footer-font-name', 'liberationsans','--header-html',
+            $header,          '--footer-html',
+            $footer,          '--load-error-handling',
             'ignore'
         );
 
@@ -654,7 +654,8 @@ sub transform {
             keywordtitle  => decode_utf8( $locale->maketext("Keywords") ),
             toctitle => decode_utf8( $locale->maketext("Table of Contents") ),
             logo     => ( $logo || 'Common_Content/images/title_logo.svg' ),
-            buildpath => abs_path("$tmp_dir/$lang/html-pdf"),
+            buildpath           => abs_path("$tmp_dir/$lang/html-pdf"),
+            chunk_section_depth => $chunk_section_depth,
         };
 
         if (@keywords) {
@@ -1003,9 +1004,10 @@ sub transform {
         unlink("$tmp_dir/$lang/$format/OEBPS/$images/icon.svg");
         unlink("$tmp_dir/$lang/$format/OEBPS/Common_Content/css/brand.css");
         unlink("$tmp_dir/$lang/$format/OEBPS/Common_Content/css/common.css");
-        unlink("$tmp_dir/$lang/$format/OEBPS/Common_Content/css/default.css");
         unlink(
-            "$tmp_dir/$lang/$format/OEBPS/Common_Content/css/overrides.css");
+            "$tmp_dir/$lang/$format/OEBPS/Common_Content/css/default.css" );
+        unlink(
+            "$tmp_dir/$lang/$format/OEBPS/Common_Content/css/overrides.css" );
         unlink("$tmp_dir/$lang/$format/OEBPS/Common_Content/css/pdf.css");
 
         unless (
@@ -1311,7 +1313,8 @@ sub get_nodes_order {
     my @node_list;
 
     if ( !$node ) {
-        @node_list = $source->getElementsByTagName('book')->[0]->childNodes();
+        @node_list
+            = $source->getElementsByTagName('book')->[0]->childNodes();
     }
     else {
         @node_list = $node->childNodes();
@@ -1558,7 +1561,9 @@ sub build_drupal_book {
             my $menu_link  = "";
             my $menu_title = "";
             my $book
-                = ($book_title) ? $book_title : "$product $version $docname";
+                = ($book_title)
+                ? $book_title
+                : "$product $version $docname";
             if ( $page eq 'index' ) {
                 $alias      = $bookname;
                 $title      = $book;
@@ -3706,3 +3711,4 @@ L<https://bugzilla.redhat.com/bugzilla/enter_bug.cgi?product=Publican&component=
 =head1 AUTHOR
 
 Jeff Fearn  C<< <jfearn@redhat.com> >>
+3711:	To save a full .LOG file rerun with -g

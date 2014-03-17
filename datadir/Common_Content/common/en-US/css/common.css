@@ -107,7 +107,7 @@ div.section {
 
 p, div.para {
 	padding-top: 0px;
-	margin-top: 0.3em;
+	margin-top: 1em;
 	padding-bottom: 0px;
 	margin-bottom: 1em;
 }
@@ -294,6 +294,9 @@ h6 {
 
 .section > div > div > div > h2.title {
 	font-size: 21px;
+	page-break-inside: avoid;
+	page-break-before: avoid;
+	page-break-after: avoid;
 }
 
 .section > div > div > div > h3.title {
@@ -698,7 +701,8 @@ li {
 /*	margin-bottom: 16px; */
 }
 
-li p, li div.para {
+li p:first-child,
+li div.para:first-child {
 	padding-top:0px;
 	margin-top:0px;
 	padding-bottom:0px;
@@ -809,7 +813,6 @@ div.title {
 }
 
 .replaceable {
-	font-family:"liberation mono", "bitstream vera mono", "dejavu mono", monospace;
 	font-style: italic;
 }
 
@@ -932,6 +935,7 @@ div.admonition_header p {
 }
 
 div.admonition_header {
+	background-origin:content-box;
 	clear: both;
 	margin: 0px;
 	padding: 0px;
@@ -944,21 +948,30 @@ div.admonition_header {
 div.warning div.admonition_header {
 	background: url(../images/red.png) top left repeat-x;
 	background-color: #590000;
+	background: -webkit-linear-gradient(#a40000,#590000);
+	background: linear-gradient(#a40000,#590000);
 }
 
 div.note div.admonition_header {
 	background: url(../images/green.png) top right repeat-x;
 	background-color: #597800;
+	background: -webkit-linear-gradient(#769f00,#597800);
+	background: linear-gradient(#769f00,#597800);
 }
 
 div.important div.admonition_header {
 	background: url(../images/yellow.png) top right repeat-x;
 	background-color: #a6710f;
+	background: -webkit-linear-gradient(#d08e13,#a6710f);
+	background: linear-gradient(#d08e13,#a6710f);
 }
 
-div.warning p, div.warning div.para,
-div.note p, div.note div.para,
-div.important p, div.important div.para {
+div.warning p:first-child,
+div.warning div.para:first-child,
+div.note p:first-child,
+div.note div.para:first-child,
+div.important p:first-child,
+div.important div.para:first-child {
 	padding: 0px;
 	margin: 0px;
 }
@@ -1319,7 +1332,7 @@ div.chapter {
 }
 
 
-div.titlepage {
+div.titlepage, div.titlepage > div, div.titlepage > div > div {
 	page-break-inside: avoid;
 	page-break-after: avoid;
 }
@@ -1680,6 +1693,8 @@ span.remark {
 
 dt {
 	clear:both;
+	page-break-inside: avoid;
+	page-break-after: avoid;
 }
 
 dt img {
@@ -1747,4 +1762,17 @@ li.step > a:first-child {
 /*	page-break-inside: avoid; */
 }
 
+
+.added {
+	background-color: #99ff99;
+}
+
+.changed {
+	background-color: #ffff77;
+}
+
+.deleted {
+	background-color: #ff4455;
+	text-decoration: line-through;
+}
 

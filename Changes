@@ -15,6 +15,9 @@ NEXT UNRELEASED
 - Use term as ID node for varlistentry. BZ #1050836
 - Fix acroread search and image issues. BZ #1038393 #1065810
 - Add line numbering to DB5 html output. BZ #1074709
+- Remove glossdiv and indexdiv headings from PDF TOC. BZ #1058545
+- Add basic handling & style for revisionflag.
+- Fix admonition style for wkhtmnltopdf 0.12.
 
 4.0.0 Wed Dec 18 2013
 - Support DocBook 5 as input format. BZ #1005042
