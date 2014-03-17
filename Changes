@@ -18,6 +18,7 @@ NEXT UNRELEASED
 - Remove glossdiv and indexdiv headings from PDF TOC. BZ #1058545
 - Add basic handling & style for revisionflag.
 - Fix admonition style for wkhtmnltopdf 0.12.
+- Pass chunk_section_depth to wkhtmltopdf. BZ #1044848
 
 4.0.0 Wed Dec 18 2013
 - Support DocBook 5 as input format. BZ #1005042
