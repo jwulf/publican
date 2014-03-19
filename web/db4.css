@@ -504,6 +504,17 @@ div.admonition {
     padding: 1.5em 1em 1em 2em;
 }
 
+
+.example {
+    border-radius: 0;
+    page-break-inside: avoid;
+    background-color: #FFFFFF;
+    border-left: 3px solid #AAAAAA;
+    padding-bottom: 0.1em;
+    padding-left: 1em;
+    padding-top: 1px;
+}
+
 img {
     max-width: 100%;
 }
