@@ -250,7 +250,8 @@ sub create {
                     ],
                 ),
             },
-            "$type" . "_Info" => {
+            "$type"
+                . "_Info" => {
                 types => 'Book Set Article',
                 node  => XML::Element->new_from_lol(
                     [   'info',
@@ -294,7 +295,7 @@ sub create {
                         ],
                     ],
                 ),
-            },
+                },
             'Revision_History' => {
                 types => 'Book Set Article',
                 node  => XML::Element->new_from_lol(

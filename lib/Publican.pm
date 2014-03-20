@@ -231,7 +231,8 @@ my %PARAM_OLD = (
     },
     'ec_provider' => {
         descr => maketext(
-            'Eclipse plugin provider. Defaults to "Publican-[_1]"', '$VERSION'
+            'Eclipse plugin provider. Defaults to "Publican-[_1]"',
+            '$VERSION'
         ),
     },
     extras_dir => {
@@ -728,7 +729,9 @@ sub _load_config {
         $brand_path =~ s/\"//g;
 
         # Override publican defaults with brand defaults
-        if ( -f "$brand_path/defaults.cfg" ) {
+        if ( -f "$brand_path/defaults.cfg"
+            && ( !-z "$brand_path/defaults.cfg" ) )
+        {
             my $tmp_cfg = new Config::Simple("$brand_path/defaults.cfg")
                 || croak(
                 maketext("Failed to load brand defaults.cfg file") );
@@ -748,7 +751,9 @@ sub _load_config {
         }
 
         # Enforce Brand Overrides
-        if ( -f "$brand_path/overrides.cfg" ) {
+        if ( -f "$brand_path/overrides.cfg"
+            && ( !-z "$brand_path/overrides.cfg" ) )
+        {
             my $tmp_cfg = new Config::Simple("$brand_path/overrides.cfg")
                 || croak(
                 maketext("Failed to load brand overrides.cfg file") );
@@ -1150,7 +1155,7 @@ sub maketext {
     my @params = @_;
 
     if ($LOCALISE) {
-        return ( decode_utf8($LOCALISE->maketext( $string, @params ) ) );
+        return ( decode_utf8( $LOCALISE->maketext( $string, @params ) ) );
     }
     else {
         carp( RED, "Warning localisation not enabled!\n", RESET );
@@ -1535,10 +1540,9 @@ sub add_revision {
     }
     else {
         $rev_doc->root()->tag('appendix');
-        my $rev_hist
-            = XML::Element->new_from_lol(
-            [ 'title', decode_utf8($locale->maketext('Revision History')) ],
-            );
+        my $rev_hist = XML::Element->new_from_lol(
+            [ 'title', decode_utf8( $locale->maketext('Revision History') ) ],
+        );
 
         $rev_doc->root()->push_content($rev_hist);
 

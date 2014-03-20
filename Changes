@@ -19,6 +19,7 @@ NEXT UNRELEASED
 - Add basic handling & style for revisionflag.
 - Fix admonition style for wkhtmnltopdf 0.12.
 - Pass chunk_section_depth to wkhtmltopdf. BZ #1044848
+- Do not die on empty brand conf files. BZ #1037037
 
 4.0.0 Wed Dec 18 2013
 - Support DocBook 5 as input format. BZ #1005042

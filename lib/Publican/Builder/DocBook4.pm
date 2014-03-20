@@ -10,7 +10,6 @@ use Publican::Builder;
 use Publican::Builder::DocBook;
 
 use Carp;
-use Config::Simple '-strict';
 use Publican;
 use Publican::XmlClean;
 use Publican::Translate;
@@ -639,7 +638,11 @@ sub validate_xml {
     my $dtd = XML::LibXML::Dtd->new( $dtd_type, $dtd_path );
 
     unless ( $source->is_valid($dtd) ) {
-        logger( maketext("DTD Validation failed for '$dir/$main_file.xml': ") . "\n", RED );
+        logger(
+            maketext("DTD Validation failed for '$dir/$main_file.xml': ")
+                . "\n",
+            RED
+        );
         croak( $source->validate($dtd) );
     }
     logger("DTD Validation OK\n");
@@ -751,7 +754,6 @@ Publican requires no configuration files or environment variables.
 
 Carp
 version
-Config::Simple
 Publican
 Publican::XmlClean
 Publican::Translate

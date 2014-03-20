@@ -37,7 +37,7 @@ my $DATA_DIR          = Publican::ConfigData->config('datadir');
 
 # Try to catch SRPMS created using outdated versions of publican in brew/koji/mock
 if (   ( $ENV{RPM_BUILD_DIR} )
-    && ( $ENV{RPM_BUILD_DIR}    ne "" )
+    && ( $ENV{RPM_BUILD_DIR} ne "" )
     && ( $ENV{RPM_PACKAGE_NAME} ne "publican" )
     && (-f "/builddir/build/SRPMS/$ENV{RPM_PACKAGE_NAME}-$ENV{RPM_PACKAGE_VERSION}-$ENV{RPM_PACKAGE_RELEASE}.src.rpm"
     )
@@ -1332,9 +1332,9 @@ if ( $action eq 'rename' ) {
 if ( $action eq 'report' ) {
     my $dtdver = $publican->param('dtdver');
     my $builder;
-    my $lang = $publican->param('xml_lang');
-    my $tmp_dir           = $publican->param('tmp_dir');
-    my $docname           = $publican->param('docname');
+    my $lang    = $publican->param('xml_lang');
+    my $tmp_dir = $publican->param('tmp_dir');
+    my $docname = $publican->param('docname');
 
     if ( $dtdver =~ m/^5/ ) {
         $builder = Publican::Builder::DocBook5->new(
@@ -1347,8 +1347,8 @@ if ( $action eq 'report' ) {
     }
 
     $builder->build(
-        {   formats         => 'txt',
-            langs           => $publican->param('xml_lang'),
+        {   formats => 'txt',
+            langs   => $publican->param('xml_lang'),
             pub_dir => $opts{pub_dir},
         }
     );
@@ -1357,7 +1357,7 @@ if ( $action eq 'report' ) {
 
     my $text = new Lingua::EN::Fathom;
     $text->analyse_file($file);
-    print($text->report);
+    print( $text->report );
 }
 
 exit(0);

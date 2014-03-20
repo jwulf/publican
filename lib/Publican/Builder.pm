@@ -648,8 +648,9 @@ sub package {
     my $config = new Config::Simple();
     $config->syntax('http');
     foreach my $key ( keys(%Config) ) {
+
         # skip invalid parameters
-        next unless(defined($Publican::PARAMS{$key}));
+        next unless ( defined( $Publican::PARAMS{$key} ) );
 
         # skip limited parameters
         next

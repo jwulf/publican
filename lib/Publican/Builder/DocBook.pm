@@ -9,7 +9,6 @@ use base 'Publican::Builder';
 use Publican::Builder;
 
 use Carp;
-use Config::Simple '-strict';
 use Publican;
 use Publican::XmlClean;
 use Publican::Translate;
@@ -553,16 +552,18 @@ sub transform {
             if ( -f "$brand_path/book_templates/footer.html" );
 
         my @wkhtmltopdf_args = (
-            $wkhtmltopdf_cmd, '--javascript-delay',
-            0,                '--header-spacing',
-            5,                '--footer-spacing',
-            5,                '--margin-top',
-            20,               '--margin-bottom',
-            20,               '--margin-left',
-            '15mm',           '--margin-right',
-            '15mm',           '--header-font-name', 'liberationsans"', '--footer-font-name', 'liberationsans','--header-html',
-            $header,          '--footer-html',
-            $footer,          '--load-error-handling',
+            $wkhtmltopdf_cmd,  '--javascript-delay',
+            0,                 '--header-spacing',
+            5,                 '--footer-spacing',
+            5,                 '--margin-top',
+            20,                '--margin-bottom',
+            20,                '--margin-left',
+            '15mm',            '--margin-right',
+            '15mm',            '--header-font-name',
+            'liberationsans"', '--footer-font-name',
+            'liberationsans',  '--header-html',
+            $header,           '--footer-html',
+            $footer,           '--load-error-handling',
             'ignore'
         );
 
@@ -1004,10 +1005,9 @@ sub transform {
         unlink("$tmp_dir/$lang/$format/OEBPS/$images/icon.svg");
         unlink("$tmp_dir/$lang/$format/OEBPS/Common_Content/css/brand.css");
         unlink("$tmp_dir/$lang/$format/OEBPS/Common_Content/css/common.css");
+        unlink("$tmp_dir/$lang/$format/OEBPS/Common_Content/css/default.css");
         unlink(
-            "$tmp_dir/$lang/$format/OEBPS/Common_Content/css/default.css" );
-        unlink(
-            "$tmp_dir/$lang/$format/OEBPS/Common_Content/css/overrides.css" );
+            "$tmp_dir/$lang/$format/OEBPS/Common_Content/css/overrides.css");
         unlink("$tmp_dir/$lang/$format/OEBPS/Common_Content/css/pdf.css");
 
         unless (
@@ -3676,7 +3676,6 @@ Publican requires no configuration files or environment variables.
 
 Carp
 version
-Config::Simple
 Publican
 Publican::XmlClean
 Publican::Translate
