@@ -2514,8 +2514,7 @@ Fix double footnote in bibliography. BZ #653447
           </xsl:call-template>
         </xsl:attribute>
         <!-- need a zero-width non-breaking space because webkit doesn't render empty anchors -->
-        &#xfeff;
-      </a>
+      &#8288;</a>
     </xsl:when>
   </xsl:choose>
 </xsl:template>

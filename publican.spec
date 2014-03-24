@@ -140,6 +140,7 @@ Requires:       lohit-oriya-fonts lohit-punjabi-fonts lohit-sindhi-fonts
 Requires:       lohit-tamil-fonts lohit-telugu-fonts dejavu-lgc-sans-mono-fonts
 Requires:       dejavu-fonts-common dejavu-serif-fonts dejavu-sans-fonts
 Requires:       dejavu-sans-mono-fonts overpass-fonts
+Requires:       wqy-zenhei-fonts
 
 BuildRequires:  liberation-mono-fonts liberation-sans-fonts liberation-serif-fonts
 BuildRequires:  cjkuni-uming-fonts ipa-gothic-fonts ipa-pgothic-fonts
