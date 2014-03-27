@@ -20,7 +20,7 @@
 		</step>
 		 <step>
 			<para>
-				Run <prompt>$</prompt> <command>publican create_site</command>, specifying the following parameters:
+				Run <command>publican create_site</command>, specifying the following parameters:
 			</para>
 			 <itemizedlist>
 				<listitem>
@@ -167,6 +167,25 @@
 					 <para>
 						Refer to <xref linkend="appe-Publican-Users_Guide-Contents_of_the_website_dump_file" /> for a description of the contents of the dump file.
 					</para>
+
+				</step>
+				<step>
+					<para>
+						Optionally, specify the web style with the <parameter>web_style</parameter>.
+					</para>
+					<variablelist>
+						<varlistentry>
+							<term>web_style: 1</term>
+							<listitem><para>The website resembles those produced by Publican&nbsp;2, with a list of products displayed in a navigation pane at the left of the page. (Default)</para></listitem>
+						</varlistentry>
+						<varlistentry>
+							<term>web_style: 2</term>
+							<listitem><para>The website includes a breadcrumb-like navigation bar across the top of the documentation.</para></listitem>
+						</varlistentry>
+					</variablelist>
+					<important>
+						<para>The web style set for your site must match the web style set for your content. For example, if you set <literal>web_style:&nbsp;2</literal> for your website, you need to have <literal>web_style:&nbsp;2</literal> set in each of the books that you want to install on the site. Consider setting this parameter in the <filename>defaults.cfg</filename> or <filename>overrides.cfg</filename> files of the brands that you intend to use with this site.</para>
+					</important>
 
 				</step>
 				 <step>
