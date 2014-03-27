@@ -125,7 +125,7 @@ _publican()
 					options='--abstract --add --book_src_lang --book_version --del --formats --lang --name --name_label --product --product_label --site_config --sort_order --subtitle --version --version_label '
 					;;
 				update_po)
-					options='--email --firstname --langs --msgmerge --surname '
+					options='--email --firstname --langs --msgmerge --previous --surname '
 					;;
 				update_pot)
 					options=''

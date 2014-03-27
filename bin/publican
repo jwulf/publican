@@ -170,6 +170,7 @@ my %options = (
     'old_site_config=s' => maketext(
         'WebSite configuration file to use when copying content between sites.'
     ),
+    'previous' => maketext('Keep previous msgid when fuzzy matches are detected in PO updates.'),
 );
 
 # Options all actions use
@@ -250,7 +251,7 @@ my %actions = (
     },
     'update_po' => {
         'brief'   => maketext('Update the PO files'),
-        'options' => [ 'langs', 'msgmerge', 'firstname', 'surname', 'email' ],
+        'options' => [ 'langs', 'msgmerge', 'firstname', 'surname', 'email', 'previous' ],
     },
     'install_brand' => {
         'brief'   => maketext('Install a brand to the supplied location'),
@@ -984,7 +985,8 @@ if ( $action eq 'update_po' ) {
             {   msgmerge  => $opts{msgmerge},
                 email     => $opts{email},
                 firstname => $opts{firstname},
-                surname   => $opts{surname}
+                surname   => $opts{surname},
+                previous  => $opts{previous},
             }
         );
     }
@@ -994,7 +996,8 @@ if ( $action eq 'update_po' ) {
                 msgmerge  => $opts{msgmerge},
                 email     => $opts{email},
                 firstname => $opts{firstname},
-                surname   => $opts{surname}
+                surname   => $opts{surname},
+                previous  => $opts{previous},
             }
         );
     }

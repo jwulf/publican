@@ -221,14 +221,14 @@ my $class = Module::Build->subclass(
             use List::MoreUtils qw|uniq|;
             my $POD_FILE;
             open($POD_FILE, '>', 'pod1/publican') || die("can't open POD file");
-            print($POD_FILE <<EOL);
+            print($POD_FILE <<'EOL');
 =head1 NAME
 
 publican - a DocBook XML publishing tool.
 
 =head1 VERSION
 
-This document describes publican version 1.0
+This document describes publican version 4.0
 
 =head1 SYNOPSIS
 
@@ -246,7 +246,7 @@ EOL
 
             my $pod = qx|perl -CDAS -I blib/lib bin/publican --help_actions|;
             print($POD_FILE $pod);
-            print($POD_FILE <<EOL);
+            print($POD_FILE <<'EOL');
 =head1 INTERFACE 
 
 EOL
@@ -254,7 +254,7 @@ EOL
             $pod = qx|perl -CDAS -I blib/lib bin/publican --help all|;
             my $version = $self->dist_version;
             print($POD_FILE $pod, "\n");
-            print($POD_FILE <<EOL);
+            print($POD_FILE <<'EOL');
 
 =head1 CONFIGURATION AND ENVIRONMENT
 

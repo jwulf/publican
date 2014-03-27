@@ -4,7 +4,7 @@ publican - a DocBook XML publishing tool.
 
 =head1 VERSION
 
-This document describes publican version 1.0
+This document describes publican version 4.0
 
 =head1 SYNOPSIS
 
@@ -482,6 +482,7 @@ update_po
         --firstname=<FIRSTNAME>    firstname to use for a revision.
         --surname=<SURNAME>       surname to use for a revision.
         --email=<EMAIL>           email to use for a revision.
+        --previous                Keep previous msgid when fuzzy matches are detected in PO updates.
 
 
 update_pot
