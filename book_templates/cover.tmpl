@@ -4,9 +4,12 @@
 <head>
 	<title></title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<link rel="stylesheet" href="Common_Content/css/pdf.css" type="text/css" />
+[% IF bodyface -%]
+	<link rel="stylesheet" href="[%- buildpath -%]/[% bodyfont | uri %]-font-faces.css" type="text/css" />
+[%- END %]
+	<link rel="stylesheet" href="pdf.css" type="text/css" />
 </head>
-<body class="cover[%- IF draft -%] draft[%- END -%]">
+<body class="cover[%- IF draft -%] draft[%- END -%]" style="font-family: '[% bodyfont %]';">
     <div class="titlepage1[%- IF draft -%] draft[%- END -%]">
 	<div class="logo" style="background-image:url([% logo %])"></div>
 	<div class="leader">

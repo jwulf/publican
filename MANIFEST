@@ -4,11 +4,14 @@ bin/db5-valid
 bin/fix-zanata-map
 bin/publican
 book_templates/cover.tmpl
-book_templates/footer.html
-book_templates/header.html
+book_templates/footer.tmpl
+book_templates/header.tmpl
+'book_templates/Liberation Mono-font-faces.css'
+'book_templates/Liberation Sans-font-faces.css'
+book_templates/pdf.css
+book_templates/pdfmain-css.tmpl
 book_templates/titlepage.tmpl
 book_templates/toc-xsl.tmpl
-book_templates/toc.xsl
 Build.PL
 CC0
 Changes
@@ -508,8 +511,6 @@ datadir/Common_Content/common/en-US/css/brand.css
 datadir/Common_Content/common/en-US/css/common.css
 datadir/Common_Content/common/en-US/css/default.css
 datadir/Common_Content/common/en-US/css/epub.css
-datadir/Common_Content/common/en-US/css/pdf.css
-datadir/Common_Content/common/en-US/css/pdfmain.css
 datadir/Common_Content/common/en-US/css/print.css
 datadir/Common_Content/common/en-US/Feedback.xml
 datadir/Common_Content/common/en-US/images/1.png

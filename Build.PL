@@ -258,7 +258,7 @@ EOL
 
 =head1 CONFIGURATION AND ENVIRONMENT
 
-Publican requires access to Apache FOP for creating PDF files.
+Publican requires access to wkhtmltopdf or Apache FOP for creating PDF files.
 
 =head1 DEPENDENCIES
 
@@ -270,7 +270,7 @@ EOL
                 print($POD_FILE "$dep\n");
             }
 
-            print($POD_FILE <<EOL);
+            print($POD_FILE <<'EOL');
 
 =head1 INCOMPATIBILITIES
 
@@ -278,15 +278,15 @@ None reported.
 
 =head1 BUGS AND LIMITATIONS
 
-No bugs have been reported.
+Bug list at L<https://bugzilla.redhat.com/buglist.cgi?product=Publican&query_format=advanced&resolution=--->.
 
 Please report any bugs or feature requests to
-C<publican-list\@redhat.com>, or through the web interface at
+C<publican-list@redhat.com>, or through the web interface at
 L<https://bugzilla.redhat.com/bugzilla/enter_bug.cgi?product=Publican&component=publican&version=$version>.
 
 =head1 AUTHOR
 
-Jeff Fearn  C<< <jfearn\@redhat.com> >>
+Jeff Fearn  C<< <jfearn@redhat.com> >>
 =cut
 EOL
 
@@ -509,10 +509,16 @@ my $builder = $class->new(
         'templates/Sitemap.tmpl'        => 'templates/Sitemap.tmpl',
     },
     book_templates_files => {
-        'book_templates/cover.tmpl'     => 'book_templates/cover.tmpl',
-        'book_templates/footer.html'    => 'book_templates/footer.html',
-        'book_templates/header.html'    => 'book_templates/header.html',
-        'book_templates/toc.xsl'        => 'book_templates/toc.xsl',
+        'book_templates/cover.tmpl'  => 'book_templates/cover.tmpl',
+        'book_templates/footer.tmpl' => 'book_templates/footer.tmpl',
+        'book_templates/header.tmpl' => 'book_templates/header.tmpl',
+        'book_templates/Liberation Mono-font-faces.css' =>
+            'book_templates/Liberation Mono-font-faces.css',
+        'book_templates/Liberation Sans-font-faces.css' =>
+            'book_templates/Liberation Sans-font-faces.css',
+        'book_templates/pdf.css' => 'book_templates/pdf.css',
+        'book_templates/pdfmain-css.tmpl' =>
+            'book_templates/pdfmain-css.tmpl',
         'book_templates/toc-xsl.tmpl'   => 'book_templates/toc-xsl.tmpl',
         'book_templates/titlepage.tmpl' => 'book_templates/titlepage.tmpl',
     },

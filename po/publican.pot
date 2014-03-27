@@ -100,11 +100,11 @@ msgstr ""
 #. ('surname')
 #. ('email')
 #. ('lang')
-#: lib/Publican.pm:1436
-#: lib/Publican.pm:1442
 #: lib/Publican.pm:1446
-#: lib/Publican.pm:1449
 #: lib/Publican.pm:1452
+#: lib/Publican.pm:1456
+#: lib/Publican.pm:1459
+#: lib/Publican.pm:1462
 msgid "%1 is a required option for add_revision"
 msgstr ""
 
@@ -114,17 +114,17 @@ msgid "'%1' is an unknown action!"
 msgstr ""
 
 #. ($language)
-#: lib/Publican/Builder/DocBook.pm:1768
+#: lib/Publican/Builder/DocBook.pm:1799
 msgid "'%1' is not a valid language for highlighting."
 msgstr ""
 
 #. ($language)
-#: lib/Publican/Builder/DocBook.pm:3533
+#: lib/Publican/Builder/DocBook.pm:3564
 msgid "'%1' is not a valid language for highlighting. Language names are case sensitive."
 msgstr ""
 
-#: lib/Publican/Builder/DocBook.pm:1872
-#: lib/Publican/Builder/DocBook.pm:1887
+#: lib/Publican/Builder/DocBook.pm:1903
+#: lib/Publican/Builder/DocBook.pm:1918
 msgid "'area' requires a 'coords' attribute."
 msgstr ""
 
@@ -133,11 +133,11 @@ msgstr ""
 msgid "'books' is a required configuration parameter for a remote set"
 msgstr ""
 
-#: lib/Publican/Translate.pm:1119
+#: lib/Publican/Translate.pm:1120
 msgid "'lang' is a mandatory argument"
 msgstr ""
 
-#: lib/Publican.pm:1598
+#: lib/Publican.pm:1608
 msgid "'lang' is a required option for get_ed_rev"
 msgstr ""
 
@@ -153,15 +153,15 @@ msgstr ""
 msgid "'xml_doc' is a mandatory argument"
 msgstr ""
 
-#. ($title,$cols,@entries)
-#: lib/Publican/XmlClean.pm:948
+#. ($title,$cols,scalar@entries)
+#: lib/Publican/XmlClean.pm:960
 msgid ""
 "*ERROR: Fatal Table Error* Table (%1) contains invalid data\n"
 "Attribute cols (%2) does not match number of entry elements (%3)"
 msgstr ""
 
 #. ($title)
-#: lib/Publican/XmlClean.pm:940
+#: lib/Publican/XmlClean.pm:950
 msgid ""
 "*ERROR: Fatal Table Error* Table (%1) contains invalid data\n"
 "Attribute cols is mandatory for tgroup"
@@ -183,7 +183,7 @@ msgstr ""
 msgid "A comma-separated list of XML tags that are not permitted in the source."
 msgstr ""
 
-#: lib/Publican.pm:393
+#: lib/Publican.pm:401
 msgid "A comma-separated list of the formats to use for the web packages."
 msgstr ""
 
@@ -196,7 +196,7 @@ msgstr ""
 msgid "A space-separated list of books used in this remote set."
 msgstr ""
 
-#: lib/Publican/Builder/DocBook.pm:649
+#: lib/Publican/Builder/DocBook.pm:652
 msgid "Abstract"
 msgstr ""
 
@@ -234,24 +234,24 @@ msgid "Arch to filter output on."
 msgstr ""
 
 #: lib/Publican/Builder/DocBook4.pm:706
-#: lib/Publican/Builder/DocBook5.pm:685
+#: lib/Publican/Builder/DocBook5.pm:684
 msgid "Author’s firstname not found in Author_Group.xml as expected."
 msgstr ""
 
 #: lib/Publican/Builder/DocBook4.pm:715
-#: lib/Publican/Builder/DocBook5.pm:694
+#: lib/Publican/Builder/DocBook5.pm:693
 msgid "Author’s surname not found in Author_Group.xml as expected."
 msgstr ""
 
-#: lib/Publican/Builder/DocBook.pm:313
+#: lib/Publican/Builder/DocBook.pm:314
 msgid "BURP"
 msgstr ""
 
-#: lib/Publican.pm:1413
+#: lib/Publican.pm:1423
 msgid "Banned attributes:"
 msgstr ""
 
-#: lib/Publican.pm:1406
+#: lib/Publican.pm:1416
 msgid "Banned tags:"
 msgstr ""
 
@@ -283,7 +283,7 @@ msgstr ""
 msgid "Building rpms from %1 using %2 in %3"
 msgstr ""
 
-#: lib/Publican.pm:311
+#: lib/Publican.pm:319
 msgid "By default Revision History is sorted in descending order. Set this to 'asc' or 'ascending' to reverse the sort."
 msgstr ""
 
@@ -304,35 +304,35 @@ msgid "CONFIDENTIAL"
 msgstr ""
 
 #. ($from,$to,$@)
-#: lib/Publican.pm:1753
+#: lib/Publican.pm:1763
 msgid "Can not copy directory %1 to %2 due to error: %3"
 msgstr ""
 
 #. ($from,$to,$@)
-#: lib/Publican.pm:1671
+#: lib/Publican.pm:1681
 msgid "Can not copy file %1 to %2 due to error: %3"
 msgstr ""
 
 #. ($from,$to,$@)
-#: lib/Publican.pm:1711
-#: lib/Publican.pm:1733
+#: lib/Publican.pm:1721
+#: lib/Publican.pm:1743
 msgid "Can not copy files %1 to %2 due to error: %3"
 msgstr ""
 
 #. ('abstract',$info_file)
 #. ('subtitle',$info_file)
-#: lib/Publican/Builder/DocBook.pm:2326
-#: lib/Publican/Builder/DocBook.pm:2412
+#: lib/Publican/Builder/DocBook.pm:2357
+#: lib/Publican/Builder/DocBook.pm:2443
 msgid "Can not locate '%1' tag in file '%2'"
 msgstr ""
 
 #. ($from,$to,$@)
-#: lib/Publican.pm:1773
+#: lib/Publican.pm:1783
 msgid "Can not move directory %1 to %2 due to error: %3"
 msgstr ""
 
 #. ($from,$to,$@)
-#: lib/Publican.pm:1691
+#: lib/Publican.pm:1701
 msgid "Can not move file %1 to %2 due to error: %3"
 msgstr ""
 
@@ -351,10 +351,10 @@ msgstr ""
 #. ($rev_file)
 #. ($xml_file)
 #: bin/publican:1157
-#: lib/Publican.pm:1605
-#: lib/Publican.pm:648
+#: lib/Publican.pm:1615
+#: lib/Publican.pm:656
 #: lib/Publican/Builder.pm:556
-#: lib/Publican/Builder/DocBook.pm:2110
+#: lib/Publican/Builder/DocBook.pm:2141
 #: lib/Publican/Builder/DocBook.pm:618
 msgid "Can't locate required file: %1"
 msgstr ""
@@ -370,7 +370,7 @@ msgid "Can't open ad file: %1"
 msgstr ""
 
 #. ($@)
-#: lib/Publican.pm:1082
+#: lib/Publican.pm:1090
 msgid "Can't open directory: %1"
 msgstr ""
 
@@ -383,15 +383,15 @@ msgstr ""
 #. ($file,$@)
 #: bin/fix-zanata-map:69
 #: bin/publican:1286
-#: lib/Publican/XmlClean.pm:998
+#: lib/Publican/XmlClean.pm:1010
 msgid "Can't open file '%1' %2"
 msgstr ""
 
-#: lib/Publican/Builder/DocBook.pm:500
+#: lib/Publican/Builder/DocBook.pm:501
 msgid "Can't open file for html input!"
 msgstr ""
 
-#: lib/Publican/Builder/DocBook.pm:496
+#: lib/Publican/Builder/DocBook.pm:497
 msgid "Can't open file for text output!"
 msgstr ""
 
@@ -403,7 +403,7 @@ msgstr ""
 msgid "Can't open file: %1: %2"
 msgstr ""
 
-#: lib/Publican/Builder/DocBook.pm:1073
+#: lib/Publican/Builder/DocBook.pm:1101
 msgid "Can't open mimetype file: "
 msgstr ""
 
@@ -423,8 +423,8 @@ msgid "Can't write to overrides.cfg: %1"
 msgstr ""
 
 #. ($language,$@)
-#: lib/Publican/Builder/DocBook.pm:1787
-#: lib/Publican/Builder/DocBook.pm:3550
+#: lib/Publican/Builder/DocBook.pm:1818
+#: lib/Publican/Builder/DocBook.pm:3581
 msgid "Cannot create plugin for language '%1': %2"
 msgstr ""
 
@@ -451,7 +451,7 @@ msgstr ""
 msgid "Cannot locate title tag in Info file!"
 msgstr ""
 
-#: lib/Publican.pm:369
+#: lib/Publican.pm:377
 msgid "Choose the formatter to use when creating txt output."
 msgstr ""
 
@@ -485,7 +485,7 @@ msgid "Config file exists, you must supply a non-existent filename."
 msgstr ""
 
 #. ($configfile)
-#: lib/Publican.pm:563
+#: lib/Publican.pm:571
 msgid "Config file not found: %1."
 msgstr ""
 
@@ -494,11 +494,11 @@ msgid "Config parameter 'scm' not found; treating set as standalone."
 msgstr ""
 
 #. ($PARAMS{$param}->{constraint})
-#: lib/Publican.pm:1016
+#: lib/Publican.pm:1024
 msgid "Constraint: %1"
 msgstr ""
 
-#: lib/Publican/Builder/DocBook.pm:2488
+#: lib/Publican/Builder/DocBook.pm:2519
 msgid "Copy Editor"
 msgstr ""
 
@@ -512,31 +512,31 @@ msgid "Could not create a Publican::Localise object for language: %1"
 msgstr ""
 
 #. ($ent_file)
-#: lib/Publican.pm:1380
+#: lib/Publican.pm:1390
 msgid "Could not open %1 for input!"
 msgstr ""
 
 #. ($rev_file)
+#. ($out_file,$@)
 #. ($out_file)
 #. ($xml_file)
-#. ($out_file,$@)
 #. ("$tmp_dir/$lang/xml_tmp/$rev_file",$@)
 #. ($auth_file)
 #. ("\$tmp_dir/\$lang/\$format/OEBPS/Common_Content/css/lang.css")
 #. ($content_file)
 #. ($file)
 #: bin/fix-zanata-map:75
-#: lib/Publican.pm:1563
-#: lib/Publican/Builder/DocBook.pm:1012
-#: lib/Publican/Builder/DocBook.pm:1062
+#: lib/Publican.pm:1573
+#: lib/Publican/Builder/DocBook.pm:1040
+#: lib/Publican/Builder/DocBook.pm:1090
 #: lib/Publican/Builder/DocBook4.pm:265
 #: lib/Publican/Builder/DocBook4.pm:317
 #: lib/Publican/Builder/DocBook5.pm:265
 #: lib/Publican/Builder/DocBook5.pm:320
 #: lib/Publican/CreateBook.pm:686
 #: lib/Publican/Translate.pm:234
-#: lib/Publican/XmlClean.pm:1116
-#: lib/Publican/XmlClean.pm:1185
+#: lib/Publican/XmlClean.pm:1128
+#: lib/Publican/XmlClean.pm:1197
 #: lib/Publican/XmlClean.pm:541
 msgid "Could not open %1 for output!"
 msgstr ""
@@ -605,16 +605,12 @@ msgstr ""
 msgid "Create package without using version in package name"
 msgstr ""
 
-#: lib/Publican/Builder/DocBook4.pm:642
-msgid "DTD Validation failed: "
-msgstr ""
-
 #: bin/publican:148
 msgid "Date to use for a revision."
 msgstr ""
 
 #. ($PARAMS{$param}->{default})
-#: lib/Publican.pm:1012
+#: lib/Publican.pm:1020
 msgid "Default: %1"
 msgstr ""
 
@@ -622,13 +618,8 @@ msgstr ""
 msgid "Delete a database entry"
 msgstr ""
 
-#: lib/Publican.pm:356
+#: lib/Publican.pm:364
 msgid "Depth of sections to include in the main table of contents."
-msgstr ""
-
-#: lib/Publican/Builder/DocBook4.pm:725
-#: lib/Publican/Builder/DocBook5.pm:704
-msgid "Did not find any authors in Author_Group.xml"
 msgstr ""
 
 #: bin/publican:164
@@ -643,7 +634,7 @@ msgstr ""
 msgid "Directory to source publican files from."
 msgstr ""
 
-#: lib/Publican.pm:350
+#: lib/Publican.pm:358
 msgid "Directory to use for building."
 msgstr ""
 
@@ -676,7 +667,7 @@ msgstr ""
 msgid "Display help text for the configuration file"
 msgstr ""
 
-#: lib/Publican.pm:333
+#: lib/Publican.pm:341
 msgid "Display remarks in transformed output."
 msgstr ""
 
@@ -711,12 +702,12 @@ msgid "ERROR: Banned tag (%1) detected. Discuss this with your brands owners if 
 msgstr ""
 
 #: lib/Publican/Builder/DocBook4.pm:677
-#: lib/Publican/Builder/DocBook5.pm:656
+#: lib/Publican/Builder/DocBook5.pm:655
 msgid "ERROR: Cannot find Author file Author_Group.xml."
 msgstr ""
 
 #. ($revnumber,q|\d[0-9.]*-\d[0-9.]*|)
-#: lib/Publican/Builder/DocBook.pm:2259
+#: lib/Publican/Builder/DocBook.pm:2290
 msgid "ERROR: revnumber '%1' does not match required format %2. e.g. '1-1'.\n"
 msgstr ""
 
@@ -733,12 +724,12 @@ msgstr ""
 msgid "Eclipse plugin provider. Defaults to \"Publican-%1\""
 msgstr ""
 
-#: lib/Publican/Builder/DocBook.pm:642
+#: lib/Publican/Builder/DocBook.pm:645
 msgid "Edited by"
 msgstr ""
 
 #. ($edition)
-#: lib/Publican/Builder/DocBook.pm:662
+#: lib/Publican/Builder/DocBook.pm:668
 msgid "Edition %1"
 msgstr ""
 
@@ -786,16 +777,16 @@ msgstr ""
 msgid "Enter your surname here."
 msgstr ""
 
-#: lib/Publican.pm:466
+#: lib/Publican.pm:474
 msgid "Extra options to pass to wkhtmltopdf. e.g. wkhtmltopdf_opts: \"-O landscape -s A3\""
 msgstr ""
 
 #. ($@)
 #: bin/db4-2-db5:50
-#: lib/Publican/Builder/DocBook.pm:2406
+#: lib/Publican/Builder/DocBook.pm:2437
 #: lib/Publican/Builder/DocBook.pm:244
 #: lib/Publican/Builder/DocBook.pm:289
-#: lib/Publican/Builder/DocBook.pm:911
+#: lib/Publican/Builder/DocBook.pm:938
 #: lib/Publican/Builder/DocBook4.pm:599
 #: lib/Publican/Builder/DocBook5.pm:602
 msgid "FATAL ERROR: %1"
@@ -805,23 +796,23 @@ msgstr ""
 #. ($xml_file,$@)
 #. ($xsl_file,$@)
 #. ($rev_file,$@)
-#: lib/Publican.pm:1205
-#: lib/Publican.pm:1228
-#: lib/Publican.pm:1530
-#: lib/Publican.pm:1627
-#: lib/Publican.pm:673
+#: lib/Publican.pm:1213
+#: lib/Publican.pm:1236
+#: lib/Publican.pm:1540
+#: lib/Publican.pm:1637
+#: lib/Publican.pm:681
 msgid "FATAL ERROR: %1: %2"
 msgstr ""
 
 #. ($@->domain(),$@->code(),$@->file(),$@->line(),$@->message(),)
 #: bin/db4-2-db5:43
-#: lib/Publican.pm:1195
-#: lib/Publican.pm:1218
-#: lib/Publican.pm:1520
-#: lib/Publican.pm:1617
-#: lib/Publican.pm:662
+#: lib/Publican.pm:1203
+#: lib/Publican.pm:1226
+#: lib/Publican.pm:1530
+#: lib/Publican.pm:1627
+#: lib/Publican.pm:670
 #: lib/Publican/Builder/DocBook.pm:232
-#: lib/Publican/Builder/DocBook.pm:901
+#: lib/Publican/Builder/DocBook.pm:928
 #: lib/Publican/Builder/DocBook4.pm:589
 #: lib/Publican/Builder/DocBook5.pm:592
 msgid "FATAL ERROR: %1:%2 in %3 on line %4: %5"
@@ -833,16 +824,16 @@ msgid "FATAL ERROR: profiling would prune root node. Do NOT set attributes to pr
 msgstr ""
 
 #. ($VR,'^([0-9.]*)-([0-9.]*)$/')
-#: lib/Publican.pm:1646
+#: lib/Publican.pm:1656
 msgid "FATAL ERROR: revnumber (%1) does not match the required format of '%2'"
 msgstr ""
 
 #. ('^([0-9.]*)-([0-9.]*)$/')
-#: lib/Publican.pm:1639
+#: lib/Publican.pm:1649
 msgid "FATAL ERROR: revnumber missing or empty, it must match the required format of '%1'"
 msgstr ""
 
-#: lib/Publican/Builder/DocBook.pm:977
+#: lib/Publican/Builder/DocBook.pm:1004
 msgid "FOP error, PDF generation failed. Check log for details."
 msgstr ""
 
@@ -852,29 +843,29 @@ msgid "Failed to execute %1, error number: %2"
 msgstr ""
 
 #. ($@)
-#: lib/Publican.pm:1236
-#: lib/Publican.pm:1334
-#: lib/Publican.pm:880
-#: lib/Publican/Builder/DocBook.pm:923
+#: lib/Publican.pm:1244
+#: lib/Publican.pm:1344
+#: lib/Publican.pm:888
+#: lib/Publican/Builder/DocBook.pm:950
 #: lib/Publican/Builder/DocBook4.pm:617
 msgid "Failed to load Win32::TieRegistry module. Error: %1"
 msgstr ""
 
-#: lib/Publican.pm:734
+#: lib/Publican.pm:742
 msgid "Failed to load brand defaults.cfg file"
 msgstr ""
 
 #. ("$brand_path/publican.cfg")
-#: lib/Publican.pm:765
+#: lib/Publican.pm:773
 msgid "Failed to load brand file: %1"
 msgstr ""
 
-#: lib/Publican.pm:754
+#: lib/Publican.pm:762
 msgid "Failed to load brand overrides.cfg file"
 msgstr ""
 
 #. ($configfile)
-#: lib/Publican.pm:570
+#: lib/Publican.pm:578
 msgid "Failed to load config file: %1"
 msgstr ""
 
@@ -913,7 +904,7 @@ msgstr ""
 msgid "Fetching %1 from scm"
 msgstr ""
 
-#: lib/Publican/Translate.pm:1142
+#: lib/Publican/Translate.pm:1143
 msgid "File Name"
 msgstr ""
 
@@ -929,7 +920,7 @@ msgstr ""
 
 #. ($format)
 #: lib/Publican/Builder/DocBook.pm:166
-#: lib/Publican/Builder/DocBook.pm:369
+#: lib/Publican/Builder/DocBook.pm:370
 msgid "Finished %1"
 msgstr ""
 
@@ -945,11 +936,11 @@ msgstr ""
 msgid "Formats"
 msgstr ""
 
-#: lib/Publican.pm:450
+#: lib/Publican.pm:458
 msgid "Full path for the publican site configuration file for non standard RPM websites."
 msgstr ""
 
-#: lib/Publican/Translate.pm:1144
+#: lib/Publican/Translate.pm:1145
 msgid "Fuzzy"
 msgstr ""
 
@@ -957,7 +948,7 @@ msgstr ""
 msgid "Generate table of contents down to the given section depth."
 msgstr ""
 
-#: lib/Publican/Builder/DocBook.pm:2491
+#: lib/Publican/Builder/DocBook.pm:2522
 msgid "Graphic Designer"
 msgstr ""
 
@@ -966,7 +957,7 @@ msgid "Hide Menu"
 msgstr ""
 
 #. ($info_file)
-#: lib/Publican/Builder/DocBook.pm:2399
+#: lib/Publican/Builder/DocBook.pm:2430
 msgid "Info file missing: %1"
 msgstr ""
 
@@ -987,7 +978,7 @@ msgstr ""
 msgid "Install a brand to the supplied location"
 msgstr ""
 
-#: lib/Publican.pm:455
+#: lib/Publican.pm:463
 msgid "Install path for non standard RPM websites."
 msgstr ""
 
@@ -1008,12 +999,12 @@ msgid "Invalid build request: no PO files exist for language %1"
 msgstr ""
 
 #. ($in_date)
-#: lib/Publican/Builder/DocBook.pm:2215
+#: lib/Publican/Builder/DocBook.pm:2246
 msgid "Invalid date: '%1' in revision history."
 msgstr ""
 
 #. ($key,$value,$constraint)
-#: lib/Publican.pm:819
+#: lib/Publican.pm:827
 msgid "Invalid format for %1. Value (%2) does not conform to constraint (%3)"
 msgstr ""
 
@@ -1031,7 +1022,7 @@ msgstr ""
 msgid "Is the content confidential?"
 msgstr ""
 
-#: lib/Publican/Builder/DocBook.pm:650
+#: lib/Publican/Builder/DocBook.pm:653
 msgid "Keywords"
 msgstr ""
 
@@ -1043,7 +1034,7 @@ msgstr ""
 msgid "Language"
 msgstr ""
 
-#: lib/Publican.pm:474
+#: lib/Publican.pm:482
 msgid "Language in which XML is authored."
 msgstr ""
 
@@ -1051,11 +1042,11 @@ msgstr ""
 msgid "Languages to replace with xml_lang regardless of translation status."
 msgstr ""
 
-#: lib/Publican/Builder/DocBook.pm:647
+#: lib/Publican/Builder/DocBook.pm:650
 msgid "Legal Notice"
 msgstr ""
 
-#: lib/Publican/Builder/DocBook.pm:2589
+#: lib/Publican/Builder/DocBook.pm:2620
 msgid "Legal notice can not be calculated before building."
 msgstr ""
 
@@ -1064,7 +1055,7 @@ msgid "License this package uses."
 msgstr ""
 
 #. ("$main_file.xml")
-#: lib/Publican/Builder/DocBook.pm:2632
+#: lib/Publican/Builder/DocBook.pm:2663
 msgid "Main XML file (%1) can not be calculated before building."
 msgstr ""
 
@@ -1083,21 +1074,21 @@ msgstr ""
 #. ('surname')
 #. ('email')
 #. ('revnumber')
-#: lib/Publican/Builder/DocBook.pm:2199
-#: lib/Publican/Builder/DocBook.pm:2209
-#: lib/Publican/Builder/DocBook.pm:2222
-#: lib/Publican/Builder/DocBook.pm:2231
+#: lib/Publican/Builder/DocBook.pm:2230
 #: lib/Publican/Builder/DocBook.pm:2240
-#: lib/Publican/Builder/DocBook.pm:2249
+#: lib/Publican/Builder/DocBook.pm:2253
+#: lib/Publican/Builder/DocBook.pm:2262
+#: lib/Publican/Builder/DocBook.pm:2271
+#: lib/Publican/Builder/DocBook.pm:2280
 msgid "Missing mandatory field '%1' in revision history."
 msgstr ""
 
 #. ('member')
-#: lib/Publican/Builder/DocBook.pm:2272
+#: lib/Publican/Builder/DocBook.pm:2303
 msgid "Missing mandatory field '%1' in revision."
 msgstr ""
 
-#: lib/Publican.pm:1403
+#: lib/Publican.pm:1413
 msgid "NOTE: These lists of tags and attributes are brand specific and are not part of Publican itself."
 msgstr ""
 
@@ -1106,7 +1097,7 @@ msgstr ""
 msgid "NOTE: the href does not contain a language! This is CORRECT!"
 msgstr ""
 
-#: lib/Publican.pm:460
+#: lib/Publican.pm:468
 msgid "Name of site package for non standard RPM websites. Required to ensure the site is installed."
 msgstr ""
 
@@ -1157,11 +1148,11 @@ msgstr ""
 msgid "Override path to Common_Content directory"
 msgstr ""
 
-#: lib/Publican.pm:435
+#: lib/Publican.pm:443
 msgid "Override the book name, bottom level, menu label on a Publican website."
 msgstr ""
 
-#: lib/Publican.pm:485
+#: lib/Publican.pm:493
 msgid "Override the bookname that will be shown in the drupal menu."
 msgstr ""
 
@@ -1169,7 +1160,7 @@ msgstr ""
 msgid "Override the default Info file."
 msgstr ""
 
-#: lib/Publican.pm:315
+#: lib/Publican.pm:323
 msgid "Override the default Revision History file."
 msgstr ""
 
@@ -1177,11 +1168,11 @@ msgstr ""
 msgid "Override the default TOC path."
 msgstr ""
 
-#: lib/Publican.pm:428
+#: lib/Publican.pm:436
 msgid "Override the default search form for a Publican website. By default this will use Google search and do a site search if web_host is set."
 msgstr ""
 
-#: lib/Publican.pm:339
+#: lib/Publican.pm:347
 msgid "Override the default sort weighting. Defaults to 50."
 msgstr ""
 
@@ -1189,7 +1180,7 @@ msgstr ""
 msgid "Override the default template path."
 msgstr ""
 
-#: lib/Publican.pm:440
+#: lib/Publican.pm:448
 msgid "Override the product, top level, menu label on a Publican website."
 msgstr ""
 
@@ -1197,7 +1188,7 @@ msgstr ""
 msgid "Override the tool to use when creating PDFs. Valid options are wkhtmltopdf and fop."
 msgstr ""
 
-#: lib/Publican.pm:445
+#: lib/Publican.pm:453
 msgid "Override the version, middle level, menu label on a Publican website. To hide this menu item set this to: UNUSED"
 msgstr ""
 
@@ -1215,16 +1206,16 @@ msgstr ""
 msgid "Packages"
 msgstr ""
 
-#: lib/Publican.pm:425
+#: lib/Publican.pm:433
 msgid "Packages to obsolete in web RPM."
 msgstr ""
 
 #. ($key,$self->{config}->param('type'))
-#: lib/Publican.pm:804
+#: lib/Publican.pm:812
 msgid "Parameter %1 is not permitted in a %2."
 msgstr ""
 
-#: lib/Publican.pm:1007
+#: lib/Publican.pm:1015
 msgid "Parameters used in the config file:"
 msgstr ""
 
@@ -1288,7 +1279,7 @@ msgstr ""
 #. ($pot_file,$po_file)
 #. ($file,$out_file)
 #: lib/Publican/Translate.pm:316
-#: lib/Publican/XmlClean.pm:982
+#: lib/Publican/XmlClean.pm:994
 msgid "Processing file %1 -> %2"
 msgstr ""
 
@@ -1300,11 +1291,11 @@ msgstr ""
 msgid "Product List"
 msgstr ""
 
-#: lib/Publican.pm:290
+#: lib/Publican.pm:298
 msgid "Product this package covers. Fetched from productname tag in xml_lang/TYPE_Info.xml"
 msgstr ""
 
-#: lib/Publican/Builder/DocBook.pm:2494
+#: lib/Publican/Builder/DocBook.pm:2525
 msgid "Production Editor"
 msgstr ""
 
@@ -1316,16 +1307,12 @@ msgstr ""
 msgid "Push SRPM to brew"
 msgstr ""
 
-#: lib/Publican/Builder/DocBook.pm:1543
+#: lib/Publican/Builder/DocBook.pm:1572
 msgid "Reached the maximum page ordering weight(30) that drupal can support. The rest of the pages will be ordered in alphabetical order\n"
 msgstr ""
 
-#: lib/Publican/Builder/DocBook5.pm:619
-msgid "RelaxNG Validation failed: "
-msgstr ""
-
 #. ($lang)
-#: lib/Publican/Translate.pm:1222
+#: lib/Publican/Translate.pm:1223
 msgid "Remaining hours for %1"
 msgstr ""
 
@@ -1349,11 +1336,11 @@ msgstr ""
 msgid "Report on the contents of a WebSite"
 msgstr ""
 
-#: lib/Publican.pm:302
+#: lib/Publican.pm:310
 msgid "Repository from which to fetch remote set books."
 msgstr ""
 
-#: lib/Publican.pm:1538
+#: lib/Publican.pm:1548
 #: lib/Publican/Builder/DocBook4.pm:233
 #: lib/Publican/Builder/DocBook5.pm:233
 #: lib/Publican/CreateBook.pm:302
@@ -1410,7 +1397,7 @@ msgid "Show Menu"
 msgstr ""
 
 #. ($dir)
-#: lib/Publican.pm:1097
+#: lib/Publican.pm:1105
 msgid "Skipping unknown language: %1"
 msgstr ""
 
@@ -1426,7 +1413,7 @@ msgstr ""
 msgid "Space-separated list of packages the desktop package requires."
 msgstr ""
 
-#: lib/Publican.pm:406
+#: lib/Publican.pm:414
 msgid "Splash pages should be generated to be compatible with this web style. Valid values are 1 and 2."
 msgstr ""
 
@@ -1448,11 +1435,11 @@ msgstr ""
 msgid "Support"
 msgstr ""
 
-#: lib/Publican/Builder/DocBook.pm:651
+#: lib/Publican/Builder/DocBook.pm:654
 msgid "Table of Contents"
 msgstr ""
 
-#: lib/Publican/Builder/DocBook.pm:2497
+#: lib/Publican/Builder/DocBook.pm:2528
 msgid "Technical Editor"
 msgstr ""
 
@@ -1479,7 +1466,7 @@ msgstr ""
 msgid "The OS for which to build packages."
 msgstr ""
 
-#: lib/Publican.pm:479
+#: lib/Publican.pm:487
 msgid "The author name to be shown in drupal book page. It must be a valid drupal username."
 msgstr ""
 
@@ -1499,16 +1486,24 @@ msgstr ""
 msgid "The brew dist to use for building the standalone desktop rpm."
 msgstr ""
 
-#: lib/Publican.pm:388
+#: lib/Publican.pm:396
 msgid "The brew dist to use for building the web rpm."
 msgstr ""
 
-#: lib/Publican.pm:496
+#: lib/Publican.pm:504
 msgid "The directory where the image should be stored in drupal server. The default is \"sites/default/files/\""
 msgstr ""
 
 #: bin/publican:117
 msgid "The edition of the book, article, or set"
+msgstr ""
+
+#: lib/Publican.pm:289
+msgid "The font to use for body text in PDFs."
+msgstr ""
+
+#: lib/Publican.pm:293
+msgid "The font to use for mono text in PDFs."
 msgstr ""
 
 #: bin/publican:120
@@ -1519,7 +1514,7 @@ msgstr ""
 msgid "The language this translation is based on."
 msgstr ""
 
-#: lib/Publican.pm:490
+#: lib/Publican.pm:498
 msgid "The menu where we can find the book. The default value is menu-user-guide"
 msgstr ""
 
@@ -1559,15 +1554,15 @@ msgstr ""
 msgid "This flag tells publican the data being processed is a distributed set. Note: do not use distributed_set on the command line. Publican uses this flag when calling itself to process distributed sets. This is the only safe way this flag can be used."
 msgstr ""
 
-#: lib/Publican.pm:399
+#: lib/Publican.pm:407
 msgid "This is a home page for a Publican-generated website, not a standard book."
 msgstr ""
 
-#: lib/Publican.pm:419
+#: lib/Publican.pm:427
 msgid "This is a host name for a Publican-generated website, used for searches and the Sitemap. Be sure to include the full path to your document tree. E.g. if your documents are in the docs directory: http://www.example.com/docs"
 msgstr ""
 
-#: lib/Publican.pm:413
+#: lib/Publican.pm:421
 msgid "This is a special page for a Publican-generated website, not a standard book. Valid types are home, product, and version."
 msgstr ""
 
@@ -1610,7 +1605,7 @@ msgid "Total Packages"
 msgstr ""
 
 #. ($lang)
-#: lib/Publican/Translate.pm:1213
+#: lib/Publican/Translate.pm:1214
 msgid "Total for %1"
 msgstr ""
 
@@ -1619,11 +1614,11 @@ msgid "Transform XML to other formats (pdf, html, html-single, drupal-book, etc)
 msgstr ""
 
 #. ($!,$@)
-#: lib/Publican/Builder/DocBook.pm:961
+#: lib/Publican/Builder/DocBook.pm:988
 msgid "Transformation error '%1' : %2"
 msgstr ""
 
-#: lib/Publican/Translate.pm:1145
+#: lib/Publican/Translate.pm:1146
 msgid "Translated"
 msgstr ""
 
@@ -1632,15 +1627,15 @@ msgstr ""
 msgid "Translation files synchronised with XML sources %1-%2"
 msgstr ""
 
-#: lib/Publican/Builder/DocBook.pm:2500
+#: lib/Publican/Builder/DocBook.pm:2531
 msgid "Translator"
 msgstr ""
 
-#: lib/Publican.pm:362
+#: lib/Publican.pm:370
 msgid "Type of content this package contains. Supported: set, book, article, brand"
 msgstr ""
 
-#: lib/Publican.pm:306
+#: lib/Publican.pm:314
 msgid "Type of repository in which books that form part of a remote set are stored. Supported types: SVN, GIT."
 msgstr ""
 
@@ -1648,21 +1643,21 @@ msgstr ""
 msgid "URL for the documentation team for this package. Used for top right URL on HTML."
 msgstr ""
 
-#: lib/Publican.pm:297
+#: lib/Publican.pm:305
 msgid "URL for the product. Used in top left URL in HTML."
 msgstr ""
 
-#: lib/Publican.pm:343
+#: lib/Publican.pm:351
 msgid "URL to find tar of source files. Used in RPM Spec files."
 msgstr ""
 
 #. ($tag)
-#: lib/Publican/Builder/DocBook.pm:3085
+#: lib/Publican/Builder/DocBook.pm:3116
 msgid "Unknow tag: %1"
 msgstr ""
 
 #. ($format)
-#: lib/Publican/Builder/DocBook.pm:864
+#: lib/Publican/Builder/DocBook.pm:891
 msgid "Unknown format: %1"
 msgstr ""
 
@@ -1672,11 +1667,11 @@ msgid "Unknown set SCM: %1"
 msgstr ""
 
 #. ($width)
-#: lib/Publican/Builder/DocBook.pm:1681
+#: lib/Publican/Builder/DocBook.pm:1712
 msgid "Unknown width format will be ignored: %1"
 msgstr ""
 
-#: lib/Publican/Translate.pm:1143
+#: lib/Publican/Translate.pm:1144
 #: lib/Publican/WebSite.pm:112
 msgid "Untranslated"
 msgstr ""
@@ -1706,7 +1701,7 @@ msgid "Use scratch instead of tag build"
 msgstr ""
 
 #. ($xsl_file)
-#: lib/Publican/Builder/DocBook.pm:871
+#: lib/Publican/Builder/DocBook.pm:898
 msgid "Using XML::LibXSLT on %1"
 msgstr ""
 
@@ -1718,7 +1713,7 @@ msgstr ""
 msgid "Version of the DocBook DTD on which this project is based."
 msgstr ""
 
-#: lib/Publican.pm:383
+#: lib/Publican.pm:391
 msgid "Version of this package. Fetched from productnumber tag in xml_lang/TYPE_Info.xml"
 msgstr ""
 
@@ -1727,12 +1722,12 @@ msgid "Versions"
 msgstr ""
 
 #. ($xml_file,$!)
-#: lib/Publican/XmlClean.pm:1039
+#: lib/Publican/XmlClean.pm:1051
 msgid "WARNING: Could not reset file ownership for %1 because %2"
 msgstr ""
 
 #. ($xml_file,$!)
-#: lib/Publican/XmlClean.pm:1032
+#: lib/Publican/XmlClean.pm:1044
 msgid "WARNING: Could not reset file permissions for %1 because %2"
 msgstr ""
 
@@ -1741,7 +1736,7 @@ msgid "WARNING: Fuzzy message in PO file."
 msgstr ""
 
 #. ($img_file)
-#: lib/Publican/XmlClean.pm:721
+#: lib/Publican/XmlClean.pm:724
 msgid "WARNING: Image missing: %1"
 msgstr ""
 
@@ -1764,7 +1759,7 @@ msgid "WARNING: Un-translated message in PO file."
 msgstr ""
 
 #. ($key)
-#: lib/Publican.pm:580
+#: lib/Publican.pm:588
 msgid "WARNING: Unknow config key %1, ignoring.\n"
 msgstr ""
 
@@ -1777,11 +1772,11 @@ msgid "WARNING: You can not create RPM packages with a blank subtitle. Skipping 
 msgstr ""
 
 #. ($key)
-#: lib/Publican.pm:598
+#: lib/Publican.pm:606
 msgid "WARNING: config key %1 is not valid for this type of object, ignoring.\n"
 msgstr ""
 
-#: lib/Publican/XmlClean.pm:926
+#: lib/Publican/XmlClean.pm:936
 msgid "WARNING: table validation failed. Could not determine table for tgroup, column numbers cannot be validated"
 msgstr ""
 
@@ -1801,12 +1796,12 @@ msgstr ""
 msgid "Welcome"
 msgstr ""
 
-#: lib/Publican/Builder/DocBook.pm:645
+#: lib/Publican/Builder/DocBook.pm:648
 msgid "With contributions from"
 msgstr ""
 
 #. ("$tmp_dir/$lang/$epub_name")
-#: lib/Publican/Builder/DocBook.pm:1101
+#: lib/Publican/Builder/DocBook.pm:1129
 msgid "Wrote epub archive: %1"
 msgstr ""
 
@@ -1815,7 +1810,7 @@ msgstr ""
 msgid "You need to change the HOLDER entity in the %1/%2.ent file"
 msgstr ""
 
-#: lib/Publican/Builder/DocBook.pm:2316
+#: lib/Publican/Builder/DocBook.pm:2347
 msgid "abstract can not be calculated before building."
 msgstr ""
 
@@ -1849,11 +1844,11 @@ msgstr ""
 msgid "collapse all"
 msgstr ""
 
-#: lib/Publican.pm:919
+#: lib/Publican.pm:927
 msgid "config loaded"
 msgstr ""
 
-#: lib/Publican.pm:549
+#: lib/Publican.pm:557
 msgid "configfile is a mandatory argument"
 msgstr ""
 
@@ -1861,12 +1856,12 @@ msgstr ""
 msgid "conformance to filter output on."
 msgstr ""
 
-#: lib/Publican/Builder/DocBook.pm:2471
+#: lib/Publican/Builder/DocBook.pm:2502
 msgid "contributor list can not be calculated before building."
 msgstr ""
 
 #: lib/Publican/Builder/DocBook4.pm:694
-#: lib/Publican/Builder/DocBook5.pm:673
+#: lib/Publican/Builder/DocBook5.pm:672
 msgid "corpauthor can not be converted to text as expected."
 msgstr ""
 
@@ -1889,7 +1884,7 @@ msgstr ""
 msgid "destination must exist"
 msgstr ""
 
-#: lib/Publican.pm:1035
+#: lib/Publican.pm:1043
 msgid "dir is a required argument"
 msgstr ""
 
@@ -1898,7 +1893,7 @@ msgstr ""
 msgid "directory %1 exists!"
 msgstr ""
 
-#: lib/Publican.pm:1314
+#: lib/Publican.pm:1324
 msgid "dtdver is a mandatory argument"
 msgstr ""
 
@@ -1914,11 +1909,11 @@ msgstr ""
 msgid "email to use for a revision."
 msgstr ""
 
-#: lib/Publican/Builder/DocBook.pm:1099
+#: lib/Publican/Builder/DocBook.pm:1127
 msgid "epub creation failed."
 msgstr ""
 
-#: lib/Publican/XmlClean.pm:969
+#: lib/Publican/XmlClean.pm:981
 msgid "file is a mandatory argument"
 msgstr ""
 
@@ -1930,7 +1925,7 @@ msgstr ""
 msgid "firstname to use for a revision."
 msgstr ""
 
-#: lib/Publican/Builder/DocBook.pm:408
+#: lib/Publican/Builder/DocBook.pm:409
 msgid "format is a mandatory argument"
 msgstr ""
 
@@ -1938,32 +1933,32 @@ msgstr ""
 msgid "formats is a mandatory argument"
 msgstr ""
 
-#: lib/Publican/Builder/DocBook.pm:3229
-#: lib/Publican/Builder/DocBook.pm:3623
+#: lib/Publican/Builder/DocBook.pm:3260
+#: lib/Publican/Builder/DocBook.pm:3654
 msgid "headings is a mandatory argument"
 msgstr ""
 
-#: lib/Publican/Builder/DocBook.pm:2548
+#: lib/Publican/Builder/DocBook.pm:2579
 msgid "keyword list can not be calculated before building."
 msgstr ""
 
 #: lib/Publican/Builder.pm:510
-#: lib/Publican/Builder/DocBook.pm:2082
-#: lib/Publican/Builder/DocBook.pm:2297
-#: lib/Publican/Builder/DocBook.pm:2367
-#: lib/Publican/Builder/DocBook.pm:2455
-#: lib/Publican/Builder/DocBook.pm:2531
-#: lib/Publican/Builder/DocBook.pm:2574
-#: lib/Publican/Builder/DocBook.pm:2614
-#: lib/Publican/Builder/DocBook.pm:406
+#: lib/Publican/Builder/DocBook.pm:2113
+#: lib/Publican/Builder/DocBook.pm:2328
+#: lib/Publican/Builder/DocBook.pm:2398
+#: lib/Publican/Builder/DocBook.pm:2486
+#: lib/Publican/Builder/DocBook.pm:2562
+#: lib/Publican/Builder/DocBook.pm:2605
+#: lib/Publican/Builder/DocBook.pm:2645
+#: lib/Publican/Builder/DocBook.pm:407
 #: lib/Publican/Builder/DocBook4.pm:540
 #: lib/Publican/Builder/DocBook4.pm:662
 #: lib/Publican/Builder/DocBook5.pm:544
-#: lib/Publican/Builder/DocBook5.pm:641
+#: lib/Publican/Builder/DocBook5.pm:640
 msgid "lang is a mandatory argument"
 msgstr ""
 
-#: lib/Publican/Builder/DocBook.pm:1377
+#: lib/Publican/Builder/DocBook.pm:1406
 msgid "lang is a mandatory argument for build_drupal_book"
 msgstr ""
 
@@ -1971,7 +1966,7 @@ msgstr ""
 msgid "lang is a required parameter"
 msgstr ""
 
-#: lib/Publican/Builder/DocBook.pm:1209
+#: lib/Publican/Builder/DocBook.pm:1237
 msgid "lang is the mandatory argument for drupal_transform"
 msgstr ""
 
@@ -1987,7 +1982,7 @@ msgstr ""
 msgid "langs is a mandatory argument"
 msgstr ""
 
-#: lib/Publican/Builder/DocBook.pm:1034
+#: lib/Publican/Builder/DocBook.pm:1062
 msgid "manifest not found"
 msgstr ""
 
@@ -2006,7 +2001,7 @@ msgstr ""
 msgid "name label for a book"
 msgstr ""
 
-#: lib/Publican/Builder/DocBook.pm:1381
+#: lib/Publican/Builder/DocBook.pm:1410
 msgid "nodes_order is a mandatory argument for build_drupal_book"
 msgstr ""
 
@@ -2016,12 +2011,12 @@ msgstr ""
 
 #: lib/Publican/Translate.pm:164
 #: lib/Publican/XmlClean.pm:449
-#: lib/Publican/XmlClean.pm:971
+#: lib/Publican/XmlClean.pm:983
 msgid "out_file is a mandatory argument"
 msgstr ""
 
 #. ($pdftool)
-#: lib/Publican/Builder/DocBook.pm:424
+#: lib/Publican/Builder/DocBook.pm:425
 msgid "pdftool only supports fop or wkhtmltopdf, not: %1"
 msgstr ""
 
@@ -2039,11 +2034,11 @@ msgstr ""
 msgid "product label for a book"
 msgstr ""
 
-#: lib/Publican.pm:698
+#: lib/Publican.pm:706
 msgid "productname not found in Info file"
 msgstr ""
 
-#: lib/Publican.pm:710
+#: lib/Publican.pm:718
 msgid "productnumber not found in Info file"
 msgstr ""
 
@@ -2056,7 +2051,7 @@ msgstr ""
 msgid "publican only accepts one action you supplied '%1': %2\n"
 msgstr ""
 
-#: lib/Publican.pm:1042
+#: lib/Publican.pm:1050
 msgid "regex is a required argument"
 msgstr ""
 
@@ -2065,15 +2060,15 @@ msgid "report PO statistics"
 msgstr ""
 
 #. ($rev_file)
-#: lib/Publican.pm:1551
+#: lib/Publican.pm:1561
 msgid "revhistory not found in %1"
 msgstr ""
 
-#: lib/Publican.pm:317
+#: lib/Publican.pm:325
 msgid "revision to filter output on."
 msgstr ""
 
-#: lib/Publican.pm:321
+#: lib/Publican.pm:329
 msgid "revisionflag to filter output on."
 msgstr ""
 
@@ -2087,7 +2082,7 @@ msgstr ""
 msgid "revnumber not found in %1"
 msgstr ""
 
-#: lib/Publican.pm:325
+#: lib/Publican.pm:333
 msgid "role to filter output on."
 msgstr ""
 
@@ -2095,16 +2090,16 @@ msgstr ""
 msgid "rpmbuild not found, rpm creation aborted."
 msgstr ""
 
-#: lib/Publican.pm:329
+#: lib/Publican.pm:337
 msgid "security to filter output on."
 msgstr ""
 
 #. ($dir)
-#: lib/Publican.pm:1038
+#: lib/Publican.pm:1046
 msgid "skipping non existent directory: %1"
 msgstr ""
 
-#: lib/Publican/Builder/DocBook.pm:1296
+#: lib/Publican/Builder/DocBook.pm:1324
 msgid "source is a mandatory argument"
 msgstr ""
 
@@ -2112,7 +2107,7 @@ msgstr ""
 msgid "spec is a mandatory argument"
 msgstr ""
 
-#: lib/Publican.pm:346
+#: lib/Publican.pm:354
 msgid "status to filter output on."
 msgstr ""
 
@@ -2124,11 +2119,11 @@ msgstr ""
 msgid "surname to use for a revision."
 msgstr ""
 
-#: lib/Publican.pm:1312
+#: lib/Publican.pm:1322
 msgid "tag is a mandatory argument"
 msgstr ""
 
-#: lib/Publican.pm:685
+#: lib/Publican.pm:693
 msgid "title not found in Info file"
 msgstr ""
 
@@ -2141,40 +2136,40 @@ msgid "type must be book, set, or article"
 msgstr ""
 
 #. (join( ", ", keys %{$args} ))
-#: lib/Publican.pm:1178
-#: lib/Publican.pm:1321
-#: lib/Publican.pm:557
-#: lib/Publican.pm:866
+#: lib/Publican.pm:1186
+#: lib/Publican.pm:1331
+#: lib/Publican.pm:565
+#: lib/Publican.pm:874
 #: lib/Publican/Builder.pm:136
 #: lib/Publican/Builder.pm:255
 #: lib/Publican/Builder.pm:313
 #: lib/Publican/Builder.pm:430
 #: lib/Publican/Builder.pm:518
 #: lib/Publican/Builder/DocBook.pm:107
-#: lib/Publican/Builder/DocBook.pm:2089
-#: lib/Publican/Builder/DocBook.pm:2303
-#: lib/Publican/Builder/DocBook.pm:2374
-#: lib/Publican/Builder/DocBook.pm:2460
-#: lib/Publican/Builder/DocBook.pm:2536
-#: lib/Publican/Builder/DocBook.pm:2579
-#: lib/Publican/Builder/DocBook.pm:2619
-#: lib/Publican/Builder/DocBook.pm:2661
-#: lib/Publican/Builder/DocBook.pm:3234
-#: lib/Publican/Builder/DocBook.pm:3397
-#: lib/Publican/Builder/DocBook.pm:3444
-#: lib/Publican/Builder/DocBook.pm:3492
-#: lib/Publican/Builder/DocBook.pm:3585
-#: lib/Publican/Builder/DocBook.pm:3628
-#: lib/Publican/Builder/DocBook.pm:416
+#: lib/Publican/Builder/DocBook.pm:2120
+#: lib/Publican/Builder/DocBook.pm:2334
+#: lib/Publican/Builder/DocBook.pm:2405
+#: lib/Publican/Builder/DocBook.pm:2491
+#: lib/Publican/Builder/DocBook.pm:2567
+#: lib/Publican/Builder/DocBook.pm:2610
+#: lib/Publican/Builder/DocBook.pm:2650
+#: lib/Publican/Builder/DocBook.pm:2692
+#: lib/Publican/Builder/DocBook.pm:3265
+#: lib/Publican/Builder/DocBook.pm:3428
+#: lib/Publican/Builder/DocBook.pm:3475
+#: lib/Publican/Builder/DocBook.pm:3523
+#: lib/Publican/Builder/DocBook.pm:3616
+#: lib/Publican/Builder/DocBook.pm:3659
+#: lib/Publican/Builder/DocBook.pm:417
 #: lib/Publican/Builder/DocBook4.pm:105
 #: lib/Publican/Builder/DocBook4.pm:545
 #: lib/Publican/Builder/DocBook4.pm:667
 #: lib/Publican/Builder/DocBook5.pm:105
 #: lib/Publican/Builder/DocBook5.pm:549
-#: lib/Publican/Builder/DocBook5.pm:646
+#: lib/Publican/Builder/DocBook5.pm:645
 #: lib/Publican/CreateBook.pm:94
 #: lib/Publican/CreateBrand.pm:70
-#: lib/Publican/Translate.pm:1124
+#: lib/Publican/Translate.pm:1125
 #: lib/Publican/Translate.pm:169
 #: lib/Publican/Translate.pm:267
 #: lib/Publican/Translate.pm:425
@@ -2188,11 +2183,11 @@ msgstr ""
 #: lib/Publican/TreeView.pm:67
 #: lib/Publican/XmlClean.pm:280
 #: lib/Publican/XmlClean.pm:454
-#: lib/Publican/XmlClean.pm:976
+#: lib/Publican/XmlClean.pm:988
 msgid "unknown arguments: %1"
 msgstr ""
 
-#: lib/Publican.pm:374
+#: lib/Publican.pm:382
 msgid "userlevel to filter output on."
 msgstr ""
 
@@ -2200,7 +2195,7 @@ msgstr ""
 msgid "varlistentry must have it's attribute 'role' set to an integer"
 msgstr ""
 
-#: lib/Publican.pm:378
+#: lib/Publican.pm:386
 msgid "vendor to filter output on."
 msgstr ""
 
@@ -2208,35 +2203,35 @@ msgstr ""
 msgid "version label for a book"
 msgstr ""
 
-#: lib/Publican/Builder/DocBook.pm:697
+#: lib/Publican/Builder/DocBook.pm:724
 msgid "wkhtmltopdf died, PDF generation failed. Check log for details."
 msgstr ""
 
-#: lib/Publican.pm:470
+#: lib/Publican.pm:478
 msgid "wordsize to filter output on."
 msgstr ""
 
-#: lib/Publican/Builder/DocBook.pm:2656
-#: lib/Publican/Builder/DocBook.pm:3227
-#: lib/Publican/Builder/DocBook.pm:3392
-#: lib/Publican/Builder/DocBook.pm:3439
-#: lib/Publican/Builder/DocBook.pm:3487
-#: lib/Publican/Builder/DocBook.pm:3580
-#: lib/Publican/Builder/DocBook.pm:3621
+#: lib/Publican/Builder/DocBook.pm:2687
+#: lib/Publican/Builder/DocBook.pm:3258
+#: lib/Publican/Builder/DocBook.pm:3423
+#: lib/Publican/Builder/DocBook.pm:3470
+#: lib/Publican/Builder/DocBook.pm:3518
+#: lib/Publican/Builder/DocBook.pm:3611
+#: lib/Publican/Builder/DocBook.pm:3652
 #: lib/Publican/XmlClean.pm:447
 msgid "xml_doc is a mandatory argument"
 msgstr ""
 
-#: lib/Publican.pm:1171
+#: lib/Publican.pm:1179
 #: lib/Publican/Translate.pm:160
 msgid "xml_file is a mandatory argument"
 msgstr ""
 
-#: lib/Publican/Builder/DocBook.pm:2084
+#: lib/Publican/Builder/DocBook.pm:2115
 msgid "xml_lang is a mandatory argument"
 msgstr ""
 
-#: lib/Publican.pm:1173
+#: lib/Publican.pm:1181
 msgid "xsl_file is a mandatory argument"
 msgstr ""
 

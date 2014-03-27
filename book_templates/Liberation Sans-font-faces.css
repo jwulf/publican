@@ -1,0 +1,25 @@
+@font-face {
+  font-family: 'Liberation Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('LiberationSans');
+}
+@font-face {
+  font-family: 'Liberation Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('LiberationSans-Bold');
+}
+@font-face {
+  font-family: 'Liberation Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: local('LiberationSans-Italic');
+}
+@font-face {
+  font-family: 'Liberation Sans';
+  font-style: italic;
+  font-weight: 700;
+  src: local('LiberationSans-BoldItalic');
+}
+

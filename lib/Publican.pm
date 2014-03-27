@@ -285,7 +285,15 @@ my %PARAM_OLD = (
         descr => maketext('os to filter output on.'),
 
     },
-    os_ver  => { descr => maketext('The OS for which to build packages.'), },
+    os_ver => { descr => maketext('The OS for which to build packages.'), },
+    pdf_body_font => {
+        descr   => maketext('The font to use for body text in PDFs.'),
+        default => 'Liberation Sans',
+    },
+    pdf_mono_font => {
+        descr   => maketext('The font to use for mono text in PDFs.'),
+        default => 'Liberation Mono',
+    },
     product => {
         descr => maketext(
             'Product this package covers. Fetched from productname tag in xml_lang/TYPE_Info.xml'
