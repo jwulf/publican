@@ -15,7 +15,7 @@
 
 Name:           publican
 Version:        4.0.0
-Release:        1%{?dist}.t26
+Release:        1%{?dist}.t28
 Summary:        Common files and scripts for publishing with DocBook XML
 # For a breakdown of the licensing, refer to LICENSE
 License:        (GPLv2+ or Artistic) and CC0
@@ -26,6 +26,7 @@ BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch:      noarch
 Provides:	publican-common = %{version}
 Provides:	publican-common-db5 = %{version}
+Provides:       publican-API = 3.9
 
 # Get rid of the old packages
 Obsoletes:      perl-Publican-WebSite

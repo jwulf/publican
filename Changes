@@ -21,13 +21,9 @@ NEXT UNRELEASED
 - Pass chunk_section_depth to wkhtmltopdf. BZ #1044848
 - Do not die on empty brand conf files. BZ #1037037
 - Fix font embedding:
-	header.html -> header.tmpl
-	footer.html -> footer.tmpl
-	pdfmain.css -> pdfmain-css.tmpl
-	font-face.css files
-	pdf.css moved to book_templates
 	TODO: Add font params to Publican cfg
 	TODO: Update brands
+- Enforce RPM API requirements. BZ #1029293
 
 4.0.0 Wed Dec 18 2013
 - Support DocBook 5 as input format. BZ #1005042
