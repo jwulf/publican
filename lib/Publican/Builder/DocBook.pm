@@ -543,27 +543,20 @@ sub transform {
 
         my $tmpl_path = Publican::ConfigData->config('book_templates');
 
-        my $header = "$tmpl_path/header.html";
-        $header = "$brand_path/book_templates/header.html"
-            if ( -f "$brand_path/book_templates/header.html" );
-
-        my $footer = "$tmpl_path/footer.html";
-        $footer = "$brand_path/book_templates/footer.html"
-            if ( -f "$brand_path/book_templates/footer.html" );
+        my $header = "$tmp_dir/$lang/html-pdf/header.html";
+        my $footer = "$tmp_dir/$lang/html-pdf/footer.html";
 
         my @wkhtmltopdf_args = (
-            $wkhtmltopdf_cmd,  '--javascript-delay',
-            0,                 '--header-spacing',
-            5,                 '--footer-spacing',
-            5,                 '--margin-top',
-            20,                '--margin-bottom',
-            20,                '--margin-left',
-            '15mm',            '--margin-right',
-            '15mm',            '--header-font-name',
-            'liberationsans"', '--footer-font-name',
-            'liberationsans',  '--header-html',
-            $header,           '--footer-html',
-            $footer,           '--load-error-handling',
+            $wkhtmltopdf_cmd, '--javascript-delay',
+            0,                '--header-spacing',
+            5,                '--footer-spacing',
+            5,                '--margin-top',
+            20,               '--margin-bottom',
+            20,               '--margin-left',
+            '15mm',           '--margin-right',
+            '15mm',           '--header-html',
+            $header,          '--footer-html',
+            $footer,          '--load-error-handling',
             'ignore'
         );
 
@@ -573,8 +566,15 @@ sub transform {
             );
         }
 
-        $tmpl_path = "$brand_path/book_templates:$tmpl_path"
-            if ( -d "$brand_path/book_templates" );
+        rcopy_glob( "$tmpl_path/*.css", "$tmp_dir/$lang/html-pdf/" );
+
+        if ( -d "$brand_path/book_templates" ) {
+            rcopy_glob(
+                "$brand_path/book_templates/*.css",
+                "$tmp_dir/$lang/html-pdf/"
+            ) if(glob("$brand_path/book_templates/*.css"));
+            $tmpl_path = "$brand_path/book_templates:$tmpl_path";
+        }
 
         my $tconf = { INCLUDE_PATH => $tmpl_path, };
         my $template = Template->new($tconf)
@@ -634,6 +634,9 @@ sub transform {
             $xml_doc->root()->look_down( "_tag", "releaseinfo" )->as_text();
         };
 
+        my $bodyfont = $self->{publican}->param('pdf_body_font');
+        my $monofont = $self->{publican}->param('pdf_mono_font');
+
         my $vars = {
             draft   => $draft,
             product => decode_utf8( encode_utf8($prod) ),
@@ -657,6 +660,10 @@ sub transform {
             logo     => ( $logo || 'Common_Content/images/title_logo.svg' ),
             buildpath           => abs_path("$tmp_dir/$lang/html-pdf"),
             chunk_section_depth => $chunk_section_depth,
+            bodyfont            => $bodyfont,
+            bodyface => (-f "$tmp_dir/$lang/html-pdf/$bodyfont-font-faces.css"),
+            monofont            => $monofont,
+            monoface => (-f "$tmp_dir/$lang/html-pdf/$monofont-font-faces.css"),
         };
 
         if (@keywords) {
@@ -683,6 +690,24 @@ sub transform {
         my $toc_xsl = "$tmp_dir/$lang/html-pdf/toc.xsl";
 
         $template->process( 'toc-xsl.tmpl', $vars, $toc_xsl,
+            binmode => ':encoding(UTF-8)' )
+            or croak( $template->error() );
+
+        my $out_file = "$tmp_dir/$lang/html-pdf/header.html";
+
+        $template->process( 'header.tmpl', $vars, $out_file,
+            binmode => ':encoding(UTF-8)' )
+            or croak( $template->error() );
+
+        $out_file = "$tmp_dir/$lang/html-pdf/footer.html";
+
+        $template->process( 'footer.tmpl', $vars, $out_file,
+            binmode => ':encoding(UTF-8)' )
+            or croak( $template->error() );
+
+        $out_file = "$tmp_dir/$lang/html-pdf/pdfmain.css";
+
+        $template->process( 'pdfmain-css.tmpl', $vars, $out_file,
             binmode => ':encoding(UTF-8)' )
             or croak( $template->error() );
 

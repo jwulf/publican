@@ -1,6 +1,4 @@
-%define wwwdir [% web_dir %]
-
-Name:          [% book_title %]-web-[% lang %]
+Name:          [% book_title %]-[% lang %]
 Version:       [% rpmver %]
 Release:       [% rpmrel %]%{?dist}
 [%- IF translation %]
@@ -18,15 +16,13 @@ BuildRoot:     %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildRequires: publican-API = [% spec_version %]
 BuildRequires: desktop-file-utils
 BuildRequires: [% brand %]
-Requires:      publican-API = [% spec_version %]
-Requires:      [% brand %]-web
-[%- IF web_obsoletes -%]
-Obsoletes:    [% web_obsoletes %]
+Requires:      xdg-utils
+[%- IF dt_obsoletes %]
+Obsoletes:     [% dt_obsoletes %]
 [%- END %]
-[%- IF web_req -%]
-Requires:    [% web_req %]
-[%- END %]
-Requires:      [% brand %]-web
+[%- IF dt_requires %]
+Requires:     [% dt_requires %]
+[% END %]
 
 %description
 [%- IF translation %]
@@ -36,42 +32,16 @@ Requires:      [% brand %]-web
 [%- END %]
 [% abstract %]
 
-%package -n [% book_title %]-[% lang %]
-[%- IF translation %]
-Summary:       [% language %] translation of [% docname %]
-Summary([% lang %]):    [% full_subtitle %]
-[%- ELSE %]
-Summary:       [% full_subtitle %]
-[%- END %]
-Group:         Documentation
-Requires:      xdg-utils
-[%- IF dt_obsoletes %]
-Obsoletes:     [% dt_obsoletes %]
-[%- END %]
-[%- IF dt_requires %]
-Requires:     [% dt_requires %]
-[% END %]
-
-%description  -n [% book_title %]-[% lang %]
-[%- IF translation %]
-[% language %] translation of [% docname %]
-
-%description -l [% lang %]  -n [% book_title %]-[% lang %]
-[%- END %]
-[% abstract %]
-
 %prep
 %setup -q
 
 %build
-publican build --nocolours [% embedtoc %] --formats="[% web_formats_comma %],html-desktop" --langs=[% lang %] --publish
+publican build --nocolours --formats="html-desktop" --langs=[% lang %] --publish
 
 %install
 rm -rf $RPM_BUILD_ROOT
-mkdir -p $RPM_BUILD_ROOT/%{wwwdir}
 mkdir -p $RPM_BUILD_ROOT%{_datadir}/applications
 mkdir -p $RPM_BUILD_ROOT/usr/share/icons/hicolor/scalable/apps
-cp -rf publish/[% lang %] $RPM_BUILD_ROOT/%{wwwdir}/.
 
 [%- IF ICONS -%]
 for icon in `ls [% lang %]/icons/*x*.png`; do
@@ -99,35 +69,23 @@ EOF
 
 desktop-file-install --dir=${RPM_BUILD_ROOT}%{_datadir}/applications [% book_title %]-[% lang %]-[% rpmver %].desktop
 
-%preun -n [% book_title %]-web-[% lang %]
-if [ "$1" = "0" ] ; then # last uninstall
-publican update_db --del --lang="[% lang %]" --formats="[% web_formats_comma %]" --name="[% docname %]" --version="[% prodver %]" --product="[% prod %]" --site_config="[% web_cfg %]"
-fi
-
-%post -n [% book_title %]-web-[% lang %]
-publican update_db --add --lang="[% lang %]" --formats="[% web_formats_comma %]" --name="[% docname %]" --version="[% prodver %]" --product="[% prod %]" --subtitle="[% full_subtitle %]" --abstract="[% full_abstract %]" [% IF name_label.defined %]--name_label="[% name_label %]"[% END %] [% IF version_label != '' %]--version_label="[% version_label %] "[% END %] [% IF product_label != '' %]--product_label="[% product_label %] "[% END %] --site_config="[% web_cfg %]" [% IF sort_order != '' %]--sort_order="[% sort_order %] "[% END %] --book_version="[% book_version %]" [% IF book_src_lang != '' %]--book_src_lang="[% book_src_lang %]"[% END %]
-
 # Update Icon cache if it exists
-%post -n [% book_title %]-[% lang %]
+%post
 touch --no-create %{_datadir}/icons/hicolor &>/dev/null || :
 
-%postun -n [% book_title %]-[% lang %]
+%postun
 if [ $1 -eq 0 ] ; then
     touch --no-create %{_datadir}/icons/hicolor &>/dev/null
     gtk-update-icon-cache %{_datadir}/icons/hicolor &>/dev/null || :
 fi
 
-%posttrans -n [% book_title %]-[% lang %]
+%posttrans
 gtk-update-icon-cache %{_datadir}/icons/hicolor &>/dev/null || :
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
-%defattr(-,root,root,-)
-%{wwwdir}/[% lang %]
-
-%files -n [% book_title %]-[% lang %]
 %defattr(-,root,root,-)
 %doc [% tmpdir %]/[% lang %]/html-desktop/*
 [%- IF ICONS %]

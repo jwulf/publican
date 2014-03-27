@@ -11,6 +11,9 @@
       <head>
         <title>[%- toctitle %]</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+[% IF bodyface -%]
+	<link rel="stylesheet" href="[%- buildpath -%]/[% bodyfont | uri %]-font-faces.css" type="text/css" />
+[%- END %]
         <style>
 [%- IF draft -%]
 	  .draft {
@@ -20,7 +23,7 @@
 	  }
 [%- END %]
           body {
-	    font-family: 'Liberation Sans';
+	    font-family: "[% bodyfont %]";
 	  }
 [%- IF chunk_section_depth -%]
 [% USE String('li ') %]
@@ -29,7 +32,6 @@
           h1 {
             text-align: center;
             font-size: 20px;
-            font-family: 'Liberation Sans';
             font-weight: bold;
           }
           span.page {
@@ -47,7 +49,6 @@
           }
           ul {
             font-size: 14px;
-            font-family: 'Liberation Sans';
             overflow-x: hidden;
             padding-left: 0em;
           }

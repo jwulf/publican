@@ -1,6 +1,13 @@
 <!DOCTYPE html>
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><script>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script>
 function subst() {
+[% IF bodyface -%]
+  var fileref=document.createElement("link");
+  fileref.setAttribute("rel", "stylesheet");
+  fileref.setAttribute("type", "text/css");
+  fileref.setAttribute("href", document.location + "[% bodyfont | uri %]-font-faces.css");
+[%- END %]
   var vars={};
   var x=document.location.search.substring(1).split('&');
   for (var i in x) {
@@ -16,7 +23,7 @@ function subst() {
 	for (var j=0; j<righty.length; ++j) righty[j].textContent = decodeURIComponent(escape(vars[x[4]]));
   }
 }
-</script></head><body style="border:0; margin: 0;" onload="subst()">
+</script></head><body style="border:0; margin: 0; font-family: '[% bodyfont %]', sans-serif;" onload="subst()">
 <div style="height: 20px; border:0; border-bottom: 1px solid #bbb; width: 100%; color:#888; font-size:8pt; padding-top:7px">
 	<span class="leftbox" style="float:left;text-align-left;">
 		<span class="leftpagenumber" style="margin-right:20px;font-size:12pt;font-weight:bold"></span>

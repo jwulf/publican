@@ -515,7 +515,7 @@ update_site
 
 =head1 CONFIGURATION AND ENVIRONMENT
 
-Publican requires access to Apache FOP for creating PDF files.
+Publican requires access to wkhtmltopdf or Apache FOP for creating PDF files.
 
 =head1 DEPENDENCIES
 
@@ -580,11 +580,11 @@ None reported.
 
 =head1 BUGS AND LIMITATIONS
 
-No bugs have been reported.
+Bug list at L<https://bugzilla.redhat.com/buglist.cgi?product=Publican&query_format=advanced&resolution=--->.
 
 Please report any bugs or feature requests to
 C<publican-list@redhat.com>, or through the web interface at
-L<https://bugzilla.redhat.com/bugzilla/enter_bug.cgi?product=Publican&component=publican&version=v3.9.9>.
+L<https://bugzilla.redhat.com/bugzilla/enter_bug.cgi?product=Publican&component=publican&version=$version>.
 
 =head1 AUTHOR
 

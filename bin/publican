@@ -47,7 +47,7 @@ if (   ( $ENV{RPM_BUILD_DIR} )
     my $pkg
         = qq|/builddir/build/SRPMS/$ENV{RPM_PACKAGE_NAME}-$ENV{RPM_PACKAGE_VERSION}-$ENV{RPM_PACKAGE_RELEASE}.src.rpm|;
     my $req_version
-        = qx|rpm --requires -qp $pkg \| grep 'publican ' \| sed -e 's/^[^0-9]*//'|;
+        = qx|rpm --requires -qp $pkg \| grep 'publican-API' \| sed -e 's/^[^0-9\.]*//'|;
 
     system("rpm -Uvh $pkg");
     my $spec = qq|/builddir/build/SPECS/$ENV{RPM_PACKAGE_NAME}.spec|;
@@ -59,11 +59,11 @@ if (   ( $ENV{RPM_BUILD_DIR} )
     if (( $db_count > 0 or $pm_count > 0 )
         and ( !$req_version
             || $req_version eq ""
-            || $req_version < $Publican::SPEC_VERSION )
+            || $req_version != $Publican::SPEC_VERSION )
         )
     {
         croak(
-            "\n\n\nERROR: The version of publican used to create the SRPM is too old to use with this version of publican. Upgrade publican on your local machine to at least version $Publican::SPEC_VERSION and try again.\n\n\n"
+            "\n\n\nERROR: The version of publican used to create the SRPM is not compatible with this version of publican. Upgrade or downgrade publican on your local machine to a version that supplies API version $Publican::SPEC_VERSION and try again.\n\n\n"
         );
     }
 }
