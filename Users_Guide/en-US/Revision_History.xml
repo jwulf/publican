@@ -8,6 +8,23 @@
 	 <simpara>
 		<revhistory>
 			<revision>
+				<revnumber>4.0-5</revnumber>
+				 <date>Thu Mar 27 2014</date>
+				 <author>
+					<firstname>Rüdiger</firstname>
+					 <surname>Landmann</surname>
+					 <email>rlandmann@redhat.com</email>
+
+				</author>
+				 <revdescription>
+					<simplelist>
+						<member>Corrections to website building instructions</member>
+					</simplelist>
+
+				</revdescription>
+
+			</revision>
+			<revision>
 				<revnumber>4.0-4</revnumber>
 				 <date>Mon Nov 25 2013</date>
 				 <author>
