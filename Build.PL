@@ -523,6 +523,7 @@ my $builder = $class->new(
         'book_templates/titlepage.tmpl' => 'book_templates/titlepage.tmpl',
     },
     rpm_templates_files => {
+        'rpm_templates/desktop-spec.tmpl'   => 'rpm_templates/desktop-spec.tmpl',
         'rpm_templates/spec.tmpl'   => 'rpm_templates/spec.tmpl',
         'rpm_templates/splash.tmpl' => 'rpm_templates/splash.tmpl',
     },

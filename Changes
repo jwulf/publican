@@ -24,6 +24,7 @@ NEXT UNRELEASED
 	TODO: Add font params to Publican cfg
 	TODO: Update brands
 - Enforce RPM API requirements. BZ #1029293
+- Fix desktop SPEC file creation. BZ #1081087
 
 4.0.0 Wed Dec 18 2013
 - Support DocBook 5 as input format. BZ #1005042
