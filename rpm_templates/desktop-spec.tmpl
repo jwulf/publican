@@ -36,7 +36,7 @@ Requires:     [% dt_requires %]
 %setup -q
 
 %build
-publican build --nocolours --formats="html-desktop" --langs=[% lang %] --publish
+publican build --nocolours --formats="[% dt_format %]" --langs=[% lang %] --publish
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -87,7 +87,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(-,root,root,-)
-%doc [% tmpdir %]/[% lang %]/html-desktop/*
+%doc [% tmpdir %]/[% lang %]/[% dt_format %]/*
 [%- IF ICONS %]
 /usr/share/icons/hicolor/*
 [%- ELSE %]

@@ -781,7 +781,10 @@ sub package {
         if ( $desktop or $short_sighted );
 
     my $spec_tmpl = 'spec.tmpl';
-    $spec_tmpl = 'desktop-spec.tmpl' if ( $desktop);
+    if ( $desktop) {
+        $spec_tmpl = 'desktop-spec.tmpl';
+        $vars{dt_format} = $self->{publican}->param('dt_format');
+    }
 
     $self->{template}->process( $spec_tmpl, \%vars, $spec_name,
         binmode => ':encoding(UTF-8)' )

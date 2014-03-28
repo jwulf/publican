@@ -34,6 +34,7 @@ NEXT UNRELEASED
 		templates/products_index.tmpl
 		templates/versions_index.tmpl
 - Sync list layout across web and desktop styles. BZ #1080236
+- Add dt_format parameter. BZ #1081808
 
 4.0.0 Wed Dec 18 2013
 - Support DocBook 5 as input format. BZ #1005042

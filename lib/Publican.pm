@@ -210,6 +210,12 @@ my %PARAM_OLD = (
             'Version of the DocBook DTD on which this project is based.'),
         default => '4.5',
     },
+    dt_format => {
+        descr => maketext(
+            'The format to use for the desktop output.'
+        ),
+        default => 'html-desktop',
+    },
     dt_obsoletes => {
         descr => maketext(
             'Space-separated list of packages the desktop package obsoletes.'
