@@ -591,10 +591,10 @@ li.step:before {
 	width: 12em;
 	right: 12.5em;
 	text-align: right;
-	vertical-align: text-bottom;
+/* 	vertical-align: text-bottom; */
 }
 
 li.step > div:first-child {
-	margin-top: -16px;
+	margin-top: -1.29em;
 }
 

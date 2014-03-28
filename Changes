@@ -29,6 +29,11 @@ NEXT UNRELEASED
 - Pass previous option to msgmerge. BZ #1081363
 - Load splash pages in templates instead of using javascript. BZ #1081300
 	TOTO: Update Brand templates.
+		templates/language_index_style_1.tmpl
+		templates/language_index.tmpl
+		templates/products_index.tmpl
+		templates/versions_index.tmpl
+- Sync list layout across web and desktop styles. BZ #1080236
 
 4.0.0 Wed Dec 18 2013
 - Support DocBook 5 as input format. BZ #1005042

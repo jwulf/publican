@@ -642,42 +642,32 @@ div.authorgroup.contrib {
 
 /*Lists*/
 ul {
-	padding-left:1.6em;
-	list-style-image:url(../images/dot.png);
-	list-style-type: circle;
+    list-style-image: url("common/en-US/images/dot.png");
+    list-style-type: circle;
+    padding-left: 1.6em;
 }
 
 ul ul {
-	list-style-image:url(../images/dot2.png);
-	list-style-type: circle;
+    list-style-image: url("common/en-US/images/dot2.png");
+    list-style-type: circle;
 }
 
-ol {
-	list-style-image:none;
+ol.1 {
 	list-style-type: decimal;
 }
 
-ol ol {
+ol.a {
 	list-style-type: lower-alpha;
 }
 
-ol.arabic {
-	list-style-type: decimal;
-}
-
-ol.loweralpha {
-	list-style-type: lower-alpha;
-}
-
-ol.lowerroman {
+ol.i {
 	list-style-type: lower-roman;
 }
-
-ol.upperalpha {
+ol.A {
 	list-style-type: upper-alpha;
 }
 
-ol.upperroman {
+ol.I {
 	list-style-type: upper-roman;
 }
 
@@ -701,12 +691,31 @@ li {
 /*	margin-bottom: 16px; */
 }
 
-li p:first-child,
-li div.para:first-child {
-	padding-top:0px;
-	margin-top:0px;
-	padding-bottom:0px;
-	margin-bottom:0.3em;
+.procedure ol,
+.procedure ul,
+ul.stepalternatives {
+	counter-reset: item;
+	list-style-position: outside;
+	list-style-type: none;
+	list-style-image: none;
+}
+
+li.step {
+}
+
+li.step:before {
+	content: counters(item, ".") ". ";
+	counter-increment: item;
+	display:inline-block;
+	position: relative;
+	width: 12em;
+	right: 12.5em;
+	text-align: right;
+/*	vertical-align: text-bottom; */
+}
+
+li.step > div:first-child {
+	margin-top: -1.29em;
 }
 
 /*images*/
