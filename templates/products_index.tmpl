@@ -7,8 +7,9 @@
 	var current_version= "Versions";
 </script>
 <h1>[% labels.${product}.label %]</h1>
-<div id="product_top_box" class="product_top_box"></div>
-<script type="text/javascript">$("#product_top_box").load("splash.html  .article");</script>
+<div id="product_top_box" class="product_top_box">
+[% splash %]
+</div>
 <div class="product_bottom_box">
 	[% FOREACH  ver = v_sort(book_list) %][% cur_ver = book_list.${ver} %]
 	<div class="bottom_versions">

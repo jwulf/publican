@@ -19,6 +19,7 @@ use Time::localtime;
 use XML::Simple;
 use Archive::Zip qw( :ERROR_CODES :CONSTANTS );
 use Publican::ConfigData;
+use HTML::TreeBuilder;
 
 my $DB_NAME           = 'books';
 my $DEFAULT_LANG      = 'en-US';
@@ -1171,6 +1172,9 @@ SEARCH
     ) or croak( $self->{Template}->error() );
 
     if ( $self->{web_style} == 1 ) {
+        $vars->{splash}
+            = $self->get_splash(
+            { path => $self->{toc_path} . "/$language" } );
         $vars->{host}  = $host;
         $vars->{lang}  = $language;
         $vars->{title} = $self->{title};
@@ -1182,6 +1186,31 @@ SEARCH
     }
 
     return \@products;
+}
+
+sub get_splash {
+    my ( $self, $arg ) = @_;
+
+    my $path = delete $arg->{path}
+        || croak "get_splash: file required";
+
+    if ( $arg && %{$arg} ) {
+        croak "unknown args: " . join( ", ", keys %{$arg} );
+    }
+
+    my $html;
+    my $file = $path . "/splash.html";
+    if ( -f ($file) ) {
+        my $tree = HTML::TreeBuilder->new();
+        my $fh;
+        open( $fh, "<:encoding(UTF-8)", $file )
+            || croak(
+            maketext( "Can't open file for html input: [_1]", $! ) );
+        $tree->parse_file($fh);
+        my $node = $tree->look_down( 'class', qr/article/ );
+        $html = $node->as_HTML() if ($node);
+    }
+    return ($html);
 }
 
 sub report {
@@ -1700,6 +1729,8 @@ sub write_version_index {
     $index_vars->{footer}           = $self->{footer};
     $index_vars->{site_title}       = $self->{title};
     $index_vars->{book_ver_list}    = $book_ver_list;
+    $index_vars->{splash}           = $self->get_splash(
+        { path => $self->{toc_path} . "/$lang/$product/$version" } );
 
     $self->{Template}->process(
         'versions_index.tmpl', $index_vars,
@@ -1757,6 +1788,9 @@ sub write_product_index {
     $index_vars->{footer}        = $self->{footer};
     $index_vars->{site_title}    = $self->{title};
     $index_vars->{book_ver_list} = $book_ver_list;
+    $index_vars->{splash}
+        = $self->get_splash(
+        { path => $self->{toc_path} . "/$lang/$product" } );
 
     $self->{Template}->process(
         'products_index.tmpl', $index_vars,
@@ -1874,6 +1908,8 @@ sub write_language_index {
     $index_vars->{trans_strings} = $trans_strings;
     $index_vars->{footer}        = $self->{footer};
     $index_vars->{site_title}    = $self->{title};
+    $index_vars->{splash}
+        = $self->get_splash( { path => $self->{toc_path} . "/$lang" } );
 
     $self->{Template}->process(
         'language_index.tmpl', $index_vars,

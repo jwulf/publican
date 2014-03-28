@@ -5,8 +5,9 @@
 [% INCLUDE 'web_2_head.tmpl' %]
 <script type="text/javascript">var current_product = "[% product %]"; var current_version= "[% version %]"; var current_book= "Books"</script>
 <h1>[% title %]</h1>
-<div id="version_top_box" class="version_top_box"></div>
-<script type="text/javascript">$("#version_top_box").load("splash.html  .article");</script>
+<div id="version_top_box" class="version_top_box">
+[% splash %]
+</div>
 <div class="main_content">
 <div class="version_bottom_box">
   <div class="bottom_versions">
