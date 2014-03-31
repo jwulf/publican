@@ -753,6 +753,7 @@ sub package {
         book_version      => "$edition-$release",
         book_src_lang     => $book_src_lang,
         img_dir           => $self->{publican}->param('img_dir'),
+        dt_format         => $self->{publican}->param('dt_format'),
     );
 
     # \p{Z} is unicode white space, which is a super set of ascii white space.
@@ -781,9 +782,8 @@ sub package {
         if ( $desktop or $short_sighted );
 
     my $spec_tmpl = 'spec.tmpl';
-    if ( $desktop) {
+    if ($desktop) {
         $spec_tmpl = 'desktop-spec.tmpl';
-        $vars{dt_format} = $self->{publican}->param('dt_format');
     }
 
     $self->{template}->process( $spec_tmpl, \%vars, $spec_name,

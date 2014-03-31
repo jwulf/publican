@@ -64,7 +64,8 @@ Requires:     [% dt_requires %]
 %setup -q
 
 %build
-publican build --nocolours [% embedtoc %] --formats="[% web_formats_comma %],html-desktop" --langs=[% lang %] --publish
+publican build --nocolours [% embedtoc %] --formats="[% web_formats_comma %],[% dt_format %]" --langs=[% lang %] --publish
+publican build --nocolours --formats="[% dt_format %]" --langs=[% lang %]
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -129,7 +130,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -n [% book_title %]-[% lang %]
 %defattr(-,root,root,-)
-%doc [% tmpdir %]/[% lang %]/html-desktop/*
+%doc [% tmpdir %]/[% lang %]/[% dt_format %]/*
 [%- IF ICONS %]
 /usr/share/icons/hicolor/*
 [%- ELSE %]
