@@ -64,7 +64,7 @@ Requires:     [% dt_requires %]
 %setup -q
 
 %build
-publican build --nocolours [% embedtoc %] --formats="[% web_formats_comma %],[% dt_format %]" --langs=[% lang %] --publish
+publican build --nocolours [% embedtoc %] --formats="[% web_formats_comma %]" --langs=[% lang %] --publish
 publican build --nocolours --formats="[% dt_format %]" --langs=[% lang %]
 
 %install
