@@ -27,6 +27,7 @@ Obsoletes:    [% web_obsoletes %]
 Requires:    [% web_req %]
 [%- END %]
 Requires:      [% brand %]-web
+Provides:      [% book_title %]-web-[% lang.replace('-', '_') %] = %{version}-%{release}
 
 %description
 [%- IF translation %]
@@ -51,6 +52,7 @@ Obsoletes:     [% dt_obsoletes %]
 [%- IF dt_requires %]
 Requires:     [% dt_requires %]
 [% END %]
+Provides:      [% book_title %]-[% lang.replace('-', '_') %] = %{version}-%{release}
 
 %description  -n [% book_title %]-[% lang %]
 [%- IF translation %]

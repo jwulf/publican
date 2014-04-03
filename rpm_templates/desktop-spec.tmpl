@@ -21,8 +21,9 @@ Requires:      xdg-utils
 Obsoletes:     [% dt_obsoletes %]
 [%- END %]
 [%- IF dt_requires %]
-Requires:     [% dt_requires %]
+Requires:      [% dt_requires %]
 [% END %]
+Provides:      [% book_title %]-[% lang.replace('-', '_') %] = %{version}-%{release}
 
 %description
 [%- IF translation %]
