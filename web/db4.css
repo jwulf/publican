@@ -5,17 +5,21 @@
 html {
 	overflow-y: scroll;
 }
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, .para .title, .orderedlist .title {
     margin-top: 1em;
     margin-bottom: 0.4em;
 }
+
+.para .title:first-child,
+.orderedlist .title:first-child {
+}
+
 body {
     background-color: #EEEEEE;
 	border: 40px solid #EEEEEE;
 	margin: 0;
 	padding: 0 10px;
 	font-family: "liberation sans", "Myriad ", "Bitstream Vera Sans", "Lucida Grande", "Luxi Sans", "Trebuchet MS", helvetica, verdana, arial, sans-serif;
-	line-height: 1.2em;
 }
 
 body.toc_embeded {
@@ -485,9 +489,8 @@ div.note div.admonition_header {
 div.important div.admonition_header {
     background: url("common/en-US/images/yellow.png") repeat-x scroll right top #A6710F;
 }
-div.warning p, div.warning div.para, div.note p, div.note div.para, div.important p, div.important div.para {
-    margin: 0;
-    padding: 0;
+div.admonition div.para:first-child {
+    margin-top: 0px;
 }
 div.admonition {
     -moz-border-bottom-colors: none;
@@ -571,8 +574,8 @@ ul.stepalternatives {
 	list-style-image: none;
 }
 
-.procedure ol,
-.procedure ul,
+.procedure > ol,
+.procedure > ul,
 ul.stepalternatives {
 	counter-reset: item;
 	list-style-position: outside;
@@ -594,7 +597,7 @@ li.step:before {
 /* 	vertical-align: text-bottom; */
 }
 
-li.step > div:first-child {
-	margin-top: -1.29em;
+li.step > *:first-child {
+	margin-top: -1.141em;
 }
 

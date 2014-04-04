@@ -20,7 +20,7 @@ NEXT UNRELEASED
 - Fix admonition style for wkhtmnltopdf 0.12.
 - Pass chunk_section_depth to wkhtmltopdf. BZ #1044848
 - Do not die on empty brand conf files. BZ #1037037
-- Fix font embedding:
+- Fix font embedding
 - Enforce RPM API requirements. BZ #1029293
 - Fix desktop SPEC file creation. BZ #1081087
 - Pass previous option to msgmerge. BZ #1081363
