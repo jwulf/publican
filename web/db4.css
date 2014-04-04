@@ -444,6 +444,14 @@ ol.I {
 	list-style-type: upper-roman;
 }
 
+table {
+	border: 1px solid #444;
+	width:100%;
+	border-collapse:collapse;
+	table-layout: fixed;
+	word-wrap: break-word;
+}
+
 div.warning:before {
     content: url("common/en-US/images/warning.png");
     padding-left: 5px;
@@ -544,6 +552,7 @@ span.term {
 div.data {
 	margin-left: 0.5em;
 }
+
 
 div.revhistory th, div.revhistory > table > tbody > tr:nth-child(even)  {
 	font-weight: bold;
