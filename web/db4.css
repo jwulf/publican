@@ -601,3 +601,15 @@ li.step > *:first-child {
 	margin-top: -1.141em;
 }
 
+dt {
+	font-weight:bold;
+	margin-bottom:0px;
+	padding-bottom:0px;
+}
+
+dd {
+	margin:0px;
+	margin-left:2em;
+	padding-top:0px;
+}
+

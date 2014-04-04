@@ -29,6 +29,7 @@ NEXT UNRELEASED
 - Add dt_format parameter. BZ #1081808
 - Provide gettext version of package name. BZ #1083102
 - Fix step style. BZ #1080156
+- Fix DD layout. BZ #1084242
 
 4.0.0 Wed Dec 18 2013
 - Support DocBook 5 as input format. BZ #1005042
