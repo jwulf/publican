@@ -159,7 +159,7 @@ Version: 1.72.0
 	<xsl:variable name="numeration">
 		<xsl:call-template name="procedure.step.numeration"/>
 	</xsl:variable>
-	<ol xmlns="http://www.w3.org/1999/xhtml" class="{$numeration}">
+	<ol xmlns="http://www.w3.org/1999/xhtml" class="substeps {$numeration}">
 		<xsl:call-template name="anchor"/>
 		<xsl:apply-templates/>
 	</ol>

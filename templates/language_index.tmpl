@@ -150,6 +150,10 @@ $(document).ready(function() {
 [%- tmpl_list.${path} = 1 %]
 [%- TRY %]
 [% INCLUDE $path %]
+						<div class="group" id="[% product %]-[% ver.replace('\\.', '-')%]-[%booker.sort_order%]">
+							<span>[% label %]</span>
+							<span>[% description %]</span>
+						</div>
 [%- CATCH file %]
 [%- END %]
 [%- END %]

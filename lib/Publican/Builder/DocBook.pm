@@ -302,17 +302,31 @@ sub build {
                                         )
                                         if ( !defined($sort)
                                         || $sort !~ /^\d+$/ );
+
+				    my $subtitles = 0;
+                                    my $annot = $node->attr('annotations');
+                                    $subtitles = 1 if($annot && lc($annot) eq 'yes');
+
                                     my $term
                                         = $node->look_down( '_tag', 'term' )
-                                        ->as_text();
+                                        ->as_trimmed_text();
+
                                     my $text = $node->look_down( '_tag',
-                                        'listitem' )->as_text();
+                                        'listitem' )->as_trimmed_text();
                                     my $OUT;
                                     open( $OUT, ">:encoding(UTF-8)",
                                         "$tmpl_dir/$sort.tmpl" )
                                         || croak( maketext("BURP") );
+                                    print( $OUT <<EOL);
 
-                                    print( $OUT <<EOL
+[% label = "$term" %]
+[% description = "$text" %]
+[% subtitles = $subtitles %]
+EOL
+
+=head1
+#BUGBUG fix templates
+                                   print( $OUT <<EOL
 \t\t\t\t\t\t<div class="group" id="[% prod %]-[% ver.replace('\\.', '-')%]-$sort">
 \t\t\t\t\t\t\t<span>$term</span>
 EOL
@@ -327,6 +341,8 @@ EOL
 \t\t\t\t\t\t</div>
 EOL
                                     );
+=cut
+
                                     close($OUT);
                                 }
 

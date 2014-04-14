@@ -177,6 +177,10 @@ a:visited {
     text-decoration: none;
 }
 
+.toc * {
+    font-weight: normal;
+}
+
 .toc a, .qandaset a {
     border: medium none;
     font-weight: normal;
@@ -341,3 +345,17 @@ li.step:before {
 li.step > div:first-child {
 	margin-top: -1.29em;
 }
+
+.added {
+	background-color: #99ff99;
+}
+
+.changed {
+	background-color: #ffff77;
+}
+
+.deleted {
+	background-color: #ff4455;
+	text-decoration: line-through;
+}
+

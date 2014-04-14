@@ -36,9 +36,6 @@ cp -rf publish/datadir/*  $RPM_BUILD_ROOT/%{_datadir}/publican/templates/groups/
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%post
-publican update_site
-
 %files
 %defattr(-,root,root,-)
 %{wwwdir}/*
