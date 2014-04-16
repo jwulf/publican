@@ -128,6 +128,8 @@ my %tmpl_strings = (
     Product_Documentation => $locale->maketext('Product Documentation'),
     Support               => $locale->maketext('Support'),
     SrcIsNewer            => $locale->maketext('English is newer'),
+    SelectYourVersion     => $locale->maketext('Select your version'),
+    SelectYourCategory    => $locale->maketext('Scroll to category'),
 );
 
 sub new {
@@ -153,9 +155,9 @@ sub new {
         )
         );
     my $tmpl_path = $config->param('tmpl_path') || $DEFAULT_TMPL_PATH;
-    $tmpl_path .= ":$DEFAULT_TMPL_PATH" if($config->param('tmpl_path'));
-    my $def_lang  = $config->param('def_lang')  || $DEFAULT_LANG;
-    my $db_file   = $config->param('db_file')   || croak(
+    $tmpl_path .= ":$DEFAULT_TMPL_PATH" if ( $config->param('tmpl_path') );
+    my $def_lang = $config->param('def_lang') || $DEFAULT_LANG;
+    my $db_file  = $config->param('db_file')  || croak(
         maketext(
             "[_1] is a mandatory field in a site configuration file. Check [_2] for validity.",
             'db_file',
@@ -1090,6 +1092,15 @@ SEARCH
                 $book_data{book_clean} =~ s/_/ /g;
                 $book_data{types} = \@types;
 
+            foreach my $format (
+                sort ( insensitive_sort keys(%{ $list2->{$product}{$version}{$book}{formats} }) ) )
+            {
+                $book_data{base_format} = $format;
+                if ( $format =~ m/^html/ ) {
+                    last;
+                }
+            }
+
                 if ( $lang eq $language ) {
                     push( @books, \%book_data );
                 }
@@ -1792,6 +1803,7 @@ sub write_product_index {
     $index_vars->{splash}
         = $self->get_splash(
         { path => $self->{toc_path} . "/$lang/$product" } );
+    $index_vars->{categories}        = (-d "$DEFAULT_TMPL_PATH/groups/$lang/$product");
 
     $self->{Template}->process(
         'products_index.tmpl', $index_vars,

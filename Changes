@@ -31,6 +31,7 @@ NEXT UNRELEASED
 - Fix step style. BZ #1080156
 - Fix DD layout. BZ #1084242
 - Fix tables breaking out. BZ #1082444
+- Add zt_push and zt_pull for Zanata.
 
 4.0.0 Wed Dec 18 2013
 - Support DocBook 5 as input format. BZ #1005042

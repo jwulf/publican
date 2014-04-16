@@ -50,6 +50,8 @@ Valid actions are:
     update_po     Update the PO files
     update_pot    Update the POT files
     update_site   Update an existing sites templates.
+    zt_pull       Pull translations from Zanata.
+    zt_push       Push translations to Zanata.
 
 
 Run: 'bin/publican <action> --help' for details on action usage
@@ -510,6 +512,32 @@ update_site
         --quiet                   Disable all logging.
         --brand_dir=s             Directory to source brand files from.
         --site_config=<SITE_CONFIG>    WebSite configuration file to use or create.
+
+
+zt_pull
+    Pull translations from Zanata.
+
+	Options:
+        --help                    Display help message
+        --config=s                Use a nonstandard config file
+        --common_config=s         Override path to Common_Config directory
+        --common_content=s        Override path to Common_Content directory
+        --nocolours               Disable ANSI colourisation of logging.
+        --quiet                   Disable all logging.
+        --brand_dir=s             Directory to source brand files from.
+
+
+zt_push
+    Push translations to Zanata.
+
+	Options:
+        --help                    Display help message
+        --config=s                Use a nonstandard config file
+        --common_config=s         Override path to Common_Config directory
+        --common_content=s        Override path to Common_Content directory
+        --nocolours               Disable ANSI colourisation of logging.
+        --quiet                   Disable all logging.
+        --brand_dir=s             Directory to source brand files from.
 
 
 

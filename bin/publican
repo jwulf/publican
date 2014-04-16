@@ -333,6 +333,16 @@ my %actions = (
             maketext('Print a readability report for the source text.'),
         'options' => [],
     },
+    'zt_pull' => {
+        'brief' =>
+            maketext('Pull translations from Zanata.'),
+        'options' => [],
+    },
+    'zt_push' => {
+        'brief' =>
+            maketext('Push translations to Zanata.'),
+        'options' => [],
+    },
 );
 
 # Grab to limit options to the valid ones for this action
@@ -1361,6 +1371,22 @@ if ( $action eq 'report' ) {
     my $text = new Lingua::EN::Fathom;
     $text->analyse_file($file);
     print( $text->report );
+}
+
+if ( $action eq 'zt_pull' ) {
+    my @zanata_cmd = qw(zanata-cli pull -s pot -t .);
+    my $result = system(@zanata_cmd);
+    if ($result) {
+        croak( maketext("Zanata call failed, error [_1]: '[2]'", $result, $!) );
+    }    
+}
+
+if ( $action eq 'zt_push' ) {
+    my @zanata_cmd = qw(zanata-cli push -s pot -t .);
+    my $result = system(@zanata_cmd);
+    if ($result) {
+        croak( maketext("Zanata call failed, error [_1]: '[2]'", $result, $!) );
+    }  
 }
 
 exit(0);

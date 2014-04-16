@@ -541,9 +541,10 @@ div.admonition {
     margin-top: 1em;
 }
 
-
-.example > .title {
-    margin-top: -1em;
+/* move these invisible fields out of the flow */
+.example > a:first-child,
+.table > a:first-child {
+    float: left;
 }
 
 img {
