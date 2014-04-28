@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"X-Generator: Zanata 3.0.3\n"
+"X-Generator: Zanata 3.3.2\n"
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican/TreeView.pm:197
@@ -2293,9 +2293,9 @@ msgid "you need to publish the brand first"
 msgstr ""
 
 # translation auto-copied from project Publican, version 3, document publican
-#~ msgid "DTD Validation failed: "
-#~ msgstr "Falló la validación DTD:"
-
-# translation auto-copied from project Publican, version 3, document publican
 #~ msgid "Can't open spec file: %1"
 #~ msgstr "No se puede abrir archivo spec: %1"
+
+# translation auto-copied from project Publican, version 3, document publican
+#~ msgid "DTD Validation failed: "
+#~ msgstr "Falló la validación DTD:"

@@ -1,20 +1,17 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
-"Language-Team: Indonesian\n"
-"Language: id\n"
+"Language-Team: German (Switzerland)\n"
+"Language: de-CH\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0\n"
 "X-Generator: Zanata 3.3.2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
 #: lib/Publican/TreeView.pm:197
 msgid ""
@@ -176,10 +173,11 @@ msgstr ""
 msgid "A space-separated list of books used in this remote set."
 msgstr ""
 
-# translation auto-copied from project Publican, version 3, document publican
+# translation auto-copied from project DocBook locales, version 1, document locale
 #: lib/Publican/Builder/DocBook.pm:673
+#, fuzzy
 msgid "Abstract"
-msgstr "Abstrak"
+msgstr "Zusammenfassung"
 
 #: bin/publican:142
 msgid "Abstract for a book"
@@ -466,10 +464,11 @@ msgstr ""
 msgid "Constraint: %1"
 msgstr ""
 
-# translation auto-copied from project Publican, version 3, document publican
+# translation auto-copied from project DocBook locales, version 1, document locale
 #: lib/Publican/Builder/DocBook.pm:2541
+#, fuzzy
 msgid "Copy Editor"
-msgstr "Pemeriksa Naskah"
+msgstr "Korrekteur"
 
 #: bin/publican:262
 msgid "Copy a brand's installed web content to another site"
@@ -684,15 +683,16 @@ msgstr ""
 msgid "Eclipse plugin provider. Defaults to \"Publican-%1\""
 msgstr ""
 
-# translation auto-copied from project Publican, version 3, document publican
+# translation auto-copied from project DocBook locales, version 1, document locale
 #: lib/Publican/Builder/DocBook.pm:666
+#, fuzzy
 msgid "Edited by"
-msgstr "Disunting oleh"
+msgstr "Herausgegeben von"
 
 #. ($edition)
 #: lib/Publican/Builder/DocBook.pm:691
 msgid "Edition %1"
-msgstr "Edisi %1"
+msgstr ""
 
 #: bin/publican:114
 msgid "Embed the web site TOC object in the generated HTML"
@@ -883,10 +883,11 @@ msgstr ""
 msgid "Generate table of contents down to the given section depth."
 msgstr ""
 
-# translation auto-copied from project Publican, version 3, document publican
+# translation auto-copied from project DocBook locales, version 1, document locale
 #: lib/Publican/Builder/DocBook.pm:2544
+#, fuzzy
 msgid "Graphic Designer"
-msgstr "Perancang Grafis"
+msgstr "Grafikgestalter"
 
 #: lib/Publican/WebSite.pm:121
 msgid "Hide Menu"
@@ -967,11 +968,9 @@ msgstr ""
 msgid "Knowledge"
 msgstr ""
 
-# translation auto-copied from project Fedora Installation Guide, version f19, document pot/Kickstart2
 #: lib/Publican/WebSite.pm:96
-#, fuzzy
 msgid "Language"
-msgstr "Bahasa"
+msgstr ""
 
 #: lib/Publican.pm:489
 msgid "Language in which XML is authored."
@@ -981,10 +980,11 @@ msgstr ""
 msgid "Languages to replace with xml_lang regardless of translation status."
 msgstr ""
 
-# translation auto-copied from project Publican, version 3, document publican
+# translation auto-copied from project DocBook locales, version 1, document locale
 #: lib/Publican/Builder/DocBook.pm:671
+#, fuzzy
 msgid "Legal Notice"
-msgstr "Aspek Hukum"
+msgstr "Rechtlicher Hinweis"
 
 #: lib/Publican/Builder/DocBook.pm:2642
 msgid "Legal notice can not be calculated before building."
@@ -1166,10 +1166,11 @@ msgstr ""
 msgid "Path to publican content."
 msgstr ""
 
-# translation auto-copied from project Publican, version 3, document publican
+# translation auto-copied from project DocBook locales, version 1, document locale
 #: lib/Publican/CreateBook.pm:376 lib/Publican/CreateBook.pm:638
+#, fuzzy
 msgid "Preface"
-msgstr "Kata Pengantar"
+msgstr "Vorwort"
 
 #: lib/Publican/Builder/DocBook4.pm:140 lib/Publican/Builder/DocBook5.pm:140
 msgid "Preprocessing xml files...\n"
@@ -1227,10 +1228,11 @@ msgstr ""
 msgid "Product this package covers. Fetched from productname tag in xml_lang/TYPE_Info.xml"
 msgstr ""
 
-# translation auto-copied from project Publican, version 3, document publican
+# translation auto-copied from project DocBook locales, version 1, document locale
 #: lib/Publican/Builder/DocBook.pm:2547
+#, fuzzy
 msgid "Production Editor"
-msgstr "Penyunting Produksi"
+msgstr "Produktions-Verfasser"
 
 #: lib/Publican/WebSite.pm:107
 msgid "Products"
@@ -1286,7 +1288,7 @@ msgstr ""
 #: lib/Publican/Builder/DocBook5.pm:232 lib/Publican/CreateBook.pm:303
 #: lib/Publican/CreateBook.pm:564
 msgid "Revision History"
-msgstr "Riwayat Revisi"
+msgstr "Versionsgeschichte"
 
 #: bin/publican:147
 msgid "Revision number to use for a revision."
@@ -1381,15 +1383,17 @@ msgstr ""
 msgid "Support"
 msgstr ""
 
-# translation auto-copied from project Publican, version 3, document publican
+# translation auto-copied from project DocBook locales, version 1, document locale
 #: lib/Publican/Builder/DocBook.pm:675
+#, fuzzy
 msgid "Table of Contents"
-msgstr "Daftar Isi"
+msgstr "Inhaltsverzeichnis"
 
-# translation auto-copied from project Publican, version 3, document publican
+# translation auto-copied from project DocBook locales, version 1, document locale
 #: lib/Publican/Builder/DocBook.pm:2550
+#, fuzzy
 msgid "Technical Editor"
-msgstr "Penyunting Teknis"
+msgstr "Technischer Verfasser"
 
 #: lib/Publican/CreateBook.pm:345 lib/Publican/CreateBook.pm:607
 msgid "Test Chapter"
@@ -1571,10 +1575,11 @@ msgstr ""
 msgid "Translation files synchronised with XML sources %1-%2"
 msgstr ""
 
-# translation auto-copied from project Publican, version 3, document publican
+# translation auto-copied from project DocBook locales, version 1, document locale
 #: lib/Publican/Builder/DocBook.pm:2553
+#, fuzzy
 msgid "Translator"
-msgstr "Penerjemah"
+msgstr "Übersetzer"
 
 #: lib/Publican.pm:377
 msgid "Type of content this package contains. Supported: set, book, article, brand"

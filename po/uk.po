@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
-"X-Generator: Zanata 3.0.3\n"
+"X-Generator: Zanata 3.3.2\n"
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican/TreeView.pm:197
@@ -2564,16 +2564,16 @@ msgid "you need to publish the brand first"
 msgstr "спочатку вам слід оприлюднити позначку"
 
 # translation auto-copied from project Publican, version 3, document publican
+#~ msgid "Can't open spec file: %1"
+#~ msgstr "Не вдалося відкрити файл spec: %1"
+
+# translation auto-copied from project Publican, version 3, document publican
 #~ msgid "DTD Validation failed: "
 #~ msgstr "Помилка під час спроби перевірки DTD: "
 
 # translation auto-copied from project Publican, version 3, document publican
 #~ msgid "RelaxNG Validation failed: "
 #~ msgstr "Спроба перевірки RelaxNG зазнала невдачі: "
-
-# translation auto-copied from project Publican, version 3, document publican
-#~ msgid "Can't open spec file: %1"
-#~ msgstr "Не вдалося відкрити файл spec: %1"
 
 # translation auto-copied from project Publican, version 3, document publican
 #~ msgid "subtitle can not be calculated before building."
