@@ -1,4 +1,4 @@
-NEXT UNRELEASED
+4.1.0 Thu May 1 2014
 - Add abstract to release notes so PDF builds
 - Fix RPM upgrade not pulling in required XML::TreeBuilder version. BZ #1053609
 - Allow PDF to build without any authors. BZ #1050975

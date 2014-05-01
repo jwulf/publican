@@ -185,6 +185,8 @@ what about a real list of valid langauges?
 
 Release Process:
 
+0: make sure User Guide and Release Notes are up to date.
+
 1: Get updated sources
 
 git checkout devel
@@ -212,13 +214,13 @@ perl Build.PL
 
 4: Commit version changes and merge code to master
 
-git commit -a -m"Release version 3.2.1"
+git commit -a -m"Release version 4.1.0"
 git push
 git checkout master
 git pull
 git merge devel
 git push
-git tag -a Release-3.2.1 -m "Release Version 3.2.1"
+git tag -a Release-4.1.0 -m "Release Version 4.1.0"
 git push origin --tags
 perl Build.PL
 ./Build
@@ -226,9 +228,9 @@ perl Build.PL
 
 5: Upload to public site
 
-scp Publican-v3.2.1.tar.gz fedorahosted.org:publican
+scp Publican-v4.1.0.tar.gz fedorahosted.org:publican
 scp publican.spec fedorahosted.org:publican
-scp tmp/rpm/publican-3.2.1-0.el6.src.rpm fedorahosted.org:publican
+scp tmp/rpm/publican*.src.rpm fedorahosted.org:publican
 
 6: Bug Rudi to do release announcement
 

@@ -14,8 +14,8 @@
 %define wwwdir /var/www/html/docs
 
 Name:           publican
-Version:        4.0.0
-Release:        1%{?dist}.t50
+Version:        4.1.0
+Release:        0%{?dist}
 Summary:        Common files and scripts for publishing with DocBook XML
 # For a breakdown of the licensing, refer to LICENSE
 License:        (GPLv2+ or Artistic) and CC0
@@ -306,6 +306,41 @@ rm -rf $RPM_BUILD_ROOT
 %{wwwdir}/common-db5
 
 %changelog
+* Thu May 1 2014 Jeff Fearn <jfearn@redhat.com> 4.1.0-0
+- Add abstract to release notes so PDF builds
+- Fix RPM upgrade not pulling in required XML::TreeBuilder version. BZ #1053609
+- Allow PDF to build without any authors. BZ #1050975
+- Increase XML::LibXSLT::max_depth to 10K. BZ #1035525
+- Include entrytbl in cols count. BZ #1069405
+- Add 'td' to translatable blocks list. BZ #1059938
+- Treat entry like para for mixedmode tags. BZ #1039382
+- Add blank page after cover page in PDF. BZ #1050770
+- Fix replaceable override in DB 4.5 XSL. BZ #1054462
+- Store processing instructions. BZ #1045463
+- Add releaseinfo support. BZ #1050789
+- Add suppor5t for wkhtmltopdf 0.12.0
+- Add non-minified JS files. BZ #1062109
+- Use term as ID node for varlistentry. BZ #1050836
+- Fix acroread search and image issues. BZ #1038393 #1065810
+- Add line numbering to DB5 html output. BZ #1074709
+- Remove glossdiv and indexdiv headings from PDF TOC. BZ #1058545
+- Add basic handling & style for revisionflag.
+- Fix admonition style for wkhtmnltopdf 0.12.
+- Pass chunk_section_depth to wkhtmltopdf. BZ #1044848
+- Do not die on empty brand conf files. BZ #1037037
+- Fix font embedding
+- Enforce RPM API requirements. BZ #1029293
+- Fix desktop SPEC file creation. BZ #1081087
+- Pass previous option to msgmerge. BZ #1081363
+- Load splash pages in templates instead of using javascript. BZ #1081300
+- Sync list layout across web and desktop styles. BZ #1080236
+- Add dt_format parameter. BZ #1081808
+- Provide gettext version of package name. BZ #1083102
+- Fix step style. BZ #1080156
+- Fix DD layout. BZ #1084242
+- Fix tables breaking out. BZ #1082444
+- Add zt_push and zt_pull for Zanata.
+
 * Wed Dec 18 2013 Rüdiger Landmann <rlandmann@redhat.com> 4.0.0-0
 - Support DocBook 5 as input format. BZ #1005042
 - Fix duplicate first author in PDF. BZ #996351
