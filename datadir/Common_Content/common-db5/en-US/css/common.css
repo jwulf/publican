@@ -143,6 +143,10 @@ img {
     max-width: 100%;
 }
 
+.figure {
+	margin-top: 1em;
+}
+
 a {
     outline: medium none;
 }

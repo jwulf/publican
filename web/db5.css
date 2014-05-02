@@ -219,6 +219,9 @@ img {
     max-width: 100%;
 }
 
+.figure {
+	margin-top: 1em;
+}
 
 div.question {
 	margin-top: 1em;
