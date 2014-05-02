@@ -160,10 +160,6 @@ div.navfooter table tr:first-child td {
 	text-align: center;
 }
 
-img {
-    max-width: 100%;
-}
-
 a {
     outline: medium none;
 }
@@ -317,33 +313,6 @@ li {
 	margin-top: 0px;
 	padding-bottom: 0px;
 /*	margin-bottom: 16px; */
-}
-
-.procedure ol,
-.procedure ul,
-ul.stepalternatives {
-	counter-reset: item;
-	list-style-position: outside;
-	list-style-type: none;
-	list-style-image: none;
-}
-
-li.step {
-}
-
-li.step:before {
-	content: counters(item, ".") ". ";
-	counter-increment: item;
-	display:inline-block;
-	position: relative;
-	width: 12em;
-	right: 12.5em;
-	text-align: right;
-/*	vertical-align: text-bottom; */
-}
-
-li.step > div:first-child {
-	margin-top: -1.29em;
 }
 
 .added {

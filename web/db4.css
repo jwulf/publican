@@ -604,34 +604,6 @@ ul.stepalternatives {
 	list-style-image: none;
 }
 
-.procedure > ol,
-.procedure > ul,
-ul.stepalternatives,
-ol.substeps {
-	counter-reset: item;
-	list-style-position: outside;
-	list-style-type: none;
-	list-style-image: none;
-}
-
-li.step {
-}
-
-li.step:before {
-	content: counters(item, ".") ". ";
-	counter-increment: item;
-	display:inline-block;
-	position: relative;
-	width: 12em;
-	right: 12.5em;
-	text-align: right;
-/* 	vertical-align: text-bottom; */
-}
-
-li.step > *:first-child {
-	margin-top: -1.141em;
-}
-
 dt {
 	font-weight:bold;
 	margin-bottom:0px;

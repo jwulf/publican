@@ -691,34 +691,6 @@ li {
 /*	margin-bottom: 16px; */
 }
 
-.procedure > ol,
-.procedure > ul,
-ul.stepalternatives,
-ol.substeps {
-	counter-reset: item;
-	list-style-position: outside;
-	list-style-type: none;
-	list-style-image: none;
-}
-
-li.step {
-}
-
-li.step:before {
-	content: counters(item, ".") ". ";
-	counter-increment: item;
-	display:inline-block;
-	position: relative;
-	width: 12em;
-	right: 12.5em;
-	text-align: right;
-/*	vertical-align: text-bottom; */
-}
-
-li.step > div:first-child {
-	margin-top: -1.29em;
-}
-
 /*images*/
 img {
 	display:block;
@@ -735,20 +707,17 @@ img {
 }
 
 .figure {
-    margin: auto;
-    text-align: center;
     width: 100%;
 }
 
 .figure img,
 .mediaobject img {
 	display:block;
-	margin: auto;
+	margin: 0em;
 	page-break-inside: avoid;
 }
 
 .figure .title {
-	margin:auto;
 	margin-bottom:2em;
 	padding:0px;
 }

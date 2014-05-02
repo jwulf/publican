@@ -137,7 +137,6 @@ body[dir="rtl"] .side_products div.link a.active:after {
 .product_top_box, .version_top_box {
     color: #555555;
     font-size: 16px;
-    line-height: 1.25em;
     min-height: 100px;
     padding-bottom: 10px;
     padding-left: 20px;

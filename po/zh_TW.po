@@ -6,6 +6,7 @@
 # rlandmann <rlandmann@fedoraproject.org>, 2013. #zanata
 # snowlet <snowlet@fedoraproject.org>, 2013. #zanata
 # tchuang <tchuang@redhat.com>, 2013. #zanata
+# Chester Cheng <ccheng@redhat.com>, 2014. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -13,7 +14,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2013-11-12 07:02-0500\n"
+"PO-Revision-Date: 2014-05-01 12:15-0400\n"
 "Last-Translator: Chester Cheng <ccheng@redhat.com>\n"
 "Language-Team: Chinese (Traditional, Taiwan)\n"
 "Language: zh-Hant-TW\n"
@@ -23,40 +24,41 @@ msgstr ""
 #: lib/Publican/TreeView.pm:197
 msgid "\n"
 "No unused XML files"
-msgstr ""
+msgstr "\n"
+"沒有未用到的 XML 檔案"
 
 #: bin/publican:637
 msgid "$ cd path/to/brand"
-msgstr ""
+msgstr "$ cd path/to/brand"
 
 #: bin/publican:638
 msgid "$ publican build --formats=xml --langs=all --publish"
-msgstr ""
+msgstr "$ publican build --formats=xml --langs=all --publish"
 
 #: bin/publican:643
 msgid "$ publican install_brand --web --path=/path/to/site/%{brand}"
-msgstr ""
+msgstr "$ publican install_brand --web --path=/path/to/site/%{brand}"
 
 #: bin/publican:647
 msgid "$ publican update_site --site_config /path/to/site/config"
-msgstr ""
+msgstr "$ publican update_site --site_config /path/to/site/config"
 
 #. ($rpmbuild,WTERMSIG($?))
 #: lib/Publican/Builder.pm:482
 msgid "%1 died with signal %2"
-msgstr ""
+msgstr "%1 失敗，訊號為 %2"
 
 #. ($rpmbuild,WEXITSTATUS($?))
 #: lib/Publican/Builder.pm:487
 msgid "%1 exited with value %2"
-msgstr ""
+msgstr "%1 退出，值為 %2"
 
 #. ('toc_path')
 #: bin/publican:765
 #: bin/publican:778
 #: lib/Publican/WebSite.pm:153
 msgid "%1 is a mandatory field in a site configuration file"
-msgstr ""
+msgstr "在網站配置檔案中，%1 是必備欄位"
 
 #. ('db_file',$site_config)
 #: lib/Publican/WebSite.pm:162
@@ -1469,18 +1471,17 @@ msgstr ""
 
 #: lib/Publican/WebSite.pm:132
 msgid "Scroll to category"
-msgstr ""
+msgstr "捲動至類別"
 
 # translation auto-copied from project subscription-manager, version 1.10.X, document keys
 #: lib/Publican/WebSite.pm:2088
 #: lib/Publican/WebSite.pm:887
-#, fuzzy
 msgid "Search"
 msgstr "搜尋"
 
 #: lib/Publican/WebSite.pm:131
 msgid "Select your version"
-msgstr ""
+msgstr "選擇您的版本"
 
 #: lib/Publican.pm:281
 msgid "Semicolon-separated list of menu categories for the desktop package."
@@ -1494,7 +1495,7 @@ msgstr ""
 #: lib/Publican/Builder/DocBook4.pm:112
 #: lib/Publican/Builder/DocBook5.pm:112
 msgid "Setting up %1"
-msgstr ""
+msgstr "設定 %1"
 
 #: lib/Publican/Builder.pm:525
 msgid ""

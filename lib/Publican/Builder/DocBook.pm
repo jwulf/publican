@@ -568,7 +568,7 @@ sub transform {
             5,                '--footer-spacing',
             5,                '--margin-top',
             20,               '--margin-bottom',
-            20,               '--margin-left',
+            22,               '--margin-left',
             '15mm',           '--margin-right',
             '15mm',           '--header-html',
             $header,          '--footer-html',
