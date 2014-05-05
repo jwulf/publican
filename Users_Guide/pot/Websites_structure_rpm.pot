@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2013-12-18 12:23+1000\n"
-"PO-Revision-Date: 2013-12-18 12:23+1000\n"
+"POT-Creation-Date: 2014-05-05 14:52+1000\n"
+"PO-Revision-Date: 2014-05-05 14:52+1000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: None\n"
 "MIME-Version: 1.0\n"
@@ -29,7 +29,7 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "Perform the following steps on your webserver. You must have an account with root privileges."
+msgid "Perform the following steps on your webserver."
 msgstr ""
 
 #. Tag: para
@@ -39,27 +39,17 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "Become root:"
+msgid "Install <application>Publican</application> and its web components package. For example, on a webserver with a Fedora operating system, run:"
 msgstr ""
 
 #. Tag: screen
 #, no-c-format
-msgid "<prompt>$</prompt> <command>su -</command>"
+msgid "<prompt>$</prompt> <command>sudo yum install publican publican-common-web</command>"
 msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "Install <application>Publican</application>. For example, on a webserver with a Fedora operating system, run:"
-msgstr ""
-
-#. Tag: screen
-#, no-c-format
-msgid "<prompt>#</prompt> <command>yum install publican-web publican-$brand-web</command>"
-msgstr ""
-
-#. Tag: para
-#, no-c-format
-msgid "Edit the <filename>/etc/publican-website.cfg</filename> file to specify the name of the site, the web host, and optionally, search parameters, default language, and dump file settings for the site:"
+msgid "With root privileges, edit the <filename>/etc/publican-website.cfg</filename> file to specify the name of the site, the web host, and optionally, search parameters, default language, dump file settings, and web style for the site:"
 msgstr ""
 
 #. Tag: para
@@ -180,6 +170,66 @@ msgstr ""
 #. Tag: para
 #, no-c-format
 msgid "Refer to <xref linkend=\"appe-Publican-Users_Guide-Contents_of_the_website_dump_file\" /> for a description of the contents of the dump file."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Optionally, specify the web style with the <parameter>web_style</parameter>."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "web_style: 1"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "The website resembles those produced by Publican&nbsp;2, with a list of products displayed in a navigation pane at the left of the page. (Default)"
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "web_style: 2"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "The website includes a breadcrumb-like navigation bar across the top of the documentation."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "The web style set for your site must match the web style set for your content. For example, if you set <literal>web_style:&nbsp;2</literal> for your website, you need to have <literal>web_style:&nbsp;2</literal> set in each of the books that you want to install on the site. Consider setting this parameter in the <filename>defaults.cfg</filename> or <filename>overrides.cfg</filename> files of the brands that you intend to use with this site."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Optionally, specify that the site tables of contents will be updated manually with the <parameter>manual_toc_update</parameter> parameter, for example:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "manual_toc_update: 1"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Normally, <application>Publican</application> updates the site's tables of contents every time a documentation package is added or removed. On a site with a large number of documents on it (more than a few hundred), or where documents are updated very frequently (dozens of updates per week), this process is very demanding on a server. On a large or busy site, we recommend that you set this parameter and then periodically update the tables of contents with the <prompt>$</prompt> <command>publican update_site</command> command."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Optionally, override the default JavaScript for the site with the <parameter>toc_js</parameter> parameter, for example:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "toc_js: \"mybrand/scripts/megafoo.js\""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "This file will be symlinked as <parameter>toc_path</parameter>/toc.js with the <prompt>$</prompt> <command>publican update_site</command> command. This path should be relative to the <parameter>toc_path</parameter> parameter."
 msgstr ""
 
 #. Tag: para

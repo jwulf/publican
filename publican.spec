@@ -306,7 +306,7 @@ rm -rf $RPM_BUILD_ROOT
 %{wwwdir}/common-db5
 
 %changelog
-* Thu May 1 2014 Jeff Fearn <jfearn@redhat.com> 4.1.0-0
+* Mon May 5 2014 Jeff Fearn <jfearn@redhat.com> 4.1.0-0
 - Add abstract to release notes so PDF builds
 - Fix RPM upgrade not pulling in required XML::TreeBuilder version. BZ #1053609
 - Allow PDF to build without any authors. BZ #1050975
