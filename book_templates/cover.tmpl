@@ -4,9 +4,12 @@
 <head>
 	<title></title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<link rel="stylesheet" href="Common_Content/css/pdf.css" type="text/css" />
+[% IF bodyface -%]
+	<link rel="stylesheet" href="[%- buildpath -%]/[% bodyfont | uri %]-font-faces.css" type="text/css" />
+[%- END %]
+	<link rel="stylesheet" href="pdf.css" type="text/css" />
 </head>
-<body class="cover[%- IF draft -%] draft[%- END -%]">
+<body class="cover[%- IF draft -%] draft[%- END -%]" style="font-family: '[% bodyfont %]';">
     <div class="titlepage1[%- IF draft -%] draft[%- END -%]">
 	<div class="logo" style="background-image:url([% logo %])"></div>
 	<div class="leader">
@@ -16,6 +19,7 @@
 	<div class="docname">[%- docname -%]</div>
 	<div class="subtitle">[%- subtitle -%]
 	[% IF edition -%]<div class="edition">[%- edition -%]</div>[%- END %]
+	[% IF releaseinfo -%]<div class="releaseinfo">[%- releaseinfo -%]</div>[%- END %]
 	</div>
 	<div class="authors">
 	[%- FOREACH author = authors %]
@@ -24,12 +28,15 @@
 	</div>
     </div>
     <div class="titlepage2[%- IF draft -%] draft[%- END -%]">
+    </div>
+    <div class="titlepage2[%- IF draft -%] draft[%- END -%]">
 	<div class="title">
 		<span class="product">[%- product -%]</span> <span class="version">[%- version -%]</span> <span class="docname">[%- docname -%]</span>
 	</div>
 	<div class="subtitle">[%- subtitle -%]
 	[% IF edition -%]<div class="edition">[%- edition -%]</div>[%- END %]
 	</div>
+	[%- IF contributors.author %]
 	<div class="authors">
 	[%- FOREACH contributor = contributors.author %]
 		<div class="contributor">
@@ -53,6 +60,7 @@
 		</div>
 	[%- END %]
 	</div>
+	[%- END %]
 	[%- IF contributors.editor %]
 	<div class="editors">
 		<h1>[%- editorlabel -%]</h1>

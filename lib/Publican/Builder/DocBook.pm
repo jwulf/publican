@@ -9,7 +9,6 @@ use base 'Publican::Builder';
 use Publican::Builder;
 
 use Carp;
-use Config::Simple '-strict';
 use Publican;
 use Publican::XmlClean;
 use Publican::Translate;
@@ -303,16 +302,31 @@ sub build {
                                         )
                                         if ( !defined($sort)
                                         || $sort !~ /^\d+$/ );
+
+				    my $subtitles = 0;
+                                    my $annot = $node->attr('annotations');
+                                    $subtitles = 1 if($annot && lc($annot) eq 'yes');
+
                                     my $term
                                         = $node->look_down( '_tag', 'term' )
-                                        ->as_text();
-                                    my $text = $node->look_down( '_tag',
-                                        'listitem' )->as_text();
-                                    my $OUT;
-                                    open( $OUT, ">:encoding(UTF-8)", "$tmpl_dir/$sort.tmpl" )
-                                        || croak( maketext("BURP") );
+                                        ->as_trimmed_text();
 
-                                    print( $OUT <<EOL
+                                    my $text = $node->look_down( '_tag',
+                                        'listitem' )->as_trimmed_text();
+                                    my $OUT;
+                                    open( $OUT, ">:encoding(UTF-8)",
+                                        "$tmpl_dir/$sort.tmpl" )
+                                        || croak( maketext("BURP") );
+                                    print( $OUT <<EOL);
+
+[% label = "$term" %]
+[% description = "$text" %]
+[% subtitles = $subtitles %]
+EOL
+
+=head1
+#BUGBUG fix templates
+                                   print( $OUT <<EOL
 \t\t\t\t\t\t<div class="group" id="[% prod %]-[% ver.replace('\\.', '-')%]-$sort">
 \t\t\t\t\t\t\t<span>$term</span>
 EOL
@@ -327,6 +341,8 @@ EOL
 \t\t\t\t\t\t</div>
 EOL
                                     );
+=cut
+
                                     close($OUT);
                                 }
 
@@ -543,21 +559,16 @@ sub transform {
 
         my $tmpl_path = Publican::ConfigData->config('book_templates');
 
-        my $header = "$tmpl_path/header.html";
-        $header = "$brand_path/book_templates/header.html"
-            if ( -f "$brand_path/book_templates/header.html" );
-
-        my $footer = "$tmpl_path/footer.html";
-        $footer = "$brand_path/book_templates/footer.html"
-            if ( -f "$brand_path/book_templates/footer.html" );
+        my $header = "$tmp_dir/$lang/html-pdf/header.html";
+        my $footer = "$tmp_dir/$lang/html-pdf/footer.html";
 
         my @wkhtmltopdf_args = (
             $wkhtmltopdf_cmd, '--javascript-delay',
             0,                '--header-spacing',
             5,                '--footer-spacing',
             5,                '--margin-top',
-            20,               '--margin-bottom',
-            20,               '--margin-left',
+            16,               '--margin-bottom',
+            16,               '--margin-left',
             '15mm',           '--margin-right',
             '15mm',           '--header-html',
             $header,          '--footer-html',
@@ -571,8 +582,15 @@ sub transform {
             );
         }
 
-        $tmpl_path = "$brand_path/book_templates:$tmpl_path"
-            if ( -d "$brand_path/book_templates" );
+        rcopy_glob( "$tmpl_path/*.css", "$tmp_dir/$lang/html-pdf/" );
+
+        if ( -d "$brand_path/book_templates" ) {
+            rcopy_glob(
+                "$brand_path/book_templates/*.css",
+                "$tmp_dir/$lang/html-pdf/"
+            ) if(glob("$brand_path/book_templates/*.css"));
+            $tmpl_path = "$brand_path/book_templates:$tmpl_path";
+        }
 
         my $tconf = { INCLUDE_PATH => $tmpl_path, };
         my $template = Template->new($tconf)
@@ -628,6 +646,12 @@ sub transform {
         my $edition = eval {
             $xml_doc->root()->look_down( "_tag", "edition" )->as_text();
         };
+        my $releaseinfo = eval {
+            $xml_doc->root()->look_down( "_tag", "releaseinfo" )->as_text();
+        };
+
+        my $bodyfont = $self->{publican}->param('pdf_body_font');
+        my $monofont = $self->{publican}->param('pdf_mono_font');
 
         my $vars = {
             draft   => $draft,
@@ -650,7 +674,12 @@ sub transform {
             keywordtitle  => decode_utf8( $locale->maketext("Keywords") ),
             toctitle => decode_utf8( $locale->maketext("Table of Contents") ),
             logo     => ( $logo || 'Common_Content/images/title_logo.svg' ),
-            buildpath => abs_path("$tmp_dir/$lang/html-pdf"),
+            buildpath           => abs_path("$tmp_dir/$lang/html-pdf"),
+            chunk_section_depth => $chunk_section_depth,
+            bodyfont            => $bodyfont,
+            bodyface => (-f "$tmp_dir/$lang/html-pdf/$bodyfont-font-faces.css"),
+            monofont            => $monofont,
+            monoface => (-f "$tmp_dir/$lang/html-pdf/$monofont-font-faces.css"),
         };
 
         if (@keywords) {
@@ -660,6 +689,9 @@ sub transform {
         if ($edition) {
             $vars->{edition} = decode_utf8(
                 $locale->maketext( 'Edition [_1]', $edition ) );
+        }
+        if ($releaseinfo) {
+            $vars->{releaseinfo} = decode_utf8($releaseinfo);
         }
 
         $template->process(
@@ -674,6 +706,24 @@ sub transform {
         my $toc_xsl = "$tmp_dir/$lang/html-pdf/toc.xsl";
 
         $template->process( 'toc-xsl.tmpl', $vars, $toc_xsl,
+            binmode => ':encoding(UTF-8)' )
+            or croak( $template->error() );
+
+        my $out_file = "$tmp_dir/$lang/html-pdf/header.html";
+
+        $template->process( 'header.tmpl', $vars, $out_file,
+            binmode => ':encoding(UTF-8)' )
+            or croak( $template->error() );
+
+        $out_file = "$tmp_dir/$lang/html-pdf/footer.html";
+
+        $template->process( 'footer.tmpl', $vars, $out_file,
+            binmode => ':encoding(UTF-8)' )
+            or croak( $template->error() );
+
+        $out_file = "$tmp_dir/$lang/html-pdf/pdfmain.css";
+
+        $template->process( 'pdfmain-css.tmpl', $vars, $out_file,
             binmode => ':encoding(UTF-8)' )
             or croak( $template->error() );
 
@@ -878,7 +928,7 @@ sub transform {
         \&insertCallouts );
     XML::LibXSLT->register_function( 'urn:perl', 'numberLines',
         \&numberLines );
-    XML::LibXSLT->max_depth(1000);
+    XML::LibXSLT->max_depth(10000);
 
     my $security = XML::LibXSLT::Security->new();
     $security->register_callback( create_dir => sub { 1; } );
@@ -1304,7 +1354,8 @@ sub get_nodes_order {
     my @node_list;
 
     if ( !$node ) {
-        @node_list = $source->getElementsByTagName('book')->[0]->childNodes();
+        @node_list
+            = $source->getElementsByTagName('book')->[0]->childNodes();
     }
     else {
         @node_list = $node->childNodes();
@@ -1551,7 +1602,9 @@ sub build_drupal_book {
             my $menu_link  = "";
             my $menu_title = "";
             my $book
-                = ($book_title) ? $book_title : "$product $version $docname";
+                = ($book_title)
+                ? $book_title
+                : "$product $version $docname";
             if ( $page eq 'index' ) {
                 $alias      = $bookname;
                 $title      = $book;
@@ -3664,7 +3717,6 @@ Publican requires no configuration files or environment variables.
 
 Carp
 version
-Config::Simple
 Publican
 Publican::XmlClean
 Publican::Translate
@@ -3699,3 +3751,4 @@ L<https://bugzilla.redhat.com/bugzilla/enter_bug.cgi?product=Publican&component=
 =head1 AUTHOR
 
 Jeff Fearn  C<< <jfearn@redhat.com> >>
+3711:	To save a full .LOG file rerun with -g

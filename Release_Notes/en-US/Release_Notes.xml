@@ -4,485 +4,236 @@
 	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Article_Info.xml"/>
 		<variablelist><info><title>Publican 4 Release Notes</title></info>
 		<varlistentry>
-			<term>Docbook 50-compatible templates</term>
+			<term>PDF refinements</term>
 			<listitem>
 				<para>
-					Docbook 5-compatible templates are now included in Publican. This makes it possible to consume Docbook 5 content from upstream projects. <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=697366">BZ#697366</link>
+					Publican 4.1 includes a number of bug fixes and enhancements for PDF generation with wkhtmltopdf:</para>
+				<itemizedlist>
+					<listitem>
+						<para>
+							Previously, Publican's PDF generation failed when no <tag>&lt;author&gt;</tag> elements was present in the <tag>&lt;authorgroup&gt;</tag> of a document. This precluded documents that were attributed only to a <tag>&lt;corpauthor&gt;</tag> or <tag>&lt;editor&gt;</tag>. Publican 4.1 no longer requires an <tag>&lt;author&gt;</tag> to be defined for a document. <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=1050975">BZ#1050975</link>
+						</para>
+					</listitem>
+					<listitem>
+						<para>
+							Previously, when rendering PDF files with wkhtmltopdf, Publican created entries in the table of contents for individual letters of the alphabet within <tag>&lt;glossary&gt;</tag> and <tag>&lt;index&gt;</tag> elements. Publican 4.1 creates only a table of contents entry for the glossary or index itself, not the letters within it.
+							<link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=1058545">BZ#1058545</link>
+						</para>
+					</listitem>
+					<listitem>
+						<para>
+							Previously, there was a blank page missing after the cover of a PDF, meaning that Publican was presenting title-page information on the verso of the document cover. Publican 4.1 introduces a blank page here so that when printed, the title page correctly appears on the recto of the leaf. 
+							<link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=1050770">BZ#1050770</link>
+						</para>
+					</listitem>
+					<listitem>
+						<para>
+							PDF files rendered with wkhtmltopdf contained unexpected font rendering when opened with Adobe Acrobat if the document source contained PNG images that contained transparency. Publican 4.1 contains a patch to change the colourspace of a PDF page that contains such an image so that Adobe Acrobat renders the page correctly. 
+							<link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=1038393">BZ#1038393</link>; see also upstream bug against wkhtmltopdf <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://github.com/wkhtmltopdf/wkhtmltopdf/issues/1577">issue 1577</link>
+						</para>
+					</listitem>
+					<listitem>
+						<para>
+							PDF files could not be searched within Adobe Acrobat (that is, <keycombo><keycap>Ctrl</keycap><keycap>F</keycap></keycombo> did not return results). This issue was fixed in wkhtmltopdf 0.12. Publican 4.1 now uses this later version of the tool.
+							<link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=1065810">BZ#1065810</link>
+						</para>
+					</listitem>
+				</itemizedlist>
+			</listitem>
+		</varlistentry>
+		<varlistentry>
+			<term>entrytbl now supported</term>
+			<listitem>
+				<para>
+					Previously, Publican did not support the <tag>&lt;entrytbl&gt;</tag> element in DocBook, because FOP could not render it. In Publican 4.1, this element is now supported. Additionally, the error message for tables with incorrect values set in the <tag>&lt;cols&gt;</tag> element now outputs the number of entries found, instead of a hash.<link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=1069405">BZ#1069405</link>
 				</para>
 			</listitem>
 		</varlistentry>
 		<varlistentry>
-			<term>Publican 4 supports git for distributed sets</term>
+			<term>&lt;td&gt; elements now translatable</term>
 			<listitem>
 				<para>
-				Publican 4 supports git for distributed sets. <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=719832">BZ#719832</link>
+					Previously, Publican did not include the contents of <tag>&lt;td&gt;</tag> elements in PO files. As a result, the content of tables that use HTML markup was not available for translation. Now, the content of <tag>&lt;td&gt;</tag> elements is available in PO files that Publican generates and matches on, and can be translated like any other translatable element. 
+					 <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=1059938">BZ#1059938</link>
 				</para>
 			</listitem>
 		</varlistentry>
 		<varlistentry>
-			<term>Internal identifiers properly rendered in epub output</term>
+			<term>Simplelists can have up to 10,000 children</term>
 			<listitem>
 				<para>
-					Previously, Publican handled ids in epub output suboptimally, resulting in paras without identifiers. Publican 4 now properly handles ids in epub output. <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=875116">BZ#875116</link>
+					Previously, Publican only supported <tag>&lt;simplelist&gt;</tag> elements with 300 children or fewer. Publican 4.1 supports <tag>&lt;simplelist&gt;</tag> elements with up to 10,000 children.
+					 <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=1035525">BZ#1035525</link>
 				</para>
 			</listitem>
 		</varlistentry>
 		<varlistentry>
-			<term>OPF manifest corrected for epub output</term>
+			<term>linenumbering="numbered" attribute now supported</term>
 			<listitem>
-				<para>	
-				Previously, Publican epub's output generated an incorrect OPF file that listed the same file multiple times. Publican 4 now generates correct OPF files that list files correctly. <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=875119">BZ#875119</link>
+				<para>
+					Previously, Publican did not support the <tag class="attribute">linenumbering="numbered"</tag> attribute for DocBook 5. This support is now available in Publican 4.1.
+					 <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=1074709">BZ#1074709</link>
 				</para>
 			</listitem>
 		</varlistentry>
 		<varlistentry>
-			<term>Unneeded files now left out of epub output</term>
+			<term>Style refinements</term>
 			<listitem>
 				<para>
-					Previously, Publican caused the end-user to download files that were not needed in built documentation. Among other undesirable behaviors, this caused epub files to be larger than was necessary. In Publican 4, every file in the OEBPS directory is added to the manifest. This means that unused images are no longer included in epub files. <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=875125">BZ#875125</link>
+					Publican 4.1 includes a number of style fixes and refinements, including:</para>
+				<itemizedlist>
+					<listitem>
+						<para>applying proportional bold italic styles consistently. <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=1054462">BZ#1054462</link>
+						</para>
+					</listitem>
+					<listitem>
+						<para>differentiating the numbering of items in <tag>&lt;orderedlist&gt;</tag>s nested within each other. <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=1080236">BZ#1080236</link>
+						</para>
+					</listitem>
+					<listitem>
+						<para>correctly aligning procedure <tag>&lt;step&gt;</tag>s and <tag>&lt;substeps&gt;</tag>s. <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=1080236">BZ#1080236</link>
+						</para>
+					</listitem>
+				</itemizedlist>
+			</listitem>
+		</varlistentry>
+		<varlistentry>
+			<term>&lt;releaseinfo&gt; now added to covers of documents</term>
+			<listitem>
+				<para>
+					Publican 4.1 presents the contents of the <tag>&lt;releaseinfo&gt;</tag> element (when present) through to the cover of a document. This support allows writers to present detailed information about the release of a document in a prominent position.
+					
+					 <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=1050789">BZ#1050789</link>
 				</para>
 			</listitem>
 		</varlistentry>
 		<varlistentry>
-			<term>CSS styles corrected in epub output</term>
+			<term>Stray space after &lt;productname&gt; removed</term>
 			<listitem>
 				<para>
-					Publican 4 improves the presentation of CSS styles in epub format. This includes improved presentation of admonitions, screen tags, and program listings, as well as the removal of the web footer tag (which previously was injected into the epub, though it should not have been). <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=883159">BZ#883159</link>
+					Previously, Publican inserted a stray space after the content of a <tag>&lt;productname&gt;</tag> element. This was especially noticeable when the productname preceded punctuation. In documents produced with Publican 4.1, the stray space no longer appears. 
+					 <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=1039382">BZ#1039382</link>
 				</para>
 			</listitem>
 		</varlistentry>
 		<varlistentry>
-			<term>Support navigation for docs without multi-page HTML format</term>
+			<term>Desktop-only packaging fixed</term>
 			<listitem>
 				<para>
-					Previously, Publican 4 did not support navigation for documents without a multi-page HTML format (the "html" format, as opposed to the "html-single", "pdf", or "epub" formats). This threatened to cause problems with the incorporation of legacy and upstream documentation that existed in formats other than multi-page html. Publican 4 includes functionality that, in the absence of a multi-page html document, links to another of the supported formats (that is, "html-single", "pdf", or "epub"). (Probably in cases like this, a pdf of the document will be generated and will be linked to.) <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=885916">BZ#885916</link>
+					Publican 4.0 introduced a bug where RPM packaging of a document for desktop use only (that is, <command>publican package --desktop</command>) failed because the spec file, as generated, was invalid. Publican 4.1 uses the same mechanism to generate desktop RPMs as it uses to generate web RPMs, correcting the problem. 
+					 <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=1081087">BZ#1081087</link>
 				</para>
 			</listitem>
 		</varlistentry>
 		<varlistentry>
-			<term>Website now indicates when a translation is older than the document in the original language</term>
+			<term>Documentation suite navigation now embedded in splash pages</term>
 			<listitem>
 				<para>
-					Publican 4 includes a new feature that provides a notification when a translation is older than the document in the source language. For instance, if the English-language source is newer than the translated document you are reading, a notice will appear informing you that you are reading a translation of a document in the source language that is not the most current version. <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=889031">BZ#889031</link>
+					Publican 4.1 uses a template to embed product navigation elements into splash pages. 
+					 <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=1081300">BZ#1081300</link>
 				</para>
 			</listitem>
 		</varlistentry>
 		<varlistentry>
-			<term>Docbook 5 CSS Update</term>
+			<term>Non-minified sources of JavaScript files now provided</term>
 			<listitem>
 				<para>
-					Publican 4 fixes an issue that caused the author content (the author's name and organization and so on) to be left-aligned instead of centered. This was caused by improper handling of Docbook 5. Publican 4 ships a completely separate set of CSS and XSL for DocBook 5 books in a separate brand that gets installed as "common-db5". <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=893199">BZ#893199</link>
+					Previously, Publican shipped two files (<filename>web/jquery.min.js</filename> and <filename>web/jquery.jcarrousel.min.js</filename>) as minified JavaScipt files. Providing these files in minified form made it harder for people distributing Publican to meet their obligations under the General Public License and the packaging requirements of various Linux distributions. The Publican source tarball now contains the non-minified versions of these files, although the minified versions are the ones installed with the software. 
+					<link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=1062109">BZ#1062109</link>
 				</para>
 			</listitem>
 		</varlistentry>
 		<varlistentry>
-			<term>Sorting books by group</term>
+			<term>XML::TreeBuilder requirement now made explicitly version-specific</term>
 			<listitem>
 				<para>
-					Previously, Publican organized books only alphabetically. This made it impossible to sort books by category (for instance, "Reference" or "Administration"). Publican 4 allows you to sort books by group (for instance, "Reference" or "Administration"). <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=901560">BZ#901560</link>
+					The Publican 4.0 spec file did not explicitly require the version of the XML::TreeBuilder module that it needs (5.1). Combined with a situation where XML::TreeBuilder 4.0 provided itself unversioned, upgrades to Publican 4.0 on RPM-based systems did not also upgrade XML::TreeBuilder. and Publican would not work. Publican 4.1 explicitly requires XML::TreeBuilder 5.1, so updates to Publican will also install the required version of that module.
+					 <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=1053609">BZ#1053609</link>
 				</para>
 			</listitem>
 		</varlistentry>
 		<varlistentry>
-			<term>Improvements to XSL re: Docbook 5</term>
+			<term>&lt;term&gt;s now have ids and are linkable</term>
 			<listitem>
 				<para>
-					Previously, XSL for abstract and subtitle detection assumed that the "*info" element (as in Docbook 4) was the root node of the XML file (and not the "info" element (as in Docbook 5)). This caused tragic failure to bulid Docbook 5 content in Publican (with "publican build" and "publican package") and resulted in grotesque bastardization of the XSL path in the service of publishing upstream documentation. Publican 4 replaces the nasty XSL with beautiful Perl, and the commands "publican build" and "publican package" now work in a DocBook 5 book with the files "mainfile", "info_file", and "rev_file" specified. <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=953675">BZ#953675</link>
+					Previously, Publican did not set an id on <tag>&lt;term&gt;</tag> elements, which meant that they could not be linked to directly. In Publican 4.1, <tag>&lt;term&gt;</tag> elements have ids and can be linked to.
+					 <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=1050836">BZ#1050836</link>
 				</para>
 			</listitem>
 		</varlistentry>
 		<varlistentry>
-			<term>Entities now expanded prior to validation</term>
+			<term>XML processing instructions preserved in PO file merges</term>
 			<listitem>
 				<para>
-					Previously, when entities were used in a file (for instance, Book_info.xml) in this context: &lt;productnumber&gt;&amp;PRODUCTVER;&lt;/productnumber&gt;, the build failed with "Invalid format for version. Value (EMPTY) does not conform to constraint (^[0-9]) at /usr/bin/publican line 713." These errors appeared because the entities were not expanded before they were checked for validity. This was not a problem in Publican itself, but rather a problem in two modules used by Publican: "XML::Catalog" and "XML::TreeBuilder". Those two modules have been patched to expand entities prior to validity checks. Publican 4 now properly expands entities before they are checked for validity. <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=963994">BZ#963994</link>
+					Previously, Publican stripped XML processing instructions out of PO files when they were merged into the XML of the source language. In Publican 4.1, processing instructions are preserved when generating the translated XML files.
+					 <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=1045463">BZ#1045463</link>
 				</para>
 			</listitem>
 		</varlistentry>
 		<varlistentry>
-			<term>Install brand web content from RPM</term>
+			<term>Depth of tables of contents in PDF files now controllable</term>
 			<listitem>
 				<para>
-					Previously, building a custom site required the installation of brand web content from the brand source. Publican 4 makes it possible to install brand web content from the installed RPMs. <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=967664">BZ#967664</link>
+					Previously, Publican only used its <parameter>chunk_section_depth</parameter> parameter to determine structure for its HTML outputs. This meant that the section depth displayed in the table of contents in a PDF file was not controllable. Publican 4.1 passes the <parameter>chunk_section_depth</parameter> parameter to wkhtmltopdf and uses it to determine the depth of entries presented in the table of contents of the PDF.
+					 <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=1044848">BZ#1044848</link>
 				</para>
 			</listitem>
 		</varlistentry>
 		<varlistentry>
-			<term>Missing "registered character" in pdf Legal Notice now restored</term>
+			<term>Empty config files in brands no longer cause errors</term>
 			<listitem>
 				<para>
-					Previously, in the Legal Notice section of pdf docs, the registered 'R in a circle' character was missing after registered names like 'Linux', 'Java', and so on. Publican 4 reworks the legal notice retrieval code and reworks the cover page templates and styles, and the 'R in a circle' character has been restored. <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=970851">BZ#970851</link>
+					Previously, if Publican attempted to load a config file that was empty or contained only comments, it would die and only return a generic error message to the user. Publican 4.1 loads brand <filename>default.cfg</filename> and <filename>overrides.cfg</filename> files without error, and dies with a descriptive error message if it tries to load an empty document config file.
+					 <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=1037037">BZ#1037037</link>
 				</para>
 			</listitem>
 		</varlistentry>
 		<varlistentry>
-			<term/>
+			<term>API compatibility enforced between documents and websites</term>
 			<listitem>
 				<para>
-					Previously, the update_date field in DUMP.xml listed only the date, like this: "&lt;update_date&gt;2013-02-21&lt;/update_date&gt;" Publican 4 replaces this with the datetime format, like this: &lt;update_date&gt;2013-02-21 13:04:12&lt;/update_date&gt; 					<link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=979846">BZ#979846</link>
+					Previously, Publican did not enforce API compatibility between documents packaged with Publican and a Publican-driven website. As a result, old documentation packages could be installed on a webserver but the documents would not be incorporated into the website navigation because the syntax of the <command>publican install_book</command> would be incorrect. Publican now provides an API version in its spec file, and requires this API in the documentation packages that it produces. Attempts to install packages on a webserver with a different API will fail because of an unmet dependency.
+					 <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=1029293">BZ#1029293</link>
 				</para>
 			</listitem>
 		</varlistentry>
 		<varlistentry>
-			<term>Inaccurate error message when building with a wrong &lt;programlisting&gt; "language=" attribute</term>
+			<term>Publican passes now passes a --previous option to msgmerge</term>
 			<listitem>
 				<para>
-					The  &lt;programlisting language="*"&gt; tag is no longer case-sensitive. The error message that results when an unrecognized language value is used has been edited to reflect this change. <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=987059">BZ#987059</link>
+					Publican 4.1 supports <option>--previous</option> as a new option for <command>publican update_po</command>. This passes the PO merging to <command>msgmerge</command> and preserves the previous msgid as comments in the PO files.
+					 <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=1034836">BZ#1034836</link>
 				</para>
 			</listitem>
 		</varlistentry>
 		<varlistentry>
-			<term>~/.publican.cfg doesn't work properly with non-ASCII characters</term>
+			<term>Documentation packages now provide an equivalent package with a POSIX-style language code</term>
 			<listitem>
 				<para>
-					It is now possible to use non-ASCII characters in the publican.cfg file. This allows for the display of names that require special characters. <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=987325">BZ#987325</link>
+					Publican 4.1 adds a <parameter>provides</parameter> parameter for documentation packages so that they provide package names with POSIX-style language codes alongside the XML-style language codes that Publican uses. For example, the <package>Publican-Users_Guide-4.1-en-US</package> package also provides a versioned <package>Publican-Users_Guide-4.1-en_US</package>. 
+					 <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=1083102">BZ#1083102</link>
 				</para>
 			</listitem>
 		</varlistentry>
 		<varlistentry>
-			<term>Subtitle rendering improved</term>
+			<term>Publican ensures that tables do not exceed the width of a page</term>
 			<listitem>
 				<para>
-					Previously, the &lt;subtitle&gt; element rendered incorrectly and was in some places bigger than the preceding title. This has been fixed. &lt;subtitle&gt; elements will now take their size from the preceding &lt;title&gt; and will be adjusted accordingly. <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=987431">BZ#987431</link>
+					Publican 4.1 ensures that the contents of tables do not exceed the page width of a document, wrapping text even in places where it ordinarily wouldn't, so that it preserves the table presentation. 
+					 <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=1082444">BZ#1082444</link>
 				</para>
 			</listitem>
 		</varlistentry>
 		<varlistentry>
-			<term>Graphics in Internet Explorer 8 improved</term>
+			<term>Format for desktop RPMs now controllable.</term>
 			<listitem>
 				<para>
-					Previously, viewing output rendered by publican caused graphics such as logos to remain invisible because Internet Explorer versions 8 and prior did not support SVG graphics. The branding pages have been changed to provide an alternative graphic extension to enable the logo to be visible. <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=990823">BZ#990823</link>
+					Previously, Publican only offered its desktop HTML output in single-page format. Publican 4.1 adds the <parameter>dt_format</parameter> to allow documents or brands to specify the format that should be provided in the desktop RPM.
+					 <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=1081808">BZ#1081808</link>
 				</para>
 			</listitem>
 		</varlistentry>
-		<varlistentry>
-			<term>Entities in attributes improved</term>
-			<listitem>
-				<para>
-					Previously, Publican incorrectly dropped entities in some attributes (for instance, when an entity was in the url attribute of an ulink tag). This meant that, though the entity was present in the docbook source, it was not present in the built HTML. This was due to a bug in XML:Treebuilder.  XML:Treebuilder has been patched, and Publican 4 no longer drops entities due to this bug. <uri xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=994686">BZ#994686</uri>
-				</para>
-			</listitem>
-		</varlistentry>
-		<varlistentry>
-			<term>Calling logger() no longer causes wide character error</term>
-			<listitem>
-				<para>
-					Previously, calling logger() with unicode characters resulted in "Wide character in print at /usr/share/perl5/vendor_perl/Publican.pm line 1092, &lt;FH&gt; line 7." This no longer happens when logger() is called. <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=996266">BZ#996266</link>
-				</para>
-			</listitem>
-		</varlistentry>
-		<varlistentry>
-			<term>First author duplicated in PDF output</term>
-			<listitem>
-				<para>
-					Previously, the name of the first author listed in the author group was duplicated on the front page of a book in the PDF format. This update ensures that the duplicates no longer occur when building books in PDF. <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=996351">BZ#996351</link>
-				</para>
-			</listitem>
-		</varlistentry>
-		<varlistentry>
-			<term>Build.PL requires now listed</term>
-			<listitem>
-				<para>
-					Previously, Build.PL had build requires that could not be determined simply by running "$ perl Build.PL". In Publican 4, if Build.PL is run when you have outstanding dependencies, an error message appears informing you of the dependencies and of how to remedy them.  <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=999259">BZ#999259</link>
-				</para>
-			</listitem>
-		</varlistentry>
-		<varlistentry>
-			<term>Builds from source install common content in correct location</term>
-			<listitem>
-				<para>
-					Previously (in Publican 3.2.0), builds of Publican that had been built in the way described in the README file (that is, CPAN-based builds from source) used the brand files and pdf/xsl from the directory where the source code had been extracted and built, and not from /usr/share/publican (the anointed, "correct" location). ConfigData.pm was rewritten, and CPAN-based builds from source of Publican 4 now correctly install the xsl and Common Content files in /usr/share/publican. <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=999427">BZ#999427</link>
-				</para>
-			</listitem>
-		</varlistentry>
-		<varlistentry>
-			<term>Revision History improved</term>
-			<listitem>
-				<para>
-					Previously, the "publican add_revision" command only scanned for the first (topmost) revision number in the Revision_History.xml file and incremented the revision number by one. This behavior led to the wrong revision number being inserted in books where the revision history was present in a descending order, with new revisions being added to the bottom of the file instead of the top.  Publican 4 introduces the "--rev_dir" parameter to the "add_revision" option, which can be set at the book or brand level. Setting this parameter to "asc" or "ascending" will cause Publican to scan the last revision present in the file instead of the first and insert a new revision to the bottom of the Revision_History.xml file.  <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=999578">BZ#999578</link>
-				</para>
-			</listitem>
-		</varlistentry>
-		<varlistentry>
-			<term>Screen tags, with wrapping enabled in pdf.xsl break the formatting of the screen output.</term>
-			<listitem>
-				<para>
-					Several example commands have been adjusted in order to wrap correctly in the PDF version of the Publican User Guide. <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=999581">BZ#999581</link>
-				</para>
-			</listitem>
-		</varlistentry>
-		<varlistentry>
-			<term>keep-together.within.column attribute improved in pdf.xsl</term>
-			<listitem>
-				<para>
-					In previous versions of Publican, the pdf.xsl definition file was missing a value for the "keep-together.within.column" attribute, which caused multiple error messages to be returned when building a PDF file. In Publican 4, this parameter has been set to "always" by default and no error messages are being displayed during the build. <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=999586">BZ#999586</link>
-				</para>
-			</listitem>
-		</varlistentry>
-		<varlistentry>
-			<term>Corrected OpenSUSE installation instructions</term>
-			<listitem>
-				<para>
-					The OpenSUSE installation instructions included an incorrect command; this is now corrected. <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=1000534">BZ#1000534</link>
-				</para>
-			</listitem>
-		</varlistentry>
-		<varlistentry>
-			<term>Publican print_unused incorrectly detects files from higher levels in the directory structure (but within the book) as unused.</term>
-			<listitem>
-				<para>
-				Previously, the "publican print_unused" command was incorrectly detecting source files in higher-level directories as unused, even when these files were actually included in the book. In Publican 4, this issue has been fixed and XML files in higher levels of the document directory structure are being handled correctly by the command.  <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=1004955">BZ#1004955</link>
-				</para>
-			</listitem>
-		</varlistentry>
-		<varlistentry>
-			<term>Docbook 5 supported as input format</term>
-			<listitem>
-				<para>
-					Publican 4 supports Docbook 5 as an input format. <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=1005042">BZ#1005042</link>
-				</para>
-			</listitem>
-		</varlistentry>
-		<varlistentry>
-			<term>Identify table sizes with classes</term>
-			<listitem>
-				<para>
-					Publican can now distinguish between tables of different sizes and apply different classes as necessary. This lets Publican apply more appropriate styles when drawing tables, such as drawing a thinner vertical line when more columns are present. <uri xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=1005640">BZ#1005640</uri>
-				</para>
-			</listitem>
-		</varlistentry>
-		<varlistentry>
-			<term>Table of Contents text is overlapping with the dotted base line in PDF version</term>
-			<listitem>
-				<para>
-					In the PDF output format, the baseline dotted line rendered for tables of contents overlapped with the text around it, making the text harder to read. This update fixes the bug and the dotted line is displayed as expected, with no text overlapped. <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=1006056">BZ#1006506</link>
-				</para>
-			</listitem>
-		</varlistentry>
-		<varlistentry>
-			<term>In pdf format Copyright content is in bold, whereras it's not bold in html, html-single, epub format.</term>
-			<listitem>
-				<para>
-					In the PDF output format, the content of the copyright note was incorrectly rendered in bold face. This update ensures the note is rendered properly. <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=1006134">BZ#1006134</link>
-				</para>
-			</listitem>
-		</varlistentry>
-		<varlistentry>
-			<term>In pdf output, headings format is not rendered properly.</term>
-			<listitem>
-				<para>
-					In the PDF output format, the English words in the headings were rendered in bold face whereas the localized content was not. This update ensures the headings are now rendered consistently with the localized content. <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=1006135">BZ#1006135</link>
-				</para>
-			</listitem>
-		</varlistentry>
-		<varlistentry>
-			<term>"Edition x" on title page of translated PDF's appears in English, not the language of translation</term>
-			<listitem>
-				<para>
-					Previously, the "Edition" string on the title page of a PDF book was always displayed in English, regardless of the language of the book. This update ensure the translated string is displayed as expected. <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=1007141">BZ#1007141</link>
-				</para>
-			</listitem>
-		</varlistentry>
-		<varlistentry>
-			<term>The word "stichworter" ("keywords" in German) appears right after Legal Notice in PDF of translation.</term>
-			<listitem>
-				<para>
-					Previously, if keywords were not supplied the section header "keywords" would appear in the PDF version. This was especially shown to happen in the German version. In Publican 4, the header will not appear when keywords are not supplied. <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=1007146">BZ#1007146</link>
-				</para>
-			</listitem>
-		</varlistentry>
-		<varlistentry>
-			<term>Creating an xref to a &lt;step&gt; results in a dead link</term>
-			<listitem>
-				<para>
-					Previously, building a publican document (HTML, PDF, etc.) using a link to a step within a procedure created a broken link that did not result in a 404 error. Now, it is possible to create links to steps within a procedure, provided the &lt;step&gt; has an ID. <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=1009015">BZ#1009015</link>
-				</para>
-			</listitem>
-		</varlistentry>
-		<varlistentry>
-			<term>img_dir not taken into account when locating icon.svg</term>
-			<listitem>
-				<para>
-					Previous versions of Publican were hard-coded to expect the icon.svg file in the images directory, even when the img_dir parameter specified a different directory. The path specified by the img_dir parameter is now taken into account. <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=1011222">BZ#1011222</link>
-				</para>
-			</listitem>
-		</varlistentry>
-		<varlistentry>
-			<term>Update Debian installation instructions</term>
-			<listitem>
-				<para>
-					The Debian installation instructions published in previous versions of the <citetitle>Publican Users' Guide</citetitle> were out-of-date and potentially dangerous. The Guide now includes instructions based on the <firstterm>apt pinning</firstterm> mechanism. <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=1013934">BZ#1013934</link>
-				</para>
-			</listitem>
-		</varlistentry>
-		<varlistentry>
-			<term>Add Docker installation instructions</term>
-			<listitem>
-				<para>
-					The <citetitle>Publican Users' Guide</citetitle> now includes instructions for installing Publican in a Docker container. <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=1015943">BZ#1015943</link>
-				</para>
-			</listitem>
-		</varlistentry>
-		<varlistentry>
-			<term>Build.PL does not compile .po files and doesn't install resulting .mo files</term>
-			<listitem>
-				<para>
-					Previous versions of Publican did not create or install the .mo files required for GNU gettext localization. This meant that neither the Publican user interface, nor some automatically generated content, were localized appropriately. Publican has been updated to create and install the .mo files as expected. <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=1016421">BZ#1016421</link>
-				</para>
-			</listitem>
-		</varlistentry>
-		<varlistentry>
-			<term>"edition" on the title page of docs is not styled</term>
-			<listitem>
-				<para>
-					Previously, the "edition" tag in documents was being displayed withoug any styling and justified to the left. In Publican 4, the edition is being displayed correctly in bold, centered text on the title page. <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=1017548">BZ#1017548</link>
-				</para>
-			</listitem>
-		</varlistentry>
-		<varlistentry>
-			<term>Cannot build Indic-language PDFs with Publican 3.99</term>
-			<listitem>
-				<para>
-					Previously, when building a PDF book, using the "--langs mr-IN" option resulted in an error and the build process terminated. This bug has been fixed and Indic language PDFs are now built correctly. <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=1018024">BZ#1018024</link>
-				</para>
-			</listitem>
-		</varlistentry>
-		<varlistentry>
-			<term>Building Publican 4.0 in Fedora 19 throws undefined subroutine error</term>
-			<listitem>
-				<para>
-					Previously, attempting to build Publican 4.0 from source failed on Fedora 19 because of incorrect use of pushd in the Build.PL script. This error has been corrected, and Publican 4.0 now builds correctly on Fedora 19. <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=1018608">BZ#1018608</link>
-				</para>
-			</listitem>
-		</varlistentry>
-		<varlistentry>
-			<term>Stray characters in DocBook 5 output</term>
-			<listitem>
-				<para>
-					In a previous version of Publican, DocBook 5 books contained instances of stray "Ã" characters in html and html-single ouput where DocBook gentext had been used. This issue is resolved where Publican 4 now sets the correct Content-Type parameter. <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=1018659">BZ#1018659</link>
-				</para>
-			</listitem>
-		</varlistentry>
-		<varlistentry>
-			<term>Publican includes XML tags from &lt;abstract&gt; in %description and %post</term>
-			<listitem>
-				<para>
-					Previously, Publican displayed the &lt;abstract&gt; XML tag and any child tags in the %description and %post field of the book's spec file. This issue has been resolved in Publican 4, and the XML tags are no longer displayed with the text. <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=1018796">BZ#1018796</link>
-				</para>
-			</listitem>
-		</varlistentry>
-		<varlistentry>
-			<term>UTF-8 name_label and product_label get mangled when rebuilding from SRPM</term>
-			<listitem>
-				<para>
-					Previously,  if a book that had been translated into a language with a non-latin script was packaged, and then repackaged using the SRPM, the contents of the name_label and product_label parameters became mangled. This occurred because Publican was not handling UTF-8 characters correctly. Publican has been updated to deal correctly with UTF-8 characters, and repackaging books with non-latin scripts now works as expected. <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=1020059">BZ#1020059</link>
-				</para>
-			</listitem>
-		</varlistentry>
-		<varlistentry>
-			<term>UTF-8 -- "Revision History" &lt;title&gt; garbled in translated revision histories in non-Latin scripts</term>
-			<listitem>
-				<para>
-					In a previous version of Publican, the the Revision_History.xml file created by Publican update_po could contain a garbled &lt;title&gt; in languages with a non-Latin script. This issue has been resolved in Publican 4. <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=1020570">BZ#1020570</link>
-				</para>
-			</listitem>
-		</varlistentry>
-		<varlistentry>
-			<term>[UTF-8] Doc group titles and descriptions on splash pages garbled in non-latin scripts</term>
-			<listitem>
-				<para>
-					In a previous version of Publican, an issue existed where the group titles and descriptions could be garbled for languages written in a non-latin script. This issue is resolved in Publican 4. <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=1022575">BZ#1022575</link>
-				</para>
-			</listitem>
-		</varlistentry>
-		<varlistentry>
-			<term>Broken styles in 3.99</term>
-			<listitem>
-				<para>
-					Previously, text formatted with several XML tags were rendered incorrectly by Publican. Publican 4 corrects rendering issues with the following XML tags so that they display correctly: &lt;imageobject&gt; , &lt;textobject&gt;, &lt;package&gt; ,  &lt;example&gt; and &lt;option&gt;. <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=1023248">BZ#1023248</link>
-				</para>
-			</listitem>
-		</varlistentry>
-		<varlistentry>
-			<term>More style changes in 3.99</term>
-			<listitem>
-				<para>
-					In a previous version of Publican, text formatted with &lt;substep&gt; , &lt;stepalternative&gt; , and &lt;term&gt; XML tags rendered incorrectly. Publican 4 restores the rendering of these XML tags to the correct formatting. <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=1026173">BZ#1026173</link>
-				</para>
-			</listitem>
-		</varlistentry>
-		<varlistentry>
-			<term>Books that contain &lt;refentry&gt;s do not work</term>
-			<listitem>
-				<para>
-					A previous version of Publican attempted to chunk content inside a &lt;refentry&gt; tag. However, this directly conflicted with parts of xhtml-common such that chunking did not occur at all, and Publican ceased to work. Publican no longer attempts to chunk &lt;refentry&gt; content. <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=1026563">BZ#1026563</link>
-				</para>
-			</listitem>
-		</varlistentry>
-		<varlistentry>
-			<term>Clarify where relative paths are used in brand instructions</term>
-			<listitem>
-				<para>
-					Previous versions of the <citetitle>Publican Users' Guide</citetitle> contained a vague warning about using relative paths in custom XSL files. The warning has now been made more specific. <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=1028815">BZ#1028815</link>
-				</para>
-			</listitem>
-		</varlistentry>
-		<varlistentry>
-			<term>Minor fixes to Users' Guide</term>
-			<listitem>
-				<para>
-					The <citetitle>Publican Users' Guide</citetitle> contained typos and other minor errors, now corrected. <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=1000534">BZ#1000534</link>
-				</para>
-			</listitem>
-		</varlistentry>
-		<varlistentry>
-			<term>Minor fixes to Common Content</term>
-			<listitem>
-				<para>
-					The <citetitle>Document Conventions</citetitle> in the common content contained some minor inconsistencies in style, for example, hyphenation. The conventions are now more internally consistent. <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=1027248">BZ#1027248</link>
-				</para>
-			</listitem>
-		</varlistentry>
-		<varlistentry>
-			<term>Clarify translation instructions</term>
-			<listitem>
-				<para>
-					The <citetitle>Publican Users' Guide</citetitle> has been updated to clarify the suggested translation workflow. Specifically, the guide now describes how to use the <command>publican drop_trans</command> command to freeze content for translation.  <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=1021287">BZ#1021287</link>
-				</para>
-			</listitem>
-		</varlistentry>
-		<varlistentry>
-			<term>Expose glossterm in PO files</term>
-			<listitem>
-				<para>
-					Publican now exposes the <tag>&lt;glossterm&gt;</tag> tag in PO files for translation. This allows translators to use the <tag>sortas</tag> attribute to fine-tune how this term will be sorted in a glosary. See the <citetitle>Publican Users' Guide</citetitle> for more information on how to use this attribute. <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=1030591">BZ#1030591</link>
-				</para>
-			</listitem>
-		</varlistentry>
-		<varlistentry>
-			<term>Readability statistics</term>
-			<listitem>
-				<para>
-					Publican can now generate readability statistics on a book. Run the <command>publican report</command> on a book to generate Fog, Flesch, and Flesch-Kincaid statistics on the text. <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=1031364">BZ#1031364</link>
-				</para>
-			</listitem>
-		</varlistentry>
-		<varlistentry>
-			<term>Syntax highlighting now makes code comments light grey</term>
-			<listitem>
-				<para>
-					Previously, comments in code samples were syntax-highlighted bright pink. Now, comments are highlighted in light grey. <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=1030718">BZ#1030718</link>
-				</para>
-			</listitem>
-		</varlistentry>
-		<varlistentry>
-			<term>Newline sequences now properly escaped in translations</term>
-			<listitem>
-				<para>
-					Previously, Publican treated the newline escape sequences <literal>\n</literal> as normal text when it processed PO files. Therefore, if the sequence appeared in the msgstr, it would appear verbatim in the built output. Now, Publican properly escapes this sequence and does not build it into output. <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/show_bug.cgi?id=1036150">BZ#1036150</link>
-				</para>
-			</listitem>
-		</varlistentry>
+		
 		
 
 

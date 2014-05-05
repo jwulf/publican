@@ -10,11 +10,11 @@
 # required for desktop file install
 %define my_vendor %(test %{OTHER} == 1 && echo "fedora" || echo "redhat")
 
-%define TESTS 0
+%define TESTS 1
 %define wwwdir /var/www/html/docs
 
 Name:           publican
-Version:        4.0.0
+Version:        4.1.0
 Release:        0%{?dist}
 Summary:        Common files and scripts for publishing with DocBook XML
 # For a breakdown of the licensing, refer to LICENSE
@@ -26,6 +26,7 @@ BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch:      noarch
 Provides:	publican-common = %{version}
 Provides:	publican-common-db5 = %{version}
+Provides:       publican-API = 4.1
 
 # Get rid of the old packages
 Obsoletes:      perl-Publican-WebSite
@@ -87,7 +88,9 @@ BuildRequires:  perl(XML::LibXML) => 1.70
 BuildRequires:  perl(XML::LibXSLT) => 1.70
 BuildRequires:  perl(XML::Simple)
 BuildRequires:  perl(XML::TreeBuilder) => 5.1
-BuildRequires:  wkhtmltopdf >= 0.10.0_rc2-5
+# BZ #1053609
+BuildRequires:  perl-XML-TreeBuilder >= 5.1
+BuildRequires:  wkhtmltopdf >= 0.12.1.development
 BuildRequires:  docbook-style-xsl >= 1.77.1
 BuildRequires:  desktop-file-utils
 BuildRequires:  gettext
@@ -104,12 +107,14 @@ BuildRequires:  perl(Lingua::EN::Fathom)
 # Most of these are handled automatically
 Requires:       perl(:MODULE_COMPAT_%(eval "`%{__perl} -V:version`"; echo $version))
 Requires:       perl(Locale::Maketext::Gettext)  >= 1.27-1.2
-Requires:       wkhtmltopdf >= 0.10.0_rc2-5
+Requires:       wkhtmltopdf >= 0.12.1.devlopment
 Requires:       rpm-build
 Requires:       docbook-style-xsl >= 1.77.1
 Requires:       perl(XML::LibXML)  >=  1.67
 Requires:       perl(XML::LibXSLT) >=  1.67
 Requires:       perl(XML::TreeBuilder) >= 5.1
+# BZ #1053609
+Requires:       perl-XML-TreeBuilder >= 5.1
 Requires:       perl-Template-Toolkit
 Requires:       perl(DBD::SQLite)
 Requires:       perl(Text::CSV_XS)
@@ -136,6 +141,7 @@ Requires:       lohit-oriya-fonts lohit-punjabi-fonts lohit-sindhi-fonts
 Requires:       lohit-tamil-fonts lohit-telugu-fonts dejavu-lgc-sans-mono-fonts
 Requires:       dejavu-fonts-common dejavu-serif-fonts dejavu-sans-fonts
 Requires:       dejavu-sans-mono-fonts overpass-fonts
+Requires:       wqy-zenhei-fonts
 
 BuildRequires:  liberation-mono-fonts liberation-sans-fonts liberation-serif-fonts
 BuildRequires:  cjkuni-uming-fonts ipa-gothic-fonts ipa-pgothic-fonts
@@ -300,6 +306,41 @@ rm -rf $RPM_BUILD_ROOT
 %{wwwdir}/common-db5
 
 %changelog
+* Mon May 5 2014 Jeff Fearn <jfearn@redhat.com> 4.1.0-0
+- Add abstract to release notes so PDF builds
+- Fix RPM upgrade not pulling in required XML::TreeBuilder version. BZ #1053609
+- Allow PDF to build without any authors. BZ #1050975
+- Increase XML::LibXSLT::max_depth to 10K. BZ #1035525
+- Include entrytbl in cols count. BZ #1069405
+- Add 'td' to translatable blocks list. BZ #1059938
+- Treat entry like para for mixedmode tags. BZ #1039382
+- Add blank page after cover page in PDF. BZ #1050770
+- Fix replaceable override in DB 4.5 XSL. BZ #1054462
+- Store processing instructions. BZ #1045463
+- Add releaseinfo support. BZ #1050789
+- Add suppor5t for wkhtmltopdf 0.12.0
+- Add non-minified JS files. BZ #1062109
+- Use term as ID node for varlistentry. BZ #1050836
+- Fix acroread search and image issues. BZ #1038393 #1065810
+- Add line numbering to DB5 html output. BZ #1074709
+- Remove glossdiv and indexdiv headings from PDF TOC. BZ #1058545
+- Add basic handling & style for revisionflag.
+- Fix admonition style for wkhtmnltopdf 0.12.
+- Pass chunk_section_depth to wkhtmltopdf. BZ #1044848
+- Do not die on empty brand conf files. BZ #1037037
+- Fix font embedding
+- Enforce RPM API requirements. BZ #1029293
+- Fix desktop SPEC file creation. BZ #1081087
+- Pass previous option to msgmerge. BZ #1081363
+- Load splash pages in templates instead of using javascript. BZ #1081300
+- Sync list layout across web and desktop styles. BZ #1080236
+- Add dt_format parameter. BZ #1081808
+- Provide gettext version of package name. BZ #1083102
+- Fix step style. BZ #1080156
+- Fix DD layout. BZ #1084242
+- Fix tables breaking out. BZ #1082444
+- Add zt_push and zt_pull for Zanata.
+
 * Wed Dec 18 2013 Rüdiger Landmann <rlandmann@redhat.com> 4.0.0-0
 - Support DocBook 5 as input format. BZ #1005042
 - Fix duplicate first author in PDF. BZ #996351

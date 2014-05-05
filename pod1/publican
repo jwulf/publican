@@ -4,7 +4,7 @@ publican - a DocBook XML publishing tool.
 
 =head1 VERSION
 
-This document describes publican version 1.0
+This document describes publican version 4.0
 
 =head1 SYNOPSIS
 
@@ -50,6 +50,8 @@ Valid actions are:
     update_po     Update the PO files
     update_pot    Update the POT files
     update_site   Update an existing sites templates.
+    zt_pull       Pull translations from Zanata.
+    zt_push       Push translations to Zanata.
 
 
 Run: 'bin/publican <action> --help' for details on action usage
@@ -482,6 +484,7 @@ update_po
         --firstname=<FIRSTNAME>    firstname to use for a revision.
         --surname=<SURNAME>       surname to use for a revision.
         --email=<EMAIL>           email to use for a revision.
+        --previous                Keep previous msgid when fuzzy matches are detected in PO updates.
 
 
 update_pot
@@ -511,11 +514,37 @@ update_site
         --site_config=<SITE_CONFIG>    WebSite configuration file to use or create.
 
 
+zt_pull
+    Pull translations from Zanata.
+
+	Options:
+        --help                    Display help message
+        --config=s                Use a nonstandard config file
+        --common_config=s         Override path to Common_Config directory
+        --common_content=s        Override path to Common_Content directory
+        --nocolours               Disable ANSI colourisation of logging.
+        --quiet                   Disable all logging.
+        --brand_dir=s             Directory to source brand files from.
+
+
+zt_push
+    Push translations to Zanata.
+
+	Options:
+        --help                    Display help message
+        --config=s                Use a nonstandard config file
+        --common_config=s         Override path to Common_Config directory
+        --common_content=s        Override path to Common_Content directory
+        --nocolours               Disable ANSI colourisation of logging.
+        --quiet                   Disable all logging.
+        --brand_dir=s             Directory to source brand files from.
+
+
 
 
 =head1 CONFIGURATION AND ENVIRONMENT
 
-Publican requires access to Apache FOP for creating PDF files.
+Publican requires access to wkhtmltopdf or Apache FOP for creating PDF files.
 
 =head1 DEPENDENCIES
 
@@ -580,11 +609,11 @@ None reported.
 
 =head1 BUGS AND LIMITATIONS
 
-No bugs have been reported.
+Bug list at L<https://bugzilla.redhat.com/buglist.cgi?product=Publican&query_format=advanced&resolution=--->.
 
 Please report any bugs or feature requests to
 C<publican-list@redhat.com>, or through the web interface at
-L<https://bugzilla.redhat.com/bugzilla/enter_bug.cgi?product=Publican&component=publican&version=v3.9.9>.
+L<https://bugzilla.redhat.com/bugzilla/enter_bug.cgi?product=Publican&component=publican&version=$version>.
 
 =head1 AUTHOR
 

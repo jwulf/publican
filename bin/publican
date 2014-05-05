@@ -37,7 +37,7 @@ my $DATA_DIR          = Publican::ConfigData->config('datadir');
 
 # Try to catch SRPMS created using outdated versions of publican in brew/koji/mock
 if (   ( $ENV{RPM_BUILD_DIR} )
-    && ( $ENV{RPM_BUILD_DIR}    ne "" )
+    && ( $ENV{RPM_BUILD_DIR} ne "" )
     && ( $ENV{RPM_PACKAGE_NAME} ne "publican" )
     && (-f "/builddir/build/SRPMS/$ENV{RPM_PACKAGE_NAME}-$ENV{RPM_PACKAGE_VERSION}-$ENV{RPM_PACKAGE_RELEASE}.src.rpm"
     )
@@ -47,7 +47,7 @@ if (   ( $ENV{RPM_BUILD_DIR} )
     my $pkg
         = qq|/builddir/build/SRPMS/$ENV{RPM_PACKAGE_NAME}-$ENV{RPM_PACKAGE_VERSION}-$ENV{RPM_PACKAGE_RELEASE}.src.rpm|;
     my $req_version
-        = qx|rpm --requires -qp $pkg \| grep 'publican ' \| sed -e 's/^[^0-9]*//'|;
+        = qx|rpm --requires -qp $pkg \| grep 'publican-API' \| sed -e 's/^[^0-9\.]*//'|;
 
     system("rpm -Uvh $pkg");
     my $spec = qq|/builddir/build/SPECS/$ENV{RPM_PACKAGE_NAME}.spec|;
@@ -59,11 +59,11 @@ if (   ( $ENV{RPM_BUILD_DIR} )
     if (( $db_count > 0 or $pm_count > 0 )
         and ( !$req_version
             || $req_version eq ""
-            || $req_version < $Publican::SPEC_VERSION )
+            || $req_version != $Publican::SPEC_VERSION )
         )
     {
         croak(
-            "\n\n\nERROR: The version of publican used to create the SRPM is too old to use with this version of publican. Upgrade publican on your local machine to at least version $Publican::SPEC_VERSION and try again.\n\n\n"
+            "\n\n\nERROR: The version of publican used to create the SRPM is not compatible with this version of publican. Upgrade or downgrade publican on your local machine to a version that supplies API version $Publican::SPEC_VERSION and try again.\n\n\n"
         );
     }
 }
@@ -170,6 +170,7 @@ my %options = (
     'old_site_config=s' => maketext(
         'WebSite configuration file to use when copying content between sites.'
     ),
+    'previous' => maketext('Keep previous msgid when fuzzy matches are detected in PO updates.'),
 );
 
 # Options all actions use
@@ -250,7 +251,7 @@ my %actions = (
     },
     'update_po' => {
         'brief'   => maketext('Update the PO files'),
-        'options' => [ 'langs', 'msgmerge', 'firstname', 'surname', 'email' ],
+        'options' => [ 'langs', 'msgmerge', 'firstname', 'surname', 'email', 'previous' ],
     },
     'install_brand' => {
         'brief'   => maketext('Install a brand to the supplied location'),
@@ -330,6 +331,16 @@ my %actions = (
     'report' => {
         'brief' =>
             maketext('Print a readability report for the source text.'),
+        'options' => [],
+    },
+    'zt_pull' => {
+        'brief' =>
+            maketext('Pull translations from Zanata.'),
+        'options' => [],
+    },
+    'zt_push' => {
+        'brief' =>
+            maketext('Push translations to Zanata.'),
         'options' => [],
     },
 );
@@ -984,7 +995,8 @@ if ( $action eq 'update_po' ) {
             {   msgmerge  => $opts{msgmerge},
                 email     => $opts{email},
                 firstname => $opts{firstname},
-                surname   => $opts{surname}
+                surname   => $opts{surname},
+                previous  => $opts{previous},
             }
         );
     }
@@ -994,7 +1006,8 @@ if ( $action eq 'update_po' ) {
                 msgmerge  => $opts{msgmerge},
                 email     => $opts{email},
                 firstname => $opts{firstname},
-                surname   => $opts{surname}
+                surname   => $opts{surname},
+                previous  => $opts{previous},
             }
         );
     }
@@ -1332,9 +1345,9 @@ if ( $action eq 'rename' ) {
 if ( $action eq 'report' ) {
     my $dtdver = $publican->param('dtdver');
     my $builder;
-    my $lang = $publican->param('xml_lang');
-    my $tmp_dir           = $publican->param('tmp_dir');
-    my $docname           = $publican->param('docname');
+    my $lang    = $publican->param('xml_lang');
+    my $tmp_dir = $publican->param('tmp_dir');
+    my $docname = $publican->param('docname');
 
     if ( $dtdver =~ m/^5/ ) {
         $builder = Publican::Builder::DocBook5->new(
@@ -1347,8 +1360,8 @@ if ( $action eq 'report' ) {
     }
 
     $builder->build(
-        {   formats         => 'txt',
-            langs           => $publican->param('xml_lang'),
+        {   formats => 'txt',
+            langs   => $publican->param('xml_lang'),
             pub_dir => $opts{pub_dir},
         }
     );
@@ -1357,7 +1370,23 @@ if ( $action eq 'report' ) {
 
     my $text = new Lingua::EN::Fathom;
     $text->analyse_file($file);
-    print($text->report);
+    print( $text->report );
+}
+
+if ( $action eq 'zt_pull' ) {
+    my @zanata_cmd = qw(zanata-cli pull -s pot -t .);
+    my $result = system(@zanata_cmd);
+    if ($result) {
+        croak( maketext("Zanata call failed, error [_1]: '[2]'", $result, $!) );
+    }    
+}
+
+if ( $action eq 'zt_push' ) {
+    my @zanata_cmd = qw(zanata-cli push -s pot -t .);
+    my $result = system(@zanata_cmd);
+    if ($result) {
+        croak( maketext("Zanata call failed, error [_1]: '[2]'", $result, $!) );
+    }  
 }
 
 exit(0);

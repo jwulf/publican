@@ -19,6 +19,7 @@ use Time::localtime;
 use XML::Simple;
 use Archive::Zip qw( :ERROR_CODES :CONSTANTS );
 use Publican::ConfigData;
+use HTML::TreeBuilder;
 
 my $DB_NAME           = 'books';
 my $DEFAULT_LANG      = 'en-US';
@@ -127,6 +128,8 @@ my %tmpl_strings = (
     Product_Documentation => $locale->maketext('Product Documentation'),
     Support               => $locale->maketext('Support'),
     SrcIsNewer            => $locale->maketext('English is newer'),
+    SelectYourVersion     => $locale->maketext('Select your version'),
+    SelectYourCategory    => $locale->maketext('Scroll to category'),
 );
 
 sub new {
@@ -152,15 +155,16 @@ sub new {
         )
         );
     my $tmpl_path = $config->param('tmpl_path') || $DEFAULT_TMPL_PATH;
-    my $def_lang  = $config->param('def_lang')  || $DEFAULT_LANG;
-    my $db_file   = $config->param('db_file')   || croak(
+    $tmpl_path .= ":$DEFAULT_TMPL_PATH" if ( $config->param('tmpl_path') );
+    my $def_lang = $config->param('def_lang') || $DEFAULT_LANG;
+    my $db_file  = $config->param('db_file')  || croak(
         maketext(
             "[_1] is a mandatory field in a site configuration file. Check [_2] for validity.",
             'db_file',
             $site_config
         )
     );
-    my $host      = $config->param('host')      || 'http://localhost/docs';
+    my $host      = $config->param('host')      || '/docs';
     my $search    = $config->param('search')    || undef;
     my $title     = $config->param('title')     || 'Documentation';
     my $dump      = $config->param('dump')      || undef;
@@ -298,14 +302,14 @@ sub update_or_add_entry {
         : croak "update_or_add_entry: version required";
     my $name    = delete $arg->{name}    || croak "name required";
     my $formats = delete $arg->{formats} || croak "formats required";
-    my $product_label    = delete $arg->{product_label};
-    my $version_label    = delete $arg->{version_label};
-    my $name_label       = delete $arg->{name_label};
-    my $subtitle         = delete $arg->{subtitle};
-    my $abstract         = delete $arg->{abstract};
-    my $sort_order       = delete $arg->{sort_order};
-    my $book_version     = delete $arg->{book_version};
-    my $book_src_lang    = delete $arg->{book_src_lang};
+    my $product_label = delete $arg->{product_label};
+    my $version_label = delete $arg->{version_label};
+    my $name_label    = delete $arg->{name_label};
+    my $subtitle      = delete $arg->{subtitle};
+    my $abstract      = delete $arg->{abstract};
+    my $sort_order    = delete $arg->{sort_order};
+    my $book_version  = delete $arg->{book_version};
+    my $book_src_lang = delete $arg->{book_src_lang};
 
     if ( %{$arg} ) {
         croak "unknown args: " . join( ", ", keys %{$arg} );
@@ -323,38 +327,38 @@ sub update_or_add_entry {
 
     if ($id) {
         $rc = $self->update_entry(
-            {   ID               => $id,
-                language         => $language,
-                product          => $product,
-                version          => $version,
-                name             => $name,
-                formats          => $formats,
-                product_label    => $product_label,
-                version_label    => $version_label,
-                name_label       => $name_label,
-                subtitle         => $subtitle,
-                abstract         => $abstract,
-                sort_order       => $sort_order,
-                book_version     => $book_version,
-                book_src_lang    => $book_src_lang,
+            {   ID            => $id,
+                language      => $language,
+                product       => $product,
+                version       => $version,
+                name          => $name,
+                formats       => $formats,
+                product_label => $product_label,
+                version_label => $version_label,
+                name_label    => $name_label,
+                subtitle      => $subtitle,
+                abstract      => $abstract,
+                sort_order    => $sort_order,
+                book_version  => $book_version,
+                book_src_lang => $book_src_lang,
             }
         );
     }
     else {
         $rc = $self->add_entry(
-            {   language         => $language,
-                product          => $product,
-                version          => $version,
-                name             => $name,
-                formats          => $formats,
-                product_label    => $product_label,
-                version_label    => $version_label,
-                name_label       => $name_label,
-                subtitle         => $subtitle,
-                abstract         => $abstract,
-                sort_order       => $sort_order,
-                book_version     => $book_version,
-                book_src_lang    => $book_src_lang,
+            {   language      => $language,
+                product       => $product,
+                version       => $version,
+                name          => $name,
+                formats       => $formats,
+                product_label => $product_label,
+                version_label => $version_label,
+                name_label    => $name_label,
+                subtitle      => $subtitle,
+                abstract      => $abstract,
+                sort_order    => $sort_order,
+                book_version  => $book_version,
+                book_src_lang => $book_src_lang,
             }
         );
     }
@@ -373,14 +377,14 @@ sub add_entry {
         : croak "add_entry: version required";
     my $name    = delete $arg->{name}    || croak "name required";
     my $formats = delete $arg->{formats} || croak "formats required";
-    my $product_label    = delete $arg->{product_label};
-    my $version_label    = delete $arg->{version_label};
-    my $name_label       = delete $arg->{name_label};
-    my $subtitle         = delete $arg->{subtitle};
-    my $abstract         = delete $arg->{abstract};
-    my $sort_order       = delete $arg->{sort_order};
-    my $book_version     = delete $arg->{book_version};
-    my $book_src_lang    = delete $arg->{book_src_lang};
+    my $product_label = delete $arg->{product_label};
+    my $version_label = delete $arg->{version_label};
+    my $name_label    = delete $arg->{name_label};
+    my $subtitle      = delete $arg->{subtitle};
+    my $abstract      = delete $arg->{abstract};
+    my $sort_order    = delete $arg->{sort_order};
+    my $book_version  = delete $arg->{book_version};
+    my $book_src_lang = delete $arg->{book_src_lang};
 
     if ( %{$arg} ) {
         croak "unknown args: " . join( ", ", keys %{$arg} );
@@ -399,11 +403,10 @@ sub add_entry {
 INSERT_ENTRY
 
     return $self->_dbh->do(
-        $sql,        undef,          $language,
-        $product,    $version,       $name,
-        $formats,    $product_label, $version_label,
-        $name_label, $subtitle,      $abstract,
-        $sort_order, $book_version,  $book_src_lang
+        $sql,           undef,         $language, $product,
+        $version,       $name,         $formats,  $product_label,
+        $version_label, $name_label,   $subtitle, $abstract,
+        $sort_order,    $book_version, $book_src_lang
     );
 }
 
@@ -419,14 +422,14 @@ sub update_entry {
         : croak "update_entry: version required";
     my $name    = delete $arg->{name}    || croak "name required";
     my $formats = delete $arg->{formats} || croak "formats required";
-    my $product_label    = delete $arg->{product_label};
-    my $version_label    = delete $arg->{version_label};
-    my $name_label       = delete $arg->{name_label};
-    my $subtitle         = delete $arg->{subtitle};
-    my $abstract         = delete $arg->{abstract};
-    my $sort_order       = delete $arg->{sort_order};
-    my $book_version     = delete $arg->{book_version};
-    my $book_src_lang    = delete $arg->{book_src_lang};
+    my $product_label = delete $arg->{product_label};
+    my $version_label = delete $arg->{version_label};
+    my $name_label    = delete $arg->{name_label};
+    my $subtitle      = delete $arg->{subtitle};
+    my $abstract      = delete $arg->{abstract};
+    my $sort_order    = delete $arg->{sort_order};
+    my $book_version  = delete $arg->{book_version};
+    my $book_src_lang = delete $arg->{book_src_lang};
 
     if ( %{$arg} ) {
         croak "unknown args: " . join( ", ", keys %{$arg} );
@@ -445,11 +448,10 @@ sub update_entry {
 INSERT_ENTRY
 
     return $self->_dbh->do(
-        $sql,        undef,          $language,
-        $product,    $version,       $name,
-        $formats,    $product_label, $version_label,
-        $name_label, $subtitle,      $abstract,
-        $sort_order, $book_version,  $book_src_lang
+        $sql,           undef,         $language, $product,
+        $version,       $name,         $formats,  $product_label,
+        $version_label, $name_label,   $subtitle, $abstract,
+        $sort_order,    $book_version, $book_src_lang
     );
 }
 
@@ -593,7 +595,7 @@ GET_LIST
             || '2000-01-01';
         $list{$product}{$version}{$name}{subtitle}   = $subtitle;
         $list{$product}{$version}{$name}{abstract}   = $abstract;
-        $list{$product}{$version}{$name}{sort_order} = ($sort_order || 50);
+        $list{$product}{$version}{$name}{sort_order} = ( $sort_order || 50 );
         $list{$product}{$version}{$name}{srcnewer}
             = !( ( defined($orig_ver) )
             && ( $orig_ver ne '' )
@@ -664,7 +666,7 @@ sub regen_all_toc {
                 delete( $version->{untrans_books} );
                 push( @versions, $version )
                     if defined( $version->{books} )
-                        && scalar @{ $version->{books} };
+                    && scalar @{ $version->{books} };
             }
 
             if ( scalar @versions ) {
@@ -967,8 +969,8 @@ SEARCH
                     $book_label
                         = $list2->{$product}{$version}{$book}{name_label}
                         if ($list2->{$product}{$version}{$book}{name_label}
-                        and $list2->{$product}{$version}{$book}{name_label} ne
-                        $book );
+                        and $list2->{$product}{$version}{$book}{name_label}
+                        ne $book );
 
                     $book_label = decode_utf8($book_label)
                         unless ( is_utf8($book_label) );
@@ -977,8 +979,9 @@ SEARCH
                         = $list2->{$product}{$version}{$book}{version_label}
                         if (
                             $list2->{$product}{$version}{$book}{version_label}
-                        and $list2->{$product}{$version}{$book}{version_label}
-                        ne $version );
+                        and
+                        $list2->{$product}{$version}{$book}{version_label} ne
+                        $version );
 
                     $version_label = decode_utf8($version_label)
                         unless ( is_utf8($version_label) );
@@ -987,8 +990,9 @@ SEARCH
                         = $list2->{$product}{$version}{$book}{product_label}
                         if (
                             $list2->{$product}{$version}{$book}{product_label}
-                        and $list2->{$product}{$version}{$book}{product_label}
-                        ne $product );
+                        and
+                        $list2->{$product}{$version}{$book}{product_label} ne
+                        $product );
 
                     $product_label = decode_utf8($product_label)
                         unless ( is_utf8($product_label) );
@@ -1088,6 +1092,15 @@ SEARCH
                 $book_data{book_clean} =~ s/_/ /g;
                 $book_data{types} = \@types;
 
+            foreach my $format (
+                sort ( insensitive_sort keys(%{ $list2->{$product}{$version}{$book}{formats} }) ) )
+            {
+                $book_data{base_format} = $format;
+                if ( $format =~ m/^html/ ) {
+                    last;
+                }
+            }
+
                 if ( $lang eq $language ) {
                     push( @books, \%book_data );
                 }
@@ -1171,6 +1184,9 @@ SEARCH
     ) or croak( $self->{Template}->error() );
 
     if ( $self->{web_style} == 1 ) {
+        $vars->{splash}
+            = $self->get_splash(
+            { path => $self->{toc_path} . "/$language" } );
         $vars->{host}  = $host;
         $vars->{lang}  = $language;
         $vars->{title} = $self->{title};
@@ -1182,6 +1198,31 @@ SEARCH
     }
 
     return \@products;
+}
+
+sub get_splash {
+    my ( $self, $arg ) = @_;
+
+    my $path = delete $arg->{path}
+        || croak "get_splash: file required";
+
+    if ( $arg && %{$arg} ) {
+        croak "unknown args: " . join( ", ", keys %{$arg} );
+    }
+
+    my $html;
+    my $file = $path . "/splash.html";
+    if ( -f ($file) ) {
+        my $tree = HTML::TreeBuilder->new();
+        my $fh;
+        open( $fh, "<:encoding(UTF-8)", $file )
+            || croak(
+            maketext( "Can't open file for html input: [_1]", $! ) );
+        $tree->parse_file($fh);
+        my $node = $tree->look_down( 'class', qr/article/ );
+        $html = $node->as_HTML() if ($node);
+    }
+    return ($html);
 }
 
 sub report {
@@ -1537,11 +1578,13 @@ SQL
             $book_lang_vars->{trans_strings} = $vars;
             $book_lang_vars->{subtitle}      = $record->{subtitle};
             $book_lang_vars->{book_label} =~ s/_/ /g;
-            $book_lang_vars->{sort_order} = ($record->{sort_order} || 50);
+            $book_lang_vars->{sort_order} = ( $record->{sort_order} || 50 );
 
-            foreach my $format ( sort (insensitive_sort split( /,/, $record->{formats} ) ) ){
+            foreach my $format (
+                sort ( insensitive_sort split( /,/, $record->{formats} ) ) )
+            {
                 $book_lang_vars->{base_format} = $format;
-                if($format =~ m/^html/) {
+                if ( $format =~ m/^html/ ) {
                     last;
                 }
             }
@@ -1583,7 +1626,7 @@ SQL
             push(
                 @{  $book_ver_list{$product}{ $record->{name} }{$version}
                         {formats}
-                    },
+                },
                 split( /,/, $record->{formats} )
             );
         }
@@ -1698,6 +1741,8 @@ sub write_version_index {
     $index_vars->{footer}           = $self->{footer};
     $index_vars->{site_title}       = $self->{title};
     $index_vars->{book_ver_list}    = $book_ver_list;
+    $index_vars->{splash}           = $self->get_splash(
+        { path => $self->{toc_path} . "/$lang/$product/$version" } );
 
     $self->{Template}->process(
         'versions_index.tmpl', $index_vars,
@@ -1755,6 +1800,10 @@ sub write_product_index {
     $index_vars->{footer}        = $self->{footer};
     $index_vars->{site_title}    = $self->{title};
     $index_vars->{book_ver_list} = $book_ver_list;
+    $index_vars->{splash}
+        = $self->get_splash(
+        { path => $self->{toc_path} . "/$lang/$product" } );
+    $index_vars->{categories}        = (-d "$DEFAULT_TMPL_PATH/groups/$lang/$product");
 
     $self->{Template}->process(
         'products_index.tmpl', $index_vars,
@@ -1833,7 +1882,7 @@ sub i_sort {
                         <=> ( $hash->{$b}->{sort_order} || 50 );
                 }
                 else { lc($a) cmp lc($b) }
-            } keys( %{$hash} ) )
+        } keys( %{$hash} ) )
     );
 }
 
@@ -1872,6 +1921,8 @@ sub write_language_index {
     $index_vars->{trans_strings} = $trans_strings;
     $index_vars->{footer}        = $self->{footer};
     $index_vars->{site_title}    = $self->{title};
+    $index_vars->{splash}
+        = $self->get_splash( { path => $self->{toc_path} . "/$lang" } );
 
     $self->{Template}->process(
         'language_index.tmpl', $index_vars,

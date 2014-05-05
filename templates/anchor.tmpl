@@ -1,4 +1,5 @@
 [% text = name %]
+[% UNLESS short %]
 [% IF lang != booklang %]
 	[% text = text _ " <span>${trans_strings.Untranslated}</span>" %]
 [% END %]
@@ -7,6 +8,7 @@
 [% END %]
 [% IF subtitle %]
 	[% text = text _ " <span class='subtitle'>${subtitle}</span>" %]
+[% END %]
 [% END %]
 
      [%- IF format == 'pdf' || format == 'epub' %]

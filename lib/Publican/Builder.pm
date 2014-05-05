@@ -616,9 +616,6 @@ sub package {
     $self->{publican}->{config}->param( 'xml_lang', $lang );
 
     my $common_config = $self->{publican}->param('common_config');
-    my $xsl_file      = $common_config . "/xsl/web-spec.xsl";
-    $xsl_file = $common_config . "/xsl/dt_htmlsingle_spec.xsl" if ($desktop);
-    $xsl_file =~ s/"//g;    # windows
     my $license       = $self->{publican}->param('license');
     my $brand         = lc( $self->{publican}->param('brand') );
     my $doc_url       = $self->{publican}->param('doc_url');
@@ -648,8 +645,9 @@ sub package {
     my $config = new Config::Simple();
     $config->syntax('http');
     foreach my $key ( keys(%Config) ) {
+
         # skip invalid parameters
-        next unless(defined($Publican::PARAMS{$key}));
+        next unless ( defined( $Publican::PARAMS{$key} ) );
 
         # skip limited parameters
         next
@@ -755,6 +753,7 @@ sub package {
         book_version      => "$edition-$release",
         book_src_lang     => $book_src_lang,
         img_dir           => $self->{publican}->param('img_dir'),
+        dt_format         => $self->{publican}->param('dt_format'),
     );
 
     # \p{Z} is unicode white space, which is a super set of ascii white space.
@@ -782,7 +781,12 @@ sub package {
     $spec_name = "$tmp_dir/rpm/$name_start-$lang.spec"
         if ( $desktop or $short_sighted );
 
-    $self->{template}->process( 'spec.tmpl', \%vars, $spec_name,
+    my $spec_tmpl = 'spec.tmpl';
+    if ($desktop) {
+        $spec_tmpl = 'desktop-spec.tmpl';
+    }
+
+    $self->{template}->process( $spec_tmpl, \%vars, $spec_name,
         binmode => ':encoding(UTF-8)' )
         or croak( $self->{template}->error() );
 

@@ -15,10 +15,10 @@ URL:           [% url %]
 Source:        [% src_url %]%{name}-%{version}-[% rpmrel %].tgz
 BuildArch:      noarch
 BuildRoot:     %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
-BuildRequires: publican >= [% spec_version %]
+BuildRequires: publican-API = [% spec_version %]
 BuildRequires: desktop-file-utils
 BuildRequires: [% brand %]
-Requires:      publican >= [% spec_version %]
+Requires:      publican-API = [% spec_version %]
 Requires:      [% brand %]-web
 [%- IF web_obsoletes -%]
 Obsoletes:    [% web_obsoletes %]
@@ -27,6 +27,7 @@ Obsoletes:    [% web_obsoletes %]
 Requires:    [% web_req %]
 [%- END %]
 Requires:      [% brand %]-web
+Provides:      [% book_title %]-web-[% lang.replace('-', '_') %] = %{version}-%{release}
 
 %description
 [%- IF translation %]
@@ -51,6 +52,7 @@ Obsoletes:     [% dt_obsoletes %]
 [%- IF dt_requires %]
 Requires:     [% dt_requires %]
 [% END %]
+Provides:      [% book_title %]-[% lang.replace('-', '_') %] = %{version}-%{release}
 
 %description  -n [% book_title %]-[% lang %]
 [%- IF translation %]
@@ -64,7 +66,8 @@ Requires:     [% dt_requires %]
 %setup -q
 
 %build
-publican build --nocolours [% embedtoc %] --formats="[% web_formats_comma %],html-desktop" --langs=[% lang %] --publish
+publican build --nocolours [% embedtoc %] --formats="[% web_formats_comma %]" --langs=[% lang %] --publish
+publican build --nocolours --formats="[% dt_format %]" --langs=[% lang %]
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -129,7 +132,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -n [% book_title %]-[% lang %]
 %defattr(-,root,root,-)
-%doc [% tmpdir %]/[% lang %]/html-desktop/*
+%doc [% tmpdir %]/[% lang %]/[% dt_format %]/*
 [%- IF ICONS %]
 /usr/share/icons/hicolor/*
 [%- ELSE %]

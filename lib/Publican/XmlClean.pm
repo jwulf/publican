@@ -185,20 +185,20 @@ my %MAP_OUT = (
     computeroutput => {},
     guimenuitem    => {},
     textobject     => { block => 1 },
-    varlistentry   => { block => 1 },
-    term           => { newline_after => 1 },
-    colspec        => { newline_after => 1 },
-    areaspec       => { block => 1 },
-    areaset        => { block => 1, keep_id => 1 },
-    area           => { newline_after => 1, keep_id => 1 },
-    calloutlist  => { block => 1 },
-    callout      => { block => 1 },
-    procedure    => { block => 1, newline_after => 1 },
-    appendix     => { block => 1 },
-    appendixinfo => { block => 1 },
-    cmdsynopsis  => { block => 1 },
-    arg          => { block => 1 },
-    group        => { block => 1 },
+    varlistentry   => { block => 1, id_node => 'term' },
+    term         => { newline_after => 1 },
+    colspec      => { newline_after => 1 },
+    areaspec     => { block         => 1 },
+    areaset      => { block         => 1, keep_id => 1 },
+    area         => { newline_after => 1, keep_id => 1 },
+    calloutlist  => { block         => 1 },
+    callout      => { block         => 1 },
+    procedure    => { block         => 1, newline_after => 1 },
+    appendix     => { block         => 1 },
+    appendixinfo => { block         => 1 },
+    cmdsynopsis  => { block         => 1 },
+    arg          => { block         => 1 },
+    group        => { block         => 1 },
     accel         => {},
     blockquote    => { block => 1 },
     classname     => {},
@@ -635,8 +635,8 @@ sub my_as_XML {
     $tree->traverse(
         sub {
             ( $node, $start ) = @_;
-            if ( ref $node ) {     # it's an element
-                                   # delete internal attrs
+            if ( ref $node ) {    # it's an element
+                                  # delete internal attrs
                 $node->attr( 'depth', undef );
                 $node->attr( 'name',  undef );
 
@@ -644,7 +644,7 @@ sub my_as_XML {
 
                 #print(STDERR "tag: $tag\n");
 
-                if ($start) {      # on the way in
+                if ($start) {     # on the way in
                     if ( $banned_tags{$tag} ) {
                         croak(
                             maketext(
@@ -674,7 +674,8 @@ sub my_as_XML {
                     if (( $MAP_OUT{$tag}->{'newline'} )
                         && (   ( not defined $MAP_OUT{$tag}->{mixed_mode} )
                             || ( not $MAP_OUT{$tag}->{mixed_mode} )
-                            || ( not $node->look_up( '_tag', 'para' ) ) )
+                            || (not $node->look_up( '_tag', qr/para|entry/ ) )
+                        )
                         )
                     {
                         push( @xml, "\n", $indent x $depth );
@@ -688,9 +689,11 @@ sub my_as_XML {
                    # Check to make sure the block is starting on it's own line
                    # If not add a new line and indent
                         if (( $xml[$#xml] && $xml[$#xml] =~ /\S/ )
-                            && ( ( not defined $MAP_OUT{$tag}->{mixed_mode} )
+                            && (( not defined $MAP_OUT{$tag}->{mixed_mode} )
                                 || ( not $MAP_OUT{$tag}->{mixed_mode} )
-                                || ( not $node->look_up( '_tag', 'para' ) ) )
+                                || (not $node->look_up( '_tag',
+                                        qr/para|entry/ ) )
+                            )
                             )
                         {
                             push( @xml, "\n", $indent x $depth );
@@ -747,9 +750,11 @@ sub my_as_XML {
                     {
                         push( @xml, $node->starttag_XML( undef, 1 ) );
                         if ($MAP_OUT{$tag}->{newline_after}
-                            && ( ( not defined $MAP_OUT{$tag}->{mixed_mode} )
+                            && (( not defined $MAP_OUT{$tag}->{mixed_mode} )
                                 || ( not $MAP_OUT{$tag}->{mixed_mode} )
-                                || ( not $node->look_up( '_tag', 'para' ) ) )
+                                || (not $node->look_up( '_tag',
+                                        qr/para|entry/ ) )
+                            )
                             )
                         {
                             push( @xml, "\n", $indent x $depth );
@@ -768,9 +773,11 @@ sub my_as_XML {
                         }
                         elsif (
                             ( not $MAP_OUT{$tag}->{verbatim} )
-                            && ( ( not defined $MAP_OUT{$tag}->{mixed_mode} )
+                            && (( not defined $MAP_OUT{$tag}->{mixed_mode} )
                                 || ( not $MAP_OUT{$tag}->{mixed_mode} )
-                                || ( not $node->look_up( '_tag', 'para' ) ) )
+                                || (not $node->look_up( '_tag',
+                                        qr/para|entry/ ) )
+                            )
                             )
                         {
                             push( @xml, "\n", $indent x $depth );
@@ -801,7 +808,8 @@ sub my_as_XML {
                             }
                             elsif (( defined $MAP_OUT{$tag}->{mixed_mode} )
                                 && ( $MAP_OUT{$tag}->{mixed_mode} )
-                                && ( $node->look_up( '_tag', 'para' ) ) )
+                                && ($node->look_up( '_tag', qr/para|entry/ ) )
+                                )
                             {
                                 $depth--;
                             }
@@ -833,7 +841,8 @@ sub my_as_XML {
                     if (( $MAP_OUT{$tag}->{newline_after} )
                         && (   ( not defined $MAP_OUT{$tag}->{mixed_mode} )
                             || ( not $MAP_OUT{$tag}->{mixed_mode} )
-                            || ( not $node->look_up( '_tag', 'para' ) ) )
+                            || (not $node->look_up( '_tag', qr/para|entry/ ) )
+                        )
                         )
                     {
                         push( @xml, "\n", $indent x $depth );
@@ -842,7 +851,8 @@ sub my_as_XML {
                     if (( $MAP_OUT{$tag}->{block} )
                         && (   ( not defined $MAP_OUT{$tag}->{mixed_mode} )
                             || ( not $MAP_OUT{$tag}->{mixed_mode} )
-                            || ( not $node->look_up( '_tag', 'para' ) ) )
+                            || (not $node->look_up( '_tag', qr/para|entry/ ) )
+                        )
                         )
                     {
                         push( @xml, "\n", $indent x $depth );
@@ -942,12 +952,14 @@ sub validate_tables {
                 ) . "\n";
 
             foreach my $row ( $node->look_down( "_tag", "row" ) ) {
-                my @entries = $row->look_down( "_tag", "entry" );
+                my @entries = $row->look_down( "_tag", qr/(?:entry|entrytbl)/,
+                    sub { $_[0]->depth() == ( $row->depth() + 1 ) } );
+## BUGBUG this is incomplete, it should check colwidths
                 if ( @entries > $cols ) {
                     croak maketext(
                         "*ERROR: Fatal Table Error* Table ([_1]) contains invalid data\nAttribute cols ([_2]) does not match number of entry elements ([_3])",
-                        $title, $cols, @entries )
-                        . "\n";
+                        $title, $cols, scalar @entries
+                    ) . "\n";
                 }
             }
         }

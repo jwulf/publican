@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2013-12-18 12:23+1000\n"
-"PO-Revision-Date: 2013-12-18 12:23+1000\n"
+"POT-Creation-Date: 2014-05-05 14:52+1000\n"
+"PO-Revision-Date: 2014-05-05 14:52+1000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: None\n"
 "MIME-Version: 1.0\n"
@@ -29,7 +29,7 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "If you find a typographical error in this manual, or if you have thought of a way to make this manual better, we would love to hear from you! Please submit a report in Bugzilla: <ulink url=\"https://bugzilla.redhat.com/enter_bug.cgi?product=Publican&amp;component=Publican20Users20Guide\" />."
+msgid "If you find a typographical error in this manual, or if you have thought of a way to make this manual better, we would love to hear from you! Please submit a report in Bugzilla: <ulink url=\"https://bugzilla.redhat.com/enter_bug.cgi?product=Publican&amp;component=Publican%20Users%20Guide&amp;version=&PRODUCTNUM;\" />."
 msgstr ""
 
 #. Tag: para

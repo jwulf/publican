@@ -18,7 +18,7 @@ use Encode qw(is_utf8 decode_utf8 encode_utf8);
 
 # What tags do we translate?
 my $TRANSTAGS
-    = qr/^(?:ackno|bridgehead|caption|conftitle|contrib|entry|firstname|glossentry|indexterm|jobtitle|keyword|label|lastname|lineannotation|lotentry|member|orgdiv|orgname|othername|para|phrase|productname|refclass|refdescriptor|refentrytitle|refmiscinfo|refname|refpurpose|releaseinfo|revremark|screeninfo|secondaryie|seealsoie|seeie|seg|segtitle|simpara|subtitle|surname|term|termdef|tertiaryie|textobject|title|titleabbrev|screen|programlisting|literallayout)$/;
+    = qr/^(?:ackno|bridgehead|caption|conftitle|contrib|entry|firstname|glossentry|indexterm|jobtitle|keyword|label|lastname|lineannotation|lotentry|member|orgdiv|orgname|othername|para|phrase|productname|refclass|refdescriptor|refentrytitle|refmiscinfo|refname|refpurpose|releaseinfo|revremark|screeninfo|secondaryie|seealsoie|seeie|seg|segtitle|simpara|subtitle|surname|td|term|termdef|tertiaryie|textobject|title|titleabbrev|screen|programlisting|literallayout)$/;
 
 # Blocks that contain translatable tags that need to be kept inline
 my $IGNOREBLOCKS
@@ -260,6 +260,7 @@ sub update_po {
         || croak( maketext("surname is a mandatory argument") );
     my $email = delete( $args->{email} )
         || croak( maketext("email is a mandatory argument") );
+    my $previous = delete( $args->{previous} );
 
     if ( %{$args} ) {
         croak(
@@ -330,21 +331,19 @@ sub update_po {
                     $self->merge_po(
                         { po_file => $po_file, pot_file => $pot_file } );
                 }
-                elsif (
-                    system(
-                        "msgmerge",      "--no-wrap", "--quiet",
-                        "--backup=none", "--update",  $po_file,
-                        $pot_file
-                    ) != 0
-                    )
-                {
-                    croak(
-                        maketext(
-                            "Fatal Error: msgmerge failed to merge updates. POT File: [_1]. Po File: [_2]",
-                            $pot_file,
-                            $po_file
-                        )
-                    );
+                else {
+                    my @cmd
+                        = qw(msgmerge --no-wrap --quiet --backup=none --update);
+                    push( @cmd, '--previous' ) if ($previous);
+                    if ( system( @cmd, $po_file, $pot_file ) != 0 ) {
+                        croak(
+                            maketext(
+                                "Fatal Error: msgmerge failed to merge updates. POT File: [_1]. Po File: [_2]",
+                                $pot_file,
+                                $po_file
+                            )
+                        );
+                    }
                 }
             }
 
@@ -519,6 +518,7 @@ sub update_po_all {
     my ( $self, $args ) = @_;
 
     my $msgmerge  = delete( $args->{msgmerge} );
+    my $previous  = delete( $args->{previous} );
     my $firstname = delete( $args->{firstname} );
     my $surname   = delete( $args->{surname} );
     my $email     = delete( $args->{email} );
@@ -537,6 +537,7 @@ sub update_po_all {
             email     => $email,
             firstname => $firstname,
             surname   => $surname,
+            previous  => $previous,
         }
     );
     return;
@@ -1095,10 +1096,10 @@ sub po_unformat {
         $string =~ s/\\\\/\\/g;   # unescape backslash added by po_format
     }
     else {
-        $string =~ s/^\"//msg;      # strip sol quotes added by msguniq etc
-        $string =~ s/\"$//msg;      # strip sol quotes added by msguniq etc
-        $string =~ s/\\n/ /msg;     # strip eol quotes added by msguniq etc
-        $string =~ s/\n//msg;       # strip eol quotes added by msguniq etc
+        $string =~ s/^\"//msg;     # strip sol quotes added by msguniq etc
+        $string =~ s/\"$//msg;     # strip sol quotes added by msguniq etc
+        $string =~ s/\\n/ /msg;    # strip eol quotes added by msguniq etc
+        $string =~ s/\n//msg;      # strip eol quotes added by msguniq etc
         $string =~ s/^[\t ]*//msg
             ;    # strip the leading spaces left from the msgid "" line
         $string =~ s/\\"/\"/msg;    # unescape quotes added by po_format

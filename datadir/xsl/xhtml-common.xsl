@@ -159,7 +159,7 @@ Version: 1.72.0
 	<xsl:variable name="numeration">
 		<xsl:call-template name="procedure.step.numeration"/>
 	</xsl:variable>
-	<ol xmlns="http://www.w3.org/1999/xhtml" class="{$numeration}">
+	<ol xmlns="http://www.w3.org/1999/xhtml" class="substeps {$numeration}">
 		<xsl:call-template name="anchor"/>
 		<xsl:apply-templates/>
 	</ol>
@@ -551,6 +551,10 @@ Version: 1.72.0
     <xsl:if test="@role">
         <xsl:text> </xsl:text>
         <xsl:value-of select="@role"/>
+    </xsl:if>
+    <xsl:if test="@revisionflag and ($draft.mode = 'yes' or ($draft.mode = 'maybe' and (ancestor-or-self::set | ancestor-or-self::book | ancestor-or-self::article)[1]/@status = 'draft'))">
+        <xsl:text> </xsl:text>
+        <xsl:value-of select="@revisionflag"/>
     </xsl:if>
   </xsl:variable>
 
@@ -981,13 +985,11 @@ Version: 1.72.0
   <xsl:param name="content"/>
 
   <xsl:variable name="p">
-    <div class="para">
+    <div>
       <xsl:call-template name="dir"/>
-      <xsl:if test="$class != ''">
         <xsl:apply-templates select="." mode="class.attribute">
-          <xsl:with-param name="class" select="$class"/>
+          <xsl:with-param name="class" select="'para'"/>
         </xsl:apply-templates>
-      </xsl:if>
       <!--xsl:if test="@id or @xml:id">
         <xsl:attribute name="id">
           <xsl:value-of select="(@id|@xml:id)[1]"/>
@@ -2492,8 +2494,29 @@ Fix double footnote in bibliography. BZ #653447
   </div>
 </xsl:template>
 
-<xsl:template match="d:replaceable" priority="1">
+<xsl:template match="replaceable" priority="1">
   <xsl:call-template name="inline.italicseq"/>
+</xsl:template>
+
+<xsl:template name="anchor">
+  <xsl:param name="node" select="."/>
+  <xsl:param name="conditional" select="1"/>
+
+  <xsl:choose>
+    <xsl:when test="$generate.id.attributes != 0">
+      <!-- No named anchors output when this param is set -->
+    </xsl:when>
+    <xsl:when test="$conditional = 0 or $node/@id or $node/@xml:id">
+      <a>
+        <xsl:attribute name="id">
+          <xsl:call-template name="object.id">
+            <xsl:with-param name="object" select="$node"/>
+          </xsl:call-template>
+        </xsl:attribute>
+        <!-- need a zero-width non-breaking space because webkit doesn't render empty anchors -->
+      &#8288;</a>
+    </xsl:when>
+  </xsl:choose>
 </xsl:template>
 
 </xsl:stylesheet>

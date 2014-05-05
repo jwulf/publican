@@ -9,10 +9,10 @@
 		<primary>Introduction 1</primary>
 
 	</indexterm>
-	 <para>
+	 <para revisionflag="changed">
 		<indexterm><primary>Introduction 2</primary></indexterm> <application>Publican</application> <indexterm><primary>Introduction 3</primary> <secondary>Introduction 3</secondary></indexterm> is a tool for publishing material authored in DocBook XML. This guide explains how to create and build books and articles using <application>Publican</application>. It is not a general DocBook XML tutorial; refer to <citetitle>DocBook: The Definitive Guide</citetitle> by Norman Walsh and Leonard Muellner, available at <ulink url="&DOCBOOK-URL;" /> for more general help with DocBook XML.
 	</para>
-	 <para>
+	 <para revisionflag="added">
 		<application>Publican</application> began life as an internal tool used by Red Hat's Documentation Group (now known as Engineering Content Services). On occasion, this legacy is visible.
 	</para>
 	 <formalpara conformance="191" id="form-Publican-Users_Guide-Introduction-Design">
@@ -22,7 +22,7 @@
 		</para>
 
 	</formalpara>
-	 <para>
+	 <para revisionflag="deleted">
 		The branding functionality allows you to create your own presentation rules and look, overriding many parts of the default style to meet your publishing needs. Choices executed in code, however, are not changeable.
 	</para>
 	 <para>
@@ -34,7 +34,7 @@
 	 <para>
 		Entities also present an essentially insurmountable obstacle to quality translation (refer to <xref linkend="sect-Publican-Users_Guide-Entities_and_translation" />). Consequently, while we are not reducing the <filename><replaceable>Doc_Name</replaceable>.ent</filename> file's functionality, we are no longer considering requests to add functionality or features associated with entity use.
 	</para>
-	<!--                               https://bugzilla.redhat.com/show_bug.cgi?id=604255                               --><!--                              example>
+	<!--                                   https://bugzilla.redhat.com/show_bug.cgi?id=604255                                   --><!--                                  example>
   <title>"Hello world!" in C++</title>
   <programlisting language="C++"><![CDATA[
 #include <qpid/messaging/Connection.h>
@@ -104,7 +104,7 @@ efficient than acknowledging messages individually.</para>
 all senders and receivers managed by each session.</para>
     </callout>
   </calloutlist>
-</example                              --> <!--                              programlistingco>
+</example                                  --> <!--                                  programlistingco>
     <areaspec>
  <area id="index1" coords="2 65"/>
  <area id="index2" coords="3 11"/>
@@ -129,7 +129,7 @@ array.
      </para>
  </callout>
     </calloutlist>
-</programlistingco                              --><!--                             
+</programlistingco                                  --><!--                                 
 <para>
 <equation>
 <title>My MathML example</title>
@@ -143,5 +143,5 @@ array.
 </mml:math>
 </equation>
 </para>
-                             -->
+                                 -->
 </preface>

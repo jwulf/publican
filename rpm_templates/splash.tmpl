@@ -10,8 +10,8 @@ URL:           [% url %]
 Source:        [% src_url %]%{name}-%{version}-[% rpmrel %].tgz
 BuildArch:     noarch
 BuildRoot:     %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
-BuildRequires: publican >= [% spec_version %]
-Requires:      publican >= [% spec_version %]
+BuildRequires: publican-API = [% spec_version %]
+Requires:      publican-API = [% spec_version %]
 BuildRequires: [% brand %]
 Requires:      [% brand %]-web
 
@@ -35,9 +35,6 @@ cp -rf publish/datadir/*  $RPM_BUILD_ROOT/%{_datadir}/publican/templates/groups/
 
 %clean
 rm -rf $RPM_BUILD_ROOT
-
-%post
-publican update_site
 
 %files
 %defattr(-,root,root,-)

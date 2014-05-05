@@ -26,14 +26,14 @@ use vars
 
 $File::Copy::Recursive::KeepMode = 0;
 
-$VERSION = version->declare('v4.0.0');
+$VERSION = version->declare('v4.1.0');
 @ISA     = qw(Exporter);
 
 @EXPORT
     = qw(dir_list debug_msg get_all_langs logger help_config maketext new_tree dtd_string rcopy dircopy fcopy rcopy_glob fmove dirmove);
 
 # Track when the SPEC file generation is incompatible.
-$SPEC_VERSION = '3.9';
+$SPEC_VERSION = '4.1';
 
 my $DEFAULT_CONFIG_FILE = 'publican.cfg';
 my $DEBUG               = undef;
@@ -210,6 +210,12 @@ my %PARAM_OLD = (
             'Version of the DocBook DTD on which this project is based.'),
         default => '4.5',
     },
+    dt_format => {
+        descr => maketext(
+            'The format to use for the desktop output.'
+        ),
+        default => 'html-desktop',
+    },
     dt_obsoletes => {
         descr => maketext(
             'Space-separated list of packages the desktop package obsoletes.'
@@ -231,7 +237,8 @@ my %PARAM_OLD = (
     },
     'ec_provider' => {
         descr => maketext(
-            'Eclipse plugin provider. Defaults to "Publican-[_1]"', '$VERSION'
+            'Eclipse plugin provider. Defaults to "Publican-[_1]"',
+            '$VERSION'
         ),
     },
     extras_dir => {
@@ -284,7 +291,15 @@ my %PARAM_OLD = (
         descr => maketext('os to filter output on.'),
 
     },
-    os_ver  => { descr => maketext('The OS for which to build packages.'), },
+    os_ver => { descr => maketext('The OS for which to build packages.'), },
+    pdf_body_font => {
+        descr   => maketext('The font to use for body text in PDFs.'),
+        default => 'Liberation Sans',
+    },
+    pdf_mono_font => {
+        descr   => maketext('The font to use for mono text in PDFs.'),
+        default => 'Liberation Mono',
+    },
     product => {
         descr => maketext(
             'Product this package covers. Fetched from productname tag in xml_lang/TYPE_Info.xml'
@@ -728,7 +743,9 @@ sub _load_config {
         $brand_path =~ s/\"//g;
 
         # Override publican defaults with brand defaults
-        if ( -f "$brand_path/defaults.cfg" ) {
+        if ( -f "$brand_path/defaults.cfg"
+            && ( !-z "$brand_path/defaults.cfg" ) )
+        {
             my $tmp_cfg = new Config::Simple("$brand_path/defaults.cfg")
                 || croak(
                 maketext("Failed to load brand defaults.cfg file") );
@@ -748,7 +765,9 @@ sub _load_config {
         }
 
         # Enforce Brand Overrides
-        if ( -f "$brand_path/overrides.cfg" ) {
+        if ( -f "$brand_path/overrides.cfg"
+            && ( !-z "$brand_path/overrides.cfg" ) )
+        {
             my $tmp_cfg = new Config::Simple("$brand_path/overrides.cfg")
                 || croak(
                 maketext("Failed to load brand overrides.cfg file") );
@@ -1150,7 +1169,7 @@ sub maketext {
     my @params = @_;
 
     if ($LOCALISE) {
-        return ( decode_utf8($LOCALISE->maketext( $string, @params ) ) );
+        return ( decode_utf8( $LOCALISE->maketext( $string, @params ) ) );
     }
     else {
         carp( RED, "Warning localisation not enabled!\n", RESET );
@@ -1280,6 +1299,8 @@ sub new_tree {
 
     my $xml_doc = XML::TreeBuilder->new(
         { 'NoExpand' => "1", 'ErrorContext' => "2" } );
+    $xml_doc->store_pis(1);
+
     my $empty_element_map = $xml_doc->_empty_element_map;
     $empty_element_map->{'xref'}       = 1;
     $empty_element_map->{'index'}      = 1;
@@ -1533,10 +1554,9 @@ sub add_revision {
     }
     else {
         $rev_doc->root()->tag('appendix');
-        my $rev_hist
-            = XML::Element->new_from_lol(
-            [ 'title', decode_utf8($locale->maketext('Revision History')) ],
-            );
+        my $rev_hist = XML::Element->new_from_lol(
+            [ 'title', decode_utf8( $locale->maketext('Revision History') ) ],
+        );
 
         $rev_doc->root()->push_content($rev_hist);
 

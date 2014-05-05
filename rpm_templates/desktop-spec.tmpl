@@ -1,0 +1,101 @@
+Name:          [% book_title %]-[% lang %]
+Version:       [% rpmver %]
+Release:       [% rpmrel %]%{?dist}
+[%- IF translation %]
+Summary:      [% language %] translation of [% book_title %]
+Summary([% lang %]):       [% full_subtitle %]
+[%- ELSE %]
+Summary:       [% full_subtitle %]
+[%- END %]
+Group:         Documentation
+License:       [% license %]
+URL:           [% url %]
+Source:        [% src_url %]%{name}-%{version}-[% rpmrel %].tgz
+BuildArch:      noarch
+BuildRoot:     %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
+BuildRequires: publican-API = [% spec_version %]
+BuildRequires: desktop-file-utils
+BuildRequires: [% brand %]
+Requires:      xdg-utils
+[%- IF dt_obsoletes %]
+Obsoletes:     [% dt_obsoletes %]
+[%- END %]
+[%- IF dt_requires %]
+Requires:      [% dt_requires %]
+[% END %]
+Provides:      [% book_title %]-[% lang.replace('-', '_') %] = %{version}-%{release}
+
+%description
+[%- IF translation %]
+[% language %] translation of [% book_title %]
+
+%description -l [% lang %]
+[%- END %]
+[% abstract %]
+
+%prep
+%setup -q
+
+%build
+publican build --nocolours --formats="[% dt_format %]" --langs=[% lang %] --publish
+
+%install
+rm -rf $RPM_BUILD_ROOT
+mkdir -p $RPM_BUILD_ROOT%{_datadir}/applications
+mkdir -p $RPM_BUILD_ROOT/usr/share/icons/hicolor/scalable/apps
+
+[%- IF ICONS -%]
+for icon in `ls [% lang %]/icons/*x*.png`; do
+  size=`echo "$icon" | sed -e 's/.*icons\/\(.*\)\.png/\1/'`;
+  mkdir -p $RPM_BUILD_ROOT/usr/share/icons/hicolor/$size/apps
+  cp $icon  $RPM_BUILD_ROOT/usr/share/icons/hicolor/$size/apps/[% book_title %]-[% lang %].png;
+done
+cp [% lang %]/icons/icon.svg  $RPM_BUILD_ROOT/usr/share/icons/hicolor/scalable/apps/[% book_title %]-[% lang %].svg;
+[%- ELSE %]
+cp [% lang %]/[% img_dir %]/icon.svg  $RPM_BUILD_ROOT/usr/share/icons/hicolor/scalable/apps/[% book_title %]-[% lang %].svg;
+[%- END %]
+
+
+cat > [% book_title %]-[% lang %]-[% rpmver %].desktop <<'EOF'
+[Desktop Entry]
+Name=[% prod %] [% prodver %]: [% docname %]
+Comment=[% full_subtitle %]
+Exec=xdg-open %{_docdir}/[% book_title %]-[% lang %]-%{version}/index.html
+Icon=[% book_title %]-[% lang %]
+Categories=Documentation;[% menu_category %]
+Type=Application
+Encoding=UTF-8
+Terminal=false
+EOF
+
+desktop-file-install --dir=${RPM_BUILD_ROOT}%{_datadir}/applications [% book_title %]-[% lang %]-[% rpmver %].desktop
+
+# Update Icon cache if it exists
+%post
+touch --no-create %{_datadir}/icons/hicolor &>/dev/null || :
+
+%postun
+if [ $1 -eq 0 ] ; then
+    touch --no-create %{_datadir}/icons/hicolor &>/dev/null
+    gtk-update-icon-cache %{_datadir}/icons/hicolor &>/dev/null || :
+fi
+
+%posttrans
+gtk-update-icon-cache %{_datadir}/icons/hicolor &>/dev/null || :
+
+%clean
+rm -rf $RPM_BUILD_ROOT
+
+%files
+%defattr(-,root,root,-)
+%doc [% tmpdir %]/[% lang %]/[% dt_format %]/*
+[%- IF ICONS %]
+/usr/share/icons/hicolor/*
+[%- ELSE %]
+/usr/share/icons/hicolor/scalable/apps/[% book_title %]-[% lang %].svg
+[%- END %]
+%{_datadir}/applications/[% book_title %]-[% lang %]-[% rpmver %].desktop
+
+%changelog
+[% log %]
+

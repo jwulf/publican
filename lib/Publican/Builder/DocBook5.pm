@@ -10,7 +10,6 @@ use Publican::Builder;
 use Publican::Builder::DocBook;
 
 use Carp;
-use Config::Simple '-strict';
 use Publican;
 use Publican::XmlClean;
 use Publican::Translate;
@@ -615,7 +614,11 @@ sub validate_xml {
         location => "http://docbook.org/xml/$dtdver/rng/docbook.rng" );
     eval { $rngschema->validate($source); };
     if ($@) {
-        logger( maketext("RelaxNG Validation failed for '$dir/$main_file.xml': ") . "\n", RED );
+        logger(
+            maketext("RelaxNG Validation failed for '$dir/$main_file.xml': ")
+                . "\n",
+            RED
+        );
         croak("$@\n$!\n");
     }
     logger("RelaxNG Validation OK\n");
@@ -699,10 +702,6 @@ sub get_author_list {
         }
     }
 
-    unless (@authors) {
-        croak( maketext("Did not find any authors in Author_Group.xml") );
-    }
-
     return (@authors);
 }
 
@@ -733,7 +732,6 @@ Publican requires no configuration files or environment variables.
 
 Carp
 version
-Config::Simple
 Publican
 Publican::XmlClean
 Publican::Translate

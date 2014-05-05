@@ -1,0 +1,32 @@
+[% IF bodyface -%]
+@import url("[% bodyfont | uri %]-font-faces.css");
+[%- END %]
+[% IF monoface -%]
+@import url("[% monofont | uri %]-font-faces.css");
+[%- END %]
+@import url("Common_Content/css/common.css");
+@import url("Common_Content/css/overrides.css");
+@import url("Common_Content/css/lang.css");
+
+body, h1, h2, h3, h4, h5, h6, pre, li, div {
+    font-family: "[% bodyfont %]" !important;
+}
+
+.guibutton,
+.guilabel,
+.computeroutput, 
+.option, 
+.command,
+.filename,
+.keycap,
+.classname,
+.literal,
+pre,
+code {
+	font-family:"[% monofont %]" !important;
+}
+
+code.email {
+	font-family: "[% bodyfont %]" !important;
+}
+

@@ -143,6 +143,10 @@ img {
     max-width: 100%;
 }
 
+.figure {
+	margin-top: 1em;
+}
+
 a {
     outline: medium none;
 }
@@ -184,5 +188,55 @@ table.lt-4-cols.gt-14-rows tr:nth-child(odd) {
 
 .gt-8-cols td:first-child {
 	border-left: 0;
+}
+/*Lists*/
+ul {
+    list-style-image: url("common/en-US/images/dot.png");
+    list-style-type: circle;
+    padding-left: 1.6em;
+}
+
+ul ul {
+    list-style-image: url("common/en-US/images/dot2.png");
+    list-style-type: circle;
+}
+
+ol.1 {
+	list-style-type: decimal;
+}
+
+ol.a {
+	list-style-type: lower-alpha;
+}
+
+ol.i {
+	list-style-type: lower-roman;
+}
+ol.A {
+	list-style-type: upper-alpha;
+}
+
+ol.I {
+	list-style-type: upper-roman;
+}
+
+dt {
+	font-weight:bold;
+	margin-bottom:0px;
+	padding-bottom:0px;
+}
+
+dd {
+	margin:0px;
+	margin-left:2em;
+	padding-top:0px;
+	padding-bottom: 1em;
+}
+
+li {
+	padding-top: 0px;
+	margin-top: 0px;
+	padding-bottom: 0px;
+/*	margin-bottom: 16px; */
 }
 

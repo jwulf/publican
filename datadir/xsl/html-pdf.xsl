@@ -14,6 +14,7 @@
 
 <xsl:param name="html.append"/>
 <xsl:param name="generate.toc">nop</xsl:param>
+<xsl:param name="html.stylesheet">pdfmain.css</xsl:param>
 
 <xsl:template name="article.titlepage.recto">
 </xsl:template>

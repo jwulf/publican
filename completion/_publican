@@ -8,7 +8,7 @@ _publican()
 	cur=`_get_cword`
         brands=`ls /usr/share/publican/Common_Content`
 
-	commands='add_revision build clean clean_ids clean_set copy_web_brand create create_brand create_site help_config install_book install_brand lang_stats migrate_site package print_banned print_known print_tree print_unused print_unused_images remove_book rename report site_stats trans_drop update_db update_po update_pot update_site'
+	commands='add_revision build clean clean_ids clean_set copy_web_brand create create_brand create_site help_config install_book install_brand lang_stats migrate_site package print_banned print_known print_tree print_unused print_unused_images remove_book rename report site_stats trans_drop update_db update_po update_pot update_site zt_pull zt_push'
 
 	if [[ $COMP_CWORD -eq 1 ]] ; then
 		if [[ "$cur" == -* ]]; then
@@ -125,13 +125,19 @@ _publican()
 					options='--abstract --add --book_src_lang --book_version --del --formats --lang --name --name_label --product --product_label --site_config --sort_order --subtitle --version --version_label '
 					;;
 				update_po)
-					options='--email --firstname --langs --msgmerge --surname '
+					options='--email --firstname --langs --msgmerge --previous --surname '
 					;;
 				update_pot)
 					options=''
 					;;
 				update_site)
 					options='--site_config '
+					;;
+				zt_pull)
+					options=''
+					;;
+				zt_push)
+					options=''
 					;;
 			esac
 			options="$options --brand_dir --common_config --common_content --config --help --nocolours --quiet "

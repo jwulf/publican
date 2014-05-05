@@ -8,6 +8,7 @@ div.othercredit div.othercredit,
 div.editor div.editor,
 div.contrib div.contrib,
 .title,
-.titlepage .edition {
+.titlepage .edition,
+.titlepage .releaseinfo {
 	color: #336699;
 }
