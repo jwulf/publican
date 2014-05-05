@@ -5,12 +5,12 @@
 
 		<revhistory>
 			<revision>
-				<revnumber>1.0-1</revnumber>
-				<date>Mon Nov 11 2013</date>
-				<author><personname><firstname>Zac</firstname><surname>Dover</surname></personname><email>zdover@redhat.com</email></author>
+				<revnumber>4.1-1</revnumber>
+				<date>Mon May 5 2014</date>
+				<author><personname><firstname>Rüdiger</firstname><surname>Landmann</surname></personname><email>rlandmann@redhat.com</email></author>
 				<revdescription>
 					<simplelist>
-						<member>Create Release Notes afresh for Publcian 4.0</member>
+						<member>Create Release Notes afresh for Publcian 4.1</member>
 					</simplelist>
 				</revdescription>
 			</revision>
