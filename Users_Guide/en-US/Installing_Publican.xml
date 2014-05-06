@@ -15,7 +15,7 @@
 
 		</important>
 		 <section conformance="183" id="sect-Publican-Users_Guide-Linux_operating_systems-Fedora">
-			<title>Fedora</title>
+			<title>Fedora &amp; Red Hat Enterprise Linux 6</title>
 			 <procedure>
 				<step>
 					<para>
@@ -34,58 +34,7 @@
 						Run the following command to install the <package>publican</package> package and the <package>publican-doc</package> documentation package:
 					</para>
 					 
-<screen><prompt>$</prompt> <command> yum install publican publican-doc</command></screen>
-
-				</step>
-
-			</procedure>
-			
-			 <para>
-				Several brand packages are available for use with <application>Publican</application>. Run the following command as the root user to install packages for building branded books:
-			</para>
-			 
-<screen><prompt>$</prompt> <command> yum install publican-<replaceable>brand</replaceable></command></screen>
-			 <para>
-				Replace <replaceable>brand</replaceable> with, for example, <literal>redhat</literal>, <literal>fedora</literal>, <literal>jboss</literal>, <literal>ovirt</literal>, or <literal>gimp</literal>. Refer to <xref linkend="chap-Publican-Users_Guide-Branding" /> for more information on branding.
-			</para>
-
-		</section>
-		
-		 <section conformance="184" id="sect-Publican-Users_Guide-Linux_operating_systems-Red_Hat_Enterprise_Linux_5">
-			<title>Red Hat Enterprise Linux 5</title>
-			 <important>
-				<title>Important — Unsupported software</title>
-				 <para>
-					<application>Publican</application> is not part of the Red Hat Enterprise Linux distribution. Therefore, Red Hat does not offer support for <application>Publican</application>.
-				</para>
-
-			</important>
-			 <important>
-				<title>Important — Dependencies available only internally to Red Hat</title>
-				 <para>
-					Installing <application>Publican</application> on Red Hat Enterprise Linux 5 requires a number of dependencies that are presently available only in yum repositories that are internal to Red Hat.
-				</para>
-
-			</important>
-			 <procedure>
-				<step>
-					<para>
-						Open a terminal.
-					</para>
-
-				</step>
-				 <step>
-					<para>
-						Change to the root user: <command> su - </command>
-					</para>
-
-				</step>
-				 <step>
-					<para>
-						Run the following command to install the <package>publican</package> package and the <package>publican-doc</package> documentation package:
-					</para>
-					 
-<screen><prompt>$</prompt> <command> yum install publican publican-doc</command></screen>
+<screen><prompt>$</prompt> yum install publican\*</screen>
 
 				</step>
 
@@ -129,6 +78,36 @@
 		 <xi:include href="Installing_Publican_OpenSuse.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
 		 <xi:include href="Installing_Publican_Docker.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
 
+		 <section>
+			<title>Running publican from a GIT checkout</title>
+			<para>
+				It is possible to run publican from a <application>GIT</application> checkout, without installing it, if the dependencies are installed.
+			</para>
+			 <procedure>
+				<step>
+					<para>
+						To checkout the source from GIT open a terminal.
+					</para>
+
+				</step>
+				 <step>
+					<para>
+						Run the following commands to checkout the <package>publican</package> source from GIT:
+					</para>
+					 
+<screen><prompt>$</prompt> cd <replaceable>PATH TO PLACE SOURCE</replaceable>
+<prompt>$</prompt> git clone git://git.fedorahosted.org/publican.git publican</screen>
+				</step>
+
+				<step>
+					<para>
+						To run publican from this checkout run the follwoing command:
+					</para>
+<screen><prompt>$</prompt>PUBLICAN_PATH="<replaceable>PATH TO PLACE SOURCE</replaceable>/publican"; \
+perl -CDAS -I $PUBLICAN_PATH/lib $PUBLICAN_PATH/bin/publican build  --brand_dir $PUBLICAN_PATH/datadir/Common_Content/common --formats html</screen>
+				</step>
+			</procedure>
+		</section>
 	</section>
 	
 	 <section conformance="187" id="sect-Publican-Users_Guide-Installing_Publican-Windows_operating_systems">
