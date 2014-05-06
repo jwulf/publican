@@ -170,7 +170,8 @@ my %options = (
     'old_site_config=s' => maketext(
         'WebSite configuration file to use when copying content between sites.'
     ),
-    'previous' => maketext('Keep previous msgid when fuzzy matches are detected in PO updates.'),
+    'previous' => maketext(
+        'Keep previous msgid when fuzzy matches are detected in PO updates.'),
 );
 
 # Options all actions use
@@ -251,7 +252,10 @@ my %actions = (
     },
     'update_po' => {
         'brief'   => maketext('Update the PO files'),
-        'options' => [ 'langs', 'msgmerge', 'firstname', 'surname', 'email', 'previous' ],
+        'options' => [
+            'langs', 'msgmerge', 'firstname', 'surname',
+            'email', 'previous'
+        ],
     },
     'install_brand' => {
         'brief'   => maketext('Install a brand to the supplied location'),
@@ -334,13 +338,11 @@ my %actions = (
         'options' => [],
     },
     'zt_pull' => {
-        'brief' =>
-            maketext('Pull translations from Zanata.'),
+        'brief'   => maketext('Pull translations from Zanata.'),
         'options' => [],
     },
     'zt_push' => {
-        'brief' =>
-            maketext('Push translations to Zanata.'),
+        'brief'   => maketext('Push translations to Zanata.'),
         'options' => [],
     },
 );
@@ -1016,7 +1018,7 @@ if ( $action eq 'update_po' ) {
 if ( $action eq 'lang_stats' ) {
     my $translater = Publican::Translate->new();
     if ( $opts{lang} eq 'all' ) {
-        foreach my $lang ( split( /,/, get_all_langs() ) ) {
+        foreach my $lang ( split( /,/, get_all_langs(1) ) ) {
             $translater->po_report( { lang => $lang } );
         }
     }
@@ -1374,19 +1376,27 @@ if ( $action eq 'report' ) {
 }
 
 if ( $action eq 'zt_pull' ) {
-    my @zanata_cmd = qw(zanata-cli pull -s pot -t .);
+    my @zanata_cmd
+        = qw(zanata-cli pull --src-dir pot --trans-dir . --include-fuzzy --locales);
+    push( @zanata_cmd, get_all_langs(1) );
     my $result = system(@zanata_cmd);
     if ($result) {
-        croak( maketext("Zanata call failed, error [_1]: '[2]'", $result, $!) );
-    }    
+        croak(
+            maketext( "Zanata call failed, error [_1]: '[2]'", $result, $! )
+        );
+    }
 }
 
 if ( $action eq 'zt_push' ) {
-    my @zanata_cmd = qw(zanata-cli push -s pot -t .);
+    my @zanata_cmd
+        = qw(zanata-cli push --src-dir pot --trans-dir . --push-type both --copy-trans 0 --locales );
+    push( @zanata_cmd, get_all_langs(1) );
     my $result = system(@zanata_cmd);
     if ($result) {
-        croak( maketext("Zanata call failed, error [_1]: '[2]'", $result, $!) );
-    }  
+        croak(
+            maketext( "Zanata call failed, error [_1]: '[2]'", $result, $! )
+        );
+    }
 }
 
 exit(0);

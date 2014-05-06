@@ -1,0 +1,266 @@
+# Gé Baylard <<Geodebay@gmail.com>>, 2013.
+# Gérard Baylard <geodebay@gmail.com>, 2013. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: 0\n"
+"POT-Creation-Date: 2013-03-08T03:26:30\n"
+"PO-Revision-Date: 2013-09-06 11:37-0400\n"
+"Last-Translator: Gérard Baylard <geodebay@gmail.com>\n"
+"Language-Team: français <<trans-fr@lists.fedoraproject.org>>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"X-Generator: Zanata 3.3.2\n"
+"Plural-Forms: nplurals=2; plural=n>1;\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Building a website with Publican"
+msgstr "Construction d'un site Web avec Publican"
+
+#. Tag: para
+#, no-c-format
+msgid "<application>Publican</application> not only builds documents for publication but can build and manage a documentation website as well. For a suite of documents that you maintain by yourself, you can use <application>Publican</application> to build a site on your local system; you can then upload the site to a webserver by whatever means you choose. This approach does not scale well, however, so for team-based documentation projects, <application>Publican</application> can generate RPM packages of documentation to install on the webserver. To install <application>Publican</application>-generated RPM packages on a webserver, <application>Publican</application> (version 2.1 or higher) and <application>rpm</application> must be installed on the server. If you build and maintain the website on a workstation and upload it to a webserver for publication, <application>Publican</application> and <application>rpm</application> do not need to be installed on the webserver."
+msgstr "Outre construire des documents en vue de leur publication, <application>Publican</application> permet aussi de créer et gérer un site Web de documentation. Pour un ensemble de documents maintenus par vos soins, vous pourrez utiliser <application>Publican</application> pour la construction d'un site local sur votre système ; puis, téléverser le site sur un serveur Web par la méthode de votre choix. Cette approche, toutefois, ne cadre pas bien pour les projets de documentation en équipe. <application>Publican</application> peut créer des paquets RPM de documentation à installer sur un serveur Web. Pour ce faire, <application>Publican</application> (version 2.1 ou supérieure) et <application>rpm</application> doivent être installés sur le serveur. Si vous construisez et maintenez le site Web sur une station de travail et le téléversez pour publication, il n'est pas nécessaire d'installer ces applications."
+
+#. Tag: para
+#, no-c-format
+msgid "The websites that <application>Publican</application> creates consist of four parts: the website structure, a home page, product and version description pages, and the documents published on the site. The website structure itself consists of:"
+msgstr "Les sites Web créés par <application>Publican</application> comprennent quatre parties : la structure du site Web, une page d'accueil, des pages de description du produit et sa version, et, les documents publiés sur le site. La structure du site Web lui-même consiste en :"
+
+#. Tag: para
+#, no-c-format
+msgid "a configuration file."
+msgstr "un fichier de configuration,"
+
+#. Tag: para
+#, no-c-format
+msgid "an SQLite database file."
+msgstr "un fichier de base de données SQLite,"
+
+#. Tag: para
+#, no-c-format
+msgid "a subdirectory for the published documents, which contains:"
+msgstr "un sous-répertoire pour les documents publiés ; il contient :"
+
+#. Tag: para
+#, no-c-format
+msgid "<filename>index.html</filename> — an index page that redirects to localized versions of a home page for the site."
+msgstr "<filename>index.html</filename> — un page d'index qui redirige vers la version régionalisée d'une page d'accueil du site."
+
+#. Tag: para
+#, no-c-format
+msgid "<filename>interactive.css</filename> — a CSS stylesheet that contains styles for the navigation menu."
+msgstr "<filename>interactive.css</filename> — une feuille de style CSS contenant les formes pour le menu de navigation."
+
+#. Tag: para
+#, no-c-format
+msgid "<filename>opds.xml</filename> — an Open Publication Distribution System (OPDS) catalog to allow compliant eBook readers to find EPUB documents on your site easily."
+msgstr "<filename>opds.xml</filename> — un catalogue « Open Publication Distribution System (OPDS) » (Système ouvert de distribution de publications) pour permettre aux lecteurs conformes eBook de trouver facilement les documents EPUB sur le site."
+
+#. Tag: para
+#, no-c-format
+msgid "<filename>Sitemap</filename> — A Sitemap is a list of the URLs from your website and metadata about them, like update history, change frequency, and importance relative to other URLs in the site. A Sitemap can be supplied to many major search engines, where it is used to help their crawlers index your site more intelligently. A Sitemap does not guarantee that your site will be ranked higher in search results. However, it does help search engines to return the most relevant results from your website in response to user queries. For more information on Sitemaps, visit <ulink url=\"http://www.sitemaps.org/\">sitemaps.org</ulink>."
+msgstr "<filename>Sitemap</filename> — un « Sitemap » (carte du site) est une liste des URL du site et des métadonnées à leur propos, comme l'historique des mises à jour, la fréquence des modifications et leur importance relativement aux autres URL du site. Un Sitemap peut être fourni à la plupart des principaux moteurs de recherche, où il sera utilisé pour aider les robots d'indexation à lister les sites intelligemment. Un Sitemap ne garantit pas que votre site sera placé plus avant dans les résultats de recherche. Mais, il aide les moteurs de recherche à renvoyer des résultats plus pertinents concernant un site Web sonné en réponse aux demandes des utilisateurs. Pour plus d'informations à propos des Sitemaps, voyez <ulink url=\"http://www.sitemaps.org/\">sitemaps.org</ulink>."
+
+#. Tag: para
+#, no-c-format
+msgid "<filename>site_overrides.css</filename> — a CSS stylesheet that overrides the styles contained in <filename>interactive.css</filename> to provide site-specific styles. This file is not created by the site creation process, but must be added manually later, or supplied by the site <firstterm>home page</firstterm>."
+msgstr "<filename>site_overrides.css</filename> — une feuille de style CSS qui prend le pas sur les styles contenus dans <filename>interactive.css</filename> pour fournir une touche graphique propre au site. Ce fichier n'est pas généré lors du processus de création du site, mais il doit être ajouté manuellement plus tard ou fourni par la <firstterm>page d'accueil</firstterm> du site."
+
+#. Tag: para
+#, no-c-format, fuzzy
+msgid "<filename>default.js</filename> — a JavaScript script that directs visitors to localized content based on the locale set in their browser and which controls the presentation of the navigation menu."
+msgstr "<filename>toc.js</filename> — un script Java qui dirige les visiteurs vers le contenu régionalisé selon la langue définie dans le navigateur et qui contrôle la présentation du menu de navigation."
+
+#. Tag: para
+#, no-c-format
+msgid "subdirectories for each language in which you publish. Initially, this contains <filename>opds.xml</filename> and <filename>toc.html</filename>. Later it also contains <filename>opds-<replaceable>product</replaceable>.xml</filename>:"
+msgstr "des sous-répertoires pour chaque langue dans laquelle vous publiez. Initialement, ils contiennent <filename>opds.xml</filename> et <filename>toc.html</filename>. Ultérieurement, ils contiennent également <filename>opds-<replaceable>produit</replaceable>.xml</filename> :"
+
+#. Tag: para
+#, no-c-format
+msgid "<filename>opds.xml</filename> — an OPDS catalog of EPUB documents in this language."
+msgstr "<filename>opds.xml</filename> — un catalogue OPDS des documents EPUB dans la langue indiquée."
+
+#. Tag: para
+#, no-c-format
+msgid "<filename>opds-<replaceable>product</replaceable>.xml</filename> — an OPDS catalog of EPUB documents for each product for which you publish documentation in this language. Within each product catalog, documentation is divided into <sgmltag>&lt;category&gt;</sgmltag>s for different versions of the same product."
+msgstr "<filename>opds-<replaceable>produit</replaceable>.xml</filename> — un catalogue OPDS des documents EPUB pour chacun des produits pour lesquels vous publiez une documentation dans la langue. Dans chaque catalogue de produit, la documentation est divisée en <sgmltag>&lt;category&gt;</sgmltag> pour les diverses versions d'un même produit."
+
+#. Tag: para
+#, no-c-format
+msgid "<filename>toc.html</filename> — the table of contents for that language, initially without links to any documents."
+msgstr "<filename>toc.html</filename> — la table des matières pour la langue, initialement sans lien vers un quelconque document."
+
+#. Tag: para
+#, no-c-format
+msgid "A subdirectory for each product for which you publish documentation in this language."
+msgstr "Un sous-répertoire pour chaque produit pour lequel vous publiez une documentation dans la langue indiquée."
+
+#. Tag: para
+#, no-c-format, fuzzy
+msgid "Optionally, the site structure might also include a <firstterm>dump file</firstterm> — an XML file that provides complete site content details for delivery of other services, such as web feeds or customised search pages. The site structure might also contain a zipped version of the dump file. Refer to <xref linkend=\"sect-Publican-Users_Guide-Creating_the_website_structure\" /> and <xref linkend=\"sect-Publican-Users_Guide-Creating_the_website_structure\" /> for details of creating a dump file, and to <xref linkend=\"appe-Publican-Users_Guide-Contents_of_the_website_dump_file\" /> for a description of the dump file contents."
+msgstr "Facultativement, la structure du site peut également comporter un <firstterm>fichier vidage</firstterm> — fichier XML qui fournit les détails complets du contenu du site pour fourniture aux autres services, comme des pages de recherche personnalisées ou de sources Web. La structure du site doit aussi contenir une version compressée du fichier vidage. Reportez-vous à la <xref linkend=\"sect-Users_Guide-Website-structure-cfg_and_db-manual\" /> et à la <xref linkend=\"sect-Users_Guide-Website-structure-cfg_and_db-rpm\" /> pour des précisions quant à la création d'un fichier vidage et à la <xref linkend=\"dump_file\" /> pour une description du contenu de ce fichier."
+
+#. Tag: title
+#, no-c-format
+msgid "Building a website manually"
+msgstr "Construction d'un site Web à la main"
+
+#. Tag: title
+#, no-c-format
+msgid "Building a website using RPM packages"
+msgstr "Construction d'un site Web avec des paquets RPM"
+
+#. Tag: title
+#, no-c-format
+msgid "Submitting Your Sitemap to Search Engines"
+msgstr "Remise du Sitemap aux moteurs de recherche"
+
+#. Tag: para
+#, no-c-format
+msgid "A Publican website includes an XML Sitemap file. The Sitemap can be submitted to many major search engines, in order to help them index your website more intelligently and thoroughly. Each search engine has its own submission procedure. This section includes documentation on how to submit a Sitemap to Google and Bing."
+msgstr "Un site Web Publican comprend un fichier XML Sitemap. Ce fichier peut être soumis à plusieurs des principaux moteurs de recherche, afin de les aider à indexer votre site Web plus intelligemment et plus minutieusement. Chaque moteur de recherche à ses propres procédures de soumission. Ce paragraphe comporte la description de la manière de soumettre un fichier Sitemap à Google et Bing."
+
+#. Tag: title
+#, no-c-format
+msgid "Submitting Your Sitemap to Google."
+msgstr "Soumission du fichier Sitemap à Google."
+
+#. Tag: title
+#, no-c-format
+msgid "To Submit Your Sitemap to Google:"
+msgstr "Pour soumettre le fichier Sitemap à Google :"
+
+#. Tag: para
+#, no-c-format
+msgid "Sign up for a Google account at <ulink url=\"http://www.google.com/webmasters/tools/home\">Google Webmaster Tools</ulink>. If you already have a Google account, you can use it."
+msgstr "Inscrivez-vous pour obtenir un compte Google à l'adresse <ulink url=\"http://www.google.com/webmasters/tools/home\">Google Webmaster Tools</ulink>. Si vous en possédez déjà un, vous pouvez l'utiliser."
+
+#. Tag: para
+#, no-c-format
+msgid "Sign in to your Google Webmaster Tools account at this URL: <ulink url=\"http://www.google.com/webmasters/tools/home\">http://www.google.com/webmasters/tools/home</ulink>."
+msgstr "Ouvrez une session dans le compte « Google Webmaster Tools » (Outils Google pour webmestres) à l'URL : <ulink url=\"http://www.google.com/webmasters/tools/home\">http://www.google.com/webmasters/tools/home</ulink>."
+
+#. Tag: para
+#, no-c-format
+msgid "First you must verify you are the owner of your Publican site. Click the <guibutton>Add A Site</guibutton> button."
+msgstr "Tout d'abord, il faut certifier que vous êtes bien le propriétaire du site Publican. Cliquez sur le bouton <guibutton>Ajouter un site</guibutton>."
+
+#. Tag: para
+#, no-c-format
+msgid "A dialog box is displayed for you to <guilabel>Add a site</guilabel> with. Enter the URL of your Publican site in the text entry field and click <guibutton>Continue</guibutton>."
+msgstr "Une boîte de dialogue s'affiche ; elle vous permet d'<guilabel>Ajouter un site</guilabel>. Entrez l'URL de votre site Publican dans le champ de saisie texte et cliquez sur <guibutton>Continuer</guibutton>."
+
+#. Tag: para
+#, no-c-format
+msgid "Follow the instructions that display and upload the HTML file that Google provides to the document root of your website."
+msgstr "Suivez les instructions affichées et téléversez, à la racine des documents de votre site Web, le fichier HTML fourni par Google."
+
+#. Tag: para
+#, no-c-format
+msgid "When you have confirmed that the provided HTML file has been uploaded to the required location by accessing it in a web browser, click the <guibutton>Verify</guibutton> button."
+msgstr "Quand il est confirmé que le fichier HTML fourni a bien été téléversé à l'emplacement requis en y ayant accès par l'intermédiaire d'un navigateur, cliquez sur le bouton <guibutton>Vérifier</guibutton>."
+
+#. Tag: para
+#, no-c-format
+msgid "When you have successfully verified the ownership of your Publican website to Google, return to the Webmaster Tools home page. Your Publican site is listed. Click on it."
+msgstr "Quand vous avez certifié avec succès la propriété du site Web Publican pour le compte de Google, revenez à la page d'accueil de « Webmaster Tools ». Votre site Publican est listé. Cliquez dessus."
+
+#. Tag: para
+#, no-c-format
+msgid "You are taken to the Webmaster Tools configuration page for your Publican site. On the left side of the page there is a menu. Click on the <guilabel>Site configuration</guilabel> menu entry to expand it. Its expanded contents includes a <guilabel>Sitemaps</guilabel> entry. Click it."
+msgstr "Vous êtes amené à la page de configuration des « Webmaster Tools »  pour votre site Publican. Sur le côté gauche de la page, se trouve un menu. Cliquez sur l'entrée <guilabel>Configuration du site</guilabel> pour la développer. Le contenu développé contient une entrée <guilabel>Sitemaps</guilabel>. Cliquez dessus."
+
+#. Tag: para
+#, no-c-format
+msgid "You are taken to a Sitemap submission page. Click the <guibutton>Submit a Sitemap</guibutton> button."
+msgstr "Vous êtes amené à la page de soumission du fichier Sitemap. Cliquez sur le bouton <guibutton>Soumettre un Sitemap</guibutton>."
+
+#. Tag: para
+#, no-c-format
+msgid "A text entry field displays, including the base URL of your Publican site, with room to enter the URL of your Sitemap XML file. Enter its location and click the <guibutton>Submit Sitemap</guibutton> button. The details of the Sitemap are displayed in a table."
+msgstr "Un champ d'entrée texte affiche le début de l'URL de votre site Publican, avec de la place pour préciser l'URL de votre fichier XML SiteMap. Entrez cet emplacement et cliquez sur le bouton <guibutton>Soumettre le Sitemap</guibutton>. Les détails du Sitemap sont affichés dans un tableau."
+
+#. Tag: title
+#, no-c-format
+msgid "Result"
+msgstr "Résultat :"
+
+#. Tag: para
+#, no-c-format
+msgid "The Sitemap for your Publican site has been successfully submitted to Google."
+msgstr "Le fichier Sitemap de votre site Publican a été soumis à Google avec succès."
+
+#. Tag: title
+#, no-c-format
+msgid "Submitting Your Sitemap to Bing."
+msgstr "Soumission d'un fichier Sitemap à Bing."
+
+#. Tag: title
+#, no-c-format
+msgid "To Submit Your Sitemap to Bing:"
+msgstr "Pour soumettre un fichier Sitemap à Bing :"
+
+#. Tag: para
+#, no-c-format
+msgid "Sign up for a Bing Webmaster Tools account at <ulink url=\"http://www.bing.com/toolbox/webmaster/\">Bing Webmaster Tools</ulink>. If you already have a Windows LiveID account, you can use it."
+msgstr "Inscrivez-vous pour obtenir un compte « Bing Webmaster Tools » à l'adresse <ulink url=\"http://www.bing.com/toolbox/webmaster/\">Bing Webmaster Tools</ulink>. Si vous en possédez déjà un, vous pouvez l'utiliser."
+
+#. Tag: para
+#, no-c-format
+msgid "Sign in to your Bing Webmaster Tools account at this URL: <ulink url=\"http://www.bing.com/toolbox/webmaster/\">http://www.bing.com/toolbox/webmaster/</ulink>."
+msgstr "Ouvrez une session dans le compte « Bing Webmaster Tools » (Outils Google pour webmestres) à l'URL : <ulink url=\"http://www.bing.com/toolbox/webmaster/\">http://www.bing.com/toolbox/webmaster/</ulink>."
+
+#. Tag: para
+#, no-c-format
+msgid "Click the <guibutton>Add Site</guibutton> button."
+msgstr "Cliquez sur le bouton <guibutton>Ajouter un site</guibutton>."
+
+#. Tag: para
+#, no-c-format
+msgid "The <guilabel>Add Site</guilabel> dialog box is displayed. Enter the URL of your Publican site in the text entry field and click <guibutton>Submit</guibutton>."
+msgstr "La boîte de dialogue <guilabel>Ajouter un site</guilabel> est affichée. Entrez l'URL de votre site Publican dans le champ d'entrée texte et cliquez sur le bouton <guibutton>Soumettre</guibutton>."
+
+#. Tag: para
+#, no-c-format
+msgid "The <guilabel>Verify Ownership</guilabel> dialog displays, with three options. Follow the instructions given when the <guilabel>Option 1: Place an XML file on your web server</guilabel> has been expanded. Upload the <systemitem>BingSiteAuth.xml</systemitem> file that Bing provides to the document root of your website."
+msgstr "La boîte de dialogue <guilabel>Certifier la propriété</guilabel> s'affiche, avec trois options. Suivez les instruction données après développement de <guilabel>Option 1 : Verser un fichier XML sur votre serveur Web</guilabel>. Téléversez le fichier <systemitem>BingSiteAuth.xml</systemitem> que Bing fournit à la racine de votre site Web."
+
+#. Tag: para
+#, no-c-format
+msgid "When you have confirmed that the provided <systemitem>BingSiteAuth.xml</systemitem> file has been uploaded to the required location by accessing it in a web browser, click the <guibutton>Verify</guibutton> button."
+msgstr "Quand vous avez confirmé que le fichier <systemitem>BingSiteAuth.xml</systemitem> fourni a bien été téléversé à l'emplacement requis en l'ouvrant dans un navigateur Web, cliquez sur le bouton <guibutton>Vérifier</guibutton>."
+
+#. Tag: para
+#, no-c-format
+msgid "When you have successfully verified your ownership of your Publican website to Bing, return to the Bing Webmaster Tools home page. Your Publican site is listed. Click on it."
+msgstr "Quand vous avez certifié avec succès la propriété de votre site Web Publican pour le compte de Bing, revenez à la page d'accueil des outils pour webmestre de Bing. Votre site Publican y est listé. Cliquez dessus."
+
+#. Tag: para
+#, no-c-format
+msgid "Select the <guibutton>Crawl</guibutton> tab."
+msgstr "Sélectionnez l'onglet <guibutton>Indexer</guibutton>."
+
+#. Tag: para
+#, no-c-format
+msgid "Select <guilabel>Sitemaps</guilabel> and then <guilabel>Add Feed</guilabel>."
+msgstr "Sélectionnez <guilabel>Sitemaps</guilabel>, puis <guilabel>Ajouter une source</guilabel>."
+
+#. Tag: para
+#, no-c-format
+msgid "The <guilabel>Add Feed</guilabel> dialog displays. Enter the URL of your Sitemap file and click <guibutton>Submit</guibutton>. The details of the Sitemap are displayed."
+msgstr "La boîte de dialogue <guilabel>Ajouter une source</guilabel> s'affiche. Entrez l'URL de votre fichier Sitemap et cliquez sur <guibutton>Soumettre</guibutton>. Les détails du fichier Sitemap sont affichés."
+
+#. Tag: title
+#, no-c-format
+msgid "Result:"
+msgstr "Résultat :"
+
+#. Tag: para
+#, no-c-format
+msgid "The Sitemap for your Publican site has been successfully submitted to Bing."
+msgstr "Le fichier Sitemap de votre site Publican a été soumis à Bing avec succès."
+

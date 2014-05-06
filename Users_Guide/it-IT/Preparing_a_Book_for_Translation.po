@@ -6,15 +6,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
 "POT-Creation-Date: 2010-11-20T11:36:40\n"
-"PO-Revision-Date: 2012-01-22 19:59+0100\n"
+"PO-Revision-Date: 2012-01-22 01:59-0500\n"
 "Last-Translator: Mario Santagiuliana <fedora at marionline.it>\n"
 "Language-Team: Italian <fedora-trans-it at redhat.com>\n"
-"Language: it-IT\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: it\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 1.5\n"
+"X-Generator: Zanata 3.3.2\n"
 
 #. Tag: title
 #, no-c-format
@@ -42,9 +42,9 @@ msgid "Optional but recommended: <firstterm>drop</firstterm> the document to tra
 msgstr ""
 
 #. Tag: screen
-#, no-c-format, fuzzy
-msgid "<prompt>$</prompt> <command>publican update_pot</command>"
-msgstr "$ <command>publican update_pot</command>\n"
+#, no-c-format
+msgid "<prompt>$</prompt> <command>publican trans_drop</command>"
+msgstr ""
 
 #. Tag: para
 #, no-c-format
@@ -77,7 +77,7 @@ msgid "<application>Publican</application> generates a POT file for every XML fi
 msgstr "<application>Publican</application> genera un file POT per ogni file XML presente della cartella dei file XML, che siano usati o meno nel documento. Se si trasformano in POT file XML non usati, si spreca il tempo e lo sforzo dei volontari traduttori, e si spreca denaro per le traduzioni commissionate a pagamento."
 
 #. Tag: para
-#, no-c-format
+#, no-c-format, fuzzy
 msgid "Use the <prompt>$</prompt> <command>publican print_unused</command> command to generate a list of XML files that are not used in your document."
 msgstr "Usare il comando <command>publican print_unused</command> per visualizzare l'elenco dei file XML non usati nel documento."
 
@@ -92,9 +92,9 @@ msgid "<prompt>$</prompt> <command>publican update_po --langs=<replaceable>langu
 msgstr "$ <command>publican update_po --langs=<replaceable>codice_lingua</replaceable></command>\n"
 
 #. Tag: para
-#, no-c-format
+#, no-c-format, fuzzy
 msgid "where <replaceable>language_code</replaceable> is the code for the target language. Refer to <xref linkend=\"appe-Publican-Users_Guide-Language_codes\" /> for more information about language codes. You can provide multiple language codes, separated by commas, to generate PO files for more than one language at a time. For example:"
-msgstr "dove <replaceable>codice_lingua</replaceable> è il codice per la lingua target. Fare riferimento all'<xref linkend=\"appe-Publican-Users_Guide-Language_codes\" /> per maggiori informazioni su questi codici. Si possono fornire codici linguistici multipli, separati da virgole, in modo da generare i file PO per più lingue. Per esempio:"
+msgstr "dove <replaceable>codice_lingua</replaceable> è il codice per la lingua target. Fare riferimento all'<xref linkend=\"appe-Users_Guide-Language_codes\" /> per maggiori informazioni su questi codici. Si possono fornire codici linguistici multipli, separati da virgole, in modo da generare i file PO per più lingue. Per esempio:"
 
 #. Tag: screen
 #, no-c-format, fuzzy
@@ -167,9 +167,9 @@ msgid "<prompt>$</prompt> <command>publican package --lang=is-IS</command>"
 msgstr "$ <command>publican package --lang=it-IT</command>\n"
 
 #. Tag: para
-#, no-c-format
+#, no-c-format, fuzzy
 msgid "You can build the document in all languages for which you have translations with the <option>--langs=all</option> option, but note that you must package each language individually. Refer to <xref linkend=\"sect-Publican-Users_Guide-Building_a_document\" /> for more information on building a document, and <xref linkend=\"sect-Publican-Users_Guide-Packaging_a_document\" /> on packaging a document."
-msgstr "E' possibile creare il documento in tutte le lingue di cui si dispone una traduzione, usando l'opzione <option>--langs=all</option>, mentre i pacchetti vanno compilati individualmente. Fare riferimento alla <xref linkend=\"sect-Publican-Users_Guide-Building_a_document\" /> ed alla <xref linkend=\"sect-Publican-Users_Guide-Packaging_a_document\" /> per maggiori informazioni."
+msgstr "E' possibile creare il documento in tutte le lingue di cui si dispone una traduzione, usando l'opzione <option>--langs=all</option>, mentre i pacchetti vanno compilati individualmente. Fare riferimento alla <xref linkend=\"sect-Users_Guide-Building_a_document\" /> ed alla <xref linkend=\"sect-Users_Guide-Packaging_a_book\" /> per maggiori informazioni."
 
 #. Tag: title
 #, no-c-format

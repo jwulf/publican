@@ -1,0 +1,379 @@
+# Gé Baylard <<Geodebay@gmail.com>>, 2013.
+# Gérard Baylard <geodebay@gmail.com>, 2013. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: 0\n"
+"POT-Creation-Date: 2013-03-08T03:26:30\n"
+"PO-Revision-Date: 2013-09-08 05:05-0400\n"
+"Last-Translator: Gérard Baylard <geodebay@gmail.com>\n"
+"Language-Team: français <<trans-fr@lists.fedoraproject.org>>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"X-Generator: Zanata 3.3.2\n"
+"Plural-Forms: nplurals=2; plural=n>1;\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Frequently Asked Questions"
+msgstr "Questions fréquemment posées"
+
+#. Tag: para
+#, no-c-format
+msgid "How do I add a language to my book?"
+msgstr "Comment ajouter une langue à mon ouvrage ?"
+
+#. Tag: para
+#, no-c-format, fuzzy
+msgid "Run <prompt>$</prompt> <command>publican update_po --langs=<replaceable>language</replaceable></command>, where <replaceable>language</replaceable> is the code for the new language that you want to add. You can add more than one language at a time, with the language codes separated by commas. For example, <command>publican update_po --langs=ja-JP</command> creates the Japanese language directory and Japanese PO files, and <command>publican update_po --langs=ja-JP,ko-KR</command> creates directories and PO files for both Japanese and Korean."
+msgstr "Exécutez <command>publican update_po --langs=<replaceable>langue</replaceable></command>, où <replaceable>langue</replaceable> est le code de la nouvelle langue à ajouter. Vous pouvez ajouter plus d'une langue simultanément, en séparant par une virgule les divers codes de langue entre eux. Par exemple, <command>publican update_po --langs=ja-JP</command> crée le répertoire pour la langue japonaise et les fichiers PO pour le japonais et <command>publican update_po --langs=ja-JP,ko-KR</command> crée les répertoires et les fichiers PO à la fois pour le japonais et le coréen."
+
+#. Tag: para
+#, no-c-format, fuzzy
+msgid "What if I do not want to use the country code? For example, can I run <prompt>$</prompt> <command>publican update_po --langs=es,de,fr</command>?"
+msgstr "Que se passe-t-il si je ne souhaite pas utiliser le code pays ? Par exemple, puis-je exécuter <command>publican update_po --langs=es,de,fr</command> ?"
+
+#. Tag: para
+#, no-c-format
+msgid "Yes — this command works. However, if you omit the country code, the output might be unpredictable when <application>Publican</application> or a brand has definitions for more than one regional variety of a language — for example, <literal>zh-CN</literal> (Simplified Chinese as used in the People's Republic of China) and <literal>zh-TW</literal> (Traditional Chinese as used in the Republic of China, on Taiwan). Even when only one variety is currently defined, it is always safest to include the country code so that, for example, a future update of <application>Publican</application> does not suddenly cause your German (<literal>de-DE</literal>) documents to switch to Schweizerdeutsch (Swiss German, <literal>de-CH</literal>) Common Content and headings."
+msgstr "Oui — cette commande fonctionne. Mais, si vous omettez le code pays, la sortie pourrait être imprévisible quand <application>Publican</application> ou un marque a des définitions couvrant plus d'une variété régionale de langue — par exemple, <literal>zh-CN</literal> (chinois simplifié utilisé en République Populaire de Chine) et <literal>zh-TW</literal> (chinois traditionnel utilisé en République de Chine à Formose). Même quand un seul type est actuellement défini, il est toujours plus sûr d'inclure le code du pays en prévision, par exemple, qu'une future mise à jour de <application>Publican</application> ne fasse pas en sorte que des documents en allemand (<literal>de-DE</literal>) basculent en dialecte alémanique (Suisse allemand, <literal>de-CH</literal>) dans les en-têtes et le « Common Content »."
+
+#. Tag: para
+#, no-c-format
+msgid "How do I update all po files?"
+msgstr "Comment mettre à jour tous les fichiers po ?"
+
+#. Tag: para
+#, no-c-format, fuzzy
+msgid "Run the <prompt>$</prompt> <command>publican update_po --langs=all</command> command."
+msgstr "Exécutez la commande <command>publican update_po --langs=all</command>."
+
+#. Tag: para
+#, no-c-format
+msgid "Where can I get a complete list of <application>Publican</application>'s build options?"
+msgstr "Où puis-je obtenir une liste complète des options de construction de <application>Publican</application> ?"
+
+#. Tag: para
+#, no-c-format, fuzzy
+msgid "Run the <prompt>$</prompt> <command>publican build --help</command> command."
+msgstr "Exécutez la commande <command>publican build --help</command>."
+
+#. Tag: para
+#, no-c-format
+msgid "Where can I get a complete list of parameters that can be set in the <filename>publican.cfg</filename>?"
+msgstr "Où puis-je obtenir une liste complète des paramètres pouvant être définis dans <filename>publican.cfg</filename> ?"
+
+#. Tag: para
+#, no-c-format, fuzzy
+msgid "Run the <prompt>$</prompt> <command>publican help_config</command> command in a directory that holds any <application>Publican</application> document."
+msgstr "Exécutez la commande <command>publican help_config</command> dans un répertoire contenant n'importe quel document <application>Publican</application>."
+
+#. Tag: para
+#, no-c-format
+msgid "Where are the <application>Publican</application> common files located?"
+msgstr "Où sont situés les fichiers courants de <application>Publican</application> ?"
+
+#. Tag: para
+#, no-c-format
+msgid "By default, they are in <filename>/usr/share/publican/</filename> on Linux operating systems and in <filename>%SystemDrive%/%ProgramFiles%/publican/Common_Content</filename> on Windows operating systems — typically, <filename>C:/Program Files/publican/Common_Content</filename>."
+msgstr "Par défaut, il sont dans <filename>/usr/share/publican/</filename> pour les systèmes d'exploitation Linux et dans <filename>%SystemDrive%/%ProgramFiles%/publican/Common_Content</filename> pour Windows — généralement, <filename>C:/Program Files/publican/Common_Content</filename>."
+
+#. Tag: para
+#, no-c-format
+msgid "Is it possible to include arbitrary files in tarballs and RPM packages?"
+msgstr "Est-il possible d'incorporer des fichiers quelconques dans les archives tar et les paquets RPM ?"
+
+#. Tag: para
+#, no-c-format
+msgid "Yes. If you make a directory named <filename>files</filename> in your source language directory it will be included in any tarballs or SRPM packages that <application>Publican</application> creates."
+msgstr "Oui. Si vous créez un répertoire nommé <filename>files</filename> dans le répertoire de la langue source, il sera incorporé avec son contenu dans n'importe quelle archive tar ou paquet SRPM que <application>Publican</application> crée."
+
+#. Tag: title
+#, no-c-format
+msgid "Important"
+msgstr "Important"
+
+#. Tag: para
+#, no-c-format
+msgid "The <filename>files</filename> directory will not be available during the validation process so you can not <sgmltag>xi:include</sgmltag> or otherwise embed any files in this directory in your XML."
+msgstr "Le répertoire <filename>files</filename> n'est pas compris dans le processus de validation ; vous ne pouvez donc pas <sgmltag>xi:include</sgmltag> ou incorporer un quelconque fichier de ce répertoire dans le XML."
+
+#. Tag: para
+#, no-c-format
+msgid "Why does <application>Publican</application> give me warnings about unknown tags?"
+msgstr "Pourquoi <application>Publican</application> donne-t-il des avertissements à propos de balises inconnues ?"
+
+#. Tag: para
+#, no-c-format
+msgid "This warning informs you that you are using a tag whose output has not been tested for attractiveness, XHTML 1.0 Strict compliance, or Section 508 (Accessibility) compliance."
+msgstr "Ces avertissements vous informent que vous utilisez des balises dont les sorties n'ont pas été agrées comme étant en stricte conformité avec XHTML 1.0 ou avec la section 508 (accessibilité)."
+
+#. Tag: para
+#, no-c-format
+msgid "I can build HTML documents fine, but when I try to build PDF documents, I get errors like <computeroutput>java.lang.NullPointerException</computeroutput> and no PDF file is produced. What is wrong?"
+msgstr "Je peux construire sans problème des documents HTML, mais quand j'essaie de construire des PDF, j'obtiens des erreurs comme <computeroutput>java.lang.NullPointerException</computeroutput> et aucun PDF n'est produit. Qu'est-ce qui n'est pas correct ?"
+
+#. Tag: para
+#, no-c-format, fuzzy
+msgid "Try building a PDF version of a different document — perhaps a fresh one that you create with the <prompt>$</prompt> <command>publican create</command> command. If the problem is not just with one particular document, you probably have a mismatch between the <application>Java Runtime Environment</application> (JRE) and the <application>Java Development Kit</application> (JDK) in use on your system. If you have a JDK installed, <application>FOP</application> requires that the JDK is of the same version as the JRE. Furthermore, <application>FOP</application> cannot use the <application>GNU Compiler for Java</application> (GCJ)."
+msgstr "Essayez de construire une version PDF d'un autre document — un nouveau créé avec la commande <command>publican create</command>. Si le problème n'est pas déclenché uniquement avec un document donné, vous avez probablement une discordance entre le <application>Java Runtime Environment</application> (JRE) (Machine virtuelle Java) et le <application>Java Development Kit</application> (JDK)(Kit de développement Java) en service sur le système. Si vous avez un JDK installé, <application>FOP</application> requiert que le JDK soit de la même version que le JRE. Plus, <application>FOP</application> ne peut pas utiliser le <application>GNU Compiler for Java</application> (GCJ) (Compilateur GNU pour Java)."
+
+#. Tag: para
+#, no-c-format
+msgid "Run <command>alternatives --config java</command> and <command>alternatives --config javac</command> to determine which JRE and JDK are in use, then select versions that match and which do not have <literal>gcj</literal> in their name. For example, the following Java configuration shows a matching JRE and JDK that allow PDFs to build:"
+msgstr "Exécutez <command>alternatives --config java</command> et <command>alternatives --config javac</command> pour déterminer quels sont les JRE et JDK en cours d'utilisation, puis choisissez des versions en accord n'ayant pas <literal>gcj</literal> dans le nom. Par exemple, la configuration Java suivante montre un JRE et un JDK accordés permettant la construction des PDF :"
+
+#. Tag: screen
+#, no-c-format, fuzzy
+msgid ""
+"<prompt>$</prompt> <command>alternatives --config java</command>\n"
+"\n"
+"There are 3 programs which provide 'java'.\n"
+"\n"
+"  Selection    Command\n"
+"-----------------------------------------------\n"
+"   1           /usr/lib/jvm/jre-1.5.0-gcj/bin/java\n"
+"*  2           /usr/lib/jvm/jre-1.6.0-openjdk/bin/java\n"
+" + 3           /usr/lib/jvm/jre-1.6.0-openjdk.x86_64/bin/java\n"
+"\n"
+"Enter to keep the current selection[+], or type selection number:"
+msgstr ""
+"$ alternatives --config java\n"
+"\n"
+"There are 3 programs which provide 'java'.\n"
+"\n"
+"  Selection    Command\n"
+"-----------------------------------------------\n"
+"   1           /usr/lib/jvm/jre-1.5.0-gcj/bin/java\n"
+"*  2           /usr/lib/jvm/jre-1.6.0-openjdk/bin/java\n"
+" + 3           /usr/lib/jvm/jre-1.6.0-openjdk.x86_64/bin/java\n"
+"\n"
+"Enter to keep the current selection[+], or type selection number:"
+
+#. Tag: screen
+#, no-c-format, fuzzy
+msgid ""
+"<prompt>$</prompt> <command>alternatives --config javac</command>\n"
+"\n"
+"There are 3 programs which provide 'javac'.\n"
+"\n"
+"  Selection    Command\n"
+"-----------------------------------------------\n"
+"*+ 1           /usr/lib/jvm/java-1.6.0-openjdk.x86_64/bin/javac\n"
+"   2           /usr/lib/jvm/java-1.6.0-openjdk/bin/javac\n"
+"   3           /usr/lib/jvm/java-1.5.0-gcj/bin/javac\n"
+"\n"
+"Enter to keep the current selection[+], or type selection number:"
+msgstr ""
+"$ alternatives --config javac\n"
+"\n"
+"There are 3 programs which provide 'javac'.\n"
+"\n"
+"  Selection    Command\n"
+"-----------------------------------------------\n"
+"*+ 1           /usr/lib/jvm/java-1.6.0-openjdk.x86_64/bin/javac\n"
+"   2           /usr/lib/jvm/java-1.6.0-openjdk/bin/javac\n"
+"   3           /usr/lib/jvm/java-1.5.0-gcj/bin/javac\n"
+"\n"
+"Enter to keep the current selection[+], or type selection number: "
+
+#. Tag: para
+#, no-c-format
+msgid "You might need to install an extra JDK if you do not have a JDK on your system that matches any of the JREs."
+msgstr "Vous devrez installer un autre JDK si celui sur le système ne correspond à aucun JRE."
+
+#. Tag: para
+#, no-c-format
+msgid "Some Java installations do not set up the <command>alternatives</command> environment correctly. No fix has been determined for this situation."
+msgstr "Certaines installations de Java ne paramètrent pas un environnement correct pour <command>alternatives</command>. Aucun correctif n'a été trouvé à cette situation."
+
+#. Tag: para
+#, no-c-format
+msgid "I get an error saying <application>Batik</application> is not in the classpath but <application>Batik</application> is installed! What is wrong?"
+msgstr "J'ai obtenu une erreur disant que <application>Batik</application> n'est pas dans le « classpath » (variable d'environnement indiquant à la machine virtuelle Java où trouver les bibliothèques de classe) alors que <application>Batik</application> est bien installé ! Qu'est-ce qui n'est pas correct ?"
+
+#. Tag: para
+#, no-c-format
+msgid "We believe this is due to classpath issues caused by having different JRE and JDK versions in use. Refer to the previous question in this FAQ about <computeroutput>java.lang.NullPointerException</computeroutput> errors and using the <command>alternatives</command> command to ensure that the JRE and JDK match."
+msgstr "Les problèmes de « classpath » sont dus, selon nous, au fait d'avoir des versions différentes du JRE et JDK en cours d'utilisation. Reportez-vous à la question précédente à propos des erreurs <computeroutput>java.lang.NullPointerException</computeroutput> et utilisez la commande <command>alternatives</command> pour vous assurer que le JRE et le JDK sont en accord."
+
+#. Tag: para
+#, no-c-format
+msgid "I get an error <computeroutput>Exception in thread \"main\" java.lang.OutOfMemoryError: Java heap space</computeroutput> when trying to build PDF. What is wrong?"
+msgstr "J'ai obtenu une erreur <computeroutput>Exception in thread \"main\" java.lang.OutOfMemoryError: Java heap space</computeroutput> en essayant de construire un PDF. Qu'est-ce qui n'est pas correct ?"
+
+#. Tag: para
+#, no-c-format, fuzzy
+msgid "The default memory allocated for Java is not big enough to build your PDF. You need to increase the memory allocated to <application>FOP</application>. Before running <prompt>$</prompt> <command>publican build</command> run <command>echo \"FOP_OPTS='-Xms50m -Xmx700m'\" &gt; ~/.foprc</command>. This sets the initial heap space to 50&nbsp;MB and allows it to grow to a maximum of 700&nbsp;MB."
+msgstr "La mémoire allouée par défaut à Java n'est pas suffisante pour construire votre PDF. Il est nécessaire d'augmenter la mémoire allouée à <application>FOP</application>. Avant de lancer <command>publican build</command>, exécutez <command>echo \"FOP_OPTS='-Xms50m -Xmx700m'\" &gt; ~/.foprc</command>. Cela définit l'espace initial du tas à 50&nbsp;Mio et autorise sa croissance jusqu'à un maximum de 700&nbsp;Mio."
+
+#. Tag: para
+#, no-c-format
+msgid "Previous versions of <application>Publican</application> removed empty <sgmltag>&lt;para&gt;</sgmltag> tags. Does <application>Publican</application> still do this?"
+msgstr "Les précédentes version de <application>Publican</application> supprimaient les balises <sgmltag>&lt;para&gt;</sgmltag> vides. <application>Publican</application> fait-il toujours cela ?"
+
+#. Tag: para
+#, no-c-format
+msgid "No. <application>Publican</application> previously removed empty <sgmltag>&lt;para&gt;</sgmltag> tags while it transformed XML because empty <sgmltag>&lt;para&gt;</sgmltag> tags broke earlier translation toolchains used within Red Hat and the Fedora Project. Empty <sgmltag>&lt;para&gt;</sgmltag> tags are valid DocBook XML, and <application>Publican</application> no longer removes them."
+msgstr "Non. Auparavant <application>Publican</application> supprimait les balises <sgmltag>&lt;para&gt;</sgmltag> vides pendant la transformation du XML étant donné qu'elles cassaient les premières chaînes d'outils de traduction utilisées dans les projets Red Hat et Fedora. Les balises <sgmltag>&lt;para&gt;</sgmltag> vides sont des expressions XML DocBook valides  et <application>Publican</application> ne les supprime plus."
+
+#. Tag: para
+#, no-c-format
+msgid "What happened to the spell check?"
+msgstr "Qu'est-il arrivé au vérificateur d'orthographe ?"
+
+#. Tag: para
+#, no-c-format
+msgid "Early versions of <application>Publican</application> (up to and including 0.45) ran a spell check while transforming a document's XML. Due to negative feedback from users, this feature was dropped."
+msgstr "Les premières versions de <application>Publican</application> (jusqu'à la version 0.45 incluse) activaient un vérificateur d'orthographe lors de la transformation du XML du document. En raison des retours négatifs de la part des utilisateurs, cette fonctionnalité a été abandonnée."
+
+#. Tag: para
+#, no-c-format
+msgid "Run the following bash script in the root directory of your document to check spellings in your XML files with the <application>aspell</application> command-line spell checker."
+msgstr "Lancez le script bash ci-après dans le répertoire racine du document pour vérifier l'orthographe des fichiers XML avec le vérificateur en ligne de commande <application>aspell</application>."
+
+#. Tag: programlisting
+#, no-c-format
+msgid "<xi:include href=\"extras/proof.sh\" parse=\"text\" xmlns:xi=\"http://www.w3.org/2001/XInclude\" />\n"
+msgstr "<xi:include href=\"extras/proof.sh\" parse=\"text\" xmlns:xi=\"http://www.w3.org/2001/XInclude\" />\n"
+
+#. Tag: para
+#, no-c-format
+msgid "Why don't <sgmltag>&lt;segmentedlist&gt;</sgmltag>s work when I build PDFs?"
+msgstr "Pourquoi la balise <sgmltag>&lt;segmentedlist&gt;</sgmltag> ne fonctionne pas lors de la construction des PDF ?"
+
+#. Tag: para
+#, no-c-format
+msgid "Check the number of columns in your <sgmltag>&lt;segmentedlist&gt;</sgmltag>s. When <sgmltag>&lt;segmentedlist&gt;</sgmltag>s are formatted as tables, the DocBook XSL limits the number of columns to two, and <application>Publican</application> formats <sgmltag>&lt;segmentedlist&gt;</sgmltag>s as tables."
+msgstr "Vérifiez le nombre de colonnes dans vos <sgmltag>&lt;segmentedlist&gt;</sgmltag>. Quand des <sgmltag>&lt;segmentedlist&gt;</sgmltag> sont formatés en tant que tableaux, le XSL de DocBook limite le nombre de colonnes à deux, et, <application>Publican</application> formate les <sgmltag>&lt;segmentedlist&gt;</sgmltag> en tant que tableaux."
+
+#. Tag: para
+#, no-c-format
+msgid "What happened to the colors in my images in this PDF?"
+msgstr "Qu'est-il arrivé aux couleurs des images dans ce PDF ?"
+
+#. Tag: para
+#, no-c-format
+msgid "This is the result of a bug in <application>FOP</application> that distorts colors in 24-bit PNG images. Convert your images to 32-bit PNG images to work around the problem."
+msgstr "Cela provient d'une anomalie de <application>FOP</application> qui distord les couleurs dans les images PNG sur 24 bits. Convertissez les images en PNG sur 32 bits pour contourner ce problème."
+
+#. Tag: para
+#, no-c-format
+msgid "When I build my document, I get an error about an &lsquo;undefined language&rsquo; — what's wrong?"
+msgstr "Quand je construis le document, j'obtiens une erreur &lsquo;langage non défini&rsquo; — qu'est-ce qui n'est pas correct ?"
+
+#. Tag: para
+#, no-c-format
+msgid "Code highlighting in <application>Publican</application> is generated with the <application>Syntax::Highlight::Engine::Kate</application> Perl module. If you specify a language in a <sgmltag>&lt;programlisting&gt;</sgmltag> tag that <application>Syntax::Highlight::Engine::Kate</application> does not recognize, you receive an error when you build your book. The first lines of the error message are similar to:"
+msgstr "La surbrillance du code dans <application>Publican</application> est créée à l'aide du module Perl <application>Syntax::Highlight::Engine::Kate</application>. Si vous précisez le langage dans une balise <sgmltag>&lt;programlisting&gt;</sgmltag>, langage non reconnu par <application>Syntax::Highlight::Engine::Kate</application>, vous obtiendrez une erreur à la construction de l'ouvrage. Les premières lignes du message d'erreur sont semblables à :"
+
+#. Tag: screen
+#, no-c-format, fuzzy
+msgid ""
+"<computeroutput>undefined language: JAVA at /usr/lib/perl5/vendor_perl/5.10.0/Syntax/Highlight/Engine/Kate.pm</computeroutput>\n"
+"<computeroutput>line 615.</computeroutput>\n"
+"<computeroutput>cannot create plugin for language 'JAVA'</computeroutput>"
+msgstr ""
+"<computeroutput>undefined language: JAVA at /usr/lib/perl5/vendor_perl/5.10.0/Syntax/Highlight/Engine/Kate.pm</computeroutput>\n"
+"<computeroutput>line 615.</computeroutput>\n"
+"<computeroutput>cannot create plugin for language 'JAVA'</computeroutput>\n"
+
+#. Tag: para
+#, no-c-format
+msgid "Note that <application>Syntax::Highlight::Engine::Kate</application> is very strict about names of languages and is case sensitive. Therefore, <sgmltag>&lt;programlisting language=\"Java\"&gt;</sgmltag> works, but <sgmltag>&lt;programlisting language=\"java\"&gt;</sgmltag> and <sgmltag>&lt;programlisting language=\"JAVA\"&gt;</sgmltag> do not. The error message that you receive identifies the problematic language attribute."
+msgstr "Notez que <application>Syntax::Highlight::Engine::Kate</application> est très strict à propos des noms de langues et est sensible à la casse. Ainsi, <sgmltag>&lt;programlisting language=\"Java\"&gt;</sgmltag> fonctionne, mais <sgmltag>&lt;programlisting language=\"java\"&gt;</sgmltag> et <sgmltag>&lt;programlisting language=\"JAVA\"&gt;</sgmltag> ne fonctionnent pas. Le message d'erreur reçu identifie l'attribut langage problématique."
+
+#. Tag: para
+#, no-c-format, fuzzy
+msgid "Refer to <ulink url=\"http://search.cpan.org/dist/Syntax-Highlight-Engine-Kate/lib/Syntax/Highlight/Engine/Kate.pm#PLUGINS\" /> for the full list of languages that <application>Syntax::Highlight::Engine::Kate</application> supports, including their expected capitalization and punctuation."
+msgstr "Allez à la page <ulink url=\"http://search.cpan.org/~szabgab/Syntax-Highlight-Engine-Kate-0.06/lib/Syntax/Highlight/Engine/Kate.pm#PLUGINS\" /> pour la liste complète des langages que <application>Syntax::Highlight::Engine::Kate</application> prend en charge, y compris majuscules et ponctuation attendues."
+
+#. Tag: para
+#, no-c-format
+msgid "How do I enable bash command-line completion for Publican?"
+msgstr "Comment puis-je activer l'auto-complémentation automatique bash sur la ligne de commande pour Publican ?"
+
+#. Tag: para
+#, no-c-format
+msgid "Support for bash command-line completion is a new feature in <application>Publican&nbsp;2.2</application>. To enable this feature:"
+msgstr "La prise en charge de l'auto-complémentation bash sur la ligne de commande est une nouvelle fonctionnalité de <application>Publican&nbsp;2.2</application>. Pour l'activer :"
+
+#. Tag: para
+#, no-c-format
+msgid "Install the package or packages that provide bash completion for your operating system. For example, on Fedora, run <command>sudo yum install bash-completion</command>."
+msgstr "Installez le ou les paquets fournissant cette fonctionnalité pour votre système d'exploitation. Par exemple, pour Fedora, exécutez <command>sudo yum install bash-completion</command>."
+
+#. Tag: para
+#, no-c-format
+msgid "Add the following to your <filename>~/.bashrc</filename> file:"
+msgstr "Ajoutez au fichier <filename>~/.bashrc</filename> :"
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"\n"
+"# Use bash-completion, if available\n"
+"if [ -f /etc/bash_completion ]; then\n"
+"        . /etc/bash_completion\n"
+"fi\n"
+msgstr ""
+"\n"
+"# Utiliser l'auto-complémentation bash, si disponible\n"
+"if [ -f /etc/bash_completion ]; then\n"
+"        . /etc/bash_completion\n"
+"fi\n"
+
+#. Tag: para
+#, no-c-format
+msgid "Restart your terminal or run <command>source ~/.bashrc</command>."
+msgstr "Redémarrez le terminal ou bien exécutez <command>source ~/.bashrc</command>."
+
+#. Tag: para
+#, no-c-format
+msgid "Why am I having trouble building my large book?"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Probably because the kernel can deal with only a certain number of file handles at a time, and you have exceeded that number. On some linuxes you can run <command>ulimit -n 8192</command> to change the limit for the current shell."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "To make this permanent, open <filename>/etc/security/limits.conf</filename> and add these two lines:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"\n"
+"*                 soft    nofile          8192\n"
+"*                 hard    nofile          8192\n"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Then save, and log in again for the changes to take effect."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Why does Jeff call Isaac &lsquo;Ivan&rsquo;?"
+msgstr "Pourquoi Jeff appelle-t-il Isaac &lsquo;Ivan&rsquo; ?"
+
+#. Tag: para
+#, no-c-format
+msgid "Because Jeff's memory is pants!"
+msgstr "Parce que Jeff n'a aucune mémoire !"
+
+#. Tag: para
+#, no-c-format
+#~ msgid "<emphasis role=\"strikethrough\">Which brands enable strict mode?</emphasis> Strict mode is not currently enforced."
+#~ msgstr "<emphasis role=\"strikethrough\">Quelles marques activent-elles le mode strict ?</emphasis> Le mode strict n'est pas actuellement appliqué."
+
+#. Tag: para
+#, no-c-format
+#~ msgid "<emphasis role=\"strikethrough\">Currently the Red Hat and JBoss brands enable strict mode.</emphasis>"
+#~ msgstr "<emphasis role=\"strikethrough\">Actuellement les marques Red Hat et JBoss activent le mode strict.</emphasis>"
+

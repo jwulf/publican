@@ -1,4 +1,4 @@
-# 
+#
 # AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
@@ -49,7 +49,8 @@ msgstr ""
 
 #. Tag: screen
 #, no-c-format
-msgid "<prompt>$</prompt> <command>publican -v</command>\n"
+msgid ""
+"<prompt>$</prompt> <command>publican -v</command>\n"
 "<computeroutput>version=2.8</computeroutput>"
 msgstr ""
 
@@ -95,7 +96,8 @@ msgstr ""
 
 #. Tag: programlisting
 #, no-c-format
-msgid "#### testing  #########\n"
+msgid ""
+"#### testing  #########\n"
 "deb http://ftp.us.debian.org/debian testing main contrib non-free"
 msgstr ""
 
@@ -116,7 +118,8 @@ msgstr ""
 
 #. Tag: programlisting
 #, no-c-format
-msgid "Package: *\n"
+msgid ""
+"Package: *\n"
 "Pin: release a=stable\n"
 "Pin-Priority: 900\n"
 "\n"
@@ -156,7 +159,8 @@ msgstr ""
 
 #. Tag: screen
 #, no-c-format
-msgid "<prompt>$</prompt> <command>publican</command>\n"
+msgid ""
+"<prompt>$</prompt> <command>publican</command>\n"
 "<computeroutput>Warning: program compiled against libxml 209 using older 208</computeroutput>\n"
 "<computeroutput>Warning: XML::LibXML compiled against libxml2 20901, but runtime libxml2 is older 20800</computeroutput>\n"
 "<computeroutput>Warning: program compiled against libxml 209 using older 208</computeroutput>\n"
@@ -171,7 +175,8 @@ msgstr ""
 
 #. Tag: screen
 #, no-c-format
-msgid "<prompt>$</prompt> <command>apt-get search libxslt</command>\n"
+msgid ""
+"<prompt>$</prompt> <command>apt-get search libxslt</command>\n"
 "<computeroutput>gambas3-gb-xml-xslt - Gambas XSLT component</computeroutput>\n"
 "<computeroutput>libidzebra-2.0-mod-alvis - IDZebra filter alvis (XSLT filter for XML)</computeroutput>\n"
 "<computeroutput>libidzebra-2.0-mod-dom - IDZebra filter 'dom' (XML DOM internal document model with XSLT)</computeroutput>\n"

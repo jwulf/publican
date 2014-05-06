@@ -6,15 +6,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
 "POT-Creation-Date: 2010-11-08T20:02:18\n"
-"PO-Revision-Date: 2012-01-22 19:38+0100\n"
+"PO-Revision-Date: 2012-01-22 01:38-0500\n"
 "Last-Translator: Mario Santagiuliana <fedora at marionline.it>\n"
 "Language-Team: Italian <fedora-trans-it at redhat.com>\n"
-"Language: it\n"
+"MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"MIME-Version: 1.0\n"
+"Language: it\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 1.5\n"
+"X-Generator: Zanata 3.3.2\n"
 
 #. Tag: title
 #, no-c-format
@@ -72,9 +72,9 @@ msgid "<prompt>$</prompt> <command> yum install publican-<replaceable>brand</rep
 msgstr "<command> yum install publican-<replaceable>brand</replaceable></command>\n"
 
 #. Tag: para
-#, no-c-format
+#, no-c-format, fuzzy
 msgid "Replace <replaceable>brand</replaceable> with, for example, <literal>redhat</literal>, <literal>fedora</literal>, <literal>jboss</literal>, <literal>ovirt</literal>, or <literal>gimp</literal>. Refer to <xref linkend=\"chap-Publican-Users_Guide-Branding\" /> for more information on branding."
-msgstr "Sostituire <replaceable>brand</replaceable> con <literal>redhat</literal>, <literal>fedora</literal>, <literal>jboss</literal>, <literal>ovirt</literal>, o <literal>gimp</literal>. Vedere il <xref linkend=\"chap-Publican-Users_Guide-Branding\" /> per una spiegazione del branding in <application>Publican</application>."
+msgstr "Sostituire <replaceable>brand</replaceable> con <literal>redhat</literal>, <literal>fedora</literal>, <literal>jboss</literal>, <literal>ovirt</literal>, o <literal>gimp</literal>. Vedere il <xref linkend=\"chap-Users_Guide-Branding\" /> per una spiegazione del branding in <application>Publican</application>."
 
 #. Tag: title
 #, no-c-format
@@ -147,9 +147,9 @@ msgid "Read the terms of the various license agreements. If you agree to their t
 msgstr "Leggere le condizioni dei vari accordi di licenza. Se si concorda con le condizioni, premere <guibutton>I Agree</guibutton> su ciascuna di esse, altrimenti premere <guibutton>Cancel</guibutton>."
 
 #. Tag: para
-#, no-c-format
+#, no-c-format, fuzzy
 msgid "The installer offers to install several components: <application>Publican</application> itself (labeled <literal>Main</literal> in the installer window), a number of <firstterm>brands</firstterm> (including <literal>RedHat</literal>, <literal>JBoss</literal>, and <literal>fedora</literal>), and two DocBook components (the DocBook <firstterm>Data Type Definition</firstterm> (DTD) and DocBook <firstterm>Extensible Stylesheet Language</firstterm> (XSL) stylesheets). The three brands are grouped under the collapsible heading <literal>Brands</literal> and the DocBook components are grouped under the collapsible heading <literal>DocBook</literal> in the installer window. Refer to <xref linkend=\"chap-Publican-Users_Guide-Branding\" /> for an explanation of brands in <application>Publican</application>. <application>Publican</application> uses the DTD and the XSL stylesheets to render XML documents in other presentation formats (such as HTML and PDF). If you do not install these components, <application>Publican</application> must download this data from the Internet every time it processes a document, which creates lengthy delays."
-msgstr "Il programma di installazione propone di installare diversi componenti: <application>Publican</application> (denominato <literal>Main</literal> nella finestra d'installazione), alcuni <firstterm>brand</firstterm> (<literal>RedHat</literal>, <literal>JBoss</literal>, e <literal>fedora</literal>), e due componenti di DocBook (il <firstterm>DTD</firstterm> o Data Type Definition, e l'<firstterm>XSL</firstterm> o Extensible Stylesheet Language). I tre brand si trovano raggruppati sotto il controllo espandibile <literal>Brands</literal>, mentre i componenti di DocBook si trovano nel controllo espandibile <literal>DocBook</literal> nella finestra di installazione. Vedere il <xref linkend=\"chap-Publican-Users_Guide-Branding\" /> per una spiegazione dei brand in <application>Publican</application>. Per rendere i documenti XML in presentazioni di altri formati (come HTML e PDF), <application>Publican</application> usa il DTD e gli <emphasis>stylesheet</emphasis> di XSL. Se non si installano questi componenti, <application>Publican</application> deve scaricare questi dati da Internet ogniqualvolta elabora un documento, il che comporta lunghi ritardi."
+msgstr "Il programma di installazione propone di installare diversi componenti: <application>Publican</application> (denominato <literal>Main</literal> nella finestra d'installazione), alcuni <firstterm>brand</firstterm> (<literal>RedHat</literal>, <literal>JBoss</literal>, e <literal>fedora</literal>), e due componenti di DocBook (il <firstterm>DTD</firstterm> o Data Type Definition, e l'<firstterm>XSL</firstterm> o Extensible Stylesheet Language). I tre brand si trovano raggruppati sotto il controllo espandibile <literal>Brands</literal>, mentre i componenti di DocBook si trovano nel controllo espandibile <literal>DocBook</literal> nella finestra di installazione. Vedere il <xref linkend=\"chap-Users_Guide-Branding\" /> per una spiegazione dei brand in <application>Publican</application>. Per rendere i documenti XML in presentazioni di altri formati (come HTML e PDF), <application>Publican</application> usa il DTD e gli <emphasis>stylesheet</emphasis> di XSL. Se non si installano questi componenti, <application>Publican</application> deve scaricare questi dati da Internet ogniqualvolta elabora un documento, il che comporta lunghi ritardi."
 
 #. Tag: para
 #, no-c-format
@@ -207,7 +207,7 @@ msgid "Install dependencies for publican, which are available as ports:"
 msgstr ""
 
 #. Tag: screen
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "<prompt>$</prompt><command>sudo port install</command> <option>docbook-xml docbook-xsl docbook-sgml-4.2 perl5 bash-completion p5-file-pushd p5-config-simple p5-file-find-rule p5-file-slurp p5-class-trigger p5-time-hires p5-list-moreutils p5-ipc-run3 p5-class-accessor p5-test-perl-critic p5-xml-libxslt p5-locale-gettext p5-image-size p5-file-copy-recursive p5-datetime p5-archive-zip p5-timedate p5-html-format p5-dbd-sqlite p5-xml-simple p5-devel-cover p5-test-pod p5-test-pod-coverage p5-template-toolkit</option> \n"
 msgstr ""
 
@@ -386,11 +386,6 @@ msgstr ""
 #~ msgid "Open your <filename>/etc/apt/sources.list</filename> file again, and delete the extra line that you added in this procedure."
 #~ msgstr "Riaprire il file <filename>/etc/apt/sources.list</filename> e rimuovere la riga precedentemente inserita."
 
-#. Tag: screen
-#, no-c-format, fuzzy
-#~ msgid "<prompt>$</prompt> <command>sudo gedit /etc/apt/sources.list</command>\n"
-#~ msgstr "<command>sudo gedit /etc/apt/sources.list</command>\n"
-
 #. Tag: para
 #, no-c-format
 #~ msgid "Note that until the release of \"Squeeze\" as the stable version of Debian, you must manually enable and disable access to the testing repository as described in this procedure whenever a new version of <application>Publican</application> becomes available in the testing repository. You can find up-to-date information about the status of <application>Publican</application> for Debian at <ulink url=\"http://packages.debian.org/squeeze/publican\" />, including the version number of <application>Publican</application> available in the repository (2.1 at the time of writing)."
@@ -421,15 +416,20 @@ msgstr ""
 #~ msgid "Save the file and close the text editor."
 #~ msgstr "Salvare il file e chiudere l'editor."
 
-#. Tag: para
+#. Tag: screen
 #, no-c-format
-#~ msgid "Test"
-#~ msgstr ""
+#~ msgid "<command>sudo apt-get update</command>\n"
+#~ msgstr "<command>sudo apt-get update</command>\n"
 
 #. Tag: title
 #, no-c-format
 #~ msgid "Debian"
 #~ msgstr "Debian"
+
+#. Tag: screen
+#, no-c-format
+#~ msgid "<command>sudo gedit /etc/apt/sources.list</command>\n"
+#~ msgstr "<command>sudo gedit /etc/apt/sources.list</command>\n"
 
 #. Tag: para
 #, no-c-format

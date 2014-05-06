@@ -1,0 +1,190 @@
+# Gé Baylard <<Geodebay@gmail.com>>, 2013.
+# Gérard Baylard <geodebay@gmail.com>, 2013. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: 0\n"
+"POT-Creation-Date: 2013-03-08T03:26:30\n"
+"PO-Revision-Date: 2013-11-17 07:03-0500\n"
+"Last-Translator: Gérard Baylard <geodebay@gmail.com>\n"
+"Language-Team: français <<trans-fr@lists.fedoraproject.org>>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"X-Generator: Zanata 3.3.2\n"
+"Plural-Forms: nplurals=2; plural=n>1;\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Conditional tagging"
+msgstr "Balisage conditionnel"
+
+#. Tag: para
+#, no-c-format
+msgid "In some cases you may need to maintain multiple versions of a book; for example, a HOWTO guide for product FOO can have an upstream version and an enterprise version, with very subtle differences between them."
+msgstr "En certaines circonstances, vous pouvez avoir besoin de maintenir plusieurs versions d'un ouvrage ; par exemple, un guide HOWTO pour le produit FOO peut avoir une version amont et une version entreprise, avec de très subtiles différences entre elles."
+
+#. Tag: para
+#, no-c-format
+msgid "<application>Publican</application> makes it easy to manage differences between multiple versions of a book by allowing you to use a single source for all versions. <firstterm>Conditional tagging</firstterm> allows you to make sure that version-specific content only appears in the correct version; that is, you <firstterm>conditionalize</firstterm> the content."
+msgstr "<application>Publican</application>facilite la gestion des différences entre plusieurs versions d'un ouvrage en vous permettant d'utiliser une source unique pour toutes les versions. Le <firstterm>balisage conditionnel</firstterm> vous permet de vous assurer qu'un contenu propre à une version n'apparaît que dans la dite version ; autrement dit, le contenu est <firstterm>conditionnel</firstterm>."
+
+#. Tag: para
+#, no-c-format, fuzzy
+msgid "To conditionalize content in a book, use the tag attribute <prompt>$</prompt> <command>condition</command>. For example, let's say the book <citetitle>How To Use Product Foo</citetitle> has an \"upstream\", \"enterprise\", and \"beta\" version:"
+msgstr "Pour soumettre un contenu à une condition dans un ouvrage, servez-vous de l'attribut de balise <command>condition</command>. Par exemple, disons que le manuel <citetitle>Comment utiliser le produit Foo</citetitle> a une version « amont », une version « entreprise » et une version « bêta » :"
+
+#. Tag: programlisting
+#, no-c-format, fuzzy
+msgid ""
+"&lt;para condition=\"upstream\"&gt;\n"
+"	&lt;application&gt;Foo&lt;/application&gt; starts automatically when you boot the system.\n"
+"&lt;/para&gt;\n"
+"	\n"
+"&lt;para condition=\"enterprise\"&gt;\n"
+"	&lt;application&gt;Foo&lt;/application&gt; only starts automatically when you boot the system when installed together with &lt;application&gt;Bar&lt;/application&gt;.\n"
+"&lt;/para&gt;	\n"
+"	\n"
+"&lt;para condition=\"beta\"&gt;\n"
+"	&lt;application&gt;Foo&lt;/application&gt; does not start automatically when you boot the system.\n"
+"&lt;/para&gt;\n"
+"	\n"
+"&lt;para condition=\"beta,enterprise\"&gt;\n"
+"	To make &lt;application&gt;Foo&lt;/application&gt; start automatically at boot time, edit the &lt;filename&gt;/etc/init.d/foo&lt;/filename&gt; file.\n"
+"&lt;/para&gt;"
+msgstr ""
+"&lt;para condition=\"upstream\"&gt;\n"
+"\t&lt;application&gt;Foo&lt;/application&gt; starts automatically when you boot the system.\n"
+"&lt;/para&gt;\n"
+"\t\n"
+"&lt;para condition=\"enterprise\"&gt;\n"
+"\t&lt;application&gt;Foo&lt;/application&gt; only starts automatically when you boot the system when installed together with &lt;application&gt;Bar&lt;/application&gt;.\n"
+"&lt;/para&gt;\t\n"
+"\t\n"
+"&lt;para condition=\"beta\"&gt;\n"
+"\t&lt;application&gt;Foo&lt;/application&gt; does not start automatically when you boot the system.\n"
+"&lt;/para&gt;\n"
+"\t\n"
+"&lt;para condition=\"beta,enterprise\"&gt;\n"
+"\tTo make &lt;application&gt;Foo&lt;/application&gt; start automatically at boot time, edit the &lt;filename&gt;/etc/init.d/foo&lt;/filename&gt; file.\n"
+"&lt;/para&gt;"
+
+#. Tag: para
+#, no-c-format, fuzzy
+msgid "To build a specific version (and thereby capture all content conditionalized for that version), add the <prompt>$</prompt> <command>condition: <replaceable>version</replaceable></command> parameter to the <filename>publican.cfg</filename> file and run the <prompt>$</prompt> <command>publican build</command> command as normal. For example, if you add <literal>condition: upstream</literal> to the <filename>publican.cfg</filename> file of <citetitle>How To Use Product Foo</citetitle> and run:"
+msgstr "Pour construire une version donnée (et de la sorte intégrer tout contenu conditionnel propre à la version), ajoutez le paramètre <command>condition: <replaceable>version</replaceable></command> dans le fichier <filename>publican.cfg</filename> et exécutez normalement la commande <command>publican build</command>. Par exemple, si vous définissez <literal>condition: upstream</literal> dans le fichier <filename>publican.cfg</filename> pour <citetitle>Comment utiliser le produit Foo</citetitle>, exécutez :"
+
+#. Tag: screen
+#, no-c-format
+msgid "<prompt>$</prompt> <command>publican build --formats=pdf --langs=en-US</command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<application>Publican</application> filters out all tags with condition attributes other than <literal>condition=\"upstream\"</literal> and builds <citetitle>How To Use Product Foo</citetitle> in as a PDF file in American English."
+msgstr "<application>Publican</application> écarte toutes les balises avec des attributs autres que <literal>condition=\"upstream\"</literal> et construit <citetitle>Comment utiliser le produit Foo</citetitle> au format PDF en langue anglaise (américain)."
+
+#. Tag: title
+#, no-c-format
+msgid "Conditional tagging and translation"
+msgstr "Balisage conditionnel et traduction"
+
+#. Tag: title
+#, no-c-format
+msgid "Use conditional tagging with great caution"
+msgstr "N'utiliser le balisage conditionnel qu'avec de grandes précautions"
+
+#. Tag: para
+#, no-c-format
+msgid "Use conditional tagging only with great caution in books that you expect to be translated, as conditional tagging creates extra difficulties for translators."
+msgstr "N'utilisez le balisage conditionnel qu'avec grande précaution dans les ouvrages qu'il est prévu de traduire ; cette fonctionnalité crée des difficultés supplémentaires pour les traducteurs."
+
+#. Tag: para
+#, no-c-format
+msgid "Conditional tagging creates difficulty for translators in two ways: it obscures context in the <firstterm>portable object</firstterm> (PO) files through which translators work, and it makes proofreading more difficult for translators who are not deeply familiar with your book and all the conditions that you have set."
+msgstr "Le balisage conditionnel crée des difficultés de deux sortes pour les traducteurs : il obscurcit le contexte dans les fichiers <firstterm>portable objet</firstterm> (PO) sur lesquels le traducteur travaille et rend la relecture plus délicate pour les traducteurs qui ne sont pas tout à fait familiers avec votre ouvrage et les conditions que vous avez imposées."
+
+#. Tag: para
+#, no-c-format, fuzzy
+msgid "The PO files for the document contain the full set of tags from the XML files, regardless of any conditions set. When translators open the PO file for the example from <citetitle>How To Use Product Foo</citetitle> in <xref linkend=\"sect-Publican-Users_Guide-Conditional_tagging\" />, they see:"
+msgstr "Le fichier PO du document contient l'ensemble complet des balises provenant des fichiers XML, quelles que soient les conditions définies. Quand un traducteur ouvre un fichier PO, par exemple celui de <citetitle>Comment utiliser le produit Foo</citetitle> dans <xref linkend=\"sect-Users_Guide-Conditional_tagging\" />, il voit :"
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"#. Tag: para\n"
+"#, no-c-format\n"
+"msgid \"&lt;application&gt;Foo&lt;/application&gt; starts automatically when you boot the system.\"\n"
+"msgstr \"\"\n"
+"\n"
+"#. Tag: para\n"
+"#, no-c-format\n"
+"msgid \"&lt;application&gt;Foo&lt;/application&gt; only starts automatically when you boot the system when installed together with &lt;application&gt;Bar&lt;/application&gt;.\"\n"
+"msgstr \"\"\n"
+"\n"
+"#. Tag: para\n"
+"#, no-c-format\n"
+"msgid \"&lt;application&gt;Foo&lt;/application&gt; does not start automatically when you boot the system.\"\n"
+"msgstr \"\"\n"
+"\n"
+"#. Tag: para\n"
+"#, no-c-format\n"
+"msgid \"To make &lt;application&gt;Foo&lt;/application&gt; start automatically at boot time, edit the &lt;filename&gt;/etc/init.d/foo&lt;/filename&gt; file.\"\n"
+"msgstr \"\""
+msgstr ""
+"#. Tag: para\n"
+"#, no-c-format\n"
+"msgid \"&lt;application&gt;Foo&lt;/application&gt; starts automatically when you boot the system.\"\n"
+"msgstr \"\"\n"
+"\n"
+"#. Tag: para\n"
+"#, no-c-format\n"
+"msgid \"&lt;application&gt;Foo&lt;/application&gt; only starts automatically when you boot the system when installed together with &lt;application&gt;Bar&lt;/application&gt;.\"\n"
+"msgstr \"\"\n"
+"\n"
+"#. Tag: para\n"
+"#, no-c-format\n"
+"msgid \"&lt;application&gt;Foo&lt;/application&gt; does not start automatically when you boot the system.\"\n"
+"msgstr \"\"\n"
+"\n"
+"#. Tag: para\n"
+"#, no-c-format\n"
+"msgid \"To make &lt;application&gt;Foo&lt;/application&gt; start automatically at boot time, edit the &lt;filename&gt;/etc/init.d/foo&lt;/filename&gt; file.\"\n"
+"msgstr \"\""
+
+#. Tag: para
+#, no-c-format
+msgid "Because PO files include do not include attributes from tags, there is nothing obvious here to show translators that these paragraphs are alternatives to each other and that the writer does not intend that meaning should flow from one paragraph to the next."
+msgstr "Comme les fichiers PO n'incluent pas les attributs de balise, il n'y a ici rien de bien évident pour indiquer au traducteur que ces paragraphes sont des alternatives s'excluant mutuellement et que l'auteur n'entendait pas introduire une continuité de signification d'une phrase à l'autre."
+
+#. Tag: para
+#, no-c-format
+msgid "In this example, the only paragraphs where the meaning flows logically from one to the next is between paragraphs three and four. Because both of these paragraphs appear in the book for the beta version of the product, they (hopefully) make sense together. Beyond that, the use of conditionals here requires translators to translate individual small chunks of content without the ability to follow the context from one paragraph to the next. When translators must work under these conditions, the quality of the translation will suffer, or the time required — and therefore the cost of translation — will increase."
+msgstr "Dans cet exemple, les seuls paragraphes avec une continuité logique de signification sont les paragraphes trois et quatre. Et comme ce deux paragraphes n'apparaissent dans l'ouvrage qu'au titre de la version bêta du produit, il prennent du sens dans la continuité (heureusement). Ainsi, l'utilisation de conditions demande ici au traducteur d'opérer par petits morceaux isolés de contenu sans vouloir donner de la continuité contextuelle d'un paragraphe à l'autre. Quand les traducteurs travaillent dans ces conditions, la qualité de la traduction en souffre, ou bien, cela demande plus de temps — et donc le coût de la traduction en est augmenté."
+
+#. Tag: para
+#, no-c-format
+msgid "Furthermore, unless the translators who work on your book know how to configure <application>Publican</application>'s <filename>publican.cfg</filename> file and are aware of the valid conditions for your book, they cannot proofread their work. Without that knowledge, when translators proofread a document, they will wonder why they cannot find text that they know they translated and can find easily in the PO file. If you must use conditionals in your book, you must be prepared to provide a greater degree of support to your translators than you would otherwise provide."
+msgstr "Furthermore, unless the translators who work on your book know how to configure <application>Publican</application>'s <filename>publican.cfg</filename> file and are aware of the valid conditions for your book, they cannot proofread their work. Without that knowledge, when translators proofread a document, they will wonder why they cannot find text that they know they translated and can find easily in the PO file. If you must use conditionals in your book, you must be prepared to provide a greater degree of support to your translators than you would otherwise provide."
+
+#. Tag: para
+#, no-c-format
+msgid "As an alternative to conditionals, consider maintaining separate versions of your book in separate branches of a version-controlled repository. You can still share XML files and even PO files between the various branches as necessary, and some version control systems allow you to share changes readily among branches."
+msgstr "Comme alternative aux conditions, envisagez l'entretien de versions séparées de l'ouvrage dans des branches séparées du dépôt à version contrôlée. Vous pourrez encore partager les fichiers XML et même les fichiers PO entre les diverses branches si nécessaire et tout système de contrôle des versions vous permettra de partager rapidement les modifications selon les branches."
+
+#. Tag: para
+#, no-c-format, fuzzy
+msgid "If you maintain two versions of a book in the same repository, we recommend using a separate config file for each version. For example, the <filename>upstream.cfg</filename> file might contain the condition <literal>condition: upstream</literal> and the <filename>enterprise.cfg</filename> file might contain the condition <literal>condition: enterprise</literal>. You could then specify the version of the document to build or package with the <option>--config</option>; for example, <prompt>$</prompt> <command>publican package --lang en-US --config upstream.cfg</command>. Using two separate config files saves you from having to edit the one config file each time you build or package a document."
+msgstr "Si vous entretenez deux versions d'un ouvrage dans le même dépôt, nous recommandons l'utilisation d'un fichier de configuration distinct pour chaque version. Par exemple, le fichier <filename>upstream.cfg</filename> peut contenir la condition <literal>condition: upstream</literal> et le fichier <filename>enterprise.cfg</filename> <literal>condition: enterprise</literal>. Puis vous préciserez la version du document à construire ou à empaqueter avec l'option <option>--config</option> ; par exemple, <command>publican package --lang en-US --config upstream.cfg</command>. L'utilisation de deux fichiers de configuration distincts vous économise d'avoir à modifier un fichier de configuration unique chaque fois que vous construisez ou empaquetez un document."
+
+#. Tag: screen
+#, no-c-format
+#~ msgid ""
+"\n"
+"publican build --formats=pdf --langs=en-US\n"
+"\n"
+#~ msgstr ""
+"\n"
+"publican build --formats=pdf --langs=en-US\n"
+"\n"
+

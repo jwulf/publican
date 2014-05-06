@@ -1,4 +1,4 @@
-# 
+#
 # AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
@@ -69,7 +69,8 @@ msgstr ""
 
 #. Tag: screen
 #, no-c-format
-msgid "<prompt>$</prompt> <command>publican --version </command>\n"
+msgid ""
+"<prompt>$</prompt> <command>publican --version </command>\n"
 "<computeroutput>version=3.2.1</computeroutput>"
 msgstr ""
 

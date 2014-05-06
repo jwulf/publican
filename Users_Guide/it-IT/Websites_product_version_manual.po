@@ -6,15 +6,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
 "POT-Creation-Date: 2011-09-09T14:23:20\n"
-"PO-Revision-Date: 2012-01-22 20:24+0100\n"
+"PO-Revision-Date: 2012-01-22 02:24-0500\n"
 "Last-Translator: Mario Santagiuliana <fedora at marionline.it>\n"
 "Language-Team: Italian <fedora-trans-it at redhat.com>\n"
-"Language: it-IT\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: it\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 1.5\n"
+"X-Generator: Zanata 3.3.2\n"
 
 #. Tag: title
 #, no-c-format
@@ -27,12 +27,12 @@ msgid "<application>Publican</application>-generated product pages and version p
 msgstr "Le pagine di prodotto e le pagine di versione generate con <application>Publican</application>, sono pagine localizzabili che offrono una panoramica generale, rispettivamente, su un prodotto o una versione. I visitatori accedono a queste pagine cliccando su prodotto o versione nel menu di navigazione. Le pagine sono strutturate come un <sgmltag>&lt;article&gt;</sgmltag> DocBook con un ulteriore parametro <parameter>web_type:&nbsp;product</parameter> o <parameter>web_type:&nbsp;version</parameter> nel proprio file <filename>publican.cfg</filename>. Nella loro struttura e presentazione, le pagine prodotto e quelle di versione sono pressoché identiche ad ogni altro articolo prodotto con <application>Publican</application>. Per creare una pagina prodotto o di versione:"
 
 #. Tag: para
-#, no-c-format
+#, no-c-format, fuzzy
 msgid "Change into a convenient directory and run the following <prompt>$</prompt> <command>publican create</command> command:"
 msgstr "Spostarsi in una cartella opportuna ed eseguire il seguente comando di <command>publican create</command>:"
 
 #. Tag: screen
-#, no-c-format
+#, no-c-format, fuzzy
 msgid "<prompt>$</prompt> <command>publican create --type Article --name <replaceable>page_name</replaceable></command>"
 msgstr "<command>publican create --type Article --name <replaceable>nome_pagina</replaceable></command>"
 
@@ -42,7 +42,7 @@ msgid "For example, a product page might be:"
 msgstr "Per esempio, per una pagina prodotto si avrebbe:"
 
 #. Tag: screen
-#, no-c-format
+#, no-c-format, fuzzy
 msgid "<prompt>$</prompt> <command>publican create --type Article --name FooMaster</command>"
 msgstr "<command>publican create --type Article --name FooMaster</command>"
 
@@ -52,7 +52,7 @@ msgid "or a version page might be:"
 msgstr "o per una pagina di versione:"
 
 #. Tag: screen
-#, no-c-format
+#, no-c-format, fuzzy
 msgid "<prompt>$</prompt> <command>publican create --type Article --name FooMaster_3</command>"
 msgstr "<command>publican create --type Article --name FooMaster_3</command>"
 
@@ -62,7 +62,7 @@ msgid "Change into the article directory:"
 msgstr "Spostarsi nella cartella dell'articolo:"
 
 #. Tag: screen
-#, no-c-format
+#, no-c-format, fuzzy
 msgid "<prompt>$</prompt> <command>cd <replaceable>page_name</replaceable></command>"
 msgstr "<command>cd <replaceable>nome_pagina</replaceable></command>"
 
@@ -162,7 +162,7 @@ msgid "&lt;title role=\"producttitle\"&gt;FooMaster Documentation&lt;/title&gt;"
 msgstr "&lt;title role=\"producttitle\"&gt;FooMaster Documentation&lt;/title&gt;"
 
 #. Tag: para
-#, no-c-format
+#, no-c-format, fuzzy
 msgid "If you publish documentation in more than one language, create a set of POT files and a set of PO files for each language with the <prompt>$</prompt> <command>publican update_pot</command> and <command>publican update_po</command> commands."
 msgstr "Se si pubblica documentazione in più lingue, creare un set di file POT ed un set di file PO per ciascuna lingua usando i comandi <command>publican update_pot</command> e <command>publican update_po</command>."
 
@@ -172,7 +172,7 @@ msgid "Build the product page or version page in single-page HTML format with th
 msgstr "Creare la pagina prodotto o di versione in formato HTML su singola pagina con l'opzione <option>--embedtoc</option> ed installarla nella struttura del sito. Per esempio:"
 
 #. Tag: screen
-#, no-c-format
+#, no-c-format, fuzzy
 msgid ""
 "<prompt>$</prompt> <command>publican build --publish --formats html-single --embedtoc --langs all</command> \n"
 "<prompt>$</prompt> <command>publican install_book --site_config ~/docsite/foomaster.cfg --lang <replaceable>Language_Code</replaceable></command>"
@@ -181,7 +181,7 @@ msgstr ""
 "<command>publican install_book --site_config ~/docsite/foomaster.cfg --lang <replaceable>codice_lingua</replaceable></command>"
 
 #. Tag: para
-#, no-c-format
+#, no-c-format, fuzzy
 msgid "Note that you can build all languages at the same time, but must install the product page or version page for each language with a separate <prompt>$</prompt> <command>publican install_book</command> command."
 msgstr "Notare che è possibile creare con un unico comando, gli HTML per tutte le lingue, ma che occorre installare la pagina prodotto o di versione di ciascuna lingua con un comando <command>publican install_book</command>, individuale."
 

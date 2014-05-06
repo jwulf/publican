@@ -1,0 +1,396 @@
+# Gé Baylard <<Geodebay@gmail.com>>, 2013.
+# Gérard Baylard <geodebay@gmail.com>, 2013. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: 0\n"
+"POT-Creation-Date: 2013-03-08T03:26:30\n"
+"PO-Revision-Date: 2013-09-03 05:07-0400\n"
+"Last-Translator: Gérard Baylard <geodebay@gmail.com>\n"
+"Language-Team: français <<trans-fr@lists.fedoraproject.org>>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"X-Generator: Zanata 3.3.2\n"
+"Plural-Forms: nplurals=2; plural=n>1;\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Using sets"
+msgstr "Utilisation de collections"
+
+#. Tag: para
+#, no-c-format, fuzzy
+msgid "A <firstterm>set</firstterm> is a collection of books, published as a single output. The <citetitle>Services Plan</citetitle> for example is a set comprised of many books such as the <citetitle>Developer Guide</citetitle>, <citetitle>Engineering Content Services Guide</citetitle> and the <citetitle>Engineering Operations Guide</citetitle> to name just a few. The <prompt>$</prompt> <command>create_book</command> command creates a template for a set by setting the <parameter>type</parameter> parameter to <literal>Set</literal>."
+msgstr "Une <firstterm>collection</firstterm> est un ensemble d'ouvrages, publiés sur une sortie unique. Par exemple, l'<citetitle>Organisation des services</citetitle> est un ensemble de plusieurs ouvrages comme le <citetitle>Guide du développeur</citetitle>, <citetitle>Guide des Services Ingénierie des contenus</citetitle> et le <citetitle>Guide d'Ingénierie des Opérations</citetitle> pour n'en citer que quelques uns. La commande <command>create_book</command> crée un canevas pour une collection en fixant la valeur du paramètre <parameter>type</parameter> à <literal>Set</literal>."
+
+#. Tag: para
+#, no-c-format
+msgid "There are two types of set:"
+msgstr "Il y a deux types de collections :"
+
+#. Tag: para
+#, no-c-format
+msgid "<firstterm>stand-alone sets</firstterm>"
+msgstr "les <firstterm>ensembles autonomes</firstterm>,"
+
+#. Tag: para
+#, no-c-format
+msgid "<firstterm>distributed sets</firstterm>"
+msgstr "les <firstterm>ensembles distribués</firstterm>."
+
+#. Tag: title
+#, no-c-format
+msgid "Stand-alone sets"
+msgstr "Ensembles autonomes"
+
+#. Tag: para
+#, no-c-format
+msgid "A stand-alone set contains the XML files for each book, all of which are located inside the directory of the set. Stand-alone sets are always built as a set; you cannot build the individual books on their own without modification."
+msgstr "Un ensemble autonome contient les fichiers XML de chaque ouvrage, chacun d'entre eux situé dans le répertoire de la collection. Les ensembles autonomes sont toujours construits en tant qu'ensemble ; vous ne pouvez pas construire isolément chaque livre de la collection sans modification."
+
+#. Tag: para
+#, no-c-format
+msgid "The procedure that follows will guide you through the process of creating a stand-alone set named <citetitle>My Set</citetitle> located in a directory called <filename>books/My_Set/</filename>. The set will contain <citetitle>Book A</citetitle> and <citetitle>Book B</citetitle> both of which will be manually created inside the <filename>books/My_Set/en-US</filename> directory."
+msgstr "La procédure suivante vous guidez dans le processus de création d'une collection autonome nommé <citetitle>My Set</citetitle>, située dans un répertoire nommé <filename>books/My_Set/</filename>. Cet ensemble contient <citetitle>Book A</citetitle> et <citetitle>Book B</citetitle>, chacun d'entre eux rédigé manuellement et placé dans le répertoire <filename>books/My_Set/en-US</filename>."
+
+#. Tag: title
+#, no-c-format
+msgid "Creating a stand-alone set"
+msgstr "Création d'un ensemble autonome"
+
+#. Tag: para
+#, no-c-format
+msgid "Run the following command in a shell in the <filename>books/</filename> directory to create a set named <literal>My_Set</literal> branded in the Red Hat style and in which the XML will be written in American English."
+msgstr "Exécuter, dans un terminal, la commande suivante en vous plaçant dans le répertoire <filename>books/</filename> pour créer un ensemble nommé <literal>My_Set</literal> avec la charte graphique Red Hat et dans laquelle les XML sont écrits en anglais (américain)."
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"publican create --type=Set --name=My_Set --brand=RedHat --lang=en-US\n"
+"\n"
+msgstr ""
+"publican create --type=Set --name=My_Set --brand=RedHat --lang=en-US\n"
+"\n"
+
+#. Tag: para
+#, no-c-format, fuzzy
+msgid "<prompt>$</prompt> <command>cd</command> into the <filename>My_Set/en-US</filename> directory and create two <emphasis>directories</emphasis> (not books) called <filename>Book_A</filename> and <filename>Book_B</filename>."
+msgstr "À l'aide de la commande <command>cd</command>, se mettre dans le répertoire <filename>My_Set/en-US</filename> et créer deux <emphasis>répertoires</emphasis> (et non livres) nommés <filename>Book_A</filename> et <filename>Book_B</filename>."
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"<prompt>$</prompt> <command>cd</command> <filename>My_Set/en-US</filename>\n"
+"<prompt>$</prompt> <command>mkdir</command> <filename>Book_A</filename> <filename>Book_B</filename>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format, fuzzy
+msgid "<prompt>$</prompt> <command>cd</command> into the <filename>books/My_Set/en-US/Book_A</filename> directory. Create and edit the <filename>Book_A.xml</filename>, <filename>Book_Info.xml</filename>, and any other xml files required for your book such as those required for individual chapters. Ensure that <filename>Book_A.xml</filename> contains the correct <sgmltag>xi:include</sgmltag> references to all of your xml files in the directory. For example, if <citetitle>Book A</citetitle> contained <filename>Book_Info.xml</filename> and <filename>Chapter_1.xml</filename>, the <filename>Book_A.xml</filename> file would look like this:"
+msgstr "Se placer à l'aide de <command>cd</command> dans le répertoire <filename>books/My_Set/en-US/Book_A</filename>. Créer et modifier <filename>Book_A.xml</filename>, <filename>Book_Info.xml</filename> et les autres fichiers XML nécessaires à l'ouvrage tels ceux requis pour des chapitres individualisés. S'assurer que <filename>Book_A.xml</filename> contient les références correctes <sgmltag>xi:include</sgmltag> vers tous les fichiers XML du répertoire. Par exemple, si <citetitle>Book A</citetitle> contient <filename>Book_Info.xml</filename> et <filename>Chapter_1.xml</filename>, le fichier <filename>Book_A.xml</filename> doit ressembler à :"
+
+#. Tag: programlisting
+#, no-c-format, fuzzy
+msgid ""
+"&lt;?xml version='1.0'?&gt;\n"
+"&lt;!DOCTYPE book PUBLIC \"-//OASIS//DTD DocBook XML V4.5//EN\" \n"
+"\"http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd\" [\n"
+"]&gt;\n"
+"	  \n"
+"&lt;book&gt;\n"
+"	  &lt;xi:include href=\"Book_Info.xml\" xmlns:xi=\"http://www.w3.org/2001/XInclude\"&gt;&lt;/xi:include&gt;\n"
+"	  &lt;xi:include href=\"Chapter_1.xml\" xmlns:xi=\"http://www.w3.org/2001/XInclude\"&gt;&lt;/xi:include&gt;\n"
+"&lt;/book&gt;\n"
+"\n"
+msgstr ""
+"&lt;?xml version='1.0'?&gt;\n"
+"&lt;!DOCTYPE book PUBLIC \"-//OASIS//DTD DocBook XML V4.5//EN\" \n"
+"\"http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd\" [\n"
+"]&gt;\n"
+"\t  \n"
+"&lt;book&gt;\n"
+"\t  &lt;xi:include href=\"Book_Info.xml\" xmlns:xi=\"http://www.w3.org/2001/XInclude\"&gt;&lt;/xi:include&gt;\n"
+"\t  &lt;xi:include href=\"Chapter_1.xml\" xmlns:xi=\"http://www.w3.org/2001/XInclude\"&gt;&lt;/xi:include&gt;\n"
+"&lt;/book&gt;\n"
+"\n"
+
+#. Tag: para
+#, no-c-format
+msgid "Use the same process for <citetitle>Book_B</citetitle>, located in the <filename>books/My_Set/en-US/Book_B</filename> directory, as per the step above."
+msgstr "Suivre un processus identique pour <citetitle>Book_B</citetitle>, situé dans le répertoire <filename>books/My_Set/en-US/Book_B</filename>."
+
+#. Tag: para
+#, no-c-format
+msgid "Open the <filename>books/My_Set/en-US/My_Set.xml</filename> file in an editor. For each book in the set, add an <sgmltag>xi:include</sgmltag> reference to the primary xml file from the book. The primary xml file for <citetitle>Book A</citetitle> will be <filename>Book_A.xml</filename> and for <citetitle>Book B</citetitle>, <filename>Book_B.xml</filename>. The <filename>My_Set.xml</filename> file should now look like this:"
+msgstr "Ouvrir le fichier <filename>books/My_Set/en-US/My_Set.xml</filename> dans un éditeur. Pour chacun des ouvrages dans la collection, ajouter une référence <sgmltag>xi:include</sgmltag> au fichier XML principal de l'ouvrage. Le fichier XML principal de <citetitle>Book A</citetitle> est <filename>Book_A.xml</filename> et celui de <citetitle>Book B</citetitle>, <filename>Book_B.xml</filename>. Le fichier <filename>My_Set.xml</filename> ressemble maintenant à quelque chose comme :"
+
+#. Tag: programlisting
+#, no-c-format, fuzzy
+msgid ""
+"<xi:include href=\"extras/Set_Name.xmlt\" parse=\"text\" xmlns:xi=\"http://www.w3.org/2001/XInclude\" />\n"
+"				\n"
+"\n"
+msgstr ""
+"<xi:include href=\"extras/Set_Name.xmlt\" parse=\"text\" xmlns:xi=\"http://www.w3.org/2001/XInclude\" />\n"
+"\n"
+
+#. Tag: para
+#, no-c-format
+msgid "To make your set XML valid, you will need to change the following:"
+msgstr "Pour rendre votre ensemble XML valide, modifier :"
+
+#. Tag: para
+#, no-c-format
+msgid "In <filename>My_Set.xml</filename>, comment out the following lines:"
+msgstr "Dans <filename>My_Set.xml</filename>, mettre en commentaire les lignes :"
+
+#. Tag: programlisting
+#, no-c-format, fuzzy
+msgid ""
+"\n"
+"&lt;remark&gt;NOTE: the href does not contain a language! This is CORRECT!&lt;/remark&gt;\n"
+"&lt;remark&gt;&lt;xi:include href=\"My_Other_Book/My_Other_Book.xml\" xmlns:xi=\"http://www.w3.org/2001/XInclude\"&gt;&lt;/remark&gt;\n"
+"&lt;setindex&gt;&lt;/setindex&gt;\n"
+msgstr ""
+"\n"
+"&lt;remark&gt;NOTE: the href does not contain a language! This is CORRECT!&lt;/remark&gt;\n"
+"&lt;remark&gt;&lt;xi:include href=\"My_Other_Book/My_Other_Book.xml\" xmlns:xi=\"http://www.w3.org/2001/XInclude\"&gt;&lt;/remark&gt;\n"
+"&lt;setindex&gt;&lt;/setindex&gt;\n"
+"            "
+
+#. Tag: para
+#, no-c-format
+msgid "In the <filename>Preface.xml</filename> and <filename>Book_Info.xml</filename> for each book you are using, add ../../ to the front of every Common_Content string you see. For example:"
+msgstr "Dans <filename>Preface.xml</filename> et <filename>Book_Info.xml</filename> de chaque ouvrage utilisé, ajouter ../../ en tête de chaque chaîne Common_Content que vous voyez. Par exemple :"
+
+#. Tag: programlisting
+#, no-c-format, fuzzy
+msgid ""
+"\n"
+"&lt;xi:include href=\"Common_Content/Conventions.xml\" xmlns:xi=\"http://www.w3.org/2001/XInclude\" /&gt;\n"
+msgstr ""
+"\n"
+"&lt;xi:include href=\"Common_Content/Conventions.xml\" xmlns:xi=\"http://www.w3.org/2001/XInclude\" /&gt;\n"
+"               "
+
+#. Tag: para
+#, no-c-format
+msgid "This will need to become:"
+msgstr "Elle doit devenir:"
+
+#. Tag: programlisting
+#, no-c-format, fuzzy
+msgid ""
+"\n"
+"&lt;xi:include href=\"../../Common_Content/Conventions.xml\" xmlns:xi=\"http://www.w3.org/2001/XInclude\" /&gt;\n"
+msgstr ""
+"\n"
+"&lt;xi:include href=\"../../Common_Content/Conventions.xml\" xmlns:xi=\"http://www.w3.org/2001/XInclude\" /&gt;\n"
+"               "
+
+#. Tag: para
+#, no-c-format
+msgid "This is because in a standalone set, the Common Content folder is two directories further away from where Publican usually looks for it, so it has to be told manually. To build your book individually, without building the entire set, undo this step."
+msgstr "Dans un ensemble autonome, le dossier « Common Content » est deux répertoires au dessous de l'emplacement dans lequel Publican le cherche généralement, et cela doit être indiqué manuellement. Pour construire vos ouvrages individuellement, sans construire la collection, ne réalisez pas cette étape."
+
+#. Tag: para
+#, no-c-format
+msgid "Test your set by running the <command>publican build --formats=test --langs=en-US</command> command."
+msgstr "Tester l'ensemble en exécutant la commande <command>publican build --formats=test --langs=en-US</command>."
+
+#. Tag: para
+#, no-c-format
+msgid "If you are using pre-existing books, you will need to rearrange them so the XML files are at the level of the set and all images are inside the images directory at the same level. For example:"
+msgstr "Si vous utilisez des ouvrages existants, vous devez les aménager de façon à ce que les fichiers XML soient au niveau de l'ensemble et toutes les images dans le répertoire images sur un même niveau. Par exemple :"
+
+#. Tag: programlisting
+#, no-c-format, fuzzy
+msgid ""
+"\n"
+"   -- My_Set\n"
+"    |-- en-US\n"
+"    |   |-- Author_Group.xml\n"
+"    |   |-- Book_A.ent\n"
+"    |   |-- Book_A.xml\n"
+"    |   |-- Book_B.ent\n"
+"    |   |-- Book_B.xml\n"
+"    |   |-- Book_Info_A.xml\n"
+"    |   |-- Book_Info_B.xml\n"
+"    |   |-- chapter_A.xml\n"
+"    |   |-- chapter_B.xml\n"
+"    |   |-- images\n"
+"    |   |   |-- icon.svg\n"
+"    |   |   `-- image1.png\n"
+"    |   |-- My_Set.ent\n"
+"    |   |-- My_Set.xml\n"
+"    |   |-- Preface.xml\n"
+"    |   |-- Revision_History.xml\n"
+"    |   `-- Set_Info.xml\n"
+"    `-- publican.cfg\n"
+"\n"
+msgstr ""
+"\n"
+"   -- My_Set\n"
+"    |-- en-US\n"
+"    |   |-- Author_Group.xml\n"
+"    |   |-- Book_A.ent\n"
+"    |   |-- Book_A.xml\n"
+"    |   |-- Book_B.ent\n"
+"    |   |-- Book_B.xml\n"
+"    |   |-- Book_Info_A.xml\n"
+"    |   |-- Book_Info_B.xml\n"
+"    |   |-- chapter_A.xml\n"
+"    |   |-- chapter_B.xml\n"
+"    |   |-- images\n"
+"    |   |   |-- icon.svg\n"
+"    |   |   `-- image1.png\n"
+"    |   |-- My_Set.ent\n"
+"    |   |-- My_Set.xml\n"
+"    |   |-- Preface.xml\n"
+"    |   |-- Revision_History.xml\n"
+"    |   `-- Set_Info.xml\n"
+"    `-- publican.cfg\n"
+"\n"
+"         "
+
+#. Tag: para
+#, no-c-format
+msgid "The XML files can also be within sub-folders to keep them separate. This is true within the images directory, as well. For example:"
+msgstr "Les fichiers XML peuvent aussi être dans des sous-répertoires pour les garder séparées. Ce qui est également vrai pour le répertoire images. Par exemple :"
+
+#. Tag: programlisting
+#, no-c-format, fuzzy
+msgid ""
+"\n"
+"   -- My_Set\n"
+"    |-- en-US\n"
+"    |   |-- Author_Group.xml\n"
+"    |   |-- Book_A\n"
+"    |   |   |-- Book_A.ent\n"
+"    |   |   |-- Book_A.xml\n"
+"    |   |   |-- Book_Info.xml\n"
+"    |   |   `-- chapter.xml\n"
+"    |   |-- Book_B\n"
+"    |   |   |-- Book_B.ent\n"
+"    |   |   |-- Book_B.xml\n"
+"    |   |   |-- Book_Info.xml\n"
+"    |   |   `-- chapter.xml\n"
+"    |   |-- images\n"
+"    |   |   |-- icon.svg\n"
+"    |   |   `-- image1.png\n"
+"    |   |-- My_Set.ent\n"
+"    |   |-- My_Set.xml\n"
+"    |   |-- Preface.xml\n"
+"    |   |-- Revision_History.xml\n"
+"    |   `-- Set_Info.xml\n"
+"    `-- publican.cfg\n"
+msgstr ""
+"\n"
+"   -- My_Set\n"
+"    |-- en-US\n"
+"    |   |-- Author_Group.xml\n"
+"    |   |-- Book_A\n"
+"    |   |   |-- Book_A.ent\n"
+"    |   |   |-- Book_A.xml\n"
+"    |   |   |-- Book_Info.xml\n"
+"    |   |   `-- chapter.xml\n"
+"    |   |-- Book_B\n"
+"    |   |   |-- Book_B.ent\n"
+"    |   |   |-- Book_B.xml\n"
+"    |   |   |-- Book_Info.xml\n"
+"    |   |   `-- chapter.xml\n"
+"    |   |-- images\n"
+"    |   |   |-- icon.svg\n"
+"    |   |   `-- image1.png\n"
+"    |   |-- My_Set.ent\n"
+"    |   |-- My_Set.xml\n"
+"    |   |-- Preface.xml\n"
+"    |   |-- Revision_History.xml\n"
+"    |   `-- Set_Info.xml\n"
+"    `-- publican.cfg\n"
+"         "
+
+#. Tag: title
+#, no-c-format
+msgid "Distributed sets"
+msgstr "Ensembles distribués"
+
+#. Tag: para
+#, no-c-format
+msgid "A <firstterm>distributed set</firstterm> contains books that are located in a version-controlled repository. Although several version control systems exist, this version of <application>Publican</application> supports only one: <application>Subversion</application> (<application>SVN</application>). By setting the repository location and titles of the included books in the <filename>publican.cfg</filename> file, each book can be exported to build the entire set. The procedure that follows will guide you through the process of creating a set named <citetitle>My Set</citetitle> containing <citetitle>Book A</citetitle> and <citetitle>Book B</citetitle>."
+msgstr "Une <firstterm>collection distribuée</firstterm> est constituée d'ouvrages situés dans un dépôt à versions contrôlées. Bien qu'il existe plusieurs systèmes de contrôle des versions, <application>Publican</application> ne prend en charge qu'un seul système : <application>Subversion</application> (<application>SVN</application>). En définissant l'emplacement du dépôt et les titres des ouvrages à inclure dans le fichier <filename>publican.cfg</filename>, chacun d'entre eux peut être exporté pour construire la totalité de la collection. La procédure suivante est un guide pour créer une collection nommée <citetitle>My Set</citetitle> contenant <citetitle>Book A</citetitle> et <citetitle>Book B</citetitle>."
+
+#. Tag: para
+#, no-c-format
+msgid "The following procedure assumes that <citetitle>Book A</citetitle> and <citetitle>Book B</citetitle> already exist and are available in your <application>SVN</application> repository. Currently <application>Publican</application> only supports <application>SVN</application>."
+msgstr "Elle suppose que <citetitle>Book A</citetitle> et <citetitle>Book B</citetitle> existent déjà et sont disponibles dans le dépôt <application>SVN</application>. Actuellement, <application>Publican</application> ne prend en charge que <application>SVN</application>."
+
+#. Tag: title
+#, no-c-format
+msgid "Creating a set"
+msgstr "Création d'une collection"
+
+#. Tag: para
+#, no-c-format
+msgid "Run the following command in a shell to create a set named <literal>My_Set</literal> branded in the Red Hat style and in which the XML will be written in American English."
+msgstr "Exécuter la commande suivante dans un terminal pour créer une collection nommée <literal>My_Set</literal> avec la charte graphique Red Hat et dans laquelle les XML sont écrits en anglais (américain)."
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"$ publican create --type=Set --name=My_Set --brand=RedHat  --lang=en-US\n"
+"\n"
+msgstr ""
+"$ publican create --type=Set --name=My_Set --brand=RedHat  --lang=en-US\n"
+"\n"
+
+#. Tag: para
+#, no-c-format
+msgid "Add the following lines to the <filename>publican.cfg</filename> file:"
+msgstr "Ajouter les lignes suivantes au fichier <filename>publican.cfg</filename> :"
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"books: Book_A Book_B\n"
+"repo: <replaceable>http://PATH-TO-YOUR-SVN-REPOSITORY</replaceable>\n"
+"scm: SVN\n"
+"\n"
+msgstr ""
+"books: Book_A Book_B\n"
+"repo: <replaceable>http://CHEMIN-VERS-LE-DÉPÔT-SVN</replaceable>\n"
+"scm: SVN\n"
+"\n"
+
+#. Tag: para
+#, no-c-format
+msgid "Your repository path should end in the directory before the book you need."
+msgstr "Le chemin vers le dépôt doit mener dans le répertoire contenant le livre dont vous avez besoin."
+
+#. Tag: para
+#, no-c-format
+msgid "Open the <filename>My_Set.xml</filename> file in an editor. For each book in the set, add an <sgmltag>xi:include</sgmltag> reference to the primary XML file from the book. The primary XML file for <citetitle>Book A</citetitle> will be <filename>Book_A.xml</filename> and for <citetitle>Book B</citetitle>, <filename>Book_B.xml</filename>. The <filename>My_Set.xml</filename> file should now look like this:"
+msgstr "Ouvrir le fichier <filename>My_Set.xml</filename> dans un éditeur de textes. Pour chaque ouvrage de la collection, ajouter une référence <sgmltag>xi:include</sgmltag> sur le fichier XML principal du livre. Le fichier XML principal pour <citetitle>Book A</citetitle> doit être <filename>Book_A.xml</filename> et pour <citetitle>Book B</citetitle>, <filename>Book_B.xml</filename>. Le fichier <filename>My_Set.xml</filename> doit maintenant ressembler à ceci :"
+
+#. Tag: para
+#, no-c-format
+msgid "To make your set XML valid, you will need to comment out the following lines in <filename>My_Set.xml</filename>"
+msgstr "Pour que le XML soit valide, mettre en commentaire dans <filename>My_Set.xml</filename> les lignes :"
+
+#. Tag: para
+#, no-c-format
+msgid "When building a set, the <command>publican clean_ids</command> command will be run over each book because of the constraint that IDs must be unique across all books. Be careful of creating IDs that rely on content that may not be available when building books independently of the set."
+msgstr "En construisant une collection, la commande <command>publican clean_ids</command> doit être lancée pour chaque ouvrage étant donné qu'il est obligatoire d'avoir un identifiant unique dans l'ensemble des livres. Soyez attentif à créer des identifiants en rapport avec le contenu qui soient adaptés lors de la construction des ouvrages indépendamment de la collection."
+
+#. Tag: screen
+#, no-c-format
+#~ msgid ""
+"cd My_Set/en-US\n"
+"mkdir Book_A Book_B\n"
+"\n"
+#~ msgstr ""
+"cd My_Set/en-US\n"
+"mkdir Book_A Book_B\n"
+"\n"
+

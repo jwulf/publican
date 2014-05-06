@@ -6,8 +6,8 @@
 	 <simpara>
 		<revhistory>
 			<revision>
-				<revnumber>4.0-4.1</revnumber>
-				<date>Tue Dec 17 2013</date>
+				<revnumber>4.0-5.1</revnumber>
+				<date>Tue May 6 2014</date>
 				<author>
 					<firstname>Jeff</firstname>
 					<surname>Fearn</surname>
@@ -15,9 +15,26 @@
 				</author>
 				<revdescription>
 					<simplelist>
-						<member>I file della traduzione sono sincronizzati con con le versioni 4.0-4 dei sorgenti XML</member>
+						<member>I file della traduzione sono sincronizzati con con le versioni 4.0-5 dei sorgenti XML</member>
 					</simplelist>
 				</revdescription>
+			</revision>
+			 <revision>
+				<revnumber>4.0-4.1</revnumber>
+				 <date>Tue Dec 17 2013</date>
+				 <author>
+					<firstname>Jeff</firstname>
+					 <surname>Fearn</surname>
+					 <email>jfearn@redhat.com</email>
+				</author>
+				 <revdescription>
+					<simplelist>
+						<member>I file della traduzione sono sincronizzati con con le versioni 4.0-4 dei sorgenti XML</member>
+
+					</simplelist>
+
+				</revdescription>
+
 			</revision>
 			 <revision>
 				<revnumber>3.2-0.1</revnumber>
@@ -26,7 +43,6 @@
 					<firstname>Jeff</firstname>
 					 <surname>Fearn</surname>
 					 <email>jfearn@redhat.com</email>
-
 				</author>
 				 <revdescription>
 					<simplelist>
@@ -44,7 +60,6 @@
 					<firstname>Jeff</firstname>
 					 <surname>Fearn</surname>
 					 <email>jfearn@redhat.com</email>
-
 				</author>
 				 <revdescription>
 					<simplelist>
@@ -62,7 +77,6 @@
 					<firstname>Ruediger</firstname>
 					 <surname>Landmann</surname>
 					 <email>rlandmann@redhat.com</email>
-
 				</author>
 				 <revdescription>
 					<simplelist>

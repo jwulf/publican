@@ -5,13 +5,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
 "POT-Creation-Date: 2010-11-29T18:01:38\n"
-"PO-Revision-Date: 2010-12-02T15:03:10\n"
+"PO-Revision-Date: \n"
 "Last-Translator: luigi votta <lewis41@fedoraproject.org>\n"
 "Language-Team: Italian <trans-it@lists-fedoraproject.org>\n"
-"Language: it-IT\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: it\n"
+"X-Generator: Zanata 3.3.2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
 #. Tag: firstname
 #, no-c-format
@@ -157,9 +159,4 @@ msgstr "Localization Project"
 #, no-c-format
 msgid "Checking the Czech examples in Entities and translation"
 msgstr "Checking the Czech examples in Entities and translation"
-
-#. Tag: phrase
-#, no-c-format
-#~ msgid "Red Hat, Engineering Operations Logo"
-#~ msgstr "Red Hat, Engineering Operations Logo"
 

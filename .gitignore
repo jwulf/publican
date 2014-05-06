@@ -1,6 +1,6 @@
 *.swp
 *.swo
-blib/
+blib
 .build/
 _build/
 cover_db/
@@ -31,3 +31,4 @@ publican-Test_Brand/
 foo2/
 foo3/
 Publican-v*.tar.gz
+.zanata-cache

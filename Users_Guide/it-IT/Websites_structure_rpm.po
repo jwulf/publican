@@ -6,15 +6,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
 "POT-Creation-Date: 2010-12-03T18:36:00\n"
-"PO-Revision-Date: 2012-01-22 20:31+0100\n"
+"PO-Revision-Date: 2012-01-22 02:31-0500\n"
 "Last-Translator: Mario Santagiuliana <fedora at marionline.it>\n"
 "Language-Team: Italian <fedora-trans-it at redhat.com>\n"
-"Language: it-IT\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: it\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 1.5\n"
+"X-Generator: Zanata 3.3.2\n"
 
 #. Tag: title
 #, no-c-format
@@ -33,8 +33,8 @@ msgstr "Quando si costruisce la struttura del sito web, <application>Publican</a
 
 #. Tag: para
 #, no-c-format
-msgid "Perform the following steps on your webserver. You must have an account with root privileges."
-msgstr "Sul server web, effettuare i seguenti passaggi. Occorre accedere con un account con privilegi di root."
+msgid "Perform the following steps on your webserver."
+msgstr ""
 
 #. Tag: para
 #, no-c-format
@@ -42,28 +42,18 @@ msgid "Log into the webserver."
 msgstr "Autenticarsi sul server web."
 
 #. Tag: para
-#, no-c-format
-msgid "Become root:"
-msgstr "Diventare utente root:"
-
-#. Tag: screen
-#, no-c-format
-msgid "<prompt>$</prompt> <command>su -</command>"
-msgstr ""
-
-#. Tag: para
-#, no-c-format
-msgid "Install <application>Publican</application>. For example, on a webserver with a Fedora operating system, run:"
+#, no-c-format, fuzzy
+msgid "Install <application>Publican</application> and its web components package. For example, on a webserver with a Fedora operating system, run:"
 msgstr "Installare <application>Publican</application>. Per esempio, su un server con Sistema Operativo Fedora, eseguire:"
 
 #. Tag: screen
 #, no-c-format
-msgid "<prompt>#</prompt> <command>yum install publican-web publican-$brand-web</command>"
+msgid "<prompt>$</prompt> <command>sudo yum install publican publican-common-web</command>"
 msgstr ""
 
 #. Tag: para
-#, no-c-format
-msgid "Edit the <filename>/etc/publican-website.cfg</filename> file to specify the name of the site, the web host, and optionally, search parameters, default language, and dump file settings for the site:"
+#, no-c-format, fuzzy
+msgid "With root privileges, edit the <filename>/etc/publican-website.cfg</filename> file to specify the name of the site, the web host, and optionally, search parameters, default language, dump file settings, and web style for the site:"
 msgstr "Modificare il file <filename>/etc/publican-website.cfg</filename>, specificando il nome del sito, il web host ed opzionalmente impostare i parametri di ricerca, la lingua predefinita e il file dump per il sito:"
 
 #. Tag: para
@@ -147,7 +137,7 @@ msgid "With <parameter>def_lang</parameter> set to <literal>fr-FR</literal>, vis
 msgstr "Impostando il parametro <parameter>def_lang</parameter> con il codice <literal>it-IT</literal>, i visitatori che visualizzano il menu di navigazione, per esempio in spagnolo, vengono diretti alla versione italiana del documento se non è presente una traduzione in spagnolo."
 
 #. Tag: para
-#, no-c-format
+#, no-c-format, fuzzy
 msgid "Optionally, configure a <firstterm>dump file</firstterm> for the website. <application>Publican</application> can output an XML file that provides complete site content details for delivery of other services, such as web feeds or customised search pages. The file is updated whenever a book is installed or removed from the site, or the <prompt>$</prompt> <command>publican update_site</command> command is run. Configure the <parameter>dump</parameter>, <parameter>dump_file</parameter>, and <parameter>zip_dump</parameter> parameters as follows:"
 msgstr "Opzionalmente, configurare un <firstterm>file dump</firstterm> per il sito web. <application>Publican</application> può produrre un file XML con i dettagli completi del contenuto del sito per offrire altri servizi, come feed web o pagine di ricerca personalizzate. Questo file viene aggiornato ad ogni installazione o rimozione di un libro dal sito, oppure eseguendo il comando <command>publican update_site</command>. Configurare come indicato di seguito, i parametri <parameter>dump</parameter>, <parameter>dump_file</parameter> e <parameter>zip_dump</parameter>:"
 
@@ -184,15 +174,75 @@ msgstr "Impostare <literal>zip_dump: 1</literal> per creare anche una versione z
 #. Tag: para
 #, no-c-format
 msgid "Refer to <xref linkend=\"appe-Publican-Users_Guide-Contents_of_the_website_dump_file\" /> for a description of the contents of the dump file."
-msgstr "Fare riferimento all'<xref linkend=\"appe-Publican-Users_Guide-Contents_of_the_website_dump_file\" /> per una descrizione del contenuto del file dump."
+msgstr ""
 
 #. Tag: para
 #, no-c-format
+msgid "Optionally, specify the web style with the <parameter>web_style</parameter>."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "web_style: 1"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "The website resembles those produced by Publican&nbsp;2, with a list of products displayed in a navigation pane at the left of the page. (Default)"
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "web_style: 2"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "The website includes a breadcrumb-like navigation bar across the top of the documentation."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "The web style set for your site must match the web style set for your content. For example, if you set <literal>web_style:&nbsp;2</literal> for your website, you need to have <literal>web_style:&nbsp;2</literal> set in each of the books that you want to install on the site. Consider setting this parameter in the <filename>defaults.cfg</filename> or <filename>overrides.cfg</filename> files of the brands that you intend to use with this site."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Optionally, specify that the site tables of contents will be updated manually with the <parameter>manual_toc_update</parameter> parameter, for example:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "manual_toc_update: 1"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Normally, <application>Publican</application> updates the site's tables of contents every time a documentation package is added or removed. On a site with a large number of documents on it (more than a few hundred), or where documents are updated very frequently (dozens of updates per week), this process is very demanding on a server. On a large or busy site, we recommend that you set this parameter and then periodically update the tables of contents with the <prompt>$</prompt> <command>publican update_site</command> command."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Optionally, override the default JavaScript for the site with the <parameter>toc_js</parameter> parameter, for example:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid "toc_js: \"mybrand/scripts/megafoo.js\""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "This file will be symlinked as <parameter>toc_path</parameter>/toc.js with the <prompt>$</prompt> <command>publican update_site</command> command. This path should be relative to the <parameter>toc_path</parameter> parameter."
+msgstr ""
+
+#. Tag: para
+#, no-c-format, fuzzy
 msgid "Create an empty file named <filename>site_overrides.css</filename>. If you want to use site-specific styles to override those provided by <filename>interactive.css</filename>, you can add a <filename>site_overrides.css</filename> to the document that provides the site <firstterm>home page</firstterm> — refer to <xref linkend=\"sect-Publican-Users_Guide-Creating_installing_and_updating_the_home_page\" />. If you do not want to use site-specific styles, the empty file you add here will prevent 404 errors on your server. On a Linux system, run:"
-msgstr "Creare un file vuoto di nome  <filename>site_overrides.css</filename>. Se si desidera usare degli stili specifici alternativi a quelli forniti da <filename>interactive.css</filename>, aggiungere un file <filename>site_overrides.css</filename> al documento che fornisce la <firstterm>home page</firstterm>  del sito — vedere la <xref linkend=\"sect-Publican-Users_Guide-Creating_installing_and_updating_the_home_page\" />. Se non si usa uno stile specifico, il file vuoto aggiunto impedirà la comparsa dell'errore 404 sul server. Su un sistema Linux, eseguire:"
+msgstr "Creare un file vuoto di nome  <filename>site_overrides.css</filename>. Se si desidera usare degli stili specifici alternativi a quelli forniti da <filename>interactive.css</filename>, aggiungere un file <filename>site_overrides.css</filename> al documento che fornisce la <firstterm>home page</firstterm>  del sito — vedere la <xref linkend=\"sect-Users_Guide-Website-homepage-rpm\" />. Se non si usa uno stile specifico, il file vuoto aggiunto impedirà la comparsa dell'errore 404 sul server. Su un sistema Linux, eseguire:"
 
 #. Tag: screen
-#, no-c-format
+#, no-c-format, fuzzy
 msgid "<prompt>#</prompt> <command>touch /var/www/html/docs/site_overrides.css</command>"
 msgstr "<command>touch /var/www/html/docs/site_overrides.css</command>"
 
@@ -211,10 +261,25 @@ msgstr ""
 #~ msgid "<command>su -</command>"
 #~ msgstr "<command>su -</command>"
 
+#. Tag: para
+#, no-c-format
+#~ msgid "Perform the following steps on your webserver. You must have an account with root privileges."
+#~ msgstr "Sul server web, effettuare i seguenti passaggi. Occorre accedere con un account con privilegi di root."
+
+#. Tag: para
+#, no-c-format
+#~ msgid "Become root:"
+#~ msgstr "Diventare utente root:"
+
 #. Tag: screen
 #, no-c-format
 #~ msgid "<command>publican update_site --site_config /etc/publican-website.cfg</command>"
 #~ msgstr "<command>publican update_site --site_config /etc/publican-website.cfg</command>"
+
+#. Tag: para
+#, no-c-format
+#~ msgid "Refer to <xref linkend=\"dump_file\" /> for a description of the contents of the dump file."
+#~ msgstr "Fare riferimento all'<xref linkend=\"dump_file\" /> per una descrizione del contenuto del file dump."
 
 #. Tag: screen
 #, no-c-format

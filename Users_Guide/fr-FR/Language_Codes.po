@@ -1,0 +1,377 @@
+# Gé Baylard <<Geodebay@gmail.com>>, 2013.
+#
+# Gérard Baylard <geodebay@gmail.com>, 2013. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: 0\n"
+"POT-Creation-Date: 2013-03-08T03:26:30\n"
+"PO-Revision-Date: 2013-09-11 01:09-0400\n"
+"Last-Translator: Gérard Baylard <geodebay@gmail.com>\n"
+"Language-Team: français <<trans-fr@lists.fedoraproject.org>>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"X-Generator: Zanata 3.3.2\n"
+"Plural-Forms: nplurals=2; plural=n>1;\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Language codes"
+msgstr "Codification des langues"
+
+#. Tag: title
+#, no-c-format
+msgid "Region subtags"
+msgstr "Descripteurs de région"
+
+#. Tag: para
+#, no-c-format
+msgid "The only part of the XML language tag that is mandatory in <application>Publican</application> is the <firstterm>language subtag</firstterm>. However, <application>Publican</application> is designed with the assumption that you will routinely include the <firstterm>region subtag</firstterm> when you identify languages. In many languages, spelling and vocabulary vary significantly from region to region. If you do not specify the regional variety of a language in which your document is authored or into which it is translated, you might obtain unexpected results when you build the document in <application>Publican</application>."
+msgstr "La seule partie de la balise de langue XML qui soit obligatoire dans <application>Publican</application> est le <firstterm>descripteur de la langue</firstterm>. Toutefois, <application>Publican</application> a été conçu en supposant la précision coutumière du <firstterm>descripteur de région</firstterm> pour identifier des langues. Dans de nombreuses langues, l'orthographe et le vocabulaire varient de façon significative d'une région à l'autre. Si vous ne précisez pas le type régional de la langue dans lequel le document est rédigé ou dans lequel il est traduit, vous pourriez obtenir des résultats imprévisibles quand vous construirez le document avec <application>Publican</application>."
+
+#. Tag: title
+#, no-c-format
+msgid "Other language codes"
+msgstr "Autres codifications de langues"
+
+#. Tag: para
+#, no-c-format
+msgid "The system of codes used to identify languages in the XML standard is not the only system of languages codes in use in the world today. However, because <application>Publican</application> strives to comply with the XML standard, these are the only codes that <application>Publican</application> supports. In particular, note that the codes used in the GNU tools (identified by their use of underscores and the <literal>@</literal> symbol to separate elements — for example, <literal>en_GB</literal> or <literal>sr_RS@latin</literal>) do not comply with the XML standard and therefore do not work with <application>Publican</application>."
+msgstr "Le système de codage utilisé pour identifier les langues dans la norme XML n'est pas le seul utilisé dans le monde aujourd'hui. Néanmoins, comme <application>Publican</application> s'attache à respecter la norme XML, ce sont les seuls pris en charge par l'application. En particulier, notez que les codes utilisés dans les outils GNU (reconnaissables par l'utilisation de soulignés et du symbole <literal>@</literal> arobas pour séparer les éléments — par exemple, <literal>en_GB</literal> ou <literal>sr_RS@latin</literal>) ne respectent pas la norme XML et, donc, ne fonctionnent pas avec <application>Publican</application>."
+
+#. Tag: para
+#, no-c-format
+msgid "<application>Publican</application> is an XML publication tool and therefore is designed to use the language codes — or <firstterm>tags</firstterm> — that the World Wide Web Consortium (W3C) designated in the XML specification.<footnote> <para> <ulink url=\"http://www.w3.org/TR/REC-xml/#sec-lang-tag\">http://www.w3.org/TR/REC-xml/#sec-lang-tag</ulink> </para> </footnote> These codes are defined in the Internet Engineering Task Force (IETF) document <citetitle>BCP&nbsp;47: Tags for Identifying Languages</citetitle>.<footnote> <para> <ulink url=\"http://tools.ietf.org/html/bcp47\">http://tools.ietf.org/html/bcp47</ulink> </para> </footnote>"
+msgstr "<application>Publican</application> est un outil de publication XML et il est donc conçu pour utiliser les codes de langues — ou <firstterm>descripteurs</firstterm> — que le « World Wide Web Consortium (W3C) » a indiqués dans la norme XML<footnote> <para> <ulink url=\"http://www.w3.org/TR/REC-xml/#sec-lang-tag\">http://www.w3.org/TR/REC-xml/#sec-lang-tag</ulink> </para> </footnote>. Ces codes sont définis dans le document <citetitle>BCP&nbsp;47: Tags for Identifying Languages</citetitle> de l'« Internet Engineering Task Force (IETF) »<footnote> <para> <ulink url=\"http://tools.ietf.org/html/bcp47\">http://tools.ietf.org/html/bcp47</ulink> </para> </footnote>."
+
+#. Tag: para
+#, no-c-format
+msgid "Language tags are built from one of more <firstterm>subtags</firstterm>, separated from one another by hyphens. In order of appearance within a language tag, these subtags are:"
+msgstr "Les codes de langues sont formés de un ou plusieurs <firstterm>descripteurs</firstterm>, séparés les uns des autres par un tiret. Dans l'ordre d'apparition dans un code de langue, ces descripteurs sont :"
+
+#. Tag: para
+#, no-c-format
+msgid "<literal><replaceable>language</replaceable>-<replaceable>script</replaceable>-<replaceable>region</replaceable>-<replaceable>variant</replaceable></literal>"
+msgstr "<literal><replaceable>langue</replaceable>-<replaceable>écriture</replaceable>-<replaceable>région</replaceable>-<replaceable>variante</replaceable></literal>"
+
+#. Tag: para
+#, no-c-format
+msgid "BCP&nbsp;47 also allows for considerable customization of language tags for special purposes through the use of <firstterm>extension subtags</firstterm> and <firstterm>private-use subtags</firstterm>. Extension subtags allow for finer-tuning of existing subtags, but must be registered with the IETF (none are currently registered). Private-use subtags are introduced by <literal>x-</literal> and do not need to be registered. Private-use subtags aside, a subtag is valid if it appears in the registry of subtags maintained by the IETF through the Internet Assigned Numbers Authority (IANA).<footnote> <para> <ulink url=\"http://www.iana.org/assignments/language-subtag-registry\">http://www.iana.org/assignments/language-subtag-registry</ulink> </para> </footnote> Although <application>Publican</application> will accept any language tag that is valid under the rules presented in BCP&nbsp;47, it is designed around the assumption that language tags for documents will most usually take the form <literal><replaceable>language</replaceable>-<replaceable>region</replaceable></literal>. A brief description of subtags follows:"
+msgstr "La norme BCP&nbsp;47 permet aussi, pour une personnalisation accrue des codes de langues pour des utilisations particulières, l'utilisation de <firstterm>descripteurs d'extension</firstterm> ou de <firstterm>descripteurs à utilisation privée</firstterm>. Les descripteurs d'extension permettent des ajustements affinés de descripteurs existants, mais doivent être enregistrés auprès de l'IETF (aucun n'est enregistré à ce jour). Les descripteurs à utilisation privée sont précédés par <literal>x-</literal> et n'ont pas besoin d'être enregistrés. À côté des descripteurs à utilisation privée, un descripteur est valable s'il apparaît dans le registre des descripteurs tenu par l'IETF par l'intermédiaire de l'« Internet Assigned Numbers Authority (IANA) »<footnote> <para> <ulink url=\"http://www.iana.org/assignments/language-subtag-registry\">http://www.iana.org/assignments/language-subtag-registry</ulink> </para> </footnote>. Même si <application>Publican</application> accepte tout code de langue valide par rapport aux règles définies dans BCP&nbsp;47, il a été conçu en supposant que les codes de langue étaient habituellement de la forme <literal><replaceable>langue</replaceable>-<replaceable>région</replaceable></literal>. Voici un bref aperçu des descripteurs :"
+
+#. Tag: term
+#, no-c-format
+msgid "language subtag"
+msgstr "descripteur de la langue"
+
+#. Tag: para
+#, no-c-format
+msgid "The language subtag comprises two or more lower-case letters and is the only mandatory part of the language tag. For most widely spoken languages, the language subtag is a two-letter code identical with the language codes specified in ISO&nbsp;639-1, <footnote> <para> <ulink url=\"http://www.infoterm.info/standardization/iso_639_1_2002.php\">http://www.infoterm.info/standardization/iso_639_1_2002.php</ulink> </para> </footnote> for example, <literal>zh</literal> (Chinese), <literal>hi</literal> (Hindi), <literal>es</literal> (Spanish), and <literal>en</literal> (English). Where no two-letter code exists in ISO&nbsp;639-1, the language subtag is usually a three-letter code identical with the codes specified in ISO&nbsp;639-2,<footnote> <para> <ulink url=\"http://www.loc.gov/standards/iso639-2/\">http://www.loc.gov/standards/iso639-2/</ulink> </para> </footnote> for example, <literal>bal</literal> (Balochi), <literal>apk</literal> (Kiowa Apache), and <literal>tpi</literal> (Tok Pisin). Finally, a small number of language subtags appear in the IANA registry that have no ISO&nbsp;639-1 or ISO&nbsp;639-2 equivalent, such as subtags for the constructed languages <literal>qya</literal> (Quenya) and <literal>tlh</literal> (Klingon), and for the occult language <literal>i-enochian</literal> (Enochian). This last example also illustrates a small number of language subtags <firstterm>grandfathered</firstterm> into the registry that do not match the two-letter or three-letter pattern of codes derived from the ISO&nbsp;639 standards."
+msgstr "Le descripteur de la langue comporte deux (ou plus) lettres minuscules et est la seule partie obligatoire du code de la langue. Pour les langues les plus couramment parlées, le descripteur de la langue est le code à deux lettres identique aux codes de langues définis dans la norme ISO&nbsp;639-1<footnote> <para> <ulink url=\"http://www.infoterm.info/standardization/iso_639_1_2002.php\">http://www.infoterm.info/standardization/iso_639_1_2002.php</ulink> </para> </footnote>, par exemple <literal>zh</literal> (chinois), <literal>hi</literal> (hindi), <literal>es</literal> (espagnol) et <literal>en</literal> (anglais). S'il n'existe pas de code à deux lettres dans ISO&nbsp;639-1, le descripteur de langue est généralement un code à trois lettres identique à ceux définis dans ISO&nbsp;639-2<footnote> <para> <ulink url=\"http://www.loc.gov/standards/iso639-2/\">http://www.loc.gov/standards/iso639-2/</ulink> </para> </footnote>, par exemple, <literal>bal</literal> (baloutche), <literal>apk</literal> (apache kiowa) et <literal>tpi</literal> (néo-mélanésien). Finalement, un petit nombre de descripteurs de langues apparaissant dans le registre de l'IANA n'ont pas d'équivalent dans ISO&nbsp;639-1 or ISO&nbsp;639-2, comme les descripteurs pour les langues construites <literal>qya</literal> (quenya) et <literal>tlh</literal> (klingon), ainsi que pour la langue occulte <literal>i-enochian</literal> (énochien). Ce dernier exemple illustre également le petit nombre de descripteurs  de langues <firstterm>avec clause d'antériorité</firstterm> dans le registre qui ne respectent pas le modèle de codes à deux ou trois lettres dérivé de la norme ISO&nbsp;639."
+
+#. Tag: title
+#, no-c-format
+msgid "Extended language subtags"
+msgstr "Descripteurs de langue étendus"
+
+#. Tag: para
+#, no-c-format
+msgid "<citetitle>RFC&nbsp;5646: Tags for Identifying Languages</citetitle><footnote> <para> <ulink url=\"http://tools.ietf.org/html/rfc5646\">http://tools.ietf.org/html/rfc5646</ulink> </para> </footnote> issued in September 2009 allows for <firstterm>extended language subtags</firstterm> to follow the language subtag. Extended language subtags are three-letter codes that represent languages that share a close relationship with a language already represented by a language subtag. For example, <literal>yue</literal> represents Cantonese, but this subtag must always be used with the language subtag associated with it (Chinese), thus: <literal>zh-yue</literal>. The IETF does not yet recognize RFC&nbsp;5646 as \"Best Common Practice\", nor are these subtags part of the XML standard yet."
+msgstr "La norme <citetitle>RFC&nbsp;5646: Tags for Identifying Languages</citetitle><footnote> <para> <ulink url=\"http://tools.ietf.org/html/rfc5646\">http://tools.ietf.org/html/rfc5646</ulink> </para> </footnote> éditée en septembre 2009 autorise des <firstterm>descripteurs de langue étendus</firstterm> à la suite du descripteur de langue. Les descripteurs étendus sont des codes à trois lettres représentant des langues en relation étroite avec un langue déjà représentée par un descripteur de langue. Par exemple, <literal>yue</literal> représente le cantonnais, mais ce descripteur doit être toujours utilisé avec le descripteur associé (chinois), et donc : <literal>zh-yue</literal>. L'IETF ne reconnaît pas encore la norme RFC&nbsp;5646 comme « meilleure pratique courante », et, de ce fait, ces sous-descripteurs comme faisant partie de la norme XML."
+
+#. Tag: term
+#, no-c-format
+msgid "script subtag"
+msgstr "descripteur d'écriture"
+
+#. Tag: para
+#, no-c-format
+msgid "The script subtag comprises four letters — the first one in upper case, the other three in lower case — and defines a writing system. These codes are identical with the four-letter codes specified in ISO&nbsp;15924.<footnote> <para> <ulink url=\"http://www.unicode.org/iso15924/\">http://www.unicode.org/iso15924/</ulink> </para> </footnote> The script subtag is used to identify languages that are commonly written with more than one writing system; the subtag is omitted when it adds no distinguishing value to the language tag overall. For example, <literal>sr-Latn</literal> represents Serbian written with the Latin alphabet and <literal>sr-Cyrl</literal> represents Serbian written with the Cyrillic alphabet; <literal>az-Arab</literal> represents Azerbaijani written in Arabic script and <literal>az-Cyrl</literal> represents Azerbaijani written with the Cyrillic alphabet. Conversely, French should not be represented as <literal>fr-Latn</literal>, because French is not commonly written in any script other than the Latin alphabet anywhere in the world."
+msgstr "Le descripteur d'écriture comprend quatre lettres — la première en majuscule, les trois autres en minuscules — ; il définit le système d'écriture. Ces codes sont identiques aux codes sur quatre lettres définis dans la norme ISO&nbsp;15924<footnote> <para> <ulink url=\"http://www.unicode.org/iso15924/\">http://www.unicode.org/iso15924/</ulink> </para> </footnote>. Le descripteur d'écriture est utilisé pour identifier une langue couramment écrite avec plus d'un système d'écriture ; le sous-descripteur est omis quand il n'ajoute aucune valeur distinctive au code de la langue. Par exemple, <literal>sr-Latn</literal> représente le serbe écrit avec l'alphabet latin et <literal>sr-Cyrl</literal> le serbe écrit avec l'alphabet cyrillique ; <literal>az-Arab</literal> représente l'azéri en écriture arabe et <literal>az-Cyrl</literal> l'azéri écrit avec l'alphabet cyrillique. A contrario, le français ne sera pas représenté par <literal>fr-Latn</literal>, car le français n'est communément pas écrit autrement qu'avec l'alphabet latin partout dans le monde."
+
+#. Tag: term
+#, no-c-format
+msgid "region subtag"
+msgstr "descripteur de région"
+
+#. Tag: para
+#, no-c-format
+msgid "The region subtag comprises either two upper-case letters (for regions that conform to national boundaries) or three digits (for other areas, such as trans-national regions). The two-letter subtags are identical with those from ISO&nbsp;3166-1<footnote> <para> <ulink url=\"http://www.iso.org/iso/country_codes.htm\">http://www.iso.org/iso/country_codes.htm</ulink> </para> </footnote>, for example, <literal>AT</literal> (Austria), <literal>TZ</literal> (Tanzania), and <literal>VE</literal> (Venezuela). The three-digit region subtags are based on those in UN&nbsp;M.49, <footnote> <para> <ulink url=\"http://unstats.un.org/unsd/methods/m49/m49.htm\">http://unstats.un.org/unsd/methods/m49/m49.htm</ulink> </para> </footnote> for example, <literal>015</literal> (Northern Africa), <literal>061</literal> (Polynesia), and <literal>419</literal> (Latin America and the Caribbean)."
+msgstr "Le descripteur de région comporte, soit deux majuscules (pour les régions dans des frontières nationales), soit trois chiffres (pour les autres zones, comme les régions à cheval sur plusieurs nations). Les descripteurs à deux lettres sont identiques à ceux de la norme ISO&nbsp;3166-1<footnote> <para> <ulink url=\"http://www.iso.org/iso/country_codes.htm\">http://www.iso.org/iso/country_codes.htm</ulink> </para> </footnote>, par exemple, <literal>AT</literal> (Autriche), <literal>TZ</literal> (Tanzanie) et <literal>VE</literal> (Vénézuela). Les descripteur à trois chiffres se fondent sur  UN&nbsp;M.49<footnote> <para> <ulink url=\"http://unstats.un.org/unsd/methods/m49/m49.htm\">http://unstats.un.org/unsd/methods/m49/m49.htm</ulink> </para> </footnote>, par exemple, <literal>015</literal> (Afrique du Nord), <literal>061</literal> (Polynésie) et <literal>419</literal> (Amérique latine et Caraïbes)."
+
+#. Tag: term
+#, no-c-format
+msgid "variant subtag"
+msgstr "Descripteurs de variantes"
+
+#. Tag: para
+#, no-c-format
+msgid "Variant subtags identify well-defined, recognizable variants of a language or script and can include upper-case letters, lower-case letters, and numerals. Variant subtags that start with a letter must be at least five characters long, and those that start with a numeral must be at least four characters long. Most variant subtags can only be used in combination with specific subtags or combinations of subtags. Variant subtags do not harmonize with any other standard; they are each the result of a separate registration with the IETF by an interested person or group."
+msgstr "Les descripteurs de variantes identifient des variantes reconnues et bien définies d'une langue ou d'une écriture ; il peuvent comporter des majuscules, des minuscules et des chiffres. Les descripteurs de variantes débutant par une lettre doivent comporter au moins cinq caractères, et ceux commençant par un chiffre quatre caractères. La plupart des descripteurs de variantes ne peuvent s'utiliser que combinés avec des descripteurs donnés ou des combinaisons de descripteurs. Les descripteurs de variantes ne correspondent à aucune norme ; ils résultent d'un enregistrement séparé auprès de l'IETF par une personne ou un groupe d'intérêt."
+
+#. Tag: para
+#, no-c-format
+msgid "Under the present standard, dialects of several languages are designated with variant subtags, for example, <literal>nedis</literal> denotes Nadiza (also known as Natisone), a dialect of Slovenian. This tag must be used in conjunction with the language subtag for Slovenian, thus: <literal>sl-nedis</literal>. In September 2009, the IETF issued a Request for Comments (RFC) that (amongst other things) proposes that dialects be represented by language extension subtags attached to language subtags.<footnote> <para> <ulink url=\"http://tools.ietf.org/html/rfc5646\">http://tools.ietf.org/html/rfc5646</ulink> </para> </footnote>"
+msgstr "Dans le cadre des normes actuelles, des dialectes de plusieurs langues sont désignés par des descripteurs de variantes, par exemple, <literal>nedis</literal> désigne le nadiza (également connu comme natisone), un dialecte slovène. Ce descripteur doit être utilisé conjointement avec le descripteur du slovène, donc : <literal>sl-nedis</literal>. En septembre 2009, l'IETF a émis une « Request for Comments (RFC) », qui (entre autres choses) propose que les dialectes soient représentés par des descripteurs d'extension attachés au descripteur de langue<footnote> <para> <ulink url=\"http://tools.ietf.org/html/rfc5646\">http://tools.ietf.org/html/rfc5646</ulink> </para> </footnote>."
+
+#. Tag: para
+#, no-c-format
+msgid "Most variant subtags mark a particular orthography, most usually as a result of an official spelling reform or a significant work documenting the language. Examples (with their required language subtags) include: <literal>fr-1606nicot</literal> (French as documented by Jean Nicot in 1606), <literal>de-1901</literal> (German spelling codified by the 2nd Orthographic Conference in 1901) and <literal>be-1959acad</literal> (Belarusian as codified by the Orthography Commission in 1959)."
+msgstr "La plupart des descripteurs de variantes marquent une orthographe particulière, résultant le plus souvent d'une réforme de l'orthographe officielle ou d'un travail significatif de documentation de la langue. Voici quelques exemples (avec les descripteurs de langue requis) : <literal>fr-1606nicot</literal> (français documenté par Jean Nicot en 1606), <literal>de-1901</literal> (orthographe allemande codifiée selon la 2e Conférence orthographique de 1901) et <literal>be-1959acad</literal> (biélorusse codifié selon la Commission orthographique de 1959)."
+
+#. Tag: para
+#, no-c-format
+msgid "Finally, some variant subtags denote a particular variant of a system of writing or transliteration. For example, <literal>zh-Latn-wadegile</literal> is Chinese written in the Latin alphabet, according to the transliteration system developed by Thomas Wade and Herbert Giles; <literal>ja-Latn-hepburn</literal> is Japanese written in the Latin alphabet using the transliteration system of James Curtis Hepburn."
+msgstr "Finalement, certains descripteurs de variantes marquent une variante particulière d'un système d'écriture ou une translittération. Par exemple, <literal>zh-Latn-wadegile</literal> désigne le chinois écrit avec l'alphabet latin, selon le système de  développé par Thomas Wade et Herbert Giles ; <literal>ja-Latn-hepburn</literal> est le japonais écrit avec l'alphabet latin avec le système de translittération de James Curtis Hepburn."
+
+#. Tag: para
+#, no-c-format
+msgid "<application>Publican</application> includes support for the following languages:"
+msgstr "<application>Publican</application> prend en charge les langues suivantes :"
+
+#. Tag: para
+#, no-c-format
+msgid "ar-SA — Arabic"
+msgstr "ar-SA — arabe"
+
+#. Tag: para
+#, no-c-format
+msgid "as-IN — Assamese"
+msgstr "as-IN — assamais"
+
+#. Tag: para
+#, no-c-format
+msgid "ast-ES — Asturian"
+msgstr "ast-ES — asturien"
+
+#. Tag: para
+#, no-c-format
+msgid "bg-BG — Bulgarian"
+msgstr "bg-BG — bulgare"
+
+#. Tag: para
+#, no-c-format
+msgid "bn-IN — Bengali (India)"
+msgstr "bn-IN — bengali (Inde)"
+
+#. Tag: para
+#, no-c-format
+msgid "bs-BA — Bosnian"
+msgstr "bs-BA — bosnien"
+
+#. Tag: para
+#, no-c-format
+msgid "ca-ES — Catalan"
+msgstr "ca-ES — catalan"
+
+#. Tag: para
+#, no-c-format
+msgid "cs-CZ — Czech"
+msgstr "cs-CZ — tchèque"
+
+#. Tag: para
+#, no-c-format
+msgid "da-DK — Danish"
+msgstr "da-DK — danois"
+
+#. Tag: para
+#, no-c-format
+msgid "de-CH — German (Switzerland)"
+msgstr "de-CH — allemand (Suisse)"
+
+#. Tag: para
+#, no-c-format
+msgid "de-DE — German (Germany)"
+msgstr "de-DE — allemand (Allemagne)"
+
+#. Tag: para
+#, no-c-format
+msgid "el-GR — Greek"
+msgstr "el-GR — grec"
+
+#. Tag: para
+#, no-c-format
+msgid "es-ES — Spanish"
+msgstr "es-ES — espagnol"
+
+#. Tag: para
+#, no-c-format
+msgid "fa-IR — Persian"
+msgstr "fa-IR — persan"
+
+#. Tag: para
+#, no-c-format
+msgid "fi-FI — Finnish"
+msgstr "fi-FI — finnois"
+
+#. Tag: para
+#, no-c-format
+msgid "fr-FR — French"
+msgstr "fr-FR — français"
+
+#. Tag: para
+#, no-c-format
+msgid "gu-IN — Gujarati"
+msgstr "gu-IN — gujarati"
+
+#. Tag: para
+#, no-c-format
+msgid "he-IL — Hebrew"
+msgstr "he-IL — hébreu"
+
+#. Tag: para
+#, no-c-format
+msgid "hi-IN — Hindi"
+msgstr "hi-IN — hindi"
+
+#. Tag: para
+#, no-c-format
+msgid "hr-HR — Croatian"
+msgstr "hr-HR — croate"
+
+#. Tag: para
+#, no-c-format
+msgid "hu-HU — Hungarian"
+msgstr "hu-HU — hongrois"
+
+#. Tag: para
+#, no-c-format
+msgid "id-ID — Indonesian"
+msgstr "id-ID — indonesien"
+
+#. Tag: para
+#, no-c-format
+msgid "is-IS — Icelandic"
+msgstr "is-IS — islandais"
+
+#. Tag: para
+#, no-c-format
+msgid "it-IT — Italian"
+msgstr "it-IT — italien"
+
+#. Tag: para
+#, no-c-format
+msgid "ja-JP — Japanese"
+msgstr "ja-JP — japonais"
+
+#. Tag: para
+#, no-c-format
+msgid "kn-IN — Kannada"
+msgstr "kn-IN — kannada"
+
+#. Tag: para
+#, no-c-format
+msgid "ko-KR — Korean"
+msgstr "ko-KR — coréen"
+
+#. Tag: para
+#, no-c-format
+msgid "lv-LV — Latvian"
+msgstr "lv-LV — lituanien"
+
+#. Tag: para
+#, no-c-format
+msgid "ml-IN — Malayalam"
+msgstr "ml-IN — malayalam"
+
+#. Tag: para
+#, no-c-format
+msgid "mr-IN — Marathi"
+msgstr "mr-IN — marathi"
+
+#. Tag: para
+#, no-c-format
+msgid "nb-NO — Norwegian (Bokmål orthography)"
+msgstr "nb-NO — norvégien (orthographe Bokmål)"
+
+#. Tag: para
+#, no-c-format
+msgid "nl-NL — Dutch"
+msgstr "nl-NL — néerlandais"
+
+#. Tag: para
+#, no-c-format
+msgid "or-IN — Oriya"
+msgstr "or-IN — oriya"
+
+#. Tag: para
+#, no-c-format
+msgid "pa-IN — Punjabi"
+msgstr "pa-IN — pendjabi"
+
+#. Tag: para
+#, no-c-format
+msgid "pl-PL — Polish"
+msgstr "pl-PL — polonais"
+
+#. Tag: para
+#, no-c-format
+msgid "pt-BR — Portuguese (Brazil)"
+msgstr "pt-BR — Portugais (Brésil)"
+
+#. Tag: para
+#, no-c-format
+msgid "pt-PT — Portuguese (Portugal)"
+msgstr "pt-PT — Portugais (Portugal)"
+
+#. Tag: para
+#, no-c-format
+msgid "ru-RU — Russian"
+msgstr "ru-RU — russe"
+
+#. Tag: para
+#, no-c-format
+msgid "si-LK — Sinhalese"
+msgstr "si-LK — cingalais"
+
+#. Tag: para
+#, no-c-format
+msgid "sk-SK — Slovak"
+msgstr "sk-SK — slovaque"
+
+#. Tag: para
+#, no-c-format
+msgid "sr-Cyrl-RS — Serbian (Cyrillic script)"
+msgstr "sr-Cyrl-RS — serbe (écriture cyrillique)"
+
+#. Tag: para
+#, no-c-format
+msgid "sr-Latn-RS — Serbian (Latin script)"
+msgstr "sr-Latn-RS — serbe (écriture latine)"
+
+#. Tag: para
+#, no-c-format
+msgid "sv-SE — Swedish"
+msgstr "sv-SE — suédois"
+
+#. Tag: para
+#, no-c-format
+msgid "ta-IN — Tamil"
+msgstr "ta-IN — tamoul"
+
+#. Tag: para
+#, no-c-format
+msgid "te-IN — Telugu"
+msgstr "te-IN — télougou"
+
+#. Tag: para
+#, no-c-format
+msgid "th-TH — Thai"
+msgstr "th-TH — thaï"
+
+#. Tag: para
+#, no-c-format
+msgid "uk-UA — Ukrainian"
+msgstr "uk-UA — ukrainien"
+
+#. Tag: para
+#, no-c-format
+msgid "zh-CN — Chinese (People's Republic of China, implicitly simplified Han script)"
+msgstr "zh-CN — chinois (République populaire de Chine, implicitement écriture Han simplifiée)"
+
+#. Tag: para
+#, no-c-format
+msgid "zh-TW — Chinese (Republic of China, implicitly traditional Han script)"
+msgstr "zh-CN — chinois (République de Chine, implicitement écriture Han traditionnelle)"
+

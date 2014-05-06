@@ -1,0 +1,681 @@
+# Gé Baylard <<Geodebay@gmail.com>>, 2013.
+# Gérard Baylard <geodebay@gmail.com>, 2013. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: 0\n"
+"POT-Creation-Date: 2013-03-08T03:26:30\n"
+"PO-Revision-Date: 2013-09-10 12:27-0400\n"
+"Last-Translator: Gérard Baylard <geodebay@gmail.com>\n"
+"Language-Team: français <<trans-fr@lists.fedoraproject.org>>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"X-Generator: Zanata 3.3.2\n"
+"Plural-Forms: nplurals=2; plural=n>1;\n"
+
+#. Tag: title
+#, no-c-format
+msgid "publican.cfg parameters"
+msgstr "Paramètres de publican.cfg"
+
+#. Tag: para
+#, no-c-format
+msgid "Every book, article, document set, or brand has a <filename>publican.cfg</filename> file in its root directory. Parameters that can be set in the <filename>publican.cfg</filename> file are:"
+msgstr "Chaque ouvrage, article, ensemble de documents ou marque de fabrique possède un fichier <filename>publican.cfg</filename> dans son répertoire racine. Les paramètres qu'il est possible de définir dans le fichier <filename>publican.cfg</filename> sont :"
+
+#. Tag: term
+#, no-c-format
+msgid "<parameter>docname</parameter>"
+msgstr "<parameter>docname</parameter>"
+
+#. Tag: para
+#, no-c-format
+msgid "the document name, set by the <option>--name</option> option."
+msgstr "le nom du document, défini par l'option <option>--name</option>."
+
+#. Tag: term
+#, no-c-format
+msgid "<parameter>version</parameter>"
+msgstr "<parameter>version</parameter>"
+
+#. Tag: para
+#, no-c-format
+msgid "the product version, set by the <option>--version</option> option."
+msgstr "la version du produit, définie par l'option <option>--version</option>."
+
+#. Tag: term
+#, no-c-format
+msgid "<parameter>xml_lang</parameter>"
+msgstr "<parameter>xml_lang</parameter>"
+
+#. Tag: para
+#, no-c-format
+msgid "the language of the source XML files, set by the <option>--lang</option> option."
+msgstr "la langue des fichiers sources XML, définie par l'option <option>--lang</option>."
+
+#. Tag: term
+#, no-c-format
+msgid "<parameter>edition</parameter>"
+msgstr "<parameter>edition</parameter>"
+
+#. Tag: para
+#, no-c-format
+msgid "the edition number for this documentation, set by the <option>--edition</option> option."
+msgstr "le numéro d'édition pour cette documentation, défini par l'option <option>--edition</option>."
+
+#. Tag: term
+#, no-c-format
+msgid "<parameter>type</parameter>"
+msgstr "<parameter>type</parameter>"
+
+#. Tag: para
+#, no-c-format
+msgid "the type of document — a DocBook <sgmltag>&lt;article&gt;</sgmltag>, DocBook <sgmltag>&lt;book&gt;</sgmltag>, or DocBook <sgmltag>&lt;set&gt;</sgmltag>, set by the <option>--type</option> option."
+msgstr "le type de document — un <sgmltag>&lt;article&gt;</sgmltag> DocBook, un <sgmltag>&lt;book&gt;</sgmltag> DocBook ou un <sgmltag>&lt;set&gt;</sgmltag> DocBook, définis par l'option <option>--type</option>."
+
+#. Tag: term
+#, no-c-format
+msgid "<parameter>brand</parameter>"
+msgstr "<parameter>brand</parameter>"
+
+#. Tag: para
+#, no-c-format
+msgid "the <firstterm>brand</firstterm> of the document, set by the <option>--brand</option> option."
+msgstr "la <firstterm>marque de fabrique</firstterm> du document, définie par l'option <option>--brand</option>."
+
+#. Tag: term
+#, no-c-format
+msgid "<parameter>product</parameter>"
+msgstr "<parameter>product</parameter>"
+
+#. Tag: para
+#, no-c-format
+msgid "the product to which this documentation applies, set by the <option>--product</option> option."
+msgstr "le produit auquel la documentation s'applique, défini par l'option <option>--product</option>."
+
+#. Tag: term
+#, no-c-format
+msgid "<parameter>arch</parameter>"
+msgstr "<parameter>arch</parameter>"
+
+#. Tag: para
+#, no-c-format
+msgid "the computer <firstterm>architecture</firstterm> for this document."
+msgstr "l'<firstterm>architecture</firstterm> de l'ordinateur auquel est destiné le document."
+
+#. Tag: term
+#, no-c-format
+msgid "<parameter>books</parameter>"
+msgstr "<parameter>books</parameter>"
+
+#. Tag: para
+#, no-c-format
+msgid "a space-separated list of books used in a remote set."
+msgstr "une liste, avec une espace comme séparateur, des ouvrages utilisés dans un ensemble distant."
+
+#. Tag: term
+#, no-c-format
+msgid "<parameter>brew_dist</parameter>"
+msgstr "<parameter>brew_dist</parameter>"
+
+#. Tag: para
+#, no-c-format
+msgid "the build target to use for building the desktop RPM package in <application>Brew</application>. (Default: <literal>docs-5E</literal>)"
+msgstr "la cible de construction à utiliser pour construire le paquet RPM bureau dans <application>Brew</application>. (Défaut : <literal>docs-5E</literal>)"
+
+#. Tag: term
+#, no-c-format
+msgid "<parameter>bridgehead_in_toc</parameter>"
+msgstr "<parameter>bridgehead_in_toc</parameter>"
+
+#. Tag: para
+#, no-c-format
+msgid "whether <sgmltag>bridgehead</sgmltag>s should be included in tables of contents. (Default: <literal>0</literal> — <sgmltag>bridgehead</sgmltag>s are not included in tables of contents)."
+msgstr "indique si des <sgmltag>bridgehead</sgmltag> doivent être incorporés dans les tables des matières. (Défaut : <literal>0</literal> — aucun <sgmltag>bridgehead</sgmltag> n'est inclus dans la table des matières)."
+
+#. Tag: term
+#, no-c-format
+msgid "<parameter>chunk_first</parameter>"
+msgstr "<parameter>chunk_first</parameter>"
+
+#. Tag: para
+#, no-c-format
+msgid "whether the first section should appear on the same page as its parent when rendered in HTML. (Default: <literal>0</literal> — the first section starts a new HTML page)."
+msgstr "indique si le premier paragraphe doit être affiché sur la même page que son parent dans un rendu HTML. (Défaut : <literal>0</literal> — le premier paragraphe commence une nouvelle page HTML)."
+
+#. Tag: term
+#, no-c-format
+msgid "<parameter>chunk_section_depth</parameter>"
+msgstr "<parameter>chunk_section_depth</parameter>"
+
+#. Tag: para
+#, no-c-format
+msgid "the point at which <application>Publican</application> no longer splits sub-subsections onto a new page when rendering HTML. (Default: <literal>4</literal>)"
+msgstr "la profondeur de subdivision à partir de laquelle <application>Publican</application> n'entame pas une nouvelle page dans un rendu HTML. (Défaut : <literal>4</literal>)"
+
+#. Tag: term
+#, no-c-format
+msgid "<parameter>classpath</parameter>"
+msgstr "<parameter>classpath</parameter>"
+
+#. Tag: para
+#, no-c-format
+msgid "the path to the jar files for <application>FOP</application>. (Default for Linux operating systems: <filename>/usr</filename><filename>/share</filename><filename>/java</filename><filename>/ant</filename><filename>/ant-trax-1.7.0.jar:</filename><filename>/usr</filename><filename>/share</filename><filename>/java</filename><filename>/xmlgraphics-commons.jar:</filename><filename>/usr</filename><filename>/share</filename><filename>/java</filename><filename>/batik-all.jar:</filename><filename>/usr</filename><filename>/share</filename><filename>/java</filename><filename>/xml-commons-apis.jar:</filename><filename>/usr</filename><filename>/share</filename><filename>/java</filename><filename>/xml-commons-apis-ext.jar</filename>)"
+msgstr "le chemin vers les fichiers d'archives jar pour <application>FOP</application>. (Par défaut pour les systèmes d'exploitation Linux : <filename>/usr</filename><filename>/share</filename><filename>/java</filename><filename>/ant</filename><filename>/ant-trax-1.7.0.jar:</filename><filename>/usr</filename><filename>/share</filename><filename>/java</filename><filename>/xmlgraphics-commons.jar:</filename><filename>/usr</filename><filename>/share</filename><filename>/java</filename><filename>/batik-all.jar:</filename><filename>/usr</filename><filename>/share</filename><filename>/java</filename><filename>/xml-commons-apis.jar:</filename><filename>/usr</filename><filename>/share</filename><filename>/java</filename><filename>/xml-commons-apis-ext.jar</filename>)"
+
+#. Tag: term
+#, no-c-format
+msgid "<parameter>common_config</parameter>"
+msgstr "<parameter>common_config</parameter>"
+
+#. Tag: para
+#, no-c-format
+msgid "the path to the <application>Publican</application> installation. (Default for Linux operating systems: <filename>/usr/share/publican</filename>, default for Windows operating systems: <filename>%SystemDrive%/%ProgramFiles%/publican</filename> — most usually <filename>C:/Program Files/publican</filename>)"
+msgstr "le chemin d'installation de <application>Publican</application>. (Par défaut pour les systèmes d'exploitation Linux : <filename>/usr/share/publican</filename>, par défaut pour Windows : <filename>%SystemDrive%/%ProgramFiles%/publican</filename> — généralement <filename>C:/Program Files/publican</filename>)"
+
+#. Tag: term
+#, no-c-format
+msgid "<parameter>common_content</parameter>"
+msgstr "<parameter>common_content</parameter>"
+
+#. Tag: para
+#, no-c-format
+msgid "the path to the <application>Publican</application>'s <firstterm>Common Content</firstterm> files. (Default for Linux operating systems: <filename>/usr/share/publican/Common_Content</filename>, default for Windows operating systems: <filename>%SystemDrive%/%ProgramFiles%/publican/Common_Content</filename> — most usually <filename>C:/Program Files/publican/Common_Content</filename>)"
+msgstr "le chemin vers les fichiers <firstterm>Common Content</firstterm> de <application>Publican</application>. (Par défaut pour les systèmes d'exploitation Linux : <filename>/usr/share/publican/Common_Content</filename>, par défaut pour Windows : <filename>%SystemDrive%/%ProgramFiles%/publican/Common_Content</filename> — généralement <filename>C:/Program Files/publican/Common_Content</filename>)"
+
+#. Tag: term
+#, no-c-format
+msgid "<parameter>condition</parameter>"
+msgstr "<parameter>condition</parameter>"
+
+#. Tag: para
+#, no-c-format
+msgid "conditions on which to prune XML before transformation."
+msgstr "conditions d'élagage du XML avant transformation."
+
+#. Tag: term
+#, no-c-format
+msgid "<parameter>confidential</parameter>"
+msgstr "<parameter>confidential</parameter>"
+
+#. Tag: para
+#, no-c-format
+msgid "marks a document as confidential. (Default: <literal>0</literal> — not confidential)."
+msgstr "marque un document comme étant confidentiel. (Défaut : <literal>0</literal> — non confidentiel)."
+
+#. Tag: term
+#, no-c-format
+msgid "<parameter>confidential_text</parameter>"
+msgstr "<parameter>confidential_text</parameter>"
+
+#. Tag: para
+#, no-c-format
+msgid "sets the text with which to mark a document as confidential. (Default: <literal>CONFIDENTIAL</literal>)."
+msgstr "définit le texte marquant un document comme étant confidentiel. (Défaut : <literal>CONFIDENTIAL</literal>)."
+
+#. Tag: term
+#, no-c-format
+msgid "<parameter>debug</parameter>"
+msgstr "<parameter>debug</parameter>"
+
+#. Tag: para
+#, no-c-format
+msgid "whether <application>Publican</application> should display debugging messages as it works. (Default: <literal>0</literal> — suppress messages)"
+msgstr "définit si <application>Publican</application> doit afficher les messages de débogage pendant son fonctionnement. (Défaut : <literal>0</literal> — pas de messages)"
+
+#. Tag: term
+#, no-c-format
+msgid "<parameter>def_lang</parameter>"
+msgstr "<parameter>def_lang</parameter>"
+
+#. Tag: para
+#, no-c-format
+msgid "the default language for a <application>Publican</application>-managed website. Tables of contents for languages other than the default language will link to documents in the default language when translations are not available. (Default: <literal>en-US</literal> — American English)"
+msgstr "la langue par défaut pour un site Web géré par <application>Publican</application>. Les tables des matières pour les langues autres que la langue par défaut établissent un lien vers la langue par défaut quand les traductions ne sont pas disponibles. (Défaut : <literal>en-US</literal> — anglais d'Amérique)"
+
+#. Tag: term
+#, no-c-format
+msgid "<parameter>doc_url</parameter>"
+msgstr "<parameter>doc_url</parameter>"
+
+#. Tag: para
+#, no-c-format
+msgid "URL for the documentation team for this package. (Default: <literal>https://fedorahosted.org/publican</literal>)"
+msgstr "URL de l'équipe de documentation pour ce paquet. (Défaut : <literal>https://fedorahosted.org/publican</literal>)"
+
+#. Tag: term
+#, no-c-format
+msgid "<parameter>dt_obsoletes</parameter>"
+msgstr "<parameter>dt_obsoletes</parameter>"
+
+#. Tag: para
+#, no-c-format
+msgid "a package that a desktop package obsoletes."
+msgstr "un paquet rendu obsolète par un paquet bureau."
+
+#. Tag: term
+#, no-c-format
+msgid "<parameter>dt_requires</parameter>"
+msgstr "<parameter>dt_requires</parameter>"
+
+#. Tag: para
+#, no-c-format, fuzzy
+msgid "a package that the desktop package requires, for example, a documentation menu package. Refer to <xref linkend=\"sect-Publican-Users_Guide-Desktop_menu_entries_for_documents\" />."
+msgstr "un paquet requis par le paquet bureau, par exemple, un paquet de menu de documentation. Voyez la <xref linkend=\"desktop_menus\" />."
+
+#. Tag: term
+#, no-c-format
+msgid "<parameter>dtdver</parameter>"
+msgstr "<parameter>dtdver</parameter>"
+
+#. Tag: para
+#, no-c-format
+msgid "the version of the DocBook XML <firstterm>Document Type Definition</firstterm> (DTD) on which this project is based. (Default: <literal>4.5</literal>)"
+msgstr "la version de la <firstterm>Document Type Definition</firstterm> (DTD) du XML Docbook sur lequel le projet se fonde. (Défaut : <literal>4.5</literal>)"
+
+#. Tag: term
+#, no-c-format
+msgid "<parameter>dtd_type</parameter>"
+msgstr "<parameter>dtd_type</parameter>"
+
+#. Tag: para
+#, no-c-format
+msgid "Override Type for DocType. Must be a complete string."
+msgstr "Redéfinit le type de document ; il prend le pas sur le précédent. Doit être une chaîne complète."
+
+#. Tag: para
+#, no-c-format
+msgid "This parameter is only permitted in a brand."
+msgstr "Ce paramètre n'est autorisé que dans une marque."
+
+#. Tag: term
+#, no-c-format
+msgid "<parameter>dtd_uri</parameter>"
+msgstr "<parameter>dtd_uri</parameter>"
+
+#. Tag: para
+#, no-c-format
+msgid "Override URI for DocType. Must be a complete string."
+msgstr "Redéfinit l'URI d'un type de document ; il prend le pas sur le précédent. Doit être une chaîne complète."
+
+#. Tag: term
+#, no-c-format
+msgid "<parameter>ec_id</parameter>"
+msgstr "<parameter>ec_id</parameter>"
+
+#. Tag: para
+#, no-c-format
+msgid "the ID for an <application>Eclipse</application> help plugin (Default: <replaceable>product</replaceable>.<replaceable>docname</replaceable>)"
+msgstr "l'identifiant pour le greffon d'aide de <application>Eclipse</application> (par défaut : <replaceable>produit</replaceable>.<replaceable>nom_document</replaceable>)"
+
+#. Tag: term
+#, no-c-format
+msgid "<parameter>ec_name</parameter>"
+msgstr "<parameter>ec_name</parameter>"
+
+#. Tag: para
+#, no-c-format
+msgid "the name of an <application>Eclipse</application> help plugin (Default: <replaceable>product</replaceable> <replaceable>docname</replaceable>)"
+msgstr "le nom d'un greffon d'aide <application>Eclipse</application> (défaut : <replaceable>produit</replaceable> <replaceable>nom_document</replaceable>)"
+
+#. Tag: term
+#, no-c-format
+msgid "<parameter>ec_provider</parameter>"
+msgstr "<parameter>ec_provider</parameter>"
+
+#. Tag: para
+#, no-c-format
+msgid "the provider name for an <application>Eclipse</application> help plugin (Default: <replaceable>Publican</replaceable>-<replaceable>Publican version</replaceable>)"
+msgstr "le nom du fournisseur du greffon d'aide <application>Eclipse</application> (défaut : <replaceable>Publican</replaceable>-<replaceable>version Publican</replaceable>)"
+
+#. Tag: term
+#, no-c-format
+msgid "<parameter>img_dir</parameter>"
+msgstr "<parameter>tmp_dir</parameter>"
+
+#. Tag: para
+#, no-c-format
+msgid "the directory <application>Publican</application> will process images from. (Default: <literal>images</literal>)"
+msgstr "le répertoire pour la sortie de <application>Publican</application>. (Défaut : <literal>tmp</literal>)"
+
+#. Tag: term
+#, no-c-format
+msgid "<parameter>generate_section_toc_level</parameter>"
+msgstr "<parameter>generate_section_toc_level</parameter>"
+
+#. Tag: para
+#, no-c-format
+msgid "the section depth at which <application>Publican</application> generates a table of contents. (Default: <literal>0</literal> — no tables of contents in sections)"
+msgstr "la profondeur de subdivision pour laquelle <application>Publican</application> crée une table des matières. (Défaut : <literal>0</literal> — pas de tables des matières dans les paragraphes)"
+
+#. Tag: term
+#, no-c-format
+msgid "<parameter>ignored_translations</parameter>"
+msgstr "<parameter>ignored_translations</parameter>"
+
+#. Tag: para
+#, no-c-format
+msgid "translations to ignore."
+msgstr "traductions à ignorer."
+
+#. Tag: term
+#, no-c-format
+msgid "<parameter>img_dir</parameter>"
+msgstr "<parameter>tmp_dir</parameter>"
+
+#. Tag: para
+#, no-c-format
+msgid "the directory <application>Publican</application> will process images from. (Default: <literal>images</literal>)"
+msgstr "le répertoire pour la sortie de <application>Publican</application>. (Défaut : <literal>tmp</literal>)"
+
+#. Tag: term
+#, no-c-format
+msgid "<parameter>info_file</parameter>"
+msgstr "<parameter>info_file</parameter>"
+
+#. Tag: para
+#, no-c-format
+msgid "override the default Info file. Use the full filename without the path."
+msgstr "écrase le fichier Info par défaut. Utiliser le nom complet du fichier sans le chemin."
+
+#. Tag: term
+#, no-c-format
+msgid "<parameter>license</parameter>"
+msgstr "<parameter>license</parameter>"
+
+#. Tag: para
+#, no-c-format
+msgid "the license this package uses. (Default: GNU Free Documentation License)."
+msgstr "la licence utilisée par ce paquet. (Défaut : GNU Free Documentation License)."
+
+#. Tag: term
+#, no-c-format
+msgid "<parameter>mainfile</parameter>"
+msgstr "<parameter>mainfile</parameter>"
+
+#. Tag: para
+#, no-c-format
+msgid "the name of the XML file in your document that contains the root XML node <sgmltag>&lt;article&gt;</sgmltag>, <sgmltag>&lt;book&gt;</sgmltag>, or <sgmltag>&lt;set&gt;</sgmltag>, and the name of the corresponding <filename>.ent</filename> file that contains the document's entities. For example, if you set <literal>mainfile: master</literal>, <application>Publican</application> looks for the root XML node in <filename>master.xml</filename> and the document entities in <filename>master.ent</filename>."
+msgstr "le nom du fichier XML de votre document contenant la racine du nœud XML <sgmltag>&lt;article&gt;</sgmltag>, <sgmltag>&lt;book&gt;</sgmltag> ou <sgmltag>&lt;set&gt;</sgmltag>, ainsi que le nom du fichier <filename>.ent</filename> contenant les entités du document. Par exemple, si vous définissez <literal>mainfile: master</literal>, <application>Publican</application> recherche le XML racine dans <filename>master.xml</filename>  et les entités du document dans <filename>master.ent</filename>."
+
+#. Tag: para
+#, no-c-format
+msgid "If <parameter>mainfile</parameter> is not set, <application>Publican</application> looks for the root XML node in a file that matches the <sgmltag>&lt;title&gt;</sgmltag> of the document set in the <filename>Article_Info.xml</filename>, <filename>Book_Info.xml</filename>, or <filename>Set_Info.xml</filename> file, and looks for the document entities in a file with a corresponding name."
+msgstr "Si <parameter>mainfile</parameter> n'est pas défini, <application>Publican</application> recherche le nœud XML racine dans un fichier dont le nom correspond au <sgmltag>&lt;title&gt;</sgmltag> du document défini dans le fichier <filename>Article_Info.xml</filename>, <filename>Book_Info.xml</filename> ou <filename>Set_Info.xml</filename>, puis examine les entités du document dans un fichier avec un nom correspondant."
+
+#. Tag: term
+#, no-c-format
+msgid "<parameter>max_image_width</parameter>"
+msgstr "<parameter>max_image_width</parameter>"
+
+#. Tag: para
+#, no-c-format
+msgid "the maximum width allowable for images in the document, unless specifically overriden in the <sgmltag>&lt;imagedata&gt;</sgmltag> tag for a specific image. (Default: <literal>444</literal> — 444 pixels wide)"
+msgstr "la largeur maximale permise pour des images dans le document, sauf à être écrasée par la balise <sgmltag>&lt;imagedata&gt;</sgmltag> pour une image donnée. (Défaut : <literal>444</literal> — largeur 444 pixels)"
+
+#. Tag: term
+#, no-c-format
+msgid "<parameter>menu_category</parameter>"
+msgstr "<parameter>menu_category</parameter>"
+
+#. Tag: para
+#, no-c-format, fuzzy
+msgid "the desktop menu category (as defined by a corresponding <filename>.menu</filename> file) in which a document should appear when installed from a desktop RPM package. Refer to <xref linkend=\"sect-Publican-Users_Guide-Desktop_menu_entries_for_documents\" />."
+msgstr "la catégorie de menu de bureau (telle que définie par un fichier <filename>.menu</filename> correspondant) dans lequel un document doit apparaître quand il est installé à partir d'un paquet RPM bureau. Voyez la <xref linkend=\"desktop_menus\" />."
+
+#. Tag: term
+#, no-c-format
+msgid "<parameter>os_ver</parameter>"
+msgstr "<parameter>os_ver</parameter>"
+
+#. Tag: para
+#, no-c-format
+msgid "the operating system for which to build packages."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "<parameter>prod_url</parameter>"
+msgstr "<parameter>prod_url</parameter>"
+
+#. Tag: para
+#, no-c-format
+msgid "URL for the product to which this document applies. (Default: <literal>https://fedorahosted.org/publican</literal>)"
+msgstr "URL du produit auquel le document s'applique. (Défaut : <literal>https://fedorahosted.org/publican</literal>)"
+
+#. Tag: term
+#, no-c-format
+msgid "<parameter>release</parameter>"
+msgstr "<parameter>release</parameter>"
+
+#. Tag: para
+#, no-c-format
+msgid "the release number of this package. Defaults to the value of <literal>xml_lang</literal>, fetched from the title tag in <filename>xml_lang/TYPE_Info.xml</filename> or <literal>Project-Id-Version</literal> in <filename>lang/TYPE_Info.po</filename>."
+msgstr "le numéro de parution de ce paquet. Pris par défaut à la valeur de <literal>xml_lang</literal>, extrait de la balise « title » dans <filename>xml_lang/TYPE_Info.xml</filename> ou <literal>Project-Id-Version</literal> dans <filename>lang/TYPE_Info.po</filename>."
+
+#. Tag: term
+#, no-c-format
+msgid "<parameter>repo</parameter>"
+msgstr "<parameter>repo</parameter>"
+
+#. Tag: para
+#, no-c-format
+msgid "the repository from which to fetch remote books that form part of a distributed set."
+msgstr "le dépôt dont sont extraits les ouvrages distants formant une partie d'un ensemble distribué."
+
+#. Tag: term
+#, no-c-format
+msgid "<parameter>rev_dir</parameter>"
+msgstr "<parameter>rev_file</parameter>"
+
+#. Tag: para
+#, no-c-format
+msgid "override the default Revision History file direction. By default <application>Publican</application> assumes the Revision History is sorted in descending order, newest versions at teh top, if you wish to change this and have the oldest revisions at the top, then set this parameter to <literal>asc</literal> or <literal>ascending</literal>."
+msgstr ""
+
+#. Tag: term
+#, no-c-format
+msgid "<parameter>rev_dir</parameter>"
+msgstr "<parameter>rev_file</parameter>"
+
+#. Tag: para
+#, no-c-format
+msgid "override the default Revision History file. Use the full filename without the path."
+msgstr "écrase le fichier « Revision History » par défaut. Employez le nom complet du fichier sans le chemin."
+
+#. Tag: term
+#, no-c-format
+msgid "<parameter>scm</parameter>"
+msgstr "<parameter>scm</parameter>"
+
+#. Tag: para
+#, no-c-format
+msgid "the version control system used in the repository in that stores the remote books in a distributed set. (Default: <literal>SVN</literal>)"
+msgstr "le système de contrôle de version utilisé dans le dépôt qui stocke les ouvrages distants dans un ensemble distribué. (Défaut : <literal>SVN</literal>)"
+
+#. Tag: term
+#, no-c-format
+msgid "<parameter>show_remarks</parameter>"
+msgstr "<parameter>show_remarks</parameter>"
+
+#. Tag: para
+#, no-c-format
+msgid "whether to display remarks in transformed output. (Default: <literal>0</literal> — hide remarks)"
+msgstr "indique s'il convient d'afficher les remarques dans la sortie transformée. (Défaut : <literal>0</literal> — cacher les remarques)"
+
+#. Tag: term
+#, no-c-format
+msgid "<parameter>sort_order</parameter>"
+msgstr "<parameter>sort_order</parameter>"
+
+#. Tag: para
+#, no-c-format
+msgid "override the default sort weighting for books in a <application>Publican</application> website. Defaults to 50."
+msgstr "prend le pas sur une estimation de poids par défaut pour le tri des ouvrages dans un site Web <application>Publican</application>. Par défaut, 50."
+
+#. Tag: term
+#, no-c-format
+msgid "<parameter>src_url</parameter>"
+msgstr "<parameter>src_url</parameter>"
+
+#. Tag: para
+#, no-c-format
+msgid "URL at which to find tarballs of source files."
+msgstr "URL où trouver les archives tar des fichiers sources."
+
+#. Tag: term
+#, no-c-format
+msgid "<parameter>img_dir</parameter>"
+msgstr "<parameter>tmp_dir</parameter>"
+
+#. Tag: para
+#, no-c-format
+msgid "the directory <application>Publican</application> will process images from. (Default: <literal>images</literal>)"
+msgstr "le répertoire pour la sortie de <application>Publican</application>. (Défaut : <literal>tmp</literal>)"
+
+#. Tag: term
+#, no-c-format
+msgid "--toc_path"
+msgstr "--toc_path"
+
+#. Tag: para
+#, no-c-format
+msgid "path to the directory in which to create the top-level <filename>toc.html</filename> file (mandatory)."
+msgstr "chemin vers le répertoire dans lequel créer le fichier <filename>toc.html</filename> de haut niveau (obligatoire)."
+
+#. Tag: term
+#, no-c-format
+msgid "<parameter>toc_section_depth</parameter>"
+msgstr "<parameter>toc_section_depth</parameter>"
+
+#. Tag: para
+#, no-c-format
+msgid "the depth of sections that <application>Publican</application> includes in the main table of contents. (Default: <literal>2</literal>)"
+msgstr "la profondeur de subdivision avec laquelle <application>Publican</application> découpe la table des matières principale. (Défaut : <literal>2</literal>)"
+
+#. Tag: term
+#, no-c-format
+msgid "--tmpl_path"
+msgstr "--tmpl_path"
+
+#. Tag: para
+#, no-c-format
+msgid "path to the template directory (by default, <filename>/usr/share/publican/templates</filename>)."
+msgstr "chemin vers le répertoire des modèles (par défaut, <filename>/usr/share/publican/templates</filename>)."
+
+#. Tag: term
+#, no-c-format
+msgid "<parameter>web_brew_dist</parameter>"
+msgstr "<parameter>web_brew_dist</parameter>"
+
+#. Tag: para
+#, no-c-format
+msgid "the <application>brew</application> build target to use for the web RPM package. (Defaults to <literal>docs-5E</literal>)"
+msgstr "la cible de construction <application>brew</application> a utiliser pour le paquet RPM Web. (Défaut : <literal>docs-5E</literal>)"
+
+#. Tag: term
+#, no-c-format
+msgid "<parameter>web_formats</parameter>"
+msgstr "<parameter>web_formats</parameter>"
+
+#. Tag: para
+#, no-c-format, fuzzy
+msgid "a comma-separated list of formats to include in the web RPM package. Refer to <xref linkend=\"sect-Publican-Users_Guide-Packaging_a_document-The_publican_package_command\" />."
+msgstr "une liste, avec une virgule comme séparateur, des formats à inclure dans le paquet RPM Web. Voyez la <xref linkend=\"sect-Users_Guide-Packaging_a_book-The_publican_package_command\" />."
+
+#. Tag: term
+#, no-c-format
+msgid "<parameter>web_home</parameter>"
+msgstr "<parameter>web_home</parameter>"
+
+#. Tag: para
+#, no-c-format
+msgid "specifies that the document is the home page of a documentation website, not a standard document."
+msgstr "précise que le document est la page d'accueil d'un site Web de documentation, et non un document standard."
+
+#. Tag: title
+#, no-c-format
+msgid "Important — <literal>web_home</literal> is deprecated"
+msgstr "Important — <literal>web_home</literal> est abandonné"
+
+#. Tag: para
+#, no-c-format
+msgid "In <application>Publican</application>&nbsp;2.2, <literal>web_home</literal> is replaced by <literal>web_type: home</literal>. Support for <literal>web_home</literal> will be removed in a future version of <application>Publican</application>."
+msgstr "Dans <application>Publican</application>&nbsp;2.2, <literal>web_home</literal> a été remplacé par <literal>web_type: home</literal>. La prise en charge de <literal>web_home</literal> sera supprimée dans une future version de <application>Publican</application>."
+
+#. Tag: term
+#, no-c-format
+msgid "<parameter>web_name_label</parameter>"
+msgstr "<parameter>web_name_label</parameter>"
+
+#. Tag: para
+#, no-c-format
+msgid "overrides the book name as it appears on the menu of a <application>Publican</application>-managed website."
+msgstr "prend le pas sur le nom de l'ouvrage tel qu'il apparaît dans le menu d'un site Web géré par <application>Publican</application>."
+
+#. Tag: term
+#, no-c-format
+msgid "<parameter>web_obsoletes</parameter>"
+msgstr "<parameter>web_obsoletes</parameter>"
+
+#. Tag: para
+#, no-c-format
+msgid "packages that the web RPM package obsoletes."
+msgstr "paquets que le paquet RPM Web rend obsolètes."
+
+#. Tag: term
+#, no-c-format
+msgid "<parameter>web_product_label</parameter>"
+msgstr "<parameter>web_product_label</parameter>"
+
+#. Tag: para
+#, no-c-format
+msgid "overrides the product name as it appears on the menu of a <application>Publican</application>-managed website."
+msgstr "prend le pas sur le nom du produit tel qu'il apparaît dans le menu d'un site Web géré par <application>Publican</application>."
+
+#. Tag: term
+#, no-c-format
+msgid "<parameter>web_type</parameter>"
+msgstr "<parameter>web_type</parameter>"
+
+#. Tag: para
+#, no-c-format, fuzzy
+msgid "specifies that the document is descriptive content for a <application>Publican</application>-managed website rather than product documentation. This content includes the home page of the website (<literal>web_type:&nbsp;home</literal>), product description pages (<literal>web_type:&nbsp;product</literal>), and version description pages (<literal>web_type:&nbsp;version</literal>). Refer to <xref linkend=\"chap-Publican-Users_Guide-Building_a_website_with_Publican\" />."
+msgstr "indique que le document est la description du contenu d'un site Web géré par <application>Publican</application> et non une documentation de produit. Ce contenu comprend la page d'accueil du site Web (<literal>web_type:&nbsp;home</literal>), des pages de description du produit (<literal>web_type:&nbsp;product</literal>) et des pages de description de la version (<literal>web_type:&nbsp;version</literal>). Voyez la <xref linkend=\"sect-Users_Guide-Website\" />."
+
+#. Tag: term
+#, no-c-format
+msgid "<parameter>web_version_label</parameter>"
+msgstr "<parameter>web_version_label</parameter>"
+
+#. Tag: para
+#, no-c-format
+msgid "overrides the version number as it appears on the menu of a <application>Publican</application>-managed website."
+msgstr "prend le pas sur le numéro de version tel qu'il apparaît sur le menu d'un site Web géré par <application>Publican</application>."
+
+#. Tag: term
+#, no-c-format
+msgid "<parameter>wkhtmltopdf_opts</parameter>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Extra options to pass to <application>wkhtmltopdf</application>. e.g. <literal>wkhtmltopdf_opts:&nbsp;\"-O&nbsp;landscape&nbsp;-s&nbsp;A3\"</literal>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+#~ msgid "the operating system for which to build packages. (Default: <literal>.el5</literal> — Red Hat Enterprise Linux 5)"
+#~ msgstr "le système d'exploitation pour lequel les paquets sont construits. (Défaut : <literal>.el5</literal> — Red Hat Enterprise Linux 5)"
+
+#. Tag: para
+#, no-c-format
+#~ msgid "<emphasis role=\"strikethrough\">use <firstterm>strict mode</firstterm> (Default: <literal>0</literal> — not strict)</emphasis> Strict mode is not currently enforced."
+#~ msgstr "<emphasis role=\"strikethrough\">utilise le <firstterm>mode strict</firstterm> (Défaut : <literal>0</literal> — pas de mode strict)</emphasis> Le mode strict n'est pas forcé actuellement."
+
+#. Tag: para
+#, no-c-format
+#~ msgid "whether <application>Publican</application> reports unknown tags when processing XML. (Default: <literal>1</literal> — report unknown tags)"
+#~ msgstr "indique si <application>Publican</application> doit signaler les balises inconnues lors du traitement du XML. (Défaut : <literal>1</literal> — signale les balises inconnues)"
+

@@ -1,0 +1,616 @@
+# Gé Baylard <<Geodebay@gmail.com>>, 2013.
+# Gérard Baylard <geodebay@gmail.com>, 2013. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: 0\n"
+"POT-Creation-Date: 2013-03-08T03:26:30\n"
+"PO-Revision-Date: 2013-09-09 12:57-0400\n"
+"Last-Translator: Gérard Baylard <geodebay@gmail.com>\n"
+"Language-Team: français <<trans-fr@lists.fedoraproject.org>>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"X-Generator: Zanata 3.3.2\n"
+"Plural-Forms: nplurals=2; plural=n>1;\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Disallowed elements and attributes"
+msgstr "Éléments et attributs rejetés"
+
+#. Tag: title
+#, no-c-format
+msgid "Supported, unsupported, and disallowed"
+msgstr "Pris en charge, non pris en charge et rejetés"
+
+#. Tag: para
+#, no-c-format
+msgid "Not every <firstterm>element</firstterm> (tag) and attribute that works with <application>Publican</application> is <firstterm>supported</firstterm>. Specifically, not every tag has been tested with regards its effect on the presentation of a document once it has been built in HTML or PDF."
+msgstr "Tout <firstterm>élément</firstterm> (balise) ou attribut n'est pas <firstterm>pris en charge</firstterm> dans le fonctionnement de <application>Publican</application>. Plus particulièrement, toutes les balises n'ont pas été testées quant à leurs effets sur la présentation d'un document une fois celui-ci construit en HTML ou PDF."
+
+#. Tag: para
+#, no-c-format
+msgid "<application>Publican</application> works with almost all DocBook 4.5 elements and their attributes, and most of these elements are <firstterm>supported</firstterm>. Supported elements and attributes are those whose presentation in <application>Publican</application> HTML and PDF output has been tested and is of an acceptable quality."
+msgstr "<application>Publican</application> fonctionne avec pratiquement tous les éléments DocBook 4.5 et leurs attributs, et la plupart de ces éléments sont <firstterm>pris en charge</firstterm>. Les éléments et attributs pris en charge sont ceux dont le rendu dans les sorties HTML ou PDF de <application>Publican</application> a été testé et est d'une qualité acceptable."
+
+#. Tag: para
+#, no-c-format
+msgid "Other elements and attributes that are not known to be harmful or redundant but which have not been tested for quality are <firstterm>unsupported</firstterm>. If material within a particular DocBook tag does not look correct when you build a document in HTML or PDF, the problem could be that the transformation logic for that tag has not yet been tested. Build the document again and examine <application>Publican</application>'s output as the document builds. <application>Publican</application> presents warnings about unsupported tags that it encounters in your XML files."
+msgstr "D'autres éléments ou attributs non connus pour être mauvais ou redondants, mais qui n'ont pas été testés au plan de la qualité sont réputés <firstterm>non pris en charge</firstterm>. Si un matériau dans une balise DocBook donnée ne paraît pas correct quand vous construisez un document en HTML ou PDF, le problème peut résulter du fait que la logique de transformation de cette balise n'a pas encore été testée. Construisez le document à nouveau et examinez les sorties de <application>Publican</application> au cours de la construction. <application>Publican</application> affiche des avertissements concernant les balises non prises en charge rencontrées dans les fichiers XML."
+
+#. Tag: para
+#, no-c-format
+msgid "Finally, a small group of elements and attributes are <firstterm>disallowed</firstterm>. These elements and attributes are set out below, each accompanied by rationale explaining why it is disallowed."
+msgstr "Enfin, un petit groupe d'éléments et d'attributs sont <firstterm>rejetés</firstterm>. Ces éléments et attributs sont précisés plus bas, chacun étant accompagné d'une explication rationnelle des raisons de son rejet."
+
+#. Tag: para
+#, no-c-format, fuzzy
+msgid "Use the command <prompt>$</prompt> <command>publican print_known</command> to print a list of tags that <application>Publican</application> supports, and the command <command>publican print_banned</command> to print a list of tags that are banned in <application>Publican</application>."
+msgstr "Utilisez la commande <command>publican print_known</command> pour afficher une liste des balises que <application>Publican</application> prend en charge et la commande <command>publican print_banned</command> pour afficher les balises rejetées."
+
+#. Tag: title
+#, no-c-format
+msgid "Disallowed elements"
+msgstr "Éléments rejetés"
+
+#. Tag: term
+#, no-c-format
+msgid "<sgmltag>&lt;caution&gt;</sgmltag>"
+msgstr "<sgmltag>&lt;caution&gt;</sgmltag>"
+
+#. Tag: term
+#, no-c-format
+msgid "<sgmltag>&lt;tip&gt;</sgmltag>"
+msgstr "<sgmltag>&lt;tip&gt;</sgmltag>"
+
+#. Tag: para
+#, no-c-format
+msgid "DocBook XML supports five <firstterm>admonitions</firstterm> of varying severity: <sgmltag>&lt;tip&gt;</sgmltag>, <sgmltag>&lt;note&gt;</sgmltag>, <sgmltag>&lt;important&gt;</sgmltag>, <sgmltag>&lt;caution&gt;</sgmltag>, and <sgmltag>&lt;warning&gt;</sgmltag>. Taken together, these represent a very fine-grained set of distinctions. It is unlikely that these fine distinctions can be applied consistently within a document, especially when more than one person writes or maintains the document. Moreover, this level of granularity is meaningless to readers. By design, <application>Publican</application> disallows the <sgmltag>&lt;tip&gt;</sgmltag> and <sgmltag>&lt;caution&gt;</sgmltag> elements, these elements being the two most redundant in the set."
+msgstr "Le XML de DocBook dispose de cinq <firstterm>avertissements</firstterm> de sévérité variable : <sgmltag>&lt;tip&gt;</sgmltag>, <sgmltag>&lt;note&gt;</sgmltag>, <sgmltag>&lt;important&gt;</sgmltag>, <sgmltag>&lt;caution&gt;</sgmltag> et <sgmltag>&lt;warning&gt;</sgmltag>. L'ensemble représente un ensemble de fines différentiations. Il est peu vraisemblable que ces distinctions puissent être utilisées de manière consistante dans un document, en particulier quand plus d'une personne écrit ou fait la maintenance du document. Plus encore, ces niveaux de différentiation sont sans signification pour le lecteur. <application>Publican</application> a fait le choix de rejeter les éléments <sgmltag>&lt;tip&gt;</sgmltag> et <sgmltag>&lt;caution&gt;</sgmltag>, jugés les plus redondants de l'ensemble."
+
+#. Tag: para
+#, no-c-format
+msgid "Use <sgmltag>&lt;note&gt;</sgmltag> instead of <sgmltag>&lt;tip&gt;</sgmltag>, and use either <sgmltag>&lt;important&gt;</sgmltag> or <sgmltag>&lt;warning&gt;</sgmltag> instead of <sgmltag>&lt;caution&gt;</sgmltag>. Some criteria by which you might select a suitable level of severity are presented in the &lsquo;Document Conventions&rsquo; section of the preface of books produced with <application>Publican</application>'s default brand."
+msgstr "Utilisez <sgmltag>&lt;note&gt;</sgmltag> à la place de <sgmltag>&lt;tip&gt;</sgmltag> et, soit <sgmltag>&lt;important&gt;</sgmltag>, soit <sgmltag>&lt;warning&gt;</sgmltag> à la place de <sgmltag>&lt;caution&gt;</sgmltag>. Quelques critères de choix d'un niveau de sévérité cohérent sont présentés dans le paragraphe &lsquo;Conventions d'écriture&rsquo; de la préface des livres créée avec la charte graphique par défaut de <application>Publican</application>."
+
+#. Tag: term
+#, no-c-format
+msgid "<sgmltag>&lt;entrytbl&gt;</sgmltag>"
+msgstr "<sgmltag>&lt;entrytbl&gt;</sgmltag>"
+
+#. Tag: para
+#, no-c-format
+msgid "<application>Publican</application> depends on an external application, <application>FOP</application>, to render PDF documents. At present, <application>FOP</application> does not support nested tables, so attempts to build PDF files from <application>Publican</application> documents that contain nested tables fail."
+msgstr "<application>Publican</application> dépend d'une application externe, <application>FOP</application>, pour le rendu PDF des documents. Actuellement, <application>FOP</application> ne prend pas en charge les tableaux imbriqués ; donc toute tentative de créer des fichiers PDF à partir de documents <application>Publican</application> contenant des tableaux imbriqués échouera."
+
+#. Tag: para
+#, no-c-format
+msgid "Nested tables are therefore disallowed at least until they are supported in <application>FOP</application>. If you planned to include a nested table in your document, reconsider your data structure."
+msgstr "Les tableaux imbriqués sont donc rejetés, du moins jusqu'à ce qu'ils soient pris en charge par <application>FOP</application>. Si vous avez prévu d'incorporer un tableau imbriqué dans votre document, revoyez la structure des données."
+
+#. Tag: term
+#, no-c-format
+msgid "<sgmltag>&lt;glossdiv&gt;</sgmltag>"
+msgstr "<sgmltag>&lt;glossdiv&gt;</sgmltag>"
+
+#. Tag: term
+#, no-c-format
+msgid "<sgmltag>&lt;glosslist&gt;</sgmltag>"
+msgstr "<sgmltag>&lt;glosslist&gt;</sgmltag>"
+
+#. Tag: para
+#, no-c-format
+msgid "This tag set presents terms in glossaries in alphabetical order; however, the terms are sorted according to the original language of the XML, regardless of how these terms are translated into any other language. For example, a glossary produced with <sgmltag>&lt;glossdiv&gt;</sgmltag>s that looks like this in English:"
+msgstr "Ce groupe de balises présente des termes dans l'ordre alphabétique sous forme de glossaire ; toutefois, les termes sont triés selon la langue d'origine du XML, sans prendre en considération la façon dont les termes sont traduits dans une autre langue. Par exemple, un glossaire construit avec <sgmltag>&lt;glossdiv&gt;</sgmltag> qui ressemblerait à ce qui suit en anglais :"
+
+#. Tag: term
+#, no-c-format
+msgid "A"
+msgstr "A"
+
+#. Tag: para
+#, no-c-format
+msgid "<literal>Apple</literal> — an <firstterm>apple</firstterm> is&hellip;"
+msgstr "<literal>Apple</literal> — an <firstterm>apple</firstterm> is&hellip;"
+
+#. Tag: term
+#, no-c-format
+msgid "G"
+msgstr "G"
+
+#. Tag: para
+#, no-c-format
+msgid "<literal>Grapes</literal> — <firstterm>grapes</firstterm> are&hellip;"
+msgstr "<literal>Grapes</literal> — <firstterm>grapes</firstterm> are&hellip;"
+
+#. Tag: term
+#, no-c-format
+msgid "O"
+msgstr "O"
+
+#. Tag: para
+#, no-c-format
+msgid "<literal>Orange</literal> — an <firstterm>orange</firstterm> is&hellip;"
+msgstr "<literal>Orange</literal> — an <firstterm>orange</firstterm> is&hellip;"
+
+#. Tag: term
+#, no-c-format
+msgid "P"
+msgstr "P"
+
+#. Tag: para
+#, no-c-format
+msgid "<literal>Peach</literal> — a <firstterm>peach</firstterm> is&hellip;"
+msgstr "<literal>Peach</literal> — a <firstterm>peach</firstterm> is&hellip;"
+
+#. Tag: para
+#, no-c-format
+msgid "looks like this in Spanish:"
+msgstr "se présente ainsi en espagnol :"
+
+#. Tag: para
+#, no-c-format
+msgid "<literal>Manzana</literal> — la <firstterm>manzana</firstterm> es&hellip;"
+msgstr "<literal>Manzana</literal> — la <firstterm>manzana</firstterm> es&hellip;"
+
+#. Tag: para
+#, no-c-format
+msgid "<literal>Uva</literal> — la <firstterm>uva</firstterm> es&hellip;"
+msgstr "<literal>Uva</literal> — la <firstterm>uva</firstterm> es&hellip;"
+
+#. Tag: para
+#, no-c-format
+msgid "<literal>Naranja</literal> — la <firstterm>naranja</firstterm> es&hellip;"
+msgstr "<literal>Naranja</literal> — la <firstterm>naranja</firstterm> es&hellip;"
+
+#. Tag: para
+#, no-c-format
+msgid "<literal>Melocotonero</literal> — el <firstterm>melocotonero</firstterm> es&hellip;"
+msgstr "<literal>Melocotonero</literal> — el <firstterm>melocotonero</firstterm> es&hellip;"
+
+#. Tag: para
+#, no-c-format
+msgid "In a translated language that does not share the same writing system with the original language in which the XML was written, the result is even more nonsensical."
+msgstr "Traduit dans une langue qui ne partage pas le même système d'écriture que la langue d'origine du XML, le résultat est encore plus dépourvu de signification."
+
+#. Tag: term
+#, no-c-format
+msgid "<sgmltag>&lt;inlinegraphic&gt;</sgmltag>"
+msgstr "<sgmltag>&lt;inlinegraphic&gt;</sgmltag>"
+
+#. Tag: para
+#, no-c-format
+msgid "This element presents information as a graphic rather than as text and does not provide an option to present a text alternative to the graphic. This tag therefore hides information from people with visual impairments. In jurisdictions that have legal requirements for electronic content to be accessible to people with visual impairments, documents that use this tag will not satisfy those requirements. Section 508 of the <citetitle>Rehabilitation Act of 1973</citetitle><footnote> <para> Refer to <ulink url=\"http://www.section508.gov/\">http://www.section508.gov/</ulink> </para> </footnote> is an example of such a requirement for federal agencies in the United States."
+msgstr "Cet élément présente l'information sous forme d'un graphique au lieu d'un texte et ne fournit pas d'option pour offrir une alternative textuelle au graphique. Cette balise cache donc une information aux personnes avec des déficiences visuelles. Dans les sites officiels, qui ont obligation légale de présenter des contenus accessibles aux mal-voyants, des documents qui utiliseraient cette balise ne satisfont pas cette prescription. La section 508 de l'<citetitle>Acte de réhabilitation de 1973</citetitle><footnote> <para> Voyez la page <ulink url=\"http://www.section508.gov/\">http://www.section508.gov/</ulink> </para> </footnote> est un exemple de ces obligations pour les agences fédérales des États-Unis."
+
+#. Tag: para
+#, no-c-format
+msgid "Note that <sgmltag>&lt;inlinegraphic&gt;</sgmltag> is not valid in DocBook version 5."
+msgstr "Notez que <sgmltag>&lt;inlinegraphic&gt;</sgmltag> n'est plus une balise valide dans DocBook version 5."
+
+#. Tag: term
+#, no-c-format
+msgid "<sgmltag>&lt;link&gt;</sgmltag>"
+msgstr "<sgmltag>&lt;link&gt;</sgmltag>"
+
+#. Tag: para
+#, no-c-format
+msgid "The <sgmltag>&lt;link&gt;</sgmltag> tag provides a general-purpose hyperlink and therefore offers nothing that the <sgmltag>&lt;xref&gt;</sgmltag> and <sgmltag>&lt;ulink&gt;</sgmltag> tags do not, for internal and external hyperlinks respectively. The <sgmltag>&lt;link&gt;</sgmltag> tag is disallowed due to its redundancy."
+msgstr "La balise <sgmltag>&lt;link&gt;</sgmltag> permet un hyper-lien d'utilisation générale et donc n'offre rien de plus que <sgmltag>&lt;xref&gt;</sgmltag> ou <sgmltag>&lt;ulink&gt;</sgmltag>, pour des liens internes et externes respectivement. La balise <sgmltag>&lt;link&gt;</sgmltag> est rejetée en raison de sa redondance."
+
+#. Tag: term
+#, no-c-format
+msgid "<sgmltag>&lt;olink&gt;</sgmltag>"
+msgstr "<sgmltag>&lt;olink&gt;</sgmltag>"
+
+#. Tag: para
+#, no-c-format
+msgid "The <sgmltag>&lt;olink&gt;</sgmltag> tag provides cross-references between XML documents. For <sgmltag>&lt;olink&gt;</sgmltag>s to work outside of documents that are all hosted within the same library of XML files, you must provide a URL for the document to which you are linking. In environments that use <sgmltag>&lt;olink&gt;</sgmltag>s, these URLs can be supplied either as an XML entity or with a server-side script. <application>Publican</application> produces documents intended for wide dissemination in which URLs are always necessary for cross-references. Therefore, the <sgmltag>&lt;olink&gt;</sgmltag> tag offers no advantage over the <sgmltag>&lt;ulink&gt;</sgmltag> tag, and is disallowed due to its redundancy."
+msgstr "La balise <sgmltag>&lt;olink&gt;</sgmltag> fournit des références croisées entre documents XML. Pour que <sgmltag>&lt;olink&gt;</sgmltag> fonctionne à l'extérieur de documents hébergés au sein d'une même bibliothèque de fichiers XML, vous devez indiquer l'URL du document auquel vous voulez vous lier. Dans des environnements qui utilisent <sgmltag>&lt;olink&gt;</sgmltag>, ces URL peuvent être fournis soit en tant qu'entité XML ou à l'aide d'un script annexe. <application>Publican</application> produit des documents prévus pour une large diffusion dans lesquels des URL sont toujours nécessaires pour les références croisées. Donc, la balise <sgmltag>&lt;olink&gt;</sgmltag> n'offre aucun avantage par rapport à <sgmltag>&lt;ulink&gt;</sgmltag> ; elle est rejetée en raison de cette redondance."
+
+#. Tag: title
+#, no-c-format
+msgid "Disallowed attributes"
+msgstr "Attributs rejetés"
+
+#. Tag: term
+#, no-c-format
+msgid "<sgmltag>&lt;[element] xreflabel=\"[any_string_here]\"&gt;</sgmltag>"
+msgstr "<sgmltag>&lt;[element] xreflabel=\"[chaîne_quelconque_ici]\"&gt;</sgmltag>"
+
+#. Tag: para
+#, no-c-format
+msgid "The presence of an <sgmltag>&lt;xreflabel&gt;</sgmltag> attribute reduces the usability of printed versions of a book. As well, attribute values are not seen by translators and, consequently, cannot be translated."
+msgstr "La présence d'un attribut <sgmltag>&lt;xreflabel&gt;</sgmltag> n'a pas d'utilité dans la version imprimée d'un ouvrage. De même, les valeurs de l'attribut ne sont pas vues par les traducteurs et, en conséquence, ne peuvent pas être traduites."
+
+#. Tag: para
+#, no-c-format
+msgid "For example, if you have the following:"
+msgstr "Par exemple, si vous avez :"
+
+#. Tag: programlisting
+#, no-c-format, fuzzy
+msgid ""
+"\n"
+"&lt;chapter id=\"ch03\" xreflabel=\"Chapter Three\"&gt;\n"
+"	&lt;title&gt;The Secret to Eternal Life&lt;/title&gt;\n"
+"	&lt;para&gt;The secret to eternal life is&hellip;&lt;/para&gt;\n"
+"&lt;/chapter&gt;\n"
+"\n"
+"[more deathless prose here]     \n"
+"\n"
+"&hellip;see &lt;xref linkend=\"ch03\"&gt; for details.\n"
+"\n"
+msgstr ""
+"\n"
+"&lt;chapter id=\"ch03\" xreflabel=\"Chapter Three\"&gt;\n"
+"\t&lt;title&gt;The Secret to Eternal Life&lt;/title&gt;\n"
+"\t&lt;para&gt;The secret to eternal life is&hellip;&lt;/para&gt;\n"
+"&lt;/chapter&gt;\n"
+"\n"
+"[autre prose pour l'éternité ici]     \n"
+"\n"
+"&hellip;see &lt;xref linkend=\"ch03\"&gt; for details.\n"
+"\n"
+
+#. Tag: para
+#, no-c-format
+msgid "when your XML is built to HTML, the <sgmltag>&lt;xref&gt;</sgmltag> tag becomes an HTML anchor tag as follows:"
+msgstr "quand le XML est construit en HTML, la balise <sgmltag>&lt;xref&gt;</sgmltag> devient une balise d'ancre HTML comme suit :"
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"\n"
+"&hellip;see &lt;a href=\"#ch03\"&gt;Chapter Three&lt;/a&gt; for details.\n"
+"\n"
+msgstr ""
+"\n"
+"&hellip;see &lt;a href=\"#ch03\"&gt;Chapter Three&lt;/a&gt; for details.\n"
+"\n"
+
+#. Tag: para
+#, no-c-format
+msgid "The text contained by the anchor tag is the same as the data in the <sgmltag>&lt;xreflabel&gt;</sgmltag> attribute. In this case, it means that readers of printed copies have less information available to them."
+msgstr "Le texte contenu dans la balise d'ancrage est le même que celui contenu dans l'attribut <sgmltag>&lt;xreflabel&gt;</sgmltag>. Dans ce cas, cela signifie que les lecteurs des copies imprimées disposent de moins d'informations à ce sujet."
+
+#. Tag: para
+#, no-c-format
+msgid "You could work around this if you make the value of the <sgmltag>&lt;xreflabel&gt;</sgmltag> attribute the same as the text within the <sgmltag>&lt;title&gt;</sgmltag><sgmltag>&lt;/title&gt;</sgmltag> element tags. However, this duplication increases the risk of typo-level errors and otherwise offers no underlying improvement. And it still reduces the amount of information presented to readers of printed copies."
+msgstr "Vous pouvez contourner ce problème si vous faites en sorte que la valeur de l'attribut <sgmltag>&lt;xreflabel&gt;</sgmltag> soit le même que celui entre les balises de l'élément <sgmltag>&lt;title&gt;</sgmltag><sgmltag>&lt;/title&gt;</sgmltag>. Toutefois, cette duplication augmente les risques d'erreurs typographiques et n'apporte aucune amélioration sous-jacente. Et, encore une fois, la quantité d'information présentée aux lecteurs des copies imprimées est réduite."
+
+#. Tag: para
+#, no-c-format
+msgid "The following XML:"
+msgstr "Le XML :"
+
+#. Tag: programlisting
+#, no-c-format, fuzzy
+msgid ""
+"\n"
+"&lt;chapter id=\"ch03\" xreflabel=\"The Secret to Eternal Life\"&gt;\n"
+"	&lt;title&gt;The Secret to Eternal Life&lt;/title&gt;\n"
+"	&lt;para&gt;The secret to eternal life is&hellip;&lt;/para&gt;\n"
+"&lt;/chapter&gt;\n"
+"\n"
+"[more deathless prose here]     \n"
+"\n"
+"&hellip;see &gt;xref linkend=\"ch03\"&gt; for details.\n"
+"\n"
+msgstr ""
+"\n"
+"&lt;chapter id=\"ch03\" xreflabel=\"The Secret to Eternal Life\"&gt;\n"
+"\t&lt;title&gt;The Secret to Eternal Life&lt;/title&gt;\n"
+"\t&lt;para&gt;The secret to eternal life is&hellip;&lt;/para&gt;\n"
+"&lt;/chapter&gt;\n"
+"\n"
+"[autre prose pour l'éternité ici]\n"
+"\n"
+"&hellip;see &gt;xref linkend=\"ch03\"&gt; for details.\n"
+"\n"
+
+#. Tag: para
+#, no-c-format
+msgid "Will result in an HTML anchor tag as follows:"
+msgstr "donnera une balise d'ancrage HTML comme suit :"
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"\n"
+"&hellip;see &lt;a href=\"#ch03\"&gt;The Secret to Eternal Life&lt;/a&gt; for details.\n"
+"\n"
+msgstr ""
+"\n"
+"&hellip;see &lt;a href=\"#ch03\"&gt;The Secret to Eternal Life&lt;/a&gt; for details.\n"
+"\n"
+
+#. Tag: para
+#, no-c-format
+msgid "This isn't as informative as the text presented to a reader if you do not use an <sgmltag>&lt;xreflabel&gt;</sgmltag> attribute. The following:"
+msgstr "Ce n'est pas aussi porteur d'information que le texte présenté au lecteur si vous n'utilisez pas l'attribut <sgmltag>&lt;xreflabel&gt;</sgmltag>. Ainsi :"
+
+#. Tag: programlisting
+#, no-c-format, fuzzy
+msgid ""
+"\n"
+"&lt;chapter id=\"ch03\"&gt;\n"
+"	&lt;title&gt;The Secret to Eternal Life&lt;/title&gt;\n"
+"	&lt;para&gt;The secret to eternal life is&hellip;&lt;/para&gt;\n"
+"&lt;/chapter&gt;\n"
+"\n"
+"[more deathless prose here]		\n"
+"\n"
+"&hellip;see &lt;xref linkend=\"ch03\"&gt; for details.\n"
+"\n"
+msgstr ""
+"\n"
+"&lt;chapter id=\"ch03\"&gt;\n"
+"\t&lt;title&gt;The Secret to Eternal Life&lt;/title&gt;\n"
+"\t&lt;para&gt;The secret to eternal life is&hellip;&lt;/para&gt;\n"
+"&lt;/chapter&gt;\n"
+"\n"
+"[autre prose pour l'éternité ici]\t\t\n"
+"\n"
+"&hellip;see &lt;xref linkend=\"ch03\"&gt; for details.\n"
+"\n"
+
+#. Tag: para
+#, no-c-format
+msgid "transforms the <sgmltag>&lt;xref&gt;</sgmltag> element as follows when built to HTML:"
+msgstr "transforme l'élément <sgmltag>&lt;xref&gt;</sgmltag> comme suit lors de la construction du HTML :"
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"\n"
+"&hellip;see &lt;a href=\"#ch03\"&gt;Chapter 3: The Secret to Eternal Life&lt;/a&gt; for details.\n"
+"\n"
+msgstr ""
+"\n"
+"&hellip;see &lt;a href=\"#ch03\"&gt;Chapter 3: The Secret to Eternal Life&lt;/a&gt; for details.\n"
+"\n"
+
+#. Tag: para
+#, no-c-format
+msgid "More important, however, are the translation problems that <sgmltag>&lt;xreflabel&gt;</sgmltag> tags cause. Attribute values are not seen by translators. Consequently, they are not translated. Consider the second example above again:"
+msgstr "Mais, les problèmes posés par <sgmltag>&lt;xreflabel&gt;</sgmltag> lors de la traduction sont encore plus importants. Les valeurs des attributs en sont pas vues par les traducteurs. Donc, ils ne sont pas traduits. Reprenons le deuxième exemple ci-dessus :"
+
+#. Tag: programlisting
+#, no-c-format, fuzzy
+msgid ""
+"\n"
+"&lt;chapter id=\"ch03\" xreflabel=\"The Secret to Eternal Life\"&gt;\n"
+"	&lt;title&gt;The Secret to Eternal Life&lt;/title&gt;\n"
+"	&lt;para&gt;The secret to eternal life is&hellip;&lt;/para&gt;\n"
+"&lt;/chapter&gt;\n"
+"\n"
+"[more deathless prose here]		\n"
+"\n"
+"&hellip;see &lt;xref linkend=\"ch03\"&gt; for details.\n"
+"\n"
+msgstr ""
+"\n"
+"&lt;chapter id=\"ch03\" xreflabel=\"The Secret to Eternal Life\"&gt;\n"
+"\t&lt;title&gt;The Secret to Eternal Life&lt;/title&gt;\n"
+"\t&lt;para&gt;The secret to eternal life is&hellip;&lt;/para&gt;\n"
+"&lt;/chapter&gt;\n"
+"\n"
+"[autre prose pour l'éternité ici]\t\t\n"
+"\n"
+"&hellip;see &lt;xref linkend=\"ch03\"&gt; for details.\n"
+"\n"
+
+#. Tag: para
+#, no-c-format
+msgid "In English, the <sgmltag>&lt;xref&gt;</sgmltag> is still transformed into an anchor tag as follows:"
+msgstr "En anglais, <sgmltag>&lt;xref&gt;</sgmltag> est toujours transformé en une balise d'ancrage ainsi :"
+
+#. Tag: para
+#, no-c-format
+msgid "Someone reading the German version, however, will have this as their underlying HTML:"
+msgstr "Mais, quelqu'un lisant la version en allemand, verra ceci avec le HTML sous-jacent :"
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"\n"
+"&hellip;Sehen Sie &lt;a href=\"#ch03\"&gt;The Secret to Eternal Life&lt;/a&gt; für Details.\n"
+"\n"
+msgstr ""
+"\n"
+"&hellip;Sehen Sie &lt;a href=\"#ch03\"&gt;The Secret to Eternal Life&lt;/a&gt; für Details.\n"
+"\n"
+
+#. Tag: para
+#, no-c-format
+msgid "If the <sgmltag>&lt;xreflabel&gt;</sgmltag> attribute is not used, the title and chapter indicator, both properly translated, appear to the reader. That is, the following:"
+msgstr "Si l'attribut <sgmltag>&lt;xreflabel&gt;</sgmltag> n'est pas utilisé, l'indication du titre et du chapitre, tous deux correctement traduits, sont visibles au lecteur. Ainsi :"
+
+#. Tag: para
+#, no-c-format
+msgid "will, after translation, present thus to a German-speaking reader:"
+msgstr "se présentera, après traduction, à un locuteur allemand :"
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"\n"
+"&hellip;Sehen Sie &lt;a href=\"#ch03\"&gt;Kapitel 3: Das Geheimnis des ewigen Lebens&lt;/a&gt; für Details.\n"
+"\n"
+msgstr ""
+"\n"
+"&hellip;Sehen Sie &lt;a href=\"#ch03\"&gt;Kapitel 3: Das Geheimnis des ewigen Lebens&lt;/a&gt; für Details.\n"
+"\n"
+
+#. Tag: para
+#, no-c-format
+msgid "This is, not surprisingly, what we want."
+msgstr "Qui est, sans surprise, ce que nous souhaitons."
+
+#. Tag: para
+#, no-c-format
+msgid "The <parameter>xreflabel</parameter> attribute is therefore disallowed."
+msgstr "Pour ces motifs, l'attribut <parameter>xreflabel</parameter> est rejeté."
+
+#. Tag: term
+#, no-c-format
+msgid "<sgmltag>&lt;[element] endterm=\"[any_string_here]\"&gt;</sgmltag>"
+msgstr "<sgmltag>&lt;[element] endterm=\"[chaîne_quelconque_ici]\"&gt;</sgmltag>"
+
+#. Tag: para
+#, no-c-format
+msgid "The <parameter>endterm</parameter> attribute allows you to present hyperlinked text other than the name of the section or chapter to which the hyperlink points. As such, it decreases the usability of printed versions of documents, and causes difficulty for translators."
+msgstr "L'attribut <parameter>endterm</parameter> vous permet de présenter un texte d'hyperlien autre que le nom du paragraphe ou du chapitre sur lequel le lien pointe. Donc, son utilité dans les versions imprimées est restreinte, et elle pose des problèmes aux traducteurs."
+
+#. Tag: para
+#, no-c-format
+msgid "The text presented in an element (such as an <sgmltag>&lt;xref&gt;</sgmltag>) that contains the <parameter>endterm</parameter> attribute is taken from a <sgmltag>&lt;titleabbrev&gt;</sgmltag> tag in the target chapter or section. Although the content of the <sgmltag>&lt;titleabbrev&gt;</sgmltag> tag is available to translators in the document's PO files, it is removed from the context of the <sgmltag>&lt;xref&gt;</sgmltag>. The absence of this context makes reliable translation impossible in languages that mark prepositions or articles for grammatical number and grammatical gender."
+msgstr "Le texte, présenté dans un élément (comme une balise <sgmltag>&lt;xref&gt;</sgmltag>) contenant l'attribut <parameter>endterm</parameter>, est pris d'une balise <sgmltag>&lt;titleabbrev&gt;</sgmltag> du chapitre ou du paragraphe cible. Même si le contenu de la balise <sgmltag>&lt;titleabbrev&gt;</sgmltag> est à disposition des traducteurs dans les fichiers PO du document, ce contenu est sorti du contexte de <sgmltag>&lt;xref&gt;</sgmltag>. Cette absence de contexte peut rendre une traduction fiable impossible dans des langues qui marquent grammaticalement les prépositions ou les articles en nombre et en genre."
+
+#. Tag: programlisting
+#, no-c-format, fuzzy
+msgid ""
+"\n"
+"&lt;chapter id=\"The_Secret\"&gt;\n"
+"	&lt;title&gt;The Secret to Eternal Life&lt;/title&gt;\n"
+"	&lt;titleabbrev id=\"final\"&gt;the final chapter&lt;/titleabbrev&gt;\n"
+"\n"
+"	&lt;para&gt;The secret to eternal life is&hellip;&lt;/para&gt;\n"
+"&lt;/chapter&gt;\n"
+"\n"
+"[more deathless prose here]     \n"
+"\n"
+"The solution is in &lt;xref linkend=\"The_Secret\" endterm=\"final\"/&gt;.\n"
+"\n"
+msgstr ""
+"\n"
+"&lt;chapter id=\"The_Secret\"&gt;\n"
+"\t&lt;title&gt;The Secret to Eternal Life&lt;/title&gt;\n"
+"\t&lt;titleabbrev id=\"final\"&gt;the final chapter&lt;/titleabbrev&gt;\n"
+"\n"
+"\t&lt;para&gt;The secret to eternal life is&hellip;&lt;/para&gt;\n"
+"&lt;/chapter&gt;\n"
+"\n"
+"[autre prose pour l'éternité ici]\n"
+"\n"
+"The solution is in &lt;xref linkend=\"The_Secret\" endterm=\"final\"/&gt;.\n"
+"\n"
+
+#. Tag: para
+#, no-c-format
+msgid "The text surrounding the <sgmltag>&lt;xref&gt;</sgmltag> presents in the English version of the document as:"
+msgstr "Le texte autour de <sgmltag>&lt;xref&gt;</sgmltag> se présente ainsi dans la version anglaise :"
+
+#. Tag: para
+#, no-c-format
+msgid "The solution is in <literal>the final chapter</literal>."
+msgstr "The solution is in <literal>the final chapter</literal>."
+
+#. Tag: para
+#, no-c-format
+msgid "A translator sees the <sgmltag>&lt;titleabbrev&gt;</sgmltag> in a PO file as:"
+msgstr "Un traducteur voit <sgmltag>&lt;titleabbrev&gt;</sgmltag> dans un fichier PO ainsi :"
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"\n"
+"#. Tag: titleabbrev\n"
+"#, no-c-format\n"
+"msgid \"the final chapter\"\n"
+"msgstr \"\"\n"
+"\n"
+msgstr ""
+"\n"
+"#. Tag: titleabbrev\n"
+"#, no-c-format\n"
+"msgid \"the final chapter\"\n"
+"msgstr \"\"\n"
+"\n"
+
+#. Tag: para
+#, no-c-format
+msgid "and sees the text that contains the <sgmltag>&lt;xref&gt;</sgmltag> elsewhere in the PO file (or, more likely, in a completely different PO file) as:"
+msgstr "et voit le texte contenant la balise <sgmltag>&lt;xref&gt;</sgmltag> ailleurs dans le fichier PO (ou, plus vraisemblablement, dans un fichier PO différent) sous la forme :"
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"\n"
+"#. Tag: para\n"
+"#, no-c-format\n"
+"msgid \"The solution is in &lt;xref linkend=\"The_Secret\" endterm=\"final\"/&gt;.\"\n"
+"msgstr \"\"\n"
+"\n"
+msgstr ""
+"\n"
+"#. Tag: para\n"
+"#, no-c-format\n"
+"msgid \"The solution is in &lt;xref linkend=\"The_Secret\" endterm=\"final\"/&gt;.\"\n"
+"msgstr \"\"\n"
+"\n"
+
+#. Tag: para
+#, no-c-format
+msgid "The translator has no way of telling what will be substituted for <sgmltag>&lt;xref linkend=\"The_Secret\" endterm=\"final\"/&gt;</sgmltag> when the document builds, so a translation in Italian might read:"
+msgstr "Le traducteur n'a pas le moyen de savoir ce qui sera substitué à <sgmltag>&lt;xref linkend=\"The_Secret\" endterm=\"final\"/&gt;</sgmltag> lors de la construction du document ; ainsi, une traduction en italien pourra s'écrire :"
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"\n"
+"#. Tag: para\n"
+"#, no-c-format\n"
+"msgid \"The solution is in &lt;xref linkend=\"The_Secret\" endterm=\"final\"/&gt;.\"\n"
+"msgstr \"La soluzione è in &lt;xref linkend=\"The_Secret\" endterm=\"final\"/&gt;.\"\n"
+"\n"
+msgstr ""
+"\n"
+"#. Tag: para\n"
+"#, no-c-format\n"
+"msgid \"The solution is in &lt;xref linkend=\"The_Secret\" endterm=\"final\"/&gt;.\"\n"
+"msgstr \"La soluzione è in &lt;xref linkend=\"The_Secret\" endterm=\"final\"/&gt;.\"\n"
+"\n"
+
+#. Tag: para
+#, no-c-format
+msgid "Note the preposition <literal>in</literal>."
+msgstr "Notez la préposition <literal>in</literal>."
+
+#. Tag: para
+#, no-c-format
+msgid "If the translator rendered <literal>the final chapter</literal> in Italian as <literal>l'ultimo capitolo</literal>, the result when the document builds will read:"
+msgstr "Si le traducteur a rendu en italien <literal>the final chapter</literal> par <literal>l'ultimo capitolo</literal>, le résultat à la construction du document sera :"
+
+#. Tag: para
+#, no-c-format
+msgid "La soluzione è in <literal>l'ultimo capitolo</literal>."
+msgstr "La soluzione è in <literal>l'ultimo capitolo</literal>."
+
+#. Tag: para
+#, no-c-format
+msgid "This result is comprehensible, but inelegant, because Italian combines some of its prepositions with its definite articles. More elegant Italian would be:"
+msgstr "Ce résultat reste compréhensible, mais est inélégant, parce que l'italien combine certaines de ses prépositions avec l'article défini. Un italien plus élégant formulerait :"
+
+#. Tag: para
+#, no-c-format
+msgid "La soluzione è nell'<literal>ultimo capitolo</literal>."
+msgstr "La soluzione è nell'<literal>ultimo capitolo</literal>."
+
+#. Tag: para
+#, no-c-format
+msgid "Without knowing what text will appear in place of &lt;xref linkend=\"The_Secret\" endterm=\"final\"/&gt;, the translator into Italian cannot know whether to leave the preposition <literal>in</literal> to stand by itself, or which of seven different possible combinations with the definite article to use: <literal>nel</literal>, <literal>nei</literal>, <literal>nello</literal>, <literal>nell'</literal>, <literal>negli</literal>, <literal>nella</literal>, or <literal>nelle</literal>."
+msgstr "Sans connaître le texte qui apparaît à la place de &lt;xref linkend=\"The_Secret\" endterm=\"final\"/&gt;, le traducteur en italien ne peut pas savoir s'il doit laisser la préposition <literal>in</literal> en l'état ou laquelle des sept combinaisons possibles avec l'article défini utiliser : <literal>nel</literal>, <literal>nei</literal>, <literal>nello</literal>, <literal>nell'</literal>, <literal>negli</literal>, <literal>nella</literal> ou <literal>nelle</literal>."
+
+#. Tag: para
+#, no-c-format
+msgid "Furthermore, note that the combined preposition and article also poses a problem with regard to whether this word should be placed in the text surrounding the <sgmltag>&lt;xref&gt;</sgmltag>, or in the <sgmltag>&lt;titleabbrev&gt;</sgmltag>. Whichever of these two solutions the translator selects will cause problems when the <parameter>endterm</parameter> appears in other grammatical contexts, because not all Italian prepositions can combine with the definite article in this way."
+msgstr "En plus, notez que la préposition combinée et l'article pose aussi le problème de savoir si le mot doit être placé dans le texte autour de <sgmltag>&lt;xref&gt;</sgmltag> ou dans le <sgmltag>&lt;titleabbrev&gt;</sgmltag>. Quelle que soit la solution retenue, elle posera des problèmes quand <parameter>endterm</parameter> apparaîtra dans un contexte grammatical différent, car toutes les propositions de la langue italienne ne se combinent pas avec l'article défini de cette façon."
+
+#. Tag: para
+#, no-c-format
+msgid "Due to the problems that <parameter>endterm</parameter> presents for translation, <application>Publican</application> disallows this attribute."
+msgstr "Compte tenu des problèmes que <parameter>endterm</parameter> présente pour la traduction, <application>Publican</application> rejette cet attribut ."
+

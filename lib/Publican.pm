@@ -211,9 +211,7 @@ my %PARAM_OLD = (
         default => '4.5',
     },
     dt_format => {
-        descr => maketext(
-            'The format to use for the desktop output.'
-        ),
+        descr   => maketext( 'The format to use for the desktop output.' ),
         default => 'html-desktop',
     },
     dt_obsoletes => {
@@ -1093,9 +1091,11 @@ Get all valid language directories.
 =cut
 
 sub get_all_langs {
+    my $no_src_lang = shift;
 
     my ( $handle, %filelist, @langs );
-    my $tmp_dir = $SINGLETON->param('tmp_dir');
+    my $tmp_dir  = $SINGLETON->param('tmp_dir');
+    my $xml_lang = $SINGLETON->param('xml_lang');
 
     opendir( $handle, '.' )
         || croak( maketext( "Can't open directory: [_1]", $@ ) );
@@ -1110,7 +1110,8 @@ sub get_all_langs {
                 );
 
             if ( valid_lang($dir) ) {
-                push( @langs, $dir );
+                push( @langs, $dir )
+                    unless ( $no_src_lang && ( $dir eq $xml_lang ) );
             }
             else {
                 logger( maketext( "Skipping unknown language: [_1]", $dir )

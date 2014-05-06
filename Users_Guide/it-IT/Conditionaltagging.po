@@ -6,15 +6,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
 "POT-Creation-Date: 2011-09-09T14:23:06\n"
-"PO-Revision-Date: 2012-01-22 16:09+0100\n"
+"PO-Revision-Date: 2012-01-22 10:09-0500\n"
 "Last-Translator: Mario Santagiuliana <fedora at marionline.it>\n"
 "Language-Team: Italian <fedora-trans-it at redhat.com>\n"
-"Language: it-IT\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.5\n"
+"Language: it\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Zanata 3.3.2\n"
 
 #. Tag: title
 #, no-c-format
@@ -32,12 +32,12 @@ msgid "<application>Publican</application> makes it easy to manage differences b
 msgstr "<application>Publican</application> semplifica la gestione delle differenze tra versioni multiple di un libro, permettendo di usare una sorgente unica per tutte le versioni. Il <firstterm>tagging condizionale</firstterm> garantisce che il contenuto di una versione specifica, compaia soltanto nella versione stabilita; ossia, permette di <firstterm>condizionare</firstterm> il contenuto."
 
 #. Tag: para
-#, no-c-format
+#, no-c-format, fuzzy
 msgid "To conditionalize content in a book, use the tag attribute <prompt>$</prompt> <command>condition</command>. For example, let's say the book <citetitle>How To Use Product Foo</citetitle> has an \"upstream\", \"enterprise\", and \"beta\" version:"
 msgstr "Per condizionare il contenuto di un libro, usare il tag <command>condition</command>. Per esempio, si supponga che il libro <citetitle>How To Use Product Foo</citetitle> abbia una versione \"upstream\", una versione \"enterprise\" e una versione \"beta\"."
 
 #. Tag: programlisting
-#, no-c-format
+#, fuzzy, no-c-format
 msgid ""
 "&lt;para condition=\"upstream\"&gt;\n"
 "	&lt;application&gt;Foo&lt;/application&gt; starts automatically when you boot the system.\n"
@@ -72,7 +72,7 @@ msgstr ""
 "&lt;/para&gt;"
 
 #. Tag: para
-#, no-c-format
+#, no-c-format, fuzzy
 msgid "To build a specific version (and thereby capture all content conditionalized for that version), add the <prompt>$</prompt> <command>condition: <replaceable>version</replaceable></command> parameter to the <filename>publican.cfg</filename> file and run the <prompt>$</prompt> <command>publican build</command> command as normal. For example, if you add <literal>condition: upstream</literal> to the <filename>publican.cfg</filename> file of <citetitle>How To Use Product Foo</citetitle> and run:"
 msgstr "Per compilare una versione specifica (e quindi catturare solo il contenuto relativo a questa versione), aggiungere il parametro <command>condition: <replaceable>versione</replaceable></command> al file <filename>publican.cfg</filename> ed eseguire il comando <command>publican build</command>, ormai noto. Per esempio, aggiungendo <command>condition: upstream</command> al file <filename>publican.cfg</filename> dell'HOWTO <citetitle>How To Use Product Foo</citetitle>, e poi eseguendo:"
 
@@ -107,9 +107,9 @@ msgid "Conditional tagging creates difficulty for translators in two ways: it ob
 msgstr "Il tagging condizionale crea difficoltà ai traduttori in due modi: oscura il contesto nei file <firstterm>PO</firstterm> (Portable Object) e rende più ardua la rilettura/correzione del documento, a quei traduttori non molto familiari con i tag condizionali."
 
 #. Tag: para
-#, no-c-format
+#, no-c-format, fuzzy
 msgid "The PO files for the document contain the full set of tags from the XML files, regardless of any conditions set. When translators open the PO file for the example from <citetitle>How To Use Product Foo</citetitle> in <xref linkend=\"sect-Publican-Users_Guide-Conditional_tagging\" />, they see:"
-msgstr "I file PO includono tutti i tag presenti in XML, a prescindere dalle condizioni. Per esempio, se un traduttore apre il file PO, relativo all'<citetitle>How To Use Product Foo</citetitle> della <xref linkend=\"sect-Publican-Users_Guide-Conditional_tagging\" />, egli vede:"
+msgstr "I file PO includono tutti i tag presenti in XML, a prescindere dalle condizioni. Per esempio, se un traduttore apre il file PO, relativo all'<citetitle>How To Use Product Foo</citetitle> della <xref linkend=\"sect-Users_Guide-Conditional_tagging\" />, egli vede:"
 
 #. Tag: programlisting
 #, no-c-format
@@ -175,7 +175,7 @@ msgid "As an alternative to conditionals, consider maintaining separate versions
 msgstr "In alternativa ai tag condizionali, si consideri di mantenere versioni separate di un libro, in rami separati di un repository con controllo di versione. In tal modo, è anche possibile condividere file XML e PO tra i vari rami; inoltre alcuni sistemi di controllo versione permettono di condividere correttamente le modifiche tra branch."
 
 #. Tag: para
-#, no-c-format
+#, no-c-format, fuzzy
 msgid "If you maintain two versions of a book in the same repository, we recommend using a separate config file for each version. For example, the <filename>upstream.cfg</filename> file might contain the condition <literal>condition: upstream</literal> and the <filename>enterprise.cfg</filename> file might contain the condition <literal>condition: enterprise</literal>. You could then specify the version of the document to build or package with the <option>--config</option>; for example, <prompt>$</prompt> <command>publican package --lang en-US --config upstream.cfg</command>. Using two separate config files saves you from having to edit the one config file each time you build or package a document."
 msgstr "Se si mantengono due versioni di un libro nello stesso repository, si raccomanda di usare un file di configurazione distinto per ciascuna versione. Per esempio, il file <filename>upstream.cfg</filename> potrebbe contenere la condizione <literal>condition: upstream</literal> e il file <filename>enterprise.cfg</filename> la condizione <literal>condition: enterprise</literal>. Si potrebbe allora specificare di compilare una versione del documento, con l'opzione <option>--config</option>; per esempio, <command>publican package --lang en-US --config upstream.cfg</command>. Usare due file di configurazione separati, evita di dover modificare ogni volta il file di configurazione, per la compilazione di un libro o pacchetto."
 
@@ -188,87 +188,5 @@ msgstr "Se si mantengono due versioni di un libro nello stesso repository, si ra
 #~ msgstr ""
 "\n"
 "publican build --formats=pdf --langs=en-US\n"
-"\n"
-
-#~ msgid ""
-"\n"
-"#. Tag: para\n"
-"#, no-c-format\n"
-"msgid \"Content that only appears in the upstream version of How To Use Product Foo.\"\n"
-"msgstr \"\"\n"
-"\n"
-"#. Tag: para\n"
-"#, no-c-format\n"
-"msgid \"Content that only appears in the enterprise version of How To Use Product Foo.\"\n"
-"msgstr \"\"\n"
-"\n"
-"#. Tag: para\n"
-"#, no-c-format\n"
-"msgid \"Content that only appears in the beta version of How To Use Product Foo.\"\n"
-"msgstr \"\"\n"
-"\n"
-"#. Tag: para\n"
-"#, no-c-format\n"
-"msgid \"Content that only appears in the beta and enterprise versions of How To Use Product Foo.\"\n"
-"msgstr \"\"\n"
-"\n"
-#~ msgstr ""
-"\n"
-"#. Tag: para\n"
-"#, no-c-format\n"
-"msgid \"Content that only appears in the upstream version of How To Use Product Foo.\"\n"
-"msgstr \"\"\n"
-"\n"
-"#. Tag: para\n"
-"#, no-c-format\n"
-"msgid \"Content that only appears in the enterprise version of How To Use Product Foo.\"\n"
-"msgstr \"\"\n"
-"\n"
-"#. Tag: para\n"
-"#, no-c-format\n"
-"msgid \"Content that only appears in the beta version of How To Use Product Foo.\"\n"
-"msgstr \"\"\n"
-"\n"
-"#. Tag: para\n"
-"#, no-c-format\n"
-"msgid \"Content that only appears in the beta and enterprise versions of How To Use Product Foo.\"\n"
-"msgstr \"\"\n"
-"\n"
-
-#~ msgid ""
-"\n"
-"&lt;para condition=\"upstream\"&gt;\n"
-"Content that only appears in the upstream version of How To Use Product Foo.\n"
-"&lt;/para&gt;\n"
-"\t\n"
-"&lt;para condition=\"enterprise\"&gt;\n"
-"Content that only appears in the enterprise version of How To Use Product Foo.\n"
-"&lt;/para&gt;\t\n"
-"\t\n"
-"&lt;para condition=\"beta\"&gt;\n"
-"Content that only appears in the beta version of How To Use Product Foo.\n"
-"&lt;/para&gt;\n"
-"\t\n"
-"&lt;para condition=\"beta,enterprise\"&gt;\n"
-"Content that only appears in the beta and enterprise versions of How To Use Product Foo.\n"
-"&lt;/para&gt;\n"
-"\n"
-#~ msgstr ""
-"\n"
-"&lt;para condition=\"upstream\"&gt;\n"
-"Content that only appears in the upstream version of How To Use Product Foo.\n"
-"&lt;/para&gt;\n"
-"\t\n"
-"&lt;para condition=\"enterprise\"&gt;\n"
-"Content that only appears in the enterprise version of How To Use Product Foo.\n"
-"&lt;/para&gt;\t\n"
-"\t\n"
-"&lt;para condition=\"beta\"&gt;\n"
-"Content that only appears in the beta version of How To Use Product Foo.\n"
-"&lt;/para&gt;\n"
-"\t\n"
-"&lt;para condition=\"beta,enterprise\"&gt;\n"
-"Content that only appears in the beta and enterprise versions of How To Use Product Foo.\n"
-"&lt;/para&gt;\n"
 "\n"
 

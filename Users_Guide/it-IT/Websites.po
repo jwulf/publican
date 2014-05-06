@@ -6,15 +6,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
 "POT-Creation-Date: 2010-12-03T18:35:59\n"
-"PO-Revision-Date: 2012-01-22 20:19+0100\n"
+"PO-Revision-Date: 2012-01-22 02:19-0500\n"
 "Last-Translator: Mario Santagiuliana <fedora at marionline.it>\n"
 "Language-Team: Italian <fedora-trans-it at redhat.com>\n"
-"Language: it-IT\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: it\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 1.5\n"
+"X-Generator: Zanata 3.3.2\n"
 
 #. Tag: title
 #, no-c-format
@@ -102,9 +102,9 @@ msgid "A subdirectory for each product for which you publish documentation in th
 msgstr "Una sotto-cartella per ciascun prodotto da pubblicare in questa lingua."
 
 #. Tag: para
-#, no-c-format
+#, no-c-format, fuzzy
 msgid "Optionally, the site structure might also include a <firstterm>dump file</firstterm> — an XML file that provides complete site content details for delivery of other services, such as web feeds or customised search pages. The site structure might also contain a zipped version of the dump file. Refer to <xref linkend=\"sect-Publican-Users_Guide-Creating_the_website_structure\" /> and <xref linkend=\"sect-Publican-Users_Guide-Creating_the_website_structure\" /> for details of creating a dump file, and to <xref linkend=\"appe-Publican-Users_Guide-Contents_of_the_website_dump_file\" /> for a description of the dump file contents."
-msgstr "Opzionalmente, la struttura del sito può contenere anche un <firstterm>file dump</firstterm> — un file XML che fornisce il dettaglio completo sul contenuto del sito per servire altri servizi, come feed web o ricerca personalizzata di pagine. La struttura potrebbe contenere anche una versione zippata del file dump. Fare riferimento alla <xref linkend=\"sect-Publican-Users_Guide-Creating_the_website_structure\" /> ed alla <xref linkend=\"sect-Publican-Users_Guide-Creating_the_website_structure\" /> per i dettagli sulla creazione di un file dump; mentre per una descrizione del contenuto di un file dump, vedere l'<xref linkend=\"appe-Publican-Users_Guide-Contents_of_the_website_dump_file\" />."
+msgstr "Opzionalmente, la struttura del sito può contenere anche un <firstterm>file dump</firstterm> — un file XML che fornisce il dettaglio completo sul contenuto del sito per servire altri servizi, come feed web o ricerca personalizzata di pagine. La struttura potrebbe contenere anche una versione zippata del file dump. Fare riferimento alla <xref linkend=\"sect-Users_Guide-Website-structure-cfg_and_db-manual\" /> ed alla <xref linkend=\"sect-Users_Guide-Website-structure-cfg_and_db-rpm\" /> per i dettagli sulla creazione di un file dump; mentre per una descrizione del contenuto di un file dump, vedere l'<xref linkend=\"dump_file\" />."
 
 #. Tag: title
 #, no-c-format
@@ -265,119 +265,4 @@ msgstr ""
 #, no-c-format
 msgid "The Sitemap for your Publican site has been successfully submitted to Bing."
 msgstr ""
-
-#. Tag: para
-#, no-c-format
-#~ msgid "If your webserver periodically checks for updated packages in the repository in which <application>Koji</application> places built packages, the webserver can automatically install updated versions of your documents."
-#~ msgstr "Se il server web controlla periodicamente la presenza di aggiornamenti nel repository in cui <application>Koji</application> salva i pacchetti creati, il webserver può automaticamente installare le versioni aggiornate dei documenti."
-
-#. Tag: para
-#, no-c-format
-#~ msgid "the name of the <firstterm>branch</firstterm> for the package; typically, a particular software version."
-#~ msgstr "il nome del <firstterm>branch</firstterm> per il pacchetto: tipicamente una particolare versione software."
-
-#. Tag: para
-#, no-c-format
-#~ msgid "imports the SRPM into the CVS root for the <application>Koji</application> instance specified in the document's <filename>publican.cfg</filename> file"
-#~ msgstr "importa l'SRPM nella radice del CVS secondo l'istanza di <application>Koji</application> specificata nel file <filename>publican.cfg</filename> del documento"
-
-#. Tag: term
-#, no-c-format
-#~ msgid "<parameter>cvs_branch</parameter>"
-#~ msgstr "<parameter>cvs_branch</parameter>"
-
-#. Tag: para
-#, no-c-format
-#~ msgid "You might also implement a system of tags where a writer or translator could run <command>koji tag-pkg</command> to apply a <firstterm>tag</firstterm> to the built package. You can then have different webservers install the package, depending on which tags are applied to it. For example, you could configure a server on your intranet to install any packages tagged <literal>draft</literal> and make them available internally for proofreading and technical review. You could then configure the server that publishes documents publicly on the web to install packages only when they are tagged <literal>public</literal>."
-#~ msgstr "Si può anche implementare un sistema di tag in cui un redattore o traduttore può eseguire il comando <command>koji tag-pkg</command> per applicare un'etichetta o <firstterm>tag</firstterm>, al pacchetto creato. In tal modo è possibile avere differenti webserver su cui installare i pacchetti, in base ai tag applicati. Per esempio, si potrebbe configurare un server su una intranet per installare tutti i pacchetti con tag <literal>draft</literal> per renderli disponibili internamente per revisione e rilettura tecnica. E poi si potrebbe configurare il server che pubblica i documenti sul web in modo da installare i pacchetti solo se con tag <literal>public</literal>."
-
-#. Tag: para
-#, no-c-format
-#~ msgid "the name of the package in CVS. <application>Publican</application> defaults to: <literal><replaceable>product</replaceable>-<replaceable>title</replaceable>-<replaceable>product_version</replaceable>-web-<replaceable>language</replaceable>-<replaceable>edition</replaceable>-<replaceable>pubsnumber</replaceable></literal>"
-#~ msgstr "il nome del pacchetto in CVS. Per impostazione, in <application>Publican</application> coincide con: <literal><replaceable>prodotto</replaceable>-<replaceable>titolo</replaceable>-<replaceable>versione_prodotto</replaceable>-web-<replaceable>lingua</replaceable>-<replaceable>edizione</replaceable>-<replaceable>numeropub</replaceable></literal>."
-
-#. Tag: para
-#, no-c-format
-#~ msgid "<filename>Site_Statistics.html</filename> — an overview of the documentation installed on the site."
-#~ msgstr "<filename>Site_Statistics.html</filename> — un sommario sulla documentazione installata sul sito."
-
-#. Tag: para
-#, no-c-format
-#~ msgid "subdirectories for each language in which you publish. Initially, this contains <filename>Site_Tech.html</filename> but later contains:"
-#~ msgstr "sottocartelle per ogni lingua in cui pubblicare. Inizialmente, essa contiene solo <filename>Site_Tech.html</filename>, poi:"
-
-#. Tag: para
-#, no-c-format
-#~ msgid "<filename>Sitemap</filename> — an XML Sitemap to assist search engines to crawl the site."
-#~ msgstr "<filename>Sitemap</filename> — una mappa del sito in XML che coadiuva i motori di ricerca nella scansione del sito."
-
-#. Tag: para
-#, no-c-format
-#~ msgid "the CVS root into which to import the SRPM. For example, the CVS root for the Fedora Project's <application>Koji</application> instance is <literal>:ext:USERNAME@cvs.fedoraproject.org:/cvs/pkgs</literal>"
-#~ msgstr "la radice di CVS in cui importare l'SRPM. Per esempio, la radice CVS per l'istanza <application>Koji</application> del Fedora Project è <literal>:ext:USERNAME@cvs.fedoraproject.org:/cvs/pkgs</literal>."
-
-#. Tag: para
-#, no-c-format
-#~ msgid "For more information about <application>Koji</application>, visit <ulink url=\"https://fedorahosted.org/koji/wiki\" />."
-#~ msgstr "Per maggiori informazioni su <application>Koji</application>, visitare <ulink url=\"https://fedorahosted.org/koji/wiki\" />."
-
-#. Tag: para
-#, no-c-format
-#~ msgid "To prepare a document for building in a <application>Koji</application> instance, edit the <filename>publican.cfg</filename> file to specify:"
-#~ msgstr "Per preparare un documento da compilare tramite una istanza di <application>Koji</application>, modificare il file <filename>publican.cfg</filename>, specificando:"
-
-#. Tag: para
-#, no-c-format
-#~ msgid "runs <command>cvs up</command>"
-#~ msgstr "esegue <command>cvs up</command>"
-
-#. Tag: para
-#, no-c-format
-#~ msgid "<application>Publican</application> then carries out the following actions:"
-#~ msgstr "A questo punto, <application>Publican</application> effettua le seguenti operazioni:"
-
-#. Tag: screen
-#, no-c-format
-#~ msgid "<command>publican package --cvs</command>"
-#~ msgstr "<command>publican package --cvs</command>"
-
-#. Tag: title
-#, no-c-format
-#~ msgid "Automating publishing"
-#~ msgstr "Automatizzare la pubblicazione"
-
-#. Tag: para
-#, no-c-format
-#~ msgid "generates an SRPM"
-#~ msgstr "genera un SRPM"
-
-#. Tag: term
-#, no-c-format
-#~ msgid "<parameter>cvs_pkg</parameter>"
-#~ msgstr "<parameter>cvs_pkg</parameter>"
-
-#. Tag: para
-#, no-c-format
-#~ msgid "<filename>toc.html</filename> — a static map of the documents on the site, to assist visitors to the site who do not have JavaScript enabled on their browsers."
-#~ msgstr "<filename>toc.html</filename> — una mappa statica dei documenti presenti sul sito, che coadiuva i visitatori con JavaScript non abilitato nei loro browser."
-
-#. Tag: para
-#, no-c-format
-#~ msgid "runs <command>make build</command>"
-#~ msgstr "esegue <command>make build</command>"
-
-#. Tag: para
-#, no-c-format
-#~ msgid "Because <application>Publican</application> can generate RPM packages, you can use <application>Publican</application> together with an RPM build system like <application>Koji</application> to automate your publishing process. When a document is ready for publication, the writer or translator runs the following command:"
-#~ msgstr "Dato che <application>Publican</application> è in grado di creare pacchetti RPM, <application>Publican</application> può essere usato insieme ad un sistema di creazione di RPM come <application>Koji</application> per automatizzare il processo di pubblicazione. Quando un documento è pronto per la pubblicazione, il redattore o il traduttore eseguono il seguente comando:"
-
-#. Tag: para
-#, no-c-format
-#~ msgid "<filename>Site_Tech.html</filename> — an overview of the technology used to build the site."
-#~ msgstr "<filename>Site_Tech.html</filename> — un sommario sulla tecnologia usata per creare il sito."
-
-#. Tag: term
-#, no-c-format
-#~ msgid "<parameter>cvs_root</parameter>"
-#~ msgstr "<parameter>cvs_root</parameter>"
 

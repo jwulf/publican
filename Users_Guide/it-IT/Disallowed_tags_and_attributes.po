@@ -6,15 +6,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
 "POT-Creation-Date: 2010-11-29T18:01:38\n"
-"PO-Revision-Date: 2012-01-22 16:29+0100\n"
+"PO-Revision-Date: 2012-01-22 10:29-0500\n"
 "Last-Translator: Mario Santagiuliana <fedora at marionline.it>\n"
 "Language-Team: Italian <fedora-trans-it at redhat.com>\n"
-"Language: it-IT\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: it\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 1.5\n"
+"X-Generator: Zanata 3.3.2\n"
 
 #. Tag: title
 #, no-c-format
@@ -47,7 +47,7 @@ msgid "Finally, a small group of elements and attributes are <firstterm>disallow
 msgstr "Infine, un ristretto gruppo di elementi ed attributi sono <firstterm>non permessi</firstterm>. Questi elementi ed attributi sono elencati in basso, accompagnati da una spiegazione del motivo del divieto."
 
 #. Tag: para
-#, no-c-format
+#, no-c-format, fuzzy
 msgid "Use the command <prompt>$</prompt> <command>publican print_known</command> to print a list of tags that <application>Publican</application> supports, and the command <command>publican print_banned</command> to print a list of tags that are banned in <application>Publican</application>."
 msgstr "Usare il comando <command>publican print_known</command> per visualizzare l'elenco dei tag supportati da <application>Publican</application>, ed il comando <command>publican print_banned</command> per visualizzare l'elenco dei tag non permessi in <application>Publican</application>."
 
@@ -232,7 +232,7 @@ msgid "For example, if you have the following:"
 msgstr "Per esempio, il seguente pezzo:"
 
 #. Tag: programlisting
-#, no-c-format
+#, fuzzy, no-c-format
 msgid ""
 "\n"
 "&lt;chapter id=\"ch03\" xreflabel=\"Chapter Three\"&gt;\n"
@@ -288,7 +288,7 @@ msgid "The following XML:"
 msgstr "Il seguente XML:"
 
 #. Tag: programlisting
-#, no-c-format
+#, fuzzy, no-c-format
 msgid ""
 "\n"
 "&lt;chapter id=\"ch03\" xreflabel=\"The Secret to Eternal Life\"&gt;\n"
@@ -334,7 +334,7 @@ msgid "This isn't as informative as the text presented to a reader if you do not
 msgstr "Ciò non è così informativo come il testo presentato senza usare l'attributo <sgmltag>&lt;xreflabel&gt;</sgmltag>. Il seguente:"
 
 #. Tag: programlisting
-#, no-c-format
+#, fuzzy, no-c-format
 msgid ""
 "\n"
 "&lt;chapter id=\"ch03\"&gt;\n"
@@ -380,7 +380,7 @@ msgid "More important, however, are the translation problems that <sgmltag>&lt;x
 msgstr "Comunque, ancora più importanti, sono i problemi di traduzione causati dal tag <sgmltag>&lt;xreflabel&gt;</sgmltag>. I valori degli attributi non sono visibili ai traduttori. Di conseguenza, non possono essere tradotti. Si consideri di nuovo il secondo esempio, di cui sopra:"
 
 #. Tag: programlisting
-#, no-c-format
+#, fuzzy, no-c-format
 msgid ""
 "\n"
 "&lt;chapter id=\"ch03\" xreflabel=\"The Secret to Eternal Life\"&gt;\n"
@@ -472,7 +472,7 @@ msgid "The text presented in an element (such as an <sgmltag>&lt;xref&gt;</sgmlt
 msgstr "Il testo presentato in un elemento (come un <sgmltag>&lt;xref&gt;</sgmltag>), contenente l'attributo <parameter>endterm</parameter> è ricavato dal tag <sgmltag>&lt;titleabbrev&gt;</sgmltag> nel capitolo o sezione target. Sebbene il contenuto del tag <sgmltag>&lt;titleabbrev&gt;</sgmltag> sia traducibile nei file PO del documento, esso viene di fatto rimosso dal contesto del tag <sgmltag>&lt;xref&gt;</sgmltag>. L'assenza di questo contesto rende praticamente impossibile la traduzione di articoli e preposizioni, preservando genere e numero."
 
 #. Tag: programlisting
-#, no-c-format
+#, fuzzy, no-c-format
 msgid ""
 "\n"
 "&lt;chapter id=\"The_Secret\"&gt;\n"

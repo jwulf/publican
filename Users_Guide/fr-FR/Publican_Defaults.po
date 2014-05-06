@@ -1,0 +1,142 @@
+# Gé Baylard <<Geodebay@gmail.com>>, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: 0\n"
+"POT-Creation-Date: 2013-03-08T03:26:30\n"
+"PO-Revision-Date: 2013-09-10 05:51-0400\n"
+"Last-Translator: Gé Baylard <<Geodebay@gmail.com>>\n"
+"Language-Team: français <<trans-fr@lists.fedoraproject.org>>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"X-Generator: Zanata 3.3.2\n"
+"Plural-Forms: nplurals=2; plural=n>1;\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Publican defaults"
+msgstr "Valeurs par défaut pour Publican"
+
+#. Tag: para
+#, no-c-format
+msgid "Users can set their own default values for <application>Publican</application> in <filename>~/.publican.cfg</filename>. Currently, <application>Publican</application> supports the following values:"
+msgstr "Les utilisateurs peuvent définir pour <application>Publican</application> des valeurs par défaut qui leur soient propres dans <filename>~/.publican.cfg</filename>. Actuellement, <application>Publican</application> accepte les valeurs :"
+
+#. Tag: para
+#, no-c-format
+msgid "firstname"
+msgstr "firstname"
+
+#. Tag: para
+#, no-c-format
+msgid "surname"
+msgstr "surname"
+
+#. Tag: para
+#, no-c-format
+msgid "email"
+msgstr "email"
+
+#. Tag: para
+#, no-c-format
+msgid "formats"
+msgstr "formats"
+
+#. Tag: para
+#, no-c-format
+msgid "lang"
+msgstr "lang"
+
+#. Tag: para
+#, no-c-format
+msgid "langs"
+msgstr "langs"
+
+#. Tag: para
+#, no-c-format
+msgid "This file is completely different to <filename>publican.cfg</filename> that is used to build a book. It does not accept the same parameters."
+msgstr "Ce fichier est totalement différent de <filename>publican.cfg</filename> utilisé pour construire un ouvrage. Il n'accepte pas les mêmes paramètres."
+
+#. Tag: title
+#, no-c-format
+msgid "Publican default examples"
+msgstr "Exemples de valeurs par défaut pour Publican"
+
+#. Tag: para
+#, no-c-format
+msgid "Users can set <replaceable>formats</replaceable>, <replaceable>lang</replaceable>, and <replaceable>langs</replaceable> to their standard build parameters."
+msgstr "Les utilisateurs peuvent définir <replaceable>formats</replaceable>, <replaceable>langue</replaceable> et <replaceable>langues</replaceable> pour leur paramètres standard de construction."
+
+#. Tag: title
+#, no-c-format
+msgid "Setting formats and lang"
+msgstr "Paramétrage des formats et de la langue"
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"<prompt>$</prompt> <command>echo 'formats: \"html,html-single,pdf,txt\"' &gt;&gt; ~/.publican.cfg</command>\n"
+"<prompt>$</prompt> <command>echo 'langs: \"en-US\"' &gt;&gt; ~/.publican.cfg</command>\n"
+"<prompt>$</prompt> <command>publican build</command>\n"
+"<computeroutput>Setting up en-US</computeroutput>\n"
+"<computeroutput>[...]</computeroutput>\n"
+"<computeroutput> Finished txt</computeroutput>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<application>Publican</application> 3.0 allows you to add a revision history entry from the command line. You can set your user details in <filename>~/.publican.cfg</filename>."
+msgstr "<application>Publican</application> 3.0 vous permet d'ajouter une entrée dans l'historique des révisions à partir de la ligne de commande. Vous pouvez définir vos informations personnelles d'utilisateur dans <filename>~/.publican.cfg</filename>."
+
+#. Tag: title
+#, no-c-format
+msgid "Setting user details"
+msgstr "Paramétrage des informations personnelles d'utilisateur"
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"<prompt>$</prompt> <command>echo 'firstname: \"Dude\"' &gt;&gt; ~/.publican.cfg</command> \n"
+"<prompt>$</prompt> <command>echo 'surname: \"McPants\"' &gt;&gt; ~/.publican.cfg</command> \n"
+"<prompt>$</prompt> <command>echo 'email: \"dude.mcpants@awesome.com\"' &gt;&gt; ~/.publican.cfg</command> \n"
+"<prompt>$</prompt> <command>publican add_revision --member \"Updated examples in chapter 2.\" \\</command>\n"
+"<command>--member \"Removed obsolete example in sect 4.1\"</command>"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+#~ msgid ""
+"\n"
+"$ echo 'firstname: \"Dude\"' &gt;&gt; ~/.publican.cfg \n"
+"$ echo 'surname: \"McPants\"' &gt;&gt; ~/.publican.cfg \n"
+"$ echo 'email: \"dude.mcpants@awesome.com\"' &gt;&gt; ~/.publican.cfg \n"
+"$ publican add_revision --member \"Updated examples in chapter 2.\" \\\n"
+"--member \"Removed obsolete example in sect 4.1\"\n"
+#~ msgstr ""
+"\n"
+"$ echo 'firstname: \"Dude\"' &gt;&gt; ~/.publican.cfg \n"
+"$ echo 'surname: \"McPants\"' &gt;&gt; ~/.publican.cfg \n"
+"$ echo 'email: \"dude.mcpants@awesome.com\"' &gt;&gt; ~/.publican.cfg \n"
+"$ publican add_revision --member \"Mise à jour des exemples du chapitre 2.\" \\\n"
+"--member \"Suppression de l'exemple obsolète du paragraphe 4.1\"\n"
+
+#. Tag: screen
+#, no-c-format
+#~ msgid ""
+"\n"
+"$ echo 'formats: \"html,html-single,pdf,txt\"' &gt;&gt; ~/.publican.cfg\n"
+"$ echo 'langs: \"en-US\"' &gt;&gt; ~/.publican.cfg\n"
+"$ publican build\n"
+"Setting up en-US\n"
+"[...]\n"
+"\tFinished txt\n"
+#~ msgstr ""
+"\n"
+"$ echo 'formats: \"html,html-single,pdf,txt\"' &gt;&gt; ~/.publican.cfg\n"
+"$ echo 'langs: \"en-US\"' &gt;&gt; ~/.publican.cfg\n"
+"$ publican build\n"
+"Setting up en-US\n"
+"[...]\n"
+"\tFinished txt\n"
+

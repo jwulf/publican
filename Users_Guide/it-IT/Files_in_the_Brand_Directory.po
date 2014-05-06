@@ -6,15 +6,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
 "POT-Creation-Date: 2011-09-09T14:23:12\n"
-"PO-Revision-Date: 2012-01-22 17:13+0100\n"
+"PO-Revision-Date: 2012-01-22 11:13-0500\n"
 "Last-Translator: Mario Santagiuliana <fedora at marionline.it>\n"
 "Language-Team: Italian <fedora-trans-it at redhat.com>\n"
-"Language: it-IT\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: it\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 1.5\n"
+"X-Generator: Zanata 3.3.2\n"
 
 #. Tag: title
 #, no-c-format
@@ -22,7 +22,7 @@ msgid "Files in the brand directory"
 msgstr "File nella directory brand"
 
 #. Tag: para
-#, no-c-format
+#, no-c-format, fuzzy
 msgid "Running the <prompt>$</prompt> <command>publican create_brand --name=<replaceable>brand</replaceable> --lang=<replaceable>language_code</replaceable></command> command creates a directory structure and the required files. The brand directory initially contains:"
 msgstr "L'esecuzione del comando <command>publican create_brand --name=<replaceable>brand</replaceable> --lang=<replaceable>codice_linguistico</replaceable></command> crea la struttura delle cartelle e i file necessari. La cartella brand, inizialmente contiene:"
 
@@ -102,7 +102,7 @@ msgid "<parameter>version</parameter>"
 msgstr "<parameter>version</parameter>"
 
 #. Tag: para
-#, no-c-format
+#, no-c-format, fuzzy
 msgid "specifies the version number for the brand. When you create the brand with <prompt>$</prompt> <command>publican create_brand</command>, the version number is set to <literal>0.1</literal>. Update the version number here in the brand <filename>publican.cfg</filename> file and in the <filename>publican-<replaceable>brand</replaceable>.spec</filename> file when you prepare a new version of the brand."
 msgstr "specifica il numero di versione del brand. Quando si crea un brand con il comando <command>publican create_brand</command>, la versione è impostata a <literal>0.1</literal>. Aggiornare questo numero di versione presente  in <filename>publican.cfg</filename> e in <filename>publican.spec</filename> del brand, in occasione della preparazione di una nuova versione del brand."
 
@@ -117,7 +117,7 @@ msgid "<parameter>xml_lang</parameter>"
 msgstr "<parameter>xml_lang</parameter>"
 
 #. Tag: para
-#, no-c-format
+#, no-c-format, fuzzy
 msgid "specifies the language of the source XML files for the brand's Common Content, for example, <literal>en-US</literal>, as set by the <option>--lang</option> option for <prompt>$</prompt> <command>publican create_brand</command>."
 msgstr "specifica la lingua dei file sorgenti XML per il Common Content del brand, per esempio <literal>en-US</literal>, come impostato nell'opzione <option>--lang</option> del comando <command>publican create_brand</command>."
 
@@ -127,14 +127,14 @@ msgid "<parameter>release</parameter>"
 msgstr "<parameter>release</parameter>"
 
 #. Tag: para
-#, no-c-format
+#, no-c-format, fuzzy
 msgid "specifies the release number for the brand. When you create the brand with <prompt>$</prompt> <command>publican create_brand</command>, the release number is set to <literal>0</literal>. Update the version number here in the brand <filename>publican.cfg</filename> file and in the <filename>publican-<replaceable>brand</replaceable>.spec</filename> file when you prepare a new release of an existing version of the brand."
 msgstr "specifica il numero di release per il brand. Quando si crea un brand con il comando <command>publican create_brand</command>, la release è impostata a <literal>0</literal>. Aggiornare il numero di release nei file <filename>publican.cfg</filename> e <filename>publican-<replaceable>brand</replaceable>.spec</filename> , in occasione della preparazione di una nuova release per un brand esistente."
 
 #. Tag: term
-#, no-c-format, fuzzy
-msgid "<parameter>web_req</parameter>"
-msgstr "<parameter>brand</parameter>"
+#, no-c-format
+msgid "<parameter>type</parameter>"
+msgstr ""
 
 #. Tag: para
 #, no-c-format
@@ -142,12 +142,12 @@ msgid "when set to <literal>type: brand</literal>, this parameter identifies the
 msgstr "impostato a <literal>type: brand</literal>, questo parametro identifica il contenuto nella cartella come un brand invece che come un libro, articolo o set."
 
 #. Tag: term
-#, no-c-format, fuzzy
-msgid "<parameter>web_req</parameter>"
-msgstr "<parameter>brand</parameter>"
+#, no-c-format
+msgid "<parameter>brand</parameter>"
+msgstr ""
 
 #. Tag: para
-#, no-c-format
+#, no-c-format, fuzzy
 msgid "specifies the name of the brand, as set by the <option>--name</option> option for <prompt>$</prompt> <command>publican create_brand</command>."
 msgstr "specifica il nome del brand, come impostato dall'opzione <option>--name</option> nel comando <command>publican create_brand</command>."
 
@@ -162,9 +162,9 @@ msgid "the full path for the <application>Publican</application> site configurat
 msgstr ""
 
 #. Tag: term
-#, no-c-format, fuzzy
-msgid "<parameter>web_req</parameter>"
-msgstr "<parameter>brand</parameter>"
+#, no-c-format
+msgid "<parameter>web_dir</parameter>"
+msgstr ""
 
 #. Tag: para
 #, no-c-format
@@ -172,7 +172,7 @@ msgid "the full path to where files will be installed. You must also set <replac
 msgstr ""
 
 #. Tag: term
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "<parameter>web_req</parameter>"
 msgstr "<parameter>brand</parameter>"
 
@@ -187,9 +187,9 @@ msgid "The defaults.cfg file and overrides.cfg file"
 msgstr "I file defaults.cfg e overrides.cfg"
 
 #. Tag: para
-#, no-c-format
+#, no-c-format, fuzzy
 msgid "Every document built in <application>Publican</application> has a <filename>publican.cfg</filename> file in its root directory, which configures build options for the document. Refer to <xref linkend=\"sect-Publican-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file\" /> for a full description of these options. The <filename>defaults.cfg</filename> file and <filename>overrides.cfg</filename> file in a brand supply default values for any of the parameters that you can otherwise set with a document's <filename>publican.cfg</filename> file."
-msgstr "Ogni documento creato in <application>Publican</application>, ha un file <filename>publican.cfg</filename> nella cartella radice, per configurare le opzioni di creazione dei documenti. Fare riferimento alla <xref linkend=\"sect-Publican-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file\" /> per una completa descrizione di queste opzioni. I file <filename>defaults.cfg</filename> e <filename>overrides.cfg</filename> in un brand, forniscono  valori predefiniti ai parametri, che è possibile impostare nel file <filename>publican.cfg</filename> di un documento."
+msgstr "Ogni documento creato in <application>Publican</application>, ha un file <filename>publican.cfg</filename> nella cartella radice, per configurare le opzioni di creazione dei documenti. Fare riferimento alla <xref linkend=\"sect-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file\" /> per una completa descrizione di queste opzioni. I file <filename>defaults.cfg</filename> e <filename>overrides.cfg</filename> in un brand, forniscono  valori predefiniti ai parametri, che è possibile impostare nel file <filename>publican.cfg</filename> di un documento."
 
 #. Tag: para
 #, no-c-format
@@ -222,9 +222,9 @@ msgid "Some Linux operating systems use the <application>RPM Package Manager</ap
 msgstr "Alcuni Sistemi Operativi Linux, usano un <application>Gestore di pacchetti RPM</application> per distribuire software, sotto forma di <firstterm>pacchetti RPM</firstterm>. In termini generali, un pacchetto RPM contiene i file di software compressi in un archivio, insieme ad un <firstterm>file spec</firstterm> che indica al <application>Gestore di pacchetti RPM</application> come e dove installare questi file."
 
 #. Tag: para
-#, no-c-format
+#, no-c-format, fuzzy
 msgid "When you create a brand, <application>Publican</application> generates the outline of an RPM spec file for the brand. The automatically generated spec file provides you with a starting point from which to create an RPM package to distribute your brand. Refer to <xref linkend=\"sect-Publican-Users_Guide-Packaging_a_brand\" /> to learn how to configure the spec file and use it to produce an RPM package."
-msgstr "Quando si crea un brand, <application>Publican</application> genera lo schema di un file spec di RPM per il brand. Il file spec generato (automaticamente), fornisce uno schema di partenza da cui creare il pacchetto RPM con cui distribuire il brand. Fare riferimento alla <xref linkend=\"sect-Publican-Users_Guide-Packaging_a_brand\" /> per sapere come configurare il file spec e come usarlo per produrre un pacchetto RPM."
+msgstr "Quando si crea un brand, <application>Publican</application> genera lo schema di un file spec di RPM per il brand. Il file spec generato (automaticamente), fornisce uno schema di partenza da cui creare il pacchetto RPM con cui distribuire il brand. Fare riferimento alla <xref linkend=\"sect-Users_Guide-Packaging_a_brand\" /> per sapere come configurare il file spec e come usarlo per produrre un pacchetto RPM."
 
 #. Tag: title
 #, no-c-format
@@ -402,9 +402,9 @@ msgid "<filename>watermark_draft</filename>"
 msgstr "<filename>watermark_draft</filename>"
 
 #. Tag: para
-#, no-c-format
+#, no-c-format, fuzzy
 msgid "is a watermark that appears on pages of draft documentation. Refer to <xref linkend=\"sect-Publican-Users_Guide-Pre_release_software_and_draft_documentation-Denoting_draft_documentation\" />."
-msgstr "è un contrassegno che appare nelle pagine di documentazione in draft (bozza). Fare riferimento alla <xref linkend=\"sect-Publican-Users_Guide-Pre_release_software_and_draft_documentation-Denoting_draft_documentation\" />."
+msgstr "è un contrassegno che appare nelle pagine di documentazione in draft (bozza). Fare riferimento alla <xref linkend=\"sect-Users_Guide-Pre_release_software_and_draft_documentation-Denoting_draft_documentation\" />."
 
 #. Tag: title
 #, no-c-format
