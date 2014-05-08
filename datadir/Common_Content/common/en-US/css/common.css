@@ -1011,7 +1011,7 @@ div.admonition {
 
 /*Table*/
 div.table {
-	page-break-inside: avoid;
+/*	page-break-inside: avoid; */
 }
 
 table {
@@ -1638,7 +1638,7 @@ pre {
 	-moz-border-radius:11px;
 	-webkit-border-radius:11px;
 	border-radius: 11px;
-	page-break-inside: avoid;
+/*	page-break-inside: avoid; */
 }
 
 .example {
