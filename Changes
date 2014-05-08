@@ -1,3 +1,6 @@
+4.1.1 Thu May 8 2014
+- Fix long tables and pre's breaking PDF build. BZ #1095574
+
 4.1.0 Mon May 5 2014
 - Add abstract to release notes so PDF builds
 - Fix RPM upgrade not pulling in required XML::TreeBuilder version. BZ #1053609
