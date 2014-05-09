@@ -93,7 +93,7 @@ msgstr "$ <command>publican update_po --langs=<replaceable>codice_lingua</replac
 
 #. Tag: para
 #, no-c-format, fuzzy
-msgid "where <replaceable>language_code</replaceable> is the code for the target language. Refer to <xref linkend=\"appe-Publican-Users_Guide-Language_codes\" /> for more information about language codes. You can provide multiple language codes, separated by commas, to generate PO files for more than one language at a time. For example:"
+msgid "where <replaceable>language_code</replaceable> is the code for the target language. Refer to <xref linkend=\"\" /> for more information about language codes. You can provide multiple language codes, separated by commas, to generate PO files for more than one language at a time. For example:"
 msgstr "dove <replaceable>codice_lingua</replaceable> è il codice per la lingua target. Fare riferimento all'<xref linkend=\"appe-Users_Guide-Language_codes\" /> per maggiori informazioni su questi codici. Si possono fornire codici linguistici multipli, separati da virgole, in modo da generare i file PO per più lingue. Per esempio:"
 
 #. Tag: screen
@@ -168,7 +168,7 @@ msgstr "$ <command>publican package --lang=it-IT</command>\n"
 
 #. Tag: para
 #, no-c-format, fuzzy
-msgid "You can build the document in all languages for which you have translations with the <option>--langs=all</option> option, but note that you must package each language individually. Refer to <xref linkend=\"sect-Publican-Users_Guide-Building_a_document\" /> for more information on building a document, and <xref linkend=\"sect-Publican-Users_Guide-Packaging_a_document\" /> on packaging a document."
+msgid "You can build the document in all languages for which you have translations with the <option>--langs=all</option> option, but note that you must package each language individually. Refer to <xref linkend=\"\" /> for more information on building a document, and <xref linkend=\"\" /> on packaging a document."
 msgstr "E' possibile creare il documento in tutte le lingue di cui si dispone una traduzione, usando l'opzione <option>--langs=all</option>, mentre i pacchetti vanno compilati individualmente. Fare riferimento alla <xref linkend=\"sect-Users_Guide-Building_a_document\" /> ed alla <xref linkend=\"sect-Users_Guide-Packaging_a_book\" /> per maggiori informazioni."
 
 #. Tag: title

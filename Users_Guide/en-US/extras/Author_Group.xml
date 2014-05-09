@@ -1,16 +1,8 @@
-<?xml version='1.0'?>
-<!DOCTYPE authorgroup PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
-]>
-
-<authorgroup>
-	<corpauthor>FF0000 Headgear Documentation Group</corpauthor>
-	<author>
-		<firstname>Dude</firstname>
-		<surname>McDude</surname>
-		<affiliation>
+<?xml version="1.0" encoding="utf-8"?>
+<authorgroup xmlns="http://docbook.org/ns/docbook" version="5.0">
+	<author><orgname>FF0000 Headgear Documentation Group</orgname></author>
+	<author><personname><firstname>Dude</firstname><surname>McDude</surname></personname><affiliation>
 			<orgname>My Org</orgname>
 			<orgdiv>Best Div in the place</orgdiv>
-		</affiliation>
-		<email>dude.mcdude@myorg.org</email>
-	</author>
+		</affiliation><email>dude.mcdude@myorg.org</email></author>
 </authorgroup>

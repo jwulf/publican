@@ -28,7 +28,7 @@ msgstr "La home page generata da <application>Publican</application> è la pagin
 
 #. Tag: para
 #, no-c-format, fuzzy
-msgid "On a workstation, create a home page using the procedure described in <xref linkend=\"sect-Publican-Users_Guide-Creating_installing_and_updating_the_home_page\" />."
+msgid "On a workstation, create a home page using the procedure described in <xref linkend=\"\" />."
 msgstr "Usando il procedimento indicato nella <xref linkend=\"sect-Users_Guide-Website-homepage-manual\" />, su una macchina creare una home page."
 
 #. Tag: para

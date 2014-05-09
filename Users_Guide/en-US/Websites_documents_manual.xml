@@ -1,10 +1,6 @@
-<?xml version='1.0' encoding='utf-8' ?>
-<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
-<!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
-%BOOK_ENTITIES;
-]>
-<section conformance="225" id="sect-Publican-Users_Guide-Installing_updating_and_removing_documents">
-	<title>Installing, updating, and removing documents</title>
+<?xml version="1.0" encoding="utf-8"?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" conformance="225" xml:id="sect-Publican-Users_Guide-Installing_updating_and_removing_documents"><info><title>Installing, updating, and removing documents</title></info>
+	
 	 <para>
 		To install a document on a website that you are building manually, change into the directory that contains the source for the document and run:
 	</para>

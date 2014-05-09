@@ -1,10 +1,6 @@
-<?xml version='1.0' encoding='utf-8' ?>
-<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
-<!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
-%BOOK_ENTITIES;
-]>
-<section conformance="210" id="sect-Publican-Users_Guide-Renaming_a_document">
-	<title>Renaming a document</title>
+<?xml version="1.0" encoding="utf-8"?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" conformance="210" xml:id="sect-Publican-Users_Guide-Renaming_a_document"><info><title>Renaming a document</title></info>
+	
 	 <para>
 		The <prompt>$</prompt> <command>publican rename</command> command makes it easy for you to rename a document to give it a new title, or to change the name or version of the product to which the document applies. The command accepts up to three options:
 	</para>
@@ -18,7 +14,7 @@
 				
 <screen><prompt>$</prompt> <command>publican rename --name "Server Deployment Guide"</command></screen>
 				 <para>
-					Specifically, the command changes the content of the <sgmltag>&lt;title&gt;</sgmltag> tag in the <filename>Article_Info.xml</filename>, <filename>Book_Info.xml</filename>, or <filename>Set_Info.xml</filename> file, and sets a value for the <parameter>mainfile</parameter> parameter in the <filename>publican.cfg</filename> file so that <application>Publican</application> can still find the root XML node and the entities for the document.
+					Specifically, the command changes the content of the <tag>&lt;title&gt;</tag> tag in the <filename>Article_Info.xml</filename>, <filename>Book_Info.xml</filename>, or <filename>Set_Info.xml</filename> file, and sets a value for the <parameter>mainfile</parameter> parameter in the <filename>publican.cfg</filename> file so that <application>Publican</application> can still find the root XML node and the entities for the document.
 				</para>
 				 <para>
 					Note that the <prompt>$</prompt> <command>publican rename</command> command does not change any file names. Therefore, the root XML node and the document entities are still located in files named after the original title of the document — <filename>Server_Configuration_Guide</filename> in the previous example.
@@ -36,7 +32,7 @@
 				
 <screen><prompt>$</prompt> <command>publican rename --product PendantFarm</command></screen>
 				 <para>
-					The command changes the content of the <sgmltag>&lt;productname&gt;</sgmltag> tag in the <filename>Article_Info.xml</filename>, <filename>Book_Info.xml</filename>, or <filename>Set_Info.xml</filename> file.
+					The command changes the content of the <tag>&lt;productname&gt;</tag> tag in the <filename>Article_Info.xml</filename>, <filename>Book_Info.xml</filename>, or <filename>Set_Info.xml</filename> file.
 				</para>
 
 			</listitem>
@@ -53,7 +49,7 @@
 				
 <screen><prompt>$</prompt> <command>publican rename --version 2.0</command></screen>
 				 <para>
-					The command changes the content of the <sgmltag>&lt;productnumber&gt;</sgmltag> tag in the <filename>Article_Info.xml</filename>, <filename>Book_Info.xml</filename>, or <filename>Set_Info.xml</filename> file.
+					The command changes the content of the <tag>&lt;productnumber&gt;</tag> tag in the <filename>Article_Info.xml</filename>, <filename>Book_Info.xml</filename>, or <filename>Set_Info.xml</filename> file.
 				</para>
 
 			</listitem>

@@ -1,11 +1,7 @@
-<?xml version='1.0' encoding='utf-8' ?>
-<!DOCTYPE important PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
-<!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
-%BOOK_ENTITIES;
-]>
-<important>
-	<title>Permitted characters</title>
+<?xml version="1.0" encoding="utf-8"?>
+<important xmlns="http://docbook.org/ns/docbook" version="5.0"><info><title>Permitted characters</title></info>
+	
 	 <para>
-		<application>Publican</application> uses data in this tag to generate part of the file name for RPM packages, unless overridden by data in the <filename>publican.cfg</filename> file. If you do not override this tag in the <filename>publican.cfg</filename> file, this tag must only contain upper- and lower-case un-accented letters, digits, and the hyphen-minus, period, underscore, and plus characters (&lsquo;a&ndash;z&rsquo;, &lsquo;A&ndash;Z&rsquo;, &lsquo;0&rsquo;&ndash;&lsquo;9&rsquo;, and &lsquo;-&rsquo;, &lsquo;.&rsquo;, &lsquo;_&rsquo;, and &lsquo;+&rsquo;) if you plan to build packages with <application>Publican</application>.
+		<application>Publican</application> uses data in this tag to generate part of the file name for RPM packages, unless overridden by data in the <filename>publican.cfg</filename> file. If you do not override this tag in the <filename>publican.cfg</filename> file, this tag must only contain upper- and lower-case un-accented letters, digits, and the hyphen-minus, period, underscore, and plus characters (‘a–z’, ‘A–Z’, ‘0’–‘9’, and ‘-’, ‘.’, ‘_’, and ‘+’) if you plan to build packages with <application>Publican</application>.
 	</para>
 </important>

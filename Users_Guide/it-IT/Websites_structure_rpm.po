@@ -173,7 +173,7 @@ msgstr "Impostare <literal>zip_dump: 1</literal> per creare anche una versione z
 
 #. Tag: para
 #, no-c-format
-msgid "Refer to <xref linkend=\"appe-Publican-Users_Guide-Contents_of_the_website_dump_file\" /> for a description of the contents of the dump file."
+msgid "Refer to <xref linkend=\"\" /> for a description of the contents of the dump file."
 msgstr ""
 
 #. Tag: para
@@ -238,7 +238,7 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format, fuzzy
-msgid "Create an empty file named <filename>site_overrides.css</filename>. If you want to use site-specific styles to override those provided by <filename>interactive.css</filename>, you can add a <filename>site_overrides.css</filename> to the document that provides the site <firstterm>home page</firstterm> — refer to <xref linkend=\"sect-Publican-Users_Guide-Creating_installing_and_updating_the_home_page\" />. If you do not want to use site-specific styles, the empty file you add here will prevent 404 errors on your server. On a Linux system, run:"
+msgid "Create an empty file named <filename>site_overrides.css</filename>. If you want to use site-specific styles to override those provided by <filename>interactive.css</filename>, you can add a <filename>site_overrides.css</filename> to the document that provides the site <firstterm>home page</firstterm> — refer to <xref linkend=\"\" />. If you do not want to use site-specific styles, the empty file you add here will prevent 404 errors on your server. On a Linux system, run:"
 msgstr "Creare un file vuoto di nome  <filename>site_overrides.css</filename>. Se si desidera usare degli stili specifici alternativi a quelli forniti da <filename>interactive.css</filename>, aggiungere un file <filename>site_overrides.css</filename> al documento che fornisce la <firstterm>home page</firstterm>  del sito — vedere la <xref linkend=\"sect-Users_Guide-Website-homepage-rpm\" />. Se non si usa uno stile specifico, il file vuoto aggiunto impedirà la comparsa dell'errore 404 sul server. Su un sistema Linux, eseguire:"
 
 #. Tag: screen

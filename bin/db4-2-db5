@@ -6,12 +6,14 @@ use Publican;
 use XML::LibXML;
 use XML::LibXSLT;
 use Carp;
+use Encode qw(is_utf8 decode_utf8 encode_utf8);
 
 my $publican = Publican->new();
 
 my $common_config = $publican->param('common_config');
 
-my $xsl_file = $common_config . "/xsl/db4-upgrade.xsl";
+##my $xsl_file = $common_config . "/xsl/db4-upgrade.xsl";
+my $xsl_file = "/home/jfearn/Source/fedora/publican.git/datadir/xsl/db4-upgrade.xsl";
 
 # required for Windows
 $xsl_file =~ s/"//g;
@@ -21,7 +23,7 @@ my $parser = XML::LibXML->new(
         suppress_warnings => 1,
         line_numbers      => 1,
         expand_xinclude   => 0,
-        expand_entities   => 0,
+        expand_entities   => 1,
         recover_silently  => 1
     }
 );
@@ -55,11 +57,10 @@ foreach my $xml_file ( sort(@xml_files) ) {
     my $stylesheet = $xslt->parse_stylesheet($style_doc);
     my $results    = $stylesheet->transform($source);
     my $outfile;
-    my $ad_file = "$xml_file";
 
     open( $outfile, ">:encoding(UTF-8)", "$xml_file" )
         || croak( maketext( "Can't open ad file: [_1]", $@ ) );
-    print( $outfile $stylesheet->output_string($results) );
+    print( $outfile decode_utf8($stylesheet->output_string($results)) );
     close($outfile);
 }
 

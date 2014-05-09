@@ -171,7 +171,7 @@ msgstr "Définir <literal>zip_dump: 1</literal> pour indiquer que <application>P
 
 #. Tag: para
 #, no-c-format
-msgid "Refer to <xref linkend=\"appe-Publican-Users_Guide-Contents_of_the_website_dump_file\" /> for a description of the contents of the dump file."
+msgid "Refer to <xref linkend=\"\" /> for a description of the contents of the dump file."
 msgstr ""
 
 #. Tag: para
@@ -236,7 +236,7 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format, fuzzy
-msgid "Create an empty file named <filename>site_overrides.css</filename>. If you want to use site-specific styles to override those provided by <filename>interactive.css</filename>, you can add a <filename>site_overrides.css</filename> to the document that provides the site <firstterm>home page</firstterm> — refer to <xref linkend=\"sect-Publican-Users_Guide-Creating_installing_and_updating_the_home_page\" />. If you do not want to use site-specific styles, the empty file you add here will prevent 404 errors on your server. On a Linux system, run:"
+msgid "Create an empty file named <filename>site_overrides.css</filename>. If you want to use site-specific styles to override those provided by <filename>interactive.css</filename>, you can add a <filename>site_overrides.css</filename> to the document that provides the site <firstterm>home page</firstterm> — refer to <xref linkend=\"\" />. If you do not want to use site-specific styles, the empty file you add here will prevent 404 errors on your server. On a Linux system, run:"
 msgstr "Créez un fichier vide nommé <filename>site_overrides.css</filename>. Si vous souhaitez utiliser des styles propres à un site en sorte qu'ils prennent le pas sur ceux de <filename>interactive.css</filename>, vous pouvez ajouter un fichier <filename>site_overrides.css</filename> au document définissant la <firstterm>page d'accueil</firstterm> — voyez la <xref linkend=\"sect-Users_Guide-Website-homepage-rpm\" />. Si vous ne voulez pas utiliser de styles propres au site, le fichier vide ajouté ici prévient l'apparition d'erreurs 404 sur le serveur. Sur un système Linux, exécutez :"
 
 #. Tag: screen

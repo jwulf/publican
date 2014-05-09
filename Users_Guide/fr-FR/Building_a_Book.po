@@ -26,7 +26,7 @@ msgstr "Note — Personnalisation de la sortie"
 
 #. Tag: para
 #, no-c-format, fuzzy
-msgid "The parameters set in the document configuration file (by default, <filename>publican.cfg</filename>) allow you to control many aspects of the way in which a document is presented — refer to <xref linkend=\"sect-Publican-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file\" />."
+msgid "The parameters set in the document configuration file (by default, <filename>publican.cfg</filename>) allow you to control many aspects of the way in which a document is presented — refer to <xref linkend=\"\" />."
 msgstr "Les paramètres définis dans le fichier de configuration du document (par défaut, <filename>publican.cfg</filename>) vous permettent de contrôler divers rendus de présentation du document — voyez la <xref linkend=\"sect-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file\" />."
 
 #. Tag: para
@@ -46,7 +46,7 @@ msgstr "Pour construire un document :"
 
 #. Tag: para
 #, no-c-format, fuzzy
-msgid "Confirm the <parameter>YEAR</parameter> and <parameter>HOLDER</parameter> entities have been configured in the <filename><replaceable>Doc_Name</replaceable>.ent</filename> file, as described in <xref linkend=\"sect-Publican-Users_Guide-Files_in_the_book_directory-Doc_Name.ent\" />."
+msgid "Confirm the <parameter>YEAR</parameter> and <parameter>HOLDER</parameter> entities have been configured in the <filename><replaceable>Doc_Name</replaceable>.ent</filename> file, as described in <xref linkend=\"\" />."
 msgstr "confirmer que les entités <parameter>YEAR</parameter> et <parameter>HOLDER</parameter> ont été définies dans le fichier <filename><replaceable>Nom_document</replaceable>.ent</filename>, comme décrit dans la <xref linkend=\"sect-Users_Guide-Files_in_the_book_directory-Doc_Name.ent\" />."
 
 #. Tag: para
@@ -181,7 +181,7 @@ msgstr "<option>eclipse</option>"
 
 #. Tag: para
 #, no-c-format, fuzzy
-msgid "<application>Publican</application> outputs the document as an <application>Eclipse</application> help plugin. Refer to <xref linkend=\"sect-Publican-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file\" /> for details of specifying <application>Eclipse</application>'s <parameter>id</parameter>, <parameter>name</parameter>, and <parameter>provider-name</parameter> parameters with <application>Publican</application>'s <parameter>ec_id</parameter>, <parameter>ec_name</parameter>, and <parameter>ec_provider</parameter> parameters."
+msgid "<application>Publican</application> outputs the document as an <application>Eclipse</application> help plugin. Refer to <xref linkend=\"\" /> for details of specifying <application>Eclipse</application>'s <parameter>id</parameter>, <parameter>name</parameter>, and <parameter>provider-name</parameter> parameters with <application>Publican</application>'s <parameter>ec_id</parameter>, <parameter>ec_name</parameter>, and <parameter>ec_provider</parameter> parameters."
 msgstr "<application>Publican</application> sort le document sous forme d'un greffon d'aide <application>Eclipse</application>. Voyez la <xref linkend=\"sect-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file\" /> pour des précisions pour la définition des paramètres <parameter>id</parameter>, <parameter>name</parameter> et <parameter>provider-name</parameter> de <application>Eclipse</application> avec les paramètres <parameter>ec_id</parameter>, <parameter>ec_name</parameter> et <parameter>ec_provider</parameter> de <application>Publican</application>."
 
 #. Tag: para
@@ -216,7 +216,7 @@ msgstr "<command>publican build --formats=html --langs=<replaceable>langues</rep
 
 #. Tag: para
 #, no-c-format, fuzzy
-msgid "Build the book in multi-page HTML format. The HTML output will be located in the <filename><replaceable>Doc_Name</replaceable>/tmp/<replaceable>language</replaceable>/html/</filename> directory. Each chapter and major section is placed in a separate HTML file. You can control the depth at which <application>Publican</application> places subsections into separate HTML files with the <literal>chunk-section-depth</literal> parameter in the <filename>publican.cfg</filename> — refer to <xref linkend=\"sect-Publican-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file\" />."
+msgid "Build the book in multi-page HTML format. The HTML output will be located in the <filename><replaceable>Doc_Name</replaceable>/tmp/<replaceable>language</replaceable>/html/</filename> directory. Each chapter and major section is placed in a separate HTML file. You can control the depth at which <application>Publican</application> places subsections into separate HTML files with the <literal>chunk-section-depth</literal> parameter in the <filename>publican.cfg</filename> — refer to <xref linkend=\"\" />."
 msgstr "construit l'ouvrage au format HTML sur plusieurs pages. La sortie HTML est située dans le répertoire <filename><replaceable>Nom_document</replaceable>/tmp/<replaceable>langue</replaceable>/html/</filename>. Chaque chapitre et division majeure est placée dans un fichier HTML distinct. Vous pouvez contrôler la profondeur de subdivision avec laquelle <application>Publican</application> mettra les sous-sections dans des fichiers séparés avec le paramètre <literal>chunk-section-depth</literal> dans <filename>publican.cfg</filename> — reportez-vous à la <xref linkend=\"sect-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file\" />."
 
 #. Tag: term

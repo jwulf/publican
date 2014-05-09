@@ -1,10 +1,6 @@
-<?xml version='1.0' encoding='utf-8' ?>
-<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
-<!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
-%BOOK_ENTITIES;
-]>
-<section conformance="140" id="sect-Publican-Users_Guide-Pre_release_software_and_draft_documentation">
-	<title>Pre-release software and draft documentation</title>
+<?xml version="1.0" encoding="utf-8"?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" conformance="140" xml:id="sect-Publican-Users_Guide-Pre_release_software_and_draft_documentation"><info><title>Pre-release software and draft documentation</title></info>
+	
 	 <para>
 		Completed documentation for pre-release software is not the same thing as draft documentation.
 	</para>
@@ -14,8 +10,8 @@
 	 <para>
 		In both circumstances, however, it is important to make the status of the software, documentation or both clear to users, developers, readers and reviewers.
 	</para>
-	 <section conformance="141" id="sect-Publican-Users_Guide-Pre_release_software_and_draft_documentation-Denoting_pre_release_software">
-		<title>Denoting pre-release software</title>
+	 <section conformance="141" xml:id="sect-Publican-Users_Guide-Pre_release_software_and_draft_documentation-Denoting_pre_release_software"><info><title>Denoting pre-release software</title></info>
+		
 		 <para>
 			Documentation for pre-release software, especially pre-release software being distributed to testers, customers and partners, should carry a clear mark denoting the beta-status of the software.
 		</para>
@@ -25,7 +21,7 @@
 		 <procedure>
 			<step>
 				<para>
-					Add the software's pre-release version number, or equivalent state information, to the <sgmltag>&lt;subtitle&gt;</sgmltag> tag in your <filename>Book_Info.xml</filename> file. Place this additional text in <sgmltag>&lt;remark&gt;</sgmltag> tags. For example:
+					Add the software's pre-release version number, or equivalent state information, to the <tag>&lt;subtitle&gt;</tag> tag in your <filename>Book_Info.xml</filename> file. Place this additional text in <tag>&lt;remark&gt;</tag> tags. For example:
 				</para>
 				 
 <programlisting language="XML">&lt;subtitle&gt;Using Red Hat Enterprise Warp Drive&lt;remark&gt; Version 1.1, Beta 2&lt;/remark&gt;&lt;/subtitle&gt;
@@ -47,30 +43,30 @@
 		</procedure>
 		
 		 <para>
-			When you build your book with this <sgmltag>&lt;remark&gt;</sgmltag> tag and the <varname>show_remarks</varname> setting in place, the pre-release nature of the software is displayed clearly and unmistakably. PDF builds display the remark on their cover and title pages. HTML builds (both single-page HTML and multiple-page HTML) display the remark near the beginning of <filename>index.html</filename>.
+			When you build your book with this <tag>&lt;remark&gt;</tag> tag and the <varname>show_remarks</varname> setting in place, the pre-release nature of the software is displayed clearly and unmistakably. PDF builds display the remark on their cover and title pages. HTML builds (both single-page HTML and multiple-page HTML) display the remark near the beginning of <filename>index.html</filename>.
 		</para>
 		 <para>
 			Because this approach makes no changes to the information in <filename>Book_Info.xml</filename> used to generate RPMs, it also ensures there is no ambiguity in the RPM subsystem's operation.
 		</para>
-		 <important>
-			<title>Important</title>
+		 <important><info><title>Important</title></info>
+			
 			 <para>
-				It is the writer's responsibility to remove the <sgmltag>&lt;remark&gt;</sgmltag> tag and its contents and remove or turn off <varname>show_remarks</varname> when documentation is updated for use with the release version of the software.
+				It is the writer's responsibility to remove the <tag>&lt;remark&gt;</tag> tag and its contents and remove or turn off <varname>show_remarks</varname> when documentation is updated for use with the release version of the software.
 			</para>
 
 		</important>
 
 	</section>
 	
-	 <section conformance="142" id="sect-Publican-Users_Guide-Pre_release_software_and_draft_documentation-Denoting_draft_documentation">
-		<title>Denoting draft documentation</title>
+	 <section conformance="142" xml:id="sect-Publican-Users_Guide-Pre_release_software_and_draft_documentation-Denoting_draft_documentation"><info><title>Denoting draft documentation</title></info>
+		
 		 <para>
 			Unfinished documentation made available to others for review should be labeled clearly as such.
 		</para>
 		 <procedure>
 			<step>
 				<para>
-					To add the draft watermark to your documentation add the <userinput>status="draft"</userinput> attribute to the <sgmltag>&lt;article&gt;</sgmltag>, <sgmltag>&lt;book&gt;</sgmltag> or <sgmltag>&lt;set&gt;</sgmltag> tag in your document's root node. For example:
+					To add the draft watermark to your documentation add the <userinput>status="draft"</userinput> attribute to the <tag>&lt;article&gt;</tag>, <tag>&lt;book&gt;</tag> or <tag>&lt;set&gt;</tag> tag in your document's root node. For example:
 				</para>
 				 
 <programlisting language="XML">&lt;book status="draft"&gt;
@@ -82,10 +78,10 @@
 		</procedure>
 		
 		 <para>
-			By default, your root node is the <sgmltag>&lt;book&gt;</sgmltag> tag in your <filename><replaceable>Doc_Name</replaceable>.xml</filename> file.
+			By default, your root node is the <tag>&lt;book&gt;</tag> tag in your <filename><replaceable>Doc_Name</replaceable>.xml</filename> file.
 		</para>
 		 <para>
-			If you are working on an article or set, the root node is the <sgmltag>&lt;article&gt;</sgmltag> or <sgmltag>&lt;set&gt;</sgmltag> tag in <filename><replaceable>Doc_Name</replaceable>.xml</filename>.
+			If you are working on an article or set, the root node is the <tag>&lt;article&gt;</tag> or <tag>&lt;set&gt;</tag> tag in <filename><replaceable>Doc_Name</replaceable>.xml</filename>.
 		</para>
 		 <para>
 			Adding the <userinput>status="draft"</userinput> attribute causes each page of the document to show the draft watermark. This is by design.
@@ -96,8 +92,8 @@
 
 	</section>
 	
-	 <section conformance="143" id="sect-Publican-Users_Guide-Pre_release_software_and_draft_documentation-Denoting_draft_documentation_of_pre_release_software">
-		<title>Denoting draft documentation of pre-release software</title>
+	 <section conformance="143" xml:id="sect-Publican-Users_Guide-Pre_release_software_and_draft_documentation-Denoting_draft_documentation_of_pre_release_software"><info><title>Denoting draft documentation of pre-release software</title></info>
+		
 		 <para>
 			To denote unfinished documentation of pre-release software properly, do both previously noted procedures.
 		</para>

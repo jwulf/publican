@@ -1,101 +1,47 @@
-<?xml version='1.0' encoding='utf-8' ?>
-<!DOCTYPE authorgroup PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
-<!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
-%BOOK_ENTITIES;
-]>
-<authorgroup>
-	<author>
-		<firstname>Don</firstname>
-		 <surname>Domingo</surname>
-		 <affiliation>
+<?xml version="1.0" encoding="utf-8"?>
+<authorgroup xmlns="http://docbook.org/ns/docbook" version="5.0">
+	<author><personname><firstname>Don</firstname><surname>Domingo</surname></personname><affiliation>
 			<orgname>Red Hat</orgname>
 			 <orgdiv>Engineering Content Services</orgdiv>
 
-		</affiliation>
-		 <email>ddomingo@redhat.com</email>
-
-	</author>
-	<author>
-		<firstname>Zac</firstname>
-		 <surname>Dover</surname>
-		 <affiliation>
+		</affiliation><email>ddomingo@redhat.com</email></author>
+	<author><personname><firstname>Zac</firstname><surname>Dover</surname></personname><affiliation>
 			<orgname>Red Hat</orgname>
 			 <orgdiv>Engineering Content Services</orgdiv>
 
-		</affiliation>
-		 <email>zdover@redhat.com</email>
-
-	</author>
-	<author>
-		<firstname>Sven</firstname>
-		 <surname>Dowdeit</surname>
-		 <contrib>Debian and Docker installation instructions</contrib>
-	</author>
-	<author>
-		<firstname>Norman</firstname>
-		 <surname>Dunbar</surname>
-		 <contrib>OpenSUSE installation instructions</contrib>
-	</author>
-	 <author>
-		<firstname>Brian</firstname>
-		 <surname>Forté</surname>
-		 <affiliation>
+		</affiliation><email>zdover@redhat.com</email></author>
+	<author><personname><firstname>Sven</firstname><surname>Dowdeit</surname></personname><contrib>Debian and Docker installation instructions</contrib></author>
+	<author><personname><firstname>Norman</firstname><surname>Dunbar</surname></personname><contrib>OpenSUSE installation instructions</contrib></author>
+	 <author><personname><firstname>Brian</firstname><surname>Forté</surname></personname><affiliation>
 			<orgname>Red Hat</orgname>
 			 <orgdiv>Engineering Content Services</orgdiv>
 
-		</affiliation>
-		 <email>bforte@redhat.com</email>
-
-	</author>
-	 <author>
-		<firstname>Rüdiger</firstname>
-		 <surname>Landmann</surname>
-		 <affiliation>
+		</affiliation><email>bforte@redhat.com</email></author>
+	 <author><personname><firstname>Rüdiger</firstname><surname>Landmann</surname></personname><affiliation>
 			<orgname>Red Hat</orgname>
 			 <orgdiv>Engineering Content Services</orgdiv>
 
-		</affiliation>
-		 <email>r.landmann@redhat.com</email>
-
-	</author>
-	<author>
-		<firstname>Rebecca</firstname>
-		 <surname>Newton</surname>
-		 <affiliation>
+		</affiliation><email>r.landmann@redhat.com</email></author>
+	<author><personname><firstname>Rebecca</firstname><surname>Newton</surname></personname><affiliation>
 			<orgname>Red Hat</orgname>
 			 <orgdiv>Engineering Content Services</orgdiv>
 
-		</affiliation>
-
-	</author>
-	 <author>
-		<firstname>Joshua</firstname>
-		 <surname>Oakes</surname>
-		 <affiliation>
+		</affiliation></author>
+	 <author><personname><firstname>Joshua</firstname><surname>Oakes</surname></personname><affiliation>
 			<orgname>Red Hat</orgname>
 			 <orgdiv>Engineering Content Services</orgdiv>
 
-		</affiliation>
-	</author>
-	 <author>
-		<firstname>Joshua</firstname>
-		 <surname>Wulf</surname>
-		 <affiliation>
+		</affiliation></author>
+	 <author><personname><firstname>Joshua</firstname><surname>Wulf</surname></personname><affiliation>
 			<orgname>Red Hat</orgname>
 			 <orgdiv>Engineering Content Services</orgdiv>
 
-		</affiliation>
-		 <email>jwulf@redhat.com</email>
+		</affiliation><email>jwulf@redhat.com</email></author>
 
-	</author>
-
-	 <othercredit class="technicaleditor">
-		<firstname>Jeff</firstname>
-		 <surname>Fearn</surname>
-		 <affiliation>
+	 <othercredit class="technicaleditor"><personname><firstname>Jeff</firstname><surname>Fearn</surname></personname><affiliation>
 			<shortaffil> <inlinemediaobject>
 				<imageobject>
-					<imagedata fileref="images/logos/engops.png" format="PNG" />
+					<imagedata fileref="images/logos/engops.png" format="PNG"/>
 				</imageobject>
 				 <textobject>
 					<phrase>Red Hat, Engineering Operations Logo</phrase>
@@ -104,20 +50,10 @@
 			</inlinemediaobject>
 			 </shortaffil>
 
-		</affiliation>
-		 <contrib>Extensive review, rough drafts, persistent annoyances.</contrib>
-		 <email>jfearn@redhat.com</email>
-
-	</othercredit>
-	 <othercredit class="other">
-		<firstname>Josef</firstname>
-		 <surname>Hruška</surname>
-		 <affiliation>
+		</affiliation><contrib>Extensive review, rough drafts, persistent annoyances.</contrib><email>jfearn@redhat.com</email></othercredit>
+	 <othercredit class="other"><personname><firstname>Josef</firstname><surname>Hruška</surname></personname><affiliation>
 			<orgname>Fedora</orgname>
 			 <orgdiv>Localization Project</orgdiv>
 
-		</affiliation>
-		 <contrib>Checking the Czech examples in Entities and translation</contrib>
-
-	</othercredit>
+		</affiliation><contrib>Checking the Czech examples in Entities and translation</contrib></othercredit>
 </authorgroup>

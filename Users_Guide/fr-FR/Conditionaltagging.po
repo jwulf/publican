@@ -106,7 +106,7 @@ msgstr "Le balisage conditionnel crée des difficultés de deux sortes pour les 
 
 #. Tag: para
 #, no-c-format, fuzzy
-msgid "The PO files for the document contain the full set of tags from the XML files, regardless of any conditions set. When translators open the PO file for the example from <citetitle>How To Use Product Foo</citetitle> in <xref linkend=\"sect-Publican-Users_Guide-Conditional_tagging\" />, they see:"
+msgid "The PO files for the document contain the full set of tags from the XML files, regardless of any conditions set. When translators open the PO file for the example from <citetitle>How To Use Product Foo</citetitle> in <xref linkend=\"\" />, they see:"
 msgstr "Le fichier PO du document contient l'ensemble complet des balises provenant des fichiers XML, quelles que soient les conditions définies. Quand un traducteur ouvre un fichier PO, par exemple celui de <citetitle>Comment utiliser le produit Foo</citetitle> dans <xref linkend=\"sect-Users_Guide-Conditional_tagging\" />, il voit :"
 
 #. Tag: programlisting

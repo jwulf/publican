@@ -103,14 +103,13 @@ my %MAP_OUT = (
     imagedata     => {},
     'xi:include'  => { newline_after => 1 },
     'xi:fallback' => { newline_after => 1 },
-
-    #    glossary          => { block         => 1 },
-    #    glossentry        => { block         => 1, id_node => 'glossterm' },
-    #    glossdiv          => { block         => 1 },
-    #    glossdef          => { block         => 1 },
-    #    glossterm         => { newline_after => 1 },
-    #    glosssee          => { newline_after => 1 },
-    #    glossseealso      => { newline_after => 1 },
+    glossary          => { block         => 1 },
+    glossentry        => { block         => 1, id_node => 'glossterm' },
+    glossdiv          => { block         => 1 },
+    glossdef          => { block         => 1 },
+    glossterm         => { newline_after => 1 },
+    glosssee          => { newline_after => 1 },
+    glossseealso      => { newline_after => 1 },
     table             => { block         => 1 },
     informaltable     => { block         => 1 },
     thead             => { block         => 1 },
@@ -119,7 +118,7 @@ my %MAP_OUT = (
     tr                => { block         => 1 },
     td                => { block         => 1 },
     row               => { block         => 1 },
-    entry             => { block         => 1 },
+    entry             => { newline_after => 1 },
     refentry          => { block         => 1 },
     refmeta           => { block         => 1 },
     refentryinfo      => { block         => 1, no_id => 1 },
@@ -239,6 +238,7 @@ my %MAP_OUT = (
     '~comment'    => {},
     foreignphrase => {},
     chapterinfo   => { block => 1 },
+    info          => { block => 1 },
     keywordset    => { block => 1 },
     keyword       => { newline_after => 1 },
     subjectset    => { block => 1 },
@@ -410,7 +410,8 @@ sub Clean_ID {
 
         # prepend product & book name (to avoid problems in sets)
         # prepend tag type for translations BZ #427312
-        if ( $my_id ne "" ) {
+        # If $product is unset then we are dealing with common content, so don't do the above.
+        if ( $my_id ne "" && $product ) {
             $my_id = "$product-$docname-$my_id";
             $my_id = substr( $tag, 0, 4 ) . "-$my_id";
         }

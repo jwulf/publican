@@ -569,9 +569,9 @@ sub validate_xml {
     my $parser = XML::LibXML->new(
         {   pedantic_parser   => 1,
             suppress_errors   => 0,
-            suppress_warnings => 1,
+            suppress_warnings => 0,
             line_numbers      => 1,
-            expand_xinclude   => 1
+            expand_xinclude   => 1,
         }
     );
 

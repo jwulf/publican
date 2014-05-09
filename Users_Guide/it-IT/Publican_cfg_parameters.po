@@ -264,7 +264,7 @@ msgstr "<parameter>dt_requires</parameter>"
 
 #. Tag: para
 #, no-c-format, fuzzy
-msgid "a package that the desktop package requires, for example, a documentation menu package. Refer to <xref linkend=\"sect-Publican-Users_Guide-Desktop_menu_entries_for_documents\" />."
+msgid "a package that the desktop package requires, for example, a documentation menu package. Refer to <xref linkend=\"\" />."
 msgstr "un pacchetto richiesto dal pacchetto desktop, per esempio, un pacchetto di menu del desktop, per documentazione. Fare riferimento alla <xref linkend=\"desktop_menus\" />."
 
 #. Tag: term
@@ -424,7 +424,7 @@ msgstr "<parameter>menu_category</parameter>"
 
 #. Tag: para
 #, no-c-format, fuzzy
-msgid "the desktop menu category (as defined by a corresponding <filename>.menu</filename> file) in which a document should appear when installed from a desktop RPM package. Refer to <xref linkend=\"sect-Publican-Users_Guide-Desktop_menu_entries_for_documents\" />."
+msgid "the desktop menu category (as defined by a corresponding <filename>.menu</filename> file) in which a document should appear when installed from a desktop RPM package. Refer to <xref linkend=\"\" />."
 msgstr "la categoria del desktop menu (come definito dal file <filename>.menu</filename> corrispondente), in cui far comparire un documento quando installato da un pacchetto RPM per desktop. Fare riferimento alla <xref linkend=\"desktop_menus\" />."
 
 #. Tag: term
@@ -584,7 +584,7 @@ msgstr "<parameter>web_formats</parameter>"
 
 #. Tag: para
 #, no-c-format, fuzzy
-msgid "a comma-separated list of formats to include in the web RPM package. Refer to <xref linkend=\"sect-Publican-Users_Guide-Packaging_a_document-The_publican_package_command\" />."
+msgid "a comma-separated list of formats to include in the web RPM package. Refer to <xref linkend=\"\" />."
 msgstr "un elenco di formati, separati da virgole, da includere nel pacchetto RPM per web. Vedere la <xref linkend=\"sect-Users_Guide-Packaging_a_book-The_publican_package_command\" />."
 
 #. Tag: term
@@ -644,7 +644,7 @@ msgstr "<parameter>web_type</parameter>"
 
 #. Tag: para
 #, no-c-format, fuzzy
-msgid "specifies that the document is descriptive content for a <application>Publican</application>-managed website rather than product documentation. This content includes the home page of the website (<literal>web_type:&nbsp;home</literal>), product description pages (<literal>web_type:&nbsp;product</literal>), and version description pages (<literal>web_type:&nbsp;version</literal>). Refer to <xref linkend=\"chap-Publican-Users_Guide-Building_a_website_with_Publican\" />."
+msgid "specifies that the document is descriptive content for a <application>Publican</application>-managed website rather than product documentation. This content includes the home page of the website (<literal>web_type:&nbsp;home</literal>), product description pages (<literal>web_type:&nbsp;product</literal>), and version description pages (<literal>web_type:&nbsp;version</literal>). Refer to <xref linkend=\"\" />."
 msgstr "specifica che il documento è un contenuto descrittivo di un sito web gestito da <application>Publican</application> e non una documentazione di prodotto. Questo contenuto include la home page del sito (<literal>web_type:&nbsp;home</literal>), pagine descrittive di prodotto (<literal>web_type:&nbsp;product</literal>) e di versione (<literal>web_type:&nbsp;version</literal>). Vedere il <xref linkend=\"sect-Users_Guide-Website\" />."
 
 #. Tag: term

@@ -1,16 +1,12 @@
-<?xml version='1.0' encoding='utf-8' ?>
-<!DOCTYPE appendix PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
-<!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
-%BOOK_ENTITIES;
-]>
-<appendix conformance="153" id="appe-Publican-Users_Guide-Contents_of_the_website_dump_file">
-	<title>Contents of the website dump file</title>
+<?xml version="1.0" encoding="utf-8"?>
+<appendix xmlns="http://docbook.org/ns/docbook" version="5.0" conformance="153" xml:id="appe-Publican-Users_Guide-Contents_of_the_website_dump_file"><info><title>Contents of the website dump file</title></info>
+	
 	 <para>
 		The dump file for a <application>Publican</application>-generated website contains some basic site configuration details, together with details of every document published on the site. The site configuration details are:
 	</para>
 	 <variablelist>
 		<varlistentry>
-			<term><sgmltag>&lt;host&gt;</sgmltag></term>
+			<term><tag>&lt;host&gt;</tag></term>
 			 <listitem>
 				<para>
 					The URL to the root of the documentation site, as set by the <parameter>host</parameter> parameter in the site configuration file.
@@ -20,7 +16,7 @@
 
 		</varlistentry>
 		 <varlistentry>
-			<term><sgmltag>&lt;def_lang&gt;</sgmltag></term>
+			<term><tag>&lt;def_lang&gt;</tag></term>
 			 <listitem>
 				<para>
 					The default language of the documentation on the website, as set by the <parameter>def_lang</parameter> parameter in the site configuration file.
@@ -36,17 +32,17 @@
 	</para>
 	 <variablelist>
 		<varlistentry>
-			<term><sgmltag>&lt;name&gt;</sgmltag></term>
+			<term><tag>&lt;name&gt;</tag></term>
 			 <listitem>
 				<para>
-					The title of the document, generated from the <sgmltag>&lt;title&gt;</sgmltag> tag in the <literal>Book_Info.xml</literal>, <literal>Article_Info.xml</literal>, or <literal>Set_Info.xml</literal> file unless overridden by the <parameter>docname</parameter> parameter in the <filename>publican.cfg</filename> file. Any spaces in the title are replaced by underscores.
+					The title of the document, generated from the <tag>&lt;title&gt;</tag> tag in the <literal>Book_Info.xml</literal>, <literal>Article_Info.xml</literal>, or <literal>Set_Info.xml</literal> file unless overridden by the <parameter>docname</parameter> parameter in the <filename>publican.cfg</filename> file. Any spaces in the title are replaced by underscores.
 				</para>
 
 			</listitem>
 
 		</varlistentry>
 		 <varlistentry>
-			<term><sgmltag>&lt;ID&gt;</sgmltag></term>
+			<term><tag>&lt;ID&gt;</tag></term>
 			 <listitem>
 				<para>
 					A unique ID number for this document, in this format, in this language.
@@ -56,17 +52,17 @@
 
 		</varlistentry>
 		 <varlistentry>
-			<term><sgmltag>&lt;abstract&gt;</sgmltag></term>
+			<term><tag>&lt;abstract&gt;</tag></term>
 			 <listitem>
 				<para>
-					A brief summary of the content of the document, generated from the <sgmltag>&lt;abstract&gt;</sgmltag> tag in the <literal>Book_Info.xml</literal>, <literal>Article_Info.xml</literal>, or <literal>Set_Info.xml</literal> file. <application>Publican</application> uses this same content to generate the <literal>%description</literal> section of the spec file when it packages a document. If the <sgmltag>&lt;abstract&gt;</sgmltag> is translated, this field contains the translated text.
+					A brief summary of the content of the document, generated from the <tag>&lt;abstract&gt;</tag> tag in the <literal>Book_Info.xml</literal>, <literal>Article_Info.xml</literal>, or <literal>Set_Info.xml</literal> file. <application>Publican</application> uses this same content to generate the <literal>%description</literal> section of the spec file when it packages a document. If the <tag>&lt;abstract&gt;</tag> is translated, this field contains the translated text.
 				</para>
 
 			</listitem>
 
 		</varlistentry>
 		 <varlistentry>
-			<term><sgmltag>&lt;format&gt;</sgmltag></term>
+			<term><tag>&lt;format&gt;</tag></term>
 			 <listitem>
 				<para>
 					The format in which the document is produced — <literal>html</literal> for multi-page html, <literal>html-single</literal> for single-page html, <literal>pdf</literal> for PDF, and <literal>epub</literal> for EPUB.
@@ -76,17 +72,17 @@
 
 		</varlistentry>
 		 <varlistentry>
-			<term><sgmltag>&lt;language&gt;</sgmltag></term>
+			<term><tag>&lt;language&gt;</tag></term>
 			 <listitem>
 				<para>
-					The language code for the document. Refer to <xref linkend="appe-Publican-Users_Guide-Language_codes" /> for more information about language codes in XML.
+					The language code for the document. Refer to <xref linkend="appe-Publican-Users_Guide-Language_codes"/> for more information about language codes in XML.
 				</para>
 
 			</listitem>
 
 		</varlistentry>
 		 <varlistentry>
-			<term><sgmltag>&lt;name_label&gt;</sgmltag></term>
+			<term><tag>&lt;name_label&gt;</tag></term>
 			 <listitem>
 				<para>
 					The name of the document as it appears in the site table of contents. This label can be set with the <parameter>web_name_label</parameter> parameter in the document's <filename>publican.cfg</filename> file. Otherwise, the field is empty for a document in its original language, or uses the translated title of the document in a translated language. Any spaces in the name label are replaced by underscores.
@@ -96,17 +92,17 @@
 
 		</varlistentry>
 		 <varlistentry>
-			<term><sgmltag>&lt;product&gt;</sgmltag></term>
+			<term><tag>&lt;product&gt;</tag></term>
 			 <listitem>
 				<para>
-					The product that the document describes, generated from the <sgmltag>&lt;productname&gt;</sgmltag> tag in the <literal>Book_Info.xml</literal>, <literal>Article_Info.xml</literal>, or <literal>Set_Info.xml</literal> file unless overridden by the <parameter>product</parameter> parameter in the <filename>publican.cfg</filename> file. Any spaces in the product name are replaced by underscores.
+					The product that the document describes, generated from the <tag>&lt;productname&gt;</tag> tag in the <literal>Book_Info.xml</literal>, <literal>Article_Info.xml</literal>, or <literal>Set_Info.xml</literal> file unless overridden by the <parameter>product</parameter> parameter in the <filename>publican.cfg</filename> file. Any spaces in the product name are replaced by underscores.
 				</para>
 
 			</listitem>
 
 		</varlistentry>
 		 <varlistentry>
-			<term><sgmltag>&lt;product_label&gt;</sgmltag></term>
+			<term><tag>&lt;product_label&gt;</tag></term>
 			 <listitem>
 				<para>
 					The name of the product as it appears in the site table of contents. This label can be set with the <parameter>web_product_label</parameter> parameter in the document's <filename>publican.cfg</filename> file. Otherwise, the field is empty for a document in its original language, or uses the translated title of the document in a translated language. Any spaces in the name label are replaced by underscores.
@@ -119,17 +115,17 @@
 
 		</varlistentry>
 		 <varlistentry>
-			<term><sgmltag>&lt;subtitle&gt;</sgmltag></term>
+			<term><tag>&lt;subtitle&gt;</tag></term>
 			 <listitem>
 				<para>
-					A one-line description of the content of the document, generated from the <sgmltag>&lt;subtitle&gt;</sgmltag> tag in the <literal>Book_Info.xml</literal>, <literal>Article_Info.xml</literal>, or <literal>Set_Info.xml</literal> file. <application>Publican</application> uses this same content to generate the <literal>Summary</literal> section of the spec file when it packages a document. If the <sgmltag>&lt;subtitle&gt;</sgmltag> is translated, this field contains the translated text.
+					A one-line description of the content of the document, generated from the <tag>&lt;subtitle&gt;</tag> tag in the <literal>Book_Info.xml</literal>, <literal>Article_Info.xml</literal>, or <literal>Set_Info.xml</literal> file. <application>Publican</application> uses this same content to generate the <literal>Summary</literal> section of the spec file when it packages a document. If the <tag>&lt;subtitle&gt;</tag> is translated, this field contains the translated text.
 				</para>
 
 			</listitem>
 
 		</varlistentry>
 		 <varlistentry>
-			<term><sgmltag>&lt;update_date&gt;</sgmltag></term>
+			<term><tag>&lt;update_date&gt;</tag></term>
 			 <listitem>
 				<para>
 					The date that the document was most recently installed on the site, in the format YYYY-MM-DD.
@@ -139,17 +135,17 @@
 
 		</varlistentry>
 		 <varlistentry>
-			<term><sgmltag>&lt;version&gt;</sgmltag></term>
+			<term><tag>&lt;version&gt;</tag></term>
 			 <listitem>
 				<para>
-					The version of the product that the document describes (<emphasis>not</emphasis> the version of the document itself), generated from the <sgmltag>&lt;productnumber&gt;</sgmltag> tag in the <literal>Book_Info.xml</literal>, <literal>Article_Info.xml</literal>, or <literal>Set_Info.xml</literal> file unless overridden by the <parameter>version</parameter> parameter in the <filename>publican.cfg</filename> file.
+					The version of the product that the document describes (<emphasis>not</emphasis> the version of the document itself), generated from the <tag>&lt;productnumber&gt;</tag> tag in the <literal>Book_Info.xml</literal>, <literal>Article_Info.xml</literal>, or <literal>Set_Info.xml</literal> file unless overridden by the <parameter>version</parameter> parameter in the <filename>publican.cfg</filename> file.
 				</para>
 
 			</listitem>
 
 		</varlistentry>
 		 <varlistentry>
-			<term><sgmltag>&lt;version_label&gt;</sgmltag></term>
+			<term><tag>&lt;version_label&gt;</tag></term>
 			 <listitem>
 				<para>
 					The version of the product as it appears in the site table of contents. This label can be set with the <parameter>web_version_label</parameter> parameter in the document's <filename>publican.cfg</filename> file.
@@ -163,54 +159,54 @@
 		</varlistentry>
 
 	</variablelist>
-	 <example conformance="241" id="exam-Publican-Users_Guide-Contents_of_the_website_dump_file-Sample_records_from_a_DUMP.xml_file">
-		<title>Sample records from a <filename>DUMP.xml</filename> file</title>
+	 <example conformance="241" xml:id="exam-Publican-Users_Guide-Contents_of_the_website_dump_file-Sample_records_from_a_DUMP.xml_file"><info><title>Sample records from a <filename>DUMP.xml</filename> file</title></info>
+		
 		 <para>
 			These two records from a <filename>DUMP.xml</filename> file show the same book, the <citetitle>Red Hat Enterprise Linux 5 Installation Guide</citetitle>, in two different formats and two different languages — an English PDF version and a French multi-page HTML version.
 		</para>
 		 
-<programlisting language="XML"><xi:include href="extras/DUMP.xmlt" parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" /></programlisting>
+<programlisting language="XML"><xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="extras/DUMP.xmlt" parse="text"/></programlisting>
 
 	</example>
-	 <section conformance="242" id="sect-Publican-Users_Guide-Contents_of_the_website_dump_file-Computing_URLs_from_the_dump_file">
-		<title>Computing URLs from the dump file</title>
+	 <section conformance="242" xml:id="sect-Publican-Users_Guide-Contents_of_the_website_dump_file-Computing_URLs_from_the_dump_file"><info><title>Computing URLs from the dump file</title></info>
+		
 		 <para>
 			Using the following fields, you can compute the URL of any document on the site:
 		</para>
 		 <itemizedlist>
 			<listitem>
 				<para>
-					<sgmltag>&lt;host&gt;</sgmltag>
+					<tag>&lt;host&gt;</tag>
 				</para>
 
 			</listitem>
 			 <listitem>
 				<para>
-					<sgmltag>&lt;name&gt;</sgmltag>
+					<tag>&lt;name&gt;</tag>
 				</para>
 
 			</listitem>
 			 <listitem>
 				<para>
-					<sgmltag>&lt;format&gt;</sgmltag>
+					<tag>&lt;format&gt;</tag>
 				</para>
 
 			</listitem>
 			 <listitem>
 				<para>
-					<sgmltag>&lt;language&gt;</sgmltag>
+					<tag>&lt;language&gt;</tag>
 				</para>
 
 			</listitem>
 			 <listitem>
 				<para>
-					<sgmltag>&lt;product&gt;</sgmltag>
+					<tag>&lt;product&gt;</tag>
 				</para>
 
 			</listitem>
 			 <listitem>
 				<para>
-					<sgmltag>&lt;version&gt;</sgmltag>
+					<tag>&lt;version&gt;</tag>
 				</para>
 
 			</listitem>
@@ -221,7 +217,7 @@
 				<term>muti-page HTML</term>
 				 <listitem>
 					<para>
-						<sgmltag>&lt;host&gt;</sgmltag>/<sgmltag>&lt;language&gt;</sgmltag>/<sgmltag>&lt;product&gt;</sgmltag>/<sgmltag>&lt;version&gt;</sgmltag>/<sgmltag>&lt;format&gt;</sgmltag>/<sgmltag>&lt;name&gt;</sgmltag>/<filename>index.html</filename>
+						<tag>&lt;host&gt;</tag>/<tag>&lt;language&gt;</tag>/<tag>&lt;product&gt;</tag>/<tag>&lt;version&gt;</tag>/<tag>&lt;format&gt;</tag>/<tag>&lt;name&gt;</tag>/<filename>index.html</filename>
 					</para>
 					 <para>
 						For example, <filename>http://docs.fedoraproject.org/en-US/Fedora/14/html/Accessibility_Guide/index.html</filename>
@@ -234,7 +230,7 @@
 				<term>single-page HTML</term>
 				 <listitem>
 					<para>
-						<sgmltag>&lt;host&gt;</sgmltag>/<sgmltag>&lt;language&gt;</sgmltag>/<sgmltag>&lt;product&gt;</sgmltag>/<sgmltag>&lt;version&gt;</sgmltag>/<sgmltag>&lt;format&gt;</sgmltag>/<sgmltag>&lt;name&gt;</sgmltag>/<filename>index.html</filename>
+						<tag>&lt;host&gt;</tag>/<tag>&lt;language&gt;</tag>/<tag>&lt;product&gt;</tag>/<tag>&lt;version&gt;</tag>/<tag>&lt;format&gt;</tag>/<tag>&lt;name&gt;</tag>/<filename>index.html</filename>
 					</para>
 					 <para>
 						For example, <filename>http://docs.fedoraproject.org/en-US/Fedora/14/html-single/Accessibility_Guide/index.html</filename>
@@ -247,7 +243,7 @@
 				<term>PDF</term>
 				 <listitem>
 					<para>
-						<sgmltag>&lt;host&gt;</sgmltag>/<sgmltag>&lt;language&gt;</sgmltag>/<sgmltag>&lt;product&gt;</sgmltag>/<sgmltag>&lt;version&gt;</sgmltag>/<sgmltag>&lt;format&gt;</sgmltag>/<sgmltag>&lt;name&gt;</sgmltag>/<sgmltag>&lt;product&gt;</sgmltag>-<sgmltag>&lt;version&gt;</sgmltag>-<sgmltag>&lt;name&gt;</sgmltag>-<sgmltag>&lt;language&gt;</sgmltag>.<filename>pdf</filename>
+						<tag>&lt;host&gt;</tag>/<tag>&lt;language&gt;</tag>/<tag>&lt;product&gt;</tag>/<tag>&lt;version&gt;</tag>/<tag>&lt;format&gt;</tag>/<tag>&lt;name&gt;</tag>/<tag>&lt;product&gt;</tag>-<tag>&lt;version&gt;</tag>-<tag>&lt;name&gt;</tag>-<tag>&lt;language&gt;</tag>.<filename>pdf</filename>
 					</para>
 					 <para>
 						For example, <filename>http://docs.fedoraproject.org/en-US/Fedora/14/pdf/Accessibility_Guide/Fedora-14-Accessibility_Guide-en-US.pdf</filename>
@@ -260,7 +256,7 @@
 				<term>EPUB</term>
 				 <listitem>
 					<para>
-						<sgmltag>&lt;host&gt;</sgmltag>/<sgmltag>&lt;language&gt;</sgmltag>/<sgmltag>&lt;product&gt;</sgmltag>/<sgmltag>&lt;version&gt;</sgmltag>/<sgmltag>&lt;format&gt;</sgmltag>/<sgmltag>&lt;name&gt;</sgmltag>/<sgmltag>&lt;product&gt;</sgmltag>-<sgmltag>&lt;version&gt;</sgmltag>-<sgmltag>&lt;name&gt;</sgmltag>-<sgmltag>&lt;language&gt;</sgmltag>.<filename>epub</filename>
+						<tag>&lt;host&gt;</tag>/<tag>&lt;language&gt;</tag>/<tag>&lt;product&gt;</tag>/<tag>&lt;version&gt;</tag>/<tag>&lt;format&gt;</tag>/<tag>&lt;name&gt;</tag>/<tag>&lt;product&gt;</tag>-<tag>&lt;version&gt;</tag>-<tag>&lt;name&gt;</tag>-<tag>&lt;language&gt;</tag>.<filename>epub</filename>
 					</para>
 					 <para>
 						For example, <filename>http://docs.fedoraproject.org/en-US/Fedora/14/pdf/Accessibility_Guide/Fedora-14-Accessibility_Guide-en-US.epub</filename>
@@ -272,7 +268,7 @@
 
 		</variablelist>
 		 <para>
-			Note that the <sgmltag>&lt;product_label&gt;</sgmltag>, <sgmltag>&lt;version_label&gt;</sgmltag>, and <sgmltag>&lt;name_label&gt;</sgmltag> fields have no significance for URLs, even when these fields are suppressed in tables of contents by the <literal>UNUSED</literal> setting.
+			Note that the <tag>&lt;product_label&gt;</tag>, <tag>&lt;version_label&gt;</tag>, and <tag>&lt;name_label&gt;</tag> fields have no significance for URLs, even when these fields are suppressed in tables of contents by the <literal>UNUSED</literal> setting.
 		</para>
 
 	</section>

@@ -53,12 +53,6 @@
   <xsl:variable name="converted">
     <xsl:apply-templates/>
   </xsl:variable>
-  <xsl:comment>
-    <xsl:text> Converted by db4-upgrade version </xsl:text>
-    <xsl:value-of select="$version"/>
-    <xsl:text> </xsl:text>
-  </xsl:comment>
-  <xsl:text>&#10;</xsl:text>
   <xsl:apply-templates select="exsl:node-set($converted)/*" mode="addNS"/>
 </xsl:template>
 

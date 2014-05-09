@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="utf-8"?>
-
-<section xmlns="http://docbook.org/ns/docbook" version="5.0">
-	<info>
+<!DOCTYPE section [
+]>
+<section version="5.0" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<info xml:id="We_Need_Feedback">
 		<title>We Need Feedback!</title>
+
 	</info>
-	<indexterm>
+	 <indexterm>
 		<primary>feedback</primary>
-		<secondary>contact information for this manual</secondary>
+		 <secondary>contact information for this manual</secondary>
+
 	</indexterm>
-	<para>
+	 <para>
 		You should over ride this by creating your own local Feedback.xml file.
 	</para>
 </section>
+
+

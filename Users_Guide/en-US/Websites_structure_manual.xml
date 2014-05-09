@@ -1,10 +1,6 @@
-<?xml version='1.0' encoding='utf-8' ?>
-<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
-<!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
-%BOOK_ENTITIES;
-]>
-<section conformance="231" id="sect-Publican-Users_Guide-Creating_the_website_structure">
-	<title>Creating the website structure</title>
+<?xml version="1.0" encoding="utf-8"?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" conformance="231" xml:id="sect-Publican-Users_Guide-Creating_the_website_structure"><info><title>Creating the website structure</title></info>
+	
 	 <para>
 		To build the website structure:
 	</para>
@@ -94,7 +90,7 @@
 				</step>
 				 <step>
 					<para>
-						Optionally, construct a search engine query to use with the search box in the navigation menu and specify the entire content of a HTML <sgmltag>&lt;form&gt;</sgmltag> with the <parameter>search</parameter> parameter. If you do not specify a custom web search, <application>Publican</application> creates a Google search limited to the host that you specified in the <parameter>host</parameter> parameter.
+						Optionally, construct a search engine query to use with the search box in the navigation menu and specify the entire content of a HTML <tag>&lt;form&gt;</tag> with the <parameter>search</parameter> parameter. If you do not specify a custom web search, <application>Publican</application> creates a Google search limited to the host that you specified in the <parameter>host</parameter> parameter.
 					</para>
 					 <para>
 						For example, to construct a Yahoo! search limited to <literal>docs.example.com</literal>, set:
@@ -107,8 +103,8 @@
 					 <para>
 						If you set <literal>value="###Search###"</literal> in the code for a submit button, <application>Publican</application> uses the word <literal>Search</literal> on the button, localized into any language that <application>Publican</application> supports.
 					</para>
-					 <important>
-						<title>Important — the search parameter is not validated</title>
+					 <important><info><title>Important — the search parameter is not validated</title></info>
+						
 						 <para>
 							<application>Publican</application> does not validate the <parameter>search</parameter> parameter, but builds the value of this parameter into the navigation menu exactly as you specify it. Be especially careful when you use this feature.
 						</para>
@@ -165,7 +161,7 @@
 
 					</variablelist>
 					 <para>
-						Refer to <xref linkend="appe-Publican-Users_Guide-Contents_of_the_website_dump_file" /> for a description of the contents of the dump file.
+						Refer to <xref linkend="appe-Publican-Users_Guide-Contents_of_the_website_dump_file"/> for a description of the contents of the dump file.
 					</para>
 
 				</step>
@@ -176,7 +172,7 @@
 					<variablelist>
 						<varlistentry>
 							<term>web_style: 1</term>
-							<listitem><para>The website resembles those produced by Publican&nbsp;2, with a list of products displayed in a navigation pane at the left of the page. (Default)</para></listitem>
+							<listitem><para>The website resembles those produced by Publican 2, with a list of products displayed in a navigation pane at the left of the page. (Default)</para></listitem>
 						</varlistentry>
 						<varlistentry>
 							<term>web_style: 2</term>
@@ -184,7 +180,7 @@
 						</varlistentry>
 					</variablelist>
 					<important>
-						<para>The web style set for your site must match the web style set for your content. For example, if you set <literal>web_style:&nbsp;2</literal> for your website, you need to have <literal>web_style:&nbsp;2</literal> set in each of the books that you want to install on the site. Consider setting this parameter in the <filename>defaults.cfg</filename> or <filename>overrides.cfg</filename> files of the brands that you intend to use with this site.</para>
+						<para>The web style set for your site must match the web style set for your content. For example, if you set <literal>web_style: 2</literal> for your website, you need to have <literal>web_style: 2</literal> set in each of the books that you want to install on the site. Consider setting this parameter in the <filename>defaults.cfg</filename> or <filename>overrides.cfg</filename> files of the brands that you intend to use with this site.</para>
 					</important>
 
 				</step>
@@ -216,7 +212,7 @@
 		</step>
 		 <step>
 			<para>
-				Create an empty file named <filename>site_overrides.css</filename> in the directory that you specified with <option>doc_path</option> (the directory that contains <filename>interactive.css</filename> and the various language directories). If you want to use site-specific styles to override those provided by <filename>interactive.css</filename>, you can add a <filename>site_overrides.css</filename> to the document that provides the site <firstterm>home page</firstterm> — refer to <xref linkend="sect-Publican-Users_Guide-Creating_installing_and_updating_the_home_page" />. If you do not want to use site-specific styles, the empty file you add here will prevent 404 errors on your server. On a Linux system, change into the directory that you specified with <option>doc_path</option> and run:
+				Create an empty file named <filename>site_overrides.css</filename> in the directory that you specified with <option>doc_path</option> (the directory that contains <filename>interactive.css</filename> and the various language directories). If you want to use site-specific styles to override those provided by <filename>interactive.css</filename>, you can add a <filename>site_overrides.css</filename> to the document that provides the site <firstterm>home page</firstterm> — refer to <xref linkend="sect-Publican-Users_Guide-Creating_installing_and_updating_the_home_page"/>. If you do not want to use site-specific styles, the empty file you add here will prevent 404 errors on your server. On a Linux system, change into the directory that you specified with <option>doc_path</option> and run:
 			</para>
 			
 <screen><prompt>$</prompt> <command>touch site_overrides.css</command></screen>

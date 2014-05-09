@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE programlisting [
+]>
 
-<programlisting xmlns="http://docbook.org/ns/docbook" version="5.0" language="Java">package org.jboss.book.jca.ex1;
+<programlisting language="Java" version="5.0" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">package org.jboss.book.jca.ex1;
 
 import javax.naming.InitialContext;
 
@@ -19,3 +20,4 @@ public class ExClient
       System.out.println("Echo.echo('Hello') = " + echo.echo("Hello"));
    }
 }</programlisting>
+

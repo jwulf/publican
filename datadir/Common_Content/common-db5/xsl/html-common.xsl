@@ -8,8 +8,9 @@
   xmlns:ptbl="http://nwalsh.com/xslt/ext/xsltproc/python/Table"
   xmlns:sverb="http://nwalsh.com/xslt/ext/com.nwalsh.saxon.Verbatim"
   xmlns:xverb="xalan://com.nwalsh.xalan.Verbatim"
+  xmlns:exsl="http://exslt.org/common"
   xmlns:perl="urn:perl"
-  exclude-result-prefixes="stbl xtbl ptbl"
+  exclude-result-prefixes="stbl xtbl ptbl exsl"
   extension-element-prefixes="perl"
 >
 <xsl:param name="embedtoc"  select="'0'"/>
@@ -21,6 +22,14 @@
 <xsl:param name="langpath"  select="''"/>
 <xsl:param name="tablecolumns.extension" select="0"/>
 <xsl:param name="use.embed.for.svg" select="1"/>
+<xsl:param name="table.borders.with.css" select="0"/>
+<xsl:param name="ulink.target" select="''"/>
+<xsl:param name="qandadiv.autolabel" select="1"/>
+<xsl:param name="generate.section.toc.level" select="0"/>
+<xsl:param name="qanda.defaultlabel">qanda</xsl:param>
+<xsl:param name="glossary.sort" select="1"/>
+<xsl:param name="formal.object.break.after">0</xsl:param>
+<xsl:param name="highlight.source" select="1"/>
 
 <!-- Admonition Graphics -->
 <xsl:param name="admon.graphics" select="1"/>
@@ -40,13 +49,14 @@
 <xsl:param name="html.stylesheet.type" select="'text/css'"/>
 <xsl:param name="html.stylesheet.print"><xsl:if test="$embedtoc = 0 ">Common_Content/css/print.css</xsl:if></xsl:param>
 <xsl:param name="html.ext" select="'.html'"/>
-<xsl:param name="suppress.header.navigation" select="1"/>
+<xsl:param name="suppress.header.navigation" select="0"/>
 <xsl:param name="css.decoration" select="0"/>
 <xsl:param name="use.id.as.filename" select="'1'"/>
 <xsl:param name="docbook.css.link" select="0"/>
 <xsl:param name="generate.css.header" select="0"/>
 <xsl:param name="make.clean.html" select="0"/>
 <xsl:param name="html.cleanup" select="0"/>
+<xsl:param name="email.delimiters.enabled">0</xsl:param>
 
 <xsl:param name="section.autolabel" select="1"/>
 <xsl:param name="section.label.includes.component.label" select="1"/>
@@ -401,6 +411,16 @@ part toc
   <xsl:call-template name="inline.italicseq"/>
 </xsl:template>
 
+<xsl:template match="d:uri">
+  <!--xsl:call-template name="inline.charseq"/-->
+    <xsl:call-template name="anchor"/>
+    <xsl:call-template name="simple.xlink">
+      <xsl:with-param name="content">
+        <xsl:apply-templates/>
+      </xsl:with-param>
+    </xsl:call-template>
+</xsl:template>
+
 <xsl:template name="number.rtf.lines">
   <xsl:param name="rtf" select="''"/>
   <xsl:param name="pi.context" select="."/>
@@ -528,6 +548,413 @@ part toc
       <xsl:message terminate="yes">
         <xsl:text>No numberLines function available.</xsl:text>
       </xsl:message>
+    </xsl:otherwise>
+  </xsl:choose>
+</xsl:template>
+
+<xsl:template name="graphical.admonition">
+	<xsl:variable name="admon.type">
+		<xsl:choose>
+			<xsl:when test="local-name(.)='note'">Note</xsl:when>
+			<xsl:when test="local-name(.)='warning'">Warning</xsl:when>
+			<xsl:when test="local-name(.)='important'">Important</xsl:when>
+			<xsl:when test="local-name(.)='tip'">Tip</xsl:when>
+			<xsl:when test="local-name(.)='caution'">Caution</xsl:when>
+			<xsl:otherwise>Note</xsl:otherwise>
+		</xsl:choose>
+	</xsl:variable>
+
+	<xsl:variable name="alt">
+		<xsl:call-template name="gentext">
+			<xsl:with-param name="key" select="$admon.type"/>
+		</xsl:call-template>
+	</xsl:variable>
+
+	<div xmlns="http://www.w3.org/1999/xhtml">
+                <xsl:call-template name="common.html.attributes"/>
+		<xsl:apply-templates select="." mode="class.attribute">
+			<xsl:with-param name="class" select="concat('admonition ', local-name(.))"/>
+		</xsl:apply-templates>
+			
+		<xsl:if test="$admon.style != ''">
+			<xsl:attribute name="style">
+				<xsl:value-of select="$admon.style"/>
+			</xsl:attribute>
+		</xsl:if>
+		<xsl:if test="@id or @xml:id">
+			<xsl:attribute name="id">
+				<xsl:value-of select="(@id|@xml:id)[1]"/>
+			</xsl:attribute>
+		</xsl:if>
+		<xsl:if test="$admon.textlabel != 0 or title">
+			<div class="admonition_header">
+				<xsl:apply-templates select="." mode="object.title.markup"/>
+			</div>
+		</xsl:if>
+		<div>
+			<xsl:apply-templates/>
+		</div>
+	</div>
+</xsl:template>
+
+<xsl:template name="header.navigation">
+	<xsl:param name="prev" select="/foo"/>
+	<xsl:param name="next" select="/foo"/>
+	<xsl:param name="nav.context"/>
+	<xsl:variable name="home" select="/*[1]"/>
+	<xsl:variable name="up" select="parent::*"/>
+	<xsl:variable name="row1" select="$navig.showtitles != 0"/>
+	<xsl:variable name="row2" select="count($prev) &gt; 0 or (count($up) &gt; 0 and generate-id($up) != generate-id($home) and $navig.showtitles != 0) or count($next) &gt; 0"/>
+	<xsl:if test="$suppress.navigation = '0' and $suppress.header.navigation = '0'">
+		<xsl:if test="$row1 or $row2">
+			<xsl:if test="$row1">
+			</xsl:if>
+			<xsl:if test="$row2">
+				<ul class="docnav top" xmlns="http://www.w3.org/1999/xhtml">
+					<li class="previous">
+						<xsl:if test="count($prev)&gt;0">
+							<a accesskey="p">
+								<xsl:attribute name="href">
+									<xsl:call-template name="href.target">
+										<xsl:with-param name="object" select="$prev"/>
+									</xsl:call-template>
+								</xsl:attribute>
+								<strong>
+									<xsl:call-template name="navig.content">
+										<xsl:with-param name="direction" select="'prev'"/>
+									</xsl:call-template>
+								</strong>
+							</a>
+						</xsl:if>
+					</li>
+						<li class="home"><xsl:value-of select="$clean_title"/></li>
+						<li class="next">
+						<xsl:if test="count($next)&gt;0">
+							<a accesskey="n">
+								<xsl:attribute name="href">
+									<xsl:call-template name="href.target">
+										<xsl:with-param name="object" select="$next"/>
+									</xsl:call-template>
+								</xsl:attribute>
+								<strong>
+									<xsl:call-template name="navig.content">
+										<xsl:with-param name="direction" select="'next'"/>
+									</xsl:call-template>
+								</strong>
+							</a>
+						</xsl:if>
+					</li>
+				</ul>
+			</xsl:if>
+		</xsl:if>
+		<xsl:if test="$header.rule != 0">
+			<hr/>
+		</xsl:if>
+	</xsl:if>
+</xsl:template>
+
+<!--
+From: xhtml/chunk-common.xsl
+Reason: remove tables, truncate link text
+Version:
+-->
+<xsl:template name="footer.navigation">
+	<xsl:param name="prev" select="/foo"/>
+	<xsl:param name="next" select="/foo"/>
+	<xsl:param name="nav.context"/>
+	<xsl:param name="title-limit" select="'50'"/>
+	<xsl:variable name="home" select="/*[1]"/>
+	<xsl:variable name="up" select="parent::*"/>
+	<xsl:variable name="row1" select="count($prev) &gt; 0 or count($up) &gt; 0 or count($next) &gt; 0"/>
+	<xsl:variable name="row2" select="($prev and $navig.showtitles != 0) or (generate-id($home) != generate-id(.) or $nav.context = 'toc') or ($chunk.tocs.and.lots != 0 and $nav.context != 'toc') or ($next and $navig.showtitles != 0)"/>
+
+	<xsl:if test="$suppress.navigation = '0' and $suppress.footer.navigation = '0'">
+		<xsl:if test="$footer.rule != 0">
+			<hr/>
+		</xsl:if>
+		<xsl:if test="$row1 or $row2">
+			<ul class="docnav" xmlns="http://www.w3.org/1999/xhtml">
+				<xsl:if test="$row1">
+					<li class="previous">
+						<xsl:if test="count($prev) &gt; 0">
+							<a accesskey="p">
+								<xsl:attribute name="href">
+									<xsl:call-template name="href.target">
+										<xsl:with-param name="object" select="$prev"/>
+									</xsl:call-template>
+								</xsl:attribute>
+								<strong>
+									<xsl:call-template name="navig.content">
+										<xsl:with-param name="direction" select="'prev'"/>
+									</xsl:call-template>
+								</strong>
+								<xsl:variable name="text">
+									<xsl:apply-templates select="$prev" mode="object.title.markup"/>
+								</xsl:variable>
+								<xsl:choose>
+									<xsl:when test="string-length($text) &gt; $title-limit">
+										<xsl:value-of select="concat(substring($text, 0, $title-limit), '...')"/>
+									</xsl:when>
+									<xsl:otherwise>
+										<xsl:value-of select="$text"/>
+									</xsl:otherwise>
+								</xsl:choose>
+							</a>
+						</xsl:if>
+					</li>
+					<xsl:if test="count($up) &gt; 0">
+						<li class="up">
+							<a accesskey="u">
+								<xsl:attribute name="href">
+									<xsl:text>#</xsl:text>
+								</xsl:attribute>
+								<strong>
+									<xsl:call-template name="navig.content">
+										<xsl:with-param name="direction" select="'up'"/>
+									</xsl:call-template>
+								</strong>
+							</a>
+						</li>
+					</xsl:if>
+					<xsl:if test="$home != . or $nav.context = 'toc'">
+						<li class="home">
+							<a accesskey="h">
+								<xsl:attribute name="href">
+									<xsl:call-template name="href.target">
+										<xsl:with-param name="object" select="$home"/>
+									</xsl:call-template>
+								</xsl:attribute>
+								<strong>
+									<xsl:call-template name="navig.content">
+										<xsl:with-param name="direction" select="'home'"/>
+									</xsl:call-template>
+								</strong>
+							</a>
+						</li>
+					</xsl:if>
+					<xsl:if test="count($next)&gt;0">
+						<li class="next">
+							<a accesskey="n">
+								<xsl:attribute name="href">
+									<xsl:call-template name="href.target">
+										<xsl:with-param name="object" select="$next"/>
+									</xsl:call-template>
+								</xsl:attribute>
+								<strong>
+									<xsl:call-template name="navig.content">
+										<xsl:with-param name="direction" select="'next'"/>
+									</xsl:call-template>
+								</strong>
+								<xsl:variable name="text">
+									<xsl:apply-templates select="$next" mode="object.title.markup"/>
+								</xsl:variable>
+								<xsl:choose>
+									<xsl:when test="string-length($text) &gt; $title-limit">
+										<xsl:value-of select="concat(substring($text, 0, $title-limit),'...')"/>
+									</xsl:when>
+									<xsl:otherwise>
+										<xsl:value-of select="$text"/>
+									</xsl:otherwise>
+								</xsl:choose>
+							</a>
+						</li>
+					</xsl:if>
+				</xsl:if>
+			</ul>
+		</xsl:if>
+	</xsl:if>
+</xsl:template>
+
+<!--
+From: xhtml/qandaset.xsl
+Reason: No stinking tables
+Version: 1.72.0
+-->
+<xsl:template name="d:qandaset">
+  <div class="qandaset">
+    <xsl:apply-templates select="." mode="class.attribute"/>
+    <xsl:apply-templates />
+  </div>
+</xsl:template>
+
+<xsl:template name="process.qandaset">
+  <div class="qandaset">
+    <xsl:apply-templates select="." mode="class.attribute"/>
+    <xsl:apply-templates />
+  </div>
+</xsl:template>
+
+<xsl:template match="qandadiv">
+  <xsl:variable name="preamble" select="*[local-name(.) != 'title'                                           and local-name(.) != 'titleabbrev'                                           and local-name(.) != 'qandadiv'                                           and local-name(.) != 'qandaentry']"/>
+
+  <xsl:if test="blockinfo/title|info/title|title">
+    <div class="qandadiv">
+        <xsl:apply-templates select="(blockinfo/title|info/title|title)[1]"/>
+    </div>
+  </xsl:if>
+
+  <xsl:variable name="toc">
+    <xsl:call-template name="dbhtml-attribute">
+      <xsl:with-param name="pis" select="processing-instruction('dbhtml')"/>
+      <xsl:with-param name="attribute" select="'toc'"/>
+    </xsl:call-template>
+  </xsl:variable>
+
+  <xsl:variable name="toc.params">
+    <xsl:call-template name="find.path.params">
+      <xsl:with-param name="table" select="normalize-space($generate.toc)"/>
+    </xsl:call-template>
+  </xsl:variable>
+  <xsl:if test="(contains($toc.params, 'toc') and $toc != '0') or $toc = '1'">
+    <div class="toc">
+        <xsl:call-template name="process.qanda.toc"/>
+    </div>
+  </xsl:if>
+  <xsl:if test="$preamble">
+    <div class="preamble">
+        <xsl:apply-templates select="$preamble"/>
+    </div>
+  </xsl:if>
+  <div>
+    <xsl:apply-templates select="." mode="class.attribute"/>
+    <xsl:apply-templates select="qandadiv|qandaentry"/>
+  </div>
+</xsl:template>
+
+<xsl:template match="d:qandaentry">
+  <div>
+    <xsl:apply-templates select="." mode="class.attribute"/>
+    <xsl:apply-templates/>
+  </div>
+</xsl:template>
+
+<xsl:template match="d:question">
+  <xsl:variable name="deflabel">
+    <xsl:choose>
+      <xsl:when test="ancestor-or-self::*[@defaultlabel]">
+        <xsl:value-of select="(ancestor-or-self::*[@defaultlabel])[last()] /@defaultlabel"/>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:value-of select="$qanda.defaultlabel"/>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:variable>
+  <xsl:variable name="label.content">
+    <xsl:apply-templates select="." mode="label.markup"/>
+    <xsl:if test="$deflabel = 'number' and not(label)">
+      <xsl:apply-templates select="." mode="intralabel.punctuation"/>
+    </xsl:if>
+  </xsl:variable>
+  <div>
+    <xsl:apply-templates select="." mode="class.attribute"/>
+      <xsl:call-template name="anchor">
+        <xsl:with-param name="node" select=".."/>
+        <xsl:with-param name="conditional" select="0"/>
+      </xsl:call-template>
+      <!--xsl:call-template name="anchor">
+        <xsl:with-param name="conditional" select="0"/>
+      </xsl:call-template-->
+      <xsl:if test="string-length($label.content) &gt; 0">
+        <div class="label">
+          <xsl:copy-of select="$label.content"/>
+        </div>
+      </xsl:if>
+    <div class="data">
+      <xsl:apply-templates/>
+    </div>
+  </div>
+</xsl:template>
+
+<xsl:template match="d:answer">
+  <xsl:variable name="deflabel">
+    <xsl:choose>
+      <xsl:when test="ancestor-or-self::*[@defaultlabel]">
+        <xsl:value-of select="(ancestor-or-self::*[@defaultlabel])[last()] /@defaultlabel"/>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:value-of select="$qanda.defaultlabel"/>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:variable>
+
+  <div>
+    <xsl:apply-templates select="." mode="class.attribute"/>
+    <xsl:variable name="answer.label">
+      <xsl:apply-templates select="." mode="label.markup"/>
+    </xsl:variable>
+    <xsl:if test="string-length($answer.label) &gt; 0">
+      <div class="label">
+        <xsl:copy-of select="$answer.label"/>
+      </div>
+    </xsl:if>
+     <div class="data">
+       <xsl:apply-templates />
+     </div>
+   </div>
+</xsl:template>
+
+<xsl:template name="apply-highlighting">
+  <xsl:choose>
+    <!-- Do we want syntax highlighting -->
+    <xsl:when test="$highlight.source != 0 and function-available('perl:highlight')">
+      <xsl:variable name="language">
+	<xsl:call-template name="language.to.xslthl">
+	  <xsl:with-param name="context" select="."/>
+	</xsl:call-template>
+      </xsl:variable>
+      <xsl:choose>
+	<xsl:when test="$language != ''">
+	  <xsl:variable name="content">
+	    <xsl:apply-templates/>
+	  </xsl:variable>
+	  <xsl:apply-templates select="perl:highlight($language, exsl:node-set($content))"/>
+	</xsl:when>
+	<xsl:otherwise>
+	  <xsl:apply-templates/>
+	</xsl:otherwise>
+      </xsl:choose>
+    </xsl:when>
+    <!-- No syntax highlighting -->
+    <xsl:otherwise>
+      <xsl:apply-templates/>
+    </xsl:otherwise>
+  </xsl:choose>
+</xsl:template>
+
+<xsl:template name="language.to.xslthl">
+  <xsl:param name="context"/>
+
+  <xsl:choose>
+    <xsl:when test="$context/@language != ''">
+      <xsl:value-of select="$context/@language"/>
+    </xsl:when>
+    <xsl:when test="$highlight.default.language != ''">
+      <xsl:value-of select="$highlight.default.language"/>
+    </xsl:when>
+  </xsl:choose>
+</xsl:template>
+
+<!--
+
+BUGBUG callout code blows up highlight if the span contains a newline
+because it has to parse lines one by one to place the gfx
+
+-->
+<xsl:template match="perl_Alert | perl_BaseN | perl_BString | perl_Char | perl_Comment | perl_DataType | perl_DecVal | perl_Error | perl_Float | perl_Function | perl_IString | perl_Keyword | perl_Operator | perl_Others | perl_RegionMarker | perl_Reserved | perl_String | perl_Variable | perl_Warning ">
+  <xsl:variable name="name">
+    <xsl:value-of select="local-name(.)"/>
+  </xsl:variable>
+  <xsl:variable name="content">
+    <xsl:apply-templates/>
+  </xsl:variable>
+  <xsl:choose>
+    <xsl:when test="contains($content,'&#xA;')">
+      <span><xsl:attribute name="class"><xsl:value-of select="$name"/></xsl:attribute><xsl:value-of select="substring-before($content,'&#xA;')"/></span><xsl:text>
+</xsl:text>
+      <span><xsl:attribute name="class"><xsl:value-of select="$name"/></xsl:attribute><xsl:value-of select="substring-after($content,'&#xA;')"/></span>
+    </xsl:when>
+    <xsl:otherwise>
+      <span><xsl:attribute name="class"><xsl:value-of select="$name"/></xsl:attribute><xsl:value-of select="$content"/></span>
     </xsl:otherwise>
   </xsl:choose>
 </xsl:template>

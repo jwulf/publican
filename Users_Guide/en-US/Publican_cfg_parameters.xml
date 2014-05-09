@@ -1,10 +1,6 @@
-<?xml version='1.0' encoding='utf-8' ?>
-<!DOCTYPE appendix PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
-<!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
-%BOOK_ENTITIES;
-]>
-<appendix conformance="209" id="appe-Publican-Users_Guide-publican.cfg_parameters">
-	<title>publican.cfg parameters</title>
+<?xml version="1.0" encoding="utf-8"?>
+<appendix xmlns="http://docbook.org/ns/docbook" version="5.0" conformance="209" xml:id="appe-Publican-Users_Guide-publican.cfg_parameters"><info><title>publican.cfg parameters</title></info>
+	
 	 <para>
 		Every book, article, document set, or brand has a <filename>publican.cfg</filename> file in its root directory. Parameters that can be set in the <filename>publican.cfg</filename> file are:
 	</para>
@@ -53,7 +49,7 @@
 			<term><parameter>type</parameter></term>
 			 <listitem>
 				<para>
-					the type of document — a DocBook <sgmltag>&lt;article&gt;</sgmltag>, DocBook <sgmltag>&lt;book&gt;</sgmltag>, or DocBook <sgmltag>&lt;set&gt;</sgmltag>, set by the <option>--type</option> option.
+					the type of document — a DocBook <tag>&lt;article&gt;</tag>, DocBook <tag>&lt;book&gt;</tag>, or DocBook <tag>&lt;set&gt;</tag>, set by the <option>--type</option> option.
 				</para>
 
 			</listitem>
@@ -113,7 +109,7 @@
 			<term><parameter>bridgehead_in_toc</parameter></term>
 			 <listitem>
 				<para>
-					whether <sgmltag>bridgehead</sgmltag>s should be included in tables of contents. (Default: <literal>0</literal> — <sgmltag>bridgehead</sgmltag>s are not included in tables of contents).
+					whether <tag>bridgehead</tag>s should be included in tables of contents. (Default: <literal>0</literal> — <tag>bridgehead</tag>s are not included in tables of contents).
 				</para>
 
 			</listitem>
@@ -243,7 +239,7 @@
 			<term><parameter>dt_requires</parameter></term>
 			 <listitem>
 				<para>
-					a package that the desktop package requires, for example, a documentation menu package. Refer to <xref linkend="sect-Publican-Users_Guide-Desktop_menu_entries_for_documents" />.
+					a package that the desktop package requires, for example, a documentation menu package. Refer to <xref linkend="sect-Publican-Users_Guide-Desktop_menu_entries_for_documents"/>.
 				</para>
 
 			</listitem>
@@ -385,10 +381,10 @@
 			<term><parameter>mainfile</parameter></term>
 			 <listitem>
 				<para>
-					the name of the XML file in your document that contains the root XML node <sgmltag>&lt;article&gt;</sgmltag>, <sgmltag>&lt;book&gt;</sgmltag>, or <sgmltag>&lt;set&gt;</sgmltag>, and the name of the corresponding <filename>.ent</filename> file that contains the document's entities. For example, if you set <literal>mainfile: master</literal>, <application>Publican</application> looks for the root XML node in <filename>master.xml</filename> and the document entities in <filename>master.ent</filename>.
+					the name of the XML file in your document that contains the root XML node <tag>&lt;article&gt;</tag>, <tag>&lt;book&gt;</tag>, or <tag>&lt;set&gt;</tag>, and the name of the corresponding <filename>.ent</filename> file that contains the document's entities. For example, if you set <literal>mainfile: master</literal>, <application>Publican</application> looks for the root XML node in <filename>master.xml</filename> and the document entities in <filename>master.ent</filename>.
 				</para>
 				 <para>
-					If <parameter>mainfile</parameter> is not set, <application>Publican</application> looks for the root XML node in a file that matches the <sgmltag>&lt;title&gt;</sgmltag> of the document set in the <filename>Article_Info.xml</filename>, <filename>Book_Info.xml</filename>, or <filename>Set_Info.xml</filename> file, and looks for the document entities in a file with a corresponding name.
+					If <parameter>mainfile</parameter> is not set, <application>Publican</application> looks for the root XML node in a file that matches the <tag>&lt;title&gt;</tag> of the document set in the <filename>Article_Info.xml</filename>, <filename>Book_Info.xml</filename>, or <filename>Set_Info.xml</filename> file, and looks for the document entities in a file with a corresponding name.
 				</para>
 
 			</listitem>
@@ -398,9 +394,9 @@
 			<term><parameter>max_image_width</parameter></term>
 			 <listitem>
 				<para>
-					the maximum width allowable for images in the document, unless specifically overriden in the <sgmltag>&lt;imagedata&gt;</sgmltag> tag for a specific image. (Default: <literal>444</literal> — 444 pixels wide)
+					the maximum width allowable for images in the document, unless specifically overriden in the <tag>&lt;imagedata&gt;</tag> tag for a specific image. (Default: <literal>444</literal> — 444 pixels wide)
 				</para>
-				 <xi:include href="Image_width.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
+				 <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Image_width.xml"/>
 
 			</listitem>
 
@@ -409,7 +405,7 @@
 			<term><parameter>menu_category</parameter></term>
 			 <listitem>
 				<para>
-					the desktop menu category (as defined by a corresponding <filename>.menu</filename> file) in which a document should appear when installed from a desktop RPM package. Refer to <xref linkend="sect-Publican-Users_Guide-Desktop_menu_entries_for_documents" />.
+					the desktop menu category (as defined by a corresponding <filename>.menu</filename> file) in which a document should appear when installed from a desktop RPM package. Refer to <xref linkend="sect-Publican-Users_Guide-Desktop_menu_entries_for_documents"/>.
 				</para>
 
 			</listitem>
@@ -569,7 +565,7 @@
 			<term><parameter>web_formats</parameter></term>
 			 <listitem>
 				<para>
-					a comma-separated list of formats to include in the web RPM package. Refer to <xref linkend="sect-Publican-Users_Guide-Packaging_a_document-The_publican_package_command" />.
+					a comma-separated list of formats to include in the web RPM package. Refer to <xref linkend="sect-Publican-Users_Guide-Packaging_a_document-The_publican_package_command"/>.
 				</para>
 
 			</listitem>
@@ -581,10 +577,10 @@
 				<para>
 					specifies that the document is the home page of a documentation website, not a standard document.
 				</para>
-				 <important>
-					<title>Important — <literal>web_home</literal> is deprecated</title>
+				 <important><info><title>Important — <literal>web_home</literal> is deprecated</title></info>
+					
 					 <para>
-						In <application>Publican</application>&nbsp;2.2, <literal>web_home</literal> is replaced by <literal>web_type: home</literal>. Support for <literal>web_home</literal> will be removed in a future version of <application>Publican</application>.
+						In <application>Publican</application> 2.2, <literal>web_home</literal> is replaced by <literal>web_type: home</literal>. Support for <literal>web_home</literal> will be removed in a future version of <application>Publican</application>.
 					</para>
 
 				</important>
@@ -626,7 +622,7 @@
 			<term><parameter>web_type</parameter></term>
 			 <listitem>
 				<para>
-					specifies that the document is descriptive content for a <application>Publican</application>-managed website rather than product documentation. This content includes the home page of the website (<literal>web_type:&nbsp;home</literal>), product description pages (<literal>web_type:&nbsp;product</literal>), and version description pages (<literal>web_type:&nbsp;version</literal>). Refer to <xref linkend="chap-Publican-Users_Guide-Building_a_website_with_Publican" />.
+					specifies that the document is descriptive content for a <application>Publican</application>-managed website rather than product documentation. This content includes the home page of the website (<literal>web_type: home</literal>), product description pages (<literal>web_type: product</literal>), and version description pages (<literal>web_type: version</literal>). Refer to <xref linkend="chap-Publican-Users_Guide-Building_a_website_with_Publican"/>.
 				</para>
 
 			</listitem>
@@ -646,7 +642,7 @@
 			<term><parameter>wkhtmltopdf_opts</parameter></term>
 			 <listitem>
 				<para>
-					Extra options to pass to <application>wkhtmltopdf</application>. e.g. <literal>wkhtmltopdf_opts:&nbsp;"-O&nbsp;landscape&nbsp;-s&nbsp;A3"</literal>
+					Extra options to pass to <application>wkhtmltopdf</application>. e.g. <literal>wkhtmltopdf_opts: "-O landscape -s A3"</literal>
 				</para>
 
 			</listitem>

@@ -1,14 +1,10 @@
-<?xml version='1.0' encoding='utf-8' ?>
-<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
-<!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
-%BOOK_ENTITIES;
-]>
-<section conformance="123" id="sect-Publican-Users_Guide-Building_a_document">
-	<title>Building a document</title>
-	 <note>
-		<title>Note — Customizing output</title>
+<?xml version="1.0" encoding="utf-8"?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" conformance="123" xml:id="sect-Publican-Users_Guide-Building_a_document"><info><title>Building a document</title></info>
+	
+	 <note><info><title>Note — Customizing output</title></info>
+		
 		 <para>
-			The parameters set in the document configuration file (by default, <filename>publican.cfg</filename>) allow you to control many aspects of the way in which a document is presented — refer to <xref linkend="sect-Publican-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file" />.
+			The parameters set in the document configuration file (by default, <filename>publican.cfg</filename>) allow you to control many aspects of the way in which a document is presented — refer to <xref linkend="sect-Publican-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file"/>.
 		</para>
 		 <para>
 			If you maintain multiple versions of a document, you can create a configuration file for each version. When building the document, you can use the <option>--config</option> to specify which configuration file (and therefore which set of parameters) to use in a particular build, for example:
@@ -23,7 +19,7 @@
 	 <procedure>
 		<step>
 			<para>
-				Confirm the <parameter>YEAR</parameter> and <parameter>HOLDER</parameter> entities have been configured in the <filename><replaceable>Doc_Name</replaceable>.ent</filename> file, as described in <xref linkend="sect-Publican-Users_Guide-Files_in_the_book_directory-Doc_Name.ent" />.
+				Confirm the <parameter>YEAR</parameter> and <parameter>HOLDER</parameter> entities have been configured in the <filename><replaceable>Doc_Name</replaceable>.ent</filename> file, as described in <xref linkend="sect-Publican-Users_Guide-Files_in_the_book_directory-Doc_Name.ent"/>.
 			</para>
 
 		</step>
@@ -57,8 +53,8 @@
 
 	</procedure>
 	
-	 <variablelist conformance="124" id="vari-Publican-Users_Guide-Building_a_document-Formats_for_the_build_action">
-		<title>Formats for the <command>build</command> action</title>
+	 <variablelist conformance="124" xml:id="vari-Publican-Users_Guide-Building_a_document-Formats_for_the_build_action"><info><title>Formats for the <command>build</command> action</title></info>
+		
 		 <varlistentry>
 			<term><option>html</option></term>
 			 <listitem>
@@ -146,7 +142,7 @@
 			<term><option>eclipse</option></term>
 			 <listitem>
 				<para>
-					<application>Publican</application> outputs the document as an <application>Eclipse</application> help plugin. Refer to <xref linkend="sect-Publican-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file" /> for details of specifying <application>Eclipse</application>'s <parameter>id</parameter>, <parameter>name</parameter>, and <parameter>provider-name</parameter> parameters with <application>Publican</application>'s <parameter>ec_id</parameter>, <parameter>ec_name</parameter>, and <parameter>ec_provider</parameter> parameters.
+					<application>Publican</application> outputs the document as an <application>Eclipse</application> help plugin. Refer to <xref linkend="sect-Publican-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file"/> for details of specifying <application>Eclipse</application>'s <parameter>id</parameter>, <parameter>name</parameter>, and <parameter>provider-name</parameter> parameters with <application>Publican</application>'s <parameter>ec_id</parameter>, <parameter>ec_name</parameter>, and <parameter>ec_provider</parameter> parameters.
 				</para>
 
 			</listitem>
@@ -182,7 +178,7 @@
 			<term><prompt>$</prompt> <command>publican build --formats=html --langs=<replaceable>languages</replaceable></command></term>
 			 <listitem>
 				<para>
-					Build the book in multi-page HTML format. The HTML output will be located in the <filename><replaceable>Doc_Name</replaceable>/tmp/<replaceable>language</replaceable>/html/</filename> directory. Each chapter and major section is placed in a separate HTML file. You can control the depth at which <application>Publican</application> places subsections into separate HTML files with the <literal>chunk-section-depth</literal> parameter in the <filename>publican.cfg</filename> — refer to <xref linkend="sect-Publican-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file" />.
+					Build the book in multi-page HTML format. The HTML output will be located in the <filename><replaceable>Doc_Name</replaceable>/tmp/<replaceable>language</replaceable>/html/</filename> directory. Each chapter and major section is placed in a separate HTML file. You can control the depth at which <application>Publican</application> places subsections into separate HTML files with the <literal>chunk-section-depth</literal> parameter in the <filename>publican.cfg</filename> — refer to <xref linkend="sect-Publican-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file"/>.
 				</para>
 
 			</listitem>
@@ -220,10 +216,10 @@
 		</varlistentry>
 
 	</variablelist>
-	 <section conformance="125" id="sect-Publican-Users_Guide-Building_a_document-Building_a_document_without_validation">
-		<title>Building a document without validation</title>
+	 <section conformance="125" xml:id="sect-Publican-Users_Guide-Building_a_document-Building_a_document_without_validation"><info><title>Building a document without validation</title></info>
+		
 		 <para>
-			<application>Publican</application> validates your XML against the DocBook <firstterm>document type definition</firstterm> (DTD) before it builds the content. However, while a document is under development, you might sometimes want to skip validation while building, especially if the document contains cross-references (<sgmltag>&lt;xref&gt;</sgmltag>s) to sections of the document that do not yet exist. To skip validation, run <prompt>$</prompt> <command>publican build</command> with the <option>--novalid</option> option. Cross-references to non-existent content appear in the built document as three question marks: <literal>???</literal>.
+			<application>Publican</application> validates your XML against the DocBook <firstterm>document type definition</firstterm> (DTD) before it builds the content. However, while a document is under development, you might sometimes want to skip validation while building, especially if the document contains cross-references (<tag>&lt;xref&gt;</tag>s) to sections of the document that do not yet exist. To skip validation, run <prompt>$</prompt> <command>publican build</command> with the <option>--novalid</option> option. Cross-references to non-existent content appear in the built document as three question marks: <literal>???</literal>.
 		</para>
 		 <para>
 			Because the document has not been validated against the DTD, the quality of the output produced when you build with the <option>--novalid</option> option is highly suspect. Do not publish documentation that you have built with the <option>--novalid</option> option.

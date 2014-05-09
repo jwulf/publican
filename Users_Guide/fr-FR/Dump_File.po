@@ -96,7 +96,7 @@ msgstr "<sgmltag>&lt;language&gt;</sgmltag>"
 
 #. Tag: para
 #, no-c-format, fuzzy
-msgid "The language code for the document. Refer to <xref linkend=\"appe-Publican-Users_Guide-Language_codes\" /> for more information about language codes in XML."
+msgid "The language code for the document. Refer to <xref linkend=\"\" /> for more information about language codes in XML."
 msgstr "le code de la langue du document. Voyez l'<xref linkend=\"appe-Users_Guide-Language_codes\" /> pour plus d'informations à propos des codes de langues en XML."
 
 #. Tag: term

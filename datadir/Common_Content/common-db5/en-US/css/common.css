@@ -1,146 +1,303 @@
-* {
-    widows: 4 !important;
-    orphans: 4 !important;
+body, h1, h2, h3, h4, h5, h6, pre, li, div {
+	margin-top: 1.5em;
+	widows: 4 !important;
+	orphans: 4 !important;
 }
 
-body, h1, h2, h3, h4, h5, h6, pre, li, div {
+div.itemizedlist, div.affiliation {
+	margin-top: 0em;
+}
+
+h1, h2, h3, h4, h5, h6, header .home, .title {
+	color: #336699;
+	font-family: "overpass", "liberation sans", "Myriad ", "Bitstream Vera Sans", "Lucida Grande", "Luxi Sans", "Trebuchet MS", helvetica, verdana, arial, sans-serif;
 }
 
 body {
-    background-color: white;
-    margin:0 auto;
-    font-family: "liberation sans", "Myriad ", "Bitstream Vera Sans", "Lucida Grande", "Luxi Sans", "Trebuchet MS", helvetica, verdana, arial, sans-serif;
-    font-size: 14px;
-    max-width: 770px;
-    color: black;
-}
-body > header {
-    margin:0 auto;
-    background-color: white;
-    max-width: 45em;
-    margin-top: 0;
-    padding: 2em 6em 6em;
+	background-color: white;
+	margin: 0 auto;
+	font-family: "liberation sans", "Myriad ", "Bitstream Vera Sans", "Lucida Grande", "Luxi Sans", "Trebuchet MS", helvetica, verdana, arial, sans-serif;
+	font-size: 12pt;
+	max-width: 54em;
+	color: black;
+	line-height: 1.3em;
 }
 
-body > footer {
-    max-width: 45em;
+header {
+	margin: 0px 1em;
 }
 
-div.warning, div.note, div.important, div.tip, div.important {
-    color: black;
-    margin: 0px;
-    padding: 0px;
-    background: none;
-    background-color: white;
-    margin-bottom: 1em;
-    border-radius: 11px 11px 11px 11px;
-    page-break-inside: avoid;
-    background-color: #F5F5F5;
-    border-style: none;
-    box-shadow: 0 2px 5px #AAAAAA inset;
-    color: #000000;
-    padding: 0.5em;
-    
+footer {
+	margin: 0px 1em;
 }
 
-div.warning th, div.note th, div.important th, div.tip th, div.important th {
-    font-size: 1.6em;
-    line-height: 2em;
+/* Navigation */
+
+.docnav a, .docnav strong {
+	border:none;
+	text-decoration:none;
+	font-weight:normal;
+}
+
+.docnav {
+	list-style:none;
+	margin:0px;
+	padding:0px;
+	position:relative;
+	width:100%;
+	padding-bottom:2em;
+	padding-top:1em;
+		height:2.5em;
+		line-height:2.5em;
+/*
+	border-top:1px dotted #ccc;
+		background-color: rgba(240, 240, 240, 0.9);
+-webkitbox-shadow: 0px .15em .5em rgba(0,0,0,0.2);
+  -moz-box-shadow: 0px .15em .5em rgba(0,0,0,0.2);
+	   box-shadow: 0px .15em .5em rgba(0,0,0,0.2);
+*/
+}
+
+.docnav li {
+	list-style:none;
+	margin:0px;
+	padding:0px;
+	display:inline;
+	font-size: 14px;
+}
+
+.docnav li:before {
+	content:" ";
+}
+
+.docnav li.previous, .docnav li.next {
+	position:absolute;
+}
+
+.docnav li.up, .docnav li.home {
+	margin:0px 1.5em;
+}
+
+.docnav.top li.home {
+	font-size: 2em;
+	font-weight: bold;
+}
+
+
+.docnav li.previous {
+	left:0px;
+	text-align:left;
+}
+
+.docnav li.next {
+	right:0px;
+	text-align:right;
+}
+
+.docnav li.previous strong, .docnav li.next strong {
+	height: 17px;
+	display: block;
+}
+
+.docnav {
+	margin:0 auto;
+	text-align:center;
+}
+
+.docnav li.next a strong {
+	background:  url(../images/stock-go-forward.png) right 120% no-repeat;
+	padding-top:	3px;
+	padding-bottom: 0.8em;
+	padding-right:  28px;
+}
+
+.docnav li.previous a strong {
+	background: url(../images/stock-go-back.png) left 120% no-repeat;
+	padding-top:	3px;
+	padding-right:  0.5em;
+	padding-bottom: 0.8em;
+	padding-left:   28px;
+}
+
+.docnav li.home a strong {
+	background: url(../images/stock-home.png) top left no-repeat;
+	padding:5px;
+	padding-left:28px;
+}
+
+.docnav li.up a strong {
+	background: url(../images/stock-go-up.png) top left no-repeat;
+	padding:5px;
+	padding-left:28px;
+}
+
+.docnav a:link, .docnav a:visited {
+	color:#666;
+}
+
+.docnav a:hover, .docnav a:focus, .docnav a:active {
+	color:black;
+}
+
+.docnav a {
+	max-width: 10px;
+	overflow:hidden;
+}
+
+.docnav a:link strong {
+	text-decoration:none;
+}
+
+.docnav {
+	margin:0 auto;
+	text-align:center;
+}
+
+ul.docnav {
+	margin-bottom: 1em;
+}
+
+/* Admonitions */
+div.admonition {
+	margin-bottom: 1em;
+	padding-left: 1.5em;
+	background-size: 0.5em auto;
+	background-image: url("../images/red.png");
+	background-repeat: repeat-y;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+}
+
+div.admonition_header {
+	font-weight: bold;
+	margin-top: 0;
+}
+
+div.admonition > div:last-child > *:last-child {
+	margin-bottom: 0em;
+}
+
+div.note {
+	background-image: url("../images/green.png");
+}
+
+div.important {
+	background-image: url("../images/yellow.png");
+}
+
+div.warning {
+	background-image: url("../images/red.png");
+}
+
+div.tip {
+	background-image: url("../images/green.png");
+}
+
+div.caution {
+	background-image: url("../images/yellow.png");
 }
 
 .command, .filename, .keycap, .classname, .literal {
-    font-family: "liberation mono","bitstream vera mono","dejavu mono",monospace;
-    font-weight: bold;
+	font-family: "liberation mono","bitstream vera mono","dejavu mono",monospace;
+	font-weight: bold;
 }
 
 .application, .guimenu, .guisubmenu, .guimenuitem, .abstract-title {
-    font-weight: bold;
+	font-weight: bold;
 }
 
 
 .computeroutput, .option {
-    font-family: "liberation mono","bitstream vera mono","dejavu mono",monospace;
-    font-weight: bold;
+	font-family: "liberation mono","bitstream vera mono","dejavu mono",monospace;
+	font-weight: bold;
 }
 
 pre {
-    border-radius: 11px 11px 11px 11px;
-    page-break-inside: avoid;
-    background-color: #F5F5F5;
-    border-style: none;
-    box-shadow: 0 2px 5px #AAAAAA inset;
-    color: #000000;
-    display: block;
-    font-family: "liberation mono","bitstream vera mono","dejavu mono",monospace;
-    font-size: 0.9em;
-    margin-bottom: 1em;
-    padding: 0.5em 1em;
-    white-space: pre-wrap;
-    word-wrap: break-word;
+	padding: 0.5em 0px 0.5em 1em;
+	font-family: "liberation mono","bitstream vera mono","dejavu mono",monospace;
+	font-size: medium;
+	border-left: 0.5em solid #AAAAAA;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+}
+
+.example {
+	padding: 0.5em 0px 0.5em 1em;
+	border-left: 0.5em solid #AAAAAA;
 }
 
 table {
-    border: 1px solid #444444;
-    border-collapse: collapse;
-    width: 100%;
-    word-wrap: break-word;
+	border-collapse: collapse;
+	width: 100%;
+	word-wrap: break-word;
 }
 
 th, td {
-    vertical-align: top;
+	vertical-align: top;
+	border: 1px solid black;
+	padding: 0.5em;
 }
 
-.revhistory > table {
-    border: none;
+th {
+	background-color: #6699cc;
+	color: white;
+}
+
+.qandaset td {
+	border: none;
+}
+
+.revhistory > table,
+.revhistory > table td {
+	border: none;
 }
 
 div.navfooter {
-    color: #999999;
+	color: #999999;
 }
 
 div.navfooter a {
-    text-decoration: none;
+	text-decoration: none;
 }
 
 div.navfooter a:hover {
-    text-decoration: none;
-    color: #444444;
+	text-decoration: none;
+	color: #444444;
 }
 
 div.navfooter table {
-    border: none;
+	border: none;
 }
 
 div.navfooter table tr:first-child td a {
-    background-position: 90% 90%;
+	background-position: 90% 90%;
 }
 
 div.navfooter table tr:first-child td:last-child a {
-    background: url("../images/stock-go-forward.png") no-repeat scroll right 120% transparent;
-    padding-bottom: 4px;
-    padding-right: 28px;
-    padding-top: 3px;
+	background: url("../images/stock-go-forward.png") no-repeat scroll right 120% transparent;
+	padding-bottom: 4px;
+	padding-right: 28px;
+	padding-top: 3px;
 }
 
 div.navfooter table tr:first-child td:first-child a {
-    background: url("../images/stock-go-back.png") no-repeat scroll left 120% transparent;
-    padding: 3px 0.5em 4px 28px;
+	background: url("../images/stock-go-back.png") no-repeat scroll left 120% transparent;
+	padding: 3px 0.5em 4px 28px;
 }
 
 div.navfooter table tr td {
-    font-size: 10px;
+	font-size: 10px;
 }
 div.navfooter table tr:first-child td {
-    font-size: 1em;
+	font-size: 1em;
 }
 
 .inlinemediaobject  {
 	display: block;
-	text-align: center;
 }
 
 img {
-    max-width: 100%;
+	max-width: 100%;
 }
 
 .figure {
@@ -148,25 +305,25 @@ img {
 }
 
 a {
-    outline: medium none;
+	outline: medium none;
 }
 
 a:link {
-    color: #3366CC;
-    text-decoration: none;
+	color: #3366CC;
+	text-decoration: none;
 }
 a:visited {
-    color: #003366;
-    text-decoration: none;
+	color: #003366;
+	text-decoration: none;
 }
 
 .toc a, .qandaset a {
-    border: medium none;
-    font-weight: normal;
+	border: medium none;
+	font-weight: normal;
 }
 
 .toc a:hover, .qandaset a:hover {
-    border-bottom: 1px dotted;
+	border-bottom: 1px dotted;
 }
 
 
@@ -189,16 +346,17 @@ table.lt-4-cols.gt-14-rows tr:nth-child(odd) {
 .gt-8-cols td:first-child {
 	border-left: 0;
 }
+
 /*Lists*/
 ul {
-    list-style-image: url("common/en-US/images/dot.png");
-    list-style-type: circle;
-    padding-left: 1.6em;
+	list-style-image: url("common/en-US/images/dot.png");
+	list-style-type: circle;
+	padding-left: 1.6em;
 }
 
 ul ul {
-    list-style-image: url("common/en-US/images/dot2.png");
-    list-style-type: circle;
+	list-style-image: url("common/en-US/images/dot2.png");
+	list-style-type: circle;
 }
 
 ol.1 {
@@ -235,8 +393,240 @@ dd {
 
 li {
 	padding-top: 0px;
-	margin-top: 0px;
+	margin-top: 1.5em;
 	padding-bottom: 0px;
 /*	margin-bottom: 16px; */
+}
+
+ul > li {
+	margin-top: 0em;
+
+}
+
+li > p:first-child {
+	margin-top: 0em;
+	margin-bottom: 0.1em;
+}
+
+sup {
+	margin:0px;
+	padding:0px;
+	font-size: 10px;
+	padding-left:0px;
+}
+
+.footnote {
+	font-size: small;
+}
+
+.footnote sup  {
+	color: black;
+}
+.footnote .para sup  {
+/*	position:absolute; */
+	vertical-align: middle;
+}
+
+/*credits*/
+.authorgroup > div {
+	margin-top: 1.5em;
+}
+
+.authorgroup,
+div.producttitle,
+.book > .titlepage h1.title,
+.article > .titlepage h1.title,
+.article > .titlepage h2.title,
+.set .titlepage > div > div > h1.title,
+.part > .titlepage h1.title,
+div.subtitle,
+h2.subtitle,
+h3.subtitle,
+.titlepage .author {
+	text-align: center;
+}
+
+.titlepage div.author {
+	text-align: center;
+	margin-top: 1.5em;
+}
+
+.authorgroup h3 {
+	clear:both;
+	margin-bottom: 0em;
+	
+}
+
+div.author div.author,
+div.translator div.translator,
+div.othercredit div.othercredit,
+div.editor div.editor,
+div.contrib div.contrib {
+	margin: 0px;
+	padding: 0px;
+	font-weight: bold;
+}
+
+div.editedby {
+	margin-top: 15px;
+	margin-bottom: -0.8em;
+}
+
+div.authorgroup .author, 
+div.authorgroup.editor, 
+div.authorgroup.translator, 
+div.authorgroup.othercredit,
+div.authorgroup.contrib {
+	display: block;
+}
+
+.revhistory .author {
+	display: inline;
+}
+
+.othercredit h3 {
+	padding-top: 1em;
+}
+
+
+.othercredit {
+	margin:0px;
+	padding:0px;
+}
+
+.releaseinfo {
+	clear: both;
+}
+
+.copyright {
+	margin-top: 1em;
+}
+
+/* qanda sets */
+.answer {
+	margin-bottom:1em;
+	border-bottom:1px dotted #ccc;
+}
+
+.qandaset .toc {
+	border-bottom:1px dotted #ccc;
+}
+
+.qandaset ul,
+.toc ul {
+	list-style: none;
+}
+
+.question {
+	font-weight:bold;
+}
+
+.answer .data, .question .data {
+	padding-left: 2.6em;
+}
+
+.answer .label, .question .label {
+	float:left;
+	font-weight:bold;
+	margin-top: 0;
+}
+
+/*revision history*/
+.revhistory {
+	display:block;
+}
+
+.revhistory table {
+	background-color:transparent;
+	border-color:#fff;
+	padding:0px;
+	margin: 0;
+	border-collapse:collapse;
+	border-style:none;
+}
+
+.revhistory td {
+	text-align :left;
+	padding:0px;
+	border: none;
+	border-top: 1px solid #fff;
+	font-weight: bold;
+}
+
+.revhistory .simplelist td {
+	font-weight: normal;
+}
+
+.revhistory .simplelist {
+	margin-bottom: 1.5em;
+	margin-left: 1em;
+}
+
+.revhistory table th {
+	display: none;
+}
+
+.screen * {
+    font-weight: normal;
+}
+
+
+.perl_Alert {
+    color: #0000FF;
+}
+.perl_BaseN {
+    color: #007F00;
+}
+.perl_BString {
+    color: #5C3566;
+}
+.perl_Char {
+    color: #FF00FF;
+}
+.perl_Comment {
+    color: #888888;
+}
+.perl_DataType {
+    color: #0000FF;
+}
+.perl_DecVal {
+    color: #00007F;
+}
+.perl_Error {
+    color: #FF0000;
+}
+.perl_Float {
+    color: #00007F;
+}
+.perl_Function {
+    color: #007F00;
+}
+.perl_IString {
+    color: #5C3566;
+}
+.perl_Keyword {
+    color: brown;
+    font-weight: bold;
+}
+.perl_Operator {
+    color: #FFA500;
+}
+.perl_Others {
+    color: green;
+}
+.perl_RegionMarker {
+    color: #96B9FF;
+}
+.perl_Reserved {
+    color: #9B30FF;
+}
+.perl_String {
+    color: #ff00ff;
+}
+.perl_Variable {
+    color: #0000FF;
+}
+.perl_Warning {
+    color: #0000FF;
 }
 

@@ -1,10 +1,6 @@
-<?xml version='1.0' encoding='utf-8' ?>
-<!DOCTYPE important PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
-<!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
-%BOOK_ENTITIES;
-]>
-<important>
-	<title>Important — 444 pixels is the maximum safe width</title>
+<?xml version="1.0" encoding="utf-8"?>
+<important xmlns="http://docbook.org/ns/docbook" version="5.0"><info><title>Important — 444 pixels is the maximum safe width</title></info>
+	
 	 <para>
 		Do not use the <parameter>max_image_width</parameter> parameter if your images contain important information. Images wider than 444 pixels presented at their full size might lead to poorly presented HTML and to PDF output that it is unusable because the images have run off the page and are incomplete.
 	</para>

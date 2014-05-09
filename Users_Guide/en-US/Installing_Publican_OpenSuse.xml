@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
-<!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
-]>
-<section conformance="233" id="sect-Users_Guide-Linux_operating_systems-OpenSuse_12">
-      <title>OpenSuse 12</title>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" conformance="233" xml:id="sect-Users_Guide-Linux_operating_systems-OpenSuse_12"><info><title>OpenSuse 12</title></info>
+      
 
       <para><application>Publican</application> has not been usable on
       OpenSuse up until release 12.1. Certain dependencies were missing and

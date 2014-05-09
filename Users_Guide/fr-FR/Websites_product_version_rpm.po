@@ -25,7 +25,7 @@ msgstr "Les pages de produit et les pages des versions créées par <application
 
 #. Tag: para
 #, no-c-format
-msgid "On a workstation, create a product or version page using the procedure described in <xref linkend=\"sect-Publican-Users_Guide-Creating_installing_and_updating_product_pages_and_version_pages\" />."
+msgid "On a workstation, create a product or version page using the procedure described in <xref linkend=\"\" />."
 msgstr ""
 
 #. Tag: para

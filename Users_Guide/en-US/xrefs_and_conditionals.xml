@@ -1,11 +1,7 @@
-<?xml version='1.0' encoding='utf-8' ?>
-<!DOCTYPE important PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
-<!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
-%BOOK_ENTITIES;
-]>
-<important>
-	<title>xrefs and conditional tagging</title>
+<?xml version="1.0" encoding="utf-8"?>
+<important xmlns="http://docbook.org/ns/docbook" version="5.0"><info><title>xrefs and conditional tagging</title></info>
+	
 	 <para>
-		If an <sgmltag>&lt;xref&gt;</sgmltag> points to content not included in the build due to conditional tagging, the build will fail. For example, with <prompt>$</prompt> <command>condition: upstream</command> set in the <filename>publican.cfg</filename> file, <prompt>$</prompt> <command>publican build --formats=pdf --langs=en-US</command> will fail if the book has the tag <sgmltag>&lt;xref linkend="betasection"&gt;</sgmltag> pointing to <sgmltag>&lt;section id="betasection" condition="beta"&gt;</sgmltag>.
+		If an <tag>&lt;xref&gt;</tag> points to content not included in the build due to conditional tagging, the build will fail. For example, with <prompt>$</prompt> <command>condition: upstream</command> set in the <filename>publican.cfg</filename> file, <prompt>$</prompt> <command>publican build --formats=pdf --langs=en-US</command> will fail if the book has the tag <tag>&lt;xref linkend="betasection"&gt;</tag> pointing to <tag>&lt;section id="betasection" condition="beta"&gt;</tag>.
 	</para>
 </important>

@@ -108,7 +108,7 @@ msgstr "Il tagging condizionale crea difficoltà ai traduttori in due modi: oscu
 
 #. Tag: para
 #, no-c-format, fuzzy
-msgid "The PO files for the document contain the full set of tags from the XML files, regardless of any conditions set. When translators open the PO file for the example from <citetitle>How To Use Product Foo</citetitle> in <xref linkend=\"sect-Publican-Users_Guide-Conditional_tagging\" />, they see:"
+msgid "The PO files for the document contain the full set of tags from the XML files, regardless of any conditions set. When translators open the PO file for the example from <citetitle>How To Use Product Foo</citetitle> in <xref linkend=\"\" />, they see:"
 msgstr "I file PO includono tutti i tag presenti in XML, a prescindere dalle condizioni. Per esempio, se un traduttore apre il file PO, relativo all'<citetitle>How To Use Product Foo</citetitle> della <xref linkend=\"sect-Users_Guide-Conditional_tagging\" />, egli vede:"
 
 #. Tag: programlisting

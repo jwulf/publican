@@ -1,10 +1,6 @@
-<?xml version='1.0' encoding='utf-8' ?>
-<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
-<!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
-%BOOK_ENTITIES;
-]>
-<chapter conformance="156" id="chap-Publican-Users_Guide-Frequently_Asked_Questions">
-	<title>Frequently Asked Questions</title>
+<?xml version="1.0" encoding="utf-8"?>
+<chapter xmlns="http://docbook.org/ns/docbook" version="5.0" conformance="156" xml:id="chap-Publican-Users_Guide-Frequently_Asked_Questions"><info><title>Frequently Asked Questions</title></info>
+	
 	 <qandaset>
 		<qandaentry>
 			<question>
@@ -107,10 +103,10 @@
 				<para>
 					Yes. If you make a directory named <filename>files</filename> in your source language directory it will be included in any tarballs or SRPM packages that <application>Publican</application> creates.
 				</para>
-				 <important>
-					<title>Important</title>
+				 <important><info><title>Important</title></info>
+					
 					 <para>
-						The <filename>files</filename> directory will not be available during the validation process so you can not <sgmltag>xi:include</sgmltag> or otherwise embed any files in this directory in your XML.
+						The <filename>files</filename> directory will not be available during the validation process so you can not <tag>xi:include</tag> or otherwise embed any files in this directory in your XML.
 					</para>
 
 				</important>
@@ -205,7 +201,7 @@ Enter to keep the current selection[+], or type selection number:</screen>
 			</question>
 			 <answer>
 				<para>
-					The default memory allocated for Java is not big enough to build your PDF. You need to increase the memory allocated to <application>FOP</application>. Before running <prompt>$</prompt> <command>publican build</command> run <command>echo "FOP_OPTS='-Xms50m -Xmx700m'" &gt; ~/.foprc</command>. This sets the initial heap space to 50&nbsp;MB and allows it to grow to a maximum of 700&nbsp;MB.
+					The default memory allocated for Java is not big enough to build your PDF. You need to increase the memory allocated to <application>FOP</application>. Before running <prompt>$</prompt> <command>publican build</command> run <command>echo "FOP_OPTS='-Xms50m -Xmx700m'" &gt; ~/.foprc</command>. This sets the initial heap space to 50 MB and allows it to grow to a maximum of 700 MB.
 				</para>
 
 			</answer>
@@ -214,13 +210,13 @@ Enter to keep the current selection[+], or type selection number:</screen>
 		 <qandaentry>
 			<question>
 				<para>
-					Previous versions of <application>Publican</application> removed empty <sgmltag>&lt;para&gt;</sgmltag> tags. Does <application>Publican</application> still do this?
+					Previous versions of <application>Publican</application> removed empty <tag>&lt;para&gt;</tag> tags. Does <application>Publican</application> still do this?
 				</para>
 
 			</question>
 			 <answer>
 				<para>
-					No. <application>Publican</application> previously removed empty <sgmltag>&lt;para&gt;</sgmltag> tags while it transformed XML because empty <sgmltag>&lt;para&gt;</sgmltag> tags broke earlier translation toolchains used within Red Hat and the Fedora Project. Empty <sgmltag>&lt;para&gt;</sgmltag> tags are valid DocBook XML, and <application>Publican</application> no longer removes them.
+					No. <application>Publican</application> previously removed empty <tag>&lt;para&gt;</tag> tags while it transformed XML because empty <tag>&lt;para&gt;</tag> tags broke earlier translation toolchains used within Red Hat and the Fedora Project. Empty <tag>&lt;para&gt;</tag> tags are valid DocBook XML, and <application>Publican</application> no longer removes them.
 				</para>
 
 			</answer>
@@ -241,7 +237,7 @@ Enter to keep the current selection[+], or type selection number:</screen>
 					Run the following bash script in the root directory of your document to check spellings in your XML files with the <application>aspell</application> command-line spell checker.
 				</para>
 				 
-<programlisting language="Bash"><xi:include href="extras/proof.sh" parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" />
+<programlisting language="Bash"><xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="extras/proof.sh" parse="text"/>
 </programlisting>
 
 			</answer>
@@ -250,13 +246,13 @@ Enter to keep the current selection[+], or type selection number:</screen>
 		 <qandaentry>
 			<question>
 				<para>
-					Why don't <sgmltag>&lt;segmentedlist&gt;</sgmltag>s work when I build PDFs?
+					Why don't <tag>&lt;segmentedlist&gt;</tag>s work when I build PDFs?
 				</para>
 
 			</question>
 			 <answer>
 				<para>
-					Check the number of columns in your <sgmltag>&lt;segmentedlist&gt;</sgmltag>s. When <sgmltag>&lt;segmentedlist&gt;</sgmltag>s are formatted as tables, the DocBook XSL limits the number of columns to two, and <application>Publican</application> formats <sgmltag>&lt;segmentedlist&gt;</sgmltag>s as tables.
+					Check the number of columns in your <tag>&lt;segmentedlist&gt;</tag>s. When <tag>&lt;segmentedlist&gt;</tag>s are formatted as tables, the DocBook XSL limits the number of columns to two, and <application>Publican</application> formats <tag>&lt;segmentedlist&gt;</tag>s as tables.
 				</para>
 
 			</answer>
@@ -280,23 +276,23 @@ Enter to keep the current selection[+], or type selection number:</screen>
 		 <qandaentry>
 			<question>
 				<para>
-					When I build my document, I get an error about an &lsquo;undefined language&rsquo; — what's wrong?
+					When I build my document, I get an error about an ‘undefined language’ — what's wrong?
 				</para>
 
 			</question>
 			 <answer>
 				<para>
-					Code highlighting in <application>Publican</application> is generated with the <application>Syntax::Highlight::Engine::Kate</application> Perl module. If you specify a language in a <sgmltag>&lt;programlisting&gt;</sgmltag> tag that <application>Syntax::Highlight::Engine::Kate</application> does not recognize, you receive an error when you build your book. The first lines of the error message are similar to:
+					Code highlighting in <application>Publican</application> is generated with the <application>Syntax::Highlight::Engine::Kate</application> Perl module. If you specify a language in a <tag>&lt;programlisting&gt;</tag> tag that <application>Syntax::Highlight::Engine::Kate</application> does not recognize, you receive an error when you build your book. The first lines of the error message are similar to:
 				</para>
 				 
 <screen><computeroutput>undefined language: JAVA at /usr/lib/perl5/vendor_perl/5.10.0/Syntax/Highlight/Engine/Kate.pm</computeroutput>
 <computeroutput>line 615.</computeroutput>
 <computeroutput>cannot create plugin for language 'JAVA'</computeroutput></screen>
 				 <para>
-					Note that <application>Syntax::Highlight::Engine::Kate</application> is very strict about names of languages and is case sensitive. Therefore, <sgmltag>&lt;programlisting language="Java"&gt;</sgmltag> works, but <sgmltag>&lt;programlisting language="java"&gt;</sgmltag> and <sgmltag>&lt;programlisting language="JAVA"&gt;</sgmltag> do not. The error message that you receive identifies the problematic language attribute.
+					Note that <application>Syntax::Highlight::Engine::Kate</application> is very strict about names of languages and is case sensitive. Therefore, <tag>&lt;programlisting language="Java"&gt;</tag> works, but <tag>&lt;programlisting language="java"&gt;</tag> and <tag>&lt;programlisting language="JAVA"&gt;</tag> do not. The error message that you receive identifies the problematic language attribute.
 				</para>
 				 <para>
-					Refer to <ulink url="http://search.cpan.org/dist/Syntax-Highlight-Engine-Kate/lib/Syntax/Highlight/Engine/Kate.pm#PLUGINS" /> for the full list of languages that <application>Syntax::Highlight::Engine::Kate</application> supports, including their expected capitalization and punctuation.
+					Refer to <uri xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://search.cpan.org/dist/Syntax-Highlight-Engine-Kate/lib/Syntax/Highlight/Engine/Kate.pm#PLUGINS">http://search.cpan.org/dist/Syntax-Highlight-Engine-Kate/lib/Syntax/Highlight/Engine/Kate.pm#PLUGINS</uri> for the full list of languages that <application>Syntax::Highlight::Engine::Kate</application> supports, including their expected capitalization and punctuation.
 				</para>
 
 			</answer>
@@ -311,7 +307,7 @@ Enter to keep the current selection[+], or type selection number:</screen>
 			</question>
 			 <answer>
 				<para>
-					Support for bash command-line completion is a new feature in <application>Publican&nbsp;2.2</application>. To enable this feature:
+					Support for bash command-line completion is a new feature in <application>Publican 2.2</application>. To enable this feature:
 				</para>
 				 <procedure>
 					<step>
@@ -375,7 +371,7 @@ fi
 		 <qandaentry>
 			<question>
 				<para>
-					Why does Jeff call Isaac &lsquo;Ivan&rsquo;?
+					Why does Jeff call Isaac ‘Ivan’?
 				</para>
 
 			</question>

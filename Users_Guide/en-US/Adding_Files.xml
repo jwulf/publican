@@ -1,10 +1,6 @@
-<?xml version='1.0' encoding='utf-8' ?>
-<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
-<!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
-%BOOK_ENTITIES;
-]>
-<section conformance="119" id="sect-Publican-Users_Guide-Adding_files">
-	<title>Adding files</title>
+<?xml version="1.0" encoding="utf-8"?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" conformance="119" xml:id="sect-Publican-Users_Guide-Adding_files"><info><title>Adding files</title></info>
+	
 	 <para>
 		<application>Publican</application> allows you to include arbitrary files together with your documents. These files are included in RPM packages that you build with <application>Publican</application> and are installed on users' systems alongside the document itself. For example, you might want to include multimedia files of tutorials that complement the document, or sample files of source code or other materials that allow users to work through the examples or tutorials in a document.
 	</para>

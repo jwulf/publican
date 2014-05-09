@@ -23,7 +23,7 @@ msgstr "Creare il pacchetto di un brand"
 
 #. Tag: para
 #, no-c-format, fuzzy
-msgid "After you create a brand (as described in <xref linkend=\"sect-Publican-Users_Guide-Creating_a_brand\" />), <application>Publican</application> can help you to distribute the brand to members of your documentation project as <firstterm>RPM packages</firstterm>. RPM packages are used to distribute software to computers with Linux operating systems that use the <application>RPM Package Manager</application>. These operating systems include Red Hat Enterprise Linux, Fedora, Mandriva Linux, SUSE Linux Enterprise, openSUSE, Turbolinux, and Yellow Dog Linux, to name just a few."
+msgid "After you create a brand (as described in <xref linkend=\"\" />), <application>Publican</application> can help you to distribute the brand to members of your documentation project as <firstterm>RPM packages</firstterm>. RPM packages are used to distribute software to computers with Linux operating systems that use the <application>RPM Package Manager</application>. These operating systems include Red Hat Enterprise Linux, Fedora, Mandriva Linux, SUSE Linux Enterprise, openSUSE, Turbolinux, and Yellow Dog Linux, to name just a few."
 msgstr "Dopo aver creato un brand (come descritto nella <xref linkend=\"sect-Users_Guide-Creating_a_brand\" />), <application>Publican</application> permette di distribuire il brand ai membri di un team di documentazione come <firstterm>pacchetti RPM</firstterm>. I pacchetti RPM vengono impiegati per distribuire software ai computer con sistemi operativi Linux che usano un <application>Gestore di pacchetti RPM</application>. Tra questi sistemi operativi figurano Red Hat Enterprise Linux, Fedora, Mandriva Linux, SUSE Linux Enterprise, openSUSE, Turbolinux e Yellow Dog Linux, per citarne solo alcuni."
 
 #. Tag: para
@@ -78,7 +78,7 @@ msgstr "se usato insieme all'opzione <option>--brew</option>, specifica di compi
 
 #. Tag: para
 #, no-c-format, fuzzy
-msgid "The <option>--lang</option>, <option>--desktop</option> and <option>--short_sighted</option> options that apply when you package books (described in <xref linkend=\"sect-Publican-Users_Guide-Packaging_a_document\" />) are meaningless when you package brands. In particular, note that although the <option>--lang</option> option is mandatory when you package a book, you do not need to use it when you package a brand."
+msgid "The <option>--lang</option>, <option>--desktop</option> and <option>--short_sighted</option> options that apply when you package books (described in <xref linkend=\"\" />) are meaningless when you package brands. In particular, note that although the <option>--lang</option> option is mandatory when you package a book, you do not need to use it when you package a brand."
 msgstr "Le opzioni <option>--lang</option>, <option>--desktop</option> e <option>--short_sighted</option> che si applicano quando si crea il pacchetto di un libro (descritto nella <xref linkend=\"sect-Users_Guide-Packaging_a_book\" />) non hanno senso nel caso dei brand. In particolare, notare che sebbene l'opzione <option>--lang</option> sia necessaria per la creazione del pacchetto di un libro, essa non occorre quando si crea il pacchetto di un brand."
 
 #. Tag: para
@@ -93,7 +93,7 @@ msgstr "<filename>publican-<replaceable>brand</replaceable>-<replaceable>version
 
 #. Tag: para
 #, no-c-format, fuzzy
-msgid "<application>Publican</application> uses the information in the <filename>publican.cfg</filename> file to supply the various parameters in the file name. Refer to <xref linkend=\"sect-Publican-Users_Guide-Files_in_the_brand_directory-The_publican.cfg_file\" /> for details of configuring this file. Additionally:"
+msgid "<application>Publican</application> uses the information in the <filename>publican.cfg</filename> file to supply the various parameters in the file name. Refer to <xref linkend=\"\" /> for details of configuring this file. Additionally:"
 msgstr "<application>Publican</application> usa le informazioni nel file <filename>publican.cfg</filename> per fornire i vari parametri nel nome di file. Fare riferimento alla <xref linkend=\"sect-Users_Guide-Files_in_the_brand_directory-The_publican.cfg_file\" /> per i dettagli sulla configurazione di questo file. Inoltre:"
 
 #. Tag: para

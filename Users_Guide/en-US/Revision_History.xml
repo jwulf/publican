@@ -1,21 +1,12 @@
-<?xml version='1.0' encoding='utf-8' ?>
-<!DOCTYPE appendix PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
-<!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
-%BOOK_ENTITIES;
-]>
-<appendix conformance="211" id="appe-Publican-Users_Guide-Revision_History">
-	<title>Revision History</title>
+<?xml version="1.0" encoding="utf-8"?>
+<appendix xmlns="http://docbook.org/ns/docbook" version="5.0" conformance="211" xml:id="appe-Publican-Users_Guide-Revision_History"><info><title>Revision History</title></info>
+	
 	 <simpara>
 		<revhistory>
 			<revision>
 				<revnumber>4.0-5</revnumber>
 				 <date>Thu Mar 27 2014</date>
-				 <author>
-					<firstname>Rüdiger</firstname>
-					 <surname>Landmann</surname>
-					 <email>rlandmann@redhat.com</email>
-
-				</author>
+				 <author><personname><firstname>Rüdiger</firstname><surname>Landmann</surname></personname><email>rlandmann@redhat.com</email></author>
 				 <revdescription>
 					<simplelist>
 						<member>Corrections to website building instructions</member>
@@ -27,12 +18,7 @@
 			<revision>
 				<revnumber>4.0-4</revnumber>
 				 <date>Mon Nov 25 2013</date>
-				 <author>
-					<firstname>Rüdiger</firstname>
-					 <surname>Landmann</surname>
-					 <email>r.landmann@redhat.com</email>
-
-				</author>
+				 <author><personname><firstname>Rüdiger</firstname><surname>Landmann</surname></personname><email>r.landmann@redhat.com</email></author>
 				 <revdescription>
 					<simplelist>
 						<member>Improve instructions for translation BZ#1021287</member>
@@ -45,12 +31,7 @@
 			<revision>
 				<revnumber>4.0-3</revnumber>
 				 <date>Thu Nov 14 2013</date>
-				 <author>
-					<firstname>Roman</firstname>
-					 <surname>Joost</surname>
-					 <email>rjoost@redhat.com</email>
-
-				</author>
+				 <author><personname><firstname>Roman</firstname><surname>Joost</surname></personname><email>rjoost@redhat.com</email></author>
 				 <revdescription>
 					<simplelist>
 						<member>Clarify where relative paths are used in brand instructions  - BZ#1028815</member>
@@ -62,12 +43,7 @@
 			<revision>
 				<revnumber>4.0-2</revnumber>
 				 <date>Thu Nov 14 2013</date>
-				 <author>
-					<firstname>Norman</firstname>
-					 <surname>Dunbar</surname>
-					 <email>SvenDowideit@home.org.au</email>
-
-				</author>
+				 <author><personname><firstname>Norman</firstname><surname>Dunbar</surname></personname><email>SvenDowideit@home.org.au</email></author>
 				 <revdescription>
 					<simplelist>
 						<member>Corrected OpenSUSE installation instructions - BZ#1000534</member>
@@ -79,12 +55,7 @@
 			<revision>
 				<revnumber>4.0-1</revnumber>
 				 <date>Thu Nov 14 2013</date>
-				 <author>
-					<firstname>Svein</firstname>
-					 <surname>Dowdeit</surname>
-					 <email>SvenDowideit@home.org.au</email>
-
-				</author>
+				 <author><personname><firstname>Svein</firstname><surname>Dowdeit</surname></personname><email>SvenDowideit@home.org.au</email></author>
 				 <revdescription>
 					<simplelist>
 						<member>Updated Debian installation instructions - BZ#1013934</member>
@@ -97,12 +68,7 @@
 			<revision>
 				<revnumber>3.2-1</revnumber>
 				 <date>Thu Jul 11 2013</date>
-				 <author>
-					<firstname>Zac</firstname>
-					 <surname>Dover</surname>
-					 <email>zdover@redhat.com</email>
-
-				</author>
+				 <author><personname><firstname>Zac</firstname><surname>Dover</surname></personname><email>zdover@redhat.com</email></author>
 				 <revdescription>
 					<simplelist>
 						<member>Added command prompts to all commands - BZ#880456</member>
@@ -118,12 +84,7 @@
 			 <revision>
 				<revnumber>3.2-0</revnumber>
 				 <date>Thu Jul 11 2013</date>
-				 <author>
-					<firstname>Jeff</firstname>
-					 <surname>Fearn</surname>
-					 <email>jfearn@redhat.com</email>
-
-				</author>
+				 <author><personname><firstname>Jeff</firstname><surname>Fearn</surname></personname><email>jfearn@redhat.com</email></author>
 				 <revdescription>
 					<simplelist>
 						<member>Publican 3.2.0</member>
@@ -139,12 +100,7 @@
 			 <revision>
 				<revnumber>3.1-0</revnumber>
 				 <date>Tue Jan 8 2013</date>
-				 <author>
-					<firstname>Norman</firstname>
-					 <surname>Dunbar</surname>
-					 <email>norman@dunbar-it.co.uk</email>
-
-				</author>
+				 <author><personname><firstname>Norman</firstname><surname>Dunbar</surname></personname><email>norman@dunbar-it.co.uk</email></author>
 				 <revdescription>
 					<simplelist>
 						<member>Add Section on Installing Publican on OpenSuse 12</member>
@@ -157,12 +113,7 @@
 			 <revision>
 				<revnumber>3.0-0</revnumber>
 				 <date>Mon Feb 20 2012</date>
-				 <author>
-					<firstname>Jeff</firstname>
-					 <surname>Fearn</surname>
-					 <email>jfearn@redhat.com</email>
-
-				</author>
+				 <author><personname><firstname>Jeff</firstname><surname>Fearn</surname></personname><email>jfearn@redhat.com</email></author>
 				 <revdescription>
 					<simplelist>
 						<member>Publican 3.0</member>
@@ -175,12 +126,7 @@
 			 <revision>
 				<revnumber>2.7-1</revnumber>
 				 <date>Tue Sep 6 2011</date>
-				 <author>
-					<firstname>Rebecca</firstname>
-					 <surname>Newton</surname>
-					 <email>rnewton@redhat.com</email>
-
-				</author>
+				 <author><personname><firstname>Rebecca</firstname><surname>Newton</surname></personname><email>rnewton@redhat.com</email></author>
 				 <revdescription>
 					<simplelist>
 						<member>Improve documentation of standalone &lt;set&gt; usage</member>
@@ -193,12 +139,7 @@
 			 <revision>
 				<revnumber>2.6-1</revnumber>
 				 <date>Mon Jul 18 2011</date>
-				 <author>
-					<firstname>Rüdiger</firstname>
-					 <surname>Landmann</surname>
-					 <email>r.landmann@redhat.com</email>
-
-				</author>
+				 <author><personname><firstname>Rüdiger</firstname><surname>Landmann</surname></personname><email>r.landmann@redhat.com</email></author>
 				 <revdescription>
 					<simplelist>
 						<member>Document new manual_toc_update parameter -- BZ#719573</member>
@@ -218,12 +159,7 @@
 			 <revision>
 				<revnumber>2.4-1</revnumber>
 				 <date>Wed Dec 1 2010</date>
-				 <author>
-					<firstname>Rüdiger</firstname>
-					 <surname>Landmann</surname>
-					 <email>r.landmann@redhat.com</email>
-
-				</author>
+				 <author><personname><firstname>Rüdiger</firstname><surname>Landmann</surname></personname><email>r.landmann@redhat.com</email></author>
 				 <revdescription>
 					<simplelist>
 						<member>Incorporate proofreading fixes from Luigi Votta <email>lewis41@fedoraproject.org</email>
@@ -241,12 +177,7 @@
 			 <revision>
 				<revnumber>2.3-0</revnumber>
 				 <date>Mon Oct 25 2010</date>
-				 <author>
-					<firstname>Rüdiger</firstname>
-					 <surname>Landmann</surname>
-					 <email>r.landmann@redhat.com</email>
-
-				</author>
+				 <author><personname><firstname>Rüdiger</firstname><surname>Landmann</surname></personname><email>r.landmann@redhat.com</email></author>
 				 <revdescription>
 					<simplelist>
 						<member>Document website dump files</member>
@@ -261,12 +192,7 @@
 			 <revision>
 				<revnumber>2.3-0</revnumber>
 				 <date>Tue Oct 5 2010</date>
-				 <author>
-					<firstname>Rüdiger</firstname>
-					 <surname>Landmann</surname>
-					 <email>r.landmann@redhat.com</email>
-
-				</author>
+				 <author><personname><firstname>Rüdiger</firstname><surname>Landmann</surname></personname><email>r.landmann@redhat.com</email></author>
 				 <revdescription>
 					<simplelist>
 						<member>Update lang_stats to include multiple languages</member>
@@ -287,12 +213,7 @@
 			 <revision>
 				<revnumber>2.2-0</revnumber>
 				 <date>Thu Aug 19 2010</date>
-				 <author>
-					<firstname>Rüdiger</firstname>
-					 <surname>Landmann</surname>
-					 <email>r.landmann@redhat.com</email>
-
-				</author>
+				 <author><personname><firstname>Rüdiger</firstname><surname>Landmann</surname></personname><email>r.landmann@redhat.com</email></author>
 				 <revdescription>
 					<simplelist>
 						<member>Expand on including code samples BZ#604255</member>
@@ -307,12 +228,7 @@
 			 <revision>
 				<revnumber>2.1-1</revnumber>
 				 <date>Fri Jul 16 2010</date>
-				 <author>
-					<firstname>Rüdiger</firstname>
-					 <surname>Landmann</surname>
-					 <email>r.landmann@redhat.com</email>
-
-				</author>
+				 <author><personname><firstname>Rüdiger</firstname><surname>Landmann</surname></personname><email>r.landmann@redhat.com</email></author>
 				 <revdescription>
 					<simplelist>
 						<member>Correct and clarify website instructions BZ#614259</member>
@@ -326,12 +242,7 @@
 			 <revision>
 				<revnumber>1.6-1</revnumber>
 				 <date>Mon May 24 2010</date>
-				 <author>
-					<firstname>Rüdiger</firstname>
-					 <surname>Landmann</surname>
-					 <email>r.landmann@redhat.com</email>
-
-				</author>
+				 <author><personname><firstname>Rüdiger</firstname><surname>Landmann</surname></personname><email>r.landmann@redhat.com</email></author>
 				 <revdescription>
 					<simplelist>
 						<member>Update Ubuntu installation instructions</member>
@@ -344,12 +255,7 @@
 			 <revision>
 				<revnumber>1.6-0</revnumber>
 				 <date>Fri May 7 2010</date>
-				 <author>
-					<firstname>Rüdiger</firstname>
-					 <surname>Landmann</surname>
-					 <email>r.landmann@redhat.com</email>
-
-				</author>
+				 <author><personname><firstname>Rüdiger</firstname><surname>Landmann</surname></personname><email>r.landmann@redhat.com</email></author>
 				 <revdescription>
 					<simplelist>
 						<member>Revise action and option nomenclature</member>
@@ -366,12 +272,7 @@
 			 <revision>
 				<revnumber>1.5-0</revnumber>
 				 <date>Fri Feb 26 2010</date>
-				 <author>
-					<firstname>Rüdiger</firstname>
-					 <surname>Landmann</surname>
-					 <email>r.landmann@redhat.com</email>
-
-				</author>
+				 <author><personname><firstname>Rüdiger</firstname><surname>Landmann</surname></personname><email>r.landmann@redhat.com</email></author>
 				 <revdescription>
 					<simplelist>
 						<member>Document --config option</member>
@@ -384,12 +285,7 @@
 			 <revision>
 				<revnumber>1.4-0</revnumber>
 				 <date>Wed Feb 17 2010</date>
-				 <author>
-					<firstname>Jeff</firstname>
-					 <surname>Fearn</surname>
-					 <email>jfearn@redhat.com</email>
-
-				</author>
+				 <author><personname><firstname>Jeff</firstname><surname>Fearn</surname></personname><email>jfearn@redhat.com</email></author>
 				 <revdescription>
 					<simplelist>
 						<member>remove obsolete reference to path to the DocBook catalog files. BZ#565498.</member>
@@ -403,12 +299,7 @@
 			 <revision>
 				<revnumber>1.3-0</revnumber>
 				 <date>Mon Dec 7 2009</date>
-				 <author>
-					<firstname>Rüdiger</firstname>
-					 <surname>Landmann</surname>
-					 <email>r.landmann@redhat.com</email>
-
-				</author>
+				 <author><personname><firstname>Rüdiger</firstname><surname>Landmann</surname></personname><email>r.landmann@redhat.com</email></author>
 				 <revdescription>
 					<simplelist>
 						<member>Add an FAQ entry about code highlighting errors.</member>
@@ -425,12 +316,7 @@
 			 <revision>
 				<revnumber>1.2-0</revnumber>
 				 <date>Fri Nov 27 2009</date>
-				 <author>
-					<firstname>Jeff</firstname>
-					 <surname>Fearn</surname>
-					 <email>jfearn@redhat.com</email>
-
-				</author>
+				 <author><personname><firstname>Jeff</firstname><surname>Fearn</surname></personname><email>jfearn@redhat.com</email></author>
 				 <revdescription>
 					<simplelist>
 						<member>Document lang_stats action. BZ#540696.</member>
@@ -443,12 +329,7 @@
 			 <revision>
 				<revnumber>1.1-1</revnumber>
 				 <date>Thu Nov 26 2009</date>
-				 <author>
-					<firstname>Jeff</firstname>
-					 <surname>Fearn</surname>
-					 <email>jfearn@redhat.com</email>
-
-				</author>
+				 <author><personname><firstname>Jeff</firstname><surname>Fearn</surname></personname><email>jfearn@redhat.com</email></author>
 				 <revdescription>
 					<simplelist>
 						<member>Fix wrong docs for condition usage. BZ#540691</member>
@@ -461,12 +342,7 @@
 			 <revision>
 				<revnumber>1.1-0</revnumber>
 				 <date>Thu Oct 22 2009</date>
-				 <author>
-					<firstname>Rüdiger</firstname>
-					 <surname>Landmann</surname>
-					 <email>r.landmann@redhat.com</email>
-
-				</author>
+				 <author><personname><firstname>Rüdiger</firstname><surname>Landmann</surname></personname><email>r.landmann@redhat.com</email></author>
 				 <revdescription>
 					<simplelist>
 						<member>Fix various small inconsistencies and general clean up</member>
@@ -479,12 +355,7 @@
 			 <revision>
 				<revnumber>1.0-0</revnumber>
 				 <date>Tue Oct 13 2009</date>
-				 <author>
-					<firstname>Rüdiger</firstname>
-					 <surname>Landmann</surname>
-					 <email>r.landmann@redhat.com</email>
-
-				</author>
+				 <author><personname><firstname>Rüdiger</firstname><surname>Landmann</surname></personname><email>r.landmann@redhat.com</email></author>
 				 <revdescription>
 					<simplelist>
 						<member>Updated for Publican 1.0</member>
@@ -497,12 +368,7 @@
 			 <revision>
 				<revnumber>0.5-0</revnumber>
 				 <date>Thu Dec 18 2008</date>
-				 <author>
-					<firstname>Jeff</firstname>
-					 <surname>Fearn</surname>
-					 <email>jfearn@redhat.com</email>
-
-				</author>
+				 <author><personname><firstname>Jeff</firstname><surname>Fearn</surname></personname><email>jfearn@redhat.com</email></author>
 				 <revdescription>
 					<simplelist>
 						<member>Added appendix on Makefile parameters</member>
@@ -516,12 +382,7 @@
 			 <revision>
 				<revnumber>0.4-0</revnumber>
 				 <date>Tue Nov 25 2008</date>
-				 <author>
-					<firstname>Brian</firstname>
-					 <surname>Forté</surname>
-					 <email>bforte@redhat.com</email>
-
-				</author>
+				 <author><personname><firstname>Brian</firstname><surname>Forté</surname></personname><email>bforte@redhat.com</email></author>
 				 <revdescription>
 					<simplelist>
 						<member>Added "Pre-release and draft documentation" section.</member>
@@ -534,12 +395,7 @@
 			 <revision>
 				<revnumber>0.3-0</revnumber>
 				 <date>Fri Oct 10 2008</date>
-				 <author>
-					<firstname>Don</firstname>
-					 <surname>Domingo</surname>
-					 <email>ddomingo@redhat.com</email>
-
-				</author>
+				 <author><personname><firstname>Don</firstname><surname>Domingo</surname></personname><email>ddomingo@redhat.com</email></author>
 				 <revdescription>
 					<simplelist>
 						<member>Adding "Conditional Tagging" section.</member>
@@ -552,12 +408,7 @@
 			 <revision>
 				<revnumber>0.2-0</revnumber>
 				 <date>Fri Sep 05 2008</date>
-				 <author>
-					<firstname>Brian</firstname>
-					 <surname>Forté</surname>
-					 <email>bforte@redhat.com</email>
-
-				</author>
+				 <author><personname><firstname>Brian</firstname><surname>Forté</surname></personname><email>bforte@redhat.com</email></author>
 				 <revdescription>
 					<simplelist>
 						<member>General edits and updates related to Publican 0.36 release. Also, new section added to Chapter 3.3.</member>
@@ -570,12 +421,7 @@
 			 <revision>
 				<revnumber>0.1-1</revnumber>
 				 <date>Fri Jun 06 2008</date>
-				 <author>
-					<firstname>Murray</firstname>
-					 <surname>McAllister</surname>
-					 <email>mmcallis@redhat.com</email>
-
-				</author>
+				 <author><personname><firstname>Murray</firstname><surname>McAllister</surname></personname><email>mmcallis@redhat.com</email></author>
 				 <revdescription>
 					<simplelist>
 						<member>Updated Branding to note addition of oVirt and GIMP brands</member>
@@ -588,12 +434,7 @@
 			 <revision>
 				<revnumber>0.1-0</revnumber>
 				 <date>Fri May 16 2008</date>
-				 <author>
-					<firstname>Jeff</firstname>
-					 <surname>Fearn</surname>
-					 <email>jfearn@redhat.com</email>
-
-				</author>
+				 <author><personname><firstname>Jeff</firstname><surname>Fearn</surname></personname><email>jfearn@redhat.com</email></author>
 				 <revdescription>
 					<simplelist>
 						<member>Updated FAQ</member>
@@ -606,12 +447,7 @@
 			 <revision>
 				<revnumber>0.0-0</revnumber>
 				 <date>Thu Dec 13 2007</date>
-				 <author>
-					<firstname>Murray</firstname>
-					 <surname>McAllister</surname>
-					 <email>mmcallis@redhat.com</email>
-
-				</author>
+				 <author><personname><firstname>Murray</firstname><surname>McAllister</surname></personname><email>mmcallis@redhat.com</email></author>
 				 <revdescription>
 					<simplelist>
 						<member>Initial content release</member>

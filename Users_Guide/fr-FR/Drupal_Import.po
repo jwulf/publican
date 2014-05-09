@@ -140,7 +140,7 @@ msgstr "Important — Définir le bloc de menu"
 
 #. Tag: para
 #, no-c-format, fuzzy
-msgid "The menu block must exist in Drupal. For more information about adding a menu block in Drupal. Please refer to <xref linkend=\"sect-Publican-Users_Guide-Drupal_Import_Guide-How_to_add_a_menu_block\" />."
+msgid "The menu block must exist in Drupal. For more information about adding a menu block in Drupal. Please refer to <xref linkend=\"\" />."
 msgstr "Le bloc de menu doit exister dans Drupal. Pour plus d'informations à propos de l'ajout d'un bloc de menu dans Drupal, voyez la <xref linkend=\"sect-Users_Guide-Import_book_into_Drupal-Drupal_Import_Guide-How_to_add_a_menu_block\" />."
 
 #. Tag: term
@@ -285,7 +285,7 @@ msgstr "Pour importer un ouvrage dans Drupal :"
 
 #. Tag: para
 #, no-c-format, fuzzy
-msgid "Follow the steps in <xref linkend=\"sect-Publican-Users_Guide-Import_book_into_Drupal-How_to_build_a_CSV_file_for_Drupal_import\" />"
+msgid "Follow the steps in <xref linkend=\"\" />"
 msgstr "Parcourir les étapes précisées dans la <xref linkend=\"sect-Users_Guide-Import_book_into_Drupal-How_to_build_a_CSV_file\" />."
 
 #. Tag: para
@@ -295,7 +295,7 @@ msgstr "Téléverser le fichier CSV dans le <filename>répertoire d'importation<
 
 #. Tag: para
 #, no-c-format, fuzzy
-msgid "Upload <filename>en-US</filename> directory to the <filename>\"sites/default/files/\"</filename> directory in the Drupal server. This value can be overriden in the <filename>publican.cfg</filename>. For more details, please read <xref linkend=\"sect-Publican-Users_Guide-Import_book_into_Drupal-The_publican.cfg_file\" />"
+msgid "Upload <filename>en-US</filename> directory to the <filename>\"sites/default/files/\"</filename> directory in the Drupal server. This value can be overriden in the <filename>publican.cfg</filename>. For more details, please read <xref linkend=\"\" />"
 msgstr "Téléverser le répertoire <filename>en-US</filename> dans le répertoire <filename>« sites/default/files/ »</filename> du serveur Drupal. Cette valeur peut être écrasée avec celle indiquée dans <filename>publican.cfg</filename>. Pour plus de détails, veuillez lire la <xref linkend=\"sect-Users_Guide-Import_book_into_Drupal-The_publican_cfg_file\" />."
 
 #. Tag: para
@@ -320,7 +320,7 @@ msgstr "Comment mettre à jour un ouvrage"
 
 #. Tag: para
 #, no-c-format, fuzzy
-msgid "Simply repeat the steps in <xref linkend=\"sect-Publican-Users_Guide-Drupal_Import_Guide-How_to_import_book\" /> to update the book."
+msgid "Simply repeat the steps in <xref linkend=\"\" /> to update the book."
 msgstr "Refaites simplement les étapes de la <xref linkend=\"sect-Users_Guide-Import_book_into_Drupal-Drupal_Import_Guide-How_to_import_book\" /> pour mettre à jour l'ouvrage."
 
 #. Tag: title

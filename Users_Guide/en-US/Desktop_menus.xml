@@ -1,10 +1,6 @@
-<?xml version='1.0' encoding='utf-8' ?>
-<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
-<!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
-%BOOK_ENTITIES;
-]>
-<section conformance="134" id="sect-Publican-Users_Guide-Desktop_menu_entries_for_documents">
-	<title>Desktop menu entries for documents</title>
+<?xml version="1.0" encoding="utf-8"?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" conformance="134" xml:id="sect-Publican-Users_Guide-Desktop_menu_entries_for_documents"><info><title>Desktop menu entries for documents</title></info>
+	
 	 <para>
 		By default, RPM packages of <application>Publican</application> documents for desktop use appear on the GNOME desktop under the <menuchoice><guimenu>System</guimenu><guisubmenu>Documentation</guisubmenu></menuchoice> menu. When users have large numbers of documents installed on their systems, this menu becomes very cluttered and difficult to navigate. Documentation for many different products and perhaps different languages becomes intermixed, adding to the confusion.
 	</para>
@@ -29,8 +25,8 @@
 	 <para>
 		Note that the <guimenu>Documentation</guimenu> menu does not group entries under a submenu until two or more documents are installed that belong on that submenu. The first document appears under <menuchoice><guimenu>System</guimenu><guisubmenu>Documentation</guisubmenu></menuchoice>.
 	</para>
-	 <section conformance="135" id="sect-Publican-Users_Guide-Desktop_menu_entries_for_documents-Creating_an_desktop_menu_package">
-		<title>Creating an desktop menu package</title>
+	 <section conformance="135" xml:id="sect-Publican-Users_Guide-Desktop_menu_entries_for_documents-Creating_an_desktop_menu_package"><info><title>Creating an desktop menu package</title></info>
+		
 		 <para>
 			A desktop menu package consists of:
 		</para>
@@ -97,20 +93,20 @@
 			</listitem>
 
 		</itemizedlist>
-		 <example conformance="239" id="exam-Publican-Users_Guide-Creating_an_desktop_menu_package-Example_.directory_file">
-			<title>Example .directory file</title>
+		 <example conformance="239" xml:id="exam-Publican-Users_Guide-Creating_an_desktop_menu_package-Example_.directory_file"><info><title>Example .directory file</title></info>
+			
 			 <para>
 				The following file, <filename>menu-example.directory</filename> illustrates the structure of a desktop entry file.
 			</para>
 			 
-<programlisting><xi:include href="extras/menu-example.directory" parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" /></programlisting>
+<programlisting><xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="extras/menu-example.directory" parse="text"/></programlisting>
 
 		</example>
 		 <para>
 			The desktop entry file is placed in <filename>/usr/share/desktop-directories/</filename>
 		</para>
 		 <para>
-			For a full description of how desktop entries work, refer to the <citetitle>Desktop Entry Specification</citetitle>, available from <ulink url="http://standards.freedesktop.org/entry-spec/latest/" />
+			For a full description of how desktop entries work, refer to the <citetitle>Desktop Entry Specification</citetitle>, available from <uri xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://standards.freedesktop.org/entry-spec/latest/">http://standards.freedesktop.org/entry-spec/latest/</uri>
 		</para>
 		 <para>
 			A desktop menu file is an XML file that contains:
@@ -127,29 +123,29 @@
 			</listitem>
 			 <listitem>
 				<para>
-					a <firstterm>root element</firstterm>, <sgmltag>&lt;Menu&gt;</sgmltag>, that contains:
+					a <firstterm>root element</firstterm>, <tag>&lt;Menu&gt;</tag>, that contains:
 				</para>
 				 <itemizedlist>
 					<listitem>
 						<para>
-							a <sgmltag>&lt;Name&gt;</sgmltag> element with the content <literal>Documentation</literal>
+							a <tag>&lt;Name&gt;</tag> element with the content <literal>Documentation</literal>
 						</para>
 
 					</listitem>
 					 <listitem>
 						<para>
-							another <sgmltag>&lt;Menu&gt;</sgmltag> element that in turn contains:
+							another <tag>&lt;Menu&gt;</tag> element that in turn contains:
 						</para>
 						 <itemizedlist>
 							<listitem>
 								<para>
-									a <sgmltag>&lt;Name&gt;</sgmltag> element with the content <literal>Documentation</literal> (just like the root element)
+									a <tag>&lt;Name&gt;</tag> element with the content <literal>Documentation</literal> (just like the root element)
 								</para>
 
 							</listitem>
 							 <listitem>
 								<para>
-									a <sgmltag>&lt;Directory&gt;</sgmltag> element with its content the name of the desktop entry file you created, for example:
+									a <tag>&lt;Directory&gt;</tag> element with its content the name of the desktop entry file you created, for example:
 								</para>
 								 
 <programlisting language="XML">&lt;Directory&gt;menu-example.directory&lt;/Directory&gt;</programlisting>
@@ -157,7 +153,7 @@
 							</listitem>
 							 <listitem>
 								<para>
-									an <sgmltag>&lt;Includes&gt;</sgmltag> element with the content <literal>X-<replaceable>category_name</replaceable></literal>, where <replaceable>category_name</replaceable> is an identifier for the documents that will be grouped together under this menu entry. For example:
+									an <tag>&lt;Includes&gt;</tag> element with the content <literal>X-<replaceable>category_name</replaceable></literal>, where <replaceable>category_name</replaceable> is an identifier for the documents that will be grouped together under this menu entry. For example:
 								</para>
 								 
 <programlisting language="XML">&lt;Includes&gt;X-Example-Docs&lt;/Includes&gt;</programlisting>
@@ -173,28 +169,28 @@
 			</listitem>
 
 		</itemizedlist>
-		 <example conformance="240" id="exam-Publican-Users_Guide-Creating_an_desktop_menu_package-Example_.menu_file">
-			<title>Example .menu file</title>
+		 <example conformance="240" xml:id="exam-Publican-Users_Guide-Creating_an_desktop_menu_package-Example_.menu_file"><info><title>Example .menu file</title></info>
+			
 			 <para>
 				The following file, <filename>menu-example.menu</filename> illustrates the structure of a desktop menu file.
 			</para>
 			 
-<programlisting><xi:include href="extras/menu-example.menu" parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" /></programlisting>
+<programlisting><xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="extras/menu-example.menu" parse="text"/></programlisting>
 
 		</example>
 		 <para>
 			The desktop menu file is placed in <filename>/etc/xdg/menus/settings-merged/</filename>
 		</para>
 		 <para>
-			For a full description of how desktop menus work, refer to the <citetitle>Desktop Menu Specification</citetitle>, available from <ulink url="http://standards.freedesktop.org/desktop-menu-spec/latest/" />
+			For a full description of how desktop menus work, refer to the <citetitle>Desktop Menu Specification</citetitle>, available from <uri xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://standards.freedesktop.org/desktop-menu-spec/latest/">http://standards.freedesktop.org/desktop-menu-spec/latest/</uri>
 		</para>
 
 	</section>
 	
-	 <section conformance="136" id="sect-Publican-Users_Guide-Desktop_menu_entries_for_documents-Setting_a_desktop_menu_category">
-		<title>Setting a desktop menu category</title>
+	 <section conformance="136" xml:id="sect-Publican-Users_Guide-Desktop_menu_entries_for_documents-Setting_a_desktop_menu_category"><info><title>Setting a desktop menu category</title></info>
+		
 		 <para>
-			To place a document in a submenu of <menuchoice><guimenu>System</guimenu><guisubmenu>Documentation</guisubmenu></menuchoice>, set the <parameter>menu_category</parameter> parameter in its <filename>publican.cfg</filename> file to match the content of the <sgmltag>&lt;Includes&gt;</sgmltag> element in the corresponding desktop menu file. For example, consider a desktop menu file that contains the element:
+			To place a document in a submenu of <menuchoice><guimenu>System</guimenu><guisubmenu>Documentation</guisubmenu></menuchoice>, set the <parameter>menu_category</parameter> parameter in its <filename>publican.cfg</filename> file to match the content of the <tag>&lt;Includes&gt;</tag> element in the corresponding desktop menu file. For example, consider a desktop menu file that contains the element:
 		</para>
 		 
 <programlisting language="XML">&lt;Includes&gt;X-Example-Docs&lt;/Includes&gt;</programlisting>

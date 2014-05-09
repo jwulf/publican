@@ -1,10 +1,6 @@
-<?xml version='1.0' encoding='utf-8' ?>
-<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
-<!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
-%BOOK_ENTITIES;
-]>
-<section conformance="188" id="sect-Publican-Users_Guide-Installing_a_brand">
-	<title>Installing a brand</title>
+<?xml version="1.0" encoding="utf-8"?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" conformance="188" xml:id="sect-Publican-Users_Guide-Installing_a_brand"><info><title>Installing a brand</title></info>
+	
 	 <para>
 		<application>Publican</application> brands for Fedora, Genome, and oVirt documents are available as RPM packages in Fedora. Similarly, Red Hat internally distributes RPM packages containing <application>Publican</application> brands for GIMP, JBoss, and Red Hat documents. Providing that you have access to the relevant repositories, you can install these brands on a computer that runs Red Hat Enterprise Linux or Fedora — or an operating system derived from either — with the command <command>yum install publican-<replaceable>brand</replaceable></command> or with a graphical package manager such as <application>PackageKit</application>.
 	</para>
@@ -64,14 +60,14 @@
 
 	</procedure>
 	
-	 <table conformance="189" id="tabl-Publican-Users_Guide-Installing_a_brand-Current_Brands_and_their_packages">
-		<title>Current Brands and their packages</title>
+	 <table conformance="189" xml:id="tabl-Publican-Users_Guide-Installing_a_brand-Current_Brands_and_their_packages"><info><title>Current Brands and their packages</title></info>
+		
 		 <tgroup cols="5">
-			<colspec colnum="1" colwidth="1*"></colspec>
-			 <colspec colnum="2" colwidth="2*"></colspec>
-			 <colspec colnum="3" colwidth="2*"></colspec>
-			 <colspec colnum="4" colwidth="2*"></colspec>
-			 <colspec colnum="5" colwidth="2*"></colspec>
+			<colspec colnum="1" colwidth="1*"/>
+			 <colspec colnum="2" colwidth="2*"/>
+			 <colspec colnum="3" colwidth="2*"/>
+			 <colspec colnum="4" colwidth="2*"/>
+			 <colspec colnum="5" colwidth="2*"/>
 			 <thead>
 				<row>
 					<entry>
@@ -99,10 +95,10 @@
 						common
 					</entry>
 					 <entry>
-						<ulink url="http://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</ulink>
+						<link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</link>
 					</entry>
 					 <entry>
-						<ulink url="http://www.gnu.org/licenses/fdl.html">GFDL Version 1.2</ulink>
+						<link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.gnu.org/licenses/fdl.html">GFDL Version 1.2</link>
 					</entry>
 					 <entry>
 						publican
@@ -117,7 +113,7 @@
 						RedHat
 					</entry>
 					 <entry>
-						<ulink url="http://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA 3.0</ulink>
+						<link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA 3.0</link>
 					</entry>
 					 <entry>
 						<phrase>CC-BY-SA 3.0</phrase>
@@ -171,7 +167,7 @@
 						oVirt
 					</entry>
 					 <entry>
-						<ulink url="http://www.opencontent.org/openpub/">OPL 1.0</ulink>
+						<link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.opencontent.org/openpub/">OPL 1.0</link>
 					</entry>
 					 <entry>
 						<phrase>OPL 1.0</phrase>
@@ -189,7 +185,7 @@
 						GIMP
 					</entry>
 					 <entry>
-						<ulink url="http://www.gnu.org/licenses/fdl.html">GFDL Version 1.2</ulink>
+						<link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.gnu.org/licenses/fdl.html">GFDL Version 1.2</link>
 					</entry>
 					 <entry>
 						<phrase>GFDL Version 1.2</phrase>

@@ -137,7 +137,7 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format, fuzzy
-msgid "The menu block must exist in Drupal. For more information about adding a menu block in Drupal. Please refer to <xref linkend=\"sect-Publican-Users_Guide-Drupal_Import_Guide-How_to_add_a_menu_block\" />."
+msgid "The menu block must exist in Drupal. For more information about adding a menu block in Drupal. Please refer to <xref linkend=\"\" />."
 msgstr ""
 
 #. Tag: term
@@ -282,7 +282,7 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format, fuzzy
-msgid "Follow the steps in <xref linkend=\"sect-Publican-Users_Guide-Import_book_into_Drupal-How_to_build_a_CSV_file_for_Drupal_import\" />"
+msgid "Follow the steps in <xref linkend=\"\" />"
 msgstr ""
 
 #. Tag: para
@@ -292,7 +292,7 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format, fuzzy
-msgid "Upload <filename>en-US</filename> directory to the <filename>\"sites/default/files/\"</filename> directory in the Drupal server. This value can be overriden in the <filename>publican.cfg</filename>. For more details, please read <xref linkend=\"sect-Publican-Users_Guide-Import_book_into_Drupal-The_publican.cfg_file\" />"
+msgid "Upload <filename>en-US</filename> directory to the <filename>\"sites/default/files/\"</filename> directory in the Drupal server. This value can be overriden in the <filename>publican.cfg</filename>. For more details, please read <xref linkend=\"\" />"
 msgstr ""
 
 #. Tag: para
@@ -317,7 +317,7 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format, fuzzy
-msgid "Simply repeat the steps in <xref linkend=\"sect-Publican-Users_Guide-Drupal_Import_Guide-How_to_import_book\" /> to update the book."
+msgid "Simply repeat the steps in <xref linkend=\"\" /> to update the book."
 msgstr ""
 
 #. Tag: title

@@ -50,7 +50,7 @@ msgstr "La fonctionnalité marquage permet de créer vos propres règles de pré
 
 #. Tag: para
 #, no-c-format, fuzzy
-msgid "Entities, for example, can be validly defined in any XML file. However, to ensure the DTD declaration is present, valid and standardized, <application>Publican</application> rewrites the declaration in every XML file before it builds a book or article. Consequently, all entities declared in all XML files are lost. <application>Publican</application>, therefore, requires you define entities in the <filename><replaceable>Doc_Name</replaceable>.ent</filename> file (refer to <xref linkend=\"sect-Publican-Users_Guide-Files_in_the_book_directory-Doc_Name.ent\" />)."
+msgid "Entities, for example, can be validly defined in any XML file. However, to ensure the DTD declaration is present, valid and standardized, <application>Publican</application> rewrites the declaration in every XML file before it builds a book or article. Consequently, all entities declared in all XML files are lost. <application>Publican</application>, therefore, requires you define entities in the <filename><replaceable>Doc_Name</replaceable>.ent</filename> file (refer to <xref linkend=\"\" />)."
 msgstr "Des entités, par exemple, peuvent être valablement définies dans tout fichier XML. Mais, pour s'assurer que la déclaration de DTD est présente, valide et normalisée, <application>Publican</application> réécrit cette déclaration dans chaque fichier XML avant de construire le fascicule ou l'article. Par conséquent, toute entité déclarée dans tout fichier XML est perdue. Ainsi, <application>Publican</application> demande que vous définissiez les entités dans le fichier <filename><replaceable>Nom_document</replaceable>.ent</filename> (reportez-vous à la <xref linkend=\"sect-Users_Guide-Files_in_the_book_directory-Doc_Name.ent\" />)."
 
 #. Tag: para
@@ -60,6 +60,6 @@ msgstr "Au fur et à mesure de l'avancement du travail de rédaction, une défin
 
 #. Tag: para
 #, no-c-format, fuzzy
-msgid "Entities also present an essentially insurmountable obstacle to quality translation (refer to <xref linkend=\"sect-Publican-Users_Guide-Entities_and_translation\" />). Consequently, while we are not reducing the <filename><replaceable>Doc_Name</replaceable>.ent</filename> file's functionality, we are no longer considering requests to add functionality or features associated with entity use."
+msgid "Entities also present an essentially insurmountable obstacle to quality translation (refer to <xref linkend=\"\" />). Consequently, while we are not reducing the <filename><replaceable>Doc_Name</replaceable>.ent</filename> file's functionality, we are no longer considering requests to add functionality or features associated with entity use."
 msgstr "Les entités sont également un obstacle quelquefois insurmontable pour des traductions de qualité (reportez-vous à la <xref linkend=\"sect-Users_Guide-Entities_and_translation\" />). En conséquence, sans vouloir restreindre les fonctionnalités associés au fichier <filename><replaceable>Nom_document</replaceable>.ent</filename>, nous ne prendrons plus en considération les demandes d'ajout de fonctionnalités ou particularités en liaison avec l'utilisation des entités."
 

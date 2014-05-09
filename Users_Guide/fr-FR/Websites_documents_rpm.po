@@ -51,6 +51,6 @@ msgstr "Supprimez un document du serveur Web avec la commande <command>rpm -e</c
 
 #. Tag: para
 #, no-c-format, fuzzy
-msgid "On large or busy sites, we recommend that you set the <parameter>manual_toc_update</parameter> parameter in the site's configuration file. With this parameter set, you must run the <prompt>$</prompt> <command>publican update_site</command> command after installing, updating, or removing documents. Refer to <xref linkend=\"sect-Publican-Users_Guide-Creating_the_website_structure\" /> for more information."
+msgid "On large or busy sites, we recommend that you set the <parameter>manual_toc_update</parameter> parameter in the site's configuration file. With this parameter set, you must run the <prompt>$</prompt> <command>publican update_site</command> command after installing, updating, or removing documents. Refer to <xref linkend=\"\" /> for more information."
 msgstr "Sur des sites importants ou occupés, nous vous recommandons de définir le paramètre <parameter>manual_toc_update</parameter> dans le fichier de configuration du site. Une fois ce paramètre défini, vous lancez la commande <command>publican update_site</command> après avoir installé, mis à jour ou supprimé des documents. Reportez-vous à <xref linkend=\"sect-Users_Guide-Website-structure-cfg_and_db-manual\" /> pour plus d'informations."
 
