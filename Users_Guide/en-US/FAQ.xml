@@ -1,6 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
-<chapter xmlns="http://docbook.org/ns/docbook" version="5.0" conformance="156" xml:id="chap-Publican-Users_Guide-Frequently_Asked_Questions"><info><title>Frequently Asked Questions</title></info>
-	
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE chapter [
+<!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
+%BOOK_ENTITIES;
+]>
+<chapter conformance="156" version="5.0" xml:id="chap-Publican-Users_Guide-Frequently_Asked_Questions" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<info xml:id="info-Publican-Users_Guide-Frequently_Asked_Questions">
+		<title>Frequently Asked Questions</title>
+	</info>
 	 <qandaset>
 		<qandaentry>
 			<question>
@@ -103,8 +109,10 @@
 				<para>
 					Yes. If you make a directory named <filename>files</filename> in your source language directory it will be included in any tarballs or SRPM packages that <application>Publican</application> creates.
 				</para>
-				 <important><info><title>Important</title></info>
-					
+				 <important>
+					<info xml:id="info-Publican-Users_Guide-Important">
+						<title>Important</title>
+					</info>
 					 <para>
 						The <filename>files</filename> directory will not be available during the validation process so you can not <tag>xi:include</tag> or otherwise embed any files in this directory in your XML.
 					</para>
@@ -237,8 +245,7 @@ Enter to keep the current selection[+], or type selection number:</screen>
 					Run the following bash script in the root directory of your document to check spellings in your XML files with the <application>aspell</application> command-line spell checker.
 				</para>
 				 
-<programlisting language="Bash"><xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="extras/proof.sh" parse="text"/>
-</programlisting>
+<programlisting language="Bash"><xi:include href="extras/proof.sh" parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" /></programlisting>
 
 			</answer>
 
@@ -292,7 +299,7 @@ Enter to keep the current selection[+], or type selection number:</screen>
 					Note that <application>Syntax::Highlight::Engine::Kate</application> is very strict about names of languages and is case sensitive. Therefore, <tag>&lt;programlisting language="Java"&gt;</tag> works, but <tag>&lt;programlisting language="java"&gt;</tag> and <tag>&lt;programlisting language="JAVA"&gt;</tag> do not. The error message that you receive identifies the problematic language attribute.
 				</para>
 				 <para>
-					Refer to <uri xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://search.cpan.org/dist/Syntax-Highlight-Engine-Kate/lib/Syntax/Highlight/Engine/Kate.pm#PLUGINS">http://search.cpan.org/dist/Syntax-Highlight-Engine-Kate/lib/Syntax/Highlight/Engine/Kate.pm#PLUGINS</uri> for the full list of languages that <application>Syntax::Highlight::Engine::Kate</application> supports, including their expected capitalization and punctuation.
+					Refer to <uri xlink:href="http://search.cpan.org/dist/Syntax-Highlight-Engine-Kate/lib/Syntax/Highlight/Engine/Kate.pm#PLUGINS" xmlns:xlink="http://www.w3.org/1999/xlink">http://search.cpan.org/dist/Syntax-Highlight-Engine-Kate/lib/Syntax/Highlight/Engine/Kate.pm#PLUGINS</uri> for the full list of languages that <application>Syntax::Highlight::Engine::Kate</application> supports, including their expected capitalization and punctuation.
 				</para>
 
 			</answer>
@@ -321,12 +328,10 @@ Enter to keep the current selection[+], or type selection number:</screen>
 							Add the following to your <filename>~/.bashrc</filename> file:
 						</para>
 						 
-<programlisting language="Bash">
-# Use bash-completion, if available
+<programlisting language="Bash"># Use bash-completion, if available
 if [ -f /etc/bash_completion ]; then
         . /etc/bash_completion
-fi
-</programlisting>
+fi</programlisting>
 
 					</step>
 					 <step>
@@ -357,10 +362,8 @@ fi
 					To make this permanent, open <filename>/etc/security/limits.conf</filename> and add these two lines:
 				</para>
 				 
-<screen>
-*                 soft    nofile          8192
-*                 hard    nofile          8192
-</screen>
+<screen>*                 soft    nofile          8192
+*                 hard    nofile          8192</screen>
 				 <para>
 					Then save, and log in again for the changes to take effect.
 				</para>
@@ -386,3 +389,4 @@ fi
 
 	</qandaset>
 </chapter>
+

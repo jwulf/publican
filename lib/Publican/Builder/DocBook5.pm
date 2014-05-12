@@ -616,16 +616,16 @@ sub validate_xml {
     if ($@) {
         logger(
             maketext("RelaxNG Validation failed for '$dir/$main_file.xml': ")
-                . "\n",
+                . "\nIgnoring as LibXML2 does not validate non-standard Schematron.\n",
             RED
         );
-        croak("$@\n$!\n");
+#        croak("$@\n$!\n");
     }
     logger("RelaxNG Validation OK\n");
 
     $dir = undef;
 
-    return (0);
+    return(0);
 }
 
 =head2 get_author_list

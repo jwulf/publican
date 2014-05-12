@@ -1,17 +1,29 @@
-<?xml version="1.0" encoding="utf-8"?>
-<chapter xmlns="http://docbook.org/ns/docbook" version="5.0" conformance="181" xml:id="chap-Publican-Users_Guide-Installing_Publican"><info><title>Installing Publican</title></info>
-	
-	 <section conformance="182" xml:id="sect-Publican-Users_Guide-Installing_Publican-Linux_operating_systems"><info><title>Linux operating systems</title></info>
-		
-		 <important><info><title>Important — Availability in repositories</title></info>
-			
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE chapter [
+<!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
+%BOOK_ENTITIES;
+]>
+<chapter conformance="181" version="5.0" xml:id="chap-Publican-Users_Guide-Installing_Publican" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<info xml:id="info-Publican-Users_Guide-Installing_Publican">
+		<title>Installing Publican</title>
+	</info>
+	 <section conformance="182" xml:id="sect-Publican-Users_Guide-Installing_Publican-Linux_operating_systems">
+		<info xml:id="info-Publican-Users_Guide-Linux_operating_systems">
+			<title>Linux operating systems</title>
+		</info>
+		 <important>
+			<info xml:id="info-Publican-Users_Guide-Important_Availability_in_repositories">
+				<title>Important — Availability in repositories</title>
+			</info>
 			 <para>
 				The procedures documented in this section assume that <application>Publican</application> and its various dependencies are available in repositories to which your system has access.
 			</para>
 
 		</important>
-		 <section conformance="183" xml:id="sect-Publican-Users_Guide-Linux_operating_systems-Fedora"><info><title>Fedora &amp; Red Hat Enterprise Linux 6</title></info>
-			
+		 <section conformance="183" xml:id="sect-Publican-Users_Guide-Linux_operating_systems-Fedora">
+			<info xml:id="info-Publican-Users_Guide-Fedora_amp_Red_Hat_Enterprise_Linux_6">
+				<title>Fedora &amp; Red Hat Enterprise Linux 6</title>
+			</info>
 			 <procedure>
 				<step>
 					<para>
@@ -42,13 +54,15 @@
 			 
 <screen><prompt>$</prompt> <command> yum install publican-<replaceable>brand</replaceable></command></screen>
 			 <para>
-				Replace <replaceable>brand</replaceable> with, for example, <literal>redhat</literal>, <literal>fedora</literal>, <literal>jboss</literal>, <literal>ovirt</literal>, or <literal>gimp</literal>. Refer to <xref linkend="chap-Publican-Users_Guide-Branding"/> for more information on branding.
+				Replace <replaceable>brand</replaceable> with, for example, <literal>redhat</literal>, <literal>fedora</literal>, <literal>jboss</literal>, <literal>ovirt</literal>, or <literal>gimp</literal>. Refer to <xref linkend="chap-Publican-Users_Guide-Branding" /> for more information on branding.
 			</para>
 
 		</section>
 		
-		 <section conformance="185" xml:id="sect-Publican-Users_Guide-Linux_operating_systems-Ubuntu"><info><title>Ubuntu</title></info>
-			
+		 <section conformance="185" xml:id="sect-Publican-Users_Guide-Linux_operating_systems-Ubuntu">
+			<info xml:id="info-Publican-Users_Guide-Ubuntu">
+				<title>Ubuntu</title>
+			</info>
 			 <procedure>
 				<step>
 					<para>
@@ -70,13 +84,14 @@
 
 		</section>
 		
-		 <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Installing_Publican_Debian.xml"/>
-		 <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Installing_Publican_OpenSuse.xml"/>
-		 <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Installing_Publican_Docker.xml"/>
-
-		 <section><info><title>Running publican from a GIT checkout</title></info>
-			
-			<para>
+		 <xi:include href="Installing_Publican_Debian.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
+		 <xi:include href="Installing_Publican_OpenSuse.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
+		 <xi:include href="Installing_Publican_Docker.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
+		 <section>
+			<info xml:id="info-Publican-Users_Guide-Running_publican_from_a_GIT_checkout">
+				<title>Running publican from a GIT checkout</title>
+			</info>
+			 <para>
 				It is possible to run publican from a <application>GIT</application> checkout, without installing it, if the dependencies are installed.
 			</para>
 			 <procedure>
@@ -93,25 +108,34 @@
 					 
 <screen><prompt>$</prompt> cd <replaceable>PATH TO PLACE SOURCE</replaceable>
 <prompt>$</prompt> git clone git://git.fedorahosted.org/publican.git publican</screen>
+
+				</step>
+				 <step>
+					<para>
+						To run publican from this checkout run the following commands:
+					</para>
+					
+<screen><prompt>$</prompt> PUBLICAN_PATH="<replaceable>PATH TO PLACE SOURCE</replaceable>/publican"
+<prompt>$</prompt> perl -CDAS -I $PUBLICAN_PATH/lib $PUBLICAN_PATH/bin/publican build  --brand_dir $PUBLICAN_PATH/datadir/Common_Content/common --formats html</screen>
+
 				</step>
 
-				<step>
-					<para>
-						To run publican from this checkout run the follwoing command:
-					</para>
-<screen><prompt>$</prompt>PUBLICAN_PATH="<replaceable>PATH TO PLACE SOURCE</replaceable>/publican"; \
-perl -CDAS -I $PUBLICAN_PATH/lib $PUBLICAN_PATH/bin/publican build  --brand_dir $PUBLICAN_PATH/datadir/Common_Content/common --formats html</screen>
-				</step>
 			</procedure>
+			
+
 		</section>
+		
+
 	</section>
 	
-	 <section conformance="187" xml:id="sect-Publican-Users_Guide-Installing_Publican-Windows_operating_systems"><info><title>Windows operating systems</title></info>
-		
+	 <section conformance="187" xml:id="sect-Publican-Users_Guide-Installing_Publican-Windows_operating_systems">
+		<info xml:id="info-Publican-Users_Guide-Windows_operating_systems">
+			<title>Windows operating systems</title>
+		</info>
 		 <procedure>
 			<step>
 				<para>
-					Download the Publican installer from <uri xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://fedorahosted.org/releases/p/u/publican/">https://fedorahosted.org/releases/p/u/publican/</uri>.
+					Download the Publican installer from <uri xlink:href="https://fedorahosted.org/releases/p/u/publican/" xmlns:xlink="http://www.w3.org/1999/xlink">https://fedorahosted.org/releases/p/u/publican/</uri>.
 				</para>
 
 			</step>
@@ -138,7 +162,7 @@ perl -CDAS -I $PUBLICAN_PATH/lib $PUBLICAN_PATH/bin/publican build  --brand_dir 
 			</step>
 			 <step>
 				<para>
-					The installer offers to install several components: <application>Publican</application> itself (labeled <literal>Main</literal> in the installer window), a number of <firstterm>brands</firstterm> (including <literal>RedHat</literal>, <literal>JBoss</literal>, and <literal>fedora</literal>), and two DocBook components (the DocBook <firstterm>Data Type Definition</firstterm> (DTD) and DocBook <firstterm>Extensible Stylesheet Language</firstterm> (XSL) stylesheets). The three brands are grouped under the collapsible heading <literal>Brands</literal> and the DocBook components are grouped under the collapsible heading <literal>DocBook</literal> in the installer window. Refer to <xref linkend="chap-Publican-Users_Guide-Branding"/> for an explanation of brands in <application>Publican</application>. <application>Publican</application> uses the DTD and the XSL stylesheets to render XML documents in other presentation formats (such as HTML and PDF). If you do not install these components, <application>Publican</application> must download this data from the Internet every time it processes a document, which creates lengthy delays.
+					The installer offers to install several components: <application>Publican</application> itself (labeled <literal>Main</literal> in the installer window), a number of <firstterm>brands</firstterm> (including <literal>RedHat</literal>, <literal>JBoss</literal>, and <literal>fedora</literal>), and two DocBook components (the DocBook <firstterm>Data Type Definition</firstterm> (DTD) and DocBook <firstterm>Extensible Stylesheet Language</firstterm> (XSL) stylesheets). The three brands are grouped under the collapsible heading <literal>Brands</literal> and the DocBook components are grouped under the collapsible heading <literal>DocBook</literal> in the installer window. Refer to <xref linkend="chap-Publican-Users_Guide-Branding" /> for an explanation of brands in <application>Publican</application>. <application>Publican</application> uses the DTD and the XSL stylesheets to render XML documents in other presentation formats (such as HTML and PDF). If you do not install these components, <application>Publican</application> must download this data from the Internet every time it processes a document, which creates lengthy delays.
 				</para>
 				 <para>
 					All components are selected by default. Click the checkboxes to deselect any components that you do <emphasis>not</emphasis> require and click <guibutton>Next</guibutton> to continue.
@@ -175,8 +199,10 @@ perl -CDAS -I $PUBLICAN_PATH/lib $PUBLICAN_PATH/bin/publican build  --brand_dir 
 
 	</section>
 	
-	 <section conformance="235" xml:id="sect-Publican-Users_Guide-Installing_Publican-OSX_Lion"><info><title>OSX Lion</title></info>
-		
+	 <section conformance="235" xml:id="sect-Publican-Users_Guide-Installing_Publican-OSX_Lion">
+		<info xml:id="info-Publican-Users_Guide-OSX_Lion">
+			<title>OSX Lion</title>
+		</info>
 		 <procedure>
 			<step>
 				<para>
@@ -192,7 +218,7 @@ perl -CDAS -I $PUBLICAN_PATH/lib $PUBLICAN_PATH/bin/publican build  --brand_dir 
 			</step>
 			 <step>
 				<para>
-					Install <application>Macports</application> from <uri xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://guide.macports.org/chunked/installing.macports.html">http://guide.macports.org/chunked/installing.macports.html</uri>. Everything you install with it goes into <filename>/opt/local</filename>, away from your normal OS files.
+					Install <application>Macports</application> from <uri xlink:href="http://guide.macports.org/chunked/installing.macports.html" xmlns:xlink="http://www.w3.org/1999/xlink">http://guide.macports.org/chunked/installing.macports.html</uri>. Everything you install with it goes into <filename>/opt/local</filename>, away from your normal OS files.
 				</para>
 
 			</step>
@@ -207,8 +233,7 @@ perl -CDAS -I $PUBLICAN_PATH/lib $PUBLICAN_PATH/bin/publican build  --brand_dir 
 					Install dependencies for publican, which are available as ports:
 				</para>
 				 
-<screen><prompt>$</prompt><command>sudo port install</command> <option>docbook-xml docbook-xsl docbook-sgml-4.2 perl5 bash-completion p5-file-pushd p5-config-simple p5-file-find-rule p5-file-slurp p5-class-trigger p5-time-hires p5-list-moreutils p5-ipc-run3 p5-class-accessor p5-test-perl-critic p5-xml-libxslt p5-locale-gettext p5-image-size p5-file-copy-recursive p5-datetime p5-archive-zip p5-timedate p5-html-format p5-dbd-sqlite p5-xml-simple p5-devel-cover p5-test-pod p5-test-pod-coverage p5-template-toolkit</option> 
-</screen>
+<screen><prompt>$</prompt><command>sudo port install</command> <option>docbook-xml docbook-xsl docbook-sgml-4.2 perl5 bash-completion p5-file-pushd p5-config-simple p5-file-find-rule p5-file-slurp p5-class-trigger p5-time-hires p5-list-moreutils p5-ipc-run3 p5-class-accessor p5-test-perl-critic p5-xml-libxslt p5-locale-gettext p5-image-size p5-file-copy-recursive p5-datetime p5-archive-zip p5-timedate p5-html-format p5-dbd-sqlite p5-xml-simple p5-devel-cover p5-test-pod p5-test-pod-coverage p5-template-toolkit</option></screen>
 
 			</step>
 			 <step>
@@ -266,8 +291,10 @@ perl -CDAS -I $PUBLICAN_PATH/lib $PUBLICAN_PATH/bin/publican build  --brand_dir 
 
 		</procedure>
 		
-		 <procedure conformance="247" xml:id="proc-Publican-Users_Guide-OSX_Lion-Create_and_build_a_book"><info><title>Create and build a book</title></info>
-			
+		 <procedure conformance="247" xml:id="proc-Publican-Users_Guide-OSX_Lion-Create_and_build_a_book">
+			<info xml:id="info-Publican-Users_Guide-Create_and_build_a_book">
+				<title>Create and build a book</title>
+			</info>
 			 <step>
 				
 <screen><prompt>$</prompt> <command>publican create</command> <option>--name=testbook</option></screen>
@@ -292,8 +319,10 @@ perl -CDAS -I $PUBLICAN_PATH/lib $PUBLICAN_PATH/bin/publican build  --brand_dir 
 
 		</procedure>
 		
-		 <procedure conformance="248" xml:id="proc-Publican-Users_Guide-OSX_Lion-Install_a_brand"><info><title>Install a brand</title></info>
-			
+		 <procedure conformance="248" xml:id="proc-Publican-Users_Guide-OSX_Lion-Install_a_brand">
+			<info xml:id="info-Publican-Users_Guide-Install_a_brand">
+				<title>Install a brand</title>
+			</info>
 			 <step>
 				<para>
 					Fix the permissions of the Commons Brand. You have to do this only once. This is a bug that will be addressed eventually.
@@ -309,7 +338,7 @@ perl -CDAS -I $PUBLICAN_PATH/lib $PUBLICAN_PATH/bin/publican build  --brand_dir 
 				 <substeps role="alternatives">
 					<step>
 						<para>
-							The SVN location for the brands supplied by Red Hat is <uri xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://svn.fedorahosted.org/svn/publican">http://svn.fedorahosted.org/svn/publican</uri>
+							The SVN location for the brands supplied by Red Hat is <uri xlink:href="http://svn.fedorahosted.org/svn/publican" xmlns:xlink="http://www.w3.org/1999/xlink">http://svn.fedorahosted.org/svn/publican</uri>
 						</para>
 
 					</step>
@@ -352,3 +381,4 @@ perl -CDAS -I $PUBLICAN_PATH/lib $PUBLICAN_PATH/bin/publican build  --brand_dir 
 	
 
 </chapter>
+

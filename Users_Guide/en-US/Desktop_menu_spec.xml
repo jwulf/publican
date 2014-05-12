@@ -1,8 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?>
-<appendix xmlns="http://docbook.org/ns/docbook" version="5.0" conformance="133" xml:id="appe-Publican-Users_Guide-Sample_spec_file_for_desktop_menu_package"><info><title>Sample spec file for desktop menu package</title></info>
-	
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE appendix [
+<!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
+%BOOK_ENTITIES;
+]>
+<appendix conformance="133" version="5.0" xml:id="appe-Publican-Users_Guide-Sample_spec_file_for_desktop_menu_package" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<info xml:id="info-Publican-Users_Guide-Sample_spec_file_for_desktop_menu_package">
+		<title>Sample spec file for desktop menu package</title>
+	</info>
 	 <para>
-		The following spec file is an example of how you could package a <firstterm>desktop entry</firstterm> (<filename>.directory</filename>) file and a <firstterm>desktop menu</firstterm> (<filename>.menu</filename>) file in an RPM package for shipping. Refer to <xref linkend="sect-Publican-Users_Guide-Desktop_menu_entries_for_documents"/> for the structure of these files.
+		The following spec file is an example of how you could package a <firstterm>desktop entry</firstterm> (<filename>.directory</filename>) file and a <firstterm>desktop menu</firstterm> (<filename>.menu</filename>) file in an RPM package for shipping. Refer to <xref linkend="sect-Publican-Users_Guide-Desktop_menu_entries_for_documents" /> for the structure of these files.
 	</para>
 	 <para>
 		This example assumes a desktop entry file named <filename>menu-example.directory</filename>, a desktop menu file named <filename>menu-example.menu</filename>, and a readme file named <filename>README</filename> are located in a directory named <filename>menu-example-0</filename> that is archived as <filename>menu-example-0.tgz</filename>.
@@ -11,5 +17,6 @@
 		When built, this results in a package named <package>menu-example</package>.
 	</para>
 	 
-<programlisting><xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="extras/menu-example.spec" parse="text"/></programlisting>
+<programlisting><xi:include href="extras/menu-example.spec" parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" /></programlisting>
 </appendix>
+

@@ -1,10 +1,16 @@
-<?xml version="1.0" encoding="utf-8"?>
-<section xmlns="http://docbook.org/ns/docbook" version="5.0" conformance="226" xml:id="sect-Publican-Users_Guide-Installing_updating_and_removing_documents-rpm"><info><title>Installing, updating and removing documents</title></info>
-	
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE section [
+<!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
+%BOOK_ENTITIES;
+]>
+<section conformance="226" version="5.0" xml:id="sect-Publican-Users_Guide-Installing_updating_and_removing_documents-rpm" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<info xml:id="info-Publican-Users_Guide-Installing_updating_and_removing_documents">
+		<title>Installing, updating and removing documents</title>
+	</info>
 	 <para>
 		On your workstation, change into the directory that contains the source for the document and run:
 	</para>
-	
+	 
 <screen><prompt>$</prompt> <command>publican package --binary --lang <replaceable>language_code</replaceable></command></screen>
 	 <para>
 		<application>Publican</application> builds an RPM package and places it in the <filename>/tmp/rpms/noarch/</filename> directory of the document. By default, <application>Publican</application> builds the RPM package for the operating system within which you are running <application>Publican</application>. To build an RPM package to install on a server that runs a different operating system, set the <parameter>os_ver</parameter> parameter in the document's <filename>publican.cfg</filename> file.
@@ -19,6 +25,8 @@
 		Remove a document from the webserver with the <command>rpm -e</command> or <command>yum erase</command> command.
 	</para>
 	 <para>
-		On large or busy sites, we recommend that you set the <parameter>manual_toc_update</parameter> parameter in the site's configuration file. With this parameter set, you must run the <prompt>$</prompt> <command>publican update_site</command> command after installing, updating, or removing documents. Refer to <xref linkend="sect-Publican-Users_Guide-Creating_the_website_structure"/> for more information.
+		On large or busy sites, we recommend that you set the <parameter>manual_toc_update</parameter> parameter in the site's configuration file. With this parameter set, you must run the <prompt>$</prompt> <command>publican update_site</command> command after installing, updating, or removing documents. Refer to <xref linkend="sect-Publican-Users_Guide-Creating_the_website_structure" /> for more information.
 	</para>
 </section>
+
+

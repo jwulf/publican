@@ -1,13 +1,19 @@
-<?xml version="1.0" encoding="utf-8"?>
-<chapter xmlns="http://docbook.org/ns/docbook" version="5.0" conformance="204" xml:id="chap-Publican-Users_Guide-Publican_commands"><info><title>Publican commands</title></info>
-	
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE chapter [
+<!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
+%BOOK_ENTITIES;
+]>
+<chapter conformance="204" version="5.0" xml:id="chap-Publican-Users_Guide-Publican_commands" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<info xml:id="info-Publican-Users_Guide-Publican_commands">
+		<title>Publican commands</title>
+	</info>
 	 <para>
 		<application>Publican</application> is a command-line tool. To use <application>Publican</application> on a computer with a Linux operating system, you must either start a terminal emulator program (such as <application>GNOME Terminal</application> or <application>Konsole</application>) or switch to a virtual console. To use <application>Publican</application> on a computer with a Windows operating system, run the <command>cmd</command> command from the <guimenu>Start menu</guimenu> to open a command prompt.
 	</para>
 	 <para>
 		<application>Publican</application> commands take one of the following formats: 
 		<variablelist>
-			<varlistentry>
+			<varlistentry xml:id="varl-Publican-Users_Guide-_publican_command_option">
 				<term><prompt>$</prompt> <command>publican <replaceable>command_option</replaceable></command></term>
 				 <listitem>
 					<para>
@@ -17,7 +23,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry>
+			 <varlistentry xml:id="varl-Publican-Users_Guide-_publican_action_action_options">
 				<term><prompt>$</prompt> <command>publican <replaceable>action</replaceable> <replaceable>action_options</replaceable></command></term>
 				 <listitem>
 					<para>
@@ -27,7 +33,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry>
+			 <varlistentry xml:id="varl-Publican-Users_Guide-_publican_command_option_action_action_options">
 				<term><prompt>$</prompt> <command>publican <replaceable>command_option</replaceable> <replaceable>action</replaceable> <replaceable>action_options</replaceable></command></term>
 				 <listitem>
 					<para>
@@ -41,12 +47,14 @@
 		</variablelist>
 
 	</para>
-	 <section conformance="205" xml:id="sect-Publican-Users_Guide-Publican_commands-Command_options"><info><title>Command options</title></info>
-		
+	 <section conformance="205" xml:id="sect-Publican-Users_Guide-Publican_commands-Command_options">
+		<info xml:id="info-Publican-Users_Guide-Command_options">
+			<title>Command options</title>
+		</info>
 		 <para>
 			The options for the <command>publican</command> command are: 
 			<variablelist>
-				<varlistentry>
+				<varlistentry xml:id="varl-Publican-Users_Guide-_help">
 					<term><option>--help</option></term>
 					 <listitem>
 						<para>
@@ -56,7 +64,7 @@
 					</listitem>
 
 				</varlistentry>
-				 <varlistentry>
+				 <varlistentry xml:id="varl-Publican-Users_Guide-_man">
 					<term><option>--man</option></term>
 					 <listitem>
 						<para>
@@ -66,7 +74,7 @@
 					</listitem>
 
 				</varlistentry>
-				 <varlistentry>
+				 <varlistentry xml:id="varl-Publican-Users_Guide-_help_actions">
 					<term><option>--help_actions</option></term>
 					 <listitem>
 						<para>
@@ -76,7 +84,7 @@
 					</listitem>
 
 				</varlistentry>
-				 <varlistentry>
+				 <varlistentry xml:id="varl-Publican-Users_Guide-_v">
 					<term><option>-v</option></term>
 					 <listitem>
 						<para>
@@ -86,7 +94,7 @@
 					</listitem>
 
 				</varlistentry>
-				 <varlistentry>
+				 <varlistentry xml:id="varl-Publican-Users_Guide-_config_file">
 					<term><option>--config <replaceable>file</replaceable></option></term>
 					 <listitem>
 						<para>
@@ -96,7 +104,7 @@
 					</listitem>
 
 				</varlistentry>
-				 <varlistentry>
+				 <varlistentry xml:id="varl-Publican-Users_Guide-_nocolours">
 					<term><option>--nocolours</option></term>
 					 <listitem>
 						<para>
@@ -106,7 +114,7 @@
 					</listitem>
 
 				</varlistentry>
-				 <varlistentry>
+				 <varlistentry xml:id="varl-Publican-Users_Guide-_quiet">
 					<term><option>--quiet</option></term>
 					 <listitem>
 						<para>
@@ -123,12 +131,14 @@
 
 	</section>
 	
-	 <section conformance="206" xml:id="sect-Publican-Users_Guide-Publican_commands-Actions"><info><title>Actions</title></info>
-		
+	 <section conformance="206" xml:id="sect-Publican-Users_Guide-Publican_commands-Actions">
+		<info xml:id="info-Publican-Users_Guide-Actions">
+			<title>Actions</title>
+		</info>
 		 <para>
 			<application>Publican</application> can perform the following actions: 
 			<variablelist>
-				<varlistentry>
+				<varlistentry xml:id="varl-Publican-Users_Guide-add_revision">
 					<term>add_revision</term>
 					 <listitem>
 						<para>
@@ -138,17 +148,17 @@
 					</listitem>
 
 				</varlistentry>
-				 <varlistentry>
+				 <varlistentry xml:id="varl-Publican-Users_Guide-build">
 					<term>build</term>
 					 <listitem>
 						<para>
-							transforms XML to other formats (for example: PDF, single-page HTML, or multiple-page HTML). Refer to <xref linkend="sect-Publican-Users_Guide-Building_a_document"/> for more details and a description of the available options.
+							transforms XML to other formats (for example: PDF, single-page HTML, or multiple-page HTML). Refer to <xref linkend="sect-Publican-Users_Guide-Building_a_document" /> for more details and a description of the available options.
 						</para>
 
 					</listitem>
 
 				</varlistentry>
-				 <varlistentry>
+				 <varlistentry xml:id="varl-Publican-Users_Guide-clean">
 					<term>clean</term>
 					 <listitem>
 						<para>
@@ -158,14 +168,16 @@
 					</listitem>
 
 				</varlistentry>
-				 <varlistentry>
+				 <varlistentry xml:id="varl-Publican-Users_Guide-clean_ids">
 					<term>clean_ids</term>
 					 <listitem>
 						<para>
 							changes all IDs to a standard format. This format is <replaceable>Book_Name-title</replaceable>. For example, a section with a title of <literal>First Section</literal> in a book named <literal>Test_Book</literal> will have the following ID after you run <prompt>$</prompt> <command>publican clean_ids</command>: <tag>&lt;section id="Test_Book-First_Section"&gt;</tag>
 						</para>
-						 <warning><info><title>Warning — <prompt>$</prompt> <command>publican clean_ids</command></title></info>
-							
+						 <warning>
+							<info xml:id="info-Publican-Users_Guide-Warning_publican_clean_ids">
+								<title>Warning — <prompt>$</prompt> <command>publican clean_ids</command></title>
+							</info>
 							 <para>
 								To make translation easier, <prompt>$</prompt> <command>publican clean_ids</command> uses the first four characters of the tag as a prefix for the ID. Consequently, you must check out the latest versions of the XML source and translations before running this command.
 							</para>
@@ -174,8 +186,10 @@
 							</para>
 
 						</warning>
-						 <important><info><title>Important — ID conflicts can occur</title></info>
-							
+						 <important>
+							<info xml:id="info-Publican-Users_Guide-Important_ID_conflicts_can_occur">
+								<title>Important — ID conflicts can occur</title>
+							</info>
 							 <para>
 								The <prompt>$</prompt> <command>publican clean_ids</command> command is intended to facilitate building a DocBook structure around documents ported from other formats such as HTML. However, <command>publican clean_ids</command> is file-based and and only has access to information in the XML file that it is currently processing and to the document name. Therefore, nodes of the same type that have the same title receive the same IDs. These duplicate IDs will prevent the document from building.
 							</para>
@@ -188,77 +202,77 @@
 					</listitem>
 
 				</varlistentry>
-				 <varlistentry>
+				 <varlistentry xml:id="varl-Publican-Users_Guide-clean_set">
 					<term>clean_set</term>
 					 <listitem>
 						<para>
-							removes local copies of remote books in a distributed set. Refer to <xref linkend="sect-Publican-Users_Guide-Using_sets-Distributed_sets"/> for details of using distributed sets.
+							removes local copies of remote books in a distributed set. Refer to <xref linkend="sect-Publican-Users_Guide-Using_sets-Distributed_sets" /> for details of using distributed sets.
 						</para>
 
 					</listitem>
 
 				</varlistentry>
-				 <varlistentry>
+				 <varlistentry xml:id="varl-Publican-Users_Guide-create">
 					<term>create</term>
 					 <listitem>
 						<para>
-							creates a new book, article, or set. Refer to <xref linkend="chap-Publican-Users_Guide-Creating_a_document"/> for details of creating a book or article, and to <xref linkend="chap-Publican-Users_Guide-Using_sets"/> for details of using sets.
+							creates a new book, article, or set. Refer to <xref linkend="chap-Publican-Users_Guide-Creating_a_document" /> for details of creating a book or article, and to <xref linkend="chap-Publican-Users_Guide-Using_sets" /> for details of using sets.
 						</para>
 
 					</listitem>
 
 				</varlistentry>
-				 <varlistentry>
+				 <varlistentry xml:id="varl-Publican-Users_Guide-create_brand">
 					<term>create_brand</term>
 					 <listitem>
 						<para>
-							creates a new brand. Refer to <xref linkend="sect-Publican-Users_Guide-Creating_a_brand"/> for details of creating a brand.
+							creates a new brand. Refer to <xref linkend="sect-Publican-Users_Guide-Creating_a_brand" /> for details of creating a brand.
 						</para>
 
 					</listitem>
 
 				</varlistentry>
-				 <varlistentry>
+				 <varlistentry xml:id="varl-Publican-Users_Guide-create_site">
 					<term>create_site</term>
 					 <listitem>
 						<para>
-							creates a documentation website. Refer to <xref linkend="chap-Publican-Users_Guide-Building_a_website_with_Publican"/> for details.
+							creates a documentation website. Refer to <xref linkend="chap-Publican-Users_Guide-Building_a_website_with_Publican" /> for details.
 						</para>
 
 					</listitem>
 
 				</varlistentry>
-				 <varlistentry>
+				 <varlistentry xml:id="varl-Publican-Users_Guide-help_config">
 					<term>help_config</term>
 					 <listitem>
 						<para>
-							displays help text for the configuration file contained in each book or brand, <filename>publican.cfg</filename>. Refer to <xref linkend="sect-Publican-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file"/> for more detail.
+							displays help text for the configuration file contained in each book or brand, <filename>publican.cfg</filename>. Refer to <xref linkend="sect-Publican-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file" /> for more detail.
 						</para>
 
 					</listitem>
 
 				</varlistentry>
-				 <varlistentry>
+				 <varlistentry xml:id="varl-Publican-Users_Guide-install_book">
 					<term>install_book</term>
 					 <listitem>
 						<para>
-							installs a document on a documentation website. Refer to <xref linkend="chap-Publican-Users_Guide-Building_a_website_with_Publican"/> for details.
+							installs a document on a documentation website. Refer to <xref linkend="chap-Publican-Users_Guide-Building_a_website_with_Publican" /> for details.
 						</para>
 
 					</listitem>
 
 				</varlistentry>
-				 <varlistentry>
+				 <varlistentry xml:id="varl-Publican-Users_Guide-install_brand">
 					<term>install_brand</term>
 					 <listitem>
 						<para>
-							configures a brand for installation. Refer to <xref linkend="sect-Publican-Users_Guide-Installing_a_brand"/> for details of installing a brand.
+							configures a brand for installation. Refer to <xref linkend="sect-Publican-Users_Guide-Installing_a_brand" /> for details of installing a brand.
 						</para>
 
 					</listitem>
 
 				</varlistentry>
-				 <varlistentry>
+				 <varlistentry xml:id="varl-Publican-Users_Guide-copy_web_brand">
 					<term>copy_web_brand</term>
 					 <listitem>
 						<para>
@@ -268,7 +282,7 @@
 					</listitem>
 
 				</varlistentry>
-				 <varlistentry>
+				 <varlistentry xml:id="varl-Publican-Users_Guide-lang_stats_langlanguage_code">
 					<term>lang_stats --lang=<replaceable>language_code</replaceable></term>
 					 <listitem>
 						<para>
@@ -278,7 +292,7 @@
 					</listitem>
 
 				</varlistentry>
-				 <varlistentry>
+				 <varlistentry xml:id="varl-Publican-Users_Guide-migrate_site">
 					<term>migrate_site</term>
 					 <listitem>
 						<para>
@@ -288,37 +302,37 @@
 					</listitem>
 
 				</varlistentry>
-				 <varlistentry>
+				 <varlistentry xml:id="varl-Publican-Users_Guide-package">
 					<term>package</term>
 					 <listitem>
 						<para>
-							packages a book, article, set, or brand for shipping as an RPM package. Refer to <xref linkend="sect-Publican-Users_Guide-Packaging_a_document"/> and <xref linkend="sect-Publican-Users_Guide-Packaging_a_brand"/> for more detail.
+							packages a book, article, set, or brand for shipping as an RPM package. Refer to <xref linkend="sect-Publican-Users_Guide-Packaging_a_document" /> and <xref linkend="sect-Publican-Users_Guide-Packaging_a_brand" /> for more detail.
 						</para>
 
 					</listitem>
 
 				</varlistentry>
-				 <varlistentry>
+				 <varlistentry xml:id="varl-Publican-Users_Guide-print_banned">
 					<term>print_banned</term>
 					 <listitem>
 						<para>
-							prints a list of DocBook tags banned by <application>Publican</application>. Refer to <xref linkend="appe-Publican-Users_Guide-Disallowed_elements_and_attributes"/> for a discussion of banned tags.
+							prints a list of DocBook tags banned by <application>Publican</application>. Refer to <xref linkend="appe-Publican-Users_Guide-Disallowed_elements_and_attributes" /> for a discussion of banned tags.
 						</para>
 
 					</listitem>
 
 				</varlistentry>
-				 <varlistentry>
+				 <varlistentry xml:id="varl-Publican-Users_Guide-print_known">
 					<term>print_known</term>
 					 <listitem>
 						<para>
-							prints a list of DocBook tags supported by <application>Publican</application>. <firstterm>Supported</firstterm> are those tags whose output has undergone at least cursory verification for quality when used in <application>Publican</application> — refer to <xref linkend="appe-Publican-Users_Guide-Disallowed_elements_and_attributes"/>.
+							prints a list of DocBook tags supported by <application>Publican</application>. <firstterm>Supported</firstterm> are those tags whose output has undergone at least cursory verification for quality when used in <application>Publican</application> — refer to <xref linkend="appe-Publican-Users_Guide-Disallowed_elements_and_attributes" />.
 						</para>
 
 					</listitem>
 
 				</varlistentry>
-				 <varlistentry>
+				 <varlistentry xml:id="varl-Publican-Users_Guide-print_tree">
 					<term>print_tree</term>
 					 <listitem>
 						<para>
@@ -328,7 +342,7 @@
 					</listitem>
 
 				</varlistentry>
-				 <varlistentry>
+				 <varlistentry xml:id="varl-Publican-Users_Guide-print_unused">
 					<term>print_unused</term>
 					 <listitem>
 						<para>
@@ -338,7 +352,7 @@
 					</listitem>
 
 				</varlistentry>
-				 <varlistentry>
+				 <varlistentry xml:id="varl-Publican-Users_Guide-publican_print_unused_images">
 					<term>publican print_unused_images</term>
 					 <listitem>
 						<para>
@@ -348,17 +362,17 @@
 					</listitem>
 
 				</varlistentry>
-				 <varlistentry>
+				 <varlistentry xml:id="varl-Publican-Users_Guide-remove_book">
 					<term>remove_book</term>
 					 <listitem>
 						<para>
-							removes a document from a documentation website. Refer to <xref linkend="chap-Publican-Users_Guide-Building_a_website_with_Publican"/> for details.
+							removes a document from a documentation website. Refer to <xref linkend="chap-Publican-Users_Guide-Building_a_website_with_Publican" /> for details.
 						</para>
 
 					</listitem>
 
 				</varlistentry>
-				 <varlistentry>
+				 <varlistentry xml:id="varl-Publican-Users_Guide-rename">
 					<term>rename</term>
 					 <listitem>
 						<para>
@@ -368,7 +382,7 @@
 					</listitem>
 
 				</varlistentry>
-				 <varlistentry>
+				 <varlistentry xml:id="varl-Publican-Users_Guide-site_stats">
 					<term>site_stats</term>
 					 <listitem>
 						<para>
@@ -378,31 +392,31 @@
 					</listitem>
 
 				</varlistentry>
-				 <varlistentry>
+				 <varlistentry xml:id="varl-Publican-Users_Guide-update_po">
 					<term>update_po</term>
 					 <listitem>
 						<para>
-							updates the <firstterm>portable object</firstterm> (PO) files. Refer to <xref linkend="sect-Publican-Users_Guide-Preparing_a_document_for_translation"/> for more detail.
+							updates the <firstterm>portable object</firstterm> (PO) files. Refer to <xref linkend="sect-Publican-Users_Guide-Preparing_a_document_for_translation" /> for more detail.
 						</para>
 
 					</listitem>
 
 				</varlistentry>
-				 <varlistentry>
+				 <varlistentry xml:id="varl-Publican-Users_Guide-update_pot">
 					<term>update_pot</term>
 					 <listitem>
 						<para>
-							updates the <firstterm>portable object template</firstterm> (POT) files. Refer to <xref linkend="sect-Publican-Users_Guide-Preparing_a_document_for_translation"/> for more detail.
+							updates the <firstterm>portable object template</firstterm> (POT) files. Refer to <xref linkend="sect-Publican-Users_Guide-Preparing_a_document_for_translation" /> for more detail.
 						</para>
 
 					</listitem>
 
 				</varlistentry>
-				 <varlistentry>
+				 <varlistentry xml:id="varl-Publican-Users_Guide-update_site">
 					<term>update_site</term>
 					 <listitem>
 						<para>
-							updates the templated content of the documentation website. Refer to <xref linkend="chap-Publican-Users_Guide-Building_a_website_with_Publican"/> for details.
+							updates the templated content of the documentation website. Refer to <xref linkend="chap-Publican-Users_Guide-Building_a_website_with_Publican" /> for details.
 						</para>
 
 					</listitem>
@@ -417,3 +431,4 @@
 	
 
 </chapter>
+

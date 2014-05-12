@@ -1,8 +1,16 @@
-<?xml version="1.0" encoding="utf-8"?>
-<section xmlns="http://docbook.org/ns/docbook" version="5.0" conformance="154" xml:id="sect-Publican-Users_Guide-Entities_and_translation"><info><title>Entities and translation</title></info>
-	
-	 <warning><info><title>Use entities with extreme caution</title></info>
-		
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE section [
+<!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
+%BOOK_ENTITIES;
+]>
+<section conformance="154" version="5.0" xml:id="sect-Publican-Users_Guide-Entities_and_translation" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<info xml:id="info-Publican-Users_Guide-Entities_and_translation">
+		<title>Entities and translation</title>
+	</info>
+	 <warning>
+		<info xml:id="info-Publican-Users_Guide-Use_entities_with_extreme_caution">
+			<title>Use entities with extreme caution</title>
+		</info>
 		 <para>
 			Entities offer convenience but they should be used with extreme caution in documents that will be translated. Writing (for example) <tag>&amp;FDS;</tag> instead of <application>Fedora Directory Server</application> saves the writer time but transformed entities do not appear in the <firstterm>portable object</firstterm> (PO) files that translators use. Complete translations of documents containing entities are, as a consequence, impossible.
 		</para>
@@ -42,24 +50,18 @@
 		By contrast, if entities are used, the entry in the PO file says:
 	</para>
 	 
-<programlisting>
-#. Tag: para
+<programlisting>#. Tag: para
 #, no-c-format
 msgid "As noted in the &lt;citetitle&gt;&amp;LIFT;&lt;/citetitle&gt;, Chapter 3…"
-msgstr ""
-
-</programlisting>
+msgstr ""</programlisting>
 	 <para>
 		The translation of this would probably run thus:
 	</para>
 	 
-<programlisting>
-#. Tag: para
+<programlisting>#. Tag: para
 #, no-c-format
 msgid "As noted in the &lt;citetitle&gt;&amp;LIFT;&lt;/citetitle&gt;, Chapter 3…"
-msgstr "Wie in &lt;citetitle&gt;&amp;LIFT;&lt;/citetitle&gt;, Kapitel 3, erwähnt…"
-
-</programlisting>
+msgstr "Wie in &lt;citetitle&gt;&amp;LIFT;&lt;/citetitle&gt;, Kapitel 3, erwähnt…"</programlisting>
 	 <para>
 		And the presentation would be thus:
 	</para>
@@ -94,24 +96,18 @@ msgstr "Wie in &lt;citetitle&gt;&amp;LIFT;&lt;/citetitle&gt;, Kapitel 3, erwähn
 		If an entity was used to save the writer time, the translator has to deal with this:
 	</para>
 	 
-<programlisting>
-#. Tag: para
+<programlisting>#. Tag: para
 #, no-c-format
 msgid "However, a careful reading of the &lt;citetitle&gt;&amp;LIFT;&lt;/citetitle&gt; afterword shows that…"
-msgstr ""
-
-</programlisting>
+msgstr ""</programlisting>
 	 <para>
 		And the translation would be subtly but importantly different:
 	</para>
 	 
-<programlisting>
-#. Tag: para
+<programlisting>#. Tag: para
 #, no-c-format
 msgid "However, a careful reading of the &lt;citetitle&gt;&amp;LIFT;&lt;/citetitle&gt; afterword shows that…"
-msgstr "Jedoch ergibt ein sorgfältiges Lesen des Nachworts für &lt;citetitle&gt;&amp;LIFT;&lt;/citetitle&gt;, dass…"
-
-</programlisting>
+msgstr "Jedoch ergibt ein sorgfältiges Lesen des Nachworts für &lt;citetitle&gt;&amp;LIFT;&lt;/citetitle&gt;, dass…"</programlisting>
 	 <para>
 		When presented to a reader, this would appear as follows:
 	</para>
@@ -130,110 +126,64 @@ msgstr "Jedoch ergibt ein sorgfältiges Lesen des Nachworts für &lt;citetitle&g
 	 <para>
 		For example, if you write a document that could apply to more than one product, you might be tempted to set an entity such as <tag>&amp;PRODUCT;</tag>. The advantage of this approach is that by simply changing this value in the <filename><replaceable>Doc_Name</replaceable>.ent</filename> file, you could easily adjust the book to document (for example) Red Hat Enterprise Linux, Fedora, or CentOS. However, while the proper noun <literal>Fedora</literal> never varies in English, it has multiple forms in other languages. For example, in Czech the name <literal>Fedora</literal> has six different forms, depending on one of seven ways in which you can use it in a sentence:
 	</para>
-	 <table conformance="155" frame="all" xml:id="tabl-Publican-Users_Guide-Entities_and_translation-Fedora_in_Czech"><info><title>'Fedora' in Czech</title></info>
-		
+	 <table conformance="155" frame="all" xml:id="tabl-Publican-Users_Guide-Entities_and_translation-Fedora_in_Czech">
+		<info xml:id="info-Publican-Users_Guide-Fedora_in_Czech">
+			<title>'Fedora' in Czech</title>
+		</info>
 		 <tgroup align="left" cols="3" colsep="1" rowsep="1">
-			<colspec colname="c1"/>
-			 <colspec colname="c2"/>
-			 <colspec colname="c3"/>
+			<colspec colname="c1"></colspec>
+			 <colspec colname="c2"></colspec>
+			 <colspec colname="c3"></colspec>
 			 <thead>
 				<row>
-					<entry>
-						Case
-					</entry>
-					 <entry>
-						Usage
-					</entry>
-					 <entry>
-						Form
-					</entry>
+					<entry> Case </entry>
+					 <entry> Usage </entry>
+					 <entry> Form </entry>
 
 				</row>
 
 			</thead>
 			 <tbody>
 				<row>
-					<entry>
-						Nominative
-					</entry>
-					 <entry>
-						the subject of a sentence
-					</entry>
-					 <entry>
-						<foreignphrase>Fedora</foreignphrase>
-					</entry>
+					<entry> Nominative </entry>
+					 <entry> the subject of a sentence </entry>
+					 <entry> <foreignphrase>Fedora</foreignphrase> </entry>
 
 				</row>
 				 <row>
-					<entry>
-						Genitive
-					</entry>
-					 <entry>
-						indicates possession
-					</entry>
-					 <entry>
-						<foreignphrase>Fedory</foreignphrase>
-					</entry>
+					<entry> Genitive </entry>
+					 <entry> indicates possession </entry>
+					 <entry> <foreignphrase>Fedory</foreignphrase> </entry>
 
 				</row>
 				 <row>
-					<entry>
-						Accusative
-					</entry>
-					 <entry>
-						the direct object of a sentence
-					</entry>
-					 <entry>
-						<foreignphrase>Fedoru</foreignphrase>
-					</entry>
+					<entry> Accusative </entry>
+					 <entry> the direct object of a sentence </entry>
+					 <entry> <foreignphrase>Fedoru</foreignphrase> </entry>
 
 				</row>
 				 <row>
-					<entry>
-						Dative
-					</entry>
-					 <entry>
-						the indirect object of a sentence
-					</entry>
-					 <entry>
-						<foreignphrase>Fedoře</foreignphrase>
-					</entry>
+					<entry> Dative </entry>
+					 <entry> the indirect object of a sentence </entry>
+					 <entry> <foreignphrase>Fedoře</foreignphrase> </entry>
 
 				</row>
 				 <row>
-					<entry>
-						Vocative
-					</entry>
-					 <entry>
-						the subject of direct address
-					</entry>
-					 <entry>
-						<foreignphrase>Fedoro</foreignphrase>
-					</entry>
+					<entry> Vocative </entry>
+					 <entry> the subject of direct address </entry>
+					 <entry> <foreignphrase>Fedoro</foreignphrase> </entry>
 
 				</row>
 				 <row>
-					<entry>
-						Locative
-					</entry>
-					 <entry>
-						relates to a location
-					</entry>
-					 <entry>
-						<foreignphrase>Fedoře</foreignphrase>
-					</entry>
+					<entry> Locative </entry>
+					 <entry> relates to a location </entry>
+					 <entry> <foreignphrase>Fedoře</foreignphrase> </entry>
 
 				</row>
 				 <row>
-					<entry>
-						Instrumental
-					</entry>
-					 <entry>
-						relates to a method
-					</entry>
-					 <entry>
-						<foreignphrase>Fedorou</foreignphrase>
-					</entry>
+					<entry> Instrumental </entry>
+					 <entry> relates to a method </entry>
+					 <entry> <foreignphrase>Fedorou</foreignphrase> </entry>
 
 				</row>
 
@@ -300,3 +250,5 @@ msgstr "Jedoch ergibt ein sorgfältiges Lesen des Nachworts für &lt;citetitle&g
 		Now multiply such problems by the more than 40 languages that <application>Publican</application> currently supports. Other than the few non-translated strings that <application>Publican</application> specifies by default in the <filename><replaceable>Doc_Name</replaceable>.ent</filename> file, entities might prove useful for version numbers of products. Beyond that, the use of entities is tantamount to a conscious effort to inhibit and reduce the quality of translations. Furthermore, readers of your document in a language that inflects nouns (whether for case, definiteness, or other reasons) will not know that the bad grammar is the result of XML entities that you set — they will probably assume that the translator is incompetent.
 	</para>
 </section>
+
+

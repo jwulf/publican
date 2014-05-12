@@ -1,47 +1,102 @@
-<?xml version="1.0" encoding="utf-8"?>
-<authorgroup xmlns="http://docbook.org/ns/docbook" version="5.0">
-	<author><personname><firstname>Don</firstname><surname>Domingo</surname></personname><affiliation>
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE authorgroup [
+<!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
+%BOOK_ENTITIES;
+]>
+<authorgroup version="5.0" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<author>
+		<personname><firstname>Don</firstname>
+		<surname>Domingo</surname>
+		</personname>
+		<affiliation>
 			<orgname>Red Hat</orgname>
 			 <orgdiv>Engineering Content Services</orgdiv>
 
-		</affiliation><email>ddomingo@redhat.com</email></author>
-	<author><personname><firstname>Zac</firstname><surname>Dover</surname></personname><affiliation>
+		</affiliation>
+		<email>ddomingo@redhat.com</email>
+	</author>
+	 <author>
+		<personname><firstname>Zac</firstname>
+		<surname>Dover</surname>
+		</personname>
+		<affiliation>
 			<orgname>Red Hat</orgname>
 			 <orgdiv>Engineering Content Services</orgdiv>
 
-		</affiliation><email>zdover@redhat.com</email></author>
-	<author><personname><firstname>Sven</firstname><surname>Dowdeit</surname></personname><contrib>Debian and Docker installation instructions</contrib></author>
-	<author><personname><firstname>Norman</firstname><surname>Dunbar</surname></personname><contrib>OpenSUSE installation instructions</contrib></author>
-	 <author><personname><firstname>Brian</firstname><surname>Forté</surname></personname><affiliation>
+		</affiliation>
+		<email>zdover@redhat.com</email>
+	</author>
+	 <author>
+		<personname><firstname>Sven</firstname>
+		<surname>Dowdeit</surname>
+		</personname><contrib>Debian and Docker installation instructions</contrib>
+	</author>
+	 <author>
+		<personname><firstname>Norman</firstname>
+		<surname>Dunbar</surname>
+		</personname><contrib>OpenSUSE installation instructions</contrib>
+	</author>
+	 <author>
+		<personname><firstname>Brian</firstname>
+		<surname>Forté</surname>
+		</personname>
+		<affiliation>
 			<orgname>Red Hat</orgname>
 			 <orgdiv>Engineering Content Services</orgdiv>
 
-		</affiliation><email>bforte@redhat.com</email></author>
-	 <author><personname><firstname>Rüdiger</firstname><surname>Landmann</surname></personname><affiliation>
+		</affiliation>
+		<email>bforte@redhat.com</email>
+	</author>
+	 <author>
+		<personname><firstname>Rüdiger</firstname>
+		<surname>Landmann</surname>
+		</personname>
+		<affiliation>
 			<orgname>Red Hat</orgname>
 			 <orgdiv>Engineering Content Services</orgdiv>
 
-		</affiliation><email>r.landmann@redhat.com</email></author>
-	<author><personname><firstname>Rebecca</firstname><surname>Newton</surname></personname><affiliation>
+		</affiliation>
+		<email>r.landmann@redhat.com</email>
+	</author>
+	 <author>
+		<personname><firstname>Rebecca</firstname>
+		<surname>Newton</surname>
+		</personname>
+		<affiliation>
 			<orgname>Red Hat</orgname>
 			 <orgdiv>Engineering Content Services</orgdiv>
 
-		</affiliation></author>
-	 <author><personname><firstname>Joshua</firstname><surname>Oakes</surname></personname><affiliation>
+		</affiliation>
+	</author>
+	 <author>
+		<personname><firstname>Joshua</firstname>
+		<surname>Oakes</surname>
+		</personname>
+		<affiliation>
 			<orgname>Red Hat</orgname>
 			 <orgdiv>Engineering Content Services</orgdiv>
 
-		</affiliation></author>
-	 <author><personname><firstname>Joshua</firstname><surname>Wulf</surname></personname><affiliation>
+		</affiliation>
+	</author>
+	 <author>
+		<personname><firstname>Joshua</firstname>
+		<surname>Wulf</surname>
+		</personname>
+		<affiliation>
 			<orgname>Red Hat</orgname>
 			 <orgdiv>Engineering Content Services</orgdiv>
 
-		</affiliation><email>jwulf@redhat.com</email></author>
-
-	 <othercredit class="technicaleditor"><personname><firstname>Jeff</firstname><surname>Fearn</surname></personname><affiliation>
+		</affiliation>
+		<email>jwulf@redhat.com</email>
+	</author>
+	 <othercredit class="technicaleditor">
+		<personname><firstname>Jeff</firstname>
+		<surname>Fearn</surname>
+		</personname>
+		<affiliation>
 			<shortaffil> <inlinemediaobject>
 				<imageobject>
-					<imagedata fileref="images/logos/engops.png" format="PNG"/>
+					<imagedata fileref="images/logos/engops.png" format="PNG" />
 				</imageobject>
 				 <textobject>
 					<phrase>Red Hat, Engineering Operations Logo</phrase>
@@ -50,10 +105,20 @@
 			</inlinemediaobject>
 			 </shortaffil>
 
-		</affiliation><contrib>Extensive review, rough drafts, persistent annoyances.</contrib><email>jfearn@redhat.com</email></othercredit>
-	 <othercredit class="other"><personname><firstname>Josef</firstname><surname>Hruška</surname></personname><affiliation>
+		</affiliation>
+		<contrib>Extensive review, rough drafts, persistent annoyances.</contrib>
+		<email>jfearn@redhat.com</email>
+	</othercredit>
+	 <othercredit class="other">
+		<personname><firstname>Josef</firstname>
+		<surname>Hruška</surname>
+		</personname>
+		<affiliation>
 			<orgname>Fedora</orgname>
 			 <orgdiv>Localization Project</orgdiv>
 
-		</affiliation><contrib>Checking the Czech examples in Entities and translation</contrib></othercredit>
+		</affiliation>
+		<contrib>Checking the Czech examples in Entities and translation</contrib>
+	</othercredit>
 </authorgroup>
+

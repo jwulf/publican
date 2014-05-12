@@ -1,6 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
-<section xmlns="http://docbook.org/ns/docbook" version="5.0" conformance="157" xml:id="sect-Publican-Users_Guide-Files_in_the_book_directory"><info><title>Files in the book directory</title></info>
-	
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE section [
+<!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
+%BOOK_ENTITIES;
+]>
+<section conformance="157" version="5.0" xml:id="sect-Publican-Users_Guide-Files_in_the_book_directory" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<info xml:id="info-Publican-Users_Guide-Files_in_the_book_directory">
+		<title>Files in the book directory</title>
+	</info>
 	 <para>
 		If you run the command <prompt>$</prompt> <command>publican create --name Test_Book --lang en-US</command>, <application>Publican</application> creates a directory structure and required files, similar to the following:
 	</para>
@@ -79,10 +85,14 @@
 		</listitem>
 
 	</itemizedlist>
-	 <section conformance="158" xml:id="sect-Publican-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file"><info><title>The publican.cfg file</title></info>
-		
-		 <note><info><title>Note — Customizing output</title></info>
-			
+	 <section conformance="158" xml:id="sect-Publican-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file">
+		<info xml:id="info-Publican-Users_Guide-The_publican.cfg_file">
+			<title>The publican.cfg file</title>
+		</info>
+		 <note>
+			<info xml:id="info-Publican-Users_Guide-Note_Customizing_output">
+				<title>Note — Customizing output</title>
+			</info>
 			 <para>
 				If you maintain multiple versions of a document, you can create a configuration file for each version. When building or packaging the document, you can use the <option>--config</option> to specify a configuration file other than the <filename>publican.cfg</filename> file and therefore a different set of parameters to use in a particular build. For example:
 			</para>
@@ -94,14 +104,17 @@
 			The <filename>publican.cfg</filename> file configures build options, and is located in the root of the book directory. The following is an example <filename>publican.cfg</filename> file, with a description of <filename>publican.cfg</filename> parameters following afterwards:
 		</para>
 		 
-<programlisting><xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="extras/publican.cfg" parse="text"/>
+<programlisting><xi:include href="extras/publican.cfg" parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" />
+		
 		
 		
 
 </programlisting>
-		 <variablelist conformance="159" xml:id="vari-Publican-Users_Guide-The_publican.cfg_file-Default_parameters"><info><title>Default parameters</title></info>
-			
-			 <varlistentry>
+		 <variablelist conformance="159" xml:id="vari-Publican-Users_Guide-The_publican.cfg_file-Default_parameters">
+			<info xml:id="info-Publican-Users_Guide-Default_parameters">
+				<title>Default parameters</title>
+			</info>
+			 <varlistentry xml:id="varl-Publican-Users_Guide-xml_lang">
 				<term><parameter>xml_lang</parameter></term>
 				 <listitem>
 					<para>
@@ -111,7 +124,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry>
+			 <varlistentry xml:id="varl-Publican-Users_Guide-type">
 				<term><parameter>type</parameter></term>
 				 <listitem>
 					<para>
@@ -121,11 +134,11 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry>
+			 <varlistentry xml:id="varl-Publican-Users_Guide-brand">
 				<term><parameter>brand</parameter></term>
 				 <listitem>
 					<para>
-						sets the <firstterm>brand</firstterm> of the document, for example, <computeroutput>RedHat</computeroutput>, <computeroutput>fedora</computeroutput>, <computeroutput>JBoss</computeroutput>, <computeroutput>oVirt</computeroutput> or <computeroutput>GIMP</computeroutput> , as set by the <option>--brand</option> option for <prompt>$</prompt> <command>publican create</command>. If you do not specify a brand, <application>Publican</application> uses its default brand. Refer to <xref linkend="chap-Publican-Users_Guide-Branding"/> for more information.
+						sets the <firstterm>brand</firstterm> of the document, for example, <computeroutput>RedHat</computeroutput>, <computeroutput>fedora</computeroutput>, <computeroutput>JBoss</computeroutput>, <computeroutput>oVirt</computeroutput> or <computeroutput>GIMP</computeroutput> , as set by the <option>--brand</option> option for <prompt>$</prompt> <command>publican create</command>. If you do not specify a brand, <application>Publican</application> uses its default brand. Refer to <xref linkend="chap-Publican-Users_Guide-Branding" /> for more information.
 					</para>
 
 				</listitem>
@@ -133,23 +146,29 @@
 			</varlistentry>
 
 		</variablelist>
-		 <variablelist conformance="160" xml:id="vari-Publican-Users_Guide-The_publican.cfg_file-Advanced_parameters"><info><title>Advanced parameters</title></info>
-			
-			 <varlistentry>
+		 <variablelist conformance="160" xml:id="vari-Publican-Users_Guide-The_publican.cfg_file-Advanced_parameters">
+			<info xml:id="info-Publican-Users_Guide-Advanced_parameters">
+				<title>Advanced parameters</title>
+			</info>
+			 <varlistentry xml:id="varl-Publican-Users_Guide-arch">
 				<term><parameter>arch</parameter></term>
 				 <listitem>
 					<para>
 						filters output by computer <firstterm>architecture</firstterm>. For example, if you set <literal>arch: x86_64</literal> in the <filename>publican.cfg</filename> file, <application>Publican</application> will only include XML elements tagged with the equivalent attribute, such as <tag>&lt;para arch="x86_64"&gt;</tag>.
 					</para>
-					 <warning><info><title>Use with caution</title></info>
-						
+					 <warning>
+						<info xml:id="info-Publican-Users_Guide-Use_with_caution">
+							<title>Use with caution</title>
+						</info>
 						 <para>
-							As with conditional tagging more generally, <literal>arch</literal> can cause great difficulties when translating documents. Refer to <xref linkend="sect-Publican-Users_Guide-Conditional_tagging-Conditional_tagging_and_translation"/> for an explanation of the issues.
+							As with conditional tagging more generally, <literal>arch</literal> can cause great difficulties when translating documents. Refer to <xref linkend="sect-Publican-Users_Guide-Conditional_tagging-Conditional_tagging_and_translation" /> for an explanation of the issues.
 						</para>
 
 					</warning>
-					 <important><info><title>arch set for root nodes</title></info>
-						
+					 <important>
+						<info xml:id="info-Publican-Users_Guide-arch_set_for_root_nodes">
+							<title>arch set for root nodes</title>
+						</info>
 						 <para>
 							If the root node of an XML file is excluded by the <parameter>arch</parameter> attribute, your document will not build, because empty files are not valid XML. For example, if <filename>Installation_and_configuration-PPC.xml</filename> contains a single chapter:
 						</para>
@@ -174,8 +193,10 @@
 						</para>
 
 					</important>
-					 <important><info><title>xrefs and the arch attribute</title></info>
-						
+					 <important>
+						<info xml:id="info-Publican-Users_Guide-xrefs_and_the_arch_attribute">
+							<title>xrefs and the arch attribute</title>
+						</info>
 						 <para>
 							If an <tag>&lt;xref&gt;</tag> points to content not included in the build due to the <parameter>arch</parameter> attribute, the build will fail. For example, with <literal>arch: x86</literal> set in the <filename>publican.cfg</filename> file, <prompt>$</prompt> <command>publican build --formats=pdf --langs=en-US</command> will fail if the book has the tag <tag>&lt;xref linkend="Itanium_installation"&gt;</tag> pointing to <tag>&lt;section id="Itanium_installation" arch="IA64"&gt;</tag>.
 						</para>
@@ -185,27 +206,27 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry>
+			 <varlistentry xml:id="varl-Publican-Users_Guide-books">
 				<term><parameter>books</parameter></term>
 				 <listitem>
 					<para>
-						specifies a space-separated list of books used in a remote set. Refer to <xref linkend="sect-Publican-Users_Guide-Using_sets-Distributed_sets"/> for more information on distributed sets.
+						specifies a space-separated list of books used in a remote set. Refer to <xref linkend="sect-Publican-Users_Guide-Using_sets-Distributed_sets" /> for more information on distributed sets.
 					</para>
 
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry>
+			 <varlistentry xml:id="varl-Publican-Users_Guide-brew_dist">
 				<term><parameter>brew_dist</parameter></term>
 				 <listitem>
 					<para>
-						specifies the build target to use for building the desktop RPM package in <application>Brew</application>, Red Hat's internal build system. This parameter defaults to <literal>docs-5E</literal>. Refer to <xref linkend="sect-Publican-Users_Guide-Packaging_a_document-The_publican_package_command"/> and <xref linkend="sect-Publican-Users_Guide-Packaging_a_brand"/> for more information on building RPM packages.
+						specifies the build target to use for building the desktop RPM package in <application>Brew</application>, Red Hat's internal build system. This parameter defaults to <literal>docs-5E</literal>. Refer to <xref linkend="sect-Publican-Users_Guide-Packaging_a_document-The_publican_package_command" /> and <xref linkend="sect-Publican-Users_Guide-Packaging_a_brand" /> for more information on building RPM packages.
 					</para>
 
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry>
+			 <varlistentry xml:id="varl-Publican-Users_Guide-bridgehead_in_toc">
 				<term><parameter>bridgehead_in_toc</parameter></term>
 				 <listitem>
 					<para>
@@ -215,7 +236,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry>
+			 <varlistentry xml:id="varl-Publican-Users_Guide-chunk_first">
 				<term><parameter>chunk_first</parameter></term>
 				 <listitem>
 					<para>
@@ -225,16 +246,18 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry>
+			 <varlistentry xml:id="varl-Publican-Users_Guide-chunk_section_depth">
 				<term><parameter>chunk_section_depth</parameter></term>
 				 <listitem>
 					<para>
 						controls the section depth at which <application>Publican</application> no longer splits sub-subsections onto a new page when rendering HTML. By default, this value is set to <literal>4</literal>.
 					</para>
-					 <example conformance="243" xml:id="exam-Publican-Users_Guide-Advanced_parameters-Controlling_the_section_depth_with_chunk_section_depth"><info><title>Controlling the section depth with chunk_section_depth</title></info>
-						
+					 <example conformance="243" xml:id="exam-Publican-Users_Guide-Advanced_parameters-Controlling_the_section_depth_with_chunk_section_depth">
+						<info xml:id="info-Publican-Users_Guide-Controlling_the_section_depth_with_chunk_section_depth">
+							<title>Controlling the section depth with chunk_section_depth</title>
+						</info>
 						 <variablelist>
-							<varlistentry>
+							<varlistentry xml:id="varl-Publican-Users_Guide-chunk_section_depth_0">
 								<term>chunk_section_depth: 0</term>
 								 <listitem>
 									<para>
@@ -244,7 +267,7 @@
 								</listitem>
 
 							</varlistentry>
-							 <varlistentry>
+							 <varlistentry xml:id="varl-Publican-Users_Guide-chunk_section_depth_1">
 								<term>chunk_section_depth: 1</term>
 								 <listitem>
 									<para>
@@ -254,7 +277,7 @@
 								</listitem>
 
 							</varlistentry>
-							 <varlistentry>
+							 <varlistentry xml:id="varl-Publican-Users_Guide-chunk_section_depth_2">
 								<term>chunk_section_depth: 2</term>
 								 <listitem>
 									<para>
@@ -264,7 +287,7 @@
 								</listitem>
 
 							</varlistentry>
-							 <varlistentry>
+							 <varlistentry xml:id="varl-Publican-Users_Guide-chunk_section_depth_3">
 								<term>chunk_section_depth: 3</term>
 								 <listitem>
 									<para>
@@ -274,7 +297,7 @@
 								</listitem>
 
 							</varlistentry>
-							 <varlistentry>
+							 <varlistentry xml:id="varl-Publican-Users_Guide-chunk_section_depth_4_default">
 								<term>chunk_section_depth: 4 (default)</term>
 								 <listitem>
 									<para>
@@ -292,7 +315,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry>
+			 <varlistentry xml:id="varl-Publican-Users_Guide-classpath">
 				<term><parameter>classpath</parameter></term>
 				 <listitem>
 					<para>
@@ -302,7 +325,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry>
+			 <varlistentry xml:id="varl-Publican-Users_Guide-common_config">
 				<term><parameter>common_config</parameter></term>
 				 <listitem>
 					<para>
@@ -312,7 +335,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry>
+			 <varlistentry xml:id="varl-Publican-Users_Guide-common_content">
 				<term><parameter>common_content</parameter></term>
 				 <listitem>
 					<para>
@@ -322,19 +345,19 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry>
+			 <varlistentry xml:id="varl-Publican-Users_Guide-condition">
 				<term><parameter>condition</parameter></term>
 				 <listitem>
 					<para>
-						specifies conditions on which to prune XML before transformation. Refer to <xref linkend="sect-Publican-Users_Guide-Conditional_tagging"/> for more information.
+						specifies conditions on which to prune XML before transformation. Refer to <xref linkend="sect-Publican-Users_Guide-Conditional_tagging" /> for more information.
 					</para>
-					 <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Root_nodes_and_conditionals.xml"/>
-					 <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="xrefs_and_conditionals.xml"/>
+					 <xi:include href="Root_nodes_and_conditionals.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
+					 <xi:include href="xrefs_and_conditionals.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
 
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry>
+			 <varlistentry xml:id="varl-Publican-Users_Guide-confidential">
 				<term><parameter>confidential</parameter></term>
 				 <listitem>
 					<para>
@@ -344,7 +367,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry>
+			 <varlistentry xml:id="varl-Publican-Users_Guide-confidential_text">
 				<term><parameter>confidential_text</parameter></term>
 				 <listitem>
 					<para>
@@ -354,7 +377,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry>
+			 <varlistentry xml:id="varl-Publican-Users_Guide-debug">
 				<term><parameter>debug</parameter></term>
 				 <listitem>
 					<para>
@@ -364,17 +387,17 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry>
+			 <varlistentry xml:id="varl-Publican-Users_Guide-def_lang">
 				<term><parameter>def_lang</parameter></term>
 				 <listitem>
 					<para>
-						sets the default language for a <application>Publican</application>-managed website. Tables of contents for languages other than the default language will link to documents in the default language when translations are not available. Refer to <xref linkend="sect-Publican-Users_Guide-Packaging_a_document"/>.
+						sets the default language for a <application>Publican</application>-managed website. Tables of contents for languages other than the default language will link to documents in the default language when translations are not available. Refer to <xref linkend="sect-Publican-Users_Guide-Packaging_a_document" />.
 					</para>
 
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry>
+			 <varlistentry xml:id="varl-Publican-Users_Guide-doc_url">
 				<term><parameter>doc_url</parameter></term>
 				 <listitem>
 					<para>
@@ -384,7 +407,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry>
+			 <varlistentry xml:id="varl-Publican-Users_Guide-docname">
 				<term><parameter>docname</parameter></term>
 				 <listitem>
 					<para>
@@ -394,7 +417,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry>
+			 <varlistentry xml:id="varl-Publican-Users_Guide-dt_obsoletes">
 				<term><parameter>dt_obsoletes</parameter></term>
 				 <listitem>
 					<para>
@@ -404,24 +427,26 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry>
+			 <varlistentry xml:id="varl-Publican-Users_Guide-dt_requires">
 				<term><parameter>dt_requires</parameter></term>
 				 <listitem>
 					<para>
-						a package that the desktop package requires, for example, a documentation menu package. Refer to <xref linkend="sect-Publican-Users_Guide-Desktop_menu_entries_for_documents"/>.
+						a package that the desktop package requires, for example, a documentation menu package. Refer to <xref linkend="sect-Publican-Users_Guide-Desktop_menu_entries_for_documents" />.
 					</para>
 
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry>
+			 <varlistentry xml:id="varl-Publican-Users_Guide-dtdver">
 				<term><parameter>dtdver</parameter></term>
 				 <listitem>
 					<para>
-						specifies the version of the DocBook XML <firstterm>Document Type Definition</firstterm> (DTD) on which this project is based. <application>Publican</application> defaults to version 4.5. The specification for DocBook XML DTD version 4.5 is available from <uri xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.docbook.org/specs/docbook-4.5-spec.html">http://www.docbook.org/specs/docbook-4.5-spec.html</uri>.
+						specifies the version of the DocBook XML <firstterm>Document Type Definition</firstterm> (DTD) on which this project is based. <application>Publican</application> defaults to version 4.5. The specification for DocBook XML DTD version 4.5 is available from <uri xlink:href="http://www.docbook.org/specs/docbook-4.5-spec.html" xmlns:xlink="http://www.w3.org/1999/xlink">http://www.docbook.org/specs/docbook-4.5-spec.html</uri>.
 					</para>
-					 <important><info><title>A different DTD might slow your build</title></info>
-						
+					 <important>
+						<info xml:id="info-Publican-Users_Guide-A_different_DTD_might_slow_your_build">
+							<title>A different DTD might slow your build</title>
+						</info>
 						 <para>
 							When you install <application>Publican</application>, you also install a local copy of the DocBook XML DTD version 4.5 and accompanying <firstterm>Extensible Stylesheet Language</firstterm> (XSL). If you set a version of the DTD for which there is no local support, <application>Publican</application> must download the appropriate DTD and XSL from an online source every time that it builds the document. Building your document is delayed while this download takes place. The combined size of the required files is around 70 MB.
 						</para>
@@ -431,7 +456,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry>
+			 <varlistentry xml:id="varl-Publican-Users_Guide-dtd_type">
 				<term><parameter>dtd_type</parameter></term>
 				 <listitem>
 					<para>
@@ -447,7 +472,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry>
+			 <varlistentry xml:id="varl-Publican-Users_Guide-dtd_uri">
 				<term><parameter>dtd_uri</parameter></term>
 				 <listitem>
 					<para>
@@ -463,17 +488,17 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry>
+			 <varlistentry xml:id="varl-Publican-Users_Guide-ec_id">
 				<term><parameter>ec_id</parameter></term>
 				 <listitem>
 					<para>
-						sets the ID for an <application>Eclipse</application> help plugin. Every <application>Eclipse</application> help plugin must have a unique ID, and these generally follow Java package naming conventions — refer to <uri xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://java.sun.com/docs/codeconv/html/CodeConventions.doc8.html">http://java.sun.com/docs/codeconv/html/CodeConventions.doc8.html</uri>. By default, <application>Publican</application> sets the ID to <replaceable>org.product</replaceable>.<replaceable>docname</replaceable>. The ID that you set here also determines the directory name for this plugin in the <filename>plugin</filename> directory.
+						sets the ID for an <application>Eclipse</application> help plugin. Every <application>Eclipse</application> help plugin must have a unique ID, and these generally follow Java package naming conventions — refer to <uri xlink:href="http://java.sun.com/docs/codeconv/html/CodeConventions.doc8.html" xmlns:xlink="http://www.w3.org/1999/xlink">http://java.sun.com/docs/codeconv/html/CodeConventions.doc8.html</uri>. By default, <application>Publican</application> sets the ID to <replaceable>org.product</replaceable>.<replaceable>docname</replaceable>. The ID that you set here also determines the directory name for this plugin in the <filename>plugin</filename> directory.
 					</para>
 
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry>
+			 <varlistentry xml:id="varl-Publican-Users_Guide-ec_name">
 				<term><parameter>ec_name</parameter></term>
 				 <listitem>
 					<para>
@@ -483,7 +508,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry>
+			 <varlistentry xml:id="varl-Publican-Users_Guide-ec_provider">
 				<term><parameter>ec_provider</parameter></term>
 				 <listitem>
 					<para>
@@ -493,22 +518,23 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry>
+			 <varlistentry xml:id="varl-Publican-Users_Guide-edition">
 				<term><parameter>edition</parameter></term>
 				 <listitem>
 					<para>
 						specifies the edition number for this document.
 					</para>
-					<note>
+					 <note>
 						<para>
 							The <tag>&lt;edition&gt;</tag> tag was required by versions of Publican prior to 2.0, which used it to generate the version of a documentation package. This tag is now completely optional and does not affect packaging in any way.
 						</para>
+
 					</note>
 
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry>
+			 <varlistentry xml:id="varl-Publican-Users_Guide-extras_dir">
 				<term><parameter>extras_dir</parameter></term>
 				 <listitem>
 					<para>
@@ -518,7 +544,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry>
+			 <varlistentry xml:id="varl-Publican-Users_Guide-footer">
 				<term><parameter>footer</parameter></term>
 				 <listitem>
 					<para>
@@ -528,16 +554,18 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry>
+			 <varlistentry xml:id="varl-Publican-Users_Guide-generate_section_toc_level">
 				<term><parameter>generate_section_toc_level</parameter></term>
 				 <listitem>
 					<para>
 						controls the section depth at which <application>Publican</application> will generate a table of contents. At the default value of <literal>0</literal>, <application>Publican</application> will generate tables of contents at the start of the document and in parts, chapters, and appendixes, but not in sections. If (for example) the value is set to <literal>1</literal>, tables of contents also appear in each "level 1" section, such as sections 1.1, 1.2, 2.1, and 2.2. If set to <literal>2</literal>, tables of contents also appear in "level 2" sections, such as sections 1.1.1, 1.1.2, and 1.2.1.
 					</para>
-					 <example conformance="244" xml:id="exam-Publican-Users_Guide-Advanced_parameters-Setting_the_section_depth_at_which_tables_of_contents_appear"><info><title>Setting the section depth at which tables of contents appear</title></info>
-						
+					 <example conformance="244" xml:id="exam-Publican-Users_Guide-Advanced_parameters-Setting_the_section_depth_at_which_tables_of_contents_appear">
+						<info xml:id="info-Publican-Users_Guide-Setting_the_section_depth_at_which_tables_of_contents_appear">
+							<title>Setting the section depth at which tables of contents appear</title>
+						</info>
 						 <variablelist>
-							<varlistentry>
+							<varlistentry xml:id="varl-Publican-Users_Guide-generate_section_toc_level_0_default">
 								<term>generate_section_toc_level: 0 (default)</term>
 								 <listitem>
 									<para>
@@ -547,7 +575,7 @@
 								</listitem>
 
 							</varlistentry>
-							 <varlistentry>
+							 <varlistentry xml:id="varl-Publican-Users_Guide-generate_section_toc_level_1">
 								<term>generate_section_toc_level: 1</term>
 								 <listitem>
 									<para>
@@ -557,7 +585,7 @@
 								</listitem>
 
 							</varlistentry>
-							 <varlistentry>
+							 <varlistentry xml:id="varl-Publican-Users_Guide-generate_section_toc_level_2">
 								<term>generate_section_toc_level: 2</term>
 								 <listitem>
 									<para>
@@ -575,17 +603,17 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry>
+			 <varlistentry xml:id="varl-Publican-Users_Guide-ignored_translations">
 				<term><parameter>ignored_translations</parameter></term>
 				 <listitem>
 					<para>
-						specifies translations to ignore as comma-separated XML language codes; for example, <literal>es-ES,it-IT</literal>. If you build or package a book for a language filtered by this parameter, <application>Publican</application> ignores any translations that exist for this language, and builds or packages the book in the language of the original XML instead. Refer to <xref linkend="sect-Publican-Users_Guide-Preparing_a_document_for_translation"/>, and to <xref linkend="appe-Publican-Users_Guide-Language_codes"/>.
+						specifies translations to ignore as comma-separated XML language codes; for example, <literal>es-ES,it-IT</literal>. If you build or package a book for a language filtered by this parameter, <application>Publican</application> ignores any translations that exist for this language, and builds or packages the book in the language of the original XML instead. Refer to <xref linkend="sect-Publican-Users_Guide-Preparing_a_document_for_translation" />, and to <xref linkend="appe-Publican-Users_Guide-Language_codes" />.
 					</para>
 
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry>
+			 <varlistentry xml:id="varl-Publican-Users_Guide-img_dir">
 				<term><parameter>img_dir</parameter></term>
 				 <listitem>
 					<para>
@@ -595,7 +623,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry>
+			 <varlistentry xml:id="varl-Publican-Users_Guide-info_file">
 				<term><parameter>info_file</parameter></term>
 				 <listitem>
 					<para>
@@ -605,28 +633,28 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry>
+			 <varlistentry xml:id="varl-Publican-Users_Guide-license">
 				<term><parameter>license</parameter></term>
 				 <listitem>
 					<para>
-						specifies the license this package uses. By default, <application>Publican</application> selects the GNU Free Documentation License (GFDL). Refer to <xref linkend="sect-Publican-Users_Guide-Packaging_a_document"/>.
+						specifies the license this package uses. By default, <application>Publican</application> selects the GNU Free Documentation License (GFDL). Refer to <xref linkend="sect-Publican-Users_Guide-Packaging_a_document" />.
 					</para>
 
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry>
+			 <varlistentry xml:id="varl-Publican-Users_Guide-max_image_width">
 				<term><parameter>max_image_width</parameter></term>
 				 <listitem>
 					<para>
-						specifies the maximum width allowable for images in the document in pixels. By default, <application>Publican</application> scales down any images wider than 444 pixels so that they fit within this limit. Keeping images no wider than 444 pixels ensures that they present no wider than the right-hand margin of the text in HTML output and that they fit within the pages of PDF output. Refer to <xref linkend="sect-Publican-Users_Guide-Adding_images"/> for more information on using images.
+						specifies the maximum width allowable for images in the document in pixels. By default, <application>Publican</application> scales down any images wider than 444 pixels so that they fit within this limit. Keeping images no wider than 444 pixels ensures that they present no wider than the right-hand margin of the text in HTML output and that they fit within the pages of PDF output. Refer to <xref linkend="sect-Publican-Users_Guide-Adding_images" /> for more information on using images.
 					</para>
-					 <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Image_width.xml"/>
+					 <xi:include href="Image_width.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
 
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry>
+			 <varlistentry xml:id="varl-Publican-Users_Guide-mainfile">
 				<term><parameter>mainfile</parameter></term>
 				 <listitem>
 					<para>
@@ -639,27 +667,27 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry>
+			 <varlistentry xml:id="varl-Publican-Users_Guide-menu_category">
 				<term><parameter>menu_category</parameter></term>
 				 <listitem>
 					<para>
-						the desktop menu category (as defined by a corresponding <filename>.menu</filename> file) in which a document should appear when installed from a desktop RPM package. Refer to <xref linkend="sect-Publican-Users_Guide-Desktop_menu_entries_for_documents"/>.
+						the desktop menu category (as defined by a corresponding <filename>.menu</filename> file) in which a document should appear when installed from a desktop RPM package. Refer to <xref linkend="sect-Publican-Users_Guide-Desktop_menu_entries_for_documents" />.
 					</para>
 
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry>
+			 <varlistentry xml:id="varl-Publican-Users_Guide-os_ver">
 				<term><parameter>os_ver</parameter></term>
 				 <listitem>
 					<para>
-						specifies the operating system for which to build packages. <application>Publican</application> appends the value that you provide here to the RPM packages that it builds. For example, <literal>.fc15</literal> for Fedora 15. The default value is <literal>.el5</literal>, which signifies Red Hat Enterprise Linux 5 and operating systems derived from it. Refer to <xref linkend="sect-Publican-Users_Guide-Packaging_a_document"/> and <xref linkend="sect-Publican-Users_Guide-Packaging_a_brand"/>.
+						specifies the operating system for which to build packages. <application>Publican</application> appends the value that you provide here to the RPM packages that it builds. For example, <literal>.fc15</literal> for Fedora 15. The default value is <literal>.el5</literal>, which signifies Red Hat Enterprise Linux 5 and operating systems derived from it. Refer to <xref linkend="sect-Publican-Users_Guide-Packaging_a_document" /> and <xref linkend="sect-Publican-Users_Guide-Packaging_a_brand" />.
 					</para>
 
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry>
+			 <varlistentry xml:id="varl-Publican-Users_Guide-prod_url">
 				<term><parameter>prod_url</parameter></term>
 				 <listitem>
 					<para>
@@ -669,7 +697,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry>
+			 <varlistentry xml:id="varl-Publican-Users_Guide-product">
 				<term><parameter>product</parameter></term>
 				 <listitem>
 					<para>
@@ -679,7 +707,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry>
+			 <varlistentry xml:id="varl-Publican-Users_Guide-release">
 				<term><parameter>release</parameter></term>
 				 <listitem>
 					<para>
@@ -689,17 +717,17 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry>
+			 <varlistentry xml:id="varl-Publican-Users_Guide-repo">
 				<term><parameter>repo</parameter></term>
 				 <listitem>
 					<para>
-						specifies the repository from which to fetch remote books that form part of a distributed set. Refer to <xref linkend="sect-Publican-Users_Guide-Using_sets-Distributed_sets"/>.
+						specifies the repository from which to fetch remote books that form part of a distributed set. Refer to <xref linkend="sect-Publican-Users_Guide-Using_sets-Distributed_sets" />.
 					</para>
 
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry>
+			 <varlistentry xml:id="varl-Publican-Users_Guide-rev_dir">
 				<term><parameter>rev_dir</parameter></term>
 				 <listitem>
 					<para>
@@ -709,7 +737,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry>
+			 <varlistentry xml:id="varl-Publican-Users_Guide-rev_file">
 				<term><parameter>rev_file</parameter></term>
 				 <listitem>
 					<para>
@@ -719,17 +747,17 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry>
+			 <varlistentry xml:id="varl-Publican-Users_Guide-scm">
 				<term><parameter>scm</parameter></term>
 				 <listitem>
 					<para>
-						specifies the version control (or <firstterm>source code management</firstterm>) system used in the repository in that stores the remote books in a distributed set. At present, <application>Publican</application> can use only <application>Subversion</application> (SVN), and therefore uses <literal>SVN</literal> as its default setting. Refer to <xref linkend="sect-Publican-Users_Guide-Using_sets-Distributed_sets"/>.
+						specifies the version control (or <firstterm>source code management</firstterm>) system used in the repository in that stores the remote books in a distributed set. At present, <application>Publican</application> can use only <application>Subversion</application> (SVN), and therefore uses <literal>SVN</literal> as its default setting. Refer to <xref linkend="sect-Publican-Users_Guide-Using_sets-Distributed_sets" />.
 					</para>
 
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry>
+			 <varlistentry xml:id="varl-Publican-Users_Guide-show_remarks">
 				<term><parameter>show_remarks</parameter></term>
 				 <listitem>
 					<para>
@@ -739,7 +767,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry>
+			 <varlistentry xml:id="varl-Publican-Users_Guide-sort_order">
 				<term><parameter>sort_order</parameter></term>
 				 <listitem>
 					<para>
@@ -749,17 +777,17 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry>
+			 <varlistentry xml:id="varl-Publican-Users_Guide-src_url">
 				<term><parameter>src_url</parameter></term>
 				 <listitem>
 					<para>
-						specifies the URL at which to find tarballs of source files. This parameter provides the <literal>Source:</literal> field in the header of an RPM spec file. Refer to <xref linkend="sect-Publican-Users_Guide-Packaging_a_document"/>.
+						specifies the URL at which to find tarballs of source files. This parameter provides the <literal>Source:</literal> field in the header of an RPM spec file. Refer to <xref linkend="sect-Publican-Users_Guide-Packaging_a_document" />.
 					</para>
 
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry>
+			 <varlistentry xml:id="varl-Publican-Users_Guide-tmp_dir">
 				<term><parameter>tmp_dir</parameter></term>
 				 <listitem>
 					<para>
@@ -769,7 +797,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry>
+			 <varlistentry xml:id="varl-Publican-Users_Guide-tmpl_path">
 				<term><parameter>tmpl_path</parameter></term>
 				 <listitem>
 					<para>
@@ -779,7 +807,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry>
+			 <varlistentry xml:id="varl-Publican-Users_Guide-toc_js">
 				<term><parameter>toc_js</parameter></term>
 				 <listitem>
 					<para>
@@ -789,7 +817,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry>
+			 <varlistentry xml:id="varl-Publican-Users_Guide-toc_type">
 				<term><parameter>toc_type</parameter></term>
 				 <listitem>
 					<para>
@@ -799,16 +827,18 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry>
+			 <varlistentry xml:id="varl-Publican-Users_Guide-toc_section_depth">
 				<term><parameter>toc_section_depth</parameter></term>
 				 <listitem>
 					<para>
 						controls the depth of sections that <application>Publican</application> includes in the main table of contents. By default, this value is set to <literal>2</literal>. With the default setting, sections 1.1 and 1.1.1 will appear in the main table of contents, but section 1.1.1.1 will not. (Note that the first digit in these examples represents a chapter, not a section).
 					</para>
-					 <example conformance="245" xml:id="exam-Publican-Users_Guide-Advanced_parameters-Controlling_the_depth_of_sections_in_the_main_table_of_contents"><info><title>Controlling the depth of sections in the main table of contents</title></info>
-						
+					 <example conformance="245" xml:id="exam-Publican-Users_Guide-Advanced_parameters-Controlling_the_depth_of_sections_in_the_main_table_of_contents">
+						<info xml:id="info-Publican-Users_Guide-Controlling_the_depth_of_sections_in_the_main_table_of_contents">
+							<title>Controlling the depth of sections in the main table of contents</title>
+						</info>
 						 <variablelist>
-							<varlistentry>
+							<varlistentry xml:id="varl-Publican-Users_Guide-toc_section_depth_0">
 								<term>toc_section_depth: 0</term>
 								 <listitem>
 									<para>
@@ -818,7 +848,7 @@
 								</listitem>
 
 							</varlistentry>
-							 <varlistentry>
+							 <varlistentry xml:id="varl-Publican-Users_Guide-toc_section_depth_1">
 								<term>toc_section_depth: 1</term>
 								 <listitem>
 									<para>
@@ -828,7 +858,7 @@
 								</listitem>
 
 							</varlistentry>
-							 <varlistentry>
+							 <varlistentry xml:id="varl-Publican-Users_Guide-toc_section_depth_2_default">
 								<term>toc_section_depth: 2 (default)</term>
 								 <listitem>
 									<para>
@@ -846,7 +876,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry>
+			 <varlistentry xml:id="varl-Publican-Users_Guide-version">
 				<term><parameter>version</parameter></term>
 				 <listitem>
 					<para>
@@ -856,34 +886,36 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry>
+			 <varlistentry xml:id="varl-Publican-Users_Guide-web_brew_dist">
 				<term><parameter>web_brew_dist</parameter></term>
 				 <listitem>
 					<para>
-						specifies the <application>brew</application> build target to use for building the web RPM packages. <application>Brew</application> is the internal build system used by Red Hat. By default, this value is set to <literal>docs-5E</literal>, representing documentation packages for Red Hat Enterprise Linux 5. Refer to <xref linkend="sect-Publican-Users_Guide-Packaging_a_document"/>.
+						specifies the <application>brew</application> build target to use for building the web RPM packages. <application>Brew</application> is the internal build system used by Red Hat. By default, this value is set to <literal>docs-5E</literal>, representing documentation packages for Red Hat Enterprise Linux 5. Refer to <xref linkend="sect-Publican-Users_Guide-Packaging_a_document" />.
 					</para>
 
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry>
+			 <varlistentry xml:id="varl-Publican-Users_Guide-web_formats">
 				<term><parameter>web_formats</parameter></term>
 				 <listitem>
 					<para>
-						a comma-separated list of formats to include in the web RPM package. Refer to <xref linkend="sect-Publican-Users_Guide-Packaging_a_document-The_publican_package_command"/>.
+						a comma-separated list of formats to include in the web RPM package. Refer to <xref linkend="sect-Publican-Users_Guide-Packaging_a_document-The_publican_package_command" />.
 					</para>
 
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry>
+			 <varlistentry xml:id="varl-Publican-Users_Guide-web_home">
 				<term><parameter>web_home</parameter></term>
 				 <listitem>
 					<para>
-						specifies that the document is the home page of a documentation website, not a standard document. Refer to <xref linkend="chap-Publican-Users_Guide-Building_a_website_with_Publican"/>.
+						specifies that the document is the home page of a documentation website, not a standard document. Refer to <xref linkend="chap-Publican-Users_Guide-Building_a_website_with_Publican" />.
 					</para>
-					 <important><info><title>Important — <literal>web_home</literal> is deprecated</title></info>
-						
+					 <important>
+						<info xml:id="info-Publican-Users_Guide-Important_web_home_is_deprecated">
+							<title>Important — <literal>web_home</literal> is deprecated</title>
+						</info>
 						 <para>
 							In <application>Publican</application> 2.2, <literal>web_home</literal> is replaced by <literal>web_type: home</literal>. Support for <literal>web_home</literal> will be removed in a future version of <application>Publican</application>.
 						</para>
@@ -893,37 +925,37 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry>
+			 <varlistentry xml:id="varl-Publican-Users_Guide-web_name_label">
 				<term><parameter>web_name_label</parameter></term>
 				 <listitem>
 					<para>
-						overrides the book name as it appears on the menu of a <application>Publican</application>-managed website. Refer to <xref linkend="chap-Publican-Users_Guide-Building_a_website_with_Publican"/>.
+						overrides the book name as it appears on the menu of a <application>Publican</application>-managed website. Refer to <xref linkend="chap-Publican-Users_Guide-Building_a_website_with_Publican" />.
 					</para>
 
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry>
+			 <varlistentry xml:id="varl-Publican-Users_Guide-web_obsoletes">
 				<term><parameter>web_obsoletes</parameter></term>
 				 <listitem>
 					<para>
-						specifies packages that the web RPM obsoletes. Refer to <xref linkend="sect-Publican-Users_Guide-Packaging_a_document"/>.
+						specifies packages that the web RPM obsoletes. Refer to <xref linkend="sect-Publican-Users_Guide-Packaging_a_document" />.
 					</para>
 
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry>
+			 <varlistentry xml:id="varl-Publican-Users_Guide-web_product_label">
 				<term><parameter>web_product_label</parameter></term>
 				 <listitem>
 					<para>
-						overrides the product name as it appears on the menu of a <application>Publican</application>-managed website. Refer to <xref linkend="chap-Publican-Users_Guide-Building_a_website_with_Publican"/>.
+						overrides the product name as it appears on the menu of a <application>Publican</application>-managed website. Refer to <xref linkend="chap-Publican-Users_Guide-Building_a_website_with_Publican" />.
 					</para>
 
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry>
+			 <varlistentry xml:id="varl-Publican-Users_Guide-web_style">
 				<term><parameter>web_style</parameter></term>
 				 <listitem>
 					<para>
@@ -933,27 +965,27 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry>
+			 <varlistentry xml:id="varl-Publican-Users_Guide-web_type">
 				<term><parameter>web_type</parameter></term>
 				 <listitem>
 					<para>
-						specifies that the document is descriptive content for a <application>Publican</application>-managed website rather than product documentation. This content includes the home page of the website (<literal>web_type: home</literal>), product description pages (<literal>web_type: product</literal>), and version description pages (<literal>web_type: version</literal>). Refer to <xref linkend="chap-Publican-Users_Guide-Building_a_website_with_Publican"/>.
+						specifies that the document is descriptive content for a <application>Publican</application>-managed website rather than product documentation. This content includes the home page of the website (<literal>web_type: home</literal>), product description pages (<literal>web_type: product</literal>), and version description pages (<literal>web_type: version</literal>). Refer to <xref linkend="chap-Publican-Users_Guide-Building_a_website_with_Publican" />.
 					</para>
 
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry>
+			 <varlistentry xml:id="varl-Publican-Users_Guide-web_version_label">
 				<term><parameter>web_version_label</parameter></term>
 				 <listitem>
 					<para>
-						overrides the version number as it appears on the menu of a <application>Publican</application>-managed website. Set this value to <literal>UNUSED</literal> for general documentation that does not apply to any particular version of a product. Refer to <xref linkend="chap-Publican-Users_Guide-Building_a_website_with_Publican"/>.
+						overrides the version number as it appears on the menu of a <application>Publican</application>-managed website. Set this value to <literal>UNUSED</literal> for general documentation that does not apply to any particular version of a product. Refer to <xref linkend="chap-Publican-Users_Guide-Building_a_website_with_Publican" />.
 					</para>
 
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry>
+			 <varlistentry xml:id="varl-Publican-Users_Guide-wkhtmltopdf_opts">
 				<term><parameter>wkhtmltopdf_opts</parameter></term>
 				 <listitem>
 					<para>
@@ -965,8 +997,10 @@
 			</varlistentry>
 
 		</variablelist>
-		 <note><info><title>Help from the command line</title></info>
-			
+		 <note>
+			<info xml:id="info-Publican-Users_Guide-Help_from_the_command_line">
+				<title>Help from the command line</title>
+			</info>
 			 <para>
 				Run the <prompt>$</prompt> <command>publican help_config</command> command in the root directory of a book for a summary of these parameters.
 			</para>
@@ -975,16 +1009,20 @@
 
 	</section>
 	
-	 <section conformance="161" xml:id="sect-Publican-Users_Guide-Files_in_the_book_directory-Book_Info.xml"><info><title>Book_Info.xml</title></info>
-		
-		 <note><info><title><filename>Article_Info.xml</filename> and <filename>Set_Info.xml</filename></title></info>
-			
+	 <section conformance="161" xml:id="sect-Publican-Users_Guide-Files_in_the_book_directory-Book_Info.xml">
+		<info xml:id="info-Publican-Users_Guide-Book_Info.xml">
+			<title>Book_Info.xml</title>
+		</info>
+		 <note>
+			<info xml:id="info-Publican-Users_Guide-Article_Info.xml_and_Set_Info.xml">
+				<title><filename>Article_Info.xml</filename> and <filename>Set_Info.xml</filename></title>
+			</info>
 			 <para>
 				This description of the <filename>Book_Info.xml</filename> file applies to <filename>Article_Info.xml</filename> and <filename>Set_Info.xml</filename> files too. However, for the sake of simplicity, the file is referred to as <filename>Book_Info.xml</filename> throughout this section.
 			</para>
 
 		</note>
-		 <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Applicable_to_RPM_only.xml"/>
+		 <xi:include href="Applicable_to_RPM_only.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
 		 <para>
 			The <filename>Book_Info.xml</filename> file contains the key metadata concerning a book: the book's ID; title; subtitle; author and edition number. It also contains the name and version of the product that is documented, and an abstract.
 		</para>
@@ -1004,9 +1042,9 @@
 			An example <filename>Book_Info.xml</filename> file, for the <literal>Test_Book</literal> book, is presented below. Details regarding this file, and what the RPM format requirements are for each tag, follow.
 		</para>
 		 
-<programlisting language="XML"><xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Book_Info.xml" parse="text"/></programlisting>
+<programlisting language="XML"><xi:include href="Book_Info.xml" parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" /></programlisting>
 		 <variablelist>
-			<varlistentry>
+			<varlistentry xml:id="varl-Publican-Users_Guide-bookinfo_idbook_id">
 				<term><tag>&lt;bookinfo id="<replaceable>book_id</replaceable>"&gt;</tag></term>
 				 <term><tag>&lt;articleinfo id="<replaceable>article_id</replaceable>"&gt;</tag></term>
 				 <term><tag>&lt;setinfo id="<replaceable>set_id</replaceable>"&gt;</tag></term>
@@ -1018,7 +1056,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry>
+			 <varlistentry xml:id="varl-Publican-Users_Guide-productnameproductnameproductname">
 				<term><tag>&lt;productname&gt;<replaceable>productname</replaceable>&lt;/productname&gt;</tag></term>
 				 <listitem>
 					<para>
@@ -1027,12 +1065,12 @@
 					 <para>
 						Override this tag with the <parameter>product</parameter> variable in the <filename>publican.cfg</filename> file if the name of your product contains non-Latin characters, accented Latin characters, or punctuation marks other than the underscore.
 					</para>
-					 <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Permitted_alphanumeric.xml"/>
+					 <xi:include href="Permitted_alphanumeric.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
 
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry>
+			 <varlistentry xml:id="varl-Publican-Users_Guide-titletitletitle">
 				<term><tag>&lt;title&gt;<replaceable>title</replaceable>&lt;/title&gt;</tag></term>
 				 <listitem>
 					<para>
@@ -1041,15 +1079,15 @@
 					 <para>
 						The names of RPM packages can only contain certain basic ASCII characters. If the title of your document contains non-Latin characters, accented Latin characters, or punctuation marks other than the underscore, use the <parameter>docname</parameter> parameter in the <filename>publican.cfg</filename> file to set a name for the document in ASCII characters. When you build the document, the title appears as you set it with the <tag>&lt;title&gt;</tag> tag, but when you package the document, the value that you used in the <parameter>docname</parameter> parameter is used in the file name of the RPM package.
 					</para>
-					 <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Permitted_alphanumeric.xml"/>
+					 <xi:include href="Permitted_alphanumeric.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
 					 <para>
-						By default, <application>Publican</application> also uses the contents of the <tag>&lt;title&gt;</tag> tag to find the file that contains the root XML node: <tag>&lt;article&gt;</tag>, <tag>&lt;book&gt;</tag>, or <tag>&lt;set&gt;</tag>. For example, if you set the title to <tag>&lt;title&gt;Server Configuration Guide&lt;/title&gt;</tag>, <application>Publican</application> expects the root XML node to be in a file named <filename>Server_Configuration_Guide.xml</filename> and the document entities to be in a file named <filename>Server_Configuration_Guide.ent</filename>. To use a different name for these files, set the <parameter>mainfile</parameter> parameter in the document configuration file (by default, <filename>publican.cfg</filename>). Refer to <xref linkend="sect-Publican-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file"/>.
+						By default, <application>Publican</application> also uses the contents of the <tag>&lt;title&gt;</tag> tag to find the file that contains the root XML node: <tag>&lt;article&gt;</tag>, <tag>&lt;book&gt;</tag>, or <tag>&lt;set&gt;</tag>. For example, if you set the title to <tag>&lt;title&gt;Server Configuration Guide&lt;/title&gt;</tag>, <application>Publican</application> expects the root XML node to be in a file named <filename>Server_Configuration_Guide.xml</filename> and the document entities to be in a file named <filename>Server_Configuration_Guide.ent</filename>. To use a different name for these files, set the <parameter>mainfile</parameter> parameter in the document configuration file (by default, <filename>publican.cfg</filename>). Refer to <xref linkend="sect-Publican-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file" />.
 					</para>
 
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry>
+			 <varlistentry xml:id="varl-Publican-Users_Guide-subtitlesubtitlesubtitle">
 				<term><tag>&lt;subtitle&gt;<replaceable>subtitle</replaceable>&lt;/subtitle&gt;</tag></term>
 				 <listitem>
 					<para>
@@ -1059,7 +1097,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry>
+			 <varlistentry xml:id="varl-Publican-Users_Guide-productnumberproductnumberproductnumber">
 				<term><tag>&lt;productnumber&gt;<replaceable>productnumber</replaceable>&lt;/productnumber&gt;</tag></term>
 				 <listitem>
 					<para>
@@ -1071,12 +1109,12 @@
 					 <para>
 						Override this tag with the <parameter>version</parameter> variable in the <filename>publican.cfg</filename> file if the product version is anything other than a number.
 					</para>
-					 <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Permitted_numbers.xml"/>
+					 <xi:include href="Permitted_numbers.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
 
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry>
+			 <varlistentry xml:id="varl-Publican-Users_Guide-editioneditionedition">
 				<term><tag>&lt;edition&gt;<replaceable>edition</replaceable>&lt;/edition&gt;</tag></term>
 				 <listitem>
 					<para>
@@ -1091,12 +1129,12 @@
 					 <para>
 						Override this tag with the <parameter>edition</parameter> variable in the <filename>publican.cfg</filename> file if the edition of your document is identified by anything other than a number.
 					</para>
-					 <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Permitted_numbers.xml"/>
+					 <xi:include href="Permitted_numbers.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
 
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry>
+			 <varlistentry xml:id="varl-Publican-Users_Guide-pubsnumberpubsnumberpubsnumber">
 				<term><tag>&lt;pubsnumber&gt;<replaceable>pubsnumber</replaceable>&lt;/pubsnumber&gt;</tag></term>
 				 <listitem>
 					<para>
@@ -1105,12 +1143,12 @@
 					 <para>
 						Override this tag with the <parameter>release</parameter> variable in the <filename>publican.cfg</filename> file if the release number of your document contains anything other than whole numbers.
 					</para>
-					 <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Permitted_integers.xml"/>
+					 <xi:include href="Permitted_integers.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
 
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry>
+			 <varlistentry xml:id="varl-Publican-Users_Guide-abstractparaabstractparaabstract">
 				<term><tag>&lt;abstract&gt;&lt;para&gt;<replaceable>abstract</replaceable>&lt;/para&gt;&lt;/abstract&gt;</tag></term>
 				 <listitem>
 					<para>
@@ -1126,7 +1164,7 @@
 			You can add extra metadata to the <filename>Book_Info.xml</filename> file of a document, to support specific features in various output formats:
 		</para>
 		 <variablelist>
-			<varlistentry>
+			<varlistentry xml:id="varl-Publican-Users_Guide-keywordset">
 				<term><tag>&lt;keywordset&gt;</tag></term>
 				 <term><tag>&lt;keyword&gt;</tag></term>
 				 <listitem>
@@ -1137,7 +1175,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry>
+			 <varlistentry xml:id="varl-Publican-Users_Guide-subjectset">
 				<term><tag>&lt;subjectset&gt;</tag></term>
 				 <term><tag>&lt;subject&gt;</tag></term>
 				 <listitem>
@@ -1145,13 +1183,13 @@
 						Terms tagged with <tag>&lt;subject&gt;</tag> and placed within a <tag>&lt;subjectset&gt;</tag> are added to the <literal>Subject</literal> field of the properties of a PDF document and in the metadata of an ebook in EPUB format.
 					</para>
 					 <para>
-						Consider using a <firstterm>controlled vocabulary</firstterm> when defining the subject of your document, for example, the <firstterm>Library of Congress Subject Headings</firstterm> (LCSH). Identify the chosen vocabulary with the <parameter>scheme</parameter> attibute in the <tag>&lt;subjectset&gt;</tag> tag, for example, <tag>&lt;subjectset scheme="libraryofcongress"&gt;</tag>. You can search for LCSH subject headings through the Library of Congress <citetitle>Authorities &amp; Vocabularies</citetitle> page: <uri xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://id.loc.gov/authorities/search/">http://id.loc.gov/authorities/search/</uri>.
+						Consider using a <firstterm>controlled vocabulary</firstterm> when defining the subject of your document, for example, the <firstterm>Library of Congress Subject Headings</firstterm> (LCSH). Identify the chosen vocabulary with the <parameter>scheme</parameter> attibute in the <tag>&lt;subjectset&gt;</tag> tag, for example, <tag>&lt;subjectset scheme="libraryofcongress"&gt;</tag>. You can search for LCSH subject headings through the Library of Congress <citetitle>Authorities &amp; Vocabularies</citetitle> page: <uri xlink:href="http://id.loc.gov/authorities/search/" xmlns:xlink="http://www.w3.org/1999/xlink">http://id.loc.gov/authorities/search/</uri>.
 					</para>
 
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry>
+			 <varlistentry xml:id="varl-Publican-Users_Guide-mediaobject_rolecover_idepub_cover">
 				<term><tag>&lt;mediaobject role="cover" id="epub_cover"&gt;</tag></term>
 				 <listitem>
 					<para>
@@ -1183,8 +1221,10 @@
 			</varlistentry>
 
 		</variablelist>
-		 <section conformance="162" xml:id="sect-Publican-Users_Guide-Book_Info.xml-RPM_packages_editions_impressions_and_versions"><info><title>RPM packages, editions, impressions and versions</title></info>
-			
+		 <section conformance="162" xml:id="sect-Publican-Users_Guide-Book_Info.xml-RPM_packages_editions_impressions_and_versions">
+			<info xml:id="info-Publican-Users_Guide-RPM_packages_editions_impressions_and_versions">
+				<title>RPM packages, editions, impressions and versions</title>
+			</info>
 			 <para>
 				As noted above, the default <filename>Book_Info.xml</filename> used by <application>Publican</application> includes an <parameter>&lt;edition&gt;</parameter> tag.
 			</para>
@@ -1224,32 +1264,34 @@
 
 	</section>
 	
-	 <section conformance="163" xml:id="sect-Publican-Users_Guide-Files_in_the_book_directory-Author_Group.xml"><info><title>Author_Group.xml</title></info>
-		
+	 <section conformance="163" xml:id="sect-Publican-Users_Guide-Files_in_the_book_directory-Author_Group.xml">
+		<info xml:id="info-Publican-Users_Guide-Author_Group.xml">
+			<title>Author_Group.xml</title>
+		</info>
 		 <para>
 			<filename>Author_Group.xml</filename> is not required but is the standard place to record author, editor, artist and other credit details. The following is an example <filename>Author_Group.xml</filename> file:
 		</para>
 		 
-<programlisting language="XML"><xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="extras/Author_Group.xml" parse="text"/>
-		
-		
-
-</programlisting>
+<programlisting language="XML"><xi:include href="extras/Author_Group.xml" parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" /></programlisting>
 		 <para>
 			<filename>Author_Group.xml</filename> does not have to contain all of the above information: include as much or as little as required.
 		</para>
 
 	</section>
 	
-	 <section conformance="164" xml:id="sect-Publican-Users_Guide-Files_in_the_book_directory-Chapter.xml"><info><title>Chapter.xml</title></info>
-		
-		 <important><info><title>Articles and chapters</title></info>
-			
+	 <section conformance="164" xml:id="sect-Publican-Users_Guide-Files_in_the_book_directory-Chapter.xml">
+		<info xml:id="info-Publican-Users_Guide-Chapter.xml">
+			<title>Chapter.xml</title>
+		</info>
+		 <important>
+			<info xml:id="info-Publican-Users_Guide-Articles_and_chapters">
+				<title>Articles and chapters</title>
+			</info>
 			 <para>
 				DocBook articles cannot contain chapters. If you use the <option>--type=article</option> option with <prompt>$</prompt> <command>publican create</command>, <application>Publican</application> does not create a <filename>Chapter.xml</filename> file. Use sections to organize content within articles.
 			</para>
 			 <para>
-				Refer to <citetitle>DocBook: The Definitive Guide</citetitle> by Norman Walsh and Leonard Muellner available at <uri xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.docbook.org/tdg/en/html/docbook.html">http://www.docbook.org/tdg/en/html/docbook.html</uri> for details of the different ways that sets, books, articles, parts, chapters, and sections interact. In particular, note that articles can be stand-alone documents, or can be incorporated into books.
+				Refer to <citetitle>DocBook: The Definitive Guide</citetitle> by Norman Walsh and Leonard Muellner available at <uri xlink:href="http://www.docbook.org/tdg/en/html/docbook.html" xmlns:xlink="http://www.w3.org/1999/xlink">http://www.docbook.org/tdg/en/html/docbook.html</uri> for details of the different ways that sets, books, articles, parts, chapters, and sections interact. In particular, note that articles can be stand-alone documents, or can be incorporated into books.
 			</para>
 
 		</important>
@@ -1257,16 +1299,14 @@
 			The <filename>Chapter.xml</filename> file is a template for creating chapter files. Chapter files contain the content that make up a book. The following is a chapter template (<filename>Chapter.xml</filename>) that is created by the <prompt>$</prompt> <command>publican create</command> command. Note the <filename>DOCTYPE</filename> is set to <filename>chapter</filename>:
 		</para>
 		 
-<programlisting language="XML"><xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="extras/Chapter.xmlt" parse="text"/>
-		
-		
-
-</programlisting>
+<programlisting language="XML"><xi:include href="extras/Chapter.xmlt" parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" /></programlisting>
 		 <para>
-			This chapter has two sections, <filename>Section 1 Test</filename> and <filename>Section 2 Test</filename>. Refer to <uri xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://docbook.org/tdg/en/html/chapter.html">http://docbook.org/tdg/en/html/chapter.html</uri> for further information about chapters.
+			This chapter has two sections, <filename>Section 1 Test</filename> and <filename>Section 2 Test</filename>. Refer to <uri xlink:href="http://docbook.org/tdg/en/html/chapter.html" xmlns:xlink="http://www.w3.org/1999/xlink">http://docbook.org/tdg/en/html/chapter.html</uri> for further information about chapters.
 		</para>
-		 <note><info><title>Note</title></info>
-			
+		 <note>
+			<info xml:id="info-Publican-Users_Guide-Note">
+				<title>Note</title>
+			</info>
 			 <para>
 				The chapter file should be renamed to reflect the chapter subject. For example, a chapter on product installation could be named <filename>Installation.xml</filename>, whereas a chapter on setting up a piece of software would be better called <filename>Setup.xml</filename> or <filename>Configuration.xml</filename>.
 			</para>
@@ -1275,26 +1315,31 @@
 
 	</section>
 	
-	 <section conformance="165" xml:id="sect-Publican-Users_Guide-Files_in_the_book_directory-Doc_Name.xml"><info><title><replaceable>Doc_Name</replaceable>.xml</title></info>
-		
+	 <section conformance="165" xml:id="sect-Publican-Users_Guide-Files_in_the_book_directory-Doc_Name.xml">
+		<info xml:id="info-Publican-Users_Guide-Doc_Name.xml">
+			<title><replaceable>Doc_Name</replaceable>.xml</title>
+		</info>
 		 <para>
 			The <filename><replaceable>Doc_Name</replaceable>.xml</filename> file contains <literal>xi:include</literal> directives to include the other necessary XML files for the document, including chapters or sections contained in other XML files. For example, a book's <filename><replaceable>Doc_Name</replaceable>.xml</filename> file brings together chapters that are contained in separate XML files.
 		</para>
 		 <para>
 			The following is an example <filename><replaceable>Doc_Name</replaceable>.xml</filename> file that describes a DocBook book — note the <parameter>DOCTYPE</parameter> is set to <literal>book</literal>.
 		</para>
-		 <example conformance="246" xml:id="exam-Publican-Users_Guide-Doc_Name.xml-A_DocBook_book"><info><title>A DocBook book</title></info>
-			
+		 <example conformance="246" xml:id="exam-Publican-Users_Guide-Doc_Name.xml-A_DocBook_book">
+			<info xml:id="info-Publican-Users_Guide-A_DocBook_book">
+				<title>A DocBook book</title>
+			</info>
 			 
-<programlisting language="XML"><xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="extras/Book_Name.xmlt" parse="text"/>
-</programlisting>
+<programlisting language="XML"><xi:include href="extras/Book_Name.xmlt" parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" /></programlisting>
 			 <para>
 				This example loads the <filename>Book_Info.xml</filename>, <filename>Preface.xml</filename>, <filename>Chapter.xml</filename>, and <filename>Appendix.xml</filename> XML files.
 			</para>
 
 		</example>
-		 <important><info><title>Important</title></info>
-			
+		 <important>
+			<info xml:id="info-Publican-Users_Guide-Important">
+				<title>Important</title>
+			</info>
 			 <para>
 				The order in which chapters are listed matters. When this example book is built, <filename>Book_Info.xml</filename> will precede <filename>Preface.xml</filename> which will precede <filename>Chapter.xml</filename>, and so on.
 			</para>
@@ -1332,17 +1377,17 @@
 &lt;/para&gt;
 &lt;/chapter&gt;
 
-&lt;/book&gt;
-
-</programlisting>
+&lt;/book&gt;</programlisting>
 		 <para>
-			This book contains two chapters. Chapter one contains two sections. Refer to <uri xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://docbook.org/tdg/en/html/section.html">http://docbook.org/tdg/en/html/section.html</uri> for further information about sections, and <uri xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://docbook.org/tdg/en/html/book.html">http://docbook.org/tdg/en/html/book.html</uri> for further information about books.
+			This book contains two chapters. Chapter one contains two sections. Refer to <uri xlink:href="http://docbook.org/tdg/en/html/section.html" xmlns:xlink="http://www.w3.org/1999/xlink">http://docbook.org/tdg/en/html/section.html</uri> for further information about sections, and <uri xlink:href="http://docbook.org/tdg/en/html/book.html" xmlns:xlink="http://www.w3.org/1999/xlink">http://docbook.org/tdg/en/html/book.html</uri> for further information about books.
 		</para>
 
 	</section>
 	
-	 <section conformance="166" xml:id="sect-Publican-Users_Guide-Files_in_the_book_directory-Doc_Name.ent"><info><title><replaceable>Doc_Name</replaceable>.ent</title></info>
-		
+	 <section conformance="166" xml:id="sect-Publican-Users_Guide-Files_in_the_book_directory-Doc_Name.ent">
+		<info xml:id="info-Publican-Users_Guide-Doc_Name.ent">
+			<title><replaceable>Doc_Name</replaceable>.ent</title>
+		</info>
 		 <para>
 			The <filename><replaceable>Doc_Name</replaceable>.ent</filename> file is used to define local entities. The <parameter>YEAR</parameter> and <parameter>HOLDER</parameter> entities are used for copyright information. By default, <application>Publican</application> sets <parameter>YEAR</parameter> to the current year, and inserts a message into <parameter>HOLDER</parameter> to remind you to specify the copyright holder for the document. If the <parameter>YEAR</parameter> and <parameter>HOLDER</parameter> entities are missing altogether, the document will not build.
 		</para>
@@ -1350,17 +1395,15 @@
 			Other entities might be required by the <firstterm>brand</firstterm> applied to your document. For example, the <application>Publican</application> brand for Fedora documents uses the entity <computeroutput>BOOKID</computeroutput> to specify how readers should refer to a document when they submit feedback about it.
 		</para>
 		 
-<screen><xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="extras/Book_Name.ent" parse="text"/>
-		
-		
-
-</screen>
-		 <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Entities.xml"/>
+<programlisting><xi:include href="extras/Book_Name.ent" parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" /></programlisting>
+		 <xi:include href="Entities.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
 
 	</section>
 	
-	 <section conformance="167" xml:id="sect-Publican-Users_Guide-Files_in_the_book_directory-Revision_History.xml"><info><title>Revision_History.xml</title></info>
-		
+	 <section conformance="167" xml:id="sect-Publican-Users_Guide-Files_in_the_book_directory-Revision_History.xml">
+		<info xml:id="info-Publican-Users_Guide-Revision_History.xml">
+			<title>Revision_History.xml</title>
+		</info>
 		 <para>
 			The <prompt>$</prompt> <command>publican package</command> command searches for the first XML file in the document's XML directory containing a <literal>&lt;revhistory&gt;</literal> tag. <application>Publican</application> then uses that file to build the RPM revision history.
 		</para>
@@ -1369,3 +1412,5 @@
 	
 
 </section>
+
+

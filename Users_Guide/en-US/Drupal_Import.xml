@@ -1,11 +1,19 @@
-<?xml version="1.0" encoding="utf-8"?>
-<chapter xmlns="http://docbook.org/ns/docbook" version="5.0" conformance="144" xml:id="chap-Publican-Users_Guide-Import_book_into_Drupal"><info><title>Import book into Drupal</title></info>
-	
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE chapter [
+<!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
+%BOOK_ENTITIES;
+]>
+<chapter conformance="144" version="5.0" xml:id="chap-Publican-Users_Guide-Import_book_into_Drupal" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<info xml:id="info-Publican-Users_Guide-Import_book_into_Drupal">
+		<title>Import book into Drupal</title>
+	</info>
 	 <para>
 		<application>Publican 3.1</application> has a new functionality which allow user to create and import a book into Drupal. All xml files in a book are transformed into a single CSV file which will later be used to import into Drupal.
 	</para>
-	 <section conformance="145" xml:id="sect-Publican-Users_Guide-Import_book_into_Drupal-How_to_build_a_CSV_file_for_Drupal_import"><info><title>How to build a CSV file for Drupal import</title></info>
-		
+	 <section conformance="145" xml:id="sect-Publican-Users_Guide-Import_book_into_Drupal-How_to_build_a_CSV_file_for_Drupal_import">
+		<info xml:id="info-Publican-Users_Guide-How_to_build_a_CSV_file_for_Drupal_import">
+			<title>How to build a CSV file for Drupal import</title>
+		</info>
 		 <para>
 			The CSV File consists of information that tells Drupal how to import the book. Each row in the CSV file represents a html page.
 		</para>
@@ -42,8 +50,10 @@
 			</listitem>
 
 		</itemizedlist>
-		 <important><info><title>Important — Use version control system</title></info>
-			
+		 <important>
+			<info xml:id="info-Publican-Users_Guide-Important_Use_version_control_system">
+				<title>Important — Use version control system</title>
+			</info>
 			 <para>
 				After running the <prompt>$</prompt> <command>publican build --langs en-US --formats=drupal-book</command> command, you will notice that the xml files in the <filename>en-US</filename> directory had been changed. This is because <application>Publican</application> added a <parameter>'Conformance'</parameter> attribute for every xml tag that has id. This attribute contains a number which is unique across xml files in the book. If you are using a version control system like <application>git</application> for your xml files, then you need to commit the changes so that the number won't get reset when other users run it. These unique numbers are very important, because they are use as the url path in drupal. Besides, <application>Publican</application> also created a database file name <filename>max_unique_id.db</filename> in the <filename>en-US</filename> directory. This database file is use to track the current maximum unique number in the book, so that <application>Publican</application> can know where you are up to and add a new unique number for your newly created Chapter or Section. Therefore, it is very important to add the database file to the version control and commit it if there is any change. If you add a new section in the xml, don't set the <parameter>'Comformance'</parameter> attribute yourself as that will make the database outdated. Just leave it for <application>publican</application> to set it.
 			</para>
@@ -52,20 +62,24 @@
 
 	</section>
 	
-	 <section conformance="146" xml:id="sect-Publican-Users_Guide-Import_book_into_Drupal-The_publican.cfg_file"><info><title>The publican.cfg file</title></info>
-		
+	 <section conformance="146" xml:id="sect-Publican-Users_Guide-Import_book_into_Drupal-The_publican.cfg_file">
+		<info xml:id="info-Publican-Users_Guide-The_publican.cfg_file">
+			<title>The publican.cfg file</title>
+		</info>
 		 <para>
 			Below are some parameters that can be configure in the publican.cfg file for Drupal import:
 		</para>
 		 <variablelist>
-			<varlistentry>
+			<varlistentry xml:id="varl-Publican-Users_Guide-drupal_author">
 				<term><parameter>drupal_author</parameter></term>
 				 <listitem>
 					<para>
 						specfies the author who should be shown in drupal book page. The name must be a valid Drupal username. 'Redhat' is the default author. Set this parameter in the <filename>publican.cfg</filename> file to override it.
 					</para>
-					 <important><info><title>Important — Setting Author</title></info>
-						
+					 <important>
+						<info xml:id="info-Publican-Users_Guide-Important_Setting_Author">
+							<title>Important — Setting Author</title>
+						</info>
 						 <para>
 							The author must have permission to manage (create, update, delete) nodes in Drupal. If the default author is used, make sure you had created an account with username 'Redhat' in Drupal.
 						</para>
@@ -75,7 +89,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry>
+			 <varlistentry xml:id="varl-Publican-Users_Guide-drupal_menu_title">
 				<term><parameter>drupal_menu_title</parameter></term>
 				 <listitem>
 					<para>
@@ -85,16 +99,18 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry>
+			 <varlistentry xml:id="varl-Publican-Users_Guide-drupal_menu_block">
 				<term><parameter>drupal_menu_block</parameter></term>
 				 <listitem>
 					<para>
 						specfies which menu block the book should show in Drupal. The default value is <parameter>"user-guide"</parameter>.
 					</para>
-					 <important><info><title>Important — Setting menu block</title></info>
-						
+					 <important>
+						<info xml:id="info-Publican-Users_Guide-Important_Setting_menu_block">
+							<title>Important — Setting menu block</title>
+						</info>
 						 <para>
-							The menu block must exist in Drupal. For more information about adding a menu block in Drupal. Please refer to <xref linkend="sect-Publican-Users_Guide-Drupal_Import_Guide-How_to_add_a_menu_block"/>.
+							The menu block must exist in Drupal. For more information about adding a menu block in Drupal. Please refer to <xref linkend="sect-Publican-Users_Guide-Drupal_Import_Guide-How_to_add_a_menu_block" />.
 						</para>
 
 					</important>
@@ -102,7 +118,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry>
+			 <varlistentry xml:id="varl-Publican-Users_Guide-drupal_image_path">
 				<term><parameter>drupal_image_path</parameter></term>
 				 <listitem>
 					<para>
@@ -117,22 +133,26 @@
 
 	</section>
 	
-	 <section conformance="147" xml:id="sect-Publican-Users_Guide-Import_book_into_Drupal-Drupal_Import_Guide"><info><title>Drupal Import Guide</title></info>
-		
+	 <section conformance="147" xml:id="sect-Publican-Users_Guide-Import_book_into_Drupal-Drupal_Import_Guide">
+		<info xml:id="info-Publican-Users_Guide-Drupal_Import_Guide">
+			<title>Drupal Import Guide</title>
+		</info>
 		 <para>
-			Before you can import a book, you need to install a module call <application>'Node Import'</application> in Drupal. This module allows Drupal to import and update content from CSV or TSV files. To install this module, simply go to <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://drupal.org/sandbox/hyu/1819292">drupal site</link> and follow the instructions on the website to download it. Once this is done, then you need to copy the downloaded module to the 'modules' directory on the Drupal server. For example if your Drupal is located in <filename>/var/www/html/drupal/</filename> directory, then you should copy the module to <filename>/var/www/html/drupal/sites/all/modules/</filename> directory. To enable the installed module, login to the Drupal site and go to <guilabel>Administer -&gt; Site building -&gt; Modules </guilabel>. In the Development section, tick the <guibutton>checkbox</guibutton> and click <guibutton>Save configuration</guibutton> button to activate the <application>Node Import</application> Module.
+			Before you can import a book, you need to install a module call <application>'Node Import'</application> in Drupal. This module allows Drupal to import and update content from CSV or TSV files. To install this module, simply go to <link xlink:href="http://drupal.org/sandbox/hyu/1819292" xmlns:xlink="http://www.w3.org/1999/xlink">drupal site</link> and follow the instructions on the website to download it. Once this is done, then you need to copy the downloaded module to the 'modules' directory on the Drupal server. For example if your Drupal is located in <filename>/var/www/html/drupal/</filename> directory, then you should copy the module to <filename>/var/www/html/drupal/sites/all/modules/</filename> directory. To enable the installed module, login to the Drupal site and go to <guilabel>Administer -&gt; Site building -&gt; Modules </guilabel>. In the Development section, tick the <guibutton>checkbox</guibutton> and click <guibutton>Save configuration</guibutton> button to activate the <application>Node Import</application> Module.
 		</para>
 		 <mediaobject>
 			<imageobject>
-				<imagedata fileref="images/drupal_enable_node_import.png" format="PNG"/>
+				<imagedata fileref="images/drupal_enable_node_import.png" format="PNG" />
 			</imageobject>
 			 <textobject>
 				<phrase>testing longdesc</phrase>
 			</textobject>
 
 		</mediaobject>
-		 <important><info><title>Important — Enable Drupal Core Modules</title></info>
-			
+		 <important>
+			<info xml:id="info-Publican-Users_Guide-Important_Enable_Drupal_Core_Modules">
+				<title>Important — Enable Drupal Core Modules</title>
+			</info>
 			 <para>
 				You also need to enable the following Drupal core modules:
 			</para>
@@ -159,21 +179,25 @@
 			</itemizedlist>
 
 		</important>
-		 <note><info><title>Permission to install Module</title></info>
-			
+		 <note>
+			<info xml:id="info-Publican-Users_Guide-Permission_to_install_Module">
+				<title>Permission to install Module</title>
+			</info>
 			 <para>
 				Please consult your web adminstrator if you don't have permission to install module in drupal.
 			</para>
 
 		</note>
-		 <section conformance="148" xml:id="sect-Publican-Users_Guide-Drupal_Import_Guide-How_to_add_a_menu_block"><info><title>How to add a menu block</title></info>
-			
+		 <section conformance="148" xml:id="sect-Publican-Users_Guide-Drupal_Import_Guide-How_to_add_a_menu_block">
+			<info xml:id="info-Publican-Users_Guide-How_to_add_a_menu_block">
+				<title>How to add a menu block</title>
+			</info>
 			 <para>
 				You can specify which menu the book should be showing in Drupal. If the specified menu block doesn't exist, Drupal will throw all the imported contents in the primary link. Therefore, if you wish to list your book in a menu block, make sure you create one before importing the book. To add a new menu block, simply login to your Drupal site and go to <guilabel>Administer -&gt; Menus -&gt; Add menu </guilabel>.
 			</para>
 			 <mediaobject>
 				<imageobject>
-					<imagedata fileref="images/drupal_add_menu.png" format="PNG"/>
+					<imagedata fileref="images/drupal_add_menu.png" format="PNG" />
 				</imageobject>
 
 			</mediaobject>
@@ -195,11 +219,13 @@
 
 		</section>
 		
-		 <section conformance="149" xml:id="sect-Publican-Users_Guide-Drupal_Import_Guide-Setting_up_Node_import"><info><title>Setting up Node import</title></info>
-			
+		 <section conformance="149" xml:id="sect-Publican-Users_Guide-Drupal_Import_Guide-Setting_up_Node_import">
+			<info xml:id="info-Publican-Users_Guide-Setting_up_Node_import">
+				<title>Setting up Node import</title>
+			</info>
 			 <mediaobject>
 				<imageobject>
-					<imagedata fileref="images/drupal_node_import_settings.png" format="PNG"/>
+					<imagedata fileref="images/drupal_node_import_settings.png" format="PNG" />
 				</imageobject>
 
 			</mediaobject>
@@ -225,8 +251,10 @@
 							<para>
 								<guilabel>File owner</guilabel> - The CSV file that you uploaded to the <filename>import directory</filename> will be assigned ownership to this user.
 							</para>
-							 <important><info><title>Important — File Ownership</title></info>
-								
+							 <important>
+								<info xml:id="info-Publican-Users_Guide-Important_File_Ownership">
+									<title>Important — File Ownership</title>
+								</info>
 								 <para>
 									Users will only be allowed to use files they have uploaded themselves and files owned by anonymous. If you leave this field blank, all files uploaded by FTP will be owned by anonymous and so all users will see those files as being available for them. If you enter a username here, files that are uploaded using FTP will be owned by that user and only that user will be able to see those uploaded files. It is recommended to leave this field blank.
 								</para>
@@ -270,13 +298,17 @@
 
 		</section>
 		
-		 <section conformance="150" xml:id="sect-Publican-Users_Guide-Drupal_Import_Guide-How_to_import_book"><info><title>How to import book</title></info>
-			
-			 <procedure conformance="151" xml:id="proc-Publican-Users_Guide-How_to_import_book-To_import_book_into_Drupal"><info><title>To import book into Drupal:</title></info>
-				
+		 <section conformance="150" xml:id="sect-Publican-Users_Guide-Drupal_Import_Guide-How_to_import_book">
+			<info xml:id="info-Publican-Users_Guide-How_to_import_book">
+				<title>How to import book</title>
+			</info>
+			 <procedure conformance="151" xml:id="proc-Publican-Users_Guide-How_to_import_book-To_import_book_into_Drupal">
+				<info xml:id="info-Publican-Users_Guide-To_import_book_into_Drupal">
+					<title>To import book into Drupal:</title>
+				</info>
 				 <step>
 					<para>
-						Follow the steps in <xref linkend="sect-Publican-Users_Guide-Import_book_into_Drupal-How_to_build_a_CSV_file_for_Drupal_import"/>
+						Follow the steps in <xref linkend="sect-Publican-Users_Guide-Import_book_into_Drupal-How_to_build_a_CSV_file_for_Drupal_import" />
 					</para>
 
 				</step>
@@ -288,7 +320,7 @@
 				</step>
 				 <step>
 					<para>
-						Upload <filename>en-US</filename> directory to the <filename>"sites/default/files/"</filename> directory in the Drupal server. This value can be overriden in the <filename>publican.cfg</filename>. For more details, please read <xref linkend="sect-Publican-Users_Guide-Import_book_into_Drupal-The_publican.cfg_file"/>
+						Upload <filename>en-US</filename> directory to the <filename>"sites/default/files/"</filename> directory in the Drupal server. This value can be overriden in the <filename>publican.cfg</filename>. For more details, please read <xref linkend="sect-Publican-Users_Guide-Import_book_into_Drupal-The_publican.cfg_file" />
 					</para>
 
 				</step>
@@ -298,7 +330,7 @@
 					</para>
 					 <mediaobject>
 						<imageobject>
-							<imagedata fileref="images/drupal_import_task.png" format="PNG"/>
+							<imagedata fileref="images/drupal_import_task.png" format="PNG" />
 						</imageobject>
 
 					</mediaobject>
@@ -310,7 +342,7 @@
 					</para>
 					 <mediaobject>
 						<imageobject>
-							<imagedata fileref="images/drupal_import_progress.png" format="PNG"/>
+							<imagedata fileref="images/drupal_import_progress.png" format="PNG" />
 						</imageobject>
 
 					</mediaobject>
@@ -320,13 +352,12 @@
 					<para>
 						The book link should be showing in the specified menu block now.
 					</para>
-					<!--       <mediaobject>
+					 <!--        <mediaobject>
 						<imageobject>
 							<imagedata fileref="images/drupal_book.png" format="PNG" />
 						</imageobject>
 
-</mediaobject>       -->
-
+</mediaobject>        -->
 				</step>
 
 			</procedure>
@@ -334,13 +365,17 @@
 
 		</section>
 		
-		 <section conformance="152" xml:id="sect-Publican-Users_Guide-Drupal_Import_Guide-How_to_update_book"><info><title>How to update book</title></info>
-			
+		 <section conformance="152" xml:id="sect-Publican-Users_Guide-Drupal_Import_Guide-How_to_update_book">
+			<info xml:id="info-Publican-Users_Guide-How_to_update_book">
+				<title>How to update book</title>
+			</info>
 			 <para>
-				Simply repeat the steps in <xref linkend="sect-Publican-Users_Guide-Drupal_Import_Guide-How_to_import_book"/> to update the book.
+				Simply repeat the steps in <xref linkend="sect-Publican-Users_Guide-Drupal_Import_Guide-How_to_import_book" /> to update the book.
 			</para>
-			 <warning><info><title>Warning — Section Chunking</title></info>
-				
+			 <warning>
+				<info xml:id="info-Publican-Users_Guide-Warning_Section_Chunking">
+					<title>Warning — Section Chunking</title>
+				</info>
 				 <para>
 					If you update the book with smaller chunks, than the missing chunks will be deleted by Drupal and the URL path for the deleted chunks will be deleted as well.
 				</para>
@@ -354,3 +389,4 @@
 	
 
 </chapter>
+

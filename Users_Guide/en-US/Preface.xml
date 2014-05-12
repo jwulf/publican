@@ -1,16 +1,24 @@
-<?xml version="1.0" encoding="utf-8"?>
-<preface xmlns="http://docbook.org/ns/docbook" version="5.0" conformance="200" xml:id="pref-Publican-Users_Guide-Preface"><info><title>Preface</title></info>
-	
-	 <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Common_Content/Conventions.xml"/>
-	 <section conformance="201" xml:id="sect-Publican-Users_Guide-Preface-We_Need_Feedback"><info><title>We Need Feedback!</title></info>
-		
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE preface [
+<!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
+%BOOK_ENTITIES;
+]>
+<preface conformance="200" version="5.0" xml:id="pref-Publican-Users_Guide-Preface" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<info xml:id="info-Publican-Users_Guide-Preface">
+		<title>Preface</title>
+	</info>
+	 <xi:include href="Common_Content/Conventions.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
+	 <section conformance="201" xml:id="sect-Publican-Users_Guide-Preface-We_Need_Feedback">
+		<info xml:id="info-Publican-Users_Guide-We_Need_Feedback">
+			<title>We Need Feedback!</title>
+		</info>
 		 <indexterm>
 			<primary>feedback</primary>
 			 <secondary>contact information for this manual</secondary>
 
 		</indexterm>
 		 <para>
-			If you find a typographical error in this manual, or if you have thought of a way to make this manual better, we would love to hear from you! Please submit a report in Bugzilla: <uri xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://bugzilla.redhat.com/enter_bug.cgi?product=Publican&amp;component=Publican%20Users%20Guide&amp;version=4.1">https://bugzilla.redhat.com/enter_bug.cgi?product=Publican&amp;component=Publican%20Users%20Guide&amp;version=4.1</uri>.
+			If you find a typographical error in this manual, or if you have thought of a way to make this manual better, we would love to hear from you! Please submit a report in Bugzilla: <uri xlink:href="https://bugzilla.redhat.com/enter_bug.cgi?product=Publican&amp;component=Publican%20Users%20Guide&amp;version=4.1" xmlns:xlink="http://www.w3.org/1999/xlink">https://bugzilla.redhat.com/enter_bug.cgi?product=Publican&amp;component=Publican%20Users%20Guide&amp;version=4.1</uri>.
 		</para>
 		 <para>
 			If you have a suggestion for improving the documentation, try to be as specific as possible when describing it. If you have found an error, please include the section number and some of the surrounding text so we can find it easily.
@@ -20,3 +28,4 @@
 	
 
 </preface>
+

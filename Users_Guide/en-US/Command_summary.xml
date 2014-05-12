@@ -1,8 +1,16 @@
-<?xml version="1.0" encoding="utf-8"?>
-<appendix xmlns="http://docbook.org/ns/docbook" version="5.0" conformance="126" xml:id="appe-Publican-Users_Guide-Command_summary"><info><title>Command summary</title></info>
-	
-	 <variablelist conformance="127" xml:id="vari-Publican-Users_Guide-Command_summary-Command_options"><info><title>Command options</title></info>
-		
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE appendix [
+<!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
+%BOOK_ENTITIES;
+]>
+<appendix conformance="126" version="5.0" xml:id="appe-Publican-Users_Guide-Command_summary" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<info xml:id="info-Publican-Users_Guide-Command_summary">
+		<title>Command summary</title>
+	</info>
+	 <variablelist conformance="127" xml:id="vari-Publican-Users_Guide-Command_summary-Command_options">
+		<info xml:id="info-Publican-Users_Guide-Command_options">
+			<title>Command options</title>
+		</info>
 		 <varlistentry>
 			<term><prompt>$</prompt> <command>publican --help</command></term>
 			 <listitem>
@@ -75,8 +83,10 @@
 		</varlistentry>
 
 	</variablelist>
-	 <variablelist conformance="128" xml:id="vari-Publican-Users_Guide-Command_summary-Actions"><info><title>Actions</title></info>
-		
+	 <variablelist conformance="128" xml:id="vari-Publican-Users_Guide-Command_summary-Actions">
+		<info xml:id="info-Publican-Users_Guide-Actions">
+			<title>Actions</title>
+		</info>
 		 <varlistentry>
 			<term><prompt>$</prompt> <command>publican add_revision</command></term>
 			 <listitem>
@@ -982,8 +992,10 @@
 		</varlistentry>
 
 	</variablelist>
-	 <section conformance="238" xml:id="sect-Publican-Users_Guide-Command_summary-Internal_commands"><info><title>Internal commands</title></info>
-		
+	 <section conformance="238" xml:id="sect-Publican-Users_Guide-Command_summary-Internal_commands">
+		<info xml:id="info-Publican-Users_Guide-Internal_commands">
+			<title>Internal commands</title>
+		</info>
 		 <para>
 			<application>Publican</application> uses the commands documented in this section internally. There is normally no need to run them manually.
 		</para>
@@ -1111,12 +1123,12 @@
 						For example:
 					</para>
 					 
-<programlisting>publican update_db --add --lang en-US --formats html,pdf --name Foo \
+<screen><prompt>$</prompt> publican update_db --add --lang en-US --formats html,pdf --name Foo \
 --name_label "foo is good" --version 0.1 --version_label UNUSED \
 --product Bar --product_label "To the bar" \
 --subtitle "A guide to Bar Foo" \
 --abstract "There once was a Foo from Bar ..." \
---site_config /usr/share/bar/foo.cfg</programlisting>
+--site_config /usr/share/bar/foo.cfg</screen>
 
 				</listitem>
 
@@ -1184,8 +1196,7 @@
 						For example:
 					</para>
 					 
-<programlisting>publican update_db --del --lang en-US --name Foo --version 0.1 --product Bar \
---site_config /usr/share/bar/foo.cfg</programlisting>
+<screen><prompt>$</prompt> publican update_db --del --lang en-US --name Foo --version 0.1 --product Bar --site_config /usr/share/bar/foo.cfg</screen>
 
 				</listitem>
 
@@ -1197,3 +1208,4 @@
 	
 
 </appendix>
+

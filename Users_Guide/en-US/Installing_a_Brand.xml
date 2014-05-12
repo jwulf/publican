@@ -1,6 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
-<section xmlns="http://docbook.org/ns/docbook" version="5.0" conformance="188" xml:id="sect-Publican-Users_Guide-Installing_a_brand"><info><title>Installing a brand</title></info>
-	
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE section [
+<!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
+%BOOK_ENTITIES;
+]>
+<section conformance="188" version="5.0" xml:id="sect-Publican-Users_Guide-Installing_a_brand" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<info xml:id="info-Publican-Users_Guide-Installing_a_brand">
+		<title>Installing a brand</title>
+	</info>
 	 <para>
 		<application>Publican</application> brands for Fedora, Genome, and oVirt documents are available as RPM packages in Fedora. Similarly, Red Hat internally distributes RPM packages containing <application>Publican</application> brands for GIMP, JBoss, and Red Hat documents. Providing that you have access to the relevant repositories, you can install these brands on a computer that runs Red Hat Enterprise Linux or Fedora — or an operating system derived from either — with the command <command>yum install publican-<replaceable>brand</replaceable></command> or with a graphical package manager such as <application>PackageKit</application>.
 	</para>
@@ -60,160 +66,82 @@
 
 	</procedure>
 	
-	 <table conformance="189" xml:id="tabl-Publican-Users_Guide-Installing_a_brand-Current_Brands_and_their_packages"><info><title>Current Brands and their packages</title></info>
-		
+	 <table conformance="189" xml:id="tabl-Publican-Users_Guide-Installing_a_brand-Current_Brands_and_their_packages">
+		<info xml:id="info-Publican-Users_Guide-Current_Brands_and_their_packages">
+			<title>Current Brands and their packages</title>
+		</info>
 		 <tgroup cols="5">
-			<colspec colnum="1" colwidth="1*"/>
-			 <colspec colnum="2" colwidth="2*"/>
-			 <colspec colnum="3" colwidth="2*"/>
-			 <colspec colnum="4" colwidth="2*"/>
-			 <colspec colnum="5" colwidth="2*"/>
+			<colspec colnum="1" colwidth="1*"></colspec>
+			 <colspec colnum="2" colwidth="2*"></colspec>
+			 <colspec colnum="3" colwidth="2*"></colspec>
+			 <colspec colnum="4" colwidth="2*"></colspec>
+			 <colspec colnum="5" colwidth="2*"></colspec>
 			 <thead>
 				<row>
-					<entry>
-						Brand
-					</entry>
-					 <entry>
-						License of Common Content files
-					</entry>
-					 <entry>
-						Default license for documents
-					</entry>
-					 <entry>
-						Package
-					</entry>
-					 <entry>
-						Comment
-					</entry>
+					<entry> Brand </entry>
+					 <entry> License of Common Content files </entry>
+					 <entry> Default license for documents </entry>
+					 <entry> Package </entry>
+					 <entry> Comment </entry>
 
 				</row>
 
 			</thead>
 			 <tbody>
 				<row>
-					<entry>
-						common
-					</entry>
-					 <entry>
-						<link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</link>
-					</entry>
-					 <entry>
-						<link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.gnu.org/licenses/fdl.html">GFDL Version 1.2</link>
-					</entry>
-					 <entry>
-						publican
-					</entry>
-					 <entry>
-						GPL compatible license. No options.
-					</entry>
+					<entry> common </entry>
+					 <entry> <link xlink:href="http://creativecommons.org/publicdomain/zero/1.0/" xmlns:xlink="http://www.w3.org/1999/xlink">CC0 1.0</link> </entry>
+					 <entry> <link xlink:href="http://www.gnu.org/licenses/fdl.html" xmlns:xlink="http://www.w3.org/1999/xlink">GFDL Version 1.2</link> </entry>
+					 <entry> publican </entry>
+					 <entry> GPL compatible license. No options. </entry>
 
 				</row>
 				 <row>
-					<entry>
-						RedHat
-					</entry>
-					 <entry>
-						<link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA 3.0</link>
-					</entry>
-					 <entry>
-						<phrase>CC-BY-SA 3.0</phrase>
-					</entry>
-					 <entry>
-						publican-redhat
-					</entry>
-					 <entry>
-
-					</entry>
+					<entry> RedHat </entry>
+					 <entry> <link xlink:href="http://creativecommons.org/licenses/by-sa/3.0/" xmlns:xlink="http://www.w3.org/1999/xlink">CC-BY-SA 3.0</link> </entry>
+					 <entry> <phrase>CC-BY-SA 3.0</phrase> </entry>
+					 <entry> publican-redhat </entry>
+					 <entry> </entry>
 
 				</row>
 				 <row>
-					<entry>
-						Fedora
-					</entry>
-					 <entry>
-						<phrase>CC-BY-SA 3.0</phrase>
-					</entry>
-					 <entry>
-						<phrase>CC-BY-SA 3.0</phrase>
-					</entry>
-					 <entry>
-						publican-fedora
-					</entry>
-					 <entry>
-
-					</entry>
+					<entry> Fedora </entry>
+					 <entry> <phrase>CC-BY-SA 3.0</phrase> </entry>
+					 <entry> <phrase>CC-BY-SA 3.0</phrase> </entry>
+					 <entry> publican-fedora </entry>
+					 <entry> </entry>
 
 				</row>
 				 <row>
-					<entry>
-						JBoss
-					</entry>
-					 <entry>
-						<phrase>CC-BY-SA 3.0</phrase>
-					</entry>
-					 <entry>
-						<phrase>CC-BY-SA 3.0</phrase>
-					</entry>
-					 <entry>
-						publican-jboss
-					</entry>
-					 <entry>
-						No Options.
-					</entry>
+					<entry> JBoss </entry>
+					 <entry> <phrase>CC-BY-SA 3.0</phrase> </entry>
+					 <entry> <phrase>CC-BY-SA 3.0</phrase> </entry>
+					 <entry> publican-jboss </entry>
+					 <entry> No Options. </entry>
 
 				</row>
 				 <row>
-					<entry>
-						oVirt
-					</entry>
-					 <entry>
-						<link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.opencontent.org/openpub/">OPL 1.0</link>
-					</entry>
-					 <entry>
-						<phrase>OPL 1.0</phrase>
-					</entry>
-					 <entry>
-						publican-ovirt
-					</entry>
-					 <entry>
-						No Options.
-					</entry>
+					<entry> oVirt </entry>
+					 <entry> <link xlink:href="http://www.opencontent.org/openpub/" xmlns:xlink="http://www.w3.org/1999/xlink">OPL 1.0</link> </entry>
+					 <entry> <phrase>OPL 1.0</phrase> </entry>
+					 <entry> publican-ovirt </entry>
+					 <entry> No Options. </entry>
 
 				</row>
 				 <row>
-					<entry>
-						GIMP
-					</entry>
-					 <entry>
-						<link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.gnu.org/licenses/fdl.html">GFDL Version 1.2</link>
-					</entry>
-					 <entry>
-						<phrase>GFDL Version 1.2</phrase>
-					</entry>
-					 <entry>
-						publican-gimp
-					</entry>
-					 <entry>
-						Matches the license for existing GIMP documentation.
-					</entry>
+					<entry> GIMP </entry>
+					 <entry> <link xlink:href="http://www.gnu.org/licenses/fdl.html" xmlns:xlink="http://www.w3.org/1999/xlink">GFDL Version 1.2</link> </entry>
+					 <entry> <phrase>GFDL Version 1.2</phrase> </entry>
+					 <entry> publican-gimp </entry>
+					 <entry> Matches the license for existing GIMP documentation. </entry>
 
 				</row>
 				 <row>
-					<entry>
-						Genome
-					</entry>
-					 <entry>
-						<phrase>OPL 1.0</phrase>
-					</entry>
-					 <entry>
-						<phrase>OPL 1.0</phrase>
-					</entry>
-					 <entry>
-						publican-genome
-					</entry>
-					 <entry>
-						No Options.
-					</entry>
+					<entry> Genome </entry>
+					 <entry> <phrase>OPL 1.0</phrase> </entry>
+					 <entry> <phrase>OPL 1.0</phrase> </entry>
+					 <entry> publican-genome </entry>
+					 <entry> No Options. </entry>
 
 				</row>
 
@@ -226,3 +154,5 @@
 		Note the difference in licensing between the common content files provided in the common brand (CC0) and the default license set for books generated with the common brand (GFDL). The CC0 license allows you to redistribute and relicense the files that make up the common brand (including the CSS and image files) to suit your project. <application>Publican</application> suggests the GFDL for documentation by default because <application>Publican</application> is developed primarily to build documentation for software. The GFDL is compatible with the GPL, which is the most commonly used license for open-source software.
 	</para>
 </section>
+
+

@@ -41,8 +41,8 @@ my %UPDATED_IDS;
 my %MAX_CONFORMANCE;
 
 my %MAP_OUT = (
-    section    => { block => 1, newline_after => 1 },
-    refsection => { block => 1, newline_after => 1, no_id => 1 },
+    section    => { block => 1, },
+    refsection => { block => 1, no_id => 1 },
     chapter       => { block         => 1 },
     preface       => { block         => 1 },
     bibliography  => { block         => 1 },
@@ -192,7 +192,7 @@ my %MAP_OUT = (
     area         => { newline_after => 1, keep_id => 1 },
     calloutlist  => { block         => 1 },
     callout      => { block         => 1 },
-    procedure    => { block         => 1, newline_after => 1 },
+    procedure    => { block         => 1 },
     appendix     => { block         => 1 },
     appendixinfo => { block         => 1 },
     cmdsynopsis  => { block         => 1 },
@@ -378,6 +378,7 @@ sub Clean_ID {
             $my_id = $node->attr( $self->{config}->param('id_attr') ) || "";
         }
         elsif ( !$MAP_OUT{$tag}->{no_id} ) {
+## TODO this doesn;t work when teh title is in an info. <info><title>...
             foreach my $child ( $node->content_refs_list() ) {
                 if ( ref $$child
                     && $$child->{'_tag'} eq
@@ -416,6 +417,9 @@ sub Clean_ID {
             $my_id = substr( $tag, 0, 4 ) . "-$my_id";
         }
 
+        $my_id = $node->attr( $self->{config}->param('id_attr') ) if ( !$my_id  || ($my_id eq "" ));
+
+
         if (   $node->attr( $self->{config}->param('id_attr') )
             && $node->attr( $self->{config}->param('id_attr') ) ne $my_id )
         {
@@ -423,7 +427,7 @@ sub Clean_ID {
                 = $my_id;
         }
 
-        if ( $my_id eq "" ) {
+        if ( !$my_id || ( $my_id eq "") ) {
             $my_id = undef;
         }
 

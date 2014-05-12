@@ -1,6 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
-<section xmlns="http://docbook.org/ns/docbook" version="5.0" conformance="132" xml:id="sect-Publican-Users_Guide-Creating_a_brand"><info><title>Creating a brand</title></info>
-	
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE section [
+<!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
+%BOOK_ENTITIES;
+]>
+<section conformance="132" version="5.0" xml:id="sect-Publican-Users_Guide-Creating_a_brand" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<info xml:id="info-Publican-Users_Guide-Creating_a_brand">
+		<title>Creating a brand</title>
+	</info>
 	 <para>
 		Use the <prompt>$</prompt> <command>create_brand</command> action to create a new brand. When you create a new brand, you must give it a name and specify the original language for the brand's XML files. The <option>--name</option> option provides the name, and the <option>--lang</option> option specifies the language. The complete command is therefore:
 	</para>
@@ -23,3 +29,5 @@
 	 
 <screen><prompt>$</prompt> <command>grep -r 'SETUP' *</command></screen>
 </section>
+
+

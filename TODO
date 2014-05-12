@@ -99,7 +99,7 @@ git checkout en-US/
 ../bin/db4-2-db5
 
 
-perl -CDAS -I $PUBLICAN_PATH/lib $PUBLICAN_PATH/bin/publican build  --brand_dir $PUBLICAN_PATH/datadir/Common_Content/common-db5 --formats html --novalid
+perl -CDAS -I $PUBLICAN_PATH/lib $PUBLICAN_PATH/bin/publican build  --brand_dir $PUBLICAN_PATH/datadir/Common_Content/common-db5 --formats html
 
 cd build/en-US/xml
 xmllint -xinclude Users_Guide.xml > test.xml
@@ -107,12 +107,6 @@ xmllint --relaxng  /usr/share/xml/docbook5/schema/rng/5.0/docbook.rng --noout te
 gvim test.xml
 cd -
 jing  /usr/share/xml/docbook5/schema/rng/5.0/docbook.rng --noout test.xml
-
-
-"4.10. Pre-release software and draft documentation"
-	Add doco on revisionflag to DB5 common content
-	display examples of show_remarks applied
-	show example of draft applied
 
 
 "A.1. Disallowed elements" & "A.2. Disallowed attributes" rewrite to say brands can do this, and why we _discourage_ them.
@@ -134,6 +128,5 @@ jing  /usr/share/xml/docbook5/schema/rng/5.0/docbook.rng --noout test.xml
 
 "4.3. Adding code samples" display programlistingco?
 
-Try inifile to mark-up config file program listings
 
 

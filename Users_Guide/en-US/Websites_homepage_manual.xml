@@ -1,6 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
-<section xmlns="http://docbook.org/ns/docbook" version="5.0" conformance="227" xml:id="sect-Publican-Users_Guide-Creating_installing_and_updating_the_home_page"><info><title>Creating, installing, and updating the home page</title></info>
-	
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE section [
+<!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
+%BOOK_ENTITIES;
+]>
+<section conformance="227" version="5.0" xml:id="sect-Publican-Users_Guide-Creating_installing_and_updating_the_home_page" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<info xml:id="info-Publican-Users_Guide-Creating_installing_and_updating_the_home_page">
+		<title>Creating, installing, and updating the home page</title>
+	</info>
 	 <para>
 		The <application>Publican</application>-generated home page is the localizable page to which visitors are directed by the site JavaScript and which provides the style for the website structure. The home page is structured as a DocBook <tag>&lt;article&gt;</tag> with an extra <parameter>web_type: home</parameter> parameter in its <filename>publican.cfg</filename> file. In its structure and its presentation, the home page is the same as any other article that you produce with <application>Publican</application>. To create the home page:
 	</para>
@@ -9,12 +15,12 @@
 			<para>
 				Change into a convenient directory and run the following <prompt>$</prompt> <command>publican create</command> command:
 			</para>
-			
+			 
 <screen><prompt>$</prompt> <command>publican create --type Article --name <replaceable>page_name</replaceable></command></screen>
 			 <para>
 				For example:
 			</para>
-			
+			 
 <screen><prompt>$</prompt> <command>publican create --type Article --name Home_Page</command></screen>
 			 <para>
 				Most brands (including the <literal>common</literal> brand) present the name of the document in large, coloured letters close to the top of the page, underneath the banner that contains the product name (the <option>--name</option> option sets the <tag>&lt;title&gt;</tag> tag). Therefore, by default, the value that you set with the <option>--name</option> option is presented prominently to visitors to your site; in the above example, visitors are greeted with the words <literal>Home Page</literal> underneath the product banner.
@@ -25,12 +31,12 @@
 			<para>
 				Change into the article directory:
 			</para>
-			
+			 
 <screen><prompt>$</prompt> <command>cd <replaceable>page_name</replaceable></command></screen>
 			 <para>
 				For example:
 			</para>
-			
+			 
 <screen><prompt>$</prompt> <command>cd Home_Page</command></screen>
 
 		</step>
@@ -50,25 +56,25 @@
 			 <para>
 				At the very least, you must add the <parameter>web_type</parameter> parameter and set it to <literal>home</literal>:
 			</para>
-			
+			 
 <programlisting>web_type: home</programlisting>
 			 <para>
 				The <parameter>web_type: home</parameter> parameter instructs <application>Publican</application> to process this document differently from product documentation. This is the only mandatory change to the <filename>publican.cfg</filename> file. Other optional changes to the <filename>publican.cfg</filename> file that are frequently useful for <application>Publican</application>-generated websites include:
 			</para>
 			 <variablelist>
-				<varlistentry>
+				<varlistentry xml:id="varl-Publican-Users_Guide-brand">
 					<term><parameter>brand</parameter></term>
 					 <listitem>
 						<para>
 							To style your home page to match your documents, add:
 						</para>
-						
+						 
 <programlisting>brand: <replaceable>name_of_brand</replaceable></programlisting>
 
 					</listitem>
 
 				</varlistentry>
-				 <varlistentry>
+				 <varlistentry xml:id="varl-Publican-Users_Guide-docname">
 					<term><parameter>docname</parameter></term>
 					 <term><parameter>product</parameter></term>
 					 <listitem>
@@ -90,7 +96,7 @@
 			 <para>
 				If you remove the <tag>&lt;xi:include&gt;</tag> that links to <filename>Article_Info.xml</filename>, specify a title for your page in the following format:
 			</para>
-			
+			 
 <programlisting language="XML">&lt;title role="producttitle"&gt;FooMaster Documentation&lt;/title&gt;</programlisting>
 
 		</step>
@@ -116,7 +122,7 @@
 			<para>
 				Build the home page in single-page HTML format with the <option>--embedtoc</option> option and install it in your website structure. For example:
 			</para>
-			
+			 
 <screen><prompt>$</prompt> <command>publican build --publish --formats html-single --embedtoc --langs all</command> 
 <prompt>$</prompt> <command>publican install_book --site_config ~/docsite/foomaster.cfg --lang <replaceable>Language_Code</replaceable></command></screen>
 			 <para>
@@ -129,3 +135,5 @@
 	
 
 </section>
+
+

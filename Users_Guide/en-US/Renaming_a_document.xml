@@ -1,17 +1,23 @@
-<?xml version="1.0" encoding="utf-8"?>
-<section xmlns="http://docbook.org/ns/docbook" version="5.0" conformance="210" xml:id="sect-Publican-Users_Guide-Renaming_a_document"><info><title>Renaming a document</title></info>
-	
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE section [
+<!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
+%BOOK_ENTITIES;
+]>
+<section conformance="210" version="5.0" xml:id="sect-Publican-Users_Guide-Renaming_a_document" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<info xml:id="info-Publican-Users_Guide-Renaming_a_document">
+		<title>Renaming a document</title>
+	</info>
 	 <para>
 		The <prompt>$</prompt> <command>publican rename</command> command makes it easy for you to rename a document to give it a new title, or to change the name or version of the product to which the document applies. The command accepts up to three options:
 	</para>
 	 <variablelist>
-		<varlistentry>
+		<varlistentry xml:id="varl-Publican-Users_Guide-_name_new_title">
 			<term><option>--name</option> <replaceable>new_title</replaceable></term>
 			 <listitem>
 				<para>
 					changes the title of the document. For example, to rename a document from <citetitle>Server Configuration Guide</citetitle> to <citetitle>Server Deployment Guide</citetitle>, change into the document's root directory and run:
 				</para>
-				
+				 
 <screen><prompt>$</prompt> <command>publican rename --name "Server Deployment Guide"</command></screen>
 				 <para>
 					Specifically, the command changes the content of the <tag>&lt;title&gt;</tag> tag in the <filename>Article_Info.xml</filename>, <filename>Book_Info.xml</filename>, or <filename>Set_Info.xml</filename> file, and sets a value for the <parameter>mainfile</parameter> parameter in the <filename>publican.cfg</filename> file so that <application>Publican</application> can still find the root XML node and the entities for the document.
@@ -23,13 +29,13 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry>
+		 <varlistentry xml:id="varl-Publican-Users_Guide-_product_new_product">
 			<term><option>--product</option> <replaceable>new_product</replaceable></term>
 			 <listitem>
 				<para>
 					changes the name of the product to which the document applies. For example, if the product was previously named <productname>ForceRivet</productname> but is now called <productname>PendantFarm</productname>, change into the document's root directory and run:
 				</para>
-				
+				 
 <screen><prompt>$</prompt> <command>publican rename --product PendantFarm</command></screen>
 				 <para>
 					The command changes the content of the <tag>&lt;productname&gt;</tag> tag in the <filename>Article_Info.xml</filename>, <filename>Book_Info.xml</filename>, or <filename>Set_Info.xml</filename> file.
@@ -38,15 +44,15 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry>
+		 <varlistentry xml:id="varl-Publican-Users_Guide-_version_new_version">
 			<term><option>--version</option> <replaceable>new_version</replaceable></term>
 			 <listitem>
 				<para>
 					changes the product version to which the document applies. For example, if the product version was previously <productnumber>1.0</productnumber>
 					 but is now <productnumber>2.0</productnumber>
-					, change into the document's root directory and run:
+					 , change into the document's root directory and run:
 				</para>
-				
+				 
 <screen><prompt>$</prompt> <command>publican rename --version 2.0</command></screen>
 				 <para>
 					The command changes the content of the <tag>&lt;productnumber&gt;</tag> tag in the <filename>Article_Info.xml</filename>, <filename>Book_Info.xml</filename>, or <filename>Set_Info.xml</filename> file.
@@ -60,6 +66,8 @@
 	 <para>
 		You can combine any combination of these options into a single command. For example:
 	</para>
-	
+	 
 <screen><prompt>$</prompt> <command>publican rename --name "Server Deployment Guide" --product PendantFarm --version 2.0</command></screen>
 </section>
+
+

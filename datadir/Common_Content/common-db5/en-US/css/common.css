@@ -23,6 +23,12 @@ body {
 	line-height: 1.3em;
 }
 
+.draft {
+    background-image: url("../images/watermark-draft.png");
+    background-position: center;
+    background-repeat: repeat-y;
+}
+
 header {
 	margin: 0px 1em;
 }
@@ -417,6 +423,12 @@ sup {
 
 .footnote {
 	font-size: small;
+	margin: 0em;
+	line-height: 1.3em;
+}
+
+.footnote p {
+	margin: 0em;
 }
 
 .footnote sup  {
@@ -628,5 +640,24 @@ div.authorgroup.contrib {
 }
 .perl_Warning {
     color: #0000FF;
+}
+
+/* revisionflag */
+
+.added {
+	background-color: #99ff99;
+}
+
+.changed {
+	background-color: #ffff77;
+}
+
+.deleted {
+	background-color: #ff4455;
+	text-decoration: line-through;
+}
+
+span.remark {
+	background-color: #ff00ff;
 }
 

@@ -1,45 +1,60 @@
-<?xml version="1.0" encoding="utf-8"?>
-<section xmlns="http://docbook.org/ns/docbook" version="5.0" conformance="249" xml:id="sect-Users_Guide-Linux_operating_systems-Docker"><info><title>Docker container</title></info>
-			
-				<note>
-					<para>
-						This installation procedure assumes you have already installed a working docker (see <uri xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://docker.io">http://docker.io</uri>) environment.
-					</para>
-				</note>
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE section [
+<!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
+%BOOK_ENTITIES;
+]>
+<section conformance="249" version="5.0" xml:id="sect-Users_Guide-Linux_operating_systems-Docker" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<info xml:id="info-Publican-Users_Guide-Docker_container">
+		<title>Docker container</title>
+	</info>
+	 <note>
+		<para>
+			This installation procedure assumes you have already installed a working docker (see <uri xlink:href="http://docker.io" xmlns:xlink="http://www.w3.org/1999/xlink">http://docker.io</uri>) environment.
+		</para>
+
+	</note>
+	 <para>
+		Docker is a lightweight Jail (currently using LXC) that allows you to install and run <application>publican</application> without installing your main Linux installation with all its dependencies.
+	</para>
+	 <procedure>
+		<step>
 			<para>
-				Docker is a lightweight Jail (currently using LXC) that allows you to install and run <application>publican</application> without installing your main Linux installation with all its dependencies.
+				Open a terminal.
 			</para>
-			 <procedure>
-				<step>
-					<para>
-						Open a terminal.
-					</para>
 
-				</step>
-				 <step>
-					<para>
-						Download and install the <application>svendowideit/publican</application> container from <uri xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://index.docker.io/u/svendowideit/publican/">https://index.docker.io/u/svendowideit/publican/</uri>:
+		</step>
+		 <step>
+			<para>
+				Download and install the <application>svendowideit/publican</application> container from <uri xlink:href="https://index.docker.io/u/svendowideit/publican/" xmlns:xlink="http://www.w3.org/1999/xlink">https://index.docker.io/u/svendowideit/publican/</uri>: 
 <screen><prompt>$</prompt> <command>docker pull svendowideit/publican</command></screen>
-						This will take some time, as it downloads a fedora based container, and then the dependencies needed for publican
-					</para>
+				 This will take some time, as it downloads a fedora based container, and then the dependencies needed for publican
+			</para>
 
-				</step>
-				 <step>
-					<para>
-						Add a publican bash alias to simplify your usage:
-					</para>
+		</step>
+		 <step>
+			<para>
+				Add a publican bash alias to simplify your usage:
+			</para>
+			
 <screen><prompt>$</prompt> <command>echo 'alias publican="docker run -t -i -v $(pwd):/mnt svendowideit/publican"' &gt;&gt; ~/.bashrc</command></screen>
-					<para>
-						This alias assumes that you are running <application>publican</application> in the documentation root directory (the one with the publican.cfg file in it.
-					</para>
-				</step>
-				 <step>
-					<para>
-						now you can use <application>publican</application> as per the documentation:
-					</para>
+			 <para>
+				This alias assumes that you are running <application>publican</application> in the documentation root directory (the one with the publican.cfg file in it.
+			</para>
+
+		</step>
+		 <step>
+			<para>
+				now you can use <application>publican</application> as per the documentation:
+			</para>
+			
 <screen><prompt>$</prompt> <command>publican --version </command>
 <computeroutput>version=3.2.1</computeroutput></screen>
-				</step>
-			</procedure>
-			
-		</section>
+
+		</step>
+
+	</procedure>
+	
+
+</section>
+
+

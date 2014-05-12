@@ -1,11 +1,17 @@
-<?xml version="1.0" encoding="utf-8"?>
-<appendix xmlns="http://docbook.org/ns/docbook" version="5.0" conformance="209" xml:id="appe-Publican-Users_Guide-publican.cfg_parameters"><info><title>publican.cfg parameters</title></info>
-	
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE appendix [
+<!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
+%BOOK_ENTITIES;
+]>
+<appendix conformance="209" version="5.0" xml:id="appe-Publican-Users_Guide-publican.cfg_parameters" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<info xml:id="info-Publican-Users_Guide-publican.cfg_parameters">
+		<title>publican.cfg parameters</title>
+	</info>
 	 <para>
 		Every book, article, document set, or brand has a <filename>publican.cfg</filename> file in its root directory. Parameters that can be set in the <filename>publican.cfg</filename> file are:
 	</para>
 	 <variablelist>
-		<varlistentry>
+		<varlistentry xml:id="varl-Publican-Users_Guide-docname">
 			<term><parameter>docname</parameter></term>
 			 <listitem>
 				<para>
@@ -15,7 +21,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry>
+		 <varlistentry xml:id="varl-Publican-Users_Guide-version">
 			<term><parameter>version</parameter></term>
 			 <listitem>
 				<para>
@@ -25,7 +31,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry>
+		 <varlistentry xml:id="varl-Publican-Users_Guide-xml_lang">
 			<term><parameter>xml_lang</parameter></term>
 			 <listitem>
 				<para>
@@ -35,7 +41,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry>
+		 <varlistentry xml:id="varl-Publican-Users_Guide-edition">
 			<term><parameter>edition</parameter></term>
 			 <listitem>
 				<para>
@@ -45,7 +51,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry>
+		 <varlistentry xml:id="varl-Publican-Users_Guide-type">
 			<term><parameter>type</parameter></term>
 			 <listitem>
 				<para>
@@ -55,7 +61,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry>
+		 <varlistentry xml:id="varl-Publican-Users_Guide-brand">
 			<term><parameter>brand</parameter></term>
 			 <listitem>
 				<para>
@@ -65,7 +71,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry>
+		 <varlistentry xml:id="varl-Publican-Users_Guide-product">
 			<term><parameter>product</parameter></term>
 			 <listitem>
 				<para>
@@ -75,7 +81,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry>
+		 <varlistentry xml:id="varl-Publican-Users_Guide-arch">
 			<term><parameter>arch</parameter></term>
 			 <listitem>
 				<para>
@@ -85,7 +91,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry>
+		 <varlistentry xml:id="varl-Publican-Users_Guide-books">
 			<term><parameter>books</parameter></term>
 			 <listitem>
 				<para>
@@ -95,7 +101,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry>
+		 <varlistentry xml:id="varl-Publican-Users_Guide-brew_dist">
 			<term><parameter>brew_dist</parameter></term>
 			 <listitem>
 				<para>
@@ -105,7 +111,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry>
+		 <varlistentry xml:id="varl-Publican-Users_Guide-bridgehead_in_toc">
 			<term><parameter>bridgehead_in_toc</parameter></term>
 			 <listitem>
 				<para>
@@ -115,7 +121,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry>
+		 <varlistentry xml:id="varl-Publican-Users_Guide-chunk_first">
 			<term><parameter>chunk_first</parameter></term>
 			 <listitem>
 				<para>
@@ -125,7 +131,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry>
+		 <varlistentry xml:id="varl-Publican-Users_Guide-chunk_section_depth">
 			<term><parameter>chunk_section_depth</parameter></term>
 			 <listitem>
 				<para>
@@ -135,7 +141,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry>
+		 <varlistentry xml:id="varl-Publican-Users_Guide-classpath">
 			<term><parameter>classpath</parameter></term>
 			 <listitem>
 				<para>
@@ -145,7 +151,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry>
+		 <varlistentry xml:id="varl-Publican-Users_Guide-common_config">
 			<term><parameter>common_config</parameter></term>
 			 <listitem>
 				<para>
@@ -155,7 +161,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry>
+		 <varlistentry xml:id="varl-Publican-Users_Guide-common_content">
 			<term><parameter>common_content</parameter></term>
 			 <listitem>
 				<para>
@@ -165,7 +171,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry>
+		 <varlistentry xml:id="varl-Publican-Users_Guide-condition">
 			<term><parameter>condition</parameter></term>
 			 <listitem>
 				<para>
@@ -175,7 +181,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry>
+		 <varlistentry xml:id="varl-Publican-Users_Guide-confidential">
 			<term><parameter>confidential</parameter></term>
 			 <listitem>
 				<para>
@@ -185,7 +191,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry>
+		 <varlistentry xml:id="varl-Publican-Users_Guide-confidential_text">
 			<term><parameter>confidential_text</parameter></term>
 			 <listitem>
 				<para>
@@ -195,7 +201,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry>
+		 <varlistentry xml:id="varl-Publican-Users_Guide-debug">
 			<term><parameter>debug</parameter></term>
 			 <listitem>
 				<para>
@@ -205,7 +211,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry>
+		 <varlistentry xml:id="varl-Publican-Users_Guide-def_lang">
 			<term><parameter>def_lang</parameter></term>
 			 <listitem>
 				<para>
@@ -215,7 +221,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry>
+		 <varlistentry xml:id="varl-Publican-Users_Guide-doc_url">
 			<term><parameter>doc_url</parameter></term>
 			 <listitem>
 				<para>
@@ -225,7 +231,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry>
+		 <varlistentry xml:id="varl-Publican-Users_Guide-dt_obsoletes">
 			<term><parameter>dt_obsoletes</parameter></term>
 			 <listitem>
 				<para>
@@ -235,17 +241,17 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry>
+		 <varlistentry xml:id="varl-Publican-Users_Guide-dt_requires">
 			<term><parameter>dt_requires</parameter></term>
 			 <listitem>
 				<para>
-					a package that the desktop package requires, for example, a documentation menu package. Refer to <xref linkend="sect-Publican-Users_Guide-Desktop_menu_entries_for_documents"/>.
+					a package that the desktop package requires, for example, a documentation menu package. Refer to <xref linkend="sect-Publican-Users_Guide-Desktop_menu_entries_for_documents" />.
 				</para>
 
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry>
+		 <varlistentry xml:id="varl-Publican-Users_Guide-dtdver">
 			<term><parameter>dtdver</parameter></term>
 			 <listitem>
 				<para>
@@ -255,7 +261,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry>
+		 <varlistentry xml:id="varl-Publican-Users_Guide-dtd_type">
 			<term><parameter>dtd_type</parameter></term>
 			 <listitem>
 				<para>
@@ -271,7 +277,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry>
+		 <varlistentry xml:id="varl-Publican-Users_Guide-dtd_uri">
 			<term><parameter>dtd_uri</parameter></term>
 			 <listitem>
 				<para>
@@ -287,7 +293,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry>
+		 <varlistentry xml:id="varl-Publican-Users_Guide-ec_id">
 			<term><parameter>ec_id</parameter></term>
 			 <listitem>
 				<para>
@@ -297,7 +303,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry>
+		 <varlistentry xml:id="varl-Publican-Users_Guide-ec_name">
 			<term><parameter>ec_name</parameter></term>
 			 <listitem>
 				<para>
@@ -307,7 +313,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry>
+		 <varlistentry xml:id="varl-Publican-Users_Guide-ec_provider">
 			<term><parameter>ec_provider</parameter></term>
 			 <listitem>
 				<para>
@@ -317,7 +323,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry>
+		 <varlistentry xml:id="varl-Publican-Users_Guide-extras_dir">
 			<term><parameter>extras_dir</parameter></term>
 			 <listitem>
 				<para>
@@ -327,7 +333,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry>
+		 <varlistentry xml:id="varl-Publican-Users_Guide-generate_section_toc_level">
 			<term><parameter>generate_section_toc_level</parameter></term>
 			 <listitem>
 				<para>
@@ -337,7 +343,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry>
+		 <varlistentry xml:id="varl-Publican-Users_Guide-ignored_translations">
 			<term><parameter>ignored_translations</parameter></term>
 			 <listitem>
 				<para>
@@ -347,7 +353,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry>
+		 <varlistentry xml:id="varl-Publican-Users_Guide-img_dir">
 			<term><parameter>img_dir</parameter></term>
 			 <listitem>
 				<para>
@@ -357,7 +363,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry>
+		 <varlistentry xml:id="varl-Publican-Users_Guide-info_file">
 			<term><parameter>info_file</parameter></term>
 			 <listitem>
 				<para>
@@ -367,7 +373,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry>
+		 <varlistentry xml:id="varl-Publican-Users_Guide-license">
 			<term><parameter>license</parameter></term>
 			 <listitem>
 				<para>
@@ -377,7 +383,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry>
+		 <varlistentry xml:id="varl-Publican-Users_Guide-mainfile">
 			<term><parameter>mainfile</parameter></term>
 			 <listitem>
 				<para>
@@ -390,28 +396,28 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry>
+		 <varlistentry xml:id="varl-Publican-Users_Guide-max_image_width">
 			<term><parameter>max_image_width</parameter></term>
 			 <listitem>
 				<para>
 					the maximum width allowable for images in the document, unless specifically overriden in the <tag>&lt;imagedata&gt;</tag> tag for a specific image. (Default: <literal>444</literal> — 444 pixels wide)
 				</para>
-				 <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Image_width.xml"/>
+				 <xi:include href="Image_width.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
 
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry>
+		 <varlistentry xml:id="varl-Publican-Users_Guide-menu_category">
 			<term><parameter>menu_category</parameter></term>
 			 <listitem>
 				<para>
-					the desktop menu category (as defined by a corresponding <filename>.menu</filename> file) in which a document should appear when installed from a desktop RPM package. Refer to <xref linkend="sect-Publican-Users_Guide-Desktop_menu_entries_for_documents"/>.
+					the desktop menu category (as defined by a corresponding <filename>.menu</filename> file) in which a document should appear when installed from a desktop RPM package. Refer to <xref linkend="sect-Publican-Users_Guide-Desktop_menu_entries_for_documents" />.
 				</para>
 
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry>
+		 <varlistentry xml:id="varl-Publican-Users_Guide-os_ver">
 			<term><parameter>os_ver</parameter></term>
 			 <listitem>
 				<para>
@@ -421,7 +427,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry>
+		 <varlistentry xml:id="varl-Publican-Users_Guide-prod_url">
 			<term><parameter>prod_url</parameter></term>
 			 <listitem>
 				<para>
@@ -431,7 +437,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry>
+		 <varlistentry xml:id="varl-Publican-Users_Guide-release">
 			<term><parameter>release</parameter></term>
 			 <listitem>
 				<para>
@@ -441,7 +447,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry>
+		 <varlistentry xml:id="varl-Publican-Users_Guide-repo">
 			<term><parameter>repo</parameter></term>
 			 <listitem>
 				<para>
@@ -451,7 +457,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry>
+		 <varlistentry xml:id="varl-Publican-Users_Guide-rev_dir">
 			<term><parameter>rev_dir</parameter></term>
 			 <listitem>
 				<para>
@@ -461,7 +467,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry>
+		 <varlistentry xml:id="varl-Publican-Users_Guide-rev_file">
 			<term><parameter>rev_file</parameter></term>
 			 <listitem>
 				<para>
@@ -471,7 +477,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry>
+		 <varlistentry xml:id="varl-Publican-Users_Guide-scm">
 			<term><parameter>scm</parameter></term>
 			 <listitem>
 				<para>
@@ -481,7 +487,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry>
+		 <varlistentry xml:id="varl-Publican-Users_Guide-show_remarks">
 			<term><parameter>show_remarks</parameter></term>
 			 <listitem>
 				<para>
@@ -491,7 +497,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry>
+		 <varlistentry xml:id="varl-Publican-Users_Guide-sort_order">
 			<term><parameter>sort_order</parameter></term>
 			 <listitem>
 				<para>
@@ -501,7 +507,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry>
+		 <varlistentry xml:id="varl-Publican-Users_Guide-src_url">
 			<term><parameter>src_url</parameter></term>
 			 <listitem>
 				<para>
@@ -511,7 +517,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry>
+		 <varlistentry xml:id="varl-Publican-Users_Guide-tmp_dir">
 			<term><parameter>tmp_dir</parameter></term>
 			 <listitem>
 				<para>
@@ -521,7 +527,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry>
+		 <varlistentry xml:id="varl-Publican-Users_Guide-_toc_path">
 			<term>--toc_path</term>
 			 <listitem>
 				<para>
@@ -531,7 +537,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry>
+		 <varlistentry xml:id="varl-Publican-Users_Guide-toc_section_depth">
 			<term><parameter>toc_section_depth</parameter></term>
 			 <listitem>
 				<para>
@@ -541,7 +547,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry>
+		 <varlistentry xml:id="varl-Publican-Users_Guide-_tmpl_path">
 			<term>--tmpl_path</term>
 			 <listitem>
 				<para>
@@ -551,7 +557,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry>
+		 <varlistentry xml:id="varl-Publican-Users_Guide-web_brew_dist">
 			<term><parameter>web_brew_dist</parameter></term>
 			 <listitem>
 				<para>
@@ -561,24 +567,26 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry>
+		 <varlistentry xml:id="varl-Publican-Users_Guide-web_formats">
 			<term><parameter>web_formats</parameter></term>
 			 <listitem>
 				<para>
-					a comma-separated list of formats to include in the web RPM package. Refer to <xref linkend="sect-Publican-Users_Guide-Packaging_a_document-The_publican_package_command"/>.
+					a comma-separated list of formats to include in the web RPM package. Refer to <xref linkend="sect-Publican-Users_Guide-Packaging_a_document-The_publican_package_command" />.
 				</para>
 
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry>
+		 <varlistentry xml:id="varl-Publican-Users_Guide-web_home">
 			<term><parameter>web_home</parameter></term>
 			 <listitem>
 				<para>
 					specifies that the document is the home page of a documentation website, not a standard document.
 				</para>
-				 <important><info><title>Important — <literal>web_home</literal> is deprecated</title></info>
-					
+				 <important>
+					<info xml:id="info-Publican-Users_Guide-Important_web_home_is_deprecated">
+						<title>Important — <literal>web_home</literal> is deprecated</title>
+					</info>
 					 <para>
 						In <application>Publican</application> 2.2, <literal>web_home</literal> is replaced by <literal>web_type: home</literal>. Support for <literal>web_home</literal> will be removed in a future version of <application>Publican</application>.
 					</para>
@@ -588,7 +596,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry>
+		 <varlistentry xml:id="varl-Publican-Users_Guide-web_name_label">
 			<term><parameter>web_name_label</parameter></term>
 			 <listitem>
 				<para>
@@ -598,7 +606,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry>
+		 <varlistentry xml:id="varl-Publican-Users_Guide-web_obsoletes">
 			<term><parameter>web_obsoletes</parameter></term>
 			 <listitem>
 				<para>
@@ -608,7 +616,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry>
+		 <varlistentry xml:id="varl-Publican-Users_Guide-web_product_label">
 			<term><parameter>web_product_label</parameter></term>
 			 <listitem>
 				<para>
@@ -618,17 +626,17 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry>
+		 <varlistentry xml:id="varl-Publican-Users_Guide-web_type">
 			<term><parameter>web_type</parameter></term>
 			 <listitem>
 				<para>
-					specifies that the document is descriptive content for a <application>Publican</application>-managed website rather than product documentation. This content includes the home page of the website (<literal>web_type: home</literal>), product description pages (<literal>web_type: product</literal>), and version description pages (<literal>web_type: version</literal>). Refer to <xref linkend="chap-Publican-Users_Guide-Building_a_website_with_Publican"/>.
+					specifies that the document is descriptive content for a <application>Publican</application>-managed website rather than product documentation. This content includes the home page of the website (<literal>web_type: home</literal>), product description pages (<literal>web_type: product</literal>), and version description pages (<literal>web_type: version</literal>). Refer to <xref linkend="chap-Publican-Users_Guide-Building_a_website_with_Publican" />.
 				</para>
 
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry>
+		 <varlistentry xml:id="varl-Publican-Users_Guide-web_version_label">
 			<term><parameter>web_version_label</parameter></term>
 			 <listitem>
 				<para>
@@ -638,7 +646,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry>
+		 <varlistentry xml:id="varl-Publican-Users_Guide-wkhtmltopdf_opts">
 			<term><parameter>wkhtmltopdf_opts</parameter></term>
 			 <listitem>
 				<para>
@@ -651,3 +659,4 @@
 
 	</variablelist>
 </appendix>
+

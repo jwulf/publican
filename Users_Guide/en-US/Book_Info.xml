@@ -1,10 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?>
-<info xmlns="http://docbook.org/ns/docbook" version="5.0" conformance="121" xml:id="book-Publican-Users_Guide-Users_Guide"><title>Users' Guide</title><subtitle>Publishing books, articles, papers and multi-volume sets with DocBook XML</subtitle>
-	
-	 
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE info [
+<!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
+%BOOK_ENTITIES;
+]>
+<info conformance="121" version="5.0" xml:id="info-Publican-Users_Guide-Users_Guide" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>Users' Guide</title>
+	<subtitle>Publishing books, articles, papers and multi-volume sets with DocBook XML</subtitle>
 	 <productname>Publican</productname>
-	 <productnumber>4.1</productnumber>
-	 
+	 <productnumber>4.2</productnumber>
 	 <keywordset>
 		<keyword>publican</keyword>
 		 <keyword>docbook</keyword>
@@ -22,33 +25,34 @@
 		</subject>
 
 	</subjectset>
-	 <author><orgname>
-		<inlinemediaobject>
+	 <author>
+		<orgname> <inlinemediaobject>
 			<imageobject>
-				<imagedata fileref="Common_Content/images/title_logo.svg" format="SVG"/>
+				<imagedata fileref="Common_Content/images/title_logo.svg" format="SVG" />
 			</imageobject>
 			 <textobject>
 				<phrase>Team Publican</phrase>
 			</textobject>
 
 		</inlinemediaobject>
-
-	</orgname></author>
+		 </orgname>
+	</author>
 	 <mediaobject role="cover">
 		<imageobject remap="lrg" role="front-large">
-			<imagedata fileref="images/cover_thumbnail.png" format="PNG"/>
+			<imagedata fileref="images/cover_thumbnail.png" format="PNG" />
 		</imageobject>
 		 <imageobject remap="s" role="front">
-			<imagedata fileref="images/cover_thumbnail.png" format="PNG"/>
+			<imagedata fileref="images/cover_thumbnail.png" format="PNG" />
 		</imageobject>
 		 <imageobject remap="xs" role="front-small">
-			<imagedata fileref="images/cover_thumbnail.png" format="PNG"/>
+			<imagedata fileref="images/cover_thumbnail.png" format="PNG" />
 		</imageobject>
 		 <imageobject remap="cs" role="thumbnail">
-			<imagedata fileref="images/cover_thumbnail.png" format="PNG"/>
+			<imagedata fileref="images/cover_thumbnail.png" format="PNG" />
 		</imageobject>
 
 	</mediaobject>
-	 <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Common_Content/Legal_Notice.xml"/>
-	 <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Author_Group.xml"/>
+	 <xi:include href="Common_Content/Legal_Notice.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
+	 <xi:include href="Author_Group.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
 </info>
+

@@ -1,12 +1,17 @@
-<?xml version="1.0" encoding="utf-8"?>
-<important xmlns="http://docbook.org/ns/docbook" version="5.0"><info><title>Root nodes and conditional tagging</title></info>
-	
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE important [
+<!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
+%BOOK_ENTITIES;
+]>
+<important version="5.0" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<info xml:id="info-Publican-Users_Guide-Root_nodes_and_conditional_tagging">
+		<title>Root nodes and conditional tagging</title>
+	</info>
 	 <para>
 		If the root node of an XML file is excluded with a conditional, your document will not build, because empty files are not valid XML. For example, if <filename>Installation_and_configuration_on_Fedora.xml</filename> contains a single chapter:
 	</para>
 	 
-<programlisting language="XML">
-&lt;?xml version='1.0' encoding='utf-8' ?&gt;
+<programlisting language="XML">&lt;?xml version='1.0' encoding='utf-8' ?&gt;
 &lt;!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
 ]&gt;
 &lt;chapter id="chap-Installation_and_configuration_on_Fedora" condition="Fedora"&gt;
@@ -14,9 +19,7 @@
 
 [text of chapter]
 
-&lt;/chapter&gt;
-
-</programlisting>
+&lt;/chapter&gt;</programlisting>
 	 <para>
 		and this chapter is included in <filename>User_Guide.xml</filename> with an <tag>&lt;xi:include&gt;</tag> tag, the document will not build with <prompt>$</prompt> <command>condition: Ubuntu</command> set in the <filename>publican.cfg</filename> file.
 	</para>
@@ -24,3 +27,4 @@
 		To exclude this chapter, add a condition to the <tag>&lt;xi:include&gt;</tag> tag in <filename>User_Guide.xml</filename>, not to the <tag>&lt;chapter&gt;</tag> tag in <filename>Installation_and_configuration_on_Fedora.xml</filename>.
 	</para>
 </important>
+

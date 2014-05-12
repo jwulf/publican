@@ -1,6 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
-<section xmlns="http://docbook.org/ns/docbook" version="5.0" conformance="186" xml:id="sect-Publican-Users_Guide-Debian"><info><title>Debian</title></info>
-	
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE section [
+<!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
+%BOOK_ENTITIES;
+]>
+<section conformance="186" version="5.0" xml:id="sect-Publican-Users_Guide-Debian" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<info xml:id="info-Publican-Users_Guide-Debian">
+		<title>Debian</title>
+	</info>
 	 <para>
 		This procedure will install the <application>publican</application> version that is in your default Debian repository. It will also install a large number of packages that <application>publican</application> depends on, like Java, XML and image processing libraries and many ancillary Perl modules.
 	</para>
@@ -37,13 +43,15 @@
 
 	</procedure>
 	
-	 <important><info><title> Important — Installing more recent packages using Apt-Pinning</title></info>
-		
+	 <important>
+		<info xml:id="info-Publican-Users_Guide-_Important_Installing_more_recent_packages_using_Apt_Pinning">
+			<title> Important — Installing more recent packages using Apt-Pinning</title>
+		</info>
 		 <para>
-			If you need a more recent release of <package>publican</package> than installed by the procedure above, you can query if there other versions available: <uri xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://packages.debian.org/publican">http://packages.debian.org/publican</uri>.
+			If you need a more recent release of <package>publican</package> than installed by the procedure above, you can query if there other versions available: <uri xlink:href="http://packages.debian.org/publican" xmlns:xlink="http://www.w3.org/1999/xlink">http://packages.debian.org/publican</uri>.
 		</para>
 		 <para>
-			To date, there has not been any backport (<uri xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://backports.debian.org/Instructions/">http://backports.debian.org/Instructions/</uri>) available for <application>publican</application>, so we need to use Apt Pinning <uri xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://wiki.debian.org/AptPreferences">https://wiki.debian.org/AptPreferences</uri>
+			To date, there has not been any backport (<uri xlink:href="http://backports.debian.org/Instructions/" xmlns:xlink="http://www.w3.org/1999/xlink">http://backports.debian.org/Instructions/</uri>) available for <application>publican</application>, so we need to use Apt Pinning <uri xlink:href="https://wiki.debian.org/AptPreferences" xmlns:xlink="http://www.w3.org/1999/xlink">https://wiki.debian.org/AptPreferences</uri>
 		</para>
 		 <para>
 			Alternatively, you could run Debian testing or unstable in a virtual machine, chroot or linux container.
@@ -194,3 +202,5 @@ Pin-Priority: -10</programlisting>
 	
 
 </section>
+
+

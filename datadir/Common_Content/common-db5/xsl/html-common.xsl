@@ -20,6 +20,8 @@
 <xsl:param name="pop_name"  select="''"/>
 <xsl:param name="brand"     select="''"/>
 <xsl:param name="langpath"  select="''"/>
+<xsl:param name="desktop"   select="0"/>
+
 <xsl:param name="tablecolumns.extension" select="0"/>
 <xsl:param name="use.embed.for.svg" select="1"/>
 <xsl:param name="table.borders.with.css" select="0"/>
@@ -30,6 +32,7 @@
 <xsl:param name="glossary.sort" select="1"/>
 <xsl:param name="formal.object.break.after">0</xsl:param>
 <xsl:param name="highlight.source" select="1"/>
+<xsl:param name="draft.mode">maybe</xsl:param>
 
 <!-- Admonition Graphics -->
 <xsl:param name="admon.graphics" select="1"/>
@@ -123,6 +126,76 @@ part toc
         <div id="navigation"><xsl:text> </xsl:text></div>
         <div id="floatingtoc" class="hidden"><xsl:text> </xsl:text></div>
   </xsl:if>
+</xsl:template>
+
+<xsl:template name="body.attributes">
+	<xsl:if test="starts-with($writing.mode, 'rl')">
+		<xsl:attribute name="dir">rtl</xsl:attribute>
+	</xsl:if>
+	<xsl:variable name="class">
+		<xsl:if test="ancestor-or-self::*[@status][1]/@status = 'draft'">
+			<xsl:text>draft </xsl:text>
+		</xsl:if>
+		<xsl:if test="$embedtoc != 0">
+			<xsl:text>toc_embeded </xsl:text>
+		</xsl:if>
+       		<xsl:if test="$desktop != 0">
+		  <xsl:text>desktop </xsl:text>
+		</xsl:if>
+	</xsl:variable>
+        <xsl:if test="$class != ''">
+	  <xsl:attribute name="class">
+		<xsl:value-of select="$class"/>
+	  </xsl:attribute>
+	</xsl:if>
+</xsl:template>
+
+<xsl:template match="*" mode="class.attribute">
+  <xsl:param name="class" select="local-name(.)"/>
+  <!-- permit customization of class attributes -->
+  <!-- Use element name by default -->
+  <xsl:variable name="class.value">
+    <xsl:apply-templates select="." mode="class.value">
+      <xsl:with-param name="class" select="$class"/>
+    </xsl:apply-templates>
+    <xsl:if test="@role">
+        <xsl:text> </xsl:text>
+        <xsl:value-of select="@role"/>
+    </xsl:if>
+    <xsl:if test="@revisionflag and (ancestor-or-self::*[@status][1]/@status = 'draft')">
+        <xsl:text> </xsl:text>
+        <xsl:value-of select="@revisionflag"/>
+    </xsl:if>
+  </xsl:variable>
+
+  <xsl:if test="string-length(normalize-space($class.value)) != 0">
+    <xsl:attribute name="class">
+      <xsl:value-of select="$class.value"/>
+    </xsl:attribute>
+  </xsl:if>
+</xsl:template>
+
+<xsl:template name="inline.charseq">
+  <xsl:param name="content">
+    <xsl:call-template name="anchor"/>
+    <xsl:call-template name="simple.xlink">
+      <xsl:with-param name="content">
+        <xsl:apply-templates/>
+      </xsl:with-param>
+    </xsl:call-template>
+  </xsl:param>
+  <!-- * if you want output from the inline.charseq template wrapped in -->
+  <!-- * something other than a Span, call the template with some value -->
+  <!-- * for the 'wrapper-name' param -->
+  <xsl:param name="wrapper-name">span</xsl:param>
+  <xsl:element name="{$wrapper-name}" namespace="http://www.w3.org/1999/xhtml">
+    <xsl:apply-templates select="." mode="class.attribute"/>
+    <xsl:call-template name="id.attribute"/>
+    <xsl:call-template name="dir"/>
+    <xsl:call-template name="generate.html.title"/>
+    <xsl:copy-of select="$content"/>
+    <xsl:call-template name="apply-annotations"/>
+  </xsl:element>
 </xsl:template>
 
 <!-- HTML5: replace border="0" with border="" -->

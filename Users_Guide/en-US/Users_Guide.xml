@@ -1,23 +1,28 @@
-<?xml version="1.0" encoding="utf-8"?>
-<book xmlns="http://docbook.org/ns/docbook" version="5.0">
-	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Book_Info.xml"/>
-	 <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Preface.xml"/>
-	 <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Introduction.xml"/>
-	 <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Installing_Publican.xml"/>
-	 <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Publican_Defaults.xml"/>
-	 <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Publican_Commands.xml"/>
-	 <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Creating_a_Book.xml"/>
-	 <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Branding.xml"/>
-	 <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Sets.xml"/>
-	 <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Websites.xml"/>
-	 <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Drupal_Import.xml"/>
-	 <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="FAQ.xml"/>
-	 <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Disallowed_tags_and_attributes.xml"/>
-	 <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Command_summary.xml"/>
-	 <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Publican_cfg_parameters.xml"/>
-	 <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Publican_cfg_parameters_order_by_alpha.xml"/>
-	 <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Dump_File.xml"/>
-	 <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Desktop_menu_spec.xml"/>
-	 <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Language_Codes.xml"/>
-	 <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Revision_History.xml"/>
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE book [
+<!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
+%BOOK_ENTITIES;
+]>
+<book status="draft" version="5.0" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<xi:include href="Book_Info.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
+	 <xi:include href="Preface.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
+	 <xi:include href="Introduction.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
+	 <xi:include href="Installing_Publican.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
+	 <xi:include href="Publican_Defaults.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
+	 <xi:include href="Publican_Commands.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
+	 <xi:include href="Creating_a_Book.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
+	 <xi:include href="Branding.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
+	 <xi:include href="Sets.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
+	 <xi:include href="Websites.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
+	 <xi:include href="Drupal_Import.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
+	 <xi:include href="FAQ.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
+	 <xi:include href="Disallowed_tags_and_attributes.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
+	 <xi:include href="Command_summary.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
+	 <xi:include href="Publican_cfg_parameters.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
+	 <xi:include href="Publican_cfg_parameters_order_by_alpha.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
+	 <xi:include href="Dump_File.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
+	 <xi:include href="Desktop_menu_spec.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
+	 <xi:include href="Language_Codes.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
+	 <xi:include href="Revision_History.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
 </book>
+

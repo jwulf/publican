@@ -1,10 +1,18 @@
-<?xml version="1.0" encoding="utf-8"?>
-<section xmlns="http://docbook.org/ns/docbook" version="5.0" conformance="123" xml:id="sect-Publican-Users_Guide-Building_a_document"><info><title>Building a document</title></info>
-	
-	 <note><info><title>Note — Customizing output</title></info>
-		
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE section [
+<!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
+%BOOK_ENTITIES;
+]>
+<section conformance="123" version="5.0" xml:id="sect-Publican-Users_Guide-Building_a_document" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<info xml:id="info-Publican-Users_Guide-Building_a_document">
+		<title>Building a document</title>
+	</info>
+	 <note>
+		<info xml:id="info-Publican-Users_Guide-Note_Customizing_output">
+			<title>Note — Customizing output</title>
+		</info>
 		 <para>
-			The parameters set in the document configuration file (by default, <filename>publican.cfg</filename>) allow you to control many aspects of the way in which a document is presented — refer to <xref linkend="sect-Publican-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file"/>.
+			The parameters set in the document configuration file (by default, <filename>publican.cfg</filename>) allow you to control many aspects of the way in which a document is presented — refer to <xref linkend="sect-Publican-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file" />.
 		</para>
 		 <para>
 			If you maintain multiple versions of a document, you can create a configuration file for each version. When building the document, you can use the <option>--config</option> to specify which configuration file (and therefore which set of parameters) to use in a particular build, for example:
@@ -19,7 +27,7 @@
 	 <procedure>
 		<step>
 			<para>
-				Confirm the <parameter>YEAR</parameter> and <parameter>HOLDER</parameter> entities have been configured in the <filename><replaceable>Doc_Name</replaceable>.ent</filename> file, as described in <xref linkend="sect-Publican-Users_Guide-Files_in_the_book_directory-Doc_Name.ent"/>.
+				Confirm the <parameter>YEAR</parameter> and <parameter>HOLDER</parameter> entities have been configured in the <filename><replaceable>Doc_Name</replaceable>.ent</filename> file, as described in <xref linkend="sect-Publican-Users_Guide-Files_in_the_book_directory-Doc_Name.ent" />.
 			</para>
 
 		</step>
@@ -53,9 +61,11 @@
 
 	</procedure>
 	
-	 <variablelist conformance="124" xml:id="vari-Publican-Users_Guide-Building_a_document-Formats_for_the_build_action"><info><title>Formats for the <command>build</command> action</title></info>
-		
-		 <varlistentry>
+	 <variablelist conformance="124" xml:id="vari-Publican-Users_Guide-Building_a_document-Formats_for_the_build_action">
+		<info xml:id="info-Publican-Users_Guide-Formats_for_the_build_action">
+			<title>Formats for the <command>build</command> action</title>
+		</info>
+		 <varlistentry xml:id="varl-Publican-Users_Guide-html">
 			<term><option>html</option></term>
 			 <listitem>
 				<para>
@@ -68,7 +78,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry>
+		 <varlistentry xml:id="varl-Publican-Users_Guide-html_single">
 			<term><option>html-single</option></term>
 			 <listitem>
 				<para>
@@ -78,7 +88,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry>
+		 <varlistentry xml:id="varl-Publican-Users_Guide-html_desktop">
 			<term><option>html-desktop</option></term>
 			 <listitem>
 				<para>
@@ -88,7 +98,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry>
+		 <varlistentry xml:id="varl-Publican-Users_Guide-man">
 			<term><option>man</option></term>
 			 <listitem>
 				<para>
@@ -98,7 +108,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry>
+		 <varlistentry xml:id="varl-Publican-Users_Guide-pdf">
 			<term><option>pdf</option></term>
 			 <listitem>
 				<para>
@@ -108,7 +118,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry>
+		 <varlistentry xml:id="varl-Publican-Users_Guide-test">
 			<term><option>test</option></term>
 			 <listitem>
 				<para>
@@ -118,7 +128,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry>
+		 <varlistentry xml:id="varl-Publican-Users_Guide-txt">
 			<term><option>txt</option></term>
 			 <listitem>
 				<para>
@@ -128,7 +138,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry>
+		 <varlistentry xml:id="varl-Publican-Users_Guide-epub">
 			<term><option>epub</option></term>
 			 <listitem>
 				<para>
@@ -138,11 +148,11 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry>
+		 <varlistentry xml:id="varl-Publican-Users_Guide-eclipse">
 			<term><option>eclipse</option></term>
 			 <listitem>
 				<para>
-					<application>Publican</application> outputs the document as an <application>Eclipse</application> help plugin. Refer to <xref linkend="sect-Publican-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file"/> for details of specifying <application>Eclipse</application>'s <parameter>id</parameter>, <parameter>name</parameter>, and <parameter>provider-name</parameter> parameters with <application>Publican</application>'s <parameter>ec_id</parameter>, <parameter>ec_name</parameter>, and <parameter>ec_provider</parameter> parameters.
+					<application>Publican</application> outputs the document as an <application>Eclipse</application> help plugin. Refer to <xref linkend="sect-Publican-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file" /> for details of specifying <application>Eclipse</application>'s <parameter>id</parameter>, <parameter>name</parameter>, and <parameter>provider-name</parameter> parameters with <application>Publican</application>'s <parameter>ec_id</parameter>, <parameter>ec_name</parameter>, and <parameter>ec_provider</parameter> parameters.
 				</para>
 
 			</listitem>
@@ -154,7 +164,7 @@
 		The following examples demonstrate commonly used <prompt>$</prompt> <command>publican build</command> commands:
 	</para>
 	 <variablelist>
-		<varlistentry>
+		<varlistentry xml:id="varl-Publican-Users_Guide-_publican_build_help">
 			<term><prompt>$</prompt> <command>publican build --help</command></term>
 			 <listitem>
 				<para>
@@ -164,7 +174,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry>
+		 <varlistentry xml:id="varl-Publican-Users_Guide-_publican_build_formatstest_langslanguages">
 			<term><prompt>$</prompt> <command>publican build --formats=test --langs=<replaceable>languages</replaceable></command></term>
 			 <listitem>
 				<para>
@@ -174,17 +184,17 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry>
+		 <varlistentry xml:id="varl-Publican-Users_Guide-_publican_build_formatshtml_langslanguages">
 			<term><prompt>$</prompt> <command>publican build --formats=html --langs=<replaceable>languages</replaceable></command></term>
 			 <listitem>
 				<para>
-					Build the book in multi-page HTML format. The HTML output will be located in the <filename><replaceable>Doc_Name</replaceable>/tmp/<replaceable>language</replaceable>/html/</filename> directory. Each chapter and major section is placed in a separate HTML file. You can control the depth at which <application>Publican</application> places subsections into separate HTML files with the <literal>chunk-section-depth</literal> parameter in the <filename>publican.cfg</filename> — refer to <xref linkend="sect-Publican-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file"/>.
+					Build the book in multi-page HTML format. The HTML output will be located in the <filename><replaceable>Doc_Name</replaceable>/tmp/<replaceable>language</replaceable>/html/</filename> directory. Each chapter and major section is placed in a separate HTML file. You can control the depth at which <application>Publican</application> places subsections into separate HTML files with the <literal>chunk-section-depth</literal> parameter in the <filename>publican.cfg</filename> — refer to <xref linkend="sect-Publican-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file" />.
 				</para>
 
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry>
+		 <varlistentry xml:id="varl-Publican-Users_Guide-_publican_build_formatshtml_single_langslanguages">
 			<term><prompt>$</prompt> <command>publican build --formats=html-single --langs=<replaceable>languages</replaceable></command></term>
 			 <listitem>
 				<para>
@@ -194,7 +204,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry>
+		 <varlistentry xml:id="varl-Publican-Users_Guide-_publican_build_formatspdf_langslanguages">
 			<term><prompt>$</prompt> <command>publican build --formats=pdf --langs=<replaceable>languages</replaceable></command></term>
 			 <listitem>
 				<para>
@@ -204,7 +214,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry>
+		 <varlistentry xml:id="varl-Publican-Users_Guide-_publican_build_formatshtmlhtml_singlepdf_langslanguages">
 			<term><prompt>$</prompt> <command>publican build --formats=html,html-single,pdf --langs=<replaceable>languages</replaceable></command></term>
 			 <listitem>
 				<para>
@@ -216,8 +226,10 @@
 		</varlistentry>
 
 	</variablelist>
-	 <section conformance="125" xml:id="sect-Publican-Users_Guide-Building_a_document-Building_a_document_without_validation"><info><title>Building a document without validation</title></info>
-		
+	 <section conformance="125" xml:id="sect-Publican-Users_Guide-Building_a_document-Building_a_document_without_validation">
+		<info xml:id="info-Publican-Users_Guide-Building_a_document_without_validation">
+			<title>Building a document without validation</title>
+		</info>
 		 <para>
 			<application>Publican</application> validates your XML against the DocBook <firstterm>document type definition</firstterm> (DTD) before it builds the content. However, while a document is under development, you might sometimes want to skip validation while building, especially if the document contains cross-references (<tag>&lt;xref&gt;</tag>s) to sections of the document that do not yet exist. To skip validation, run <prompt>$</prompt> <command>publican build</command> with the <option>--novalid</option> option. Cross-references to non-existent content appear in the built document as three question marks: <literal>???</literal>.
 		</para>
@@ -229,3 +241,5 @@
 	
 
 </section>
+
+
