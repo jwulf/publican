@@ -53,7 +53,7 @@
 			Because this approach makes no changes to the information in <filename>Book_Info.xml</filename> used to generate RPMs, it also ensures there is no ambiguity in the RPM subsystem's operation.
 		</para>
 		 <example>
-			<title>An example of a block marked up as draft</title>
+			<title>An example of an inline remark</title>
 			<para>
 				Here is an <application role="remark">example</application> of an inline remark.
 			</para>

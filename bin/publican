@@ -486,6 +486,77 @@ if ( $help and ( $action eq "docbook" ) ) {
     my $cleaner = Publican::XmlClean->new( { exclude_ent => 1 } );
     $cleaner->process_file( { file => $out_file, out_file => $out_file } );
 
+# all the parameters
+
+    $xml_doc = XML::Element->new_from_lol(
+        [ 'appendix', [ 'info', [ 'title', 'Configuration summary' ], ] ] );
+
+    my $gen_list = XML::Element->new_from_lol(
+        [ 'variablelist', {id => 'Auto_Docs-actions'},[ 'info', [ 'title', 'General options' ], ], ] );
+    my $brand_list = XML::Element->new_from_lol(
+        [ 'variablelist', {id => 'Auto_Docs-actions'},[ 'info', [ 'title', 'Brand options' ], ], ] );
+    my $web_list = XML::Element->new_from_lol(
+        [ 'variablelist', {id => 'Auto_Docs-actions'},[ 'info', [ 'title', 'Site options' ], ], ] );
+
+    $xml_doc->push_content($gen_list);
+    $xml_doc->push_content($brand_list);
+    $xml_doc->push_content($web_list);
+
+    foreach my $key ( sort(keys(%PARAMS)) ) {
+            my $entry = XML::Element->new_from_lol(
+                [   'varlistentry',
+                    [ 'term', "$key" ]
+                ] );
+
+             if(defined($PARAMS{$key}->{limit_to}) && $PARAMS{$key}->{limit_to} eq 'brand' ) {
+		$brand_list->push_content($entry);
+		}elsif(defined($PARAMS{$key}->{limit_to}) && $PARAMS{$key}->{limit_to} eq 'site' ){
+		$web_list->push_content($entry);
+		} else{
+		$gen_list->push_content($entry);
+}
+            my $item  = XML::Element->new_from_lol(
+		       [ 'listitem', [ 'para', $PARAMS{$key}->{descr} ] ]
+            );
+	
+       		$entry->push_content($item);
+           if(defined($PARAMS{$key}->{alert})) {
+               my $warn =  XML::Element->new_from_lol(
+		       [ 'warning', [ 'para', $PARAMS{$key}->{alert} ] ]
+            );
+
+       		$item->push_content($warn);
+           }
+           if(defined($PARAMS{$key}->{default})) {
+               my $def =  XML::Element->new_from_lol(
+		       [ 'para', "The default value for this parameter is: " . $PARAMS{$key}->{default} ]
+            );
+
+       		$item->push_content($def);
+           }
+           if(defined($PARAMS{$key}->{constraint})) {
+               my $constraint =  XML::Element->new_from_lol(
+		       [ 'para', "This parameter is constrained with the following regular expression: " . $PARAMS{$key}->{constraint} ]
+            );
+
+       		$item->push_content($constraint);
+           }
+    }
+
+    $out_file = 'en-US/Auto_Docs_Configs.xml';
+    open( $OUTDOC, ">:encoding(UTF-8)", $out_file )
+        || croak( maketext( "Could not open [_1] for output!", $out_file ) );
+
+    print( $OUTDOC Publican::Builder::dtd_string(
+            { tag => 'appendix', dtdver => '5.0', cleaning => 1 }
+        )
+    );
+    print( $OUTDOC $xml_doc->as_XML() );
+    close($OUTDOC);
+
+    $xml_doc->root()->delete();
+    $cleaner->process_file( { file => $out_file, out_file => $out_file } );
+
     exit(0);
 }
 

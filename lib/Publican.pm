@@ -30,7 +30,7 @@ $VERSION = version->declare('v4.1.1');
 @ISA     = qw(Exporter);
 
 @EXPORT
-    = qw(dir_list debug_msg get_all_langs logger help_config maketext new_tree dtd_string rcopy dircopy fcopy rcopy_glob fmove dirmove);
+    = qw(dir_list debug_msg get_all_langs logger help_config maketext new_tree dtd_string rcopy dircopy fcopy rcopy_glob fmove dirmove %PARAMS);
 
 # Track when the SPEC file generation is incompatible.
 $SPEC_VERSION = '4.1';

@@ -112,8 +112,6 @@ jing  /usr/share/xml/docbook5/schema/rng/5.0/docbook.rng --noout test.xml
 "A.1. Disallowed elements" & "A.2. Disallowed attributes" rewrite to say brands can do this, and why we _discourage_ them.
 
 
-"Command summary" Pull this in using pod2docbook.
-
 "publican.cfg parameters" pull this in using pod2docbook.
 
 "Alphabetical index of publican.cfg parameters" ... 
@@ -124,9 +122,11 @@ jing  /usr/share/xml/docbook5/schema/rng/5.0/docbook.rng --noout test.xml
 "1.1.1. Fedora & Red Hat Enterprise Linux 6"
 	add note about publican-doc package and how to read them
 
-"4.2. Adding images" remove width
-
 "4.3. Adding code samples" display programlistingco?
 
+"4.5. Renaming a document" can we just use the auto docs?
 
+"4.7. Building a document" docbook 5 validation fails :(
+
+"When I build my document, I get an error about an ‘undefined language’ — what's wr" note case insensitive matching
 
