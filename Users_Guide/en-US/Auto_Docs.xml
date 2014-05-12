@@ -5,7 +5,7 @@
 	<info>
 		<title>Command summary</title>
 	</info>
-	<variablelist>
+	<variablelist id="Auto_Docs-options">
 		<info>
 			<title>Command options</title>
 		</info>
@@ -66,9 +66,9 @@
 			</listitem>
 		</varlistentry>
 	</variablelist>
-	<variablelist>
+	<variablelist id="Auto_Docs-actions">
 		<info>
-			<title>Actions</title>
+			<title>Command actions</title>
 		</info>
 		<varlistentry>
 			<term><prompt>$</prompt><command> publican</command> add_revision</term>
