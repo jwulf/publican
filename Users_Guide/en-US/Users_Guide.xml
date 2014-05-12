@@ -17,7 +17,7 @@
 	 <xi:include href="Drupal_Import.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
 	 <xi:include href="FAQ.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
 	 <xi:include href="Disallowed_tags_and_attributes.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
-	 <xi:include href="Command_summary.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
+	 <xi:include href="Auto_Docs.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
 	 <xi:include href="Publican_cfg_parameters.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
 	 <xi:include href="Publican_cfg_parameters_order_by_alpha.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
 	 <xi:include href="Dump_File.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />

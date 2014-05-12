@@ -167,11 +167,14 @@ ul.docnav {
 div.admonition {
 	margin-bottom: 1em;
 	padding-left: 1.5em;
+/*
 	background-size: 0.5em auto;
 	background-image: url("../images/red.png");
 	background-repeat: repeat-y;
+*/
 	padding-top: 0.5em;
 	padding-bottom: 0.5em;
+	border-left: 0.5em solid #59BC00;
 }
 
 div.admonition_header {
@@ -183,24 +186,21 @@ div.admonition > div:last-child > *:last-child {
 	margin-bottom: 0em;
 }
 
-div.note {
-	background-image: url("../images/green.png");
-}
 
 div.important {
-	background-image: url("../images/yellow.png");
+	border-color: #FFC200;
 }
 
 div.warning {
-	background-image: url("../images/red.png");
+	border-color: #FF0000;
 }
 
 div.tip {
-	background-image: url("../images/green.png");
+	border-color: #0000AA;
 }
 
 div.caution {
-	background-image: url("../images/yellow.png");
+	border-color: #950000;
 }
 
 .command, .filename, .keycap, .classname, .literal {
@@ -222,7 +222,7 @@ pre {
 	padding: 0.5em 0px 0.5em 1em;
 	font-family: "liberation mono","bitstream vera mono","dejavu mono",monospace;
 	font-size: medium;
-	border-left: 0.5em solid #AAAAAA;
+	border-left: 0.5em solid #666666;
 	white-space: pre-wrap;
 	word-wrap: break-word;
 }

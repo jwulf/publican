@@ -437,6 +437,109 @@ if ($bash_comp) {
     exit(0);
 }
 
+# Undocumented way of getting help for all actions as DocBook 5.0 XML
+if ( $help and ( $action eq "docbook" ) ) {
+
+    my $xml_doc = XML::Element->new_from_lol(
+        [ 'appendix', [ 'info', [ 'title', 'Command summary' ], ] ] );
+
+    my $var_list = XML::Element->new_from_lol(
+        [ 'variablelist', [ 'info', [ 'title', 'Command options' ], ], ] );
+
+    $xml_doc->push_content($var_list);
+
+    foreach my $option ( sort(@utility_opts) ) {
+        my $entry = XML::Element->new_from_lol(
+            [   'varlistentry',
+                [ 'term', "--$option" ],
+                [ 'listitem', [ 'para', $options{$option} ] ]
+            ]
+        );
+
+        $var_list->push_content($entry);
+    }
+
+    $var_list = XML::Element->new_from_lol(
+        [ 'variablelist', [ 'info', [ 'title', 'Actions' ], ], ] );
+
+    $xml_doc->push_content($var_list);
+
+    foreach my $cmd ( sort( keys(%actions) ) ) {
+        $var_list->push_content( _help_action_asdb($cmd) );
+
+    }
+
+    my $OUTDOC;
+    my $out_file = 'en-US/Auto_Docs.xml';
+    open( $OUTDOC, ">:encoding(UTF-8)", $out_file )
+        || croak( maketext( "Could not open [_1] for output!", $out_file ) );
+
+    print( $OUTDOC Publican::Builder::dtd_string(
+            { tag => 'appendix', dtdver => '5.0', cleaning => 1 }
+        )
+    );
+    print( $OUTDOC $xml_doc->as_XML() );
+    close($OUTDOC);
+
+    $xml_doc->root()->delete();
+
+    my $cleaner = Publican::XmlClean->new( { exclude_ent => 1 } );
+    $cleaner->process_file( { file => $out_file, out_file => $out_file } );
+
+    exit(0);
+}
+
+sub _help_action_asdb {
+    my $cmd = shift || croak maketext( "[_1] is a required argument", 'cmd' );
+    my $brief = $actions{$cmd}->{brief};
+
+    my $varentry = XML::Element->new_from_lol(
+        [   'varlistentry',
+            [   'term', [ 'prompt', '$' ], [ 'command', ' publican' ],
+                " $cmd"
+            ],
+        ]
+    );
+
+    my $item = XML::Element->new_from_lol(
+            [ 'listitem', [ 'para', $brief ] ],
+    );
+
+   $varentry->push_content($item);
+    my $varlist = XML::Element->new_from_lol(
+        [   'variablelist',
+        ]
+    );
+
+    $item->push_content($varlist);
+    foreach my $option ( sort( @{ $actions{$cmd}->{options} } ) ) {
+        my $entry;
+
+        if ( $options{$option} ) {
+            $entry = XML::Element->new_from_lol(
+                [   'varlistentry',
+                    [ 'term', "--$option" ],
+                    [ 'listitem', [ 'para', $options{$option} ] ]
+                ]
+            );
+        }
+        else {
+            my $text
+                = maketext( $options{"$option=s"} || $options{"$option=s@"} );
+            $entry = XML::Element->new_from_lol(
+                [   'varlistentry',
+                    [ 'term', "--$option=", ['replaceable',  uc($option) ]],
+                    [ 'listitem', [ 'para', $text ] ]
+                ]
+            );
+        }
+
+        $varlist->push_content($entry);
+    }
+
+    return ($varentry);
+}
+
 # catch no action set
 if ( $action eq "" ) {
     pod2usage(
