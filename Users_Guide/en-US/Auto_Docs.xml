@@ -1,0 +1,1017 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE appendix [
+]>
+<appendix version="5.0" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<info>
+		<title>Command summary</title>
+	</info>
+	<variablelist>
+		<info>
+			<title>Command options</title>
+		</info>
+		<varlistentry>
+			<term>--brand_dir=s</term>
+			<listitem>
+				<para>
+					Directory to source brand files from.
+				</para>
+			</listitem>
+		</varlistentry>
+		<varlistentry>
+			<term>--common_config=s</term>
+			<listitem>
+				<para>
+					Override path to Common_Config directory
+				</para>
+			</listitem>
+		</varlistentry>
+		<varlistentry>
+			<term>--common_content=s</term>
+			<listitem>
+				<para>
+					Override path to Common_Content directory
+				</para>
+			</listitem>
+		</varlistentry>
+		<varlistentry>
+			<term>--config=s</term>
+			<listitem>
+				<para>
+					Use a nonstandard config file
+				</para>
+			</listitem>
+		</varlistentry>
+		<varlistentry>
+			<term>--help</term>
+			<listitem>
+				<para>
+					Display help message
+				</para>
+			</listitem>
+		</varlistentry>
+		<varlistentry>
+			<term>--nocolours</term>
+			<listitem>
+				<para>
+					Disable ANSI colourisation of logging.
+				</para>
+			</listitem>
+		</varlistentry>
+		<varlistentry>
+			<term>--quiet</term>
+			<listitem>
+				<para>
+					Disable all logging.
+				</para>
+			</listitem>
+		</varlistentry>
+	</variablelist>
+	<variablelist>
+		<info>
+			<title>Actions</title>
+		</info>
+		<varlistentry>
+			<term><prompt>$</prompt><command> publican</command> add_revision</term>
+			<listitem>
+				<para>
+					Add an entry to the revision history
+				</para>
+				<variablelist>
+					<varlistentry>
+						<term>--date=<replaceable>DATE</replaceable></term>
+						<listitem>
+							<para>
+								Date to use for a revision.
+							</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term>--email=<replaceable>EMAIL</replaceable></term>
+						<listitem>
+							<para>
+								email to use for a revision.
+							</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term>--firstname=<replaceable>FIRSTNAME</replaceable></term>
+						<listitem>
+							<para>
+								firstname to use for a revision.
+							</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term>--lang=<replaceable>LANG</replaceable></term>
+						<listitem>
+							<para>
+								The language the XML will be written in
+							</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term>--member=<replaceable>MEMBER</replaceable></term>
+						<listitem>
+							<para>
+								An entry to be added to the revision. Can be specified multiple times.
+							</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term>--revnumber=<replaceable>REVNUMBER</replaceable></term>
+						<listitem>
+							<para>
+								Revision number to use for a revision.
+							</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term>--surname=<replaceable>SURNAME</replaceable></term>
+						<listitem>
+							<para>
+								surname to use for a revision.
+							</para>
+						</listitem>
+					</varlistentry>
+				</variablelist>
+			</listitem>
+		</varlistentry>
+		<varlistentry>
+			<term><prompt>$</prompt><command> publican</command> build</term>
+			<listitem>
+				<para>
+					Transform XML to other formats (pdf, html, html-single, drupal-book, etc)
+				</para>
+				<variablelist>
+					<varlistentry>
+						<term>--distributed_set</term>
+						<listitem>
+							<para>
+								This flag tells publican the data being processed is a distributed set. Note: do not use distributed_set on the command line. Publican uses this flag when calling itself to process distributed sets. This is the only safe way this flag can be used.
+							</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term>--embedtoc</term>
+						<listitem>
+							<para>
+								Embed the web site TOC object in the generated HTML
+							</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term>--formats=<replaceable>FORMATS</replaceable></term>
+						<listitem>
+							<para>
+								Comma-separated list of formats, for example: html,pdf,html-single,html-desktop,txt,epub
+							</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term>--langs=<replaceable>LANGS</replaceable></term>
+						<listitem>
+							<para>
+								Comma-separated list of languages, for example: en-US,de-DE,all
+							</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term>--novalid</term>
+						<listitem>
+							<para>
+								Do not run the DTD validation
+							</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term>--pdftool=<replaceable>PDFTOOL</replaceable></term>
+						<listitem>
+							<para>
+								Override the tool to use when creating PDFs. Valid options are wkhtmltopdf and fop.
+							</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term>--pub_dir=<replaceable>PUB_DIR</replaceable></term>
+						<listitem>
+							<para>
+								Directory to publish files to. Defaults to publish.
+							</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term>--publish</term>
+						<listitem>
+							<para>
+								Set up built content for publishing
+							</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term>--src_dir=<replaceable>SRC_DIR</replaceable></term>
+						<listitem>
+							<para>
+								Directory to source publican files from.
+							</para>
+						</listitem>
+					</varlistentry>
+				</variablelist>
+			</listitem>
+		</varlistentry>
+		<varlistentry>
+			<term><prompt>$</prompt><command> publican</command> clean</term>
+			<listitem>
+				<para>
+					Remove all temporary files and directories
+				</para>
+				<variablelist>
+					<varlistentry>
+						<term>--pub_dir=<replaceable>PUB_DIR</replaceable></term>
+						<listitem>
+							<para>
+								Directory to publish files to. Defaults to publish.
+							</para>
+						</listitem>
+					</varlistentry>
+				</variablelist>
+			</listitem>
+		</varlistentry>
+		<varlistentry>
+			<term><prompt>$</prompt><command> publican</command> clean_ids</term>
+			<listitem>
+				<para>
+					Run clean ids for source XML
+				</para>
+				<variablelist>
+				</variablelist>
+			</listitem>
+		</varlistentry>
+		<varlistentry>
+			<term><prompt>$</prompt><command> publican</command> clean_set</term>
+			<listitem>
+				<para>
+					Remove local copies of remote set books
+				</para>
+				<variablelist>
+				</variablelist>
+			</listitem>
+		</varlistentry>
+		<varlistentry>
+			<term><prompt>$</prompt><command> publican</command> copy_web_brand</term>
+			<listitem>
+				<para>
+					Copy a brand's installed web content to another site
+				</para>
+				<variablelist>
+					<varlistentry>
+						<term>--brand=<replaceable>BRAND</replaceable></term>
+						<listitem>
+							<para>
+								The brand to use
+							</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term>--old_site_config=<replaceable>OLD_SITE_CONFIG</replaceable></term>
+						<listitem>
+							<para>
+								WebSite configuration file to use when copying content between sites.
+							</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term>--site_config=<replaceable>SITE_CONFIG</replaceable></term>
+						<listitem>
+							<para>
+								WebSite configuration file to use or create.
+							</para>
+						</listitem>
+					</varlistentry>
+				</variablelist>
+			</listitem>
+		</varlistentry>
+		<varlistentry>
+			<term><prompt>$</prompt><command> publican</command> create</term>
+			<listitem>
+				<para>
+					Create a new book, set, or article
+				</para>
+				<variablelist>
+					<varlistentry>
+						<term>--brand=<replaceable>BRAND</replaceable></term>
+						<listitem>
+							<para>
+								The brand to use
+							</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term>--dtdver=<replaceable>DTDVER</replaceable></term>
+						<listitem>
+							<para>
+								The version of the DocBook DTD to use
+							</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term>--edition=<replaceable>EDITION</replaceable></term>
+						<listitem>
+							<para>
+								The edition of the book, article, or set
+							</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term>--lang=<replaceable>LANG</replaceable></term>
+						<listitem>
+							<para>
+								The language the XML will be written in
+							</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term>--name=<replaceable>NAME</replaceable></term>
+						<listitem>
+							<para>
+								The name of the book, article, set, or brand
+							</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term>--product=<replaceable>PRODUCT</replaceable></term>
+						<listitem>
+							<para>
+								The name of the product
+							</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term>--type=<replaceable>TYPE</replaceable></term>
+						<listitem>
+							<para>
+								The type (book, article, or set)
+							</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term>--version=<replaceable>VERSION</replaceable></term>
+						<listitem>
+							<para>
+								The version of the product
+							</para>
+						</listitem>
+					</varlistentry>
+				</variablelist>
+			</listitem>
+		</varlistentry>
+		<varlistentry>
+			<term><prompt>$</prompt><command> publican</command> create_brand</term>
+			<listitem>
+				<para>
+					Create a new brand
+				</para>
+				<variablelist>
+					<varlistentry>
+						<term>--lang=<replaceable>LANG</replaceable></term>
+						<listitem>
+							<para>
+								The language the XML will be written in
+							</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term>--name=<replaceable>NAME</replaceable></term>
+						<listitem>
+							<para>
+								The name of the book, article, set, or brand
+							</para>
+						</listitem>
+					</varlistentry>
+				</variablelist>
+			</listitem>
+		</varlistentry>
+		<varlistentry>
+			<term><prompt>$</prompt><command> publican</command> create_site</term>
+			<listitem>
+				<para>
+					Create a new WebSite in the supplied location.
+				</para>
+				<variablelist>
+					<varlistentry>
+						<term>--db_file=<replaceable>DB_FILE</replaceable></term>
+						<listitem>
+							<para>
+								Override default database file.
+							</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term>--lang=<replaceable>LANG</replaceable></term>
+						<listitem>
+							<para>
+								The language the XML will be written in
+							</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term>--site_config=<replaceable>SITE_CONFIG</replaceable></term>
+						<listitem>
+							<para>
+								WebSite configuration file to use or create.
+							</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term>--tmpl_path=<replaceable>TMPL_PATH</replaceable></term>
+						<listitem>
+							<para>
+								Override the default template path.
+							</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term>--toc_path=<replaceable>TOC_PATH</replaceable></term>
+						<listitem>
+							<para>
+								Override the default TOC path.
+							</para>
+						</listitem>
+					</varlistentry>
+				</variablelist>
+			</listitem>
+		</varlistentry>
+		<varlistentry>
+			<term><prompt>$</prompt><command> publican</command> help_config</term>
+			<listitem>
+				<para>
+					Display help text for the configuration file
+				</para>
+				<variablelist>
+				</variablelist>
+			</listitem>
+		</varlistentry>
+		<varlistentry>
+			<term><prompt>$</prompt><command> publican</command> install_book</term>
+			<listitem>
+				<para>
+					Install a book in to a WebSite.
+				</para>
+				<variablelist>
+					<varlistentry>
+						<term>--lang=<replaceable>LANG</replaceable></term>
+						<listitem>
+							<para>
+								The language the XML will be written in
+							</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term>--site_config=<replaceable>SITE_CONFIG</replaceable></term>
+						<listitem>
+							<para>
+								WebSite configuration file to use or create.
+							</para>
+						</listitem>
+					</varlistentry>
+				</variablelist>
+			</listitem>
+		</varlistentry>
+		<varlistentry>
+			<term><prompt>$</prompt><command> publican</command> install_brand</term>
+			<listitem>
+				<para>
+					Install a brand to the supplied location
+				</para>
+				<variablelist>
+					<varlistentry>
+						<term>--path=<replaceable>PATH</replaceable></term>
+						<listitem>
+							<para>
+								/path/to/install/to
+							</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term>--pub_dir=<replaceable>PUB_DIR</replaceable></term>
+						<listitem>
+							<para>
+								Directory to publish files to. Defaults to publish.
+							</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term>--web</term>
+						<listitem>
+							<para>
+								Install the web content for a brand.
+							</para>
+						</listitem>
+					</varlistentry>
+				</variablelist>
+			</listitem>
+		</varlistentry>
+		<varlistentry>
+			<term><prompt>$</prompt><command> publican</command> lang_stats</term>
+			<listitem>
+				<para>
+					report PO statistics
+				</para>
+				<variablelist>
+					<varlistentry>
+						<term>--lang=<replaceable>LANG</replaceable></term>
+						<listitem>
+							<para>
+								The language the XML will be written in
+							</para>
+						</listitem>
+					</varlistentry>
+				</variablelist>
+			</listitem>
+		</varlistentry>
+		<varlistentry>
+			<term><prompt>$</prompt><command> publican</command> migrate_site</term>
+			<listitem>
+				<para>
+					Migrate a website DataBase from Publican &lt; 3 to Publican 3.
+				</para>
+				<variablelist>
+					<varlistentry>
+						<term>--site_config=<replaceable>SITE_CONFIG</replaceable></term>
+						<listitem>
+							<para>
+								WebSite configuration file to use or create.
+							</para>
+						</listitem>
+					</varlistentry>
+				</variablelist>
+			</listitem>
+		</varlistentry>
+		<varlistentry>
+			<term><prompt>$</prompt><command> publican</command> package</term>
+			<listitem>
+				<para>
+					Package a language for shipping
+				</para>
+				<variablelist>
+					<varlistentry>
+						<term>--binary</term>
+						<listitem>
+							<para>
+								Build binary rpm when running package
+							</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term>--brew</term>
+						<listitem>
+							<para>
+								Push SRPM to brew
+							</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term>--desktop</term>
+						<listitem>
+							<para>
+								Create desktop instead of web package
+							</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term>--lang=<replaceable>LANG</replaceable></term>
+						<listitem>
+							<para>
+								The language the XML will be written in
+							</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term>--pub_dir=<replaceable>PUB_DIR</replaceable></term>
+						<listitem>
+							<para>
+								Directory to publish files to. Defaults to publish.
+							</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term>--scratch</term>
+						<listitem>
+							<para>
+								Use scratch instead of tag build
+							</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term>--short_sighted</term>
+						<listitem>
+							<para>
+								Create package without using version in package name
+							</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term>--wait</term>
+						<listitem>
+							<para>
+								Wait for brew to finish building
+							</para>
+						</listitem>
+					</varlistentry>
+				</variablelist>
+			</listitem>
+		</varlistentry>
+		<varlistentry>
+			<term><prompt>$</prompt><command> publican</command> print_banned</term>
+			<listitem>
+				<para>
+					Print a list of banned DocBook tags
+				</para>
+				<variablelist>
+				</variablelist>
+			</listitem>
+		</varlistentry>
+		<varlistentry>
+			<term><prompt>$</prompt><command> publican</command> print_known</term>
+			<listitem>
+				<para>
+					Print a list of QA'd DocBook tags
+				</para>
+				<variablelist>
+				</variablelist>
+			</listitem>
+		</varlistentry>
+		<varlistentry>
+			<term><prompt>$</prompt><command> publican</command> print_tree</term>
+			<listitem>
+				<para>
+					Print a tree of the xi:includes
+				</para>
+				<variablelist>
+				</variablelist>
+			</listitem>
+		</varlistentry>
+		<varlistentry>
+			<term><prompt>$</prompt><command> publican</command> print_unused</term>
+			<listitem>
+				<para>
+					Print a list of unused XML files
+				</para>
+				<variablelist>
+				</variablelist>
+			</listitem>
+		</varlistentry>
+		<varlistentry>
+			<term><prompt>$</prompt><command> publican</command> print_unused_images</term>
+			<listitem>
+				<para>
+					Print a list of unused Image files
+				</para>
+				<variablelist>
+				</variablelist>
+			</listitem>
+		</varlistentry>
+		<varlistentry>
+			<term><prompt>$</prompt><command> publican</command> remove_book</term>
+			<listitem>
+				<para>
+					Remove a book from a WebSite.
+				</para>
+				<variablelist>
+					<varlistentry>
+						<term>--lang=<replaceable>LANG</replaceable></term>
+						<listitem>
+							<para>
+								The language the XML will be written in
+							</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term>--site_config=<replaceable>SITE_CONFIG</replaceable></term>
+						<listitem>
+							<para>
+								WebSite configuration file to use or create.
+							</para>
+						</listitem>
+					</varlistentry>
+				</variablelist>
+			</listitem>
+		</varlistentry>
+		<varlistentry>
+			<term><prompt>$</prompt><command> publican</command> rename</term>
+			<listitem>
+				<para>
+					Rename a publican book
+				</para>
+				<variablelist>
+					<varlistentry>
+						<term>--name=<replaceable>NAME</replaceable></term>
+						<listitem>
+							<para>
+								The name of the book, article, set, or brand
+							</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term>--product=<replaceable>PRODUCT</replaceable></term>
+						<listitem>
+							<para>
+								The name of the product
+							</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term>--version=<replaceable>VERSION</replaceable></term>
+						<listitem>
+							<para>
+								The version of the product
+							</para>
+						</listitem>
+					</varlistentry>
+				</variablelist>
+			</listitem>
+		</varlistentry>
+		<varlistentry>
+			<term><prompt>$</prompt><command> publican</command> report</term>
+			<listitem>
+				<para>
+					Print a readability report for the source text.
+				</para>
+				<variablelist>
+				</variablelist>
+			</listitem>
+		</varlistentry>
+		<varlistentry>
+			<term><prompt>$</prompt><command> publican</command> site_stats</term>
+			<listitem>
+				<para>
+					Report on the contents of a WebSite
+				</para>
+				<variablelist>
+					<varlistentry>
+						<term>--site_config=<replaceable>SITE_CONFIG</replaceable></term>
+						<listitem>
+							<para>
+								WebSite configuration file to use or create.
+							</para>
+						</listitem>
+					</varlistentry>
+				</variablelist>
+			</listitem>
+		</varlistentry>
+		<varlistentry>
+			<term><prompt>$</prompt><command> publican</command> trans_drop</term>
+			<listitem>
+				<para>
+					Snapshot the source language for use in translation.
+				</para>
+				<variablelist>
+				</variablelist>
+			</listitem>
+		</varlistentry>
+		<varlistentry>
+			<term><prompt>$</prompt><command> publican</command> update_db</term>
+			<listitem>
+				<para>
+					Add or remove database entries. Used for processing pre-build books, such as when building packages.
+				</para>
+				<variablelist>
+					<varlistentry>
+						<term>--abstract=<replaceable>ABSTRACT</replaceable></term>
+						<listitem>
+							<para>
+								Abstract for a book
+							</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term>--add</term>
+						<listitem>
+							<para>
+								Add a database entry
+							</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term>--book_src_lang=<replaceable>BOOK_SRC_LANG</replaceable></term>
+						<listitem>
+							<para>
+								The language this translation is based on.
+							</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term>--book_version=<replaceable>BOOK_VERSION</replaceable></term>
+						<listitem>
+							<para>
+								The version number of the book being installed.
+							</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term>--del</term>
+						<listitem>
+							<para>
+								Delete a database entry
+							</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term>--formats=<replaceable>FORMATS</replaceable></term>
+						<listitem>
+							<para>
+								Comma-separated list of formats, for example: html,pdf,html-single,html-desktop,txt,epub
+							</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term>--lang=<replaceable>LANG</replaceable></term>
+						<listitem>
+							<para>
+								The language the XML will be written in
+							</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term>--name=<replaceable>NAME</replaceable></term>
+						<listitem>
+							<para>
+								The name of the book, article, set, or brand
+							</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term>--name_label=<replaceable>NAME_LABEL</replaceable></term>
+						<listitem>
+							<para>
+								name label for a book
+							</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term>--product=<replaceable>PRODUCT</replaceable></term>
+						<listitem>
+							<para>
+								The name of the product
+							</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term>--product_label=<replaceable>PRODUCT_LABEL</replaceable></term>
+						<listitem>
+							<para>
+								product label for a book
+							</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term>--site_config=<replaceable>SITE_CONFIG</replaceable></term>
+						<listitem>
+							<para>
+								WebSite configuration file to use or create.
+							</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term>--sort_order=<replaceable>SORT_ORDER</replaceable></term>
+						<listitem>
+							<para>
+								Order to sort a book
+							</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term>--subtitle=<replaceable>SUBTITLE</replaceable></term>
+						<listitem>
+							<para>
+								Sub title for a book
+							</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term>--version=<replaceable>VERSION</replaceable></term>
+						<listitem>
+							<para>
+								The version of the product
+							</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term>--version_label=<replaceable>VERSION_LABEL</replaceable></term>
+						<listitem>
+							<para>
+								version label for a book
+							</para>
+						</listitem>
+					</varlistentry>
+				</variablelist>
+			</listitem>
+		</varlistentry>
+		<varlistentry>
+			<term><prompt>$</prompt><command> publican</command> update_po</term>
+			<listitem>
+				<para>
+					Update the PO files
+				</para>
+				<variablelist>
+					<varlistentry>
+						<term>--email=<replaceable>EMAIL</replaceable></term>
+						<listitem>
+							<para>
+								email to use for a revision.
+							</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term>--firstname=<replaceable>FIRSTNAME</replaceable></term>
+						<listitem>
+							<para>
+								firstname to use for a revision.
+							</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term>--langs=<replaceable>LANGS</replaceable></term>
+						<listitem>
+							<para>
+								Comma-separated list of languages, for example: en-US,de-DE,all
+							</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term>--msgmerge</term>
+						<listitem>
+							<para>
+								Use gettext's msgmerge for POT/PO merging.
+							</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term>--previous</term>
+						<listitem>
+							<para>
+								Keep previous msgid when fuzzy matches are detected in PO updates.
+							</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term>--surname=<replaceable>SURNAME</replaceable></term>
+						<listitem>
+							<para>
+								surname to use for a revision.
+							</para>
+						</listitem>
+					</varlistentry>
+				</variablelist>
+			</listitem>
+		</varlistentry>
+		<varlistentry>
+			<term><prompt>$</prompt><command> publican</command> update_pot</term>
+			<listitem>
+				<para>
+					Update the POT files
+				</para>
+				<variablelist>
+				</variablelist>
+			</listitem>
+		</varlistentry>
+		<varlistentry>
+			<term><prompt>$</prompt><command> publican</command> update_site</term>
+			<listitem>
+				<para>
+					Update an existing sites templates.
+				</para>
+				<variablelist>
+					<varlistentry>
+						<term>--site_config=<replaceable>SITE_CONFIG</replaceable></term>
+						<listitem>
+							<para>
+								WebSite configuration file to use or create.
+							</para>
+						</listitem>
+					</varlistentry>
+				</variablelist>
+			</listitem>
+		</varlistentry>
+		<varlistentry>
+			<term><prompt>$</prompt><command> publican</command> zt_pull</term>
+			<listitem>
+				<para>
+					Pull translations from Zanata.
+				</para>
+				<variablelist>
+				</variablelist>
+			</listitem>
+		</varlistentry>
+		<varlistentry>
+			<term><prompt>$</prompt><command> publican</command> zt_push</term>
+			<listitem>
+				<para>
+					Push translations to Zanata.
+				</para>
+				<variablelist>
+				</variablelist>
+			</listitem>
+		</varlistentry>
+	</variablelist>
+</appendix>
+
