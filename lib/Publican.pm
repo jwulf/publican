@@ -30,7 +30,7 @@ $VERSION = version->declare('v4.1.2');
 @ISA     = qw(Exporter);
 
 @EXPORT
-    = qw(dir_list debug_msg get_all_langs logger help_config maketext new_tree dtd_string rcopy dircopy fcopy rcopy_glob fmove dirmove %PARAMS);
+    = qw(dir_list debug_msg get_all_langs logger help_config maketext new_tree dtd_string rcopy dircopy fcopy rcopy_glob fmove dirmove params_as_docbook);
 
 # Track when the SPEC file generation is incompatible.
 $SPEC_VERSION = '4.1';
@@ -1793,6 +1793,77 @@ sub dirmove {
 
     return;
 }
+
+sub params_as_docbook {
+    my ($gen_list,$brand_list,$web_list) = @_;
+
+    foreach my $key ( sort( keys(%PARAMS) ) ) {
+        my $entry = XML::Element->new_from_lol(
+            [ 'varlistentry', [ 'term', "$key" ] ] );
+
+        if ( defined( $PARAMS{$key}->{limit_to} )
+            && $PARAMS{$key}->{limit_to} eq 'brand' )
+        {
+            $brand_list->push_content($entry);
+        }
+        elsif ( defined( $PARAMS{$key}->{limit_to} )
+            && $PARAMS{$key}->{limit_to} eq 'site' )
+        {
+            $web_list->push_content($entry);
+        }
+        else {
+            $gen_list->push_content($entry);
+        }
+        my $item = XML::Element->new_from_lol(
+            [ 'listitem', [ 'para', $PARAMS{$key}->{descr} ] ] );
+
+        $entry->push_content($item);
+
+        if ( defined( $PARAMS{$key}->{default} ) ) {
+            my $def = XML::Element->new_from_lol(
+                [   'para',
+                    maketext("The default value for this parameter is: [_1]", $PARAMS{$key}->{default})
+                ]
+            );
+
+            $item->push_content($def);
+        }
+
+        if ( defined( $PARAMS{$key}->{constraint} ) ) {
+            my $constraint = XML::Element->new_from_lol(
+                [   'para',
+                    maketext("This parameter is constrained with the following regular expression: [_1]", $PARAMS{$key}->{constraint})
+                ]
+            );
+
+            $item->push_content($constraint);
+        }
+
+        if ( defined( $PARAMS{$key}->{not_for} ) ) {
+            my $info = XML::Element->new_from_lol(
+                [   'tip',
+                    [   'para',
+                        maketext(
+                            "This field is not supported for: [_1].",
+                            $PARAMS{$key}->{not_for}
+                        )
+                    ]
+                ]
+            );
+
+            $item->push_content($info);
+        }
+
+        if ( defined( $PARAMS{$key}->{alert} ) ) {
+            my $warn = XML::Element->new_from_lol(
+                [ 'warning', [ 'para', $PARAMS{$key}->{alert} ] ] );
+
+            $item->push_content($warn);
+        }
+    }
+
+}
+
 
 1;    # Magic true value required at end of module
 __END__

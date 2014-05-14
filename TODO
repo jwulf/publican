@@ -109,6 +109,9 @@ cd -
 jing  /usr/share/xml/docbook5/schema/rng/5.0/docbook.rng --noout test.xml
 
 
+
+Complete auto docs, website params.
+
 "A.1. Disallowed elements" & "A.2. Disallowed attributes" rewrite to say brands can do this, and why we _discourage_ them.
 
 
@@ -126,7 +129,8 @@ jing  /usr/share/xml/docbook5/schema/rng/5.0/docbook.rng --noout test.xml
 
 "4.5. Renaming a document" can we just use the auto docs?
 
-"4.7. Building a document" docbook 5 validation fails :(
-
 "When I build my document, I get an error about an ‘undefined language’ — what's wr" note case insensitive matching
+
+
+
 

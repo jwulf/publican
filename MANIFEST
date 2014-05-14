@@ -981,7 +981,6 @@ Users_Guide/en-US/Author_Group.xml
 Users_Guide/en-US/Book_Info.xml
 Users_Guide/en-US/Branding.xml
 Users_Guide/en-US/Building_a_Book.xml
-Users_Guide/en-US/Command_summary.xml
 Users_Guide/en-US/Conditionaltagging.xml
 Users_Guide/en-US/Creating_a_Book.xml
 Users_Guide/en-US/Creating_a_Brand.xml
@@ -1042,7 +1041,6 @@ Users_Guide/en-US/Permitted_numbers.xml
 Users_Guide/en-US/Preface.xml
 Users_Guide/en-US/Preparing_a_Book_for_Translation.xml
 Users_Guide/en-US/Publican_cfg_parameters.xml
-Users_Guide/en-US/Publican_cfg_parameters_order_by_alpha.xml
 Users_Guide/en-US/Publican_Commands.xml
 Users_Guide/en-US/Publican_Defaults.xml
 Users_Guide/en-US/Renaming_a_document.xml

@@ -81,7 +81,7 @@ my %LANG_NAME = (
     'zh-TW'      => '繁體中文',
 );
 
-%PARAMS = (
+my %PARAMS = (
     toc_path => {
         descr => maketext(
             "The path to the directory in which to create the top-level index.html file."

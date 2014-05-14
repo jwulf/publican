@@ -18,7 +18,6 @@
 	 <xi:include href="FAQ.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
 	 <xi:include href="Disallowed_tags_and_attributes.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
 	 <xi:include href="Auto_Docs.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
-	 <xi:include href="Publican_cfg_parameters.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
 	 <xi:include href="Auto_Docs_Configs.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
 	 <xi:include href="Dump_File.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
 	 <xi:include href="Desktop_menu_spec.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
