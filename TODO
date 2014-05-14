@@ -93,12 +93,12 @@ section on "Converting DB4 to DB5"
 convert PUG to DB5
 
 PUBLICAN_PATH="/home/jfearn/Source/fedora/publican.git"
-publican clean
+perl -CDAS -I $PUBLICAN_PATH/lib $PUBLICAN_PATH/bin/publican clean
 
 git checkout en-US/
 ../bin/db4-2-db5
 
-
+perl -CDAS -I $PUBLICAN_PATH/lib $PUBLICAN_PATH/bin/publican --help docbook
 perl -CDAS -I $PUBLICAN_PATH/lib $PUBLICAN_PATH/bin/publican build  --brand_dir $PUBLICAN_PATH/datadir/Common_Content/common-db5 --formats html
 
 cd build/en-US/xml

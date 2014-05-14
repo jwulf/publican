@@ -444,7 +444,11 @@ if ( $help and ( $action eq "docbook" ) ) {
         [ 'appendix', [ 'info', [ 'title', 'Command summary' ], ] ] );
 
     my $var_list = XML::Element->new_from_lol(
-        [ 'variablelist', {id => 'Auto_Docs-options'}, [ 'info', [ 'title', 'Command options' ], ], ] );
+        [   'variablelist',
+            { id => 'Auto_Docs-options' },
+            [ 'info', [ 'title', 'Command options' ], ],
+        ]
+    );
 
     $xml_doc->push_content($var_list);
 
@@ -460,7 +464,11 @@ if ( $help and ( $action eq "docbook" ) ) {
     }
 
     $var_list = XML::Element->new_from_lol(
-        [ 'variablelist', {id => 'Auto_Docs-actions'},[ 'info', [ 'title', 'Command actions' ], ], ] );
+        [   'variablelist',
+            { id => 'Auto_Docs-actions' },
+            [ 'info', [ 'title', 'Command actions' ], ],
+        ]
+    );
 
     $xml_doc->push_content($var_list);
 
@@ -486,61 +494,97 @@ if ( $help and ( $action eq "docbook" ) ) {
     my $cleaner = Publican::XmlClean->new( { exclude_ent => 1 } );
     $cleaner->process_file( { file => $out_file, out_file => $out_file } );
 
-# all the parameters
+    # all the parameters
 
     $xml_doc = XML::Element->new_from_lol(
         [ 'appendix', [ 'info', [ 'title', 'Configuration summary' ], ] ] );
 
     my $gen_list = XML::Element->new_from_lol(
-        [ 'variablelist', {id => 'Auto_Docs-actions'},[ 'info', [ 'title', 'General options' ], ], ] );
+        [   'variablelist',
+            { id => 'Auto_Docs-actions' },
+            [ 'info', [ 'title', 'General options' ], ],
+        ]
+    );
     my $brand_list = XML::Element->new_from_lol(
-        [ 'variablelist', {id => 'Auto_Docs-actions'},[ 'info', [ 'title', 'Brand options' ], ], ] );
+        [   'variablelist',
+            { id => 'Auto_Docs-actions' },
+            [ 'info', [ 'title', 'Brand options' ], ],
+        ]
+    );
     my $web_list = XML::Element->new_from_lol(
-        [ 'variablelist', {id => 'Auto_Docs-actions'},[ 'info', [ 'title', 'Site options' ], ], ] );
+        [   'variablelist',
+            { id => 'Auto_Docs-actions' },
+            [ 'info', [ 'title', 'Site options' ], ],
+        ]
+    );
 
     $xml_doc->push_content($gen_list);
     $xml_doc->push_content($brand_list);
     $xml_doc->push_content($web_list);
 
-    foreach my $key ( sort(keys(%PARAMS)) ) {
-            my $entry = XML::Element->new_from_lol(
-                [   'varlistentry',
-                    [ 'term', "$key" ]
-                ] );
+    foreach my $key ( sort( keys(%PARAMS) ) ) {
+        my $entry = XML::Element->new_from_lol(
+            [ 'varlistentry', [ 'term', "$key" ] ] );
 
-             if(defined($PARAMS{$key}->{limit_to}) && $PARAMS{$key}->{limit_to} eq 'brand' ) {
-		$brand_list->push_content($entry);
-		}elsif(defined($PARAMS{$key}->{limit_to}) && $PARAMS{$key}->{limit_to} eq 'site' ){
-		$web_list->push_content($entry);
-		} else{
-		$gen_list->push_content($entry);
-}
-            my $item  = XML::Element->new_from_lol(
-		       [ 'listitem', [ 'para', $PARAMS{$key}->{descr} ] ]
-            );
-	
-       		$entry->push_content($item);
-           if(defined($PARAMS{$key}->{alert})) {
-               my $warn =  XML::Element->new_from_lol(
-		       [ 'warning', [ 'para', $PARAMS{$key}->{alert} ] ]
-            );
+        if ( defined( $PARAMS{$key}->{limit_to} )
+            && $PARAMS{$key}->{limit_to} eq 'brand' )
+        {
+            $brand_list->push_content($entry);
+        }
+        elsif ( defined( $PARAMS{$key}->{limit_to} )
+            && $PARAMS{$key}->{limit_to} eq 'site' )
+        {
+            $web_list->push_content($entry);
+        }
+        else {
+            $gen_list->push_content($entry);
+        }
+        my $item = XML::Element->new_from_lol(
+            [ 'listitem', [ 'para', $PARAMS{$key}->{descr} ] ] );
 
-       		$item->push_content($warn);
-           }
-           if(defined($PARAMS{$key}->{default})) {
-               my $def =  XML::Element->new_from_lol(
-		       [ 'para', "The default value for this parameter is: " . $PARAMS{$key}->{default} ]
-            );
+        $entry->push_content($item);
 
-       		$item->push_content($def);
-           }
-           if(defined($PARAMS{$key}->{constraint})) {
-               my $constraint =  XML::Element->new_from_lol(
-		       [ 'para', "This parameter is constrained with the following regular expression: " . $PARAMS{$key}->{constraint} ]
+        if ( defined( $PARAMS{$key}->{default} ) ) {
+            my $def = XML::Element->new_from_lol(
+                [   'para',
+                    maketext("The default value for this parameter is: [_1]", $PARAMS{$key}->{default})
+                ]
             );
 
-       		$item->push_content($constraint);
-           }
+            $item->push_content($def);
+        }
+
+        if ( defined( $PARAMS{$key}->{constraint} ) ) {
+            my $constraint = XML::Element->new_from_lol(
+                [   'para',
+                    maketext("This parameter is constrained with the following regular expression: [_1]", $PARAMS{$key}->{constraint})
+                ]
+            );
+
+            $item->push_content($constraint);
+        }
+
+        if ( defined( $PARAMS{$key}->{not_for} ) ) {
+            my $info = XML::Element->new_from_lol(
+                [   'tip',
+                    [   'para',
+                        maketext(
+                            "This field is not supported for: [_1].",
+                            $PARAMS{$key}->{not_for}
+                        )
+                    ]
+                ]
+            );
+
+            $item->push_content($info);
+        }
+
+        if ( defined( $PARAMS{$key}->{alert} ) ) {
+            my $warn = XML::Element->new_from_lol(
+                [ 'warning', [ 'para', $PARAMS{$key}->{alert} ] ] );
+
+            $item->push_content($warn);
+        }
     }
 
     $out_file = 'en-US/Auto_Docs_Configs.xml';
@@ -572,15 +616,11 @@ sub _help_action_asdb {
         ]
     );
 
-    my $item = XML::Element->new_from_lol(
-            [ 'listitem', [ 'para', $brief ] ],
-    );
+    my $item
+        = XML::Element->new_from_lol( [ 'listitem', [ 'para', $brief ] ], );
 
-   $varentry->push_content($item);
-    my $varlist = XML::Element->new_from_lol(
-        [   'variablelist',
-        ]
-    );
+    $varentry->push_content($item);
+    my $varlist = XML::Element->new_from_lol( [ 'variablelist', ] );
 
     $item->push_content($varlist);
     foreach my $option ( sort( @{ $actions{$cmd}->{options} } ) ) {
@@ -599,7 +639,7 @@ sub _help_action_asdb {
                 = maketext( $options{"$option=s"} || $options{"$option=s@"} );
             $entry = XML::Element->new_from_lol(
                 [   'varlistentry',
-                    [ 'term', "--$option=", ['replaceable',  uc($option) ]],
+                    [ 'term', "--$option=", [ 'replaceable', uc($option) ] ],
                     [ 'listitem', [ 'para', $text ] ]
                 ]
             );

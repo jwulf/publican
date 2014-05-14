@@ -53,6 +53,11 @@
 				<para>
 					The default value for this parameter is: docs-5E
 				</para>
+				<warning>
+					<para>
+						This field is deprecated and will be removed from Publican in the future.
+					</para>
+				</warning>
 			</listitem>
 		</varlistentry>
 		<varlistentry>
@@ -185,11 +190,16 @@
 			<term>docname</term>
 			<listitem>
 				<para>
-					Name of this package. Fetched from title tag in xml_lang/TYPE_Info.xml if not set in cfg file.
+					Name of this document. Fetched from title tag in xml_lang/TYPE_Info.xml if not set in cfg file.
 				</para>
 				<para>
 					This parameter is constrained with the following regular expression: ^[0-9a-zA-Z_\-\.\+]+$
 				</para>
+				<tip>
+				<para>
+					This field is not supported for: brand.
+				</para>
+				</tip>
 			</listitem>
 		</varlistentry>
 		<varlistentry>
@@ -440,6 +450,11 @@
 				<para>
 					This parameter is constrained with the following regular expression: ^[0-9a-zA-Z_\-\.\+]+$
 				</para>
+				<tip>
+				<para>
+					This field is not supported for: brand.
+				</para>
+				</tip>
 			</listitem>
 		</varlistentry>
 		<varlistentry>

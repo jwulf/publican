@@ -81,6 +81,92 @@ my %LANG_NAME = (
     'zh-TW'      => '繁體中文',
 );
 
+%PARAMS = (
+    toc_path => {
+        descr => maketext(
+            "The path to the directory in which to create the top-level index.html file."
+        ),
+        mandatory => 1
+    },
+    tmpl_path => {
+        descr   => maketext("Full path to the template directory."),
+        default => $DEFAULT_TMPL_PATH
+    },
+    def_lang => {
+        descr => maketext(
+            "The default language for this website. Tables of contents for languages other than the default language will link to documents in the default language when translations are not available."
+        ),
+        default => $DEFAULT_LANG
+    },
+    db_file => {
+        descr => maketext(
+            "The name of the SQLite database file for your site, with the filename extension .db"
+        ),
+        mandatory => 1
+    },
+    host => {
+        descr =>
+            maketext("The web host, may be a full URI or a relative path."),
+        default => "/docs"
+    },
+    search => {
+        descr   => maketext("The HTML to inject in as the site serach."),
+        default => maketext("Google site search")
+    },
+    title => {
+        descr   => maketext("Title used for all site navigation pages."),
+        default => maketext("Documentation")
+    },
+    dump =>
+        { descr => maketext("Dump the publican database to an XML file.") },
+    dump_file => {
+        descr => maketext(
+            "The name of the file to dump the publican database to."),
+        default => $DEFAULT_DUMP_FILE
+    },
+    zip_dump => {
+        descr   => maketext("Zip up the dump file after dumping it"),
+        default => 0
+    },
+    toc_type => {
+        descr => maketext(
+            "Template to use for generagting the web style 1 toc file."),
+        default => "toc",
+        alert   => maketext(
+            'This field is deprecated and will be removed from Publican in the future.'
+        ),
+    },
+    toc_js => {
+        descr =>
+            maketext("The source file to use for JavaScript functionality."),
+        default => "default.js"
+    },
+    manual_toc_update => {
+        descr => maketext(
+            "Stop publican from automatically rebuilding teh web site everytime a book is installed, updated or removed."
+        ),
+        default => "0"
+    },
+    debug => {
+        descr   => maketext("Output extra messages when running publican."),
+        default => "0"
+    },
+    footer => {
+        descr => maketext(
+            "HTML to inject in to the footer of every page on the website."),
+        default => ""
+    },
+    web_style => {
+        descr => maketext(
+            "Publican supports mutliple base styles for websites, this picks one."
+        ),
+        default => "1",
+        alert   => maketext(
+            'This field is deprecated and will be removed from Publican in the future.'
+        )
+    },
+);
+
 # This is required to ensure that the correct localised strings are found when running
 # the commands on an non en-US command line
 my $locale = Publican::Localise->get_handle('en-US')
@@ -1092,14 +1178,18 @@ SEARCH
                 $book_data{book_clean} =~ s/_/ /g;
                 $book_data{types} = \@types;
 
-            foreach my $format (
-                sort ( insensitive_sort keys(%{ $list2->{$product}{$version}{$book}{formats} }) ) )
-            {
-                $book_data{base_format} = $format;
-                if ( $format =~ m/^html/ ) {
-                    last;
+                foreach my $format (
+                    sort ( insensitive_sort keys(
+                            %{  $list2->{$product}{$version}{$book}{formats}
+                            }
+                    ) )
+                    )
+                {
+                    $book_data{base_format} = $format;
+                    if ( $format =~ m/^html/ ) {
+                        last;
+                    }
                 }
-            }
 
                 if ( $lang eq $language ) {
                     push( @books, \%book_data );
@@ -1803,7 +1893,8 @@ sub write_product_index {
     $index_vars->{splash}
         = $self->get_splash(
         { path => $self->{toc_path} . "/$lang/$product" } );
-    $index_vars->{categories}        = (-d "$DEFAULT_TMPL_PATH/groups/$lang/$product");
+    $index_vars->{categories}
+        = ( -d "$DEFAULT_TMPL_PATH/groups/$lang/$product" );
 
     $self->{Template}->process(
         'products_index.tmpl', $index_vars,

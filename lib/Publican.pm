@@ -122,7 +122,9 @@ my %PARAM_OLD = (
         descr => maketext(
             'The brew dist to use for building the standalone desktop rpm.'),
         default => 'docs-5E',
-
+        alert   => maketext(
+            'This field is deprecated and will be removed from Publican in the future.'
+        ),
     },
     bridgehead_in_toc => {
         descr   => maketext('Display bridge head elements in the TOCs?'),
@@ -149,18 +151,15 @@ my %PARAM_OLD = (
     common_config => {
         descr   => maketext('Path to publican content.'),
         default => Publican::ConfigData->config('datadir'),
-
     },
     common_content => {
         descr   => maketext('Path to publican common content.'),
         default => Publican::ConfigData->config('datadir')
             . '/Common_Content',
-
     },
     condition => {
         descr => maketext(
             'Conditions on which to prune XML before transformation.'),
-
     },
     confidential => {
         descr   => maketext('Is the content confidential?'),
@@ -182,7 +181,7 @@ my %PARAM_OLD = (
     },
     docname => {
         descr => maketext(
-            'Name of this package. Fetched from title tag in xml_lang/TYPE_Info.xml if not set in cfg file.'
+            'Name of this document. Fetched from title tag in xml_lang/TYPE_Info.xml if not set in cfg file.'
         ),
         constraint => '^[0-9a-zA-Z_\-\.\+]+$',
         not_for    => 'brand',
@@ -211,18 +210,18 @@ my %PARAM_OLD = (
         default => '4.5',
     },
     dt_format => {
-        descr   => maketext( 'The format to use for the desktop output.' ),
+        descr   => maketext('The format to use for the desktop output.'),
         default => 'html-desktop',
     },
     dt_obsoletes => {
         descr => maketext(
-            'Space-separated list of packages the desktop package obsoletes.'
+            'Space-separated list of packages the desktop RPM obsoletes.'
         ),
 
     },
     dt_requires => {
         descr => maketext(
-            'Space-separated list of packages the desktop package requires.'),
+            'Space-separated list of packages the desktop RPM requires.'),
 
     },
     'ec_id' => {
@@ -235,8 +234,7 @@ my %PARAM_OLD = (
     },
     'ec_provider' => {
         descr => maketext(
-            'Eclipse plugin provider. Defaults to "Publican-[_1]"',
-            '$VERSION'
+            'Eclipse plugin provider. Defaults to "Publican-[_1]"', $VERSION
         ),
     },
     extras_dir => {
@@ -425,7 +423,7 @@ my %PARAM_OLD = (
         descr => maketext(
             'This is a special page for a Publican-generated website, not a standard book. Valid types are home, product, and version.'
         ),
-        constraint => '^(home|product|version|)$',
+        constraint => '^(home|product|version)$',
     },
     web_host => {
         descr => maketext(
@@ -496,17 +494,14 @@ my %PARAM_OLD = (
     drupal_menu_title => {
         descr => maketext(
             'Override the bookname that will be shown in the drupal menu.'),
-        default => '',
     },
     drupal_menu_block => {
-        descr => maketext(
-            'The menu where we can find the book. The default value is menu-user-guide'
-        ),
+        descr   => maketext( 'The menu where we can find the book.' ),
         default => 'user-guide',
     },
     drupal_image_path => {
         descr => maketext(
-            'The directory where the image should be stored in drupal server. The default is "sites/default/files/"'
+            'The directory where the image should be stored in drupal server.'
         ),
         default => 'sites/default/files/',
     },
