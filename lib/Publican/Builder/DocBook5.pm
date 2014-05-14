@@ -616,10 +616,10 @@ sub validate_xml {
     if ($@) {
         logger(
             maketext("RelaxNG Validation failed for '$dir/$main_file.xml': ")
-                . "\nIgnoring as LibXML2 does not validate non-standard Schematron.\n",
+                . "\nIGNORING: Validation is broken, see BZ #1097495\n",
             RED
         );
-#        croak("$@\n$!\n");
+##        croak("$@\n$!\n");
     }
     logger("RelaxNG Validation OK\n");
 
