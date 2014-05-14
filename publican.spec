@@ -14,7 +14,7 @@
 %define wwwdir /var/www/html/docs
 
 Name:           publican
-Version:        4.1.1
+Version:        4.1.2
 Release:        0%{?dist}
 Summary:        Common files and scripts for publishing with DocBook XML
 # For a breakdown of the licensing, refer to LICENSE
@@ -306,6 +306,9 @@ rm -rf $RPM_BUILD_ROOT
 %{wwwdir}/common-db5
 
 %changelog
+* Wed May 14 2014 Jeff Fearn <jfearn@redhat.com> 4.1.2-0
+- Fix broken DocBook5 validation stopping package builds. BZ #1097495
+
 * Thu May 8 2014 Jeff Fearn <jfearn@redhat.com> 4.1.1-0
 - Fix long tables and pre's breaking PDF build. BZ #1095574
 
