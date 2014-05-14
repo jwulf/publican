@@ -1,9 +1,13 @@
 
 # Track font name changes
 %define RHEL6 %([[ %{?dist}x == .el6[a-z]* ]] && echo 1 || echo 0)
+%define RHEL7 %([[ %{?dist}x == .el7[a-z]* ]] && echo 1 || echo 0)
 
 %define OTHER 1
 %if %{RHEL6}
+%define OTHER 0
+%endif
+%if %{RHEL7}
 %define OTHER 0
 %endif
 
@@ -15,7 +19,7 @@
 
 Name:           publican
 Version:        4.1.2
-Release:        0%{?dist}
+Release:        0.1%{?dist}
 Summary:        Common files and scripts for publishing with DocBook XML
 # For a breakdown of the licensing, refer to LICENSE
 License:        (GPLv2+ or Artistic) and CC0
@@ -90,7 +94,6 @@ BuildRequires:  perl(XML::Simple)
 BuildRequires:  perl(XML::TreeBuilder) => 5.1
 # BZ #1053609
 BuildRequires:  perl-XML-TreeBuilder >= 5.1
-BuildRequires:  wkhtmltopdf >= 0.12.1.development
 BuildRequires:  docbook-style-xsl >= 1.77.1
 BuildRequires:  desktop-file-utils
 BuildRequires:  gettext
@@ -107,7 +110,6 @@ BuildRequires:  perl(Lingua::EN::Fathom)
 # Most of these are handled automatically
 Requires:       perl(:MODULE_COMPAT_%(eval "`%{__perl} -V:version`"; echo $version))
 Requires:       perl(Locale::Maketext::Gettext)  >= 1.27-1.2
-Requires:       wkhtmltopdf >= 0.12.1.devlopment
 Requires:       rpm-build
 Requires:       docbook-style-xsl >= 1.77.1
 Requires:       perl(XML::LibXML)  >=  1.67
@@ -142,7 +144,18 @@ Requires:       lohit-tamil-fonts lohit-telugu-fonts dejavu-lgc-sans-mono-fonts
 Requires:       dejavu-fonts-common dejavu-serif-fonts dejavu-sans-fonts
 Requires:       dejavu-sans-mono-fonts overpass-fonts
 Requires:       wqy-zenhei-fonts
-
+Requires:       wkhtmltopdf >= 0.12.1.devlopment
+BuildRequires:  wkhtmltopdf >= 0.12.1.development
+BuildRequires:  liberation-mono-fonts liberation-sans-fonts liberation-serif-fonts
+BuildRequires:  cjkuni-uming-fonts ipa-gothic-fonts ipa-pgothic-fonts
+BuildRequires:  lklug-fonts baekmuk-ttf-batang-fonts
+%endif
+%if %{RHEL7}
+Requires:       liberation-mono-fonts liberation-sans-fonts liberation-serif-fonts
+Requires:       cjkuni-uming-fonts ipa-gothic-fonts ipa-pgothic-fonts
+Requires:       lklug-fonts baekmuk-ttf-batang-fonts overpass-fonts
+Requires:       wkhtmltopdf >= 0.12.1.devlopment
+BuildRequires:  wkhtmltopdf >= 0.12.1.development
 BuildRequires:  liberation-mono-fonts liberation-sans-fonts liberation-serif-fonts
 BuildRequires:  cjkuni-uming-fonts ipa-gothic-fonts ipa-pgothic-fonts
 BuildRequires:  lklug-fonts baekmuk-ttf-batang-fonts
@@ -151,7 +164,8 @@ BuildRequires:  lklug-fonts baekmuk-ttf-batang-fonts
 Requires:       liberation-mono-fonts liberation-sans-fonts liberation-serif-fonts
 Requires:       cjkuni-uming-fonts ipa-gothic-fonts ipa-pgothic-fonts
 Requires:       lklug-fonts baekmuk-ttf-batang-fonts overpass-fonts
-
+Requires:       fop
+BuildRequires:  fop
 BuildRequires:  liberation-mono-fonts liberation-sans-fonts liberation-serif-fonts
 BuildRequires:  cjkuni-uming-fonts ipa-gothic-fonts ipa-pgothic-fonts
 BuildRequires:  lklug-fonts baekmuk-ttf-batang-fonts
@@ -306,6 +320,9 @@ rm -rf $RPM_BUILD_ROOT
 %{wwwdir}/common-db5
 
 %changelog
+* Wed May 14 2014 Jeff Fearn <jfearn@redhat.com> 4.1.2-0.1
+- Fix Fedora and RHEL7  requires
+
 * Wed May 14 2014 Jeff Fearn <jfearn@redhat.com> 4.1.2-0
 - Fix broken DocBook5 validation stopping package builds. BZ #1097495
 
