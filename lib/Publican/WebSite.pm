@@ -160,6 +160,7 @@ my %PARAMS = (
         descr => maketext(
             "Publican supports mutliple base styles for websites, this picks one."
         ),
+        constraint => '[1-2]',
         default => "1",
         alert   => maketext(
             'This field is deprecated and will be removed from Publican in the future.'
@@ -288,7 +289,6 @@ sub new {
 
     my $conf = { INCLUDE_PATH => $tmpl_path, ENCODING => 'utf8', };
 
-    #    $conf->{DEBUG} = Template::Constants::DEBUG_ALL if ($debug);
     $conf->{DEBUG} = Template::Constants::DEBUG_VARS if ($debug);
 
     # create Template object
@@ -1167,7 +1167,7 @@ SEARCH
                     else {
                         print( STDERR
                                 "ERROR: bogus entry found in DB: $lang/$product/$version/$type/$book\n"
-                        );
+                        ) if($self->{debug});
                     }
 
                     push( @types, \%type_data );
@@ -2213,6 +2213,66 @@ SQL
 
     return;
 }
+
+
+sub params_as_docbook {
+    my ($web_list) = @_;
+
+    foreach my $key ( sort( keys(%PARAMS) ) ) {
+        my $entry = XML::Element->new_from_lol(
+            [ 'varlistentry', [ 'term', "$key" ] ] );
+
+        $web_list->push_content($entry);
+        my $item = XML::Element->new_from_lol(
+            [ 'listitem', [ 'para', $PARAMS{$key}->{descr} ] ] );
+
+        $entry->push_content($item);
+
+        if ( defined( $PARAMS{$key}->{default} ) ) {
+            my $def = XML::Element->new_from_lol(
+                [   'para',
+                    maketext("The default value for this parameter is: [_1]", $PARAMS{$key}->{default})
+                ]
+            );
+
+            $item->push_content($def);
+        }
+
+        if ( defined( $PARAMS{$key}->{constraint} ) ) {
+            my $constraint = XML::Element->new_from_lol(
+                [   'para',
+                    maketext("This parameter is constrained with the following regular expression: [_1]", $PARAMS{$key}->{constraint})
+                ]
+            );
+
+            $item->push_content($constraint);
+        }
+
+        if ( defined( $PARAMS{$key}->{not_for} ) ) {
+            my $info = XML::Element->new_from_lol(
+                [   'tip',
+                    [   'para',
+                        maketext(
+                            "This field is not supported for: [_1].",
+                            $PARAMS{$key}->{not_for}
+                        )
+                    ]
+                ]
+            );
+
+            $item->push_content($info);
+        }
+
+        if ( defined( $PARAMS{$key}->{alert} ) ) {
+            my $warn = XML::Element->new_from_lol(
+                [ 'warning', [ 'para', $PARAMS{$key}->{alert} ] ] );
+
+            $item->push_content($warn);
+        }
+    }
+
+}
+
 
 1;    # Magic true value required at end of module
 __END__

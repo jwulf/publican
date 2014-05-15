@@ -17,6 +17,6 @@
 		When built, this results in a package named <package>menu-example</package>.
 	</para>
 	 
-<programlisting><xi:include href="extras/menu-example.spec" parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" /></programlisting>
+<programlisting language="RPM Spec"><xi:include href="extras/menu-example.spec" parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" /></programlisting>
 </appendix>
 

@@ -9,6 +9,9 @@
 		<info>
 			<title>General options</title>
 		</info>
+		<para>
+			These are set in the books or brands configuration files.
+		</para>
 		<varlistentry>
 			<term>arch</term>
 			<listitem>
@@ -217,7 +220,7 @@
 			<term>drupal_image_path</term>
 			<listitem>
 				<para>
-					The directory where the image should be stored in drupal server. The default is "sites/default/files/"
+					The directory where the image should be stored in drupal server.
 				</para>
 				<para>
 					The default value for this parameter is: sites/default/files/
@@ -228,7 +231,7 @@
 			<term>drupal_menu_block</term>
 			<listitem>
 				<para>
-					The menu where we can find the book. The default value is menu-user-guide
+					The menu where we can find the book.
 				</para>
 				<para>
 					The default value for this parameter is: user-guide
@@ -240,9 +243,6 @@
 			<listitem>
 				<para>
 					Override the bookname that will be shown in the drupal menu.
-				</para>
-				<para>
-					The default value for this parameter is:
 				</para>
 			</listitem>
 		</varlistentry>
@@ -261,7 +261,7 @@
 			<term>dt_obsoletes</term>
 			<listitem>
 				<para>
-					Space-separated list of packages the desktop package obsoletes.
+					Space-separated list of packages the desktop RPM obsoletes.
 				</para>
 			</listitem>
 		</varlistentry>
@@ -269,7 +269,7 @@
 			<term>dt_requires</term>
 			<listitem>
 				<para>
-					Space-separated list of packages the desktop package requires.
+					Space-separated list of packages the desktop RPM requires.
 				</para>
 			</listitem>
 		</varlistentry>
@@ -304,7 +304,7 @@
 			<term>ec_provider</term>
 			<listitem>
 				<para>
-					Eclipse plugin provider. Defaults to "Publican-$VERSION"
+					Eclipse plugin provider. Defaults to "Publican-v4.1.2"
 				</para>
 			</listitem>
 		</varlistentry>
@@ -716,27 +716,13 @@
 			</listitem>
 		</varlistentry>
 		<varlistentry>
-			<term>web_style</term>
-			<listitem>
-				<para>
-					Splash pages should be generated to be compatible with this web style. Valid values are 1 and 2.
-				</para>
-				<para>
-					The default value for this parameter is: 1
-				</para>
-				<para>
-					This parameter is constrained with the following regular expression: [1-2]
-				</para>
-			</listitem>
-		</varlistentry>
-		<varlistentry>
 			<term>web_type</term>
 			<listitem>
 				<para>
 					This is a special page for a Publican-generated website, not a standard book. Valid types are home, product, and version.
 				</para>
 				<para>
-					This parameter is constrained with the following regular expression: ^(home|product|version|)$
+					This parameter is constrained with the following regular expression: ^(home|product|version)$
 				</para>
 			</listitem>
 		</varlistentry>
@@ -780,6 +766,9 @@
 		<info>
 			<title>Brand options</title>
 		</info>
+		<para>
+			These are set in the brands configuration files.
+		</para>
 		<varlistentry>
 			<term>banned_attrs</term>
 			<listitem>
@@ -860,6 +849,189 @@
 		<info>
 			<title>Site options</title>
 		</info>
+		<para>
+			These are set in the sites configuration file.
+		</para>
+		<varlistentry>
+			<term>db_file</term>
+			<listitem>
+				<para>
+					The name of the SQLite database file for your site, with the filename extension .db
+				</para>
+			</listitem>
+		</varlistentry>
+		<varlistentry>
+			<term>debug</term>
+			<listitem>
+				<para>
+					Output extra messages when running publican.
+				</para>
+				<para>
+					The default value for this parameter is: 0
+				</para>
+			</listitem>
+		</varlistentry>
+		<varlistentry>
+			<term>def_lang</term>
+			<listitem>
+				<para>
+					The default language for this website. Tables of contents for languages other than the default language will link to documents in the default language when translations are not available.
+				</para>
+				<para>
+					The default value for this parameter is: en-US
+				</para>
+			</listitem>
+		</varlistentry>
+		<varlistentry>
+			<term>dump</term>
+			<listitem>
+				<para>
+					Dump the publican database to an XML file.
+				</para>
+			</listitem>
+		</varlistentry>
+		<varlistentry>
+			<term>dump_file</term>
+			<listitem>
+				<para>
+					The name of the file to dump the publican database to.
+				</para>
+				<para>
+					The default value for this parameter is: /var/www/html/DUMP.xml
+				</para>
+			</listitem>
+		</varlistentry>
+		<varlistentry>
+			<term>footer</term>
+			<listitem>
+				<para>
+					HTML to inject in to the footer of every page on the website.
+				</para>
+				<para>
+					The default value for this parameter is:
+				</para>
+			</listitem>
+		</varlistentry>
+		<varlistentry>
+			<term>host</term>
+			<listitem>
+				<para>
+					The web host, may be a full URI or a relative path.
+				</para>
+				<para>
+					The default value for this parameter is: /docs
+				</para>
+			</listitem>
+		</varlistentry>
+		<varlistentry>
+			<term>manual_toc_update</term>
+			<listitem>
+				<para>
+					Stop publican from automatically rebuilding teh web site everytime a book is installed, updated or removed.
+				</para>
+				<para>
+					The default value for this parameter is: 0
+				</para>
+			</listitem>
+		</varlistentry>
+		<varlistentry>
+			<term>search</term>
+			<listitem>
+				<para>
+					The HTML to inject in as the site serach.
+				</para>
+				<para>
+					The default value for this parameter is: Google site search
+				</para>
+			</listitem>
+		</varlistentry>
+		<varlistentry>
+			<term>title</term>
+			<listitem>
+				<para>
+					Title used for all site navigation pages.
+				</para>
+				<para>
+					The default value for this parameter is: Documentation
+				</para>
+			</listitem>
+		</varlistentry>
+		<varlistentry>
+			<term>tmpl_path</term>
+			<listitem>
+				<para>
+					Full path to the template directory.
+				</para>
+				<para>
+					The default value for this parameter is: /usr/share/publican/templates
+				</para>
+			</listitem>
+		</varlistentry>
+		<varlistentry>
+			<term>toc_js</term>
+			<listitem>
+				<para>
+					The source file to use for JavaScript functionality.
+				</para>
+				<para>
+					The default value for this parameter is: default.js
+				</para>
+			</listitem>
+		</varlistentry>
+		<varlistentry>
+			<term>toc_path</term>
+			<listitem>
+				<para>
+					The path to the directory in which to create the top-level index.html file.
+				</para>
+			</listitem>
+		</varlistentry>
+		<varlistentry>
+			<term>toc_type</term>
+			<listitem>
+				<para>
+					Template to use for generagting the web style 1 toc file.
+				</para>
+				<para>
+					The default value for this parameter is: toc
+				</para>
+				<warning>
+					<para>
+						This field is deprecated and will be removed from Publican in the future.
+					</para>
+				</warning>
+			</listitem>
+		</varlistentry>
+		<varlistentry>
+			<term>web_style</term>
+			<listitem>
+				<para>
+					Publican supports mutliple base styles for websites, this picks one.
+				</para>
+				<para>
+					The default value for this parameter is: 1
+				</para>
+				<para>
+					This parameter is constrained with the following regular expression: [1-2]
+				</para>
+				<warning>
+					<para>
+						This field is deprecated and will be removed from Publican in the future.
+					</para>
+				</warning>
+			</listitem>
+		</varlistentry>
+		<varlistentry>
+			<term>zip_dump</term>
+			<listitem>
+				<para>
+					Zip up the dump file after dumping it
+				</para>
+				<para>
+					The default value for this parameter is: 0
+				</para>
+			</listitem>
+		</varlistentry>
 	</variablelist>
 </appendix>
 

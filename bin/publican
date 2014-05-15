@@ -503,18 +503,21 @@ if ( $help and ( $action eq "docbook" ) ) {
         [   'variablelist',
             { id => 'Auto_Docs-actions' },
             [ 'info', [ 'title', 'General options' ], ],
+	    ['para', maketext("These are set in the books or brands configuration files.") ],
         ]
     );
     my $brand_list = XML::Element->new_from_lol(
         [   'variablelist',
             { id => 'Auto_Docs-actions' },
             [ 'info', [ 'title', 'Brand options' ], ],
+	    ['para', maketext("These are set in the brands configuration files.") ],
         ]
     );
     my $web_list = XML::Element->new_from_lol(
         [   'variablelist',
             { id => 'Auto_Docs-actions' },
             [ 'info', [ 'title', 'Site options' ], ],
+	    ['para', maketext("These are set in the sites configuration file.") ],
         ]
     );
 
@@ -523,6 +526,7 @@ if ( $help and ( $action eq "docbook" ) ) {
     $xml_doc->push_content($web_list);
 
     $xml_doc->push_content(Publican::params_as_docbook($gen_list,$brand_list,$web_list));
+    $xml_doc->push_content(Publican::WebSite::params_as_docbook($web_list));
 
     $out_file = 'en-US/Auto_Docs_Configs.xml';
     open( $OUTDOC, ">:encoding(UTF-8)", $out_file )

@@ -3,13 +3,13 @@
 <!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
 %BOOK_ENTITIES;
 ]>
-<appendix conformance="137" version="5.0" xml:id="appe-Publican-Users_Guide-Disallowed_elements_and_attributes" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
-	<info xml:id="info-Publican-Users_Guide-Disallowed_elements_and_attributes">
-		<title>Disallowed elements and attributes</title>
+<appendix conformance="137" version="5.0" xml:id="appe-Publican-Users_Guide-Discouraged_elements_and_attributes" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<info xml:id="info-Publican-Users_Guide-Discouraged_elements_and_attributes">
+		<title>Discouraged elements and attributes</title>
 	</info>
 	 <note>
-		<info xml:id="info-Publican-Users_Guide-Supported_unsupported_and_disallowed">
-			<title>Supported, unsupported, and disallowed</title>
+		<info xml:id="info-Publican-Users_Guide-Supported_unsupported_and_discouraged">
+			<title>Supported, unsupported, and discouraged</title>
 		</info>
 		 <para>
 			Not every <firstterm>element</firstterm> (tag) and attribute that works with <application>Publican</application> is <firstterm>supported</firstterm>. Specifically, not every tag has been tested with regards its effect on the presentation of a document once it has been built in HTML or PDF.
@@ -17,52 +17,24 @@
 
 	</note>
 	 <para>
-		<application>Publican</application> works with almost all DocBook 4.5 elements and their attributes, and most of these elements are <firstterm>supported</firstterm>. Supported elements and attributes are those whose presentation in <application>Publican</application> HTML and PDF output has been tested and is of an acceptable quality.
+		<application>Publican</application> works with almost all DocBook elements and their attributes, and most of these elements are <firstterm>supported</firstterm>. Supported elements and attributes are those whose presentation in <application>Publican</application> HTML and PDF output has been tested and is of an acceptable quality.
 	</para>
 	 <para>
 		Other elements and attributes that are not known to be harmful or redundant but which have not been tested for quality are <firstterm>unsupported</firstterm>. If material within a particular DocBook tag does not look correct when you build a document in HTML or PDF, the problem could be that the transformation logic for that tag has not yet been tested. Build the document again and examine <application>Publican</application>'s output as the document builds. <application>Publican</application> presents warnings about unsupported tags that it encounters in your XML files.
 	</para>
 	 <para>
-		Finally, a small group of elements and attributes are <firstterm>disallowed</firstterm>. These elements and attributes are set out below, each accompanied by rationale explaining why it is disallowed.
+		Finally, a small group of elements and attributes are <firstterm>discouraged</firstterm>. These elements and attributes are set out below, each accompanied by rationale explaining why it is discouraged.
 	</para>
 	 <para>
 		Use the command <prompt>$</prompt> <command>publican print_known</command> to print a list of tags that <application>Publican</application> supports, and the command <command>publican print_banned</command> to print a list of tags that are banned in <application>Publican</application>.
 	</para>
-	 <section conformance="138" xml:id="sect-Publican-Users_Guide-Disallowed_elements_and_attributes-Disallowed_elements">
-		<info xml:id="info-Publican-Users_Guide-Disallowed_elements">
-			<title>Disallowed elements</title>
+	 <section conformance="138" xml:id="sect-Publican-Users_Guide-Discouraged_elements_and_attributes-Discouraged_elements">
+		<info xml:id="info-Publican-Users_Guide-Discouraged_elements">
+			<title>Discouraged elements</title>
 		</info>
 		 <variablelist>
-			<varlistentry>
-				<term><tag>&lt;caution&gt;</tag></term>
-				 <term><tag>&lt;tip&gt;</tag></term>
-				 <listitem>
-					<para>
-						DocBook XML supports five <firstterm>admonitions</firstterm> of varying severity: <tag>&lt;tip&gt;</tag>, <tag>&lt;note&gt;</tag>, <tag>&lt;important&gt;</tag>, <tag>&lt;caution&gt;</tag>, and <tag>&lt;warning&gt;</tag>. Taken together, these represent a very fine-grained set of distinctions. It is unlikely that these fine distinctions can be applied consistently within a document, especially when more than one person writes or maintains the document. Moreover, this level of granularity is meaningless to readers. By design, <application>Publican</application> disallows the <tag>&lt;tip&gt;</tag> and <tag>&lt;caution&gt;</tag> elements, these elements being the two most redundant in the set.
-					</para>
-					 <para>
-						Use <tag>&lt;note&gt;</tag> instead of <tag>&lt;tip&gt;</tag>, and use either <tag>&lt;important&gt;</tag> or <tag>&lt;warning&gt;</tag> instead of <tag>&lt;caution&gt;</tag>. Some criteria by which you might select a suitable level of severity are presented in the ‘Document Conventions’ section of the preface of books produced with <application>Publican</application>'s default brand.
-					</para>
-
-				</listitem>
-
-			</varlistentry>
-			 <varlistentry>
-				<term><tag>&lt;entrytbl&gt;</tag></term>
-				 <listitem>
-					<para>
-						<application>Publican</application> depends on an external application, <application>FOP</application>, to render PDF documents. At present, <application>FOP</application> does not support nested tables, so attempts to build PDF files from <application>Publican</application> documents that contain nested tables fail.
-					</para>
-					 <para>
-						Nested tables are therefore disallowed at least until they are supported in <application>FOP</application>. If you planned to include a nested table in your document, reconsider your data structure.
-					</para>
-
-				</listitem>
-
-			</varlistentry>
 			 <varlistentry>
 				<term><tag>&lt;glossdiv&gt;</tag></term>
-				 <term><tag>&lt;glosslist&gt;</tag></term>
 				 <listitem>
 					<para>
 						This tag set presents terms in glossaries in alphabetical order; however, the terms are sorted according to the original language of the XML, regardless of how these terms are translated into any other language. For example, a glossary produced with <tag>&lt;glossdiv&gt;</tag>s that looks like this in English:
@@ -180,20 +152,10 @@
 
 			</varlistentry>
 			 <varlistentry>
-				<term><tag>&lt;link&gt;</tag></term>
-				 <listitem>
-					<para>
-						The <tag>&lt;link&gt;</tag> tag provides a general-purpose hyperlink and therefore offers nothing that the <tag>&lt;xref&gt;</tag> and <tag>&lt;ulink&gt;</tag> tags do not, for internal and external hyperlinks respectively. The <tag>&lt;link&gt;</tag> tag is disallowed due to its redundancy.
-					</para>
-
-				</listitem>
-
-			</varlistentry>
-			 <varlistentry>
 				<term><tag>&lt;olink&gt;</tag></term>
 				 <listitem>
 					<para>
-						The <tag>&lt;olink&gt;</tag> tag provides cross-references between XML documents. For <tag>&lt;olink&gt;</tag>s to work outside of documents that are all hosted within the same library of XML files, you must provide a URL for the document to which you are linking. In environments that use <tag>&lt;olink&gt;</tag>s, these URLs can be supplied either as an XML entity or with a server-side script. <application>Publican</application> produces documents intended for wide dissemination in which URLs are always necessary for cross-references. Therefore, the <tag>&lt;olink&gt;</tag> tag offers no advantage over the <tag>&lt;ulink&gt;</tag> tag, and is disallowed due to its redundancy.
+						The <tag>&lt;olink&gt;</tag> tag provides cross-references between XML documents. For <tag>&lt;olink&gt;</tag>s to work outside of documents that are all hosted within the same library of XML files, you must provide a URL for the document to which you are linking. In environments that use <tag>&lt;olink&gt;</tag>s, these URLs can be supplied either as an XML entity or with a server-side script. <application>Publican</application> does not provide any way to build or use a database for these links.
 					</para>
 
 				</listitem>
@@ -204,9 +166,9 @@
 
 	</section>
 	
-	 <section conformance="139" xml:id="sect-Publican-Users_Guide-Disallowed_elements_and_attributes-Disallowed_attributes">
-		<info xml:id="info-Publican-Users_Guide-Disallowed_attributes">
-			<title>Disallowed attributes</title>
+	 <section conformance="139" xml:id="sect-Publican-Users_Guide-Discouraged_elements_and_attributes-Discouraged_attributes">
+		<info xml:id="info-Publican-Users_Guide-Discouraged_attributes">
+			<title>Discouraged attributes</title>
 		</info>
 		 <variablelist>
 			<varlistentry>
@@ -315,7 +277,7 @@
 						This is, not surprisingly, what we want.
 					</para>
 					 <para>
-						The <parameter>xreflabel</parameter> attribute is therefore disallowed.
+						The <parameter>xreflabel</parameter> attribute is therefore discouraged.
 					</para>
 
 				</listitem>
@@ -357,7 +319,7 @@ The solution is in &lt;xref linkend="The_Secret" endterm="final"/&gt;.</programl
 						A translator sees the <tag>&lt;titleabbrev&gt;</tag> in a PO file as:
 					</para>
 					 
-<programlisting>#. Tag: titleabbrev
+<programlisting language="GNU Gettext">#. Tag: titleabbrev
 #, no-c-format
 msgid "the final chapter"
 msgstr ""</programlisting>
@@ -365,18 +327,18 @@ msgstr ""</programlisting>
 						and sees the text that contains the <tag>&lt;xref&gt;</tag> elsewhere in the PO file (or, more likely, in a completely different PO file) as:
 					</para>
 					 
-<programlisting>#. Tag: para
+<programlisting language="GNU Gettext">#. Tag: para
 #, no-c-format
-msgid "The solution is in &lt;xref linkend="The_Secret" endterm="final"/&gt;."
+msgid "The solution is in &lt;xref linkend=\"The_Secret\" endterm=\"final\"/&gt;."
 msgstr ""</programlisting>
 					 <para>
 						The translator has no way of telling what will be substituted for <tag>&lt;xref linkend="The_Secret" endterm="final"/&gt;</tag> when the document builds, so a translation in Italian might read:
 					</para>
 					 
-<programlisting>#. Tag: para
+<programlisting language="GNU Gettext">#. Tag: para
 #, no-c-format
-msgid "The solution is in &lt;xref linkend="The_Secret" endterm="final"/&gt;."
-msgstr "La soluzione è in &lt;xref linkend="The_Secret" endterm="final"/&gt;."</programlisting>
+msgid "The solution is in &lt;xref linkend=\"The_Secret\" endterm=\"final\"/&gt;."
+msgstr "La soluzione è in &lt;xref linkend=\"The_Secret\" endterm=\"final\"/&gt;."</programlisting>
 					 <para>
 						Note the preposition <literal>in</literal>.
 					</para>
@@ -405,7 +367,7 @@ msgstr "La soluzione è in &lt;xref linkend="The_Secret" endterm="final"/&gt;."<
 						Furthermore, note that the combined preposition and article also poses a problem with regard to whether this word should be placed in the text surrounding the <tag>&lt;xref&gt;</tag>, or in the <tag>&lt;titleabbrev&gt;</tag>. Whichever of these two solutions the translator selects will cause problems when the <parameter>endterm</parameter> appears in other grammatical contexts, because not all Italian prepositions can combine with the definite article in this way.
 					</para>
 					 <para>
-						Due to the problems that <parameter>endterm</parameter> presents for translation, <application>Publican</application> disallows this attribute.
+						Due to the problems that <parameter>endterm</parameter> presents for translation, <application>Publican</application> discourages this attribute.
 					</para>
 
 				</listitem>

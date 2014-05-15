@@ -412,13 +412,6 @@ my %PARAM_OLD = (
         alert =>
             'web_home is deprecated and will be removed from Publican in the future. Use "web_type: home" instead.',
     },
-    web_style => {
-        descr => maketext(
-            'Splash pages should be generated to be compatible with this web style. Valid values are 1 and 2.'
-        ),
-        constraint => '[1-2]',
-        default    => '1',
-    },
     web_type => {
         descr => maketext(
             'This is a special page for a Publican-generated website, not a standard book. Valid types are home, product, and version.'
@@ -975,7 +968,7 @@ sub debug_msg {
     }
     else {
 
-        #        logger( "$caller: $func, $line\n\t$arg\n", RED );
+##        logger( "$caller: $func, $line\n\t$arg\n", RED );
         logger( "$caller: $arg", RED );
     }
 

@@ -115,10 +115,6 @@ Complete auto docs, website params.
 "A.1. Disallowed elements" & "A.2. Disallowed attributes" rewrite to say brands can do this, and why we _discourage_ them.
 
 
-"publican.cfg parameters" pull this in using pod2docbook.
-
-"Alphabetical index of publican.cfg parameters" ... 
-
 "Sample spec file for desktop menu package" up to date?
 
 

@@ -323,9 +323,10 @@ a:visited {
 	text-decoration: none;
 }
 
-.toc a, .qandaset a {
+.toc *, .qandaset a {
 	border: medium none;
-	font-weight: normal;
+	font-weight: normal !important;
+	font-family: "liberation sans", "Myriad ", "Bitstream Vera Sans", "Lucida Grande", "Luxi Sans", "Trebuchet MS", helvetica, verdana, arial, sans-serif !important;
 }
 
 .toc a:hover, .qandaset a:hover {
