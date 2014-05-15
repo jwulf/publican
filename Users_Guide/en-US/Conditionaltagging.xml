@@ -14,7 +14,7 @@
 		<application>Publican</application> makes it easy to manage differences between multiple versions of a book by allowing you to use a single source for all versions. <firstterm>Conditional tagging</firstterm> allows you to make sure that version-specific content only appears in the correct version; that is, you <firstterm>conditionalize</firstterm> the content.
 	</para>
 	 <para>
-		To conditionalize content in a book, use the tag attribute <prompt>$</prompt> <command>condition</command>. For example, let's say the book <citetitle>How To Use Product Foo</citetitle> has an "upstream", "enterprise", and "beta" version:
+		To conditionalize content in a book, use the tag attribute <command>condition</command>. For example, let's say the book <citetitle>How To Use Product Foo</citetitle> has an "upstream", "enterprise", and "beta" version:
 	</para>
 	 
 <programlisting language="XML">&lt;para condition="upstream"&gt;
@@ -33,7 +33,7 @@
 	To make &lt;application&gt;Foo&lt;/application&gt; start automatically at boot time, edit the &lt;filename&gt;/etc/init.d/foo&lt;/filename&gt; file.
 &lt;/para&gt;</programlisting>
 	 <para>
-		To build a specific version (and thereby capture all content conditionalized for that version), add the <prompt>$</prompt> <command>condition: <replaceable>version</replaceable></command> parameter to the <filename>publican.cfg</filename> file and run the <prompt>$</prompt> <command>publican build</command> command as normal. For example, if you add <literal>condition: upstream</literal> to the <filename>publican.cfg</filename> file of <citetitle>How To Use Product Foo</citetitle> and run:
+		To build a specific version (and thereby capture all content conditionalized for that version), add the <command>condition: <replaceable>version</replaceable></command> parameter to the <filename>publican.cfg</filename> file and run the <prompt>$</prompt> <command>publican build</command> command as normal. For example, if you add <literal>condition: upstream</literal> to the <filename>publican.cfg</filename> file of <citetitle>How To Use Product Foo</citetitle> and run:
 	</para>
 	 
 <screen><prompt>$</prompt> <command>publican build --formats=pdf --langs=en-US</command></screen>
