@@ -2,6 +2,9 @@
 - Fix broken DocBook5 validation stopping package builds. BZ #1097495
 - Many updates to Users' Guide.
 - Remove incorrect prompt. BZ #1096544
+- Added tip formatting. BZ #1033830
+- Simply styling of code, and admonitions in HTML5. BZ #1093498
+- Add iframe video support to DocBook5 HTML5. BZ #752021
 
 4.1.1 Thu May 8 2014
 - Fix long tables and pre's breaking PDF build. BZ #1095574

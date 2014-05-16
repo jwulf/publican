@@ -1032,5 +1032,123 @@ because it has to parse lines one by one to place the gfx
   </xsl:choose>
 </xsl:template>
 
+<!-- change <video> to iframe -->
+<xsl:template match="d:videodata">
+  <xsl:variable name="filename">
+    <xsl:call-template name="mediaobject.filename">
+      <xsl:with-param name="object" select=".."/>
+    </xsl:call-template>
+  </xsl:variable>
+
+  <iframe>
+    <xsl:call-template name="common.html.attributes"/>
+
+    <xsl:attribute name="src">
+      <xsl:value-of select="$filename"/>
+    </xsl:attribute>
+
+    <xsl:call-template name="video.poster"/>
+
+    <xsl:apply-templates select="@*[local-name() != 'fileref']"/>
+    <xsl:apply-templates select="../d:multimediaparam"/>
+    
+    <!-- add any fallback content -->
+    <xsl:call-template name="video.fallback"/>
+    <xsl:text> </xsl:text>
+  </iframe>
+</xsl:template>
+
+<!-- add iframe to img rules -->
+<xsl:template match="*" mode="convert.to.style">
+
+  <xsl:variable name="element" select="local-name(.)"/>
+
+  <xsl:variable name="style.from.atts">
+    <xsl:for-each select="@*">
+
+      <xsl:choose>
+        <!-- width and height attributes are ok for img element -->
+        <xsl:when test="local-name() = 'width' and ($element != 'img' and  $element != 'iframe')">
+          <xsl:text>width: </xsl:text>
+          <xsl:value-of select="."/>
+          <xsl:text>; </xsl:text>
+        </xsl:when>
+
+        <xsl:when test="local-name() = 'height' and ($element != 'img' and  $element != 'iframe')">
+          <xsl:text>height </xsl:text>
+          <xsl:value-of select="."/>
+          <xsl:text>; </xsl:text>
+        </xsl:when>
+
+        <xsl:when test="local-name() = 'align'">
+          <xsl:text>text-align: </xsl:text>
+          <xsl:value-of select="."/>
+          <xsl:text>; </xsl:text>
+        </xsl:when>
+
+        <xsl:when test="local-name() = 'valign'">
+          <xsl:text>vertical-align: </xsl:text>
+          <xsl:value-of select="."/>
+          <xsl:text>; </xsl:text>
+        </xsl:when>
+
+        <xsl:when test="local-name() = 'border'">
+          <xsl:text>border: </xsl:text>
+          <xsl:value-of select="."/>
+          <xsl:text>; </xsl:text>
+        </xsl:when>
+
+        <xsl:when test="local-name() = 'cellspacing'">
+          <xsl:text>border-spacing: </xsl:text>
+          <xsl:value-of select="."/>
+          <xsl:text>; </xsl:text>
+        </xsl:when>
+
+        <xsl:when test="local-name() = 'cellpadding'">
+          <xsl:text>padding: </xsl:text>
+          <xsl:value-of select="."/>
+          <xsl:text>; </xsl:text>
+        </xsl:when>
+      </xsl:choose>
+    </xsl:for-each>
+  </xsl:variable>
+
+  <!-- merge existing styles with these new styles -->
+  <xsl:variable name="style">
+    <xsl:value-of select="concat($style.from.atts, @style)"/>
+  </xsl:variable>
+
+  <!-- HTML5: reserved for element name conversion if needed -->
+  <xsl:variable name="element.name">
+    <xsl:value-of select="local-name(.)"/>
+  </xsl:variable>
+
+  <xsl:element name="{$element.name}">
+    <xsl:if test="string-length($style) != 0">
+      <xsl:attribute name="style">
+        <xsl:value-of select="$style"/>
+      </xsl:attribute>
+    </xsl:if>
+    <!-- skip converted atts, and also skip disallowed summary attribute -->
+    <xsl:for-each select="@*">
+      <xsl:choose>
+        <xsl:when test="local-name(.) = 'width' and ( $element != 'img' and  $element != 'iframe')"/>
+        <xsl:when test="local-name(.) = 'height' and ( $element != 'img' and  $element != 'iframe')"/>
+        <xsl:when test="local-name(.) = 'summary'"/>
+        <xsl:when test="local-name(.) = 'border'"/>
+        <xsl:when test="local-name(.) = 'cellspacing'"/>
+        <xsl:when test="local-name(.) = 'cellpadding'"/>
+        <xsl:when test="local-name(.) = 'style'"/>
+        <xsl:when test="local-name(.) = 'align'"/>
+        <xsl:when test="local-name(.) = 'valign'"/>
+        <xsl:otherwise>
+          <xsl:copy-of select="."/>
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:for-each>
+    <xsl:apply-templates mode="convert.to.style"/>
+  </xsl:element>
+</xsl:template>
+
 </xsl:stylesheet>
 

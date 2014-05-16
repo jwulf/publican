@@ -151,5 +151,24 @@ array.
 </equation>
 </para>
 -->
+<!-- 
+<mediaobject>
+  <videoobject>
+     <videodata contentdepth="413" contentwidth="660" controls="" format="video/webm" fileref="http://clips.vorwaerts-gmbh.de/VfE.webm"/>
+   </videoobject>
+ </mediaobject>
+<mediaobject>
+  <videoobject>
+     <videodata contentdepth="413" contentwidth="660"
+ fileref="http://player.vimeo.com/video/30704252?title=0[1844952446]byline=0[1844952446]portrait=0"/>
+   </videoobject>
+    <caption/>
+ </mediaobject>
+<mediaobject>
+  <videoobject>
+     <videodata fileref="http://youtube.com/embed/B-Wd-Q3F8KM"/>
+   </videoobject>
+ </mediaobject>
+-->
 </preface>
 
