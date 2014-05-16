@@ -303,9 +303,10 @@ sub build {
                                         if ( !defined($sort)
                                         || $sort !~ /^\d+$/ );
 
-				    my $subtitles = 0;
+                                    my $subtitles = 0;
                                     my $annot = $node->attr('annotations');
-                                    $subtitles = 1 if($annot && lc($annot) eq 'yes');
+                                    $subtitles = 1
+                                        if ( $annot && lc($annot) eq 'yes' );
 
                                     my $term
                                         = $node->look_down( '_tag', 'term' )
@@ -588,7 +589,7 @@ sub transform {
             rcopy_glob(
                 "$brand_path/book_templates/*.css",
                 "$tmp_dir/$lang/html-pdf/"
-            ) if(glob("$brand_path/book_templates/*.css"));
+            ) if ( glob("$brand_path/book_templates/*.css") );
             $tmpl_path = "$brand_path/book_templates:$tmpl_path";
         }
 
@@ -677,9 +678,11 @@ sub transform {
             buildpath           => abs_path("$tmp_dir/$lang/html-pdf"),
             chunk_section_depth => $chunk_section_depth,
             bodyfont            => $bodyfont,
-            bodyface => (-f "$tmp_dir/$lang/html-pdf/$bodyfont-font-faces.css"),
-            monofont            => $monofont,
-            monoface => (-f "$tmp_dir/$lang/html-pdf/$monofont-font-faces.css"),
+            bodyface =>
+                ( -f "$tmp_dir/$lang/html-pdf/$bodyfont-font-faces.css" ),
+            monofont => $monofont,
+            monoface =>
+                ( -f "$tmp_dir/$lang/html-pdf/$monofont-font-faces.css" ),
         };
 
         if (@keywords) {
@@ -1711,12 +1714,20 @@ sub adjustColumnWidths {
 
     my @widths = ();
     my ( $prop, $perc, $exact, $total_prop ) = ( 0, 0, 0, 0 );
+    my $set_width = undef;
 
     # $node is XML::LibXML::Element
     foreach my $node ( $doc->getElementsByTagName($tagname) ) {
 
         # $width is XML::LibXML::Attr
         my $width = $node->getAttribute($width_tag) || '1*';
+        my $width = $node->getAttribute($width_tag);
+        if ($width) {
+            $set_width = 1;
+        }
+        else {
+            $width = '1*';
+        }
         if ( $width =~ m/^(\d+)\*$/ ) {
             $prop++;
             $total_prop += $1;
@@ -1760,11 +1771,12 @@ sub adjustColumnWidths {
     }
 
     my $i = 0;
-    foreach my $node ( $doc->getElementsByTagName($tagname) ) {
-        $node->setAttribute( $width_tag, $widths[$i] );
-        $i++;
+    if ($set_width) {
+        foreach my $node ( $doc->getElementsByTagName($tagname) ) {
+            $node->setAttribute( $width_tag, $widths[$i] );
+            $i++;
+        }
     }
-
     return ($content);
 }
 

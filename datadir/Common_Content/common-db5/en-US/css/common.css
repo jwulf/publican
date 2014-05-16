@@ -236,6 +236,7 @@ table {
 	border-collapse: collapse;
 	width: 100%;
 	word-wrap: break-word;
+	table-layout: fixed;
 }
 
 th, td {

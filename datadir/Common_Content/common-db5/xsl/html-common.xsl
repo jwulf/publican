@@ -22,7 +22,7 @@
 <xsl:param name="langpath"  select="''"/>
 <xsl:param name="desktop"   select="0"/>
 
-<xsl:param name="tablecolumns.extension" select="0"/>
+<xsl:param name="tablecolumns.extension" select="1"/>
 <xsl:param name="use.embed.for.svg" select="1"/>
 <xsl:param name="table.borders.with.css" select="0"/>
 <xsl:param name="ulink.target" select="''"/>
@@ -228,43 +228,7 @@ part toc
       </xsl:call-template>
     </colgroup>
   </xsl:variable>
-
-  <!-- then modify colgroup attributes with extension -->
-  <xsl:variable name="colgroup.with.extension">
-    <xsl:choose>
-      <xsl:when test="$use.extensions != 0
-                      and $tablecolumns.extension != 0">
-        <xsl:choose>
-          <xsl:when test="function-available('stbl:adjustColumnWidths')">
-            <xsl:copy-of select="stbl:adjustColumnWidths($colgroup.with.attributes)"/>
-          </xsl:when>
-          <xsl:when test="function-available('xtbl:adjustColumnWidths')">
-            <xsl:copy-of select="xtbl:adjustColumnWidths($colgroup.with.attributes)"/>
-          </xsl:when>
-          <xsl:when test="function-available('ptbl:adjustColumnWidths')">
-            <xsl:copy-of select="ptbl:adjustColumnWidths($colgroup.with.attributes)"/>
-          </xsl:when>
-          <xsl:otherwise>
-            <xsl:message terminate="yes">
-              <xsl:text>No adjustColumnWidths function available.</xsl:text>
-            </xsl:message>
-          </xsl:otherwise>
-        </xsl:choose>
-      </xsl:when>
-      <xsl:otherwise>
-        <xsl:copy-of select="$colgroup.with.attributes"/>
-      </xsl:otherwise>
-    </xsl:choose>
-  </xsl:variable>
-
-  <!-- Now convert to @style -->
-  <xsl:variable name="colgroup">
-    <xsl:call-template name="colgroup.with.style">
-      <xsl:with-param name="colgroup" select="$colgroup.with.extension"/>
-    </xsl:call-template>
-  </xsl:variable>
-
-  <xsl:variable name="explicit.table.width">
+ <xsl:variable name="explicit.table.width">
     <xsl:call-template name="pi.dbhtml_table-width">
       <xsl:with-param name="node" select=".."/>
     </xsl:call-template>
@@ -315,7 +279,46 @@ part toc
     </xsl:if>
   </xsl:variable>
 
-  <!-- assemble a table @style -->
+
+  <!-- then modify colgroup attributes with extension -->
+  <xsl:variable name="colgroup.with.extension">
+    <xsl:choose>
+      <xsl:when test="$use.extensions != 0
+                      and $tablecolumns.extension != 0">
+        <xsl:choose>
+          <xsl:when test="function-available('stbl:adjustColumnWidths')">
+            <xsl:copy-of select="stbl:adjustColumnWidths($colgroup.with.attributes)"/>
+          </xsl:when>
+          <xsl:when test="function-available('xtbl:adjustColumnWidths')">
+            <xsl:copy-of select="xtbl:adjustColumnWidths($colgroup.with.attributes)"/>
+          </xsl:when>
+          <xsl:when test="function-available('ptbl:adjustColumnWidths')">
+            <xsl:copy-of select="ptbl:adjustColumnWidths($colgroup.with.attributes)"/>
+          </xsl:when>
+          <xsl:when test="function-available('perl:adjustColumnWidths')">
+            <xsl:copy-of select="perl:adjustColumnWidths($table.width, $colgroup.with.attributes)"/>
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:message terminate="yes">
+              <xsl:text>No adjustColumnWidths function available.</xsl:text>
+            </xsl:message>
+          </xsl:otherwise>
+        </xsl:choose>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:copy-of select="$colgroup.with.attributes"/>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:variable>
+
+  <!-- Now convert to @style -->
+  <xsl:variable name="colgroup">
+    <xsl:call-template name="colgroup.with.style">
+      <xsl:with-param name="colgroup" select="$colgroup.with.extension"/>
+    </xsl:call-template>
+  </xsl:variable>
+
+   <!-- assemble a table @style -->
   <xsl:variable name="table.style">
 
     <xsl:if test="$cellspacing != '' or $html.cellspacing != ''">
