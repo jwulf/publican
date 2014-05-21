@@ -5,6 +5,7 @@
 - Added tip formatting. BZ #1033830
 - Remove incorrect prompt. BZ #1096544
 - Add "popper" to hide program listing after 4 lines. BZ #1088051
+- Fix white space being removed from msgids when merging. BZ #1097090
 
 4.1.3 Wed May 21 2014
 - Fix extra space breaking spec files with sort_order. BZ #1099262

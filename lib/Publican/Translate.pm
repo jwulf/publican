@@ -829,7 +829,7 @@ sub translate {
     # If a tag has attributes we need to remove them for comparison as
     # the PO format does not allow this to be stored
 ## BUGBUG document this better
-    if ( $msgid =~ m/^"<$tag([\t ]+[^>]+)>[\t ]*(.*)$/ ) {
+    if ( $msgid =~ m/^"<$tag([\t ]+[^>]+)>(.*)$/ ) {
         $attr_text = $1;
         $msgid     = qq{"$2};
         $attr_text =~ s/\\//g;
