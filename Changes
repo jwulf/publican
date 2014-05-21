@@ -1,3 +1,7 @@
+4.1.3 Wed May 21 2014
+- Fix extra space breaking spec files with sort_order. BZ #1099262
+- Make div.title bold in db4.css. BZ #1049661
+
 4.1.2 Wed May 14 2014
 - Fix broken DocBook5 validation stopping package builds. BZ #1097495
 - Many updates to Users' Guide.
@@ -22,7 +26,7 @@
 - Fix replaceable override in DB 4.5 XSL. BZ #1054462
 - Store processing instructions. BZ #1045463
 - Add releaseinfo support. BZ #1050789
-- Add suppor5t for wkhtmltopdf 0.12.0
+- Add support for wkhtmltopdf 0.12.0
 - Add non-minified JS files. BZ #1062109
 - Use term as ID node for varlistentry. BZ #1050836
 - Fix acroread search and image issues. BZ #1038393 #1065810

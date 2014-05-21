@@ -347,6 +347,11 @@ p, div.para, div.formalpara {
     padding-bottom: 0;
     padding-top: 0;
 }
+
+div.title {
+    font-weight: bold;
+}
+
 pre {
     border-radius: 11px 11px 11px 11px;
     page-break-inside: avoid;
