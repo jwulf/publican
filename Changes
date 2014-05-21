@@ -1,3 +1,11 @@
+4.2.0 UNRELEASED
+- Add iframe video support to DocBook5 HTML5. BZ #752021
+- Stop calculating column width if no width is set. BZ #1084860
+- Simply styling of code, and admonitions in HTML5. BZ #1093498
+- Added tip formatting. BZ #1033830
+- Remove incorrect prompt. BZ #1096544
+- Add "popper" to hide program listing after 4 lines. BZ #1088051
+
 4.1.3 Wed May 21 2014
 - Fix extra space breaking spec files with sort_order. BZ #1099262
 - Make div.title bold in db4.css. BZ #1049661
@@ -5,11 +13,6 @@
 4.1.2 Wed May 14 2014
 - Fix broken DocBook5 validation stopping package builds. BZ #1097495
 - Many updates to Users' Guide.
-- Remove incorrect prompt. BZ #1096544
-- Added tip formatting. BZ #1033830
-- Simply styling of code, and admonitions in HTML5. BZ #1093498
-- Add iframe video support to DocBook5 HTML5. BZ #752021
-- Stop calculating column width if no width is set. BZ #1084860
 
 4.1.1 Thu May 8 2014
 - Fix long tables and pre's breaking PDF build. BZ #1095574

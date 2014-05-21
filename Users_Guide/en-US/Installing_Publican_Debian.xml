@@ -162,7 +162,7 @@ Pin-Priority: -10</programlisting>
 		<step>
 			<para>
 				
-<screen><prompt>$</prompt> <command>apt-get search libxslt</command>
+<screen role="popper" id="pants"><prompt>$</prompt> <command>apt-get search libxslt</command>
 <computeroutput>gambas3-gb-xml-xslt - Gambas XSLT component</computeroutput>
 <computeroutput>libidzebra-2.0-mod-alvis - IDZebra filter alvis (XSLT filter for XML)</computeroutput>
 <computeroutput>libidzebra-2.0-mod-dom - IDZebra filter 'dom' (XML DOM internal document model with XSLT)</computeroutput>

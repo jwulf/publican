@@ -1720,7 +1720,6 @@ sub adjustColumnWidths {
     foreach my $node ( $doc->getElementsByTagName($tagname) ) {
 
         # $width is XML::LibXML::Attr
-        my $width = $node->getAttribute($width_tag) || '1*';
         my $width = $node->getAttribute($width_tag);
         if ($width) {
             $set_width = 1;

@@ -526,7 +526,7 @@ if ( $help and ( $action eq "docbook" ) ) {
     $xml_doc->push_content($web_list);
 
     $xml_doc->push_content(Publican::params_as_docbook($gen_list,$brand_list,$web_list));
-    $xml_doc->push_content(Publican::WebSite::params_as_docbook($web_list));
+    $xml_doc->push_content(Publican::WebSite::site_params_as_docbook($web_list));
 
     $out_file = 'en-US/Auto_Docs_Configs.xml';
     open( $OUTDOC, ">:encoding(UTF-8)", $out_file )

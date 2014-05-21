@@ -64,6 +64,14 @@
 <xsl:param name="section.autolabel" select="1"/>
 <xsl:param name="section.label.includes.component.label" select="1"/>
 
+<xsl:param name="local.l10n.xml" select="document('')"/>
+<l:i18n xmlns:l="http://docbook.sourceforge.net/xmlns/l10n/1.0">
+    <l:l10n language="en">
+        <l:gentext key="showall" text="Show All"/>
+        <l:gentext key="hide" text="Hide"/>
+    </l:l10n>
+</l:i18n>
+
 <xsl:param name="generate.toc">
 set toc
 book toc
@@ -118,6 +126,22 @@ part toc
       loadMenu();
     </script>
   </xsl:if>
+    <script type="text/javascript">
+function pop(entity) {
+	if(entity) {
+		var my_parent = entity.parentNode;
+		var my_class = my_parent.className;
+		my_parent.className = my_class.replace(/popper/,"popped");
+	}
+}
+function unpop(entity) {
+	if(entity) {
+		var my_parent = entity.parentNode;
+		var my_class = my_parent.className;
+		my_parent.className = my_class.replace(/popped/,"popper");
+	}
+}
+    </script>
 </xsl:template>
 
 <xsl:template name="user.header.content">
@@ -1151,6 +1175,75 @@ because it has to parse lines one by one to place the gfx
     </xsl:for-each>
     <xsl:apply-templates mode="convert.to.style"/>
   </xsl:element>
+</xsl:template>
+
+<xsl:template match="d:programlisting|d:screen|d:synopsis">
+  <xsl:param name="suppress-numbers" select="'0'"/>
+
+  <xsl:call-template name="anchor"/>
+  <xsl:variable name="showall">
+    <xsl:call-template name="gentext">
+        <xsl:with-param name="key" select="'showall'"/>
+    </xsl:call-template>
+  </xsl:variable>
+  <xsl:variable name="hide">
+    <xsl:call-template name="gentext">
+        <xsl:with-param name="key" select="'hide'"/>
+    </xsl:call-template>
+  </xsl:variable>
+  
+  <xsl:variable name="div.element">pre</xsl:variable>
+  <xsl:choose>
+    <xsl:when test="$suppress-numbers = '0'                     and @linenumbering = 'numbered'                     and $use.extensions != '0'                     and $linenumbering.extension != '0'">
+      <xsl:variable name="rtf">
+        <xsl:choose>
+          <xsl:when test="$highlight.source != 0">
+            <xsl:call-template name="apply-highlighting"/>
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:apply-templates/>
+          </xsl:otherwise>
+        </xsl:choose>
+      </xsl:variable>
+      <xsl:element name="{$div.element}" namespace="http://www.w3.org/1999/xhtml">
+        <xsl:apply-templates select="." mode="common.html.attributes"/>
+        <xsl:call-template name="id.attribute"/>
+        <xsl:if test="@width != ''">
+          <xsl:attribute name="width">
+            <xsl:value-of select="@width"/>
+          </xsl:attribute>
+        </xsl:if>
+        <xsl:if test="@role = 'popper'">
+        <a href="#" onclick="pop(this);return false;" class="show">[<xsl:value-of select="$showall"/>]</a><a href="#" onclick="unpop(this);return false;" class="hide">[<xsl:value-of select="$hide"/>]</a><br/>
+        </xsl:if>
+        <xsl:call-template name="number.rtf.lines">
+          <xsl:with-param name="rtf" select="$rtf"/>
+        </xsl:call-template>
+      </xsl:element>
+    </xsl:when>
+    <xsl:otherwise>
+      <xsl:element name="{$div.element}" namespace="http://www.w3.org/1999/xhtml">
+        <xsl:apply-templates select="." mode="common.html.attributes"/>
+        <xsl:call-template name="id.attribute"/>
+        <xsl:if test="@width != ''">
+          <xsl:attribute name="width">
+            <xsl:value-of select="@width"/>
+          </xsl:attribute>
+        </xsl:if>
+        <xsl:if test="@role = 'popper'">
+        <a href="#" onclick="pop(this);return false;" class="show">[<xsl:value-of select="$showall"/>]</a><a href="#" onclick="unpop(this);return false;" class="hide">[<xsl:value-of select="$hide"/>]</a><br/>
+        </xsl:if>
+        <xsl:choose>
+          <xsl:when test="$highlight.source != 0">
+            <xsl:call-template name="apply-highlighting"/>
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:apply-templates/>
+          </xsl:otherwise>
+        </xsl:choose>
+      </xsl:element>
+    </xsl:otherwise>
+  </xsl:choose>
 </xsl:template>
 
 </xsl:stylesheet>

@@ -161,8 +161,8 @@ my %PARAMS = (
             "Publican supports mutliple base styles for websites, this picks one."
         ),
         constraint => '[1-2]',
-        default => "1",
-        alert   => maketext(
+        default    => "1",
+        alert      => maketext(
             'This field is deprecated and will be removed from Publican in the future.'
         )
     },
@@ -1167,7 +1167,7 @@ SEARCH
                     else {
                         print( STDERR
                                 "ERROR: bogus entry found in DB: $lang/$product/$version/$type/$book\n"
-                        ) if($self->{debug});
+                        ) if ( $self->{debug} );
                     }
 
                     push( @types, \%type_data );
@@ -1179,10 +1179,8 @@ SEARCH
                 $book_data{types} = \@types;
 
                 foreach my $format (
-                    sort ( insensitive_sort keys(
-                            %{  $list2->{$product}{$version}{$book}{formats}
-                            }
-                    ) )
+                    sort insensitive_sort
+                    keys( %{ $list2->{$product}{$version}{$book}{formats} } )
                     )
                 {
                     $book_data{base_format} = $format;
@@ -2214,8 +2212,7 @@ SQL
     return;
 }
 
-
-sub params_as_docbook {
+sub site_params_as_docbook {
     my ($web_list) = @_;
 
     foreach my $key ( sort( keys(%PARAMS) ) ) {
@@ -2231,7 +2228,10 @@ sub params_as_docbook {
         if ( defined( $PARAMS{$key}->{default} ) ) {
             my $def = XML::Element->new_from_lol(
                 [   'para',
-                    maketext("The default value for this parameter is: [_1]", $PARAMS{$key}->{default})
+                    maketext(
+                        "The default value for this parameter is: [_1]",
+                        $PARAMS{$key}->{default}
+                    )
                 ]
             );
 
@@ -2241,7 +2241,10 @@ sub params_as_docbook {
         if ( defined( $PARAMS{$key}->{constraint} ) ) {
             my $constraint = XML::Element->new_from_lol(
                 [   'para',
-                    maketext("This parameter is constrained with the following regular expression: [_1]", $PARAMS{$key}->{constraint})
+                    maketext(
+                        "This parameter is constrained with the following regular expression: [_1]",
+                        $PARAMS{$key}->{constraint}
+                    )
                 ]
             );
 
@@ -2272,7 +2275,6 @@ sub params_as_docbook {
     }
 
 }
-
 
 1;    # Magic true value required at end of module
 __END__

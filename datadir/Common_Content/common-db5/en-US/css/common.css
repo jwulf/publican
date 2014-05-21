@@ -9,7 +9,7 @@ div.itemizedlist, div.affiliation {
 }
 
 h1, h2, h3, h4, h5, h6, header .home, .title {
-	color: #336699;
+	color: #454545;
 	font-family: "overpass", "liberation sans", "Myriad ", "Bitstream Vera Sans", "Lucida Grande", "Luxi Sans", "Trebuchet MS", helvetica, verdana, arial, sans-serif;
 }
 
@@ -226,6 +226,20 @@ pre {
 	white-space: pre-wrap;
 	word-wrap: break-word;
 }
+
+
+pre.popper {
+	max-height: 6.3em;
+	overflow: hidden;
+	border-bottom: 1px dashed #666666;
+}
+
+.popper > .hide {display: none; }
+
+pre.popped { max-height: 100%; }
+.popped > .show {display: none; }
+
+@media print { .hide, .show { display: none; } pre.popper {max-height: auto;}}
 
 .example {
 	padding: 0.5em 0px 0.5em 1em;
