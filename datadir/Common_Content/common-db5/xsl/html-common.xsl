@@ -10,7 +10,7 @@
   xmlns:xverb="xalan://com.nwalsh.xalan.Verbatim"
   xmlns:exsl="http://exslt.org/common"
   xmlns:perl="urn:perl"
-  exclude-result-prefixes="stbl xtbl ptbl exsl"
+  exclude-result-prefixes="stbl xtbl ptbl exsl d sverb xverb"
   extension-element-prefixes="perl"
 >
 <xsl:param name="embedtoc"  select="'0'"/>
@@ -33,6 +33,7 @@
 <xsl:param name="formal.object.break.after">0</xsl:param>
 <xsl:param name="highlight.source" select="1"/>
 <xsl:param name="draft.mode">maybe</xsl:param>
+<xsl:param name="poper.as.dl"  select="0"/>
 
 <!-- Admonition Graphics -->
 <xsl:param name="admon.graphics" select="1"/>
@@ -43,7 +44,7 @@
         <xsl:value-of select="concat($tocpath, '/../', $brand, '/', $langpath, '/images/')"/>
       </xsl:when>
       <xsl:otherwise>
-		<xsl:text>Common_Content/images/</xsl:text>
+        <xsl:text>Common_Content/images/</xsl:text>
       </xsl:otherwise>
     </xsl:choose>
 </xsl:param>
@@ -101,47 +102,121 @@ part toc
     <link rel="stylesheet" type="text/css"><xsl:attribute name="href"><xsl:value-of select="$tocpath"/>/../<xsl:value-of select="$brand"/>/<xsl:value-of select="$langpath"/>/css/brand.css</xsl:attribute></link>
     <link rel="stylesheet" type="text/css"><xsl:attribute name="href"><xsl:value-of select="$tocpath"/>/../print.css</xsl:attribute><xsl:attribute name="media">print</xsl:attribute></link>
     <script type="text/javascript">
-    	<xsl:attribute name="src"><xsl:value-of select="$tocpath"/>/labels.js</xsl:attribute>
-    	<xsl:text> </xsl:text>
+        <xsl:attribute name="src"><xsl:value-of select="$tocpath"/>/labels.js</xsl:attribute>
+        <xsl:text> </xsl:text>
     </script>
     <script type="text/javascript">
-    	<xsl:attribute name="src"><xsl:value-of select="$tocpath"/>/../toc.js</xsl:attribute>
-    	<xsl:text> </xsl:text>
+        <xsl:attribute name="src"><xsl:value-of select="$tocpath"/>/../toc.js</xsl:attribute>
+        <xsl:text> </xsl:text>
     </script>
     <script type="text/javascript">
-    	<xsl:attribute name="src"><xsl:value-of select="$tocpath"/>/../jquery-1.7.1.min.js</xsl:attribute>
-    	<xsl:text> </xsl:text>
+        <xsl:attribute name="src"><xsl:value-of select="$tocpath"/>/../jquery-1.7.1.min.js</xsl:attribute>
+        <xsl:text> </xsl:text>
     </script>
     <script type="text/javascript">
       <xsl:if test="$web.type = ''">
-	current_book = '<xsl:copy-of select="$pop_name"/>';
-	current_version = '<xsl:copy-of select="$pop_ver"/>';
-	current_product = '<xsl:copy-of select="$pop_prod"/>';
+    current_book = '<xsl:copy-of select="$pop_name"/>';
+    current_version = '<xsl:copy-of select="$pop_ver"/>';
+    current_product = '<xsl:copy-of select="$pop_prod"/>';
       </xsl:if>
       <xsl:if test="$web.type != ''">
-	current_book = '';
-	current_version = '';
+    current_book = '';
+    current_version = '';
       </xsl:if>
       toc_path = '<xsl:value-of select="$tocpath"/>';
       loadMenu();
     </script>
   </xsl:if>
-    <script type="text/javascript">
+
+    <script type="text/javascript"><![CDATA[
 function pop(entity) {
-	if(entity) {
-		var my_parent = entity.parentNode;
-		var my_class = my_parent.className;
-		my_parent.className = my_class.replace(/popper/,"popped");
-	}
+    if(entity) {
+        var my_parent = entity.parentNode;
+        var my_class = my_parent.className;
+        my_parent.className = my_class.replace(/popper/,"popped");
+    }
 }
 function unpop(entity) {
-	if(entity) {
-		var my_parent = entity.parentNode;
-		var my_class = my_parent.className;
-		my_parent.className = my_class.replace(/popped/,"popper");
-	}
+    if(entity) {
+        var my_parent = entity.parentNode;
+        var my_class = my_parent.className;
+        my_parent.className = my_class.replace(/popped/,"popper");
+    }
 }
-    </script>
+
+function siblings(entity){
+    var r = [];
+    for ( var n = entity.parentNode.firstChild; n; n = n.nextSibling ) 
+       if ( n.nodeType == 1 && n != entity)
+          r.push( n );        
+    return r;
+}
+
+/* This displays an element and hides all it's siblings */
+function activateElement(id) {
+    var entity = document.getElementById(id);
+    if(entity.className.indexOf("active") == -1) {
+        entity.className = entity.className + " active";
+    }
+    var sibs =  siblings(entity);
+
+    for(var i=0; i < sibs.length; i++) {
+    if(sibs[i].className.indexOf("active") != -1) {
+         sibs[i].className = sibs[i].className.replace(/[ ]*active/, '');
+        }
+    }
+}
+
+function getCookie(name) {
+    var name_c = window.location.hostname + '-' + name;
+
+    if(document.cookie) {
+        var cookies = document.cookie.split(/ *; */);
+        for(var i=0; i < cookies.length; i++) {
+            var current_c = cookies[i].split("=");
+            if(current_c[0] == name_c) {
+                return(current_c[1]);
+                break;
+            }
+        }
+    }
+    return('');
+}
+
+
+function setCookie(name, value, expires, path) {
+    name = window.location.hostname + '-' + name;
+
+    var curCookie = name + "=" + value + 
+        ((expires) ? ";expires=" + expires.toGMTString() : "") + 
+        ((path) ? ";path=" + path : "");
+    document.cookie = curCookie; 
+}
+
+function setDefLangCookie(entity) {
+    setCookie('switchery', entity.options[entity.selectedIndex].value, '', '/');
+}
+
+function initSwitchery() {
+    var divs = document.getElementsByTagName('div');
+    for(i in divs) {
+        if(typeof(divs[i].className) != 'undefined' && divs[i].className.indexOf("switchery") != -1) {
+            var lang = getCookie('switchery');
+            if(lang != '') {
+                var entity = document.getElementById(divs[i].id + '-' + lang);
+                if(entity) {
+                    entity.onclick();
+                    entity.parentNode.lastChild.value = lang;
+                } else {
+                    divs[i].firstChild.firstChild.onclick();
+                }
+            } else {
+                divs[i].firstChild.firstChild.onclick();
+            }
+        }
+    }
+}
+]]>    </script>
 </xsl:template>
 
 <xsl:template name="user.header.content">
@@ -153,25 +228,26 @@ function unpop(entity) {
 </xsl:template>
 
 <xsl:template name="body.attributes">
-	<xsl:if test="starts-with($writing.mode, 'rl')">
-		<xsl:attribute name="dir">rtl</xsl:attribute>
-	</xsl:if>
-	<xsl:variable name="class">
-		<xsl:if test="ancestor-or-self::*[@status][1]/@status = 'draft'">
-			<xsl:text>draft </xsl:text>
-		</xsl:if>
-		<xsl:if test="$embedtoc != 0">
-			<xsl:text>toc_embeded </xsl:text>
-		</xsl:if>
-       		<xsl:if test="$desktop != 0">
-		  <xsl:text>desktop </xsl:text>
-		</xsl:if>
-	</xsl:variable>
+    <xsl:if test="starts-with($writing.mode, 'rl')">
+        <xsl:attribute name="dir">rtl</xsl:attribute>
+    </xsl:if>
+    <xsl:variable name="class">
+        <xsl:if test="ancestor-or-self::*[@status][1]/@status = 'draft'">
+            <xsl:text>draft </xsl:text>
+        </xsl:if>
+        <xsl:if test="$embedtoc != 0">
+            <xsl:text>toc_embeded </xsl:text>
+        </xsl:if>
+               <xsl:if test="$desktop != 0">
+          <xsl:text>desktop </xsl:text>
+        </xsl:if>
+    </xsl:variable>
         <xsl:if test="$class != ''">
-	  <xsl:attribute name="class">
-		<xsl:value-of select="$class"/>
-	  </xsl:attribute>
-	</xsl:if>
+      <xsl:attribute name="class">
+        <xsl:value-of select="$class"/>
+      </xsl:attribute>
+    </xsl:if>
+  <xsl:attribute name="onLoad">initSwitchery();</xsl:attribute>
 </xsl:template>
 
 <xsl:template match="*" mode="class.attribute">
@@ -653,104 +729,104 @@ function unpop(entity) {
 </xsl:template>
 
 <xsl:template name="graphical.admonition">
-	<xsl:variable name="admon.type">
-		<xsl:choose>
-			<xsl:when test="local-name(.)='note'">Note</xsl:when>
-			<xsl:when test="local-name(.)='warning'">Warning</xsl:when>
-			<xsl:when test="local-name(.)='important'">Important</xsl:when>
-			<xsl:when test="local-name(.)='tip'">Tip</xsl:when>
-			<xsl:when test="local-name(.)='caution'">Caution</xsl:when>
-			<xsl:otherwise>Note</xsl:otherwise>
-		</xsl:choose>
-	</xsl:variable>
+    <xsl:variable name="admon.type">
+        <xsl:choose>
+            <xsl:when test="local-name(.)='note'">Note</xsl:when>
+            <xsl:when test="local-name(.)='warning'">Warning</xsl:when>
+            <xsl:when test="local-name(.)='important'">Important</xsl:when>
+            <xsl:when test="local-name(.)='tip'">Tip</xsl:when>
+            <xsl:when test="local-name(.)='caution'">Caution</xsl:when>
+            <xsl:otherwise>Note</xsl:otherwise>
+        </xsl:choose>
+    </xsl:variable>
 
-	<xsl:variable name="alt">
-		<xsl:call-template name="gentext">
-			<xsl:with-param name="key" select="$admon.type"/>
-		</xsl:call-template>
-	</xsl:variable>
+    <xsl:variable name="alt">
+        <xsl:call-template name="gentext">
+            <xsl:with-param name="key" select="$admon.type"/>
+        </xsl:call-template>
+    </xsl:variable>
 
-	<div xmlns="http://www.w3.org/1999/xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
                 <xsl:call-template name="common.html.attributes"/>
-		<xsl:apply-templates select="." mode="class.attribute">
-			<xsl:with-param name="class" select="concat('admonition ', local-name(.))"/>
-		</xsl:apply-templates>
-			
-		<xsl:if test="$admon.style != ''">
-			<xsl:attribute name="style">
-				<xsl:value-of select="$admon.style"/>
-			</xsl:attribute>
-		</xsl:if>
-		<xsl:if test="@id or @xml:id">
-			<xsl:attribute name="id">
-				<xsl:value-of select="(@id|@xml:id)[1]"/>
-			</xsl:attribute>
-		</xsl:if>
-		<xsl:if test="$admon.textlabel != 0 or title">
-			<div class="admonition_header">
-				<xsl:apply-templates select="." mode="object.title.markup"/>
-			</div>
-		</xsl:if>
-		<div>
-			<xsl:apply-templates/>
-		</div>
-	</div>
+        <xsl:apply-templates select="." mode="class.attribute">
+            <xsl:with-param name="class" select="concat('admonition ', local-name(.))"/>
+        </xsl:apply-templates>
+            
+        <xsl:if test="$admon.style != ''">
+            <xsl:attribute name="style">
+                <xsl:value-of select="$admon.style"/>
+            </xsl:attribute>
+        </xsl:if>
+        <xsl:if test="@id or @xml:id">
+            <xsl:attribute name="id">
+                <xsl:value-of select="(@id|@xml:id)[1]"/>
+            </xsl:attribute>
+        </xsl:if>
+        <xsl:if test="$admon.textlabel != 0 or title">
+            <div class="admonition_header">
+                <xsl:apply-templates select="." mode="object.title.markup"/>
+            </div>
+        </xsl:if>
+        <div>
+            <xsl:apply-templates/>
+        </div>
+    </div>
 </xsl:template>
 
 <xsl:template name="header.navigation">
-	<xsl:param name="prev" select="/foo"/>
-	<xsl:param name="next" select="/foo"/>
-	<xsl:param name="nav.context"/>
-	<xsl:variable name="home" select="/*[1]"/>
-	<xsl:variable name="up" select="parent::*"/>
-	<xsl:variable name="row1" select="$navig.showtitles != 0"/>
-	<xsl:variable name="row2" select="count($prev) &gt; 0 or (count($up) &gt; 0 and generate-id($up) != generate-id($home) and $navig.showtitles != 0) or count($next) &gt; 0"/>
-	<xsl:if test="$suppress.navigation = '0' and $suppress.header.navigation = '0'">
-		<xsl:if test="$row1 or $row2">
-			<xsl:if test="$row1">
-			</xsl:if>
-			<xsl:if test="$row2">
-				<ul class="docnav top" xmlns="http://www.w3.org/1999/xhtml">
-					<li class="previous">
-						<xsl:if test="count($prev)&gt;0">
-							<a accesskey="p">
-								<xsl:attribute name="href">
-									<xsl:call-template name="href.target">
-										<xsl:with-param name="object" select="$prev"/>
-									</xsl:call-template>
-								</xsl:attribute>
-								<strong>
-									<xsl:call-template name="navig.content">
-										<xsl:with-param name="direction" select="'prev'"/>
-									</xsl:call-template>
-								</strong>
-							</a>
-						</xsl:if>
-					</li>
-						<li class="home"><xsl:value-of select="$clean_title"/></li>
-						<li class="next">
-						<xsl:if test="count($next)&gt;0">
-							<a accesskey="n">
-								<xsl:attribute name="href">
-									<xsl:call-template name="href.target">
-										<xsl:with-param name="object" select="$next"/>
-									</xsl:call-template>
-								</xsl:attribute>
-								<strong>
-									<xsl:call-template name="navig.content">
-										<xsl:with-param name="direction" select="'next'"/>
-									</xsl:call-template>
-								</strong>
-							</a>
-						</xsl:if>
-					</li>
-				</ul>
-			</xsl:if>
-		</xsl:if>
-		<xsl:if test="$header.rule != 0">
-			<hr/>
-		</xsl:if>
-	</xsl:if>
+    <xsl:param name="prev" select="/foo"/>
+    <xsl:param name="next" select="/foo"/>
+    <xsl:param name="nav.context"/>
+    <xsl:variable name="home" select="/*[1]"/>
+    <xsl:variable name="up" select="parent::*"/>
+    <xsl:variable name="row1" select="$navig.showtitles != 0"/>
+    <xsl:variable name="row2" select="count($prev) &gt; 0 or (count($up) &gt; 0 and generate-id($up) != generate-id($home) and $navig.showtitles != 0) or count($next) &gt; 0"/>
+    <xsl:if test="$suppress.navigation = '0' and $suppress.header.navigation = '0'">
+        <xsl:if test="$row1 or $row2">
+            <xsl:if test="$row1">
+            </xsl:if>
+            <xsl:if test="$row2">
+                <ul class="docnav top" xmlns="http://www.w3.org/1999/xhtml">
+                    <li class="previous">
+                        <xsl:if test="count($prev)&gt;0">
+                            <a accesskey="p">
+                                <xsl:attribute name="href">
+                                    <xsl:call-template name="href.target">
+                                        <xsl:with-param name="object" select="$prev"/>
+                                    </xsl:call-template>
+                                </xsl:attribute>
+                                <strong>
+                                    <xsl:call-template name="navig.content">
+                                        <xsl:with-param name="direction" select="'prev'"/>
+                                    </xsl:call-template>
+                                </strong>
+                            </a>
+                        </xsl:if>
+                    </li>
+                        <li class="home"><xsl:value-of select="$clean_title"/></li>
+                        <li class="next">
+                        <xsl:if test="count($next)&gt;0">
+                            <a accesskey="n">
+                                <xsl:attribute name="href">
+                                    <xsl:call-template name="href.target">
+                                        <xsl:with-param name="object" select="$next"/>
+                                    </xsl:call-template>
+                                </xsl:attribute>
+                                <strong>
+                                    <xsl:call-template name="navig.content">
+                                        <xsl:with-param name="direction" select="'next'"/>
+                                    </xsl:call-template>
+                                </strong>
+                            </a>
+                        </xsl:if>
+                    </li>
+                </ul>
+            </xsl:if>
+        </xsl:if>
+        <xsl:if test="$header.rule != 0">
+            <hr/>
+        </xsl:if>
+    </xsl:if>
 </xsl:template>
 
 <!--
@@ -759,110 +835,110 @@ Reason: remove tables, truncate link text
 Version:
 -->
 <xsl:template name="footer.navigation">
-	<xsl:param name="prev" select="/foo"/>
-	<xsl:param name="next" select="/foo"/>
-	<xsl:param name="nav.context"/>
-	<xsl:param name="title-limit" select="'50'"/>
-	<xsl:variable name="home" select="/*[1]"/>
-	<xsl:variable name="up" select="parent::*"/>
-	<xsl:variable name="row1" select="count($prev) &gt; 0 or count($up) &gt; 0 or count($next) &gt; 0"/>
-	<xsl:variable name="row2" select="($prev and $navig.showtitles != 0) or (generate-id($home) != generate-id(.) or $nav.context = 'toc') or ($chunk.tocs.and.lots != 0 and $nav.context != 'toc') or ($next and $navig.showtitles != 0)"/>
+    <xsl:param name="prev" select="/foo"/>
+    <xsl:param name="next" select="/foo"/>
+    <xsl:param name="nav.context"/>
+    <xsl:param name="title-limit" select="'50'"/>
+    <xsl:variable name="home" select="/*[1]"/>
+    <xsl:variable name="up" select="parent::*"/>
+    <xsl:variable name="row1" select="count($prev) &gt; 0 or count($up) &gt; 0 or count($next) &gt; 0"/>
+    <xsl:variable name="row2" select="($prev and $navig.showtitles != 0) or (generate-id($home) != generate-id(.) or $nav.context = 'toc') or ($chunk.tocs.and.lots != 0 and $nav.context != 'toc') or ($next and $navig.showtitles != 0)"/>
 
-	<xsl:if test="$suppress.navigation = '0' and $suppress.footer.navigation = '0'">
-		<xsl:if test="$footer.rule != 0">
-			<hr/>
-		</xsl:if>
-		<xsl:if test="$row1 or $row2">
-			<ul class="docnav" xmlns="http://www.w3.org/1999/xhtml">
-				<xsl:if test="$row1">
-					<li class="previous">
-						<xsl:if test="count($prev) &gt; 0">
-							<a accesskey="p">
-								<xsl:attribute name="href">
-									<xsl:call-template name="href.target">
-										<xsl:with-param name="object" select="$prev"/>
-									</xsl:call-template>
-								</xsl:attribute>
-								<strong>
-									<xsl:call-template name="navig.content">
-										<xsl:with-param name="direction" select="'prev'"/>
-									</xsl:call-template>
-								</strong>
-								<xsl:variable name="text">
-									<xsl:apply-templates select="$prev" mode="object.title.markup"/>
-								</xsl:variable>
-								<xsl:choose>
-									<xsl:when test="string-length($text) &gt; $title-limit">
-										<xsl:value-of select="concat(substring($text, 0, $title-limit), '...')"/>
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:value-of select="$text"/>
-									</xsl:otherwise>
-								</xsl:choose>
-							</a>
-						</xsl:if>
-					</li>
-					<xsl:if test="count($up) &gt; 0">
-						<li class="up">
-							<a accesskey="u">
-								<xsl:attribute name="href">
-									<xsl:text>#</xsl:text>
-								</xsl:attribute>
-								<strong>
-									<xsl:call-template name="navig.content">
-										<xsl:with-param name="direction" select="'up'"/>
-									</xsl:call-template>
-								</strong>
-							</a>
-						</li>
-					</xsl:if>
-					<xsl:if test="$home != . or $nav.context = 'toc'">
-						<li class="home">
-							<a accesskey="h">
-								<xsl:attribute name="href">
-									<xsl:call-template name="href.target">
-										<xsl:with-param name="object" select="$home"/>
-									</xsl:call-template>
-								</xsl:attribute>
-								<strong>
-									<xsl:call-template name="navig.content">
-										<xsl:with-param name="direction" select="'home'"/>
-									</xsl:call-template>
-								</strong>
-							</a>
-						</li>
-					</xsl:if>
-					<xsl:if test="count($next)&gt;0">
-						<li class="next">
-							<a accesskey="n">
-								<xsl:attribute name="href">
-									<xsl:call-template name="href.target">
-										<xsl:with-param name="object" select="$next"/>
-									</xsl:call-template>
-								</xsl:attribute>
-								<strong>
-									<xsl:call-template name="navig.content">
-										<xsl:with-param name="direction" select="'next'"/>
-									</xsl:call-template>
-								</strong>
-								<xsl:variable name="text">
-									<xsl:apply-templates select="$next" mode="object.title.markup"/>
-								</xsl:variable>
-								<xsl:choose>
-									<xsl:when test="string-length($text) &gt; $title-limit">
-										<xsl:value-of select="concat(substring($text, 0, $title-limit),'...')"/>
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:value-of select="$text"/>
-									</xsl:otherwise>
-								</xsl:choose>
-							</a>
-						</li>
-					</xsl:if>
-				</xsl:if>
-			</ul>
-		</xsl:if>
-	</xsl:if>
+    <xsl:if test="$suppress.navigation = '0' and $suppress.footer.navigation = '0'">
+        <xsl:if test="$footer.rule != 0">
+            <hr/>
+        </xsl:if>
+        <xsl:if test="$row1 or $row2">
+            <ul class="docnav" xmlns="http://www.w3.org/1999/xhtml">
+                <xsl:if test="$row1">
+                    <li class="previous">
+                        <xsl:if test="count($prev) &gt; 0">
+                            <a accesskey="p">
+                                <xsl:attribute name="href">
+                                    <xsl:call-template name="href.target">
+                                        <xsl:with-param name="object" select="$prev"/>
+                                    </xsl:call-template>
+                                </xsl:attribute>
+                                <strong>
+                                    <xsl:call-template name="navig.content">
+                                        <xsl:with-param name="direction" select="'prev'"/>
+                                    </xsl:call-template>
+                                </strong>
+                                <xsl:variable name="text">
+                                    <xsl:apply-templates select="$prev" mode="object.title.markup"/>
+                                </xsl:variable>
+                                <xsl:choose>
+                                    <xsl:when test="string-length($text) &gt; $title-limit">
+                                        <xsl:value-of select="concat(substring($text, 0, $title-limit), '...')"/>
+                                    </xsl:when>
+                                    <xsl:otherwise>
+                                        <xsl:value-of select="$text"/>
+                                    </xsl:otherwise>
+                                </xsl:choose>
+                            </a>
+                        </xsl:if>
+                    </li>
+                    <xsl:if test="count($up) &gt; 0">
+                        <li class="up">
+                            <a accesskey="u">
+                                <xsl:attribute name="href">
+                                    <xsl:text>#</xsl:text>
+                                </xsl:attribute>
+                                <strong>
+                                    <xsl:call-template name="navig.content">
+                                        <xsl:with-param name="direction" select="'up'"/>
+                                    </xsl:call-template>
+                                </strong>
+                            </a>
+                        </li>
+                    </xsl:if>
+                    <xsl:if test="$home != . or $nav.context = 'toc'">
+                        <li class="home">
+                            <a accesskey="h">
+                                <xsl:attribute name="href">
+                                    <xsl:call-template name="href.target">
+                                        <xsl:with-param name="object" select="$home"/>
+                                    </xsl:call-template>
+                                </xsl:attribute>
+                                <strong>
+                                    <xsl:call-template name="navig.content">
+                                        <xsl:with-param name="direction" select="'home'"/>
+                                    </xsl:call-template>
+                                </strong>
+                            </a>
+                        </li>
+                    </xsl:if>
+                    <xsl:if test="count($next)&gt;0">
+                        <li class="next">
+                            <a accesskey="n">
+                                <xsl:attribute name="href">
+                                    <xsl:call-template name="href.target">
+                                        <xsl:with-param name="object" select="$next"/>
+                                    </xsl:call-template>
+                                </xsl:attribute>
+                                <strong>
+                                    <xsl:call-template name="navig.content">
+                                        <xsl:with-param name="direction" select="'next'"/>
+                                    </xsl:call-template>
+                                </strong>
+                                <xsl:variable name="text">
+                                    <xsl:apply-templates select="$next" mode="object.title.markup"/>
+                                </xsl:variable>
+                                <xsl:choose>
+                                    <xsl:when test="string-length($text) &gt; $title-limit">
+                                        <xsl:value-of select="concat(substring($text, 0, $title-limit),'...')"/>
+                                    </xsl:when>
+                                    <xsl:otherwise>
+                                        <xsl:value-of select="$text"/>
+                                    </xsl:otherwise>
+                                </xsl:choose>
+                            </a>
+                        </li>
+                    </xsl:if>
+                </xsl:if>
+            </ul>
+        </xsl:if>
+    </xsl:if>
 </xsl:template>
 
 <!--
@@ -998,20 +1074,20 @@ Version: 1.72.0
     <!-- Do we want syntax highlighting -->
     <xsl:when test="$highlight.source != 0 and function-available('perl:highlight')">
       <xsl:variable name="language">
-	<xsl:call-template name="language.to.xslthl">
-	  <xsl:with-param name="context" select="."/>
-	</xsl:call-template>
+    <xsl:call-template name="language.to.xslthl">
+      <xsl:with-param name="context" select="."/>
+    </xsl:call-template>
       </xsl:variable>
       <xsl:choose>
-	<xsl:when test="$language != ''">
-	  <xsl:variable name="content">
-	    <xsl:apply-templates/>
-	  </xsl:variable>
-	  <xsl:apply-templates select="perl:highlight($language, exsl:node-set($content))"/>
-	</xsl:when>
-	<xsl:otherwise>
-	  <xsl:apply-templates/>
-	</xsl:otherwise>
+    <xsl:when test="$language != ''">
+      <xsl:variable name="content">
+        <xsl:apply-templates/>
+      </xsl:variable>
+      <xsl:apply-templates select="perl:highlight($language, exsl:node-set($content))"/>
+    </xsl:when>
+    <xsl:otherwise>
+      <xsl:apply-templates/>
+    </xsl:otherwise>
       </xsl:choose>
     </xsl:when>
     <!-- No syntax highlighting -->
@@ -1179,6 +1255,7 @@ because it has to parse lines one by one to place the gfx
 
 <xsl:template match="d:programlisting|d:screen|d:synopsis">
   <xsl:param name="suppress-numbers" select="'0'"/>
+  <xsl:param name="set-id" select="'0'"/>
 
   <xsl:call-template name="anchor"/>
   <xsl:variable name="showall">
@@ -1208,6 +1285,11 @@ because it has to parse lines one by one to place the gfx
       <xsl:element name="{$div.element}" namespace="http://www.w3.org/1999/xhtml">
         <xsl:apply-templates select="." mode="common.html.attributes"/>
         <xsl:call-template name="id.attribute"/>
+        <xsl:if test="$set-id != 0">
+          <xsl:attribute name="id">
+            <xsl:value-of select="$set-id"/>
+          </xsl:attribute>
+        </xsl:if>
         <xsl:if test="@width != ''">
           <xsl:attribute name="width">
             <xsl:value-of select="@width"/>
@@ -1225,6 +1307,11 @@ because it has to parse lines one by one to place the gfx
       <xsl:element name="{$div.element}" namespace="http://www.w3.org/1999/xhtml">
         <xsl:apply-templates select="." mode="common.html.attributes"/>
         <xsl:call-template name="id.attribute"/>
+        <xsl:if test="$set-id != 0">
+          <xsl:attribute name="id">
+            <xsl:value-of select="$set-id"/>
+          </xsl:attribute>
+        </xsl:if>
         <xsl:if test="@width != ''">
           <xsl:attribute name="width">
             <xsl:value-of select="@width"/>
@@ -1242,6 +1329,63 @@ because it has to parse lines one by one to place the gfx
           </xsl:otherwise>
         </xsl:choose>
       </xsl:element>
+    </xsl:otherwise>
+  </xsl:choose>
+</xsl:template>
+
+<xsl:template match="d:informalexample">
+  <xsl:param name="class">
+    <xsl:apply-templates select="." mode="class.value"/>
+  </xsl:param>
+  <xsl:param name="id">
+        <xsl:call-template name="object.id"/>
+  </xsl:param>
+
+  <xsl:choose>
+    <xsl:when test="@role = 'switchery' and $poper.as.dl = '1'">
+      <div class="{$class} {@role}">
+        <xsl:call-template name="id.attribute"/>
+      <dl>
+        <xsl:call-template name="anchor"/>
+        <xsl:for-each select="d:programlisting">
+          <dt><xsl:value-of select="@language" /></dt>
+      <dd>
+            <xsl:apply-templates select=".">
+              <xsl:with-param name="set-id" select="concat($id, '-code')"/>
+            </xsl:apply-templates>
+          </dd>
+        </xsl:for-each>
+      </dl>
+      </div>
+    </xsl:when>
+    <xsl:when test="@role = 'switchery' and $poper.as.dl = '0'">
+      <div class="{$class} {@role}">
+        <xsl:call-template name="id.attribute"/>
+        <xsl:call-template name="anchor"/>
+        <div class="labels">
+          <xsl:for-each select="d:programlisting">
+        <span id="{$id}-{@language}" onclick="activateElement('{$id}-{@language}'); activateElement('{$id}-{@language}-code'); return false;" >
+          <xsl:value-of select="@language" />
+        </span>
+      </xsl:for-each>
+                <select class="deflang" onchange="setDefLangCookie(this)">
+                    <option value="">Default Language</option>
+                  <xsl:for-each select="d:programlisting">
+                    <option value="{@language}"><xsl:value-of select="@language"/></option>
+              </xsl:for-each>
+                </select>
+        </div>
+        <div class="code">
+        <xsl:for-each select="d:programlisting">
+            <xsl:apply-templates select=".">
+              <xsl:with-param name="set-id" select="concat($id, '-', @language, '-code')"/>
+            </xsl:apply-templates>
+        </xsl:for-each>
+        </div>
+      </div>
+    </xsl:when>
+    <xsl:otherwise>
+      <xsl:call-template name="informal.object"/>
     </xsl:otherwise>
   </xsl:choose>
 </xsl:template>

@@ -10,6 +10,7 @@
 
 <xsl:param name="html.append"/>
 <xsl:param name="generate.toc">nop</xsl:param>
+<xsl:param name="poper.as.dl"  select="1"/>
 
 <xsl:template name="article.titlepage.recto">
 </xsl:template>

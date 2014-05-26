@@ -38,6 +38,21 @@
 	 <para>
 		Entities also present an essentially insurmountable obstacle to quality translation (refer to <xref linkend="sect-Publican-Users_Guide-Entities_and_translation" />). Consequently, while we are not reducing the <filename><replaceable>Doc_Name</replaceable>.ent</filename> file's functionality, we are no longer considering requests to add functionality or features associated with entity use.
 	</para>
+
+    <informalexample id="switch1" role="switchery">
+<programlisting language="Perl">#!/usr/bin/perl
+use strict;
+use warnings;
+
+print "Hello, World!\n";</programlisting>
+<programlisting language="C++">#include &lt;iostream&gt;
+
+int main()
+{
+  std::cout &lt;&lt; "Hello World!";
+}</programlisting>
+    </informalexample>
+
 <!--https://bugzilla.redhat.com/show_bug.cgi?id=604255-->
 <!--example>
   <title>"Hello world!" in C++</title>

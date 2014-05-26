@@ -86,6 +86,8 @@ scp to hosted
 PUG changes
 ######################################
 
+## Make sure JavaScript for popper and switchery are tidied up!!!
+
 Installing "Running publican from a GIT checkout"
 
 section on "Converting DB4 to DB5"
