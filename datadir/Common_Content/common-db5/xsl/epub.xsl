@@ -1,9 +1,12 @@
 <?xml version='1.0'?>
 
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="http://www.w3.org/1999/xhtml"
-				xmlns:exsl="http://exslt.org/common"
-				version="1.0"
-				exclude-result-prefixes="exsl">
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:d="http://docbook.org/ns/docbook"
+  xmlns:exsl="http://exslt.org/common"
+  xmlns:l="http://docbook.sourceforge.net/xmlns/l10n/1.0"
+  version="1.0"
+  exclude-result-prefixes="exsl l d">
 
 <xsl:import href="http://docbook.sourceforge.net/release/xsl/current/epub/docbook.xsl"/>
 <xsl:import href="html-common.xsl"/>

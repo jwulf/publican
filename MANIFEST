@@ -1013,7 +1013,6 @@ Users_Guide/en-US/icons/24x24.png
 Users_Guide/en-US/icons/32x32.png
 Users_Guide/en-US/icons/48x48.png
 Users_Guide/en-US/icons/icon.svg
-Users_Guide/en-US/Image_width.xml
 Users_Guide/en-US/images/cover_thumbnail.png
 Users_Guide/en-US/images/drupal_add_menu.png
 Users_Guide/en-US/images/drupal_add_user.png
@@ -1040,7 +1039,6 @@ Users_Guide/en-US/Permitted_integers.xml
 Users_Guide/en-US/Permitted_numbers.xml
 Users_Guide/en-US/Preface.xml
 Users_Guide/en-US/Preparing_a_Book_for_Translation.xml
-Users_Guide/en-US/Publican_cfg_parameters.xml
 Users_Guide/en-US/Publican_Commands.xml
 Users_Guide/en-US/Publican_Defaults.xml
 Users_Guide/en-US/Renaming_a_document.xml
@@ -1096,7 +1094,6 @@ Users_Guide/it-IT/Permitted_integers.po
 Users_Guide/it-IT/Permitted_numbers.po
 Users_Guide/it-IT/Preface.po
 Users_Guide/it-IT/Preparing_a_Book_for_Translation.po
-Users_Guide/it-IT/Publican_cfg_parameters.po
 Users_Guide/it-IT/Publican_cfg_parameters_order_by_alpha.po
 Users_Guide/it-IT/Publican_Commands.po
 Users_Guide/it-IT/Publican_Defaults.po

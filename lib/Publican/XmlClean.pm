@@ -13,6 +13,7 @@ use Publican::Builder;
 use File::Inplace;
 use DBI;
 use Data::Dumper;
+use File::Basename;
 
 =head1 NAME
 
@@ -461,7 +462,6 @@ sub print_xml {
         );
     }
 
-    my $lvl       = 0;
     my $dtdver    = $self->{publican}->param('dtdver');
     my $docname   = $self->{publican}->param('docname');
     my $lang      = $self->{config}->param('lang');
@@ -522,7 +522,7 @@ sub print_xml {
                 }
             }
 
-            #             print(STDERR Dumper($node));
+##             print(STDERR Dumper($node));
         }
 
         $doctype .= qq|]>\n| if ($doctype);
@@ -551,11 +551,8 @@ sub print_xml {
         if ( $docname && !$self->{config}->param('exclude_ent') ) {
             my $xml_lang = $self->{publican}->param('xml_lang');
             if ( -e "$xml_lang/$main_file.ent" ) {
-                $ent_file = "$xml_lang/$main_file.ent";
-
-                # damn entities need special handling for when people include
-                # entities in abstracts.
-                $ent_file = "$main_file.ent" if ($cleaning);
+                $ent_file = "$main_file.ent";
+                $ent_file = "$path$main_file.ent" if ($path);
             }
         }
 
@@ -1126,27 +1123,12 @@ sub set_unique_ids {
     foreach my $xml_file ( sort(@xml_files) ) {
         next if ( $xml_file =~ m{/extras/} );
 
-        # get declarations
-        my $INDOC;
-        open( $INDOC, "<:encoding(UTF-8)", "$xml_file" )
-            || croak(
-            maketext( "Could not open [_1] for output!", $xml_file ) );
-
-        my $declarations = "";
-        my @lines        = <$INDOC>;
-        foreach my $line (@lines) {
-            $declarations .= $line;
-            if ( $line =~ /\]\>\s*$/ ) {
-                last;
-            }
-        }
-
-        $INDOC->close();
-
         my $xml_doc = XML::TreeBuilder->new(
             { 'NoExpand' => "1", 'ErrorContext' => "2" } );
         $xml_doc->store_comments(1);
         $xml_doc->store_pis(1);
+        $xml_doc->store_cdata(1);
+        $xml_doc->store_declarations(1);
 
         $xml_doc->parse_file($xml_file);
 
@@ -1188,21 +1170,7 @@ sub set_unique_ids {
             }
         );
 
-        my $xml = $tree->as_XML();
-        $xml =~ s/&#34;/"/g;
-        $xml =~ s/&#39;/'/g;
-        $xml =~ s/&quot;/"/g;
-        $xml =~ s/&apos;/'/g;
-
-        $xml = $declarations . $xml;
-
-        my $OUTDOC;
-        open( $OUTDOC, ">:encoding(UTF-8)", "$xml_file" )
-            || croak(
-            maketext( "Could not open [_1] for output!", $xml_file ) );
-
-        print( $OUTDOC $xml );
-        close($OUTDOC);
+       $self->print_xml( { xml_doc => $tree, out_file => $xml_file } );
     }
 
     eval {

@@ -36,7 +36,7 @@ Publican::Translate - Module for manipulating POT and PO files.
 	use Publican::Translate;
 	my $po = Publican::Translate->new();
 
- 	$po->update_pot();
+	$po->update_pot();
 	$po->update_po({ langs => 'fr-FR,de-DE' });
 	$po->update_po({ langs => 'all' });
 	$po->merge_xml({ lang  => 'fr-FR' });
@@ -123,6 +123,7 @@ sub update_pot {
         mkpath($path) if ( !-d $path );
 
         my $xml_doc = Publican::Builder::new_tree();
+        $xml_doc->store_cdata(1);
         $xml_doc->parse_file($xml_file)
             || croak(
             maketext( "Can't open file [_1]. Error: [_2]", $xml_file, $@ ) );
@@ -162,6 +163,7 @@ sub po2xml {
         || croak( maketext("po_file is a mandatory argument") );
     my $out_file = delete( $args->{out_file} )
         || croak( maketext("out_file is a mandatory argument") );
+    my $ent_file = delete( $args->{ent_file} );
 
     if ( %{$args} ) {
         croak(
@@ -230,10 +232,18 @@ sub po2xml {
 
     my $OUTDOC;
 
+    my $path = undef;
+    if ( $out_file =~ m|^(.*/xml)/(.*\/)[^\/]*\.xml| ) {
+        $path = $2;
+        $path =~ s|[^/]*/|\.\./|g;
+    }
+
+    $ent_file = "$path$ent_file" if ($path);
+
     open( $OUTDOC, ">:encoding(UTF-8)", "$out_file" )
         || croak( maketext( "Could not open [_1] for output!", $out_file ) );
     print $OUTDOC Publican::Builder::dtd_string(
-        { tag => $type, dtdver => $dtdver, cleaning => 1 } );
+        { tag => $type, dtdver => $dtdver, cleaning => 1, ent_file => $ent_file } );
 ##debug_msg("is utf8 text: " . utf8::is_utf8($text) . "\n");
     print( $OUTDOC $text );
     close($OUTDOC);

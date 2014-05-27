@@ -5,7 +5,7 @@ use warnings;
 use strict;
 use Carp;
 use Config::Simple '-strict';
-use XML::TreeBuilder;
+use XML::TreeBuilder 5.3;
 use I18N::LangTags::List;
 use Term::ANSIColor qw(:constants uncolor);
 use File::Find::Rule;
@@ -1289,6 +1289,7 @@ sub new_tree {
     my $xml_doc = XML::TreeBuilder->new(
         { 'NoExpand' => "1", 'ErrorContext' => "2" } );
     $xml_doc->store_pis(1);
+    $xml_doc->store_cdata(1);
 
     my $empty_element_map = $xml_doc->_empty_element_map;
     $empty_element_map->{'xref'}       = 1;
@@ -1377,21 +1378,10 @@ DTDHEAD
 
     # handle entity file
     if ($ent_file) {
-        if ($cleaning) {
-            $dtd .= <<ENT;
+        $dtd .= <<ENT;
 <!ENTITY % BOOK_ENTITIES SYSTEM "$ent_file">
 %BOOK_ENTITIES;
 ENT
-        }
-        else {
-            my $INFILE;
-            open( $INFILE, "<:encoding(UTF-8)", "$ent_file" )
-                || croak(
-                maketext( "Could not open [_1] for input!", $ent_file ) );
-            my @lines = <$INFILE>;
-            $INFILE->close();
-            $dtd .= join( "", @lines );
-        }
     }
     $dtd .= <<DTDTAIL;
 ]>

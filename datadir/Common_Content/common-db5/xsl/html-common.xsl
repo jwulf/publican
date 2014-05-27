@@ -11,7 +11,7 @@
   xmlns:exsl="http://exslt.org/common"
   xmlns:perl="urn:perl"
   exclude-result-prefixes="stbl xtbl ptbl exsl d sverb xverb"
-  extension-element-prefixes="perl"
+  extension-element-prefixes="perl d"
 >
 <xsl:param name="embedtoc"  select="'0'"/>
 <xsl:param name="tocpath"   select="''"/>
