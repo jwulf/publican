@@ -57,11 +57,23 @@ Create a new Publican::Translate object.
 
 sub new {
     my ( $this, $args ) = @_;
+
+    my $showfuzzy  = delete( $args->{showfuzzy} );
+
+    if ( %{$args} ) {
+        croak(
+            maketext(
+                "unknown arguments: [_1]", join( ", ", keys %{$args} )
+            )
+        );
+    }
+
     my $class = ref($this) || $this;
     my $self = bless {}, $class;
 
     my $publican = Publican->new();
     $self->{publican} = $publican;
+    $self->{showfuzzy} = $showfuzzy;
 
     return $self;
 }
@@ -180,6 +192,14 @@ sub po2xml {
             . "\n"
     );
 
+    my $path = undef;
+    if ( $out_file =~ m|^(.*/xml)/(.*\/)[^\/]*\.xml| ) {
+        $path = $2;
+        $path =~ s|[^/]*/|\.\./|g;
+    }
+
+    $ent_file = "$path$ent_file" if ($path);
+
     my $dtdver = $self->{publican}->param('dtdver');
 
     my $out_doc = Publican::Builder::new_tree();
@@ -188,25 +208,18 @@ sub po2xml {
         maketext( "Can't open file [_1]. Error: [_2]", $xml_file, $@ ) );
     $out_doc->pos( $out_doc->root() );
 
-    my $msgids = Locale::PO->load_file_ashash($po_file);
+    my $msgids = Locale::PO->load_file_ashash($po_file, 'UTF-8');
     foreach my $key ( keys( %{$msgids} ) ) {
-##debug_msg("key: $key\n");
-##debug_msg("is utf8  key " . utf8::is_utf8($key) . "\n");
         my $msgref = $msgids->{$key};
-##debug_msg("is utf8 msgref " . utf8::is_utf8($msgref->msgstr()) . "\n");
         if ( $msgref->obsolete() ) {
-##            debug_msg("Deleting obsolete msg_id: $key\n");
             delete( $msgids->{$key} );
         }
-        if ( $msgref->fuzzy() ) {
-##            debug_msg("no fuzzy matches: $key\n");
+        if ($msgref->fuzzy() && !$self->{showfuzzy}) {
             $msgref->msgstr("");
         }
     }
 
-##debug_msg( "hash: " . join( "\n\n", keys( %{$msgids} ) ) . "\n\n" );
-
-    $self->merge_msgs( { out_doc => $out_doc, msgids => $msgids } );
+    $self->merge_msgs( { ent_file => $ent_file, out_doc => $out_doc, msgids => $msgids } );
 
     $out_doc->pos( $out_doc->root() );
     foreach my $node ( $out_doc->look_down( 'processed', 1 ) ) {
@@ -217,8 +230,6 @@ sub po2xml {
     my $type = $out_doc->attr("_tag");
     my $text = $out_doc->as_XML();
 
-##    $text =~ s/&#10;//g;
-##    $text =~ s/&#9;//g;
     $text =~ s/&#38;([a-zA-Z-_0-9]+;)/&$1/g;
     $text =~ s/&#38;/&amp;/g;
     $text =~ s/&#60;/&lt;/g;
@@ -232,19 +243,10 @@ sub po2xml {
 
     my $OUTDOC;
 
-    my $path = undef;
-    if ( $out_file =~ m|^(.*/xml)/(.*\/)[^\/]*\.xml| ) {
-        $path = $2;
-        $path =~ s|[^/]*/|\.\./|g;
-    }
-
-    $ent_file = "$path$ent_file" if ($path);
-
     open( $OUTDOC, ">:encoding(UTF-8)", "$out_file" )
         || croak( maketext( "Could not open [_1] for output!", $out_file ) );
     print $OUTDOC Publican::Builder::dtd_string(
         { tag => $type, dtdver => $dtdver, cleaning => 1, ent_file => $ent_file } );
-##debug_msg("is utf8 text: " . utf8::is_utf8($text) . "\n");
     print( $OUTDOC $text );
     close($OUTDOC);
 
@@ -416,8 +418,6 @@ sub update_po {
 
 Merge updated POT files in to existing PO files.
 
-TODO Impliment this...
-
 =cut
 
 sub merge_po {
@@ -436,8 +436,8 @@ sub merge_po {
         );
     }
 
-    my $pot_arry      = Locale::PO->load_file_asarray($pot_file);
-    my $po_hash       = Locale::PO->load_file_ashash($po_file);
+    my $pot_arry      = Locale::PO->load_file_asarray($pot_file, 'UTF-8');
+    my $po_hash       = Locale::PO->load_file_ashash($po_file, 'UTF-8');
     my @po_keys       = keys( %{$po_hash} );
     my %po_start_keys = map { $_ => 1 } @po_keys;
     my @out_arry      = ();
@@ -489,7 +489,7 @@ POT:
         push( @out_arry, $po_hash->{$obsolete} );
     }
 
-    Locale::PO->save_file_fromarray( $po_file, \@out_arry );
+    Locale::PO->save_file_fromarray( $po_file, \@out_arry, 'UTF-8' );
 
     return;
 }
@@ -692,6 +692,7 @@ sub merge_msgs {
         || croak("out_doc is a mandatory argument");
     my $msgids = delete( $args->{msgids} )
         || croak("msgids is a mandatory argument");
+    my $ent_file = delete( $args->{ent_file} );
 
     if ( %{$args} ) {
         croak(
@@ -747,7 +748,7 @@ sub merge_msgs {
 
     # No Nesting so push all of this nodes content on to the output trans_tree
         if ( !$#matches ) {
-            $self->translate( { node => $child, msgids => $msgids } );
+            $self->translate( {ent_file => $ent_file, node => $child, msgids => $msgids } );
         }
         else {
 
@@ -772,7 +773,7 @@ sub merge_msgs {
                 {
                     if ( $trans_node && !$trans_node->is_empty ) {
                         $self->translate(
-                            { node => $trans_node, msgids => $msgids } );
+                            {ent_file => $ent_file, node => $trans_node, msgids => $msgids } );
                         $child->push_content( $trans_node->content_list() );
                         $trans_node->delete();
                         $trans_node = XML::Element->new( $child->tag() );
@@ -788,7 +789,7 @@ sub merge_msgs {
 
             if ( $trans_node && !$trans_node->is_empty ) {
                 $self->translate(
-                    { node => $trans_node, msgids => $msgids } );
+                    {ent_file => $ent_file, node => $trans_node, msgids => $msgids } );
                 $child->push_content( $trans_node->content_list() );
                 $trans_node->delete();
             }
@@ -810,6 +811,7 @@ sub translate {
         || croak("node is a mandatory argument");
     my $msgids = delete( $args->{msgids} )
         || croak("msgids is a mandatory argument");
+    my $ent_file = delete( $args->{ent_file} );
 
     if ( %{$args} ) {
         croak(
@@ -822,30 +824,16 @@ sub translate {
     my $msgid = $node->as_XML();
     my $tag   = $node->tag();
 
-##debug_msg("msgid 1: $tag, $msgid\n");
+    my $po = new Locale::PO(-msgid=> detag($msgid, $tag), -msgstr => '');
+    $msgid = $po->msgid();
+
     my $attr_text = '';
-
-##debug_msg("is utf8 msgid: ".utf8::is_utf8($msgid)."\n");
-    utf8::encode($msgid);
-
-    $msgid = $self->normalise( $msgid, $tag );
-    $msgid = po_format( $msgid, $tag );
-    if ( $tag =~ /$VERBATIM/ ) {
-        $msgid =~ s/\\\\n/\\n/g;
+    my %attrs = $node->all_attr();
+    foreach my $key (keys(%attrs)) {
+        next if($key =~ /^_/);
+        $attr_text .= qq{ $key="$attrs{$key}"};
     }
 
-    #debug_msg("msgid 3: |$msgid| |$tag|\n");
-
-    # If a tag has attributes we need to remove them for comparison as
-    # the PO format does not allow this to be stored
-## BUGBUG document this better
-    if ( $msgid =~ m/^"<$tag([\t ]+[^>]+)>(.*)$/ ) {
-        $attr_text = $1;
-        $msgid     = qq{"$2};
-        $attr_text =~ s/\\//g;
-    }
-
-##debug_msg("msgid 4: $tag, $msgid\n");
     # mixed mode tags, para, caption, can be empty at this point
     if ( $msgid and ( $msgid eq '""' ) ) {
 
@@ -858,19 +846,14 @@ sub translate {
             my $msgstr = $msgids->{$msgid}{msgstr};
             debug_msg("DANGER: found obsolete msg: $msgid\n")
                 if ( $msgstr =~ /^#~/ );
-##debug_msg("is utf8 msgstr 1: " . utf8::is_utf8($msgstr) . "\n");
-            utf8::decode($msgstr);
-##debug_msg("is utf8 msgstr 2: " . utf8::is_utf8($msgstr) . "\n");
-##debug_msg("msgstr: |$msgstr|\n");
 
-            my $repl = po_unformat( $msgstr, $tag );
+            my $repl = $po->dequote($msgstr);
 
-##debug_msg("is utf8 repl: ".utf8::is_utf8($repl)."\n");
-##debug_msg("repl: |$repl|\n");
             my $dtd = Publican::Builder::dtd_string(
                 {   tag      => $tag,
                     dtdver   => $self->{publican}->param('dtdver'),
-                    cleaning => 1
+                    cleaning => 1,
+                    ent_file => $ent_file
                 }
             );
             my $new_tree = Publican::Builder::new_tree();
@@ -879,7 +862,6 @@ sub translate {
             $node->push_content( $new_tree->content_list() );
         }
         else {
-##        debug_msg("WARNING: Un-translated message: '$msgid'\n");
             if ( $msgids->{$msgid}->fuzzy() )
             {    # BUGBUG TEST this is still set
                 logger( maketext("WARNING: Fuzzy message in PO file."), RED );
@@ -897,7 +879,6 @@ sub translate {
         }
     }
     else {
-##         debug_msg("WARNING: Missing message: '\n$msgid\n'\n");
         logger(
             maketext(
                 "WARNING: Message missing from PO file, consider updating your POT and PO files."
@@ -940,42 +921,15 @@ sub print_msgs {
         )
         );
 
-    print( $fh $self->header() );
+    my $po = new Locale::PO(-msgid=> '', -msgstr => $self->header());
+    print( $fh $po->dump() );
 
     my %msgs = ();
-
     foreach my $child ( $msg_list->content_list() ) {
         my $msg_id = $child->as_XML();
-##debug_msg("is utf8 msg_id 1: '" . utf8::is_utf8($msg_id) . "'\n");
-##debug_msg("msg_id: $msg_id\n");
-
-##        my $msg_id = $child->as_text();
-        $msg_id = po_format( $self->normalise( $msg_id, $child->tag() ),
-            $child->tag() );
-        next unless $msg_id;
-
-##        $msg_id = qq|"$msg_id"|;
-        next
-            if ( $msg_id eq '' || $msg_id eq '""' || defined $msgs{$msg_id} );
-##debug_msg("is utf8 msg_id 2: '" . utf8::is_utf8($msg_id) . "'\n");
-##debug_msg("msg_id: $msg_id\n\n");
-        $msgs{$msg_id} = 1;
-        if ( $child->tag() =~ /$VERBATIM/ ) {
-            $msg_id =~ s/\\\\n/\\n"\n"/g;
-        }
-##debug_msg("is utf8 msg_id 3: '" . utf8::is_utf8($msg_id) . "'\n");
-##debug_msg("msg_id: $msg_id\n\n");
-        my $tag = $child->tag();
-        print $fh <<MSGID
-#. Tag: $tag
-#, no-c-format
-msgid $msg_id
-msgstr ""
-
-MSGID
-
-    }
-
+        my $po = new Locale::PO(-msgid=> detag($msg_id, $child->tag()), -msgstr => '');
+        print( $fh $po->dump() );
+    }    
     close($fh);
 
     return;
@@ -994,128 +948,55 @@ sub header {
         = DateTime->now( time_zone => "local" )->strftime("%Y-%m-%d %H:%M%z");
 
     my $string = <<POT;
-# 
-# AUTHOR <EMAIL\@ADDRESS>, YEAR.
-#
-msgid ""
-msgstr ""
-"Project-Id-Version: 0\\n"
-"POT-Creation-Date: $date\\n"
-"PO-Revision-Date: $date\\n"
-"Last-Translator: Automatically generated\\n"
-"Language-Team: None\\n"
-"MIME-Version: 1.0\\n"
-"Content-Type: application/x-publican; charset=UTF-8\\n"
-"Content-Transfer-Encoding: 8bit\\n"
-
+Project-Id-Version: 0
+POT-Creation-Date: $date
+PO-Revision-Date: $date
+Last-Translator: Automatically generated
+Language-Team: None
+MIME-Version: 1.0
+Content-Type: application/x-publican; charset=UTF-8
+Content-Transfer-Encoding: 8bit
 POT
 
     return ($string);
 }
 
-=head2 normalise
-
-Remove extraneous white space.
-
-=cut
-
-sub normalise {
-    my $self = shift;
-    my $norm = shift;
-    my $name = shift;
-    if ( $name =~ /$VERBATIM/ ) {
-        $norm =~ s/\n/\\n/g;    # CR
-    }
-    else {
-        $norm =~ s/\n/ /g;        # CR
-        $norm =~ s/^[\t ]*//g;    # space at start of line
-        $norm =~ s/[\t ]*$//g;    # space at end of line
-        $norm =~ s/[\t ]+/ /g;    # colapse spacing
-    }
-
-    # Escaped entities :(
-## TODO dupe code from XmlClean
-##    $norm =~ s/&#10;//g;
-##    $norm =~ s/&#9;//g;
-##    $norm =~ s/&#38;([a-zA-Z-_0-9]+;)/&$1/g;
-    $norm =~ s/&#38;/&amp;/g;
-##    $norm =~ s/&amp;#x200B;/&#x200B;/g;
-##    $norm =~ s/&#x200B; &#x200B;/ /g;
-##    $norm =~ s/&#x200B; / /g;
-    $norm =~ s/&#60;/&lt;/g;
-    $norm =~ s/&#62;/&gt;/g;
-    $norm =~ s/&#34;/"/g;
-    $norm =~ s/&#39;/'/g;
-    $norm =~ s/&quot;/"/g;
-    $norm =~ s/&apos;/'/g;
-
-##debug_msg("is utf8 norm: '" . utf8::is_utf8($norm) . "'\n");
-##debug_msg("norm: $norm\n\n");
-
-    return $norm;
-}
-
-=head2 po_format
+=head2 detag
 
 Format a string for use in a PO file.
 
 =cut
 
-sub po_format {
+sub detag {
     my $string = shift;
     my $name = shift || '';
 
     debug_msg("unknown tag for: $string") if $name eq '';
 
     if ( $name =~ /$VERBATIM/ ) {
-        $string =~ s/^<$name>//s;    # remove start tag to reduce polution
-        $string =~ s/<\/$name>(?:\\n|[\t ])*$//s
-            ;                        # remove close tag to reduce polution
-        $string =~ s/\\/\\\\/g;  # \ seen as control sequence by msg* programs
-        $string =~ s/\"/\\"/g;   # " seen as special char by msg* programs
-    }
+    # remove start tag to reduce polution
+        $string =~ s/^<$name[^>]*>//;
+# remove close tag to reduce polution
+        $string =~ s/<\/$name>\s*$//;
+        chomp($string);
+            ;                            }
     else {
-        $string =~ s/^<$name>[\t ]*//s;  # remove start tag to reduce polution
-        $string
-            =~ s/[\t ]*<\/$name>$//s;    # remove close tag to reduce polution
-        $string =~ s/\\/\\\\/g;  # \ seen as control sequence by msg* programs
-        $string =~ s/\"/\\"/g;   # " seen as special char by msg* programs
+        chomp($string);
+        # remove start tag & leading space
+        $string =~ s/^<$name[^>]*>\s*//;
+        # remove close tag & trailing
+        $string =~ s/\s*<\/$name>\s*$//;
     }
-    $string = qq|"$string"|;
 
-    return $string;
-}
+    $string =~ s/&#38;/&amp;/g;
+    $string =~ s/&#60;/&lt;/g;
+    $string =~ s/&#62;/&gt;/g;
+    $string =~ s/&#34;/"/g;
+    $string =~ s/&#39;/'/g;
+    $string =~ s/&quot;/"/g;
+    $string =~ s/&apos;/'/g;
 
-=head2 po_unformat
-
-Remove PO formatting from a string.
-
-=cut
-
-sub po_unformat {
-    my $string = shift;
-    my $name = shift || '';
-
-    if ( $name =~ /$VERBATIM/ ) {
-        $string =~ s/^\"//msg;    # strip sol quotes added by msguniq etc
-        $string =~ s/\"$//msg;    # strip sol quotes added by msguniq etc
-##debug_msg("string: $string");
-        $string =~ s/\\n/\n/msg;  # strip eol quotes added by msguniq etc
-##debug_msg("string: $string");
-        $string =~ s/\\"/\"/msg;  # unescape quotes added by po_format
-        $string =~ s/\\\\/\\/g;   # unescape backslash added by po_format
-    }
-    else {
-        $string =~ s/^\"//msg;     # strip sol quotes added by msguniq etc
-        $string =~ s/\"$//msg;     # strip sol quotes added by msguniq etc
-        $string =~ s/\\n/ /msg;    # strip eol quotes added by msguniq etc
-        $string =~ s/\n//msg;      # strip eol quotes added by msguniq etc
-        $string =~ s/^[\t ]*//msg
-            ;    # strip the leading spaces left from the msgid "" line
-        $string =~ s/\\"/\"/msg;    # unescape quotes added by po_format
-        $string =~ s/\\\\/\\/g;     # unescape backslash added by po_format
-    }
-    return $string;
+    return($string);
 }
 
 =head2 po_report
@@ -1188,8 +1069,7 @@ sub po_report {
                 $po_stats{msg_count}--;
                 next;
             }
-## More accurate word counts
-##            my $count = () = $msgref->msgid() =~ /\w+/g;
+
             my $count = ()
                 = $msgref->msgid()
                 =~ /(?:\s+|<\/[a-zA-Z]+><[a-zA-Z]+>\S|-|.$)/g;
@@ -1274,13 +1154,16 @@ Publican requires no configuration files or environment variables.
 Carp
 version
 Publican
-File::Copy::Recursive
 File::Path
+Term::ANSIColor
+DateTime
+Locale::PO
+XML::TreeBuilder
+String::Similarity
 
 =head1 INCOMPATIBILITIES
 
 None reported.
-
 
 =head1 BUGS AND LIMITATIONS
 

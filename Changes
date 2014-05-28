@@ -8,6 +8,8 @@
 - Fix white space being removed from msgids when merging. BZ #1097090
 - Add code language switching. BZ #1092351
 - Fix CDATA support, bump XML::TreeBuilder dep to 5.3. BZ #1101050
+- Add --showfuzzy to build options.
+- Move PO manipulation to Local::PO.
 
 4.1.3 Wed May 21 2014
 - Fix extra space breaking spec files with sort_order. BZ #1099262

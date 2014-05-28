@@ -172,6 +172,7 @@ my %options = (
     ),
     'previous' => maketext(
         'Keep previous msgid when fuzzy matches are detected in PO updates.'),
+    showfuzzy     => maketext('Show fuzzy translation entries in output. Defaults off.'),
 );
 
 # Options all actions use
@@ -191,7 +192,7 @@ my %actions = (
         'options' => [
             'formats',         'langs',   'publish', 'embedtoc',
             'distributed_set', 'novalid', 'src_dir', 'pdftool',
-            'pub_dir'
+            'pub_dir', 'showfuzzy'
         ],
     },
     'clean' => {
@@ -1189,12 +1190,12 @@ if ( $action eq 'build' ) {
 
     if ( $dtdver =~ m/^5/ ) {
         $builder = Publican::Builder::DocBook5->new(
-            { novalid => $opts{novalid} } );
+            { novalid => $opts{novalid}, showfuzzy => $opts{showfuzzy} } );
 
     }
     else {
         $builder = Publican::Builder::DocBook4->new(
-            { novalid => $opts{novalid} } );
+            { novalid => $opts{novalid}, showfuzzy => $opts{showfuzzy} } );
     }
 
     $builder->build(

@@ -129,6 +129,7 @@ sub new {
     my $class = ref($this) || $this;
 
     my $novalid = delete( $args->{novalid} ) || 0;
+    my $showfuzzy         = delete( $args->{showfuzzy} )         || undef;
 
     if ( %{$args} ) {
         croak(
@@ -141,7 +142,7 @@ sub new {
     my $self = bless {}, $class;
 
     $self->{publican}   = Publican->new();
-    $self->{translator} = Publican::Translate->new();
+    $self->{translator} = Publican::Translate->new({showfuzzy => $showfuzzy});
     $self->{validate}   = !$novalid;
     my $common_content = $self->{publican}->param('common_content');
     my $common_config  = $self->{publican}->param('common_config');

@@ -1285,9 +1285,10 @@ TODO: Make XmlClean use this.
 sub new_tree {
 
     my $store_comments = ( shift() || 0 );
+    my $noexpand = shift();
 
     my $xml_doc = XML::TreeBuilder->new(
-        { 'NoExpand' => "1", 'ErrorContext' => "2" } );
+        { 'NoExpand' => !$noexpand, 'ErrorContext' => "2" } );
     $xml_doc->store_pis(1);
     $xml_doc->store_cdata(1);
 
@@ -1370,9 +1371,16 @@ sub dtd_string {
 DTDHEAD
 
     if ( $dtdver =~ m/^5/ ) {
+## TODO BUGBUG this should resolve DocBook4 entities ...
         $dtd = <<DTDHEAD;
 <?xml version='1.0' encoding='utf-8' ?>
 <!DOCTYPE $tag [
+<!ENTITY % DOCBOOK_ENTS SYSTEM "http://www.oasis-open.org/docbook/xml/4.5/dbcentx.mod">
+%BOOK_ENTS;
+<!ENTITY % isopub PUBLIC
+     "ISO 8879:1986//ENTITIES Publishing//EN//XML"
+     "http://www.w3.org/2003/entities/iso8879/isopub.ent"
+>
 DTDHEAD
     }
 
@@ -1383,6 +1391,7 @@ DTDHEAD
 %BOOK_ENTITIES;
 ENT
     }
+
     $dtd .= <<DTDTAIL;
 ]>
 DTDTAIL
