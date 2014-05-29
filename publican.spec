@@ -91,9 +91,9 @@ BuildRequires:  perl(Time::localtime)
 BuildRequires:  perl(XML::LibXML) => 1.70
 BuildRequires:  perl(XML::LibXSLT) => 1.70
 BuildRequires:  perl(XML::Simple)
-BuildRequires:  perl(XML::TreeBuilder) => 5.3
+BuildRequires:  perl(XML::TreeBuilder) => 5.4
 # BZ #1053609
-BuildRequires:  perl-XML-TreeBuilder >= 5.1
+BuildRequires:  perl-XML-TreeBuilder >= 5.4
 BuildRequires:  docbook-style-xsl >= 1.77.1
 BuildRequires:  desktop-file-utils
 BuildRequires:  gettext
@@ -114,9 +114,9 @@ Requires:       rpm-build
 Requires:       docbook-style-xsl >= 1.77.1
 Requires:       perl(XML::LibXML)  >=  1.67
 Requires:       perl(XML::LibXSLT) >=  1.67
-Requires:       perl(XML::TreeBuilder) >= 5.3
+Requires:       perl(XML::TreeBuilder) >= 5.4
 # BZ #1053609
-Requires:       perl-XML-TreeBuilder >= 5.3
+Requires:       perl-XML-TreeBuilder >= 5.4
 Requires:       perl-Template-Toolkit
 Requires:       perl(DBD::SQLite)
 Requires:       perl(Text::CSV_XS)

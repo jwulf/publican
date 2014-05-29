@@ -86,9 +86,6 @@ scp to hosted
 PUG changes
 ######################################
 
-## Make sure XML::TreeBuilder is bumped to 5.4 for the as_XML fix!!!
-## why don't DocBook4 entities resolve...
-
 Installing "Running publican from a GIT checkout"
 
 section on "Converting DB4 to DB5"

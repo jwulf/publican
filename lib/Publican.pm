@@ -5,7 +5,7 @@ use warnings;
 use strict;
 use Carp;
 use Config::Simple '-strict';
-use XML::TreeBuilder 5.3;
+use XML::TreeBuilder 5.4;
 use I18N::LangTags::List;
 use Term::ANSIColor qw(:constants uncolor);
 use File::Find::Rule;
