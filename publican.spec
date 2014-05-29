@@ -78,7 +78,7 @@ BuildRequires:  perl(IO::String)
 BuildRequires:  perl(List::MoreUtils)
 BuildRequires:  perl(List::Util)
 BuildRequires:  perl(Locale::Language)
-BuildRequires:  perl(Locale::PO)
+BuildRequires:  perl(Locale::PO) >= 0.24
 BuildRequires:  perl(Module::Build)
 BuildRequires:  perl(Pod::Usage)
 BuildRequires:  perl(String::Similarity)

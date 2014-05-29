@@ -21,22 +21,8 @@
 <xsl:param name="chunker.output.quiet" select="0"/>
 <xsl:param name="suppress.navigation">1</xsl:param>
 <xsl:param name="refentry.separator" select="1"/>
-
-<xsl:param name="generate.toc">
-set nop
-book nop
-article nop
-chapter nop
-qandadiv nop
-qandaset nop
-sect1 nop
-sect2 nop
-sect3 nop
-sect4 nop
-sect5 nop
-section nop
-part nop
-</xsl:param>
+<xsl:param name="generate.section.toc.level" select="0"/>
+<xsl:param name="manual.toc" select="' '"/>
 
 <!--
 From: xhtml/chunk-common.xsl

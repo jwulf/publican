@@ -11,7 +11,7 @@ use Publican::Localise;
 use File::Path;
 use Term::ANSIColor qw(:constants);
 use DateTime;
-use Locale::PO;
+use Locale::PO 0.24;
 use XML::TreeBuilder;
 use String::Similarity;
 use Encode qw(is_utf8 decode_utf8 encode_utf8);
