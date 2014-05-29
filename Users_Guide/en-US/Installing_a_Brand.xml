@@ -2,10 +2,15 @@
 <!DOCTYPE section [
 <!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
 %BOOK_ENTITIES;
+<!ENTITY % sgml.features "IGNORE">
+<!ENTITY % xml.features "INCLUDE">
+<!ENTITY % DOCBOOK_ENTS PUBLIC "-//OASIS//ENTITIES DocBook XML Character Entities V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/dbcentx.mod">
+%DOCBOOK_ENTS;
 ]>
 <section conformance="188" version="5.0" xml:id="sect-Publican-Users_Guide-Installing_a_brand" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
 	<info xml:id="info-Publican-Users_Guide-Installing_a_brand">
 		<title>Installing a brand</title>
+
 	</info>
 	 <para>
 		<application>Publican</application> brands for Fedora, Genome, and oVirt documents are available as RPM packages in Fedora. Similarly, Red Hat internally distributes RPM packages containing <application>Publican</application> brands for GIMP, JBoss, and Red Hat documents. Providing that you have access to the relevant repositories, you can install these brands on a computer that runs Red Hat Enterprise Linux or Fedora — or an operating system derived from either — with the command <command>yum install publican-<replaceable>brand</replaceable></command> or with a graphical package manager such as <application>PackageKit</application>.
@@ -65,10 +70,10 @@
 		</step>
 
 	</procedure>
-	
 	 <table conformance="189" xml:id="tabl-Publican-Users_Guide-Installing_a_brand-Current_Brands_and_their_packages">
 		<info xml:id="info-Publican-Users_Guide-Current_Brands_and_their_packages">
 			<title>Current Brands and their packages</title>
+
 		</info>
 		 <tgroup cols="5">
 			<colspec colnum="1" colwidth="1*"></colspec>
@@ -154,5 +159,4 @@
 		Note the difference in licensing between the common content files provided in the common brand (CC0) and the default license set for books generated with the common brand (GFDL). The CC0 license allows you to redistribute and relicense the files that make up the common brand (including the CSS and image files) to suit your project. <application>Publican</application> suggests the GFDL for documentation by default because <application>Publican</application> is developed primarily to build documentation for software. The GFDL is compatible with the GPL, which is the most commonly used license for open-source software.
 	</para>
 </section>
-
 

@@ -2,10 +2,15 @@
 <!DOCTYPE section [
 <!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
 %BOOK_ENTITIES;
+<!ENTITY % sgml.features "IGNORE">
+<!ENTITY % xml.features "INCLUDE">
+<!ENTITY % DOCBOOK_ENTS PUBLIC "-//OASIS//ENTITIES DocBook XML Character Entities V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/dbcentx.mod">
+%DOCBOOK_ENTS;
 ]>
 <section conformance="186" version="5.0" xml:id="sect-Publican-Users_Guide-Debian" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
 	<info xml:id="info-Publican-Users_Guide-Debian">
 		<title>Debian</title>
+
 	</info>
 	 <para>
 		This procedure will install the <application>publican</application> version that is in your default Debian repository. It will also install a large number of packages that <application>publican</application> depends on, like Java, XML and image processing libraries and many ancillary Perl modules.
@@ -42,10 +47,10 @@
 		</step>
 
 	</procedure>
-	
 	 <important>
 		<info xml:id="info-Publican-Users_Guide-_Important_Installing_more_recent_packages_using_Apt_Pinning">
 			<title> Important — Installing more recent packages using Apt-Pinning</title>
+
 		</info>
 		 <para>
 			If you need a more recent release of <package>publican</package> than installed by the procedure above, you can query if there other versions available: <uri xlink:href="http://packages.debian.org/publican" xmlns:xlink="http://www.w3.org/1999/xlink">http://packages.debian.org/publican</uri>.
@@ -147,7 +152,6 @@ Pin-Priority: -10</programlisting>
 		</step>
 
 	</procedure>
-	
 	 <para>
 		Because Apt Pinning mixes 2 different debian streams in an un-tested way, incompatibilities may happen. For example, you may get a warning like: 
 <screen><prompt>$</prompt> <command>publican</command>
@@ -162,7 +166,7 @@ Pin-Priority: -10</programlisting>
 		<step>
 			<para>
 				
-<screen role="popper" id="pants"><prompt>$</prompt> <command>apt-get search libxslt</command>
+<screen conformance="263" id="pants" role="popper"><prompt>$</prompt> <command>apt-get search libxslt</command>
 <computeroutput>gambas3-gb-xml-xslt - Gambas XSLT component</computeroutput>
 <computeroutput>libidzebra-2.0-mod-alvis - IDZebra filter alvis (XSLT filter for XML)</computeroutput>
 <computeroutput>libidzebra-2.0-mod-dom - IDZebra filter 'dom' (XML DOM internal document model with XSLT)</computeroutput>
@@ -199,8 +203,6 @@ Pin-Priority: -10</programlisting>
 		</step>
 
 	</procedure>
-	
 
 </section>
-
 

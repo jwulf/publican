@@ -2,10 +2,15 @@
 <!DOCTYPE section [
 <!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
 %BOOK_ENTITIES;
+<!ENTITY % sgml.features "IGNORE">
+<!ENTITY % xml.features "INCLUDE">
+<!ENTITY % DOCBOOK_ENTS PUBLIC "-//OASIS//ENTITIES DocBook XML Character Entities V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/dbcentx.mod">
+%DOCBOOK_ENTS;
 ]>
 <section conformance="229" version="5.0" xml:id="sect-Publican-Users_Guide-Creating_installing_and_updating_product_pages_and_version_pages" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
 	<info xml:id="info-Publican-Users_Guide-Creating_installing_and_updating_product_pages_and_version_pages">
 		<title>Creating, installing, and updating product pages and version pages</title>
+
 	</info>
 	 <para>
 		<application>Publican</application>-generated product pages and version pages are the localizable pages that provide a general overview of a product or version respectively. Visitors access these pages by clicking on a product or version in the navigation menu. The pages are structured as DocBook <tag>&lt;article&gt;</tag>s with an extra <parameter>web_type: product</parameter> or <parameter>web_type: version</parameter> parameter in their <filename>publican.cfg</filename> files. In their structure and presentation, product pages and version pages are the same as any other article that you produce with <application>Publican</application>. To create a product page or version page:
@@ -127,8 +132,6 @@
 		</step>
 
 	</procedure>
-	
 
 </section>
-
 

@@ -2,10 +2,15 @@
 <!DOCTYPE section [
 <!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
 %BOOK_ENTITIES;
+<!ENTITY % sgml.features "IGNORE">
+<!ENTITY % xml.features "INCLUDE">
+<!ENTITY % DOCBOOK_ENTS PUBLIC "-//OASIS//ENTITIES DocBook XML Character Entities V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/dbcentx.mod">
+%DOCBOOK_ENTS;
 ]>
 <section conformance="132" version="5.0" xml:id="sect-Publican-Users_Guide-Creating_a_brand" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
 	<info xml:id="info-Publican-Users_Guide-Creating_a_brand">
 		<title>Creating a brand</title>
+
 	</info>
 	 <para>
 		Use the <prompt>$</prompt> <command>create_brand</command> action to create a new brand. When you create a new brand, you must give it a name and specify the original language for the brand's XML files. The <option>--name</option> option provides the name, and the <option>--lang</option> option specifies the language. The complete command is therefore:
@@ -29,5 +34,4 @@
 	 
 <screen><prompt>$</prompt> <command>grep -r 'SETUP' *</command></screen>
 </section>
-
 

@@ -446,7 +446,7 @@ if ( $help and ( $action eq "docbook" ) ) {
 
     my $var_list = XML::Element->new_from_lol(
         [   'variablelist',
-            { id => 'Auto_Docs-options' },
+            { id => 'Auto_Docs-Command_options' },
             [ 'info', [ 'title', 'Command options' ], ],
         ]
     );
@@ -466,7 +466,7 @@ if ( $help and ( $action eq "docbook" ) ) {
 
     $var_list = XML::Element->new_from_lol(
         [   'variablelist',
-            { id => 'Auto_Docs-actions' },
+            { id => 'Auto_Docs-Command_actions' },
             [ 'info', [ 'title', 'Command actions' ], ],
         ]
     );
@@ -502,21 +502,21 @@ if ( $help and ( $action eq "docbook" ) ) {
 
     my $gen_list = XML::Element->new_from_lol(
         [   'variablelist',
-            { id => 'Auto_Docs-actions' },
+            { id => 'Auto_Docs_Configs-General_options' },
             [ 'info', [ 'title', 'General options' ], ],
 	    ['para', maketext("These are set in the books or brands configuration files.") ],
         ]
     );
     my $brand_list = XML::Element->new_from_lol(
         [   'variablelist',
-            { id => 'Auto_Docs-actions' },
+            { id => 'Auto_Docs_Configs-Brand_options' },
             [ 'info', [ 'title', 'Brand options' ], ],
 	    ['para', maketext("These are set in the brands configuration files.") ],
         ]
     );
     my $web_list = XML::Element->new_from_lol(
         [   'variablelist',
-            { id => 'Auto_Docs-actions' },
+            { id => 'Auto_Docs_Configs-Site_option' },
             [ 'info', [ 'title', 'Site options' ], ],
 	    ['para', maketext("These are set in the sites configuration file.") ],
         ]

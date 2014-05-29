@@ -2,37 +2,43 @@
 <!DOCTYPE appendix [
 <!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
 %BOOK_ENTITIES;
+<!ENTITY % sgml.features "IGNORE">
+<!ENTITY % xml.features "INCLUDE">
+<!ENTITY % DOCBOOK_ENTS PUBLIC "-//OASIS//ENTITIES DocBook XML Character Entities V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/dbcentx.mod">
+%DOCBOOK_ENTS;
 ]>
 <appendix conformance="211" version="5.0" xml:id="appe-Publican-Users_Guide-Revision_History" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
 	<info xml:id="info-Publican-Users_Guide-Revision_History">
 		<title>Revision History</title>
+
 	</info>
 	 <simpara>
 		<revhistory>
-			 <revision>
+			<revision>
 				<revnumber>4.2-0</revnumber>
 				 <date>Mon May 12 2014</date>
 				 <author>
 					<personname><firstname>Jeff</firstname>
-					<surname>Fearn</surname>
-					</personname><email>jfearn@redhat.com</email>
+					 <surname>Fearn</surname>
+					 </personname><email>jfearn@redhat.com</email>
 				</author>
 				 <revdescription>
 					<simplelist>
 						<member>Convert to DocBook 5</member>
-						<member>Update a lot of content</member>
+						 <member>Update a lot of content</member>
+
 					</simplelist>
 
 				</revdescription>
-			</revision>
 
-			<revision>
+			</revision>
+			 <revision>
 				<revnumber>4.0-5</revnumber>
 				 <date>Thu Mar 27 2014</date>
 				 <author>
 					<personname><firstname>Rüdiger</firstname>
-					<surname>Landmann</surname>
-					</personname><email>rlandmann@redhat.com</email>
+					 <surname>Landmann</surname>
+					 </personname><email>rlandmann@redhat.com</email>
 				</author>
 				 <revdescription>
 					<simplelist>
@@ -48,8 +54,8 @@
 				 <date>Mon Nov 25 2013</date>
 				 <author>
 					<personname><firstname>Rüdiger</firstname>
-					<surname>Landmann</surname>
-					</personname><email>r.landmann@redhat.com</email>
+					 <surname>Landmann</surname>
+					 </personname><email>r.landmann@redhat.com</email>
 				</author>
 				 <revdescription>
 					<simplelist>
@@ -66,8 +72,8 @@
 				 <date>Thu Nov 14 2013</date>
 				 <author>
 					<personname><firstname>Roman</firstname>
-					<surname>Joost</surname>
-					</personname><email>rjoost@redhat.com</email>
+					 <surname>Joost</surname>
+					 </personname><email>rjoost@redhat.com</email>
 				</author>
 				 <revdescription>
 					<simplelist>
@@ -83,8 +89,8 @@
 				 <date>Thu Nov 14 2013</date>
 				 <author>
 					<personname><firstname>Norman</firstname>
-					<surname>Dunbar</surname>
-					</personname><email>SvenDowideit@home.org.au</email>
+					 <surname>Dunbar</surname>
+					 </personname><email>SvenDowideit@home.org.au</email>
 				</author>
 				 <revdescription>
 					<simplelist>
@@ -100,8 +106,8 @@
 				 <date>Thu Nov 14 2013</date>
 				 <author>
 					<personname><firstname>Svein</firstname>
-					<surname>Dowdeit</surname>
-					</personname><email>SvenDowideit@home.org.au</email>
+					 <surname>Dowdeit</surname>
+					 </personname><email>SvenDowideit@home.org.au</email>
 				</author>
 				 <revdescription>
 					<simplelist>
@@ -118,8 +124,8 @@
 				 <date>Thu Jul 11 2013</date>
 				 <author>
 					<personname><firstname>Zac</firstname>
-					<surname>Dover</surname>
-					</personname><email>zdover@redhat.com</email>
+					 <surname>Dover</surname>
+					 </personname><email>zdover@redhat.com</email>
 				</author>
 				 <revdescription>
 					<simplelist>
@@ -138,8 +144,8 @@
 				 <date>Thu Jul 11 2013</date>
 				 <author>
 					<personname><firstname>Jeff</firstname>
-					<surname>Fearn</surname>
-					</personname><email>jfearn@redhat.com</email>
+					 <surname>Fearn</surname>
+					 </personname><email>jfearn@redhat.com</email>
 				</author>
 				 <revdescription>
 					<simplelist>
@@ -158,8 +164,8 @@
 				 <date>Tue Jan 8 2013</date>
 				 <author>
 					<personname><firstname>Norman</firstname>
-					<surname>Dunbar</surname>
-					</personname><email>norman@dunbar-it.co.uk</email>
+					 <surname>Dunbar</surname>
+					 </personname><email>norman@dunbar-it.co.uk</email>
 				</author>
 				 <revdescription>
 					<simplelist>
@@ -175,8 +181,8 @@
 				 <date>Mon Feb 20 2012</date>
 				 <author>
 					<personname><firstname>Jeff</firstname>
-					<surname>Fearn</surname>
-					</personname><email>jfearn@redhat.com</email>
+					 <surname>Fearn</surname>
+					 </personname><email>jfearn@redhat.com</email>
 				</author>
 				 <revdescription>
 					<simplelist>
@@ -192,8 +198,8 @@
 				 <date>Tue Sep 6 2011</date>
 				 <author>
 					<personname><firstname>Rebecca</firstname>
-					<surname>Newton</surname>
-					</personname><email>rnewton@redhat.com</email>
+					 <surname>Newton</surname>
+					 </personname><email>rnewton@redhat.com</email>
 				</author>
 				 <revdescription>
 					<simplelist>
@@ -209,8 +215,8 @@
 				 <date>Mon Jul 18 2011</date>
 				 <author>
 					<personname><firstname>Rüdiger</firstname>
-					<surname>Landmann</surname>
-					</personname><email>r.landmann@redhat.com</email>
+					 <surname>Landmann</surname>
+					 </personname><email>r.landmann@redhat.com</email>
 				</author>
 				 <revdescription>
 					<simplelist>
@@ -232,8 +238,8 @@
 				 <date>Wed Dec 1 2010</date>
 				 <author>
 					<personname><firstname>Rüdiger</firstname>
-					<surname>Landmann</surname>
-					</personname><email>r.landmann@redhat.com</email>
+					 <surname>Landmann</surname>
+					 </personname><email>r.landmann@redhat.com</email>
 				</author>
 				 <revdescription>
 					<simplelist>
@@ -253,8 +259,8 @@
 				 <date>Mon Oct 25 2010</date>
 				 <author>
 					<personname><firstname>Rüdiger</firstname>
-					<surname>Landmann</surname>
-					</personname><email>r.landmann@redhat.com</email>
+					 <surname>Landmann</surname>
+					 </personname><email>r.landmann@redhat.com</email>
 				</author>
 				 <revdescription>
 					<simplelist>
@@ -272,8 +278,8 @@
 				 <date>Tue Oct 5 2010</date>
 				 <author>
 					<personname><firstname>Rüdiger</firstname>
-					<surname>Landmann</surname>
-					</personname><email>r.landmann@redhat.com</email>
+					 <surname>Landmann</surname>
+					 </personname><email>r.landmann@redhat.com</email>
 				</author>
 				 <revdescription>
 					<simplelist>
@@ -297,8 +303,8 @@
 				 <date>Thu Aug 19 2010</date>
 				 <author>
 					<personname><firstname>Rüdiger</firstname>
-					<surname>Landmann</surname>
-					</personname><email>r.landmann@redhat.com</email>
+					 <surname>Landmann</surname>
+					 </personname><email>r.landmann@redhat.com</email>
 				</author>
 				 <revdescription>
 					<simplelist>
@@ -316,8 +322,8 @@
 				 <date>Fri Jul 16 2010</date>
 				 <author>
 					<personname><firstname>Rüdiger</firstname>
-					<surname>Landmann</surname>
-					</personname><email>r.landmann@redhat.com</email>
+					 <surname>Landmann</surname>
+					 </personname><email>r.landmann@redhat.com</email>
 				</author>
 				 <revdescription>
 					<simplelist>
@@ -334,8 +340,8 @@
 				 <date>Mon May 24 2010</date>
 				 <author>
 					<personname><firstname>Rüdiger</firstname>
-					<surname>Landmann</surname>
-					</personname><email>r.landmann@redhat.com</email>
+					 <surname>Landmann</surname>
+					 </personname><email>r.landmann@redhat.com</email>
 				</author>
 				 <revdescription>
 					<simplelist>
@@ -351,8 +357,8 @@
 				 <date>Fri May 7 2010</date>
 				 <author>
 					<personname><firstname>Rüdiger</firstname>
-					<surname>Landmann</surname>
-					</personname><email>r.landmann@redhat.com</email>
+					 <surname>Landmann</surname>
+					 </personname><email>r.landmann@redhat.com</email>
 				</author>
 				 <revdescription>
 					<simplelist>
@@ -372,8 +378,8 @@
 				 <date>Fri Feb 26 2010</date>
 				 <author>
 					<personname><firstname>Rüdiger</firstname>
-					<surname>Landmann</surname>
-					</personname><email>r.landmann@redhat.com</email>
+					 <surname>Landmann</surname>
+					 </personname><email>r.landmann@redhat.com</email>
 				</author>
 				 <revdescription>
 					<simplelist>
@@ -389,8 +395,8 @@
 				 <date>Wed Feb 17 2010</date>
 				 <author>
 					<personname><firstname>Jeff</firstname>
-					<surname>Fearn</surname>
-					</personname><email>jfearn@redhat.com</email>
+					 <surname>Fearn</surname>
+					 </personname><email>jfearn@redhat.com</email>
 				</author>
 				 <revdescription>
 					<simplelist>
@@ -407,8 +413,8 @@
 				 <date>Mon Dec 7 2009</date>
 				 <author>
 					<personname><firstname>Rüdiger</firstname>
-					<surname>Landmann</surname>
-					</personname><email>r.landmann@redhat.com</email>
+					 <surname>Landmann</surname>
+					 </personname><email>r.landmann@redhat.com</email>
 				</author>
 				 <revdescription>
 					<simplelist>
@@ -428,8 +434,8 @@
 				 <date>Fri Nov 27 2009</date>
 				 <author>
 					<personname><firstname>Jeff</firstname>
-					<surname>Fearn</surname>
-					</personname><email>jfearn@redhat.com</email>
+					 <surname>Fearn</surname>
+					 </personname><email>jfearn@redhat.com</email>
 				</author>
 				 <revdescription>
 					<simplelist>
@@ -445,8 +451,8 @@
 				 <date>Thu Nov 26 2009</date>
 				 <author>
 					<personname><firstname>Jeff</firstname>
-					<surname>Fearn</surname>
-					</personname><email>jfearn@redhat.com</email>
+					 <surname>Fearn</surname>
+					 </personname><email>jfearn@redhat.com</email>
 				</author>
 				 <revdescription>
 					<simplelist>
@@ -462,8 +468,8 @@
 				 <date>Thu Oct 22 2009</date>
 				 <author>
 					<personname><firstname>Rüdiger</firstname>
-					<surname>Landmann</surname>
-					</personname><email>r.landmann@redhat.com</email>
+					 <surname>Landmann</surname>
+					 </personname><email>r.landmann@redhat.com</email>
 				</author>
 				 <revdescription>
 					<simplelist>
@@ -479,8 +485,8 @@
 				 <date>Tue Oct 13 2009</date>
 				 <author>
 					<personname><firstname>Rüdiger</firstname>
-					<surname>Landmann</surname>
-					</personname><email>r.landmann@redhat.com</email>
+					 <surname>Landmann</surname>
+					 </personname><email>r.landmann@redhat.com</email>
 				</author>
 				 <revdescription>
 					<simplelist>
@@ -496,8 +502,8 @@
 				 <date>Thu Dec 18 2008</date>
 				 <author>
 					<personname><firstname>Jeff</firstname>
-					<surname>Fearn</surname>
-					</personname><email>jfearn@redhat.com</email>
+					 <surname>Fearn</surname>
+					 </personname><email>jfearn@redhat.com</email>
 				</author>
 				 <revdescription>
 					<simplelist>
@@ -514,8 +520,8 @@
 				 <date>Tue Nov 25 2008</date>
 				 <author>
 					<personname><firstname>Brian</firstname>
-					<surname>Forté</surname>
-					</personname><email>bforte@redhat.com</email>
+					 <surname>Forté</surname>
+					 </personname><email>bforte@redhat.com</email>
 				</author>
 				 <revdescription>
 					<simplelist>
@@ -531,8 +537,8 @@
 				 <date>Fri Oct 10 2008</date>
 				 <author>
 					<personname><firstname>Don</firstname>
-					<surname>Domingo</surname>
-					</personname><email>ddomingo@redhat.com</email>
+					 <surname>Domingo</surname>
+					 </personname><email>ddomingo@redhat.com</email>
 				</author>
 				 <revdescription>
 					<simplelist>
@@ -548,8 +554,8 @@
 				 <date>Fri Sep 05 2008</date>
 				 <author>
 					<personname><firstname>Brian</firstname>
-					<surname>Forté</surname>
-					</personname><email>bforte@redhat.com</email>
+					 <surname>Forté</surname>
+					 </personname><email>bforte@redhat.com</email>
 				</author>
 				 <revdescription>
 					<simplelist>
@@ -565,8 +571,8 @@
 				 <date>Fri Jun 06 2008</date>
 				 <author>
 					<personname><firstname>Murray</firstname>
-					<surname>McAllister</surname>
-					</personname><email>mmcallis@redhat.com</email>
+					 <surname>McAllister</surname>
+					 </personname><email>mmcallis@redhat.com</email>
 				</author>
 				 <revdescription>
 					<simplelist>
@@ -582,8 +588,8 @@
 				 <date>Fri May 16 2008</date>
 				 <author>
 					<personname><firstname>Jeff</firstname>
-					<surname>Fearn</surname>
-					</personname><email>jfearn@redhat.com</email>
+					 <surname>Fearn</surname>
+					 </personname><email>jfearn@redhat.com</email>
 				</author>
 				 <revdescription>
 					<simplelist>
@@ -599,8 +605,8 @@
 				 <date>Thu Dec 13 2007</date>
 				 <author>
 					<personname><firstname>Murray</firstname>
-					<surname>McAllister</surname>
-					</personname><email>mmcallis@redhat.com</email>
+					 <surname>McAllister</surname>
+					 </personname><email>mmcallis@redhat.com</email>
 				</author>
 				 <revdescription>
 					<simplelist>

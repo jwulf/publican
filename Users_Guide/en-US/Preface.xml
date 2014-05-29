@@ -2,15 +2,21 @@
 <!DOCTYPE preface [
 <!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
 %BOOK_ENTITIES;
+<!ENTITY % sgml.features "IGNORE">
+<!ENTITY % xml.features "INCLUDE">
+<!ENTITY % DOCBOOK_ENTS PUBLIC "-//OASIS//ENTITIES DocBook XML Character Entities V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/dbcentx.mod">
+%DOCBOOK_ENTS;
 ]>
 <preface conformance="200" version="5.0" xml:id="pref-Publican-Users_Guide-Preface" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
 	<info xml:id="info-Publican-Users_Guide-Preface">
 		<title>Preface</title>
+
 	</info>
 	 <xi:include href="Common_Content/Conventions.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
 	 <section conformance="201" xml:id="sect-Publican-Users_Guide-Preface-We_Need_Feedback">
 		<info xml:id="info-Publican-Users_Guide-We_Need_Feedback">
 			<title>We Need Feedback!</title>
+
 		</info>
 		 <indexterm>
 			<primary>feedback</primary>
@@ -25,7 +31,6 @@
 		</para>
 
 	</section>
-	
 
 </preface>
 

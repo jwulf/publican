@@ -2,16 +2,21 @@
 <!DOCTYPE info [
 <!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
 %BOOK_ENTITIES;
+<!ENTITY % sgml.features "IGNORE">
+<!ENTITY % xml.features "INCLUDE">
+<!ENTITY % DOCBOOK_ENTS PUBLIC "-//OASIS//ENTITIES DocBook XML Character Entities V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/dbcentx.mod">
+%DOCBOOK_ENTS;
 ]>
 <info conformance="121" version="5.0" xml:id="info-Publican-Users_Guide-Users_Guide" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
 	<title>Users' Guide</title>
-	<subtitle>Publishing books, articles, papers and multi-volume sets with DocBook XML</subtitle>
+	 <subtitle>Publishing books, articles, papers and multi-volume sets with DocBook XML</subtitle>
 	 <productname>Publican</productname>
 	 <productnumber>4.2</productnumber>
 	 <abstract>
 		<para>
 			This book will help you install <application>&PRODUCT;</application>. It also provides instructions for using Publican to create and publish DocBook XML-based books, articles and book sets. This guide assumes that you are already familiar with DocBook XML.
 		</para>
+
 	</abstract>
 	 <keywordset>
 		<keyword>publican</keyword>
@@ -41,6 +46,7 @@
 
 		</inlinemediaobject>
 		 </orgname>
+
 	</author>
 	 <mediaobject role="cover">
 		<imageobject remap="lrg" role="front-large">

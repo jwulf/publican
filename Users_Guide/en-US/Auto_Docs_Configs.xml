@@ -1,11 +1,15 @@
 <?xml version='1.0' encoding='utf-8' ?>
 <!DOCTYPE appendix [
+<!ENTITY % sgml.features "IGNORE">
+<!ENTITY % xml.features "INCLUDE">
+<!ENTITY % DOCBOOK_ENTS PUBLIC "-//OASIS//ENTITIES DocBook XML Character Entities V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/dbcentx.mod">
+%DOCBOOK_ENTS;
 ]>
 <appendix version="5.0" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
 	<info>
 		<title>Configuration summary</title>
 	</info>
-	<variablelist id="Auto_Docs-actions">
+	<variablelist id="Auto_Docs_Configs-General_options">
 		<info>
 			<title>General options</title>
 		</info>
@@ -762,7 +766,7 @@
 			</listitem>
 		</varlistentry>
 	</variablelist>
-	<variablelist id="Auto_Docs-actions">
+	<variablelist id="Auto_Docs_Configs-Brand_options">
 		<info>
 			<title>Brand options</title>
 		</info>
@@ -845,7 +849,7 @@
 			</listitem>
 		</varlistentry>
 	</variablelist>
-	<variablelist id="Auto_Docs-actions">
+	<variablelist id="Auto_Docs_Configs-Site_option">
 		<info>
 			<title>Site options</title>
 		</info>

@@ -2,10 +2,15 @@
 <!DOCTYPE section [
 <!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
 %BOOK_ENTITIES;
+<!ENTITY % sgml.features "IGNORE">
+<!ENTITY % xml.features "INCLUDE">
+<!ENTITY % DOCBOOK_ENTS PUBLIC "-//OASIS//ENTITIES DocBook XML Character Entities V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/dbcentx.mod">
+%DOCBOOK_ENTS;
 ]>
 <section conformance="231" version="5.0" xml:id="sect-Publican-Users_Guide-Creating_the_website_structure" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
 	<info xml:id="info-Publican-Users_Guide-Creating_the_website_structure">
 		<title>Creating the website structure</title>
+
 	</info>
 	 <para>
 		To build the website structure:
@@ -112,6 +117,7 @@
 					 <important>
 						<info xml:id="info-Publican-Users_Guide-Important_the_search_parameter_is_not_validated">
 							<title>Important — the search parameter is not validated</title>
+
 						</info>
 						 <para>
 							<application>Publican</application> does not validate the <parameter>search</parameter> parameter, but builds the value of this parameter into the navigation menu exactly as you specify it. Be especially careful when you use this feature.
@@ -184,6 +190,7 @@
 								<para>
 									The website resembles those produced by Publican 2, with a list of products displayed in a navigation pane at the left of the page. (Default)
 								</para>
+
 							</listitem>
 
 						</varlistentry>
@@ -193,6 +200,7 @@
 								<para>
 									The website includes a breadcrumb-like navigation bar across the top of the documentation.
 								</para>
+
 							</listitem>
 
 						</varlistentry>
@@ -286,12 +294,10 @@
 		</step>
 
 	</procedure>
-	
 	 <para>
 		To make <application>Publican</application> refresh the site structure at any time, run:
 	</para>
 	 
 <screen><prompt>$</prompt> <command>publican update_site --site_config <replaceable>path_to_site_configuration_file</replaceable>.cfg</command></screen>
 </section>
-
 

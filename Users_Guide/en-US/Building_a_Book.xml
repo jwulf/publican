@@ -2,14 +2,20 @@
 <!DOCTYPE section [
 <!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
 %BOOK_ENTITIES;
+<!ENTITY % sgml.features "IGNORE">
+<!ENTITY % xml.features "INCLUDE">
+<!ENTITY % DOCBOOK_ENTS PUBLIC "-//OASIS//ENTITIES DocBook XML Character Entities V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/dbcentx.mod">
+%DOCBOOK_ENTS;
 ]>
 <section conformance="123" version="5.0" xml:id="sect-Publican-Users_Guide-Building_a_document" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
 	<info xml:id="info-Publican-Users_Guide-Building_a_document">
 		<title>Building a document</title>
+
 	</info>
 	 <note>
 		<info xml:id="info-Publican-Users_Guide-Note_Customizing_output">
 			<title>Note — Customizing output</title>
+
 		</info>
 		 <para>
 			The parameters set in the document configuration file (by default, <filename>publican.cfg</filename>) allow you to control many aspects of the way in which a document is presented — refer to <xref linkend="sect-Publican-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file" />.
@@ -60,10 +66,10 @@
 		</step>
 
 	</procedure>
-	
 	 <variablelist conformance="124" xml:id="vari-Publican-Users_Guide-Building_a_document-Formats_for_the_build_action">
 		<info xml:id="info-Publican-Users_Guide-Formats_for_the_build_action">
 			<title>Formats for the <command>build</command> action</title>
+
 		</info>
 		 <varlistentry xml:id="varl-Publican-Users_Guide-html">
 			<term><option>html</option></term>
@@ -229,6 +235,7 @@
 	 <section conformance="125" xml:id="sect-Publican-Users_Guide-Building_a_document-Building_a_document_without_validation">
 		<info xml:id="info-Publican-Users_Guide-Building_a_document_without_validation">
 			<title>Building a document without validation</title>
+
 		</info>
 		 <para>
 			<application>Publican</application> validates your XML against the DocBook <firstterm>document type definition</firstterm> (DTD) before it builds the content. However, while a document is under development, you might sometimes want to skip validation while building, especially if the document contains cross-references (<tag>&lt;xref&gt;</tag>s) to sections of the document that do not yet exist. To skip validation, run <prompt>$</prompt> <command>publican build</command> with the <option>--novalid</option> option. Cross-references to non-existent content appear in the built document as three question marks: <literal>???</literal>.
@@ -238,8 +245,6 @@
 		</para>
 
 	</section>
-	
 
 </section>
-
 

@@ -2,10 +2,15 @@
 <!DOCTYPE section [
 <!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
 %BOOK_ENTITIES;
+<!ENTITY % sgml.features "IGNORE">
+<!ENTITY % xml.features "INCLUDE">
+<!ENTITY % DOCBOOK_ENTS PUBLIC "-//OASIS//ENTITIES DocBook XML Character Entities V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/dbcentx.mod">
+%DOCBOOK_ENTS;
 ]>
 <section conformance="120" version="5.0" xml:id="sect-Publican-Users_Guide-Adding_images" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
 	<info xml:id="info-Publican-Users_Guide-Adding_images">
 		<title>Adding images</title>
+
 	</info>
 	 <para>
 		Store images in the <filename>images</filename> subdirectory in the directory that holds your XML files. Use <computeroutput>./images/<replaceable>image-name</replaceable></computeroutput> to insert images into a book. The following is an example that inserts the <filename>testimage.png</filename> image:
@@ -29,6 +34,7 @@
 	 <important>
 		<info xml:id="info-Publican-Users_Guide-Image_file_locations">
 			<title>Image file locations</title>
+
 		</info>
 		 <para>
 			<application>Publican</application> only uses images in the <filename>images</filename> subdirectory of your XML directory and corresponding images in the <filename>images</filename> subdirectories of your translated languages. Images stored in other directories directories do not work.
@@ -36,5 +42,4 @@
 
 	</important>
 </section>
-
 

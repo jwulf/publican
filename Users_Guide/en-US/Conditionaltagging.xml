@@ -2,10 +2,15 @@
 <!DOCTYPE section [
 <!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
 %BOOK_ENTITIES;
+<!ENTITY % sgml.features "IGNORE">
+<!ENTITY % xml.features "INCLUDE">
+<!ENTITY % DOCBOOK_ENTS PUBLIC "-//OASIS//ENTITIES DocBook XML Character Entities V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/dbcentx.mod">
+%DOCBOOK_ENTS;
 ]>
 <section conformance="129" version="5.0" xml:id="sect-Publican-Users_Guide-Conditional_tagging" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
 	<info xml:id="info-Publican-Users_Guide-Conditional_tagging">
 		<title>Conditional tagging</title>
+
 	</info>
 	 <para>
 		In some cases you may need to maintain multiple versions of a book; for example, a HOWTO guide for product FOO can have an upstream version and an enterprise version, with very subtle differences between them.
@@ -45,10 +50,12 @@
 	 <section conformance="130" xml:id="sect-Publican-Users_Guide-Conditional_tagging-Conditional_tagging_and_translation">
 		<info xml:id="info-Publican-Users_Guide-Conditional_tagging_and_translation">
 			<title>Conditional tagging and translation</title>
+
 		</info>
 		 <warning>
 			<info xml:id="info-Publican-Users_Guide-Use_conditional_tagging_with_great_caution">
 				<title>Use conditional tagging with great caution</title>
+
 			</info>
 			 <para>
 				Use conditional tagging only with great caution in books that you expect to be translated, as conditional tagging creates extra difficulties for translators.
@@ -98,8 +105,6 @@ msgstr ""</programlisting>
 		</para>
 
 	</section>
-	
 
 </section>
-
 

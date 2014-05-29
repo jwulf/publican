@@ -2,10 +2,15 @@
 <!DOCTYPE chapter [
 <!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
 %BOOK_ENTITIES;
+<!ENTITY % sgml.features "IGNORE">
+<!ENTITY % xml.features "INCLUDE">
+<!ENTITY % DOCBOOK_ENTS PUBLIC "-//OASIS//ENTITIES DocBook XML Character Entities V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/dbcentx.mod">
+%DOCBOOK_ENTS;
 ]>
 <chapter conformance="204" version="5.0" xml:id="chap-Publican-Users_Guide-Publican_commands" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
 	<info xml:id="info-Publican-Users_Guide-Publican_commands">
 		<title>Publican commands</title>
+
 	</info>
 	 <para>
 		<application>Publican</application> is a command-line tool. To use <application>Publican</application> on a computer with a Linux operating system, you must either start a terminal emulator program (such as <application>GNOME Terminal</application> or <application>Konsole</application>) or switch to a virtual console. To use <application>Publican</application> on a computer with a Windows operating system, run the <command>cmd</command> command from the <guimenu>Start menu</guimenu> to open a command prompt.
@@ -17,7 +22,7 @@
 				<term><prompt>$</prompt> <command>publican <replaceable>command_option</replaceable></command></term>
 				 <listitem>
 					<para>
-						The <replaceable>command_option</replaceable> is any of several options for the <prompt>$</prompt> <command>publican</command> command itself. For a complete list of actions see <xref linkend="Auto_Docs-options"/>
+						The <replaceable>command_option</replaceable> is any of several options for the <prompt>$</prompt> <command>publican</command> command itself. For a complete list of actions see <xref linkend="Auto_Docs-Command_actions" />
 					</para>
 
 				</listitem>
@@ -27,7 +32,7 @@
 				<term><prompt>$</prompt> <command>publican <replaceable>action</replaceable> <replaceable>action_options</replaceable></command></term>
 				 <listitem>
 					<para>
-						The <replaceable>action</replaceable> is an action for <application>Publican</application> to perform, such as creating the XML files for a new document or building a HTML document from a document's XML files. The <replaceable>action_options</replaceable> apply to the <replaceable>action</replaceable>, such as specifying the language of a document. For a complete list of actions see <xref linkend="Auto_Docs-actions"/>
+						The <replaceable>action</replaceable> is an action for <application>Publican</application> to perform, such as creating the XML files for a new document or building a HTML document from a document's XML files. The <replaceable>action_options</replaceable> apply to the <replaceable>action</replaceable>, such as specifying the language of a document. For a complete list of actions see <xref linkend="Auto_Docs-Command_actions" />
 					</para>
 
 				</listitem>
@@ -37,7 +42,7 @@
 				<term><prompt>$</prompt> <command>publican <replaceable>command_option</replaceable> <replaceable>action</replaceable> <replaceable>action_options</replaceable></command></term>
 				 <listitem>
 					<para>
-						Some <replaceable>command_options</replaceable> affect the output of <replaceable>actions</replaceable>, for example, whether <application>Publican</application> should use ANSI colors in its output.  For a complete list of actions and options see <xref linkend="Auto_Docs-actions"/>
+						Some <replaceable>command_options</replaceable> affect the output of <replaceable>actions</replaceable>, for example, whether <application>Publican</application> should use ANSI colors in its output. For a complete list of actions and options see <xref linkend="Auto_Docs-Command_actions" />
 					</para>
 
 				</listitem>
@@ -45,6 +50,7 @@
 			</varlistentry>
 
 		</variablelist>
+
 	</para>
 </chapter>
 

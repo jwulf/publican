@@ -86,11 +86,7 @@ scp to hosted
 PUG changes
 ######################################
 
-Installing "Running publican from a GIT checkout"
-
-section on "Converting DB4 to DB5"
-
-convert PUG to DB5
+ADD: section on "Converting DB4 to DB5"?
 
 PUBLICAN_PATH="/home/jfearn/Source/fedora/publican.git"
 perl -CDAS -I $PUBLICAN_PATH/lib $PUBLICAN_PATH/bin/publican clean
@@ -110,12 +106,7 @@ jing  /usr/share/xml/docbook5/schema/rng/5.0/docbook.rng --noout test.xml
 
 
 
-Complete auto docs, website params.
-
-"A.1. Disallowed elements" & "A.2. Disallowed attributes" rewrite to say brands can do this, and why we _discourage_ them.
-
-
-"Sample spec file for desktop menu package" up to date?
+Sample spec file for desktop menu package" up to date?
 
 
 "1.1.1. Fedora & Red Hat Enterprise Linux 6"
@@ -128,9 +119,6 @@ Complete auto docs, website params.
 "When I build my document, I get an error about an ‘undefined language’ — what's wr" note case insensitive matching
 
 
-
-http://www.cssportal.com/css3-preview/showing-and-hiding-content-with-pure-css3.php
-http://www.cssportal.com/css3-preview/demo/css-menu-ex1.html
 
 :nmap %% :let X=1<cr>1G!!
 :nmap !! /FATAL ERROR\:<cr>:s/\:/\=X.':'/<cr>:let X=X+1<cr>!!

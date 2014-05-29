@@ -2,15 +2,21 @@
 <!DOCTYPE section [
 <!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
 %BOOK_ENTITIES;
+<!ENTITY % sgml.features "IGNORE">
+<!ENTITY % xml.features "INCLUDE">
+<!ENTITY % DOCBOOK_ENTS PUBLIC "-//OASIS//ENTITIES DocBook XML Character Entities V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/dbcentx.mod">
+%DOCBOOK_ENTS;
 ]>
 <section conformance="193" version="5.0" xml:id="sect-Publican-Users_Guide-Packaging_a_document" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
 	<info xml:id="info-Publican-Users_Guide-Packaging_a_document">
 		<title>Packaging a document</title>
+
 	</info>
 	 <xi:include href="Applicable_to_RPM_only.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
 	 <note conformance="234">
 		<info xml:id="info-Publican-Users_Guide-Note_Customizing_output">
 			<title>Note — Customizing output</title>
+
 		</info>
 		 <para>
 			The parameters set in the document configuration file (by default, <filename>publican.cfg</filename>) allow you to control many aspects of the way in which a document is presented and packaged — refer to <xref linkend="sect-Publican-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file" />.
@@ -28,6 +34,7 @@
 	 <section conformance="194" xml:id="sect-Publican-Users_Guide-Packaging_a_document-Types_of_RPM_packages">
 		<info xml:id="info-Publican-Users_Guide-Types_of_RPM_packages">
 			<title>Types of RPM packages</title>
+
 		</info>
 		 <para>
 			<application>Publican</application> can produce both <firstterm>source RPM packages</firstterm> (<firstterm>SRPM packages</firstterm>) and <firstterm>binary RPM packages</firstterm>. Furthermore, both SRPM packages and binary RPM packages can be configured to deploy to workstations or web servers.
@@ -35,6 +42,7 @@
 		 <section conformance="195" xml:id="sect-Publican-Users_Guide-Types_of_RPM_packages-Source_RPM_packages_and_binary_RPM_packages">
 			<info xml:id="info-Publican-Users_Guide-Source_RPM_packages_and_binary_RPM_packages">
 				<title>Source RPM packages and binary RPM packages</title>
+
 			</info>
 			 <para>
 				SRPM packages contain the source code used to generate software rather than the software itself. To use an SRPM package, a computer must <firstterm>compile</firstterm> the source code into software — or in this case, into documents. SRPM packages of <application>Publican</application> documents contain XML files and a <firstterm>spec file</firstterm> rather than finished documents in formats such as HTML and PDF. You cannot install documentation directly from SRPM packages with current versions of the <application>RPM Package Manager</application>.
@@ -44,10 +52,10 @@
 			</para>
 
 		</section>
-		
 		 <section conformance="196" xml:id="sect-Publican-Users_Guide-Types_of_RPM_packages-Desktop_packages_and_web_packages">
 			<info xml:id="info-Publican-Users_Guide-Desktop_packages_and_web_packages">
 				<title>Desktop packages and web packages</title>
+
 			</info>
 			 <para>
 				<application>Publican</application> can package documents for reading on a computer workstation (a <firstterm>desktop RPM package</firstterm>) or to install on a web server and publish on the World Wide Web (a <firstterm>web RPM package</firstterm>). The desktop RPM package of a <application>Publican</application> document and the web RPM package of the same document differ in that the desktop RPM package installs documentation only for local use on a computer, while the web RPM installs documentation for local use, but also to be served to the World Wide Web.
@@ -81,14 +89,13 @@
 			</para>
 
 		</section>
-		
 		 <xi:include href="Desktop_menus.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
 
 	</section>
-	
 	 <section conformance="197" xml:id="sect-Publican-Users_Guide-Packaging_a_document-The_publican_package_command">
 		<info xml:id="info-Publican-Users_Guide-The_publican_package_command">
 			<title>The <prompt>$</prompt> <command>publican package</command> command</title>
+
 		</info>
 		 <para>
 			Use the <prompt>$</prompt> <command>publican package --lang=<replaceable>Language_Code</replaceable></command> command to package documents for distribution in the language that you specify with the <option>--lang</option> option. Refer to <xref linkend="appe-Publican-Users_Guide-Language_codes" /> for more information about language codes.
@@ -106,6 +113,7 @@
 					 <note>
 						<info xml:id="info-Publican-Users_Guide-Incomplete_translations">
 							<title>Incomplete translations</title>
+
 						</info>
 						 <para>
 							If translation in a particular language is not complete by the scheduled release date, consider marking the language with the <parameter>ignored_translations</parameter> parameter in the document's <filename>publican.cfg</filename> file. The package will be named appropriately for the language, but will contain documentation in the original language of the XML rather than a partial translation. When translation is complete, remove the <parameter>ignored_translations</parameter> parameter, increase the release number in the <literal>Project-Id-Version</literal> field in the <filename>Book_Info.po</filename> file for that language, and generate the package again. When you distribute the revised package, it becomes available to replace the original untranslated package.
@@ -165,6 +173,7 @@
 					 <warning>
 						<info xml:id="info-Publican-Users_Guide-Omitting_the_software_version_number">
 							<title>Omitting the software version number</title>
+
 						</info>
 						 <para>
 							Much software documentation is version-specific. At best, the procedures described in the documentation for one version of a product might not help you to install, configure, or use a different version of the product. At worst, the procedures described in the documentation for one version might be misleading or even harmful when applied to a different version.
@@ -237,6 +246,7 @@
 		 <section conformance="198" xml:id="sect-Publican-Users_Guide-The_publican_package_command-The_publican_package_command_Example_usage">
 			<info xml:id="info-Publican-Users_Guide-The_publican_package_command_Example_usage">
 				<title>The <prompt>$</prompt> <command>publican package</command> command — Example usage</title>
+
 			</info>
 			 <para>
 				The following examples illustrate some common options, illustrated with the <citetitle>Foomaster 9 Configuration Guide</citetitle>, edition 2, revision 6.
@@ -296,11 +306,8 @@
 			</variablelist>
 
 		</section>
-		
 
 	</section>
-	
 
 </section>
-
 

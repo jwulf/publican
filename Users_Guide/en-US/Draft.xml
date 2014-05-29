@@ -2,10 +2,15 @@
 <!DOCTYPE section [
 <!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
 %BOOK_ENTITIES;
+<!ENTITY % sgml.features "IGNORE">
+<!ENTITY % xml.features "INCLUDE">
+<!ENTITY % DOCBOOK_ENTS PUBLIC "-//OASIS//ENTITIES DocBook XML Character Entities V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/dbcentx.mod">
+%DOCBOOK_ENTS;
 ]>
 <section conformance="140" version="5.0" xml:id="sect-Publican-Users_Guide-Pre_release_software_and_draft_documentation" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
 	<info xml:id="info-Publican-Users_Guide-Pre_release_software_and_draft_documentation">
 		<title>Pre-release software and draft documentation</title>
+
 	</info>
 	 <para>
 		Completed documentation for pre-release software is not the same thing as draft documentation.
@@ -19,6 +24,7 @@
 	 <section conformance="141" xml:id="sect-Publican-Users_Guide-Pre_release_software_and_draft_documentation-Denoting_pre_release_software">
 		<info xml:id="info-Publican-Users_Guide-Denoting_pre_release_software">
 			<title>Denoting pre-release software</title>
+
 		</info>
 		 <para>
 			Documentation for pre-release software, especially pre-release software being distributed to testers, customers and partners, should carry a clear mark denoting the beta-status of the software.
@@ -45,7 +51,6 @@
 			</step>
 
 		</procedure>
-		
 		 <para>
 			When you build your book with this <tag>&lt;remark&gt;</tag> tag and the <varname>show_remarks</varname> setting in place, the pre-release nature of the software is displayed clearly and unmistakably. PDF builds display the remark on their cover and title pages. HTML builds (both single-page HTML and multiple-page HTML) display the remark near the beginning of <filename>index.html</filename>.
 		</para>
@@ -54,13 +59,15 @@
 		</para>
 		 <example>
 			<title>An example of an inline remark</title>
-			<para>
+			 <para>
 				Here is an <application role="remark">example</application> of an inline remark.
 			</para>
+
 		</example>
 		 <important>
 			<info xml:id="info-Publican-Users_Guide-Important">
 				<title>Important</title>
+
 			</info>
 			 <para>
 				It is the writer's responsibility to remove the <tag>&lt;remark&gt;</tag> tag and its contents and remove or turn off <varname>show_remarks</varname> when documentation is updated for use with the release version of the software.
@@ -69,10 +76,10 @@
 		</important>
 
 	</section>
-	
 	 <section conformance="142" xml:id="sect-Publican-Users_Guide-Pre_release_software_and_draft_documentation-Denoting_draft_documentation">
 		<info xml:id="info-Publican-Users_Guide-Denoting_draft_documentation">
 			<title>Denoting draft documentation</title>
+
 		</info>
 		 <para>
 			Unfinished documentation made available to others for review should be labeled clearly as such.
@@ -88,7 +95,6 @@
 			</step>
 
 		</procedure>
-		
 		 <para>
 			By default, your root node is the <tag>&lt;book&gt;</tag> tag in your <filename><replaceable>Doc_Name</replaceable>.xml</filename> file.
 		</para>
@@ -103,6 +109,7 @@
 		</para>
 		 <example>
 			<title>An example of a block marked up as draft</title>
+			 
 <literallayout role="draft">This is an example of a block that is marked as draft
 
 
@@ -115,13 +122,14 @@
 
 Isn't it pretty!
 </literallayout>
+
 		</example>
 
 	</section>
-	
 	 <section conformance="143" xml:id="sect-Publican-Users_Guide-Pre_release_software_and_draft_documentation-Denoting_draft_documentation_of_pre_release_software">
 		<info xml:id="info-Publican-Users_Guide-Denoting_draft_documentation_of_pre_release_software">
 			<title>Denoting draft documentation of pre-release software</title>
+
 		</info>
 		 <para>
 			To denote unfinished documentation of pre-release software properly, do both previously noted procedures.
@@ -130,40 +138,48 @@ Isn't it pretty!
 	</section>
 	 <section>
 		<info>
-			<title>Denoting changed content <remark>New section</remark></title>
+			<title>Denoting changed content <remark>New section</remark>
+			 </title>
+
 		</info>
 		 <para revisionflag="added">
-			DocBook allows setting the <tag>revisionflag</tag> on many elements to allow easier reviewing on changed documents. <application>Publican</application>, as of version 4.1, will add highlighting to these elements if the book is in draft mode. e.g. <userinput>revisionflag="added"</userinput>
-			<variablelist>
+			DocBook allows setting the <tag>revisionflag</tag> on many elements to allow easier reviewing on changed documents. <application>Publican</application>, as of version 4.1, will add highlighting to these elements if the book is in draft mode. e.g. <userinput>revisionflag="added"</userinput> <variablelist>
 				<varlistentry>
 					<term>added</term>
-					<listitem>
+					 <listitem>
 						<para role="added">
 							This is how an element that has been added to a new revision is marked-up.
 						</para>
+
 					</listitem>
+
 				</varlistentry>
-				<varlistentry>
+				 <varlistentry>
 					<term>changed</term>
-					<listitem>
+					 <listitem>
 						<para role="changed">
 							This is how an element that has been changed in a new revision is marked-up.
 						</para>
+
 					</listitem>
+
 				</varlistentry>
-				<varlistentry>
+				 <varlistentry>
 					<term>deleted</term>
-					<listitem>
+					 <listitem>
 						<para role="deleted">
 							This is how an element that has been marked for deletion from a new revision is marked-up. Publican will not automatically delete or hide this content, you have to ensure this is done before publication.
 						</para>
+
 					</listitem>
+
 				</varlistentry>
+
 			</variablelist>
+
 		</para>
+
 	</section>
-	
 
 </section>
-
 

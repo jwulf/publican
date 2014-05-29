@@ -2,10 +2,15 @@
 <!DOCTYPE chapter [
 <!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
 %BOOK_ENTITIES;
+<!ENTITY % sgml.features "IGNORE">
+<!ENTITY % xml.features "INCLUDE">
+<!ENTITY % DOCBOOK_ENTS PUBLIC "-//OASIS//ENTITIES DocBook XML Character Entities V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/dbcentx.mod">
+%DOCBOOK_ENTS;
 ]>
 <chapter conformance="156" version="5.0" xml:id="chap-Publican-Users_Guide-Frequently_Asked_Questions" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
 	<info xml:id="info-Publican-Users_Guide-Frequently_Asked_Questions">
 		<title>Frequently Asked Questions</title>
+
 	</info>
 	 <qandaset>
 		<qandaentry>
@@ -112,6 +117,7 @@
 				 <important>
 					<info xml:id="info-Publican-Users_Guide-Important">
 						<title>Important</title>
+
 					</info>
 					 <para>
 						The <filename>files</filename> directory will not be available during the validation process so you can not <tag>xi:include</tag> or otherwise embed any files in this directory in your XML.
@@ -342,7 +348,6 @@ fi</programlisting>
 					</step>
 
 				</procedure>
-				
 
 			</answer>
 

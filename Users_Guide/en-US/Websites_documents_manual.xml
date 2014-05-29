@@ -2,10 +2,15 @@
 <!DOCTYPE section [
 <!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
 %BOOK_ENTITIES;
+<!ENTITY % sgml.features "IGNORE">
+<!ENTITY % xml.features "INCLUDE">
+<!ENTITY % DOCBOOK_ENTS PUBLIC "-//OASIS//ENTITIES DocBook XML Character Entities V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/dbcentx.mod">
+%DOCBOOK_ENTS;
 ]>
 <section conformance="225" version="5.0" xml:id="sect-Publican-Users_Guide-Installing_updating_and_removing_documents" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
 	<info xml:id="info-Publican-Users_Guide-Installing_updating_and_removing_documents">
 		<title>Installing, updating, and removing documents</title>
+
 	</info>
 	 <para>
 		To install a document on a website that you are building manually, change into the directory that contains the source for the document and run:
@@ -28,5 +33,4 @@
 		When you have installed the documents, the website is ready to upload to your webserver by whatever process you usually use, for example <application>scp</application>, <application>rsync</application>, or an FTP client.
 	</para>
 </section>
-
 

@@ -1391,7 +1391,7 @@ sub get_nodes_order {
                 #print "$unique_id\n";
             }
 
-            if ( $cnode_attr && $cnode_attr->isId ) {
+            if ( $cnode_attr && $cnode_attr->name() eq "id" ) {
                 my $value = $cnode_attr->getValue();
                 $order{ ++$count }{'id'} = $value;
                 $order{$count}{'type'} = $cnode->nodeName();
@@ -1577,7 +1577,7 @@ sub build_drupal_book {
                                 if ($update_link) {
                                     $old_value = join( '#', @links );
                                     $node->attr( 'href',
-                                        "?q=$bookname-" . $old_value );
+                                        "$bookname-" . $old_value );
                                     $update_link = 0;
                                 }
 

@@ -1,11 +1,15 @@
 <?xml version='1.0' encoding='utf-8' ?>
 <!DOCTYPE appendix [
+<!ENTITY % sgml.features "IGNORE">
+<!ENTITY % xml.features "INCLUDE">
+<!ENTITY % DOCBOOK_ENTS PUBLIC "-//OASIS//ENTITIES DocBook XML Character Entities V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/dbcentx.mod">
+%DOCBOOK_ENTS;
 ]>
 <appendix version="5.0" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
 	<info>
 		<title>Command summary</title>
 	</info>
-	<variablelist id="Auto_Docs-options">
+	<variablelist id="Auto_Docs-Command_options">
 		<info>
 			<title>Command options</title>
 		</info>
@@ -66,7 +70,7 @@
 			</listitem>
 		</varlistentry>
 	</variablelist>
-	<variablelist id="Auto_Docs-actions">
+	<variablelist id="Auto_Docs-Command_actions">
 		<info>
 			<title>Command actions</title>
 		</info>
@@ -204,6 +208,14 @@
 						<listitem>
 							<para>
 								Set up built content for publishing
+							</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term>--showfuzzy</term>
+						<listitem>
+							<para>
+								Show fuzzy translation entries in output. Defaults off.
 							</para>
 						</listitem>
 					</varlistentry>

@@ -2,10 +2,15 @@
 <!DOCTYPE preface [
 <!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
 %BOOK_ENTITIES;
+<!ENTITY % sgml.features "IGNORE">
+<!ENTITY % xml.features "INCLUDE">
+<!ENTITY % DOCBOOK_ENTS PUBLIC "-//OASIS//ENTITIES DocBook XML Character Entities V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/dbcentx.mod">
+%DOCBOOK_ENTS;
 ]>
 <preface conformance="190" version="5.0" xml:id="pref-Publican-Users_Guide-Introduction" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
 	<info xml:id="info-Publican-Users_Guide-Introduction">
 		<title>Introduction</title>
+
 	</info>
 	 <indexterm>
 		<primary>Introduction 1</primary>
@@ -20,6 +25,7 @@
 	 <formalpara conformance="191" xml:id="form-Publican-Users_Guide-Introduction-Design">
 		<info xml:id="info-Publican-Users_Guide-Design">
 			<title>Design</title>
+
 		</info>
 		 <para>
 			<application>Publican</application> is a publication system, not just a DocBook processing tool. As well as ensuring your DocBook XML is valid, <application>Publican</application> works to ensure your XML is up to publishable standard.
@@ -38,19 +44,21 @@
 	 <para>
 		Entities also present an essentially insurmountable obstacle to quality translation (refer to <xref linkend="sect-Publican-Users_Guide-Entities_and_translation" />). Consequently, while we are not reducing the <filename><replaceable>Doc_Name</replaceable>.ent</filename> file's functionality, we are no longer considering requests to add functionality or features associated with entity use.
 	</para>
-
-    <informalexample conformance="264" id="switch1" role="switchery">
+	 <informalexample conformance="264" id="switch1" role="switchery">
 <programlisting language="Perl">#!/usr/bin/perl
 use strict;
 use warnings;
 
 print "Hello, World!\n";</programlisting>
+	 
 <programlisting language="C++"><![CDATA[#include <iostream>
 
 int main()
 {
   std::cout << "Hello World!"; &lies;
 }
-]]></programlisting>
-    </informalexample>
+]]>
+</programlisting>
+	 </informalexample>
 </preface>
+

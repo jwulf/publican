@@ -2,10 +2,15 @@
 <!DOCTYPE section [
 <!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
 %BOOK_ENTITIES;
+<!ENTITY % sgml.features "IGNORE">
+<!ENTITY % xml.features "INCLUDE">
+<!ENTITY % DOCBOOK_ENTS PUBLIC "-//OASIS//ENTITIES DocBook XML Character Entities V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/dbcentx.mod">
+%DOCBOOK_ENTS;
 ]>
 <section conformance="233" version="5.0" xml:id="sect-Users_Guide-Linux_operating_systems-OpenSuse_12" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
 	<info xml:id="info-Publican-Users_Guide-OpenSuse_12">
 		<title>OpenSuse 12</title>
+
 	</info>
 	 <para>
 		<application>Publican</application> has not been usable on OpenSuse up until release 12.1. Certain dependencies were missing and could not be found in any known OpenSuse repository. This is not the case with OpenSuse 12.1 as all dependencies can now be found and installed.
@@ -242,8 +247,6 @@
 		</step>
 
 	</procedure>
-	
 
 </section>
-
 

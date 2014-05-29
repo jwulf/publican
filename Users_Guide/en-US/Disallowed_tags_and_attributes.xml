@@ -2,14 +2,20 @@
 <!DOCTYPE appendix [
 <!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
 %BOOK_ENTITIES;
+<!ENTITY % sgml.features "IGNORE">
+<!ENTITY % xml.features "INCLUDE">
+<!ENTITY % DOCBOOK_ENTS PUBLIC "-//OASIS//ENTITIES DocBook XML Character Entities V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/dbcentx.mod">
+%DOCBOOK_ENTS;
 ]>
 <appendix conformance="137" version="5.0" xml:id="appe-Publican-Users_Guide-Discouraged_elements_and_attributes" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
 	<info xml:id="info-Publican-Users_Guide-Discouraged_elements_and_attributes">
 		<title>Discouraged elements and attributes</title>
+
 	</info>
 	 <note>
 		<info xml:id="info-Publican-Users_Guide-Supported_unsupported_and_discouraged">
 			<title>Supported, unsupported, and discouraged</title>
+
 		</info>
 		 <para>
 			Not every <firstterm>element</firstterm> (tag) and attribute that works with <application>Publican</application> is <firstterm>supported</firstterm>. Specifically, not every tag has been tested with regards its effect on the presentation of a document once it has been built in HTML or PDF.
@@ -31,9 +37,10 @@
 	 <section conformance="138" xml:id="sect-Publican-Users_Guide-Discouraged_elements_and_attributes-Discouraged_elements">
 		<info xml:id="info-Publican-Users_Guide-Discouraged_elements">
 			<title>Discouraged elements</title>
+
 		</info>
 		 <variablelist>
-			 <varlistentry>
+			<varlistentry>
 				<term><tag>&lt;glossdiv&gt;</tag></term>
 				 <listitem>
 					<para>
@@ -165,10 +172,10 @@
 		</variablelist>
 
 	</section>
-	
 	 <section conformance="139" xml:id="sect-Publican-Users_Guide-Discouraged_elements_and_attributes-Discouraged_attributes">
 		<info xml:id="info-Publican-Users_Guide-Discouraged_attributes">
 			<title>Discouraged attributes</title>
+
 		</info>
 		 <variablelist>
 			<varlistentry>
@@ -377,7 +384,6 @@ msgstr "La soluzione è in &lt;xref linkend=\"The_Secret\" endterm=\"final\"/&gt
 		</variablelist>
 
 	</section>
-	
 
 </appendix>
 

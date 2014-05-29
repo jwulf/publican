@@ -2,10 +2,15 @@
 <!DOCTYPE section [
 <!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
 %BOOK_ENTITIES;
+<!ENTITY % sgml.features "IGNORE">
+<!ENTITY % xml.features "INCLUDE">
+<!ENTITY % DOCBOOK_ENTS PUBLIC "-//OASIS//ENTITIES DocBook XML Character Entities V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/dbcentx.mod">
+%DOCBOOK_ENTS;
 ]>
 <section conformance="134" version="5.0" xml:id="sect-Publican-Users_Guide-Desktop_menu_entries_for_documents" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
 	<info xml:id="info-Publican-Users_Guide-Desktop_menu_entries_for_documents">
 		<title>Desktop menu entries for documents</title>
+
 	</info>
 	 <para>
 		By default, RPM packages of <application>Publican</application> documents for desktop use appear on the GNOME desktop under the <menuchoice><guimenu>System</guimenu><guisubmenu>Documentation</guisubmenu></menuchoice> menu. When users have large numbers of documents installed on their systems, this menu becomes very cluttered and difficult to navigate. Documentation for many different products and perhaps different languages becomes intermixed, adding to the confusion.
@@ -34,6 +39,7 @@
 	 <section conformance="135" xml:id="sect-Publican-Users_Guide-Desktop_menu_entries_for_documents-Creating_an_desktop_menu_package">
 		<info xml:id="info-Publican-Users_Guide-Creating_an_desktop_menu_package">
 			<title>Creating an desktop menu package</title>
+
 		</info>
 		 <para>
 			A desktop menu package consists of:
@@ -104,6 +110,7 @@
 		 <example conformance="239" xml:id="exam-Publican-Users_Guide-Creating_an_desktop_menu_package-Example_.directory_file">
 			<info xml:id="info-Publican-Users_Guide-Example_.directory_file">
 				<title>Example .directory file</title>
+
 			</info>
 			 <para>
 				The following file, <filename>menu-example.directory</filename> illustrates the structure of a desktop entry file.
@@ -182,6 +189,7 @@
 		 <example conformance="240" xml:id="exam-Publican-Users_Guide-Creating_an_desktop_menu_package-Example_.menu_file">
 			<info xml:id="info-Publican-Users_Guide-Example_.menu_file">
 				<title>Example .menu file</title>
+
 			</info>
 			 <para>
 				The following file, <filename>menu-example.menu</filename> illustrates the structure of a desktop menu file.
@@ -198,10 +206,10 @@
 		</para>
 
 	</section>
-	
 	 <section conformance="136" xml:id="sect-Publican-Users_Guide-Desktop_menu_entries_for_documents-Setting_a_desktop_menu_category">
 		<info xml:id="info-Publican-Users_Guide-Setting_a_desktop_menu_category">
 			<title>Setting a desktop menu category</title>
+
 		</info>
 		 <para>
 			To place a document in a submenu of <menuchoice><guimenu>System</guimenu><guisubmenu>Documentation</guisubmenu></menuchoice>, set the <parameter>menu_category</parameter> parameter in its <filename>publican.cfg</filename> file to match the content of the <tag>&lt;Includes&gt;</tag> element in the corresponding desktop menu file. For example, consider a desktop menu file that contains the element:
@@ -234,8 +242,6 @@
 		</para>
 
 	</section>
-	
 
 </section>
-
 

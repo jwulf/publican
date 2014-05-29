@@ -11,20 +11,18 @@ use Encode qw(is_utf8 decode_utf8 encode_utf8);
 my $publican = Publican->new();
 
 my $common_config = $publican->param('common_config');
-
-##my $xsl_file = $common_config . "/xsl/db4-upgrade.xsl";
-my $xsl_file = "/home/jfearn/Source/fedora/publican.git/datadir/xsl/db4-upgrade.xsl";
+my $xsl_file = $common_config . "/xsl/db4-upgrade.xsl";
 
 # required for Windows
 $xsl_file =~ s/"//g;
 my $parser = XML::LibXML->new(
     {   pedantic_parser   => 0,
-        suppress_errors   => 1,
-        suppress_warnings => 1,
+        suppress_errors   => 0,
+        suppress_warnings => 0,
         line_numbers      => 1,
         expand_xinclude   => 0,
-        expand_entities   => 1,
-        recover_silently  => 1
+        expand_entities   => 0,
+        recover_silently  => 0,
     }
 );
 
@@ -43,7 +41,11 @@ foreach my $xml_file ( sort(@xml_files) ) {
             carp(
                 maketext(
                     "FATAL ERROR: [_1]:[_2] in [_3] on line [_4]: [_5]",
-                    $@->domain(), $@->code(), $@->file(), $@->line(), $@->message(),
+                    $@->domain(),
+                    $@->code(),
+                    $@->file(),
+                    $@->line(),
+                    $@->message(),
                 )
             );
             next;
@@ -60,7 +62,7 @@ foreach my $xml_file ( sort(@xml_files) ) {
 
     open( $outfile, ">:encoding(UTF-8)", "$xml_file" )
         || croak( maketext( "Can't open ad file: [_1]", $@ ) );
-    print( $outfile decode_utf8($stylesheet->output_string($results)) );
+    print( $outfile decode_utf8( $stylesheet->output_string($results) ) );
     close($outfile);
 }
 

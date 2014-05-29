@@ -2,10 +2,15 @@
 <!DOCTYPE section [
 <!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
 %BOOK_ENTITIES;
+<!ENTITY % sgml.features "IGNORE">
+<!ENTITY % xml.features "INCLUDE">
+<!ENTITY % DOCBOOK_ENTS PUBLIC "-//OASIS//ENTITIES DocBook XML Character Entities V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/dbcentx.mod">
+%DOCBOOK_ENTS;
 ]>
 <section conformance="210" version="5.0" xml:id="sect-Publican-Users_Guide-Renaming_a_document" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
 	<info xml:id="info-Publican-Users_Guide-Renaming_a_document">
 		<title>Renaming a document</title>
+
 	</info>
 	 <para>
 		The <prompt>$</prompt> <command>publican rename</command> command makes it easy for you to rename a document to give it a new title, or to change the name or version of the product to which the document applies. The command accepts up to three options:
@@ -69,5 +74,4 @@
 	 
 <screen><prompt>$</prompt> <command>publican rename --name "Server Deployment Guide" --product PendantFarm --version 2.0</command></screen>
 </section>
-
 

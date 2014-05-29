@@ -2,10 +2,15 @@
 <!DOCTYPE section [
 <!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
 %BOOK_ENTITIES;
+<!ENTITY % sgml.features "IGNORE">
+<!ENTITY % xml.features "INCLUDE">
+<!ENTITY % DOCBOOK_ENTS PUBLIC "-//OASIS//ENTITIES DocBook XML Character Entities V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/dbcentx.mod">
+%DOCBOOK_ENTS;
 ]>
 <section conformance="226" version="5.0" xml:id="sect-Publican-Users_Guide-Installing_updating_and_removing_documents-rpm" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
 	<info xml:id="info-Publican-Users_Guide-Installing_updating_and_removing_documents">
 		<title>Installing, updating and removing documents</title>
+
 	</info>
 	 <para>
 		On your workstation, change into the directory that contains the source for the document and run:
@@ -28,5 +33,4 @@
 		On large or busy sites, we recommend that you set the <parameter>manual_toc_update</parameter> parameter in the site's configuration file. With this parameter set, you must run the <prompt>$</prompt> <command>publican update_site</command> command after installing, updating, or removing documents. Refer to <xref linkend="sect-Publican-Users_Guide-Creating_the_website_structure" /> for more information.
 	</para>
 </section>
-
 

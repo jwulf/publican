@@ -2,14 +2,20 @@
 <!DOCTYPE appendix [
 <!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
 %BOOK_ENTITIES;
+<!ENTITY % sgml.features "IGNORE">
+<!ENTITY % xml.features "INCLUDE">
+<!ENTITY % DOCBOOK_ENTS PUBLIC "-//OASIS//ENTITIES DocBook XML Character Entities V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/dbcentx.mod">
+%DOCBOOK_ENTS;
 ]>
 <appendix conformance="192" version="5.0" xml:id="appe-Publican-Users_Guide-Language_codes" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
 	<info xml:id="info-Publican-Users_Guide-Language_codes">
 		<title>Language codes</title>
+
 	</info>
 	 <important>
 		<info xml:id="info-Publican-Users_Guide-Region_subtags">
 			<title>Region subtags</title>
+
 		</info>
 		 <para>
 			The only part of the XML language tag that is mandatory in <application>Publican</application> is the <firstterm>language subtag</firstterm>. However, <application>Publican</application> is designed with the assumption that you will routinely include the <firstterm>region subtag</firstterm> when you identify languages. In many languages, spelling and vocabulary vary significantly from region to region. If you do not specify the regional variety of a language in which your document is authored or into which it is translated, you might obtain unexpected results when you build the document in <application>Publican</application>.
@@ -19,6 +25,7 @@
 	 <important>
 		<info xml:id="info-Publican-Users_Guide-Other_language_codes">
 			<title>Other language codes</title>
+
 		</info>
 		 <para>
 			The system of codes used to identify languages in the XML standard is not the only system of languages codes in use in the world today. However, because <application>Publican</application> strives to comply with the XML standard, these are the only codes that <application>Publican</application> supports. In particular, note that the codes used in the GNU tools (identified by their use of underscores and the <literal>@</literal> symbol to separate elements — for example, <literal>en_GB</literal> or <literal>sr_RS@latin</literal>) do not comply with the XML standard and therefore do not work with <application>Publican</application>.
@@ -62,6 +69,7 @@
 				 <note>
 					<info xml:id="info-Publican-Users_Guide-Extended_language_subtags">
 						<title>Extended language subtags</title>
+
 					</info>
 					 <para>
 						<citetitle>RFC 5646: Tags for Identifying Languages</citetitle><footnote> <para>

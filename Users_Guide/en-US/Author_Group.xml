@@ -2,98 +2,103 @@
 <!DOCTYPE authorgroup [
 <!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
 %BOOK_ENTITIES;
+<!ENTITY % sgml.features "IGNORE">
+<!ENTITY % xml.features "INCLUDE">
+<!ENTITY % DOCBOOK_ENTS PUBLIC "-//OASIS//ENTITIES DocBook XML Character Entities V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/dbcentx.mod">
+%DOCBOOK_ENTS;
 ]>
 <authorgroup version="5.0" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
 	<author>
 		<personname><firstname>Don</firstname>
-		<surname>Domingo</surname>
-		</personname>
-		<affiliation>
+		 <surname>Domingo</surname>
+		 </personname> <affiliation>
 			<orgname>Red Hat</orgname>
 			 <orgdiv>Engineering Content Services</orgdiv>
 
 		</affiliation>
-		<email>ddomingo@redhat.com</email>
+		 <email>ddomingo@redhat.com</email>
+
 	</author>
 	 <author>
 		<personname><firstname>Zac</firstname>
-		<surname>Dover</surname>
-		</personname>
-		<affiliation>
+		 <surname>Dover</surname>
+		 </personname> <affiliation>
 			<orgname>Red Hat</orgname>
 			 <orgdiv>Engineering Content Services</orgdiv>
 
 		</affiliation>
-		<email>zdover@redhat.com</email>
+		 <email>zdover@redhat.com</email>
+
 	</author>
 	 <author>
 		<personname><firstname>Sven</firstname>
-		<surname>Dowdeit</surname>
-		</personname><contrib>Debian and Docker installation instructions</contrib>
+		 <surname>Dowdeit</surname>
+		 </personname><contrib>Debian and Docker installation instructions</contrib>
+
 	</author>
 	 <author>
 		<personname><firstname>Norman</firstname>
-		<surname>Dunbar</surname>
-		</personname><contrib>OpenSUSE installation instructions</contrib>
+		 <surname>Dunbar</surname>
+		 </personname><contrib>OpenSUSE installation instructions</contrib>
+
 	</author>
 	 <author>
 		<personname><firstname>Brian</firstname>
-		<surname>Forté</surname>
-		</personname>
-		<affiliation>
+		 <surname>Forté</surname>
+		 </personname> <affiliation>
 			<orgname>Red Hat</orgname>
 			 <orgdiv>Engineering Content Services</orgdiv>
 
 		</affiliation>
-		<email>bforte@redhat.com</email>
+		 <email>bforte@redhat.com</email>
+
 	</author>
 	 <author>
 		<personname><firstname>Rüdiger</firstname>
-		<surname>Landmann</surname>
-		</personname>
-		<affiliation>
+		 <surname>Landmann</surname>
+		 </personname> <affiliation>
 			<orgname>Red Hat</orgname>
 			 <orgdiv>Engineering Content Services</orgdiv>
 
 		</affiliation>
-		<email>r.landmann@redhat.com</email>
+		 <email>r.landmann@redhat.com</email>
+
 	</author>
 	 <author>
 		<personname><firstname>Rebecca</firstname>
-		<surname>Newton</surname>
-		</personname>
-		<affiliation>
+		 <surname>Newton</surname>
+		 </personname> <affiliation>
 			<orgname>Red Hat</orgname>
 			 <orgdiv>Engineering Content Services</orgdiv>
 
 		</affiliation>
+
 	</author>
 	 <author>
 		<personname><firstname>Joshua</firstname>
-		<surname>Oakes</surname>
-		</personname>
-		<affiliation>
+		 <surname>Oakes</surname>
+		 </personname> <affiliation>
 			<orgname>Red Hat</orgname>
 			 <orgdiv>Engineering Content Services</orgdiv>
 
 		</affiliation>
+
 	</author>
 	 <author>
 		<personname><firstname>Joshua</firstname>
-		<surname>Wulf</surname>
-		</personname>
-		<affiliation>
+		 <surname>Wulf</surname>
+		 </personname> <affiliation>
 			<orgname>Red Hat</orgname>
 			 <orgdiv>Engineering Content Services</orgdiv>
 
 		</affiliation>
-		<email>jwulf@redhat.com</email>
+		 <email>jwulf@redhat.com</email>
+
 	</author>
 	 <othercredit class="technicaleditor">
 		<personname><firstname>Jeff</firstname>
-		<surname>Fearn</surname>
-		</personname>
-		<affiliation>
+		 <surname>Fearn</surname>
+		 </personname> <affiliation>
 			<shortaffil> <inlinemediaobject>
 				<imageobject>
 					<imagedata fileref="images/logos/engops.png" format="PNG" />
@@ -106,19 +111,20 @@
 			 </shortaffil>
 
 		</affiliation>
-		<contrib>Extensive review, rough drafts, persistent annoyances.</contrib>
-		<email>jfearn@redhat.com</email>
+		 <contrib>Extensive review, rough drafts, persistent annoyances.</contrib>
+		 <email>jfearn@redhat.com</email>
+
 	</othercredit>
 	 <othercredit class="other">
 		<personname><firstname>Josef</firstname>
-		<surname>Hruška</surname>
-		</personname>
-		<affiliation>
+		 <surname>Hruška</surname>
+		 </personname> <affiliation>
 			<orgname>Fedora</orgname>
 			 <orgdiv>Localization Project</orgdiv>
 
 		</affiliation>
-		<contrib>Checking the Czech examples in Entities and translation</contrib>
+		 <contrib>Checking the Czech examples in Entities and translation</contrib>
+
 	</othercredit>
 </authorgroup>
 
