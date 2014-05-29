@@ -7,12 +7,4 @@
 <!ENTITY PRODUCTNUM "4.1">
 <!ENTITY BOOKNAME "Users_Guide">
 <!ENTITY DOCBOOK-URL "http://www.docbook.org/tdg/en/html/docbook.html">
-<!ENTITY nbsp "&#x000A0;" >
-<!ENTITY semi "&#x0003B;" >
-<!ENTITY lsquor "&#x0201A;" ><!--SINGLE LOW-9 QUOTATION MARK -->
-<!ENTITY rsquor "&#x02019;" ><!--RIGHT SINGLE QUOTATION MARK -->
-<!ENTITY lsquo "&#x02018;" ><!--LEFT SINGLE QUOTATION MARK -->
-<!ENTITY rsquo "&#x02019;" ><!--RIGHT SINGLE QUOTATION MARK -->
-<!ENTITY hellip           "&#x02026;" ><!--HORIZONTAL ELLIPSIS -->
-<!ENTITY ndash            "&#x02013;" ><!--EN DASH -->
 

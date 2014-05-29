@@ -228,7 +228,7 @@ sub build {
                        # handle a structured error (XML::LibXML::Error object)
                                         croak(
                                             maketext(
-                                                "FATAL ERROR: [_1]:[_2] in [_3] on line [_4]: [_5]",
+                                                "FATAL ERROR 1: [_1]:[_2] in [_3] on line [_4]: [_5]",
                                                 $@->domain(),
                                                 $@->code(),
                                                 $@->file(),
@@ -240,7 +240,7 @@ sub build {
                                     else {
                                         croak(
                                             maketext(
-                                                "FATAL ERROR: [_1]", $@
+                                                "FATAL ERROR 2: [_1]", $@
                                             )
                                         );
                                     }
@@ -285,7 +285,7 @@ sub build {
                                 };
                                 if ($@) {
                                     croak(
-                                        maketext( "FATAL ERROR: [_1]", $@ ) );
+                                        maketext( "FATAL ERROR 3: [_1]", $@ ) );
                                 }
 
                                 foreach my $node (
@@ -515,7 +515,12 @@ sub transform {
         my $fh;
         open( $fh, "<:encoding(UTF-8)", "html-single/index.html" )
             || croak( maketext("Can't open file for html input!") );
-        $tree->parse_file($fh);
+        eval { $tree->parse_file($fh); };
+
+        if ($@) {
+            croak( maketext( "FATAL ERROR 4: [_1]", $@ ) );
+        }
+
 ## BZ #697363
         my $formatter = $self->{publican}->param('txt_formater') || '';
 
@@ -638,7 +643,11 @@ sub transform {
             if ( !-f $xml_file );
 
         my $xml_doc = XML::TreeBuilder->new();
-        $xml_doc->parse_file($xml_file);
+        eval { $xml_doc->parse_file($xml_file); };
+        if ($@) {
+            croak( maketext( "FATAL ERROR 5: [_1]", $@ ) );
+        }
+
         my $logo = eval {
             $xml_doc->root()->look_down( "_tag", "corpauthor" )
                 ->look_down( "_tag", "imagedata" )->attr('fileref');
@@ -951,7 +960,7 @@ sub transform {
             # handle a structured error (XML::LibXML::Error object)
             croak(
                 maketext(
-                    "FATAL ERROR: [_1]:[_2] in [_3] on line [_4]: [_5]",
+                    "FATAL ERROR 6: [_1]:[_2] in [_3] on line [_4]: [_5]",
                     $@->domain(),
                     $@->code(),
                     $@->file(),
@@ -961,7 +970,7 @@ sub transform {
             );
         }
         else {
-            croak( maketext( "FATAL ERROR: [_1]", $@ ) );
+            croak( maketext( "FATAL ERROR 7: [_1]", $@ ) );
         }
     }
 
@@ -1474,7 +1483,11 @@ sub build_drupal_book {
             open my $html_file, "<:encoding(utf8)", $file_name
                 or croak "$file_name: $!";
 
-            $tree->parse_file($html_file);
+            eval { $tree->parse_file($html_file); };
+            if ($@) {
+                croak( maketext( "FATAL ERROR 8: [_1]", $@ ) );
+            }
+
             $html_file->close();
 
             my $title_element = $tree->look_down( '_tag', 'title' );
@@ -2174,8 +2187,11 @@ sub web_labels {
     croak( maketext( "Can't locate required file: [_1]", $xml_file ) )
         if ( !-f $xml_file );
 
-    my $xml_doc = XML::TreeBuilder->new();
-    $xml_doc->parse_file($xml_file);
+    my $xml_doc = XML::TreeBuilder->new({ 'NoExpand' => "0", 'ErrorContext' => "2" });
+    eval { $xml_doc->parse_file($xml_file); };
+    if ($@) {
+        croak( maketext( "FATAL ERROR 9: opening file [_1]:\n\t[_2]",$xml_file, $@ ) );
+    }
 
     # BUGBUG can't translate overridden labels :(
     unless ($web_product_label) {
@@ -2190,6 +2206,7 @@ sub web_labels {
             $web_product_label =~ s/\s/_/g;
         }
     }
+
     unless ($web_name_label) {
         $web_name_label = eval {
             $xml_doc->root()->look_down( "_tag", "title" )->as_text();
@@ -2255,7 +2272,10 @@ sub change_log {
         if ( $self->{publican}->param('web_home')
         || $self->{publican}->param('web_type') );
 
-    $xml_doc->parse_file("$path");
+    eval { $xml_doc->parse_file("$path"); };
+    if ($@) {
+        croak( maketext( "FATAL ERROR 10: [_1]", $@ ) );
+    }
 
     $xml_doc->root()->look_down( "_tag", "revision" )
         || croak(
@@ -2382,7 +2402,10 @@ sub get_abstract {
 
     my $xml_doc = XML::TreeBuilder->new(
         { 'NoExpand' => "0", 'ErrorContext' => "2" } );
-    $xml_doc->parse_file($info_file);
+    eval { $xml_doc->parse_file($info_file); };
+    if ($@) {
+        croak( maketext( "FATAL ERROR 11: [_1]", $@ ) );
+    }
 
     my $abs = $xml_doc->look_down( '_tag', 'abstract' )
         || croak(
@@ -2467,7 +2490,7 @@ sub get_subtitle {
         { 'NoExpand' => "0", 'ErrorContext' => "2" } );
     eval { $xml_doc->parse_file($info_file); };
     if ($@) {
-        croak( maketext( "FATAL ERROR: [_1]", $@ ) );
+        croak( maketext( "FATAL ERROR 12: [_1]", $@ ) );
     }
 
     my $st = $xml_doc->look_down( '_tag', 'subtitle' )
@@ -2537,7 +2560,10 @@ sub get_contributors {
 
     my $xml_doc = XML::TreeBuilder->new(
         { 'NoExpand' => "0", 'ErrorContext' => "2" } );
-    $xml_doc->parse_file($file);
+    eval { $xml_doc->parse_file($file); };
+    if ($@) {
+        croak( maketext( "FATAL ERROR 13: [_1]", $@ ) );
+    }
 
     foreach my $node (
         $xml_doc->root()->look_down(
@@ -2614,7 +2640,10 @@ sub get_keywords {
 
     my $xml_doc = XML::TreeBuilder->new(
         { 'NoExpand' => "0", 'ErrorContext' => "2" } );
-    $xml_doc->parse_file($file);
+    eval { $xml_doc->parse_file($file); };
+    if ($@) {
+        croak( maketext( "FATAL ERROR 14: [_1]", $@ ) );
+    }
 
     foreach my $node ( $xml_doc->root()->look_down( "_tag", 'keyword' ) ) {
         push( @keywords, $node->as_text() );
@@ -2655,7 +2684,10 @@ sub get_legalnotice {
 
     my $xml_doc = XML::TreeBuilder->new(
         { 'NoExpand' => "0", 'ErrorContext' => "2" } );
-    $xml_doc->parse_file($file);
+    eval { $xml_doc->parse_file($file); };
+    if ($@) {
+        croak( maketext( "FATAL ERROR 15: [_1]", $@ ) );
+    }
 
     my $ln = $xml_doc->root()->look_down( "_tag", 'legalnotice' );
     $ln->detach();
@@ -2700,7 +2732,10 @@ sub get_draft {
 
     my $xml_doc = XML::TreeBuilder->new(
         { 'NoExpand' => "0", 'ErrorContext' => "2" } );
-    $xml_doc->parse_file($file);
+    eval { $xml_doc->parse_file($file); };
+    if ($@) {
+        croak( maketext( "FATAL ERROR 16: [_1]", $@ ) );
+    }
 
     $draft = ( $xml_doc->root()->attr('status')
             && $xml_doc->root()->attr('status') eq 'draft' );

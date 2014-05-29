@@ -135,3 +135,11 @@ Complete auto docs, website params.
 http://www.cssportal.com/css3-preview/showing-and-hiding-content-with-pure-css3.php
 http://www.cssportal.com/css3-preview/demo/css-menu-ex1.html
 
+:nmap %% :let X=1<cr>1G!!
+:nmap !! /FATAL ERROR\:<cr>:s/\:/\=X.':'/<cr>:let X=X+1<cr>!!
+%%
+:% s/FATAL ERROR/FATAL ERROR /g
+
+
+
+

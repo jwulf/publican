@@ -1372,15 +1372,14 @@ DTDHEAD
 
     if ( $dtdver =~ m/^5/ ) {
 ## TODO BUGBUG this should resolve DocBook4 entities ...
+#<!ENTITY % sgml.features "IGNORE">
+#<!ENTITY % xml.features "INCLUDE">
+#<!ENTITY % DOCBOOK_ENTS PUBLIC "-//OASIS//ENTITIES DocBook XML Character Entities V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/dbcentx.mod">
+#%DOCBOOK_ENTS;
+
         $dtd = <<DTDHEAD;
 <?xml version='1.0' encoding='utf-8' ?>
 <!DOCTYPE $tag [
-<!ENTITY % DOCBOOK_ENTS SYSTEM "http://www.oasis-open.org/docbook/xml/4.5/dbcentx.mod">
-%BOOK_ENTS;
-<!ENTITY % isopub PUBLIC
-     "ISO 8879:1986//ENTITIES Publishing//EN//XML"
-     "http://www.w3.org/2003/entities/iso8879/isopub.ent"
->
 DTDHEAD
     }
 
@@ -1393,6 +1392,10 @@ ENT
     }
 
     $dtd .= <<DTDTAIL;
+<!ENTITY % sgml.features "IGNORE">
+<!ENTITY % xml.features "INCLUDE">
+<!ENTITY % DOCBOOK_ENTS PUBLIC "-//OASIS//ENTITIES DocBook XML Character Entities V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/dbcentx.mod">
+%DOCBOOK_ENTS;
 ]>
 DTDTAIL
 

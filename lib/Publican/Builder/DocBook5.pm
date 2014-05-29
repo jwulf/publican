@@ -106,10 +106,10 @@ sub setup_xml {
         );
     }
 
-    my $extras = $self->{publican}->param('extras_dir');
+    my $extras    = $self->{publican}->param('extras_dir');
     my $main_file = $self->{publican}->param('mainfile');
-    my $ent_file = undef;
-    $ent_file = "$main_file.ent" if(-e "$xml_lang/$main_file.ent");
+    my $ent_file  = undef;
+    $ent_file = "$main_file.ent" if ( -e "$xml_lang/$main_file.ent" );
 
     foreach my $lang ( split( /,/, $langs ) ) {
         logger( maketext( "Setting up [_1]", $lang ) . "\n" );
@@ -176,9 +176,10 @@ sub setup_xml {
             my $extras = $self->{publican}->param('extras_dir');
 
             my @xml_files = dir_list( $source_dir, '*.xml' );
-            rcopy( "$xml_lang/$ent_file", "$tmp_dir/$lang/xml_tmp/." ) if ( -e "$xml_lang/$ent_file" );
-            rcopy( "$lang/$ent_file", "$tmp_dir/$lang/xml_tmp/." ) if ( -e "$lang/$ent_file" );
-
+            rcopy( "$xml_lang/$ent_file", "$tmp_dir/$lang/xml_tmp/." )
+                if ( -e "$xml_lang/$ent_file" );
+            rcopy( "$lang/$ent_file", "$tmp_dir/$lang/xml_tmp/." )
+                if ( -e "$lang/$ent_file" );
 
             foreach my $xml_file ( sort(@xml_files) ) {
                 next if ( $xml_file =~ m|$source_dir/$extras/| );
@@ -224,8 +225,17 @@ sub setup_xml {
                 my $rev_tree       = $self->{publican}->new_tree();
                 my $trans_rev_tree = $self->{publican}->new_tree();
 
-                $rev_tree->parse_file("$tmp_dir/$lang/xml_tmp/$rev_file");
-                $trans_rev_tree->parse_file("$lang/$rev_file");
+                eval {
+                    $rev_tree->parse_file("$tmp_dir/$lang/xml_tmp/$rev_file");
+                };
+                if ($@) {
+                    croak( maketext( "FATAL ERROR: [_1]", $@ ) );
+                }
+
+                eval { $trans_rev_tree->parse_file("$lang/$rev_file"); };
+                if ($@) {
+                    croak( maketext( "FATAL ERROR: [_1]", $@ ) );
+                }
 
                 my $id = undef;
 
@@ -292,7 +302,11 @@ sub setup_xml {
 
                 my $auth_doc = XML::TreeBuilder->new(
                     { 'NoExpand' => "1", 'ErrorContext' => "2" } );
-                $auth_doc->parse_file($auth_file);
+                eval { $auth_doc->parse_file($auth_file); };
+                if ($@) {
+                    croak( maketext( "FATAL ERROR: [_1]", $@ ) );
+                }
+
                 my $auth_node = eval {
                     $auth_doc->root()->look_down( "_tag", "authorgroup" );
                 };
@@ -305,7 +319,11 @@ sub setup_xml {
                 }
                 my $trans_doc = XML::TreeBuilder->new(
                     { 'NoExpand' => "1", 'ErrorContext' => "2" } );
-                $trans_doc->parse_file($trans_file);
+                eval { $trans_doc->parse_file($trans_file); };
+                if ($@) {
+                    croak( maketext( "FATAL ERROR: [_1]", $@ ) );
+                }
+
                 my $trans_node = eval {
                     $trans_doc->root()->look_down( "_tag", "authorgroup" );
                 };
@@ -442,8 +460,10 @@ sub setup_xml {
                 }
             }
 
-            rcopy( "$xml_lang/$ent_file", "$tmp_dir/$lang/xml/." ) if ( -e "$xml_lang/$ent_file" );
-            rcopy( "$lang/$ent_file", "$tmp_dir/$lang/xml/." ) if ( -e "$lang/$ent_file" );
+            rcopy( "$xml_lang/$ent_file", "$tmp_dir/$lang/xml/." )
+                if ( -e "$xml_lang/$ent_file" );
+            rcopy( "$lang/$ent_file", "$tmp_dir/$lang/xml/." )
+                if ( -e "$lang/$ent_file" );
 
             dircopy( "$xml_lang/$extras", "$tmp_dir/$lang/xml/$extras" )
                 if ( -d "$xml_lang/$extras" );
@@ -590,7 +610,7 @@ sub validate_xml {
             # handle a structured error (XML::LibXML::Error object)
             croak(
                 maketext(
-                    "FATAL ERROR: [_1]:[_2] in [_3] on line [_4]: [_5]",
+                    "FATAL ERROR 3: [_1]:[_2] in [_3] on line [_4]: [_5]",
                     $@->domain(),
                     $@->code(),
                     $@->file(),
@@ -627,7 +647,7 @@ sub validate_xml {
 
     $dir = undef;
 
-    return(0);
+    return (0);
 }
 
 =head2 get_author_list
@@ -662,7 +682,10 @@ sub get_author_list {
 
     my $xml_doc = XML::TreeBuilder->new(
         { 'NoExpand' => "0", 'ErrorContext' => "2" } );
-    $xml_doc->parse_file($file);
+    eval { $xml_doc->parse_file($file); };
+    if ($@) {
+        croak( maketext( "FATAL ERROR: [_1]", $@ ) );
+    }
 
     foreach my $author (
         $xml_doc->root()->look_down( "_tag", qr/^(?:author|orgname)$/ ) )

@@ -559,7 +559,11 @@ sub package {
 
         my $rev_doc = XML::TreeBuilder->new(
             { 'NoExpand' => "1", 'ErrorContext' => "2" } );
-        $rev_doc->parse_file($rev_file);
+    eval { $rev_doc->parse_file($rev_file); };
+    if ($@) {
+        croak( maketext( "FATAL ERROR: [_1]", $@ ) );
+    }
+
         my $VR = eval {
             $rev_doc->root()->look_down( "_tag", "revnumber" )->as_text();
         };
