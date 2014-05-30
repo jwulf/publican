@@ -1,5 +1,3 @@
-@import url("common-db5/en-US/css/default.css");
-
 * {
     widows: 4 !important;
     orphans: 4 !important;
@@ -18,7 +16,7 @@ body {
     max-width: 46em !important;
 }
 body > header {
-    margin: 2em auto;
+    margin: 4em auto;
 }
 
 body[dir="rtl"] > header

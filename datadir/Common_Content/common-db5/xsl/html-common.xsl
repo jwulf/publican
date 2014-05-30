@@ -54,6 +54,7 @@
 <xsl:param name="html.stylesheet.print"><xsl:if test="$embedtoc = 0 ">Common_Content/css/print.css</xsl:if></xsl:param>
 <xsl:param name="html.ext" select="'.html'"/>
 <xsl:param name="suppress.header.navigation" select="0"/>
+<xsl:param name="suppress.footer.navigation" select="'1'"/>
 <xsl:param name="css.decoration" select="0"/>
 <xsl:param name="use.id.as.filename" select="'1'"/>
 <xsl:param name="docbook.css.link" select="0"/>

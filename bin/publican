@@ -1018,19 +1018,10 @@ if ( $action eq 'install_brand' ) {
         foreach my $ln ( split( ',', get_all_langs() ) ) {
             mkpath("$opts{path}/$ln/css") unless ( -f "$opts{path}/$ln/css" );
 
-            dircopy( "$xml_lang/css", "$opts{path}/$ln/css" )
-                if ( -d "$xml_lang/css" );
-            dircopy( "$ln/css", "$opts{path}/$ln/css" )
-                if ( -d "$ln/css" );
-
-            unless ( -f "$opts{path}/$ln/css/brand-web.css" ) {
-                my $DUMMY_FILE;
-                open( $DUMMY_FILE, '>', "$opts{path}/$ln/css/brand-web.css" )
-                    || croak(
-                    "can't open file for output: $opts{path}/$ln/css/brand-web.css"
-                    );
-                close($DUMMY_FILE);
-            }
+            rcopy( "$xml_lang/css/brand.css", "$opts{path}/$ln/css/brand.css" )
+                if ( -d "$xml_lang/css/brand.css" );
+            rcopy( "$ln/css/lang.css", "$opts{path}/$ln/css/lang.css" )
+                if ( -d "$ln/css/lang.css" );
 
             my $images = $publican->param('img_dir');
             mkpath("$opts{path}/$ln/$images")

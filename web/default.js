@@ -434,7 +434,7 @@ function loadMenu(){
 		});
 		$(".docnav li.home").click(function(e){
 			work = 1;
-			toggle(e, 'floatingtoc');
+			expand_menu('floatingtoc');
 			return false;
 		});
 	});

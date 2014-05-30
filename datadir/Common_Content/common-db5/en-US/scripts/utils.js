@@ -83,5 +83,7 @@ function initSwitchery() {
             }
         }
     }
+
 }
+
 

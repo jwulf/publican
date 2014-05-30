@@ -126,7 +126,3 @@ Sample spec file for desktop menu package" up to date?
 :% s/FATAL ERROR/FATAL ERROR /g
 
 
-CSS
-
-consider getting rid of common.ss and just using brand.css ...
-
