@@ -1,0 +1,728 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: 0\n"
+"POT-Creation-Date: 2014-06-02 09:01+1000\n"
+"PO-Revision-Date: 2014-06-02 09:01+1000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: None\n"
+"MIME-Version: 1.0\n"
+"Content-Type: application/x-publican; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Command summary"
+msgstr ""
+
+msgid "Command options"
+msgstr ""
+
+msgid "--brand_dir=s"
+msgstr ""
+
+msgid "Directory to source brand files from."
+msgstr ""
+
+msgid "--common_config=s"
+msgstr ""
+
+msgid "Override path to Common_Config directory"
+msgstr ""
+
+msgid "--common_content=s"
+msgstr ""
+
+msgid "Override path to Common_Content directory"
+msgstr ""
+
+msgid "--config=s"
+msgstr ""
+
+msgid "Use a nonstandard config file"
+msgstr ""
+
+msgid "--help"
+msgstr ""
+
+msgid "Display help message"
+msgstr ""
+
+msgid "--nocolours"
+msgstr ""
+
+msgid "Disable ANSI colourisation of logging."
+msgstr ""
+
+msgid "--quiet"
+msgstr ""
+
+msgid "Disable all logging."
+msgstr ""
+
+msgid "Command actions"
+msgstr ""
+
+msgid "<prompt>$</prompt><command> publican</command> add_revision"
+msgstr ""
+
+msgid "Add an entry to the revision history"
+msgstr ""
+
+msgid "--date=<replaceable>DATE</replaceable>"
+msgstr ""
+
+msgid "Date to use for a revision."
+msgstr ""
+
+msgid "--email=<replaceable>EMAIL</replaceable>"
+msgstr ""
+
+msgid "email to use for a revision."
+msgstr ""
+
+msgid "--firstname=<replaceable>FIRSTNAME</replaceable>"
+msgstr ""
+
+msgid "firstname to use for a revision."
+msgstr ""
+
+msgid "--lang=<replaceable>LANG</replaceable>"
+msgstr ""
+
+msgid "The language the XML will be written in"
+msgstr ""
+
+msgid "--member=<replaceable>MEMBER</replaceable>"
+msgstr ""
+
+msgid "An entry to be added to the revision. Can be specified multiple times."
+msgstr ""
+
+msgid "--revnumber=<replaceable>REVNUMBER</replaceable>"
+msgstr ""
+
+msgid "Revision number to use for a revision."
+msgstr ""
+
+msgid "--surname=<replaceable>SURNAME</replaceable>"
+msgstr ""
+
+msgid "surname to use for a revision."
+msgstr ""
+
+msgid "<prompt>$</prompt><command> publican</command> build"
+msgstr ""
+
+msgid "Transform XML to other formats (pdf, html, html-single, drupal-book, etc)"
+msgstr ""
+
+msgid "--distributed_set"
+msgstr ""
+
+msgid "This flag tells publican the data being processed is a distributed set. Note: do not use distributed_set on the command line. Publican uses this flag when calling itself to process distributed sets. This is the only safe way this flag can be used."
+msgstr ""
+
+msgid "--embedtoc"
+msgstr ""
+
+msgid "Embed the web site TOC object in the generated HTML"
+msgstr ""
+
+msgid "--formats=<replaceable>FORMATS</replaceable>"
+msgstr ""
+
+msgid "Comma-separated list of formats, for example: html,pdf,html-single,html-desktop,txt,epub"
+msgstr ""
+
+msgid "--langs=<replaceable>LANGS</replaceable>"
+msgstr ""
+
+msgid "Comma-separated list of languages, for example: en-US,de-DE,all"
+msgstr ""
+
+msgid "--novalid"
+msgstr ""
+
+msgid "Do not run the DTD validation"
+msgstr ""
+
+msgid "--pdftool=<replaceable>PDFTOOL</replaceable>"
+msgstr ""
+
+msgid "Override the tool to use when creating PDFs. Valid options are wkhtmltopdf and fop."
+msgstr ""
+
+msgid "--pub_dir=<replaceable>PUB_DIR</replaceable>"
+msgstr ""
+
+msgid "Directory to publish files to. Defaults to publish."
+msgstr ""
+
+msgid "--publish"
+msgstr ""
+
+msgid "Set up built content for publishing"
+msgstr ""
+
+msgid "--showfuzzy"
+msgstr ""
+
+msgid "Show fuzzy translation entries in output. Defaults off."
+msgstr ""
+
+msgid "--src_dir=<replaceable>SRC_DIR</replaceable>"
+msgstr ""
+
+msgid "Directory to source publican files from."
+msgstr ""
+
+msgid "<prompt>$</prompt><command> publican</command> clean"
+msgstr ""
+
+msgid "Remove all temporary files and directories"
+msgstr ""
+
+msgid "--pub_dir=<replaceable>PUB_DIR</replaceable>"
+msgstr ""
+
+msgid "Directory to publish files to. Defaults to publish."
+msgstr ""
+
+msgid "<prompt>$</prompt><command> publican</command> clean_ids"
+msgstr ""
+
+msgid "Run clean ids for source XML"
+msgstr ""
+
+msgid "<prompt>$</prompt><command> publican</command> clean_set"
+msgstr ""
+
+msgid "Remove local copies of remote set books"
+msgstr ""
+
+msgid "<prompt>$</prompt><command> publican</command> copy_web_brand"
+msgstr ""
+
+msgid "Copy a brand's installed web content to another site"
+msgstr ""
+
+msgid "--brand=<replaceable>BRAND</replaceable>"
+msgstr ""
+
+msgid "The brand to use"
+msgstr ""
+
+msgid "--old_site_config=<replaceable>OLD_SITE_CONFIG</replaceable>"
+msgstr ""
+
+msgid "WebSite configuration file to use when copying content between sites."
+msgstr ""
+
+msgid "--site_config=<replaceable>SITE_CONFIG</replaceable>"
+msgstr ""
+
+msgid "WebSite configuration file to use or create."
+msgstr ""
+
+msgid "<prompt>$</prompt><command> publican</command> create"
+msgstr ""
+
+msgid "Create a new book, set, or article"
+msgstr ""
+
+msgid "--brand=<replaceable>BRAND</replaceable>"
+msgstr ""
+
+msgid "The brand to use"
+msgstr ""
+
+msgid "--dtdver=<replaceable>DTDVER</replaceable>"
+msgstr ""
+
+msgid "The version of the DocBook DTD to use"
+msgstr ""
+
+msgid "--edition=<replaceable>EDITION</replaceable>"
+msgstr ""
+
+msgid "The edition of the book, article, or set"
+msgstr ""
+
+msgid "--lang=<replaceable>LANG</replaceable>"
+msgstr ""
+
+msgid "The language the XML will be written in"
+msgstr ""
+
+msgid "--name=<replaceable>NAME</replaceable>"
+msgstr ""
+
+msgid "The name of the book, article, set, or brand"
+msgstr ""
+
+msgid "--product=<replaceable>PRODUCT</replaceable>"
+msgstr ""
+
+msgid "The name of the product"
+msgstr ""
+
+msgid "--type=<replaceable>TYPE</replaceable>"
+msgstr ""
+
+msgid "The type (book, article, or set)"
+msgstr ""
+
+msgid "--version=<replaceable>VERSION</replaceable>"
+msgstr ""
+
+msgid "The version of the product"
+msgstr ""
+
+msgid "<prompt>$</prompt><command> publican</command> create_brand"
+msgstr ""
+
+msgid "Create a new brand"
+msgstr ""
+
+msgid "--lang=<replaceable>LANG</replaceable>"
+msgstr ""
+
+msgid "The language the XML will be written in"
+msgstr ""
+
+msgid "--name=<replaceable>NAME</replaceable>"
+msgstr ""
+
+msgid "The name of the book, article, set, or brand"
+msgstr ""
+
+msgid "<prompt>$</prompt><command> publican</command> create_site"
+msgstr ""
+
+msgid "Create a new WebSite in the supplied location."
+msgstr ""
+
+msgid "--db_file=<replaceable>DB_FILE</replaceable>"
+msgstr ""
+
+msgid "Override default database file."
+msgstr ""
+
+msgid "--lang=<replaceable>LANG</replaceable>"
+msgstr ""
+
+msgid "The language the XML will be written in"
+msgstr ""
+
+msgid "--site_config=<replaceable>SITE_CONFIG</replaceable>"
+msgstr ""
+
+msgid "WebSite configuration file to use or create."
+msgstr ""
+
+msgid "--tmpl_path=<replaceable>TMPL_PATH</replaceable>"
+msgstr ""
+
+msgid "Override the default template path."
+msgstr ""
+
+msgid "--toc_path=<replaceable>TOC_PATH</replaceable>"
+msgstr ""
+
+msgid "Override the default TOC path."
+msgstr ""
+
+msgid "<prompt>$</prompt><command> publican</command> help_config"
+msgstr ""
+
+msgid "Display help text for the configuration file"
+msgstr ""
+
+msgid "<prompt>$</prompt><command> publican</command> install_book"
+msgstr ""
+
+msgid "Install a book in to a WebSite."
+msgstr ""
+
+msgid "--lang=<replaceable>LANG</replaceable>"
+msgstr ""
+
+msgid "The language the XML will be written in"
+msgstr ""
+
+msgid "--site_config=<replaceable>SITE_CONFIG</replaceable>"
+msgstr ""
+
+msgid "WebSite configuration file to use or create."
+msgstr ""
+
+msgid "<prompt>$</prompt><command> publican</command> install_brand"
+msgstr ""
+
+msgid "Install a brand to the supplied location"
+msgstr ""
+
+msgid "--path=<replaceable>PATH</replaceable>"
+msgstr ""
+
+msgid "/path/to/install/to"
+msgstr ""
+
+msgid "--pub_dir=<replaceable>PUB_DIR</replaceable>"
+msgstr ""
+
+msgid "Directory to publish files to. Defaults to publish."
+msgstr ""
+
+msgid "--web"
+msgstr ""
+
+msgid "Install the web content for a brand."
+msgstr ""
+
+msgid "<prompt>$</prompt><command> publican</command> lang_stats"
+msgstr ""
+
+msgid "report PO statistics"
+msgstr ""
+
+msgid "--lang=<replaceable>LANG</replaceable>"
+msgstr ""
+
+msgid "The language the XML will be written in"
+msgstr ""
+
+msgid "<prompt>$</prompt><command> publican</command> migrate_site"
+msgstr ""
+
+msgid "Migrate a website DataBase from Publican &lt; 3 to Publican 3."
+msgstr ""
+
+msgid "--site_config=<replaceable>SITE_CONFIG</replaceable>"
+msgstr ""
+
+msgid "WebSite configuration file to use or create."
+msgstr ""
+
+msgid "<prompt>$</prompt><command> publican</command> package"
+msgstr ""
+
+msgid "Package a language for shipping"
+msgstr ""
+
+msgid "--binary"
+msgstr ""
+
+msgid "Build binary rpm when running package"
+msgstr ""
+
+msgid "--brew"
+msgstr ""
+
+msgid "Push SRPM to brew"
+msgstr ""
+
+msgid "--desktop"
+msgstr ""
+
+msgid "Create desktop instead of web package"
+msgstr ""
+
+msgid "--lang=<replaceable>LANG</replaceable>"
+msgstr ""
+
+msgid "The language the XML will be written in"
+msgstr ""
+
+msgid "--pub_dir=<replaceable>PUB_DIR</replaceable>"
+msgstr ""
+
+msgid "Directory to publish files to. Defaults to publish."
+msgstr ""
+
+msgid "--scratch"
+msgstr ""
+
+msgid "Use scratch instead of tag build"
+msgstr ""
+
+msgid "--short_sighted"
+msgstr ""
+
+msgid "Create package without using version in package name"
+msgstr ""
+
+msgid "--wait"
+msgstr ""
+
+msgid "Wait for brew to finish building"
+msgstr ""
+
+msgid "<prompt>$</prompt><command> publican</command> print_banned"
+msgstr ""
+
+msgid "Print a list of banned DocBook tags"
+msgstr ""
+
+msgid "<prompt>$</prompt><command> publican</command> print_known"
+msgstr ""
+
+msgid "Print a list of QA'd DocBook tags"
+msgstr ""
+
+msgid "<prompt>$</prompt><command> publican</command> print_tree"
+msgstr ""
+
+msgid "Print a tree of the xi:includes"
+msgstr ""
+
+msgid "<prompt>$</prompt><command> publican</command> print_unused"
+msgstr ""
+
+msgid "Print a list of unused XML files"
+msgstr ""
+
+msgid "<prompt>$</prompt><command> publican</command> print_unused_images"
+msgstr ""
+
+msgid "Print a list of unused Image files"
+msgstr ""
+
+msgid "<prompt>$</prompt><command> publican</command> remove_book"
+msgstr ""
+
+msgid "Remove a book from a WebSite."
+msgstr ""
+
+msgid "--lang=<replaceable>LANG</replaceable>"
+msgstr ""
+
+msgid "The language the XML will be written in"
+msgstr ""
+
+msgid "--site_config=<replaceable>SITE_CONFIG</replaceable>"
+msgstr ""
+
+msgid "WebSite configuration file to use or create."
+msgstr ""
+
+msgid "<prompt>$</prompt><command> publican</command> rename"
+msgstr ""
+
+msgid "Rename a publican book"
+msgstr ""
+
+msgid "--name=<replaceable>NAME</replaceable>"
+msgstr ""
+
+msgid "The name of the book, article, set, or brand"
+msgstr ""
+
+msgid "--product=<replaceable>PRODUCT</replaceable>"
+msgstr ""
+
+msgid "The name of the product"
+msgstr ""
+
+msgid "--version=<replaceable>VERSION</replaceable>"
+msgstr ""
+
+msgid "The version of the product"
+msgstr ""
+
+msgid "<prompt>$</prompt><command> publican</command> report"
+msgstr ""
+
+msgid "Print a readability report for the source text."
+msgstr ""
+
+msgid "<prompt>$</prompt><command> publican</command> site_stats"
+msgstr ""
+
+msgid "Report on the contents of a WebSite"
+msgstr ""
+
+msgid "--site_config=<replaceable>SITE_CONFIG</replaceable>"
+msgstr ""
+
+msgid "WebSite configuration file to use or create."
+msgstr ""
+
+msgid "<prompt>$</prompt><command> publican</command> trans_drop"
+msgstr ""
+
+msgid "Snapshot the source language for use in translation."
+msgstr ""
+
+msgid "<prompt>$</prompt><command> publican</command> update_db"
+msgstr ""
+
+msgid "Add or remove database entries. Used for processing pre-build books, such as when building packages."
+msgstr ""
+
+msgid "--abstract=<replaceable>ABSTRACT</replaceable>"
+msgstr ""
+
+msgid "Abstract for a book"
+msgstr ""
+
+msgid "--add"
+msgstr ""
+
+msgid "Add a database entry"
+msgstr ""
+
+msgid "--book_src_lang=<replaceable>BOOK_SRC_LANG</replaceable>"
+msgstr ""
+
+msgid "The language this translation is based on."
+msgstr ""
+
+msgid "--book_version=<replaceable>BOOK_VERSION</replaceable>"
+msgstr ""
+
+msgid "The version number of the book being installed."
+msgstr ""
+
+msgid "--del"
+msgstr ""
+
+msgid "Delete a database entry"
+msgstr ""
+
+msgid "--formats=<replaceable>FORMATS</replaceable>"
+msgstr ""
+
+msgid "Comma-separated list of formats, for example: html,pdf,html-single,html-desktop,txt,epub"
+msgstr ""
+
+msgid "--lang=<replaceable>LANG</replaceable>"
+msgstr ""
+
+msgid "The language the XML will be written in"
+msgstr ""
+
+msgid "--name=<replaceable>NAME</replaceable>"
+msgstr ""
+
+msgid "The name of the book, article, set, or brand"
+msgstr ""
+
+msgid "--name_label=<replaceable>NAME_LABEL</replaceable>"
+msgstr ""
+
+msgid "name label for a book"
+msgstr ""
+
+msgid "--product=<replaceable>PRODUCT</replaceable>"
+msgstr ""
+
+msgid "The name of the product"
+msgstr ""
+
+msgid "--product_label=<replaceable>PRODUCT_LABEL</replaceable>"
+msgstr ""
+
+msgid "product label for a book"
+msgstr ""
+
+msgid "--site_config=<replaceable>SITE_CONFIG</replaceable>"
+msgstr ""
+
+msgid "WebSite configuration file to use or create."
+msgstr ""
+
+msgid "--sort_order=<replaceable>SORT_ORDER</replaceable>"
+msgstr ""
+
+msgid "Order to sort a book"
+msgstr ""
+
+msgid "--subtitle=<replaceable>SUBTITLE</replaceable>"
+msgstr ""
+
+msgid "Sub title for a book"
+msgstr ""
+
+msgid "--version=<replaceable>VERSION</replaceable>"
+msgstr ""
+
+msgid "The version of the product"
+msgstr ""
+
+msgid "--version_label=<replaceable>VERSION_LABEL</replaceable>"
+msgstr ""
+
+msgid "version label for a book"
+msgstr ""
+
+msgid "<prompt>$</prompt><command> publican</command> update_po"
+msgstr ""
+
+msgid "Update the PO files"
+msgstr ""
+
+msgid "--email=<replaceable>EMAIL</replaceable>"
+msgstr ""
+
+msgid "email to use for a revision."
+msgstr ""
+
+msgid "--firstname=<replaceable>FIRSTNAME</replaceable>"
+msgstr ""
+
+msgid "firstname to use for a revision."
+msgstr ""
+
+msgid "--langs=<replaceable>LANGS</replaceable>"
+msgstr ""
+
+msgid "Comma-separated list of languages, for example: en-US,de-DE,all"
+msgstr ""
+
+msgid "--msgmerge"
+msgstr ""
+
+msgid "Use gettext's msgmerge for POT/PO merging."
+msgstr ""
+
+msgid "--previous"
+msgstr ""
+
+msgid "Keep previous msgid when fuzzy matches are detected in PO updates."
+msgstr ""
+
+msgid "--surname=<replaceable>SURNAME</replaceable>"
+msgstr ""
+
+msgid "surname to use for a revision."
+msgstr ""
+
+msgid "<prompt>$</prompt><command> publican</command> update_pot"
+msgstr ""
+
+msgid "Update the POT files"
+msgstr ""
+
+msgid "<prompt>$</prompt><command> publican</command> update_site"
+msgstr ""
+
+msgid "Update an existing sites templates."
+msgstr ""
+
+msgid "--site_config=<replaceable>SITE_CONFIG</replaceable>"
+msgstr ""
+
+msgid "WebSite configuration file to use or create."
+msgstr ""
+
+msgid "<prompt>$</prompt><command> publican</command> zt_pull"
+msgstr ""
+
+msgid "Pull translations from Zanata."
+msgstr ""
+
+msgid "<prompt>$</prompt><command> publican</command> zt_push"
+msgstr ""
+
+msgid "Push translations to Zanata."
+msgstr ""
+

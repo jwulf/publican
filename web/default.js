@@ -3,7 +3,6 @@ var name_c = window.location.hostname + '-publican';
 var num_days = 7;
 var name_cp = window.location.hostname + '-publican-current_page';
 var name_menu = window.location.hostname + '-publican-menu';
-var style = 1;
 var toc_path = '';
 site_title = 'Documentation';
 
@@ -373,71 +372,64 @@ function showMenu() {
 }
 
 function loadMenu(){
-	$.ajax({
-		url:toc_path + '/toc.html',
-		type:'HEAD',
-		success:
-			function(){
-				style = 1;
-				addID(current_product);
-				addID(current_product + '.' + current_version);
-				addID(current_product + '.' + current_version + '.books');
-				addID(current_product + '.' + current_version + '.' + current_book);
-				var html =  '<div id="tocdiv"><iframe id="tocframe" class="toc" src="' + toc_path + '/toc.html">This is an iframe, to view it upgrade your browser or enable iframe display.</iframe></div>';
-				$("#navigation").html(html);
-			},
-		error:
-			function(){
-				style = 2;
-                                var prod_label;
-				if(current_product != 'Products') {
-					prod_label = labels[current_product]["label"];
-				} else {
-					prod_label = labels["trans_strings"]["Products"];
-				}
-                                
-				var html = '<div id="menu">';
-				html = 	html +	'<div id="lang_menu" class="breadcrumb"><a href="' + toc_path + '/index.html">' + labels["site"]["title"] + '</a></div>';
-				html = 	html +	'<div id="product_menu" class="breadcrumb" onmouseover="work=1; expand_menu(\'product_menu_list\');" onmouseout="work=1; retract_menu(\'product_menu_list\');">' + prod_label + '</div>';
-				if(typeof current_version != "undefined" && current_version != '') {
-					html = 	html +	'<div id="version_menu" class="breadcrumb" onmouseover="work=1; expand_menu(\'version_menu_list\');" onmouseout="work=1; retract_menu(\'version_menu_list\');">' + current_version + '</div>';
-					if(typeof current_book != "undefined" && current_book != '') {
-						html = 	html +	'<div id="book_menu" class="breadcrumb" onmouseover="work=1; expand_menu(\'book_menu_list\');" onmouseout="work=1; retract_menu(\'book_menu_list\');">' + current_book + '</div>';
-						html = 	html +	'<div id="book_format_menu" onmouseover="work=1; expand_menu(\'book_format_menu_list\');" onmouseout="work=1; retract_menu(\'book_format_menu_list\');"></div>';
-						html = 	html +	'<div id="book_lang_menu" onmouseover="work=1; expand_menu(\'book_lang_menu_list\');" onmouseout="work=1; retract_menu(\'book_lang_menu_list\');"></div>';
-					}
-				}
-				html = 	html +	'<div id="search_box"></div>';
-				html = 	html +	'</div>';
-				$("#navigation").html(html);
-				$("#search_box").load(toc_path + "/../search.html");
-				$("#product_menu").load(toc_path + "/products_menu.html");
-				if(typeof current_product != "undefined" && current_product != '') {
-					$("#version_menu").load(toc_path +  '/' + current_product + "/versions_menu.html");
-					if(typeof current_version != "undefined" && current_version != '') {
-						$("#book_menu").load(toc_path + '/' + current_product + '/' +  current_version + '/' +  "/books_menu.html");
-						if(typeof current_book != "undefined" && current_book != '') {
-							$("#book_lang_menu").load(toc_path + '/' +  current_product + '/' +  current_version +  '/' + current_book + "/lang_menu.html");
-							$("#book_format_menu").load(toc_path + '/' +  current_product + '/' +  current_version +  '/' + current_book + "/format_menu.html");
-						}
-					}
-				}
-				$('body').removeClass('toc_embeded');
-				$('body').addClass('menu_embeded');
+	jQuery(document).ready(function() {
+	        if(typeof style == "undefined" || style == 1) {
+			addID(current_product);
+			addID(current_product + '.' + current_version);
+			addID(current_product + '.' + current_version + '.books');
+			addID(current_product + '.' + current_version + '.' + current_book);
+			var html =  '<div id="tocdiv"><iframe id="tocframe" class="toc" src="' + toc_path + '/toc.html">This is an iframe, to view it upgrade your browser or enable iframe display.</iframe></div>';
+			jQuery("#navigation").html(html);
+		} else {
+			var prod_label;
+			if(current_product != 'Products') {
+				prod_label = labels[current_product]["label"];
+			} else {
+				prod_label = labels["trans_strings"]["Products"];
 			}
-	});
-	$(document).ready(function() {
-		$("#floatingtoc").load('index.html .toc:eq(0)');
-		$("body").click(function(){
+                                
+			var html = '<div id="menu">';
+			html = 	html +	'<div id="lang_menu" class="breadcrumb"><a href="' + toc_path + '/index.html">' + labels["site"]["title"] + '</a></div>';
+			html = 	html +	'<div id="product_menu" class="breadcrumb" onmouseover="work=1; expand_menu(\'product_menu_list\');" onmouseout="work=1; retract_menu(\'product_menu_list\');">' + prod_label + '</div>';
+			if(typeof current_version != "undefined" && current_version != '') {
+				html = 	html +	'<div id="version_menu" class="breadcrumb" onmouseover="work=1; expand_menu(\'version_menu_list\');" onmouseout="work=1; retract_menu(\'version_menu_list\');">' + current_version + '</div>';
+				if(typeof current_book != "undefined" && current_book != '') {
+					html = 	html +	'<div id="book_menu" class="breadcrumb" onmouseover="work=1; expand_menu(\'book_menu_list\');" onmouseout="work=1; retract_menu(\'book_menu_list\');">' + current_book + '</div>';
+					html = 	html +	'<div id="book_format_menu" onmouseover="work=1; expand_menu(\'book_format_menu_list\');" onmouseout="work=1; retract_menu(\'book_format_menu_list\');"></div>';
+					html = 	html +	'<div id="book_lang_menu" onmouseover="work=1; expand_menu(\'book_lang_menu_list\');" onmouseout="work=1; retract_menu(\'book_lang_menu_list\');"></div>';
+				}
+			}
+			html = 	html +	'<div id="search_box"></div>';
+			html = 	html +	'</div>';
+			jQuery("#navigation").html(html);
+			jQuery("#search_box").load(toc_path + "/../search.html");
+			jQuery("#product_menu").load(toc_path + "/products_menu.html");
+			if(typeof current_product != "undefined" && current_product != '') {
+				jQuery("#version_menu").load(toc_path +  '/' + current_product + "/versions_menu.html");
+				if(typeof current_version != "undefined" && current_version != '') {
+					jQuery("#book_menu").load(toc_path + '/' + current_product + '/' +  current_version + '/' +  "/books_menu.html");
+					if(typeof current_book != "undefined" && current_book != '') {
+						jQuery("#book_lang_menu").load(toc_path + '/' +  current_product + '/' +  current_version +  '/' + current_book + "/lang_menu.html");
+						jQuery("#book_format_menu").load(toc_path + '/' +  current_product + '/' +  current_version +  '/' + current_book + "/format_menu.html");
+					}
+				}
+			}
+
+			jQuery('body').removeClass('toc_embeded');
+			jQuery('body').addClass('menu_embeded');
+		}
+
+		/* Requried for DocBook 4 content ... */
+		jQuery("#floatingtoc").load('index.html .toc:eq(0)');
+		jQuery("body").click(function(){
 			work = 1;
 			retract_menu('floatingtoc');
 		});
-		$(".docnav li.home").click(function(e){
+		jQuery(".docnav li.home").click(function(e){
 			work = 1;
-			expand_menu('floatingtoc');
+			toggle(e, 'floatingtoc');
 			return false;
 		});
-	});
-
+	}); 
 }
 

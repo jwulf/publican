@@ -91,11 +91,28 @@ ADD: section on "Converting DB4 to DB5"?
 PUBLICAN_PATH="/home/jfearn/Source/fedora/publican.git"
 perl -CDAS -I $PUBLICAN_PATH/lib $PUBLICAN_PATH/bin/publican clean
 
+Install PUG from source
+perl -CDAS -I $PUBLICAN_PATH/lib $PUBLICAN_PATH/bin/publican remove_book --lang en-US  --site_config /home/jfearn/Source/fedora/fedorapeople.org/home.cfg;
+perl -CDAS -I $PUBLICAN_PATH/lib $PUBLICAN_PATH/bin/publican remove_book --lang en-US  --site_config /home/jfearn/Source/fedora/fedorapeople.org/style_1.cfg;
+perl -CDAS -I $PUBLICAN_PATH/lib $PUBLICAN_PATH/bin/publican build --langs en-US --brand_dir $PUBLICAN_PATH/datadir/Common_Content/common-db5 --formats html,html-single,pdf,epub,txt --publish --embedtoc;
+perl -CDAS -I $PUBLICAN_PATH/lib $PUBLICAN_PATH/bin/publican install_book --lang en-US --site_config /home/jfearn/Source/fedora/fedorapeople.org/home.cfg;
+perl -CDAS -I $PUBLICAN_PATH/lib $PUBLICAN_PATH/bin/publican install_book --lang en-US  --site_config /home/jfearn/Source/fedora/fedorapeople.org/style_1.cfg;
+
+Install common-db5 from source
+cxd 
+perl -CDAS -I $PUBLICAN_PATH/lib $PUBLICAN_PATH/bin/publican build --formats=xml --langs=all --publish
+perl -CDAS -I $PUBLICAN_PATH/lib $PUBLICAN_PATH/bin/publican install_brand  --web --path=/var/www/html/public_html/common-db5
+perl -CDAS -I $PUBLICAN_PATH/blib $PUBLICAN_PATH/bin/publican update_site --site_config /home/jfearn/Source/fedora/fedorapeople.org/home.cfg
+perl -CDAS -I $PUBLICAN_PATH/blib $PUBLICAN_PATH/bin/publican update_site --site_config /home/jfearn/Source/fedora/fedorapeople.org/style_1.cfg
+perl -CDAS -I $PUBLICAN_PATH/blib/lib $PUBLICAN_PATH/bin/publican update_site --site_config /home/jfearn/Source/fedora/fedorapeople.org/home.cfg
+
 git checkout en-US/
 ../bin/db4-2-db5
 
 perl -CDAS -I $PUBLICAN_PATH/lib $PUBLICAN_PATH/bin/publican --help docbook
 perl -CDAS -I $PUBLICAN_PATH/lib $PUBLICAN_PATH/bin/publican build  --brand_dir $PUBLICAN_PATH/datadir/Common_Content/common-db5 --formats html
+
+perl -CDAS -I $PUBLICAN_PATH/lib $PUBLICAN_PATH/bin/publican build  --brand_dir $PUBLICAN_PATH/datadir/Common_Content/common-db5 --formats drupal-book
 
 cd build/en-US/xml
 xmllint -xinclude Users_Guide.xml > test.xml
@@ -118,11 +135,14 @@ Sample spec file for desktop menu package" up to date?
 
 "When I build my document, I get an error about an ‘undefined language’ — what's wr" note case insensitive matching
 
+Document: mediaobject role="logo"
 
 
 :nmap %% :let X=1<cr>1G!!
 :nmap !! /FATAL ERROR\:<cr>:s/\:/\=X.':'/<cr>:let X=X+1<cr>!!
 %%
 :% s/FATAL ERROR/FATAL ERROR /g
+
+
 
 

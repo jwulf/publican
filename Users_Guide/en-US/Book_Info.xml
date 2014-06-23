@@ -35,19 +35,14 @@
 		</subject>
 
 	</subjectset>
-	 <author>
-		<orgname> <inlinemediaobject>
-			<imageobject>
-				<imagedata fileref="Common_Content/images/title_logo.svg" format="SVG" />
-			</imageobject>
-			 <textobject>
-				<phrase>Team Publican</phrase>
-			</textobject>
-
-		</inlinemediaobject>
-		 </orgname>
-
-	</author>
+	<mediaobject role="logo">
+		<imageobject>
+			<imagedata fileref="Common_Content/images/title_logo.svg" format="SVG" />
+		</imageobject>
+		 <textobject>
+			<phrase>Team Publican</phrase>
+		</textobject>
+	</mediaobject>
 	 <mediaobject role="cover">
 		<imageobject remap="lrg" role="front-large">
 			<imagedata fileref="images/cover_thumbnail.png" format="PNG" />

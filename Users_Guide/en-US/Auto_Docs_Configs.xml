@@ -1,5 +1,7 @@
 <?xml version='1.0' encoding='utf-8' ?>
 <!DOCTYPE appendix [
+<!ENTITY % BOOK_ENTITIES SYSTEM "Users_Guide.ent">
+%BOOK_ENTITIES;
 <!ENTITY % sgml.features "IGNORE">
 <!ENTITY % xml.features "INCLUDE">
 <!ENTITY % DOCBOOK_ENTS PUBLIC "-//OASIS//ENTITIES DocBook XML Character Entities V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/dbcentx.mod">
@@ -8,1034 +10,1245 @@
 <appendix version="5.0" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
 	<info>
 		<title>Configuration summary</title>
+
 	</info>
-	<variablelist id="Auto_Docs_Configs-General_options">
+	 <variablelist conformance="266" id="Auto_Docs_Configs-General_options">
 		<info>
 			<title>General options</title>
+
 		</info>
-		<para>
+		 <para>
 			These are set in the books or brands configuration files.
 		</para>
-		<varlistentry>
+		 <varlistentry>
 			<term>arch</term>
-			<listitem>
+			 <listitem>
 				<para>
 					Arch to filter output on.
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>audience</term>
-			<listitem>
+			 <listitem>
 				<para>
 					audience to filter output on.
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>books</term>
-			<listitem>
+			 <listitem>
 				<para>
 					A space-separated list of books used in this remote set.
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>brand</term>
-			<listitem>
+			 <listitem>
 				<para>
 					The brand to use when building this package.
 				</para>
-				<para>
+				 <para>
 					The default value for this parameter is: common
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>brew_dist</term>
-			<listitem>
+			 <listitem>
 				<para>
 					The brew dist to use for building the standalone desktop rpm.
 				</para>
-				<para>
+				 <para>
 					The default value for this parameter is: docs-5E
 				</para>
-				<warning>
+				 <warning>
 					<para>
 						This field is deprecated and will be removed from Publican in the future.
 					</para>
+
 				</warning>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>bridgehead_in_toc</term>
-			<listitem>
+			 <listitem>
 				<para>
 					Display bridge head elements in the TOCs?
 				</para>
-				<para>
+				 <para>
 					The default value for this parameter is: 0
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>chunk_first</term>
-			<listitem>
+			 <listitem>
 				<para>
 					For HTML, should the first section be on the same page as its parent?
 				</para>
-				<para>
+				 <para>
 					The default value for this parameter is: 0
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>chunk_section_depth</term>
-			<listitem>
+			 <listitem>
 				<para>
 					For HTML, what is the deepest level of nesting at which a section should be split onto its own page?
 				</para>
-				<para>
+				 <para>
 					The default value for this parameter is: 4
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>classpath</term>
-			<listitem>
+			 <listitem>
 				<para>
 					Path to jar files for FOP.
 				</para>
-				<para>
+				 <para>
 					The default value for this parameter is: /usr/share/java/ant/ant-trax-1.7.0.jar:/usr/share/java/xmlgraphics-commons.jar:/usr/share/java/batik-all.jar:/usr/share/java/xml-commons-apis.jar:/usr/share/java/xml-commons-apis-ext.jar
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>common_config</term>
-			<listitem>
+			 <listitem>
 				<para>
 					Path to publican content.
 				</para>
-				<para>
+				 <para>
 					The default value for this parameter is: /usr/share/publican
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>common_content</term>
-			<listitem>
+			 <listitem>
 				<para>
 					Path to publican common content.
 				</para>
-				<para>
+				 <para>
 					The default value for this parameter is: /usr/share/publican/Common_Content
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>condition</term>
-			<listitem>
+			 <listitem>
 				<para>
 					Conditions on which to prune XML before transformation.
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>confidential</term>
-			<listitem>
+			 <listitem>
 				<para>
 					Is the content confidential?
 				</para>
-				<para>
+				 <para>
 					The default value for this parameter is: 0
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>confidential_text</term>
-			<listitem>
+			 <listitem>
 				<para>
 					The text used to indicate content is confidential.
 				</para>
-				<para>
+				 <para>
 					The default value for this parameter is: CONFIDENTIAL
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>conformance</term>
-			<listitem>
+			 <listitem>
 				<para>
 					conformance to filter output on.
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>debug</term>
-			<listitem>
+			 <listitem>
 				<para>
 					Print out extra messages?
 				</para>
-				<para>
+				 <para>
 					The default value for this parameter is: 0
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>doc_url</term>
-			<listitem>
+			 <listitem>
 				<para>
 					URL for the documentation team for this package. Used for top right URL on HTML.
 				</para>
-				<para>
+				 <para>
 					The default value for this parameter is: https://fedorahosted.org/publican
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>docname</term>
-			<listitem>
+			 <listitem>
 				<para>
 					Name of this document. Fetched from title tag in xml_lang/TYPE_Info.xml if not set in cfg file.
 				</para>
-				<para>
+				 <para>
 					This parameter is constrained with the following regular expression: ^[0-9a-zA-Z_\-\.\+]+$
 				</para>
-				<tip>
-				<para>
+				 <tip> <para>
 					This field is not supported for: brand.
 				</para>
-				</tip>
+				 </tip>
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>drupal_author</term>
-			<listitem>
+			 <listitem>
 				<para>
 					The author name to be shown in drupal book page. It must be a valid drupal username.
 				</para>
-				<para>
+				 <para>
 					The default value for this parameter is: Publican
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>drupal_image_path</term>
-			<listitem>
+			 <listitem>
 				<para>
 					The directory where the image should be stored in drupal server.
 				</para>
-				<para>
+				 <para>
 					The default value for this parameter is: sites/default/files/
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>drupal_menu_block</term>
-			<listitem>
+			 <listitem>
 				<para>
 					The menu where we can find the book.
 				</para>
-				<para>
+				 <para>
 					The default value for this parameter is: user-guide
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>drupal_menu_title</term>
-			<listitem>
+			 <listitem>
 				<para>
 					Override the bookname that will be shown in the drupal menu.
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>dt_format</term>
-			<listitem>
+			 <listitem>
 				<para>
 					The format to use for the desktop output.
 				</para>
-				<para>
+				 <para>
 					The default value for this parameter is: html-desktop
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>dt_obsoletes</term>
-			<listitem>
+			 <listitem>
 				<para>
 					Space-separated list of packages the desktop RPM obsoletes.
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>dt_requires</term>
-			<listitem>
+			 <listitem>
 				<para>
 					Space-separated list of packages the desktop RPM requires.
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>dtdver</term>
-			<listitem>
+			 <listitem>
 				<para>
 					Version of the DocBook DTD on which this project is based.
 				</para>
-				<para>
+				 <para>
 					The default value for this parameter is: 4.5
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>ec_id</term>
-			<listitem>
+			 <listitem>
 				<para>
 					Eclipse plugin ID. Defaults to "$product.$docname"
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>ec_name</term>
-			<listitem>
+			 <listitem>
 				<para>
 					Eclipse plugin name. Defaults to "$product $docname"
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>ec_provider</term>
-			<listitem>
+			 <listitem>
 				<para>
 					Eclipse plugin provider. Defaults to "Publican-v4.1.3"
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>extras_dir</term>
-			<listitem>
+			 <listitem>
 				<para>
 					Directory where images are located.
 				</para>
-				<para>
+				 <para>
 					The default value for this parameter is: extras
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>generate_section_toc_level</term>
-			<listitem>
+			 <listitem>
 				<para>
 					Generate table of contents down to the given section depth.
 				</para>
-				<para>
+				 <para>
 					The default value for this parameter is: 0
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>ignored_translations</term>
-			<listitem>
+			 <listitem>
 				<para>
 					Languages to replace with xml_lang regardless of translation status.
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>img_dir</term>
-			<listitem>
+			 <listitem>
 				<para>
 					Directory where images are located.
 				</para>
-				<para>
+				 <para>
 					The default value for this parameter is: images
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>info_file</term>
-			<listitem>
+			 <listitem>
 				<para>
 					Override the default Info file.
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>lang</term>
-			<listitem>
+			 <listitem>
 				<para>
 					lang to filter output on.
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>license</term>
-			<listitem>
+			 <listitem>
 				<para>
 					License this package uses.
 				</para>
-				<para>
+				 <para>
 					The default value for this parameter is: GFDL
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>mainfile</term>
-			<listitem>
+			 <listitem>
 				<para>
 					The name of the main xml and ent files for this book, sans file extension and language. Fetched from docname if not set.
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>menu_category</term>
-			<listitem>
+			 <listitem>
 				<para>
 					Semicolon-separated list of menu categories for the desktop package.
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>os</term>
-			<listitem>
+			 <listitem>
 				<para>
 					os to filter output on.
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>os_ver</term>
-			<listitem>
+			 <listitem>
 				<para>
 					The OS for which to build packages.
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>pdf_body_font</term>
-			<listitem>
+			 <listitem>
 				<para>
 					The font to use for body text in PDFs.
 				</para>
-				<para>
+				 <para>
 					The default value for this parameter is: Liberation Sans
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>pdf_mono_font</term>
-			<listitem>
+			 <listitem>
 				<para>
 					The font to use for mono text in PDFs.
 				</para>
-				<para>
+				 <para>
 					The default value for this parameter is: Liberation Mono
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>prod_url</term>
-			<listitem>
+			 <listitem>
 				<para>
 					URL for the product. Used in top left URL in HTML.
 				</para>
-				<para>
+				 <para>
 					The default value for this parameter is: https://fedorahosted.org/publican
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>product</term>
-			<listitem>
+			 <listitem>
 				<para>
 					Product this package covers. Fetched from productname tag in xml_lang/TYPE_Info.xml
 				</para>
-				<para>
+				 <para>
 					This parameter is constrained with the following regular expression: ^[0-9a-zA-Z_\-\.\+]+$
 				</para>
-				<tip>
-				<para>
+				 <tip> <para>
 					This field is not supported for: brand.
 				</para>
-				</tip>
+				 </tip>
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>repo</term>
-			<listitem>
+			 <listitem>
 				<para>
 					Repository from which to fetch remote set books.
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>rev_dir</term>
-			<listitem>
+			 <listitem>
 				<para>
 					By default Revision History is sorted in descending order. Set this to 'asc' or 'ascending' to reverse the sort.
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>rev_file</term>
-			<listitem>
+			 <listitem>
 				<para>
 					Override the default Revision History file.
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>revision</term>
-			<listitem>
+			 <listitem>
 				<para>
 					revision to filter output on.
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>revisionflag</term>
-			<listitem>
+			 <listitem>
 				<para>
 					revisionflag to filter output on.
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>role</term>
-			<listitem>
+			 <listitem>
 				<para>
 					role to filter output on.
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>scm</term>
-			<listitem>
+			 <listitem>
 				<para>
 					Type of repository in which books that form part of a remote set are stored. Supported types: SVN, GIT.
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>security</term>
-			<listitem>
+			 <listitem>
 				<para>
 					security to filter output on.
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>show_remarks</term>
-			<listitem>
+			 <listitem>
 				<para>
 					Display remarks in transformed output.
 				</para>
-				<para>
+				 <para>
 					The default value for this parameter is: 0
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>sort_order</term>
-			<listitem>
+			 <listitem>
 				<para>
 					Override the default sort weighting. Defaults to 50.
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>src_url</term>
-			<listitem>
+			 <listitem>
 				<para>
 					URL to find tar of source files. Used in RPM Spec files.
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>status</term>
-			<listitem>
+			 <listitem>
 				<para>
 					status to filter output on.
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>tmp_dir</term>
-			<listitem>
+			 <listitem>
 				<para>
 					Directory to use for building.
 				</para>
-				<para>
+				 <para>
 					The default value for this parameter is: tmp
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>toc_section_depth</term>
-			<listitem>
+			 <listitem>
 				<para>
 					Depth of sections to include in the main table of contents.
 				</para>
-				<para>
+				 <para>
 					The default value for this parameter is: 2
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>txt_formater</term>
-			<listitem>
+			 <listitem>
 				<para>
 					Choose the formatter to use when creating txt output.
 				</para>
-				<para>
+				 <para>
 					The default value for this parameter is: default
 				</para>
-				<para>
+				 <para>
 					This parameter is constrained with the following regular expression: ^(links{1}|tables{1}|default)$
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>type</term>
-			<listitem>
+			 <listitem>
 				<para>
 					Type of content this package contains. Supported: set, book, article, brand
 				</para>
-				<para>
+				 <para>
 					The default value for this parameter is: Book
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>userlevel</term>
-			<listitem>
+			 <listitem>
 				<para>
 					userlevel to filter output on.
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>vendor</term>
-			<listitem>
+			 <listitem>
 				<para>
 					vendor to filter output on.
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>version</term>
-			<listitem>
+			 <listitem>
 				<para>
 					Version of this package. Fetched from productnumber tag in xml_lang/TYPE_Info.xml
 				</para>
-				<para>
+				 <para>
 					This parameter is constrained with the following regular expression: ^[0-9][^\p{IsSpace}]*$
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>web_brew_dist</term>
-			<listitem>
+			 <listitem>
 				<para>
 					The brew dist to use for building the web rpm.
 				</para>
-				<para>
+				 <para>
 					The default value for this parameter is: docs-5E
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>web_formats</term>
-			<listitem>
+			 <listitem>
 				<para>
 					A comma-separated list of the formats to use for the web packages.
 				</para>
-				<para>
+				 <para>
 					The default value for this parameter is: html,html-single,pdf,epub
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>web_home</term>
-			<listitem>
+			 <listitem>
 				<para>
 					This is a home page for a Publican-generated website, not a standard book.
 				</para>
-				<warning>
+				 <warning>
 					<para>
 						web_home is deprecated and will be removed from Publican in the future. Use "web_type: home" instead.
 					</para>
+
 				</warning>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>web_host</term>
-			<listitem>
+			 <listitem>
 				<para>
 					This is a host name for a Publican-generated website, used for searches and the Sitemap. Be sure to include the full path to your document tree. E.g. if your documents are in the docs directory: http://www.example.com/docs
 				</para>
-				<warning>
+				 <warning>
 					<para>
 						web_host is deprecated and will be removed from Publican in the future. Use "host" in the web site configuration file instead.
 					</para>
+
 				</warning>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>web_name_label</term>
-			<listitem>
+			 <listitem>
 				<para>
 					Override the book name, bottom level, menu label on a Publican website.
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>web_obsoletes</term>
-			<listitem>
+			 <listitem>
 				<para>
 					Packages to obsolete in web RPM.
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>web_product_label</term>
-			<listitem>
+			 <listitem>
 				<para>
 					Override the product, top level, menu label on a Publican website.
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>web_search</term>
-			<listitem>
+			 <listitem>
 				<para>
 					Override the default search form for a Publican website. By default this will use Google search and do a site search if web_host is set.
 				</para>
-				<warning>
+				 <warning>
 					<para>
 						web_search is deprecated and will be removed from Publican in the future. Use "search" in the web site configuration file instead.
 					</para>
+
 				</warning>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>web_type</term>
-			<listitem>
+			 <listitem>
 				<para>
 					This is a special page for a Publican-generated website, not a standard book. Valid types are home, product, and version.
 				</para>
-				<para>
+				 <para>
 					This parameter is constrained with the following regular expression: ^(home|product|version)$
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>web_version_label</term>
-			<listitem>
+			 <listitem>
 				<para>
 					Override the version, middle level, menu label on a Publican website. To hide this menu item set this to: UNUSED
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>wkhtmltopdf_opts</term>
-			<listitem>
+			 <listitem>
 				<para>
 					Extra options to pass to wkhtmltopdf. e.g. wkhtmltopdf_opts: "-O landscape -s A3"
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>wordsize</term>
-			<listitem>
+			 <listitem>
 				<para>
 					wordsize to filter output on.
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>xml_lang</term>
-			<listitem>
+			 <listitem>
 				<para>
 					Language in which XML is authored.
 				</para>
-				<para>
+				 <para>
 					The default value for this parameter is: en-US
 				</para>
+
 			</listitem>
+
 		</varlistentry>
+
 	</variablelist>
-	<variablelist id="Auto_Docs_Configs-Brand_options">
+	 <variablelist conformance="267" id="Auto_Docs_Configs-Brand_options">
 		<info>
 			<title>Brand options</title>
+
 		</info>
-		<para>
+		 <para>
 			These are set in the brands configuration files.
 		</para>
-		<varlistentry>
+		 <varlistentry>
 			<term>banned_attrs</term>
-			<listitem>
+			 <listitem>
 				<para>
 					A comma-separated list of XML attributes that are not permitted in the source.
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>banned_tags</term>
-			<listitem>
+			 <listitem>
 				<para>
 					A comma-separated list of XML tags that are not permitted in the source.
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>base_brand</term>
-			<listitem>
+			 <listitem>
 				<para>
 					The base brand to use for this brand.
 				</para>
-				<para>
+				 <para>
 					The default value for this parameter is: common
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>dtd_type</term>
-			<listitem>
+			 <listitem>
 				<para>
 					Override Type for DocType. Must be a complete string.
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>dtd_uri</term>
-			<listitem>
+			 <listitem>
 				<para>
 					Override URI for DocType. Must be a complete string.
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>no_embedtoc</term>
-			<listitem>
+			 <listitem>
 				<para>
 					Brand option to disable embedding the navigational toc in web packages
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>web_cfg</term>
-			<listitem>
+			 <listitem>
 				<para>
 					Full path for the publican site configuration file for non standard RPM websites.
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>web_dir</term>
-			<listitem>
+			 <listitem>
 				<para>
 					Install path for non standard RPM websites.
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>web_req</term>
-			<listitem>
+			 <listitem>
 				<para>
 					Name of site package for non standard RPM websites. Required to ensure the site is installed.
 				</para>
+
 			</listitem>
+
 		</varlistentry>
+
 	</variablelist>
-	<variablelist id="Auto_Docs_Configs-Site_option">
+	 <variablelist conformance="268" id="Auto_Docs_Configs-Site_option">
 		<info>
 			<title>Site options</title>
+
 		</info>
-		<para>
+		 <para>
 			These are set in the sites configuration file.
 		</para>
-		<varlistentry>
+		 <varlistentry>
 			<term>db_file</term>
-			<listitem>
+			 <listitem>
 				<para>
 					The name of the SQLite database file for your site, with the filename extension .db
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>debug</term>
-			<listitem>
+			 <listitem>
 				<para>
 					Output extra messages when running publican.
 				</para>
-				<para>
+				 <para>
 					The default value for this parameter is: 0
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>def_lang</term>
-			<listitem>
+			 <listitem>
 				<para>
 					The default language for this website. Tables of contents for languages other than the default language will link to documents in the default language when translations are not available.
 				</para>
-				<para>
+				 <para>
 					The default value for this parameter is: en-US
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>dump</term>
-			<listitem>
+			 <listitem>
 				<para>
 					Dump the publican database to an XML file.
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>dump_file</term>
-			<listitem>
+			 <listitem>
 				<para>
 					The name of the file to dump the publican database to.
 				</para>
-				<para>
+				 <para>
 					The default value for this parameter is: /var/www/html/DUMP.xml
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>footer</term>
-			<listitem>
+			 <listitem>
 				<para>
 					HTML to inject in to the footer of every page on the website.
 				</para>
-				<para>
+				 <para>
 					The default value for this parameter is:
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>host</term>
-			<listitem>
+			 <listitem>
 				<para>
 					The web host, may be a full URI or a relative path.
 				</para>
-				<para>
+				 <para>
 					The default value for this parameter is: /docs
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>manual_toc_update</term>
-			<listitem>
+			 <listitem>
 				<para>
 					Stop publican from automatically rebuilding teh web site everytime a book is installed, updated or removed.
 				</para>
-				<para>
+				 <para>
 					The default value for this parameter is: 0
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>search</term>
-			<listitem>
+			 <listitem>
 				<para>
 					The HTML to inject in as the site serach.
 				</para>
-				<para>
+				 <para>
 					The default value for this parameter is: Google site search
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>title</term>
-			<listitem>
+			 <listitem>
 				<para>
 					Title used for all site navigation pages.
 				</para>
-				<para>
+				 <para>
 					The default value for this parameter is: Documentation
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>tmpl_path</term>
-			<listitem>
+			 <listitem>
 				<para>
 					Full path to the template directory.
 				</para>
-				<para>
+				 <para>
 					The default value for this parameter is: /usr/share/publican/templates
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>toc_js</term>
-			<listitem>
+			 <listitem>
 				<para>
 					The source file to use for JavaScript functionality.
 				</para>
-				<para>
+				 <para>
 					The default value for this parameter is: default.js
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>toc_path</term>
-			<listitem>
+			 <listitem>
 				<para>
 					The path to the directory in which to create the top-level index.html file.
 				</para>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>toc_type</term>
-			<listitem>
+			 <listitem>
 				<para>
 					Template to use for generagting the web style 1 toc file.
 				</para>
-				<para>
+				 <para>
 					The default value for this parameter is: toc
 				</para>
-				<warning>
+				 <warning>
 					<para>
 						This field is deprecated and will be removed from Publican in the future.
 					</para>
+
 				</warning>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>web_style</term>
-			<listitem>
+			 <listitem>
 				<para>
 					Publican supports mutliple base styles for websites, this picks one.
 				</para>
-				<para>
+				 <para>
 					The default value for this parameter is: 1
 				</para>
-				<para>
+				 <para>
 					This parameter is constrained with the following regular expression: [1-2]
 				</para>
-				<warning>
+				 <warning>
 					<para>
 						This field is deprecated and will be removed from Publican in the future.
 					</para>
+
 				</warning>
+
 			</listitem>
+
 		</varlistentry>
-		<varlistentry>
+		 <varlistentry>
 			<term>zip_dump</term>
-			<listitem>
+			 <listitem>
 				<para>
 					Zip up the dump file after dumping it
 				</para>
-				<para>
+				 <para>
 					The default value for this parameter is: 0
 				</para>
+
 			</listitem>
+
 		</varlistentry>
+
 	</variablelist>
 </appendix>
 

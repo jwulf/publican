@@ -1,7 +1,19 @@
-body, h1, h2, h3, h4, h5, h6, pre, li, div {
-    margin-top: 1.5em;
+body, h1, h2, h3, h4, h5, h6, li, div {
+    margin-top: 2em;
     widows: 4 !important;
     orphans: 4 !important;
+}
+
+body > div.book,
+body > div.article,
+body > div.set,
+body > div.preface,
+body > div.chapter,
+body > div.section,
+body > div.appendix,
+body > div.part {
+    margin-top: 0;
+    padding: 0em 2em;
 }
 
 div.itemizedlist, div.affiliation {
@@ -21,6 +33,8 @@ body {
     max-width: 54em;
     color: black;
     line-height: 1.3em;
+    padding-bottom: 3em;
+    padding-top: 2em;
 }
 
 .draft {
@@ -36,6 +50,14 @@ header {
 footer {
     margin: 0px 1em;
 }
+
+.visible {
+    display: block !important;
+}
+.hidden {
+    display: none !important;
+}
+
 
 /* Navigation */
 
@@ -133,6 +155,10 @@ header .docnav .home:after {
     z-index: 2;
 }
 
+footer .docnav {
+    display: none;
+}
+
 /* Admonitions */
 div.admonition {
     margin-bottom: 1em;
@@ -173,12 +199,12 @@ div.caution {
     border-color: #950000;
 }
 
-.command, .filename, .keycap, .classname, .literal {
+.command, .filename, .keycap, .classname, .literal, code {
     font-family: "liberation mono","bitstream vera mono","dejavu mono",monospace;
     font-weight: bold;
 }
 
-.application, .guimenu, .guisubmenu, .guimenuitem, .abstract-title {
+.application, .guimenu, .guilabel, .guibutton, .guisubmenu, .guimenuitem, .abstract-title {
     font-weight: bold;
 }
 
@@ -206,6 +232,7 @@ pre {
 .popper {
     max-height: 6.3em;
     overflow: hidden;
+    overflow: -moz-hidden-unscrollable;
     border-bottom: 1px dashed #666666;
     position:relative;
 }
@@ -218,10 +245,11 @@ pre {
 .popped .hide {
     display: block;
     position: absolute;
-    top: 0;
+/*    top: 0;
     left: 0;
     right: 0;
     bottom: 0;
+*/
     height: 100%;
     width: 100%;
     opacity: 0;
@@ -229,6 +257,7 @@ pre {
 
 .popped {
     max-height: 100%;
+    position:relative;
 }
 .popped > .show {
     display: none;
@@ -254,6 +283,10 @@ pre.numbered span.line:before{
 .example {
     padding: 0.5em 0px 0.5em 1em;
     border-left: 0.5em solid #AAAAAA;
+}
+
+.example p:first-child {
+    margin-top: 0px;
 }
 
 .switchery {
@@ -312,6 +345,10 @@ th, td {
 th {
     background-color: #6699cc;
     color: white;
+}
+
+.qandaset li {
+    margin-top: 0.3em;
 }
 
 .qandaset td {
@@ -457,20 +494,21 @@ ol.I {
 
 dt {
     font-weight:bold;
-    margin-bottom:0px;
-    padding-bottom:0px;
+    margin-top: 1.5em;
 }
 
 dd {
-    margin:0px;
+    margin-top: 0.5em;
+/*    margin:0px;
     margin-left:2em;
     padding-top:0px;
     padding-bottom: 1em;
+*/
 }
 
 li {
     padding-top: 0px;
-    margin-top: 1.5em;
+    margin-top: 1em;
     padding-bottom: 0px;
 /*    margin-bottom: 16px; */
 }
@@ -480,7 +518,8 @@ ul > li {
 
 }
 
-li > p:first-child {
+li > p:first-child,
+dd > p:first-child {
     margin-top: 0em;
     margin-bottom: 0.1em;
 }
@@ -525,7 +564,8 @@ div.producttitle,
 div.subtitle,
 h2.subtitle,
 h3.subtitle,
-.titlepage .author {
+.titlepage .author,
+.mediaobject.logo {
     text-align: center;
 }
 
@@ -598,6 +638,7 @@ div.authorgroup.contrib {
 .qandaset ul,
 .toc ul {
     list-style: none;
+    margin-bottom: 1em;
 }
 
 .question {
@@ -736,17 +777,18 @@ iframe {
     border: none;
 }
 
-#floatingtoc a {
+#poptoc a {
     color: #eee;
 }
-#floatingtoc dd a {
+#poptoc dd a {
     color: #eee;
 }
-#floatingtoc {
+#poptoc {
+    width: 100%;
 }
-#floatingtoc .toc {
+#poptoc div.toc {
     -moz-box-sizing: border-box;
-    background-color: rgba(100, 100, 100, 0.83);
+    background-color: rgba(100, 100, 100, 0.96);
     bottom: 2em;
     left: 50%;
     margin-bottom: 0;
@@ -762,7 +804,16 @@ iframe {
     width: 70%;
 }
 
-#floatingtoc .toc ul {
+#poptoc .toc ul {
     padding-bottom: 0.5em;
 }
 
+
+.formalpara-title {
+    color: #454545;
+    display: block;
+    font-size: larger;
+    font-weight: bold;
+    margin-bottom: 1em;
+    margin-top: 1.5em;
+}

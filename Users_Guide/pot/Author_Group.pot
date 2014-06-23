@@ -1,159 +1,137 @@
-# 
-# AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2014-05-06 14:10+1000\n"
-"PO-Revision-Date: 2014-05-06 14:10+1000\n"
+"POT-Creation-Date: 2014-06-02 09:01+1000\n"
+"PO-Revision-Date: 2014-06-02 09:01+1000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: None\n"
 "MIME-Version: 1.0\n"
 "Content-Type: application/x-publican; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#. Tag: firstname
-#, no-c-format
 msgid "Don"
 msgstr ""
 
-#. Tag: surname
-#, no-c-format
 msgid "Domingo"
 msgstr ""
 
-#. Tag: orgname
-#, no-c-format
 msgid "Red Hat"
 msgstr ""
 
-#. Tag: orgdiv
-#, no-c-format
 msgid "Engineering Content Services"
 msgstr ""
 
-#. Tag: firstname
-#, no-c-format
 msgid "Zac"
 msgstr ""
 
-#. Tag: surname
-#, no-c-format
 msgid "Dover"
 msgstr ""
 
-#. Tag: firstname
-#, no-c-format
+msgid "Red Hat"
+msgstr ""
+
+msgid "Engineering Content Services"
+msgstr ""
+
 msgid "Sven"
 msgstr ""
 
-#. Tag: surname
-#, no-c-format
 msgid "Dowdeit"
 msgstr ""
 
-#. Tag: contrib
-#, no-c-format
 msgid "Debian and Docker installation instructions"
 msgstr ""
 
-#. Tag: firstname
-#, no-c-format
 msgid "Norman"
 msgstr ""
 
-#. Tag: surname
-#, no-c-format
 msgid "Dunbar"
 msgstr ""
 
-#. Tag: contrib
-#, no-c-format
 msgid "OpenSUSE installation instructions"
 msgstr ""
 
-#. Tag: firstname
-#, no-c-format
 msgid "Brian"
 msgstr ""
 
-#. Tag: surname
-#, no-c-format
 msgid "Forté"
 msgstr ""
 
-#. Tag: firstname
-#, no-c-format
+msgid "Red Hat"
+msgstr ""
+
+msgid "Engineering Content Services"
+msgstr ""
+
 msgid "Rüdiger"
 msgstr ""
 
-#. Tag: surname
-#, no-c-format
 msgid "Landmann"
 msgstr ""
 
-#. Tag: firstname
-#, no-c-format
+msgid "Red Hat"
+msgstr ""
+
+msgid "Engineering Content Services"
+msgstr ""
+
 msgid "Rebecca"
 msgstr ""
 
-#. Tag: surname
-#, no-c-format
 msgid "Newton"
 msgstr ""
 
-#. Tag: firstname
-#, no-c-format
+msgid "Red Hat"
+msgstr ""
+
+msgid "Engineering Content Services"
+msgstr ""
+
 msgid "Joshua"
 msgstr ""
 
-#. Tag: surname
-#, no-c-format
 msgid "Oakes"
 msgstr ""
 
-#. Tag: surname
-#, no-c-format
+msgid "Red Hat"
+msgstr ""
+
+msgid "Engineering Content Services"
+msgstr ""
+
+msgid "Joshua"
+msgstr ""
+
 msgid "Wulf"
 msgstr ""
 
-#. Tag: firstname
-#, no-c-format
+msgid "Red Hat"
+msgstr ""
+
+msgid "Engineering Content Services"
+msgstr ""
+
 msgid "Jeff"
 msgstr ""
 
-#. Tag: surname
-#, no-c-format
 msgid "Fearn"
 msgstr ""
 
-#. Tag: contrib
-#, no-c-format
 msgid "Extensive review, rough drafts, persistent annoyances."
 msgstr ""
 
-#. Tag: firstname
-#, no-c-format
 msgid "Josef"
 msgstr ""
 
-#. Tag: surname
-#, no-c-format
 msgid "Hruška"
 msgstr ""
 
-#. Tag: orgname
-#, no-c-format
 msgid "Fedora"
 msgstr ""
 
-#. Tag: orgdiv
-#, no-c-format
 msgid "Localization Project"
 msgstr ""
 
-#. Tag: contrib
-#, no-c-format
 msgid "Checking the Czech examples in Entities and translation"
 msgstr ""
 

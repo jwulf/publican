@@ -1,29 +1,7 @@
-* {
-    widows: 4 !important;
-    orphans: 4 !important;
-}
-html {
-	overflow-y: scroll;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    margin-top: 1em;
-    margin-bottom: 0.4em;
-}
 
 body {
-    margin: auto;
-    max-width: 46em !important;
-}
-body > header {
-    margin: 4em auto;
 }
 
-body[dir="rtl"] > header
-body[dir="rtl"] > footer {
-    padding-left: 40px;
-    padding-right: 30px;
-}
 .visible {
     display: block !important;
 }

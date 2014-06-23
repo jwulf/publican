@@ -150,10 +150,7 @@
 
 			</info>
 			 <procedure conformance="222" xml:id="proc-Publican-Users_Guide-Submitting_Your_Sitemap_to_Google.-To_Submit_Your_Sitemap_to_Google">
-				<info xml:id="info-Publican-Users_Guide-To_Submit_Your_Sitemap_to_Google">
 					<title>To Submit Your Sitemap to Google:</title>
-
-				</info>
 				 <step>
 					<para>
 						Sign up for a Google account at <link xlink:href="http://www.google.com/webmasters/tools/home" xmlns:xlink="http://www.w3.org/1999/xlink">Google Webmaster Tools</link>. If you already have a Google account, you can use it.
@@ -217,10 +214,7 @@
 
 			</procedure>
 			 <formalpara conformance="256" xml:id="form-Publican-Users_Guide-To_Submit_Your_Sitemap_to_Google-Result">
-				<info xml:id="info-Publican-Users_Guide-Result">
 					<title>Result</title>
-
-				</info>
 				 <para>
 					The Sitemap for your Publican site has been successfully submitted to Google.
 				</para>
@@ -234,10 +228,7 @@
 
 			</info>
 			 <procedure conformance="224" xml:id="proc-Publican-Users_Guide-Submitting_Your_Sitemap_to_Bing.-To_Submit_Your_Sitemap_to_Bing">
-				<info xml:id="info-Publican-Users_Guide-To_Submit_Your_Sitemap_to_Bing">
 					<title>To Submit Your Sitemap to Bing:</title>
-
-				</info>
 				 <step>
 					<para>
 						Sign up for a Bing Webmaster Tools account at <link xlink:href="http://www.bing.com/toolbox/webmaster/" xmlns:xlink="http://www.w3.org/1999/xlink">Bing Webmaster Tools</link>. If you already have a Windows LiveID account, you can use it.
@@ -301,10 +292,7 @@
 
 			</procedure>
 			 <formalpara conformance="257" xml:id="form-Publican-Users_Guide-To_Submit_Your_Sitemap_to_Bing-Result">
-				<info xml:id="info-Publican-Users_Guide-Result2">
 					<title>Result:</title>
-
-				</info>
 				 <para>
 					The Sitemap for your Publican site has been successfully submitted to Bing.
 				</para>

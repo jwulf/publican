@@ -14,8 +14,15 @@
 <xsl:param name="generate.legalnotice.link" select="0"/>
 <xsl:param name="generate.revhistory.link" select="0"/>
 
-<xsl:param name="chunk.section.depth" select="4"/>
-<xsl:param name="chunk.first.sections" select="1"/>
+<!--xsl:param name="appendix.autolabel" select="0"/>
+<xsl:param name="chapter.autolabel" select="0"/>
+<xsl:param name="part.autolabel" select="0"/>
+<xsl:param name="reference.autolabel" select="0"/>
+<xsl:param name="section.autolabel" select="0"/-->
+
+<xsl:param name="chunker.output.omit-xml-declaration" select="'yes'"/>
+<xsl:param name="chunk.section.depth" select="1"/>
+<xsl:param name="chunk.first.sections" select="0"/>
 <xsl:param name="chunk.toc" select="''"/>
 <xsl:param name="chunk.append"/>
 <xsl:param name="chunker.output.quiet" select="0"/>
@@ -26,41 +33,10 @@
 
 <!--
 From: xhtml/chunk-common.xsl
-Reason: remove tables, truncate link text
+Reason: remove
 Version:
 -->
 <xsl:template name="header.navigation">
-	<xsl:variable name="row1" select="$navig.showtitles != 0"/>
-			<xsl:if test="$row1">
-				<p xmlns="http://www.w3.org/1999/xhtml">
-					<xsl:attribute name="id">
-						<xsl:text>title</xsl:text>
-					</xsl:attribute>
-					<a class="left">
-						<xsl:attribute name="href">
-							<xsl:value-of select="$prod.url"/>
-						</xsl:attribute>
-						<img alt="Product Site">
-							<xsl:attribute name="src">
-								<xsl:value-of select="$admon.graphics.path"/><xsl:text>/image_left.png</xsl:text>
-							</xsl:attribute>
-						</img>
-					</a>
-					<a class="right">
-						<xsl:attribute name="href">
-							<xsl:value-of select="$doc.url"/>
-						</xsl:attribute>
-						<img alt="Documentation Site">
-							<xsl:attribute name="src">
-								<xsl:value-of select="$admon.graphics.path"/><xsl:text>/image_right.png</xsl:text>
-							</xsl:attribute>
-						</img>
-					</a>
-				</p>
-			</xsl:if>
-		<xsl:if test="$header.rule != 0">
-			<hr/>
-		</xsl:if>
 </xsl:template>
 
 <!--
@@ -78,11 +54,8 @@ Version:
   <html>
      <head>
        <xsl:call-template name="html.head">
-         <xsl:with-param name="prev" select="$prev"/>
-         <xsl:with-param name="next" select="$next"/>
       </xsl:call-template>
     </head>
-
     <body>
       <xsl:call-template name="body.attributes"/>
       <xsl:call-template name="user.header.navigation"/>

@@ -111,16 +111,7 @@
 			The <filename>publican.cfg</filename> file configures build options, and is located in the root of the book directory. The following is an example <filename>publican.cfg</filename> file, with a description of <filename>publican.cfg</filename> parameters following afterwards:
 		</para>
 		 
-<programlisting><xi:include href="extras/publican.cfg" parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" />
-		
-		
-		
-		
-		
-		
-		
-
-</programlisting>
+<programlisting><xi:include href="extras/publican.cfg" parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" /></programlisting>
 		 <variablelist conformance="159" xml:id="vari-Publican-Users_Guide-The_publican.cfg_file-Default_parameters">
 			<info xml:id="info-Publican-Users_Guide-Default_parameters">
 				<title>Default parameters</title>

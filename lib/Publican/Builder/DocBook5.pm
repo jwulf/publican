@@ -177,9 +177,9 @@ sub setup_xml {
 
             my @xml_files = dir_list( $source_dir, '*.xml' );
             rcopy( "$xml_lang/$ent_file", "$tmp_dir/$lang/xml_tmp/." )
-                if ( -e "$xml_lang/$ent_file" );
+                if ( $ent_file &&  -e "$xml_lang/$ent_file" );
             rcopy( "$lang/$ent_file", "$tmp_dir/$lang/xml_tmp/." )
-                if ( -e "$lang/$ent_file" );
+                if ( $ent_file && -e "$lang/$ent_file" );
 
             foreach my $xml_file ( sort(@xml_files) ) {
                 next if ( $xml_file =~ m|$source_dir/$extras/| );
@@ -461,9 +461,9 @@ sub setup_xml {
             }
 
             rcopy( "$xml_lang/$ent_file", "$tmp_dir/$lang/xml/." )
-                if ( -e "$xml_lang/$ent_file" );
+                if ( $ent_file && -e "$xml_lang/$ent_file" );
             rcopy( "$lang/$ent_file", "$tmp_dir/$lang/xml/." )
-                if ( -e "$lang/$ent_file" );
+                if ( $ent_file && -e "$lang/$ent_file" );
 
             dircopy( "$xml_lang/$extras", "$tmp_dir/$lang/xml/$extras" )
                 if ( -d "$xml_lang/$extras" );

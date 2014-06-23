@@ -45,10 +45,7 @@
 			The procedure that follows will guide you through the process of creating a stand-alone set named <citetitle>My Set</citetitle> located in a directory called <filename>books/My_Set/</filename>. The set will contain <citetitle>Book A</citetitle> and <citetitle>Book B</citetitle> both of which will be manually created inside the <filename>books/My_Set/en-US</filename> directory.
 		</para>
 		 <procedure conformance="214" xml:id="proc-Publican-Users_Guide-Stand_alone_sets-Creating_a_stand_alone_set">
-			<info xml:id="info-Publican-Users_Guide-Creating_a_stand_alone_set">
 				<title>Creating a stand-alone set</title>
-
-			</info>
 			 <step>
 				<para>
 					Run the following command in a shell in the <filename>books/</filename> directory to create a set named <literal>My_Set</literal> branded in the Red Hat style and in which the XML will be written in American English.
@@ -206,10 +203,7 @@
 
 		</important>
 		 <procedure conformance="216" xml:id="proc-Publican-Users_Guide-Distributed_sets-Creating_a_set">
-			<info xml:id="info-Publican-Users_Guide-Creating_a_set">
 				<title>Creating a set</title>
-
-			</info>
 			 <step>
 				<para>
 					Run the following command in a shell to create a set named <literal>My_Set</literal> branded in the Red Hat style and in which the XML will be written in American English.

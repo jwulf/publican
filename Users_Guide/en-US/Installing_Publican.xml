@@ -294,10 +294,8 @@
 
 		</procedure>
 		 <procedure conformance="247" xml:id="proc-Publican-Users_Guide-OSX_Lion-Create_and_build_a_book">
-			<info xml:id="info-Publican-Users_Guide-Create_and_build_a_book">
-				<title>Create and build a book</title>
+			<title>Create and build a book</title>
 
-			</info>
 			 <step>
 				
 <screen><prompt>$</prompt> <command>publican create</command> <option>--name=testbook</option></screen>
@@ -322,10 +320,7 @@
 
 		</procedure>
 		 <procedure conformance="248" xml:id="proc-Publican-Users_Guide-OSX_Lion-Install_a_brand">
-			<info xml:id="info-Publican-Users_Guide-Install_a_brand">
-				<title>Install a brand</title>
-
-			</info>
+			<title>Install a brand</title>
 			 <step>
 				<para>
 					Fix the permissions of the Commons Brand. You have to do this only once. This is a bug that will be addressed eventually.

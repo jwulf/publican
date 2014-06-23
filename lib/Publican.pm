@@ -496,7 +496,7 @@ my %PARAM_OLD = (
         descr => maketext(
             'The directory where the image should be stored in drupal server.'
         ),
-        default => 'sites/default/files/',
+        default => '/sites/default/files/documentation/',
     },
 
 );

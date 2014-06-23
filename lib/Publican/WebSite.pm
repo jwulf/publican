@@ -243,6 +243,7 @@ sub new {
         );
     my $tmpl_path = $config->param('tmpl_path') || $DEFAULT_TMPL_PATH;
     $tmpl_path .= ":$DEFAULT_TMPL_PATH" if ( $config->param('tmpl_path') );
+print(STDERR "tmpl_path: $tmpl_path\n");
     my $def_lang = $config->param('def_lang') || $DEFAULT_LANG;
     my $db_file  = $config->param('db_file')  || croak(
         maketext(
@@ -1816,6 +1817,7 @@ sub write_version_index {
     my $host = $self->{host};
 
     my $index_vars;
+    $index_vars->{style}            = $self->{web_style};
     $index_vars->{product}          = $product;
     $index_vars->{version}          = $version;
     $index_vars->{host}             = $host;
@@ -1875,6 +1877,7 @@ sub write_product_index {
     my $host = $self->{host};
 
     my $index_vars;
+    $index_vars->{style}         = $self->{web_style};
     $index_vars->{product}       = $product;
     $index_vars->{host}          = $host;
     $index_vars->{book_list}     = $book_list;
@@ -1935,6 +1938,7 @@ sub write_product_menu {
     my @products = sort( insensitive_sort keys( %{$book_list} ) );
 
     my $index_vars;
+    $index_vars->{style}         = $self->{web_style};
     $index_vars->{host}          = $host;
     $index_vars->{book_list}     = $book_list;
     $index_vars->{lang}          = $lang;
@@ -1997,6 +2001,7 @@ sub write_language_index {
     my @products = sort( insensitive_sort keys( %{$book_list} ) );
 
     my $index_vars;
+    $index_vars->{style}         = $self->{web_style};
     $index_vars->{host}          = $host;
     $index_vars->{book_list}     = $book_list;
     $index_vars->{lang}          = $lang;
@@ -2040,6 +2045,7 @@ sub write_language_labels {
     my $host = $self->{host};
 
     my $index_vars;
+    $index_vars->{style}         = $self->{web_style};
     $index_vars->{lang}          = $lang;
     $index_vars->{labels}        = $labels;
     $index_vars->{trans_strings} = $trans_strings;
@@ -2088,7 +2094,8 @@ sub write_books_index {
             foreach my $version (@versions) {
 
                 my $index_vars;
-                $index_vars->{host} = $host;
+                $index_vars->{style} = $self->{web_style};
+                $index_vars->{host}  = $host;
                 $index_vars->{book} = $book_list->{$product}{$version}{$book};
                 $index_vars->{lang} = $lang;
                 $index_vars->{langs}    = $langs;

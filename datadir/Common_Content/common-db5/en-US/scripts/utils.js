@@ -1,3 +1,5 @@
+var work = 1;
+
 function pop(entity) {
     if(entity) {
         var my_parent = entity.parentNode;
@@ -86,4 +88,34 @@ function initSwitchery() {
 
 }
 
+function showhide(id) {
+	if(work) {
+		work = 0;
+		var entity = document.getElementById(id);
+		if(entity) {
+			var my_class = entity.className;
+			if(my_class.indexOf("hidden") != -1) {
+				entity.className = my_class.replace(/hidden/,"visible");
+			}
+			else if(my_class.indexOf("visible") != -1) {
+				entity.className = my_class.replace(/visible/,"hidden");
+			}
+		}
+	}
+
+	return false;
+}
+
+function hide(id) {
+	if(work) {
+		work = 0;
+	var entity = document.getElementById(id);
+	if(entity) {
+		var my_class = entity.className;
+		if(my_class.indexOf("visible") != -1) {
+			entity.className = my_class.replace(/visible/,"hidden");
+		}
+	}
+	} else { work=1;}
+}
 

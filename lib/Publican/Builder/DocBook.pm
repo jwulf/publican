@@ -1206,7 +1206,7 @@ sub transform {
         # remove all html files
         my @htmls = glob "*.html";
         foreach (@htmls) {
-            unlink($_);
+#            unlink($_);
         }
 
         print "Zipping $filename.tar.gz\n";
@@ -1338,9 +1338,32 @@ sub drupal_transform {
         $fh->print( $xs->string );
     }
 
+
     $fh->close();
     $self->{dbh}->disconnect()
         if ( defined $self->{dbh} );
+
+    my $out_file = "$drupal_dir/$product-$version-$docname-$lang-$edition-$release.xml";
+    open( $fh, ">:encoding(UTF-8)", $out_file )
+            || croak(
+            maketext( "Could not open [_1] for output: [_2]", $out_file, $@ ) );
+
+
+    $fh->print(qq{<?xml version="1.0" encoding="UTF-8"?>\n<document>\n});
+    foreach my $row ( @{$outputs} ) {
+         $fh->print(<<EOR);
+  <page>
+    <title>$row->[0]</title>
+    <url>$row->[10]</url>
+    <parent>$row->[2]</parent>
+    <weight>$row->[3]</weight>
+    <menu>$row->[4]</menu>
+    <body>$row->[6]</body>
+  </page>
+EOR
+    }
+
+    $fh->print("</document>\n");
 
     return;
 }
@@ -1637,12 +1660,14 @@ sub build_drupal_book {
             }
 
             $title =~ s/\s+/ /g;
-            my $html_string = $tree->as_HTML;
-            $html_string
-                =~ s/^\<\!DOCTYPE html PUBLIC \"\-\/\/W3C\/\/DTD.*\.dtd\"\>\n*//;
-            $html_string =~ s/\<html.*\>\s*\<body\>//;
-            $html_string =~ s/\<\/body\>//;
-            $html_string =~ s/\<\/html\>//;
+            my $html_string = $tree->as_HTML('<>&', "",{});
+            $html_string =~ s{^<!DOCTYPE [^>]*>\n*}{};
+            $html_string =~ s{<html.*>\s*<body[^>]*>}{};
+            $html_string =~ s{</body>}{};
+            $html_string =~ s{</html>}{};
+##            $html_string =~ s{&ldquo;}{"};
+##            $html_string =~ s{&rdquo;}{"};
+##            $html_string =~ s{&nbsp;}{ };
 
             push @csv_row, $title;
             push @csv_row, $book;

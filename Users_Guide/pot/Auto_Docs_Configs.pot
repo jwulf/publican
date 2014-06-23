@@ -1,0 +1,818 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: 0\n"
+"POT-Creation-Date: 2014-06-02 09:01+1000\n"
+"PO-Revision-Date: 2014-06-02 09:01+1000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: None\n"
+"MIME-Version: 1.0\n"
+"Content-Type: application/x-publican; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Configuration summary"
+msgstr ""
+
+msgid "General options"
+msgstr ""
+
+msgid "These are set in the books or brands configuration files."
+msgstr ""
+
+msgid "arch"
+msgstr ""
+
+msgid "Arch to filter output on."
+msgstr ""
+
+msgid "audience"
+msgstr ""
+
+msgid "audience to filter output on."
+msgstr ""
+
+msgid "books"
+msgstr ""
+
+msgid "A space-separated list of books used in this remote set."
+msgstr ""
+
+msgid "brand"
+msgstr ""
+
+msgid "The brand to use when building this package."
+msgstr ""
+
+msgid "The default value for this parameter is: common"
+msgstr ""
+
+msgid "brew_dist"
+msgstr ""
+
+msgid "The brew dist to use for building the standalone desktop rpm."
+msgstr ""
+
+msgid "The default value for this parameter is: docs-5E"
+msgstr ""
+
+msgid "This field is deprecated and will be removed from Publican in the future."
+msgstr ""
+
+msgid "bridgehead_in_toc"
+msgstr ""
+
+msgid "Display bridge head elements in the TOCs?"
+msgstr ""
+
+msgid "The default value for this parameter is: 0"
+msgstr ""
+
+msgid "chunk_first"
+msgstr ""
+
+msgid "For HTML, should the first section be on the same page as its parent?"
+msgstr ""
+
+msgid "The default value for this parameter is: 0"
+msgstr ""
+
+msgid "chunk_section_depth"
+msgstr ""
+
+msgid "For HTML, what is the deepest level of nesting at which a section should be split onto its own page?"
+msgstr ""
+
+msgid "The default value for this parameter is: 4"
+msgstr ""
+
+msgid "classpath"
+msgstr ""
+
+msgid "Path to jar files for FOP."
+msgstr ""
+
+msgid "The default value for this parameter is: /usr/share/java/ant/ant-trax-1.7.0.jar:/usr/share/java/xmlgraphics-commons.jar:/usr/share/java/batik-all.jar:/usr/share/java/xml-commons-apis.jar:/usr/share/java/xml-commons-apis-ext.jar"
+msgstr ""
+
+msgid "common_config"
+msgstr ""
+
+msgid "Path to publican content."
+msgstr ""
+
+msgid "The default value for this parameter is: /usr/share/publican"
+msgstr ""
+
+msgid "common_content"
+msgstr ""
+
+msgid "Path to publican common content."
+msgstr ""
+
+msgid "The default value for this parameter is: /usr/share/publican/Common_Content"
+msgstr ""
+
+msgid "condition"
+msgstr ""
+
+msgid "Conditions on which to prune XML before transformation."
+msgstr ""
+
+msgid "confidential"
+msgstr ""
+
+msgid "Is the content confidential?"
+msgstr ""
+
+msgid "The default value for this parameter is: 0"
+msgstr ""
+
+msgid "confidential_text"
+msgstr ""
+
+msgid "The text used to indicate content is confidential."
+msgstr ""
+
+msgid "The default value for this parameter is: CONFIDENTIAL"
+msgstr ""
+
+msgid "conformance"
+msgstr ""
+
+msgid "conformance to filter output on."
+msgstr ""
+
+msgid "debug"
+msgstr ""
+
+msgid "Print out extra messages?"
+msgstr ""
+
+msgid "The default value for this parameter is: 0"
+msgstr ""
+
+msgid "doc_url"
+msgstr ""
+
+msgid "URL for the documentation team for this package. Used for top right URL on HTML."
+msgstr ""
+
+msgid "The default value for this parameter is: https://fedorahosted.org/publican"
+msgstr ""
+
+msgid "docname"
+msgstr ""
+
+msgid "Name of this document. Fetched from title tag in xml_lang/TYPE_Info.xml if not set in cfg file."
+msgstr ""
+
+msgid "This parameter is constrained with the following regular expression: ^[0-9a-zA-Z_\-\.\+]+$"
+msgstr ""
+
+msgid "This field is not supported for: brand."
+msgstr ""
+
+msgid "drupal_author"
+msgstr ""
+
+msgid "The author name to be shown in drupal book page. It must be a valid drupal username."
+msgstr ""
+
+msgid "The default value for this parameter is: Publican"
+msgstr ""
+
+msgid "drupal_image_path"
+msgstr ""
+
+msgid "The directory where the image should be stored in drupal server."
+msgstr ""
+
+msgid "The default value for this parameter is: sites/default/files/"
+msgstr ""
+
+msgid "drupal_menu_block"
+msgstr ""
+
+msgid "The menu where we can find the book."
+msgstr ""
+
+msgid "The default value for this parameter is: user-guide"
+msgstr ""
+
+msgid "drupal_menu_title"
+msgstr ""
+
+msgid "Override the bookname that will be shown in the drupal menu."
+msgstr ""
+
+msgid "dt_format"
+msgstr ""
+
+msgid "The format to use for the desktop output."
+msgstr ""
+
+msgid "The default value for this parameter is: html-desktop"
+msgstr ""
+
+msgid "dt_obsoletes"
+msgstr ""
+
+msgid "Space-separated list of packages the desktop RPM obsoletes."
+msgstr ""
+
+msgid "dt_requires"
+msgstr ""
+
+msgid "Space-separated list of packages the desktop RPM requires."
+msgstr ""
+
+msgid "dtdver"
+msgstr ""
+
+msgid "Version of the DocBook DTD on which this project is based."
+msgstr ""
+
+msgid "The default value for this parameter is: 4.5"
+msgstr ""
+
+msgid "ec_id"
+msgstr ""
+
+msgid "Eclipse plugin ID. Defaults to \"$product.$docname\""
+msgstr ""
+
+msgid "ec_name"
+msgstr ""
+
+msgid "Eclipse plugin name. Defaults to \"$product $docname\""
+msgstr ""
+
+msgid "ec_provider"
+msgstr ""
+
+msgid "Eclipse plugin provider. Defaults to \"Publican-v4.1.3\""
+msgstr ""
+
+msgid "extras_dir"
+msgstr ""
+
+msgid "Directory where images are located."
+msgstr ""
+
+msgid "The default value for this parameter is: extras"
+msgstr ""
+
+msgid "generate_section_toc_level"
+msgstr ""
+
+msgid "Generate table of contents down to the given section depth."
+msgstr ""
+
+msgid "The default value for this parameter is: 0"
+msgstr ""
+
+msgid "ignored_translations"
+msgstr ""
+
+msgid "Languages to replace with xml_lang regardless of translation status."
+msgstr ""
+
+msgid "img_dir"
+msgstr ""
+
+msgid "Directory where images are located."
+msgstr ""
+
+msgid "The default value for this parameter is: images"
+msgstr ""
+
+msgid "info_file"
+msgstr ""
+
+msgid "Override the default Info file."
+msgstr ""
+
+msgid "lang"
+msgstr ""
+
+msgid "lang to filter output on."
+msgstr ""
+
+msgid "license"
+msgstr ""
+
+msgid "License this package uses."
+msgstr ""
+
+msgid "The default value for this parameter is: GFDL"
+msgstr ""
+
+msgid "mainfile"
+msgstr ""
+
+msgid "The name of the main xml and ent files for this book, sans file extension and language. Fetched from docname if not set."
+msgstr ""
+
+msgid "menu_category"
+msgstr ""
+
+msgid "Semicolon-separated list of menu categories for the desktop package."
+msgstr ""
+
+msgid "os"
+msgstr ""
+
+msgid "os to filter output on."
+msgstr ""
+
+msgid "os_ver"
+msgstr ""
+
+msgid "The OS for which to build packages."
+msgstr ""
+
+msgid "pdf_body_font"
+msgstr ""
+
+msgid "The font to use for body text in PDFs."
+msgstr ""
+
+msgid "The default value for this parameter is: Liberation Sans"
+msgstr ""
+
+msgid "pdf_mono_font"
+msgstr ""
+
+msgid "The font to use for mono text in PDFs."
+msgstr ""
+
+msgid "The default value for this parameter is: Liberation Mono"
+msgstr ""
+
+msgid "prod_url"
+msgstr ""
+
+msgid "URL for the product. Used in top left URL in HTML."
+msgstr ""
+
+msgid "The default value for this parameter is: https://fedorahosted.org/publican"
+msgstr ""
+
+msgid "product"
+msgstr ""
+
+msgid "Product this package covers. Fetched from productname tag in xml_lang/TYPE_Info.xml"
+msgstr ""
+
+msgid "This parameter is constrained with the following regular expression: ^[0-9a-zA-Z_\-\.\+]+$"
+msgstr ""
+
+msgid "This field is not supported for: brand."
+msgstr ""
+
+msgid "repo"
+msgstr ""
+
+msgid "Repository from which to fetch remote set books."
+msgstr ""
+
+msgid "rev_dir"
+msgstr ""
+
+msgid "By default Revision History is sorted in descending order. Set this to 'asc' or 'ascending' to reverse the sort."
+msgstr ""
+
+msgid "rev_file"
+msgstr ""
+
+msgid "Override the default Revision History file."
+msgstr ""
+
+msgid "revision"
+msgstr ""
+
+msgid "revision to filter output on."
+msgstr ""
+
+msgid "revisionflag"
+msgstr ""
+
+msgid "revisionflag to filter output on."
+msgstr ""
+
+msgid "role"
+msgstr ""
+
+msgid "role to filter output on."
+msgstr ""
+
+msgid "scm"
+msgstr ""
+
+msgid "Type of repository in which books that form part of a remote set are stored. Supported types: SVN, GIT."
+msgstr ""
+
+msgid "security"
+msgstr ""
+
+msgid "security to filter output on."
+msgstr ""
+
+msgid "show_remarks"
+msgstr ""
+
+msgid "Display remarks in transformed output."
+msgstr ""
+
+msgid "The default value for this parameter is: 0"
+msgstr ""
+
+msgid "sort_order"
+msgstr ""
+
+msgid "Override the default sort weighting. Defaults to 50."
+msgstr ""
+
+msgid "src_url"
+msgstr ""
+
+msgid "URL to find tar of source files. Used in RPM Spec files."
+msgstr ""
+
+msgid "status"
+msgstr ""
+
+msgid "status to filter output on."
+msgstr ""
+
+msgid "tmp_dir"
+msgstr ""
+
+msgid "Directory to use for building."
+msgstr ""
+
+msgid "The default value for this parameter is: tmp"
+msgstr ""
+
+msgid "toc_section_depth"
+msgstr ""
+
+msgid "Depth of sections to include in the main table of contents."
+msgstr ""
+
+msgid "The default value for this parameter is: 2"
+msgstr ""
+
+msgid "txt_formater"
+msgstr ""
+
+msgid "Choose the formatter to use when creating txt output."
+msgstr ""
+
+msgid "The default value for this parameter is: default"
+msgstr ""
+
+msgid "This parameter is constrained with the following regular expression: ^(links{1}|tables{1}|default)$"
+msgstr ""
+
+msgid "type"
+msgstr ""
+
+msgid "Type of content this package contains. Supported: set, book, article, brand"
+msgstr ""
+
+msgid "The default value for this parameter is: Book"
+msgstr ""
+
+msgid "userlevel"
+msgstr ""
+
+msgid "userlevel to filter output on."
+msgstr ""
+
+msgid "vendor"
+msgstr ""
+
+msgid "vendor to filter output on."
+msgstr ""
+
+msgid "version"
+msgstr ""
+
+msgid "Version of this package. Fetched from productnumber tag in xml_lang/TYPE_Info.xml"
+msgstr ""
+
+msgid "This parameter is constrained with the following regular expression: ^[0-9][^\p{IsSpace}]*$"
+msgstr ""
+
+msgid "web_brew_dist"
+msgstr ""
+
+msgid "The brew dist to use for building the web rpm."
+msgstr ""
+
+msgid "The default value for this parameter is: docs-5E"
+msgstr ""
+
+msgid "web_formats"
+msgstr ""
+
+msgid "A comma-separated list of the formats to use for the web packages."
+msgstr ""
+
+msgid "The default value for this parameter is: html,html-single,pdf,epub"
+msgstr ""
+
+msgid "web_home"
+msgstr ""
+
+msgid "This is a home page for a Publican-generated website, not a standard book."
+msgstr ""
+
+msgid "web_home is deprecated and will be removed from Publican in the future. Use \"web_type: home\" instead."
+msgstr ""
+
+msgid "web_host"
+msgstr ""
+
+msgid "This is a host name for a Publican-generated website, used for searches and the Sitemap. Be sure to include the full path to your document tree. E.g. if your documents are in the docs directory: http://www.example.com/docs"
+msgstr ""
+
+msgid "web_host is deprecated and will be removed from Publican in the future. Use \"host\" in the web site configuration file instead."
+msgstr ""
+
+msgid "web_name_label"
+msgstr ""
+
+msgid "Override the book name, bottom level, menu label on a Publican website."
+msgstr ""
+
+msgid "web_obsoletes"
+msgstr ""
+
+msgid "Packages to obsolete in web RPM."
+msgstr ""
+
+msgid "web_product_label"
+msgstr ""
+
+msgid "Override the product, top level, menu label on a Publican website."
+msgstr ""
+
+msgid "web_search"
+msgstr ""
+
+msgid "Override the default search form for a Publican website. By default this will use Google search and do a site search if web_host is set."
+msgstr ""
+
+msgid "web_search is deprecated and will be removed from Publican in the future. Use \"search\" in the web site configuration file instead."
+msgstr ""
+
+msgid "web_type"
+msgstr ""
+
+msgid "This is a special page for a Publican-generated website, not a standard book. Valid types are home, product, and version."
+msgstr ""
+
+msgid "This parameter is constrained with the following regular expression: ^(home|product|version)$"
+msgstr ""
+
+msgid "web_version_label"
+msgstr ""
+
+msgid "Override the version, middle level, menu label on a Publican website. To hide this menu item set this to: UNUSED"
+msgstr ""
+
+msgid "wkhtmltopdf_opts"
+msgstr ""
+
+msgid "Extra options to pass to wkhtmltopdf. e.g. wkhtmltopdf_opts: \"-O landscape -s A3\""
+msgstr ""
+
+msgid "wordsize"
+msgstr ""
+
+msgid "wordsize to filter output on."
+msgstr ""
+
+msgid "xml_lang"
+msgstr ""
+
+msgid "Language in which XML is authored."
+msgstr ""
+
+msgid "The default value for this parameter is: en-US"
+msgstr ""
+
+msgid "Brand options"
+msgstr ""
+
+msgid "These are set in the brands configuration files."
+msgstr ""
+
+msgid "banned_attrs"
+msgstr ""
+
+msgid "A comma-separated list of XML attributes that are not permitted in the source."
+msgstr ""
+
+msgid "banned_tags"
+msgstr ""
+
+msgid "A comma-separated list of XML tags that are not permitted in the source."
+msgstr ""
+
+msgid "base_brand"
+msgstr ""
+
+msgid "The base brand to use for this brand."
+msgstr ""
+
+msgid "The default value for this parameter is: common"
+msgstr ""
+
+msgid "dtd_type"
+msgstr ""
+
+msgid "Override Type for DocType. Must be a complete string."
+msgstr ""
+
+msgid "dtd_uri"
+msgstr ""
+
+msgid "Override URI for DocType. Must be a complete string."
+msgstr ""
+
+msgid "no_embedtoc"
+msgstr ""
+
+msgid "Brand option to disable embedding the navigational toc in web packages"
+msgstr ""
+
+msgid "web_cfg"
+msgstr ""
+
+msgid "Full path for the publican site configuration file for non standard RPM websites."
+msgstr ""
+
+msgid "web_dir"
+msgstr ""
+
+msgid "Install path for non standard RPM websites."
+msgstr ""
+
+msgid "web_req"
+msgstr ""
+
+msgid "Name of site package for non standard RPM websites. Required to ensure the site is installed."
+msgstr ""
+
+msgid "Site options"
+msgstr ""
+
+msgid "These are set in the sites configuration file."
+msgstr ""
+
+msgid "db_file"
+msgstr ""
+
+msgid "The name of the SQLite database file for your site, with the filename extension .db"
+msgstr ""
+
+msgid "debug"
+msgstr ""
+
+msgid "Output extra messages when running publican."
+msgstr ""
+
+msgid "The default value for this parameter is: 0"
+msgstr ""
+
+msgid "def_lang"
+msgstr ""
+
+msgid "The default language for this website. Tables of contents for languages other than the default language will link to documents in the default language when translations are not available."
+msgstr ""
+
+msgid "The default value for this parameter is: en-US"
+msgstr ""
+
+msgid "dump"
+msgstr ""
+
+msgid "Dump the publican database to an XML file."
+msgstr ""
+
+msgid "dump_file"
+msgstr ""
+
+msgid "The name of the file to dump the publican database to."
+msgstr ""
+
+msgid "The default value for this parameter is: /var/www/html/DUMP.xml"
+msgstr ""
+
+msgid "footer"
+msgstr ""
+
+msgid "HTML to inject in to the footer of every page on the website."
+msgstr ""
+
+msgid "The default value for this parameter is:"
+msgstr ""
+
+msgid "host"
+msgstr ""
+
+msgid "The web host, may be a full URI or a relative path."
+msgstr ""
+
+msgid "The default value for this parameter is: /docs"
+msgstr ""
+
+msgid "manual_toc_update"
+msgstr ""
+
+msgid "Stop publican from automatically rebuilding teh web site everytime a book is installed, updated or removed."
+msgstr ""
+
+msgid "The default value for this parameter is: 0"
+msgstr ""
+
+msgid "search"
+msgstr ""
+
+msgid "The HTML to inject in as the site serach."
+msgstr ""
+
+msgid "The default value for this parameter is: Google site search"
+msgstr ""
+
+msgid "title"
+msgstr ""
+
+msgid "Title used for all site navigation pages."
+msgstr ""
+
+msgid "The default value for this parameter is: Documentation"
+msgstr ""
+
+msgid "tmpl_path"
+msgstr ""
+
+msgid "Full path to the template directory."
+msgstr ""
+
+msgid "The default value for this parameter is: /usr/share/publican/templates"
+msgstr ""
+
+msgid "toc_js"
+msgstr ""
+
+msgid "The source file to use for JavaScript functionality."
+msgstr ""
+
+msgid "The default value for this parameter is: default.js"
+msgstr ""
+
+msgid "toc_path"
+msgstr ""
+
+msgid "The path to the directory in which to create the top-level index.html file."
+msgstr ""
+
+msgid "toc_type"
+msgstr ""
+
+msgid "Template to use for generagting the web style 1 toc file."
+msgstr ""
+
+msgid "The default value for this parameter is: toc"
+msgstr ""
+
+msgid "This field is deprecated and will be removed from Publican in the future."
+msgstr ""
+
+msgid "web_style"
+msgstr ""
+
+msgid "Publican supports mutliple base styles for websites, this picks one."
+msgstr ""
+
+msgid "The default value for this parameter is: 1"
+msgstr ""
+
+msgid "This parameter is constrained with the following regular expression: [1-2]"
+msgstr ""
+
+msgid "This field is deprecated and will be removed from Publican in the future."
+msgstr ""
+
+msgid "zip_dump"
+msgstr ""
+
+msgid "Zip up the dump file after dumping it"
+msgstr ""
+
+msgid "The default value for this parameter is: 0"
+msgstr ""
+

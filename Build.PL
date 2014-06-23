@@ -2,6 +2,7 @@ use strict;
 use warnings;
 use Module::Build;
 use 5.008;
+use Cwd qw(abs_path cwd);
 
 my $class = Module::Build->subclass(
     class => 'My::Builder',
@@ -184,6 +185,18 @@ my $class = Module::Build->subclass(
             $self->depends_on('test');
             return;
         }
+        sub ACTION_install {
+            my ($self) = @_;
+            $self->config_data('etc', $self->install_path('etc'));
+            $self->config_data('datadir', $self->install_path('datadir'));
+            $self->config_data('web', $self->install_path('web'));
+            $self->config_data('templates', $self->install_path('templates'));
+            $self->config_data('book_templates', $self->install_path('book_templates'));
+            $self->config_data('rpm_templates', $self->install_path('rpm_templates'));
+            $self->config_data('docdir', $self->install_path('docdir'));
+            $self->SUPER::ACTION_config_data();
+            return $self->SUPER::ACTION_install();
+        }
         sub ACTION_distdir {
             my ($self) = @_;
 ##            $self->depends_on('update_pod');
@@ -199,6 +212,7 @@ my $class = Module::Build->subclass(
         sub ACTION_test {
             my ($self) = @_;
             use Cwd qw(abs_path cwd);
+if(0) {
             $self->config_data('etc', abs_path('blib/etc'));
             $self->config_data('datadir', abs_path('blib/datadir'));
             $self->config_data('web', abs_path('blib/web'));
@@ -206,7 +220,9 @@ my $class = Module::Build->subclass(
             $self->config_data('book_templates', abs_path('blib/book_templates'));
             $self->config_data('rpm_templates', abs_path('blib/rpm_templates'));
             $self->config_data('docdir', abs_path('pod1'));
+}
             $self->SUPER::ACTION_test();
+if(0) {
             $self->config_data('etc', $self->install_path('etc'));
             $self->config_data('datadir', $self->install_path('datadir'));
             $self->config_data('web', $self->install_path('web'));
@@ -215,6 +231,7 @@ my $class = Module::Build->subclass(
             $self->config_data('rpm_templates', $self->install_path('rpm_templates'));
             $self->config_data('docdir', $self->install_path('docdir'));
             $self->SUPER::ACTION_config_data();
+}
         }
         sub ACTION_update_pod {
             my ($self) = @_;
@@ -550,6 +567,15 @@ if ( $^O eq 'darwin' ) {
     $builder->install_path( 'locale' => '/opt/local/share/locale' );
 }
 
+            $builder->config_data('etc', abs_path('blib/etc'));
+            $builder->config_data('datadir', abs_path('blib/datadir'));
+            $builder->config_data('web', abs_path('blib/web'));
+            $builder->config_data('templates', abs_path('blib/templates'));
+            $builder->config_data('book_templates', abs_path('blib/book_templates'));
+            $builder->config_data('rpm_templates', abs_path('blib/rpm_templates'));
+            $builder->config_data('docdir', abs_path('pod1'));
+$builder->config_data();
+
 $builder->add_build_element('brand_template');
 $builder->add_build_element('data');
 $builder->add_build_element('web');
@@ -559,6 +585,7 @@ $builder->add_build_element('rpm_templates');
 $builder->add_build_element('etc');
 $builder->add_build_element('completion');
 $builder->add_build_element('locale');
+if(0) {
 $builder->config_data( 'etc',       $builder->install_path('etc') );
 $builder->config_data( 'datadir',   $builder->install_path('datadir') );
 $builder->config_data( 'web',       $builder->install_path('web') );
@@ -569,6 +596,8 @@ $builder->config_data( 'rpm_templates',
     $builder->install_path('rpm_templates') );
 $builder->config_data( 'docdir', $builder->install_path('docdir') );
 $builder->config_data( 'locale', $builder->install_path('locale') );
+}
+
 
 $builder->create_build_script();
 

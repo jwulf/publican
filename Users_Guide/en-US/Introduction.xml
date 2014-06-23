@@ -51,12 +51,13 @@ use warnings;
 
 print "Hello, World!\n";</programlisting>
 	 
-<programlisting language="C++"><![CDATA[#include <iostream>
+<programlisting language="C++"><![CDATA[#include &lt;iostream&gt;
 
 int main()
 {
-  std::cout << "Hello World!"; &lies;
+  std::cout &lt;&lt; "Hello World!"; &lies;
 }
+
 ]]>
 </programlisting>
 	 </informalexample>

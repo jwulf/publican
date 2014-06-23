@@ -1,24 +1,17 @@
-# 
-# AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2014-05-06 14:10+1000\n"
-"PO-Revision-Date: 2014-05-06 14:10+1000\n"
+"POT-Creation-Date: 2014-06-02 09:01+1000\n"
+"PO-Revision-Date: 2014-06-02 09:01+1000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: None\n"
 "MIME-Version: 1.0\n"
 "Content-Type: application/x-publican; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#. Tag: title
-#, no-c-format
 msgid "xrefs and conditional tagging"
 msgstr ""
 
-#. Tag: para
-#, no-c-format
-msgid "If an <sgmltag>&lt;xref&gt;</sgmltag> points to content not included in the build due to conditional tagging, the build will fail. For example, with <prompt>$</prompt> <command>condition: upstream</command> set in the <filename>publican.cfg</filename> file, <prompt>$</prompt> <command>publican build --formats=pdf --langs=en-US</command> will fail if the book has the tag <sgmltag>&lt;xref linkend=\"betasection\"&gt;</sgmltag> pointing to <sgmltag>&lt;section id=\"betasection\" condition=\"beta\"&gt;</sgmltag>."
+msgid "If an <tag>&lt;xref&gt;</tag> points to content not included in the build due to conditional tagging, the build will fail. For example, with <prompt>$</prompt> <command>condition: upstream</command> set in the <filename>publican.cfg</filename> file, <prompt>$</prompt> <command>publican build --formats=pdf --langs=en-US</command> will fail if the book has the tag <tag>&lt;xref linkend=\"betasection\"&gt;</tag> pointing to <tag>&lt;section id=\"betasection\" condition=\"beta\"&gt;</tag>."
 msgstr ""
 
