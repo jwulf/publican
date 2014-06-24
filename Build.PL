@@ -9,6 +9,9 @@ my $cwd = cwd();
 my $class = Module::Build->subclass(
     class => 'My::Builder',
     code  => q{
+        # older versions of Module::Build need this duplicated.
+        use Cwd qw(abs_path cwd);
+        my $cwd = cwd();
         my $dir = $cwd . '/tmp/rpm';
         my $common_langs = 'all';
         sub ACTION_srpm {
@@ -175,7 +178,6 @@ my $class = Module::Build->subclass(
         }
         sub ACTION_authortest {
             my ($self) = @_;
-##            $self->depends_on('build');
             $self->depends_on('distmeta');
             $self->test_files( qw< t xt/author > );
             $self->recursive_test_files(1);
@@ -184,6 +186,7 @@ my $class = Module::Build->subclass(
         }
         sub ACTION_install {
             my ($self) = @_;
+            # Set ConfigData to point to the installed paths
             $self->config_data('etc', $self->install_path('etc'));
             $self->config_data('datadir', $self->install_path('datadir'));
             $self->config_data('web', $self->install_path('web'));
@@ -196,41 +199,14 @@ my $class = Module::Build->subclass(
         }
         sub ACTION_distdir {
             my ($self) = @_;
-##            $self->depends_on('update_pod');
             return $self->SUPER::ACTION_distdir();
         }
         sub ACTION_build {
             my ($self) = @_;
             $self->SUPER::ACTION_build();
-print(STDERR "common_files\n");
             $self->depends_on('common_files');
-print(STDERR "commondb5_files\n");
             $self->depends_on('commondb5_files');
-print(STDERR "locale_files\n");
             $self->depends_on('locale_files');
-        }
-        sub ACTION_test {
-            my ($self) = @_;
-if(0) {
-            $self->config_data('etc', abs_path('blib/etc'));
-            $self->config_data('datadir', abs_path('blib/datadir'));
-            $self->config_data('web', abs_path('blib/web'));
-            $self->config_data('templates', abs_path('blib/templates'));
-            $self->config_data('book_templates', abs_path('blib/book_templates'));
-            $self->config_data('rpm_templates', abs_path('blib/rpm_templates'));
-            $self->config_data('docdir', abs_path('pod1'));
-}
-            $self->SUPER::ACTION_test();
-if(0) {
-            $self->config_data('etc', $self->install_path('etc'));
-            $self->config_data('datadir', $self->install_path('datadir'));
-            $self->config_data('web', $self->install_path('web'));
-            $self->config_data('templates', $self->install_path('templates'));
-            $self->config_data('book_templates', $self->install_path('book_templates'));
-            $self->config_data('rpm_templates', $self->install_path('rpm_templates'));
-            $self->config_data('docdir', $self->install_path('docdir'));
-            $self->SUPER::ACTION_config_data();
-}
         }
         sub ACTION_update_pod {
             my ($self) = @_;
@@ -578,6 +554,7 @@ $builder->add_build_element('etc');
 $builder->add_build_element('completion');
 $builder->add_build_element('locale');
 
+## Setup ConfigData so it points to the local content
 $builder->config_data( 'etc',            $cwd . '/blib/etc' );
 $builder->config_data( 'datadir',        $cwd . '/blib/datadir' );
 $builder->config_data( 'web',            $cwd . '/blib/web' );
@@ -585,19 +562,6 @@ $builder->config_data( 'templates',      $cwd . '/blib/templates' );
 $builder->config_data( 'book_templates', $cwd . '/blib/book_templates' );
 $builder->config_data( 'rpm_templates',  $cwd . '/blib/rpm_templates' );
 $builder->config_data( 'docdir',         $cwd . '/pod1' );
-
-if (0) {
-    $builder->config_data( 'etc',       $builder->install_path('etc') );
-    $builder->config_data( 'datadir',   $builder->install_path('datadir') );
-    $builder->config_data( 'web',       $builder->install_path('web') );
-    $builder->config_data( 'templates', $builder->install_path('templates') );
-    $builder->config_data( 'book_templates',
-        $builder->install_path('book_templates') );
-    $builder->config_data( 'rpm_templates',
-        $builder->install_path('rpm_templates') );
-    $builder->config_data( 'docdir', $builder->install_path('docdir') );
-    $builder->config_data( 'locale', $builder->install_path('locale') );
-}
 
 $builder->create_build_script();
 

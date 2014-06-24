@@ -109,7 +109,7 @@ sub setup_xml {
     my $extras    = $self->{publican}->param('extras_dir');
     my $main_file = $self->{publican}->param('mainfile');
     my $ent_file  = undef;
-    $ent_file = "$main_file.ent" if ( -e "$xml_lang/$main_file.ent" );
+    $ent_file = "$main_file.ent" if ( defined($main_file) && -e "$xml_lang/$main_file.ent" );
 
     foreach my $lang ( split( /,/, $langs ) ) {
         logger( maketext( "Setting up [_1]", $lang ) . "\n" );

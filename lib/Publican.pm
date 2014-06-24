@@ -489,7 +489,7 @@ my %PARAM_OLD = (
             'Override the bookname that will be shown in the drupal menu.'),
     },
     drupal_menu_block => {
-        descr   => maketext( 'The menu where we can find the book.' ),
+        descr   => maketext('The menu where we can find the book.'),
         default => 'user-guide',
     },
     drupal_image_path => {
@@ -1790,7 +1790,7 @@ sub dirmove {
 }
 
 sub params_as_docbook {
-    my ($gen_list,$brand_list,$web_list) = @_;
+    my ( $gen_list, $brand_list, $web_list ) = @_;
 
     foreach my $key ( sort( keys(%PARAMS) ) ) {
         my $entry = XML::Element->new_from_lol(
@@ -1817,7 +1817,10 @@ sub params_as_docbook {
         if ( defined( $PARAMS{$key}->{default} ) ) {
             my $def = XML::Element->new_from_lol(
                 [   'para',
-                    maketext("The default value for this parameter is: [_1]", $PARAMS{$key}->{default})
+                    maketext(
+                        "The default value for this parameter is: [_1]",
+                        $PARAMS{$key}->{default}
+                    )
                 ]
             );
 
@@ -1827,7 +1830,10 @@ sub params_as_docbook {
         if ( defined( $PARAMS{$key}->{constraint} ) ) {
             my $constraint = XML::Element->new_from_lol(
                 [   'para',
-                    maketext("This parameter is constrained with the following regular expression: [_1]", $PARAMS{$key}->{constraint})
+                    maketext(
+                        "This parameter is constrained with the following regular expression: [_1]",
+                        $PARAMS{$key}->{constraint}
+                    )
                 ]
             );
 
@@ -1858,7 +1864,6 @@ sub params_as_docbook {
     }
 
 }
-
 
 1;    # Magic true value required at end of module
 __END__
