@@ -18,8 +18,8 @@
 %define wwwdir /var/www/html/docs
 
 Name:           publican
-Version:        4.1.4
-Release:        0%{?dist}
+Version:        4.1.9
+Release:        0%{?dist}.t1
 Summary:        Common files and scripts for publishing with DocBook XML
 # For a breakdown of the licensing, refer to LICENSE
 License:        (GPLv2+ or Artistic) and CC0
