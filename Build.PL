@@ -450,6 +450,7 @@ my $builder = $class->new(
         'datadir/Common_Content/common-db5/tmp',
         'datadir/Common_Content/common-db5/publish',
         'META.json',
+        'publican-Test_Brand',
     ],
     script_files => [ 'bin/publican', 'bin/db5-valid', 'bin/db4-2-db5' ],
     bindoc_dirs  => ['pod1'],
@@ -540,7 +541,8 @@ my $builder = $class->new(
         'book_templates/titlepage.tmpl' => 'book_templates/titlepage.tmpl',
     },
     rpm_templates_files => {
-        'rpm_templates/desktop-spec.tmpl'   => 'rpm_templates/desktop-spec.tmpl',
+        'rpm_templates/desktop-spec.tmpl' =>
+            'rpm_templates/desktop-spec.tmpl',
         'rpm_templates/spec.tmpl'   => 'rpm_templates/spec.tmpl',
         'rpm_templates/splash.tmpl' => 'rpm_templates/splash.tmpl',
     },
@@ -567,15 +569,6 @@ if ( $^O eq 'darwin' ) {
     $builder->install_path( 'locale' => '/opt/local/share/locale' );
 }
 
-            $builder->config_data('etc', abs_path('blib/etc'));
-            $builder->config_data('datadir', abs_path('blib/datadir'));
-            $builder->config_data('web', abs_path('blib/web'));
-            $builder->config_data('templates', abs_path('blib/templates'));
-            $builder->config_data('book_templates', abs_path('blib/book_templates'));
-            $builder->config_data('rpm_templates', abs_path('blib/rpm_templates'));
-            $builder->config_data('docdir', abs_path('pod1'));
-$builder->config_data();
-
 $builder->add_build_element('brand_template');
 $builder->add_build_element('data');
 $builder->add_build_element('web');
@@ -585,19 +578,28 @@ $builder->add_build_element('rpm_templates');
 $builder->add_build_element('etc');
 $builder->add_build_element('completion');
 $builder->add_build_element('locale');
-if(0) {
-$builder->config_data( 'etc',       $builder->install_path('etc') );
-$builder->config_data( 'datadir',   $builder->install_path('datadir') );
-$builder->config_data( 'web',       $builder->install_path('web') );
-$builder->config_data( 'templates', $builder->install_path('templates') );
-$builder->config_data( 'book_templates',
-    $builder->install_path('book_templates') );
-$builder->config_data( 'rpm_templates',
-    $builder->install_path('rpm_templates') );
-$builder->config_data( 'docdir', $builder->install_path('docdir') );
-$builder->config_data( 'locale', $builder->install_path('locale') );
-}
 
+$builder->config_data( 'etc',            abs_path('blib/etc') );
+$builder->config_data( 'datadir',        abs_path('blib/datadir') );
+$builder->config_data( 'web',            abs_path('blib/web') );
+$builder->config_data( 'templates',      abs_path('blib/templates') );
+$builder->config_data( 'book_templates', abs_path('blib/book_templates') );
+$builder->config_data( 'rpm_templates',  abs_path('blib/rpm_templates') );
+$builder->config_data( 'docdir',         abs_path('pod1') );
+$builder->config_data();
+
+if (0) {
+    $builder->config_data( 'etc',       $builder->install_path('etc') );
+    $builder->config_data( 'datadir',   $builder->install_path('datadir') );
+    $builder->config_data( 'web',       $builder->install_path('web') );
+    $builder->config_data( 'templates', $builder->install_path('templates') );
+    $builder->config_data( 'book_templates',
+        $builder->install_path('book_templates') );
+    $builder->config_data( 'rpm_templates',
+        $builder->install_path('rpm_templates') );
+    $builder->config_data( 'docdir', $builder->install_path('docdir') );
+    $builder->config_data( 'locale', $builder->install_path('locale') );
+}
 
 $builder->create_build_script();
 

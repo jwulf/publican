@@ -109,7 +109,7 @@ sub setup_xml {
     my $extras = $self->{publican}->param('extras_dir');
     my $main_file = $self->{publican}->param('mainfile');
     my $ent_file = undef;
-    $ent_file = "$main_file.ent" if(-e "$xml_lang/$main_file.ent");
+    $ent_file = "$main_file.ent" if(defined($main_file) && -e "$xml_lang/$main_file.ent");
 
     foreach my $lang ( split( /,/, $langs ) ) {
         logger( maketext( "Setting up [_1]", $lang ) . "\n" );
@@ -176,8 +176,8 @@ sub setup_xml {
             my $extras = $self->{publican}->param('extras_dir');
 
             my @xml_files = dir_list( $source_dir, '*.xml' );
-            rcopy( "$xml_lang/$ent_file", "$tmp_dir/$lang/xml_tmp/." ) if ( -e "$xml_lang/$ent_file" );
-            rcopy( "$lang/$ent_file", "$tmp_dir/$lang/xml_tmp/." ) if ( -e "$lang/$ent_file" );
+            rcopy( "$xml_lang/$ent_file", "$tmp_dir/$lang/xml_tmp/." ) if (defined($ent_file) &&  -e "$xml_lang/$ent_file" );
+            rcopy( "$lang/$ent_file", "$tmp_dir/$lang/xml_tmp/." ) if (defined($ent_file) &&  -e "$lang/$ent_file" );
 
             foreach my $xml_file ( sort(@xml_files) ) {
                 next if ( $xml_file =~ m|$source_dir/$extras/| );
@@ -438,8 +438,8 @@ sub setup_xml {
                 }
             }
 
-            rcopy( "$xml_lang/$ent_file", "$tmp_dir/$lang/xml/." ) if ( -e "$xml_lang/$ent_file" );
-            rcopy( "$lang/$ent_file", "$tmp_dir/$lang/xml/." ) if ( -e "$lang/$ent_file" );
+            rcopy( "$xml_lang/$ent_file", "$tmp_dir/$lang/xml/." ) if (defined($ent_file) &&  -e "$xml_lang/$ent_file" );
+            rcopy( "$lang/$ent_file", "$tmp_dir/$lang/xml/." ) if (defined($ent_file) &&  -e "$lang/$ent_file" );
 
             dircopy( "$xml_lang/$extras", "$tmp_dir/$lang/xml/$extras" )
                 if ( -d "$xml_lang/$extras" );

@@ -13,17 +13,21 @@ BEGIN {
 my $dir = pushd("Test_Book");
 
 my $publican = Publican->new(
-    {
-        debug          => 1,
-        NOCOLOURS      => 1,
-        QUIET          => 1,
+    {   debug     => 1,
+        NOCOLOURS => 1,
+        QUIET     => 1,
     }
 );
 
 my $builder = Publican::Builder::DocBook4->new();
-isa_ok( $builder, 'Publican::Builder::DocBook4', 'creating a Publican::Builder::DocBook4' );
+isa_ok( $builder, 'Publican::Builder::DocBook4',
+    'creating a Publican::Builder::DocBook4' );
 
-eval { $builder->build( { formats => "html,pdf,drupal-book", langs => "en-US", pub_dir => 'publishing' } ) };
+eval {
+    $builder->build(
+        { formats => "html,pdf", langs => "en-US", pub_dir => 'publishing' }
+    );
+};
 my $e = $@;
 ok( ( not $e ), "build a book" );
 diag($e) if $e;
