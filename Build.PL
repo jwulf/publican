@@ -4,11 +4,12 @@ use Module::Build;
 use 5.008;
 use Cwd qw(abs_path cwd);
 
+my $cwd = cwd();
+
 my $class = Module::Build->subclass(
     class => 'My::Builder',
     code  => q{
-        use Cwd;
-        my $dir = cwd() . '/tmp/rpm';
+        my $dir = $cwd . '/tmp/rpm';
         my $common_langs = 'all';
         sub ACTION_srpm {
             my $self = shift;
@@ -65,7 +66,6 @@ my $class = Module::Build->subclass(
             my $self = shift;
             require File::Find::Rule;
             require File::Copy::Recursive;
-            my $cwd = getcwd();
             my $path = "$cwd/blib/datadir/Common_Content/brand-template";
             mkpath("$path");
             File::Copy::Recursive::rcopy( "datadir/Common_Content/brand-template/*", "$path/.");
@@ -85,7 +85,6 @@ my $class = Module::Build->subclass(
             if($@){
                 warn($@);
             } else {
-                my $cwd = getcwd();
                 my $dir = File::pushd::pushd("$cwd/datadir/Common_Content/common");
                 my $path = "$cwd/blib/datadir/Common_Content";
 
@@ -116,7 +115,6 @@ my $class = Module::Build->subclass(
             if($@){
                 warn("$@, $!");
             } else {
-                my $cwd = getcwd();
                 my $dir = File::pushd::pushd('datadir/Common_Content/common-db5');
                 my $path = "$cwd/blib/datadir/Common_Content";
 
@@ -136,7 +134,6 @@ my $class = Module::Build->subclass(
             use File::Path;
             require File::Find::Rule;
             require Locale::Msgfmt;
-            my $cwd = getcwd();
             my @po_files = File::Find::Rule::find(
                 maxdepth => 1,
                 file     => name => "*.po",
@@ -205,13 +202,15 @@ my $class = Module::Build->subclass(
         sub ACTION_build {
             my ($self) = @_;
             $self->SUPER::ACTION_build();
+print(STDERR "common_files\n");
             $self->depends_on('common_files');
+print(STDERR "commondb5_files\n");
             $self->depends_on('commondb5_files');
+print(STDERR "locale_files\n");
             $self->depends_on('locale_files');
         }
         sub ACTION_test {
             my ($self) = @_;
-            use Cwd qw(abs_path cwd);
 if(0) {
             $self->config_data('etc', abs_path('blib/etc'));
             $self->config_data('datadir', abs_path('blib/datadir'));
@@ -579,14 +578,13 @@ $builder->add_build_element('etc');
 $builder->add_build_element('completion');
 $builder->add_build_element('locale');
 
-$builder->config_data( 'etc',            abs_path('blib/etc') );
-$builder->config_data( 'datadir',        abs_path('blib/datadir') );
-$builder->config_data( 'web',            abs_path('blib/web') );
-$builder->config_data( 'templates',      abs_path('blib/templates') );
-$builder->config_data( 'book_templates', abs_path('blib/book_templates') );
-$builder->config_data( 'rpm_templates',  abs_path('blib/rpm_templates') );
-$builder->config_data( 'docdir',         abs_path('pod1') );
-$builder->config_data();
+$builder->config_data( 'etc',            $cwd . '/blib/etc' );
+$builder->config_data( 'datadir',        $cwd . '/blib/datadir' );
+$builder->config_data( 'web',            $cwd . '/blib/web' );
+$builder->config_data( 'templates',      $cwd . '/blib/templates' );
+$builder->config_data( 'book_templates', $cwd . '/blib/book_templates' );
+$builder->config_data( 'rpm_templates',  $cwd . '/blib/rpm_templates' );
+$builder->config_data( 'docdir',         $cwd . '/pod1' );
 
 if (0) {
     $builder->config_data( 'etc',       $builder->install_path('etc') );
