@@ -772,7 +772,6 @@ if ( $action eq 'update_site' ) {
     my $site_config = $opts{site_config} || undef;
     local $File::Copy::Recursive::RMTrgFil = 1;
     my $ws = Publican::WebSite->new( { site_config => $site_config } );
-print(STDERR "WEB_TEMPLATE_PATH: $WEB_TEMPLATE_PATH\n");
     rcopy( "$WEB_TEMPLATE_PATH/*", $ws->toc_path() . "/." );
     $ws->regen_all_toc( { force => 1 } );
 

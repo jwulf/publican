@@ -243,7 +243,7 @@ sub new {
         );
     my $tmpl_path = $config->param('tmpl_path') || $DEFAULT_TMPL_PATH;
     $tmpl_path .= ":$DEFAULT_TMPL_PATH" if ( $config->param('tmpl_path') );
-print(STDERR "tmpl_path: $tmpl_path\n");
+
     my $def_lang = $config->param('def_lang') || $DEFAULT_LANG;
     my $db_file  = $config->param('db_file')  || croak(
         maketext(
