@@ -18,8 +18,8 @@
 %define wwwdir /var/www/html/docs
 
 Name:           publican
-Version:        4.1.3
-Release:        0%{?dist}.t1
+Version:        4.1.4
+Release:        0%{?dist}
 Summary:        Common files and scripts for publishing with DocBook XML
 # For a breakdown of the licensing, refer to LICENSE
 License:        (GPLv2+ or Artistic) and CC0
@@ -320,6 +320,9 @@ rm -rf $RPM_BUILD_ROOT
 %{wwwdir}/common-db5
 
 %changelog
+* Wed May 21 2014 Jeff Fearn <jfearn@redhat.com> 4.1.4-0
+- Fix headers and footers triggering index out of range in PDF Build.
+
 * Wed May 21 2014 Jeff Fearn <jfearn@redhat.com> 4.1.3-0
 - Fix extra space breaking spec files with sort_order. BZ #1099262
 - Make div.title bold in db4.css. BZ #1049661

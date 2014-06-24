@@ -26,7 +26,7 @@ use vars
 
 $File::Copy::Recursive::KeepMode = 0;
 
-$VERSION = version->declare('v4.1.3');
+$VERSION = version->declare('v4.1.4');
 @ISA     = qw(Exporter);
 
 @EXPORT
