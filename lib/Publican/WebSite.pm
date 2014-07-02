@@ -1728,6 +1728,8 @@ sub write_version_index {
     my $host = $self->{host};
 
     my $index_vars;
+    $index_vars->{v_sort}           = \&v_sort;
+    $index_vars->{i_sort}           = \&i_sort;
     $index_vars->{product}          = $product;
     $index_vars->{version}          = $version;
     $index_vars->{host}             = $host;
