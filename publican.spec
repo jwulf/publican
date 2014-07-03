@@ -19,7 +19,7 @@
 
 Name:           publican
 Version:        4.1.4
-Release:        0%{?dist}
+Release:        1%{?dist}
 Summary:        Common files and scripts for publishing with DocBook XML
 # For a breakdown of the licensing, refer to LICENSE
 License:        (GPLv2+ or Artistic) and CC0
@@ -320,6 +320,9 @@ rm -rf $RPM_BUILD_ROOT
 %{wwwdir}/common-db5
 
 %changelog
+* Thu Jul 03 2014 Jeff Fearn <jfearn@redhat.com> 4.1.4-1
+- Expose sort functions to version index page.
+
 * Wed May 21 2014 Jeff Fearn <jfearn@redhat.com> 4.1.4-0
 - Fix headers and footers triggering index out of range in PDF Build.
 
