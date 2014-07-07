@@ -14,7 +14,7 @@
 # required for desktop file install
 %define my_vendor %(test %{OTHER} == 1 && echo "fedora" || echo "redhat")
 
-%define TESTS 0
+%define TESTS 1
 %define wwwdir /var/www/html/docs
 
 Name:           publican

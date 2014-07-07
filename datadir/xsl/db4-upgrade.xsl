@@ -389,11 +389,12 @@
         <xsl:call-template name="copy.attributes"/>
 
 	<xsl:if test="title|titleabbrev|subtitle">
-	  <info>
+<!-- unnecessary
+        <info> -->
 	    <xsl:apply-templates select="title" mode="copy"/>
 	    <xsl:apply-templates select="titleabbrev" mode="copy"/>
 	    <xsl:apply-templates select="subtitle" mode="copy"/>
-	  </info>
+<!--	  </info> -->
 	</xsl:if>
 
         <xsl:apply-templates/>

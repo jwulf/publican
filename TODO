@@ -73,13 +73,14 @@ Chase up tig!
 branch rename
 generate Changes file from git log ... requires hygeine
 
-Release Process:
 
-git merge
-git tag
-...
-scp to hosted
-...
+
+######################################
+Publican 4.2
+######################################
+
+Callouts: images deleted from DB5 style, make CSS rules to do the images.
+
 
 
 ######################################

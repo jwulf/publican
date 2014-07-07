@@ -163,11 +163,6 @@ footer .docnav {
 div.admonition {
     margin-bottom: 1em;
     padding-left: 1.5em;
-/*
-    background-size: 0.5em auto;
-    background-image: url("../images/red.png");
-    background-repeat: repeat-y;
-*/
     padding-top: 0.5em;
     padding-bottom: 0.5em;
     border-left: 0.5em solid #59BC00;
