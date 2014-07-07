@@ -398,10 +398,11 @@ sub setup_xml {
             my $brand_path = $self->{publican}->param('brand_dir')
                 || $common_content . "/$brand";
 
+            # don't copy installed base brand when testing base brands
             rcopy_glob(
                 $common_content . "/$base_brand/en-US/*",
                 "$tmp_dir/$lang/xml/Common_Content"
-            );
+            ) unless(($brand eq $base_brand) && ( $brand_path ne $common_content . "/$brand" ));
 
             if ( $lang ne 'en-US' ) {
                 if ( -d $common_content . "/$base_brand/$lang" ) {

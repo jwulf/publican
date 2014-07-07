@@ -1943,6 +1943,7 @@ BUGBUG: make sure class is being set
 sub insertCallouts {
     my $areaspec = shift();
     my $verbatim = shift();
+    my $mode =  (shift() || 'gfx');
 
     # XML::LibXML::Document
     my $doc = $areaspec->get_node(1);
@@ -1950,7 +1951,6 @@ sub insertCallouts {
     my $verb      = $verbatim->get_node(1);
     my $childnode = $verb->firstChild;
 
-    my $mode   = 'gfx';
     my $format = 'HTML';
     my $tag    = $childnode->nodeName();
 
@@ -2116,6 +2116,9 @@ sub insertCallouts {
                             'http://www.w3.org/1999/XSL/Format', 'fo' );
                     }
                     $out_string .= $gfx_node->toString();
+                }
+                elsif ( $mode eq 'css' ) {
+                    $out_string .= "<span class='callout'>$index</span> ";
                 }
                 else {    # numeric
                     $out_string .= "$index ";

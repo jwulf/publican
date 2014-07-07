@@ -33,9 +33,12 @@
 <xsl:param name="qanda.defaultlabel">qanda</xsl:param>
 <xsl:param name="glossary.sort" select="1"/>
 <xsl:param name="formal.object.break.after">0</xsl:param>
-<xsl:param name="highlight.source" select="1"/>
+<xsl:param name="highlight.source" select="0"/>
 <xsl:param name="draft.mode">maybe</xsl:param>
 <xsl:param name="poper.as.dl"  select="0"/>
+<xsl:param name="callout.list.table" select="0"/>
+<xsl:param name="callout.graphics" select="0"/>
+<xsl:param name="callouts.extension" select="0"/>
 
 <!-- Admonition Graphics -->
 <xsl:param name="admon.graphics" select="1"/>
@@ -2215,6 +2218,15 @@ valign: <xsl:value-of select="@valign"/></xsl:message>
       </xsl:for-each>
     </map>
   </xsl:if>
+</xsl:template>
+
+
+<xsl:template name="callout-bug">
+  <xsl:param name="conum" select="1"/>
+
+    <span class="callout">
+      <xsl:value-of select="$conum"/>
+    </span>
 </xsl:template>
 
 </xsl:stylesheet>

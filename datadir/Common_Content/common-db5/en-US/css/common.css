@@ -812,3 +812,29 @@ iframe {
     margin-bottom: 1em;
     margin-top: 1.5em;
 }
+
+a.co {
+    background-color: #9a9a9a;
+    border-radius: 15px;
+    color: white;
+    position: absolute;
+    right: 1em;
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+    font-weight: bold;
+}
+
+dl.calloutlist dt a {
+    font-family: "liberation mono","bitstream vera mono","dejavu mono",monospace;
+    background-color: #9a9a9a;
+    border-radius: 15px;
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+    color: white;
+    font-weight: bold;
+}
+
+dl.calloutlist dd {
+    margin-top: -1.3em;
+}
+
