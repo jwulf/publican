@@ -34,7 +34,6 @@ use List::Util qw(max);
 use Text::Wrap qw(fill $columns);
 use IO::String;
 use File::Which;
-use Text::CSV_XS;
 use Publican::ConfigData;
 use Sort::Versions;
 use Template;
@@ -285,7 +284,8 @@ sub build {
                                 };
                                 if ($@) {
                                     croak(
-                                        maketext( "FATAL ERROR 3: [_1]", $@ ) );
+                                        maketext( "FATAL ERROR 3: [_1]", $@ )
+                                    );
                                 }
 
                                 foreach my $node (
@@ -1173,24 +1173,40 @@ sub transform {
     elsif ( $format eq 'drupal-book' ) {
         $dir = undef;
 
+        my $title;
+        my $btitle = $xslt_opts{clean_title};
+        $btitle =~ s/^"//;
+        $btitle =~ s/"$//;
+        $title
+            = $web_product_label
+            ? $web_product_label
+            : $self->{publican}->param('product');
+        $title .= ' ';
+        $title .=
+              $web_version_label
+            ? $web_version_label
+            : $self->{publican}->param('version');
+        $title =~ s/_/ /g;
+        $title .= " $btitle";
+
         my $docname = $self->{publican}->param('docname');
         my $product = $self->{publican}->param('product');
         my $version = $self->{publican}->param('version');
         my $edition = $self->{publican}->param('edition');
         my $release = $self->{publican}->param('release');
 
-        my $filename = "$product-$version-$docname-$lang-$edition-$release";
-        my $content_dir = "$lang/$product/$version/$docname";
+        my $filename
+            = "$product-$version-$docname-$lang-$edition-$release.tar.gz";
+        my $content_dir
+            = "$product-$version-$docname-$lang-$edition-$release";
 
-        $self->drupal_transform( { lang => $lang } );
+        $self->drupal_transform(
+            { lang => $lang, filename => $filename, title => $title } );
         my $images = $self->{publican}->param('img_dir');
 
         dircopy( "$tmp_dir/$lang/xml/$images",
             "$tmp_dir/$lang/$format/$content_dir/$images" )
             if ( -d "$tmp_dir/$lang/xml/$images" );
-        dircopy( "$tmp_dir/$lang/xml/Common_Content/images",
-            "$tmp_dir/$lang/$format/$content_dir/Common_Content/images" )
-            if ( $embedtoc == 0 );
 
         dircopy( "$xml_lang/files",
             "$tmp_dir/$lang/$format/$content_dir/files" )
@@ -1206,14 +1222,19 @@ sub transform {
         # remove all html files
         my @htmls = glob "*.html";
         foreach (@htmls) {
-#            unlink($_);
+            unlink($_);
         }
 
-        print "Zipping $filename.tar.gz\n";
-        system("tar -czf $filename.tar.gz ./$filename.csv ./$lang")
-            && croak( maketext("Failed to zip $filename.tar.gz\n") );
-
+        my $tar      = Archive::Tar->new();
+        my @filelist = File::Find::Rule->file->in($content_dir);
+        $tar->add_files(@filelist);
+        $tar->write( $filename, COMPRESS_GZIP );
         $dir = undef;
+        logger(
+            maketext( "Wrote tar archive: [_1]",
+                "$tmp_dir/$lang/$format/$filename" )
+                . "\n"
+        );
     }
     else {
         my $images = $self->{publican}->param('img_dir');
@@ -1268,7 +1289,13 @@ sub drupal_transform {
 
     my $lang = delete $args->{lang}
         || croak maketext(
-        "lang is the mandatory argument for drupal_transform");
+        "[_1] is a mandatory argument for drupal_transform", 'lang' );
+    my $filename = delete $args->{filename}
+        || croak maketext(
+        "[_1] is a mandatory argument for drupal_transform", 'filename' );
+    my $title = delete $args->{title}
+        || croak maketext(
+        "[_1] is a mandatory argument for drupal_transform", 'title' );
 
     my $tmp_dir    = $self->{publican}->param('tmp_dir');
     my $main_file  = $self->{publican}->param('mainfile');
@@ -1298,33 +1325,6 @@ sub drupal_transform {
         }
     );
 
-    my @csv_headers = (
-        "Title",
-        "Book",
-        "Parent item",
-        "Weight",
-        "Menu link title",
-        "Alias for node which should be used as parent menu",
-        "Body",
-        "Input format",
-        "Authored By",
-        "Published",
-        "URL path settings",
-    );
-
-    my $csv_file = "$product-$version-$docname-$lang-$edition-$release.csv";
-
-    print "Writing $csv_file\n";
-
-    my $xs
-        = Text::CSV_XS->new( { binary => 1, always_quote => 1, eol => $/ } );
-
-    open my $fh, ">:encoding(utf8)", "$drupal_dir/$csv_file"
-        || croak "$drupal_dir/$csv_file: $!";
-
-    $xs->combine(@csv_headers);
-    $fh->print( $xs->string );
-
     my $outputs = $self->build_drupal_book(
         {   lang         => $lang,
             nodes_order  => $nodes_order,
@@ -1333,25 +1333,27 @@ sub drupal_transform {
         }
     );
 
-    foreach my $row ( @{$outputs} ) {
-        $xs->combine( @{$row} ) or $xs->error_diag;
-        $fh->print( $xs->string );
-    }
-
-
-    $fh->close();
     $self->{dbh}->disconnect()
         if ( defined $self->{dbh} );
 
-    my $out_file = "$drupal_dir/$product-$version-$docname-$lang-$edition-$release.xml";
+    my $out_file
+        = "$drupal_dir/$product-$version-$docname-$lang-$edition-$release.xml";
+    my $fh;
+
     open( $fh, ">:encoding(UTF-8)", $out_file )
-            || croak(
-            maketext( "Could not open [_1] for output: [_2]", $out_file, $@ ) );
+        || croak(
+        maketext( "Could not open [_1] for output: [_2]", $out_file, $@ ) );
 
+    $fh->print(<<EOH);
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+	<title>$title</title>
+	<lang>$lang</lang>
+	<images>$filename</images>
+EOH
 
-    $fh->print(qq{<?xml version="1.0" encoding="UTF-8"?>\n<document>\n});
     foreach my $row ( @{$outputs} ) {
-         $fh->print(<<EOR);
+        $fh->print(<<EOR);
   <page>
     <title>$row->[0]</title>
     <url>$row->[10]</url>
@@ -1660,7 +1662,7 @@ sub build_drupal_book {
             }
 
             $title =~ s/\s+/ /g;
-            my $html_string = $tree->as_HTML('<>&', "",{});
+            my $html_string = $tree->as_HTML( '<>&', "", {} );
             $html_string =~ s{^<!DOCTYPE [^>]*>\n*}{};
             $html_string =~ s{<html.*>\s*<body[^>]*>}{};
             $html_string =~ s{</body>}{};
@@ -2212,10 +2214,16 @@ sub web_labels {
     croak( maketext( "Can't locate required file: [_1]", $xml_file ) )
         if ( !-f $xml_file );
 
-    my $xml_doc = XML::TreeBuilder->new({ 'NoExpand' => "0", 'ErrorContext' => "2" });
+    my $xml_doc = XML::TreeBuilder->new(
+        { 'NoExpand' => "0", 'ErrorContext' => "2" } );
     eval { $xml_doc->parse_file($xml_file); };
     if ($@) {
-        croak( maketext( "FATAL ERROR 9: opening file [_1]:\n\t[_2]",$xml_file, $@ ) );
+        croak(
+            maketext(
+                "FATAL ERROR 9: opening file [_1]:\n\t[_2]", $xml_file,
+                $@
+            )
+        );
     }
 
     # BUGBUG can't translate overridden labels :(
