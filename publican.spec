@@ -19,7 +19,7 @@
 
 Name:           publican
 Version:        4.1.4
-Release:        1%{?dist}
+Release:        1%{?dist}.t2
 Summary:        Common files and scripts for publishing with DocBook XML
 # For a breakdown of the licensing, refer to LICENSE
 License:        (GPLv2+ or Artistic) and CC0
