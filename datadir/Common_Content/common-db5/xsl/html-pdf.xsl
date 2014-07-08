@@ -106,24 +106,6 @@ Version:
      <xsl:call-template name="user.header.content">
         <xsl:with-param name="node" select="$doc"/>
       </xsl:call-template>
-<!--      <p xmlns="http://www.w3.org/1999/xhtml">
-        <xsl:attribute name="id">
-           <xsl:text>title</xsl:text>
-        </xsl:attribute>
-        <a class="left">
-          <xsl:attribute name="href">
-              <xsl:value-of select="$prod.url"/>
-          </xsl:attribute>
-          <img src="Common_Content/images/image_left.png" alt="Product Site"/>
-        </a>
-        <a class="right">
-          <xsl:attribute name="href">
-            <xsl:value-of select="$doc.url"/>
-          </xsl:attribute>
-          <img src="Common_Content/images/image_right.png" alt="Documentation Site"/>
-        </a>
-      </p>
--->
       <xsl:apply-templates select="."/>
       <xsl:call-template name="user.footer.content">
         <xsl:with-param name="node" select="$doc"/>

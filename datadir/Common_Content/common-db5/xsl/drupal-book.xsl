@@ -1,15 +1,17 @@
 <?xml version='1.0'?>
 
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:d="http://docbook.org/ns/docbook"
+  xmlns:perl="urn:perl"
 				xmlns:exsl="http://exslt.org/common"
 				version="1.0"
-				exclude-result-prefixes="exsl">
+				exclude-result-prefixes="exsl d"
+  extension-element-prefixes="perl d"
+>
 
-<xsl:import href="http://docbook.sourceforge.net/release/xsl/current/xhtml/docbook.xsl"/>
-<xsl:import href="http://docbook.sourceforge.net/release/xsl/current/xhtml/chunk.xsl"/>
-
-<xsl:include href="defaults.xsl"/>
-<xsl:include href="xhtml-common.xsl"/>
+<xsl:import href="http://docbook.sourceforge.net/release/xsl-ns/current/xhtml5/docbook.xsl"/>
+<xsl:import href="http://docbook.sourceforge.net/release/xsl-ns/current/xhtml5/chunk.xsl"/>
+<xsl:import href="html-common.xsl"/>
 
 <xsl:param name="generate.legalnotice.link" select="0"/>
 <xsl:param name="generate.revhistory.link" select="0"/>
@@ -19,7 +21,7 @@
 <xsl:param name="part.autolabel" select="0"/>
 <xsl:param name="reference.autolabel" select="0"/>
 <xsl:param name="section.autolabel" select="0"/-->
-
+<xsl:param name="suppress.navigation" select="1"/>
 <xsl:param name="chunker.output.omit-xml-declaration" select="'yes'"/>
 <xsl:param name="chunk.section.depth" select="1"/>
 <xsl:param name="chunk.first.sections" select="0"/>
