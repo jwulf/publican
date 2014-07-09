@@ -18,8 +18,8 @@
 %define wwwdir /var/www/html/docs
 
 Name:           publican
-Version:        4.1.4
-Release:        1%{?dist}.t2
+Version:        4.1.5
+Release:        0%{?dist}
 Summary:        Common files and scripts for publishing with DocBook XML
 # For a breakdown of the licensing, refer to LICENSE
 License:        (GPLv2+ or Artistic) and CC0
@@ -320,7 +320,7 @@ rm -rf $RPM_BUILD_ROOT
 %{wwwdir}/common-db5
 
 %changelog
-* Wed Jul 09 2014 Jeff Fearn <jfearn@redhat.com> 4.1.5-1
+* Wed Jul 09 2014 Jeff Fearn <jfearn@redhat.com> 4.1.5-0
 - Add some web UI tranlstaion strings & sort formats. BZ #1117081
 - Fix formal para title CSS. BZ #1110076
 
