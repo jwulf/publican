@@ -4,22 +4,23 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
 "PO-Revision-Date: 2013-11-12 07:02-0500\n"
 "Last-Translator: Maks <m_lyashuk@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
 "X-Generator: Zanata 3.3.2\n"
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican/TreeView.pm:197
-msgid "\n"
+msgid ""
+"\n"
 "No unused XML files"
-msgstr "\n"
+msgstr ""
+"\n"
 "Немає невикористаних файлів XML"
 
 # translation auto-copied from project Publican, version 3, document publican
@@ -56,20 +57,15 @@ msgstr "%1 завершила роботу з виведенням значен�
 
 # translation auto-copied from project Publican, version 3, document publican
 #. ('toc_path')
-#: bin/publican:765
-#: bin/publican:778
-#: lib/Publican/WebSite.pm:153
+#: bin/publican:765 bin/publican:778 lib/Publican/WebSite.pm:157
 msgid "%1 is a mandatory field in a site configuration file"
 msgstr "%1 є обов’язковим полем у файлі налаштування сайта"
 
 # translation auto-copied from project Publican, version 3, document publican
 #. ('db_file',$site_config)
-#: lib/Publican/WebSite.pm:162
-msgid ""
-"%1 is a mandatory field in a site configuration file. Check %2 for validity."
-msgstr ""
-"%1 є обов’язковим полем у файлі налаштування сайта. Перевірте коректність %2."
-""
+#: lib/Publican/WebSite.pm:166
+msgid "%1 is a mandatory field in a site configuration file. Check %2 for validity."
+msgstr "%1 є обов’язковим полем у файлі налаштування сайта. Перевірте коректність %2."
 
 # translation auto-copied from project Publican, version 3, document publican
 #. ('cmd')
@@ -87,24 +83,11 @@ msgstr ""
 #. ('brand')
 #. ('old_site_config')
 #. ('path')
-#: bin/publican:1132
-#: bin/publican:1241
-#: bin/publican:479
-#: bin/publican:573
-#: bin/publican:575
-#: bin/publican:577
-#: bin/publican:676
-#: bin/publican:678
-#: bin/publican:683
-#: bin/publican:686
-#: bin/publican:688
-#: bin/publican:698
-#: bin/publican:700
-#: bin/publican:703
-#: bin/publican:750
-#: bin/publican:752
-#: bin/publican:755
-#: bin/publican:853
+#: bin/publican:1132 bin/publican:1241 bin/publican:479 bin/publican:573
+#: bin/publican:575 bin/publican:577 bin/publican:676 bin/publican:678
+#: bin/publican:683 bin/publican:686 bin/publican:688 bin/publican:698
+#: bin/publican:700 bin/publican:703 bin/publican:750 bin/publican:752
+#: bin/publican:755 bin/publican:853
 msgid "%1 is a required argument"
 msgstr "%1 є обов’язковим аргументом"
 
@@ -114,11 +97,8 @@ msgstr "%1 є обов’язковим аргументом"
 #. ('surname')
 #. ('email')
 #. ('lang')
-#: lib/Publican.pm:1457
-#: lib/Publican.pm:1463
-#: lib/Publican.pm:1467
-#: lib/Publican.pm:1470
-#: lib/Publican.pm:1473
+#: lib/Publican.pm:1457 lib/Publican.pm:1463 lib/Publican.pm:1467
+#: lib/Publican.pm:1470 lib/Publican.pm:1473
 msgid "%1 is a required option for add_revision"
 msgstr "%1 є обов’язковим параметром для add_revision"
 
@@ -133,29 +113,21 @@ msgstr "«%1» є невідомою дією!"
 #: lib/Publican/Builder/DocBook.pm:1821
 #, fuzzy
 msgid "'%1' is not a valid language for highlighting."
-msgstr ""
-"«%1» не є коректною мовою для підсвічування. Назви мов слід вказувати з "
-"врахуванням регістру."
+msgstr "«%1» не є коректною мовою для підсвічування. Назви мов слід вказувати з врахуванням регістру."
 
 # translation auto-copied from project Publican, version 3, document publican
 #. ($language)
 #: lib/Publican/Builder/DocBook.pm:3586
-msgid ""
-"'%1' is not a valid language for highlighting. Language names are case "
-"sensitive."
-msgstr ""
-"«%1» не є коректною мовою для підсвічування. Назви мов слід вказувати з "
-"врахуванням регістру."
+msgid "'%1' is not a valid language for highlighting. Language names are case sensitive."
+msgstr "«%1» не є коректною мовою для підсвічування. Назви мов слід вказувати з врахуванням регістру."
 
 # translation auto-copied from project Publican, version 3, document publican
-#: lib/Publican/Builder/DocBook.pm:1925
-#: lib/Publican/Builder/DocBook.pm:1940
+#: lib/Publican/Builder/DocBook.pm:1925 lib/Publican/Builder/DocBook.pm:1940
 msgid "'area' requires a 'coords' attribute."
 msgstr "«area» потрібен атрибут «coords»."
 
 # translation auto-copied from project Publican, version 3, document publican
-#: lib/Publican/Builder.pm:887
-#: lib/Publican/Builder.pm:948
+#: lib/Publican/Builder.pm:887 lib/Publican/Builder.pm:948
 msgid "'books' is a required configuration parameter for a remote set"
 msgstr "«books» є обов’язковим параметром налаштування для віддаленого набору"
 
@@ -211,59 +183,33 @@ msgstr "/шлях/для/встановлення"
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican/WebSite.pm:101
-msgid ""
-"<p>The Navigation Menu above requires JavaScript to function.</p><p>Enable "
-"JavaScript to allow the Navigation Menu to function.</p><p>Disable CSS to "
-"view the Navigation options without JavaScript enabled</p>"
-msgstr ""
-"<p>Для того, щоб можна було скористатися меню навігації, слід увімкнути "
-"JavaScript.</p><p>Увімкніть JavaScript, якщо бажаєте користуватися меню "
-"навігації.</p><p>Вимкніть CSS, щоб переглянути пункти меню навігації без "
-"вмикання JavaScript.</p>"
+msgid "<p>The Navigation Menu above requires JavaScript to function.</p><p>Enable JavaScript to allow the Navigation Menu to function.</p><p>Disable CSS to view the Navigation options without JavaScript enabled</p>"
+msgstr "<p>Для того, щоб можна було скористатися меню навігації, слід увімкнути JavaScript.</p><p>Увімкніть JavaScript, якщо бажаєте користуватися меню навігації.</p><p>Вимкніть CSS, щоб переглянути пункти меню навігації без вмикання JavaScript.</p>"
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican.pm:101
-msgid ""
-"A comma-separated list of XML attributes that are not permitted in the "
-"source."
-msgstr ""
-"Список атрибутів XML, які не можна використовувати у початковому коді, "
-"відокремлених комами."
+msgid "A comma-separated list of XML attributes that are not permitted in the source."
+msgstr "Список атрибутів XML, які не можна використовувати у початковому коді, відокремлених комами."
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican.pm:107
-msgid ""
-"A comma-separated list of XML tags that are not permitted in the source."
-msgstr ""
-"Список теґів XML, які не можна використовувати у початковому коді, "
-"відокремлених комами."
+msgid "A comma-separated list of XML tags that are not permitted in the source."
+msgstr "Список теґів XML, які не можна використовувати у початковому коді, відокремлених комами."
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican.pm:408
 msgid "A comma-separated list of the formats to use for the web packages."
-msgstr ""
-"Список відокремлених комами форматів, які слід використовувати для веб-"
-"пакунків."
+msgstr "Список відокремлених комами форматів, які слід використовувати для веб-пакунків."
 
 # translation auto-copied from project Publican, version 3, document publican
-#: lib/Publican/CreateBook.pm:268
-#: lib/Publican/CreateBook.pm:529
-msgid ""
-"A short overview and summary of the book's subject and purpose, "
-"traditionally no more than one paragraph long. Note: the abstract will "
-"appear in the front matter of your book and will also be placed in the "
-"description field of the book's RPM spec file."
-msgstr ""
-"Короткий огляд і резюме теми і призначення книги, за об’ємом традиційно не "
-"перевищує одного абзацу. Зауваження: резюме буде показано на титульному "
-"листі вашої книги, його також буде додано у поле опису файла специфікації "
-"пакунка RPM книги."
+#: lib/Publican/CreateBook.pm:268 lib/Publican/CreateBook.pm:529
+msgid "A short overview and summary of the book's subject and purpose, traditionally no more than one paragraph long. Note: the abstract will appear in the front matter of your book and will also be placed in the description field of the book's RPM spec file."
+msgstr "Короткий огляд і резюме теми і призначення книги, за об’ємом традиційно не перевищує одного абзацу. Зауваження: резюме буде показано на титульному листі вашої книги, його також буде додано у поле опису файла специфікації пакунка RPM книги."
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican.pm:96
 msgid "A space-separated list of books used in this remote set."
-msgstr ""
-"Список відокремлених пробілами назв книг для цього віддаленого набору."
+msgstr "Список відокремлених пробілами назв книг для цього віддаленого набору."
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican/Builder/DocBook.pm:673
@@ -292,12 +238,8 @@ msgstr "Додати запис до журналу версій"
 
 # translation auto-copied from project Publican, version 3, document publican
 #: bin/publican:297
-msgid ""
-"Add or remove database entries. Used for processing pre-build books, such as "
-"when building packages."
-msgstr ""
-"Додати або вилучити записи бази даних. Використовується для обробки "
-"попередньо зібраних книг, зокрема під час збирання пакунків."
+msgid "Add or remove database entries. Used for processing pre-build books, such as when building packages."
+msgstr "Додати або вилучити записи бази даних. Використовується для обробки попередньо зібраних книг, зокрема під час збирання пакунків."
 
 # translation auto-copied from project Publican, version 3, document publican
 #. ($lang)
@@ -308,22 +250,18 @@ msgstr "Всі формати збирання для вказаної мови 
 # translation auto-copied from project Publican, version 3, document publican
 #: bin/publican:150
 msgid "An entry to be added to the revision. Can be specified multiple times."
-msgstr ""
-"Запис, який буде додано до запису модифікації. Можна вказувати декілька "
-"разів."
+msgstr "Запис, який буде додано до запису модифікації. Можна вказувати декілька разів."
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican.pm:87
 msgid "Arch to filter output on."
 msgstr "Архітектура для фільтрування виведених даних."
 
-#: lib/Publican/Builder/DocBook4.pm:709
-#: lib/Publican/Builder/DocBook5.pm:687
+#: lib/Publican/Builder/DocBook4.pm:709 lib/Publican/Builder/DocBook5.pm:687
 msgid "Author’s firstname not found in Author_Group.xml as expected."
 msgstr ""
 
-#: lib/Publican/Builder/DocBook4.pm:718
-#: lib/Publican/Builder/DocBook5.pm:696
+#: lib/Publican/Builder/DocBook4.pm:718 lib/Publican/Builder/DocBook5.pm:696
 msgid "Author’s surname not found in Author_Group.xml as expected."
 msgstr ""
 
@@ -354,17 +292,14 @@ msgstr "Книги"
 
 # translation auto-copied from project Publican, version 3, document publican
 #. ($brand)
-#: lib/Publican/Builder/DocBook4.pm:415
-#: lib/Publican/Builder/DocBook5.pm:418
+#: lib/Publican/Builder/DocBook4.pm:415 lib/Publican/Builder/DocBook5.pm:418
 msgid "Brand '%1' had no content to copy."
 msgstr "Для позначки «%1» не виявлено даних для копіювання."
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican.pm:286
 msgid "Brand option to disable embedding the navigational toc in web packages"
-msgstr ""
-"Параметр позначки для вимикання вбудовування навігаційного змісту до "
-"вебпакунків"
+msgstr "Параметр позначки для вимикання вбудовування навігаційного змісту до вебпакунків"
 
 # translation auto-copied from project Publican, version 3, document publican
 #: bin/publican:101
@@ -378,22 +313,18 @@ msgid "Building rpms from %1 using %2 in %3"
 msgstr "Збирання rpm з %1 за допомогою %2 у %3"
 
 #: lib/Publican.pm:326
-msgid ""
-"By default Revision History is sorted in descending order. Set this to 'asc' "
-"or 'ascending' to reverse the sort."
+msgid "By default Revision History is sorted in descending order. Set this to 'asc' or 'ascending' to reverse the sort."
 msgstr ""
 
 # translation auto-copied from project Publican, version 3, document publican
 #. ($lang)
-#: lib/Publican/Builder/DocBook4.pm:557
-#: lib/Publican/Builder/DocBook5.pm:561
+#: lib/Publican/Builder/DocBook4.pm:557 lib/Publican/Builder/DocBook5.pm:561
 msgid "Bypassing test for language: %1"
 msgstr "Тест для вказаної мови пропущено: %1"
 
 # translation auto-copied from project Publican, version 3, document publican
 #. ($lang)
-#: lib/Publican/Builder/DocBook4.pm:153
-#: lib/Publican/Builder/DocBook5.pm:153
+#: lib/Publican/Builder/DocBook4.pm:153 lib/Publican/Builder/DocBook5.pm:153
 msgid "Bypassing translation for %1"
 msgstr "Пропущено переклад %1"
 
@@ -416,8 +347,7 @@ msgstr "Не вдалося відкрити файл %1. Помилка: %2"
 
 # translation auto-copied from project Publican, version 3, document publican
 #. ($from,$to,$@)
-#: lib/Publican.pm:1731
-#: lib/Publican.pm:1753
+#: lib/Publican.pm:1731 lib/Publican.pm:1753
 #, fuzzy
 msgid "Can not copy files %1 to %2 due to error: %3"
 msgstr "Не вдалося відкрити файл %1. Помилка: %2"
@@ -425,8 +355,7 @@ msgstr "Не вдалося відкрити файл %1. Помилка: %2"
 # translation auto-copied from project Publican, version 3, document publican
 #. ('abstract',$info_file)
 #. ('subtitle',$info_file)
-#: lib/Publican/Builder/DocBook.pm:2379
-#: lib/Publican/Builder/DocBook.pm:2465
+#: lib/Publican/Builder/DocBook.pm:2379 lib/Publican/Builder/DocBook.pm:2465
 #, fuzzy
 msgid "Can not locate '%1' tag in file '%2'"
 msgstr "Не вдалося виявити основний файл XML: «%1»"
@@ -447,13 +376,11 @@ msgstr "Не вдалося відкрити файл %1. Помилка: %2"
 #. ($name)
 #: lib/Publican/CreateBrand.pm:104
 msgid "Can't create brand, directory 'publican-%1' exists!"
-msgstr ""
-"Не вдалося створити позначку, каталог з назвою «publican-%1» вже існує!"
+msgstr "Не вдалося створити позначку, каталог з назвою «publican-%1» вже існує!"
 
 # translation auto-copied from project Publican, version 3, document publican
 #. ($@)
-#: lib/Publican/CreateBrand.pm:109
-#: lib/Publican/CreateBrand.pm:112
+#: lib/Publican/CreateBrand.pm:109 lib/Publican/CreateBrand.pm:112
 msgid "Can't create directory: %1"
 msgstr "Не вдалося створити каталог: %1"
 
@@ -461,11 +388,8 @@ msgstr "Не вдалося створити каталог: %1"
 #. ($info_file)
 #. ($rev_file)
 #. ($xml_file)
-#: bin/publican:1170
-#: lib/Publican.pm:1625
-#: lib/Publican.pm:663
-#: lib/Publican/Builder.pm:556
-#: lib/Publican/Builder/DocBook.pm:2163
+#: bin/publican:1170 lib/Publican.pm:1625 lib/Publican.pm:663
+#: lib/Publican/Builder.pm:556 lib/Publican/Builder/DocBook.pm:2163
 #: lib/Publican/Builder/DocBook.pm:636
 msgid "Can't locate required file: %1"
 msgstr "Не вдалося виявити потрібний файл: %1"
@@ -477,8 +401,7 @@ msgstr "Не вдалося виявити srpm, пакування перерв
 
 # translation auto-copied from project Publican, version 3, document publican
 #. ($@)
-#: bin/db4-2-db5:61
-#: lib/Publican/Builder/DocBook.pm:261
+#: bin/db4-2-db5:61 lib/Publican/Builder/DocBook.pm:261
 msgid "Can't open ad file: %1"
 msgstr "Не вдалося відкрити файл ad: %1"
 
@@ -490,16 +413,13 @@ msgstr "Не вдалося відкрити каталог: %1"
 
 # translation auto-copied from project Publican, version 3, document publican
 #. ($xml_file,$@)
-#: lib/Publican/Translate.pm:128
-#: lib/Publican/Translate.pm:186
+#: lib/Publican/Translate.pm:128 lib/Publican/Translate.pm:186
 msgid "Can't open file %1. Error: %2"
 msgstr "Не вдалося відкрити файл %1. Помилка: %2"
 
 # translation auto-copied from project Publican, version 3, document publican
 #. ($file,$@)
-#: bin/fix-zanata-map:69
-#: bin/publican:1299
-#: lib/Publican/XmlClean.pm:1010
+#: bin/fix-zanata-map:69 bin/publican:1299 lib/Publican/XmlClean.pm:1010
 msgid "Can't open file '%1' %2"
 msgstr "Не вдалося відкрити файл «%1» %2"
 
@@ -509,7 +429,7 @@ msgid "Can't open file for html input!"
 msgstr "Не вдалося відкрити файл вхідних даних html!"
 
 #. ($!)
-#: lib/Publican/WebSite.pm:1220
+#: lib/Publican/WebSite.pm:1222
 msgid "Can't open file for html input: %1"
 msgstr ""
 
@@ -521,8 +441,7 @@ msgstr "Не вдалося відкрити файл для виведення 
 # translation auto-copied from project Publican, version 3, document publican
 #. ($in_file,$@)
 #. ($xml_file,$@)
-#: lib/Publican/TreeView.pm:154
-#: lib/Publican/TreeView.pm:235
+#: lib/Publican/TreeView.pm:154 lib/Publican/TreeView.pm:235
 #: lib/Publican/TreeView.pm:82
 msgid "Can't open file: %1: %2"
 msgstr "Не вдалося відкрити файл: %1: %2"
@@ -552,8 +471,7 @@ msgstr "Не вдалося виконати запис до overrides.cfg: %1"
 
 # translation auto-copied from project Publican, version 3, document publican
 #. ($language,$@)
-#: lib/Publican/Builder/DocBook.pm:1840
-#: lib/Publican/Builder/DocBook.pm:3603
+#: lib/Publican/Builder/DocBook.pm:1840 lib/Publican/Builder/DocBook.pm:3603
 #, fuzzy
 msgid "Cannot create plugin for language '%1': %2"
 msgstr "Не вдалося виявити основний файл XML: «%1»"
@@ -565,8 +483,7 @@ msgstr ""
 
 # translation auto-copied from project Publican, version 3, document publican
 #. ("$main_file.xml")
-#: lib/Publican/Builder/DocBook4.pm:576
-#: lib/Publican/Builder/DocBook5.pm:579
+#: lib/Publican/Builder/DocBook4.pm:576 lib/Publican/Builder/DocBook5.pm:579
 msgid "Cannot locate main XML file: '%1'"
 msgstr "Не вдалося виявити основний файл XML: «%1»"
 
@@ -588,9 +505,7 @@ msgstr "Не вдалося знайти теґ title у файлі Info!"
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican.pm:384
 msgid "Choose the formatter to use when creating txt output."
-msgstr ""
-"Виберіть засіб форматування, який буде використано для виведення даних у "
-"текстовому форматі."
+msgstr "Виберіть засіб форматування, який буде використано для виведення даних у текстовому форматі."
 
 # translation auto-copied from project Publican, version 3, document publican
 #. ($publican->param('tmp_dir'))
@@ -610,12 +525,8 @@ msgstr "Код"
 
 # translation auto-copied from project Publican, version 3, document publican
 #: bin/publican:109
-msgid ""
-"Comma-separated list of formats, for example: html,pdf,html-single,html-"
-"desktop,txt,epub"
-msgstr ""
-"Список назв форматів, відокремлених комами. Приклад: html,pdf,html-"
-"single,html-desktop,txt,epub"
+msgid "Comma-separated list of formats, for example: html,pdf,html-single,html-desktop,txt,epub"
+msgstr "Список назв форматів, відокремлених комами. Приклад: html,pdf,html-single,html-desktop,txt,epub"
 
 # translation auto-copied from project Publican, version 3, document publican
 #: bin/publican:112
@@ -630,9 +541,7 @@ msgstr "Умови, за яких слід пропускати XML перед �
 # translation auto-copied from project Publican, version 3, document publican
 #: bin/publican:584
 msgid "Config file exists, you must supply a non-existent filename."
-msgstr ""
-"Файл налаштувань вже існує, вам слід вказати назву, яку ще не було "
-"використано."
+msgstr "Файл налаштувань вже існує, вам слід вказати назву, яку ще не було використано."
 
 # translation auto-copied from project Publican, version 3, document publican
 #. ($configfile)
@@ -643,8 +552,7 @@ msgstr "Не знайдено файла налаштувань: %1."
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican/Builder.pm:873
 msgid "Config parameter 'scm' not found; treating set as standalone."
-msgstr ""
-"Не виявлено параметра налаштування «scm». Набір вважатиметься автономним."
+msgstr "Не виявлено параметра налаштування «scm». Набір вважатиметься автономним."
 
 # translation auto-copied from project Publican, version 3, document publican
 #. ($PARAMS{$param}->{constraint})
@@ -681,18 +589,12 @@ msgstr ""
 #. ("\$tmp_dir/\$lang/\$format/OEBPS/Common_Content/css/lang.css")
 #. ($content_file)
 #. ($file)
-#: bin/fix-zanata-map:75
-#: lib/Publican.pm:1583
-#: lib/Publican/Builder/DocBook.pm:1062
-#: lib/Publican/Builder/DocBook.pm:1112
-#: lib/Publican/Builder/DocBook4.pm:264
-#: lib/Publican/Builder/DocBook4.pm:316
-#: lib/Publican/Builder/DocBook5.pm:264
-#: lib/Publican/Builder/DocBook5.pm:319
-#: lib/Publican/CreateBook.pm:687
-#: lib/Publican/Translate.pm:234
-#: lib/Publican/XmlClean.pm:1128
-#: lib/Publican/XmlClean.pm:1197
+#: bin/fix-zanata-map:75 lib/Publican.pm:1583
+#: lib/Publican/Builder/DocBook.pm:1062 lib/Publican/Builder/DocBook.pm:1112
+#: lib/Publican/Builder/DocBook4.pm:264 lib/Publican/Builder/DocBook4.pm:316
+#: lib/Publican/Builder/DocBook5.pm:264 lib/Publican/Builder/DocBook5.pm:319
+#: lib/Publican/CreateBook.pm:687 lib/Publican/Translate.pm:234
+#: lib/Publican/XmlClean.pm:1128 lib/Publican/XmlClean.pm:1197
 #: lib/Publican/XmlClean.pm:541
 msgid "Could not open %1 for output!"
 msgstr "Не вдалося відкрити %1 для виведення даних!"
@@ -705,7 +607,7 @@ msgstr "Не вдалося відкрити %1 для виведення дан
 
 # translation auto-copied from project Publican, version 3, document publican
 #. ($@)
-#: lib/Publican/WebSite.pm:1326
+#: lib/Publican/WebSite.pm:1328
 msgid "Could not open dump file for output: %1"
 msgstr "Не вдалося відкрити файл дампа для виведення даних: %1"
 
@@ -717,8 +619,7 @@ msgstr "Не вдалося відкрити файл пункту. %1"
 
 # translation auto-copied from project Publican, version 3, document publican
 #. ($out_file)
-#: lib/Publican/CreateBrand.pm:245
-#: lib/Publican/CreateBrand.pm:318
+#: lib/Publican/CreateBrand.pm:245 lib/Publican/CreateBrand.pm:318
 msgid "Could not open file %1 for output!"
 msgstr "Не вдалося відкрити файл %1 для виведення даних!"
 
@@ -734,7 +635,7 @@ msgstr "Не вдалося відкрити файл README для виведе
 
 # translation auto-copied from project Publican, version 3, document publican
 #. ($@)
-#: lib/Publican/WebSite.pm:1439
+#: lib/Publican/WebSite.pm:1441
 msgid "Could not open footer file for output: %1"
 msgstr "Не вдалося відкрити файл нижнього колонтитула для виведення даних: %1"
 
@@ -746,7 +647,7 @@ msgstr "Не вдалося відкрити файл піктограми. %1"
 
 # translation auto-copied from project Publican, version 3, document publican
 #. ($@)
-#: lib/Publican/WebSite.pm:1432
+#: lib/Publican/WebSite.pm:1434
 msgid "Could not open search file for output: %1"
 msgstr "Не вдалося відкрити файл пошуку для виведення даних: %1"
 
@@ -794,9 +695,7 @@ msgstr "Вилучити запис бази даних"
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican.pm:371
 msgid "Depth of sections to include in the main table of contents."
-msgstr ""
-"Мінімальний рівень розділу у ієрархії для включення до основного списку "
-"змісту."
+msgstr "Мінімальний рівень розділу у ієрархії для включення до основного списку змісту."
 
 # translation auto-copied from project Publican, version 3, document publican
 #: bin/publican:164
@@ -818,8 +717,7 @@ msgstr "Каталог початкових файлів publican."
 msgid "Directory to use for building."
 msgstr "Каталог, який слід використовувати для збирання."
 
-#: lib/Publican.pm:245
-#: lib/Publican.pm:261
+#: lib/Publican.pm:245 lib/Publican.pm:261
 msgid "Directory where images are located."
 msgstr ""
 
@@ -883,28 +781,23 @@ msgstr ""
 msgid "Document Language"
 msgstr "Загалом мов"
 
+#: lib/Publican/WebSite.pm:136
+msgid "EPUB"
+msgstr ""
+
 # translation auto-copied from project Publican, version 3, document publican
 #. ($attr)
 #: lib/Publican/XmlClean.pm:662
-msgid ""
-"ERROR: Banned attribute (%1) detected. Discuss this with your brands owners "
-"if you think this is in error."
-msgstr ""
-"ПОМИЛКА: виявлено заборонений атрибут (%1). Якщо ви вважаєте, що сталася "
-"якась помилка, зверніться до власників вашої версії системи."
+msgid "ERROR: Banned attribute (%1) detected. Discuss this with your brands owners if you think this is in error."
+msgstr "ПОМИЛКА: виявлено заборонений атрибут (%1). Якщо ви вважаєте, що сталася якась помилка, зверніться до власників вашої версії системи."
 
 # translation auto-copied from project Publican, version 3, document publican
 #. ($tag)
 #: lib/Publican/XmlClean.pm:651
-msgid ""
-"ERROR: Banned tag (%1) detected. Discuss this with your brands owners if you "
-"think this is in error."
-msgstr ""
-"ПОМИЛКА: виявлено заборонений теґ (%1). Якщо ви вважаєте, що сталася якась "
-"помилка, зверніться до власників вашої версії системи."
+msgid "ERROR: Banned tag (%1) detected. Discuss this with your brands owners if you think this is in error."
+msgstr "ПОМИЛКА: виявлено заборонений теґ (%1). Якщо ви вважаєте, що сталася якась помилка, зверніться до власників вашої версії системи."
 
-#: lib/Publican/Builder/DocBook4.pm:680
-#: lib/Publican/Builder/DocBook5.pm:658
+#: lib/Publican/Builder/DocBook4.pm:680 lib/Publican/Builder/DocBook5.pm:658
 msgid "ERROR: Cannot find Author file Author_Group.xml."
 msgstr ""
 
@@ -912,9 +805,7 @@ msgstr ""
 #. ($revnumber,q|\d[0-9.]*-\d[0-9.]*|)
 #: lib/Publican/Builder/DocBook.pm:2312
 msgid "ERROR: revnumber '%1' does not match required format %2. e.g. '1-1'.\n"
-msgstr ""
-"ПОМИЛКА: номер модифікації (revnumber) «%1» не відповідає обов’язковому "
-"форматуванню %2. Приклад форматування: «1-1».\n"
+msgstr "ПОМИЛКА: номер модифікації (revnumber) «%1» не відповідає обов’язковому форматуванню %2. Приклад форматування: «1-1».\n"
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican.pm:232
@@ -930,8 +821,7 @@ msgstr "Назва додатка Eclipse. Типове значення — \"$
 #. ('$VERSION')
 #: lib/Publican.pm:240
 msgid "Eclipse plugin provider. Defaults to \"Publican-%1\""
-msgstr ""
-"Вміст поля розробника додатка Eclipse. Типове значення — \"Publican-%1\""
+msgstr "Вміст поля розробника додатка Eclipse. Типове значення — \"Publican-%1\""
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican/Builder/DocBook.pm:666
@@ -953,61 +843,47 @@ msgid "English is newer"
 msgstr ""
 
 # translation auto-copied from project Publican, version 3, document publican
-#: lib/Publican/CreateBook.pm:260
-#: lib/Publican/CreateBook.pm:520
+#: lib/Publican/CreateBook.pm:260 lib/Publican/CreateBook.pm:520
 msgid "Enter a short description here."
 msgstr "Тут вам слід вказати короткий опис."
 
 # translation auto-copied from project Publican, version 3, document publican
-#: lib/Publican/CreateBook.pm:172
-#: lib/Publican/CreateBook.pm:323
-#: lib/Publican/CreateBook.pm:432
-#: lib/Publican/CreateBook.pm:584
+#: lib/Publican/CreateBook.pm:172 lib/Publican/CreateBook.pm:323
+#: lib/Publican/CreateBook.pm:432 lib/Publican/CreateBook.pm:584
 msgid "Enter your email address here."
 msgstr "Тут вам слід вказати вашу адресу електронної пошти."
 
 # translation auto-copied from project Publican, version 3, document publican
-#: lib/Publican/CreateBook.pm:153
-#: lib/Publican/CreateBook.pm:314
-#: lib/Publican/CreateBook.pm:414
-#: lib/Publican/CreateBook.pm:576
+#: lib/Publican/CreateBook.pm:153 lib/Publican/CreateBook.pm:314
+#: lib/Publican/CreateBook.pm:414 lib/Publican/CreateBook.pm:576
 msgid "Enter your first name here."
 msgstr "Тут вам слід вказати ваше ім’я."
 
 # translation auto-copied from project Publican, version 3, document publican
-#: lib/Publican/CreateBook.pm:162
-#: lib/Publican/CreateBook.pm:422
+#: lib/Publican/CreateBook.pm:162 lib/Publican/CreateBook.pm:422
 msgid "Enter your organisation's name here."
 msgstr "Тут вам слід вказати назву установи."
 
 # translation auto-copied from project Publican, version 3, document publican
-#: lib/Publican/CreateBook.pm:167
-#: lib/Publican/CreateBook.pm:427
+#: lib/Publican/CreateBook.pm:167 lib/Publican/CreateBook.pm:427
 msgid "Enter your organisational division here."
 msgstr "Тут вам слід вказати назву підрозділу."
 
 # translation auto-copied from project Publican, version 3, document publican
-#: lib/Publican/CreateBook.pm:156
-#: lib/Publican/CreateBook.pm:318
-#: lib/Publican/CreateBook.pm:417
-#: lib/Publican/CreateBook.pm:580
+#: lib/Publican/CreateBook.pm:156 lib/Publican/CreateBook.pm:318
+#: lib/Publican/CreateBook.pm:417 lib/Publican/CreateBook.pm:580
 msgid "Enter your surname here."
 msgstr "Тут вам слід вказати ваше прізвище."
 
 #: lib/Publican.pm:481
-msgid ""
-"Extra options to pass to wkhtmltopdf. e.g. wkhtmltopdf_opts: \"-O landscape -"
-"s A3\""
+msgid "Extra options to pass to wkhtmltopdf. e.g. wkhtmltopdf_opts: \"-O landscape -s A3\""
 msgstr ""
 
 # translation auto-copied from project Publican, version 3, document publican
 #. ($@)
-#: bin/db4-2-db5:50
-#: lib/Publican/Builder/DocBook.pm:243
-#: lib/Publican/Builder/DocBook.pm:2459
-#: lib/Publican/Builder/DocBook.pm:288
-#: lib/Publican/Builder/DocBook.pm:961
-#: lib/Publican/Builder/DocBook4.pm:598
+#: bin/db4-2-db5:50 lib/Publican/Builder/DocBook.pm:243
+#: lib/Publican/Builder/DocBook.pm:2459 lib/Publican/Builder/DocBook.pm:288
+#: lib/Publican/Builder/DocBook.pm:961 lib/Publican/Builder/DocBook4.pm:598
 #: lib/Publican/Builder/DocBook5.pm:601
 msgid "FATAL ERROR: %1"
 msgstr "КРИТИЧНА ПОМИЛКА: %1"
@@ -1016,38 +892,25 @@ msgstr "КРИТИЧНА ПОМИЛКА: %1"
 #. ($xml_file,$@)
 #. ($xsl_file,$@)
 #. ($rev_file,$@)
-#: lib/Publican.pm:1224
-#: lib/Publican.pm:1247
-#: lib/Publican.pm:1551
-#: lib/Publican.pm:1647
-#: lib/Publican.pm:688
+#: lib/Publican.pm:1224 lib/Publican.pm:1247 lib/Publican.pm:1551
+#: lib/Publican.pm:1647 lib/Publican.pm:688
 msgid "FATAL ERROR: %1: %2"
 msgstr ""
 
 # translation auto-copied from project Publican, version 3, document publican
 #. ($@->domain(),$@->code(),$@->file(),$@->line(),$@->message(),)
-#: bin/db4-2-db5:43
-#: lib/Publican.pm:1214
-#: lib/Publican.pm:1237
-#: lib/Publican.pm:1541
-#: lib/Publican.pm:1637
-#: lib/Publican.pm:677
-#: lib/Publican/Builder/DocBook.pm:231
-#: lib/Publican/Builder/DocBook.pm:951
-#: lib/Publican/Builder/DocBook4.pm:588
-#: lib/Publican/Builder/DocBook5.pm:591
+#: bin/db4-2-db5:43 lib/Publican.pm:1214 lib/Publican.pm:1237
+#: lib/Publican.pm:1541 lib/Publican.pm:1637 lib/Publican.pm:677
+#: lib/Publican/Builder/DocBook.pm:231 lib/Publican/Builder/DocBook.pm:951
+#: lib/Publican/Builder/DocBook4.pm:588 lib/Publican/Builder/DocBook5.pm:591
 msgid "FATAL ERROR: %1:%2 in %3 on line %4: %5"
 msgstr "КРИТИЧНА ПОМИЛКА: %1:%2 у %3, рядок %4: %5"
 
 # translation auto-copied from project Publican, version 3, document publican
 #. ($attr)
 #: lib/Publican/XmlClean.pm:346
-msgid ""
-"FATAL ERROR: profiling would prune root node. Do NOT set attributes to prune "
-"on in a root node. Offending attibute: %1"
-msgstr ""
-"КРИТИЧНА ПОМИЛКА: профілювання за архітектурою (arch) призведе до пропуску "
-"кореневого вузла (root). НЕ ВСТАНОВЛЮЙТЕ arch у кореневому вузлі."
+msgid "FATAL ERROR: profiling would prune root node. Do NOT set attributes to prune on in a root node. Offending attibute: %1"
+msgstr "КРИТИЧНА ПОМИЛКА: профілювання за архітектурою (arch) призведе до пропуску кореневого вузла (root). НЕ ВСТАНОВЛЮЙТЕ arch у кореневому вузлі."
 
 #. ($VR,'^([0-9.]*)-([0-9.]*)$/')
 #: lib/Publican.pm:1666
@@ -1058,17 +921,13 @@ msgstr "формат запису revnumber (%1) не відповідає об�
 #. ('^([0-9.]*)-([0-9.]*)$/')
 #: lib/Publican.pm:1659
 #, fuzzy
-msgid ""
-"FATAL ERROR: revnumber missing or empty, it must match the required format "
-"of '%1'"
+msgid "FATAL ERROR: revnumber missing or empty, it must match the required format of '%1'"
 msgstr "формат запису revnumber (%1) не відповідає обов’язковому формату «%2»"
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican/Builder/DocBook.pm:1027
 msgid "FOP error, PDF generation failed. Check log for details."
-msgstr ""
-"Помилка FOP, спроба створення PDF зазнала невдачі. Докладніші дані можна "
-"знайти у журналі."
+msgstr "Помилка FOP, спроба створення PDF зазнала невдачі. Докладніші дані можна знайти у журналі."
 
 # translation auto-copied from project Publican, version 3, document publican
 #. ($rpmbuild,$!)
@@ -1078,15 +937,10 @@ msgstr "Не вдалося виконати %1, номер помилки: %2"
 
 # translation auto-copied from project Publican, version 3, document publican
 #. ($@)
-#: lib/Publican.pm:1255
-#: lib/Publican.pm:1355
-#: lib/Publican.pm:899
-#: lib/Publican/Builder/DocBook.pm:973
-#: lib/Publican/Builder/DocBook4.pm:616
+#: lib/Publican.pm:1255 lib/Publican.pm:1355 lib/Publican.pm:899
+#: lib/Publican/Builder/DocBook.pm:973 lib/Publican/Builder/DocBook4.pm:616
 msgid "Failed to load Win32::TieRegistry module. Error: %1"
-msgstr ""
-"Не вдалося завантажити модуль Win32::TieRegistry. Повідомлення про помилку: "
-"%1"
+msgstr "Не вдалося завантажити модуль Win32::TieRegistry. Повідомлення про помилку: %1"
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican.pm:751
@@ -1120,9 +974,7 @@ msgstr "Не вдалося завантажити файл налаштуван
 #. ($pot_file,$@)
 #: lib/Publican/Translate.pm:928
 msgid "Failed to open output file %1. Error: %2"
-msgstr ""
-"Не вдалося відкрити файл для виведення даних %1. Повідомлення про помилку: "
-"%2"
+msgstr "Не вдалося відкрити файл для виведення даних %1. Повідомлення про помилку: %2"
 
 #. ($book,$?)
 #: lib/Publican/Builder.pm:918
@@ -1132,26 +984,20 @@ msgstr ""
 # translation auto-copied from project Publican, version 3, document publican
 #. ($pot_file,$po_file)
 #: lib/Publican/Translate.pm:341
-msgid ""
-"Fatal Error: msgmerge failed to merge updates. POT File: %1. Po File: %2"
-msgstr ""
-"Критична помилка: msgmerge не вдалося вбудувати оновлені дані. Файл POT: %1. "
-"Файл Po: %2"
+msgid "Fatal Error: msgmerge failed to merge updates. POT File: %1. Po File: %2"
+msgstr "Критична помилка: msgmerge не вдалося вбудувати оновлені дані. Файл POT: %1. Файл Po: %2"
 
 # translation auto-copied from project Publican, version 3, document publican
 #. ($book,$?)
 #: lib/Publican/Builder.pm:979
 msgid "Fatal error: Book failed to build! Book: %1. Error Number: %2"
-msgstr ""
-"Критична помилка: не вдалося зібрати книгу! Книга: %1. Номер помилки: %2"
+msgstr "Критична помилка: не вдалося зібрати книгу! Книга: %1. Номер помилки: %2"
 
 # translation auto-copied from project Publican, version 3, document publican
 #. ($book,$?)
 #: lib/Publican/Builder.pm:963
 msgid "Fatal error: Book failed to run clean_ids! Book: %1. Error Number: %2"
-msgstr ""
-"Критична помилка: не вдалося запустити clean_ids для книги! Книга: %1. Номер "
-"помилки: %2"
+msgstr "Критична помилка: не вдалося запустити clean_ids для книги! Книга: %1. Номер помилки: %2"
 
 # translation auto-copied from project Publican, version 3, document publican
 #. ($book)
@@ -1170,33 +1016,25 @@ msgstr "Назва файла"
 msgid "Finish building %1"
 msgstr "Завершення збирання %1"
 
-#: lib/Publican/Builder/DocBook4.pm:142
-#: lib/Publican/Builder/DocBook5.pm:142
+#: lib/Publican/Builder/DocBook4.pm:142 lib/Publican/Builder/DocBook5.pm:142
 msgid "Finish preprocess\n"
 msgstr ""
 
 # translation auto-copied from project Publican, version 3, document publican
 #. ($format)
-#: lib/Publican/Builder/DocBook.pm:165
-#: lib/Publican/Builder/DocBook.pm:385
+#: lib/Publican/Builder/DocBook.pm:165 lib/Publican/Builder/DocBook.pm:385
 msgid "Finished %1"
 msgstr "Завершено %1"
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican.pm:133
 msgid "For HTML, should the first section be on the same page as its parent?"
-msgstr ""
-"Чи має перший розділ у форматі HTML міститися на одній сторінці з "
-"батьківським розділом?"
+msgstr "Чи має перший розділ у форматі HTML міститися на одній сторінці з батьківським розділом?"
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican.pm:140
-msgid ""
-"For HTML, what is the deepest level of nesting at which a section should be "
-"split onto its own page?"
-msgstr ""
-"До якого рівня у ієрархії розділів слід розбивати на окремі сторінки вміст "
-"документа HTML?"
+msgid "For HTML, what is the deepest level of nesting at which a section should be split onto its own page?"
+msgstr "До якого рівня у ієрархії розділів слід розбивати на окремі сторінки вміст документа HTML?"
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican/WebSite.pm:123
@@ -1205,12 +1043,8 @@ msgstr "Формати"
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican.pm:465
-msgid ""
-"Full path for the publican site configuration file for non standard RPM "
-"websites."
-msgstr ""
-"Повний шлях до файла налаштувань сайта publican для нестандартних RPM-сайтів."
-""
+msgid "Full path for the publican site configuration file for non standard RPM websites."
+msgstr "Повний шлях до файла налаштувань сайта publican для нестандартних RPM-сайтів."
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican/Translate.pm:1146
@@ -1226,6 +1060,10 @@ msgstr "Створити зміст до вказаної глибини у іє
 #: lib/Publican/Builder/DocBook.pm:2544
 msgid "Graphic Designer"
 msgstr "Художнє оформлення"
+
+#: lib/Publican/WebSite.pm:133
+msgid "HTML (Recommended)"
+msgstr ""
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican/WebSite.pm:121
@@ -1243,8 +1081,7 @@ msgid "Information"
 msgstr "Відомості"
 
 # translation auto-copied from project Publican, version 3, document publican
-#: lib/Publican/CreateBook.pm:331
-#: lib/Publican/CreateBook.pm:592
+#: lib/Publican/CreateBook.pm:331 lib/Publican/CreateBook.pm:592
 msgid "Initial creation by publican"
 msgstr "Дата створення за допомогою publican"
 
@@ -1270,16 +1107,13 @@ msgstr "Встановити дані сторінок для позначки."
 
 # translation auto-copied from project Publican, version 3, document publican
 #. ($lang)
-#: lib/Publican/Builder/DocBook4.pm:116
-#: lib/Publican/Builder/DocBook5.pm:116
+#: lib/Publican/Builder/DocBook4.pm:116 lib/Publican/Builder/DocBook5.pm:116
 msgid "Invalid build request: language directory %1 does not exist."
-msgstr ""
-"Некоректний запит щодо збирання: каталогу з перекладами, %1, не існує."
+msgstr "Некоректний запит щодо збирання: каталогу з перекладами, %1, не існує."
 
 # translation auto-copied from project Publican, version 3, document publican
 #. ($lang)
-#: lib/Publican/Builder/DocBook4.pm:164
-#: lib/Publican/Builder/DocBook5.pm:164
+#: lib/Publican/Builder/DocBook4.pm:164 lib/Publican/Builder/DocBook5.pm:164
 msgid "Invalid build request: no PO files exist for language %1"
 msgstr "Некоректний запит щодо збирання: не знайдено файлів PO для мови %1"
 
@@ -1293,8 +1127,7 @@ msgstr "Некоректна дата, «%1», у журналі версій."
 #. ($key,$value,$constraint)
 #: lib/Publican.pm:838
 msgid "Invalid format for %1. Value (%2) does not conform to constraint (%3)"
-msgstr ""
-"Некоректний формат для %1. Значення (%2) не відповідає обмеженням (%3)"
+msgstr "Некоректний формат для %1. Значення (%2) не відповідає обмеженням (%3)"
 
 # translation auto-copied from project Publican, version 3, document publican
 #. ($lang)
@@ -1377,12 +1210,9 @@ msgstr "Перенести базу даних сайта з Publican < 3 на P
 #. ('surname')
 #. ('email')
 #. ('revnumber')
-#: lib/Publican/Builder/DocBook.pm:2252
-#: lib/Publican/Builder/DocBook.pm:2262
-#: lib/Publican/Builder/DocBook.pm:2275
-#: lib/Publican/Builder/DocBook.pm:2284
-#: lib/Publican/Builder/DocBook.pm:2293
-#: lib/Publican/Builder/DocBook.pm:2302
+#: lib/Publican/Builder/DocBook.pm:2252 lib/Publican/Builder/DocBook.pm:2262
+#: lib/Publican/Builder/DocBook.pm:2275 lib/Publican/Builder/DocBook.pm:2284
+#: lib/Publican/Builder/DocBook.pm:2293 lib/Publican/Builder/DocBook.pm:2302
 msgid "Missing mandatory field '%1' in revision history."
 msgstr "Пропущено обов’язкове поле «%1» у журналі версій."
 
@@ -1394,36 +1224,23 @@ msgstr "Пропущено обов’язкове поле «%1» у полі �
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican.pm:1424
-msgid ""
-"NOTE: These lists of tags and attributes are brand specific and are not part "
-"of Publican itself."
-msgstr ""
-"ЗАУВАЖЕННЯ: ці списки теґів і атрибутів, пов’язано лише з певною версією "
-"системи, вони не є частиною самої системи Publican."
+msgid "NOTE: These lists of tags and attributes are brand specific and are not part of Publican itself."
+msgstr "ЗАУВАЖЕННЯ: ці списки теґів і атрибутів, пов’язано лише з певною версією системи, вони не є частиною самої системи Publican."
 
 # translation auto-copied from project Publican, version 3, document publican
-#: lib/Publican/CreateBook.pm:243
-#: lib/Publican/CreateBook.pm:503
+#: lib/Publican/CreateBook.pm:243 lib/Publican/CreateBook.pm:503
 msgid "NOTE: the href does not contain a language! This is CORRECT!"
 msgstr "ЗАУВАЖЕННЯ: у href не повинно бути теґу мови! Так МАЄ бути!"
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican.pm:475
-msgid ""
-"Name of site package for non standard RPM websites. Required to ensure the "
-"site is installed."
-msgstr ""
-"Назва пакунка сайта для нестандартних RPM-сайтів. Потрібна для забезпечення "
-"встановлення сайта."
+msgid "Name of site package for non standard RPM websites. Required to ensure the site is installed."
+msgstr "Назва пакунка сайта для нестандартних RPM-сайтів. Потрібна для забезпечення встановлення сайта."
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican.pm:185
-msgid ""
-"Name of this package. Fetched from title tag in xml_lang/TYPE_Info.xml if "
-"not set in cfg file."
-msgstr ""
-"Назва цього пакунка. Значення буде отримано з теґу title файла xml_lang/"
-"TYPE_Info.xml, якщо його не встановлено у файлі cfg."
+msgid "Name of this package. Fetched from title tag in xml_lang/TYPE_Info.xml if not set in cfg file."
+msgstr "Назва цього пакунка. Значення буде отримано з теґу title файла xml_lang/TYPE_Info.xml, якщо його не встановлено у файлі cfg."
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican/TreeView.pm:271
@@ -1433,23 +1250,18 @@ msgstr "Немає невикористаних файлів зображень"
 # translation auto-copied from project Publican, version 3, document publican
 #: bin/publican:634
 msgid ""
-"Now that your site is migrated you will need to rebuild your brands and "
-"install the brands web payload on your site.\n"
+"Now that your site is migrated you will need to rebuild your brands and install the brands web payload on your site.\n"
 "\n"
-"It is also recommended that you rebuild and reinstall all books to ensure "
-"the layout is properly migrated."
+"It is also recommended that you rebuild and reinstall all books to ensure the layout is properly migrated."
 msgstr ""
-"Тепер, коли ваш сайт перенесено, вам слід повторно зібрати ваші позначки і "
-"встановити дані позначок на сайті.\n"
+"Тепер, коли ваш сайт перенесено, вам слід повторно зібрати ваші позначки і встановити дані позначок на сайті.\n"
 "\n"
-"Крім того, варто перезібрати і перевстановити всі книги, щоб забезпечити "
-"належне перенесення даних щодо їхнього компонування."
+"Крім того, варто перезібрати і перевстановити всі книги, щоб забезпечити належне перенесення даних щодо їхнього компонування."
 
 # translation auto-copied from project Publican, version 3, document publican
 #: bin/publican:672
 msgid "One of add or del is required when updating the database"
-msgstr ""
-"Для оновлення бази даних слід використовувати одну з команд, «add» або «del»"
+msgstr "Для оновлення бази даних слід використовувати одну з команд, «add» або «del»"
 
 # translation auto-copied from project Publican, version 3, document publican
 #: bin/publican:482
@@ -1486,10 +1298,8 @@ msgstr "Перевизначити шлях до каталогу Common_Content
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican.pm:450
-msgid ""
-"Override the book name, bottom level, menu label on a Publican website."
-msgstr ""
-"Перевизначити назву книги, нижній рівень, мітку меню на веб-сайті Publican."
+msgid "Override the book name, bottom level, menu label on a Publican website."
+msgstr "Перевизначити назву книги, нижній рівень, мітку меню на веб-сайті Publican."
 
 #: lib/Publican.pm:500
 msgid "Override the bookname that will be shown in the drupal menu."
@@ -1512,13 +1322,8 @@ msgstr "Перевизначити типовий шлях до даних що�
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican.pm:443
-msgid ""
-"Override the default search form for a Publican website. By default this "
-"will use Google search and do a site search if web_host is set."
-msgstr ""
-"Перевизначити типову пошукову форму для веб-сайта Publican. Типово, буде "
-"використано пошук Google та пошук за сайтом, якщо встановлено значення "
-"web_host."
+msgid "Override the default search form for a Publican website. By default this will use Google search and do a site search if web_host is set."
+msgstr "Перевизначити типову пошукову форму для веб-сайта Publican. Типово, буде використано пошук Google та пошук за сайтом, якщо встановлено значення web_host."
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican.pm:354
@@ -1533,29 +1338,24 @@ msgstr "Перевизначити типовий шлях до шаблонів
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican.pm:455
 msgid "Override the product, top level, menu label on a Publican website."
-msgstr ""
-"Перевизначити назву продукту, верхній рівень, мітку меню на веб-сайті "
-"Publican."
+msgstr "Перевизначити назву продукту, верхній рівень, мітку меню на веб-сайті Publican."
 
 #: bin/publican:161
-msgid ""
-"Override the tool to use when creating PDFs. Valid options are wkhtmltopdf "
-"and fop."
+msgid "Override the tool to use when creating PDFs. Valid options are wkhtmltopdf and fop."
 msgstr ""
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican.pm:460
-msgid ""
-"Override the version, middle level, menu label on a Publican website. To "
-"hide this menu item set this to: UNUSED"
+msgid "Override the version, middle level, menu label on a Publican website. To hide this menu item set this to: UNUSED"
+msgstr "Перевизначити номер версії, середній рівень, мітку меню на веб-сайті Publican. Щоб сховати цей пункт меню, встановіть значення UNUSED"
+
+#: lib/Publican/WebSite.pm:135
+msgid "PDF"
 msgstr ""
-"Перевизначити номер версії, середній рівень, мітку меню на веб-сайті "
-"Publican. Щоб сховати цей пункт меню, встановіть значення UNUSED"
 
 # translation auto-copied from project Publican, version 3, document publican
 #. ($po_file)
-#: lib/Publican/Builder/DocBook4.pm:195
-#: lib/Publican/Builder/DocBook5.pm:195
+#: lib/Publican/Builder/DocBook4.pm:195 lib/Publican/Builder/DocBook5.pm:195
 msgid "PO file '%1' not found! Using base XML!"
 msgstr "Не знайдено файла PO «%1»! Використання базового XML!"
 
@@ -1600,13 +1400,11 @@ msgid "Path to publican content."
 msgstr "Шлях до даних Publican."
 
 # translation auto-copied from project Publican, version 3, document publican
-#: lib/Publican/CreateBook.pm:376
-#: lib/Publican/CreateBook.pm:638
+#: lib/Publican/CreateBook.pm:376 lib/Publican/CreateBook.pm:638
 msgid "Preface"
 msgstr "Передмова"
 
-#: lib/Publican/Builder/DocBook4.pm:140
-#: lib/Publican/Builder/DocBook5.pm:140
+#: lib/Publican/Builder/DocBook4.pm:140 lib/Publican/Builder/DocBook5.pm:140
 msgid "Preprocessing xml files...\n"
 msgstr ""
 
@@ -1647,16 +1445,14 @@ msgstr "Виводити додаткові повідомлення?"
 # translation auto-copied from project Publican, version 3, document publican
 #. ($file)
 #. ($xml_file)
-#: lib/Publican/Translate.pm:117
-#: lib/Publican/Translate.pm:86
+#: lib/Publican/Translate.pm:117 lib/Publican/Translate.pm:86
 msgid "Processing file %1"
 msgstr "Обробка файла %1"
 
 # translation auto-copied from project Publican, version 3, document publican
 #. ($pot_file,$po_file)
 #. ($file,$out_file)
-#: lib/Publican/Translate.pm:317
-#: lib/Publican/XmlClean.pm:994
+#: lib/Publican/Translate.pm:317 lib/Publican/XmlClean.pm:994
 msgid "Processing file %1 -> %2"
 msgstr "Обробка файла %1 -> %2"
 
@@ -1671,12 +1467,8 @@ msgstr "Список продуктів"
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican.pm:305
-msgid ""
-"Product this package covers. Fetched from productname tag in xml_lang/"
-"TYPE_Info.xml"
-msgstr ""
-"Продукт, який пов’язано з цим пакунком. Визначається за теґом productname у "
-"xml_lang/TYPE_Info.xml"
+msgid "Product this package covers. Fetched from productname tag in xml_lang/TYPE_Info.xml"
+msgstr "Продукт, який пов’язано з цим пакунком. Визначається за теґом productname у xml_lang/TYPE_Info.xml"
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican/Builder/DocBook.pm:2547
@@ -1702,9 +1494,7 @@ msgid "Push translations to Zanata."
 msgstr ""
 
 #: lib/Publican/Builder/DocBook.pm:1594
-msgid ""
-"Reached the maximum page ordering weight(30) that drupal can support. The "
-"rest of the pages will be ordered in alphabetical order\n"
+msgid "Reached the maximum page ordering weight(30) that drupal can support. The rest of the pages will be ordered in alphabetical order\n"
 msgstr ""
 
 # translation auto-copied from project Publican, version 3, document publican
@@ -1744,10 +1534,8 @@ msgid "Repository from which to fetch remote set books."
 msgstr "Сховище, з якого слід звантажувати віддалені набори книг."
 
 # translation auto-copied from project Publican, version 3, document publican
-#: lib/Publican.pm:1558
-#: lib/Publican/Builder/DocBook4.pm:232
-#: lib/Publican/Builder/DocBook5.pm:232
-#: lib/Publican/CreateBook.pm:303
+#: lib/Publican.pm:1558 lib/Publican/Builder/DocBook4.pm:232
+#: lib/Publican/Builder/DocBook5.pm:232 lib/Publican/CreateBook.pm:303
 #: lib/Publican/CreateBook.pm:564
 msgid "Revision History"
 msgstr "Журнал версій"
@@ -1766,29 +1554,24 @@ msgstr "Виконати вилучення ідентифікаторів з п
 #. ($0)
 #: bin/publican:425
 msgid "Run: '%1 <action> --help' for details on action usage"
-msgstr ""
-"Відайте команду «%1 <дія> --help», що дізнатися більше про використання дії"
+msgstr "Відайте команду «%1 <дія> --help», що дізнатися більше про використання дії"
 
 # translation auto-copied from project Publican, version 3, document publican
 #: bin/publican:938
-msgid ""
-"Running clean process to ensure stale content is not bundled in packages."
-msgstr ""
-"Запуск процесу очищення з метою вилучення непотрібних даних з пакунків."
+msgid "Running clean process to ensure stale content is not bundled in packages."
+msgstr "Запуск процесу очищення з метою вилучення непотрібних даних з пакунків."
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican/Builder.pm:957
 msgid "Running clean_ids to prevent inter-book ID clashes."
-msgstr ""
-"Запуск clean_ids для запобігання повторенню ідентифікаторів у різних книгах."
+msgstr "Запуск clean_ids для запобігання повторенню ідентифікаторів у різних книгах."
 
 #: lib/Publican/WebSite.pm:132
 msgid "Scroll to category"
 msgstr ""
 
 # translation auto-copied from project Publican, version 3, document publican
-#: lib/Publican/WebSite.pm:2088
-#: lib/Publican/WebSite.pm:887
+#: lib/Publican/WebSite.pm:2109 lib/Publican/WebSite.pm:891
 msgid "Search"
 msgstr "Пошук"
 
@@ -1808,24 +1591,23 @@ msgstr "Налаштувати список збирання для публік
 
 # translation auto-copied from project Publican, version 3, document publican
 #. ($lang)
-#: lib/Publican/Builder/DocBook4.pm:112
-#: lib/Publican/Builder/DocBook5.pm:112
+#: lib/Publican/Builder/DocBook4.pm:112 lib/Publican/Builder/DocBook5.pm:112
 msgid "Setting up %1"
 msgstr "Налаштування %1"
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican/Builder.pm:525
-msgid ""
-"Short-sighted packages can only be used to make desktop rpms. Add --desktop "
-"to your argument list."
-msgstr ""
-"Короткотерміновими пакунками можна скористатися лише для створення desktop-"
-"rpm. Додайте --desktop до вашого списку параметрів."
+msgid "Short-sighted packages can only be used to make desktop rpms. Add --desktop to your argument list."
+msgstr "Короткотерміновими пакунками можна скористатися лише для створення desktop-rpm. Додайте --desktop до вашого списку параметрів."
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican/WebSite.pm:122
 msgid "Show Menu"
 msgstr "Показати меню"
+
+#: lib/Publican/WebSite.pm:134
+msgid "Single-page HTML"
+msgstr ""
 
 # translation auto-copied from project Publican, version 3, document publican
 #. ($dir)
@@ -1840,25 +1622,17 @@ msgstr ""
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican.pm:221
 msgid "Space-separated list of packages the desktop package obsoletes."
-msgstr ""
-"Список відокремлених пробілами пакунків, які застарівають після встановлення "
-"стільничного пакунка."
+msgstr "Список відокремлених пробілами пакунків, які застарівають після встановлення стільничного пакунка."
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican.pm:227
 msgid "Space-separated list of packages the desktop package requires."
-msgstr ""
-"Список відокремлених пробілами пакунків, які потрібні для роботи "
-"стільничного пакунка."
+msgstr "Список відокремлених пробілами пакунків, які потрібні для роботи стільничного пакунка."
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican.pm:421
-msgid ""
-"Splash pages should be generated to be compatible with this web style. Valid "
-"values are 1 and 2."
-msgstr ""
-"Сторінки вітання буде створено відповідно до цього стилю сторінок. "
-"Коректними значеннями є 1 і 2."
+msgid "Splash pages should be generated to be compatible with this web style. Valid values are 1 and 2."
+msgstr "Сторінки вітання буде створено відповідно до цього стилю сторінок. Коректними значеннями є 1 і 2."
 
 # translation auto-copied from project Publican, version 3, document publican
 #. ($book)
@@ -1894,32 +1668,24 @@ msgid "Technical Editor"
 msgstr "Технічний редактор"
 
 # translation auto-copied from project Publican, version 3, document publican
-#: lib/Publican/CreateBook.pm:345
-#: lib/Publican/CreateBook.pm:607
+#: lib/Publican/CreateBook.pm:345 lib/Publican/CreateBook.pm:607
 msgid "Test Chapter"
 msgstr "Тестова глава"
 
 # translation auto-copied from project Publican, version 3, document publican
-#: lib/Publican/CreateBook.pm:348
-#: lib/Publican/CreateBook.pm:610
+#: lib/Publican/CreateBook.pm:348 lib/Publican/CreateBook.pm:610
 msgid "Test Section 1"
 msgstr "Тестовий розділ першого рівня"
 
 # translation auto-copied from project Publican, version 3, document publican
-#: lib/Publican/CreateBook.pm:355
-#: lib/Publican/CreateBook.pm:617
+#: lib/Publican/CreateBook.pm:355 lib/Publican/CreateBook.pm:617
 msgid "Test Section 2"
 msgstr "Тестовий розділ другого рівня"
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican/WebSite.pm:98
-msgid ""
-"The Navigation Menu below will automatically collapse when pages are loaded. "
-"Enable cookies to fix the Navigation Menu functionality."
-msgstr ""
-"Після завантаження сторінок навігаційне меню буде автоматично згортатися. "
-"Увімкніть використання кук у переглядачі, щоб виправити роботу навігаційного "
-"меню."
+msgid "The Navigation Menu below will automatically collapse when pages are loaded. Enable cookies to fix the Navigation Menu functionality."
+msgstr "Після завантаження сторінок навігаційне меню буде автоматично згортатися. Увімкніть використання кук у переглядачі, щоб виправити роботу навігаційного меню."
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican.pm:294
@@ -1927,9 +1693,7 @@ msgid "The OS for which to build packages."
 msgstr "Операційна система, для якої слід зібрати пакунки."
 
 #: lib/Publican.pm:494
-msgid ""
-"The author name to be shown in drupal book page. It must be a valid drupal "
-"username."
+msgid "The author name to be shown in drupal book page. It must be a valid drupal username."
 msgstr ""
 
 # translation auto-copied from project Publican, version 3, document publican
@@ -1950,9 +1714,7 @@ msgstr "Позначка, яку слід використовувати для 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican.pm:123
 msgid "The brew dist to use for building the standalone desktop rpm."
-msgstr ""
-"Назва дистрибутива, яку слід використати для збирання автономних desktop-rpm."
-""
+msgstr "Назва дистрибутива, яку слід використати для збирання автономних desktop-rpm."
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican.pm:403
@@ -1960,9 +1722,7 @@ msgid "The brew dist to use for building the web rpm."
 msgstr "Назва дистрибутива, яку слід використати для збирання web-rpm."
 
 #: lib/Publican.pm:511
-msgid ""
-"The directory where the image should be stored in drupal server. The default "
-"is \"sites/default/files/\""
+msgid "The directory where the image should be stored in drupal server. The default is \"sites/default/files/\""
 msgstr ""
 
 # translation auto-copied from project Publican, version 3, document publican
@@ -1992,8 +1752,7 @@ msgid "The language this translation is based on."
 msgstr ""
 
 #: lib/Publican.pm:505
-msgid ""
-"The menu where we can find the book. The default value is menu-user-guide"
+msgid "The menu where we can find the book. The default value is menu-user-guide"
 msgstr ""
 
 # translation auto-copied from project Publican, version 3, document publican
@@ -2003,13 +1762,8 @@ msgstr "Назва книги, статті, набору або позначк�
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican.pm:276
-msgid ""
-"The name of the main xml and ent files for this book, sans file extension "
-"and language. Fetched from docname if not set."
-msgstr ""
-"Назва основного файла xml і файла ent для цих книг, назва файла розширення "
-"sans та назва мови. Якщо не встановлено, буде визначено на основі назви "
-"документа."
+msgid "The name of the main xml and ent files for this book, sans file extension and language. Fetched from docname if not set."
+msgstr "Назва основного файла xml і файла ent для цих книг, назва файла розширення sans та назва мови. Якщо не встановлено, буде визначено на основі назви документа."
 
 # translation auto-copied from project Publican, version 3, document publican
 #: bin/publican:118
@@ -2045,89 +1799,54 @@ msgstr "Версія продукту"
 
 # translation auto-copied from project Publican, version 3, document publican
 #: bin/publican:128
-msgid ""
-"This flag tells publican the data being processed is a distributed set. Note:"
-" do not use distributed_set on the command line. Publican uses this flag "
-"when calling itself to process distributed sets. This is the only safe way "
-"this flag can be used."
-msgstr ""
-"За допомогою цього прапорця можна наказати publican обробити дані як "
-"розподілений набір. Зауваження: не використовуйте параметр distributed_set у "
-"командному рядку. Publican використовує цей параметр для внутрішнього вжитку "
-"під час обробки розподілених наборів. Встановлення прапорця є єдиним "
-"безпечним способом виконання відповідного завдання."
+msgid "This flag tells publican the data being processed is a distributed set. Note: do not use distributed_set on the command line. Publican uses this flag when calling itself to process distributed sets. This is the only safe way this flag can be used."
+msgstr "За допомогою цього прапорця можна наказати publican обробити дані як розподілений набір. Зауваження: не використовуйте параметр distributed_set у командному рядку. Publican використовує цей параметр для внутрішнього вжитку під час обробки розподілених наборів. Встановлення прапорця є єдиним безпечним способом виконання відповідного завдання."
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican.pm:414
-msgid ""
-"This is a home page for a Publican-generated website, not a standard book."
-msgstr ""
-"Це домашня сторінка створеного за допомогою Publican веб-сайта, а не "
-"стандартна книга."
+msgid "This is a home page for a Publican-generated website, not a standard book."
+msgstr "Це домашня сторінка створеного за допомогою Publican веб-сайта, а не стандартна книга."
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican.pm:434
-msgid ""
-"This is a host name for a Publican-generated website, used for searches and "
-"the Sitemap. Be sure to include the full path to your document tree. E.g. if "
-"your documents are in the docs directory: http://www.example.com/docs"
-msgstr ""
-"Це назва вузла веб-сайта, створеного за допомогою Publican, яку буде "
-"використано для пошуку створення карти сайта. Не забудьте включити шлях "
-"ієрархії документа повністю. Наприклад, якщо ваші документи зберігаються у "
-"каталозі docs, слід вказати: http://www.example.com/docs"
+msgid "This is a host name for a Publican-generated website, used for searches and the Sitemap. Be sure to include the full path to your document tree. E.g. if your documents are in the docs directory: http://www.example.com/docs"
+msgstr "Це назва вузла веб-сайта, створеного за допомогою Publican, яку буде використано для пошуку створення карти сайта. Не забудьте включити шлях ієрархії документа повністю. Наприклад, якщо ваші документи зберігаються у каталозі docs, слід вказати: http://www.example.com/docs"
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican.pm:428
-msgid ""
-"This is a special page for a Publican-generated website, not a standard book."
-" Valid types are home, product, and version."
-msgstr ""
-"Це особлива сторінка створеного за допомогою Publican веб-сайта, а не "
-"стандартна книга. Коректними типами є home, product і version."
+msgid "This is a special page for a Publican-generated website, not a standard book. Valid types are home, product, and version."
+msgstr "Це особлива сторінка створеного за допомогою Publican веб-сайта, а не стандартна книга. Коректними типами є home, product і version."
 
 # translation auto-copied from project Publican, version 3, document publican
-#: lib/Publican/CreateBook.pm:363
-#: lib/Publican/CreateBook.pm:625
+#: lib/Publican/CreateBook.pm:363 lib/Publican/CreateBook.pm:625
 msgid "This is a test listitem."
 msgstr "Тестовий пункт списку."
 
 # translation auto-copied from project Publican, version 3, document publican
-#: lib/Publican/CreateBook.pm:220
-#: lib/Publican/CreateBook.pm:346
-#: lib/Publican/CreateBook.pm:480
-#: lib/Publican/CreateBook.pm:608
+#: lib/Publican/CreateBook.pm:220 lib/Publican/CreateBook.pm:346
+#: lib/Publican/CreateBook.pm:480 lib/Publican/CreateBook.pm:608
 msgid "This is a test paragraph"
 msgstr "Тестовий абзац"
 
 # translation auto-copied from project Publican, version 3, document publican
-#: lib/Publican/CreateBook.pm:358
-#: lib/Publican/CreateBook.pm:620
+#: lib/Publican/CreateBook.pm:358 lib/Publican/CreateBook.pm:620
 msgid "This is a test paragraph in Section 2"
 msgstr "Тестовий абзац в розділі другого рівня"
 
 # translation auto-copied from project Publican, version 3, document publican
-#: lib/Publican/CreateBook.pm:351
-#: lib/Publican/CreateBook.pm:613
+#: lib/Publican/CreateBook.pm:351 lib/Publican/CreateBook.pm:613
 msgid "This is a test paragraph in a section"
 msgstr "Тестовий абзац у розділі"
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican/WebSite.pm:104
-msgid ""
-"This is an iframe, to view it upgrade your browser or enable iframe display."
-msgstr ""
-"Використано iframe. Щоб переглянути вміст цього блоку, вам слід скористатися "
-"новішою версією переглядача Інтернету, або увімкнути показ iframe."
+msgid "This is an iframe, to view it upgrade your browser or enable iframe display."
+msgstr "Використано iframe. Щоб переглянути вміст цього блоку, вам слід скористатися новішою версією переглядача Інтернету, або увімкнути показ iframe."
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican/WebSite.pm:115
-msgid ""
-"This web site requires JavaScript and cookies to be enabled to function "
-"correctly."
-msgstr ""
-"Для належної роботи цього сайта слід увімкнути використання JavaScript та "
-"кук."
+msgid "This web site requires JavaScript and cookies to be enabled to function correctly."
+msgstr "Для належної роботи цього сайта слід увімкнути використання JavaScript та кук."
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican/WebSite.pm:111
@@ -2146,8 +1865,7 @@ msgid "Total for %1"
 msgstr "Загалом для %1"
 
 #: bin/publican:188
-msgid ""
-"Transform XML to other formats (pdf, html, html-single, drupal-book, etc)"
+msgid "Transform XML to other formats (pdf, html, html-single, drupal-book, etc)"
 msgstr ""
 
 # translation auto-copied from project Publican, version 3, document publican
@@ -2174,39 +1892,27 @@ msgstr "Перекладач"
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican.pm:377
-msgid ""
-"Type of content this package contains. Supported: set, book, article, brand"
-msgstr ""
-"Тип даних, які містяться у цьому пакунку. Підтримуються такі типи: набір "
-"(set), книга (book), стаття (article), позначка (brand)"
+msgid "Type of content this package contains. Supported: set, book, article, brand"
+msgstr "Тип даних, які містяться у цьому пакунку. Підтримуються такі типи: набір (set), книга (book), стаття (article), позначка (brand)"
 
 #: lib/Publican.pm:321
-msgid ""
-"Type of repository in which books that form part of a remote set are stored. "
-"Supported types: SVN, GIT."
+msgid "Type of repository in which books that form part of a remote set are stored. Supported types: SVN, GIT."
 msgstr ""
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican.pm:192
-msgid ""
-"URL for the documentation team for this package. Used for top right URL on "
-"HTML."
-msgstr ""
-"Адреса URL команди з документування цього пакунка. Буде використано як "
-"верхню праву адресу у HTML."
+msgid "URL for the documentation team for this package. Used for top right URL on HTML."
+msgstr "Адреса URL команди з документування цього пакунка. Буде використано як верхню праву адресу у HTML."
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican.pm:312
 msgid "URL for the product. Used in top left URL in HTML."
-msgstr ""
-"Адреса сторінки продукту. Буде викорисано як верхню ліву адресу у HTML."
+msgstr "Адреса сторінки продукту. Буде викорисано як верхню ліву адресу у HTML."
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican.pm:358
 msgid "URL to find tar of source files. Used in RPM Spec files."
-msgstr ""
-"Адреса, за якою зберігаються архіви файлів початкових кодів. Буде "
-"використано у файлах spec RPM."
+msgstr "Адреса, за якою зберігаються архіви файлів початкових кодів. Буде використано у файлах spec RPM."
 
 #. ($tag)
 #: lib/Publican/Builder/DocBook.pm:3138
@@ -2232,8 +1938,7 @@ msgid "Unknown width format will be ignored: %1"
 msgstr "Невідомий формат ширини, який буде проігноровано: %1"
 
 # translation auto-copied from project Publican, version 3, document publican
-#: lib/Publican/Translate.pm:1145
-#: lib/Publican/WebSite.pm:113
+#: lib/Publican/Translate.pm:1145 lib/Publican/WebSite.pm:113
 msgid "Untranslated"
 msgstr "Не перекладено"
 
@@ -2285,12 +1990,8 @@ msgstr "Версія DocBook DTD, на якій засновано цей про
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican.pm:398
-msgid ""
-"Version of this package. Fetched from productnumber tag in xml_lang/"
-"TYPE_Info.xml"
-msgstr ""
-"Версія цього пакунка. Визначається на основі теґу productnumber з xml_lang/"
-"TYPE_Info.xml"
+msgid "Version of this package. Fetched from productnumber tag in xml_lang/TYPE_Info.xml"
+msgstr "Версія цього пакунка. Визначається на основі теґу productnumber з xml_lang/TYPE_Info.xml"
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican/WebSite.pm:109
@@ -2320,12 +2021,8 @@ msgstr "ПОПЕРЕДЖЕННЯ: не знайдено зображення: %1
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican/Translate.pm:893
-msgid ""
-"WARNING: Message missing from PO file, consider updating your POT and PO "
-"files."
-msgstr ""
-"ПОПЕРЕДЖЕННЯ: у файлі PO немає повідомлення, варто оновити ваші файли POT і "
-"PO ."
+msgid "WARNING: Message missing from PO file, consider updating your POT and PO files."
+msgstr "ПОПЕРЕДЖЕННЯ: у файлі PO немає повідомлення, варто оновити ваші файли POT і PO ."
 
 # translation auto-copied from project Publican, version 3, document publican
 #. ($pot_file)
@@ -2351,36 +2048,23 @@ msgstr ""
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican/Builder.pm:763
-msgid ""
-"WARNING: You can not create RPM packages with a blank abstract. Skipping RPM "
-"creation.\n"
-msgstr ""
-"ПОПЕРЕДЖЕННЯ: не можна створювати пакунків RPM з порожніми рефератами. Дію "
-"зі створення RPM не буде виконано.\n"
+msgid "WARNING: You can not create RPM packages with a blank abstract. Skipping RPM creation.\n"
+msgstr "ПОПЕРЕДЖЕННЯ: не можна створювати пакунків RPM з порожніми рефератами. Дію зі створення RPM не буде виконано.\n"
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican/Builder.pm:773
-msgid ""
-"WARNING: You can not create RPM packages with a blank subtitle. Skipping RPM "
-"creation.\n"
-msgstr ""
-"ПОПЕРЕДЖЕННЯ: не можна створювати пакунків RPM з порожніми підзаголовками. "
-"Дію зі створення RPM не буде виконано.\n"
+msgid "WARNING: You can not create RPM packages with a blank subtitle. Skipping RPM creation.\n"
+msgstr "ПОПЕРЕДЖЕННЯ: не можна створювати пакунків RPM з порожніми підзаголовками. Дію зі створення RPM не буде виконано.\n"
 
 #. ($key)
 #: lib/Publican.pm:613
-msgid ""
-"WARNING: config key %1 is not valid for this type of object, ignoring.\n"
+msgid "WARNING: config key %1 is not valid for this type of object, ignoring.\n"
 msgstr ""
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican/XmlClean.pm:936
-msgid ""
-"WARNING: table validation failed. Could not determine table for tgroup, "
-"column numbers cannot be validated"
-msgstr ""
-"ПОПЕРЕДЖЕННЯ: помилка під час перевірки коректності таблиці. Не вдалося "
-"визначити таблицю для tgroup, кількість стовпчиків неможливо перевірити"
+msgid "WARNING: table validation failed. Could not determine table for tgroup, column numbers cannot be validated"
+msgstr "ПОПЕРЕДЖЕННЯ: помилка під час перевірки коректності таблиці. Не вдалося визначити таблицю для tgroup, кількість стовпчиків неможливо перевірити"
 
 # translation auto-copied from project Publican, version 3, document publican
 #: bin/publican:104
@@ -2420,8 +2104,7 @@ msgid "You need to change the HOLDER entity in the %1/%2.ent file"
 msgstr "Вам слід змінити значення параметра HOLDER у файлі %1/%2.ent"
 
 #. ($result,$!)
-#: bin/publican:1380
-#: bin/publican:1388
+#: bin/publican:1380 bin/publican:1388
 msgid "Zanata call failed, error %1: '[2]'"
 msgstr ""
 
@@ -2443,10 +2126,8 @@ msgstr "Архітектура для фільтрування виведени�
 # translation auto-copied from project Publican, version 3, document publican
 #. ($auth_file)
 #. ($trans_file)
-#: lib/Publican/Builder/DocBook4.pm:292
-#: lib/Publican/Builder/DocBook4.pm:305
-#: lib/Publican/Builder/DocBook5.pm:295
-#: lib/Publican/Builder/DocBook5.pm:308
+#: lib/Publican/Builder/DocBook4.pm:292 lib/Publican/Builder/DocBook4.pm:305
+#: lib/Publican/Builder/DocBook5.pm:295 lib/Publican/Builder/DocBook5.pm:308
 msgid "authorgroup not found in %1"
 msgstr "у %1 не знайдено автогрупи"
 
@@ -2485,8 +2166,7 @@ msgstr "Архітектура для фільтрування виведени�
 msgid "contributor list can not be calculated before building."
 msgstr ""
 
-#: lib/Publican/Builder/DocBook4.pm:697
-#: lib/Publican/Builder/DocBook5.pm:675
+#: lib/Publican/Builder/DocBook4.pm:697 lib/Publican/Builder/DocBook5.pm:675
 msgid "corpauthor can not be converted to text as expected."
 msgstr ""
 
@@ -2494,8 +2174,7 @@ msgstr ""
 #. ($_,$@)
 #: lib/Publican/Builder.pm:194
 msgid "couldn't remove unwanted dir '%1', error: %2"
-msgstr ""
-"не вдалося вилучити небажаний каталог «%1», повідомлення про помилку: %2"
+msgstr "не вдалося вилучити небажаний каталог «%1», повідомлення про помилку: %2"
 
 # translation auto-copied from project Publican, version 3, document publican
 #. ($_,$@)
@@ -2530,7 +2209,7 @@ msgid "dtdver is a mandatory argument"
 msgstr "dtdver є обов’язковим параметром"
 
 # translation auto-copied from project Publican, version 3, document publican
-#: lib/Publican/WebSite.pm:1340
+#: lib/Publican/WebSite.pm:1342
 msgid "dump file zip creation failed."
 msgstr "помилка під час створення архіву zip дампа."
 
@@ -2575,8 +2254,7 @@ msgid "formats is a mandatory argument"
 msgstr "formats є обов’язковим параметром"
 
 # translation auto-copied from project Publican, version 3, document publican
-#: lib/Publican/Builder/DocBook.pm:3282
-#: lib/Publican/Builder/DocBook.pm:3676
+#: lib/Publican/Builder/DocBook.pm:3282 lib/Publican/Builder/DocBook.pm:3676
 #, fuzzy
 msgid "headings is a mandatory argument"
 msgstr "«langs» є обов’язковим параметром"
@@ -2586,18 +2264,12 @@ msgid "keyword list can not be calculated before building."
 msgstr ""
 
 # translation auto-copied from project Publican, version 3, document publican
-#: lib/Publican/Builder.pm:510
-#: lib/Publican/Builder/DocBook.pm:2135
-#: lib/Publican/Builder/DocBook.pm:2350
-#: lib/Publican/Builder/DocBook.pm:2420
-#: lib/Publican/Builder/DocBook.pm:2508
-#: lib/Publican/Builder/DocBook.pm:2584
-#: lib/Publican/Builder/DocBook.pm:2627
-#: lib/Publican/Builder/DocBook.pm:2667
-#: lib/Publican/Builder/DocBook.pm:422
-#: lib/Publican/Builder/DocBook4.pm:539
-#: lib/Publican/Builder/DocBook4.pm:665
-#: lib/Publican/Builder/DocBook5.pm:543
+#: lib/Publican/Builder.pm:510 lib/Publican/Builder/DocBook.pm:2135
+#: lib/Publican/Builder/DocBook.pm:2350 lib/Publican/Builder/DocBook.pm:2420
+#: lib/Publican/Builder/DocBook.pm:2508 lib/Publican/Builder/DocBook.pm:2584
+#: lib/Publican/Builder/DocBook.pm:2627 lib/Publican/Builder/DocBook.pm:2667
+#: lib/Publican/Builder/DocBook.pm:422 lib/Publican/Builder/DocBook4.pm:539
+#: lib/Publican/Builder/DocBook4.pm:665 lib/Publican/Builder/DocBook5.pm:543
 #: lib/Publican/Builder/DocBook5.pm:643
 msgid "lang is a mandatory argument"
 msgstr "«lang» є обов’язковим параметром"
@@ -2621,10 +2293,8 @@ msgid "lang to filter output on."
 msgstr "Архітектура для фільтрування виведених даних."
 
 # translation auto-copied from project Publican, version 3, document publican
-#: lib/Publican/Builder.pm:939
-#: lib/Publican/Builder/DocBook.pm:93
-#: lib/Publican/Builder/DocBook4.pm:96
-#: lib/Publican/Builder/DocBook5.pm:96
+#: lib/Publican/Builder.pm:939 lib/Publican/Builder/DocBook.pm:93
+#: lib/Publican/Builder/DocBook4.pm:96 lib/Publican/Builder/DocBook5.pm:96
 #: lib/Publican/Translate.pm:254
 msgid "langs is a mandatory argument"
 msgstr "«langs» є обов’язковим параметром"
@@ -2641,8 +2311,7 @@ msgid "match_strings requires 2 arguments %1, %2."
 msgstr "match_strings слід передати 2 параметри: %1, %2."
 
 # translation auto-copied from project Publican, version 3, document publican
-#: bin/publican:518
-#: lib/Publican/CreateBook.pm:81
+#: bin/publican:518 lib/Publican/CreateBook.pm:81
 #: lib/Publican/CreateBrand.pm:62
 msgid "name is a required parameter"
 msgstr "«name» є обов’язковим параметром"
@@ -2662,8 +2331,7 @@ msgid "os to filter output on."
 msgstr "Архітектура для фільтрування виведених даних."
 
 # translation auto-copied from project Publican, version 3, document publican
-#: lib/Publican/Translate.pm:164
-#: lib/Publican/XmlClean.pm:449
+#: lib/Publican/Translate.pm:164 lib/Publican/XmlClean.pm:449
 #: lib/Publican/XmlClean.pm:983
 msgid "out_file is a mandatory argument"
 msgstr "«out_file» є обов’язковим параметром"
@@ -2674,14 +2342,12 @@ msgid "pdftool only supports fop or wkhtmltopdf, not: %1"
 msgstr ""
 
 # translation auto-copied from project Publican, version 3, document publican
-#: lib/Publican/Translate.pm:162
-#: lib/Publican/Translate.pm:417
+#: lib/Publican/Translate.pm:162 lib/Publican/Translate.pm:417
 msgid "po_file is a mandatory argument"
 msgstr "po_file є обов’язковим параметром"
 
 # translation auto-copied from project Publican, version 3, document publican
-#: lib/Publican/Translate.pm:419
-#: lib/Publican/Translate.pm:913
+#: lib/Publican/Translate.pm:419 lib/Publican/Translate.pm:913
 msgid "pot_file is a mandatory argument"
 msgstr "pot_file є обов’язковим параметром"
 
@@ -2698,8 +2364,7 @@ msgstr "У файлі Info не виявлено даних щодо назви 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican.pm:725
 msgid "productnumber not found in Info file"
-msgstr ""
-"У файлі Info не виявлено даних щодо номера версії продукту (productnumber)"
+msgstr "У файлі Info не виявлено даних щодо номера версії продукту (productnumber)"
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican/Builder/DocBook.pm:101
@@ -2817,54 +2482,29 @@ msgstr "типом має бути book, set або article"
 
 # translation auto-copied from project Publican, version 3, document publican
 #. (join( ", ", keys %{$args} ))
-#: lib/Publican.pm:1197
-#: lib/Publican.pm:1342
-#: lib/Publican.pm:572
-#: lib/Publican.pm:885
-#: lib/Publican/Builder.pm:136
-#: lib/Publican/Builder.pm:255
-#: lib/Publican/Builder.pm:313
-#: lib/Publican/Builder.pm:430
-#: lib/Publican/Builder.pm:518
-#: lib/Publican/Builder/DocBook.pm:106
-#: lib/Publican/Builder/DocBook.pm:2142
-#: lib/Publican/Builder/DocBook.pm:2356
-#: lib/Publican/Builder/DocBook.pm:2427
-#: lib/Publican/Builder/DocBook.pm:2513
-#: lib/Publican/Builder/DocBook.pm:2589
-#: lib/Publican/Builder/DocBook.pm:2632
-#: lib/Publican/Builder/DocBook.pm:2672
-#: lib/Publican/Builder/DocBook.pm:2714
-#: lib/Publican/Builder/DocBook.pm:3287
-#: lib/Publican/Builder/DocBook.pm:3450
-#: lib/Publican/Builder/DocBook.pm:3497
-#: lib/Publican/Builder/DocBook.pm:3545
-#: lib/Publican/Builder/DocBook.pm:3638
-#: lib/Publican/Builder/DocBook.pm:3681
-#: lib/Publican/Builder/DocBook.pm:432
-#: lib/Publican/Builder/DocBook4.pm:104
-#: lib/Publican/Builder/DocBook4.pm:544
-#: lib/Publican/Builder/DocBook4.pm:670
-#: lib/Publican/Builder/DocBook5.pm:104
-#: lib/Publican/Builder/DocBook5.pm:548
-#: lib/Publican/Builder/DocBook5.pm:648
-#: lib/Publican/CreateBook.pm:94
-#: lib/Publican/CreateBrand.pm:70
-#: lib/Publican/Translate.pm:1126
-#: lib/Publican/Translate.pm:169
-#: lib/Publican/Translate.pm:268
-#: lib/Publican/Translate.pm:424
-#: lib/Publican/Translate.pm:529
-#: lib/Publican/Translate.pm:559
-#: lib/Publican/Translate.pm:689
-#: lib/Publican/Translate.pm:807
-#: lib/Publican/Translate.pm:918
-#: lib/Publican/TreeView.pm:131
-#: lib/Publican/TreeView.pm:220
-#: lib/Publican/TreeView.pm:67
-#: lib/Publican/XmlClean.pm:280
-#: lib/Publican/XmlClean.pm:454
-#: lib/Publican/XmlClean.pm:988
+#: lib/Publican.pm:1197 lib/Publican.pm:1342 lib/Publican.pm:572
+#: lib/Publican.pm:885 lib/Publican/Builder.pm:136 lib/Publican/Builder.pm:255
+#: lib/Publican/Builder.pm:313 lib/Publican/Builder.pm:430
+#: lib/Publican/Builder.pm:518 lib/Publican/Builder/DocBook.pm:106
+#: lib/Publican/Builder/DocBook.pm:2142 lib/Publican/Builder/DocBook.pm:2356
+#: lib/Publican/Builder/DocBook.pm:2427 lib/Publican/Builder/DocBook.pm:2513
+#: lib/Publican/Builder/DocBook.pm:2589 lib/Publican/Builder/DocBook.pm:2632
+#: lib/Publican/Builder/DocBook.pm:2672 lib/Publican/Builder/DocBook.pm:2714
+#: lib/Publican/Builder/DocBook.pm:3287 lib/Publican/Builder/DocBook.pm:3450
+#: lib/Publican/Builder/DocBook.pm:3497 lib/Publican/Builder/DocBook.pm:3545
+#: lib/Publican/Builder/DocBook.pm:3638 lib/Publican/Builder/DocBook.pm:3681
+#: lib/Publican/Builder/DocBook.pm:432 lib/Publican/Builder/DocBook4.pm:104
+#: lib/Publican/Builder/DocBook4.pm:544 lib/Publican/Builder/DocBook4.pm:670
+#: lib/Publican/Builder/DocBook5.pm:104 lib/Publican/Builder/DocBook5.pm:548
+#: lib/Publican/Builder/DocBook5.pm:648 lib/Publican/CreateBook.pm:94
+#: lib/Publican/CreateBrand.pm:70 lib/Publican/Translate.pm:1126
+#: lib/Publican/Translate.pm:169 lib/Publican/Translate.pm:268
+#: lib/Publican/Translate.pm:424 lib/Publican/Translate.pm:529
+#: lib/Publican/Translate.pm:559 lib/Publican/Translate.pm:689
+#: lib/Publican/Translate.pm:807 lib/Publican/Translate.pm:918
+#: lib/Publican/TreeView.pm:131 lib/Publican/TreeView.pm:220
+#: lib/Publican/TreeView.pm:67 lib/Publican/XmlClean.pm:280
+#: lib/Publican/XmlClean.pm:454 lib/Publican/XmlClean.pm:988
 msgid "unknown arguments: %1"
 msgstr "невідомі параметри: %1"
 
@@ -2890,9 +2530,7 @@ msgstr "мітка версії книги"
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican/Builder/DocBook.pm:747
 msgid "wkhtmltopdf died, PDF generation failed. Check log for details."
-msgstr ""
-"Роботу wkhtmltopdf несподівано завершено, спроба створення PDF зазнала "
-"невдачі. Докладніші дані можна знайти у журналі."
+msgstr "Роботу wkhtmltopdf несподівано завершено, спроба створення PDF зазнала невдачі. Докладніші дані можна знайти у журналі."
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican.pm:485
@@ -2900,20 +2538,15 @@ msgid "wordsize to filter output on."
 msgstr "Архітектура для фільтрування виведених даних."
 
 # translation auto-copied from project Publican, version 3, document publican
-#: lib/Publican/Builder/DocBook.pm:2709
-#: lib/Publican/Builder/DocBook.pm:3280
-#: lib/Publican/Builder/DocBook.pm:3445
-#: lib/Publican/Builder/DocBook.pm:3492
-#: lib/Publican/Builder/DocBook.pm:3540
-#: lib/Publican/Builder/DocBook.pm:3633
-#: lib/Publican/Builder/DocBook.pm:3674
-#: lib/Publican/XmlClean.pm:447
+#: lib/Publican/Builder/DocBook.pm:2709 lib/Publican/Builder/DocBook.pm:3280
+#: lib/Publican/Builder/DocBook.pm:3445 lib/Publican/Builder/DocBook.pm:3492
+#: lib/Publican/Builder/DocBook.pm:3540 lib/Publican/Builder/DocBook.pm:3633
+#: lib/Publican/Builder/DocBook.pm:3674 lib/Publican/XmlClean.pm:447
 msgid "xml_doc is a mandatory argument"
 msgstr "xml_doc є обов’язковим параметром"
 
 # translation auto-copied from project Publican, version 3, document publican
-#: lib/Publican.pm:1190
-#: lib/Publican/Translate.pm:160
+#: lib/Publican.pm:1190 lib/Publican/Translate.pm:160
 msgid "xml_file is a mandatory argument"
 msgstr "xml_file є обов’язковим параметром"
 

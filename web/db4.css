@@ -136,7 +136,7 @@ body.draft > div.book, body.draft > div.article, body.draft > div.set, body.draf
     position: absolute !important;
     width: 40em !important;
 }
-.title > a:first-child {
+.title > a:first-child:empty {
     position: relative !important;
     top: -32px !important;
 }

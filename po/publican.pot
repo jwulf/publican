@@ -50,12 +50,12 @@ msgstr ""
 #. ('toc_path')
 #: bin/publican:765
 #: bin/publican:778
-#: lib/Publican/WebSite.pm:153
+#: lib/Publican/WebSite.pm:157
 msgid "%1 is a mandatory field in a site configuration file"
 msgstr ""
 
 #. ('db_file',$site_config)
-#: lib/Publican/WebSite.pm:162
+#: lib/Publican/WebSite.pm:166
 msgid "%1 is a mandatory field in a site configuration file. Check %2 for validity."
 msgstr ""
 
@@ -392,7 +392,7 @@ msgid "Can't open file for html input!"
 msgstr ""
 
 #. ($!)
-#: lib/Publican/WebSite.pm:1220
+#: lib/Publican/WebSite.pm:1222
 msgid "Can't open file for html input: %1"
 msgstr ""
 
@@ -552,7 +552,7 @@ msgid "Could not open %1 for output: %2"
 msgstr ""
 
 #. ($@)
-#: lib/Publican/WebSite.pm:1326
+#: lib/Publican/WebSite.pm:1328
 msgid "Could not open dump file for output: %1"
 msgstr ""
 
@@ -576,7 +576,7 @@ msgid "Could not open file README for output!"
 msgstr ""
 
 #. ($@)
-#: lib/Publican/WebSite.pm:1439
+#: lib/Publican/WebSite.pm:1441
 msgid "Could not open footer file for output: %1"
 msgstr ""
 
@@ -586,7 +586,7 @@ msgid "Could not open icon file. %1"
 msgstr ""
 
 #. ($@)
-#: lib/Publican/WebSite.pm:1432
+#: lib/Publican/WebSite.pm:1434
 msgid "Could not open search file for output: %1"
 msgstr ""
 
@@ -694,6 +694,10 @@ msgstr ""
 
 #: lib/Publican/WebSite.pm:126
 msgid "Document Language"
+msgstr ""
+
+#: lib/Publican/WebSite.pm:136
+msgid "EPUB"
 msgstr ""
 
 #. ($attr)
@@ -957,6 +961,10 @@ msgstr ""
 msgid "Graphic Designer"
 msgstr ""
 
+#: lib/Publican/WebSite.pm:133
+msgid "HTML (Recommended)"
+msgstr ""
+
 #: lib/Publican/WebSite.pm:121
 msgid "Hide Menu"
 msgstr ""
@@ -1201,6 +1209,10 @@ msgstr ""
 msgid "Override the version, middle level, menu label on a Publican website. To hide this menu item set this to: UNUSED"
 msgstr ""
 
+#: lib/Publican/WebSite.pm:135
+msgid "PDF"
+msgstr ""
+
 #. ($po_file)
 #: lib/Publican/Builder/DocBook4.pm:195
 #: lib/Publican/Builder/DocBook5.pm:195
@@ -1390,8 +1402,8 @@ msgstr ""
 msgid "Scroll to category"
 msgstr ""
 
-#: lib/Publican/WebSite.pm:2088
-#: lib/Publican/WebSite.pm:887
+#: lib/Publican/WebSite.pm:2109
+#: lib/Publican/WebSite.pm:891
 msgid "Search"
 msgstr ""
 
@@ -1419,6 +1431,10 @@ msgstr ""
 
 #: lib/Publican/WebSite.pm:122
 msgid "Show Menu"
+msgstr ""
+
+#: lib/Publican/WebSite.pm:134
+msgid "Single-page HTML"
 msgstr ""
 
 #. ($dir)
@@ -1932,7 +1948,7 @@ msgstr ""
 msgid "dtdver is a mandatory argument"
 msgstr ""
 
-#: lib/Publican/WebSite.pm:1340
+#: lib/Publican/WebSite.pm:1342
 msgid "dump file zip creation failed."
 msgstr ""
 

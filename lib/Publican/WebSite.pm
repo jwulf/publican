@@ -217,6 +217,10 @@ my %tmpl_strings = (
     SrcIsNewer            => $locale->maketext('English is newer'),
     SelectYourVersion     => $locale->maketext('Select your version'),
     SelectYourCategory    => $locale->maketext('Scroll to category'),
+    html_label            => $locale->maketext('HTML (Recommended)'),
+    'html-single_label'   => $locale->maketext('Single-page HTML'),
+    pdf_label             => $locale->maketext('PDF'),
+    epub_label            => $locale->maketext('EPUB'),
 );
 
 sub new {
@@ -1179,11 +1183,7 @@ SEARCH
                 $book_data{book_clean} =~ s/_/ /g;
                 $book_data{types} = \@types;
 
-                foreach my $format (
-                    sort insensitive_sort
-                    keys( %{ $list2->{$product}{$version}{$book}{formats} } )
-                    )
-                {
+                foreach my $format (sort(insensitive_sort keys(%{$list2->{$product}{$version}{$book}{formats}}))) {
                     $book_data{base_format} = $format;
                     if ( $format =~ m/^html/ ) {
                         last;
@@ -1712,11 +1712,27 @@ SQL
             $book_list{$product}{$version}{ $record->{name} }
                 = $book_lang_vars;
 
+            my %formats;
+            map( $formats{$_} = 1, split( /,/, $record->{formats} ) );
+
+            my @forder = qw(html html-single epub pdf);
+            foreach my $format (@forder) {
+                if ( defined( $formats{$format} ) ) {
+                    push(
+                        @{  $book_ver_list{$product}{ $record->{name} }
+                                {$version}{formats}
+                        },
+                        $format
+                    );
+                    delete( $formats{$format} );
+                }
+            }
+
             push(
                 @{  $book_ver_list{$product}{ $record->{name} }{$version}
                         {formats}
                 },
-                split( /,/, $record->{formats} )
+                keys(%formats)
             );
         }
 

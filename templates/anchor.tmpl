@@ -1,4 +1,6 @@
-[% text = name %]
+[% UNLESS text %]
+    [% text = name %]
+[% END %]
 [% UNLESS short %]
 [% IF lang != booklang %]
 	[% text = text _ " <span>${trans_strings.Untranslated}</span>" %]

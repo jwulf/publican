@@ -12,6 +12,13 @@
 - Move PO manipulation to Locale::PO.
 - Fix inline"\n" not working in verbatim. BZ #1097091 (TODO bump Locale::PO version when released)
 
+4.1.5 Wed Jul 09 2014
+- Add some web UI tranlstaion strings & sort formats. BZ #1117081
+- Fix formal para title CSS. BZ #1110076
+
+4.1.4 Thu Jul 03 2014
+- Expose sort functions to version index page.
+
 4.1.3 Wed May 21 2014
 - Fix extra space breaking spec files with sort_order. BZ #1099262
 - Make div.title bold in db4.css. BZ #1049661
