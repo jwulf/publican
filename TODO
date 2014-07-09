@@ -79,9 +79,6 @@ generate Changes file from git log ... requires hygeine
 Publican 4.2
 ######################################
 
-Callouts: images deleted from DB5 style, make CSS rules to do the images.
-	hihglighting breaks links in callouts
-	no extension breaks programlistingco
 
 
 ######################################

@@ -38,6 +38,7 @@ use Publican::ConfigData;
 use Sort::Versions;
 use Template;
 use Encode qw(is_utf8 decode_utf8 encode_utf8);
+use Data::Dumper;
 
 use vars qw(@ISA @EXPORT @EXPORT_OK);
 
@@ -1835,8 +1836,6 @@ sub highlight {
 
     my $language = $lang->string_value();
 
-##debug_msg("Highlighting $language\n");
-
     my $hl = new Syntax::Highlight::Engine::Kate(
         substitutions => {
             "<" => "&lt;",
@@ -1947,7 +1946,6 @@ sub insertCallouts {
 
     # XML::LibXML::Document
     my $doc = $areaspec->get_node(1);
-
     my $verb      = $verbatim->get_node(1);
     my $childnode = $verb->firstChild;
 
@@ -2118,7 +2116,7 @@ sub insertCallouts {
                     $out_string .= $gfx_node->toString();
                 }
                 elsif ( $mode eq 'css' ) {
-                    $out_string .= "<span class='callout'>$index</span> ";
+                    $out_string .= qq{<span class='inlinecallout'>$index</span> };
                 }
                 else {    # numeric
                     $out_string .= "$index ";

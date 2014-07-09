@@ -51,15 +51,12 @@ use warnings;
 
 print "Hello, World!\n";</programlisting>
 	 
-<programlisting language="C++"><![CDATA[#include &lt;iostream&gt;
+<programlisting language="C++"><![CDATA[#include <iostream>
 
 int main()
 {
-  std::cout &lt;&lt; "Hello World!"; &lies;
-}
-
-]]>
-</programlisting>
+  std::cout << "Hello World!"; &lies;
+}]]></programlisting>
 	 </informalexample>
 
 <!--
@@ -68,7 +65,7 @@ int main()
 
 <example>
   <title>"Hello world!" in C++</title>
-  <programlisting language="C++"><![CDATA[
+  <programlisting><![CDATA[
 #include <qpid/messaging/Connection.h>
 #include <qpid/messaging/Message.h>
 #include <qpid/messaging/Receiver.h>

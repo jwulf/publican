@@ -33,12 +33,12 @@
 <xsl:param name="qanda.defaultlabel">qanda</xsl:param>
 <xsl:param name="glossary.sort" select="1"/>
 <xsl:param name="formal.object.break.after">0</xsl:param>
-<xsl:param name="highlight.source" select="0"/>
+<xsl:param name="highlight.source" select="1"/>
 <xsl:param name="draft.mode">maybe</xsl:param>
 <xsl:param name="poper.as.dl"  select="0"/>
 <xsl:param name="callout.list.table" select="0"/>
 <xsl:param name="callout.graphics" select="0"/>
-<xsl:param name="callouts.extension" select="0"/>
+<xsl:param name="callouts.extension" select="1"/>
 
 <!-- Admonition Graphics -->
 <xsl:param name="admon.graphics" select="1"/>
@@ -1010,20 +1010,20 @@ Version: 1.72.0
     <!-- Do we want syntax highlighting -->
     <xsl:when test="$highlight.source != 0 and function-available('perl:highlight')">
       <xsl:variable name="language">
-    <xsl:call-template name="language.to.xslthl">
-      <xsl:with-param name="context" select="."/>
-    </xsl:call-template>
+        <xsl:call-template name="language.to.xslthl">
+          <xsl:with-param name="context" select="."/>
+        </xsl:call-template>
       </xsl:variable>
       <xsl:choose>
-    <xsl:when test="$language != ''">
-      <xsl:variable name="content">
-        <xsl:apply-templates/>
-      </xsl:variable>
-      <xsl:apply-templates select="perl:highlight($language, exsl:node-set($content))"/>
-    </xsl:when>
-    <xsl:otherwise>
-      <xsl:apply-templates/>
-    </xsl:otherwise>
+        <xsl:when test="$language != ''">
+          <xsl:variable name="content">
+            <xsl:apply-templates/>
+          </xsl:variable>
+          <xsl:apply-templates select="perl:highlight($language, $content)"/>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:apply-templates/>
+        </xsl:otherwise>
       </xsl:choose>
     </xsl:when>
     <!-- No syntax highlighting -->
@@ -1207,7 +1207,10 @@ because it has to parse lines one by one to place the gfx
   
   <xsl:variable name="div.element">pre</xsl:variable>
   <xsl:choose>
-    <xsl:when test="$suppress-numbers = '0'                     and @linenumbering = 'numbered'                     and $use.extensions != '0'                     and $linenumbering.extension != '0'">
+    <xsl:when test="$suppress-numbers = '0'
+                and @linenumbering = 'numbered'
+                and $use.extensions != '0'
+                and $linenumbering.extension != '0'">
       <xsl:variable name="rtf">
         <xsl:choose>
           <xsl:when test="$highlight.source != 0">
@@ -2223,10 +2226,71 @@ valign: <xsl:value-of select="@valign"/></xsl:message>
 
 <xsl:template name="callout-bug">
   <xsl:param name="conum" select="1"/>
-
     <span class="callout">
       <xsl:value-of select="$conum"/>
     </span>
+</xsl:template>
+
+<xsl:template match="d:programlistingco|d:screenco">
+  <xsl:variable name="verbatim" select="d:programlisting|d:screen"/>
+
+  <xsl:choose>
+    <xsl:when test="$use.extensions != '0' and $callouts.extension != '0'">
+      <xsl:variable name="rtf">
+        <xsl:apply-templates select="$verbatim">
+          <xsl:with-param name="suppress-numbers" select="'1'"/>
+        </xsl:apply-templates>
+      </xsl:variable>
+
+      <xsl:variable name="rtf-with-callouts">
+        <xsl:choose>
+          <xsl:when test="function-available('sverb:insertCallouts')">
+            <xsl:copy-of select="sverb:insertCallouts(d:areaspec,$rtf)"/>
+          </xsl:when>
+          <xsl:when test="function-available('xverb:insertCallouts')">
+            <xsl:copy-of select="xverb:insertCallouts(d:areaspec,$rtf)"/>
+          </xsl:when>
+          <xsl:when test="function-available('perl:insertCallouts')">
+            <xsl:copy-of select="perl:insertCallouts(d:areaspec,$rtf, 'css')"/>
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:message terminate="yes">
+              <xsl:text>No insertCallouts function is available.</xsl:text>
+            </xsl:message>
+          </xsl:otherwise>
+        </xsl:choose>
+      </xsl:variable>
+
+      <xsl:choose>
+        <xsl:when test="$verbatim/@linenumbering = 'numbered' and $linenumbering.extension != '0'">
+          <div>
+            <xsl:call-template name="common.html.attributes"/>
+            <xsl:call-template name="id.attribute"/>
+            <xsl:call-template name="number.rtf.lines">
+              <xsl:with-param name="rtf" select="$rtf-with-callouts"/>
+              <xsl:with-param name="pi.context" select="d:programlisting|d:screen"/>
+            </xsl:call-template>
+            <xsl:apply-templates select="d:calloutlist"/>
+          </div>
+        </xsl:when>
+        <xsl:otherwise>
+          <div>
+            <xsl:call-template name="common.html.attributes"/>
+            <xsl:call-template name="id.attribute"/>
+            <xsl:copy-of select="$rtf-with-callouts"/>
+            <xsl:apply-templates select="d:calloutlist"/>
+          </div>
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:when>
+    <xsl:otherwise>
+      <div>
+        <xsl:apply-templates select="." mode="common.html.attributes"/>
+        <xsl:call-template name="id.attribute"/>
+        <xsl:apply-templates/>
+      </div>
+    </xsl:otherwise>
+  </xsl:choose>
 </xsl:template>
 
 </xsl:stylesheet>
