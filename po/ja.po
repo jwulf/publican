@@ -690,7 +690,7 @@ msgstr "ドキュメント言語"
 
 #: lib/Publican/WebSite.pm:136
 msgid "EPUB"
-msgstr ""
+msgstr "EPUB"
 
 #. ($attr)
 #: lib/Publican/XmlClean.pm:662
@@ -933,7 +933,7 @@ msgstr "グラフィックデザイナー"
 
 #: lib/Publican/WebSite.pm:133
 msgid "HTML (Recommended)"
-msgstr ""
+msgstr "HTML (推奨)"
 
 #: lib/Publican/WebSite.pm:121
 msgid "Hide Menu"
@@ -1178,7 +1178,7 @@ msgstr ""
 
 #: lib/Publican/WebSite.pm:135
 msgid "PDF"
-msgstr ""
+msgstr "PDF"
 
 #. ($po_file)
 #: lib/Publican/Builder/DocBook4.pm:195 lib/Publican/Builder/DocBook5.pm:195
@@ -1401,7 +1401,7 @@ msgstr ""
 
 #: lib/Publican/WebSite.pm:134
 msgid "Single-page HTML"
-msgstr ""
+msgstr "単一 HTML"
 
 #. ($dir)
 #: lib/Publican.pm:1116
