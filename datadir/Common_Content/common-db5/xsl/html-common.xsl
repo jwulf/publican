@@ -2210,6 +2210,60 @@ valign: <xsl:value-of select="@valign"/></xsl:message>
     </span>
 </xsl:template>
 
+<xsl:template match="d:co" name="co">
+  <!-- Support a single linkend in HTML -->
+  <xsl:variable name="targets" select="key('id', @linkends)"/>
+  <xsl:variable name="target" select="$targets[1]"/>
+  <xsl:choose>
+    <xsl:when test="$target">
+      <a>
+        <xsl:apply-templates select="." mode="common.html.attributes"/>
+        <xsl:choose>
+          <xsl:when test="$generate.id.attributes = 0">
+            <!-- force an id attribute here -->
+            <xsl:if test="@id or @xml:id">
+              <xsl:attribute name="id">
+                <xsl:value-of select="(@id|@xml:id)[1]"/>
+              </xsl:attribute>
+            </xsl:if>
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:call-template name="id.attribute"/>
+          </xsl:otherwise>
+        </xsl:choose>
+        <xsl:attribute name="href">
+          <xsl:call-template name="href.target">
+            <xsl:with-param name="object" select="$target"/>
+          </xsl:call-template>
+        </xsl:attribute>
+        <xsl:attribute name="onmouseover">
+ 		<xsl:text>highlightTarget(this);</xsl:text> 
+        </xsl:attribute>
+        <xsl:attribute name="onclick">
+ 		<xsl:text>highlightTarget(this, 1);</xsl:text> 
+        </xsl:attribute>
+        <xsl:attribute name="onmouseout">
+ 		<xsl:text>dehighlightTarget(this);</xsl:text> 
+        </xsl:attribute>
+        <xsl:apply-templates select="." mode="callout-bug"/>
+     </a>
+    </xsl:when>
+    <xsl:otherwise>
+      <xsl:if test="$generate.id.attributes != 0">
+        <xsl:if test="@id or @xml:id">
+          <span>
+             <xsl:attribute name="id">
+                <xsl:value-of select="(@id|@xml:id)[1]"/>
+              </xsl:attribute>
+          </span>
+        </xsl:if>
+      </xsl:if>
+      <xsl:call-template name="anchor"/>
+      <xsl:apply-templates select="." mode="callout-bug"/>
+    </xsl:otherwise>
+  </xsl:choose>
+</xsl:template>
+
 <xsl:template match="d:programlistingco|d:screenco">
   <xsl:variable name="verbatim" select="d:programlisting|d:screen"/>
 
