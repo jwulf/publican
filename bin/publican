@@ -439,19 +439,25 @@ if ($bash_comp) {
 }
 
 # Undocumented way of getting help for all actions as DocBook 5.0 XML
+# TODO should spit out the docs in every language ...
 if ( $help and ( $action eq "docbook" ) ) {
 
     my $xml_doc = XML::Element->new_from_lol(
-        [ 'appendix', [ 'info', [ 'title', 'Command summary' ], ] ] );
+        [ 'appendix', {id=>'Command_summary'}, [ 'info', [ 'title', maketext('Command summary') ], ] ] );
 
-    my $var_list = XML::Element->new_from_lol(
-        [   'variablelist',
+    my $section = XML::Element->new_from_lol(
+        [   'section',
             { id => 'Auto_Docs-Command_options' },
-            [ 'info', [ 'title', 'Command options' ], ],
+            [ 'info', [ 'title', maketext('Command options') ], ],
         ]
     );
 
-    $xml_doc->push_content($var_list);
+    my $var_list = XML::Element->new_from_lol(
+        [   'variablelist' ]
+    );
+
+    $section->push_content($var_list);
+    $xml_doc->push_content($section);
 
     foreach my $option ( sort(@utility_opts) ) {
         my $entry = XML::Element->new_from_lol(
@@ -464,14 +470,19 @@ if ( $help and ( $action eq "docbook" ) ) {
         $var_list->push_content($entry);
     }
 
-    $var_list = XML::Element->new_from_lol(
-        [   'variablelist',
+    $section = XML::Element->new_from_lol(
+        [   'section',
             { id => 'Auto_Docs-Command_actions' },
-            [ 'info', [ 'title', 'Command actions' ], ],
+            [ 'info', [ 'title', maketext('Command actions') ], ],
         ]
     );
 
-    $xml_doc->push_content($var_list);
+    $var_list = XML::Element->new_from_lol(
+        [   'variablelist' ]
+    );
+
+    $section->push_content($var_list);
+    $xml_doc->push_content($section);
 
     foreach my $cmd ( sort( keys(%actions) ) ) {
         $var_list->push_content( _help_action_asdb($cmd) );
@@ -498,33 +509,49 @@ if ( $help and ( $action eq "docbook" ) ) {
     # all the parameters
 
     $xml_doc = XML::Element->new_from_lol(
-        [ 'appendix', [ 'info', [ 'title', 'Configuration summary' ], ] ] );
+        [ 'appendix', {id => 'Configuration_summary'}, [ 'info', [ 'title', maketext('Configuration summary') ], ] ] );
 
-    my $gen_list = XML::Element->new_from_lol(
-        [   'variablelist',
+    $section = XML::Element->new_from_lol(
+        [   'section',
             { id => 'Auto_Docs_Configs-General_options' },
-            [ 'info', [ 'title', 'General options' ], ],
+            [ 'info', [ 'title', maketext('General options') ], ],
 	    ['para', maketext("These are set in the books or brands configuration files.") ],
         ]
     );
+
+    my $gen_list = XML::Element->new_from_lol(
+        [   'variablelist']
+    );
+    $section->push_content($gen_list);
+    $xml_doc->push_content($section);
+
     my $brand_list = XML::Element->new_from_lol(
-        [   'variablelist',
+        [   'variablelist'],
+ );
+
+    $section = XML::Element->new_from_lol(
+        [   'section',
             { id => 'Auto_Docs_Configs-Brand_options' },
-            [ 'info', [ 'title', 'Brand options' ], ],
+            [ 'info', [ 'title', maketext('Brand options') ], ],
 	    ['para', maketext("These are set in the brands configuration files.") ],
         ]
     );
+    $section->push_content($brand_list);
+    $xml_doc->push_content($section);
+
     my $web_list = XML::Element->new_from_lol(
-        [   'variablelist',
+        [   'variablelist'],
+ );
+
+    $section = XML::Element->new_from_lol(
+        [   'section',
             { id => 'Auto_Docs_Configs-Site_option' },
-            [ 'info', [ 'title', 'Site options' ], ],
+            [ 'info', [ 'title', maketext('Site options') ], ],
 	    ['para', maketext("These are set in the sites configuration file.") ],
         ]
     );
-
-    $xml_doc->push_content($gen_list);
-    $xml_doc->push_content($brand_list);
-    $xml_doc->push_content($web_list);
+    $section->push_content($web_list);
+    $xml_doc->push_content($section);
 
     $xml_doc->push_content(Publican::params_as_docbook($gen_list,$brand_list,$web_list));
     $xml_doc->push_content(Publican::WebSite::site_params_as_docbook($web_list));
@@ -551,7 +578,7 @@ sub _help_action_asdb {
     my $brief = $actions{$cmd}->{brief};
 
     my $varentry = XML::Element->new_from_lol(
-        [   'varlistentry',
+        [   'varlistentry', {id => $cmd},
             [   'term', [ 'prompt', '$' ], [ 'command', ' publican' ],
                 " $cmd"
             ],

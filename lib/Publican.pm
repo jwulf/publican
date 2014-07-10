@@ -1794,7 +1794,7 @@ sub params_as_docbook {
 
     foreach my $key ( sort( keys(%PARAMS) ) ) {
         my $entry = XML::Element->new_from_lol(
-            [ 'varlistentry', [ 'term', "$key" ] ] );
+            [ 'varlistentry', {id => $key},[ 'term', "$key" ] ] );
 
         if ( defined( $PARAMS{$key}->{limit_to} )
             && $PARAMS{$key}->{limit_to} eq 'brand' )

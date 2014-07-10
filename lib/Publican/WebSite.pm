@@ -2242,7 +2242,7 @@ sub site_params_as_docbook {
 
     foreach my $key ( sort( keys(%PARAMS) ) ) {
         my $entry = XML::Element->new_from_lol(
-            [ 'varlistentry', [ 'term', "$key" ] ] );
+            [ 'varlistentry', {id => $key}, [ 'term', "$key" ] ] );
 
         $web_list->push_content($entry);
         my $item = XML::Element->new_from_lol(

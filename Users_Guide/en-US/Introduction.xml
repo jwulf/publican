@@ -44,13 +44,16 @@
 	 <para>
 		Entities also present an essentially insurmountable obstacle to quality translation (refer to <xref linkend="sect-Publican-Users_Guide-Entities_and_translation" />). Consequently, while we are not reducing the <filename><replaceable>Doc_Name</replaceable>.ent</filename> file's functionality, we are no longer considering requests to add functionality or features associated with entity use.
 	</para>
+<section id="Testing_New_Styles" condition="testing">
+<title>This section is for testing the output and doesn't ship in the production docs</title>
+<section id="BZ1092351">
+<title>Testing BZ #1092351 Code Switcher</title>
 	 <informalexample conformance="264" id="switch1" role="switchery">
 <programlisting language="Perl">#!/usr/bin/perl
 use strict;
 use warnings;
 
 print "Hello, World!\n";</programlisting>
-	 
 <programlisting language="C++"><![CDATA[#include <iostream>
 
 int main()
@@ -58,7 +61,37 @@ int main()
   std::cout << "Hello World!"; &lies;
 }]]></programlisting>
 	 </informalexample>
-
+</section>
+<section id="BZ1088051">
+<title>Testing BZ #1088051 Code Popper</title>
+<screen role="popper"><prompt>$</prompt> <command>apt-get search libxslt</command>
+<computeroutput>gambas3-gb-xml-xslt - Gambas XSLT component</computeroutput>
+<computeroutput>libidzebra-2.0-mod-alvis - IDZebra filter alvis (XSLT filter for XML)</computeroutput>
+<computeroutput>libidzebra-2.0-mod-dom - IDZebra filter 'dom' (XML DOM internal document model with XSLT)</computeroutput>
+<computeroutput>libical-parser-html-perl - generates HTML calendars from iCalendars</computeroutput>
+<computeroutput>libxsltc-java - XSL Transformations (XSLT) compiler from Xalan-Java</computeroutput>
+<computeroutput>libxml-filter-xslt-perl - Perl module for XSLT as a SAX Filter</computeroutput>
+<computeroutput>libxml-libxslt-perl - Perl interface to the GNOME libxslt library</computeroutput>
+<computeroutput>libxslt1-dbg - XSLT 1.0 processing library - debugging symbols</computeroutput>
+<computeroutput>libxslt1-dev - XSLT 1.0 processing library - development kit</computeroutput>
+<computeroutput>libxslt1.1 - XSLT 1.0 processing library - runtime library</computeroutput>
+<computeroutput>python-libxslt1 - Python bindings for libxslt1</computeroutput>
+<computeroutput>python-libxslt1-dbg - Python bindings for libxslt1 (debug extension)</computeroutput>
+<computeroutput>python-lxml - pythonic binding for the libxml2 and libxslt libraries</computeroutput>
+<computeroutput>python-lxml-dbg - pythonic binding for the libxml2 and libxslt libraries (debug extension)</computeroutput>
+<computeroutput>python-lxml-doc - pythonic binding for the libxml2 and libxslt libraries (documentation)</computeroutput>
+<computeroutput>python3-lxml - pythonic binding for the libxml2 and libxslt libraries</computeroutput>
+<computeroutput>python3-lxml-dbg - pythonic binding for the libxml2 and libxslt libraries (debug extension)</computeroutput>
+<computeroutput>php5-xsl - XSL module for php5</computeroutput>
+<computeroutput>libsp-gxmlcpp-dev - S+P C++ wrapper for Gnome libxml2/libxslt</computeroutput>
+<computeroutput>libsp-gxmlcpp1 - S+P C++ wrapper for Gnome libxml2/libxslt</computeroutput>
+<computeroutput>swfmill - xml2swf and swf2xml processor</computeroutput>
+<computeroutput>libxslthl-java - XSLT syntax highlighting</computeroutput></screen>
+<para>&nbsp;</para>
+</section>
+<section id="BZ1112899">
+<title>Testing BZ #1112899 Callouts and BZ #1101050 Entities in CDATA</title>
+	 
 <!--
      https://bugzilla.redhat.com/show_bug.cgi?id=604255
 -->
@@ -70,7 +103,7 @@ int main()
 #include <qpid/messaging/Message.h>
 #include <qpid/messaging/Receiver.h>
 #include <qpid/messaging/Sender.h>
-#include <qpid/messaging/Session.h>
+#include <qpid/messaging/Session.h> &BZ1101050;
 
 #include <iostream>]]>
 
@@ -161,6 +194,27 @@ array.
  </callout>
     </calloutlist>
 </programlistingco>
+</section>
+<section id="BZ752021">
+<title>Testing BZ #752021 Cross-Browser embed external video</title>
+<mediaobject>
+  <videoobject>
+     <videodata contentdepth="413" contentwidth="660" controls="" format="video/webm" fileref="http://clips.vorwaerts-gmbh.de/VfE.webm"/>
+   </videoobject>
+ </mediaobject>
+<mediaobject>
+  <videoobject>
+     <videodata contentdepth="413" contentwidth="660"
+ fileref="http://player.vimeo.com/video/30704252?title=0[1844952446]byline=0[1844952446]portrait=0"/>
+   </videoobject>
+    <caption/>
+ </mediaobject>
+<mediaobject>
+  <videoobject>
+     <videodata fileref="http://youtube.com/embed/B-Wd-Q3F8KM"/>
+   </videoobject>
+ </mediaobject>
+
 
 <!--                                 
 <para>
@@ -177,6 +231,7 @@ array.
 </equation>
 </para>
 -->
-
+</section>
+</section>
 </preface>
 
