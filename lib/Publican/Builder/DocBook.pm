@@ -1843,26 +1843,26 @@ sub highlight {
             "&" => "&amp;",
         },
         format_table => {
-            Alert        => [ "<perl_Alert>",        "</perl_Alert>" ],
-            BaseN        => [ "<perl_BaseN>",        "</perl_BaseN>" ],
-            BString      => [ "<perl_BString>",      "</perl_BString>" ],
-            Char         => [ "<perl_Char>",         "</perl_Char>" ],
-            Comment      => [ "<perl_Comment>",      "</perl_Comment>" ],
-            DataType     => [ "<perl_DataType>",     "</perl_DataType>" ],
-            DecVal       => [ "<perl_DecVal>",       "</perl_DecVal>" ],
-            Error        => [ "<perl_Error>",        "</perl_Error>" ],
-            Float        => [ "<perl_Float>",        "</perl_Float>" ],
-            Function     => [ "<perl_Function>",     "</perl_Function>" ],
-            IString      => [ "<perl_IString>",      "</perl_IString>" ],
-            Keyword      => [ "<perl_Keyword>",      "</perl_Keyword>" ],
+            Alert        => [ "<span class='perl_Alert'>",        "</span>" ],
+            BaseN        => [ "<span class='perl_BaseN'>",        "</span>" ],
+            BString      => [ "<span class='perl_BString'>",      "</span>" ],
+            Char         => [ "<span class='perl_Char'>",         "</span>" ],
+            Comment      => [ "<span class='perl_Comment'>",      "</span>" ],
+            DataType     => [ "<span class='perl_DataType'>",     "</span>" ],
+            DecVal       => [ "<span class='perl_DecVal'>",       "</span>" ],
+            Error        => [ "<span class='perl_Error'>",        "</span>" ],
+            Float        => [ "<span class='perl_Float'>",        "</span>" ],
+            Function     => [ "<span class='perl_Function'>",     "</span>" ],
+            IString      => [ "<span class='perl_IString'>",      "</span>" ],
+            Keyword      => [ "<span class='perl_Keyword'>",      "</span>" ],
             Normal       => [ "",                    "" ],
-            Operator     => [ "<perl_Operator>",     "</perl_Operator>" ],
-            Others       => [ "<perl_Others>",       "</perl_Others>" ],
-            RegionMarker => [ "<perl_RegionMarker>", "</perl_RegionMarker>" ],
-            Reserved     => [ "<perl_Reserved>",     "</perl_Reserved>" ],
-            String       => [ "<perl_String>",       "</perl_String>" ],
-            Variable     => [ "<perl_Variable>",     "</perl_Variable>" ],
-            Warning      => [ "<perl_Warning>",      "</perl_Warning>" ],
+            Operator     => [ "<span class='perl_Operator'>",     "</span>" ],
+            Others       => [ "<span class='perl_Others'>",       "</span>" ],
+            RegionMarker => [ "<span class='perl_RegionMarker'>", "</span>" ],
+            Reserved     => [ "<span class='perl_Reserved'>",     "</span>" ],
+            String       => [ "<span class='perl_String'>",       "</span>" ],
+            Variable     => [ "<span class='perl_Variable'>",     "</span>" ],
+            Warning      => [ "<span class='perl_Warning'>",      "</span>" ],
         },
     );
 
@@ -1904,8 +1904,11 @@ sub highlight {
 ##debug_msg("Highlighting: " . $in_string . "\n") if $language eq 'C++';
 
     $parser->expand_entities(0);
-    my $out_string = $hl->highlightText( $content->string_value() );
+    my $out_string = ''; #$hl->highlightText( $content->string_value() );
 
+    foreach my $line (split /^/, $content->string_value()) {
+         $out_string .= $hl->highlightText($line);
+    }
 ##debug_msg("Highlighting: $out_string\n");
 
     # this gives an XML::LibXML::DocumentFragment

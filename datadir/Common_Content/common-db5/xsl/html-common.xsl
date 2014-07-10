@@ -1046,29 +1046,8 @@ Version: 1.72.0
   </xsl:choose>
 </xsl:template>
 
-<!--
-
-BUGBUG callout code blows up highlight if the span contains a newline
-because it has to parse lines one by one to place the gfx
-
--->
-<xsl:template match="perl_Alert | perl_BaseN | perl_BString | perl_Char | perl_Comment | perl_DataType | perl_DecVal | perl_Error | perl_Float | perl_Function | perl_IString | perl_Keyword | perl_Operator | perl_Others | perl_RegionMarker | perl_Reserved | perl_String | perl_Variable | perl_Warning ">
-  <xsl:variable name="name">
-    <xsl:value-of select="local-name(.)"/>
-  </xsl:variable>
-  <xsl:variable name="content">
-    <xsl:apply-templates/>
-  </xsl:variable>
-  <xsl:choose>
-    <xsl:when test="contains($content,'&#xA;')">
-      <span><xsl:attribute name="class"><xsl:value-of select="$name"/></xsl:attribute><xsl:value-of select="substring-before($content,'&#xA;')"/></span><xsl:text>
-</xsl:text>
-      <span><xsl:attribute name="class"><xsl:value-of select="$name"/></xsl:attribute><xsl:value-of select="substring-after($content,'&#xA;')"/></span>
-    </xsl:when>
-    <xsl:otherwise>
-      <span><xsl:attribute name="class"><xsl:value-of select="$name"/></xsl:attribute><xsl:value-of select="$content"/></span>
-    </xsl:otherwise>
-  </xsl:choose>
+<xsl:template match="span">
+    <xsl:copy-of select="."/>
 </xsl:template>
 
 <!-- change <video> to iframe -->
