@@ -1947,6 +1947,12 @@ sub insertCallouts {
     my $verbatim = shift();
     my $mode =  (shift() || 'gfx');
 
+    my $embedded = 0;
+    if($mode = 'embedtoc') {
+        $mode =  'gfx';
+        $embedded = 1;
+    }
+
     # XML::LibXML::Document
     my $doc = $areaspec->get_node(1);
     my $verb      = $verbatim->get_node(1);
@@ -2097,12 +2103,15 @@ sub insertCallouts {
                 if ( $mode eq 'gfx' ) {
                     my $gfx_node;
 
+                    my $common_path = '"Common_Content';
+
+                    $common_path = '../../../..' if($embedded);
                     if ( $format eq 'HTML' ) {
                         $gfx_node = XML::LibXML::Element->new('img');
                         $gfx_node->setAttribute( 'class', 'callout' );
                         $gfx_node->setAttribute( 'alt',   $index );
                         $gfx_node->setAttribute( 'src',
-                            "Common_Content/images/$index.png" );
+                            "$common_path/images/$index.png" );
                     }
                     elsif ( $format eq 'PDF' ) {
                         $gfx_node = XML::LibXML::Element->new(

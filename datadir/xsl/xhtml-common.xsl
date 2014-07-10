@@ -2098,11 +2098,20 @@ snip border rubbish. BZ #875967
           <xsl:with-param name="suppress-numbers" select="'1'"/>
         </xsl:apply-templates>
       </xsl:variable>
-
+      <xsl:param name="mode">
+        <xsl:choose>
+          <xsl:when test="$embedtoc != 0">
+		<xsl:text>embedtoc</xsl:text>
+          </xsl:when>
+          <xsl:otherwise>
+		<xsl:text>gfx</xsl:text>
+          </xsl:otherwise>
+        </xsl:choose>
+      </xsl:param>
       <xsl:variable name="rtf-with-callouts">
         <xsl:choose>
           <xsl:when test="function-available('sverb:insertCallouts')">
-            <xsl:copy-of select="sverb:insertCallouts(areaspec,$rtf)"/>
+            <xsl:copy-of select="sverb:insertCallouts(areaspec,$rtf, $mode)"/>
           </xsl:when>
           <xsl:when test="function-available('xverb:insertCallouts')">
             <xsl:copy-of select="xverb:insertCallouts(areaspec,$rtf)"/>

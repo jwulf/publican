@@ -11,6 +11,7 @@
 - Add --showfuzzy to build options.
 - Move PO manipulation to Locale::PO.
 - Fix inline"\n" not working in verbatim. BZ #1097091 (TODO bump Locale::PO version when released)
+- Fix images for DB4 website callouts. BZ #1112899
 
 4.1.5 Wed Jul 09 2014
 - Add some web UI tranlstaion strings & sort formats. BZ #1117081

@@ -130,8 +130,7 @@ function hide(id) {
 var preventReset = 0;
 
 function dehighlightTarget(entity) {
-	if(preventReset == 0) {
-	if(entity) {
+	if(preventReset == 0 && entity) {
 		var id = entity.href;
 		if(id.indexOf("#") != -1) {
 			id = id.substr(id.indexOf('#')+1);
@@ -140,8 +139,7 @@ function dehighlightTarget(entity) {
 		if(target) {
 			deactivateElement(target);
 		}
-	} 
-	}
+		}
 }
 
 function highlightTarget(entity, norefresh) {
@@ -151,6 +149,7 @@ function highlightTarget(entity, norefresh) {
 			id = id.substr(id.indexOf('#')+1);
 		}
 		activateElement(id);
+		preventReset = 0;
 	} 
 	if(norefresh == 1) {
 		preventReset=1;
