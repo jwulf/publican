@@ -199,7 +199,7 @@ array.
 <title>Testing BZ #752021 Cross-Browser embed external video</title>
 <mediaobject>
   <videoobject>
-     <videodata contentdepth="413" contentwidth="660" controls="" format="video/webm" fileref="http://clips.vorwaerts-gmbh.de/VfE.webm"/>
+     <videodata contentdepth="413" contentwidth="660" autoplay="false" controls="" format="video/webm" fileref="http://clips.vorwaerts-gmbh.de/VfE.webm"/>
    </videoobject>
  </mediaobject>
 <mediaobject>

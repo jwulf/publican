@@ -1546,9 +1546,7 @@ SQL
             {
                 $record->{$key} = decode_utf8( $record->{$key} )
                     unless ( is_utf8( $record->{$key} ) );
-##                print( STDERR "$key: " . ( $record->{$key} || "" ) . ", " );
             }
-##            print( STDERR "\n\n" );
 
             if ( $product ne '' and ( $product ne $record->{product} ) ) {
 
@@ -1638,7 +1636,6 @@ SQL
 
             my @lang_array;
             if ( $record->{langs} ) {
-##print( STDERR "langs: " . $record->{langs} ."\n\n");
                 foreach my $trans ( sort( split( /,/, $record->{langs} ) ) ) {
                     my %lang_hash = (
                         lang      => $trans,
