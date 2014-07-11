@@ -40,7 +40,7 @@ my $tlink = cwd() . '/foo3';
 
 my $dir = pushd('foo3');
 
-system("ln -s $flink $tlink") unless ( -l 'blib' && -d 'blib' );
+#system("ln -s $flink $tlink") unless ( -l 'blib' && -d 'blib' );
 
 $result = system(
     @perl_args,      $publican,   'create_site',  '--site_config',

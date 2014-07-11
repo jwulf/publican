@@ -802,6 +802,7 @@ iframe {
     top: 50px;
     transition: bottom 0.2s ease 2s;
     width: 70%;
+    z-index: 1000;
 }
 
 #poptoc .toc ul {
@@ -915,5 +916,14 @@ a.co, dl.calloutlist dt a,
 span.inlinecallout,
 dl.calloutlist dt > span.callout {
 	border-radius: 0 0% 50% 50%;
+}
+
+dl.calloutlist dt.active,
+dl.calloutlist dt.active span.callout,
+dl.calloutlist dt.active a {
+    border-color: #d00;
+}
+dl.calloutlist dt.active a {
+    background-color: #d00;
 }
 

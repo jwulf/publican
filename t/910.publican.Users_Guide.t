@@ -26,7 +26,7 @@ my $tlink = cwd().'/Users_Guide';
 my $dir = pushd('Users_Guide');
 my $result;
 
-system("ln -s $flink $tlink") unless (-l 'blib' && -d 'blib');
+#system("ln -s $flink $tlink") unless (-l 'blib' && -d 'blib');
 
 $result = system( @perl_args, $publican, 'print_tree', @common_opts );
 is( $result, 0, 'Run print_tree' );

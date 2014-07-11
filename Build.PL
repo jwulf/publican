@@ -197,6 +197,27 @@ my $class = Module::Build->subclass(
             $self->SUPER::ACTION_config_data();
             return $self->SUPER::ACTION_install();
         }
+        sub ACTION_test {
+            my ($self) = @_;
+            ## Setup ConfigData so it points to the local content
+            $self->config_data( 'etc',            $cwd . '/blib/etc' );
+            $self->config_data( 'datadir',        $cwd . '/blib/datadir' );
+            $self->config_data( 'web',            $cwd . '/blib/web' );
+            $self->config_data( 'templates',      $cwd . '/blib/templates' );
+            $self->config_data( 'book_templates', $cwd . '/blib/book_templates' );
+            $self->config_data( 'rpm_templates',  $cwd . '/blib/rpm_templates' );
+            $self->config_data( 'docdir',         $cwd . '/pod1' );
+            $self->SUPER::ACTION_test();
+            # Set ConfigData to point to the installed paths
+            $self->config_data('etc', $self->install_path('etc'));
+            $self->config_data('datadir', $self->install_path('datadir'));
+            $self->config_data('web', $self->install_path('web'));
+            $self->config_data('templates', $self->install_path('templates'));
+            $self->config_data('book_templates', $self->install_path('book_templates'));
+            $self->config_data('rpm_templates', $self->install_path('rpm_templates'));
+            $self->config_data('docdir', $self->install_path('docdir'));
+            return;
+        }
         sub ACTION_distdir {
             my ($self) = @_;
             return $self->SUPER::ACTION_distdir();

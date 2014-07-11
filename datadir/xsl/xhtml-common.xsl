@@ -2098,7 +2098,7 @@ snip border rubbish. BZ #875967
           <xsl:with-param name="suppress-numbers" select="'1'"/>
         </xsl:apply-templates>
       </xsl:variable>
-      <xsl:param name="mode">
+      <xsl:variable name="mode">
         <xsl:choose>
           <xsl:when test="$embedtoc != 0">
 		<xsl:text>embedtoc</xsl:text>
@@ -2107,7 +2107,7 @@ snip border rubbish. BZ #875967
 		<xsl:text>gfx</xsl:text>
           </xsl:otherwise>
         </xsl:choose>
-      </xsl:param>
+      </xsl:variable>
       <xsl:variable name="rtf-with-callouts">
         <xsl:choose>
           <xsl:when test="function-available('sverb:insertCallouts')">
@@ -2371,6 +2371,10 @@ snip border rubbish. BZ #875967
       </xsl:message>
     </xsl:otherwise>
   </xsl:choose>
+</xsl:template>
+
+<xsl:template match="span">
+    <xsl:copy-of select="."/>
 </xsl:template>
 
 <!-- ONLY add title attribute if there is an alt text -->

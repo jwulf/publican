@@ -1948,7 +1948,7 @@ sub insertCallouts {
     my $mode =  (shift() || 'gfx');
 
     my $embedded = 0;
-    if($mode = 'embedtoc') {
+    if($mode eq 'embedtoc') {
         $mode =  'gfx';
         $embedded = 1;
     }

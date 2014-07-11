@@ -31,7 +31,7 @@ my $tlink = cwd().'/foo2';
 
 my $dir = pushd("foo2");
 
-system("ln -s $flink $tlink");
+#system("ln -s $flink $tlink");
 
 is( system(qq{perl -CDAS $coverdb -I $lib $publican help_config $common_opts}),
     0, 'test help_config'

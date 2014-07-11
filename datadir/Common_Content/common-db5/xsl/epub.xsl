@@ -8,10 +8,14 @@
   version="1.0"
   exclude-result-prefixes="exsl l d">
 
-<xsl:import href="http://docbook.sourceforge.net/release/xsl/current/epub/docbook.xsl"/>
-<xsl:import href="html-common.xsl"/>
+<xsl:import href="http://docbook.sourceforge.net/release/xsl-ns/current/epub/docbook.xsl"/>
+<!--xsl:import href="html-common.xsl"/-->
+
 <xsl:param name="suppress.navigation" select="1"/>
+<xsl:param name="use.extensions" select="0"/>
 <xsl:param name="tablecolumns.extension" select="0"/>
+<xsl:param name="callouts.extension" select="0"/>
+
 <xsl:param name="epub.oebps.dir" select="'OEBPS/'"/> 
 <xsl:param name="chunker.output.doctype-public" select="'-//W3C//DTD XHTML 1.1//EN'"/>
 <xsl:param name="chunker.output.doctype-system" select="'http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd'"/>
@@ -99,8 +103,8 @@ part nop
 
       <!-- TODO: be nice to have a id="titlepage" here -->
       <xsl:apply-templates select="//part|
-                                   //book[*[last()][self::bookinfo]]|
-                                   //book[bookinfo]|
+                                   //book[*[last()][self::info]]|
+                                   //book[info]|
                                    /set|
                                    /set/book|
                                    //reference|
