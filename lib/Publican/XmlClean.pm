@@ -833,7 +833,7 @@ sub my_as_XML {
                         and !@{ $node->content_array_ref() } )
                     {
                         if ( $tag eq '~cdata' ) {
-                            push( @xml, qq|]]>\n| );
+                            push( @xml, qq|]]>| );
                         }
                         else {
                             push( @xml, $node->endtag_XML() );

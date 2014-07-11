@@ -214,7 +214,12 @@ array.
      <videodata fileref="http://youtube.com/embed/B-Wd-Q3F8KM"/>
    </videoobject>
  </mediaobject>
+</section>
 
+<section id="1110611">
+<title>Testing BZ #1110611 A line break is automatically inserted after cdata in code.</title>
+<para>Is there a newline inserted after this <code><![CDATA[CDATA]]></code>?</para>
+</section>
 
 <!--                                 
 <para>
@@ -231,7 +236,6 @@ array.
 </equation>
 </para>
 -->
-</section>
 </section>
 </preface>
 
