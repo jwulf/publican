@@ -785,7 +785,7 @@ Version:
             <hr/>
         </xsl:if>
         <xsl:if test="$row1 or $row2">
-            <ul class="docnav" xmlns="http://www.w3.org/1999/xhtml">
+            <ul class="docnav bottom" xmlns="http://www.w3.org/1999/xhtml">
                 <xsl:if test="$row1">
                     <li class="previous">
                         <xsl:if test="count($prev) &gt; 0">

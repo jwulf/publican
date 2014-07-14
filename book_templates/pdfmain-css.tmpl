@@ -5,8 +5,12 @@
 @import url("[% monofont | uri %]-font-faces.css");
 [%- END %]
 @import url("Common_Content/css/common.css");
+[% IF overrides_css -%]
 @import url("Common_Content/css/overrides.css");
+[%- END %]
+[% IF lang_css -%]
 @import url("Common_Content/css/lang.css");
+[%- END %]
 
 body, h1, h2, h3, h4, h5, h6, pre, li, div {
     font-family: "[% bodyfont %]" !important;

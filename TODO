@@ -82,13 +82,15 @@ Publican 4.2
 Books to test 4.2 on:
 	DB5:
 		PUG
-		Red_Hat_Enterprise_Linux_OpenStack_Platform-Configuration_Reference_Guide-5-web-en-US
-		Red_Hat_Enterprise_Linux_OpenStack_Platform-Administration_User_Guide-5-web-en-US
+		Red_Hat_Enterprise_Linux_OpenStack_Platform-Configuration_Reference_Guide-5-web-en-US	(RedHat-db5-201405)
+		Red_Hat_Enterprise_Linux_OpenStack_Platform-Administration_User_Guide-5-web-en-US	(RedHat-db5-201405)
+		Red_Hat_Enterprise_Linux_OpenStack_Platform-End_User_Guide-4-web-en-US			(RedHat-db5)
+		Red_Hat_Enterprise_Linux_OpenStack_Platform-Administration_User_Guide-4-web-en-US	(RedHat-db5)
 
 	DB4:
-		Red_Hat_Certificate_System-Admin_Guide-8.1-web-en-US
-		Red_Hat_Enterprise_Linux-Installation_Guide-7-web-en-US
-		Red_Hat_Enterprise_Linux-Installation_Guide-6-web-en-US
+		Red_Hat_Certificate_System-Admin_Guide-8.1-web-en-US	(RedHat-201405)
+		Red_Hat_Enterprise_Linux-Installation_Guide-7-web-en-US	(RedHat-201405)
+		Red_Hat_Enterprise_Linux-Installation_Guide-6-web-en-US	(RedHat)
 
 DB5 ePub: does it work?
 

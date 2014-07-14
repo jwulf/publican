@@ -693,6 +693,8 @@ sub transform {
             monofont => $monofont,
             monoface =>
                 ( -f "$tmp_dir/$lang/html-pdf/$monofont-font-faces.css" ),
+            overrides_css => ( -f "$tmp_dir/$lang/html-pdf/overrides.css" ),
+            lang_css      => ( -f "$tmp_dir/$lang/html-pdf/lang.css" ),
         };
 
         if (@keywords) {
@@ -1855,7 +1857,7 @@ sub highlight {
             Function     => [ "<span class='perl_Function'>",     "</span>" ],
             IString      => [ "<span class='perl_IString'>",      "</span>" ],
             Keyword      => [ "<span class='perl_Keyword'>",      "</span>" ],
-            Normal       => [ "",                    "" ],
+            Normal       => [ "",                                 "" ],
             Operator     => [ "<span class='perl_Operator'>",     "</span>" ],
             Others       => [ "<span class='perl_Others'>",       "</span>" ],
             RegionMarker => [ "<span class='perl_RegionMarker'>", "</span>" ],
@@ -1904,10 +1906,10 @@ sub highlight {
 ##debug_msg("Highlighting: " . $in_string . "\n") if $language eq 'C++';
 
     $parser->expand_entities(0);
-    my $out_string = ''; #$hl->highlightText( $content->string_value() );
+    my $out_string = '';    #$hl->highlightText( $content->string_value() );
 
-    foreach my $line (split /^/, $content->string_value()) {
-         $out_string .= $hl->highlightText($line);
+    foreach my $line ( split /^/, $content->string_value() ) {
+        $out_string .= $hl->highlightText($line);
     }
 ##debug_msg("Highlighting: $out_string\n");
 
@@ -1945,16 +1947,16 @@ BUGBUG: make sure class is being set
 sub insertCallouts {
     my $areaspec = shift();
     my $verbatim = shift();
-    my $mode =  (shift() || 'gfx');
+    my $mode     = ( shift() || 'gfx' );
 
     my $embedded = 0;
-    if($mode eq 'embedtoc') {
-        $mode =  'gfx';
+    if ( $mode eq 'embedtoc' ) {
+        $mode     = 'gfx';
         $embedded = 1;
     }
 
     # XML::LibXML::Document
-    my $doc = $areaspec->get_node(1);
+    my $doc       = $areaspec->get_node(1);
     my $verb      = $verbatim->get_node(1);
     my $childnode = $verb->firstChild;
 
@@ -2105,7 +2107,7 @@ sub insertCallouts {
 
                     my $common_path = '"Common_Content';
 
-                    $common_path = '../../../..' if($embedded);
+                    $common_path = '../../../..' if ($embedded);
                     if ( $format eq 'HTML' ) {
                         $gfx_node = XML::LibXML::Element->new('img');
                         $gfx_node->setAttribute( 'class', 'callout' );
@@ -2128,7 +2130,8 @@ sub insertCallouts {
                     $out_string .= $gfx_node->toString();
                 }
                 elsif ( $mode eq 'css' ) {
-                    $out_string .= qq{<span class='inlinecallout'>$index</span> };
+                    $out_string
+                        .= qq{<span class='inlinecallout'>$index</span> };
                 }
                 else {    # numeric
                     $out_string .= "$index ";
