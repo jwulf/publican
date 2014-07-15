@@ -95,8 +95,8 @@ int main()
 <!--
      https://bugzilla.redhat.com/show_bug.cgi?id=604255
 -->
-
-<example>
+<para>Test a programlisting with a calloutlist</para>
+<example> 
   <title>"Hello world!" in C++</title>
   <programlisting><![CDATA[
 #include <qpid/messaging/Connection.h>
@@ -167,7 +167,7 @@ all senders and receivers managed by each session.</para>
     </callout>
   </calloutlist>
 </example>
-
+<para>And now we test a programlistingco with an areaspec</para>
 <programlistingco>
     <areaspec>
  <area id="index1" coords="2 65"/>
@@ -199,19 +199,19 @@ array.
 <title>Testing BZ #752021 Cross-Browser embed external video</title>
 <mediaobject>
   <videoobject>
-     <videodata contentdepth="413" contentwidth="660" autoplay="false" controls="" format="video/webm" fileref="http://clips.vorwaerts-gmbh.de/VfE.webm"/>
+     <videodata contentdepth="413" contentwidth="660" autoplay="false" controls="" format="video/webm" fileref="https://clips.vorwaerts-gmbh.de/VfE.webm"/>
    </videoobject>
  </mediaobject>
 <mediaobject>
   <videoobject>
      <videodata contentdepth="413" contentwidth="660"
- fileref="http://player.vimeo.com/video/30704252?title=0[1844952446]byline=0[1844952446]portrait=0"/>
+ fileref="https://player.vimeo.com/video/30704252?title=0[1844952446]byline=0[1844952446]portrait=0"/>
    </videoobject>
     <caption/>
  </mediaobject>
 <mediaobject>
   <videoobject>
-     <videodata fileref="http://youtube.com/embed/B-Wd-Q3F8KM"/>
+     <videodata fileref="https://youtube.com/embed/B-Wd-Q3F8KM"/>
    </videoobject>
  </mediaobject>
 </section>
