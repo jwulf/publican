@@ -183,4 +183,25 @@ Version:
   </xsl:choose>
 </xsl:template>
 
+<xsl:template match="d:videodata">
+  <a>
+    <xsl:call-template name="common.html.attributes"/>
+
+    <xsl:attribute name="href">
+      <xsl:value-of select="@fileref"/>
+    </xsl:attribute>
+
+    <xsl:call-template name="video.poster"/>
+
+    <xsl:value-of select="@fileref"/>
+    <!--xsl:apply-templates select="@*[local-name() != 'fileref']"/-->
+    <xsl:apply-templates select="../d:multimediaparam"/>
+    
+    <!-- add any fallback content -->
+    <xsl:call-template name="video.fallback"/>
+      
+  </a>
+</xsl:template>
+
+
 </xsl:stylesheet>
