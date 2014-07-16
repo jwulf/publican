@@ -19,7 +19,7 @@ body {
 	border: 40px solid #EEEEEE;
 	margin: 0;
 	padding: 0 10px;
-	font-family: "liberation sans", "Myriad ", "Bitstream Vera Sans", "Lucida Grande", "Luxi Sans", "Trebuchet MS", helvetica, verdana, arial, sans-serif;
+	font-family: "Open Sans","liberation sans", "Myriad ", "Bitstream Vera Sans", "Lucida Grande", "Luxi Sans", "Trebuchet MS", helvetica, verdana, arial, sans-serif;
 }
 
 body.toc_embeded {
@@ -51,19 +51,6 @@ body.toc_embeded > div.book, body.toc_embeded > div.article, body.toc_embeded > 
 }
 #floatingtoc dd a {
     color: #CCCCCC;
-}
-#floatingtoc {
-    background-color: rgba(255, 255, 255, 0.86);
-    border: medium none;
-    bottom: 0;
-    left: 0;
-    margin: 0;
-    max-height: none;
-    overflow: hidden;
-    padding: 5em 0;
-    top: 0;
-    transition: all 0.2s ease 0s;
-    width: 100%;
 }
 #floatingtoc .toc {
     -moz-box-sizing: border-box;
@@ -320,11 +307,11 @@ a:visited {
 }
 
 .command, .filename, .keycap, .classname, .literal {
-    font-family: "liberation mono","bitstream vera mono","dejavu mono",monospace;
+    font-family: "dejavu sans mono","liberation mono","bitstream vera mono","dejavu mono",monospace;
     font-weight: bold;
 }
 code {
-    font-family: "liberation mono","bitstream vera mono","dejavu mono",monospace;
+    font-family: "dejavu sans mono","liberation mono","bitstream vera mono","dejavu mono",monospace;
     font-weight: bold;
     white-space: pre-wrap;
     word-wrap: break-word;
@@ -360,7 +347,7 @@ pre {
     box-shadow: 0 2px 5px #AAAAAA inset;
     color: #000000;
     display: block;
-    font-family: "liberation mono","bitstream vera mono","dejavu mono",monospace;
+    font-family: "dejavu sans mono","liberation mono","bitstream vera mono","dejavu mono",monospace;
     font-size: 0.9em;
     margin-top: 1em;
     padding: 0.5em 1em;

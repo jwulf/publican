@@ -290,11 +290,11 @@ my %PARAM_OLD = (
     os_ver => { descr => maketext('The OS for which to build packages.'), },
     pdf_body_font => {
         descr   => maketext('The font to use for body text in PDFs.'),
-        default => 'Liberation Sans',
+        default => 'Open Sans',
     },
     pdf_mono_font => {
         descr   => maketext('The font to use for mono text in PDFs.'),
-        default => 'Liberation Mono',
+        default => 'dejavu sans mono',
     },
     product => {
         descr => maketext(

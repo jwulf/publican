@@ -447,6 +447,7 @@ my $builder = $class->new(
         'datadir/Common_Content/common-db5/publish',
         'META.json',
         'publican-Test_Brand',
+        'Release_Notes/tmp',
     ],
     script_files => [ 'bin/publican', 'bin/db5-valid', 'bin/db4-2-db5' ],
     bindoc_dirs  => ['pod1'],
