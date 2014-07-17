@@ -420,7 +420,7 @@
 						The font to use for body text in PDFs.
 					</para>
 					<para>
-						The default value for this parameter is: Liberation Sans
+						The default value for this parameter is: Open Sans
 					</para>
 				</listitem>
 			</varlistentry>
@@ -431,7 +431,7 @@
 						The font to use for mono text in PDFs.
 					</para>
 					<para>
-						The default value for this parameter is: Liberation Mono
+						The default value for this parameter is: dejavu sans mono
 					</para>
 				</listitem>
 			</varlistentry>

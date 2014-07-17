@@ -39,6 +39,8 @@ use Sort::Versions;
 use Template;
 use Encode qw(is_utf8 decode_utf8 encode_utf8);
 use Data::Dumper;
+use HTML::WikiConverter;
+use File::Slurp;
 
 use vars qw(@ISA @EXPORT @EXPORT_OK);
 
@@ -81,8 +83,6 @@ sub new {
 =head2  build
 
 Transform the source in to another format.
-
-Valid formats: eclipse epub html html-single html-desktop man pdf txt
 
 =cut
 
@@ -502,51 +502,77 @@ sub transform {
         . $self->{publican}->param('docname') . '-'
         . "$lang.pdf";
 
-    if ( $format eq 'txt' ) {
+    my $sub_format = 0;
+
+    $sub_format = 1 if ( $format eq 'txt' );
+    foreach my $dialect ( HTML::WikiConverter->available_dialects ) {
+        if ( $dialect eq $format ) {
+            $sub_format = 1;
+            last;
+        }
+    }
+
+    if ($sub_format) {
         if ( !-e "$tmp_dir/$lang/html-single" || $rebuild ) {
             $self->transform( { lang => $lang, format => 'html-single' } );
         }
 
         $dir = pushd("$tmp_dir/$lang");
-        mkdir 'txt';
+        mkdir $format;
         my $TXT_FILE;
-        open( $TXT_FILE, ">:encoding(UTF-8)", "txt/$docname.txt" )
-            || croak( maketext("Can't open file for text output!") );
-        my $tree = HTML::TreeBuilder->new();
         my $fh;
         open( $fh, "<:encoding(UTF-8)", "html-single/index.html" )
             || croak( maketext("Can't open file for html input!") );
-        eval { $tree->parse_file($fh); };
 
-        if ($@) {
-            croak( maketext( "FATAL ERROR 4: [_1]", $@ ) );
-        }
+        if ( $format eq 'txt' ) {
+            open( $TXT_FILE, ">:encoding(UTF-8)", "$format/$docname.txt" )
+                || croak( maketext("Can't open file for text output!") );
 
+            my $tree = HTML::TreeBuilder->new();
+            eval { $tree->parse_file($fh); };
+
+            if ($@) {
+                croak( maketext( "FATAL ERROR 4: [_1]", $@ ) );
+            }
 ## BZ #697363
-        my $formatter = $self->{publican}->param('txt_formater') || '';
+            my $formatter = $self->{publican}->param('txt_formater') || '';
 
-        if ( $formatter eq 'links' ) {
-            my $f = HTML::FormatText::WithLinks->new();
-            print( $TXT_FILE $f->parse( $tree->as_HTML() ) );
+            if ( $formatter eq 'links' ) {
+                my $f = HTML::FormatText::WithLinks->new();
+                print( $TXT_FILE $f->parse( $tree->as_HTML() ) );
 
-        }
-        elsif ( $formatter eq 'tables' ) {
-            print( $TXT_FILE HTML::FormatText::WithLinks::AndTables->convert(
-                    $tree->as_HTML,
-                    {   leftmargin   => 0,
-                        rightmargin  => 72,
-                        anchor_links => 0,
-                        before_link  => ' [%n] '
-                    }
-                )
-            );
+            }
+            elsif ( $formatter eq 'tables' ) {
+                print( $TXT_FILE HTML::FormatText::WithLinks::AndTables
+                        ->convert(
+                        $tree->as_HTML,
+                        {   leftmargin   => 0,
+                            rightmargin  => 72,
+                            anchor_links => 0,
+                            before_link  => ' [%n] '
+                        }
+                        )
+                );
+            }
+            else {
+                my $f = HTML::FormatText->new(
+                    leftmargin  => 0,
+                    rightmargin => 72
+                );
+                print( $TXT_FILE $f->format($tree) );
+            }
+
         }
         else {
-            my $f
-                = HTML::FormatText->new( leftmargin => 0, rightmargin => 72 );
-            print( $TXT_FILE $f->format($tree) );
-        }
+            # must be a wiki format
+            open( $TXT_FILE, ">", "$format/$docname.txt" )
+                || croak( maketext("Can't open file for text output!") );
 
+            my $wc = new HTML::WikiConverter( dialect => $format );
+            my $html = read_file("html-single/index.html");
+            my $txt  = $wc->html2wiki($html);
+            print( $TXT_FILE $txt );
+        }
         close($TXT_FILE);
         $dir = undef;
         return;
@@ -1176,21 +1202,9 @@ sub transform {
     elsif ( $format eq 'drupal-book' ) {
         $dir = undef;
 
-        my $title;
-        my $btitle = $xslt_opts{clean_title};
-        $btitle =~ s/^"//;
-        $btitle =~ s/"$//;
-        $title
-            = $web_product_label
-            ? $web_product_label
-            : $self->{publican}->param('product');
-        $title .= ' ';
-        $title .=
-              $web_version_label
-            ? $web_version_label
-            : $self->{publican}->param('version');
-        $title =~ s/_/ /g;
-        $title .= " $btitle";
+        my $title = $xslt_opts{clean_title};
+        $title =~ s/^"//;
+        $title =~ s/"$//;
 
         my $docname = $self->{publican}->param('docname');
         my $product = $self->{publican}->param('product');
@@ -1309,6 +1323,9 @@ sub drupal_transform {
     my $release    = $self->{publican}->param('release');
     my $xml_lang   = $self->{publican}->param('xml_lang');
     my $drupal_dir = "$tmp_dir/$lang/drupal-book";
+    my $subtitle   = $self->get_subtitle( { lang => $lang } );
+    my $abstract   = $self->get_abstract( { lang => $lang } );
+    my $keywords   = join( ',', $self->get_keywords( { lang => $lang } ) );
 
     my $parser = XML::LibXML->new();
     $parser->expand_xinclude(1);
@@ -1350,9 +1367,17 @@ sub drupal_transform {
     $fh->print(<<EOH);
 <?xml version="1.0" encoding="UTF-8"?>
 <document>
-	<title>$title</title>
-	<lang>$lang</lang>
-	<images>$filename</images>
+  <name>$product $version $title</name>
+  <title>$title</title>
+  <subtitle>$subtitle</subtitle>
+  <lang>$lang</lang>
+  <images>$filename</images>
+  <product>$product</product>
+  <version>$version</version>
+  <edition>$edition</edition>
+  <release>$release</release>
+  <abstract>$abstract</abstract>
+  <keywords>$keywords</keywords>
 EOH
 
     foreach my $row ( @{$outputs} ) {
@@ -3846,4 +3871,4 @@ L<https://bugzilla.redhat.com/bugzilla/enter_bug.cgi?product=Publican&component=
 =head1 AUTHOR
 
 Jeff Fearn  C<< <jfearn@redhat.com> >>
-3711:	To save a full .LOG file rerun with -g
+
