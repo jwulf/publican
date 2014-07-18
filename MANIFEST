@@ -337,9 +337,11 @@ datadir/Common_Content/common-db5/uk-UA/Conventions.po
 datadir/Common_Content/common-db5/uk-UA/Feedback.po
 datadir/Common_Content/common-db5/uk-UA/Program_Listing.po
 datadir/Common_Content/common-db5/uk-UA/Revision_History.po
+datadir/Common_Content/common-db5/xsl/drupal-book.xsl
 datadir/Common_Content/common-db5/xsl/epub.xsl
 datadir/Common_Content/common-db5/xsl/html-common.xsl
 datadir/Common_Content/common-db5/xsl/html-pdf.xsl
+datadir/Common_Content/common-db5/xsl/html-single-plain.xsl
 datadir/Common_Content/common-db5/xsl/html-single.xsl
 datadir/Common_Content/common-db5/xsl/html.xsl
 datadir/Common_Content/common-db5/xsl/pdf.xsl
@@ -757,6 +759,7 @@ datadir/xsl/dt_htmlsingle_spec.xsl
 datadir/xsl/eclipse.xsl
 datadir/xsl/epub.xsl
 datadir/xsl/html-pdf.xsl
+datadir/xsl/html-single-plain.xsl
 datadir/xsl/html-single.xsl
 datadir/xsl/html.xsl
 datadir/xsl/man.xsl
@@ -1110,4 +1113,3 @@ windows/publican2.ico
 xt/author/perlcritic.t
 xt/author/pod-coverage.t
 xt/author/pod.t
-META.json

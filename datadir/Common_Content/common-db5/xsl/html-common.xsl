@@ -74,7 +74,7 @@
 <xsl:param name="email.delimiters.enabled">0</xsl:param>
 
 <xsl:param name="section.autolabel" select="1"/>
-<xsl:param name="section.label.includes.component.label" select="1"/>
+<xsl:param name="section.label.includes.component.label" select="0"/>
 
 <xsl:param name="local.l10n.xml" select="document('')"/>
 <l:i18n xmlns:l="http://docbook.sourceforge.net/xmlns/l10n/1.0">
@@ -1098,7 +1098,7 @@ Version: 1.72.0
         </xsl:when>
 
         <xsl:when test="local-name() = 'height' and ($element != 'img' and  $element != 'iframe')">
-          <xsl:text>height </xsl:text>
+          <xsl:text>height: </xsl:text>
           <xsl:value-of select="."/>
           <xsl:text>; </xsl:text>
         </xsl:when>

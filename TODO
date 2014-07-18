@@ -94,6 +94,22 @@ Books to test 4.2 on:
 
 DB5 ePub: does it work?
 
+Markdown:
+	No TOCs in output
+	revert para == div in DB4
+	No NAV in output
+	class styles not being applied e.g. 'span class="application"' is not bold
+    code higlighting breaks code block?
+    admonitions no worky
+    indexterms break links
+    code switcher breaks code blocks
+    callouts/examples ...
+    inline command not right, space after ** is an issue
+
+
+
+
+
 ######################################
 PUG changes
 ######################################

@@ -176,7 +176,7 @@ sub build {
                 }
             ) unless ( $format eq 'xml' );
 
-            $rebuild = 0 if ( $format eq 'txt' || $format eq 'html-single' );
+            $rebuild = 0 if ( $format eq 'txt' || $format eq 'html-single-plain' );
 
             if ($publish) {
                 if ( $type eq 'brand' ) {
@@ -513,15 +513,15 @@ sub transform {
     }
 
     if ($sub_format) {
-        if ( !-e "$tmp_dir/$lang/html-single" || $rebuild ) {
-            $self->transform( { lang => $lang, format => 'html-single' } );
+        if ( !-e "$tmp_dir/$lang/html-single-plain" || $rebuild ) {
+            $self->transform( { lang => $lang, format => 'html-single-plain' } );
         }
 
         $dir = pushd("$tmp_dir/$lang");
         mkdir $format;
         my $TXT_FILE;
         my $fh;
-        open( $fh, "<:encoding(UTF-8)", "html-single/index.html" )
+        open( $fh, "<:encoding(UTF-8)", "html-single-plain/index.html" )
             || croak( maketext("Can't open file for html input!") );
 
         if ( $format eq 'txt' ) {
@@ -569,7 +569,7 @@ sub transform {
                 || croak( maketext("Can't open file for text output!") );
 
             my $wc = new HTML::WikiConverter( dialect => $format );
-            my $html = read_file("html-single/index.html");
+            my $html = read_file("html-single-plain/index.html");
             my $txt  = $wc->html2wiki($html);
             print( $TXT_FILE $txt );
         }
@@ -875,6 +875,10 @@ sub transform {
         $xslt_opts{'pop_prod'} = "'$pop_prod'" if ($pop_prod);
         $xslt_opts{'pop_ver'}  = "'$pop_ver'" if ($pop_ver);
         $xslt_opts{'pop_name'} = "'$pop_name'" if ($pop_name);
+    }
+    elsif ( $format eq 'html-single-plain' ) {
+
+        $dir = pushd("$tmp_dir/$lang/$format");
     }
     elsif ( $format eq 'html-pdf' ) {
         $dir = pushd("$tmp_dir/$lang/$format");
