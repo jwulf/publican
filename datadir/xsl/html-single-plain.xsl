@@ -45,7 +45,7 @@ sect3 nop
 sect4 nop
 sect5 nop
 section nop
-part toc
+part nop
 </xsl:param>
 
 <xsl:template name="user.head.content">

@@ -8,7 +8,7 @@
     extension-element-prefixes="d"
 >
 
-<xsl:import href="http://docbook.sourceforge.net/release/xsl-ns/current/xhtml5/docbook.xsl"/>
+<xsl:import href="http://docbook.sourceforge.net/release/xsl/current/xhtml/docbook.xsl"/>
 <xsl:param name="generate.legalnotice.link" select="0"/>
 <xsl:param name="generate.revhistory.link" select="0"/>
 <xsl:param name="suppress.navigation">1</xsl:param>
@@ -31,6 +31,7 @@
 <xsl:param name="ignore.image.scaling" select="1"/>
 <xsl:param name="section.autolabel" select="1"/>
 <xsl:param name="section.label.includes.component.label" select="1"/>
+<xsl:param name="email.delimiters.enabled" select="0"/>
 
 <xsl:param name="generate.toc">
 set nop
@@ -45,7 +46,7 @@ sect3 nop
 sect4 nop
 sect5 nop
 section nop
-part toc
+part nop
 </xsl:param>
 <xsl:template name="user.head.content">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />

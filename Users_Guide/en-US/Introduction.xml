@@ -220,6 +220,12 @@ array.
 <title>Testing BZ #1110611 A line break is automatically inserted after cdata in code.</title>
 <para>Is there a newline inserted after this <code><![CDATA[CDATA]]></code>?</para>
 </section>
+<section id="1117561">
+<title>Testing BZ #1117561 CDATA tags</title>
+<para><![CDATA[=, >, >=, <, <=, <>]]></para>
+<para><![CDATA[!=]]></para>
+<para><![CDATA[<>]]></para>
+</section>
 
 <!--                                 
 <para>

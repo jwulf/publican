@@ -46,6 +46,8 @@ use vars qw(@ISA @EXPORT @EXPORT_OK);
 
 @ISA = qw(Publican::Builder);
 
+%HTML::Element::optionalEndTag = ();
+
 =head1 NAME
 
 Publican::Builder::DocBook - A module to Convert XML to various output formats
@@ -565,13 +567,32 @@ sub transform {
         }
         else {
             # must be a wiki format
-            open( $TXT_FILE, ">", "$format/$docname.txt" )
+            open( $TXT_FILE, ">:encoding(UTF-8)", "$format/$docname.txt" )
                 || croak( maketext("Can't open file for text output!") );
 
-            my $wc = new HTML::WikiConverter( dialect => $format );
-            my $html = read_file("html-single-plain/index.html");
+
+            my $tree = HTML::TreeBuilder->new();
+            eval { $tree->parse_file($fh); };
+
+            if ($@) {
+                croak( maketext( "FATAL ERROR 4: [_1]", $@ ) );
+            }
+
+		    # remove broken empty anchors
+            foreach my $node ($tree->root()->look_down('_tag', 'a')) {
+                if($node->is_empty() && $node->id()) {
+                    $node->parent()->id($node->id());
+    				$node->delete();
+                }				
+            }
+		    # remove extra code tags anchors
+            foreach my $node ($tree->root()->look_down(_tag => 'code', class => qr/email|uri/)) {
+    			$node->replace_with_content();
+            }
+            my $wc = new HTML::WikiConverter( dialect => $format, link_style => 'inline' );
+            my $html = encode_utf8($tree->as_XML());
             my $txt  = $wc->html2wiki($html);
-            print( $TXT_FILE $txt );
+            print( $TXT_FILE decode_utf8($txt) );
         }
         close($TXT_FILE);
         $dir = undef;
