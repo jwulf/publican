@@ -83,7 +83,7 @@ BuildRequires:  perl(Locale::PO) >= 0.24
 BuildRequires:  perl(Module::Build)
 BuildRequires:  perl(Pod::Usage)
 BuildRequires:  perl(String::Similarity)
-BuildRequires:  perl(Syntax::Highlight::Engine::Kate) >= 0.07-5
+BuildRequires:  perl(Syntax::Highlight::Engine::Kate) >= 0.09
 BuildRequires:  perl(Template)
 BuildRequires:  perl(Template::Constants)
 BuildRequires:  perl(Term::ANSIColor)
@@ -121,11 +121,10 @@ Requires:       perl-XML-TreeBuilder >= 5.4
 Requires:       perl-Template-Toolkit
 Requires:       perl(DBD::SQLite)
 Requires:       perl(Text::CSV_XS)
-Requires:       perl(Syntax::Highlight::Engine::Kate) >= 0.07-5
 Requires:       docbook5-schemas
 Requires:       docbook5-style-xsl >= 1.78.1
 
-# Not reall required, but sometimes koji pulls in a conflicting dep...
+# Not really required, but sometimes koji pulls in a conflicting dep...
 Requires:       perl(Compress::Zlib) => 2.030
 
 # Lets validate some basics

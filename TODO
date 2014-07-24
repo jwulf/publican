@@ -106,7 +106,8 @@ Markdown:
     callouts/examples ...
     inline command not right, space after ** is an issue
     remark to <!---
-
+> <varlistentry><listitem> got a bold
+> <literal> got a bold.
 
 ######################################
 PUG changes
