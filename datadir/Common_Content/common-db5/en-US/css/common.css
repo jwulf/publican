@@ -271,9 +271,13 @@ pre.numbered span.line{
 }
 pre.numbered span.line:before{
     content: counter(linecounter);
-    width: 2em;
+    width: 1.5em;
     display: inline-block;
-    border-right: 1px solid black;
+    border-right: 1px solid #a1a1a1;
+	text-align: right;
+	margin-right: 1em;
+	color: #a1a1a1;
+	padding-right: 0.3em;
 }
 
 .example {

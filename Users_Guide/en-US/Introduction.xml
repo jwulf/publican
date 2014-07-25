@@ -49,7 +49,7 @@
 <section id="BZ1092351">
 <title>Testing BZ #1092351 Code Switcher</title>
 	 <informalexample conformance="264" id="switch1" role="switchery">
-<programlisting language="Perl">#!/usr/bin/perl
+<programlisting language="Perl" linenumbering="numbered">#!/usr/bin/perl
 use strict;
 use warnings;
 
@@ -64,7 +64,7 @@ int main()
 </section>
 <section id="BZ1088051">
 <title>Testing BZ #1088051 Code Popper</title>
-<screen role="popper"><prompt>$</prompt> <command>apt-get search libxslt</command>
+<screen role="popper" linenumbering="numbered"><prompt>$</prompt> <command>apt-get search libxslt</command>
 <computeroutput>gambas3-gb-xml-xslt - Gambas XSLT component</computeroutput>
 <computeroutput>libidzebra-2.0-mod-alvis - IDZebra filter alvis (XSLT filter for XML)</computeroutput>
 <computeroutput>libidzebra-2.0-mod-dom - IDZebra filter 'dom' (XML DOM internal document model with XSLT)</computeroutput>
@@ -173,7 +173,7 @@ all senders and receivers managed by each session.</para>
  <area id="index1" coords="2 65"/>
  <area id="index2" coords="3 11"/>
     </areaspec>
-<programlisting language="XML">  &lt;list-index 
+<programlisting language="XML" linenumbering="numbered">  &lt;list-index 
         column="column_name"
         base="0|1|..."/&gt;
 </programlisting>

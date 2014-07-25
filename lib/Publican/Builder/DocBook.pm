@@ -1959,7 +1959,7 @@ sub highlight {
     my $out_string = '';    #$hl->highlightText( $content->string_value() );
 
     foreach my $line ( split /^/, $content->string_value() ) {
-        $out_string .= $hl->highlightText($line);
+        $out_string .= '<span class="line">&#8203;</span>' . $hl->highlightText($line);
     }
 ##debug_msg("Highlighting: $out_string\n");
 

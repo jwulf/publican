@@ -43,7 +43,7 @@
 <xsl:param name="chunk.toc" select="''"/>
 <xsl:param name="chunk.section.depth" select="1"/>
 <xsl:param name="chunk.tocs.and.lots" select="0"/>
-
+<xsl:param name="linenumbering.extension" select="0"/>
 
 <!-- Admonition Graphics -->
 <xsl:param name="admon.graphics" select="1"/>
@@ -1238,6 +1238,14 @@ Version: 1.72.0
         <xsl:if test="@width != ''">
           <xsl:attribute name="width">
             <xsl:value-of select="@width"/>
+          </xsl:attribute>
+        </xsl:if>
+        <xsl:if test="@linenumbering = 'numbered'">
+          <xsl:attribute name="class">
+            <xsl:value-of select="local-name(.)"/><xsl:text> numbered</xsl:text> 
+			<xsl:if test="@role != ''">
+				<xsl:text> </xsl:text><xsl:value-of select="@role"/>
+        	</xsl:if>
           </xsl:attribute>
         </xsl:if>
         <xsl:if test="@role = 'popper' and $poper.as.dl = '0'">
