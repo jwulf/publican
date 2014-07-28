@@ -178,7 +178,8 @@ sub build {
                 }
             ) unless ( $format eq 'xml' );
 
-            $rebuild = 0 if ( $format eq 'txt' || $format eq 'html-single-plain' );
+            $rebuild = 0
+                if ( $format eq 'txt' || $format eq 'html-single-plain' );
 
             if ($publish) {
                 if ( $type eq 'brand' ) {
@@ -272,9 +273,21 @@ sub build {
                         elsif ( $web_type =~ m/^product$/i ) {
                             $path = "$pub_dir/home/$lang/$product";
 
+                            my $tmpl_dir = "$pub_dir/datadir/$lang/$product";
+
+                            # Copy External Links
+                            if ( -f "$tmp_dir/$lang/xml/External_Links.xml" )
+                            {
+                                mkpath($tmpl_dir);
+                                fcopy(
+                                    "$tmp_dir/$lang/xml/External_Links.xml",
+                                    "$tmpl_dir/External_Links.xml"
+                                );
+                                unlink(
+                                    "$tmp_dir/$lang/xml/External_Links.xml");
+                            }
+
                             if ( -f "$tmp_dir/$lang/xml/Groups.xml" ) {
-                                my $tmpl_dir
-                                    = "$pub_dir/datadir/$lang/$product";
                                 mkpath($tmpl_dir);
                                 my $xml_doc = XML::TreeBuilder->new(
                                     {   'NoExpand'     => "0",
@@ -516,7 +529,8 @@ sub transform {
 
     if ($sub_format) {
         if ( !-e "$tmp_dir/$lang/html-single-plain" || $rebuild ) {
-            $self->transform( { lang => $lang, format => 'html-single-plain' } );
+            $self->transform(
+                { lang => $lang, format => 'html-single-plain' } );
         }
 
         $dir = pushd("$tmp_dir/$lang");
@@ -570,7 +584,6 @@ sub transform {
             open( $TXT_FILE, ">:encoding(UTF-8)", "$format/$docname.txt" )
                 || croak( maketext("Can't open file for text output!") );
 
-
             my $tree = HTML::TreeBuilder->new();
             eval { $tree->parse_file($fh); };
 
@@ -578,19 +591,30 @@ sub transform {
                 croak( maketext( "FATAL ERROR 4: [_1]", $@ ) );
             }
 
-		    # remove broken empty anchors
-            foreach my $node ($tree->root()->look_down('_tag', 'a')) {
-                if($node->is_empty() && $node->id()) {
-                    $node->parent()->id($node->id());
-    				$node->delete();
-                }				
+            # remove broken empty anchors
+            foreach my $node ( $tree->root()->look_down( '_tag', 'a' ) ) {
+                if ( $node->is_empty() && $node->id() ) {
+                    $node->parent()->id( $node->id() );
+                    $node->delete();
+                }
             }
-		    # remove extra code tags anchors
-            foreach my $node ($tree->root()->look_down(_tag => 'code', class => qr/email|uri/)) {
-    			$node->replace_with_content();
+
+            # remove extra code tags anchors
+            foreach my $node ( $tree->root()
+                ->look_down( _tag => 'code', class => qr/email|uri/ ) )
+            {
+                $node->replace_with_content();
             }
-            my $wc = new HTML::WikiConverter( dialect => $format, link_style => 'inline' );
-            my $html = encode_utf8($tree->as_XML());
+            my %opts;
+
+            if ( $format eq 'Markdown' ) {
+                $opts{link_style}         = 'inline';
+                $opts{ordered_list_style} = 'one-dot';
+                $opts{md_extra}           = 1;
+            }
+
+            my $wc   = new HTML::WikiConverter( dialect => $format, %opts );
+            my $html = encode_utf8( $tree->as_XML() );
             my $txt  = $wc->html2wiki($html);
             print( $TXT_FILE decode_utf8($txt) );
         }
@@ -1959,7 +1983,8 @@ sub highlight {
     my $out_string = '';    #$hl->highlightText( $content->string_value() );
 
     foreach my $line ( split /^/, $content->string_value() ) {
-        $out_string .= '<span class="line">&#8203;</span>' . $hl->highlightText($line);
+        $out_string .= '<span class="line">&#8203;</span>'
+            . $hl->highlightText($line);
     }
 ##debug_msg("Highlighting: $out_string\n");
 

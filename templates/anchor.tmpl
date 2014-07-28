@@ -17,6 +17,8 @@
         <a href="[% host %]/[% booklang %]/[% product %]/[% version %]/[%format %]/[% book %]/[% product %]-[% version %]-[% book %]-[% booklang %].[% format %]">[% text %]</a>
      [%- ELSIF format == 'txt' %]
         <a href="[% host %]/[% booklang %]/[% product %]/[% version %]/[%format %]/[% book %]/[% book %].[% format %]">[% text %]</a>
+     [%- ELSIF format == 'external' %]
+        <a class="external" href="[% uri %]">[% text %]</a>
      [%- ELSE %]
         <a [% IF class %]class="[% class %]" [% END %][% IF onclick %]onclick="[% onclick %]" [% END %]href="[% host %]/[% booklang %]/[% product %]/[% version %]/[%format %]/[% book %]/index.html">[% text %]</a>
      [%- END %]

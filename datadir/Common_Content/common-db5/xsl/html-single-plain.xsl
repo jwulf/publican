@@ -32,6 +32,7 @@
 <xsl:param name="section.autolabel" select="1"/>
 <xsl:param name="section.label.includes.component.label" select="1"/>
 <xsl:param name="email.delimiters.enabled" select="0"/>
+<xsl:param name="linenumbering.extension" select="0"/>
 
 <xsl:param name="generate.toc">
 set nop

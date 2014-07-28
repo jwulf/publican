@@ -1183,7 +1183,13 @@ SEARCH
                 $book_data{book_clean} =~ s/_/ /g;
                 $book_data{types} = \@types;
 
-                foreach my $format (sort(insensitive_sort keys(%{$list2->{$product}{$version}{$book}{formats}}))) {
+                foreach my $format (
+                    sort( insensitive_sort keys(
+                            %{  $list2->{$product}{$version}{$book}{formats}
+                            }
+                    ) )
+                    )
+                {
                     $book_data{base_format} = $format;
                     if ( $format =~ m/^html/ ) {
                         last;
@@ -1827,6 +1833,29 @@ sub write_version_index {
         croak "unknown args: " . join( ", ", keys %{$arg} );
     }
 
+    my $file = Publican::ConfigData->config('templates')
+        . "/groups/$lang/$product/External_Links.xml";
+    if ( -f $file ) {
+        my $xml_doc = XML::TreeBuilder->new(
+            { 'NoExpand' => "1", 'ErrorContext' => "2" } );
+        eval { $xml_doc->parse_file($file); };
+        croak( maketext( "Can't open file '[_1]' [_2]", $file, $@ ) ) if ($@);
+        foreach my $node (
+            $xml_doc->look_down( '_tag' => 'member', version => $version ) )
+        {
+            my $book_lang_vars;
+            $book_lang_vars->{product}    = $product;
+            $book_lang_vars->{version}    = $version;
+            $book_lang_vars->{lang}       = $lang;
+            $book_lang_vars->{name}       = $node->attr('title');
+            $book_lang_vars->{subtitle}   = $node->as_trimmed_text();
+            $book_lang_vars->{sort_order} = ( $node->attr('role') || 50 );
+            $book_lang_vars->{external}   = 1;
+            $book_lang_vars->{uri}        = $node->attr('href');
+            $book_list->{ $node->attr('title') } = $book_lang_vars;
+        }
+    }
+
     my $host = $self->{host};
 
     my $index_vars;
@@ -2239,7 +2268,7 @@ sub site_params_as_docbook {
 
     foreach my $key ( sort( keys(%PARAMS) ) ) {
         my $entry = XML::Element->new_from_lol(
-            [ 'varlistentry', {id => $key}, [ 'term', "$key" ] ] );
+            [ 'varlistentry', { id => $key }, [ 'term', "$key" ] ] );
 
         $web_list->push_content($entry);
         my $item = XML::Element->new_from_lol(

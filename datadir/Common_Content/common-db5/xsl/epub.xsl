@@ -21,6 +21,7 @@
 <xsl:param name="chunker.output.doctype-system" select="'http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd'"/>
 <xsl:param name="html.stylesheet">Common_Content/css/epub.css</xsl:param>
 <xsl:param name="html.stylesheet.print"></xsl:param>
+<xsl:param name="linenumbering.extension" select="0"/>
 
 <xsl:param name="generate.toc">
 set nop

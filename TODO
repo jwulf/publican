@@ -109,6 +109,10 @@ Markdown:
 > <varlistentry><listitem> got a bold
 > <literal> got a bold.
 
+   Consider supporting some/all of the extensions at https://github.com/jmcmanus/pagedown-extra
+
+   image tags appear broken ...
+
 ######################################
 PUG changes
 ######################################
