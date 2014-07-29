@@ -18,7 +18,7 @@
 %define wwwdir /var/www/html/docs
 
 Name:           publican
-Version:        4.1.5
+Version:        4.1.6
 Release:        0%{?dist}
 Summary:        Common files and scripts for publishing with DocBook XML
 # For a breakdown of the licensing, refer to LICENSE
@@ -28,8 +28,8 @@ URL:            https://publican.fedorahosted.org
 Source0:        https://fedorahosted.org/released/publican/Publican-v%{version}.tar.gz
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch:      noarch
-Provides:	publican-common = %{version}
-Provides:	publican-common-db5 = %{version}
+Provides:       publican-common = %{version}
+Provides:       publican-common-db5 = %{version}
 Provides:       publican-API = 4.1
 
 # Get rid of the old packages
@@ -320,6 +320,9 @@ rm -rf $RPM_BUILD_ROOT
 %{wwwdir}/common-db5
 
 %changelog
+* Tue Jul 29 2014 Jeff Fearn <jfearn@redhat.com> 4.1.6-0
+- Another shot at fixing PDF index out of range error.
+
 * Wed Jul 09 2014 Jeff Fearn <jfearn@redhat.com> 4.1.5-0
 - Add some web UI tranlstaion strings & sort formats. BZ #1117081
 - Fix formal para title CSS. BZ #1110076

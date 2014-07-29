@@ -19,15 +19,16 @@
 	  .draft {
 		background-image: url([%- buildpath -%]/Common_Content/images/watermark-draft.png);
 		background-repeat: repeat-y;
-        	background-position: center;
+		background-position: center;
 	  }
 [%- END %]
           body {
-	    font-family: "[% bodyfont %]";
-	  }
+			height: 90%;
+			font-family: "[% bodyfont %]";
+		  }
 [%- IF chunk_section_depth -%]
 [% USE String('li ') %]
-	  body ul li li [% String.repeat(chunk_section_depth)  %]{ display: none; }
+	  	  body ul li li [% String.repeat(chunk_section_depth)  %]{ display: none; }
 [%- END %]
           h1 {
             text-align: center;
@@ -49,7 +50,7 @@
             list-style: none;
           }
           ul {
-            font-size: 14px;
+            font-size: 12px;
             overflow-x: hidden;
             padding-left: 0em;
           }

@@ -1,9 +1,7 @@
 /* Cover Page styles */
-
 html {
-	height: 240mm; 
+    height: 230mm;
 }
-
 body.cover {
 	height: 100%;
 	background-color: white;
@@ -26,8 +24,8 @@ body.cover * {
 }
 
 body.cover div.logo {
-	height: 30%;
-        background-position: 50% 0%;
+	height: 20%;
+	background-position: 50% 0%;
 	background-image: url("Common_Content/images/title_logo.svg");
 	background-repeat: no-repeat;
 }
@@ -35,9 +33,8 @@ body.cover div.logo {
 
 body.cover div.leader {
 	display: inline-block;
-	font-size: 40px;
+	font-size: 30px;
 	font-weight: 600;
-	margin-top: 2em;
 }
 
 body.cover div.product {
@@ -50,20 +47,20 @@ body.cover div.version {
 }
 
 body.cover div.docname {
-	font-size: 40px;
+	font-size: 30px;
 	font-weight: 600;
 	min-height: 10%;
-	line-height: 40px;
+	line-height: 30px;
 }
 
 body.cover div.subtitle {
-	height: 20%;
+	height: 15%;
 	font-weight:300;
-	font-size: 20px;
+	font-size: 16px;
 	color: black;
 	border-top: .1em solid black;
-	padding-top: 40px;
-	margin-top: 40px;
+	padding-top: 20px;
+	margin-top: 20px;
 	margin-bottom: 0px;
 }
 body.cover div.authors {
@@ -73,7 +70,11 @@ body.cover div.author {
 	float: left;
 	min-width: 33%;
 	font-weight: 300;
-	font-size: 20px;
+	font-size: 16px;
+}
+
+div.authors {
+	margin-top: 2em;
 }
 
 div.draft {
@@ -85,15 +86,15 @@ div.para {
 	margin-top: 1em;
 }
 
-.titlepage2,
-.titlepage3 {
+div.titlepage2,
+div.titlepage3 {
 	text-align: left;
-	height: 100%;
+//	height: 100%;
 	page-break-before: always;
 }
 
 .titlepage2 .title {
-	font-size: 20px;
+	font-size: 16px;
 	color: black;
 	font-weight: normal;
 	margin-bottom: 0.1em;
@@ -123,6 +124,7 @@ div.para {
 	color: black;
 	font-size: 14px;
 	font-weight: normal;
+    margin-top: 2em;
 }
 
 .titlepage2 .editors h1,

@@ -303,9 +303,10 @@ sub build {
                                         if ( !defined($sort)
                                         || $sort !~ /^\d+$/ );
 
-				    my $subtitles = 0;
+                                    my $subtitles = 0;
                                     my $annot = $node->attr('annotations');
-                                    $subtitles = 1 if($annot && lc($annot) eq 'yes');
+                                    $subtitles = 1
+                                        if ( $annot && lc($annot) eq 'yes' );
 
                                     my $term
                                         = $node->look_down( '_tag', 'term' )
@@ -563,17 +564,17 @@ sub transform {
         my $footer = "$tmp_dir/$lang/html-pdf/footer.html";
 
         my @wkhtmltopdf_args = (
-            $wkhtmltopdf_cmd, '--javascript-delay',
-            0,                '--header-spacing',
-            5,                '--footer-spacing',
-            5,                '--margin-top',
-            '14mm',           '--margin-bottom',
-            '14mm',           '--margin-left',
-            '15mm',           '--margin-right',
-            '15mm',           '--header-html',
-            $header,          '--footer-html',
-            $footer,          '--load-error-handling',
-            'ignore'
+            $wkhtmltopdf_cmd,        '--disable-smart-shrinking',
+            '--javascript-delay',    0,
+            '--header-spacing',      6,
+            '--footer-spacing',      6,
+            '--margin-top',          '14mm',
+            '--margin-bottom',       '14mm',
+            '--margin-left',         '15mm',
+            '--margin-right',        '15mm',
+            '--header-html',         $header,
+            '--footer-html',         $footer,
+            '--load-error-handling', 'ignore'
         );
 
         if ( $self->{publican}->param('wkhtmltopdf_opts') ) {
@@ -588,7 +589,7 @@ sub transform {
             rcopy_glob(
                 "$brand_path/book_templates/*.css",
                 "$tmp_dir/$lang/html-pdf/"
-            ) if(glob("$brand_path/book_templates/*.css"));
+            ) if ( glob("$brand_path/book_templates/*.css") );
             $tmpl_path = "$brand_path/book_templates:$tmpl_path";
         }
 
@@ -677,9 +678,11 @@ sub transform {
             buildpath           => abs_path("$tmp_dir/$lang/html-pdf"),
             chunk_section_depth => $chunk_section_depth,
             bodyfont            => $bodyfont,
-            bodyface => (-f "$tmp_dir/$lang/html-pdf/$bodyfont-font-faces.css"),
-            monofont            => $monofont,
-            monoface => (-f "$tmp_dir/$lang/html-pdf/$monofont-font-faces.css"),
+            bodyface =>
+                ( -f "$tmp_dir/$lang/html-pdf/$bodyfont-font-faces.css" ),
+            monofont => $monofont,
+            monoface =>
+                ( -f "$tmp_dir/$lang/html-pdf/$monofont-font-faces.css" ),
         };
 
         if (@keywords) {
