@@ -114,9 +114,10 @@ div.titlepage3 {
 	font-size: 12px;
 }
 
-.titlepage3 .abstract {
+.titlepage3 .abstract,
+.titlepage3 .legalnotice {
 	page-break-before: avoid !important;
-	font-size: 14px;
+	font-size: 12px;
 }
 
 .titlepage2 h1,

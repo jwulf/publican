@@ -102,7 +102,6 @@ div {
 }
 
 div.section {
-	page-break-inside: avoid;
 }
 
 p, div.para {
@@ -120,7 +119,6 @@ div.formalpara {
 }
 
 .varlistentry div.para {
-	page-break-before: avoid;
 
 }
 
@@ -168,8 +166,6 @@ h1, h2, h3, h4, h5, h6 {
 	background-color: transparent;
 	margin-bottom: 0px;
 	margin-top: 20px;
-	page-break-inside: avoid;
-	page-break-after: avoid;
 	word-wrap: break-word;
 }
 
@@ -294,9 +290,6 @@ h6 {
 
 .section > div > div > div > h2.title {
 	font-size: 21px;
-	page-break-inside: avoid;
-	page-break-before: avoid;
-	page-break-after: avoid;
 }
 
 .section > div > div > div > h3.title {
@@ -501,7 +494,6 @@ div.authorgroup.othercredit,
 div.authorgroup.contrib {
 	display: block;
 	font-size: 14px;
-	page-break-inside: avoid;
 }
 
 .revhistory .author {
@@ -715,7 +707,6 @@ img {
 .mediaobject img {
 	display:block;
 	margin: 0em;
-	page-break-inside: avoid;
 }
 
 .figure .title {
@@ -778,8 +769,6 @@ div.title {
 	font-weight: 14px;
 	font-weight: bold;
 	color: #336699;
-	page-break-inside: avoid;
-	page-break-after: avoid;
 	word-wrap: break-word;
 }
 
@@ -905,7 +894,6 @@ div.warning, div.note, div.important {
 	background-color: white;
 	margin-bottom: 1em;
 	border-bottom: 1px solid #aaaaaa;
-	page-break-inside: avoid;
 }
 
 div.admonition_header p {
@@ -1011,7 +999,6 @@ div.admonition {
 
 /*Table*/
 div.table {
-/*	page-break-inside: avoid; */
 }
 
 table {
@@ -1301,50 +1288,35 @@ a.footnote {
 
 /**/
 .pdf-break {
-	page-break-before: always;
 }
 
 div.legalnotice {
-	page-break-before: always;
 }
 
 div.abstract {
-	page-break-before: always;
-/*	page-break-after: always;*/
 }
 
 div.chapter {
-	page-break-before: always;
 }
 
 
 div.titlepage, div.titlepage > div, div.titlepage > div > div {
-	page-break-inside: avoid;
-	page-break-after: avoid;
 }
 
 div.preface, div.part {
-	page-break-before: always;
 }
 
 div.appendix {
-	page-break-before: always;
 }
 
 div.section {
-	page-break-inside: auto;
-	page-break-before: auto;
-	page-break-after: auto;
 }
 
 
 dt.varlistentry {
-	page-break-inside: avoid;
-	page-break-after: avoid;
 }
 
 dd {
-	page-break-before: avoid;
 }
 
 div.note .replaceable, 
@@ -1638,19 +1610,18 @@ pre {
 	-moz-border-radius:11px;
 	-webkit-border-radius:11px;
 	border-radius: 11px;
-/*	page-break-inside: avoid; */
 }
 
 .example {
 	-moz-border-radius:0px;
 	-webkit-border-radius:0px;
 	border-radius: 0px;
-	page-break-inside: avoid;
 }
 
 /* move these invisible fields out of the flow */
 .example > a:first-child,
-.table > a:first-child {
+.table > a:first-child,
+.procedure > a:first-child {
     float: left;
 }
 
@@ -1685,8 +1656,6 @@ span.remark {
 
 dt {
 	clear:both;
-	page-break-inside: avoid;
-	page-break-after: avoid;
 }
 
 dt img {
@@ -1751,7 +1720,6 @@ li.step > a:first-child {
 	list-style-type: upper-alpha;
 }
 .task {
-/*	page-break-inside: avoid; */
 }
 
 
