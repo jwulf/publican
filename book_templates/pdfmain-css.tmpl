@@ -12,29 +12,54 @@
 @import url("Common_Content/css/lang.css");
 [%- END %]
 
-body, h1, h2, h3, h4, h5, h6, pre, li, div {
+body, h1, h2, h3, h4, h5, h6, pre, li, div, .title {
     font-family: "[% bodyfont %]" !important;
-	line-height: 1.3em !important;
+    line-height: 1.3em !important;
 }
 body {
-	font-size: 12px;
-	line-height: 14px;
+    font-size: 11px;
+    line-height: 14px;
 }
-h1, h2, h3, h4, h5, h6 {
-	margin-top: 1.5em;
-	padding-bottom: 1em;
+h1, h2, h3, h4, h5, h6, .title {
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+    page-break-after: avoid;
 }
-div.warning, div.note, div.important {
-	margin-top: 1.5em;
+h1 {
+    font-size: 17px !important;
+}
+h2 {
+    font-size: 15px !important;
+}
+h3 {
+    font-size: 13px !important;
+}
+h4 {
+    font-size: 12px !important;
+}
+h5 {
+    font-size: 11px !important;
+}
+h6, div.title {
+    font-size: 11px !important;
 }
 
-p, div.para {
-	margin-top: 0px;
+div.warning, div.note, div.important, div.tip, div.caution {
+    margin-top: 1.5em;
 }
 
 div.admonition_header p {
-	font-size: 14px;
+    font-size: 14px;
 }
+
+div.chapter, div.part, div.appendix {
+    page-break-before: always;
+
+}
+div.warning, div.note, div.important, div.tip, div.caution {
+    page-break-inside: avoid;
+}
+
 
 .guibutton,
 .guilabel,
@@ -47,11 +72,11 @@ div.admonition_header p {
 .literal,
 pre,
 code {
-	font-family:"[% monofont %]" !important;
+    font-family:"[% monofont %]" !important;
 }
 
 code.email {
-	font-family: "[% bodyfont %]" !important;
+    font-family: "[% bodyfont %]" !important;
 }
 
 .popper {

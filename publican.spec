@@ -19,7 +19,7 @@
 
 Name:           publican
 Version:        4.1.9
-Release:        0%{?dist}.t9
+Release:        0%{?dist}.t10
 Summary:        Common files and scripts for publishing with DocBook XML
 # For a breakdown of the licensing, refer to LICENSE
 License:        (GPLv2+ or Artistic) and CC0
@@ -320,6 +320,9 @@ rm -rf $RPM_BUILD_ROOT
 %{wwwdir}/common-db5
 
 %changelog
+* Mon Aug 04 2014 Jeff Fearn <jfearn@redhat.com> 4.1.7-0
+- Another shot at fixing PDF index out of range error.
+
 * Tue Jul 29 2014 Jeff Fearn <jfearn@redhat.com> 4.1.6-0
 - Another shot at fixing PDF index out of range error.
 
