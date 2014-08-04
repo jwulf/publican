@@ -2330,6 +2330,8 @@ sub site_params_as_docbook {
 1;    # Magic true value required at end of module
 __END__
 
+=encoding utf8
+
 =head1 NAME
 
 Publican::WebSite - Manage a documentation website
@@ -2338,33 +2340,11 @@ Publican::WebSite - Manage a documentation website
 
     use Publican::WebSite;
 
-=for author to fill in:
-    Brief code example(s) here showing commonest usage(s).
-    This section will be as far as many users bother reading
-    so make it as educational and exeplary as possible.
-  
-    my $ws = Publican::WebSite::new();
-
-	$ws->add($product, $version, $name, $format);
-
-    foreach my $entry ($ws->list()) { ... }
-
-    $ws->del($product, $version, $name, $format);
-
 =head1 DESCRIPTION
 
-=for author to fill in:
-    Write a full description of the module and its features here.
-    Use subsections (=head2, =head3) as appropriate.
-
+Builds the static navgation content for a Publican Web Site.
 
 =head1 INTERFACE 
-
-=for author to fill in:
-    Write a separate section listing the public components of the modules
-    interface. These normally consist of either subroutines that may be
-    exported, or methods that may be called on objects belonging to the
-    classes provided by the module.
 
 =head2  new
 
@@ -2483,6 +2463,14 @@ Sort strings in a case insensitive order.
 =head2 version_sort
 
 Sort version strings in correct order. Handles X Vs X.Y Vs X.Y.Z.
+
+=head2 get_splash
+
+Returns the splash page header as a HTML chunk.
+
+=head2 site_params_as_docbook
+
+Returns the site paramaters as a docbook chunk, used for documeting options.
 
 =head1 AUTHOR
 

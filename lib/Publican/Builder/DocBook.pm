@@ -641,17 +641,17 @@ sub transform {
         my $footer = "$tmp_dir/$lang/html-pdf/footer.html";
 
         my @wkhtmltopdf_args = (
-            $wkhtmltopdf_cmd, '--javascript-delay',
-            0,                '--header-spacing',
-            5,                '--footer-spacing',
-            5,                '--margin-top',
-            '14mm',           '--margin-bottom',
-            '14mm',           '--margin-left',
-            '15mm',           '--margin-right',
-            '15mm',           '--header-html',
-            $header,          '--footer-html',
-            $footer,          '--load-error-handling',
-            'ignore'
+            $wkhtmltopdf_cmd,        '--disable-smart-shrinking',
+            '--javascript-delay',    0,
+            '--header-spacing',      6,
+            '--footer-spacing',      6,
+            '--margin-top',          '14mm',
+            '--margin-bottom',       '14mm',
+            '--margin-left',         '15mm',
+            '--margin-right',        '15mm',
+            '--header-html',         $header,
+            '--footer-html',         $footer,
+            '--load-error-handling', 'ignore'
         );
 
         if ( $self->{publican}->param('wkhtmltopdf_opts') ) {
@@ -3602,9 +3602,9 @@ sub headings {
     return;
 }
 
-=head2 headings
+=head2 links 
 
-Create an array of all headings in DocBook XML.
+Convert DocBook links in to HTML5 anchors.
 
 =cut
 
@@ -3649,9 +3649,9 @@ sub links {
     return;
 }
 
-=head2 headings
+=head2 footnotes
 
-Create an array of all headings in DocBook XML.
+Convert DocBook footnotes in to HTML5 footnotes.
 
 =cut
 
@@ -3697,9 +3697,11 @@ sub footnotes {
     return;
 }
 
-=head2 headings
+=head2 highlight2
 
-Create an array of all headings in DocBook XML.
+Highlight code blocks in HTML5.
+
+TODO replace with highlight.js??
 
 =cut
 
@@ -3762,8 +3764,10 @@ sub highlight2 {
         my $modname = "Syntax::Highlight::Engine::Kate::$lang_module";
         my $plug;
         ## This has to be a string to stop use being run in BEGIN
+        ## no critic
         eval "use $modname; \$plug = new $modname(engine => \$hl);";
-
+		## use critic
+		
         if ( defined($plug) ) {
             $language = $plug->language();
         }
@@ -3790,9 +3794,9 @@ sub highlight2 {
     return;
 }
 
-=head2 headings
+=head2 number_lines
 
-Create an array of all headings in DocBook XML.
+Number lines in HTML5 code blocks.
 
 =cut
 

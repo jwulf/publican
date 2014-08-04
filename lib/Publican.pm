@@ -1789,6 +1789,12 @@ sub dirmove {
     return;
 }
 
+=head2 params_as_docbook
+
+Returns DocBook chunks describing all the configuration options. Used to generate autodocs.
+
+=cut
+
 sub params_as_docbook {
     my ( $gen_list, $brand_list, $web_list ) = @_;
 

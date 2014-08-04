@@ -220,6 +220,7 @@ my $class = Module::Build->subclass(
         }
         sub ACTION_distdir {
             my ($self) = @_;
+            $self->depends_on('authortest');
             return $self->SUPER::ACTION_distdir();
         }
         sub ACTION_build {
@@ -319,11 +320,8 @@ my $builder = $class->new(
     dist_version_from  => 'lib/Publican.pm',
     configure_requires => { 'Module::Build' => 0 },
     build_requires     => {
-        'Devel::Cover'                           => 0,
         'Module::Build'                          => 0,
         'Test::More'                             => 0,
-        'Test::Pod'                              => 1.14,
-        'Test::Pod::Coverage'                    => 1.04,
         'Archive::Tar'                           => 1.84,
         'Archive::Zip'                           => 0,
         'Locale::Maketext::Gettext'              => 0,
@@ -357,7 +355,6 @@ my $builder = $class->new(
         'List::MoreUtils'                        => 0,
         'Locale::Language'                       => 0,
         'Locale::PO'                             => 0.24,
-        'Module::Build'                          => 0,
         'Pod::Usage'                             => 0,
         'Sort::Versions'                         => 0,
         'String::Similarity'                     => 0,
@@ -410,7 +407,6 @@ my $builder = $class->new(
         'List::Util'                             => 0,
         'Locale::Language'                       => 0,
         'Locale::PO'                             => 0.24,
-        'Module::Build'                          => 0,
         'Pod::Usage'                             => 0,
         'Sort::Versions'                         => 0,
         'String::Similarity'                     => 0,
