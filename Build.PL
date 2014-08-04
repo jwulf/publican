@@ -199,6 +199,7 @@ my $class = Module::Build->subclass(
         }
         sub ACTION_test {
             my ($self) = @_;
+            $self->depends_on('build');
             ## Setup ConfigData so it points to the local content
             $self->config_data( 'etc',            $cwd . '/blib/etc' );
             $self->config_data( 'datadir',        $cwd . '/blib/datadir' );
