@@ -73,7 +73,7 @@ BuildRequires:  perl(HTML::FormatText)
 BuildRequires:  perl(HTML::FormatText::WithLinks)
 BuildRequires:  perl(HTML::FormatText::WithLinks::AndTables) >= 0.02
 BuildRequires:  perl(HTML::TreeBuilder)
-BuildRequires:  perl(HTML::WikiConverter::Markdown)
+BuildRequires:  perl(HTML::WikiConverter::Markdown) >= 0.06
 BuildRequires:  perl(I18N::LangTags::List)
 BuildRequires:  perl(IO::String)
 BuildRequires:  perl(List::MoreUtils)
