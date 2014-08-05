@@ -103,7 +103,11 @@ part toc
 <xsl:param name="header.rule" select="0"/>
 <xsl:param name="footer.rule" select="0"/>
 
-<!-- duplicated from xhtml-docbook.xsl -->
+<xsl:template name="head.content.generator">
+  <xsl:param name="node" select="."/>
+  <meta name="generator" content="publican {$publican.version}"/>
+</xsl:template>
+
 <xsl:template name="user.head.content">
   <xsl:param name="node" select="."/>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />

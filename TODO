@@ -94,24 +94,10 @@ Books to test 4.2 on:
 
 DB5 ePub: does it work?
 
-Markdown:
-	No TOCs in output
-	revert para == div in DB4
-	No NAV in output
-	class styles not being applied e.g. 'span class="application"' is not bold
-    code higlighting breaks code block?
-    admonitions no worky
-    indexterms break links
-    code switcher breaks code blocks
-    callouts/examples ...
-    inline command not right, space after ** is an issue
-    remark to <!---
-> <varlistentry><listitem> got a bold
-> <literal> got a bold.
+splash.css
+	remove db4.css link
+	fix style on default splash pages
 
-   Consider supporting some/all of the extensions at https://github.com/jmcmanus/pagedown-extra
-
-   image tags appear broken ...
 
 ######################################
 PUG changes
@@ -119,7 +105,7 @@ PUG changes
 
 ADD: section on "Converting DB4 to DB5"?
 
-PUBLICAN_PATH="/home/jfearn/Source/fedora/publican.git"
+PUBLICAN_PATH="/home/jfearn/Source/fedora/publican"
 perl -CDAS -I $PUBLICAN_PATH/lib $PUBLICAN_PATH/bin/publican clean
 
 Install PUG from source

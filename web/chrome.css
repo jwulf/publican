@@ -108,7 +108,7 @@ body[dir="rtl"] #langauge_menu {
     height: 100%;
     padding-right: 10px;
     position: relative;
-    right: 240px;
+/*    right: 240px; */
     z-index: 19;
 }
 body[dir="rtl"] #book_lang_menu, body[dir="rtl"] #lang_menu_2, body[dir="rtl"] #book_format_menu {
@@ -316,7 +316,7 @@ body[dir="rtl"] #search_box {
     text-indent: 1em;
 }
 #book_lang_menu, #lang_menu_2, #book_format_menu {
-    right: 140px;
+/*    right: 140px; */
     z-index: 0;
 }
 #search_box, #search_box input[type="text"] {
@@ -368,3 +368,7 @@ body.menu_embeded {
     font-style: italic;
     background: none !important;
 } 
+ul.toc {
+    padding: 0;
+    margin: 0;
+}

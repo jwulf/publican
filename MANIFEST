@@ -755,7 +755,6 @@ datadir/xsl/carousel.xsl
 datadir/xsl/db4-upgrade.xsl
 datadir/xsl/defaults.xsl
 datadir/xsl/drupal-book.xsl
-datadir/xsl/dt_htmlsingle_spec.xsl
 datadir/xsl/eclipse.xsl
 datadir/xsl/epub.xsl
 datadir/xsl/html-pdf.xsl
