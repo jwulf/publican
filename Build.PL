@@ -467,8 +467,6 @@ my $builder = $class->new(
         'datadir/rpmlint.cfg'   => 'datadir/rpmlint.cfg',
         'datadir/default.db'    => 'datadir/default.db',
         'datadir/fop/fop.xconf' => 'datadir/fop/fop.xconf',
-        'datadir/xsl/dt_htmlsingle_spec.xsl' =>
-            'datadir/xsl/dt_htmlsingle_spec.xsl',
         'datadir/xsl/carousel.xsl'     => 'datadir/xsl/carousel.xsl',
         'datadir/xsl/xhtml-common.xsl' => 'datadir/xsl/xhtml-common.xsl',
         'datadir/xsl/html-pdf.xsl'     => 'datadir/xsl/html-pdf.xsl',
