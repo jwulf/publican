@@ -17,8 +17,7 @@ my $class = Module::Build->subclass(
         sub ACTION_srpm {
             my $self = shift;
             my $os_ver = $self->args('os_ver');
-            $self->SUPER::ACTION_clean;
-            $self->SUPER::ACTION_dist;
+            $self->depends_on('dist');
             $self->do_system("mkdir -p $dir");
             $self->do_system("cp Publican*.tar.gz $dir/.");
             if($os_ver) {
@@ -75,7 +74,6 @@ my $class = Module::Build->subclass(
         }
         sub ACTION_common_files {
             my $self = shift;
-            $self->depends_on('build');
             use lib File::Spec->catdir('blib/lib');
             use File::Path;
             eval {
@@ -105,7 +103,6 @@ my $class = Module::Build->subclass(
         }
         sub ACTION_commondb5_files {
             my $self = shift;
-            $self->depends_on('build');
             use lib File::Spec->catdir('blib/lib');
             use File::Path;
             eval {
@@ -178,8 +175,7 @@ my $class = Module::Build->subclass(
         }
         sub ACTION_authortest {
             my ($self) = @_;
-            $self->depends_on('distmeta');
-            $self->test_files( qw< t xt/author > );
+            $self->test_files( qw< xt/author > );
             $self->recursive_test_files(1);
             $self->depends_on('test');
             return;
@@ -199,7 +195,7 @@ my $class = Module::Build->subclass(
         }
         sub ACTION_test {
             my ($self) = @_;
-            $self->depends_on('build');
+#            $self->depends_on('build');
             ## Setup ConfigData so it points to the local content
             $self->config_data( 'etc',            $cwd . '/blib/etc' );
             $self->config_data( 'datadir',        $cwd . '/blib/datadir' );
