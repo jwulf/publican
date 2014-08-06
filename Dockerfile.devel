@@ -1,0 +1,6 @@
+FROM fedora:20
+
+RUN yum upgrade -y; yum install -y yum-utils git; yum clean all
+RUN git clone git://git.fedorahosted.org/publican.git --branch devel
+RUN pushd /publican; yum-builddep --skip-broken publican.spec; yum clean all; perl Build.PL; ./Build local; popd
+

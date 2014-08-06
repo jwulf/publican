@@ -1,10 +1,4 @@
-Updated Deps:
-
-	docbook5-style-xsl
-	XML::TreeBuilder
-	XML::Catalog
-
-Locale::Maketext::Lexicon add to BuildRequires
+Get Locale::Maketext::Gettext patch upstream! https://rt.cpan.org/Ticket/Display.html?id=97771
 
 EPUB:
 

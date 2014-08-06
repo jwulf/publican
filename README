@@ -78,6 +78,13 @@ RHEL/Fedora
     $ ./Build
     $ ./Build rpm
 
+Docker
+	For production version see Users Guide.
+
+    For testing devel branch on fedora based image:
+
+    	$ docker build --rm - < Dockerfile.devel
+
 Debian
     The publican package deb files are in the debian package repo
     http://packages.debian.org/search?keywords=publican
