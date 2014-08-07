@@ -16,6 +16,7 @@
 - Add Markdown output. BZ #1120455
 - Bump Syntax::Highlight::Engine::Kate dep to 0.09.
 - Add external link support. BZ #1123193
+- Add 'th' to translation block list. BZ #1127462
 
 4.1.7 Mon Aug 04 2014
 - Another shot at fixing PDF index out of range error.

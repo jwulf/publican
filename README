@@ -73,7 +73,7 @@ CPAN
 RHEL/Fedora
     cd publican/publican
     $ perl Build.PL
-        if this complains about missing deps,  on Fedora 10+, and RHEL 6, run
+        if this complains about missing deps, on Fedora 10+, and RHEL 6+, run
         $ sudo yum-builddep publican.spec 
     $ ./Build
     $ ./Build rpm
@@ -82,8 +82,10 @@ Docker
 	For production version see Users Guide.
 
     For testing devel branch on fedora based image:
-
+        $ mkdir $HOME/books
+        $ sudo chcon -R -t svirt_sandbox_file_t $HOME/books
     	$ docker build --rm - < Dockerfile.devel
+        $ docker run -i -t -v $HOME/books:$HOME/books publican /bin/bash
 
 Debian
     The publican package deb files are in the debian package repo

@@ -108,7 +108,7 @@ BuildRequires:  perl(version) >= 0.77
 BuildRequires:  perl(Locale::Msgfmt)
 BuildRequires:  perl(Locale::Maketext::Lexicon)
 BuildRequires:  perl(Lingua::EN::Fathom)
-BuildRequires:  rpm-build
+BuildRequires:  rpm-build libicu-devel
 
 # Most of these are handled automatically
 Requires:       perl(:MODULE_COMPAT_%(eval "`%{__perl} -V:version`"; echo $version))
