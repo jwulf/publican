@@ -1,5 +1,6 @@
 #!perl
 
+use Test::More;
 eval "use Test::Perl::Critic";
 
 if ($@) {
