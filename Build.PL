@@ -62,7 +62,9 @@ my $class = Module::Build->subclass(
             $rule->file->name("*.rpm");
             $rule->file->not_name("*.src.rpm");
             my @rpm_files = $rule->in($dir);
-            $self->do_system("sudo", "yum", "-y", "localinstall",  "--nogpg", @rpm_files);
+            my @cmd = qw(yum -y localinstall --nogpg);
+            unshift(@cmd, 'sudo') if($<);
+            $self->do_system(@cmd, @rpm_files);
         }
         sub process_brand_template_files {
             my $self = shift;
