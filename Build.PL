@@ -471,6 +471,7 @@ my $builder = $class->new(
         'datadir/xsl/html.xsl'         => 'datadir/xsl/html.xsl',
         'datadir/xsl/txt.xsl'          => 'datadir/xsl/txt.xsl',
         'datadir/xsl/defaults.xsl'     => 'datadir/xsl/defaults.xsl',
+        'datadir/xsl/html-single-plain.xsl'  => 'datadir/xsl/html-single-plain.xsl',
         'datadir/xsl/html-single.xsl'  => 'datadir/xsl/html-single.xsl',
         'datadir/xsl/pdf.xsl'          => 'datadir/xsl/pdf.xsl',
         'datadir/xsl/epub.xsl'         => 'datadir/xsl/epub.xsl',

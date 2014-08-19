@@ -19,7 +19,7 @@
 
 Name:           publican
 Version:        4.1.9
-Release:        0%{?dist}.t10
+Release:        0%{?dist}.t11
 Summary:        Common files and scripts for publishing with DocBook XML
 # For a breakdown of the licensing, refer to LICENSE
 License:        (GPLv2+ or Artistic) and CC0
@@ -118,6 +118,7 @@ Requires:       docbook-style-xsl >= 1.77.1
 Requires:       perl(XML::LibXML)  >=  1.70
 Requires:       perl(XML::LibXSLT) >=  1.70
 Requires:       perl(XML::TreeBuilder) >= 5.4
+Requires:  perl(HTML::WikiConverter::Markdown) >= 0.06
 # BZ #1053609
 Requires:       perl-XML-TreeBuilder >= 5.4
 Requires:       perl-Template-Toolkit
