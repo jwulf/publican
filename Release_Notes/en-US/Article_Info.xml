@@ -2,9 +2,9 @@
 <!-- Converted by db4-upgrade version 1.0 -->
 <info xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="arti-Documentation-Release_Notes-Release_Notes">
 	<title>Release Notes</title>
-	<subtitle>New Features and Bugfixes in Publican 4.0</subtitle>
+	<subtitle>New Features and Bugfixes in Publican 4.2</subtitle>
 	<productname>Publican</productname>
-	<productnumber>4.1</productnumber>
+	<productnumber>4.2</productnumber>
 	<author><orgname>
 		<inlinemediaobject>
 			<imageobject>
@@ -13,9 +13,9 @@
 		</inlinemediaobject>
 	</orgname></author>
 	<abstract>
-		<para>This document describes the enhancements and fixes included in Publican 4.1.</para>
+		<para>This document describes the enhancements and fixes included in Publican 4.2.</para>
 		<para>Publican is available for download at <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://fedorahosted.org/publican/">https://fedorahosted.org/publican/</link>.</para>
-		<para>The Publican User Guide is available at <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://jfearn.fedorapeople.org/en-US/Publican/4.0/html/Users_Guide/index.html">http://jfearn.fedorapeople.org/en-US/Publican/4.0/html/Users_Guide/index.html</link>.</para>
+		<para>The Publican User Guide is available at <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://jfearn.fedorapeople.org/en-US/Publican/4.2/html/Users_Guide/index.html">http://jfearn.fedorapeople.org/en-US/Publican/4.2/html/Users_Guide/index.html</link>.</para>
 	</abstract>
 	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Common_Content/Legal_Notice.xml"/>
 	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Author_Group.xml"/>
