@@ -309,7 +309,7 @@
 				<term>ec_provider</term>
 				<listitem>
 					<para>
-						Eclipse plugin provider. Defaults to "Publican-v4.1.9"
+						Eclipse plugin provider. Defaults to "Publican-v4.2.0"
 					</para>
 				</listitem>
 			</varlistentry>

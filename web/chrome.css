@@ -274,8 +274,8 @@ body[dir="rtl"] .breadcrumb ul a {
 #search_box {
     background-color: transparent;
     padding: 0;
-    position: absolute;
-    right: 40px;
+    position: relative;
+    float: right;
     width: 190px;
     z-index: 9;
 }

@@ -18,8 +18,8 @@
 %define wwwdir /var/www/html/docs
 
 Name:           publican
-Version:        4.1.9
-Release:        0%{?dist}.t11
+Version:        4.2.0
+Release:        0%{?dist}
 Summary:        Common files and scripts for publishing with DocBook XML
 # For a breakdown of the licensing, refer to LICENSE
 License:        (GPLv2+ or Artistic) and CC0
@@ -323,6 +323,26 @@ rm -rf $RPM_BUILD_ROOT
 %{wwwdir}/common-db5
 
 %changelog
+* Thu Aug 28 2014 Jeff Fearn <jfearn@redhat.com> 4.2.0-0
+- Add iframe video support to DocBook5 HTML5. BZ #752021
+- Stop calculating column width if no width is set. BZ #1084860
+- Simply styling of code, and admonitions in HTML5. BZ #1093498
+- Added tip formatting. BZ #1033830
+- Remove incorrect prompt. BZ #1096544
+- Add "popper" to hide program listing after 4 lines. BZ #1088051
+- Fix white space being removed from msgids when merging. BZ #1097090
+- Add code language switching. BZ #1092351
+- Fix CDATA support, bump XML::TreeBuilder dep to 5.3. BZ #1101050
+- Add --showfuzzy to build options.
+- Move PO manipulation to Locale::PO.
+- Fix inline"\n" not working in verbatim. BZ #1097091 (TODO bump Locale::PO version when released)
+- Fix images for DB4 website callouts. BZ #1112899
+- Remove newline after cdata. BZ #1110611
+- Add Markdown output. BZ #1120455
+- Bump Syntax::Highlight::Engine::Kate dep to 0.09.
+- Add external link support. BZ #1123193
+- Add 'th' to translation block list. BZ #1127462
+
 * Mon Aug 04 2014 Jeff Fearn <jfearn@redhat.com> 4.1.7-0
 - Another shot at fixing PDF index out of range error.
 

@@ -324,8 +324,11 @@ body > #wrapper h1 {
     font-weight: normal;
     padding-top: 20px;
     text-align: center;
+    line-height: 1.1em;
 }
 body > #wrapper h2 {
+    margin-top:2em;
+    margin-bottom: 1em;
     font-weight: normal;
     text-align: center;
 }

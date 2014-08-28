@@ -7,60 +7,6 @@ $ java -jar ~/Downloads/epubcheck/epubcheck-3.0b2.jar build/en-US/Publican-4.0-U
 
 *********************************************************
 
-
-List of unscheduled things we should look at doing:
-
-... Support MOBI output using EBook::MOBI
-
-
-Document migrating a P2 web site to P3:
-
-$ publican migrate_site --site_config homepage.cfg
-
-
-Document creating a P3 web site from scratch:
-
-$ mkdir $path_to_make_web_site_in
-$ cd $path_to_make_web_site_in
-$ publican create_site --site_config tester.cfg --db_file tester.db --toc_path ./docs
-$ publican site_stats --site_config tester.cfg
-
-The database contains books that cover 0 products, 0 languages,  totaling 0 packages
-
-$ cd $path to publican common_files
-$ publican build --formats xml --publish
-$ mkdir /home/jfearn/Source/test/testsite/docs/common
-$ publican install_brand --web --path /home/jfearn/Source/test/testsite/docs/common 
-
-$ cd $path_to_welcome_page
-$ publican build --publish --formats html-single --embedtoc --langs en-US
-$ publican install_book --lang en-US --site_config /home/jfearn/Source/test/testsite/tester.cfg
-
-$ cd $book_soure_dir
-$ publican build --publish --embedtoc --formats html,pdf,html-single,epub,txt --lang en-US
-
-$ publican site_stats --site_config tester.cfg 
-
-The database contains books that cover 1 products, 1 languages,  totaling 1 packages
-
-
-Actions without tests:
-
-clean_set
-create_brand
-install_brand
-migrate_site
-rename
-update_db
-
-
-/usr/share/perl5/Locale/Maketext/Gettext.pm
-        # convert gettext %1 to maketext [_1]
-        $stro =~ s/\%(\d)+/\[_$1\]/g;
-        $strt =~ s/\%(\d)+/\[_$1\]/g;
-
-
-
 GIT
 
 Chase up tig!
@@ -97,32 +43,18 @@ splash.css
 PUG changes
 ######################################
 
-ADD: section on "Converting DB4 to DB5"?
-
 PUBLICAN_PATH="/home/jfearn/Source/fedora/publican"
 perl -CDAS -I $PUBLICAN_PATH/lib $PUBLICAN_PATH/bin/publican clean
-
-Install PUG from source
-perl -CDAS -I $PUBLICAN_PATH/lib $PUBLICAN_PATH/bin/publican remove_book --lang en-US  --site_config /home/jfearn/Source/fedora/fedorapeople.org/home.cfg;
-perl -CDAS -I $PUBLICAN_PATH/lib $PUBLICAN_PATH/bin/publican remove_book --lang en-US  --site_config /home/jfearn/Source/fedora/fedorapeople.org/style_1.cfg;
-perl -CDAS -I $PUBLICAN_PATH/lib $PUBLICAN_PATH/bin/publican build --langs en-US --brand_dir $PUBLICAN_PATH/datadir/Common_Content/common-db5 --formats html,html-single,pdf,epub,txt --publish --embedtoc;
-perl -CDAS -I $PUBLICAN_PATH/lib $PUBLICAN_PATH/bin/publican install_book --lang en-US --site_config /home/jfearn/Source/fedora/fedorapeople.org/home.cfg;
-perl -CDAS -I $PUBLICAN_PATH/lib $PUBLICAN_PATH/bin/publican install_book --lang en-US  --site_config /home/jfearn/Source/fedora/fedorapeople.org/style_1.cfg;
-
-Install common-db5 from source
-cxd 
-perl -CDAS -I $PUBLICAN_PATH/lib $PUBLICAN_PATH/bin/publican build --formats=xml --langs=all --publish
-perl -CDAS -I $PUBLICAN_PATH/lib $PUBLICAN_PATH/bin/publican install_brand  --web --path=/var/www/html/public_html/common-db5
-perl -CDAS -I $PUBLICAN_PATH/blib $PUBLICAN_PATH/bin/publican update_site --site_config /home/jfearn/Source/fedora/fedorapeople.org/home.cfg
-perl -CDAS -I $PUBLICAN_PATH/blib $PUBLICAN_PATH/bin/publican update_site --site_config /home/jfearn/Source/fedora/fedorapeople.org/style_1.cfg
-perl -CDAS -I $PUBLICAN_PATH/blib/lib $PUBLICAN_PATH/bin/publican update_site --site_config /home/jfearn/Source/fedora/fedorapeople.org/home.cfg
 
 git checkout en-US/
 ../bin/db4-2-db5
 
+Update command docs:
+cd Users_Guide
 perl -CDAS -I $PUBLICAN_PATH/lib $PUBLICAN_PATH/bin/publican --help docbook
-perl -CDAS -I $PUBLICAN_PATH/lib $PUBLICAN_PATH/bin/publican build  --brand_dir $PUBLICAN_PATH/datadir/Common_Content/common-db5 --formats html
 
+
+perl -CDAS -I $PUBLICAN_PATH/lib $PUBLICAN_PATH/bin/publican build  --brand_dir $PUBLICAN_PATH/datadir/Common_Content/common-db5 --formats html
 perl -CDAS -I $PUBLICAN_PATH/lib $PUBLICAN_PATH/bin/publican build  --brand_dir $PUBLICAN_PATH/datadir/Common_Content/common-db5 --formats drupal-book
 
 cd build/en-US/xml

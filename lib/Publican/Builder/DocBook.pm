@@ -890,12 +890,6 @@ sub transform {
             $toc_path = '../..';
             $pop_name = undef;
         }
-        if (   $self->{publican}->param('web_type')
-            && $self->{publican}->param('web_style') == 2 )
-        {
-
-##            $xslt_opts{'body.only'} = 1;
-        }
     }
 
     $xslt_opts{clean_title}

@@ -44,6 +44,7 @@
 <xsl:param name="chunk.section.depth" select="1"/>
 <xsl:param name="chunk.tocs.and.lots" select="0"/>
 <xsl:param name="linenumbering.extension" select="0"/>
+<xsl:param name="chunk.quietly" select="1"/>
 
 <!-- Admonition Graphics -->
 <xsl:param name="admon.graphics" select="1"/>

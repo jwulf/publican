@@ -25,7 +25,7 @@
 <xsl:param name="chunk.first.sections" select="0"/>
 <xsl:param name="chunk.toc" select="''"/>
 <xsl:param name="chunk.append"/>
-<xsl:param name="chunker.output.quiet" select="0"/>
+<xsl:param name="chunk.quietly" select="1"/>
 <xsl:param name="suppress.navigation">1</xsl:param>
 <xsl:param name="refentry.separator" select="1"/>
 <xsl:param name="generate.section.toc.level" select="0"/>

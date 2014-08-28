@@ -18,7 +18,7 @@
 <xsl:param name="chunk.first.sections" select="1"/>
 <xsl:param name="chunk.toc" select="''"/>
 <xsl:param name="chunk.append"/>
-<xsl:param name="chunker.output.quiet" select="0"/>
+<xsl:param name="chunk.quietly" select="1"/>
 
 <xsl:param name="refentry.separator" select="1"/>
 <xsl:param name="suppress.footer.navigation"><xsl:value-of select="$embedtoc"/></xsl:param>

@@ -1,4 +1,4 @@
-4.2.0 UNRELEASED
+4.2.0 Thu Aug 28 2014
 - Add iframe video support to DocBook5 HTML5. BZ #752021
 - Stop calculating column width if no width is set. BZ #1084860
 - Simply styling of code, and admonitions in HTML5. BZ #1093498
