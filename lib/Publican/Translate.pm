@@ -926,8 +926,10 @@ sub print_msgs {
 
     my %msgs = ();
     foreach my $child ( $msg_list->content_list() ) {
-        my $msg_id = $child->as_XML();
-        my $po = new Locale::PO(-msgid=> detag($msg_id, $child->tag()), -msgstr => '');
+        my $msg_id = detag($child->as_XML(), $child->tag());
+        # This can be empty if a mixed mode tag only contains a block
+        next if( $msg_id eq '');
+        my $po = new Locale::PO(-msgid=> $msg_id, -msgstr => '');
         print( $fh $po->dump() );
     }    
     close($fh);
