@@ -18,8 +18,8 @@
 %define wwwdir /var/www/html/docs
 
 Name:           publican
-Version:        4.2.0
-Release:        0%{?dist}.t2
+Version:        4.2.1
+Release:        0%{?dist}
 Summary:        Common files and scripts for publishing with DocBook XML
 # For a breakdown of the licensing, refer to LICENSE
 License:        (GPLv2+ or Artistic) and CC0
@@ -323,6 +323,10 @@ rm -rf $RPM_BUILD_ROOT
 %{wwwdir}/common-db5
 
 %changelog
+* Mon Sep 01 2014 Jeff Fearn <jfearn@redhat.com> 4.2.1-0
+- Remove empty msgids from POT files. BZ #1135143
+- Fix highlight in callout with areaspec. BZ #1135827
+
 * Thu Aug 28 2014 Jeff Fearn <jfearn@redhat.com> 4.2.0-0
 - Add iframe video support to DocBook5 HTML5. BZ #752021
 - Stop calculating column width if no width is set. BZ #1084860
