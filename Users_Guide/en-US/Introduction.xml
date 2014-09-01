@@ -226,6 +226,62 @@ array.
 <para><![CDATA[!=]]></para>
 <para><![CDATA[<>]]></para>
 </section>
+<section id="">
+<title>Testing BZ # Single line comment being highlighted in a callout.</title>
+
+				 <programlistingco>
+					<areaspec>
+						<area coords="18" id="wih.service.ex" />
+						 <area coords="22" id="wih.mgr.completion" />
+
+					</areaspec>
+					 
+<programlisting language="Java">
+package com.sample;
+
+import org.kie.api.runtime.process.WorkItem;
+import org.kie.api.runtime.process.WorkItemHandler;
+import org.kie.api.runtime.process.WorkItemManager;
+
+public class NotificationWorkItemHandler implements WorkItemHandler {
+
+  public void executeWorkItem(WorkItem workItem, WorkItemManager manager) {
+    String from = (String) workItem.getParameter("From");
+    String to = (String) workItem.getParameter("To");
+    String message = (String) workItem.getParameter("Message");
+    String priority = (String) workItem.getParameter("Priority");
+
+    // send email
+    EmailService service = ServiceRegistry.getInstance().getEmailService();
+    service.sendEmail(from, to, "Notification", message);
+
+    // notify manager that work item has been completed
+    manager.completeWorkItem(workItem.getId(), null);
+  }
+
+  public void abortWorkItem(WorkItem workItem, WorkItemManager manager) {
+  // Do nothing, notifications cannot be aborted
+  }
+
+}</programlisting>
+					 <calloutlist>
+						<callout arearefs="wih.service.ex">
+							<para>
+								The <code>ServiceRegistry</code> class is an example class implementing the task business logic.
+							</para>
+
+						</callout>
+						 <callout arearefs="wih.mgr.completion">
+							<para>
+								The <function>completeWorkItem()</function> call completes the work item execution.
+							</para>
+
+						</callout>
+
+					</calloutlist>
+
+				</programlistingco>
+</section>
 
 <!--                                 
 <para>

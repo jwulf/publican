@@ -1,5 +1,6 @@
 4.2.1 UNRELEASED
 - Remove empty msgid from POT files. BZ #1135143
+- Fix highlight in callout with areaspec. BZ #1135827
 
 4.2.0 Thu Aug 28 2014
 - Add iframe video support to DocBook5 HTML5. BZ #752021

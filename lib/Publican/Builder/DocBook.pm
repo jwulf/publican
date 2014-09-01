@@ -1977,8 +1977,14 @@ sub highlight {
     my $out_string = '';    #$hl->highlightText( $content->string_value() );
 
     foreach my $line ( split /^/, $content->string_value() ) {
+        my $chomped = chomp($line);
         $out_string .= '<span class="line">&#8203;</span>'
             . $hl->highlightText($line);
+        if($chomped) {
+            # reset stack
+            $hl->highlightText("\n");
+            $out_string .= "\n";
+        }
     }
 ##debug_msg("Highlighting: $out_string\n");
 
