@@ -1277,7 +1277,7 @@ sub transform {
         # remove any RCS from the output
         finddepth( \&del_unwanted_dirs, "$tmp_dir/$lang/$format" );
 
-        $dir = pushd("$tmp_dir/$lang/$format");
+        $dir = pushd("$tmp_dir/$lang/$format/$content_dir");
 
         # remove all html files
         my @htmls = glob "*.html";
@@ -1286,9 +1286,9 @@ sub transform {
         }
 
         my $tar      = Archive::Tar->new();
-        my @filelist = File::Find::Rule->file->in($content_dir);
+        my @filelist = File::Find::Rule->file->in(".");
         $tar->add_files(@filelist);
-        $tar->write( $filename, COMPRESS_GZIP );
+        $tar->write( "../$filename", COMPRESS_GZIP );
         $dir = undef;
         logger(
             maketext( "Wrote tar archive: [_1]",
