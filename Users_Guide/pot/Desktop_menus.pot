@@ -1,13 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2014-06-02 09:01+1000\n"
-"PO-Revision-Date: 2014-06-02 09:01+1000\n"
+"POT-Creation-Date: 2014-09-09 09:00+1000\n"
+"PO-Revision-Date: 2014-09-09 09:00+1000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: None\n"
+"Language: en-US \n"
 "MIME-Version: 1.0\n"
 "Content-Type: application/x-publican; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Publican v4.2.1\n"
 
 msgid "Desktop menu entries for documents"
 msgstr ""
@@ -131,9 +133,6 @@ msgid "Setting a desktop menu category"
 msgstr ""
 
 msgid "To place a document in a submenu of <menuchoice><guimenu>System</guimenu><guisubmenu>Documentation</guisubmenu></menuchoice>, set the <parameter>menu_category</parameter> parameter in its <filename>publican.cfg</filename> file to match the content of the <tag>&lt;Includes&gt;</tag> element in the corresponding desktop menu file. For example, consider a desktop menu file that contains the element:"
-msgstr ""
-
-msgid "&lt;Includes&gt;X-Example-Docs&lt;/Includes&gt;"
 msgstr ""
 
 msgid "To place a document in the submenu defined by this desktop menu file, the document's <filename>publican.cfg</filename> file should contain:"

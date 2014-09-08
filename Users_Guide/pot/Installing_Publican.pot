@@ -1,13 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2014-06-02 09:01+1000\n"
-"PO-Revision-Date: 2014-06-02 09:01+1000\n"
+"POT-Creation-Date: 2014-09-09 09:00+1000\n"
+"PO-Revision-Date: 2014-09-09 09:00+1000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: None\n"
+"Language: en-US \n"
 "MIME-Version: 1.0\n"
 "Content-Type: application/x-publican; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Publican v4.2.1\n"
 
 msgid "Installing Publican"
 msgstr ""
@@ -46,9 +48,6 @@ msgid "Replace <replaceable>brand</replaceable> with, for example, <literal>redh
 msgstr ""
 
 msgid "Ubuntu"
-msgstr ""
-
-msgid "Open a terminal."
 msgstr ""
 
 msgid "Run the following command to install the <package>publican</package> package:"
@@ -129,9 +128,6 @@ msgid "<application>Xcode</application> is about 4GB. Be prepared to wait. It ha
 msgstr ""
 
 msgid "Install <application>Macports</application> from <uri xlink:href=\"http://guide.macports.org/chunked/installing.macports.html\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">http://guide.macports.org/chunked/installing.macports.html</uri>. Everything you install with it goes into <filename>/opt/local</filename>, away from your normal OS files."
-msgstr ""
-
-msgid "Open a terminal."
 msgstr ""
 
 msgid "Install dependencies for publican, which are available as ports:"

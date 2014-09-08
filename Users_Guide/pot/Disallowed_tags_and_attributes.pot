@@ -1,13 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2014-06-02 09:01+1000\n"
-"PO-Revision-Date: 2014-06-02 09:01+1000\n"
+"POT-Creation-Date: 2014-09-09 09:00+1000\n"
+"PO-Revision-Date: 2014-09-09 09:00+1000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: None\n"
+"Language: en-US \n"
 "MIME-Version: 1.0\n"
 "Content-Type: application/x-publican; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Publican v4.2.1\n"
 
 msgid "Discouraged elements and attributes"
 msgstr ""
@@ -66,25 +68,13 @@ msgstr ""
 msgid "looks like this in Spanish:"
 msgstr ""
 
-msgid "A"
-msgstr ""
-
 msgid "<literal>Manzana</literal> — la <firstterm>manzana</firstterm> es…"
-msgstr ""
-
-msgid "G"
 msgstr ""
 
 msgid "<literal>Uva</literal> — la <firstterm>uva</firstterm> es…"
 msgstr ""
 
-msgid "O"
-msgstr ""
-
 msgid "<literal>Naranja</literal> — la <firstterm>naranja</firstterm> es…"
-msgstr ""
-
-msgid "P"
 msgstr ""
 
 msgid "<literal>Melocotonero</literal> — el <firstterm>melocotonero</firstterm> es…"
@@ -204,9 +194,6 @@ msgstr ""
 msgid "In English, the <tag>&lt;xref&gt;</tag> is still transformed into an anchor tag as follows:"
 msgstr ""
 
-msgid "…see &lt;a href=\"#ch03\"&gt;The Secret to Eternal Life&lt;/a&gt; for details."
-msgstr ""
-
 msgid "Someone reading the German version, however, will have this as their underlying HTML:"
 msgstr ""
 
@@ -214,17 +201,6 @@ msgid "…Sehen Sie &lt;a href=\"#ch03\"&gt;The Secret to Eternal Life&lt;/a&gt;
 msgstr ""
 
 msgid "If the <tag>&lt;xreflabel&gt;</tag> attribute is not used, the title and chapter indicator, both properly translated, appear to the reader. That is, the following:"
-msgstr ""
-
-msgid ""
-"&lt;chapter id=\"ch03\"&gt;\n"
-"	&lt;title&gt;The Secret to Eternal Life&lt;/title&gt;\n"
-"	&lt;para&gt;The secret to eternal life is…&lt;/para&gt;\n"
-"&lt;/chapter&gt;\n"
-"\n"
-"[more deathless prose here]		\n"
-"\n"
-"…see &lt;xref linkend=\"ch03\"&gt; for details."
 msgstr ""
 
 msgid "will, after translation, present thus to a German-speaking reader:"
@@ -246,9 +222,6 @@ msgid "The <parameter>endterm</parameter> attribute allows you to present hyperl
 msgstr ""
 
 msgid "The text presented in an element (such as an <tag>&lt;xref&gt;</tag>) that contains the <parameter>endterm</parameter> attribute is taken from a <tag>&lt;titleabbrev&gt;</tag> tag in the target chapter or section. Although the content of the <tag>&lt;titleabbrev&gt;</tag> tag is available to translators in the document's PO files, it is removed from the context of the <tag>&lt;xref&gt;</tag>. The absence of this context makes reliable translation impossible in languages that mark prepositions or articles for grammatical number and grammatical gender."
-msgstr ""
-
-msgid "For example, if you have the following:"
 msgstr ""
 
 msgid ""

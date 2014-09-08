@@ -921,16 +921,20 @@ sub print_msgs {
         )
         );
 
+    my %msgs = ();
     my $po = new Locale::PO(-msgid=> '', -msgstr => $self->header());
     print( $fh $po->dump() );
+    $msgs{''} = $po;
 
-    my %msgs = ();
     foreach my $child ( $msg_list->content_list() ) {
         my $msg_id = detag($child->as_XML(), $child->tag());
         # This can be empty if a mixed mode tag only contains a block
         next if( $msg_id eq '');
-        my $po = new Locale::PO(-msgid=> $msg_id, -msgstr => '');
-        print( $fh $po->dump() );
+        if(!defined($msgs{$msg_id})) {
+          my $po = new Locale::PO(-msgid=> $msg_id, -msgstr => '');
+          print( $fh $po->dump() );
+          $msgs{$msg_id} = $po; 
+        }
     }    
     close($fh);
 
@@ -949,15 +953,21 @@ sub header {
     my $date
         = DateTime->now( time_zone => "local" )->strftime("%Y-%m-%d %H:%M%z");
 
+    my $lang = $self->{publican}->param('xml_lang');
+    $lang =~ s/_/-/g;
+    my $pver = $self->{publican}->VERSION;
+
     my $string = <<POT;
 Project-Id-Version: 0
 POT-Creation-Date: $date
 PO-Revision-Date: $date
 Last-Translator: Automatically generated
 Language-Team: None
+Language: $lang 
 MIME-Version: 1.0
 Content-Type: application/x-publican; charset=UTF-8
 Content-Transfer-Encoding: 8bit
+X-Generator: Publican $pver
 POT
 
     return ($string);

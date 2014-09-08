@@ -1,13 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2014-06-02 09:01+1000\n"
-"PO-Revision-Date: 2014-06-02 09:01+1000\n"
+"POT-Creation-Date: 2014-09-09 09:00+1000\n"
+"PO-Revision-Date: 2014-09-09 09:00+1000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: None\n"
+"Language: en-US \n"
 "MIME-Version: 1.0\n"
 "Content-Type: application/x-publican; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Publican v4.2.1\n"
 
 msgid "Command summary"
 msgstr ""
@@ -180,12 +182,6 @@ msgstr ""
 msgid "Remove all temporary files and directories"
 msgstr ""
 
-msgid "--pub_dir=<replaceable>PUB_DIR</replaceable>"
-msgstr ""
-
-msgid "Directory to publish files to. Defaults to publish."
-msgstr ""
-
 msgid "<prompt>$</prompt><command> publican</command> clean_ids"
 msgstr ""
 
@@ -228,12 +224,6 @@ msgstr ""
 msgid "Create a new book, set, or article"
 msgstr ""
 
-msgid "--brand=<replaceable>BRAND</replaceable>"
-msgstr ""
-
-msgid "The brand to use"
-msgstr ""
-
 msgid "--dtdver=<replaceable>DTDVER</replaceable>"
 msgstr ""
 
@@ -244,12 +234,6 @@ msgid "--edition=<replaceable>EDITION</replaceable>"
 msgstr ""
 
 msgid "The edition of the book, article, or set"
-msgstr ""
-
-msgid "--lang=<replaceable>LANG</replaceable>"
-msgstr ""
-
-msgid "The language the XML will be written in"
 msgstr ""
 
 msgid "--name=<replaceable>NAME</replaceable>"
@@ -282,18 +266,6 @@ msgstr ""
 msgid "Create a new brand"
 msgstr ""
 
-msgid "--lang=<replaceable>LANG</replaceable>"
-msgstr ""
-
-msgid "The language the XML will be written in"
-msgstr ""
-
-msgid "--name=<replaceable>NAME</replaceable>"
-msgstr ""
-
-msgid "The name of the book, article, set, or brand"
-msgstr ""
-
 msgid "<prompt>$</prompt><command> publican</command> create_site"
 msgstr ""
 
@@ -304,18 +276,6 @@ msgid "--db_file=<replaceable>DB_FILE</replaceable>"
 msgstr ""
 
 msgid "Override default database file."
-msgstr ""
-
-msgid "--lang=<replaceable>LANG</replaceable>"
-msgstr ""
-
-msgid "The language the XML will be written in"
-msgstr ""
-
-msgid "--site_config=<replaceable>SITE_CONFIG</replaceable>"
-msgstr ""
-
-msgid "WebSite configuration file to use or create."
 msgstr ""
 
 msgid "--tmpl_path=<replaceable>TMPL_PATH</replaceable>"
@@ -342,18 +302,6 @@ msgstr ""
 msgid "Install a book in to a WebSite."
 msgstr ""
 
-msgid "--lang=<replaceable>LANG</replaceable>"
-msgstr ""
-
-msgid "The language the XML will be written in"
-msgstr ""
-
-msgid "--site_config=<replaceable>SITE_CONFIG</replaceable>"
-msgstr ""
-
-msgid "WebSite configuration file to use or create."
-msgstr ""
-
 msgid "<prompt>$</prompt><command> publican</command> install_brand"
 msgstr ""
 
@@ -364,12 +312,6 @@ msgid "--path=<replaceable>PATH</replaceable>"
 msgstr ""
 
 msgid "/path/to/install/to"
-msgstr ""
-
-msgid "--pub_dir=<replaceable>PUB_DIR</replaceable>"
-msgstr ""
-
-msgid "Directory to publish files to. Defaults to publish."
 msgstr ""
 
 msgid "--web"
@@ -384,22 +326,10 @@ msgstr ""
 msgid "report PO statistics"
 msgstr ""
 
-msgid "--lang=<replaceable>LANG</replaceable>"
-msgstr ""
-
-msgid "The language the XML will be written in"
-msgstr ""
-
 msgid "<prompt>$</prompt><command> publican</command> migrate_site"
 msgstr ""
 
 msgid "Migrate a website DataBase from Publican &lt; 3 to Publican 3."
-msgstr ""
-
-msgid "--site_config=<replaceable>SITE_CONFIG</replaceable>"
-msgstr ""
-
-msgid "WebSite configuration file to use or create."
 msgstr ""
 
 msgid "<prompt>$</prompt><command> publican</command> package"
@@ -424,18 +354,6 @@ msgid "--desktop"
 msgstr ""
 
 msgid "Create desktop instead of web package"
-msgstr ""
-
-msgid "--lang=<replaceable>LANG</replaceable>"
-msgstr ""
-
-msgid "The language the XML will be written in"
-msgstr ""
-
-msgid "--pub_dir=<replaceable>PUB_DIR</replaceable>"
-msgstr ""
-
-msgid "Directory to publish files to. Defaults to publish."
 msgstr ""
 
 msgid "--scratch"
@@ -492,40 +410,10 @@ msgstr ""
 msgid "Remove a book from a WebSite."
 msgstr ""
 
-msgid "--lang=<replaceable>LANG</replaceable>"
-msgstr ""
-
-msgid "The language the XML will be written in"
-msgstr ""
-
-msgid "--site_config=<replaceable>SITE_CONFIG</replaceable>"
-msgstr ""
-
-msgid "WebSite configuration file to use or create."
-msgstr ""
-
 msgid "<prompt>$</prompt><command> publican</command> rename"
 msgstr ""
 
 msgid "Rename a publican book"
-msgstr ""
-
-msgid "--name=<replaceable>NAME</replaceable>"
-msgstr ""
-
-msgid "The name of the book, article, set, or brand"
-msgstr ""
-
-msgid "--product=<replaceable>PRODUCT</replaceable>"
-msgstr ""
-
-msgid "The name of the product"
-msgstr ""
-
-msgid "--version=<replaceable>VERSION</replaceable>"
-msgstr ""
-
-msgid "The version of the product"
 msgstr ""
 
 msgid "<prompt>$</prompt><command> publican</command> report"
@@ -538,12 +426,6 @@ msgid "<prompt>$</prompt><command> publican</command> site_stats"
 msgstr ""
 
 msgid "Report on the contents of a WebSite"
-msgstr ""
-
-msgid "--site_config=<replaceable>SITE_CONFIG</replaceable>"
-msgstr ""
-
-msgid "WebSite configuration file to use or create."
 msgstr ""
 
 msgid "<prompt>$</prompt><command> publican</command> trans_drop"
@@ -588,46 +470,16 @@ msgstr ""
 msgid "Delete a database entry"
 msgstr ""
 
-msgid "--formats=<replaceable>FORMATS</replaceable>"
-msgstr ""
-
-msgid "Comma-separated list of formats, for example: html,pdf,html-single,html-desktop,txt,epub"
-msgstr ""
-
-msgid "--lang=<replaceable>LANG</replaceable>"
-msgstr ""
-
-msgid "The language the XML will be written in"
-msgstr ""
-
-msgid "--name=<replaceable>NAME</replaceable>"
-msgstr ""
-
-msgid "The name of the book, article, set, or brand"
-msgstr ""
-
 msgid "--name_label=<replaceable>NAME_LABEL</replaceable>"
 msgstr ""
 
 msgid "name label for a book"
 msgstr ""
 
-msgid "--product=<replaceable>PRODUCT</replaceable>"
-msgstr ""
-
-msgid "The name of the product"
-msgstr ""
-
 msgid "--product_label=<replaceable>PRODUCT_LABEL</replaceable>"
 msgstr ""
 
 msgid "product label for a book"
-msgstr ""
-
-msgid "--site_config=<replaceable>SITE_CONFIG</replaceable>"
-msgstr ""
-
-msgid "WebSite configuration file to use or create."
 msgstr ""
 
 msgid "--sort_order=<replaceable>SORT_ORDER</replaceable>"
@@ -642,12 +494,6 @@ msgstr ""
 msgid "Sub title for a book"
 msgstr ""
 
-msgid "--version=<replaceable>VERSION</replaceable>"
-msgstr ""
-
-msgid "The version of the product"
-msgstr ""
-
 msgid "--version_label=<replaceable>VERSION_LABEL</replaceable>"
 msgstr ""
 
@@ -658,24 +504,6 @@ msgid "<prompt>$</prompt><command> publican</command> update_po"
 msgstr ""
 
 msgid "Update the PO files"
-msgstr ""
-
-msgid "--email=<replaceable>EMAIL</replaceable>"
-msgstr ""
-
-msgid "email to use for a revision."
-msgstr ""
-
-msgid "--firstname=<replaceable>FIRSTNAME</replaceable>"
-msgstr ""
-
-msgid "firstname to use for a revision."
-msgstr ""
-
-msgid "--langs=<replaceable>LANGS</replaceable>"
-msgstr ""
-
-msgid "Comma-separated list of languages, for example: en-US,de-DE,all"
 msgstr ""
 
 msgid "--msgmerge"
@@ -690,12 +518,6 @@ msgstr ""
 msgid "Keep previous msgid when fuzzy matches are detected in PO updates."
 msgstr ""
 
-msgid "--surname=<replaceable>SURNAME</replaceable>"
-msgstr ""
-
-msgid "surname to use for a revision."
-msgstr ""
-
 msgid "<prompt>$</prompt><command> publican</command> update_pot"
 msgstr ""
 
@@ -706,12 +528,6 @@ msgid "<prompt>$</prompt><command> publican</command> update_site"
 msgstr ""
 
 msgid "Update an existing sites templates."
-msgstr ""
-
-msgid "--site_config=<replaceable>SITE_CONFIG</replaceable>"
-msgstr ""
-
-msgid "WebSite configuration file to use or create."
 msgstr ""
 
 msgid "<prompt>$</prompt><command> publican</command> zt_pull"

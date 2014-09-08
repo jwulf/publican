@@ -1,13 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2014-06-02 09:01+1000\n"
-"PO-Revision-Date: 2014-06-02 09:01+1000\n"
+"POT-Creation-Date: 2014-09-09 09:00+1000\n"
+"PO-Revision-Date: 2014-09-09 09:00+1000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: None\n"
+"Language: en-US \n"
 "MIME-Version: 1.0\n"
 "Content-Type: application/x-publican; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Publican v4.2.1\n"
 
 msgid "Pre-release software and draft documentation"
 msgstr ""
@@ -129,8 +131,5 @@ msgid "deleted"
 msgstr ""
 
 msgid "This is how an element that has been marked for deletion from a new revision is marked-up. Publican will not automatically delete or hide this content, you have to ensure this is done before publication."
-msgstr ""
-
-msgid ""
 msgstr ""
 

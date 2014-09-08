@@ -1,13 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2014-06-02 09:01+1000\n"
-"PO-Revision-Date: 2014-06-02 09:01+1000\n"
+"POT-Creation-Date: 2014-09-09 09:00+1000\n"
+"PO-Revision-Date: 2014-09-09 09:00+1000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: None\n"
+"Language: en-US \n"
 "MIME-Version: 1.0\n"
 "Content-Type: application/x-publican; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Publican v4.2.1\n"
 
 msgid "Files in the brand directory"
 msgstr ""
@@ -49,9 +51,6 @@ msgid "<filename>overrides.css</filename>"
 msgstr ""
 
 msgid "the <filename>images</filename> subdirectory, which contains 43 images in both raster (PNG) and vector (SVG) formats."
-msgstr ""
-
-msgid ""
 msgstr ""
 
 msgid "The publican.cfg file"
@@ -156,13 +155,7 @@ msgstr ""
 msgid "Inside the brand directory is a subdirectory named after the default XML language for brand, as set with the <option>--lang</option> option when you created the brand. This subdirectory contains XML and image files that override the default Common Content provided with <application>Publican</application>. Customizing these files provides your brand with its distinctive appearance, including its color scheme and logos."
 msgstr ""
 
-msgid "<filename>Feedback.xml</filename>"
-msgstr ""
-
 msgid "The <filename>Feedback.xml</filename> file is included by default in the preface of every book produced in <application>Publican</application>. It invites readers to leave feedback about the document. Customize this file with the contact details of your project. If your project uses a bug tracking system such as <application>Bugzilla</application>, <application>JIRA</application>, or <application>Trac</application>, you could include this information here."
-msgstr ""
-
-msgid "<filename>Legal_Notice.xml</filename>"
 msgstr ""
 
 msgid "The <filename>Legal_Notice.xml</filename> file contains the legal notice that appears at the beginning of every document produced by <application>Publican</application>. Insert the details of your chosen copyright license into this file. Typically, this might include the name of the license, a short summary of the license, and a link to the full details of the license."

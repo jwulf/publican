@@ -1,18 +1,17 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2014-06-02 09:01+1000\n"
-"PO-Revision-Date: 2014-06-02 09:01+1000\n"
+"POT-Creation-Date: 2014-09-09 09:00+1000\n"
+"PO-Revision-Date: 2014-09-09 09:00+1000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: None\n"
+"Language: en-US \n"
 "MIME-Version: 1.0\n"
 "Content-Type: application/x-publican; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Publican v4.2.1\n"
 
 msgid "Revision History"
-msgstr ""
-
-msgid ""
 msgstr ""
 
 msgid "Jeff"
@@ -34,12 +33,6 @@ msgid "Landmann"
 msgstr ""
 
 msgid "Corrections to website building instructions"
-msgstr ""
-
-msgid "Rüdiger"
-msgstr ""
-
-msgid "Landmann"
 msgstr ""
 
 msgid "Improve instructions for translation BZ#1021287"
@@ -96,12 +89,6 @@ msgstr ""
 msgid "Updated web site instructions - BZ#979224"
 msgstr ""
 
-msgid "Jeff"
-msgstr ""
-
-msgid "Fearn"
-msgstr ""
-
 msgid "Publican 3.2.0"
 msgstr ""
 
@@ -114,19 +101,7 @@ msgstr ""
 msgid "Document build option --pub_dir"
 msgstr ""
 
-msgid "Norman"
-msgstr ""
-
-msgid "Dunbar"
-msgstr ""
-
 msgid "Add Section on Installing Publican on OpenSuse 12"
-msgstr ""
-
-msgid "Jeff"
-msgstr ""
-
-msgid "Fearn"
 msgstr ""
 
 msgid "Publican 3.0"
@@ -139,12 +114,6 @@ msgid "Newton"
 msgstr ""
 
 msgid "Improve documentation of standalone &lt;set&gt; usage"
-msgstr ""
-
-msgid "Rüdiger"
-msgstr ""
-
-msgid "Landmann"
 msgstr ""
 
 msgid "Document new manual_toc_update parameter -- BZ#719573"
@@ -168,12 +137,6 @@ msgstr ""
 msgid "Incorporate proofreading fixes from Luigi Votta <email>lewis41@fedoraproject.org</email> BZ#657576, BZ#663399"
 msgstr ""
 
-msgid "Rüdiger"
-msgstr ""
-
-msgid "Landmann"
-msgstr ""
-
 msgid "Incorporate proofreading fixes from Luigi Votta <email>lewis41@fedoraproject.org</email> BZ#657576"
 msgstr ""
 
@@ -189,12 +152,6 @@ msgstr ""
 msgid "Document site_overrides.css"
 msgstr ""
 
-msgid "Rüdiger"
-msgstr ""
-
-msgid "Landmann"
-msgstr ""
-
 msgid "Document website dump files"
 msgstr ""
 
@@ -202,12 +159,6 @@ msgid "Document bump command"
 msgstr ""
 
 msgid "Update image width behaviour"
-msgstr ""
-
-msgid "Rüdiger"
-msgstr ""
-
-msgid "Landmann"
 msgstr ""
 
 msgid "Update lang_stats to include multiple languages"
@@ -237,12 +188,6 @@ msgstr ""
 msgid "Correction -- def_langs is a site config parameter, not a homepage config file parameter"
 msgstr ""
 
-msgid "Rüdiger"
-msgstr ""
-
-msgid "Landmann"
-msgstr ""
-
 msgid "Expand on including code samples BZ#604255"
 msgstr ""
 
@@ -252,31 +197,13 @@ msgstr ""
 msgid "Document --novalid BZ#616142"
 msgstr ""
 
-msgid "Rüdiger"
-msgstr ""
-
-msgid "Landmann"
-msgstr ""
-
 msgid "Correct and clarify website instructions BZ#614259"
 msgstr ""
 
 msgid "Clarify use of Product-Version-Id for packaging"
 msgstr ""
 
-msgid "Rüdiger"
-msgstr ""
-
-msgid "Landmann"
-msgstr ""
-
 msgid "Update Ubuntu installation instructions"
-msgstr ""
-
-msgid "Rüdiger"
-msgstr ""
-
-msgid "Landmann"
 msgstr ""
 
 msgid "Revise action and option nomenclature"
@@ -294,31 +221,13 @@ msgstr ""
 msgid "Document Eclipse help plugin format and supporting parameters"
 msgstr ""
 
-msgid "Rüdiger"
-msgstr ""
-
-msgid "Landmann"
-msgstr ""
-
 msgid "Document --config option"
-msgstr ""
-
-msgid "Jeff"
-msgstr ""
-
-msgid "Fearn"
 msgstr ""
 
 msgid "remove obsolete reference to path to the DocBook catalog files. BZ#565498."
 msgstr ""
 
 msgid "document CVS options."
-msgstr ""
-
-msgid "Rüdiger"
-msgstr ""
-
-msgid "Landmann"
 msgstr ""
 
 msgid "Add an FAQ entry about code highlighting errors."
@@ -336,46 +245,16 @@ msgstr ""
 msgid "Metadata in the Book_Info.xml file"
 msgstr ""
 
-msgid "Jeff"
-msgstr ""
-
-msgid "Fearn"
-msgstr ""
-
 msgid "Document lang_stats action. BZ#540696."
-msgstr ""
-
-msgid "Jeff"
-msgstr ""
-
-msgid "Fearn"
 msgstr ""
 
 msgid "Fix wrong docs for condition usage. BZ#540691"
 msgstr ""
 
-msgid "Rüdiger"
-msgstr ""
-
-msgid "Landmann"
-msgstr ""
-
 msgid "Fix various small inconsistencies and general clean up"
 msgstr ""
 
-msgid "Rüdiger"
-msgstr ""
-
-msgid "Landmann"
-msgstr ""
-
 msgid "Updated for Publican 1.0"
-msgstr ""
-
-msgid "Jeff"
-msgstr ""
-
-msgid "Fearn"
 msgstr ""
 
 msgid "Added appendix on Makefile parameters"
@@ -402,12 +281,6 @@ msgstr ""
 msgid "Adding \"Conditional Tagging\" section."
 msgstr ""
 
-msgid "Brian"
-msgstr ""
-
-msgid "Forté"
-msgstr ""
-
 msgid "General edits and updates related to Publican 0.36 release. Also, new section added to Chapter 3.3."
 msgstr ""
 
@@ -420,24 +293,9 @@ msgstr ""
 msgid "Updated Branding to note addition of oVirt and GIMP brands"
 msgstr ""
 
-msgid "Jeff"
-msgstr ""
-
-msgid "Fearn"
-msgstr ""
-
 msgid "Updated FAQ"
 msgstr ""
 
-msgid "Murray"
-msgstr ""
-
-msgid "McAllister"
-msgstr ""
-
 msgid "Initial content release"
-msgstr ""
-
-msgid ""
 msgstr ""
 

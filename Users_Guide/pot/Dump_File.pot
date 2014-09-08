@@ -1,13 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2014-06-02 09:01+1000\n"
-"PO-Revision-Date: 2014-06-02 09:01+1000\n"
+"POT-Creation-Date: 2014-09-09 09:00+1000\n"
+"PO-Revision-Date: 2014-09-09 09:00+1000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: None\n"
+"Language: en-US \n"
 "MIME-Version: 1.0\n"
 "Content-Type: application/x-publican; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Publican v4.2.1\n"
 
 msgid "Contents of the website dump file"
 msgstr ""
@@ -123,24 +125,6 @@ msgstr ""
 msgid "Using the following fields, you can compute the URL of any document on the site:"
 msgstr ""
 
-msgid "<tag>&lt;host&gt;</tag>"
-msgstr ""
-
-msgid "<tag>&lt;name&gt;</tag>"
-msgstr ""
-
-msgid "<tag>&lt;format&gt;</tag>"
-msgstr ""
-
-msgid "<tag>&lt;language&gt;</tag>"
-msgstr ""
-
-msgid "<tag>&lt;product&gt;</tag>"
-msgstr ""
-
-msgid "<tag>&lt;version&gt;</tag>"
-msgstr ""
-
 msgid "muti-page HTML"
 msgstr ""
 
@@ -151,9 +135,6 @@ msgid "For example, <filename>http://docs.fedoraproject.org/en-US/Fedora/14/html
 msgstr ""
 
 msgid "single-page HTML"
-msgstr ""
-
-msgid "<tag>&lt;host&gt;</tag>/<tag>&lt;language&gt;</tag>/<tag>&lt;product&gt;</tag>/<tag>&lt;version&gt;</tag>/<tag>&lt;format&gt;</tag>/<tag>&lt;name&gt;</tag>/<filename>index.html</filename>"
 msgstr ""
 
 msgid "For example, <filename>http://docs.fedoraproject.org/en-US/Fedora/14/html-single/Accessibility_Guide/index.html</filename>"

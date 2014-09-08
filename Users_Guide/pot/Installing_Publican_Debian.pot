@@ -1,13 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2014-06-02 09:01+1000\n"
-"PO-Revision-Date: 2014-06-02 09:01+1000\n"
+"POT-Creation-Date: 2014-09-09 09:00+1000\n"
+"PO-Revision-Date: 2014-09-09 09:00+1000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: None\n"
+"Language: en-US \n"
 "MIME-Version: 1.0\n"
 "Content-Type: application/x-publican; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Publican v4.2.1\n"
 
 msgid "Debian"
 msgstr ""
@@ -49,12 +51,6 @@ msgstr ""
 msgid "Assuming there is a more recent version of <application>publican</application> available in the testing repository, and that you are running the current stable, then you can upgrade by:"
 msgstr ""
 
-msgid "Open a terminal."
-msgstr ""
-
-msgid "Change to the root user: <command> su - </command>"
-msgstr ""
-
 msgid "Open your <filename>/etc/apt/sources.list</filename> file in a text editor. For example, to edit the file in <application>gedit</application> run:"
 msgstr ""
 
@@ -77,9 +73,6 @@ msgstr ""
 msgid "<prompt>$</prompt> <command>gedit /etc/apt/preferences</command>"
 msgstr ""
 
-msgid "Add the following line to the end of the file:"
-msgstr ""
-
 msgid ""
 "Package: *\n"
 "Pin: release a=stable\n"
@@ -92,9 +85,6 @@ msgid ""
 "Package: *\n"
 "Pin: release o=Debian\n"
 "Pin-Priority: -10"
-msgstr ""
-
-msgid "Save the file and close the text editor."
 msgstr ""
 
 msgid "Run the following command to update the list of packages available to your computer:"
@@ -122,9 +112,6 @@ msgid ""
 msgstr ""
 
 msgid "Which indicates that you might need to upgrade libxml2 and libxslt to the testing repository version too. This can be done by searching to find the likely library:"
-msgstr ""
-
-msgid ""
 msgstr ""
 
 msgid ""
@@ -160,8 +147,5 @@ msgid "And then upgrading those packages to testing."
 msgstr ""
 
 msgid "<prompt>$</prompt> <command>apt-get -t testing upgrade libxml2 libxslt1.1</command>"
-msgstr ""
-
-msgid ""
 msgstr ""
 

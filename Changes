@@ -1,3 +1,6 @@
+4.2.2 Tue Sep 09 2014
+- Fix duplicate messages in POT files. BZ #1136133
+
 4.2.1 Mon Sep 01 2014
 - Remove empty msgids from POT files. BZ #1135143
 - Fix highlight in callout with areaspec. BZ #1135827

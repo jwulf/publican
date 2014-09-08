@@ -1,13 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2014-06-02 09:01+1000\n"
-"PO-Revision-Date: 2014-06-02 09:01+1000\n"
+"POT-Creation-Date: 2014-09-09 09:00+1000\n"
+"PO-Revision-Date: 2014-09-09 09:00+1000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: None\n"
+"Language: en-US \n"
 "MIME-Version: 1.0\n"
 "Content-Type: application/x-publican; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Publican v4.2.1\n"
 
 msgid "Installing a brand"
 msgstr ""
@@ -105,31 +107,13 @@ msgstr ""
 msgid "publican-redhat"
 msgstr ""
 
-msgid ""
-msgstr ""
-
 msgid "Fedora"
-msgstr ""
-
-msgid "<phrase>CC-BY-SA 3.0</phrase>"
-msgstr ""
-
-msgid "<phrase>CC-BY-SA 3.0</phrase>"
 msgstr ""
 
 msgid "publican-fedora"
 msgstr ""
 
-msgid ""
-msgstr ""
-
 msgid "JBoss"
-msgstr ""
-
-msgid "<phrase>CC-BY-SA 3.0</phrase>"
-msgstr ""
-
-msgid "<phrase>CC-BY-SA 3.0</phrase>"
 msgstr ""
 
 msgid "publican-jboss"
@@ -150,13 +134,7 @@ msgstr ""
 msgid "publican-ovirt"
 msgstr ""
 
-msgid "No Options."
-msgstr ""
-
 msgid "GIMP"
-msgstr ""
-
-msgid "<link xlink:href=\"http://www.gnu.org/licenses/fdl.html\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">GFDL Version 1.2</link>"
 msgstr ""
 
 msgid "<phrase>GFDL Version 1.2</phrase>"
@@ -171,16 +149,7 @@ msgstr ""
 msgid "Genome"
 msgstr ""
 
-msgid "<phrase>OPL 1.0</phrase>"
-msgstr ""
-
-msgid "<phrase>OPL 1.0</phrase>"
-msgstr ""
-
 msgid "publican-genome"
-msgstr ""
-
-msgid "No Options."
 msgstr ""
 
 msgid "Note the difference in licensing between the common content files provided in the common brand (CC0) and the default license set for books generated with the common brand (GFDL). The CC0 license allows you to redistribute and relicense the files that make up the common brand (including the CSS and image files) to suit your project. <application>Publican</application> suggests the GFDL for documentation by default because <application>Publican</application> is developed primarily to build documentation for software. The GFDL is compatible with the GPL, which is the most commonly used license for open-source software."
