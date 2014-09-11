@@ -14,12 +14,12 @@
 # required for desktop file install
 %define my_vendor %(test %{OTHER} == 1 && echo "fedora" || echo "redhat")
 
-%define TESTS 0
+%define TESTS 1
 %define wwwdir /var/www/html/docs
 
 Name:           publican
 Version:        4.2.2
-Release:        0%{?dist}
+Release:        1%{?dist}
 Summary:        Common files and scripts for publishing with DocBook XML
 # For a breakdown of the licensing, refer to LICENSE
 License:        (GPLv2+ or Artistic) and CC0
@@ -325,7 +325,7 @@ rm -rf $RPM_BUILD_ROOT
 %{wwwdir}/common-db5
 
 %changelog
-* Thu Sep 11 2014 Jeff Fearn <jfearn@redhat.com> 4.2.2-0
+* Thu Sep 11 2014 Jeff Fearn <jfearn@redhat.com> 4.2.2-1
 - Fix duplicate messages in POT files. BZ #1136133
 - Remove top level directory from drupal tar file. BZ #1139070
 - Fix PDF font selection. BZ #1139899
