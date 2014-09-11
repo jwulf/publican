@@ -170,7 +170,7 @@ all senders and receivers managed by each session.</para>
 <para>And now we test a programlistingco with an areaspec</para>
 <programlistingco>
     <areaspec>
- <area id="index1" coords="2 65"/>
+ <area id="index1" coords="2 55"/>
  <area id="index2" coords="3 11"/>
     </areaspec>
 <programlisting language="XML" linenumbering="numbered">  &lt;list-index 

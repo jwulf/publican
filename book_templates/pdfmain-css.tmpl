@@ -11,14 +11,16 @@
 [% IF lang_css -%]
 @import url("Common_Content/css/lang.css");
 [%- END %]
+* {
+    font-family: "[% bodyfont %]" !important;
+}
 
 body, h1, h2, h3, h4, h5, h6, pre, li, div, .title {
-    font-family: "[% bodyfont %]" !important;
     line-height: 1.3em !important;
 }
 body {
-    font-size: 11px;
-    line-height: 14px;
+    font-size: 11px !important;
+    line-height: 14px !important;
 }
 h1, h2, h3, h4, h5, h6, .title {
     margin-top: 1.5em;
@@ -71,8 +73,22 @@ div.warning, div.note, div.important, div.tip, div.caution {
 .classname,
 .literal,
 pre,
-code {
+code,
+.guibutton *,
+.guilabel *,
+.computeroutput *, 
+.option *, 
+.command *,
+.filename *,
+.keycap *,
+.classname *,
+.literal *,
+pre *,
+code *  {
     font-family:"[% monofont %]" !important;
+    font-size: 11px !important;
+	white-space: pre-wrap !important;
+	word-wrap: break-word;
 }
 
 code.email {
@@ -89,5 +105,16 @@ section.preface,
 section.part,
 section.appendix {
 	page-break-before: always;
+}
+
+.inlinecallout, .callout, a.co, .calloutlist > dt > a {
+	position: relative !important;
+	padding: .5em !important;
+}
+.calloutlist > dt > a span {
+	padding: 0.1em !important;
+}
+a.co {
+	right: auto !important;
 }
 

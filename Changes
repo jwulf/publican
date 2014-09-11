@@ -1,6 +1,7 @@
 4.2.2 Tue Sep 09 2014
 - Fix duplicate messages in POT files. BZ #1136133
 - Remove top level directory from drupal tar file. BZ #1139070
+- Fix PDF font selection. BZ #1139899
 
 4.2.1 Mon Sep 01 2014
 - Remove empty msgids from POT files. BZ #1135143

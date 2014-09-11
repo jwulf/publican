@@ -14,12 +14,12 @@
 # required for desktop file install
 %define my_vendor %(test %{OTHER} == 1 && echo "fedora" || echo "redhat")
 
-%define TESTS 1
+%define TESTS 0
 %define wwwdir /var/www/html/docs
 
 Name:           publican
-Version:        4.2.1
-Release:        0%{?dist}.t2
+Version:        4.2.2
+Release:        0%{?dist}
 Summary:        Common files and scripts for publishing with DocBook XML
 # For a breakdown of the licensing, refer to LICENSE
 License:        (GPLv2+ or Artistic) and CC0
@@ -118,7 +118,7 @@ Requires:       docbook-style-xsl >= 1.77.1
 Requires:       perl(XML::LibXML)  >=  1.70
 Requires:       perl(XML::LibXSLT) >=  1.70
 Requires:       perl(XML::TreeBuilder) >= 5.4
-Requires:  perl(HTML::WikiConverter::Markdown) >= 0.06
+Requires:       perl(HTML::WikiConverter::Markdown) >= 0.06
 # BZ #1053609
 Requires:       perl-XML-TreeBuilder >= 5.4
 Requires:       perl-Template-Toolkit
@@ -152,6 +152,8 @@ BuildRequires:  wkhtmltopdf >= 0.12.1.development
 BuildRequires:  liberation-mono-fonts liberation-sans-fonts liberation-serif-fonts
 BuildRequires:  cjkuni-uming-fonts ipa-gothic-fonts ipa-pgothic-fonts
 BuildRequires:  lklug-fonts baekmuk-ttf-batang-fonts
+BuildRequires:  dejavu-fonts-common dejavu-serif-fonts dejavu-sans-fonts
+BuildRequires:  dejavu-sans-mono-fonts overpass-fonts dejavu-lgc-sans-mono-fonts
 %endif
 %if %{RHEL7}
 Requires:       liberation-mono-fonts liberation-sans-fonts liberation-serif-fonts
@@ -323,6 +325,11 @@ rm -rf $RPM_BUILD_ROOT
 %{wwwdir}/common-db5
 
 %changelog
+* Thu Sep 11 2014 Jeff Fearn <jfearn@redhat.com> 4.2.2-0
+- Fix duplicate messages in POT files. BZ #1136133
+- Remove top level directory from drupal tar file. BZ #1139070
+- Fix PDF font selection. BZ #1139899
+
 * Mon Sep 01 2014 Jeff Fearn <jfearn@redhat.com> 4.2.1-0
 - Remove empty msgids from POT files. BZ #1135143
 - Fix highlight in callout with areaspec. BZ #1135827

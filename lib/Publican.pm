@@ -26,7 +26,7 @@ use vars
 
 $File::Copy::Recursive::KeepMode = 0;
 
-$VERSION = version->declare('v4.2.1');
+$VERSION = version->declare('v4.2.2');
 @ISA     = qw(Exporter);
 
 @EXPORT
@@ -290,11 +290,11 @@ my %PARAM_OLD = (
     os_ver => { descr => maketext('The OS for which to build packages.'), },
     pdf_body_font => {
         descr   => maketext('The font to use for body text in PDFs.'),
-        default => 'Open Sans',
+        default => 'Liberation Sans',
     },
     pdf_mono_font => {
         descr   => maketext('The font to use for mono text in PDFs.'),
-        default => 'dejavu sans mono',
+        default => 'Liberation Sans Mono',
     },
     product => {
         descr => maketext(

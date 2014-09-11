@@ -17,6 +17,9 @@
     <link rel="stylesheet" href="[%- buildpath -%]/[% bodyfont | uri %]-font-faces.css" type="text/css" />
 [%- END %]
         <style>
+          * {
+              font-family: "[% bodyfont %]";
+          }
 [%- IF draft -%]
           .draft {
               background-image: url([%- buildpath -%]/Common_Content/images/watermark-draft.png);
@@ -26,7 +29,6 @@
 [%- END %]
           body {
               height: 90%;
-              font-family: "[% bodyfont %]";
               font-size: 10px;
               line-height: 13px;
               padding-top: 0px !important;
