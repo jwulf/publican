@@ -309,7 +309,7 @@
 				<term>ec_provider</term>
 				<listitem>
 					<para>
-						Eclipse plugin provider. Defaults to "Publican-v4.2.0"
+						Eclipse plugin provider. Defaults to "Publican-v4.2.2"
 					</para>
 				</listitem>
 			</varlistentry>
@@ -420,7 +420,7 @@
 						The font to use for body text in PDFs.
 					</para>
 					<para>
-						The default value for this parameter is: Open Sans
+						The default value for this parameter is: Liberation Sans
 					</para>
 				</listitem>
 			</varlistentry>
@@ -431,7 +431,7 @@
 						The font to use for mono text in PDFs.
 					</para>
 					<para>
-						The default value for this parameter is: dejavu sans mono
+						The default value for this parameter is: Liberation Mono
 					</para>
 				</listitem>
 			</varlistentry>
