@@ -294,7 +294,7 @@ my %PARAM_OLD = (
     },
     pdf_mono_font => {
         descr   => maketext('The font to use for mono text in PDFs.'),
-        default => 'Liberation Sans Mono',
+        default => 'Liberation Mono',
     },
     product => {
         descr => maketext(

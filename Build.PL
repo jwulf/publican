@@ -17,6 +17,7 @@ my $class = Module::Build->subclass(
         sub ACTION_srpm {
             my $self = shift;
             my $os_ver = $self->args('os_ver');
+            $self->depends_on('clean');
             $self->depends_on('dist');
             $self->do_system("mkdir -p $dir");
             $self->do_system("cp Publican*.tar.gz $dir/.");
@@ -525,11 +526,7 @@ my $builder = $class->new(
         'book_templates/cover.tmpl'  => 'book_templates/cover.tmpl',
         'book_templates/footer.tmpl' => 'book_templates/footer.tmpl',
         'book_templates/header.tmpl' => 'book_templates/header.tmpl',
-        'book_templates/Liberation Mono-font-faces.css' =>
-            'book_templates/Liberation Mono-font-faces.css',
-        'book_templates/Liberation Sans-font-faces.css' =>
-            'book_templates/Liberation Sans-font-faces.css',
-        'book_templates/pdf.css' => 'book_templates/pdf.css',
+        'book_templates/pdf-css.tmpl' => 'book_templates/pdf-css.tmpl',
         'book_templates/pdfmain-css.tmpl' =>
             'book_templates/pdfmain-css.tmpl',
         'book_templates/toc-xsl.tmpl'   => 'book_templates/toc-xsl.tmpl',

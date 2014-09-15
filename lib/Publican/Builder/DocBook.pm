@@ -660,7 +660,7 @@ sub transform {
             );
         }
 
-        rcopy_glob( "$tmpl_path/*.css", "$tmp_dir/$lang/html-pdf/" );
+        rcopy_glob( "$tmpl_path/*.css", "$tmp_dir/$lang/html-pdf/" ) if (-e  "$tmpl_path/*.css");
 
         if ( -d "$brand_path/book_templates" ) {
             rcopy_glob(
@@ -810,6 +810,12 @@ sub transform {
         $out_file = "$tmp_dir/$lang/html-pdf/pdfmain.css";
 
         $template->process( 'pdfmain-css.tmpl', $vars, $out_file,
+            binmode => ':encoding(UTF-8)' )
+            or croak( $template->error() );
+
+        $out_file = "$tmp_dir/$lang/html-pdf/pdf.css";
+
+        $template->process( 'pdf-css.tmpl', $vars, $out_file,
             binmode => ':encoding(UTF-8)' )
             or croak( $template->error() );
 
