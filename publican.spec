@@ -19,7 +19,7 @@
 
 Name:           publican
 Version:        4.2.2
-Release:        1%{?dist}.t3
+Release:        2%{?dist}
 Summary:        Common files and scripts for publishing with DocBook XML
 # For a breakdown of the licensing, refer to LICENSE
 License:        (GPLv2+ or Artistic) and CC0
@@ -325,7 +325,7 @@ rm -rf $RPM_BUILD_ROOT
 %{wwwdir}/common-db5
 
 %changelog
-* Thu Sep 11 2014 Jeff Fearn <jfearn@redhat.com> 4.2.2-1
+* Wed Sep 17 2014 Jeff Fearn <jfearn@redhat.com> 4.2.2-2
 - Fix duplicate messages in POT files. BZ #1136133
 - Remove top level directory from drupal tar file. BZ #1139070
 - Fix PDF font selection. BZ #1139899
