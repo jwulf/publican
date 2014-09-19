@@ -2,7 +2,7 @@
 <!DOCTYPE appendix [
 <!ENTITY % sgml.features "IGNORE">
 <!ENTITY % xml.features "INCLUDE">
-<!ENTITY % DOCBOOK_ENTS PUBLIC "-//OASIS//ENTITIES DocBook XML Character Entities V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/dbcentx.mod">
+<!ENTITY % DOCBOOK_ENTS PUBLIC "-//OASIS//ENTITIES DocBook Character Entities V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/dbcentx.mod">
 %DOCBOOK_ENTS;
 ]>
 <appendix id="Command_summary" version="5.0" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">

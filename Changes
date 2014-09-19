@@ -1,3 +1,6 @@
+4.2.3 UNRELEASED
+- Fix DocBook4 entity text, BZ #1143060
+
 4.2.2 Wed Sep 17 2014
 - Fix duplicate messages in POT files. BZ #1136133
 - Remove top level directory from drupal tar file. BZ #1139070
