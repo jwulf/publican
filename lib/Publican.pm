@@ -1377,7 +1377,7 @@ DTDHEAD
 <!DOCTYPE $tag [
 <!ENTITY % sgml.features "IGNORE">
 <!ENTITY % xml.features "INCLUDE">
-<!ENTITY % DOCBOOK_ENTS PUBLIC "-//OASIS//ENTITIES DocBook XML Character Entities V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/dbcentx.mod">
+<!ENTITY % DOCBOOK_ENTS PUBLIC "-//OASIS//ENTITIES DocBook Character Entities V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/dbcentx.mod">
 %DOCBOOK_ENTS;
 DTDHEAD
     }
