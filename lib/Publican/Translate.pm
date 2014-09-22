@@ -58,7 +58,7 @@ Create a new Publican::Translate object.
 sub new {
     my ( $this, $args ) = @_;
 
-    my $showfuzzy  = delete( $args->{showfuzzy} );
+    my $showfuzzy = delete( $args->{showfuzzy} );
 
     if ( %{$args} ) {
         croak(
@@ -72,7 +72,7 @@ sub new {
     my $self = bless {}, $class;
 
     my $publican = Publican->new();
-    $self->{publican} = $publican;
+    $self->{publican}  = $publican;
     $self->{showfuzzy} = $showfuzzy;
 
     return $self;
@@ -208,18 +208,19 @@ sub po2xml {
         maketext( "Can't open file [_1]. Error: [_2]", $xml_file, $@ ) );
     $out_doc->pos( $out_doc->root() );
 
-    my $msgids = Locale::PO->load_file_ashash($po_file, 'UTF-8');
+    my $msgids = Locale::PO->load_file_ashash( $po_file, 'UTF-8' );
     foreach my $key ( keys( %{$msgids} ) ) {
         my $msgref = $msgids->{$key};
         if ( $msgref->obsolete() ) {
             delete( $msgids->{$key} );
         }
-        if ($msgref->fuzzy() && !$self->{showfuzzy}) {
+        if ( $msgref->fuzzy() && !$self->{showfuzzy} ) {
             $msgref->msgstr("");
         }
     }
 
-    $self->merge_msgs( { ent_file => $ent_file, out_doc => $out_doc, msgids => $msgids } );
+    $self->merge_msgs(
+        { ent_file => $ent_file, out_doc => $out_doc, msgids => $msgids } );
 
     $out_doc->pos( $out_doc->root() );
     foreach my $node ( $out_doc->look_down( 'processed', 1 ) ) {
@@ -246,7 +247,12 @@ sub po2xml {
     open( $OUTDOC, ">:encoding(UTF-8)", "$out_file" )
         || croak( maketext( "Could not open [_1] for output!", $out_file ) );
     print $OUTDOC Publican::Builder::dtd_string(
-        { tag => $type, dtdver => $dtdver, cleaning => 1, ent_file => $ent_file } );
+        {   tag      => $type,
+            dtdver   => $dtdver,
+            cleaning => 1,
+            ent_file => $ent_file
+        }
+    );
     print( $OUTDOC $text );
     close($OUTDOC);
 
@@ -436,8 +442,8 @@ sub merge_po {
         );
     }
 
-    my $pot_arry      = Locale::PO->load_file_asarray($pot_file, 'UTF-8');
-    my $po_hash       = Locale::PO->load_file_ashash($po_file, 'UTF-8');
+    my $pot_arry = Locale::PO->load_file_asarray( $pot_file, 'UTF-8' );
+    my $po_hash       = Locale::PO->load_file_ashash( $po_file, 'UTF-8' );
     my @po_keys       = keys( %{$po_hash} );
     my %po_start_keys = map { $_ => 1 } @po_keys;
     my @out_arry      = ();
@@ -748,7 +754,9 @@ sub merge_msgs {
 
     # No Nesting so push all of this nodes content on to the output trans_tree
         if ( !$#matches ) {
-            $self->translate( {ent_file => $ent_file, node => $child, msgids => $msgids } );
+            $self->translate(
+                { ent_file => $ent_file, node => $child, msgids => $msgids }
+            );
         }
         else {
 
@@ -773,7 +781,11 @@ sub merge_msgs {
                 {
                     if ( $trans_node && !$trans_node->is_empty ) {
                         $self->translate(
-                            {ent_file => $ent_file, node => $trans_node, msgids => $msgids } );
+                            {   ent_file => $ent_file,
+                                node     => $trans_node,
+                                msgids   => $msgids
+                            }
+                        );
                         $child->push_content( $trans_node->content_list() );
                         $trans_node->delete();
                         $trans_node = XML::Element->new( $child->tag() );
@@ -789,7 +801,11 @@ sub merge_msgs {
 
             if ( $trans_node && !$trans_node->is_empty ) {
                 $self->translate(
-                    {ent_file => $ent_file, node => $trans_node, msgids => $msgids } );
+                    {   ent_file => $ent_file,
+                        node     => $trans_node,
+                        msgids   => $msgids
+                    }
+                );
                 $child->push_content( $trans_node->content_list() );
                 $trans_node->delete();
             }
@@ -824,13 +840,13 @@ sub translate {
     my $msgid = $node->as_XML();
     my $tag   = $node->tag();
 
-    my $po = new Locale::PO(-msgid=> detag($msgid, $tag), -msgstr => '');
+    my $po = new Locale::PO( -msgid => detag( $msgid, $tag ), -msgstr => '' );
     $msgid = $po->msgid();
 
     my $attr_text = '';
-    my %attrs = $node->all_attr();
-    foreach my $key (keys(%attrs)) {
-        next if($key =~ /^_/);
+    my %attrs     = $node->all_attr();
+    foreach my $key ( keys(%attrs) ) {
+        next if ( $key =~ /^_/ );
         $attr_text .= qq{ $key="$attrs{$key}"};
     }
 
@@ -922,20 +938,21 @@ sub print_msgs {
         );
 
     my %msgs = ();
-    my $po = new Locale::PO(-msgid=> '', -msgstr => $self->header());
+    my $po = new Locale::PO( -msgid => '', -msgstr => $self->header() );
     print( $fh $po->dump() );
     $msgs{''} = $po;
 
     foreach my $child ( $msg_list->content_list() ) {
-        my $msg_id = detag($child->as_XML(), $child->tag());
+        my $msg_id = detag( $child->as_XML(), $child->tag() );
+
         # This can be empty if a mixed mode tag only contains a block
-        next if( $msg_id eq '');
-        if(!defined($msgs{$msg_id})) {
-          my $po = new Locale::PO(-msgid=> $msg_id, -msgstr => '');
-          print( $fh $po->dump() );
-          $msgs{$msg_id} = $po; 
+        next if ( $msg_id eq '' );
+        if ( !defined( $msgs{$msg_id} ) ) {
+            my $po = new Locale::PO( -msgid => $msg_id, -msgstr => '' );
+            print( $fh $po->dump() );
+            $msgs{$msg_id} = $po;
         }
-    }    
+    }
     close($fh);
 
     return;
@@ -986,18 +1003,27 @@ sub detag {
     debug_msg("unknown tag for: $string") if $name eq '';
 
     if ( $name =~ /$VERBATIM/ ) {
-    # remove start tag to reduce polution
+
+        # remove start tag to reduce polution
         $string =~ s/^<$name[^>]*>//;
-# remove close tag to reduce polution
+
+        # remove close tag to reduce polution
         $string =~ s/<\/$name>\s*$//;
         chomp($string);
-            ;                            }
+    }
     else {
         chomp($string);
+
         # remove start tag & leading space
         $string =~ s/^<$name[^>]*>\s*//;
+
         # remove close tag & trailing
         $string =~ s/\s*<\/$name>\s*$//;
+
+        $string =~ s/\n/ /g;     # CR
+        $string =~ s/^\s*//g;    # space at start of line
+        $string =~ s/\s*$//g;    # space at end of line
+        $string =~ s/\s+/ /g;    # collapse spacing
     }
 
     $string =~ s/&#38;/&amp;/g;
@@ -1008,7 +1034,7 @@ sub detag {
     $string =~ s/&quot;/"/g;
     $string =~ s/&apos;/'/g;
 
-    return($string);
+    return ($string);
 }
 
 =head2 po_report
