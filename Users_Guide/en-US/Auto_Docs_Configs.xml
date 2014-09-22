@@ -861,7 +861,7 @@
 			These are set in the sites configuration file.
 		</para>
 		<variablelist>
-			<varlistentry id="db_file">
+			<varlistentry id="site_db_file">
 				<term>db_file</term>
 				<listitem>
 					<para>
@@ -869,7 +869,7 @@
 					</para>
 				</listitem>
 			</varlistentry>
-			<varlistentry id="debug">
+			<varlistentry id="site_debug">
 				<term>debug</term>
 				<listitem>
 					<para>
@@ -880,7 +880,7 @@
 					</para>
 				</listitem>
 			</varlistentry>
-			<varlistentry id="def_lang">
+			<varlistentry id="site_def_lang">
 				<term>def_lang</term>
 				<listitem>
 					<para>
@@ -891,7 +891,7 @@
 					</para>
 				</listitem>
 			</varlistentry>
-			<varlistentry id="dump">
+			<varlistentry id="site_dump">
 				<term>dump</term>
 				<listitem>
 					<para>
@@ -899,7 +899,7 @@
 					</para>
 				</listitem>
 			</varlistentry>
-			<varlistentry id="dump_file">
+			<varlistentry id="site_dump_file">
 				<term>dump_file</term>
 				<listitem>
 					<para>
@@ -910,7 +910,7 @@
 					</para>
 				</listitem>
 			</varlistentry>
-			<varlistentry id="footer">
+			<varlistentry id="site_footer">
 				<term>footer</term>
 				<listitem>
 					<para>
@@ -921,7 +921,7 @@
 					</para>
 				</listitem>
 			</varlistentry>
-			<varlistentry id="host">
+			<varlistentry id="site_host">
 				<term>host</term>
 				<listitem>
 					<para>
@@ -932,7 +932,7 @@
 					</para>
 				</listitem>
 			</varlistentry>
-			<varlistentry id="manual_toc_update">
+			<varlistentry id="site_manual_toc_update">
 				<term>manual_toc_update</term>
 				<listitem>
 					<para>
@@ -943,7 +943,7 @@
 					</para>
 				</listitem>
 			</varlistentry>
-			<varlistentry id="search">
+			<varlistentry id="site_search">
 				<term>search</term>
 				<listitem>
 					<para>
@@ -954,7 +954,7 @@
 					</para>
 				</listitem>
 			</varlistentry>
-			<varlistentry id="title">
+			<varlistentry id="site_title">
 				<term>title</term>
 				<listitem>
 					<para>
@@ -965,7 +965,7 @@
 					</para>
 				</listitem>
 			</varlistentry>
-			<varlistentry id="tmpl_path">
+			<varlistentry id="site_tmpl_path">
 				<term>tmpl_path</term>
 				<listitem>
 					<para>
@@ -976,7 +976,7 @@
 					</para>
 				</listitem>
 			</varlistentry>
-			<varlistentry id="toc_js">
+			<varlistentry id="site_toc_js">
 				<term>toc_js</term>
 				<listitem>
 					<para>
@@ -987,7 +987,7 @@
 					</para>
 				</listitem>
 			</varlistentry>
-			<varlistentry id="toc_path">
+			<varlistentry id="site_toc_path">
 				<term>toc_path</term>
 				<listitem>
 					<para>
@@ -995,7 +995,7 @@
 					</para>
 				</listitem>
 			</varlistentry>
-			<varlistentry id="toc_type">
+			<varlistentry id="site_toc_type">
 				<term>toc_type</term>
 				<listitem>
 					<para>
@@ -1011,7 +1011,7 @@
 					</warning>
 				</listitem>
 			</varlistentry>
-			<varlistentry id="web_style">
+			<varlistentry id="site_web_style">
 				<term>web_style</term>
 				<listitem>
 					<para>
@@ -1030,7 +1030,7 @@
 					</warning>
 				</listitem>
 			</varlistentry>
-			<varlistentry id="zip_dump">
+			<varlistentry id="site_zip_dump">
 				<term>zip_dump</term>
 				<listitem>
 					<para>

@@ -591,7 +591,6 @@ sub _help_action_asdb {
     $varentry->push_content($item);
     my $varlist = XML::Element->new_from_lol( [ 'variablelist', ] );
 
-    $item->push_content($varlist);
     foreach my $option ( sort( @{ $actions{$cmd}->{options} } ) ) {
         my $entry;
 
@@ -616,6 +615,7 @@ sub _help_action_asdb {
 
         $varlist->push_content($entry);
     }
+    $item->push_content($varlist) if(!$varlist->is_empty());
 
     return ($varentry);
 }

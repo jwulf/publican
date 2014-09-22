@@ -18,7 +18,7 @@
 	 <para>
 		<application>Publican</application> commands take one of the following formats: 
 		<variablelist>
-			<varlistentry xml:id="varl-Publican-Users_Guide-_publican_command_option">
+			<varlistentry>
 				<term><prompt>$</prompt> <command>publican <replaceable>command_option</replaceable></command></term>
 				 <listitem>
 					<para>
@@ -28,7 +28,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-_publican_action_action_options">
+			 <varlistentry>
 				<term><prompt>$</prompt> <command>publican <replaceable>action</replaceable> <replaceable>action_options</replaceable></command></term>
 				 <listitem>
 					<para>
@@ -38,7 +38,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-_publican_command_option_action_action_options">
+			 <varlistentry>
 				<term><prompt>$</prompt> <command>publican <replaceable>command_option</replaceable> <replaceable>action</replaceable> <replaceable>action_options</replaceable></command></term>
 				 <listitem>
 					<para>

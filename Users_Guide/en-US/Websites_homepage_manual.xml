@@ -67,7 +67,7 @@
 				The <parameter>web_type: home</parameter> parameter instructs <application>Publican</application> to process this document differently from product documentation. This is the only mandatory change to the <filename>publican.cfg</filename> file. Other optional changes to the <filename>publican.cfg</filename> file that are frequently useful for <application>Publican</application>-generated websites include:
 			</para>
 			 <variablelist>
-				<varlistentry xml:id="varl-Publican-Users_Guide-brand">
+				<varlistentry>
 					<term><parameter>brand</parameter></term>
 					 <listitem>
 						<para>
@@ -79,7 +79,7 @@
 					</listitem>
 
 				</varlistentry>
-				 <varlistentry xml:id="varl-Publican-Users_Guide-docname">
+				 <varlistentry>
 					<term><parameter>docname</parameter></term>
 					 <term><parameter>product</parameter></term>
 					 <listitem>

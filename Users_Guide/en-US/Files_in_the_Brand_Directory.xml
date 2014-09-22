@@ -106,7 +106,7 @@
 			The <filename>publican.cfg</filename> file in a brand serves a similar purpose to the <filename>publican.cfg</filename> file in a document — it configures a number of basic options that define your brand.
 		</para>
 		 <variablelist>
-			<varlistentry xml:id="varl-Publican-Users_Guide-version">
+			<varlistentry>
 				<term><parameter>version</parameter></term>
 				 <listitem>
 					<para>
@@ -119,7 +119,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-xml_lang">
+			 <varlistentry>
 				<term><parameter>xml_lang</parameter></term>
 				 <listitem>
 					<para>
@@ -129,7 +129,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-release">
+			 <varlistentry>
 				<term><parameter>release</parameter></term>
 				 <listitem>
 					<para>
@@ -139,7 +139,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-type">
+			 <varlistentry>
 				<term><parameter>type</parameter></term>
 				 <listitem>
 					<para>
@@ -149,7 +149,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-brand">
+			 <varlistentry>
 				<term><parameter>brand</parameter></term>
 				 <listitem>
 					<para>
@@ -159,7 +159,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-web_cfg">
+			 <varlistentry>
 				<term><parameter>web_cfg</parameter></term>
 				 <listitem>
 					<para>
@@ -169,7 +169,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-web_dir">
+			 <varlistentry>
 				<term><parameter>web_dir</parameter></term>
 				 <listitem>
 					<para>
@@ -179,7 +179,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-web_req">
+			 <varlistentry>
 				<term><parameter>web_req</parameter></term>
 				 <listitem>
 					<para>
@@ -307,7 +307,7 @@
 			The <filename>images</filename> subdirectory contains 43 images in both <firstterm>portable network graphics</firstterm> (PNG) and <firstterm>scalable vector graphics</firstterm> (SVG) format. These images are placeholders for various navigation icons, admonition graphics, and brand logos. They include:
 		</para>
 		 <variablelist>
-			<varlistentry xml:id="varl-Publican-Users_Guide-image_left">
+			<varlistentry>
 				<term><filename>image_left</filename></term>
 				 <listitem>
 					<para>
@@ -317,7 +317,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-image_right">
+			 <varlistentry>
 				<term><filename>image_right</filename></term>
 				 <listitem>
 					<para>
@@ -327,7 +327,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-title_logo">
+			 <varlistentry>
 				<term><filename>title_logo</filename></term>
 				 <listitem>
 					<para>
@@ -337,7 +337,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-note">
+			 <varlistentry>
 				<term><filename>note</filename></term>
 				 <term><filename>important</filename></term>
 				 <term><filename>warning</filename></term>
@@ -349,7 +349,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-dot">
+			 <varlistentry>
 				<term><filename>dot</filename></term>
 				 <term><filename>dot2</filename></term>
 				 <listitem>
@@ -360,7 +360,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-stock_go_back">
+			 <varlistentry>
 				<term><filename>stock-go-back</filename></term>
 				 <term><filename>stock-go-forward</filename></term>
 				 <term><filename>stock-go-up</filename></term>
@@ -373,7 +373,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-h1_bg">
+			 <varlistentry>
 				<term><filename>h1-bg</filename></term>
 				 <listitem>
 					<para>
@@ -383,7 +383,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-watermark_draft">
+			 <varlistentry>
 				<term><filename>watermark_draft</filename></term>
 				 <listitem>
 					<para>

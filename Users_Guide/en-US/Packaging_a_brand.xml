@@ -29,7 +29,7 @@
 		To package a brand, use the <prompt>$</prompt> <command>publican package</command> command in the brand directory. When used without any further options, <application>Publican</application> produces an SRPM package. The options for packaging a brand are as follows:
 	</para>
 	 <variablelist>
-		<varlistentry xml:id="varl-Publican-Users_Guide-_binary">
+		<varlistentry>
 			<term><option>--binary</option></term>
 			 <listitem>
 				<para>
@@ -39,7 +39,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry xml:id="varl-Publican-Users_Guide-_brew">
+		 <varlistentry>
 			<term><option>--brew</option></term>
 			 <listitem>
 				<para>
@@ -49,7 +49,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry xml:id="varl-Publican-Users_Guide-_scratch">
+		 <varlistentry>
 			<term><option>--scratch</option></term>
 			 <listitem>
 				<para>

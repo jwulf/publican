@@ -71,7 +71,7 @@
 			<title>Formats for the <command>build</command> action</title>
 
 		</info>
-		 <varlistentry xml:id="varl-Publican-Users_Guide-html">
+		 <varlistentry>
 			<term><option>html</option></term>
 			 <listitem>
 				<para>
@@ -84,7 +84,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry xml:id="varl-Publican-Users_Guide-html_single">
+		 <varlistentry>
 			<term><option>html-single</option></term>
 			 <listitem>
 				<para>
@@ -94,7 +94,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry xml:id="varl-Publican-Users_Guide-html_desktop">
+		 <varlistentry>
 			<term><option>html-desktop</option></term>
 			 <listitem>
 				<para>
@@ -104,7 +104,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry xml:id="varl-Publican-Users_Guide-man">
+		 <varlistentry>
 			<term><option>man</option></term>
 			 <listitem>
 				<para>
@@ -114,7 +114,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry xml:id="varl-Publican-Users_Guide-pdf">
+		 <varlistentry>
 			<term><option>pdf</option></term>
 			 <listitem>
 				<para>
@@ -124,7 +124,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry xml:id="varl-Publican-Users_Guide-test">
+		 <varlistentry>
 			<term><option>test</option></term>
 			 <listitem>
 				<para>
@@ -134,7 +134,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry xml:id="varl-Publican-Users_Guide-txt">
+		 <varlistentry>
 			<term><option>txt</option></term>
 			 <listitem>
 				<para>
@@ -144,7 +144,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry xml:id="varl-Publican-Users_Guide-epub">
+		 <varlistentry>
 			<term><option>epub</option></term>
 			 <listitem>
 				<para>
@@ -154,7 +154,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry xml:id="varl-Publican-Users_Guide-eclipse">
+		 <varlistentry>
 			<term><option>eclipse</option></term>
 			 <listitem>
 				<para>
@@ -170,7 +170,7 @@
 		The following examples demonstrate commonly used <prompt>$</prompt> <command>publican build</command> commands:
 	</para>
 	 <variablelist>
-		<varlistentry xml:id="varl-Publican-Users_Guide-_publican_build_help">
+		<varlistentry>
 			<term><prompt>$</prompt> <command>publican build --help</command></term>
 			 <listitem>
 				<para>
@@ -180,7 +180,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry xml:id="varl-Publican-Users_Guide-_publican_build_formatstest_langslanguages">
+		 <varlistentry>
 			<term><prompt>$</prompt> <command>publican build --formats=test --langs=<replaceable>languages</replaceable></command></term>
 			 <listitem>
 				<para>
@@ -190,7 +190,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry xml:id="varl-Publican-Users_Guide-_publican_build_formatshtml_langslanguages">
+		 <varlistentry>
 			<term><prompt>$</prompt> <command>publican build --formats=html --langs=<replaceable>languages</replaceable></command></term>
 			 <listitem>
 				<para>
@@ -200,7 +200,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry xml:id="varl-Publican-Users_Guide-_publican_build_formatshtml_single_langslanguages">
+		 <varlistentry>
 			<term><prompt>$</prompt> <command>publican build --formats=html-single --langs=<replaceable>languages</replaceable></command></term>
 			 <listitem>
 				<para>
@@ -210,7 +210,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry xml:id="varl-Publican-Users_Guide-_publican_build_formatspdf_langslanguages">
+		 <varlistentry>
 			<term><prompt>$</prompt> <command>publican build --formats=pdf --langs=<replaceable>languages</replaceable></command></term>
 			 <listitem>
 				<para>
@@ -220,7 +220,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry xml:id="varl-Publican-Users_Guide-_publican_build_formatshtmlhtml_singlepdf_langslanguages">
+		 <varlistentry>
 			<term><prompt>$</prompt> <command>publican build --formats=html,html-single,pdf --langs=<replaceable>languages</replaceable></command></term>
 			 <listitem>
 				<para>

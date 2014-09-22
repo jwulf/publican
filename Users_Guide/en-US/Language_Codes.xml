@@ -54,7 +54,7 @@
 		 </footnote> Although <application>Publican</application> will accept any language tag that is valid under the rules presented in BCP 47, it is designed around the assumption that language tags for documents will most usually take the form <literal><replaceable>language</replaceable>-<replaceable>region</replaceable></literal>. A brief description of subtags follows:
 	</para>
 	 <variablelist>
-		<varlistentry xml:id="varl-Publican-Users_Guide-language_subtag">
+		<varlistentry>
 			<term>language subtag</term>
 			 <listitem>
 				<para>
@@ -83,7 +83,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry xml:id="varl-Publican-Users_Guide-script_subtag">
+		 <varlistentry>
 			<term>script subtag</term>
 			 <listitem>
 				<para>
@@ -96,7 +96,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry xml:id="varl-Publican-Users_Guide-region_subtag">
+		 <varlistentry>
 			<term>region subtag</term>
 			 <listitem>
 				<para>
@@ -112,7 +112,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry xml:id="varl-Publican-Users_Guide-variant_subtag">
+		 <varlistentry>
 			<term>variant subtag</term>
 			 <listitem>
 				<para>

@@ -17,7 +17,7 @@
 
 	</indexterm>
 	 <para>
-		<indexterm><primary>Introduction 2</primary></indexterm> <application>Publican</application> <indexterm><primary>Introduction 3</primary> <secondary>Introduction 3</secondary></indexterm> is a tool for publishing material authored in DocBook XML. This guide explains how to create and build books and articles using <application>Publican</application>. It is not a general DocBook XML tutorial; refer to <citetitle>DocBook: The Definitive Guide</citetitle> by Norman Walsh and Leonard Muellner, available at <uri xlink:href="http://www.docbook.org/tdg/en/html/docbook.html" xmlns:xlink="http://www.w3.org/1999/xlink">http://www.docbook.org/tdg/en/html/docbook.html</uri> for more general help with DocBook XML.
+		<indexterm><primary>Introduction 2</primary></indexterm> <application>Publican</application> <indexterm><primary>Introduction 3</primary> <secondary>Introduction 3</secondary></indexterm> \ \n \p is a tool for publishing material authored in DocBook XML. This guide explains how to create and build books and articles using <application>Publican</application>. It is not a general DocBook XML tutorial; refer to <citetitle>DocBook: The Definitive Guide</citetitle> by Norman Walsh and Leonard Muellner, available at <uri xlink:href="http://www.docbook.org/tdg/en/html/docbook.html" xmlns:xlink="http://www.w3.org/1999/xlink">http://www.docbook.org/tdg/en/html/docbook.html</uri> for more general help with DocBook XML.
 	</para>
 	 <para>
 		<application>Publican</application> began life as an internal tool used by Red Hat's Documentation Group (now known as Engineering Content Services). On occasion, this legacy is visible.
@@ -50,10 +50,11 @@
 <title>Testing BZ #1092351 Code Switcher</title>
 	 <informalexample conformance="264" id="switch1" role="switchery">
 <programlisting language="Perl" linenumbering="numbered">#!/usr/bin/perl
-use strict;
+use strict; \
 use warnings;
 
-print "Hello, World!\n";</programlisting>
+print "Hello, World!\n";
+</programlisting>
 <programlisting language="C++"><![CDATA[#include <iostream>
 
 int main()
@@ -226,8 +227,8 @@ array.
 <para><![CDATA[!=]]></para>
 <para><![CDATA[<>]]></para>
 </section>
-<section id="">
-<title>Testing BZ # Single line comment being highlighted in a callout.</title>
+<section id="1135827">
+<title>Testing BZ #1135827 Single line comment being highlighted in a callout.</title>
 
 				 <programlistingco>
 					<areaspec>

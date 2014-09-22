@@ -117,7 +117,7 @@
 				<title>Default parameters</title>
 
 			</info>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-xml_lang">
+			 <varlistentry>
 				<term><parameter>xml_lang</parameter></term>
 				 <listitem>
 					<para>
@@ -127,7 +127,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-type">
+			 <varlistentry>
 				<term><parameter>type</parameter></term>
 				 <listitem>
 					<para>
@@ -137,7 +137,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-brand">
+			 <varlistentry>
 				<term><parameter>brand</parameter></term>
 				 <listitem>
 					<para>
@@ -155,7 +155,7 @@
 				 </title>
 
 			</info>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-arch">
+			 <varlistentry>
 				<term><parameter>arch</parameter></term>
 				 <listitem>
 					<para>
@@ -214,7 +214,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-books">
+			 <varlistentry>
 				<term><parameter>books</parameter></term>
 				 <listitem>
 					<para>
@@ -224,7 +224,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-brew_dist">
+			 <varlistentry>
 				<term><parameter>brew_dist</parameter></term>
 				 <listitem>
 					<para>
@@ -234,7 +234,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-bridgehead_in_toc">
+			 <varlistentry>
 				<term><parameter>bridgehead_in_toc</parameter></term>
 				 <listitem>
 					<para>
@@ -244,7 +244,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-chunk_first">
+			 <varlistentry>
 				<term><parameter>chunk_first</parameter></term>
 				 <listitem>
 					<para>
@@ -254,7 +254,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-chunk_section_depth">
+			 <varlistentry>
 				<term><parameter>chunk_section_depth</parameter></term>
 				 <listitem>
 					<para>
@@ -266,7 +266,7 @@
 
 						</info>
 						 <variablelist>
-							<varlistentry xml:id="varl-Publican-Users_Guide-chunk_section_depth_0">
+							<varlistentry>
 								<term>chunk_section_depth: 0</term>
 								 <listitem>
 									<para>
@@ -276,7 +276,7 @@
 								</listitem>
 
 							</varlistentry>
-							 <varlistentry xml:id="varl-Publican-Users_Guide-chunk_section_depth_1">
+							 <varlistentry>
 								<term>chunk_section_depth: 1</term>
 								 <listitem>
 									<para>
@@ -286,7 +286,7 @@
 								</listitem>
 
 							</varlistentry>
-							 <varlistentry xml:id="varl-Publican-Users_Guide-chunk_section_depth_2">
+							 <varlistentry>
 								<term>chunk_section_depth: 2</term>
 								 <listitem>
 									<para>
@@ -296,7 +296,7 @@
 								</listitem>
 
 							</varlistentry>
-							 <varlistentry xml:id="varl-Publican-Users_Guide-chunk_section_depth_3">
+							 <varlistentry>
 								<term>chunk_section_depth: 3</term>
 								 <listitem>
 									<para>
@@ -306,7 +306,7 @@
 								</listitem>
 
 							</varlistentry>
-							 <varlistentry xml:id="varl-Publican-Users_Guide-chunk_section_depth_4_default">
+							 <varlistentry>
 								<term>chunk_section_depth: 4 (default)</term>
 								 <listitem>
 									<para>
@@ -324,7 +324,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-classpath">
+			 <varlistentry>
 				<term><parameter>classpath</parameter></term>
 				 <listitem>
 					<para>
@@ -334,7 +334,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-common_config">
+			 <varlistentry>
 				<term><parameter>common_config</parameter></term>
 				 <listitem>
 					<para>
@@ -344,7 +344,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-common_content">
+			 <varlistentry>
 				<term><parameter>common_content</parameter></term>
 				 <listitem>
 					<para>
@@ -354,7 +354,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-condition">
+			 <varlistentry>
 				<term><parameter>condition</parameter></term>
 				 <listitem>
 					<para>
@@ -366,7 +366,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-confidential">
+			 <varlistentry>
 				<term><parameter>confidential</parameter></term>
 				 <listitem>
 					<para>
@@ -376,7 +376,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-confidential_text">
+			 <varlistentry>
 				<term><parameter>confidential_text</parameter></term>
 				 <listitem>
 					<para>
@@ -386,7 +386,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-debug">
+			 <varlistentry>
 				<term><parameter>debug</parameter></term>
 				 <listitem>
 					<para>
@@ -396,7 +396,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-def_lang">
+			 <varlistentry>
 				<term><parameter>def_lang</parameter></term>
 				 <listitem>
 					<para>
@@ -406,7 +406,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-doc_url">
+			 <varlistentry>
 				<term><parameter>doc_url</parameter></term>
 				 <listitem>
 					<para>
@@ -416,7 +416,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-docname">
+			 <varlistentry>
 				<term><parameter>docname</parameter></term>
 				 <listitem>
 					<para>
@@ -426,7 +426,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-dt_obsoletes">
+			 <varlistentry>
 				<term><parameter>dt_obsoletes</parameter></term>
 				 <listitem>
 					<para>
@@ -436,7 +436,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-dt_requires">
+			 <varlistentry>
 				<term><parameter>dt_requires</parameter></term>
 				 <listitem>
 					<para>
@@ -446,7 +446,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-dtdver">
+			 <varlistentry>
 				<term><parameter>dtdver</parameter></term>
 				 <listitem>
 					<para>
@@ -466,7 +466,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-dtd_type">
+			 <varlistentry>
 				<term><parameter>dtd_type</parameter></term>
 				 <listitem>
 					<para>
@@ -482,7 +482,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-dtd_uri">
+			 <varlistentry>
 				<term><parameter>dtd_uri</parameter></term>
 				 <listitem>
 					<para>
@@ -498,7 +498,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-ec_id">
+			 <varlistentry>
 				<term><parameter>ec_id</parameter></term>
 				 <listitem>
 					<para>
@@ -508,7 +508,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-ec_name">
+			 <varlistentry>
 				<term><parameter>ec_name</parameter></term>
 				 <listitem>
 					<para>
@@ -518,7 +518,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-ec_provider">
+			 <varlistentry>
 				<term><parameter>ec_provider</parameter></term>
 				 <listitem>
 					<para>
@@ -528,7 +528,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-edition">
+			 <varlistentry>
 				<term><parameter>edition</parameter></term>
 				 <listitem>
 					<para>
@@ -544,7 +544,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-extras_dir">
+			 <varlistentry>
 				<term><parameter>extras_dir</parameter></term>
 				 <listitem>
 					<para>
@@ -554,7 +554,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-footer">
+			 <varlistentry>
 				<term><parameter>footer</parameter></term>
 				 <listitem>
 					<para>
@@ -564,7 +564,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-generate_section_toc_level">
+			 <varlistentry>
 				<term><parameter>generate_section_toc_level</parameter></term>
 				 <listitem>
 					<para>
@@ -576,7 +576,7 @@
 
 						</info>
 						 <variablelist>
-							<varlistentry xml:id="varl-Publican-Users_Guide-generate_section_toc_level_0_default">
+							<varlistentry>
 								<term>generate_section_toc_level: 0 (default)</term>
 								 <listitem>
 									<para>
@@ -586,7 +586,7 @@
 								</listitem>
 
 							</varlistentry>
-							 <varlistentry xml:id="varl-Publican-Users_Guide-generate_section_toc_level_1">
+							 <varlistentry>
 								<term>generate_section_toc_level: 1</term>
 								 <listitem>
 									<para>
@@ -596,7 +596,7 @@
 								</listitem>
 
 							</varlistentry>
-							 <varlistentry xml:id="varl-Publican-Users_Guide-generate_section_toc_level_2">
+							 <varlistentry>
 								<term>generate_section_toc_level: 2</term>
 								 <listitem>
 									<para>
@@ -614,7 +614,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-ignored_translations">
+			 <varlistentry>
 				<term><parameter>ignored_translations</parameter></term>
 				 <listitem>
 					<para>
@@ -624,7 +624,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-img_dir">
+			 <varlistentry>
 				<term><parameter>img_dir</parameter></term>
 				 <listitem>
 					<para>
@@ -634,7 +634,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-info_file">
+			 <varlistentry>
 				<term><parameter>info_file</parameter></term>
 				 <listitem>
 					<para>
@@ -644,7 +644,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-license">
+			 <varlistentry>
 				<term><parameter>license</parameter></term>
 				 <listitem>
 					<para>
@@ -654,7 +654,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-mainfile">
+			 <varlistentry>
 				<term><parameter>mainfile</parameter></term>
 				 <listitem>
 					<para>
@@ -667,7 +667,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-menu_category">
+			 <varlistentry>
 				<term><parameter>menu_category</parameter></term>
 				 <listitem>
 					<para>
@@ -677,7 +677,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-os_ver">
+			 <varlistentry>
 				<term><parameter>os_ver</parameter></term>
 				 <listitem>
 					<para>
@@ -687,7 +687,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-prod_url">
+			 <varlistentry>
 				<term><parameter>prod_url</parameter></term>
 				 <listitem>
 					<para>
@@ -697,7 +697,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-product">
+			 <varlistentry>
 				<term><parameter>product</parameter></term>
 				 <listitem>
 					<para>
@@ -707,7 +707,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-release">
+			 <varlistentry>
 				<term><parameter>release</parameter></term>
 				 <listitem>
 					<para>
@@ -717,7 +717,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-repo">
+			 <varlistentry>
 				<term><parameter>repo</parameter></term>
 				 <listitem>
 					<para>
@@ -727,7 +727,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-rev_dir">
+			 <varlistentry>
 				<term><parameter>rev_dir</parameter></term>
 				 <listitem>
 					<para>
@@ -737,7 +737,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-rev_file">
+			 <varlistentry>
 				<term><parameter>rev_file</parameter></term>
 				 <listitem>
 					<para>
@@ -747,7 +747,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-scm">
+			 <varlistentry>
 				<term><parameter>scm</parameter></term>
 				 <listitem>
 					<para>
@@ -757,7 +757,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-show_remarks">
+			 <varlistentry>
 				<term><parameter>show_remarks</parameter></term>
 				 <listitem>
 					<para>
@@ -767,7 +767,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-sort_order">
+			 <varlistentry>
 				<term><parameter>sort_order</parameter></term>
 				 <listitem>
 					<para>
@@ -777,7 +777,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-src_url">
+			 <varlistentry>
 				<term><parameter>src_url</parameter></term>
 				 <listitem>
 					<para>
@@ -787,7 +787,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-tmp_dir">
+			 <varlistentry>
 				<term><parameter>tmp_dir</parameter></term>
 				 <listitem>
 					<para>
@@ -797,7 +797,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-tmpl_path">
+			 <varlistentry>
 				<term><parameter>tmpl_path</parameter></term>
 				 <listitem>
 					<para>
@@ -807,7 +807,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-toc_js">
+			 <varlistentry>
 				<term><parameter>toc_js</parameter></term>
 				 <listitem>
 					<para>
@@ -817,7 +817,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-toc_type">
+			 <varlistentry>
 				<term><parameter>toc_type</parameter></term>
 				 <listitem>
 					<para>
@@ -827,7 +827,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-toc_section_depth">
+			 <varlistentry>
 				<term><parameter>toc_section_depth</parameter></term>
 				 <listitem>
 					<para>
@@ -839,7 +839,7 @@
 
 						</info>
 						 <variablelist>
-							<varlistentry xml:id="varl-Publican-Users_Guide-toc_section_depth_0">
+							<varlistentry>
 								<term>toc_section_depth: 0</term>
 								 <listitem>
 									<para>
@@ -849,7 +849,7 @@
 								</listitem>
 
 							</varlistentry>
-							 <varlistentry xml:id="varl-Publican-Users_Guide-toc_section_depth_1">
+							 <varlistentry>
 								<term>toc_section_depth: 1</term>
 								 <listitem>
 									<para>
@@ -859,7 +859,7 @@
 								</listitem>
 
 							</varlistentry>
-							 <varlistentry xml:id="varl-Publican-Users_Guide-toc_section_depth_2_default">
+							 <varlistentry>
 								<term>toc_section_depth: 2 (default)</term>
 								 <listitem>
 									<para>
@@ -877,7 +877,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-version">
+			 <varlistentry>
 				<term><parameter>version</parameter></term>
 				 <listitem>
 					<para>
@@ -887,7 +887,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-web_brew_dist">
+			 <varlistentry>
 				<term><parameter>web_brew_dist</parameter></term>
 				 <listitem>
 					<para>
@@ -897,7 +897,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-web_formats">
+			 <varlistentry>
 				<term><parameter>web_formats</parameter></term>
 				 <listitem>
 					<para>
@@ -907,7 +907,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-web_home">
+			 <varlistentry>
 				<term><parameter>web_home</parameter></term>
 				 <listitem>
 					<para>
@@ -927,7 +927,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-web_name_label">
+			 <varlistentry>
 				<term><parameter>web_name_label</parameter></term>
 				 <listitem>
 					<para>
@@ -937,7 +937,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-web_obsoletes">
+			 <varlistentry>
 				<term><parameter>web_obsoletes</parameter></term>
 				 <listitem>
 					<para>
@@ -947,7 +947,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-web_product_label">
+			 <varlistentry>
 				<term><parameter>web_product_label</parameter></term>
 				 <listitem>
 					<para>
@@ -957,7 +957,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-web_style">
+			 <varlistentry>
 				<term><parameter>web_style</parameter></term>
 				 <listitem>
 					<para>
@@ -967,7 +967,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-web_type">
+			 <varlistentry>
 				<term><parameter>web_type</parameter></term>
 				 <listitem>
 					<para>
@@ -977,7 +977,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-web_version_label">
+			 <varlistentry>
 				<term><parameter>web_version_label</parameter></term>
 				 <listitem>
 					<para>
@@ -987,7 +987,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-wkhtmltopdf_opts">
+			 <varlistentry>
 				<term><parameter>wkhtmltopdf_opts</parameter></term>
 				 <listitem>
 					<para>
@@ -1048,7 +1048,7 @@
 		 
 <programlisting language="XML"><xi:include href="Book_Info.xml" parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" /></programlisting>
 		 <variablelist>
-			<varlistentry xml:id="varl-Publican-Users_Guide-bookinfo_idbook_id">
+			<varlistentry>
 				<term><tag>&lt;bookinfo id="<replaceable>book_id</replaceable>"&gt;</tag></term>
 				 <term><tag>&lt;articleinfo id="<replaceable>article_id</replaceable>"&gt;</tag></term>
 				 <term><tag>&lt;setinfo id="<replaceable>set_id</replaceable>"&gt;</tag></term>
@@ -1060,7 +1060,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-productnameproductnameproductname">
+			 <varlistentry>
 				<term><tag>&lt;productname&gt;<replaceable>productname</replaceable>&lt;/productname&gt;</tag></term>
 				 <listitem>
 					<para>
@@ -1074,7 +1074,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-titletitletitle">
+			 <varlistentry>
 				<term><tag>&lt;title&gt;<replaceable>title</replaceable>&lt;/title&gt;</tag></term>
 				 <listitem>
 					<para>
@@ -1091,7 +1091,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-subtitlesubtitlesubtitle">
+			 <varlistentry>
 				<term><tag>&lt;subtitle&gt;<replaceable>subtitle</replaceable>&lt;/subtitle&gt;</tag></term>
 				 <listitem>
 					<para>
@@ -1101,7 +1101,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-productnumberproductnumberproductnumber">
+			 <varlistentry>
 				<term><tag>&lt;productnumber&gt;<replaceable>productnumber</replaceable>&lt;/productnumber&gt;</tag></term>
 				 <listitem>
 					<para>
@@ -1118,7 +1118,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-editioneditionedition">
+			 <varlistentry>
 				<term><tag>&lt;edition&gt;<replaceable>edition</replaceable>&lt;/edition&gt;</tag></term>
 				 <listitem>
 					<para>
@@ -1138,7 +1138,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-pubsnumberpubsnumberpubsnumber">
+			 <varlistentry>
 				<term><tag>&lt;pubsnumber&gt;<replaceable>pubsnumber</replaceable>&lt;/pubsnumber&gt;</tag></term>
 				 <listitem>
 					<para>
@@ -1152,7 +1152,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-abstractparaabstractparaabstract">
+			 <varlistentry>
 				<term><tag>&lt;abstract&gt;&lt;para&gt;<replaceable>abstract</replaceable>&lt;/para&gt;&lt;/abstract&gt;</tag></term>
 				 <listitem>
 					<para>
@@ -1168,7 +1168,7 @@
 			You can add extra metadata to the <filename>Book_Info.xml</filename> file of a document, to support specific features in various output formats:
 		</para>
 		 <variablelist>
-			<varlistentry xml:id="varl-Publican-Users_Guide-keywordset">
+			<varlistentry>
 				<term><tag>&lt;keywordset&gt;</tag></term>
 				 <term><tag>&lt;keyword&gt;</tag></term>
 				 <listitem>
@@ -1179,7 +1179,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-subjectset">
+			 <varlistentry>
 				<term><tag>&lt;subjectset&gt;</tag></term>
 				 <term><tag>&lt;subject&gt;</tag></term>
 				 <listitem>
@@ -1193,7 +1193,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-mediaobject_rolecover_idepub_cover">
+			 <varlistentry>
 				<term><tag>&lt;mediaobject role="cover" id="epub_cover"&gt;</tag></term>
 				 <listitem>
 					<para>

@@ -16,7 +16,7 @@
 		The <prompt>$</prompt> <command>publican rename</command> command makes it easy for you to rename a document to give it a new title, or to change the name or version of the product to which the document applies. The command accepts up to three options:
 	</para>
 	 <variablelist>
-		<varlistentry xml:id="varl-Publican-Users_Guide-_name_new_title">
+		<varlistentry>
 			<term><option>--name</option> <replaceable>new_title</replaceable></term>
 			 <listitem>
 				<para>
@@ -34,7 +34,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry xml:id="varl-Publican-Users_Guide-_product_new_product">
+		 <varlistentry>
 			<term><option>--product</option> <replaceable>new_product</replaceable></term>
 			 <listitem>
 				<para>
@@ -49,7 +49,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry xml:id="varl-Publican-Users_Guide-_version_new_version">
+		 <varlistentry>
 			<term><option>--version</option> <replaceable>new_version</replaceable></term>
 			 <listitem>
 				<para>

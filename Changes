@@ -1,6 +1,7 @@
 4.2.3 UNRELEASED
 - Fix DocBook4 entity text, BZ #1143060
 - Remove extra white space from non-verbatim msgid's. BZ #1143792
+- Fix PDF build using FOP fails with "No numberLines function available." BZ #1143852
 
 4.2.2 Wed Sep 17 2014
 - Fix duplicate messages in POT files. BZ #1136133
@@ -23,7 +24,7 @@
 - Fix CDATA support, bump XML::TreeBuilder dep to 5.3. BZ #1101050
 - Add --showfuzzy to build options.
 - Move PO manipulation to Locale::PO.
-- Fix inline"\n" not working in verbatim. BZ #1097091 (TODO bump Locale::PO version when released)
+- Fix inline"\n" not working in verbatim. BZ #1097091
 - Fix images for DB4 website callouts. BZ #1112899
 - Remove newline after cdata. BZ #1110611
 - Add Markdown output. BZ #1120455

@@ -22,7 +22,7 @@
 		The <prompt>$</prompt> <command>publican create</command> command accepts several options, detailed in this chapter. When an option can accept a value, separate the option from the value with a space or an equals sign; for example, <command>publican create --name New_Book</command> or <command>publican create --name=New_Book</command>.
 	</para>
 	 <variablelist>
-		<varlistentry xml:id="varl-Publican-Users_Guide-_help">
+		<varlistentry>
 			<term><option>--help</option></term>
 			 <listitem>
 				<para>
@@ -32,7 +32,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry xml:id="varl-Publican-Users_Guide-_name_Doc_Name">
+		 <varlistentry>
 			<term><option>--name<replaceable> Doc_Name</replaceable></option></term>
 			 <listitem>
 				<para>
@@ -42,7 +42,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry xml:id="varl-Publican-Users_Guide-_lang_Language_Code">
+		 <varlistentry>
 			<term><option>--lang<replaceable> Language_Code</replaceable></option></term>
 			 <listitem>
 				<para>
@@ -52,7 +52,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry xml:id="varl-Publican-Users_Guide-_version_version">
+		 <varlistentry>
 			<term><option>--version<replaceable> version</replaceable></option></term>
 			 <listitem>
 				<para>
@@ -62,7 +62,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry xml:id="varl-Publican-Users_Guide-_edition_edition">
+		 <varlistentry>
 			<term><option>--edition<replaceable> edition</replaceable></option></term>
 			 <listitem>
 				<para>
@@ -72,7 +72,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry xml:id="varl-Publican-Users_Guide-_product_Product_Name">
+		 <varlistentry>
 			<term><option>--product<replaceable> Product_Name</replaceable></option></term>
 			 <listitem>
 				<para>
@@ -82,7 +82,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry xml:id="varl-Publican-Users_Guide-_type_Article_name_Article_Name">
+		 <varlistentry>
 			<term><option>--type Article --name<replaceable> Article_Name</replaceable></option></term>
 			 <listitem>
 				<para>
@@ -92,7 +92,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry xml:id="varl-Publican-Users_Guide-_type_Set_name_Set_Name">
+		 <varlistentry>
 			<term><option>--type Set --name<replaceable> Set_Name</replaceable></option></term>
 			 <listitem>
 				<para>
@@ -102,7 +102,7 @@
 			</listitem>
 
 		</varlistentry>
-		 <varlistentry xml:id="varl-Publican-Users_Guide-_brand_brand">
+		 <varlistentry>
 			<term><option>--brand <replaceable>brand</replaceable></option></term>
 			 <listitem>
 				<para>

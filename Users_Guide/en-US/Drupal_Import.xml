@@ -77,7 +77,7 @@
 			Below are some parameters that can be configure in the publican.cfg file for Drupal import:
 		</para>
 		 <variablelist>
-			<varlistentry xml:id="varl-Publican-Users_Guide-drupal_author">
+			<varlistentry>
 				<term><parameter>drupal_author</parameter></term>
 				 <listitem>
 					<para>
@@ -97,7 +97,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-drupal_menu_title">
+			 <varlistentry>
 				<term><parameter>drupal_menu_title</parameter></term>
 				 <listitem>
 					<para>
@@ -107,7 +107,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-drupal_menu_block">
+			 <varlistentry>
 				<term><parameter>drupal_menu_block</parameter></term>
 				 <listitem>
 					<para>
@@ -127,7 +127,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-drupal_image_path">
+			 <varlistentry>
 				<term><parameter>drupal_image_path</parameter></term>
 				 <listitem>
 					<para>

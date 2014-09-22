@@ -104,7 +104,7 @@
 			If you run <prompt>$</prompt> <command>publican package</command> with no options other than the mandatory <option>--lang</option> option, <application>Publican</application> produces a web SRPM package. The full range of options for <command>publican package</command> is as follows:
 		</para>
 		 <variablelist>
-			<varlistentry xml:id="varl-Publican-Users_Guide-_lang_language">
+			<varlistentry>
 				<term><option>--lang</option> <replaceable>language</replaceable></term>
 				 <listitem>
 					<para>
@@ -124,7 +124,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-_config_filename">
+			 <varlistentry>
 				<term><option>--config</option> <replaceable>filename</replaceable></term>
 				 <listitem>
 					<para>
@@ -134,7 +134,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-_desktop">
+			 <varlistentry>
 				<term><option>--desktop</option></term>
 				 <listitem>
 					<para>
@@ -144,7 +144,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-_brew">
+			 <varlistentry>
 				<term><option>--brew</option></term>
 				 <listitem>
 					<para>
@@ -154,7 +154,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-_scratch">
+			 <varlistentry>
 				<term><option>--scratch</option></term>
 				 <listitem>
 					<para>
@@ -164,7 +164,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-_short_sighted">
+			 <varlistentry>
 				<term><option>--short_sighted</option></term>
 				 <listitem>
 					<para>
@@ -187,7 +187,7 @@
 				</listitem>
 
 			</varlistentry>
-			 <varlistentry xml:id="varl-Publican-Users_Guide-_binary">
+			 <varlistentry>
 				<term><option>--binary</option></term>
 				 <listitem>
 					<para>
@@ -252,7 +252,7 @@
 				The following examples illustrate some common options, illustrated with the <citetitle>Foomaster 9 Configuration Guide</citetitle>, edition 2, revision 6.
 			</para>
 			 <variablelist>
-				<varlistentry xml:id="varl-Publican-Users_Guide-_publican_package_langcs_CZ">
+				<varlistentry>
 					<term><prompt>$</prompt> <command>publican package --lang=cs-CZ</command></term>
 					 <listitem>
 						<para>
@@ -262,7 +262,7 @@
 					</listitem>
 
 				</varlistentry>
-				 <varlistentry xml:id="varl-Publican-Users_Guide-_publican_package_desktop_langcs_CZ">
+				 <varlistentry>
 					<term><prompt>$</prompt> <command>publican package --desktop --lang=cs-CZ</command></term>
 					 <listitem>
 						<para>
@@ -272,7 +272,7 @@
 					</listitem>
 
 				</varlistentry>
-				 <varlistentry xml:id="varl-Publican-Users_Guide-_publican_package_binary_langcs_CZ">
+				 <varlistentry>
 					<term><prompt>$</prompt> <command>publican package --binary --lang=cs-CZ</command></term>
 					 <listitem>
 						<para>
@@ -282,7 +282,7 @@
 					</listitem>
 
 				</varlistentry>
-				 <varlistentry xml:id="varl-Publican-Users_Guide-_publican_package_desktop_binary_langcs_CZ">
+				 <varlistentry>
 					<term><prompt>$</prompt> <command>publican package --desktop --binary --lang=cs-CZ</command></term>
 					 <listitem>
 						<para>
@@ -292,7 +292,7 @@
 					</listitem>
 
 				</varlistentry>
-				 <varlistentry xml:id="varl-Publican-Users_Guide-_publican_package_desktop_short_sighted_langcs_CZ">
+				 <varlistentry>
 					<term><prompt>$</prompt> <command>publican package --desktop --short_sighted --lang=cs-CZ</command></term>
 					 <listitem>
 						<para>

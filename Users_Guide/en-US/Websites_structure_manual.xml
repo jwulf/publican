@@ -142,7 +142,7 @@
 						Optionally, configure a <firstterm>dump file</firstterm> for the website. <application>Publican</application> can output an XML file that provides complete site content details for delivery of other services, such as web feeds or customised search pages. The file is updated whenever a book is installed or removed from the site, or the <prompt>$</prompt> <command>publican update_site</command> command is run. Configure the <parameter>dump</parameter>, <parameter>dump_file</parameter>, and <parameter>zip_dump</parameter> parameters as follows:
 					</para>
 					 <variablelist>
-						<varlistentry xml:id="varl-Publican-Users_Guide-dump">
+						<varlistentry>
 							<term><parameter>dump</parameter></term>
 							 <listitem>
 								<para>
@@ -152,7 +152,7 @@
 							</listitem>
 
 						</varlistentry>
-						 <varlistentry xml:id="varl-Publican-Users_Guide-dump_file">
+						 <varlistentry>
 							<term><parameter>dump_file</parameter></term>
 							 <listitem>
 								<para>
@@ -162,7 +162,7 @@
 							</listitem>
 
 						</varlistentry>
-						 <varlistentry xml:id="varl-Publican-Users_Guide-zip_dump">
+						 <varlistentry>
 							<term><parameter>zip_dump</parameter></term>
 							 <listitem>
 								<para>
@@ -184,7 +184,7 @@
 						Optionally, specify the web style with the <parameter>web_style</parameter>.
 					</para>
 					 <variablelist>
-						<varlistentry xml:id="varl-Publican-Users_Guide-web_style_1">
+						<varlistentry>
 							<term>web_style: 1</term>
 							 <listitem>
 								<para>
@@ -194,7 +194,7 @@
 							</listitem>
 
 						</varlistentry>
-						 <varlistentry xml:id="varl-Publican-Users_Guide-web_style_2">
+						 <varlistentry>
 							<term>web_style: 2</term>
 							 <listitem>
 								<para>

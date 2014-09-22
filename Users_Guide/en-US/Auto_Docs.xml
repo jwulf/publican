@@ -257,8 +257,6 @@
 					<para>
 						Run clean ids for source XML
 					</para>
-					<variablelist>
-					</variablelist>
 				</listitem>
 			</varlistentry>
 			<varlistentry id="clean_set">
@@ -267,8 +265,6 @@
 					<para>
 						Remove local copies of remote set books
 					</para>
-					<variablelist>
-					</variablelist>
 				</listitem>
 			</varlistentry>
 			<varlistentry id="copy_web_brand">
@@ -461,8 +457,6 @@
 					<para>
 						Display help text for the configuration file
 					</para>
-					<variablelist>
-					</variablelist>
 				</listitem>
 			</varlistentry>
 			<varlistentry id="install_book">
@@ -641,8 +635,6 @@
 					<para>
 						Print a list of banned DocBook tags
 					</para>
-					<variablelist>
-					</variablelist>
 				</listitem>
 			</varlistentry>
 			<varlistentry id="print_known">
@@ -651,8 +643,6 @@
 					<para>
 						Print a list of QA'd DocBook tags
 					</para>
-					<variablelist>
-					</variablelist>
 				</listitem>
 			</varlistentry>
 			<varlistentry id="print_tree">
@@ -661,8 +651,6 @@
 					<para>
 						Print a tree of the xi:includes
 					</para>
-					<variablelist>
-					</variablelist>
 				</listitem>
 			</varlistentry>
 			<varlistentry id="print_unused">
@@ -671,8 +659,6 @@
 					<para>
 						Print a list of unused XML files
 					</para>
-					<variablelist>
-					</variablelist>
 				</listitem>
 			</varlistentry>
 			<varlistentry id="print_unused_images">
@@ -681,8 +667,6 @@
 					<para>
 						Print a list of unused Image files
 					</para>
-					<variablelist>
-					</variablelist>
 				</listitem>
 			</varlistentry>
 			<varlistentry id="remove_book">
@@ -751,8 +735,6 @@
 					<para>
 						Print a readability report for the source text.
 					</para>
-					<variablelist>
-					</variablelist>
 				</listitem>
 			</varlistentry>
 			<varlistentry id="site_stats">
@@ -779,8 +761,6 @@
 					<para>
 						Snapshot the source language for use in translation.
 					</para>
-					<variablelist>
-					</variablelist>
 				</listitem>
 			</varlistentry>
 			<varlistentry id="update_db">
@@ -985,8 +965,6 @@
 					<para>
 						Update the POT files
 					</para>
-					<variablelist>
-					</variablelist>
 				</listitem>
 			</varlistentry>
 			<varlistentry id="update_site">
@@ -1013,8 +991,6 @@
 					<para>
 						Pull translations from Zanata.
 					</para>
-					<variablelist>
-					</variablelist>
 				</listitem>
 			</varlistentry>
 			<varlistentry id="zt_push">
@@ -1023,8 +999,6 @@
 					<para>
 						Push translations to Zanata.
 					</para>
-					<variablelist>
-					</variablelist>
 				</listitem>
 			</varlistentry>
 		</variablelist>

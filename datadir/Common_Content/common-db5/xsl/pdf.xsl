@@ -15,5 +15,12 @@
 >
 
 <xsl:import href="http://docbook.sourceforge.net/release/xsl-ns/current/fo/docbook.xsl"/>
+<xsl:param name="use.extensions" select="1"/>
+<xsl:param name="tablecolumns.extension" select="0"/>
+<xsl:param name="fop.extensions" select="0"/>
+<xsl:param name="fop1.extensions" select="1"/>
+<xsl:param name="linenumbering.extension" select="0"/>
+<xsl:param name="callouts.extension" select="0"/>
+
 </xsl:stylesheet>
 
