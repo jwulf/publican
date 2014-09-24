@@ -1374,6 +1374,13 @@ DTDHEAD
         # make sure docbook4 entities still work
         $dtd = <<DTDHEAD;
 <?xml version='1.0' encoding='utf-8' ?>
+DTDHEAD
+    }
+
+
+    if ( 1 &&  $dtdver =~ m/^5/ ) {
+        # make sure docbook4 entities still work
+        $dtd = <<DTDHEAD;
 <!DOCTYPE $tag [
 <!ENTITY % sgml.features "IGNORE">
 <!ENTITY % xml.features "INCLUDE">
@@ -1382,6 +1389,7 @@ DTDHEAD
 DTDHEAD
     }
 
+
     # handle entity file
     if ($ent_file) {
         $dtd .= <<ENT;
@@ -1389,6 +1397,18 @@ DTDHEAD
 %BOOK_ENTITIES;
 ENT
     }
+
+    if ( 0 &&  $dtdver =~ m/^5/ ) {
+        # make sure docbook4 entities still work
+        $dtd = <<DTDHEAD;
+<!DOCTYPE $tag [
+<!ENTITY % sgml.features "IGNORE">
+<!ENTITY % xml.features "INCLUDE">
+<!ENTITY % DOCBOOK_ENTS PUBLIC "-//OASIS//ENTITIES DocBook Character Entities V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/dbcentx.mod">
+%DOCBOOK_ENTS;
+DTDHEAD
+    }
+
 
     $dtd .= <<DTDTAIL;
 ]>
