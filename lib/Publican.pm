@@ -1377,8 +1377,9 @@ DTDHEAD
 DTDHEAD
     }
 
+my $before = 0;
 
-    if ( 1 &&  $dtdver =~ m/^5/ ) {
+    if ( $before &&  $dtdver =~ m/^5/ ) {
         # make sure docbook4 entities still work
         $dtd = <<DTDHEAD;
 <!DOCTYPE $tag [
@@ -1398,7 +1399,7 @@ DTDHEAD
 ENT
     }
 
-    if ( 0 &&  $dtdver =~ m/^5/ ) {
+    if ( !$before &&  $dtdver =~ m/^5/ ) {
         # make sure docbook4 entities still work
         $dtd = <<DTDHEAD;
 <!DOCTYPE $tag [
