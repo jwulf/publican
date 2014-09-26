@@ -173,6 +173,7 @@ my %options = (
     'previous' => maketext(
         'Keep previous msgid when fuzzy matches are detected in PO updates.'),
     showfuzzy     => maketext('Show fuzzy translation entries in output. Defaults off.'),
+    'allow_network' => maketext(q|Allow the XML and XSLT processing to access the newtowrk. Defaults off.|),
 );
 
 # Options all actions use
@@ -180,7 +181,7 @@ my @utility_opts = (
     'help',            'config=s',
     'common_config=s', 'common_content=s',
     'nocolours',       'quiet',
-    'brand_dir=s',
+    'brand_dir=s', 'allow_network'
 );
 
 # Actions
@@ -993,6 +994,7 @@ my $publican = Publican->new(
         QUIET          => $opts{quiet},
         NOCOLOURS      => $opts{nocolours},
         brand_dir      => $opts{brand_dir},
+        allow_network  => $opts{allow_network},
     }
 );
 

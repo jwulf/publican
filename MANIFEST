@@ -11,6 +11,7 @@ book_templates/pdfmain-css.tmpl
 book_templates/titlepage.tmpl
 book_templates/toc-xsl.tmpl
 Build.PL
+catalog
 CC0
 Changes
 completion/_publican

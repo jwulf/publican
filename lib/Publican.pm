@@ -864,6 +864,7 @@ sub new {
         $QUIET     = delete( $args->{QUIET} );
         $NOCOLOURS = delete( $args->{NOCOLOURS} );
         my $brand_dir = delete( $args->{brand_dir} );
+        my $allow_network =  delete( $args->{allow_network} );
 
         if ( %{$args} ) {
             croak(
@@ -876,6 +877,8 @@ sub new {
 
         $self = bless {}, $class;
         $SINGLETON = $self;
+
+        $self->{allow_network} = $allow_network;
 
         # BUGBUG this should be replaced by Publican::Config
         if ( $^O eq 'MSWin32' ) {
@@ -1188,9 +1191,10 @@ sub run_xslt {
         );
     }
 
-    my $parser = XML::LibXML->new();
+    my $parser = XML::LibXML->new(no_network => !$self->{allow_network});
     my $xslt   = XML::LibXSLT->new();
     $parser->expand_entities(1);
+    
     my $source;
     eval { $source = $parser->parse_file($xml_file); };
 
@@ -1374,15 +1378,15 @@ DTDHEAD
         # make sure docbook4 entities still work
         $dtd = <<DTDHEAD;
 <?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE $tag [
 DTDHEAD
     }
 
-my $before = 0;
+my $before = -1;
 
-    if ( $before &&  $dtdver =~ m/^5/ ) {
+    if ( $before == 1 &&  $dtdver =~ m/^5/ ) {
         # make sure docbook4 entities still work
-        $dtd = <<DTDHEAD;
-<!DOCTYPE $tag [
+        $dtd .= <<DTDHEAD;
 <!ENTITY % sgml.features "IGNORE">
 <!ENTITY % xml.features "INCLUDE">
 <!ENTITY % DOCBOOK_ENTS PUBLIC "-//OASIS//ENTITIES DocBook Character Entities V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/dbcentx.mod">
@@ -1399,10 +1403,9 @@ DTDHEAD
 ENT
     }
 
-    if ( !$before &&  $dtdver =~ m/^5/ ) {
+    if ( $before == 0 &&  $dtdver =~ m/^5/ ) {
         # make sure docbook4 entities still work
-        $dtd = <<DTDHEAD;
-<!DOCTYPE $tag [
+        $dtd .= <<DTDHEAD;
 <!ENTITY % sgml.features "IGNORE">
 <!ENTITY % xml.features "INCLUDE">
 <!ENTITY % DOCBOOK_ENTS PUBLIC "-//OASIS//ENTITIES DocBook Character Entities V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/dbcentx.mod">

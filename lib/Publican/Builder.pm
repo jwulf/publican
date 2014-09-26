@@ -12,8 +12,6 @@ use Publican::Translate;
 use File::Path;
 use File::pushd;
 use File::Find;
-use XML::LibXSLT;
-use XML::LibXML;
 use Cwd qw(abs_path);
 use Archive::Tar;
 use Archive::Zip qw( :ERROR_CODES :CONSTANTS );
@@ -1037,8 +1035,6 @@ Publican::Translate
 File::Path
 File::pushd
 File::Find
-XML::LibXSLT
-XML::LibXML
 Cwd
 Archive::Tar
 DateTime

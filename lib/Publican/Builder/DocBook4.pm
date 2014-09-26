@@ -16,7 +16,6 @@ use Publican::Translate;
 use File::Path;
 use File::pushd;
 use File::Find;
-use XML::LibXSLT;
 use XML::LibXML;
 use Cwd qw(abs_path);
 use Archive::Tar;
@@ -574,7 +573,8 @@ sub validate_xml {
             suppress_errors   => 0,
             suppress_warnings => 1,
             line_numbers      => 1,
-            expand_xinclude   => 1
+            expand_xinclude   => 1,
+            no_network => !$self->{publican}->{allow_network}
         }
     );
 
@@ -766,7 +766,6 @@ Publican::Translate
 File::Path
 File::pushd
 File::Find
-XML::LibXSLT
 XML::LibXML
 Cwd
 Archive::Tar

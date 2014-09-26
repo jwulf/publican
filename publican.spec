@@ -3,6 +3,9 @@
 %define RHEL6 %([[ %{?dist}x == .el6[a-z]* ]] && echo 1 || echo 0)
 %define RHEL7 %([[ %{?dist}x == .el7[a-z]* ]] && echo 1 || echo 0)
 
+# BUGBUG BZ #1144220 work around wrong entity string bug
+%define DBPATH %(find /usr/share/sgml/docbook/xml-dtd-4.5*/dbcentx.mod)
+
 %define OTHER 1
 %if %{RHEL6}
 %define OTHER 0
@@ -19,7 +22,7 @@
 
 Name:           publican
 Version:        4.2.2
-Release:        2%{?dist}
+Release:        2%{?dist}.t3
 Summary:        Common files and scripts for publishing with DocBook XML
 # For a breakdown of the licensing, refer to LICENSE
 License:        (GPLv2+ or Artistic) and CC0
@@ -221,27 +224,29 @@ Website style for common brand for DocBook5 content
 %setup -q -n Publican-v%{version}
 
 %build
-%{__perl} Build.PL installdirs=vendor --nocolours=1
+sed -i -e 's,PATH,%{DBPATH},g' catalog
+XML_CATALOG_FILES=$dir/catalog %{__perl} Build.PL installdirs=vendor --nocolours=1
 
-./Build --nocolours=1
+XML_CATALOG_FILES=$dir/catalog ./Build --nocolours=1
 dir=`pwd`
 
-cd Users_Guide && %{__perl} -CDAS -I $dir/blib/lib $dir/blib/script/publican build \
+cd Users_Guide && XML_CATALOG_FILES=$dir/catalog  %{__perl} -CDAS -I $dir/blib/lib $dir/blib/script/publican build \
     --formats=html-desktop --publish --langs=en-US \
     --common_config="$dir/blib/datadir" \
     --common_content="$dir/blib/datadir/Common_Content" --nocolours
 
 cd $dir
 
-cd Release_Notes && %{__perl} -CDAS -I $dir/blib/lib $dir/blib/script/publican build \
+cd Release_Notes && XML_CATALOG_FILES=$dir/catalog %{__perl} -CDAS -I $dir/blib/lib $dir/blib/script/publican build \
     --formats=html-desktop --publish --langs=en-US \
     --common_config="$dir/blib/datadir" \
     --common_content="$dir/blib/datadir/Common_Content" --nocolours
 
 %install
 rm -rf $RPM_BUILD_ROOT
+dir=`pwd`
 
-./Build install destdir=$RPM_BUILD_ROOT create_packlist=0
+XML_CATALOG_FILES=$dir/catalog ./Build install destdir=$RPM_BUILD_ROOT create_packlist=0
 find $RPM_BUILD_ROOT -depth -type d -exec rmdir {} 2>/dev/null \;
 
 %{_fixperms} $RPM_BUILD_ROOT/*
@@ -260,16 +265,17 @@ desktop-file-install --vendor="%{my_vendor}" --dir=$RPM_BUILD_ROOT%{_datadir}/ap
 mkdir -p -m755 $RPM_BUILD_ROOT/%{wwwdir}/common
 dir=`pwd`
 cd datadir/Common_Content/common
-%{__perl} -CDAS -I $dir/blib/lib $dir/blib/script/publican install_brand --web --path=$RPM_BUILD_ROOT/%{wwwdir}/common
+XML_CATALOG_FILES=$dir/catalog %{__perl} -CDAS -I $dir/blib/lib $dir/blib/script/publican install_brand --web --path=$RPM_BUILD_ROOT/%{wwwdir}/common
 cd -
 mkdir -p -m755 $RPM_BUILD_ROOT/%{wwwdir}/common-db5
 cd datadir/Common_Content/common-db5
-%{__perl} -CDAS -I $dir/blib/lib $dir/blib/script/publican install_brand --web --path=$RPM_BUILD_ROOT/%{wwwdir}/common-db5
+XML_CATALOG_FILES=$dir/catalog %{__perl} -CDAS -I $dir/blib/lib $dir/blib/script/publican install_brand --web --path=$RPM_BUILD_ROOT/%{wwwdir}/common-db5
 cd -
 
 %check
 %if %{TESTS}
-./Build --nocolours=1 test
+dir=`pwd`
+XML_CATALOG_FILES=$dir/catalog ./Build --nocolours=1 test
 %endif
 
 %post
@@ -279,11 +285,21 @@ CATALOG=%{_sysconfdir}/xml/catalog
 "https://fedorahosted.org/released/publican/xsl/docbook4/" \
 "file://%{_datadir}/publican/xsl/"  $CATALOG
 
+CATALOG=%{_sysconfdir}/xml/catalog
+%{_bindir}/xmlcatalog --noout --add "public" \
+"-//OASIS//ENTITIES DocBook Character Entities V4.5//EN" \
+"file://%{DBPATH}"  $CATALOG
+
 %postun
 if [ "$1" = 0 ]; then
   CATALOG=%{_sysconfdir}/xml/catalog
   %{_bindir}/xmlcatalog --noout --del \
   "https://fedorahosted.org/released/publican/xsl/docbook4/" $CATALOG
+
+  CATALOG=%{_sysconfdir}/xml/catalog
+  %{_bindir}/xmlcatalog --noout --del \
+  "-//OASIS//ENTITIES DocBook Character Entities V4.5//EN" $CATALOG
+
 fi
 
 %clean

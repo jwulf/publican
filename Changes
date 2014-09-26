@@ -2,6 +2,8 @@
 - Fix DocBook4 entity text, BZ #1143060
 - Remove extra white space from non-verbatim msgid's. BZ #1143792
 - Fix PDF build using FOP fails with "No numberLines function available." BZ #1143852
+- Add allow_network option. Defaults OFF. BZ #1144949
+- Add hacks to work around BZ #1144220
 
 4.2.2 Wed Sep 17 2014
 - Fix duplicate messages in POT files. BZ #1136133

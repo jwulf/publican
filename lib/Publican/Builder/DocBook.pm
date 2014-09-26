@@ -1009,7 +1009,7 @@ sub transform {
 
     logger(
         "\t" . maketext( "Using XML::LibXSLT on [_1]", $xsl_file ) . "\n" );
-    my $parser = XML::LibXML->new();
+    my $parser = XML::LibXML->new(no_network => !$self->{publican}->{allow_network});
     my $xslt   = XML::LibXSLT->new();
     XML::LibXSLT->register_function( 'urn:perl', 'adjustColumnWidths',
         \&adjustColumnWidths );
@@ -1038,7 +1038,7 @@ sub transform {
             # handle a structured error (XML::LibXML::Error object)
             croak(
                 maketext(
-                    "FATAL ERROR 6: [_1]:[_2] in [_3] on line [_4]: [_5]",
+                    "FATAL ERROR 6 building $format: [_1]:[_2] in [_3] on line [_4]: [_5]",
                     $@->domain(),
                     $@->code(),
                     $@->file(),
@@ -1376,7 +1376,7 @@ sub drupal_transform {
     my $abstract   = $self->get_abstract( { lang => $lang } );
     my $keywords   = join( ',', $self->get_keywords( { lang => $lang } ) );
 
-    my $parser = XML::LibXML->new();
+    my $parser = XML::LibXML->new(no_network => !$self->{publican}->{allow_network});
     $parser->expand_xinclude(1);
     $parser->expand_entities(1);
 
@@ -1971,7 +1971,7 @@ sub highlight {
 
     $hl->language($language);
 
-    my $parser = XML::LibXML->new();
+    my $parser = XML::LibXML->new(no_network => $Publican::SINGLETON->{allow_network});
 
 ## BUGBUG testing https://bugzilla.redhat.com/show_bug.cgi?id=604255
 ##    my $test = $content->get_node(1);
@@ -2097,7 +2097,7 @@ sub insertCallouts {
     my $count      = 0;
     my $position   = 40;
 
-    my $parser = XML::LibXML->new();
+    my $parser = XML::LibXML->new(no_network => !$Publican::SINGLETON->{allow_network});
     $parser->expand_entities(0);
 
     my $test       = $verb->toString();
@@ -2241,7 +2241,7 @@ sub numberLines {
     my $count   = shift()->string_value();
     my $content = shift();
 
-    my $parser = XML::LibXML->new();
+    my $parser = XML::LibXML->new(no_network => !$Publican::SINGLETON->{allow_network});
     $parser->expand_entities(0);
 
     my $text      = $content->string_value();
