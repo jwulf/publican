@@ -173,7 +173,7 @@ my %options = (
     'previous' => maketext(
         'Keep previous msgid when fuzzy matches are detected in PO updates.'),
     showfuzzy     => maketext('Show fuzzy translation entries in output. Defaults off.'),
-    'allow_network' => maketext(q|Allow the XML and XSLT processing to access the newtowrk. Defaults off.|),
+    'allow_network' => maketext(q|Allow the XML and XSLT processing to access the network. Defaults off.|),
 );
 
 # Options all actions use

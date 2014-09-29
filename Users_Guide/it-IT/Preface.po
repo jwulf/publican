@@ -30,13 +30,16 @@ msgstr "Occorrono commenti!"
 msgid "<primary>feedback</primary> <secondary>contact information for this manual</secondary>"
 msgstr "<primary>commenti</primary> <secondary>informazioni di contatto per questo manuale</secondary>"
 
-#. Tag: para
-#, no-c-format, fuzzy
-msgid "If you find a typographical error in this manual, or if you have thought of a way to make this manual better, we would love to hear from you! Please submit a report in Bugzilla: <ulink url=\"https://bugzilla.redhat.com/enter_bug.cgi?product=Publican&amp;component=Publican%20Users%20Guide&amp;version=&PRODUCTNUM;\" />."
-msgstr "Se in questo manuale si trovano errori tipografici, oppure se si hanno suggerimenti su come migliorare questo manuale, noi saremmo lieti di ascoltarli! Si prega di inviare un report in <ulink url=\"https://bugzilla.redhat.com/enter_bug.cgi?product=Publican&amp;component=Publican20Users20Guide\">Bugzilla</ulink>."
+msgid "If you find a typographical error in this manual, or if you have thought of a way to make this manual better, we would love to hear from you! Please submit a report in Bugzilla: <uri xlink:href=\"https://bugzilla.redhat.com/enter_bug.cgi?product=Publican&amp;component=Publican%20Users%20Guide&amp;version=4.1\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">https://bugzilla.redhat.com/enter_bug.cgi?product=Publican&amp;component=Publican%20Users%20Guide&amp;version=4.1</uri>."
+msgstr ""
 
 #. Tag: para
 #, no-c-format
 msgid "If you have a suggestion for improving the documentation, try to be as specific as possible when describing it. If you have found an error, please include the section number and some of the surrounding text so we can find it easily."
 msgstr "Se si hanno suggerimenti su come migliorare il documento, si cerchi di essere il più possibile specifici nella descrizione. Se si trova un errore, si prega di indicare la sezione e di includere anche parte del testo circostante, in modo da poterlo intercettare facilmente."
+
+#. Tag: para
+#, no-c-format, fuzzy
+#~ msgid "If you find a typographical error in this manual, or if you have thought of a way to make this manual better, we would love to hear from you! Please submit a report in Bugzilla: <ulink url=\"https://bugzilla.redhat.com/enter_bug.cgi?product=Publican&amp;component=Publican%20Users%20Guide&amp;version=&PRODUCTNUM;\" />."
+#~ msgstr "Se in questo manuale si trovano errori tipografici, oppure se si hanno suggerimenti su come migliorare questo manuale, noi saremmo lieti di ascoltarli! Si prega di inviare un report in <ulink url=\"https://bugzilla.redhat.com/enter_bug.cgi?product=Publican&amp;component=Publican20Users20Guide\">Bugzilla</ulink>."
 

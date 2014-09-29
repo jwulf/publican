@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2014-09-18 09:54+1000\n"
-"PO-Revision-Date: 2014-09-18 09:54+1000\n"
+"POT-Creation-Date: 2014-09-30 07:39+1000\n"
+"PO-Revision-Date: 2014-09-30 07:39+1000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: None\n"
 "Language: en-US \n"
@@ -158,7 +158,7 @@ msgstr ""
 msgid "Name of this document. Fetched from title tag in xml_lang/TYPE_Info.xml if not set in cfg file."
 msgstr ""
 
-msgid "This parameter is constrained with the following regular expression: ^[0-9a-zA-Z_\-\.\+]+$"
+msgid "This parameter is constrained with the following regular expression: ^[0-9a-zA-Z_\\-\\.\\+]+$"
 msgstr ""
 
 msgid "This field is not supported for: brand."
@@ -476,7 +476,7 @@ msgstr ""
 msgid "Version of this package. Fetched from productnumber tag in xml_lang/TYPE_Info.xml"
 msgstr ""
 
-msgid "This parameter is constrained with the following regular expression: ^[0-9][^\p{IsSpace}]*$"
+msgid "This parameter is constrained with the following regular expression: ^[0-9][^\\p{IsSpace}]*$"
 msgstr ""
 
 msgid "web_brew_dist"

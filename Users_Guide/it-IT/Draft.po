@@ -52,15 +52,13 @@ msgid "To create that mark do the following:"
 msgstr "Per creare il contrassegno, seguire la seguente procedura:"
 
 #. Tag: para
-#, no-c-format
-msgid "Add the software's pre-release version number, or equivalent state information, to the <sgmltag>&lt;subtitle&gt;</sgmltag> tag in your <filename>Book_Info.xml</filename> file. Place this additional text in <sgmltag>&lt;remark&gt;</sgmltag> tags. For example:"
+#, no-c-format, fuzzy
+msgid "Add the software's pre-release version number, or equivalent state information, to the <tag>&lt;subtitle&gt;</tag> tag in your <filename>Book_Info.xml</filename> file. Place this additional text in <tag>&lt;remark&gt;</tag> tags. For example:"
 msgstr "Aggiungere il numero di versione del software pre-release, o un informazione di stato equivalente, al tag <sgmltag>&lt;subtitle&gt;</sgmltag> nel file <filename>Book_Info.xml</filename>. Inserire questa informazione tra tag <sgmltag>&lt;remark&gt;</sgmltag>. Per esempio:"
 
 #. Tag: programlisting
-#, no-c-format
-msgid ""
-"&lt;subtitle&gt;Using Red Hat Enterprise Warp Drive&lt;remark&gt; Version 1.1, Beta 2&lt;/remark&gt;&lt;/subtitle&gt;\n"
-"\n"
+#, no-c-format, fuzzy
+msgid "&lt;subtitle&gt;Using Red Hat Enterprise Warp Drive&lt;remark&gt; Version 1.1, Beta 2&lt;/remark&gt;&lt;/subtitle&gt;"
 msgstr ""
 "&lt;subtitle&gt;Using Red Hat Enterprise Warp Drive&lt;remark&gt; Version 1.1, Beta 2&lt;/remark&gt;&lt;/subtitle&gt;\n"
 "\n"
@@ -71,17 +69,15 @@ msgid "add <varname>show_remarks</varname> to the <filename>publican.cfg</filena
 msgstr "Aggiungere <varname>show_remarks</varname> al file <filename>publican.cfg</filename> ed impostarlo ad '1':"
 
 #. Tag: programlisting
-#, no-c-format
-msgid ""
-"show_remarks: 1\n"
-"\n"
+#, no-c-format, fuzzy
+msgid "show_remarks: 1"
 msgstr ""
 "show_remarks: 1\n"
 "\n"
 
 #. Tag: para
-#, no-c-format
-msgid "When you build your book with this <sgmltag>&lt;remark&gt;</sgmltag> tag and the <varname>show_remarks</varname> setting in place, the pre-release nature of the software is displayed clearly and unmistakably. PDF builds display the remark on their cover and title pages. HTML builds (both single-page HTML and multiple-page HTML) display the remark near the beginning of <filename>index.html</filename>."
+#, no-c-format, fuzzy
+msgid "When you build your book with this <tag>&lt;remark&gt;</tag> tag and the <varname>show_remarks</varname> setting in place, the pre-release nature of the software is displayed clearly and unmistakably. PDF builds display the remark on their cover and title pages. HTML builds (both single-page HTML and multiple-page HTML) display the remark near the beginning of <filename>index.html</filename>."
 msgstr "Compilando il libro con questo tag <sgmltag>&lt;remark&gt;</sgmltag> e con l'impostazione <varname>show_remarks</varname>, si definisce in modo chiaro ed inequivocabile la natura pre-release del software. Le compilazioni PDF visualizzano il contrassegno sulla copertina e sulla pagina del titolo. Le compilazioni HTML (sia su pagina singola sia su pagine multiple), visualizzano il contrassegno sulla pagina iniziale del file <filename>index.html</filename>."
 
 #. Tag: para
@@ -89,14 +85,20 @@ msgstr "Compilando il libro con questo tag <sgmltag>&lt;remark&gt;</sgmltag> e c
 msgid "Because this approach makes no changes to the information in <filename>Book_Info.xml</filename> used to generate RPMs, it also ensures there is no ambiguity in the RPM subsystem's operation."
 msgstr "Poiché questo approccio non modifica le informazioni nel file <filename>Book_Info.xml</filename> usato per generare gli RPM, esso garantisce anche che non ci sia alcuna ambiguità nelle operazioni del sottosistema RPM."
 
+msgid "An example of an inline remark"
+msgstr ""
+
+msgid "Here is an <application role=\"remark\">example</application> of an inline remark."
+msgstr ""
+
 #. Tag: title
 #, no-c-format
 msgid "Important"
 msgstr "Importante"
 
 #. Tag: para
-#, no-c-format
-msgid "It is the writer's responsibility to remove the <sgmltag>&lt;remark&gt;</sgmltag> tag and its contents and remove or turn off <varname>show_remarks</varname> when documentation is updated for use with the release version of the software."
+#, no-c-format, fuzzy
+msgid "It is the writer's responsibility to remove the <tag>&lt;remark&gt;</tag> tag and its contents and remove or turn off <varname>show_remarks</varname> when documentation is updated for use with the release version of the software."
 msgstr "Rimane una responsabilità del redattore rimuovere il tag <sgmltag>&lt;remark&gt;</sgmltag> con il suo contenuto e rimuovere o disattivare l'attributo <varname>show_remarks</varname> quando la documentazione viene aggiornata con la versione di release del software."
 
 #. Tag: title
@@ -110,27 +112,25 @@ msgid "Unfinished documentation made available to others for review should be la
 msgstr "La documentazione incompleta resa disponibile per revisione dovrebbe essere indicata chiaramente come tale."
 
 #. Tag: para
-#, no-c-format
-msgid "To add the draft watermark to your documentation add the <userinput>status=\"draft\"</userinput> attribute to the <sgmltag>&lt;article&gt;</sgmltag>, <sgmltag>&lt;book&gt;</sgmltag> or <sgmltag>&lt;set&gt;</sgmltag> tag in your document's root node. For example:"
+#, no-c-format, fuzzy
+msgid "To add the draft watermark to your documentation add the <userinput>status=\"draft\"</userinput> attribute to the <tag>&lt;article&gt;</tag>, <tag>&lt;book&gt;</tag> or <tag>&lt;set&gt;</tag> tag in your document's root node. For example:"
 msgstr "Per far comparire il contrassegno <emphasis>draft</emphasis> ad un documento, aggiungere l'attributo <userinput>status=\"draft\"</userinput> al tag <sgmltag>&lt;article&gt;</sgmltag>, <sgmltag>&lt;book&gt;</sgmltag> o <sgmltag>&lt;set&gt;</sgmltag> nel nodo radice del documento. Per esempio:"
 
 #. Tag: programlisting
-#, no-c-format
-msgid ""
-"&lt;book status=\"draft\"&gt;\n"
-"\n"
+#, no-c-format, fuzzy
+msgid "&lt;book status=\"draft\"&gt;"
 msgstr ""
 "&lt;book status=\"draft\"&gt;\n"
 "\n"
 
 #. Tag: para
-#, no-c-format
-msgid "By default, your root node is the <sgmltag>&lt;book&gt;</sgmltag> tag in your <filename><replaceable>Doc_Name</replaceable>.xml</filename> file."
+#, no-c-format, fuzzy
+msgid "By default, your root node is the <tag>&lt;book&gt;</tag> tag in your <filename><replaceable>Doc_Name</replaceable>.xml</filename> file."
 msgstr "Per impostazione, il nodo radice coincide con il tag <sgmltag>&lt;book&gt;</sgmltag> nel file <filename><replaceable>Nome_Doc</replaceable>.xml</filename>."
 
 #. Tag: para
-#, no-c-format
-msgid "If you are working on an article or set, the root node is the <sgmltag>&lt;article&gt;</sgmltag> or <sgmltag>&lt;set&gt;</sgmltag> tag in <filename><replaceable>Doc_Name</replaceable>.xml</filename>."
+#, no-c-format, fuzzy
+msgid "If you are working on an article or set, the root node is the <tag>&lt;article&gt;</tag> or <tag>&lt;set&gt;</tag> tag in <filename><replaceable>Doc_Name</replaceable>.xml</filename>."
 msgstr "Nel caso di un articolo o set di volumi, il nodo radice coincide con il tag <sgmltag>&lt;article&gt;</sgmltag> o <sgmltag>&lt;set&gt;</sgmltag>, rispettivamente, nel file <filename><replaceable>Nome_Doc</replaceable>.xml</filename>."
 
 #. Tag: para
@@ -143,6 +143,23 @@ msgstr "L'aggiunta dell'attributo <userinput>status=\"draft\"</userinput> causa 
 msgid "Even if you change only a portion of a work before sending it out for review, marking every page as draft will encourage reviewers to report errors or typos they spot in passing. It will also ensure non-reviewers who encounter the work do not mistake a draft for a finished version."
 msgstr "Anche se si modificano solo brevi porzioni di un documento da revisionare, contrassegnare le pagine come draft incoraggia i lettori a riportare gli errori ed i refusi intercettati. Serve anche ad assicurare che lettori occasionali evitino di far danni scambiando un draft per una versione finale."
 
+msgid "An example of a block marked up as draft"
+msgstr ""
+
+msgid ""
+"This is an example of a block that is marked as draft\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"Isn't it pretty!"
+msgstr ""
+
 #. Tag: title
 #, no-c-format
 msgid "Denoting draft documentation of pre-release software"
@@ -152,4 +169,28 @@ msgstr "Denotare come draft la documentazione per software pre-release"
 #, no-c-format
 msgid "To denote unfinished documentation of pre-release software properly, do both previously noted procedures."
 msgstr "Per denotare propriamente la documentazione incompleta relativa a software pre-release, seguire entrambe le procedure indicate in precedenza."
+
+msgid "Denoting changed content <remark>New section</remark>"
+msgstr ""
+
+msgid "DocBook allows setting the <tag>revisionflag</tag> on many elements to allow easier reviewing on changed documents. <application>Publican</application>, as of version 4.1, will add highlighting to these elements if the book is in draft mode. e.g. <userinput>revisionflag=\"added\"</userinput>"
+msgstr ""
+
+msgid "added"
+msgstr ""
+
+msgid "This is how an element that has been added to a new revision is marked-up."
+msgstr ""
+
+msgid "changed"
+msgstr ""
+
+msgid "This is how an element that has been changed in a new revision is marked-up."
+msgstr ""
+
+msgid "deleted"
+msgstr ""
+
+msgid "This is how an element that has been marked for deletion from a new revision is marked-up. Publican will not automatically delete or hide this content, you have to ensure this is done before publication."
+msgstr ""
 

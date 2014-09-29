@@ -31,11 +31,11 @@ msgstr "<application>Publican</application>facilite la gestion des différences 
 
 #. Tag: para
 #, no-c-format, fuzzy
-msgid "To conditionalize content in a book, use the tag attribute <prompt>$</prompt> <command>condition</command>. For example, let's say the book <citetitle>How To Use Product Foo</citetitle> has an \"upstream\", \"enterprise\", and \"beta\" version:"
+msgid "To conditionalize content in a book, use the tag attribute <command>condition</command>. For example, let's say the book <citetitle>How To Use Product Foo</citetitle> has an \"upstream\", \"enterprise\", and \"beta\" version:"
 msgstr "Pour soumettre un contenu à une condition dans un ouvrage, servez-vous de l'attribut de balise <command>condition</command>. Par exemple, disons que le manuel <citetitle>Comment utiliser le produit Foo</citetitle> a une version « amont », une version « entreprise » et une version « bêta » :"
 
 #. Tag: programlisting
-#, no-c-format, fuzzy
+#, no-c-format
 msgid ""
 "&lt;para condition=\"upstream\"&gt;\n"
 "	&lt;application&gt;Foo&lt;/application&gt; starts automatically when you boot the system.\n"
@@ -71,7 +71,7 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format, fuzzy
-msgid "To build a specific version (and thereby capture all content conditionalized for that version), add the <prompt>$</prompt> <command>condition: <replaceable>version</replaceable></command> parameter to the <filename>publican.cfg</filename> file and run the <prompt>$</prompt> <command>publican build</command> command as normal. For example, if you add <literal>condition: upstream</literal> to the <filename>publican.cfg</filename> file of <citetitle>How To Use Product Foo</citetitle> and run:"
+msgid "To build a specific version (and thereby capture all content conditionalized for that version), add the <command>condition: <replaceable>version</replaceable></command> parameter to the <filename>publican.cfg</filename> file and run the <prompt>$</prompt> <command>publican build</command> command as normal. For example, if you add <literal>condition: upstream</literal> to the <filename>publican.cfg</filename> file of <citetitle>How To Use Product Foo</citetitle> and run:"
 msgstr "Pour construire une version donnée (et de la sorte intégrer tout contenu conditionnel propre à la version), ajoutez le paramètre <command>condition: <replaceable>version</replaceable></command> dans le fichier <filename>publican.cfg</filename> et exécutez normalement la commande <command>publican build</command>. Par exemple, si vous définissez <literal>condition: upstream</literal> dans le fichier <filename>publican.cfg</filename> pour <citetitle>Comment utiliser le produit Foo</citetitle>, exécutez :"
 
 #. Tag: screen
@@ -106,7 +106,7 @@ msgstr "Le balisage conditionnel crée des difficultés de deux sortes pour les 
 
 #. Tag: para
 #, no-c-format, fuzzy
-msgid "The PO files for the document contain the full set of tags from the XML files, regardless of any conditions set. When translators open the PO file for the example from <citetitle>How To Use Product Foo</citetitle> in <xref linkend=\"\" />, they see:"
+msgid "The PO files for the document contain the full set of tags from the XML files, regardless of any conditions set. When translators open the PO file for the example from <citetitle>How To Use Product Foo</citetitle> in <xref linkend=\"sect-Publican-Users_Guide-Conditional_tagging\" />, they see:"
 msgstr "Le fichier PO du document contient l'ensemble complet des balises provenant des fichiers XML, quelles que soient les conditions définies. Quand un traducteur ouvre un fichier PO, par exemple celui de <citetitle>Comment utiliser le produit Foo</citetitle> dans <xref linkend=\"sect-Users_Guide-Conditional_tagging\" />, il voit :"
 
 #. Tag: programlisting
@@ -173,7 +173,7 @@ msgid "As an alternative to conditionals, consider maintaining separate versions
 msgstr "Comme alternative aux conditions, envisagez l'entretien de versions séparées de l'ouvrage dans des branches séparées du dépôt à version contrôlée. Vous pourrez encore partager les fichiers XML et même les fichiers PO entre les diverses branches si nécessaire et tout système de contrôle des versions vous permettra de partager rapidement les modifications selon les branches."
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "If you maintain two versions of a book in the same repository, we recommend using a separate config file for each version. For example, the <filename>upstream.cfg</filename> file might contain the condition <literal>condition: upstream</literal> and the <filename>enterprise.cfg</filename> file might contain the condition <literal>condition: enterprise</literal>. You could then specify the version of the document to build or package with the <option>--config</option>; for example, <prompt>$</prompt> <command>publican package --lang en-US --config upstream.cfg</command>. Using two separate config files saves you from having to edit the one config file each time you build or package a document."
 msgstr "Si vous entretenez deux versions d'un ouvrage dans le même dépôt, nous recommandons l'utilisation d'un fichier de configuration distinct pour chaque version. Par exemple, le fichier <filename>upstream.cfg</filename> peut contenir la condition <literal>condition: upstream</literal> et le fichier <filename>enterprise.cfg</filename> <literal>condition: enterprise</literal>. Puis vous préciserez la version du document à construire ou à empaqueter avec l'option <option>--config</option> ; par exemple, <command>publican package --lang en-US --config upstream.cfg</command>. L'utilisation de deux fichiers de configuration distincts vous économise d'avoir à modifier un fichier de configuration unique chaque fois que vous construisez ou empaquetez un document."
 

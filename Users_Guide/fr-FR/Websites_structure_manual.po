@@ -31,8 +31,7 @@ msgstr "Sur la station de travail, créez un nouveau répertoire et placez-vous 
 
 #. Tag: screen
 #, no-c-format
-msgid ""
-"<prompt>$</prompt> <command>mkdir ~/docsite</command>\n"
+msgid "<prompt>$</prompt> <command>mkdir ~/docsite</command>\n"
 "<prompt>$</prompt> <command>cd ~/docsite</command>"
 msgstr ""
 
@@ -63,8 +62,8 @@ msgstr "Sur un ordinateur avec un système d'exploitation autre que Linux, défi
 
 #. Tag: para
 #, no-c-format
-msgid "<option>--tmpl_path</option> — the path to the <filename>templates/</filename> directory of your <application>Publican</application> installation. On computers with Windows operating systems, this is typically <filename><replaceable>%SystemDrive%</replaceable>\\<replaceable>%ProgramFiles%</replaceable>\\Publican\\templates</filename>."
-msgstr "<option>--tmpl_path</option> — le chemin vers le répertoire <filename>templates/</filename> de l'installation de <application>Publican</application>. Sur les ordinateurs avec Windows, c'est généralement <filename><replaceable>%SystemDrive%</replaceable>\\<replaceable>%ProgramFiles%</replaceable>\\Publican\\templates</filename>."
+msgid "<option>--tmpl_path</option> — the path to the <filename>templates/</filename> directory of your <application>Publican</application> installation. On computers with Windows operating systems, this is typically <filename><replaceable>%SystemDrive%</replaceable>\\<replaceable>%ProgramFiles%</replaceable>\\Publican\templates</filename>."
+msgstr "<option>--tmpl_path</option> — le chemin vers le répertoire <filename>templates/</filename> de l'installation de <application>Publican</application>. Sur les ordinateurs avec Windows, c'est généralement <filename><replaceable>%SystemDrive%</replaceable>\\<replaceable>%ProgramFiles%</replaceable>\\Publican\templates</filename>."
 
 #. Tag: para
 #, no-c-format
@@ -72,7 +71,7 @@ msgid "For example:"
 msgstr "Par exemple :"
 
 #. Tag: screen
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "<prompt>$</prompt> <command>publican create_site --site_config foomaster.cfg --db_file foomaster.db --toc_path html/docs</command>"
 msgstr "<command>publican create_site --site_config foomaster.cfg --db_file foomaster.db --toc_path html/docs</command>"
 
@@ -117,8 +116,8 @@ msgid "<application>Publican</application> uses the value set for <parameter>hos
 msgstr "<application>Publican</application> utilise la valeur définie pour  <parameter>host</parameter> pour construire les URL dans le fichier XML <filename>Sitemap</filename> qu'il crée pour les moteurs d'indexation et pour limiter les recherches aux résultats de votre seul site, recherches commandées par l'intermédiaire de la boîte ad-hoc du menu de navigation ."
 
 #. Tag: para
-#, no-c-format
-msgid "Optionally, construct a search engine query to use with the search box in the navigation menu and specify the entire content of a HTML <sgmltag>&lt;form&gt;</sgmltag> with the <parameter>search</parameter> parameter. If you do not specify a custom web search, <application>Publican</application> creates a Google search limited to the host that you specified in the <parameter>host</parameter> parameter."
+#, no-c-format, fuzzy
+msgid "Optionally, construct a search engine query to use with the search box in the navigation menu and specify the entire content of a HTML <tag>&lt;form&gt;</tag> with the <parameter>search</parameter> parameter. If you do not specify a custom web search, <application>Publican</application> creates a Google search limited to the host that you specified in the <parameter>host</parameter> parameter."
 msgstr "Facultativement, construisez une requête de moteur de recherche à utiliser avec la boîte ad-hoc dans le menu de navigation et définissez le contenu complet d'une <sgmltag>&lt;form&gt;</sgmltag> HTML avec le paramètre <parameter>search</parameter>. Si vous ne définissez pas une recherche Web personnalisée, <application>Publican</application> crée une recherche Google limitée à l'hôte que vous avez défini au paramètre <parameter>host</parameter>."
 
 #. Tag: para
@@ -167,7 +166,7 @@ msgid "With <parameter>def_lang</parameter> set to <literal>fr-FR</literal>, vis
 msgstr "Si <parameter>def_lang</parameter> est défini égal à <literal>fr-FR</literal>, les visiteurs visionnant le menu de navigation en espagnol (par exemple) seront renvoyés sur la version française originale du document si celui-ci n'a pas encore été traduit en castillan."
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "Optionally, configure a <firstterm>dump file</firstterm> for the website. <application>Publican</application> can output an XML file that provides complete site content details for delivery of other services, such as web feeds or customised search pages. The file is updated whenever a book is installed or removed from the site, or the <prompt>$</prompt> <command>publican update_site</command> command is run. Configure the <parameter>dump</parameter>, <parameter>dump_file</parameter>, and <parameter>zip_dump</parameter> parameters as follows:"
 msgstr "Facultativement, configurez un <firstterm>fichier vidage</firstterm> pour le site. <application>Publican</application> peut sortir un fichier XML donnant des détails complets sur le contenu du site à livrer à d'autres services, comme des sources Web ou des pages de recherche personnalisées. Le fichier est mis à jour chaque fois qu'un ouvrage est installé ou enlevé du site, ou bien que la commande <command>publican update_site</command> est lancée. Configurez les paramètres <parameter>dump</parameter>, <parameter>dump_file</parameter> et <parameter>zip_dump</parameter> ainsi :"
 
@@ -201,9 +200,7 @@ msgstr "<parameter>zip_dump</parameter>"
 msgid "Set <literal>zip_dump: 1</literal> to specify that <application>Publican</application> should create a zipped version of the XML file together with the XML version. This parameter defaults to <literal>0</literal> (off)."
 msgstr "Définissez <literal>zip_dump: 1</literal> pour indiquer que <application>Publican</application> doit créer une version compressée du fichier XML en même temps qu'un version normale. Par défaut, ce paramètre est égal à <literal>0</literal> (off)."
 
-#. Tag: para
-#, no-c-format
-msgid "Refer to <xref linkend=\"\" /> for a description of the contents of the dump file."
+msgid "Refer to <xref linkend=\"appe-Publican-Users_Guide-Contents_of_the_website_dump_file\" /> for a description of the contents of the dump file."
 msgstr ""
 
 #. Tag: para
@@ -217,8 +214,8 @@ msgid "web_style: 1"
 msgstr ""
 
 #. Tag: para
-#, no-c-format
-msgid "The website resembles those produced by Publican&nbsp;2, with a list of products displayed in a navigation pane at the left of the page. (Default)"
+#, no-c-format, fuzzy
+msgid "The website resembles those produced by Publican 2, with a list of products displayed in a navigation pane at the left of the page. (Default)"
 msgstr ""
 
 #. Tag: term
@@ -232,8 +229,8 @@ msgid "The website includes a breadcrumb-like navigation bar across the top of t
 msgstr ""
 
 #. Tag: para
-#, no-c-format
-msgid "The web style set for your site must match the web style set for your content. For example, if you set <literal>web_style:&nbsp;2</literal> for your website, you need to have <literal>web_style:&nbsp;2</literal> set in each of the books that you want to install on the site. Consider setting this parameter in the <filename>defaults.cfg</filename> or <filename>overrides.cfg</filename> files of the brands that you intend to use with this site."
+#, no-c-format, fuzzy
+msgid "The web style set for your site must match the web style set for your content. For example, if you set <literal>web_style: 2</literal> for your website, you need to have <literal>web_style: 2</literal> set in each of the books that you want to install on the site. Consider setting this parameter in the <filename>defaults.cfg</filename> or <filename>overrides.cfg</filename> files of the brands that you intend to use with this site."
 msgstr ""
 
 #. Tag: para
@@ -247,7 +244,7 @@ msgid "manual_toc_update: 1"
 msgstr "manual_toc_update: 1"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "Normally, <application>Publican</application> updates the site's tables of contents every time a documentation package is added or removed. On a site with a large number of documents on it (more than a few hundred), or where documents are updated very frequently (dozens of updates per week), this process is very demanding on a server. On a large or busy site, we recommend that you set this parameter and then periodically update the tables of contents with the <prompt>$</prompt> <command>publican update_site</command> command."
 msgstr "Normalement, <application>Publican</application> met à jour les tables des matières d'un site chaque fois qu'un paquet de documentation est ajouté ou supprimé. Sur un site avec un grand nombre de documents (plus d'une centaine), ou bien si les documents sont mis à jour très fréquemment (des dizaines de mises à jour par semaine), ce processus est très gourmand pour un serveur. Sur un site important ou occupé, nous recommandons d'activer ce paramètre et de mettre à jour périodiquement les tables des matières avec la commande <command>publican update_site</command>."
 
@@ -268,11 +265,11 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format, fuzzy
-msgid "Create an empty file named <filename>site_overrides.css</filename> in the directory that you specified with <option>doc_path</option> (the directory that contains <filename>interactive.css</filename> and the various language directories). If you want to use site-specific styles to override those provided by <filename>interactive.css</filename>, you can add a <filename>site_overrides.css</filename> to the document that provides the site <firstterm>home page</firstterm> — refer to <xref linkend=\"\" />. If you do not want to use site-specific styles, the empty file you add here will prevent 404 errors on your server. On a Linux system, change into the directory that you specified with <option>doc_path</option> and run:"
+msgid "Create an empty file named <filename>site_overrides.css</filename> in the directory that you specified with <option>doc_path</option> (the directory that contains <filename>interactive.css</filename> and the various language directories). If you want to use site-specific styles to override those provided by <filename>interactive.css</filename>, you can add a <filename>site_overrides.css</filename> to the document that provides the site <firstterm>home page</firstterm> — refer to <xref linkend=\"sect-Publican-Users_Guide-Creating_installing_and_updating_the_home_page\" />. If you do not want to use site-specific styles, the empty file you add here will prevent 404 errors on your server. On a Linux system, change into the directory that you specified with <option>doc_path</option> and run:"
 msgstr "Créez un fichier vide nommé <filename>site_overrides.css</filename> dans le répertoire défini par <option>doc_path</option> (le répertoire contenant <filename>interactive.css</filename> et les divers sous-répertoires des langues). Si vous souhaitez utiliser des styles propres à un site en sorte qu'ils prennent le pas sur ceux de <filename>interactive.css</filename>, vous pouvez ajouter un fichier <filename>site_overrides.css</filename> au document définissant la <firstterm>page d'accueil</firstterm> — voyez la <xref linkend=\"sect-Users_Guide-Website-homepage-manual\" />. Si vous ne voulez pas utiliser de styles propres au site, le fichier vide ajouté ici préviendra l'apparition d'erreurs 404 sur le serveur. Sur un système Linux, placez-vous dans le répertoire précisé par <option>doc_path</option> et exécutez :"
 
 #. Tag: screen
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "<prompt>$</prompt> <command>touch site_overrides.css</command>"
 msgstr "<command>touch site_overrides.css</command>"
 
@@ -332,7 +329,7 @@ msgid "To make <application>Publican</application> refresh the site structure at
 msgstr "Pour faire en sorte que <application>Publican</application> rafraîchisse la structure du site, lancez à tout moment :"
 
 #. Tag: screen
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "<prompt>$</prompt> <command>publican update_site --site_config <replaceable>path_to_site_configuration_file</replaceable>.cfg</command>"
 msgstr "<command>publican update_site --site_config <replaceable>chemin_vers_le_fichier_de_configuration_du_site</replaceable>.cfg</command>"
 
@@ -343,10 +340,13 @@ msgstr "<command>publican update_site --site_config <replaceable>chemin_vers_le_
 
 #. Tag: screen
 #, no-c-format
-#~ msgid ""
-"<command>mkdir ~/docsite</command>\n"
+#~ msgid "<command>mkdir ~/docsite</command>\n"
 "<command>cd ~/docsite</command>"
+#~ msgstr "<command>mkdir ~/docsite</command>\n"
+"<command>cd ~/docsite</command>"
+
+#. Tag: para
+#, no-c-format
+#~ msgid "Refer to <xref linkend=\"\" /> for a description of the contents of the dump file."
 #~ msgstr ""
-"<command>mkdir ~/docsite</command>\n"
-"<command>cd ~/docsite</command>"
 

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2014-09-18 09:54+1000\n"
-"PO-Revision-Date: 2014-09-18 09:54+1000\n"
+"POT-Creation-Date: 2014-09-30 07:39+1000\n"
+"PO-Revision-Date: 2014-09-30 07:39+1000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: None\n"
 "Language: en-US \n"
@@ -39,7 +39,7 @@ msgstr ""
 msgid "On a computer with an operating system other than Linux, also set:"
 msgstr ""
 
-msgid "<option>--tmpl_path</option> — the path to the <filename>templates/</filename> directory of your <application>Publican</application> installation. On computers with Windows operating systems, this is typically <filename><replaceable>%SystemDrive%</replaceable>\<replaceable>%ProgramFiles%</replaceable>\Publican\templates</filename>."
+msgid "<option>--tmpl_path</option> — the path to the <filename>templates/</filename> directory of your <application>Publican</application> installation. On computers with Windows operating systems, this is typically <filename><replaceable>%SystemDrive%</replaceable>\\<replaceable>%ProgramFiles%</replaceable>\\Publican\templates</filename>."
 msgstr ""
 
 msgid "For example:"
@@ -132,7 +132,7 @@ msgstr ""
 msgid "web_style: 1"
 msgstr ""
 
-msgid "The website resembles those produced by Publican 2, with a list of products displayed in a navigation pane at the left of the page. (Default)"
+msgid "The website resembles those produced by Publican 2, with a list of products displayed in a navigation pane at the left of the page. (Default)"
 msgstr ""
 
 msgid "web_style: 2"
@@ -141,7 +141,7 @@ msgstr ""
 msgid "The website includes a breadcrumb-like navigation bar across the top of the documentation."
 msgstr ""
 
-msgid "The web style set for your site must match the web style set for your content. For example, if you set <literal>web_style: 2</literal> for your website, you need to have <literal>web_style: 2</literal> set in each of the books that you want to install on the site. Consider setting this parameter in the <filename>defaults.cfg</filename> or <filename>overrides.cfg</filename> files of the brands that you intend to use with this site."
+msgid "The web style set for your site must match the web style set for your content. For example, if you set <literal>web_style: 2</literal> for your website, you need to have <literal>web_style: 2</literal> set in each of the books that you want to install on the site. Consider setting this parameter in the <filename>defaults.cfg</filename> or <filename>overrides.cfg</filename> files of the brands that you intend to use with this site."
 msgstr ""
 
 msgid "Optionally, specify that the site tables of contents will be updated manually with the <parameter>manual_toc_update</parameter> parameter, for example:"

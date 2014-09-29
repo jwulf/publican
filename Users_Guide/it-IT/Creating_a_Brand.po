@@ -21,12 +21,12 @@ msgid "Creating a brand"
 msgstr "Creare un brand"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "Use the <prompt>$</prompt> <command>create_brand</command> action to create a new brand. When you create a new brand, you must give it a name and specify the original language for the brand's XML files. The <option>--name</option> option provides the name, and the <option>--lang</option> option specifies the language. The complete command is therefore:"
 msgstr "Usare l'azione <command>create_brand</command> per creare un nuovo brand. Quando si crea un nuovo brand, occorre fornire un nome e specificare la lingua originale per i file XML del brand. L'opzione <option>--name</option> fornisce il nome, e l'opzione <option>--lang</option> specifica la lingua. Quindi il comando completo è:"
 
 #. Tag: screen
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "<prompt>$</prompt> <command>publican create_brand --name=<replaceable>brand</replaceable> --lang=<replaceable>language_code</replaceable></command>"
 msgstr "<command>publican create_brand --name=<replaceable>brand</replaceable> --lang=<replaceable>codice_linguistico</replaceable></command>\n"
 
@@ -41,7 +41,7 @@ msgid "For example, to create a brand called <literal>Acme</literal>, which will
 msgstr "Per esempio, per creare un brand di nome <literal>Acme</literal>, con i file XML in Common Content redatti in inglese statunitense, eseguire:"
 
 #. Tag: screen
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "<prompt>$</prompt> <command>publican create_brand --name=Acme --lang=en-US</command>"
 msgstr "<command>publican create_brand --name=Acme --lang=en-US</command>\n"
 

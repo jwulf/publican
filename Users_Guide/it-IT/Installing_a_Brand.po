@@ -52,7 +52,7 @@ msgid "Change into the directory in which you created or unpacked the brand:"
 msgstr "Spostarsi nella cartella contenente il brand estratto:"
 
 #. Tag: screen
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "<prompt>$</prompt> <command>cd publican-<replaceable>brand</replaceable></command>"
 msgstr "<command>cd publican-<replaceable>brand</replaceable></command>\n"
 
@@ -67,7 +67,7 @@ msgid "Build the brand:"
 msgstr "Compilare il brand:"
 
 #. Tag: screen
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "<prompt>$</prompt> <command>publican build --formats xml --langs all --publish</command>"
 msgstr "<command>publican build --formats xml --langs all --publish</command>\n"
 
@@ -77,7 +77,7 @@ msgid "Install the brand:"
 msgstr "Installare il brand:"
 
 #. Tag: screen
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "<prompt>$</prompt> <command>sudo publican install_brand --path <replaceable>path</replaceable></command>"
 msgstr "<command>sudo publican install_brand --path <replaceable>path</replaceable></command>\n"
 
@@ -87,7 +87,7 @@ msgid "where <replaceable>path</replaceable> is the path to the <application>Pub
 msgstr "dove <replaceable>path</replaceable> è il percorso ai file Common Content di <application>Publican</application>. Per esempio, su un sistema Linux, eseguire:"
 
 #. Tag: screen
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "<prompt>$</prompt> <command>sudo publican install_brand --path /usr/share/publican/Common_Content</command>"
 msgstr "<command>sudo publican install_brand --path /usr/share/publican/Common_Content</command>\n"
 
@@ -97,7 +97,7 @@ msgid "or on a Windows system, run"
 msgstr "o su un sistema Windows, eseguire:"
 
 #. Tag: screen
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "<prompt>$</prompt> <command>publican install_brand --path \"C:/Program Files/Publican/Common_Content\"</command>"
 msgstr "<command>publican install_brand --path \"C:/Program Files/Publican/Common_Content\"</command>\n"
 
@@ -136,15 +136,11 @@ msgstr "Commento"
 msgid "common"
 msgstr "common"
 
-#. Tag: entry
-#, no-c-format
-msgid "<ulink url=\"http://creativecommons.org/publicdomain/zero/1.0/\">CC0 1.0</ulink>"
-msgstr "<ulink url=\"http://creativecommons.org/publicdomain/zero/1.0/\">CC0 1.0</ulink>"
+msgid "<link xlink:href=\"http://creativecommons.org/publicdomain/zero/1.0/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">CC0 1.0</link>"
+msgstr ""
 
-#. Tag: entry
-#, no-c-format
-msgid "<ulink url=\"http://www.gnu.org/licenses/fdl.html\">GFDL Version 1.2</ulink>"
-msgstr "<ulink url=\"http://www.gnu.org/licenses/fdl.html\">GFDL Version 1.2</ulink>"
+msgid "<link xlink:href=\"http://www.gnu.org/licenses/fdl.html\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">GFDL Version 1.2</link>"
+msgstr ""
 
 #. Tag: entry
 #, no-c-format
@@ -161,10 +157,8 @@ msgstr "Licenza GPL compatibile. Nessuna opzione."
 msgid "RedHat"
 msgstr "RedHat"
 
-#. Tag: entry
-#, no-c-format
-msgid "<ulink url=\"http://creativecommons.org/licenses/by-sa/3.0/\">CC-BY-SA 3.0</ulink>"
-msgstr "<ulink url=\"http://creativecommons.org/licenses/by-sa/3.0/\">CC-BY-SA 3.0</ulink>"
+msgid "<link xlink:href=\"http://creativecommons.org/licenses/by-sa/3.0/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">CC-BY-SA 3.0</link>"
+msgstr ""
 
 #. Tag: entry
 #, no-c-format
@@ -206,10 +200,8 @@ msgstr "Nessuna opzione."
 msgid "oVirt"
 msgstr "oVirt"
 
-#. Tag: entry
-#, no-c-format
-msgid "<ulink url=\"http://www.opencontent.org/openpub/\">OPL 1.0</ulink>"
-msgstr "<ulink url=\"http://www.opencontent.org/openpub/\">OPL 1.0</ulink>"
+msgid "<link xlink:href=\"http://www.opencontent.org/openpub/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">OPL 1.0</link>"
+msgstr ""
 
 #. Tag: entry
 #, no-c-format
@@ -255,4 +247,24 @@ msgstr "publican-genome"
 #, no-c-format
 msgid "Note the difference in licensing between the common content files provided in the common brand (CC0) and the default license set for books generated with the common brand (GFDL). The CC0 license allows you to redistribute and relicense the files that make up the common brand (including the CSS and image files) to suit your project. <application>Publican</application> suggests the GFDL for documentation by default because <application>Publican</application> is developed primarily to build documentation for software. The GFDL is compatible with the GPL, which is the most commonly used license for open-source software."
 msgstr "Notare, nel brand common, la differenza di licenza tra i file di common content (CC0) e la licenza predefinita (GFDL), impostata sui libri generati con il brand common. La licenza CC0 consente di re-distribuire e licenziare i file (inclusi i file CSS e le immagini), che fanno parte del common brand per soddisfare alle proprie esigenze progettuali. <application>Publican</application> suggerisce la licenza GFDL per la documentazione, per impostazione predefinita, poiché <application>Publican</application> è sviluppato in primo luogo per creare documentazione per software. La licenza GFDL è compatibile con la licenza GPL, che è la licenza più comunemente usata per il software open-source. "
+
+#. Tag: entry
+#, no-c-format
+#~ msgid "<ulink url=\"http://www.opencontent.org/openpub/\">OPL 1.0</ulink>"
+#~ msgstr "<ulink url=\"http://www.opencontent.org/openpub/\">OPL 1.0</ulink>"
+
+#. Tag: entry
+#, no-c-format
+#~ msgid "<ulink url=\"http://www.gnu.org/licenses/fdl.html\">GFDL Version 1.2</ulink>"
+#~ msgstr "<ulink url=\"http://www.gnu.org/licenses/fdl.html\">GFDL Version 1.2</ulink>"
+
+#. Tag: entry
+#, no-c-format
+#~ msgid "<ulink url=\"http://creativecommons.org/publicdomain/zero/1.0/\">CC0 1.0</ulink>"
+#~ msgstr "<ulink url=\"http://creativecommons.org/publicdomain/zero/1.0/\">CC0 1.0</ulink>"
+
+#. Tag: entry
+#, no-c-format
+#~ msgid "<ulink url=\"http://creativecommons.org/licenses/by-sa/3.0/\">CC-BY-SA 3.0</ulink>"
+#~ msgstr "<ulink url=\"http://creativecommons.org/licenses/by-sa/3.0/\">CC-BY-SA 3.0</ulink>"
 

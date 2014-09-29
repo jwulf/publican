@@ -40,7 +40,7 @@ msgid "Log into the webserver."
 msgstr "Se connecter au serveur Web."
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "Install <application>Publican</application> and its web components package. For example, on a webserver with a Fedora operating system, run:"
 msgstr "Installer <application>Publican</application>. Par exemple, sur un serveur avec Fedora comme système d'exploitation, exécuter :"
 
@@ -50,7 +50,7 @@ msgid "<prompt>$</prompt> <command>sudo yum install publican publican-common-web
 msgstr ""
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "With root privileges, edit the <filename>/etc/publican-website.cfg</filename> file to specify the name of the site, the web host, and optionally, search parameters, default language, dump file settings, and web style for the site:"
 msgstr "Modifier le fichier <filename>/etc/publican-website.cfg</filename> pour définir le nom du site, l'hôte Web et, facultativement, les paramètres de recherche, la langue par défaut et les réglages du fichier de vidage pour le site :"
 
@@ -85,8 +85,8 @@ msgid "<application>Publican</application> uses the value set for <parameter>hos
 msgstr "<application>Publican</application> utilise la valeur définie pour  <parameter>host</parameter> pour construire les URL dans le fichier XML <filename>Sitemap</filename> qu'il crée pour les moteurs d'indexation et pour limiter aux résultats de votre seul site les recherches opérées par l'intermédiaire de la boîte ad-hoc dans le menu de navigation."
 
 #. Tag: para
-#, no-c-format
-msgid "Optionally, construct a search engine query to use with the search box in the navigation menu and specify the entire content of a HTML <sgmltag>&lt;form&gt;</sgmltag> with the <parameter>search</parameter> parameter. If you do not specify a custom web search, <application>Publican</application> creates a Google search limited to the host that you specified in the <parameter>host</parameter> parameter."
+#, no-c-format, fuzzy
+msgid "Optionally, construct a search engine query to use with the search box in the navigation menu and specify the entire content of a HTML <tag>&lt;form&gt;</tag> with the <parameter>search</parameter> parameter. If you do not specify a custom web search, <application>Publican</application> creates a Google search limited to the host that you specified in the <parameter>host</parameter> parameter."
 msgstr "Facultativement, construire une requête de moteur de recherche à utiliser avec la boîte ad-hoc dans le menu de navigation et définir le contenu complet d'une <sgmltag>&lt;form&gt;</sgmltag> HTML avec le paramètre <parameter>search</parameter>. Si vous ne définissez pas une recherche Web personnalisée, <application>Publican</application> crée une recherche Google limitée à l'hôte que vous avez défini au paramètre <parameter>host</parameter>."
 
 #. Tag: para
@@ -135,7 +135,7 @@ msgid "With <parameter>def_lang</parameter> set to <literal>fr-FR</literal>, vis
 msgstr "Si <parameter>def_lang</parameter> est défini égal à <literal>fr-FR</literal>, les visiteurs visionnant le menu de navigation en espagnol (par exemple) seront reliés à la version française originale du document si celui-ci n'a pas encore été traduit en castillan."
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "Optionally, configure a <firstterm>dump file</firstterm> for the website. <application>Publican</application> can output an XML file that provides complete site content details for delivery of other services, such as web feeds or customised search pages. The file is updated whenever a book is installed or removed from the site, or the <prompt>$</prompt> <command>publican update_site</command> command is run. Configure the <parameter>dump</parameter>, <parameter>dump_file</parameter>, and <parameter>zip_dump</parameter> parameters as follows:"
 msgstr "Facultativement, configurer un <firstterm>fichier vidage</firstterm> pour le site. <application>Publican</application> peut sortir un fichier XML donnant des détails complets sur le contenu du site à livrer à d'autres services, comme des sources Web ou des pages de recherche personnalisées. Le fichier est mis à jour chaque fois qu'un ouvrage est installé ou enlevé du site, ou bien que la commande <command>publican update_site</command> est lancée. Configurez les paramètres <parameter>dump</parameter>, <parameter>dump_file</parameter> et <parameter>zip_dump</parameter> ainsi :"
 
@@ -169,9 +169,7 @@ msgstr "<parameter>zip_dump</parameter>"
 msgid "Set <literal>zip_dump: 1</literal> to specify that <application>Publican</application> should create a zipped version of the XML file together with the XML version. This parameter defaults to <literal>0</literal> (off)."
 msgstr "Définir <literal>zip_dump: 1</literal> pour indiquer que <application>Publican</application> doit créer une version compressée du fichier XML en même temps qu'un version normale. Par défaut, ce paramètre est égal à <literal>0</literal> (off)."
 
-#. Tag: para
-#, no-c-format
-msgid "Refer to <xref linkend=\"\" /> for a description of the contents of the dump file."
+msgid "Refer to <xref linkend=\"appe-Publican-Users_Guide-Contents_of_the_website_dump_file\" /> for a description of the contents of the dump file."
 msgstr ""
 
 #. Tag: para
@@ -185,8 +183,8 @@ msgid "web_style: 1"
 msgstr ""
 
 #. Tag: para
-#, no-c-format
-msgid "The website resembles those produced by Publican&nbsp;2, with a list of products displayed in a navigation pane at the left of the page. (Default)"
+#, no-c-format, fuzzy
+msgid "The website resembles those produced by Publican 2, with a list of products displayed in a navigation pane at the left of the page. (Default)"
 msgstr ""
 
 #. Tag: term
@@ -200,8 +198,8 @@ msgid "The website includes a breadcrumb-like navigation bar across the top of t
 msgstr ""
 
 #. Tag: para
-#, no-c-format
-msgid "The web style set for your site must match the web style set for your content. For example, if you set <literal>web_style:&nbsp;2</literal> for your website, you need to have <literal>web_style:&nbsp;2</literal> set in each of the books that you want to install on the site. Consider setting this parameter in the <filename>defaults.cfg</filename> or <filename>overrides.cfg</filename> files of the brands that you intend to use with this site."
+#, no-c-format, fuzzy
+msgid "The web style set for your site must match the web style set for your content. For example, if you set <literal>web_style: 2</literal> for your website, you need to have <literal>web_style: 2</literal> set in each of the books that you want to install on the site. Consider setting this parameter in the <filename>defaults.cfg</filename> or <filename>overrides.cfg</filename> files of the brands that you intend to use with this site."
 msgstr ""
 
 #. Tag: para
@@ -236,11 +234,11 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format, fuzzy
-msgid "Create an empty file named <filename>site_overrides.css</filename>. If you want to use site-specific styles to override those provided by <filename>interactive.css</filename>, you can add a <filename>site_overrides.css</filename> to the document that provides the site <firstterm>home page</firstterm> — refer to <xref linkend=\"\" />. If you do not want to use site-specific styles, the empty file you add here will prevent 404 errors on your server. On a Linux system, run:"
+msgid "Create an empty file named <filename>site_overrides.css</filename>. If you want to use site-specific styles to override those provided by <filename>interactive.css</filename>, you can add a <filename>site_overrides.css</filename> to the document that provides the site <firstterm>home page</firstterm> — refer to <xref linkend=\"sect-Publican-Users_Guide-Creating_installing_and_updating_the_home_page\" />. If you do not want to use site-specific styles, the empty file you add here will prevent 404 errors on your server. On a Linux system, run:"
 msgstr "Créez un fichier vide nommé <filename>site_overrides.css</filename>. Si vous souhaitez utiliser des styles propres à un site en sorte qu'ils prennent le pas sur ceux de <filename>interactive.css</filename>, vous pouvez ajouter un fichier <filename>site_overrides.css</filename> au document définissant la <firstterm>page d'accueil</firstterm> — voyez la <xref linkend=\"sect-Users_Guide-Website-homepage-rpm\" />. Si vous ne voulez pas utiliser de styles propres au site, le fichier vide ajouté ici prévient l'apparition d'erreurs 404 sur le serveur. Sur un système Linux, exécutez :"
 
 #. Tag: screen
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "<prompt>#</prompt> <command>touch /var/www/html/docs/site_overrides.css</command>"
 msgstr "<command>touch /var/www/html/docs/site_overrides.css</command>"
 
@@ -254,16 +252,6 @@ msgstr "Pour faire en sorte que <application>Publican</application> rafraîchiss
 msgid "<prompt>$</prompt> <command>publican update_site</command>"
 msgstr ""
 
-#. Tag: screen
-#, no-c-format
-#~ msgid "<command>su -</command>"
-#~ msgstr "<command>su -</command>"
-
-#. Tag: para
-#, no-c-format
-#~ msgid "Perform the following steps on your webserver. You must have an account with root privileges."
-#~ msgstr "Parcourez les étapes suivantes sur votre serveur Web. Vous devez disposez d'un compte autorisant les privilèges administrateur."
-
 #. Tag: para
 #, no-c-format
 #~ msgid "Become root:"
@@ -271,8 +259,8 @@ msgstr ""
 
 #. Tag: screen
 #, no-c-format
-#~ msgid "<command>publican update_site --site_config /etc/publican-website.cfg</command>"
-#~ msgstr "<command>publican update_site --site_config /etc/publican-website.cfg</command>"
+#~ msgid "<command>yum install publican</command>"
+#~ msgstr "<command>yum install publican</command>"
 
 #. Tag: para
 #, no-c-format
@@ -281,6 +269,21 @@ msgstr ""
 
 #. Tag: screen
 #, no-c-format
-#~ msgid "<command>yum install publican</command>"
-#~ msgstr "<command>yum install publican</command>"
+#~ msgid "<command>publican update_site --site_config /etc/publican-website.cfg</command>"
+#~ msgstr "<command>publican update_site --site_config /etc/publican-website.cfg</command>"
+
+#. Tag: screen
+#, no-c-format
+#~ msgid "<command>su -</command>"
+#~ msgstr "<command>su -</command>"
+
+#. Tag: para
+#, no-c-format
+#~ msgid "Refer to <xref linkend=\"\" /> for a description of the contents of the dump file."
+#~ msgstr ""
+
+#. Tag: para
+#, no-c-format
+#~ msgid "Perform the following steps on your webserver. You must have an account with root privileges."
+#~ msgstr "Parcourez les étapes suivantes sur votre serveur Web. Vous devez disposez d'un compte autorisant les privilèges administrateur."
 

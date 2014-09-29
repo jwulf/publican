@@ -264,7 +264,7 @@ msgstr "<parameter>dt_requires</parameter>"
 
 #. Tag: para
 #, no-c-format, fuzzy
-msgid "a package that the desktop package requires, for example, a documentation menu package. Refer to <xref linkend=\"\" />."
+msgid "a package that the desktop package requires, for example, a documentation menu package. Refer to <xref linkend=\"sect-Publican-Users_Guide-Desktop_menu_entries_for_documents\" />."
 msgstr "un pacchetto richiesto dal pacchetto desktop, per esempio, un pacchetto di menu del desktop, per documentazione. Fare riferimento alla <xref linkend=\"desktop_menus\" />."
 
 #. Tag: term
@@ -333,13 +333,13 @@ msgid "the provider name for an <application>Eclipse</application> help plugin (
 msgstr "il nome del fornitore del plugin d'aiuto di <application>Eclipse</application>. (Per impostazione: <replaceable>Publican</replaceable>-<replaceable>versione Publican</replaceable>)"
 
 #. Tag: term
-#, no-c-format
-msgid "<parameter>img_dir</parameter>"
-msgstr "<parameter>tmp_dir</parameter>"
+#, no-c-format, fuzzy
+msgid "<parameter>rev_file</parameter>"
+msgstr "<parameter>release</parameter>"
 
 #. Tag: para
-#, no-c-format
-msgid "the directory <application>Publican</application> will process images from. (Default: <literal>images</literal>)"
+#, no-c-format, fuzzy
+msgid "the directory for <application>Publican</application> output. (Default: <literal>tmp</literal>)"
 msgstr "la cartella di output di <application>Publican</application>. (Per impostazione: <literal>tmp</literal>)"
 
 #. Tag: term
@@ -363,13 +363,13 @@ msgid "translations to ignore."
 msgstr "traduzioni da ignorare"
 
 #. Tag: term
-#, no-c-format
-msgid "<parameter>img_dir</parameter>"
+#, no-c-format, fuzzy
+msgid "<parameter>tmp_dir</parameter>"
 msgstr "<parameter>tmp_dir</parameter>"
 
 #. Tag: para
-#, no-c-format
-msgid "the directory <application>Publican</application> will process images from. (Default: <literal>images</literal>)"
+#, no-c-format, fuzzy
+msgid "the directory for <application>Publican</application> output. (Default: <literal>tmp</literal>)"
 msgstr "la cartella di output di <application>Publican</application>. (Per impostazione: <literal>tmp</literal>)"
 
 #. Tag: term
@@ -424,7 +424,7 @@ msgstr "<parameter>menu_category</parameter>"
 
 #. Tag: para
 #, no-c-format, fuzzy
-msgid "the desktop menu category (as defined by a corresponding <filename>.menu</filename> file) in which a document should appear when installed from a desktop RPM package. Refer to <xref linkend=\"\" />."
+msgid "the desktop menu category (as defined by a corresponding <filename>.menu</filename> file) in which a document should appear when installed from a desktop RPM package. Refer to <xref linkend=\"sect-Publican-Users_Guide-Desktop_menu_entries_for_documents\" />."
 msgstr "la categoria del desktop menu (come definito dal file <filename>.menu</filename> corrispondente), in cui far comparire un documento quando installato da un pacchetto RPM per desktop. Fare riferimento alla <xref linkend=\"desktop_menus\" />."
 
 #. Tag: term
@@ -468,8 +468,8 @@ msgid "the repository from which to fetch remote books that form part of a distr
 msgstr "il repository da cui scaricare libri remoti, parte di un set distribuito."
 
 #. Tag: term
-#, no-c-format
-msgid "<parameter>rev_dir</parameter>"
+#, no-c-format, fuzzy
+msgid "<parameter>rev_file</parameter>"
 msgstr "<parameter>release</parameter>"
 
 #. Tag: para
@@ -478,8 +478,8 @@ msgid "override the default Revision History file direction. By default <applica
 msgstr ""
 
 #. Tag: term
-#, no-c-format
-msgid "<parameter>rev_dir</parameter>"
+#, no-c-format, fuzzy
+msgid "<parameter>rev_file</parameter>"
 msgstr "<parameter>release</parameter>"
 
 #. Tag: para
@@ -528,13 +528,13 @@ msgid "URL at which to find tarballs of source files."
 msgstr "URL in cui trovare i tarball dei file sorgenti"
 
 #. Tag: term
-#, no-c-format
-msgid "<parameter>img_dir</parameter>"
+#, no-c-format, fuzzy
+msgid "<parameter>tmp_dir</parameter>"
 msgstr "<parameter>tmp_dir</parameter>"
 
 #. Tag: para
-#, no-c-format
-msgid "the directory <application>Publican</application> will process images from. (Default: <literal>images</literal>)"
+#, no-c-format, fuzzy
+msgid "the directory for <application>Publican</application> output. (Default: <literal>tmp</literal>)"
 msgstr "la cartella di output di <application>Publican</application>. (Per impostazione: <literal>tmp</literal>)"
 
 #. Tag: term
@@ -583,9 +583,9 @@ msgid "<parameter>web_formats</parameter>"
 msgstr "<parameter>web_formats</parameter>"
 
 #. Tag: para
-#, no-c-format, fuzzy
-msgid "a comma-separated list of formats to include in the web RPM package. Refer to <xref linkend=\"\" />."
-msgstr "un elenco di formati, separati da virgole, da includere nel pacchetto RPM per web. Vedere la <xref linkend=\"sect-Users_Guide-Packaging_a_book-The_publican_package_command\" />."
+#, no-c-format
+msgid "a comma-separated list of formats to include in the web RPM package. Refer to <xref linkend=\"sect-Publican-Users_Guide-Packaging_a_document-The_publican_package_command\" />."
+msgstr ""
 
 #. Tag: term
 #, no-c-format
@@ -644,7 +644,7 @@ msgstr "<parameter>web_type</parameter>"
 
 #. Tag: para
 #, no-c-format, fuzzy
-msgid "specifies that the document is descriptive content for a <application>Publican</application>-managed website rather than product documentation. This content includes the home page of the website (<literal>web_type:&nbsp;home</literal>), product description pages (<literal>web_type:&nbsp;product</literal>), and version description pages (<literal>web_type:&nbsp;version</literal>). Refer to <xref linkend=\"\" />."
+msgid "specifies that the document is descriptive content for a <application>Publican</application>-managed website rather than product documentation. This content includes the home page of the website (<literal>web_type:&nbsp;home</literal>), product description pages (<literal>web_type:&nbsp;product</literal>), and version description pages (<literal>web_type:&nbsp;version</literal>). Refer to <xref linkend=\"chap-Publican-Users_Guide-Building_a_website_with_Publican\" />."
 msgstr "specifica che il documento è un contenuto descrittivo di un sito web gestito da <application>Publican</application> e non una documentazione di prodotto. Questo contenuto include la home page del sito (<literal>web_type:&nbsp;home</literal>), pagine descrittive di prodotto (<literal>web_type:&nbsp;product</literal>) e di versione (<literal>web_type:&nbsp;version</literal>). Vedere il <xref linkend=\"sect-Users_Guide-Website\" />."
 
 #. Tag: term
@@ -669,16 +669,21 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-#~ msgid "the operating system for which to build packages. (Default: <literal>.el5</literal> — Red Hat Enterprise Linux 5)"
-#~ msgstr "il sistema operativo per cui creare il pacchetto. (Per impostazione: <literal>.el5</literal> — Red Hat Enterprise Linux 5)"
-
-#. Tag: para
-#, no-c-format
 #~ msgid "<emphasis role=\"strikethrough\">use <firstterm>strict mode</firstterm> (Default: <literal>0</literal> — not strict)</emphasis> Strict mode is not currently enforced."
 #~ msgstr "<emphasis role=\"strikethrough\">usa <firstterm>strict mode</firstterm> (Per impostazione: <literal>0</literal> — non strict)</emphasis> attualmente la modalità strict non è abilitata"
 
 #. Tag: para
 #, no-c-format
+#~ msgid "the operating system for which to build packages. (Default: <literal>.el5</literal> — Red Hat Enterprise Linux 5)"
+#~ msgstr "il sistema operativo per cui creare il pacchetto. (Per impostazione: <literal>.el5</literal> — Red Hat Enterprise Linux 5)"
+
+#. Tag: para
+#, no-c-format
 #~ msgid "whether <application>Publican</application> reports unknown tags when processing XML. (Default: <literal>1</literal> — report unknown tags)"
 #~ msgstr "specifica se segnalare i tag sconosciuti durante l'elaborazione degli XML. (Per impostazione: <literal>1</literal> — tag sconosciuti segnalati)"
+
+#. Tag: para
+#, no-c-format, fuzzy
+#~ msgid "a comma-separated list of formats to include in the web RPM package. Refer to <xref linkend=\"\" />."
+#~ msgstr "un elenco di formati, separati da virgole, da includere nel pacchetto RPM per web. Vedere la <xref linkend=\"sect-Users_Guide-Packaging_a_book-The_publican_package_command\" />."
 

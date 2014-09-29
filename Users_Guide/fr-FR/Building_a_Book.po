@@ -26,7 +26,7 @@ msgstr "Note — Personnalisation de la sortie"
 
 #. Tag: para
 #, no-c-format, fuzzy
-msgid "The parameters set in the document configuration file (by default, <filename>publican.cfg</filename>) allow you to control many aspects of the way in which a document is presented — refer to <xref linkend=\"\" />."
+msgid "The parameters set in the document configuration file (by default, <filename>publican.cfg</filename>) allow you to control many aspects of the way in which a document is presented — refer to <xref linkend=\"sect-Publican-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file\" />."
 msgstr "Les paramètres définis dans le fichier de configuration du document (par défaut, <filename>publican.cfg</filename>) vous permettent de contrôler divers rendus de présentation du document — voyez la <xref linkend=\"sect-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file\" />."
 
 #. Tag: para
@@ -35,7 +35,7 @@ msgid "If you maintain multiple versions of a document, you can create a configu
 msgstr "Si vous entretenez plusieurs versions d'un document, vous pouvez créer un fichier de configuration pour chaque version. À la construction du document, vous pouvez utiliser l'option <option>--config</option> pour préciser le fichier de configuration (et donc le jeu de paramètres associés) à utiliser dans une construction donnée, par exemple :"
 
 #. Tag: screen
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "<prompt>$</prompt> <command>publican build --formats html,pdf --langs en-US,de-DE,hu-HU --config community.cfg</command>"
 msgstr "<command>publican build --formats html,pdf --langs en-US,de-DE,hu-HU --config community.cfg</command>"
 
@@ -46,7 +46,7 @@ msgstr "Pour construire un document :"
 
 #. Tag: para
 #, no-c-format, fuzzy
-msgid "Confirm the <parameter>YEAR</parameter> and <parameter>HOLDER</parameter> entities have been configured in the <filename><replaceable>Doc_Name</replaceable>.ent</filename> file, as described in <xref linkend=\"\" />."
+msgid "Confirm the <parameter>YEAR</parameter> and <parameter>HOLDER</parameter> entities have been configured in the <filename><replaceable>Doc_Name</replaceable>.ent</filename> file, as described in <xref linkend=\"sect-Publican-Users_Guide-Files_in_the_book_directory-Doc_Name.ent\" />."
 msgstr "confirmer que les entités <parameter>YEAR</parameter> et <parameter>HOLDER</parameter> ont été définies dans le fichier <filename><replaceable>Nom_document</replaceable>.ent</filename>, comme décrit dans la <xref linkend=\"sect-Users_Guide-Files_in_the_book_directory-Doc_Name.ent\" />."
 
 #. Tag: para
@@ -55,7 +55,7 @@ msgid "Change into the root directory of the document. For example, if the docum
 msgstr "se placer dans le répertoire racine du document. Par exemple, si le document s'intitule <literal>Livre_test</literal> et est situé dans le répertoire <filename>~/livres/</filename>, exécutez la commande :"
 
 #. Tag: screen
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "<prompt>$</prompt> <command>cd ~/books/Test_Book</command>"
 msgstr "<command>cd ~/livres/Livre_test</command>"
 
@@ -65,7 +65,7 @@ msgid "Run a test for any errors that would stop the book from building in your 
 msgstr "lancez un test pour détecter une éventuelle anomalie qui empêcherait la construction de l'ouvrage dans la langue choisie, par exemple :"
 
 #. Tag: screen
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "<prompt>$</prompt> <command>publican build --formats=test --langs=en-US</command>"
 msgstr "<command>publican build --formats=test --langs=en-US</command>"
 
@@ -75,7 +75,7 @@ msgid "Run the following command to build the book:"
 msgstr "pour construire l'ouvrage, lancez :"
 
 #. Tag: screen
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "<prompt>$</prompt> <command>publican build --formats=<replaceable>formats</replaceable> --langs=<replaceable>languages</replaceable></command>"
 msgstr "<command>publican build --formats=<replaceable>formats</replaceable> --langs=<replaceable>langues</replaceable></command>"
 
@@ -181,46 +181,46 @@ msgstr "<option>eclipse</option>"
 
 #. Tag: para
 #, no-c-format, fuzzy
-msgid "<application>Publican</application> outputs the document as an <application>Eclipse</application> help plugin. Refer to <xref linkend=\"\" /> for details of specifying <application>Eclipse</application>'s <parameter>id</parameter>, <parameter>name</parameter>, and <parameter>provider-name</parameter> parameters with <application>Publican</application>'s <parameter>ec_id</parameter>, <parameter>ec_name</parameter>, and <parameter>ec_provider</parameter> parameters."
+msgid "<application>Publican</application> outputs the document as an <application>Eclipse</application> help plugin. Refer to <xref linkend=\"sect-Publican-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file\" /> for details of specifying <application>Eclipse</application>'s <parameter>id</parameter>, <parameter>name</parameter>, and <parameter>provider-name</parameter> parameters with <application>Publican</application>'s <parameter>ec_id</parameter>, <parameter>ec_name</parameter>, and <parameter>ec_provider</parameter> parameters."
 msgstr "<application>Publican</application> sort le document sous forme d'un greffon d'aide <application>Eclipse</application>. Voyez la <xref linkend=\"sect-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file\" /> pour des précisions pour la définition des paramètres <parameter>id</parameter>, <parameter>name</parameter> et <parameter>provider-name</parameter> de <application>Eclipse</application> avec les paramètres <parameter>ec_id</parameter>, <parameter>ec_name</parameter> et <parameter>ec_provider</parameter> de <application>Publican</application>."
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "The following examples demonstrate commonly used <prompt>$</prompt> <command>publican build</command> commands:"
 msgstr "Voici des exemples montrant des commandes courantes avec <command>publican build</command> :"
 
 #. Tag: term
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "<prompt>$</prompt> <command>publican build --help</command>"
 msgstr "<command>publican build --help</command>"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "List available <prompt>$</prompt> <command>publican build</command> options for building a book."
 msgstr "liste les options disponibles de <command>publican build</command> pour construire un ouvrage."
 
 #. Tag: term
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "<prompt>$</prompt> <command>publican build --formats=test --langs=<replaceable>languages</replaceable></command>"
 msgstr "<command>publican build --formats=test --langs=<replaceable>langues</replaceable></command>"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "Check that the book can be built correctly. Build <command>--formats=test</command> before running any other <prompt>$</prompt> <command>publican build</command> command, and before checking a book back into a version-controlled repository from which other contributors might download it."
 msgstr "vérifie que l'ouvrage peut être correctement construit. Lancez la commande <command>--formats=test</command> avant d'exécuter tout autre commande de <command>publican build</command> et avant de téléverser un ouvrage dans un dépôt à version contrôlée à partir duquel d'autres contributeurs pourraient le télécharger."
 
 #. Tag: term
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "<prompt>$</prompt> <command>publican build --formats=html --langs=<replaceable>languages</replaceable></command>"
 msgstr "<command>publican build --formats=html --langs=<replaceable>langues</replaceable></command>"
 
 #. Tag: para
 #, no-c-format, fuzzy
-msgid "Build the book in multi-page HTML format. The HTML output will be located in the <filename><replaceable>Doc_Name</replaceable>/tmp/<replaceable>language</replaceable>/html/</filename> directory. Each chapter and major section is placed in a separate HTML file. You can control the depth at which <application>Publican</application> places subsections into separate HTML files with the <literal>chunk-section-depth</literal> parameter in the <filename>publican.cfg</filename> — refer to <xref linkend=\"\" />."
+msgid "Build the book in multi-page HTML format. The HTML output will be located in the <filename><replaceable>Doc_Name</replaceable>/tmp/<replaceable>language</replaceable>/html/</filename> directory. Each chapter and major section is placed in a separate HTML file. You can control the depth at which <application>Publican</application> places subsections into separate HTML files with the <literal>chunk-section-depth</literal> parameter in the <filename>publican.cfg</filename> — refer to <xref linkend=\"sect-Publican-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file\" />."
 msgstr "construit l'ouvrage au format HTML sur plusieurs pages. La sortie HTML est située dans le répertoire <filename><replaceable>Nom_document</replaceable>/tmp/<replaceable>langue</replaceable>/html/</filename>. Chaque chapitre et division majeure est placée dans un fichier HTML distinct. Vous pouvez contrôler la profondeur de subdivision avec laquelle <application>Publican</application> mettra les sous-sections dans des fichiers séparés avec le paramètre <literal>chunk-section-depth</literal> dans <filename>publican.cfg</filename> — reportez-vous à la <xref linkend=\"sect-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file\" />."
 
 #. Tag: term
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "<prompt>$</prompt> <command>publican build --formats=html-single --langs=<replaceable>languages</replaceable></command>"
 msgstr "<command>publican build --formats=html-single --langs=<replaceable>langues</replaceable></command>"
 
@@ -230,7 +230,7 @@ msgid "Build the book in single-page HTML format. The output will be a single HT
 msgstr "Construit l'ouvrage au format HTML sur une seule page. La sortie sera un fichier HTML unique situé dans le répertoire <filename><replaceable>Nom_document</replaceable>/tmp/<replaceable>langue</replaceable>/html-single/</filename>."
 
 #. Tag: term
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "<prompt>$</prompt> <command>publican build --formats=pdf --langs=<replaceable>languages</replaceable></command>"
 msgstr "<command>publican build --formats=pdf --langs=<replaceable>langues</replaceable></command>"
 
@@ -240,7 +240,7 @@ msgid "Build the book as a PDF file. <application>Publican</application> relies 
 msgstr "Construit l'ouvrage sous forme d'un fichier PDF. <application>Publican</application> s'appuie sur une application externe, <application>FOP</application>, pour le rendu en PDF. En conséquence, la construction de PDF peut ne pas être possible sur tous les systèmes ; elle dépend de la disponibilité de <application>FOP</application>. La sortie sera un fichier PDF unique situé dans le répertoire <filename><replaceable>Nom_document</replaceable>/tmp/<replaceable>langue</replaceable>/pdf/</filename>."
 
 #. Tag: term
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "<prompt>$</prompt> <command>publican build --formats=html,html-single,pdf --langs=<replaceable>languages</replaceable></command>"
 msgstr "<command>publican build --formats=html,html-single,pdf --langs=<replaceable>langues</replaceable></command>"
 
@@ -256,7 +256,7 @@ msgstr "Construction d'un document sans validation"
 
 #. Tag: para
 #, no-c-format, fuzzy
-msgid "<application>Publican</application> validates your XML against the DocBook <firstterm>document type definition</firstterm> (DTD) before it builds the content. However, while a document is under development, you might sometimes want to skip validation while building, especially if the document contains cross-references (<sgmltag>&lt;xref&gt;</sgmltag>s) to sections of the document that do not yet exist. To skip validation, run <prompt>$</prompt> <command>publican build</command> with the <option>--novalid</option> option. Cross-references to non-existent content appear in the built document as three question marks: <literal>???</literal>."
+msgid "<application>Publican</application> validates your XML against the DocBook <firstterm>document type definition</firstterm> (DTD) before it builds the content. However, while a document is under development, you might sometimes want to skip validation while building, especially if the document contains cross-references (<tag>&lt;xref&gt;</tag>s) to sections of the document that do not yet exist. To skip validation, run <prompt>$</prompt> <command>publican build</command> with the <option>--novalid</option> option. Cross-references to non-existent content appear in the built document as three question marks: <literal>???</literal>."
 msgstr "<application>Publican</application> valide le XML vis à vis du DTD DocBook (<firstterm>définition type du document</firstterm>) avant la construction de son contenu. Toutefois, tant que le développement d'un document est en cours, vous pouvez souhaiter sauter cette phase pendant la construction, en particulier si le document comporte des références croisées (<sgmltag>&lt;xref&gt;</sgmltag>) vers des sections qui ne sont pas encore rédigées. Pour sauter la validation, exécutez <command>publican build</command> avec l'option <option>--novalid</option>. Les références croisées inexistantes apparaîtront dans le document construit sous forme de trois points d'interrogation : <literal>???</literal>."
 
 #. Tag: para

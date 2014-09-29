@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2014-09-18 09:54+1000\n"
-"PO-Revision-Date: 2014-09-18 09:54+1000\n"
+"POT-Creation-Date: 2014-09-30 07:39+1000\n"
+"PO-Revision-Date: 2014-09-30 07:39+1000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: None\n"
 "Language: en-US \n"
@@ -255,7 +255,7 @@ msgstr ""
 msgid "<parameter>docname</parameter>"
 msgstr ""
 
-msgid "specifies the document name. If set, this value overrides the content of the <tag>&lt;title&gt;</tag> tag in the <filename>Book_Info.xml</filename> file when you package a document. This value must contain only upper- and lower-case un-accented letters, digits, and the underscore and space characters (‘a–z’, ‘A–Z’, ‘0’–‘9’, and ‘_’ and ‘ ’)."
+msgid "specifies the document name. If set, this value overrides the content of the <tag>&lt;title&gt;</tag> tag in the <filename>Book_Info.xml</filename> file when you package a document. This value must contain only upper- and lower-case un-accented letters, digits, and the underscore and space characters (‘a–z’, ‘A–Z’, ‘0’–‘9’, and ‘_’ and ‘ ’)."
 msgstr ""
 
 msgid "<parameter>dt_obsoletes</parameter>"
@@ -279,7 +279,7 @@ msgstr ""
 msgid "A different DTD might slow your build"
 msgstr ""
 
-msgid "When you install <application>Publican</application>, you also install a local copy of the DocBook XML DTD version 4.5 and accompanying <firstterm>Extensible Stylesheet Language</firstterm> (XSL). If you set a version of the DTD for which there is no local support, <application>Publican</application> must download the appropriate DTD and XSL from an online source every time that it builds the document. Building your document is delayed while this download takes place. The combined size of the required files is around 70 MB."
+msgid "When you install <application>Publican</application>, you also install a local copy of the DocBook XML DTD version 4.5 and accompanying <firstterm>Extensible Stylesheet Language</firstterm> (XSL). If you set a version of the DTD for which there is no local support, <application>Publican</application> must download the appropriate DTD and XSL from an online source every time that it builds the document. Building your document is delayed while this download takes place. The combined size of the required files is around 70 MB."
 msgstr ""
 
 msgid "<parameter>dtd_type</parameter>"
@@ -405,7 +405,7 @@ msgstr ""
 msgid "<parameter>os_ver</parameter>"
 msgstr ""
 
-msgid "specifies the operating system for which to build packages. <application>Publican</application> appends the value that you provide here to the RPM packages that it builds. For example, <literal>.fc15</literal> for Fedora 15. The default value is <literal>.el5</literal>, which signifies Red Hat Enterprise Linux 5 and operating systems derived from it. Refer to <xref linkend=\"sect-Publican-Users_Guide-Packaging_a_document\" /> and <xref linkend=\"sect-Publican-Users_Guide-Packaging_a_brand\" />."
+msgid "specifies the operating system for which to build packages. <application>Publican</application> appends the value that you provide here to the RPM packages that it builds. For example, <literal>.fc15</literal> for Fedora 15. The default value is <literal>.el5</literal>, which signifies Red Hat Enterprise Linux 5 and operating systems derived from it. Refer to <xref linkend=\"sect-Publican-Users_Guide-Packaging_a_document\" /> and <xref linkend=\"sect-Publican-Users_Guide-Packaging_a_brand\" />."
 msgstr ""
 
 msgid "<parameter>prod_url</parameter>"
@@ -417,7 +417,7 @@ msgstr ""
 msgid "<parameter>product</parameter>"
 msgstr ""
 
-msgid "specifies the product to which this documentation applies. If set, this value overrides the content of the <tag>&lt;productname&gt;</tag> tag in the <filename>Book_Info.xml</filename> file when you package a document. This value must include only contain upper- and lower-case un-accented letters, digits, and the underscore and space characters (‘a–z’, ‘A–Z’, ‘0’–‘9’, and ‘_’ and ‘ ’)."
+msgid "specifies the product to which this documentation applies. If set, this value overrides the content of the <tag>&lt;productname&gt;</tag> tag in the <filename>Book_Info.xml</filename> file when you package a document. This value must include only contain upper- and lower-case un-accented letters, digits, and the underscore and space characters (‘a–z’, ‘A–Z’, ‘0’–‘9’, and ‘_’ and ‘ ’)."
 msgstr ""
 
 msgid "<parameter>release</parameter>"
@@ -546,7 +546,7 @@ msgstr ""
 msgid "Important — <literal>web_home</literal> is deprecated"
 msgstr ""
 
-msgid "In <application>Publican</application> 2.2, <literal>web_home</literal> is replaced by <literal>web_type: home</literal>. Support for <literal>web_home</literal> will be removed in a future version of <application>Publican</application>."
+msgid "In <application>Publican</application> 2.2, <literal>web_home</literal> is replaced by <literal>web_type: home</literal>. Support for <literal>web_home</literal> will be removed in a future version of <application>Publican</application>."
 msgstr ""
 
 msgid "<parameter>web_name_label</parameter>"
@@ -576,7 +576,7 @@ msgstr ""
 msgid "<parameter>web_type</parameter>"
 msgstr ""
 
-msgid "specifies that the document is descriptive content for a <application>Publican</application>-managed website rather than product documentation. This content includes the home page of the website (<literal>web_type: home</literal>), product description pages (<literal>web_type: product</literal>), and version description pages (<literal>web_type: version</literal>). Refer to <xref linkend=\"chap-Publican-Users_Guide-Building_a_website_with_Publican\" />."
+msgid "specifies that the document is descriptive content for a <application>Publican</application>-managed website rather than product documentation. This content includes the home page of the website (<literal>web_type: home</literal>), product description pages (<literal>web_type: product</literal>), and version description pages (<literal>web_type: version</literal>). Refer to <xref linkend=\"chap-Publican-Users_Guide-Building_a_website_with_Publican\" />."
 msgstr ""
 
 msgid "<parameter>web_version_label</parameter>"
@@ -588,7 +588,7 @@ msgstr ""
 msgid "<parameter>wkhtmltopdf_opts</parameter>"
 msgstr ""
 
-msgid "Extra options to pass to <application>wkhtmltopdf</application>. e.g. <literal>wkhtmltopdf_opts: \"-O landscape -s A3\"</literal>"
+msgid "Extra options to pass to <application>wkhtmltopdf</application>. e.g. <literal>wkhtmltopdf_opts: \"-O landscape -s A3\"</literal>"
 msgstr ""
 
 msgid "Help from the command line"

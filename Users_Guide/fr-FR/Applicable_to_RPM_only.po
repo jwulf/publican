@@ -20,7 +20,7 @@ msgid "Packages other than RPM packages"
 msgstr "Paquets autres que les paquets RPM"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "This section discusses packaging documents for distribution through the <application>RPM Package Manager</application>. However, when you use the <prompt>$</prompt> <command>publican package</command> command, <application>Publican</application> generates a tarball that you can use to build a package to distribute through different package manager software. If you run <command>publican package</command> on a computer on which <application>rpmbuild</application> is not installed, <application>Publican</application> still generates the tarball, even though it cannot then generate an RPM package from that tarball."
 msgstr "Ce paragraphe traite de l'empaquetage des documents en vue d'une distribution par l'intermédiaire du <application>Gestionnaire de paquets RPM</application>. Néanmoins, si vous utilisez la commande <command>publican package</command>, <application>Publican</application> crée une archive « .tar » ; vous pouvez l'utiliser pour construire un paquet à distribuer pour d'autres gestionnaires de paquets. Si vous exécutez <command>publican package</command> sur un ordinateur où <application>rpmbuild</application> n'est pas installé, <application>Publican</application> génère tout de même l'archive « .tar », même s'il ne peut pas créer de paquet RPM pour cette archive."
 

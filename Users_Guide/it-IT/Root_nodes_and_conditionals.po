@@ -27,9 +27,8 @@ msgid "If the root node of an XML file is excluded with a conditional, your docu
 msgstr "Se il nodo di root di un file XML viene escluso da un tag condizionale, il documento non compila, poiché file vuoti non sono file XML validi. Per esempio, se il file <filename>Installation_and_configuration_on_Fedora.xml</filename> contiene un solo capitolo:"
 
 #. Tag: programlisting
-#, no-c-format
+#, no-c-format, fuzzy
 msgid ""
-"\n"
 "&lt;?xml version='1.0' encoding='utf-8' ?&gt;\n"
 "&lt;!DOCTYPE chapter PUBLIC \"-//OASIS//DTD DocBook XML V4.5//EN\" \"http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd\" [\n"
 "]&gt;\n"
@@ -38,8 +37,7 @@ msgid ""
 "\n"
 "[text of chapter]\n"
 "\n"
-"&lt;/chapter&gt;\n"
-"\n"
+"&lt;/chapter&gt;"
 msgstr ""
 "\n"
 "&lt;?xml version='1.0' encoding='utf-8' ?&gt;\n"
@@ -55,11 +53,11 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format, fuzzy
-msgid "and this chapter is included in <filename>User_Guide.xml</filename> with an <sgmltag>&lt;xi:include&gt;</sgmltag> tag, the document will not build with <prompt>$</prompt> <command>condition: Ubuntu</command> set in the <filename>publican.cfg</filename> file."
+msgid "and this chapter is included in <filename>User_Guide.xml</filename> with an <tag>&lt;xi:include&gt;</tag> tag, the document will not build with <prompt>$</prompt> <command>condition: Ubuntu</command> set in the <filename>publican.cfg</filename> file."
 msgstr "ed il capitolo è incluso in <filename>User_Guide.xml</filename> con un tag <sgmltag>&lt;xi:include&gt;</sgmltag>, il documento non compila se è presente l'impostazione <command>condition: Ubuntu</command> nel file <filename>publican.cfg</filename>."
 
 #. Tag: para
-#, no-c-format
-msgid "To exclude this chapter, add a condition to the <sgmltag>&lt;xi:include&gt;</sgmltag> tag in <filename>User_Guide.xml</filename>, not to the <sgmltag>&lt;chapter&gt;</sgmltag> tag in <filename>Installation_and_configuration_on_Fedora.xml</filename>."
+#, no-c-format, fuzzy
+msgid "To exclude this chapter, add a condition to the <tag>&lt;xi:include&gt;</tag> tag in <filename>User_Guide.xml</filename>, not to the <tag>&lt;chapter&gt;</tag> tag in <filename>Installation_and_configuration_on_Fedora.xml</filename>."
 msgstr "Per escludere il capitolo, aggiungere un attributo condizionale al tag <sgmltag>&lt;xi:include&gt;</sgmltag> in <filename>User_Guide.xml</filename>, e non al tag <sgmltag>&lt;chapter&gt;</sgmltag> in <filename>Installation_and_configuration_on_Fedora.xml</filename>."
 

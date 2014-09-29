@@ -1,4 +1,4 @@
-# 
+#
 # AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
@@ -17,9 +17,7 @@ msgstr ""
 msgid "Docker container"
 msgstr ""
 
-#. Tag: para
-#, no-c-format
-msgid "This installation procedure assumes you have already installed a working docker (see <ulink url=\"http://docker.io\" />) environment."
+msgid "This installation procedure assumes you have already installed a working docker (see <uri xlink:href=\"http://docker.io\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">http://docker.io</uri>) environment."
 msgstr ""
 
 #. Tag: para
@@ -32,9 +30,7 @@ msgstr ""
 msgid "Open a terminal."
 msgstr ""
 
-#. Tag: para
-#, no-c-format
-msgid "Download and install the <application>svendowideit/publican</application> container from <ulink url=\"https://index.docker.io/u/svendowideit/publican/\" />:"
+msgid "Download and install the <application>svendowideit/publican</application> container from <uri xlink:href=\"https://index.docker.io/u/svendowideit/publican/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">https://index.docker.io/u/svendowideit/publican/</uri>:"
 msgstr ""
 
 #. Tag: screen
@@ -72,4 +68,14 @@ msgstr ""
 msgid "<prompt>$</prompt> <command>publican --version </command>\n"
 "<computeroutput>version=3.2.1</computeroutput>"
 msgstr ""
+
+#. Tag: para
+#, no-c-format
+#~ msgid "This installation procedure assumes you have already installed a working docker (see <ulink url=\"http://docker.io\" />) environment."
+#~ msgstr ""
+
+#. Tag: para
+#, no-c-format
+#~ msgid "Download and install the <application>svendowideit/publican</application> container from <ulink url=\"https://index.docker.io/u/svendowideit/publican/\" />:"
+#~ msgstr ""
 

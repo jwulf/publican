@@ -20,17 +20,17 @@ msgid "Creating, installing, and updating product pages and version pages"
 msgstr "Création, installation et mise à jour des pages du produit et des pages des versions"
 
 #. Tag: para
-#, no-c-format
-msgid "<application>Publican</application>-generated product pages and version pages are the localizable pages that provide a general overview of a product or version respectively. Visitors access these pages by clicking on a product or version in the navigation menu. The pages are structured as DocBook <sgmltag>&lt;article&gt;</sgmltag>s with an extra <parameter>web_type:&nbsp;product</parameter> or <parameter>web_type:&nbsp;version</parameter> parameter in their <filename>publican.cfg</filename> files. In their structure and presentation, product pages and version pages are the same as any other article that you produce with <application>Publican</application>. To create a product page or version page:"
+#, no-c-format, fuzzy
+msgid "<application>Publican</application>-generated product pages and version pages are the localizable pages that provide a general overview of a product or version respectively. Visitors access these pages by clicking on a product or version in the navigation menu. The pages are structured as DocBook <tag>&lt;article&gt;</tag>s with an extra <parameter>web_type: product</parameter> or <parameter>web_type: version</parameter> parameter in their <filename>publican.cfg</filename> files. In their structure and presentation, product pages and version pages are the same as any other article that you produce with <application>Publican</application>. To create a product page or version page:"
 msgstr "Les pages du produit créées par <application>Publican</application> et les pages des versions sont des pages adaptables à la langue du lecteur ; elles donnent une vue générale du produit ou de la version. Les visiteurs ont accès à ces pages en cliquant sur un produit ou une version dans le menu de navigation. Les pages sont structurées de la même manière que des <sgmltag>&lt;article&gt;</sgmltag> DocBook avec des paramètres <parameter>web_type:&nbsp;product</parameter> ou <parameter>web_type:&nbsp;version</parameter> supplémentaires dans leurs fichiers <filename>publican.cfg</filename>. Dans leur structure ou présentation, les pages du produit ou des versions sont identiques à celles de n'importe quel autre article que vous auriez créé avec <application>Publican</application>. Pour créer une page de produit ou une page de version :"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "Change into a convenient directory and run the following <prompt>$</prompt> <command>publican create</command> command:"
 msgstr "Placez-vous dans un répertoire adéquat et exécutez la commande <command>publican create</command> comme ceci :"
 
 #. Tag: screen
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "<prompt>$</prompt> <command>publican create --type Article --name <replaceable>page_name</replaceable></command>"
 msgstr "<command>publican create --type Article --name <replaceable>nom_page</replaceable></command>"
 
@@ -40,7 +40,7 @@ msgid "For example, a product page might be:"
 msgstr "Par exemple, une page de produit peut être :"
 
 #. Tag: screen
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "<prompt>$</prompt> <command>publican create --type Article --name FooMaster</command>"
 msgstr "<command>publican create --type Article --name FooMaster</command>"
 
@@ -50,7 +50,7 @@ msgid "or a version page might be:"
 msgstr "et une page version :"
 
 #. Tag: screen
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "<prompt>$</prompt> <command>publican create --type Article --name FooMaster_3</command>"
 msgstr "<command>publican create --type Article --name FooMaster_3</command>"
 
@@ -60,7 +60,7 @@ msgid "Change into the article directory:"
 msgstr "Placez-vous dans le répertoire de l'article :"
 
 #. Tag: screen
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "<prompt>$</prompt> <command>cd <replaceable>page_name</replaceable></command>"
 msgstr "<command>cd <replaceable>nom_page</replaceable></command>"
 
@@ -80,8 +80,8 @@ msgid "Unlink the <filename>Article_Info.xml</filename> file from your root XML 
 msgstr "Enlevez le lien avec le fichier <filename>Article_Info.xml</filename> dans votre fichier racine XML."
 
 #. Tag: para
-#, no-c-format
-msgid "Little of the content of the <filename>Article_Info.xml</filename> file is likely to be useful for product pages or version pages. Therefore, edit the root XML file of your page to remove the <sgmltag>&lt;xi:include&gt;</sgmltag> tag that links to <filename>Article_Info.xml</filename>. <application>Publican</application> still uses the information in <filename>Article_Info.xml</filename> for packaging, but does not include it on the page itself."
+#, no-c-format, fuzzy
+msgid "Little of the content of the <filename>Article_Info.xml</filename> file is likely to be useful for product pages or version pages. Therefore, edit the root XML file of your page to remove the <tag>&lt;xi:include&gt;</tag> tag that links to <filename>Article_Info.xml</filename>. <application>Publican</application> still uses the information in <filename>Article_Info.xml</filename> for packaging, but does not include it on the page itself."
 msgstr "Pratiquement rien du contenu du fichier <filename>Article_Info.xml</filename> n'est susceptible d'avoir une utilité pour les pages produit ou version. Ainsi, modifiez le fichier racine XML de votre page d'accueil pour supprimer la balise <sgmltag>&lt;xi:include&gt;</sgmltag> liant à <filename>Article_Info.xml</filename>. <application>Publican</application> utilise toujours des informations situées dans <filename>Article_Info.xml</filename> pour l'empaquetage, mais il ne les incorpore pas dans la page elle-même."
 
 #. Tag: para
@@ -140,8 +140,8 @@ msgid "<parameter>product</parameter>"
 msgstr "<parameter>product</parameter>"
 
 #. Tag: para
-#, no-c-format
-msgid "If the <sgmltag>&lt;title&gt;</sgmltag> or the <sgmltag>&lt;product&gt;</sgmltag> that you set in the <filename>Article_Info</filename> file included anything other than basic, unaccented Latin characters, set the <parameter>docname</parameter> and <parameter>product</parameter> as necessary."
+#, no-c-format, fuzzy
+msgid "If the <tag>&lt;title&gt;</tag> or the <tag>&lt;product&gt;</tag> that you set in the <filename>Article_Info</filename> file included anything other than basic, unaccented Latin characters, set the <parameter>docname</parameter> and <parameter>product</parameter> as necessary."
 msgstr "Dans les balises <sgmltag>&lt;title&gt;</sgmltag> ou <sgmltag>&lt;product&gt;</sgmltag> définies dans le fichier <filename>Article_Info</filename> ne comportant rien d'autre que des caractères latins de base sans accents, définissez les paramètres <parameter>docname</parameter> et <parameter>product</parameter> comme il convient."
 
 #. Tag: para
@@ -150,8 +150,8 @@ msgid "Edit the content of the <filename><replaceable>page_name</replaceable>.xm
 msgstr "Modifiez le contenu du fichier <filename><replaceable>nom_page</replaceable>.xml</filename> (par exemple, <filename>Foomaster.xml</filename>) comme vous le feriez pour tout autre document DocBook."
 
 #. Tag: para
-#, no-c-format
-msgid "If you remove the <sgmltag>&lt;xi:include&gt;</sgmltag> that links to <filename>Article_Info.xml</filename>, specify a title for your page in the following format:"
+#, no-c-format, fuzzy
+msgid "If you remove the <tag>&lt;xi:include&gt;</tag> that links to <filename>Article_Info.xml</filename>, specify a title for your page in the following format:"
 msgstr "Si vous supprimez la balise <sgmltag>&lt;xi:include&gt;</sgmltag> liant à <filename>Article_Info.xml</filename>, donnez un titre à votre page avec le format :"
 
 #. Tag: programlisting
@@ -160,7 +160,7 @@ msgid "&lt;title role=\"producttitle\"&gt;FooMaster Documentation&lt;/title&gt;"
 msgstr "&lt;title role=\"producttitle\"&gt;Documentation de FooMaster&lt;/title&gt;"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "If you publish documentation in more than one language, create a set of POT files and a set of PO files for each language with the <prompt>$</prompt> <command>publican update_pot</command> and <command>publican update_po</command> commands."
 msgstr "Si vous publiez la documentation en plus d'une langue, créez un ensemble de fichiers POT et des ensembles de fichiers PO pour chaque langue avec les commandes <command>publican update_pot</command> et <command>publican update_po</command>."
 
@@ -170,16 +170,14 @@ msgid "Build the product page or version page in single-page HTML format with th
 msgstr "Construisez la page du produit ou la page de version au format HTML page unique avec l'option <option>--embedtoc</option> et installez-la dans la structure du site Web. Par exemple :"
 
 #. Tag: screen
-#, no-c-format, fuzzy
-msgid ""
-"<prompt>$</prompt> <command>publican build --publish --formats html-single --embedtoc --langs all</command> \n"
+#, no-c-format
+msgid "<prompt>$</prompt> <command>publican build --publish --formats html-single --embedtoc --langs all</command> \n"
 "<prompt>$</prompt> <command>publican install_book --site_config ~/docsite/foomaster.cfg --lang <replaceable>Language_Code</replaceable></command>"
-msgstr ""
-"<command>publican build --publish --formats html-single --embedtoc --langs all</command> \n"
+msgstr "<command>publican build --publish --formats html-single --embedtoc --langs all</command> \n"
 "<command>publican install_book --site_config ~/docsite/foomaster.cfg --lang <replaceable>Code_langue</replaceable></command>"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "Note that you can build all languages at the same time, but must install the product page or version page for each language with a separate <prompt>$</prompt> <command>publican install_book</command> command."
 msgstr "Notez que vous pouvez construire toutes les langues simultanément, mais vous devez installer la page du produit ou la page de version pour chaque langue à l'aide d'une commande <command>publican install_book</command> distincte."
 

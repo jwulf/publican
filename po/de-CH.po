@@ -213,7 +213,7 @@ msgid "All build formats will be skipped for language: %1"
 msgstr ""
 
 #: bin/publican:176
-msgid "Allow the XML and XSLT processing to access the newtowrk. Defaults off."
+msgid "Allow the XML and XSLT processing to access the network. Defaults off."
 msgstr ""
 
 #: bin/publican:150

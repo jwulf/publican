@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2014-09-18 09:54+1000\n"
-"PO-Revision-Date: 2014-09-18 09:54+1000\n"
+"POT-Creation-Date: 2014-09-30 07:39+1000\n"
+"PO-Revision-Date: 2014-09-30 07:39+1000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: None\n"
 "Language: en-US \n"
@@ -56,7 +56,7 @@ msgstr ""
 msgid "Install the dependencies that are available from various online repositories - many of these are not present in the installation DVD repository."
 msgstr ""
 
-msgid "<prompt>$</prompt> <command>sudo zypper install perl-Config-Simple perl-DateTime \ perl-DateTime-Format-DateParse perl-DBD-SQLite perl-DBI \ perl-File-Find-Rule perl-File-Which perl-HTML-Format \ perl-Locale-MakeText-Gettext perl-Template-Toolkit \ perl-Test-Deep perl-Test-Pod perl-XML-LibXSLT \ perl-YAML liberation-fonts</command>"
+msgid "<prompt>$</prompt> <command>sudo zypper install perl-Config-Simple perl-DateTime \\ perl-DateTime-Format-DateParse perl-DBD-SQLite perl-DBI \\ perl-File-Find-Rule perl-File-Which perl-HTML-Format \\ perl-Locale-MakeText-Gettext perl-Template-Toolkit \\ perl-Test-Deep perl-Test-Pod perl-XML-LibXSLT \\ perl-YAML liberation-fonts</command>"
 msgstr ""
 
 msgid "<filename>Liberation-fonts</filename> is most likely already installed, but it is required. <application>Zypper</application> will not reinstall it if it is already present."
@@ -65,7 +65,7 @@ msgstr ""
 msgid "Use <application>cpan</application> to install the remaining dependencies which cannot be installed by <application>zypper</application>:"
 msgstr ""
 
-msgid "<prompt>$</prompt> <command>sudo sh cpan File::pushd File::Copy::Recursive Locale::PO pp \ Syntax::Highlight::Engine::Kate XML::TreeBuilder exit </command>"
+msgid "<prompt>$</prompt> <command>sudo sh cpan File::pushd File::Copy::Recursive Locale::PO pp \\ Syntax::Highlight::Engine::Kate XML::TreeBuilder exit </command>"
 msgstr ""
 
 msgid "Download the source code:"

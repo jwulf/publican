@@ -28,7 +28,7 @@ msgstr "<primary>Introduzione 1</primary>"
 
 #. Tag: para
 #, no-c-format, fuzzy
-msgid "<indexterm><primary>Introduction 2</primary></indexterm> <application>Publican</application> <indexterm><primary>Introduction 3</primary> <secondary>Introduction 3</secondary></indexterm> is a tool for publishing material authored in DocBook XML. This guide explains how to create and build books and articles using <application>Publican</application>. It is not a general DocBook XML tutorial; refer to <citetitle>DocBook: The Definitive Guide</citetitle> by Norman Walsh and Leonard Muellner, available at <ulink url=\"&DOCBOOK-URL;\" /> for more general help with DocBook XML."
+msgid "<indexterm><primary>Introduction 2</primary></indexterm> <application>Publican</application> <indexterm><primary>Introduction 3</primary> <secondary>Introduction 3</secondary></indexterm> \\ \\n \\p is a tool for publishing material authored in DocBook XML. This guide explains how to create and build books and articles using <application>Publican</application>. It is not a general DocBook XML tutorial; refer to <citetitle>DocBook: The Definitive Guide</citetitle> by Norman Walsh and Leonard Muellner, available at <uri xlink:href=\"http://www.docbook.org/tdg/en/html/docbook.html\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">http://www.docbook.org/tdg/en/html/docbook.html</uri> for more general help with DocBook XML."
 msgstr "<indexterm> <primary>Introduzione 2</primary> </indexterm> <application>Publican</application> <indexterm> <primary>Introduzione 3</primary> </indexterm> è uno strumento per pubblicare materiale scritto in DocBook XML. Questa guida spiega come creare e compilare libri ed articoli usando <application>Publican</application>. Non si tratta di un tutorial su DocBook XML; per supporto su DocBook XML, fare invece riferimento alla Guida <citetitle>DocBook: The Definitive Guide</citetitle> di Norman Walsh e Leonard Muellner, disponibile su <ulink url=\"http://www.docbook.org/tdg/en/html/docbook.html\" />."
 
 #. Tag: para
@@ -53,7 +53,7 @@ msgstr "Le funzionalità di brand consentono di creare regole di presentazione e
 
 #. Tag: para
 #, no-c-format, fuzzy
-msgid "Entities, for example, can be validly defined in any XML file. However, to ensure the DTD declaration is present, valid and standardized, <application>Publican</application> rewrites the declaration in every XML file before it builds a book or article. Consequently, all entities declared in all XML files are lost. <application>Publican</application>, therefore, requires you define entities in the <filename><replaceable>Doc_Name</replaceable>.ent</filename> file (refer to <xref linkend=\"\" />)."
+msgid "Entities, for example, can be validly defined in any XML file. However, to ensure the DTD declaration is present, valid and standardized, <application>Publican</application> rewrites the declaration in every XML file before it builds a book or article. Consequently, all entities declared in all XML files are lost. <application>Publican</application>, therefore, requires you define entities in the <filename><replaceable>Doc_Name</replaceable>.ent</filename> file (refer to <xref linkend=\"sect-Publican-Users_Guide-Files_in_the_book_directory-Doc_Name.ent\" />)."
 msgstr "Per esempio, le entità possono essere validamente definite in ogni file XML. Tuttavia per garantire che la dichiarazione DTD sia presente, valida e standardizzata, <application>Publican</application> riscrive la dichiarazione in ogni file XML prima di compilare un testo o articolo. Di conseguenza, tutte le entità dichiarate nei file XML vengono perse. Quindi <application>Publican</application> richiede di definire le entità nel file <filename><replaceable>Nome_Doc</replaceable>.ent</filename> (vedere la <xref linkend=\"sect-Users_Guide-Files_in_the_book_directory-Doc_Name.ent\" />)."
 
 #. Tag: para
@@ -63,6 +63,206 @@ msgstr "Al crescere del lavoro editoriale, la definizione di entità senza restr
 
 #. Tag: para
 #, no-c-format, fuzzy
-msgid "Entities also present an essentially insurmountable obstacle to quality translation (refer to <xref linkend=\"\" />). Consequently, while we are not reducing the <filename><replaceable>Doc_Name</replaceable>.ent</filename> file's functionality, we are no longer considering requests to add functionality or features associated with entity use."
+msgid "Entities also present an essentially insurmountable obstacle to quality translation (refer to <xref linkend=\"sect-Publican-Users_Guide-Entities_and_translation\" />). Consequently, while we are not reducing the <filename><replaceable>Doc_Name</replaceable>.ent</filename> file's functionality, we are no longer considering requests to add functionality or features associated with entity use."
 msgstr "Inoltre le entità presentano un ostacolo sostanzialmente insormontabile sulla qualità della traduzione (fare riferimento alla <xref linkend=\"sect-Users_Guide-Entities_and_translation\" />). Quindi, si ritiene opportuno mantenere le attuali funzionalità del file <filename><replaceable>Nome_Doc</replaceable>.ent</filename> senza aggiungere altre funzionalità o caratteristiche associate all'uso delle entità."
+
+msgid "This section is for testing the output and doesn't ship in the production docs"
+msgstr ""
+
+msgid "Testing BZ #1092351 Code Switcher"
+msgstr ""
+
+msgid ""
+"#!/usr/bin/perl\n"
+"use strict; \\\n"
+"use warnings;\n"
+"\n"
+"print \"Hello, World!\\n\";"
+msgstr ""
+
+msgid ""
+"<![CDATA[#include <iostream>\n"
+"\n"
+"int main()\n"
+"{\n"
+"  std::cout << \"Hello World!\"; &lies;\n"
+"}]]>"
+msgstr ""
+
+msgid "Testing BZ #1088051 Code Popper"
+msgstr ""
+
+msgid ""
+"<prompt>$</prompt> <command>apt-get search libxslt</command>\n"
+"<computeroutput>gambas3-gb-xml-xslt - Gambas XSLT component</computeroutput>\n"
+"<computeroutput>libidzebra-2.0-mod-alvis - IDZebra filter alvis (XSLT filter for XML)</computeroutput>\n"
+"<computeroutput>libidzebra-2.0-mod-dom - IDZebra filter 'dom' (XML DOM internal document model with XSLT)</computeroutput>\n"
+"<computeroutput>libical-parser-html-perl - generates HTML calendars from iCalendars</computeroutput>\n"
+"<computeroutput>libxsltc-java - XSL Transformations (XSLT) compiler from Xalan-Java</computeroutput>\n"
+"<computeroutput>libxml-filter-xslt-perl - Perl module for XSLT as a SAX Filter</computeroutput>\n"
+"<computeroutput>libxml-libxslt-perl - Perl interface to the GNOME libxslt library</computeroutput>\n"
+"<computeroutput>libxslt1-dbg - XSLT 1.0 processing library - debugging symbols</computeroutput>\n"
+"<computeroutput>libxslt1-dev - XSLT 1.0 processing library - development kit</computeroutput>\n"
+"<computeroutput>libxslt1.1 - XSLT 1.0 processing library - runtime library</computeroutput>\n"
+"<computeroutput>python-libxslt1 - Python bindings for libxslt1</computeroutput>\n"
+"<computeroutput>python-libxslt1-dbg - Python bindings for libxslt1 (debug extension)</computeroutput>\n"
+"<computeroutput>python-lxml - pythonic binding for the libxml2 and libxslt libraries</computeroutput>\n"
+"<computeroutput>python-lxml-dbg - pythonic binding for the libxml2 and libxslt libraries (debug extension)</computeroutput>\n"
+"<computeroutput>python-lxml-doc - pythonic binding for the libxml2 and libxslt libraries (documentation)</computeroutput>\n"
+"<computeroutput>python3-lxml - pythonic binding for the libxml2 and libxslt libraries</computeroutput>\n"
+"<computeroutput>python3-lxml-dbg - pythonic binding for the libxml2 and libxslt libraries (debug extension)</computeroutput>\n"
+"<computeroutput>php5-xsl - XSL module for php5</computeroutput>\n"
+"<computeroutput>libsp-gxmlcpp-dev - S+P C++ wrapper for Gnome libxml2/libxslt</computeroutput>\n"
+"<computeroutput>libsp-gxmlcpp1 - S+P C++ wrapper for Gnome libxml2/libxslt</computeroutput>\n"
+"<computeroutput>swfmill - xml2swf and swf2xml processor</computeroutput>\n"
+"<computeroutput>libxslthl-java - XSLT syntax highlighting</computeroutput>"
+msgstr ""
+
+msgid "&nbsp;"
+msgstr ""
+
+msgid "Testing BZ #1112899 Callouts and BZ #1101050 Entities in CDATA"
+msgstr ""
+
+msgid "Test a programlisting with a calloutlist"
+msgstr ""
+
+msgid "\"Hello world!\" in C++"
+msgstr ""
+
+msgid ""
+"<![CDATA[\n"
+"#include <qpid/messaging/Connection.h>\n"
+"#include <qpid/messaging/Message.h>\n"
+"#include <qpid/messaging/Receiver.h>\n"
+"#include <qpid/messaging/Sender.h>\n"
+"#include <qpid/messaging/Session.h> &BZ1101050;\n"
+"\n"
+"#include <iostream>]]>\n"
+"\n"
+"using namespace qpid::messaging;\n"
+"\n"
+"int main(int argc, char** argv) {\n"
+"    std::string broker = argc &gt; 1 ? argv[1] : \"localhost:5672\";\n"
+"    std::string address = argc &gt; 2 ? argv[2] : \"amq.topic\";\n"
+"    Connection connection(broker); \n"
+"    try {\n"
+"        connection.open();  <co id=\"hello-cpp-open\" linkends=\"callout-cpp-open\"></co>\n"
+"        Session session = connection.createSession(); <co id=\"hello-cpp-session\" linkends=\"callout-cpp-session\"></co>\n"
+"\n"
+"        Receiver receiver = session.createReceiver(address); <co id=\"hello-cpp-receiver\" linkends=\"callout-cpp-receiver\"></co>\n"
+"        Sender sender = session.createSender(address); <co id=\"hello-cpp-sender\" linkends=\"callout-cpp-sender\"></co>\n"
+"\n"
+"        sender.send(Message(\"Hello world!\"));\n"
+"\n"
+"        Message message = receiver.fetch(Duration::SECOND * 1); <co id=\"hello-cpp-fetch\" linkends=\"callout-cpp-fetch\"></co>\n"
+"        <![CDATA[std::cout << message.getContent() << std::endl;]]>\n"
+"        session.acknowledge(); <co id=\"hello-cpp-acknowledge\" linkends=\"callout-cpp-acknowledge\"></co>\n"
+"\n"
+"        connection.close(); <co id=\"hello-cpp-close\" linkends=\"callout-cpp-close\"></co>\n"
+"        return 0;\n"
+"    } catch(const std::exception&amp; error) {\n"
+"        <![CDATA[std::cerr << error.what() << std::endl;]]>\n"
+"        connection.close();\n"
+"        return 1;   \n"
+"    }\n"
+"  }"
+msgstr ""
+
+msgid "Establishes the connection with the messaging broker."
+msgstr ""
+
+msgid "Creates a session object, which maintains the state of all interactions with the messaging broker, and manages senders and receivers."
+msgstr ""
+
+msgid "Creates a receiver that reads from the given address."
+msgstr ""
+
+msgid "Creates a sender that sends to the given address."
+msgstr ""
+
+msgid "Reads the next message. The duration is optional, if omitted, will wait indefinitely for the next message."
+msgstr ""
+
+msgid "Acknowledges messages that have been read. To guarantee delivery, a message remains on the messaging broker until it is acknowledged by a client. session.acknowledge() acknowledges all unacknowledged messages for the given session&mdash;this allows acknowledgements to be batched, which is more efficient than acknowledging messages individually."
+msgstr ""
+
+msgid "Closes the connection, all sessions managed by the connection, and all senders and receivers managed by each session."
+msgstr ""
+
+msgid "And now we test a programlistingco with an areaspec"
+msgstr ""
+
+msgid ""
+"  &lt;list-index \n"
+"        column=\"column_name\"\n"
+"        base=\"0|1|...\"/&gt;"
+msgstr ""
+
+msgid "<literal>column_name</literal> (required): the name of the column holding the collection index values."
+msgstr ""
+
+msgid "<literal>base</literal> (optional - defaults to <literal>0</literal>): the value of the index column that corresponds to the first element of the list or array."
+msgstr ""
+
+msgid "Testing BZ #752021 Cross-Browser embed external video"
+msgstr ""
+
+msgid "Testing BZ #1110611 A line break is automatically inserted after cdata in code."
+msgstr ""
+
+msgid "Is there a newline inserted after this <code><![CDATA[CDATA]]></code>?"
+msgstr ""
+
+msgid "Testing BZ #1117561 CDATA tags"
+msgstr ""
+
+msgid "<![CDATA[=, >, >=, <, <=, <>]]>"
+msgstr ""
+
+msgid "<![CDATA[!=]]>"
+msgstr ""
+
+msgid "<![CDATA[<>]]>"
+msgstr ""
+
+msgid "Testing BZ #1135827 Single line comment being highlighted in a callout."
+msgstr ""
+
+msgid ""
+"\n"
+"package com.sample;\n"
+"\n"
+"import org.kie.api.runtime.process.WorkItem;\n"
+"import org.kie.api.runtime.process.WorkItemHandler;\n"
+"import org.kie.api.runtime.process.WorkItemManager;\n"
+"\n"
+"public class NotificationWorkItemHandler implements WorkItemHandler {\n"
+"\n"
+"  public void executeWorkItem(WorkItem workItem, WorkItemManager manager) {\n"
+"    String from = (String) workItem.getParameter(\"From\");\n"
+"    String to = (String) workItem.getParameter(\"To\");\n"
+"    String message = (String) workItem.getParameter(\"Message\");\n"
+"    String priority = (String) workItem.getParameter(\"Priority\");\n"
+"\n"
+"    // send email\n"
+"    EmailService service = ServiceRegistry.getInstance().getEmailService();\n"
+"    service.sendEmail(from, to, \"Notification\", message);\n"
+"\n"
+"    // notify manager that work item has been completed\n"
+"    manager.completeWorkItem(workItem.getId(), null);\n"
+"  }\n"
+"\n"
+"  public void abortWorkItem(WorkItem workItem, WorkItemManager manager) {\n"
+"  // Do nothing, notifications cannot be aborted\n"
+"  }\n"
+"\n"
+"}"
+msgstr ""
+
+msgid "The <code>ServiceRegistry</code> class is an example class implementing the task business logic."
+msgstr ""
+
+msgid "The <function>completeWorkItem()</function> call completes the work item execution."
+msgstr ""
 

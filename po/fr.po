@@ -261,7 +261,7 @@ msgid "All build formats will be skipped for language: %1"
 msgstr "Tous les formats de constructions seront omis pour la langue : %1"
 
 #: bin/publican:176
-msgid "Allow the XML and XSLT processing to access the newtowrk. Defaults off."
+msgid "Allow the XML and XSLT processing to access the network. Defaults off."
 msgstr ""
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard

@@ -35,17 +35,15 @@ msgid "The CSV File consists of information that tells Drupal how to import the 
 msgstr "Le fichier CSV donne l'information indiquant à Drupal la manière d'importer l'ouvrage. Chaque ligne du fichier CSV représente une page html."
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "Use the <prompt>$</prompt> <command>publican build</command> command to create the CSV file for Drupal import. Before running the command, use the cd command to change into the directory where your book is located. For example, if you have a book call \"User_Guide\" in your home directory, then run the following command."
 msgstr "Utilisez la commande <command>publican build</command> pour créer le fichier CSV d'importation dans Drupal. Avant de lancer la commande, utilisez cd pour vous déplacer dans le répertoire où votre ouvrage est situé. Par exemple, si vous avez un ouvrage nommé « Guide utilisateur » dans votre répertoire personnel, exécutez la commande :"
 
 #. Tag: screen
-#, no-c-format, fuzzy
-msgid ""
-"<prompt>$</prompt> <command>cd User_Guide/</command>\n"
+#, no-c-format
+msgid "<prompt>$</prompt> <command>cd User_Guide/</command>\n"
 "<prompt>$</prompt> <command>publican build --langs en-US --formats=drupal-book</command>"
-msgstr ""
-"<command>cd Guide_utilisateur/</command>\n"
+msgstr "<command>cd Guide_utilisateur/</command>\n"
 "<command>publican build --langs en-US --formats=drupal-book</command>"
 
 #. Tag: para
@@ -79,7 +77,7 @@ msgid "Important — Use version control system"
 msgstr "Important — Utiliser le système de contrôle de version"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "After running the <prompt>$</prompt> <command>publican build --langs en-US --formats=drupal-book</command> command, you will notice that the xml files in the <filename>en-US</filename> directory had been changed. This is because <application>Publican</application> added a <parameter>'Conformance'</parameter> attribute for every xml tag that has id. This attribute contains a number which is unique across xml files in the book. If you are using a version control system like <application>git</application> for your xml files, then you need to commit the changes so that the number won't get reset when other users run it. These unique numbers are very important, because they are use as the url path in drupal. Besides, <application>Publican</application> also created a database file name <filename>max_unique_id.db</filename> in the <filename>en-US</filename> directory. This database file is use to track the current maximum unique number in the book, so that <application>Publican</application> can know where you are up to and add a new unique number for your newly created Chapter or Section. Therefore, it is very important to add the database file to the version control and commit it if there is any change. If you add a new section in the xml, don't set the <parameter>'Comformance'</parameter> attribute yourself as that will make the database outdated. Just leave it for <application>publican</application> to set it."
 msgstr "Après avoir exécuté la commande <command>publican build --langs en-US --formats=drupal-book</command>, vous remarquerez que les fichiers xml dans le répertoire <filename>en-US</filename> ont été modifiés. En effet, <application>Publican</application> a ajouté un attribut de <parameter>« conformité »</parameter> pour chaque balise qu'il a identifiée. Cet attribut contient un nombre unique dans l'ensemble des fichiers xml de l'ouvrage. Si vous utilisez un système de contrôle de version comme <application>git</application> pour le fichiers xml, vous devrez enregistrer les changements de façon à ce que ce nombre ne soit pas réinitialisé quand d'autres utilisateurs exécutent git. Ces nombres uniques sont importants : ils sont utilisés dans le chemin de l'url dans Drupal. Conjointement, <application>Publican</application> a créé un fichier base de données <filename>max_unique_id.db</filename> dans le répertoire <filename>en-US</filename>. Cette base de données s'utilise pour suivre le nombre unique le plus grand dans les documents ; ainsi, <application>Publican</application> sait où vous en êtes pour ajouter un nouveau nombre unique pour les chapitres ou les sections nouvellement créés. Donc, il est important d'ajouter le fichier base de données pour le contrôle de version et de l'enregistrer s'il y a eu un quelconque changement. Si vous ajoutez une nouvelle section dans le xml, ne définissez pas l'attribut du paramètre de <parameter>« conformité »</parameter> vous-même car cela rendrait la base de données caduque. Laissez <application>publican</application> le faire pour vous."
 
@@ -138,10 +136,8 @@ msgstr "définit le bloc de menu que l'ouvrage doit afficher dans Drupal. La val
 msgid "Important — Setting menu block"
 msgstr "Important — Définir le bloc de menu"
 
-#. Tag: para
-#, no-c-format, fuzzy
-msgid "The menu block must exist in Drupal. For more information about adding a menu block in Drupal. Please refer to <xref linkend=\"\" />."
-msgstr "Le bloc de menu doit exister dans Drupal. Pour plus d'informations à propos de l'ajout d'un bloc de menu dans Drupal, voyez la <xref linkend=\"sect-Users_Guide-Import_book_into_Drupal-Drupal_Import_Guide-How_to_add_a_menu_block\" />."
+msgid "The menu block must exist in Drupal. For more information about adding a menu block in Drupal. Please refer to <xref linkend=\"sect-Publican-Users_Guide-Drupal_Import_Guide-How_to_add_a_menu_block\" />."
+msgstr ""
 
 #. Tag: term
 #, no-c-format
@@ -159,8 +155,8 @@ msgid "Drupal Import Guide"
 msgstr "Guide d'importation dans Drupal"
 
 #. Tag: para
-#, no-c-format
-msgid "Before you can import a book, you need to install a module call <application>'Node Import'</application> in Drupal. This module allows Drupal to import and update content from CSV or TSV files. To install this module, simply go to <ulink url=\"http://drupal.org/sandbox/hyu/1819292\">drupal site</ulink> and follow the instructions on the website to download it. Once this is done, then you need to copy the downloaded module to the 'modules' directory on the Drupal server. For example if your Drupal is located in <filename>/var/www/html/drupal/</filename> directory, then you should copy the module to <filename>/var/www/html/drupal/sites/all/modules/</filename> directory. To enable the installed module, login to the Drupal site and go to <guilabel>Administer -&gt; Site building -&gt; Modules </guilabel>. In the Development section, tick the <guibutton>checkbox</guibutton> and click <guibutton>Save configuration</guibutton> button to activate the <application>Node Import</application> Module."
+#, no-c-format, fuzzy
+msgid "Before you can import a book, you need to install a module call <application>'Node Import'</application> in Drupal. This module allows Drupal to import and update content from CSV or TSV files. To install this module, simply go to <link xlink:href=\"http://drupal.org/sandbox/hyu/1819292\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">drupal site</link> and follow the instructions on the website to download it. Once this is done, then you need to copy the downloaded module to the 'modules' directory on the Drupal server. For example if your Drupal is located in <filename>/var/www/html/drupal/</filename> directory, then you should copy the module to <filename>/var/www/html/drupal/sites/all/modules/</filename> directory. To enable the installed module, login to the Drupal site and go to <guilabel>Administer -&gt; Site building -&gt; Modules </guilabel>. In the Development section, tick the <guibutton>checkbox</guibutton> and click <guibutton>Save configuration</guibutton> button to activate the <application>Node Import</application> Module."
 msgstr "Avant de pouvoir importer un ouvrage, vous devez installer un module nommé <application>« Node Import »</application> dans Drupal. Ce module permet à Drupal d'importer et mettre à jour des contenus à partir de fichiers CVS ou TVS. Pour installer ce module, allez simplement sur le <ulink url=\"http://drupal.org/sandbox/hyu/1819292\">site Drupal</ulink> et suivez les instructions du site pour le télécharger. Ceci fait, vous devez copier le module téléchargé dans le répertoire « modules » sur le serveur Drupal. Par exemple, si Drupal est situé dans le répertoire <filename>/var/www/html/drupal/</filename>, vous devez copier le module dans le répertoire <filename>/var/www/html/drupal/sites/all/modules/</filename>. Pour activer le module installé, connectez-vous sur le site Drupal et allez dans <guilabel>Administrer -&gt; Construction d'un site -&gt; Modules</guilabel>. Dans la section Développement, cochez la <guibutton>case</guibutton>, puis cliquez sur le bouton <guibutton>Enregistrer la configuration</guibutton> pour activer le module <application>Node Import</application>."
 
 #. Tag: title
@@ -283,10 +279,8 @@ msgstr "Comment importer un ouvrage"
 msgid "To import book into Drupal:"
 msgstr "Pour importer un ouvrage dans Drupal :"
 
-#. Tag: para
-#, no-c-format, fuzzy
-msgid "Follow the steps in <xref linkend=\"\" />"
-msgstr "Parcourir les étapes précisées dans la <xref linkend=\"sect-Users_Guide-Import_book_into_Drupal-How_to_build_a_CSV_file\" />."
+msgid "Follow the steps in <xref linkend=\"sect-Publican-Users_Guide-Import_book_into_Drupal-How_to_build_a_CSV_file_for_Drupal_import\" />"
+msgstr ""
 
 #. Tag: para
 #, no-c-format
@@ -295,7 +289,7 @@ msgstr "Téléverser le fichier CSV dans le <filename>répertoire d'importation<
 
 #. Tag: para
 #, no-c-format, fuzzy
-msgid "Upload <filename>en-US</filename> directory to the <filename>\"sites/default/files/\"</filename> directory in the Drupal server. This value can be overriden in the <filename>publican.cfg</filename>. For more details, please read <xref linkend=\"\" />"
+msgid "Upload <filename>en-US</filename> directory to the <filename>\"sites/default/files/\"</filename> directory in the Drupal server. This value can be overriden in the <filename>publican.cfg</filename>. For more details, please read <xref linkend=\"sect-Publican-Users_Guide-Import_book_into_Drupal-The_publican.cfg_file\" />"
 msgstr "Téléverser le répertoire <filename>en-US</filename> dans le répertoire <filename>« sites/default/files/ »</filename> du serveur Drupal. Cette valeur peut être écrasée avec celle indiquée dans <filename>publican.cfg</filename>. Pour plus de détails, veuillez lire la <xref linkend=\"sect-Users_Guide-Import_book_into_Drupal-The_publican_cfg_file\" />."
 
 #. Tag: para
@@ -318,10 +312,8 @@ msgstr "Un lien vers l'ouvrage est maintenant affiché dans le bloc de menu déf
 msgid "How to update book"
 msgstr "Comment mettre à jour un ouvrage"
 
-#. Tag: para
-#, no-c-format, fuzzy
-msgid "Simply repeat the steps in <xref linkend=\"\" /> to update the book."
-msgstr "Refaites simplement les étapes de la <xref linkend=\"sect-Users_Guide-Import_book_into_Drupal-Drupal_Import_Guide-How_to_import_book\" /> pour mettre à jour l'ouvrage."
+msgid "Simply repeat the steps in <xref linkend=\"sect-Publican-Users_Guide-Drupal_Import_Guide-How_to_import_book\" /> to update the book."
+msgstr ""
 
 #. Tag: title
 #, no-c-format
@@ -332,4 +324,19 @@ msgstr "Attention — Découpage en sections"
 #, no-c-format
 msgid "If you update the book with smaller chunks, than the missing chunks will be deleted by Drupal and the URL path for the deleted chunks will be deleted as well."
 msgstr "Si vous mettez à jour un ouvrage avec un sectionnement restreint, les sections manquantes seront détruites par Drupal et les URL vers les sections détruites seront également supprimés."
+
+#. Tag: para
+#, no-c-format, fuzzy
+#~ msgid "The menu block must exist in Drupal. For more information about adding a menu block in Drupal. Please refer to <xref linkend=\"\" />."
+#~ msgstr "Le bloc de menu doit exister dans Drupal. Pour plus d'informations à propos de l'ajout d'un bloc de menu dans Drupal, voyez la <xref linkend=\"sect-Users_Guide-Import_book_into_Drupal-Drupal_Import_Guide-How_to_add_a_menu_block\" />."
+
+#. Tag: para
+#, no-c-format, fuzzy
+#~ msgid "Follow the steps in <xref linkend=\"\" />"
+#~ msgstr "Parcourir les étapes précisées dans la <xref linkend=\"sect-Users_Guide-Import_book_into_Drupal-How_to_build_a_CSV_file\" />."
+
+#. Tag: para
+#, no-c-format, fuzzy
+#~ msgid "Simply repeat the steps in <xref linkend=\"\" /> to update the book."
+#~ msgstr "Refaites simplement les étapes de la <xref linkend=\"sect-Users_Guide-Import_book_into_Drupal-Drupal_Import_Guide-How_to_import_book\" /> pour mettre à jour l'ouvrage."
 

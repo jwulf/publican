@@ -23,6 +23,22 @@ msgstr "Cronologia revisioni"
 
 #. Tag: firstname
 #, no-c-format
+msgid "Jeff"
+msgstr "Jeff"
+
+#. Tag: surname
+#, no-c-format
+msgid "Fearn"
+msgstr "Fearn"
+
+msgid "Convert to DocBook 5"
+msgstr ""
+
+msgid "Update a lot of content"
+msgstr ""
+
+#. Tag: firstname
+#, no-c-format
 msgid "Rüdiger"
 msgstr "Rüdiger"
 
@@ -47,8 +63,8 @@ msgid "Document use of \"sortas\" for indexes and glossaries"
 msgstr ""
 
 #. Tag: firstname
-#, no-c-format
-msgid "Roman"
+#, no-c-format, fuzzy
+msgid "Norman"
 msgstr ""
 
 #. Tag: surname
@@ -62,8 +78,8 @@ msgid "Clarify where relative paths are used in brand instructions - BZ#1028815"
 msgstr ""
 
 #. Tag: firstname
-#, no-c-format
-msgid "Roman"
+#, no-c-format, fuzzy
+msgid "Norman"
 msgstr ""
 
 #. Tag: surname
@@ -126,19 +142,9 @@ msgstr ""
 msgid "Updated web site instructions - BZ#979224"
 msgstr ""
 
-#. Tag: firstname
-#, no-c-format
-msgid "Jeff"
-msgstr "Jeff"
-
-#. Tag: surname
-#, no-c-format
-msgid "Fearn"
-msgstr "Fearn"
-
 #. Tag: member
-#, no-c-format
-msgid "Publican 3.2.0"
+#, no-c-format, fuzzy
+msgid "Publican 3.0"
 msgstr ""
 
 #. Tag: member
@@ -162,8 +168,8 @@ msgid "Add Section on Installing Publican on OpenSuse 12"
 msgstr ""
 
 #. Tag: member
-#, no-c-format
-msgid "Publican 3.2.0"
+#, no-c-format, fuzzy
+msgid "Publican 3.0"
 msgstr ""
 
 #. Tag: firstname

@@ -25,12 +25,12 @@ msgid "On your workstation, change into the directory that contains the source f
 msgstr "Sur une station de travail, placez-vous dans le répertoire contenant la source du document et exécutez :"
 
 #. Tag: screen
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "<prompt>$</prompt> <command>publican package --binary --lang <replaceable>language_code</replaceable></command>"
 msgstr "<command>publican package --binary --lang <replaceable>code_langue</replaceable></command>"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "<application>Publican</application> builds an RPM package and places it in the <filename>/tmp/rpms/noarch/</filename> directory of the document. By default, <application>Publican</application> builds the RPM package for the operating system within which you are running <application>Publican</application>. To build an RPM package to install on a server that runs a different operating system, set the <parameter>os_ver</parameter> parameter in the document's <filename>publican.cfg</filename> file."
 msgstr "<application>Publican</application> construit un paquet RPM et le place dans le répertoire <filename>/tmp/rpms/noarch/</filename> du document. Notez que, par défaut, <application>Publican</application> crée un paquet RPM à installer sur un serveur tournant sous « Red Hat Enterprise Linux&nbsp;5 ». Pour construire un paquet RPM à installer sur un serveur avec un système d'exploitation autre, définir le paramètre <parameter>os_ver</parameter> dans le fichier <filename>publican.cfg</filename> du document."
 
@@ -40,8 +40,8 @@ msgid "Either upload the document packages to the webserver and install them wit
 msgstr "Soit téléversez les paquets documents sur le serveur Web et installez les avec la commande <command>rpm -i</command> ou <command>yum localinstall</command>, soit placez les paquets dans un dépôt et configurez le serveur Web pour les installer à partir de ce dépôt en lançant la commande <command>yum install</command>."
 
 #. Tag: para
-#, no-c-format
-msgid "To update a document, build a new package with a higher <sgmltag>&lt;edition&gt;</sgmltag> number or <sgmltag>&lt;pubsnumber&gt;</sgmltag> in the <filename>Book_Info.xml</filename> or <filename>Article_Info.xml</filename>. <application>Publican</application> uses these values to set the version and release numbers for the RPM package. When you install this package on your webserver, <application>yum</application> can replace the old version with the new when you run <command>yum localinstall</command> for a local package, or <command>yum update</command> for a package fetched from a repository."
+#, no-c-format, fuzzy
+msgid "To update a document, build a new package with a higher <tag>&lt;edition&gt;</tag> number or <tag>&lt;pubsnumber&gt;</tag> in the <filename>Book_Info.xml</filename> or <filename>Article_Info.xml</filename>. <application>Publican</application> uses these values to set the version and release numbers for the RPM package. When you install this package on your webserver, <application>yum</application> can replace the old version with the new when you run <command>yum localinstall</command> for a local package, or <command>yum update</command> for a package fetched from a repository."
 msgstr "Pour mettre à jour un document, construisez un nouveau paquet avec un numéro <sgmltag>&lt;edition&gt;</sgmltag> ou <sgmltag>&lt;pubsnumber&gt;</sgmltag> plus grand dans <filename>Book_Info.xml</filename> ou <filename>Article_Info.xml</filename>. <application>Publican</application> utilise ces valeurs pour définir les numéros de version ou de parution du paquet RPM. Quand vous installez ce paquet sur le serveur Web, <application>yum</application> peut remplacer l'ancienne version par la nouvelle quand vous lancez <command>yum localinstall</command> pour un paquet local, ou bien <command>yum update</command> pour un paquet extrait d'un dépôt."
 
 #. Tag: para
@@ -51,6 +51,6 @@ msgstr "Supprimez un document du serveur Web avec la commande <command>rpm -e</c
 
 #. Tag: para
 #, no-c-format, fuzzy
-msgid "On large or busy sites, we recommend that you set the <parameter>manual_toc_update</parameter> parameter in the site's configuration file. With this parameter set, you must run the <prompt>$</prompt> <command>publican update_site</command> command after installing, updating, or removing documents. Refer to <xref linkend=\"\" /> for more information."
+msgid "On large or busy sites, we recommend that you set the <parameter>manual_toc_update</parameter> parameter in the site's configuration file. With this parameter set, you must run the <prompt>$</prompt> <command>publican update_site</command> command after installing, updating, or removing documents. Refer to <xref linkend=\"sect-Publican-Users_Guide-Creating_the_website_structure\" /> for more information."
 msgstr "Sur des sites importants ou occupés, nous vous recommandons de définir le paramètre <parameter>manual_toc_update</parameter> dans le fichier de configuration du site. Une fois ce paramètre défini, vous lancez la commande <command>publican update_site</command> après avoir installé, mis à jour ou supprimé des documents. Reportez-vous à <xref linkend=\"sect-Users_Guide-Website-structure-cfg_and_db-manual\" /> pour plus d'informations."
 

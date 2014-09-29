@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2014-09-18 09:54+1000\n"
-"PO-Revision-Date: 2014-09-18 09:54+1000\n"
+"POT-Creation-Date: 2014-09-30 07:39+1000\n"
+"PO-Revision-Date: 2014-09-30 07:39+1000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: None\n"
 "Language: en-US \n"
@@ -15,6 +15,12 @@ msgid "Command summary"
 msgstr ""
 
 msgid "Command options"
+msgstr ""
+
+msgid "--allow_network"
+msgstr ""
+
+msgid "Allow the XML and XSLT processing to access the network. Defaults off."
 msgstr ""
 
 msgid "--brand_dir=s"

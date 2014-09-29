@@ -36,7 +36,7 @@ msgid "In the directory <filename>My_Book</filename>:"
 msgstr "Nella cartella <filename>My_Book</filename>:"
 
 #. Tag: screen
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "<prompt>$</prompt> <command>mkdir en-US/files</command>"
 msgstr "<command>mkdir en-US/files</command>"
 
@@ -46,7 +46,7 @@ msgid "Copy the files to the directory <filename>files</filename>:"
 msgstr "Copiare i file nella cartella <filename>files</filename>:"
 
 #. Tag: screen
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "<prompt>$</prompt> <command>cp arbitrary_files en-US/files</command>"
 msgstr "<command>cp arbitrary_files en-US/files</command>"
 

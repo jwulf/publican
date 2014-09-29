@@ -24,19 +24,19 @@ msgstr "Guide utilisateur"
 msgid "Publishing books, articles, papers and multi-volume sets with DocBook XML"
 msgstr "Publication d'ouvrages, articles, papiers et ensembles en plusieurs tomes avec XML Docbook"
 
-#. Tag: productname
+#. Tag: keyword
 #, no-c-format
-msgid "&PRODUCT;"
-msgstr ""
+msgid "Publican"
+msgstr "publican"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "This book will help you install <application>&PRODUCT;</application>. It also provides instructions for using Publican to create and publish DocBook XML-based books, articles and book sets. This guide assumes that you are already familiar with DocBook XML."
 msgstr "Cet ouvrage vous aide à installer <application>Publican</application>. Il donne aussi des instructions pour l'utilisation de Publican en vue de créer et publier des ouvrages, des articles ou des ensembles de livres à l'aide du XML DocBook. Ce guide suppose que vous connaissez déjà le XML DocBook."
 
 #. Tag: keyword
 #, no-c-format
-msgid "publican"
+msgid "Publican"
 msgstr "publican"
 
 #. Tag: keyword
@@ -48,4 +48,9 @@ msgstr "docbook"
 #, no-c-format
 msgid "publishing"
 msgstr "publication"
+
+#. Tag: productname
+#, no-c-format
+#~ msgid "&PRODUCT;"
+#~ msgstr ""
 

@@ -60,8 +60,8 @@ msgid "<filename>opds.xml</filename> — an Open Publication Distribution System
 msgstr "<filename>opds.xml</filename> — un catalogue « Open Publication Distribution System (OPDS) » (Système ouvert de distribution de publications) pour permettre aux lecteurs conformes eBook de trouver facilement les documents EPUB sur le site."
 
 #. Tag: para
-#, no-c-format
-msgid "<filename>Sitemap</filename> — A Sitemap is a list of the URLs from your website and metadata about them, like update history, change frequency, and importance relative to other URLs in the site. A Sitemap can be supplied to many major search engines, where it is used to help their crawlers index your site more intelligently. A Sitemap does not guarantee that your site will be ranked higher in search results. However, it does help search engines to return the most relevant results from your website in response to user queries. For more information on Sitemaps, visit <ulink url=\"http://www.sitemaps.org/\">sitemaps.org</ulink>."
+#, no-c-format, fuzzy
+msgid "<filename>Sitemap</filename> — A Sitemap is a list of the URLs from your website and metadata about them, like update history, change frequency, and importance relative to other URLs in the site. A Sitemap can be supplied to many major search engines, where it is used to help their crawlers index your site more intelligently. A Sitemap does not guarantee that your site will be ranked higher in search results. However, it does help search engines to return the most relevant results from your website in response to user queries. For more information on Sitemaps, visit <link xlink:href=\"http://www.sitemaps.org/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">sitemaps.org</link>."
 msgstr "<filename>Sitemap</filename> — un « Sitemap » (carte du site) est une liste des URL du site et des métadonnées à leur propos, comme l'historique des mises à jour, la fréquence des modifications et leur importance relativement aux autres URL du site. Un Sitemap peut être fourni à la plupart des principaux moteurs de recherche, où il sera utilisé pour aider les robots d'indexation à lister les sites intelligemment. Un Sitemap ne garantit pas que votre site sera placé plus avant dans les résultats de recherche. Mais, il aide les moteurs de recherche à renvoyer des résultats plus pertinents concernant un site Web sonné en réponse aux demandes des utilisateurs. Pour plus d'informations à propos des Sitemaps, voyez <ulink url=\"http://www.sitemaps.org/\">sitemaps.org</ulink>."
 
 #. Tag: para
@@ -70,7 +70,7 @@ msgid "<filename>site_overrides.css</filename> — a CSS stylesheet that overrid
 msgstr "<filename>site_overrides.css</filename> — une feuille de style CSS qui prend le pas sur les styles contenus dans <filename>interactive.css</filename> pour fournir une touche graphique propre au site. Ce fichier n'est pas généré lors du processus de création du site, mais il doit être ajouté manuellement plus tard ou fourni par la <firstterm>page d'accueil</firstterm> du site."
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "<filename>default.js</filename> — a JavaScript script that directs visitors to localized content based on the locale set in their browser and which controls the presentation of the navigation menu."
 msgstr "<filename>toc.js</filename> — un script Java qui dirige les visiteurs vers le contenu régionalisé selon la langue définie dans le navigateur et qui contrôle la présentation du menu de navigation."
 
@@ -85,8 +85,8 @@ msgid "<filename>opds.xml</filename> — an OPDS catalog of EPUB documents in th
 msgstr "<filename>opds.xml</filename> — un catalogue OPDS des documents EPUB dans la langue indiquée."
 
 #. Tag: para
-#, no-c-format
-msgid "<filename>opds-<replaceable>product</replaceable>.xml</filename> — an OPDS catalog of EPUB documents for each product for which you publish documentation in this language. Within each product catalog, documentation is divided into <sgmltag>&lt;category&gt;</sgmltag>s for different versions of the same product."
+#, no-c-format, fuzzy
+msgid "<filename>opds-<replaceable>product</replaceable>.xml</filename> — an OPDS catalog of EPUB documents for each product for which you publish documentation in this language. Within each product catalog, documentation is divided into <tag>&lt;category&gt;</tag>s for different versions of the same product."
 msgstr "<filename>opds-<replaceable>produit</replaceable>.xml</filename> — un catalogue OPDS des documents EPUB pour chacun des produits pour lesquels vous publiez une documentation dans la langue. Dans chaque catalogue de produit, la documentation est divisée en <sgmltag>&lt;category&gt;</sgmltag> pour les diverses versions d'un même produit."
 
 #. Tag: para
@@ -101,7 +101,7 @@ msgstr "Un sous-répertoire pour chaque produit pour lequel vous publiez une doc
 
 #. Tag: para
 #, no-c-format, fuzzy
-msgid "Optionally, the site structure might also include a <firstterm>dump file</firstterm> — an XML file that provides complete site content details for delivery of other services, such as web feeds or customised search pages. The site structure might also contain a zipped version of the dump file. Refer to <xref linkend=\"\" /> and <xref linkend=\"\" /> for details of creating a dump file, and to <xref linkend=\"\" /> for a description of the dump file contents."
+msgid "Optionally, the site structure might also include a <firstterm>dump file</firstterm> — an XML file that provides complete site content details for delivery of other services, such as web feeds or customised search pages. The site structure might also contain a zipped version of the dump file. Refer to <xref linkend=\"sect-Publican-Users_Guide-Creating_the_website_structure\" /> and <xref linkend=\"sect-Publican-Users_Guide-Creating_the_website_structure\" /> for details of creating a dump file, and to <xref linkend=\"appe-Publican-Users_Guide-Contents_of_the_website_dump_file\" /> for a description of the dump file contents."
 msgstr "Facultativement, la structure du site peut également comporter un <firstterm>fichier vidage</firstterm> — fichier XML qui fournit les détails complets du contenu du site pour fourniture aux autres services, comme des pages de recherche personnalisées ou de sources Web. La structure du site doit aussi contenir une version compressée du fichier vidage. Reportez-vous à la <xref linkend=\"sect-Users_Guide-Website-structure-cfg_and_db-manual\" /> et à la <xref linkend=\"sect-Users_Guide-Website-structure-cfg_and_db-rpm\" /> pour des précisions quant à la création d'un fichier vidage et à la <xref linkend=\"dump_file\" /> pour une description du contenu de ce fichier."
 
 #. Tag: title
@@ -135,13 +135,13 @@ msgid "To Submit Your Sitemap to Google:"
 msgstr "Pour soumettre le fichier Sitemap à Google :"
 
 #. Tag: para
-#, no-c-format
-msgid "Sign up for a Google account at <ulink url=\"http://www.google.com/webmasters/tools/home\">Google Webmaster Tools</ulink>. If you already have a Google account, you can use it."
+#, no-c-format, fuzzy
+msgid "Sign up for a Google account at <link xlink:href=\"http://www.google.com/webmasters/tools/home\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Google Webmaster Tools</link>. If you already have a Google account, you can use it."
 msgstr "Inscrivez-vous pour obtenir un compte Google à l'adresse <ulink url=\"http://www.google.com/webmasters/tools/home\">Google Webmaster Tools</ulink>. Si vous en possédez déjà un, vous pouvez l'utiliser."
 
 #. Tag: para
-#, no-c-format
-msgid "Sign in to your Google Webmaster Tools account at this URL: <ulink url=\"http://www.google.com/webmasters/tools/home\">http://www.google.com/webmasters/tools/home</ulink>."
+#, no-c-format, fuzzy
+msgid "Sign in to your Google Webmaster Tools account at this URL: <link xlink:href=\"http://www.google.com/webmasters/tools/home\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">http://www.google.com/webmasters/tools/home</link>."
 msgstr "Ouvrez une session dans le compte « Google Webmaster Tools » (Outils Google pour webmestres) à l'URL : <ulink url=\"http://www.google.com/webmasters/tools/home\">http://www.google.com/webmasters/tools/home</ulink>."
 
 #. Tag: para
@@ -205,13 +205,13 @@ msgid "To Submit Your Sitemap to Bing:"
 msgstr "Pour soumettre un fichier Sitemap à Bing :"
 
 #. Tag: para
-#, no-c-format
-msgid "Sign up for a Bing Webmaster Tools account at <ulink url=\"http://www.bing.com/toolbox/webmaster/\">Bing Webmaster Tools</ulink>. If you already have a Windows LiveID account, you can use it."
+#, no-c-format, fuzzy
+msgid "Sign up for a Bing Webmaster Tools account at <link xlink:href=\"http://www.bing.com/toolbox/webmaster/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Bing Webmaster Tools</link>. If you already have a Windows LiveID account, you can use it."
 msgstr "Inscrivez-vous pour obtenir un compte « Bing Webmaster Tools » à l'adresse <ulink url=\"http://www.bing.com/toolbox/webmaster/\">Bing Webmaster Tools</ulink>. Si vous en possédez déjà un, vous pouvez l'utiliser."
 
 #. Tag: para
-#, no-c-format
-msgid "Sign in to your Bing Webmaster Tools account at this URL: <ulink url=\"http://www.bing.com/toolbox/webmaster/\">http://www.bing.com/toolbox/webmaster/</ulink>."
+#, no-c-format, fuzzy
+msgid "Sign in to your Bing Webmaster Tools account at this URL: <link xlink:href=\"http://www.bing.com/toolbox/webmaster/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">http://www.bing.com/toolbox/webmaster/</link>."
 msgstr "Ouvrez une session dans le compte « Bing Webmaster Tools » (Outils Google pour webmestres) à l'URL : <ulink url=\"http://www.bing.com/toolbox/webmaster/\">http://www.bing.com/toolbox/webmaster/</ulink>."
 
 #. Tag: para

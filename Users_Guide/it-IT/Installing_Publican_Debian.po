@@ -49,8 +49,7 @@ msgstr ""
 
 #. Tag: screen
 #, no-c-format
-msgid ""
-"<prompt>$</prompt> <command>publican -v</command>\n"
+msgid "<prompt>$</prompt> <command>publican -v</command>\n"
 "<computeroutput>version=2.8</computeroutput>"
 msgstr ""
 
@@ -60,13 +59,11 @@ msgid "Important — Installing more recent packages using Apt-Pinning"
 msgstr ""
 
 #. Tag: para
-#, no-c-format
-msgid "If you need a more recent release of <package>publican</package> than installed by the procedure above, you can query if there other versions available: <ulink url=\"http://packages.debian.org/publican\" />."
+#, no-c-format, fuzzy
+msgid "If you need a more recent release of <package>publican</package> than installed by the procedure above, you can query if there other versions available: <uri xlink:href=\"http://packages.debian.org/publican\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">http://packages.debian.org/publican</uri>."
 msgstr ""
 
-#. Tag: para
-#, no-c-format
-msgid "To date, there has not been any backport (<ulink url=\"http://backports.debian.org/Instructions/\" />) available for <application>publican</application>, so we need to use Apt Pinning <ulink url=\"https://wiki.debian.org/AptPreferences\" />"
+msgid "To date, there has not been any backport (<uri xlink:href=\"http://backports.debian.org/Instructions/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">http://backports.debian.org/Instructions/</uri>) available for <application>publican</application>, so we need to use Apt Pinning <uri xlink:href=\"https://wiki.debian.org/AptPreferences\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">https://wiki.debian.org/AptPreferences</uri>"
 msgstr ""
 
 #. Tag: para
@@ -96,8 +93,7 @@ msgstr ""
 
 #. Tag: programlisting
 #, no-c-format
-msgid ""
-"#### testing  #########\n"
+msgid "#### testing  #########\n"
 "deb http://ftp.us.debian.org/debian testing main contrib non-free"
 msgstr ""
 
@@ -215,4 +211,9 @@ msgstr ""
 #, no-c-format
 msgid "<prompt>$</prompt> <command>apt-get -t testing upgrade libxml2 libxslt1.1</command>"
 msgstr ""
+
+#. Tag: para
+#, no-c-format
+#~ msgid "To date, there has not been any backport (<ulink url=\"http://backports.debian.org/Instructions/\" />) available for <application>publican</application>, so we need to use Apt Pinning <ulink url=\"https://wiki.debian.org/AptPreferences\" />"
+#~ msgstr ""
 

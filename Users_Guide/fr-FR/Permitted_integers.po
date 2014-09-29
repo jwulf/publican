@@ -20,7 +20,7 @@ msgid "Permitted characters"
 msgstr "Caractères autorisés"
 
 #. Tag: para
-#, no-c-format
-msgid "<application>Publican</application> uses data in this tag to generate part of the file name for RPM packages, unless overridden by data in the <filename>publican.cfg</filename> file. If you do not override this tag in the <filename>publican.cfg</filename> file, this tag must only contain numbers (&lsquo;0&ndash;9&rsquo;) if you plan to build packages with <application>Publican</application>."
+#, no-c-format, fuzzy
+msgid "<application>Publican</application> uses data in this tag to generate part of the file name for RPM packages, unless overridden by data in the <filename>publican.cfg</filename> file. If you do not override this tag in the <filename>publican.cfg</filename> file, this tag must only contain numbers (‘0–9’) if you plan to build packages with <application>Publican</application>."
 msgstr "<application>Publican</application> utilise la donnée de cette balise pour créer en partie le nom du fichier des paquets RPM, excepté si cette donnée a été  écrasée par celle définie dans le fichier <filename>publican.cfg</filename>. Si vous ne remplacez pas la valeur de la balise par celle de <filename>publican.cfg</filename>, elle ne doit comporter que des chiffres (&lsquo;0&ndash;9&rsquo;) si vous avez prévu de construire des paquets avec <application>Publican</application>."
 

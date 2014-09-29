@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2014-09-18 09:54+1000\n"
-"PO-Revision-Date: 2014-09-18 09:54+1000\n"
+"POT-Creation-Date: 2014-09-30 07:39+1000\n"
+"PO-Revision-Date: 2014-09-30 07:39+1000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: None\n"
 "Language: en-US \n"
@@ -35,7 +35,7 @@ msgstr ""
 msgid "Run the following command to install the <package>publican</package> package and the <package>publican-doc</package> documentation package:"
 msgstr ""
 
-msgid "<prompt>$</prompt> yum install publican\*"
+msgid "<prompt>$</prompt> yum install publican\\*"
 msgstr ""
 
 msgid "Several brand packages are available for use with <application>Publican</application>. Run the following command as the root user to install packages for building branded books:"
@@ -103,7 +103,7 @@ msgstr ""
 msgid "All components are selected by default. Click the checkboxes to deselect any components that you do <emphasis>not</emphasis> require and click <guibutton>Next</guibutton> to continue."
 msgstr ""
 
-msgid "By default, the installer software creates a folder named <filename>Publican</filename> within the <filename><replaceable>%ProgramFiles%</replaceable></filename> folder of your computer — typically <filename>C:\Program Files\Publican</filename>. You can manually edit the path displayed in the <guilabel>Destination Folder</guilabel> box to select a different folder."
+msgid "By default, the installer software creates a folder named <filename>Publican</filename> within the <filename><replaceable>%ProgramFiles%</replaceable></filename> folder of your computer — typically <filename>C:\\Program Files\\Publican</filename>. You can manually edit the path displayed in the <guilabel>Destination Folder</guilabel> box to select a different folder."
 msgstr ""
 
 msgid "When you are satisfied with the destination folder, click <guibutton>Install</guibutton>."

@@ -27,8 +27,8 @@ msgid "Use entities with extreme caution"
 msgstr "Usare le entità con particolare attenzione"
 
 #. Tag: para
-#, no-c-format
-msgid "Entities offer convenience but they should be used with extreme caution in documents that will be translated. Writing (for example) <sgmltag>&amp;FDS&semi;</sgmltag> instead of <application>Fedora Directory Server</application> saves the writer time but transformed entities do not appear in the <firstterm>portable object</firstterm> (PO) files that translators use. Complete translations of documents containing entities are, as a consequence, impossible."
+#, no-c-format, fuzzy
+msgid "Entities offer convenience but they should be used with extreme caution in documents that will be translated. Writing (for example) <tag>&amp;FDS;</tag> instead of <application>Fedora Directory Server</application> saves the writer time but transformed entities do not appear in the <firstterm>portable object</firstterm> (PO) files that translators use. Complete translations of documents containing entities are, as a consequence, impossible."
 msgstr "Le entità sono convenienti, ma dovrebbero essere usate con particolare attenzione in quei documenti che saranno tradotti. Scrivere per esempio, <sgmltag>&amp;FDS&semi;</sgmltag> invece di <application>Fedora Directory Server</application> è un vantaggio per il redattore del documento; tuttavia le entità non risultano trasformate nei file <firstterm>PO</firstterm> (Portable Object) usati dai traduttori. Di conseguenza, risulta impossibile una traduzione completa di un documento contenente entità."
 
 #. Tag: para
@@ -37,13 +37,13 @@ msgid "Entities present special obstacles to translators and can preclude the pr
 msgstr "Le entità rappresentano degli ostacoli per i traduttori, precludendo la possibilità di realizzare traduzioni di qualità. La natura propria di una entità è di rendere esattamente, in ogni occorrenza del documento ed in ogni lingua, la parola o frase rappresentata. Questa scarsa flessibilità comporta che la parola o gruppo di parole, rappresentate dall'entità, possa essere illeggibile o incomprensibile in certe lingue e non possa modificarsi al cambiare delle regole grammaticali richieste dalla lingua. Inoltre, poiché durante la conversione in PO dei file XML, le entità non vengono trasformate, i traduttori non possono selezionare correttamente, secondo le regole grammaticali della propria lingua, le parole da inserire intorno all'entità."
 
 #. Tag: para
-#, no-c-format
-msgid "If you define an entity — <sgmltag>&lt;!ENTITY LIFT \"Liberty Installation and Formatting Tome\"&gt;</sgmltag> — you can enter <literal>&amp;LIFT&semi;</literal> in your XML and it will appear as <literal>Liberty Installation and Formatting Tome</literal> every time the book is built as HTML, PDF or text."
+#, no-c-format, fuzzy
+msgid "If you define an entity — <tag>&lt;!ENTITY LIFT \"Liberty Installation and Formatting Tome\"&gt;</tag> — you can enter <literal>&amp;LIFT;</literal> in your XML and it will appear as <literal>Liberty Installation and Formatting Tome</literal> every time the book is built as HTML, PDF or text."
 msgstr "Se si definisce una entità — <sgmltag>&lt;!ENTITY LIFT \"Liberty Installation and Formatting Tome\"&gt;</sgmltag> — nel file XML si può inserire un riferimento all'entità definita, <literal>&amp;LIFT&semi;</literal> e in ogni compilazione HTML, PDF o semplice testo, si visualizzerà l'entità <literal>Liberty Installation and Formatting Tome</literal>."
 
 #. Tag: para
-#, no-c-format
-msgid "Entities are not transformed when XML is converted to PO, however. Consequently, translators never see <literal>Liberty Installation and Formatting Tome</literal>. Instead they see <literal>&amp;LIFT&semi;</literal>, which they cannot translate."
+#, no-c-format, fuzzy
+msgid "Entities are not transformed when XML is converted to PO, however. Consequently, translators never see <literal>Liberty Installation and Formatting Tome</literal>. Instead they see <literal>&amp;LIFT;</literal>, which they cannot translate."
 msgstr "Le entità non vengono trasformate durante la conversione in PO dei file XML. Quindi, i traduttori non vedono mai <literal>Liberty Installation and Formatting Tome</literal>, ma soltanto <literal>&amp;LIFT&semi;</literal>, che non possono tradurre."
 
 #. Tag: para
@@ -52,8 +52,8 @@ msgid "Consider something as simple as the following English sentence fragment b
 msgstr "Si consideri per esempio la traduzione in tedesco, del seguente frammento in lingua inglese:"
 
 #. Tag: para
-#, no-c-format
-msgid "As noted in the <citetitle>Liberty Installation and Formatting Tome</citetitle>, Chapter 3&hellip;"
+#, no-c-format, fuzzy
+msgid "As noted in the <citetitle>Liberty Installation and Formatting Tome</citetitle>, Chapter 3…"
 msgstr "As noted in the <citetitle>Liberty Installation and Formatting Tome</citetitle>, Chapter 3&hellip;"
 
 #. Tag: para
@@ -62,13 +62,13 @@ msgid "A translation of this might be as follows:"
 msgstr "Una traduzione potrebbe essere:"
 
 #. Tag: para
-#, no-c-format
-msgid "<foreignphrase>Wie in dem <citetitle>Wälzer für die Installation und Formatierung von Liberty</citetitle>, Kapitel 3, erwähnt&hellip;</foreignphrase>"
+#, no-c-format, fuzzy
+msgid "<foreignphrase>Wie in dem <citetitle>Wälzer für die Installation und Formatierung von Liberty</citetitle>, Kapitel 3, erwähnt…</foreignphrase>"
 msgstr "<foreignphrase>Wie in dem <citetitle>Wälzer für die Installation und Formatierung von Liberty</citetitle>, Kapitel 3, erwähnt&hellip;</foreignphrase>"
 
 #. Tag: para
-#, no-c-format
-msgid "Because there is no text missing, the title can be translated into elegant German. Also, note the use of <foreignphrase>&lsquo;dem&rsquo;</foreignphrase>, the correct form of the definite article ('the') when referring to a <foreignphrase>Wälzer</foreignphrase> ('tome') in this grammatical context."
+#, no-c-format, fuzzy
+msgid "Because there is no text missing, the title can be translated into elegant German. Also, note the use of <foreignphrase>‘dem’</foreignphrase>, the correct form of the definite article ('the') when referring to a <foreignphrase>Wälzer</foreignphrase> ('tome') in this grammatical context."
 msgstr "Poiché non esistono entità, il titolo può essere tradotto in un tedesco corretto. Inoltre, notare in questo contesto linguistico, l'uso di <foreignphrase>&lsquo;dem&rsquo;</foreignphrase>, la forma corretta dell'articolo determinativo ('il') quando riferito a <foreignphrase>Wälzer</foreignphrase> ('tomo') "
 
 #. Tag: para
@@ -77,14 +77,12 @@ msgid "By contrast, if entities are used, the entry in the PO file says:"
 msgstr "Per contrasto, usando le entità, la stessa frase nel file PO risulta:"
 
 #. Tag: programlisting
-#, no-c-format
+#, no-c-format, fuzzy
 msgid ""
-"\n"
 "#. Tag: para\n"
 "#, no-c-format\n"
-"msgid \"As noted in the &lt;citetitle&gt;&amp;LIFT&semi;&lt;/citetitle&gt;, Chapter 3&hellip;\"\n"
-"msgstr \"\"\n"
-"\n"
+"msgid \"As noted in the &lt;citetitle&gt;&amp;LIFT;&lt;/citetitle&gt;, Chapter 3…\"\n"
+"msgstr \"\""
 msgstr ""
 "\n"
 "#. Tag: para\n"
@@ -99,14 +97,12 @@ msgid "The translation of this would probably run thus:"
 msgstr "La traduzione di ciò, probabilmente sarebbe:"
 
 #. Tag: programlisting
-#, no-c-format
+#, no-c-format, fuzzy
 msgid ""
-"\n"
 "#. Tag: para\n"
 "#, no-c-format\n"
-"msgid \"As noted in the &lt;citetitle&gt;&amp;LIFT&semi;&lt;/citetitle&gt;, Chapter 3&hellip;\"\n"
-"msgstr \"Wie in &lt;citetitle&gt;&amp;LIFT&semi;&lt;/citetitle&gt;, Kapitel 3, erwähnt&hellip;\"\n"
-"\n"
+"msgid \"As noted in the &lt;citetitle&gt;&amp;LIFT;&lt;/citetitle&gt;, Chapter 3…\"\n"
+"msgstr \"Wie in &lt;citetitle&gt;&amp;LIFT;&lt;/citetitle&gt;, Kapitel 3, erwähnt…\""
 msgstr ""
 "\n"
 "#. Tag: para\n"
@@ -121,13 +117,13 @@ msgid "And the presentation would be thus:"
 msgstr "E nella presentazione si avrebbe:"
 
 #. Tag: para
-#, no-c-format
-msgid "<foreignphrase>Wie in <citetitle>Liberty Installation and Formatting Tome</citetitle>, Kapitel 3, erwähnt&hellip;</foreignphrase>"
+#, no-c-format, fuzzy
+msgid "<foreignphrase>Wie in <citetitle>Liberty Installation and Formatting Tome</citetitle>, Kapitel 3, erwähnt…</foreignphrase>"
 msgstr "<foreignphrase>Wie in <citetitle>Liberty Installation and Formatting Tome</citetitle>, Kapitel 3, erwähnt&hellip;</foreignphrase>"
 
 #. Tag: para
-#, no-c-format
-msgid "This, of course, leaves the title in English, including words like 'Tome' and 'Formatting' that readers are unlikely to understand. Also, the translator is forced to omit the definite article &lsquo;dem&rsquo;, a more general construction that comes close to a hybrid of English and German that German speakers call <foreignphrase>Denglisch</foreignphrase> or <foreignphrase>Angleutsch</foreignphrase>. Many German speakers consider this approach incorrect and almost all consider it inelegant."
+#, no-c-format, fuzzy
+msgid "This, of course, leaves the title in English, including words like 'Tome' and 'Formatting' that readers are unlikely to understand. Also, the translator is forced to omit the definite article ‘dem’, a more general construction that comes close to a hybrid of English and German that German speakers call <foreignphrase>Denglisch</foreignphrase> or <foreignphrase>Angleutsch</foreignphrase>. Many German speakers consider this approach incorrect and almost all consider it inelegant."
 msgstr "In tal caso, ovviamente il titolo rimane in inglese, incluse le parole come 'Tome' e 'Formatting' che il lettore difficilmente comprende. Inoltre, il traduttore è costretto ad omettere l'articolo definitivo &lsquo;dem&rsquo;, per un costrutto più generico che si avvicina ad un ibrido tra inglese e tedesco, definito <foreignphrase>Denglisch</foreignphrase> o <foreignphrase>Angleutsch</foreignphrase>, dai madrelingua tedesca. Molti di coloro che parlano il tedesco, ritengono scorretto questo approccio e quasi tutti un modo poco elegante."
 
 #. Tag: para
@@ -136,8 +132,8 @@ msgid "Equivalent problems emerge with a fragment such as this:"
 msgstr "Problemi analoghi emergono con un frammento come questo:"
 
 #. Tag: para
-#, no-c-format
-msgid "However, a careful reading of the <citetitle>Liberty Installation and Formatting Tome</citetitle> afterword shows that&hellip;"
+#, no-c-format, fuzzy
+msgid "However, a careful reading of the <citetitle>Liberty Installation and Formatting Tome</citetitle> afterword shows that…"
 msgstr "However, a careful reading of the <citetitle>Liberty Installation and Formatting Tome</citetitle> afterword shows that&hellip;"
 
 #. Tag: para
@@ -146,8 +142,8 @@ msgid "With no text hidden behind an entity, a German translation of this might 
 msgstr "Senza testo nascosto da entità, una traduzione in tedesco potrebbe essere:"
 
 #. Tag: para
-#, no-c-format
-msgid "<foreignphrase>Jedoch ergibt ein sorgfältiges Lesen des Nachworts für den <citetitle>Wälzer für die Installation und Formatierung von Liberty</citetitle>, dass&hellip;</foreignphrase>"
+#, no-c-format, fuzzy
+msgid "<foreignphrase>Jedoch ergibt ein sorgfältiges Lesen des Nachworts für den <citetitle>Wälzer für die Installation und Formatierung von Liberty</citetitle>, dass…</foreignphrase>"
 msgstr "<foreignphrase>Jedoch ergibt ein sorgfältiges Lesen des Nachworts für den <citetitle>Wälzer für die Installation und Formatierung von Liberty</citetitle>, dass&hellip;</foreignphrase>"
 
 #. Tag: para
@@ -156,14 +152,12 @@ msgid "If an entity was used to save the writer time, the translator has to deal
 msgstr "Se, per salvare tempo di scrittura, si fosse usata un'entità, il traduttore si sarebbe trovato con questo:"
 
 #. Tag: programlisting
-#, no-c-format
+#, no-c-format, fuzzy
 msgid ""
-"\n"
 "#. Tag: para\n"
 "#, no-c-format\n"
-"msgid \"However, a careful reading of the &lt;citetitle&gt;&amp;LIFT&semi;&lt;/citetitle&gt; afterword shows that&hellip;\"\n"
-"msgstr \"\"\n"
-"\n"
+"msgid \"However, a careful reading of the &lt;citetitle&gt;&amp;LIFT;&lt;/citetitle&gt; afterword shows that…\"\n"
+"msgstr \"\""
 msgstr ""
 "\n"
 "#. Tag: para\n"
@@ -178,14 +172,12 @@ msgid "And the translation would be subtly but importantly different:"
 msgstr "E la traduzione sarebbe stata differente, in modo sottile ma rilevante:"
 
 #. Tag: programlisting
-#, no-c-format
+#, no-c-format, fuzzy
 msgid ""
-"\n"
 "#. Tag: para\n"
 "#, no-c-format\n"
-"msgid \"However, a careful reading of the &lt;citetitle&gt;&amp;LIFT&semi;&lt;/citetitle&gt; afterword shows that&hellip;\"\n"
-"msgstr \"Jedoch ergibt ein sorgfältiges Lesen des Nachworts für &lt;citetitle&gt;&amp;LIFT&semi;&lt;/citetitle&gt;, dass&hellip;\"\n"
-"\n"
+"msgid \"However, a careful reading of the &lt;citetitle&gt;&amp;LIFT;&lt;/citetitle&gt; afterword shows that…\"\n"
+"msgstr \"Jedoch ergibt ein sorgfältiges Lesen des Nachworts für &lt;citetitle&gt;&amp;LIFT;&lt;/citetitle&gt;, dass…\""
 msgstr ""
 "\n"
 "#. Tag: para\n"
@@ -200,8 +192,8 @@ msgid "When presented to a reader, this would appear as follows:"
 msgstr "Presentata al lettore, questa apparirebbe come:"
 
 #. Tag: para
-#, no-c-format
-msgid "<foreignphrase>Jedoch ergibt ein sorgfältiges Lesen des Nachworts für <citetitle>Liberty Installation and Formatting Tome</citetitle>, dass&hellip;</foreignphrase>"
+#, no-c-format, fuzzy
+msgid "<foreignphrase>Jedoch ergibt ein sorgfältiges Lesen des Nachworts für <citetitle>Liberty Installation and Formatting Tome</citetitle>, dass…</foreignphrase>"
 msgstr "<foreignphrase>Jedoch ergibt ein sorgfältiges Lesen des Nachworts für <citetitle>Liberty Installation and Formatting Tome</citetitle>, dass&hellip;</foreignphrase>"
 
 #. Tag: para
@@ -215,8 +207,8 @@ msgid "Finally, consider that although a particular word never changes its form 
 msgstr "Infine, tener presente che anche se un termine è invariabile in inglese, ciò non necessariamente è vero in altre lingue, anche quando si tratta di un <firstterm>nome proprio</firstterm> come quello di un prodotto. In molte lingue, i nomi cambiano la loro forma (<firstterm>flessione</firstterm>) in accordo al ruolo nel periodo (<firstterm>caso</firstterm> grammaticale). Una entità in un file XML, impostata per rappresentare un nome inglese o un sintagma nominale (<emphasis>noun phrase</emphasis>) rende praticamente impossibile una traduzione corretta in tali lingue."
 
 #. Tag: para
-#, no-c-format
-msgid "For example, if you write a document that could apply to more than one product, you might be tempted to set an entity such as <sgmltag>&amp;PRODUCT&semi;</sgmltag>. The advantage of this approach is that by simply changing this value in the <filename><replaceable>Doc_Name</replaceable>.ent</filename> file, you could easily adjust the book to document (for example) Red Hat Enterprise Linux, Fedora, or CentOS. However, while the proper noun <literal>Fedora</literal> never varies in English, it has multiple forms in other languages. For example, in Czech the name <literal>Fedora</literal> has six different forms, depending on one of seven ways in which you can use it in a sentence:"
+#, no-c-format, fuzzy
+msgid "For example, if you write a document that could apply to more than one product, you might be tempted to set an entity such as <tag>&amp;PRODUCT;</tag>. The advantage of this approach is that by simply changing this value in the <filename><replaceable>Doc_Name</replaceable>.ent</filename> file, you could easily adjust the book to document (for example) Red Hat Enterprise Linux, Fedora, or CentOS. However, while the proper noun <literal>Fedora</literal> never varies in English, it has multiple forms in other languages. For example, in Czech the name <literal>Fedora</literal> has six different forms, depending on one of seven ways in which you can use it in a sentence:"
 msgstr "Per esempio, se si scrive un documento che si può applicare a più di un prodotto, si potrebbe essere tentati di impostare una entità come <sgmltag>&amp;PRODUCT&semi;</sgmltag>. Il vantaggio di questo approccio è che cambiando semplicemente questo valore nel file <filename><replaceable>Nome_Doc</replaceable>.ent</filename>, si può facilmente adattare il libro a una documentazione, per esempio, per Red Hat Enterprise Linux, Fedora, o CentOS. Comunque, mentre il nome proprio <firstterm>Fedora</firstterm> non subisce variazioni nella lingua inglese, (per esempio) in ceco, presenta sei forme differenti, una per ciascuno dei possibili ruoli in un periodo:"
 
 #. Tag: title
@@ -370,23 +362,23 @@ msgid "<foreignphrase>Ahoj, Fedoro!</foreignphrase> — Hello Fedora!"
 msgstr "<foreignphrase>Ahoj, Fedoro!</foreignphrase> — Ciao Fedora!"
 
 #. Tag: para
-#, no-c-format
-msgid "<foreignphrase>Ve Fedoře 10&hellip;</foreignphrase> — In Fedora 10&hellip;"
+#, no-c-format, fuzzy
+msgid "<foreignphrase>Ve Fedoře 10…</foreignphrase> — In Fedora 10…"
 msgstr "<foreignphrase>Ve Fedoře 10&hellip;</foreignphrase> — In Fedora 14&hellip;"
 
 #. Tag: para
-#, no-c-format
-msgid "<foreignphrase>S Fedorou získáváte nejnovější&hellip;</foreignphrase> — With Fedora, you get the latest&hellip;"
+#, no-c-format, fuzzy
+msgid "<foreignphrase>S Fedorou získáváte nejnovější…</foreignphrase> — With Fedora, you get the latest…"
 msgstr "<foreignphrase>S Fedorou získáváte nejnovější&hellip;</foreignphrase> — Con Fedora, puoi ottenere gli ultimi&hellip;"
 
 #. Tag: para
-#, no-c-format
-msgid "A sentence that begins <foreignphrase>S Fedora získáváte nejnovější&hellip;</foreignphrase> remains comprehensible to Czech readers, but the result is not grammatically correct. The same effect can be simulated in English, because although English nouns lost their case endings during the Middle Ages, English pronouns are still inflected. The sentence, 'Me see she' is completely comprehensible to English speakers, but is not what they expect to read, because the form of the pronouns <literal>me</literal> and <literal>she</literal> is not correct. <literal>Me</literal> is the accusative form of the pronoun, but because it is the subject of the sentence, the pronoun should take the nominative form, <literal>I</literal>. Similarly, <literal>she</literal> is nominative case, but as the direct object of the sentence the pronoun should take its accusative form, <literal>her</literal>."
+#, no-c-format, fuzzy
+msgid "A sentence that begins <foreignphrase>S Fedora získáváte nejnovější…</foreignphrase> remains comprehensible to Czech readers, but the result is not grammatically correct. The same effect can be simulated in English, because although English nouns lost their case endings during the Middle Ages, English pronouns are still inflected. The sentence, 'Me see she' is completely comprehensible to English speakers, but is not what they expect to read, because the form of the pronouns <literal>me</literal> and <literal>she</literal> is not correct. <literal>Me</literal> is the accusative form of the pronoun, but because it is the subject of the sentence, the pronoun should take the nominative form, <literal>I</literal>. Similarly, <literal>she</literal> is nominative case, but as the direct object of the sentence the pronoun should take its accusative form, <literal>her</literal>."
 msgstr "Una frase che inizia con <foreignphrase>S Fedora získáváte nejnovější&hellip;</foreignphrase> rimane comprensibile al lettore ceco, ma risulta sintatticamente scorretta. Lo stesso effetto si può aver con la lingua inglese, infatti anche se i sostantivi hanno perso l'uso delle desinenze intorno al Medio Evo, i pronomi hanno conservato la flessione. La frase, 'Me see she' risulta completamente comprensibile ad un inglese, ma non è la forma che ci si aspetterebbe di leggere, poiché non è corretta la forma dei pronomi <literal>me</literal> e <literal>she</literal>. <literal>Me</literal> è la forma accusativa del pronome, ma poiché è il soggetto del periodo, il pronome dovrebbe assumere la forma nominativa, <literal>I</literal>. Analogamente, <literal>she</literal> è il caso nominativo, ma come oggetto diretto del periodo il pronome dovrebbe assumere la forma accusativa, <literal>her</literal>."
 
 #. Tag: para
-#, no-c-format
-msgid "Nouns in most Slavic languages like Russian, Ukrainian, Czech, Polish, Serbian, and Croatian have seven different cases. Nouns in Finno&ndash;Ugaric languages such as Finnish, Hungarian, and Estonian have between fifteen and seventeen cases. Other languages alter nouns for other reasons. For example, Scandinavian languages inflect nouns to indicate <firstterm>definiteness</firstterm> — whether the noun refers to '<emphasis>a</emphasis> thing' or '<emphasis>the</emphasis> thing' — and some dialects of those languages inflect nouns both for definiteness <emphasis>and</emphasis> for grammatical case."
+#, no-c-format, fuzzy
+msgid "Nouns in most Slavic languages like Russian, Ukrainian, Czech, Polish, Serbian, and Croatian have seven different cases. Nouns in Finno–Ugaric languages such as Finnish, Hungarian, and Estonian have between fifteen and seventeen cases. Other languages alter nouns for other reasons. For example, Scandinavian languages inflect nouns to indicate <firstterm>definiteness</firstterm> — whether the noun refers to '<emphasis>a</emphasis> thing' or '<emphasis>the</emphasis> thing' — and some dialects of those languages inflect nouns both for definiteness <emphasis>and</emphasis> for grammatical case."
 msgstr "I sostantivi nella maggior parte delle lingue slave come russo, ceco, polacco, serbo e croato, hanno sette differenti casi. I sostantivi nelle lingue Finno&ndash;ugriche come finlandese, ungherese ed estone hanno tra quindici e diciassette casi. Altre lingue modificano i sostantivi per altre ragioni. Per esempio, le lingue scandinave flettono i sostantivi per indicare <firstterm>determinazione</firstterm> — se il sostantivo si riferisce ad '<emphasis>una</emphasis> cosa' o '<emphasis>alla</emphasis> cosa' — ed alcuni dialetti di queste lingue flettono i sostantivi per determinazione <emphasis>e</emphasis> per declinazione."
 
 #. Tag: para

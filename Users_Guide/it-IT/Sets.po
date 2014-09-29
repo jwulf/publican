@@ -22,7 +22,7 @@ msgid "Using sets"
 msgstr "Usare i set"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "A <firstterm>set</firstterm> is a collection of books, published as a single output. The <citetitle>Services Plan</citetitle> for example is a set comprised of many books such as the <citetitle>Developer Guide</citetitle>, <citetitle>Engineering Content Services Guide</citetitle> and the <citetitle>Engineering Operations Guide</citetitle> to name just a few. The <prompt>$</prompt> <command>create_book</command> command creates a template for a set by setting the <parameter>type</parameter> parameter to <literal>Set</literal>."
 msgstr "Un <firstterm>set</firstterm> è una raccolta di libri pubblicati come una unica presentazione. <citetitle>Services Plan</citetitle>, per esempio, è un set composto da molti libri come <citetitle>Developer Guide</citetitle>, <citetitle>Engineering Content Services Guide</citetitle> ed <citetitle>Engineering Operations Guide</citetitle>, per citarne solo alcuni. Il comando <command>create_book</command> crea un modello per un set, impostando il parametro <parameter>type</parameter> con il valore <literal>Set</literal>."
 
@@ -67,29 +67,26 @@ msgid "Run the following command in a shell in the <filename>books/</filename> d
 msgstr "In una shell, eseguire il seguente comando nella cartella  <filename>books/</filename> per creare un set denominato <literal>My_Set</literal> con brand in stile Red Hat e in cui i file XML vengono redatti in inglese americano."
 
 #. Tag: programlisting
-#, no-c-format
-msgid ""
-"publican create --type=Set --name=My_Set --brand=RedHat --lang=en-US\n"
-"\n"
+#, no-c-format, fuzzy
+msgid "publican create --type=Set --name=My_Set --brand=RedHat --lang=en-US"
 msgstr ""
 "publican create --type=Set --name=My_Set --brand=RedHat --lang=en-US\n"
 "\n"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "<prompt>$</prompt> <command>cd</command> into the <filename>My_Set/en-US</filename> directory and create two <emphasis>directories</emphasis> (not books) called <filename>Book_A</filename> and <filename>Book_B</filename>."
 msgstr "<command>cd</command> nella cartella <filename>My_Set/en-US</filename> e creare due <emphasis>cartelle</emphasis> (non libri), denominate <filename>Book_A</filename> e <filename>Book_B</filename>."
 
 #. Tag: screen
 #, no-c-format
-msgid ""
-"<prompt>$</prompt> <command>cd</command> <filename>My_Set/en-US</filename>\n"
+msgid "<prompt>$</prompt> <command>cd</command> <filename>My_Set/en-US</filename>\n"
 "<prompt>$</prompt> <command>mkdir</command> <filename>Book_A</filename> <filename>Book_B</filename>"
 msgstr ""
 
 #. Tag: para
 #, no-c-format, fuzzy
-msgid "<prompt>$</prompt> <command>cd</command> into the <filename>books/My_Set/en-US/Book_A</filename> directory. Create and edit the <filename>Book_A.xml</filename>, <filename>Book_Info.xml</filename>, and any other xml files required for your book such as those required for individual chapters. Ensure that <filename>Book_A.xml</filename> contains the correct <sgmltag>xi:include</sgmltag> references to all of your xml files in the directory. For example, if <citetitle>Book A</citetitle> contained <filename>Book_Info.xml</filename> and <filename>Chapter_1.xml</filename>, the <filename>Book_A.xml</filename> file would look like this:"
+msgid "<prompt>$</prompt> <command>cd</command> into the <filename>books/My_Set/en-US/Book_A</filename> directory. Create and edit the <filename>Book_A.xml</filename>, <filename>Book_Info.xml</filename>, and any other xml files required for your book such as those required for individual chapters. Ensure that <filename>Book_A.xml</filename> contains the correct <tag>xi:include</tag> references to all of your xml files in the directory. For example, if <citetitle>Book A</citetitle> contained <filename>Book_Info.xml</filename> and <filename>Chapter_1.xml</filename>, the <filename>Book_A.xml</filename> file would look like this:"
 msgstr "<command>cd</command> nella cartella <filename>books/My_Set/en-US/Book_A</filename>. Creare e modificare i file <filename>Book_A.xml</filename>, <filename>Book_Info.xml</filename> e gli altri file XML richiesti dal libro e gli altri dei vari capitoli. Assicurarsi che il file <filename>Book_A.xml</filename> contenga i corretti riferimenti in <sgmltag>xi:include</sgmltag> a tutti i file XML nella cartella. Per esempio, se <citetitle>Book A</citetitle> contiene <filename>Book_Info.xml</filename> e <filename>Chapter_1.xml</filename>, il file <filename>Book_A.xml</filename> potrebbe essere simile a:"
 
 #. Tag: programlisting
@@ -103,8 +100,7 @@ msgid ""
 "&lt;book&gt;\n"
 "	  &lt;xi:include href=\"Book_Info.xml\" xmlns:xi=\"http://www.w3.org/2001/XInclude\"&gt;&lt;/xi:include&gt;\n"
 "	  &lt;xi:include href=\"Chapter_1.xml\" xmlns:xi=\"http://www.w3.org/2001/XInclude\"&gt;&lt;/xi:include&gt;\n"
-"&lt;/book&gt;\n"
-"\n"
+"&lt;/book&gt;"
 msgstr ""
 "&lt;?xml version='1.0'?&gt;\n"
 "&lt;!DOCTYPE book PUBLIC \"-//OASIS//DTD DocBook XML V4.5//EN\" \n"
@@ -123,16 +119,13 @@ msgid "Use the same process for <citetitle>Book_B</citetitle>, located in the <f
 msgstr "Usare lo stesso procedimento per il <citetitle>Book_B</citetitle>, salvato nella cartella <filename>books/My_Set/en-US/Book_B</filename>, come indicato sopra."
 
 #. Tag: para
-#, no-c-format
-msgid "Open the <filename>books/My_Set/en-US/My_Set.xml</filename> file in an editor. For each book in the set, add an <sgmltag>xi:include</sgmltag> reference to the primary xml file from the book. The primary xml file for <citetitle>Book A</citetitle> will be <filename>Book_A.xml</filename> and for <citetitle>Book B</citetitle>, <filename>Book_B.xml</filename>. The <filename>My_Set.xml</filename> file should now look like this:"
+#, no-c-format, fuzzy
+msgid "Open the <filename>books/My_Set/en-US/My_Set.xml</filename> file in an editor. For each book in the set, add an <tag>xi:include</tag> reference to the primary xml file from the book. The primary xml file for <citetitle>Book A</citetitle> will be <filename>Book_A.xml</filename> and for <citetitle>Book B</citetitle>, <filename>Book_B.xml</filename>. The <filename>My_Set.xml</filename> file should now look like this:"
 msgstr "Modificare il file <filename>books/My_Set/en-US/My_Set.xml</filename>. Per ciascun libro nel set, aggiungere un riferimento <sgmltag>xi:include</sgmltag> al file XML principale del libro. Il file XML principale per il <citetitle>Book A</citetitle> è <filename>Book_A.xml</filename> e quello per il <citetitle>Book B</citetitle>, <filename>Book_B.xml</filename>. Il file <filename>My_Set.xml</filename> dovrebbe assomigliare a:"
 
 #. Tag: programlisting
 #, no-c-format, fuzzy
-msgid ""
-"<xi:include href=\"extras/Set_Name.xmlt\" parse=\"text\" xmlns:xi=\"http://www.w3.org/2001/XInclude\" />\n"
-"				\n"
-"\n"
+msgid "<xi:include href=\"extras/Set_Name.xmlt\" parse=\"text\" xmlns:xi=\"http://www.w3.org/2001/XInclude\" />"
 msgstr ""
 "<xi:include href=\"extras/Set_Name.xmlt\" parse=\"text\" xmlns:xi=\"http://www.w3.org/2001/XInclude\" />\n"
 "\n"
@@ -150,10 +143,9 @@ msgstr "In <filename>My_Set.xml</filename>, togliere il commento alle seguenti r
 #. Tag: programlisting
 #, no-c-format, fuzzy
 msgid ""
-"\n"
 "&lt;remark&gt;NOTE: the href does not contain a language! This is CORRECT!&lt;/remark&gt;\n"
 "&lt;remark&gt;&lt;xi:include href=\"My_Other_Book/My_Other_Book.xml\" xmlns:xi=\"http://www.w3.org/2001/XInclude\"&gt;&lt;/remark&gt;\n"
-"&lt;setindex&gt;&lt;/setindex&gt;\n"
+"&lt;setindex&gt;&lt;/setindex&gt;"
 msgstr ""
 "\n"
 "&lt;remark&gt;NOTE: the href does not contain a language! This is CORRECT!&lt;/remark&gt;\n"
@@ -168,9 +160,7 @@ msgstr "In <filename>Preface.xml</filename> e <filename>Book_Info.xml</filename>
 
 #. Tag: programlisting
 #, no-c-format, fuzzy
-msgid ""
-"\n"
-"&lt;xi:include href=\"Common_Content/Conventions.xml\" xmlns:xi=\"http://www.w3.org/2001/XInclude\" /&gt;\n"
+msgid "&lt;xi:include href=\"Common_Content/Conventions.xml\" xmlns:xi=\"http://www.w3.org/2001/XInclude\" /&gt;"
 msgstr ""
 "\n"
 "&lt;xi:include href=\"Common_Content/Conventions.xml\" xmlns:xi=\"http://www.w3.org/2001/XInclude\" /&gt;\n"
@@ -183,9 +173,7 @@ msgstr "Quindi si ha:"
 
 #. Tag: programlisting
 #, no-c-format, fuzzy
-msgid ""
-"\n"
-"&lt;xi:include href=\"../../Common_Content/Conventions.xml\" xmlns:xi=\"http://www.w3.org/2001/XInclude\" /&gt;\n"
+msgid "&lt;xi:include href=\"../../Common_Content/Conventions.xml\" xmlns:xi=\"http://www.w3.org/2001/XInclude\" /&gt;"
 msgstr ""
 "\n"
 "&lt;xi:include href=\"../../Common_Content/Conventions.xml\" xmlns:xi=\"http://www.w3.org/2001/XInclude\" /&gt;\n"
@@ -209,7 +197,6 @@ msgstr "Se si usano libri pre-esistenti, occorre riorganizzarli in modo che i fi
 #. Tag: programlisting
 #, no-c-format, fuzzy
 msgid ""
-"\n"
 "   -- My_Set\n"
 "    |-- en-US\n"
 "    |   |-- Author_Group.xml\n"
@@ -229,8 +216,7 @@ msgid ""
 "    |   |-- Preface.xml\n"
 "    |   |-- Revision_History.xml\n"
 "    |   `-- Set_Info.xml\n"
-"    `-- publican.cfg\n"
-"\n"
+"    `-- publican.cfg"
 msgstr ""
 "\n"
 "   -- My_Set\n"
@@ -264,7 +250,6 @@ msgstr "I file XML possono trovarsi anche all'interno di sotto-cartelle separate
 #. Tag: programlisting
 #, no-c-format, fuzzy
 msgid ""
-"\n"
 "   -- My_Set\n"
 "    |-- en-US\n"
 "    |   |-- Author_Group.xml\n"
@@ -286,7 +271,7 @@ msgid ""
 "    |   |-- Preface.xml\n"
 "    |   |-- Revision_History.xml\n"
 "    |   `-- Set_Info.xml\n"
-"    `-- publican.cfg\n"
+"    `-- publican.cfg"
 msgstr ""
 "\n"
 "   -- My_Set\n"
@@ -339,10 +324,8 @@ msgid "Run the following command in a shell to create a set named <literal>My_Se
 msgstr "In una shell, eseguire il seguente comando, per creare un set denominato <literal>My_Set</literal> con brand in stile Red Hat e in cui i file XML vengono redatti in inglese americano."
 
 #. Tag: programlisting
-#, no-c-format
-msgid ""
-"$ publican create --type=Set --name=My_Set --brand=RedHat  --lang=en-US\n"
-"\n"
+#, no-c-format, fuzzy
+msgid "$ publican create --type=Set --name=My_Set --brand=RedHat  --lang=en-US"
 msgstr ""
 "$ publican create --type=Set --name=My_Set --brand=RedHat  --lang=en-US\n"
 "\n"
@@ -353,12 +336,11 @@ msgid "Add the following lines to the <filename>publican.cfg</filename> file:"
 msgstr "Aggiungere le seguenti righe al file <filename>publican.cfg</filename>:"
 
 #. Tag: programlisting
-#, no-c-format
+#, no-c-format, fuzzy
 msgid ""
 "books: Book_A Book_B\n"
 "repo: <replaceable>http://PATH-TO-YOUR-SVN-REPOSITORY</replaceable>\n"
-"scm: SVN\n"
-"\n"
+"scm: SVN"
 msgstr ""
 "books: Book_A Book_B\n"
 "repo: <replaceable>http://PATH-TO-YOUR-SVN-REPOSITORY</replaceable>\n"
@@ -371,8 +353,8 @@ msgid "Your repository path should end in the directory before the book you need
 msgstr "Il percorso al repository deve indirizzare per primo, la cartella del libro."
 
 #. Tag: para
-#, no-c-format
-msgid "Open the <filename>My_Set.xml</filename> file in an editor. For each book in the set, add an <sgmltag>xi:include</sgmltag> reference to the primary XML file from the book. The primary XML file for <citetitle>Book A</citetitle> will be <filename>Book_A.xml</filename> and for <citetitle>Book B</citetitle>, <filename>Book_B.xml</filename>. The <filename>My_Set.xml</filename> file should now look like this:"
+#, no-c-format, fuzzy
+msgid "Open the <filename>My_Set.xml</filename> file in an editor. For each book in the set, add an <tag>xi:include</tag> reference to the primary XML file from the book. The primary XML file for <citetitle>Book A</citetitle> will be <filename>Book_A.xml</filename> and for <citetitle>Book B</citetitle>, <filename>Book_B.xml</filename>. The <filename>My_Set.xml</filename> file should now look like this:"
 msgstr "Modificare il file <filename>My_Set.xml</filename>. Per ciascun libro del set, aggiungere un riferimento <sgmltag>xi:include</sgmltag> al file XML principale del libro. Il file XML principale per il <citetitle>Book A</citetitle> è <filename>Book_A.xml</filename> e quello per il <citetitle>Book B</citetitle>, <filename>Book_B.xml</filename>. Il file <filename>My_Set.xml</filename> dovrebbe assomigliare a:"
 
 #. Tag: para
