@@ -1382,7 +1382,8 @@ DTDHEAD
 DTDHEAD
     }
 
-my $before = -1;
+    # BUGBUG if we put the DB ENT first it breaks the builds ...
+    my $before = 0;
 
     if ( $before == 1 &&  $dtdver =~ m/^5/ ) {
         # make sure docbook4 entities still work
