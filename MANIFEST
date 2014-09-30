@@ -974,6 +974,8 @@ Users_Guide/fr-FR/Adding_Files.po
 Users_Guide/fr-FR/Adding_Images.po
 Users_Guide/fr-FR/Applicable_to_RPM_only.po
 Users_Guide/fr-FR/Author_Group.po
+Users_Guide/fr-FR/Auto_Docs.po
+Users_Guide/fr-FR/Auto_Docs_Configs.po
 Users_Guide/fr-FR/Book_Info.po
 Users_Guide/fr-FR/Branding.po
 Users_Guide/fr-FR/Building_a_Book.po
@@ -1030,6 +1032,8 @@ Users_Guide/it-IT/Adding_Files.po
 Users_Guide/it-IT/Adding_Images.po
 Users_Guide/it-IT/Applicable_to_RPM_only.po
 Users_Guide/it-IT/Author_Group.po
+Users_Guide/it-IT/Auto_Docs.po
+Users_Guide/it-IT/Auto_Docs_Configs.po
 Users_Guide/it-IT/Book_Info.po
 Users_Guide/it-IT/Branding.po
 Users_Guide/it-IT/Building_a_Book.po
@@ -1111,4 +1115,3 @@ windows/publican2.ico
 xt/author/perlcritic.t
 xt/author/pod-coverage.t
 xt/author/pod.t
-META.json
