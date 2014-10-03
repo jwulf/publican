@@ -93,7 +93,7 @@ msgstr "Alcune <replaceable>opzioni_comando</replaceable> influenzano il risulta
 #. Tag: para
 #, fuzzy, no-c-format
 #~ msgid "creates a new brand. Refer to <xref linkend=\"sect-Publican-Users_Guide-Creating_a_brand\" /> for details of creating a brand."
-#~ msgstr "crea un nuovo brand. Fare riferimento alla <xref linkend=\"sect-Users_Guide-Creating_a_brand\" /> per i dettagli."
+#~ msgstr "crea un nuovo brand. Fare riferimento alla <xref linkend=\"sect-Publican-Users_Guide-Creating_a_brand\" /> per i dettagli."
 
 #. Tag: term
 #, no-c-format
@@ -143,7 +143,7 @@ msgstr "Alcune <replaceable>opzioni_comando</replaceable> influenzano il risulta
 #. Tag: para
 #, fuzzy, no-c-format
 #~ msgid "updates the <firstterm>portable object template</firstterm> (POT) files. Refer to <xref linkend=\"sect-Publican-Users_Guide-Preparing_a_document_for_translation\" /> for more detail."
-#~ msgstr "aggiorna i file <firstterm>POT</firstterm> (Portable Object Template). Vedere la <xref linkend=\"sect-Users_Guide-Preparing_a_document_for_translation\" /> per maggiori dettagli."
+#~ msgstr "aggiorna i file <firstterm>POT</firstterm> (Portable Object Template). Vedere la <xref linkend=\"sect-Publican-Users_Guide-Preparing_a_document_for_translation\" /> per maggiori dettagli."
 
 #. Tag: term
 #, no-c-format
@@ -198,7 +198,7 @@ msgstr "Alcune <replaceable>opzioni_comando</replaceable> influenzano il risulta
 #. Tag: para
 #, fuzzy, no-c-format
 #~ msgid "updates the templated content of the documentation website. Refer to <xref linkend=\"chap-Publican-Users_Guide-Building_a_website_with_Publican\" /> for details."
-#~ msgstr "aggiorna i template del sito web di documentazione. Consultare il <xref linkend=\"sect-Users_Guide-Website\" /> per i dettagli."
+#~ msgstr "aggiorna i template del sito web di documentazione. Consultare il <xref linkend=\"chap-Publican-Users_Guide-Building_a_website_with_Publican\" /> per i dettagli."
 
 #. Tag: para
 #, no-c-format
@@ -238,7 +238,7 @@ msgstr "Alcune <replaceable>opzioni_comando</replaceable> influenzano il risulta
 #. Tag: para
 #, fuzzy, no-c-format
 #~ msgid "updates the <firstterm>portable object</firstterm> (PO) files. Refer to <xref linkend=\"sect-Publican-Users_Guide-Preparing_a_document_for_translation\" /> for more detail."
-#~ msgstr "aggiorna i file <firstterm>PO</firstterm> (Portable Object). Vedere la <xref linkend=\"sect-Users_Guide-Preparing_a_document_for_translation\" /> per maggiori dettagli."
+#~ msgstr "aggiorna i file <firstterm>PO</firstterm> (Portable Object). Vedere la <xref linkend=\"sect-Publican-Users_Guide-Preparing_a_document_for_translation\" /> per maggiori dettagli."
 
 #. Tag: term
 #, no-c-format
@@ -273,7 +273,7 @@ msgstr "Alcune <replaceable>opzioni_comando</replaceable> influenzano il risulta
 #. Tag: para
 #, fuzzy, no-c-format
 #~ msgid "packages a book, article, set, or brand for shipping as an RPM package. Refer to <xref linkend=\"sect-Publican-Users_Guide-Packaging_a_document\" /> and <xref linkend=\"sect-Publican-Users_Guide-Packaging_a_brand\" /> for more detail."
-#~ msgstr "crea un pacchetto un RPM di un libro, articolo, set o brand. Vedere la <xref linkend=\"sect-Users_Guide-Packaging_a_book\" /> e la <xref linkend=\"sect-Users_Guide-Packaging_a_brand\" /> per maggiori dettagli."
+#~ msgstr "crea un pacchetto un RPM di un libro, articolo, set o brand. Vedere la <xref linkend=\"sect-Publican-Users_Guide-Packaging_a_document\" /> e la <xref linkend=\"sect-Publican-Users_Guide-Packaging_a_brand\" /> per maggiori dettagli."
 
 #. Tag: term
 #, no-c-format
@@ -283,7 +283,7 @@ msgstr "Alcune <replaceable>opzioni_comando</replaceable> influenzano il risulta
 #. Tag: para
 #, fuzzy, no-c-format
 #~ msgid "creates a new book, article, or set. Refer to <xref linkend=\"chap-Publican-Users_Guide-Creating_a_document\" /> for details of creating a book or article, and to <xref linkend=\"chap-Publican-Users_Guide-Using_sets\" /> for details of using sets."
-#~ msgstr "crea un nuovo libro, articolo o un nuovo set. Vedere il <xref linkend=\"chap-Users_Guide-Creating_a_document\" /> per i dettagli su come creare un libro o articolo, ed il <xref linkend=\"chap-Users_Guide-Using_sets\" /> per i dettagli sull'uso dei set."
+#~ msgstr "crea un nuovo libro, articolo o un nuovo set. Vedere il <xref linkend=\"chap-Users_Guide-Creating_a_document\" /> per i dettagli su come creare un libro o articolo, ed il <xref linkend=\"chap-Publican-Users_Guide-Using_sets\" /> per i dettagli sull'uso dei set."
 
 #. Tag: para
 #, no-c-format
@@ -303,12 +303,12 @@ msgstr "Alcune <replaceable>opzioni_comando</replaceable> influenzano il risulta
 #. Tag: para
 #, fuzzy, no-c-format
 #~ msgid "transforms XML to other formats (for example: PDF, single-page HTML, or multiple-page HTML). Refer to <xref linkend=\"sect-Publican-Users_Guide-Building_a_document\" /> for more details and a description of the available options."
-#~ msgstr "trasforma i file XML in altri formati (per esempio: PDF, HTML su pagina singola o HTML su pagine multiple). Fare riferimento alla <xref linkend=\"sect-Users_Guide-Building_a_document\" /> per maggiori dettagli ed una descrizione delle opzioni disponibili."
+#~ msgstr "trasforma i file XML in altri formati (per esempio: PDF, HTML su pagina singola o HTML su pagine multiple). Fare riferimento alla <xref linkend=\"sect-Publican-Users_Guide-Building_a_document\" /> per maggiori dettagli ed una descrizione delle opzioni disponibili."
 
 #. Tag: para
 #, fuzzy, no-c-format
 #~ msgid "displays help text for the configuration file contained in each book or brand, <filename>publican.cfg</filename>. Refer to <xref linkend=\"sect-Publican-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file\" /> for more detail."
-#~ msgstr "visualizza un elenco di parametri di configurazione del file <filename>publican.cfg</filename>, contenuto in ciascun libro o brand. Fare riferimento alla <xref linkend=\"sect-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file\" /> per maggiori dettagli."
+#~ msgstr "visualizza un elenco di parametri di configurazione del file <filename>publican.cfg</filename>, contenuto in ciascun libro o brand. Fare riferimento alla <xref linkend=\"sect-Publican-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file\" /> per maggiori dettagli."
 
 #. Tag: para
 #, no-c-format
@@ -343,7 +343,7 @@ msgstr "Alcune <replaceable>opzioni_comando</replaceable> influenzano il risulta
 #. Tag: para
 #, fuzzy, no-c-format
 #~ msgid "configures a brand for installation. Refer to <xref linkend=\"sect-Publican-Users_Guide-Installing_a_brand\" /> for details of installing a brand."
-#~ msgstr "configura l'installazione di un brand. Fare riferimento alla <xref linkend=\"sect-Users_Guide-Installing_a_brand\" /> per i dettagli. "
+#~ msgstr "configura l'installazione di un brand. Fare riferimento alla <xref linkend=\"sect-Publican-Users_Guide-Installing_a_brand\" /> per i dettagli. "
 
 #. Tag: term
 #, no-c-format
@@ -378,7 +378,7 @@ msgstr "Alcune <replaceable>opzioni_comando</replaceable> influenzano il risulta
 #. Tag: para
 #, fuzzy, no-c-format
 #~ msgid "removes local copies of remote books in a distributed set. Refer to <xref linkend=\"sect-Publican-Users_Guide-Using_sets-Distributed_sets\" /> for details of using distributed sets."
-#~ msgstr "rimuove le copie locali di libri remoti facenti parte di un set distribuito. Vedere la <xref linkend=\"sect-Users_Guide-Using_sets-Distributed_sets\" /> per i dettagli sull'uso di set distribuiti."
+#~ msgstr "rimuove le copie locali di libri remoti facenti parte di un set distribuito. Vedere la <xref linkend=\"sect-Publican-Users_Guide-Using_sets-Distributed_sets\" /> per i dettagli sull'uso di set distribuiti."
 
 #. Tag: para
 #, no-c-format
@@ -413,7 +413,7 @@ msgstr "Alcune <replaceable>opzioni_comando</replaceable> influenzano il risulta
 #. Tag: para
 #, fuzzy, no-c-format
 #~ msgid "removes a document from a documentation website. Refer to <xref linkend=\"chap-Publican-Users_Guide-Building_a_website_with_Publican\" /> for details."
-#~ msgstr "rimuove un documento da un sito web di documentazione. Vedere il <xref linkend=\"sect-Users_Guide-Website\" /> per i dettagli."
+#~ msgstr "rimuove un documento da un sito web di documentazione. Vedere il <xref linkend=\"chap-Publican-Users_Guide-Building_a_website_with_Publican\" /> per i dettagli."
 
 #. Tag: term
 #, no-c-format
@@ -428,12 +428,12 @@ msgstr "Alcune <replaceable>opzioni_comando</replaceable> influenzano il risulta
 #. Tag: para
 #, fuzzy, no-c-format
 #~ msgid "creates a documentation website. Refer to <xref linkend=\"chap-Publican-Users_Guide-Building_a_website_with_Publican\" /> for details."
-#~ msgstr "crea un sito web di documentazione. Fare riferimento al <xref linkend=\"sect-Users_Guide-Website\" /> per i dettagli."
+#~ msgstr "crea un sito web di documentazione. Fare riferimento al <xref linkend=\"chap-Publican-Users_Guide-Building_a_website_with_Publican\" /> per i dettagli."
 
 #. Tag: para
 #, fuzzy, no-c-format
 #~ msgid "installs a document on a documentation website. Refer to <xref linkend=\"chap-Publican-Users_Guide-Building_a_website_with_Publican\" /> for details."
-#~ msgstr "installa un documento su un sito web di documentazione. Vedere il <xref linkend=\"sect-Users_Guide-Website\" /> per i dettagli."
+#~ msgstr "installa un documento su un sito web di documentazione. Vedere il <xref linkend=\"chap-Publican-Users_Guide-Building_a_website_with_Publican\" /> per i dettagli."
 
 #. Tag: title
 #, no-c-format

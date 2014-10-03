@@ -169,7 +169,7 @@ msgstr "$ <command>publican package --lang=it-IT</command>\n"
 #. Tag: para
 #, no-c-format
 msgid "You can build the document in all languages for which you have translations with the <option>--langs=all</option> option, but note that you must package each language individually. Refer to <xref linkend=\"sect-Publican-Users_Guide-Building_a_document\" /> for more information on building a document, and <xref linkend=\"sect-Publican-Users_Guide-Packaging_a_document\" /> on packaging a document."
-msgstr "E' possibile creare il documento in tutte le lingue di cui si dispone una traduzione, usando l'opzione <option>--langs=all</option>, mentre i pacchetti vanno compilati individualmente. Fare riferimento alla <xref linkend=\"sect-Users_Guide-Building_a_document\" /> ed alla <xref linkend=\"sect-Users_Guide-Packaging_a_book\" /> per maggiori informazioni."
+msgstr "E' possibile creare il documento in tutte le lingue di cui si dispone una traduzione, usando l'opzione <option>--langs=all</option>, mentre i pacchetti vanno compilati individualmente. Fare riferimento alla <xref linkend=\"sect-Publican-Users_Guide-Building_a_document\" /> ed alla <xref linkend=\"sect-Publican-Users_Guide-Packaging_a_document\" /> per maggiori informazioni."
 
 #. Tag: title
 #, no-c-format

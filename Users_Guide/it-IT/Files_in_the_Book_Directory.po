@@ -147,7 +147,7 @@ msgstr "<parameter>brand</parameter>"
 #. Tag: para
 #, no-c-format
 msgid "sets the <firstterm>brand</firstterm> of the document, for example, <computeroutput>RedHat</computeroutput>, <computeroutput>fedora</computeroutput>, <computeroutput>JBoss</computeroutput>, <computeroutput>oVirt</computeroutput> or <computeroutput>GIMP</computeroutput> , as set by the <option>--brand</option> option for <prompt>$</prompt> <command>publican create</command>. If you do not specify a brand, <application>Publican</application> uses its default brand. Refer to <xref linkend=\"chap-Publican-Users_Guide-Branding\" /> for more information."
-msgstr "imposta il <firstterm>brand</firstterm> del documento, per esempio <computeroutput>RedHat</computeroutput>, <computeroutput>fedora</computeroutput>, <computeroutput>JBoss</computeroutput>, <computeroutput>oVirt</computeroutput> o <computeroutput>GIMP</computeroutput>, come impostato con l'opzione <option>--brand</option> nel comando <command>publican create</command>. Se non si specifica un brand, <application>Publican</application> usa il brand predefinito. Fare riferimento al <xref linkend=\"chap-Users_Guide-Branding\" /> per maggiori informazioni."
+msgstr "imposta il <firstterm>brand</firstterm> del documento, per esempio <computeroutput>RedHat</computeroutput>, <computeroutput>fedora</computeroutput>, <computeroutput>JBoss</computeroutput>, <computeroutput>oVirt</computeroutput> o <computeroutput>GIMP</computeroutput>, come impostato con l'opzione <option>--brand</option> nel comando <command>publican create</command>. Se non si specifica un brand, <application>Publican</application> usa il brand predefinito. Fare riferimento al <xref linkend=\"chap-Publican-Users_Guide-Branding\" /> per maggiori informazioni."
 
 msgid "Advanced parameters<remark> Delete me and reference appendix</remark>"
 msgstr ""
@@ -170,7 +170,7 @@ msgstr "Usare con cautela"
 #. Tag: para
 #, no-c-format
 msgid "As with conditional tagging more generally, <literal>arch</literal> can cause great difficulties when translating documents. Refer to <xref linkend=\"sect-Publican-Users_Guide-Conditional_tagging-Conditional_tagging_and_translation\" /> for an explanation of the issues."
-msgstr "Come accade più in generale con i tag condizionali, il parametro <literal>arch</literal> può causare notevoli problemi in fase di traduzione di un documento. Vedere la <xref linkend=\"sect-Users_Guide-Conditional_tagging-Conditional_tagging_and_translation\" /> per una spiegazione di questi problemi."
+msgstr "Come accade più in generale con i tag condizionali, il parametro <literal>arch</literal> può causare notevoli problemi in fase di traduzione di un documento. Vedere la <xref linkend=\"sect-Publican-Users_Guide-Conditional_tagging-Conditional_tagging_and_translation\" /> per una spiegazione di questi problemi."
 
 #. Tag: title
 #, no-c-format
@@ -236,7 +236,7 @@ msgstr "<parameter>books</parameter>"
 #. Tag: para
 #, no-c-format
 msgid "specifies a space-separated list of books used in a remote set. Refer to <xref linkend=\"sect-Publican-Users_Guide-Using_sets-Distributed_sets\" /> for more information on distributed sets."
-msgstr "specifica un elenco di libri, separati da spazio, usati in un set remoto. Vedere la <xref linkend=\"sect-Users_Guide-Using_sets-Distributed_sets\" /> per maggiori informazioni sui set distribuiti."
+msgstr "specifica un elenco di libri, separati da spazio, usati in un set remoto. Vedere la <xref linkend=\"sect-Publican-Users_Guide-Using_sets-Distributed_sets\" /> per maggiori informazioni sui set distribuiti."
 
 #. Tag: term
 #, no-c-format
@@ -246,7 +246,7 @@ msgstr "<parameter>brew_dist</parameter>"
 #. Tag: para
 #, no-c-format
 msgid "specifies the build target to use for building the desktop RPM package in <application>Brew</application>, Red Hat's internal build system. This parameter defaults to <literal>docs-5E</literal>. Refer to <xref linkend=\"sect-Publican-Users_Guide-Packaging_a_document-The_publican_package_command\" /> and <xref linkend=\"sect-Publican-Users_Guide-Packaging_a_brand\" /> for more information on building RPM packages."
-msgstr "specifica il target da usare per creare il pacchetto RPM desktop in <application>Brew</application>, il sistema di creazione di pacchetti interno a Red Hat. Il valore predefinito è <literal>docs-5E</literal>. Vedere la <xref linkend=\"sect-Users_Guide-Packaging_a_book-The_publican_package_command\" /> e la <xref linkend=\"sect-Users_Guide-Packaging_a_brand\" /> per maggiori informazioni sulla compilazione di pacchetti RPM."
+msgstr "specifica il target da usare per creare il pacchetto RPM desktop in <application>Brew</application>, il sistema di creazione di pacchetti interno a Red Hat. Il valore predefinito è <literal>docs-5E</literal>. Vedere la <xref linkend=\"sect-Publican-Users_Guide-Packaging_a_document-The_publican_package_command\" /> e la <xref linkend=\"sect-Publican-Users_Guide-Packaging_a_brand\" /> per maggiori informazioni sulla compilazione di pacchetti RPM."
 
 #. Tag: term
 #, no-c-format
@@ -371,7 +371,7 @@ msgstr "<parameter>condition</parameter>"
 #. Tag: para
 #, no-c-format
 msgid "specifies conditions on which to prune XML before transformation. Refer to <xref linkend=\"sect-Publican-Users_Guide-Conditional_tagging\" /> for more information."
-msgstr "specifica, prima di una trasformazione, le condizioni per escludere file XML. Vedere la <xref linkend=\"sect-Users_Guide-Conditional_tagging\" /> per maggiori informazioni."
+msgstr "specifica, prima di una trasformazione, le condizioni per escludere file XML. Vedere la <xref linkend=\"sect-Publican-Users_Guide-Conditional_tagging\" /> per maggiori informazioni."
 
 #. Tag: term
 #, no-c-format
@@ -411,7 +411,7 @@ msgstr "<parameter>def_lang</parameter>"
 #. Tag: para
 #, no-c-format
 msgid "sets the default language for a <application>Publican</application>-managed website. Tables of contents for languages other than the default language will link to documents in the default language when translations are not available. Refer to <xref linkend=\"sect-Publican-Users_Guide-Packaging_a_document\" />."
-msgstr "imposta la lingua predefinita per un sito web gestito da <application>Publican</application>. La tabelle dei contenuti delle altre lingue fanno riferimento ai documenti della lingua predefinita, se non sono disponibili traduzioni. Fare riferimento alla <xref linkend=\"sect-Users_Guide-Packaging_a_book\" /> per maggiori informazioni."
+msgstr "imposta la lingua predefinita per un sito web gestito da <application>Publican</application>. La tabelle dei contenuti delle altre lingue fanno riferimento ai documenti della lingua predefinita, se non sono disponibili traduzioni. Fare riferimento alla <xref linkend=\"sect-Publican-Users_Guide-Packaging_a_document\" /> per maggiori informazioni."
 
 #. Tag: term
 #, no-c-format
@@ -451,7 +451,7 @@ msgstr "<parameter>dt_requires</parameter>"
 #. Tag: para
 #, no-c-format
 msgid "a package that the desktop package requires, for example, a documentation menu package. Refer to <xref linkend=\"sect-Publican-Users_Guide-Desktop_menu_entries_for_documents\" />."
-msgstr "il pacchetto richiesto dal pacchetto desktop, per esempio, il pacchetto del menu di una documentazione. Fare riferimento alla <xref linkend=\"desktop_menus\" />."
+msgstr "il pacchetto richiesto dal pacchetto desktop, per esempio, il pacchetto del menu di una documentazione. Fare riferimento alla <xref linkend=\"sect-Publican-Users_Guide-Desktop_menu_entries_for_documents\" />."
 
 #. Tag: term
 #, no-c-format
@@ -616,7 +616,7 @@ msgstr "<parameter>ignored_translations</parameter>"
 #. Tag: para
 #, no-c-format
 msgid "specifies translations to ignore as comma-separated XML language codes; for example, <literal>es-ES,it-IT</literal>. If you build or package a book for a language filtered by this parameter, <application>Publican</application> ignores any translations that exist for this language, and builds or packages the book in the language of the original XML instead. Refer to <xref linkend=\"sect-Publican-Users_Guide-Preparing_a_document_for_translation\" />, and to <xref linkend=\"appe-Publican-Users_Guide-Language_codes\" />."
-msgstr "specifica le traduzioni da ignorare, specificando i codici linguistici separati da virgola, per esempio, <literal>es-ES,it-IT</literal>. Se si crea un libro o il pacchetto di un libro per una lingua filtrata da questo parametro, <application>Publican</application> ignora ogni traduzione in questa lingua, e crea invece il libro o il pacchetto relativo, nella lingua dei sorgenti XML. Fare riferimento alla <xref linkend=\"sect-Users_Guide-Preparing_a_document_for_translation\" /> ed all'<xref linkend=\"appe-Publican-Users_Guide-Language_codes\" />."
+msgstr "specifica le traduzioni da ignorare, specificando i codici linguistici separati da virgola, per esempio, <literal>es-ES,it-IT</literal>. Se si crea un libro o il pacchetto di un libro per una lingua filtrata da questo parametro, <application>Publican</application> ignora ogni traduzione in questa lingua, e crea invece il libro o il pacchetto relativo, nella lingua dei sorgenti XML. Fare riferimento alla <xref linkend=\"sect-Publican-Users_Guide-Preparing_a_document_for_translation\" /> ed all'<xref linkend=\"appe-Publican-Users_Guide-Language_codes\" />."
 
 #. Tag: term
 #, no-c-format
@@ -646,7 +646,7 @@ msgstr "<parameter>license</parameter>"
 #. Tag: para
 #, no-c-format
 msgid "specifies the license this package uses. By default, <application>Publican</application> selects the GNU Free Documentation License (GFDL). Refer to <xref linkend=\"sect-Publican-Users_Guide-Packaging_a_document\" />."
-msgstr "specifica la licenza usata dal pacchetto. Per impostazione, <application>Publican</application> seleziona la licenza GFDL (GNU Free Documentation License). Fare riferimento alla <xref linkend=\"sect-Users_Guide-Packaging_a_book\" />."
+msgstr "specifica la licenza usata dal pacchetto. Per impostazione, <application>Publican</application> seleziona la licenza GFDL (GNU Free Documentation License). Fare riferimento alla <xref linkend=\"sect-Publican-Users_Guide-Packaging_a_document\" />."
 
 #. Tag: term
 #, no-c-format
@@ -671,7 +671,7 @@ msgstr "<parameter>menu_category</parameter>"
 #. Tag: para
 #, no-c-format
 msgid "the desktop menu category (as defined by a corresponding <filename>.menu</filename> file) in which a document should appear when installed from a desktop RPM package. Refer to <xref linkend=\"sect-Publican-Users_Guide-Desktop_menu_entries_for_documents\" />."
-msgstr "la categoria del menu del desktop (come definito dal file <filename>.menu</filename> corrispondente), in cui inserire il documento installato con un pacchetto RPM desktop. Fare riferimento alla <xref linkend=\"desktop_menus\" />."
+msgstr "la categoria del menu del desktop (come definito dal file <filename>.menu</filename> corrispondente), in cui inserire il documento installato con un pacchetto RPM desktop. Fare riferimento alla <xref linkend=\"sect-Publican-Users_Guide-Desktop_menu_entries_for_documents\" />."
 
 #. Tag: term
 #, no-c-format
@@ -681,7 +681,7 @@ msgstr "<parameter>os_ver</parameter>"
 #. Tag: para
 #, no-c-format
 msgid "specifies the operating system for which to build packages. <application>Publican</application> appends the value that you provide here to the RPM packages that it builds. For example, <literal>.fc15</literal> for Fedora 15. The default value is <literal>.el5</literal>, which signifies Red Hat Enterprise Linux 5 and operating systems derived from it. Refer to <xref linkend=\"sect-Publican-Users_Guide-Packaging_a_document\" /> and <xref linkend=\"sect-Publican-Users_Guide-Packaging_a_brand\" />."
-msgstr "specifica il sistema operativo per cui costruire il pacchetto. <application>Publican</application> appende questo valore al nome del pacchetto RPM. Per esempio, <literal>.fc15</literal> for Fedora&nbsp;15. Il valore predefinito è <literal>.el5</literal>, che significa Red Hat Enterprise Linux 5 e sistemi operativi derivati. Fare riferimento alla <xref linkend=\"sect-Users_Guide-Packaging_a_book\" /> ed alla <xref linkend=\"sect-Users_Guide-Packaging_a_brand\" />."
+msgstr "specifica il sistema operativo per cui costruire il pacchetto. <application>Publican</application> appende questo valore al nome del pacchetto RPM. Per esempio, <literal>.fc15</literal> for Fedora&nbsp;15. Il valore predefinito è <literal>.el5</literal>, che significa Red Hat Enterprise Linux 5 e sistemi operativi derivati. Fare riferimento alla <xref linkend=\"sect-Publican-Users_Guide-Packaging_a_document\" /> ed alla <xref linkend=\"sect-Publican-Users_Guide-Packaging_a_brand\" />."
 
 #. Tag: term
 #, no-c-format
@@ -721,7 +721,7 @@ msgstr "<parameter>repo</parameter>"
 #. Tag: para
 #, no-c-format
 msgid "specifies the repository from which to fetch remote books that form part of a distributed set. Refer to <xref linkend=\"sect-Publican-Users_Guide-Using_sets-Distributed_sets\" />."
-msgstr "specifica il repository da cui prelevare i libri remoti che fanno parte di un set distribuito. Fare riferimento alla <xref linkend=\"sect-Users_Guide-Using_sets-Distributed_sets\" />."
+msgstr "specifica il repository da cui prelevare i libri remoti che fanno parte di un set distribuito. Fare riferimento alla <xref linkend=\"sect-Publican-Users_Guide-Using_sets-Distributed_sets\" />."
 
 #. Tag: term
 #, no-c-format
@@ -751,7 +751,7 @@ msgstr "<parameter>scm</parameter>"
 #. Tag: para
 #, no-c-format
 msgid "specifies the version control (or <firstterm>source code management</firstterm>) system used in the repository in that stores the remote books in a distributed set. At present, <application>Publican</application> can use only <application>Subversion</application> (SVN), and therefore uses <literal>SVN</literal> as its default setting. Refer to <xref linkend=\"sect-Publican-Users_Guide-Using_sets-Distributed_sets\" />."
-msgstr "specifica il <firstterm>sistema di controllo versione</firstterm> (o source code management), usato nel repository contenente i libri remoti di un set distribuito. Al momento, <application>Publican</application> può usare solo <application>SVN</application> (Subversion), e quindi il valore predefinito è  <literal>SVN</literal>. Fare riferimento alla <xref linkend=\"sect-Users_Guide-Using_sets-Distributed_sets\" />."
+msgstr "specifica il <firstterm>sistema di controllo versione</firstterm> (o source code management), usato nel repository contenente i libri remoti di un set distribuito. Al momento, <application>Publican</application> può usare solo <application>SVN</application> (Subversion), e quindi il valore predefinito è  <literal>SVN</literal>. Fare riferimento alla <xref linkend=\"sect-Publican-Users_Guide-Using_sets-Distributed_sets\" />."
 
 #. Tag: term
 #, no-c-format
@@ -781,7 +781,7 @@ msgstr "<parameter>src_url</parameter>"
 #. Tag: para
 #, no-c-format
 msgid "specifies the URL at which to find tarballs of source files. This parameter provides the <literal>Source:</literal> field in the header of an RPM spec file. Refer to <xref linkend=\"sect-Publican-Users_Guide-Packaging_a_document\" />."
-msgstr "specifica l'URL in cui trovare i tarball dei file sorgente. Questo parametro completa il campo <literal>Source:</literal> nell'intestazione del file <emphasis>spec</emphasis> dell'RPM. Fare riferimento alla <xref linkend=\"sect-Users_Guide-Packaging_a_book\" />."
+msgstr "specifica l'URL in cui trovare i tarball dei file sorgente. Questo parametro completa il campo <literal>Source:</literal> nell'intestazione del file <emphasis>spec</emphasis> dell'RPM. Fare riferimento alla <xref linkend=\"sect-Publican-Users_Guide-Packaging_a_document\" />."
 
 #. Tag: term
 #, no-c-format
@@ -886,7 +886,7 @@ msgstr "<parameter>web_brew_dist</parameter>"
 #. Tag: para
 #, no-c-format
 msgid "specifies the <application>brew</application> build target to use for building the web RPM packages. <application>Brew</application> is the internal build system used by Red Hat. By default, this value is set to <literal>docs-5E</literal>, representing documentation packages for Red Hat Enterprise Linux 5. Refer to <xref linkend=\"sect-Publican-Users_Guide-Packaging_a_document\" />."
-msgstr "specifica il target di compilazione <application>brew</application> da usare per la creazione di pacchetti RPM per il web. <application>Brew</application> è il sistema di creazione di pacchetti interno a Red Hat. Per impostazione, questo valore è impostato su <literal>docs-5E</literal>, rappresentando i pacchetti per la documentazione Red Hat Enterprise Linux 5. Fare riferimento alla <xref linkend=\"sect-Users_Guide-Packaging_a_book\" />."
+msgstr "specifica il target di compilazione <application>brew</application> da usare per la creazione di pacchetti RPM per il web. <application>Brew</application> è il sistema di creazione di pacchetti interno a Red Hat. Per impostazione, questo valore è impostato su <literal>docs-5E</literal>, rappresentando i pacchetti per la documentazione Red Hat Enterprise Linux 5. Fare riferimento alla <xref linkend=\"sect-Publican-Users_Guide-Packaging_a_document\" />."
 
 #. Tag: term
 #, no-c-format
@@ -896,7 +896,7 @@ msgstr "<parameter>web_formats</parameter>"
 #. Tag: para
 #, no-c-format
 msgid "a comma-separated list of formats to include in the web RPM package. Refer to <xref linkend=\"sect-Publican-Users_Guide-Packaging_a_document-The_publican_package_command\" />."
-msgstr "una lista di formati, separati da virgola, da includere nel pacchetto RPM per il web. Fare riferimento alla <xref linkend=\"sect-Users_Guide-Packaging_a_book-The_publican_package_command\" />."
+msgstr "una lista di formati, separati da virgola, da includere nel pacchetto RPM per il web. Fare riferimento alla <xref linkend=\"sect-Publican-Users_Guide-Packaging_a_document-The_publican_package_command\" />."
 
 #. Tag: term
 #, no-c-format
@@ -906,7 +906,7 @@ msgstr "<parameter>web_home</parameter>"
 #. Tag: para
 #, no-c-format
 msgid "specifies that the document is the home page of a documentation website, not a standard document. Refer to <xref linkend=\"chap-Publican-Users_Guide-Building_a_website_with_Publican\" />."
-msgstr "specifica che il documento è la home page di un sito web di documentazione, non un documento standard. Fare riferimento al <xref linkend=\"sect-Users_Guide-Website\" />."
+msgstr "specifica che il documento è la home page di un sito web di documentazione, non un documento standard. Fare riferimento al <xref linkend=\"chap-Publican-Users_Guide-Building_a_website_with_Publican\" />."
 
 #. Tag: title
 #, no-c-format
@@ -926,7 +926,7 @@ msgstr "<parameter>web_name_label</parameter>"
 #. Tag: para
 #, no-c-format
 msgid "overrides the book name as it appears on the menu of a <application>Publican</application>-managed website. Refer to <xref linkend=\"chap-Publican-Users_Guide-Building_a_website_with_Publican\" />."
-msgstr "visualizza il valore impostato, invece del nome del libro, nel menu di un sito web gestito da <application>Publican</application>. Fare riferimento al <xref linkend=\"sect-Users_Guide-Website\" />."
+msgstr "visualizza il valore impostato, invece del nome del libro, nel menu di un sito web gestito da <application>Publican</application>. Fare riferimento al <xref linkend=\"chap-Publican-Users_Guide-Building_a_website_with_Publican\" />."
 
 #. Tag: term
 #, no-c-format
@@ -936,7 +936,7 @@ msgstr "<parameter>web_obsoletes</parameter>"
 #. Tag: para
 #, no-c-format
 msgid "specifies packages that the web RPM obsoletes. Refer to <xref linkend=\"sect-Publican-Users_Guide-Packaging_a_document\" />."
-msgstr "specifica i pacchetti resi obsoleti da questo RPM per il web. Fare riferimento alla <xref linkend=\"sect-Users_Guide-Packaging_a_book\" />."
+msgstr "specifica i pacchetti resi obsoleti da questo RPM per il web. Fare riferimento alla <xref linkend=\"sect-Publican-Users_Guide-Packaging_a_document\" />."
 
 #. Tag: term
 #, no-c-format
@@ -946,7 +946,7 @@ msgstr "<parameter>web_product_label</parameter>"
 #. Tag: para
 #, no-c-format
 msgid "overrides the product name as it appears on the menu of a <application>Publican</application>-managed website. Refer to <xref linkend=\"chap-Publican-Users_Guide-Building_a_website_with_Publican\" />."
-msgstr "visualizza il valore impostato, invece del nome del prodotto, nel menu di un sito web gestito da <application>Publican</application>. Fare riferimento al <xref linkend=\"sect-Users_Guide-Website\" />."
+msgstr "visualizza il valore impostato, invece del nome del prodotto, nel menu di un sito web gestito da <application>Publican</application>. Fare riferimento al <xref linkend=\"chap-Publican-Users_Guide-Building_a_website_with_Publican\" />."
 
 #. Tag: term
 #, no-c-format
@@ -966,7 +966,7 @@ msgstr ""
 #. Tag: para
 #, no-c-format
 msgid "specifies that the document is descriptive content for a <application>Publican</application>-managed website rather than product documentation. This content includes the home page of the website (<literal>web_type: home</literal>), product description pages (<literal>web_type: product</literal>), and version description pages (<literal>web_type: version</literal>). Refer to <xref linkend=\"chap-Publican-Users_Guide-Building_a_website_with_Publican\" />."
-msgstr "specifica che si tratta di un documento descrittivo per un sito web gestito da <application>Publican</application>, e non del documento di un prodotto. Il contenuto include la home page del sito web (<literal>web_type:&nbsp;home</literal>), pagine descrittive di prodotto (<literal>web_type:&nbsp;product</literal>), e pagine descrittive di versione (<literal>web_type:&nbsp;version</literal>). Fare riferimento al <xref linkend=\"sect-Users_Guide-Website\" />."
+msgstr "specifica che si tratta di un documento descrittivo per un sito web gestito da <application>Publican</application>, e non del documento di un prodotto. Il contenuto include la home page del sito web (<literal>web_type:&nbsp;home</literal>), pagine descrittive di prodotto (<literal>web_type:&nbsp;product</literal>), e pagine descrittive di versione (<literal>web_type:&nbsp;version</literal>). Fare riferimento al <xref linkend=\"chap-Publican-Users_Guide-Building_a_website_with_Publican\" />."
 
 #. Tag: term
 #, no-c-format
@@ -976,7 +976,7 @@ msgstr "<parameter>web_version_label</parameter>"
 #. Tag: para
 #, no-c-format
 msgid "overrides the version number as it appears on the menu of a <application>Publican</application>-managed website. Set this value to <literal>UNUSED</literal> for general documentation that does not apply to any particular version of a product. Refer to <xref linkend=\"chap-Publican-Users_Guide-Building_a_website_with_Publican\" />."
-msgstr "visualizza il valore impostato, invece del numero di versione, nel menu di un sito web gestito da <application>Publican</application>. Impostare il valore su <literal>UNUSED</literal> per una documentazione generale che non si applica ad una particolare versione di un prodotto. Fare riferimento al <xref linkend=\"sect-Users_Guide-Website\" />."
+msgstr "visualizza il valore impostato, invece del numero di versione, nel menu di un sito web gestito da <application>Publican</application>. Impostare il valore su <literal>UNUSED</literal> per una documentazione generale che non si applica ad una particolare versione di un prodotto. Fare riferimento al <xref linkend=\"chap-Publican-Users_Guide-Building_a_website_with_Publican\" />."
 
 #. Tag: term
 #, no-c-format
@@ -1104,7 +1104,7 @@ msgstr "I nomi dei pacchetti RPM possono contenere solo particolari caratteri AS
 #. Tag: para
 #, no-c-format
 msgid "By default, <application>Publican</application> also uses the contents of the <tag>&lt;title&gt;</tag> tag to find the file that contains the root XML node: <tag>&lt;article&gt;</tag>, <tag>&lt;book&gt;</tag>, or <tag>&lt;set&gt;</tag>. For example, if you set the title to <tag>&lt;title&gt;Server Configuration Guide&lt;/title&gt;</tag>, <application>Publican</application> expects the root XML node to be in a file named <filename>Server_Configuration_Guide.xml</filename> and the document entities to be in a file named <filename>Server_Configuration_Guide.ent</filename>. To use a different name for these files, set the <parameter>mainfile</parameter> parameter in the document configuration file (by default, <filename>publican.cfg</filename>). Refer to <xref linkend=\"sect-Publican-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file\" />."
-msgstr "Per impostazione, <application>Publican</application> usa il contenuto di <sgmltag>&lt;title&gt;</sgmltag> per individuare il file contenente il nodo XML radice: <sgmltag>&lt;article&gt;</sgmltag>, <sgmltag>&lt;book&gt;</sgmltag> o <sgmltag>&lt;set&gt;</sgmltag>. Per esempio, se si imposta il titolo <sgmltag>&lt;title&gt;Server Configuration Guide&lt;/title&gt;</sgmltag>, <application>Publican</application> si aspetta di trovare il nodo XML radice in un file di nome <filename>Server_Configuration_Guide.ent</filename>. Per usare un nome differente per questi file, impostare il parametro <parameter>mainfile</parameter> nel file di configurazione (per impostazione, <filename>publican.cfg</filename>). Fare riferimento alla <xref linkend=\"sect-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file\" />."
+msgstr "Per impostazione, <application>Publican</application> usa il contenuto di <sgmltag>&lt;title&gt;</sgmltag> per individuare il file contenente il nodo XML radice: <sgmltag>&lt;article&gt;</sgmltag>, <sgmltag>&lt;book&gt;</sgmltag> o <sgmltag>&lt;set&gt;</sgmltag>. Per esempio, se si imposta il titolo <sgmltag>&lt;title&gt;Server Configuration Guide&lt;/title&gt;</sgmltag>, <application>Publican</application> si aspetta di trovare il nodo XML radice in un file di nome <filename>Server_Configuration_Guide.ent</filename>. Per usare un nome differente per questi file, impostare il parametro <parameter>mainfile</parameter> nel file di configurazione (per impostazione, <filename>publican.cfg</filename>). Fare riferimento alla <xref linkend=\"sect-Publican-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file\" />."
 
 #. Tag: term
 #, no-c-format
