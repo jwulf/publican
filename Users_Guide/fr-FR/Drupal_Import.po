@@ -155,7 +155,7 @@ msgid "Drupal Import Guide"
 msgstr "Guide d'importation dans Drupal"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "Before you can import a book, you need to install a module call <application>'Node Import'</application> in Drupal. This module allows Drupal to import and update content from CSV or TSV files. To install this module, simply go to <link xlink:href=\"http://drupal.org/sandbox/hyu/1819292\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">drupal site</link> and follow the instructions on the website to download it. Once this is done, then you need to copy the downloaded module to the 'modules' directory on the Drupal server. For example if your Drupal is located in <filename>/var/www/html/drupal/</filename> directory, then you should copy the module to <filename>/var/www/html/drupal/sites/all/modules/</filename> directory. To enable the installed module, login to the Drupal site and go to <guilabel>Administer -&gt; Site building -&gt; Modules </guilabel>. In the Development section, tick the <guibutton>checkbox</guibutton> and click <guibutton>Save configuration</guibutton> button to activate the <application>Node Import</application> Module."
 msgstr "Avant de pouvoir importer un ouvrage, vous devez installer un module nommé <application>« Node Import »</application> dans Drupal. Ce module permet à Drupal d'importer et mettre à jour des contenus à partir de fichiers CVS ou TVS. Pour installer ce module, allez simplement sur le <ulink url=\"http://drupal.org/sandbox/hyu/1819292\">site Drupal</ulink> et suivez les instructions du site pour le télécharger. Ceci fait, vous devez copier le module téléchargé dans le répertoire « modules » sur le serveur Drupal. Par exemple, si Drupal est situé dans le répertoire <filename>/var/www/html/drupal/</filename>, vous devez copier le module dans le répertoire <filename>/var/www/html/drupal/sites/all/modules/</filename>. Pour activer le module installé, connectez-vous sur le site Drupal et allez dans <guilabel>Administrer -&gt; Construction d'un site -&gt; Modules</guilabel>. Dans la section Développement, cochez la <guibutton>case</guibutton>, puis cliquez sur le bouton <guibutton>Enregistrer la configuration</guibutton> pour activer le module <application>Node Import</application>."
 
@@ -288,7 +288,7 @@ msgid "Upload the CSV file to <filename>import Directory</filename> in the Drupa
 msgstr "Téléverser le fichier CSV dans le <filename>répertoire d'importation</filename> du serveur Drupal."
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "Upload <filename>en-US</filename> directory to the <filename>\"sites/default/files/\"</filename> directory in the Drupal server. This value can be overriden in the <filename>publican.cfg</filename>. For more details, please read <xref linkend=\"sect-Publican-Users_Guide-Import_book_into_Drupal-The_publican.cfg_file\" />"
 msgstr "Téléverser le répertoire <filename>en-US</filename> dans le répertoire <filename>« sites/default/files/ »</filename> du serveur Drupal. Cette valeur peut être écrasée avec celle indiquée dans <filename>publican.cfg</filename>. Pour plus de détails, veuillez lire la <xref linkend=\"sect-Users_Guide-Import_book_into_Drupal-The_publican_cfg_file\" />."
 
@@ -327,6 +327,11 @@ msgstr "Si vous mettez à jour un ouvrage avec un sectionnement restreint, les s
 
 #. Tag: para
 #, no-c-format, fuzzy
+#~ msgid "Simply repeat the steps in <xref linkend=\"\" /> to update the book."
+#~ msgstr "Refaites simplement les étapes de la <xref linkend=\"sect-Users_Guide-Import_book_into_Drupal-Drupal_Import_Guide-How_to_import_book\" /> pour mettre à jour l'ouvrage."
+
+#. Tag: para
+#, no-c-format, fuzzy
 #~ msgid "The menu block must exist in Drupal. For more information about adding a menu block in Drupal. Please refer to <xref linkend=\"\" />."
 #~ msgstr "Le bloc de menu doit exister dans Drupal. Pour plus d'informations à propos de l'ajout d'un bloc de menu dans Drupal, voyez la <xref linkend=\"sect-Users_Guide-Import_book_into_Drupal-Drupal_Import_Guide-How_to_add_a_menu_block\" />."
 
@@ -334,9 +339,4 @@ msgstr "Si vous mettez à jour un ouvrage avec un sectionnement restreint, les s
 #, no-c-format, fuzzy
 #~ msgid "Follow the steps in <xref linkend=\"\" />"
 #~ msgstr "Parcourir les étapes précisées dans la <xref linkend=\"sect-Users_Guide-Import_book_into_Drupal-How_to_build_a_CSV_file\" />."
-
-#. Tag: para
-#, no-c-format, fuzzy
-#~ msgid "Simply repeat the steps in <xref linkend=\"\" /> to update the book."
-#~ msgstr "Refaites simplement les étapes de la <xref linkend=\"sect-Users_Guide-Import_book_into_Drupal-Drupal_Import_Guide-How_to_import_book\" /> pour mettre à jour l'ouvrage."
 

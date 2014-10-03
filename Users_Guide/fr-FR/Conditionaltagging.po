@@ -30,7 +30,7 @@ msgid "<application>Publican</application> makes it easy to manage differences b
 msgstr "<application>Publican</application>facilite la gestion des différences entre plusieurs versions d'un ouvrage en vous permettant d'utiliser une source unique pour toutes les versions. Le <firstterm>balisage conditionnel</firstterm> vous permet de vous assurer qu'un contenu propre à une version n'apparaît que dans la dite version ; autrement dit, le contenu est <firstterm>conditionnel</firstterm>."
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "To conditionalize content in a book, use the tag attribute <command>condition</command>. For example, let's say the book <citetitle>How To Use Product Foo</citetitle> has an \"upstream\", \"enterprise\", and \"beta\" version:"
 msgstr "Pour soumettre un contenu à une condition dans un ouvrage, servez-vous de l'attribut de balise <command>condition</command>. Par exemple, disons que le manuel <citetitle>Comment utiliser le produit Foo</citetitle> a une version « amont », une version « entreprise » et une version « bêta » :"
 
@@ -70,7 +70,7 @@ msgstr ""
 "&lt;/para&gt;"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "To build a specific version (and thereby capture all content conditionalized for that version), add the <command>condition: <replaceable>version</replaceable></command> parameter to the <filename>publican.cfg</filename> file and run the <prompt>$</prompt> <command>publican build</command> command as normal. For example, if you add <literal>condition: upstream</literal> to the <filename>publican.cfg</filename> file of <citetitle>How To Use Product Foo</citetitle> and run:"
 msgstr "Pour construire une version donnée (et de la sorte intégrer tout contenu conditionnel propre à la version), ajoutez le paramètre <command>condition: <replaceable>version</replaceable></command> dans le fichier <filename>publican.cfg</filename> et exécutez normalement la commande <command>publican build</command>. Par exemple, si vous définissez <literal>condition: upstream</literal> dans le fichier <filename>publican.cfg</filename> pour <citetitle>Comment utiliser le produit Foo</citetitle>, exécutez :"
 
@@ -105,7 +105,7 @@ msgid "Conditional tagging creates difficulty for translators in two ways: it ob
 msgstr "Le balisage conditionnel crée des difficultés de deux sortes pour les traducteurs : il obscurcit le contexte dans les fichiers <firstterm>portable objet</firstterm> (PO) sur lesquels le traducteur travaille et rend la relecture plus délicate pour les traducteurs qui ne sont pas tout à fait familiers avec votre ouvrage et les conditions que vous avez imposées."
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "The PO files for the document contain the full set of tags from the XML files, regardless of any conditions set. When translators open the PO file for the example from <citetitle>How To Use Product Foo</citetitle> in <xref linkend=\"sect-Publican-Users_Guide-Conditional_tagging\" />, they see:"
 msgstr "Le fichier PO du document contient l'ensemble complet des balises provenant des fichiers XML, quelles que soient les conditions définies. Quand un traducteur ouvre un fichier PO, par exemple celui de <citetitle>Comment utiliser le produit Foo</citetitle> dans <xref linkend=\"sect-Users_Guide-Conditional_tagging\" />, il voit :"
 

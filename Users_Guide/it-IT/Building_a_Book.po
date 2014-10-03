@@ -28,7 +28,7 @@ msgid "Note — Customizing output"
 msgstr "Nota — Personalizzare la presentazione"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "The parameters set in the document configuration file (by default, <filename>publican.cfg</filename>) allow you to control many aspects of the way in which a document is presented — refer to <xref linkend=\"sect-Publican-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file\" />."
 msgstr "I parametri impostati nel file di configurazione del documento (per impostazione <filename>publican.cfg</filename>), permettono di controllare molti aspetti riguardanti la presentazione di un documento — fare riferimento a <xref linkend=\"sect-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file\" />."
 
@@ -48,7 +48,7 @@ msgid "To build a document:"
 msgstr "Per creare un documento:"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "Confirm the <parameter>YEAR</parameter> and <parameter>HOLDER</parameter> entities have been configured in the <filename><replaceable>Doc_Name</replaceable>.ent</filename> file, as described in <xref linkend=\"sect-Publican-Users_Guide-Files_in_the_book_directory-Doc_Name.ent\" />."
 msgstr "Verificare che nel file <filename><replaceable>Nome_Doc</replaceable>.ent</filename>, siano state configurate le entità <parameter>YEAR</parameter> e <parameter>HOLDER</parameter>, come descritto nella <xref linkend=\"sect-Users_Guide-Files_in_the_book_directory-Doc_Name.ent\" />."
 
@@ -183,7 +183,7 @@ msgid "<option>eclipse</option>"
 msgstr "<option>eclipse</option>"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "<application>Publican</application> outputs the document as an <application>Eclipse</application> help plugin. Refer to <xref linkend=\"sect-Publican-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file\" /> for details of specifying <application>Eclipse</application>'s <parameter>id</parameter>, <parameter>name</parameter>, and <parameter>provider-name</parameter> parameters with <application>Publican</application>'s <parameter>ec_id</parameter>, <parameter>ec_name</parameter>, and <parameter>ec_provider</parameter> parameters."
 msgstr "<application>Publican</application> presenta il documento come un plugin d'aiuto di <application>Eclipse</application>. Vedere la <xref linkend=\"sect-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file\" /> per i dettagli sui parametri d'impostazione <parameter>ec_id</parameter>, <parameter>ec_name</parameter> ed <parameter>ec_provider</parameter>."
 
@@ -218,7 +218,7 @@ msgid "<prompt>$</prompt> <command>publican build --formats=html --langs=<replac
 msgstr "<command>publican build --formats=html --langs=<replaceable>lingue</replaceable></command>"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "Build the book in multi-page HTML format. The HTML output will be located in the <filename><replaceable>Doc_Name</replaceable>/tmp/<replaceable>language</replaceable>/html/</filename> directory. Each chapter and major section is placed in a separate HTML file. You can control the depth at which <application>Publican</application> places subsections into separate HTML files with the <literal>chunk-section-depth</literal> parameter in the <filename>publican.cfg</filename> — refer to <xref linkend=\"sect-Publican-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file\" />."
 msgstr "Compila il libro in formato HTML su pagine multiple. Il documento in HTML viene salvato nella directory <filename><replaceable>Nome_Doc</replaceable>/tmp/<replaceable>lingua</replaceable>/html/</filename>. Ogni capitolo e ogni sezione principale viene disposto in un file HTML separato. E' possibile controllare il livello di suddivisione delle sotto-sezioni da presentare su pagine HTML separate, con il parametro <literal>chunk-section-depth</literal> in <filename>publican.cfg</filename> — fare riferimento alla <xref linkend=\"sect-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file\" />."
 
@@ -258,7 +258,7 @@ msgid "Building a document without validation"
 msgstr "Compilare un documento senza controllo di validità"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "<application>Publican</application> validates your XML against the DocBook <firstterm>document type definition</firstterm> (DTD) before it builds the content. However, while a document is under development, you might sometimes want to skip validation while building, especially if the document contains cross-references (<tag>&lt;xref&gt;</tag>s) to sections of the document that do not yet exist. To skip validation, run <prompt>$</prompt> <command>publican build</command> with the <option>--novalid</option> option. Cross-references to non-existent content appear in the built document as three question marks: <literal>???</literal>."
 msgstr "<application>Publican</application> controlla la validità della struttura XML con il <firstterm>DTD</firstterm> (Document Type Definition) prima di compilare il contenuto. Tuttavia in certe situazioni, come quando un documento è in fase di sviluppo, si potrebbe voler saltare la validazione durante la compilazione, soprattutto se il documento contiene riferimenti incrociati (<sgmltag>&lt;xref&gt;</sgmltag>) a sezioni del documento che ancora non esistono. Per saltare la validazione, eseguire <command>publican build</command> con l'opzione <option>--novalid</option>. I riferimenti a contenuto non esistente, nel documento creato, appaiono con tre punti interrogativi, <literal>???</literal>."
 

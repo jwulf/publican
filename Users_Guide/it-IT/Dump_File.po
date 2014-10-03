@@ -27,7 +27,7 @@ msgid "The dump file for a <application>Publican</application>-generated website
 msgstr "Il file dump di un sito web generato da <application>Publican</application> contiene i dettagli di alcune configurazioni di base, insieme con i dettagli di ogni documento pubblicato sul sito. I dettagli di configurazione del sito sono:"
 
 #. Tag: term
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "<tag>&lt;host&gt;</tag>"
 msgstr "<sgmltag>&lt;host&gt;</sgmltag>"
 
@@ -37,7 +37,7 @@ msgid "The URL to the root of the documentation site, as set by the <parameter>h
 msgstr "L'URL alla radice del sito di documentazione, come impostato dal parametro <parameter>host</parameter>, nel file di configurazione del sito."
 
 #. Tag: term
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "<tag>&lt;def_lang&gt;</tag>"
 msgstr "<sgmltag>&lt;def_lang&gt;</sgmltag>"
 
@@ -52,17 +52,17 @@ msgid "Each document, in each language, in each format has a separate record. Th
 msgstr "Ogni documento, in ogni lingua, in ogni formato ha un record separato. Questi record contengono i seguenti dati:"
 
 #. Tag: term
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "<tag>&lt;name&gt;</tag>"
 msgstr "<sgmltag>&lt;name&gt;</sgmltag>"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "The title of the document, generated from the <tag>&lt;title&gt;</tag> tag in the <literal>Book_Info.xml</literal>, <literal>Article_Info.xml</literal>, or <literal>Set_Info.xml</literal> file unless overridden by the <parameter>docname</parameter> parameter in the <filename>publican.cfg</filename> file. Any spaces in the title are replaced by underscores."
 msgstr "Il titolo del documento, generato dal tag <sgmltag>&lt;title&gt;</sgmltag> in <literal>Book_Info.xml</literal>, <literal>Article_Info.xml</literal> o <literal>Set_Info.xml</literal>, superato dal parametro <parameter>docname</parameter> nel file <filename>publican.cfg</filename>. Ogni spazio presente nel titolo è sostituito con un carattere trattino basso."
 
 #. Tag: term
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "<tag>&lt;ID&gt;</tag>"
 msgstr "<sgmltag>&lt;ID&gt;</sgmltag>"
 
@@ -72,17 +72,17 @@ msgid "A unique ID number for this document, in this format, in this language."
 msgstr "Un numero ID unico per il documento, in un certo formato e lingua."
 
 #. Tag: term
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "<tag>&lt;abstract&gt;</tag>"
 msgstr "<sgmltag>&lt;abstract&gt;</sgmltag>"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "A brief summary of the content of the document, generated from the <tag>&lt;abstract&gt;</tag> tag in the <literal>Book_Info.xml</literal>, <literal>Article_Info.xml</literal>, or <literal>Set_Info.xml</literal> file. <application>Publican</application> uses this same content to generate the <literal>%description</literal> section of the spec file when it packages a document. If the <tag>&lt;abstract&gt;</tag> is translated, this field contains the translated text."
 msgstr "Una breve descrizione generale del contenuto del documento, generato dal tag <sgmltag>&lt;abstract&gt;</sgmltag> in <literal>Book_Info.xml</literal>, <literal>Article_Info.xml</literal> o <literal>Set_Info.xml</literal>. <application>Publican</application> usa questo stesso contenuto per generare la sezione <literal>%description</literal> del file spec, usato per creare il pacchetto RPM di un documento. Se l'<sgmltag>&lt;abstract&gt;</sgmltag> è tradotto, questo campo contiene il testo tradotto."
 
 #. Tag: term
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "<tag>&lt;format&gt;</tag>"
 msgstr "<sgmltag>&lt;format&gt;</sgmltag>"
 
@@ -92,17 +92,17 @@ msgid "The format in which the document is produced — <literal>html</literal> 
 msgstr "Il formato in cui il documento è prodotto — <literal>html</literal> per html in pagine multiple, <literal>html-single</literal> per html in pagina singola, <literal>pdf</literal> per PDF ed <literal>epub</literal> per EPUB."
 
 #. Tag: term
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "<tag>&lt;language&gt;</tag>"
 msgstr "<sgmltag>&lt;language&gt;</sgmltag>"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "The language code for the document. Refer to <xref linkend=\"appe-Publican-Users_Guide-Language_codes\" /> for more information about language codes in XML."
 msgstr "Il codice linguistico per il documento. Fare riferimento all'<xref linkend=\"appe-Users_Guide-Language_codes\" />, per maggiori informazioni su questi codici in XML."
 
 #. Tag: term
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "<tag>&lt;name_label&gt;</tag>"
 msgstr "<sgmltag>&lt;name_label&gt;</sgmltag>"
 
@@ -112,17 +112,17 @@ msgid "The name of the document as it appears in the site table of contents. Thi
 msgstr "Il nome del documento che appare nella tabella dei contenuti del sito. Il nome può essere impostato con il parametro <parameter>web_name_label</parameter> nel file <filename>publican.cfg</filename> del documento. Diversamente, il campo è vuoto per un documento in lingua originale o contiene il titolo del documento tradotto. Ogni spazio presente nel nome è sostituito con il carattere trattino basso."
 
 #. Tag: term
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "<tag>&lt;product&gt;</tag>"
 msgstr "<sgmltag>&lt;product&gt;</sgmltag>"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "The product that the document describes, generated from the <tag>&lt;productname&gt;</tag> tag in the <literal>Book_Info.xml</literal>, <literal>Article_Info.xml</literal>, or <literal>Set_Info.xml</literal> file unless overridden by the <parameter>product</parameter> parameter in the <filename>publican.cfg</filename> file. Any spaces in the product name are replaced by underscores."
 msgstr "Il prodotto descritto dal documento, generato dal tag <sgmltag>&lt;productname&gt;</sgmltag> in <literal>Book_Info.xml</literal>, <literal>Article_Info.xml</literal> o <literal>Set_Info.xml</literal>, se non generato dal parametro <parameter>product</parameter> nel file <filename>publican.cfg</filename>. Ogni spazio presente nel nome è sostituito con il carattere trattino basso."
 
 #. Tag: term
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "<tag>&lt;product_label&gt;</tag>"
 msgstr "<sgmltag>&lt;product_label&gt;</sgmltag>"
 
@@ -137,17 +137,17 @@ msgid "If the product label is set to <literal>UNUSED</literal>, no heading for 
 msgstr "Se il nome di prodotto è impostato con <literal>UNUSED</literal>, non viene visualizzata alcuna intestazione nella tabella dei contenuti del sito."
 
 #. Tag: term
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "<tag>&lt;subtitle&gt;</tag>"
 msgstr "<sgmltag>&lt;subtitle&gt;</sgmltag>"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "A one-line description of the content of the document, generated from the <tag>&lt;subtitle&gt;</tag> tag in the <literal>Book_Info.xml</literal>, <literal>Article_Info.xml</literal>, or <literal>Set_Info.xml</literal> file. <application>Publican</application> uses this same content to generate the <literal>Summary</literal> section of the spec file when it packages a document. If the <tag>&lt;subtitle&gt;</tag> is translated, this field contains the translated text."
 msgstr "Un'unica riga descrittiva del contenuto del documento, generato dal tag <sgmltag>&lt;subtitle&gt;</sgmltag> in <literal>Book_Info.xml</literal>, <literal>Article_Info.xml</literal> o <literal>Set_Info.xml</literal>. <application>Publican</application> usa questo stesso contenuto per generare la sezione <literal>Summary</literal> del file spec, usato per creare il pacchetto RPM di un documento. Se il <sgmltag>&lt;subtitle&gt;</sgmltag> è tradotto, questo campo contiene il testo tradotto."
 
 #. Tag: term
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "<tag>&lt;update_date&gt;</tag>"
 msgstr "<sgmltag>&lt;update_date&gt;</sgmltag>"
 
@@ -157,17 +157,17 @@ msgid "The date that the document was most recently installed on the site, in th
 msgstr "La data di più recente installazione del documento, sul sito, nel formato YYYY-MM-DD."
 
 #. Tag: term
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "<tag>&lt;version&gt;</tag>"
 msgstr "<sgmltag>&lt;version&gt;</sgmltag>"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "The version of the product that the document describes (<emphasis>not</emphasis> the version of the document itself), generated from the <tag>&lt;productnumber&gt;</tag> tag in the <literal>Book_Info.xml</literal>, <literal>Article_Info.xml</literal>, or <literal>Set_Info.xml</literal> file unless overridden by the <parameter>version</parameter> parameter in the <filename>publican.cfg</filename> file."
 msgstr "La versione del prodotto descritto dal documento (<emphasis>non</emphasis> la versione del documento), generata dal tag <sgmltag>&lt;productnumber&gt;</sgmltag> in <literal>Book_Info.xml</literal>, <literal>Article_Info.xml</literal> o <literal>Set_Info.xml</literal>, se non generata dal parametro <parameter>version</parameter> nel file <filename>publican.cfg</filename>."
 
 #. Tag: term
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "<tag>&lt;version_label&gt;</tag>"
 msgstr "<sgmltag>&lt;version_label&gt;</sgmltag>"
 
@@ -212,7 +212,7 @@ msgid "muti-page HTML"
 msgstr "HTML multi-pagine"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "<tag>&lt;host&gt;</tag>/<tag>&lt;language&gt;</tag>/<tag>&lt;product&gt;</tag>/<tag>&lt;version&gt;</tag>/<tag>&lt;format&gt;</tag>/<tag>&lt;name&gt;</tag>/<filename>index.html</filename>"
 msgstr "<sgmltag>&lt;host&gt;</sgmltag>/<sgmltag>&lt;language&gt;</sgmltag>/<sgmltag>&lt;product&gt;</sgmltag>/<sgmltag>&lt;version&gt;</sgmltag>/<sgmltag>&lt;format&gt;</sgmltag>/<sgmltag>&lt;name&gt;</sgmltag>/<filename>index.html</filename>"
 
@@ -237,7 +237,7 @@ msgid "PDF"
 msgstr "PDF"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "<tag>&lt;host&gt;</tag>/<tag>&lt;language&gt;</tag>/<tag>&lt;product&gt;</tag>/<tag>&lt;version&gt;</tag>/<tag>&lt;format&gt;</tag>/<tag>&lt;name&gt;</tag>/<tag>&lt;product&gt;</tag>-<tag>&lt;version&gt;</tag>-<tag>&lt;name&gt;</tag>-<tag>&lt;language&gt;</tag>.<filename>pdf</filename>"
 msgstr "<sgmltag>&lt;host&gt;</sgmltag>/<sgmltag>&lt;language&gt;</sgmltag>/<sgmltag>&lt;product&gt;</sgmltag>/<sgmltag>&lt;version&gt;</sgmltag>/<sgmltag>&lt;format&gt;</sgmltag>/<sgmltag>&lt;name&gt;</sgmltag>/<sgmltag>&lt;product&gt;</sgmltag>-<sgmltag>&lt;version&gt;</sgmltag>-<sgmltag>&lt;name&gt;</sgmltag>-<sgmltag>&lt;language&gt;</sgmltag>.<filename>pdf</filename>"
 
@@ -252,7 +252,7 @@ msgid "EPUB"
 msgstr "EPUB"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "<tag>&lt;host&gt;</tag>/<tag>&lt;language&gt;</tag>/<tag>&lt;product&gt;</tag>/<tag>&lt;version&gt;</tag>/<tag>&lt;format&gt;</tag>/<tag>&lt;name&gt;</tag>/<tag>&lt;product&gt;</tag>-<tag>&lt;version&gt;</tag>-<tag>&lt;name&gt;</tag>-<tag>&lt;language&gt;</tag>.<filename>epub</filename>"
 msgstr "<sgmltag>&lt;host&gt;</sgmltag>/<sgmltag>&lt;language&gt;</sgmltag>/<sgmltag>&lt;product&gt;</sgmltag>/<sgmltag>&lt;version&gt;</sgmltag>/<sgmltag>&lt;format&gt;</sgmltag>/<sgmltag>&lt;name&gt;</sgmltag>/<sgmltag>&lt;product&gt;</sgmltag>-<sgmltag>&lt;version&gt;</sgmltag>-<sgmltag>&lt;name&gt;</sgmltag>-<sgmltag>&lt;language&gt;</sgmltag>.<filename>epub</filename>"
 
@@ -262,7 +262,7 @@ msgid "For example, <filename>http://docs.fedoraproject.org/en-US/Fedora/14/pdf/
 msgstr "Per esempio, <filename>http://docs.fedoraproject.org/en-US/Fedora/14/pdf/Accessibility_Guide/Fedora-14-Accessibility_Guide-en-US.epub</filename>"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "Note that the <tag>&lt;product_label&gt;</tag>, <tag>&lt;version_label&gt;</tag>, and <tag>&lt;name_label&gt;</tag> fields have no significance for URLs, even when these fields are suppressed in tables of contents by the <literal>UNUSED</literal> setting."
 msgstr "Notare che i campi <sgmltag>&lt;product_label&gt;</sgmltag>, <sgmltag>&lt;version_label&gt;</sgmltag> e <sgmltag>&lt;name_label&gt;</sgmltag> sono privi di significato per gli URL, anche quando sono esplicitamente rimossi dalla tabella dei contenuti con l'impostazione <literal>UNUSED</literal>."
 

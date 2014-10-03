@@ -32,7 +32,7 @@ msgid "Complete the XML of a document."
 msgstr "Completare l'XML di un documento."
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "The XML for this version of the document should now be considered ‘frozen’. If your document is stored in a version-controlled repository, you should now move this version into a separate directory or branch. This allows writers to begin work on subsequent versions of the document in one branch, while providing a stable base for translation in another branch."
 msgstr "Questa versione XML del documento dovrebbe essere considerata &lsquo;frozen&rsquo;. Se il documento si trova in un repository con controllo di versione, a questo punto, la versione verrebbe spostata in una cartella  separata o <emphasis>branch</emphasis>. In tal modo i redattori possono iniziare a lavorare su versioni successive del documento in un branch, e fornire una base stabile per traduzione in un altro branch."
 
@@ -92,7 +92,7 @@ msgid "<prompt>$</prompt> <command>publican update_po --langs=<replaceable>langu
 msgstr "$ <command>publican update_po --langs=<replaceable>codice_lingua</replaceable></command>\n"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "where <replaceable>language_code</replaceable> is the code for the target language. Refer to <xref linkend=\"appe-Publican-Users_Guide-Language_codes\" /> for more information about language codes. You can provide multiple language codes, separated by commas, to generate PO files for more than one language at a time. For example:"
 msgstr "dove <replaceable>codice_lingua</replaceable> è il codice per la lingua target. Fare riferimento all'<xref linkend=\"appe-Users_Guide-Language_codes\" /> per maggiori informazioni su questi codici. Si possono fornire codici linguistici multipli, separati da virgole, in modo da generare i file PO per più lingue. Per esempio:"
 
@@ -167,7 +167,7 @@ msgid "<prompt>$</prompt> <command>publican package --lang=is-IS</command>"
 msgstr "$ <command>publican package --lang=it-IT</command>\n"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "You can build the document in all languages for which you have translations with the <option>--langs=all</option> option, but note that you must package each language individually. Refer to <xref linkend=\"sect-Publican-Users_Guide-Building_a_document\" /> for more information on building a document, and <xref linkend=\"sect-Publican-Users_Guide-Packaging_a_document\" /> on packaging a document."
 msgstr "E' possibile creare il documento in tutte le lingue di cui si dispone una traduzione, usando l'opzione <option>--langs=all</option>, mentre i pacchetti vanno compilati individualmente. Fare riferimento alla <xref linkend=\"sect-Users_Guide-Building_a_document\" /> ed alla <xref linkend=\"sect-Users_Guide-Packaging_a_book\" /> per maggiori informazioni."
 
@@ -187,12 +187,12 @@ msgid "Translating Indexes and Glossaries"
 msgstr ""
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "DocBook automatically collates and sorts <tag>&lt;glossentry&gt;</tag> elements into a book's glossary; and <tag>&lt;primary&gt;</tag>, <tag>&lt;secondary&gt;</tag>, and <tag>&lt;tertiary&gt;</tag> <tag>&lt;indexterm&gt;</tag> elements into a book's index. Entries are sorted automatically, and although this system works well for languages written with an alphabet, abugida, or syllabic script, languages written with logograms sort less well."
 msgstr ""
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "To manually adjust the sort order of a glossary entry or index entry, manually add DocBook's <tag>sortas</tag> attribute to the XML element. For example, to ensure that the Japanese word 暗号化 sorts correctly in an index, specify:"
 msgstr ""
 
@@ -219,17 +219,20 @@ msgid ""
 "msgstr \"&lt;glossterm sortas=\"あんごうか\"&gt;暗号化&lt;/glossterm&gt;\""
 msgstr ""
 
+#. Tag: title
+#, no-c-format
+#~ msgid "Preparing a document for translation"
+#~ msgstr "Preparare un documento per la traduzione"
+
 #. Tag: para
 #, no-c-format
 #~ msgid "If this is the first time that PO files have been created for a particular language, <application>Publican</application> creates a new subdirectory, named with the language code that you specified with the <option>--langs=</option> option. This subdirectory holds a PO file for each POT file in <filename>pot</filename> subdirectory. If <application>Publican</application> has created PO files for this language previously, <application>Publican</application> updates the existing PO files to reflect any changes in the POT files since the PO files were last updated. You can update existing PO files in every subdirectory with the <option>--langs=all</option> option:"
 #~ msgstr "Se è la prima volta che i file PO vengono creati per una lingua, <application>Publican</application> crea una nuova sottocartella, il cui nome coincide con il codice linguistico specificato con l'opzione <option>--langs=</option>. La sottocartella contiene un file PO per ciascun file POT nella sottocartella <filename>pot</filename>. Se <application>Publican</application> ha creato i file PO precedentemente, <application>Publican</application> aggiorna i file PO esistenti per rispecchiare i cambiamenti apportati ai file POT dall'ultimo aggiornamento dei file PO. E' possibile aggiornare i file PO esistenti in tutte le sottocartelle, usando l'opzione <option>--langs=all</option>:"
 
-#. Tag: programlisting
+#. Tag: para
 #, no-c-format
-#~ msgid "\"Project-Id-Version: 3\n"
-"\""
-#~ msgstr "\"Project-Id-Version: 3\n"
-"\""
+#~ msgid "The release number of RPM packages for translated documents is set by the <parameter>Project-Id-Version</parameter> parameter in the <filename>Article_Info.po</filename> or <filename>Book_Info.po</filename> file. For example, release <literal>3</literal> of a book in Japanese would have the following set at the start of the <filename>ja-JP/Book_Info.po</filename> file:"
+#~ msgstr "Il numero di release dei pacchetti RPM per i documenti tradotti viene impostato con il parametro <parameter>Project-Id-Version</parameter> nel file <filename>Article_Info.po</filename> o <filename>Book_Info.po</filename>. Per esempio, la release <literal>3</literal> di un libro in lingua giapponese avrebbe la seguente impostazione nel file <filename>ja-JP/Book_Info.po</filename>:"
 
 #. Tag: title
 #, no-c-format
@@ -238,16 +241,13 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-#~ msgid "The release number of RPM packages for translated documents is set by the <parameter>Project-Id-Version</parameter> parameter in the <filename>Article_Info.po</filename> or <filename>Book_Info.po</filename> file. For example, release <literal>3</literal> of a book in Japanese would have the following set at the start of the <filename>ja-JP/Book_Info.po</filename> file:"
-#~ msgstr "Il numero di release dei pacchetti RPM per i documenti tradotti viene impostato con il parametro <parameter>Project-Id-Version</parameter> nel file <filename>Article_Info.po</filename> o <filename>Book_Info.po</filename>. Per esempio, la release <literal>3</literal> di un libro in lingua giapponese avrebbe la seguente impostazione nel file <filename>ja-JP/Book_Info.po</filename>:"
-
-#. Tag: para
-#, no-c-format
 #~ msgid "Note that the release number of a package in a particular language does not bear any relationship to the release number of the package for the same document in its original language or in any other language. The release number is specific to one particular language only."
 #~ msgstr "Notare che il numero di release di un pacchetto in una certa lingua non condivide nessuna relazione con il numero di rilascio del pacchetto relativo allo stesso documento in lingua originale o in altra lingua. Questo numero si riferisce esclusivamente ad una lingua."
 
-#. Tag: title
+#. Tag: programlisting
 #, no-c-format
-#~ msgid "Preparing a document for translation"
-#~ msgstr "Preparare un documento per la traduzione"
+#~ msgid "\"Project-Id-Version: 3\n"
+"\""
+#~ msgstr "\"Project-Id-Version: 3\n"
+"\""
 

@@ -22,12 +22,12 @@ msgid "Adding code samples"
 msgstr "Aggiungere codice"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "If your book contains code samples, place them in a directory named <filename>extras/</filename> in your source language directory and use an <tag>&lt;xi:include&gt;</tag> to pull the code file into the XML structure of your document. <application>Publican</application> does not parse any files that it finds in the <filename>extras/</filename> directory as XML."
 msgstr "Se il libro contiene pezzi di codice, salvare il file in una sotto-cartella denominata <filename>extras/</filename> nella cartella della lingua originale, ed usare un <sgmltag>&lt;xi:include&gt;</sgmltag> per caricare il file del codice nella struttura XML del documento. Ogni file contenuto nella cartella <filename>extras/</filename> non viene analizzato sintatticamente (parsed) come XML da <application>Publican</application>."
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "Certain characters are reserved in XML, in particular, <literal>&amp;</literal> and <literal>&lt;</literal>. If you insert code samples directly into the XML of your document, you must escape these characters, either by marking them as <literal>CDATA</literal> or by replacing them with entities (&amp;amp; and &amp;lt; respectively).<footnote> <para> Refer to section 2.4 \"Character Data and Markup\" in the XML 1.0 standard, available from <uri xlink:href=\"http://www.w3.org/TR/2008/REC-xml-20081126/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">http://www.w3.org/TR/2008/REC-xml-20081126/</uri>. </para> </footnote> If you place these files in the <filename>extras/</filename> directory, you do not need to escape these characters. This approach saves time, reduces the chances of introducing errors into either the document XML or the code itself, and makes future maintenance of the document and the code easier."
 msgstr "Alcuni caratteri sono riservati in XML, in particolare, <literal>&amp;</literal> e <literal>&lt;</literal>. Se si inserisce un pezzo di codice direttamente in un file XML di un documento, occorre fare l'<emphasis>escaping</emphasis> di questi caratteri, rendendoli <literal>CDATA</literal> o sostituendoli con entità (&amp;amp&semi; e &amp;lt&semi; rispettivamente).<footnote><para>Fare riferimento alla sezione 2.4 \"Character Data and Markup\" dello  standard XML&nbsp;1.0, disponibile su <ulink url=\"http://www.w3.org/TR/2008/REC-xml-20081126/\" />.</para></footnote> Posizionando questi file nella cartella <filename>extras/</filename>, non occorre alcun escaping di questi caratteri. Questo approccio risparmia tempo, riduce la possibilità di introdurre errori nell'XML e nel codice; oltre a semplificare il mantenimento del documento e del codice."
 
@@ -57,7 +57,7 @@ msgid "<prompt>$</prompt> <command>cp <filename>~/samples/foo.c en-US/extras/.</
 msgstr "<command>cp <filename>~/samples/foo.c en-US/extras/.</filename></command>\n"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "<tag>xi:include</tag> the sample file in your xml file"
 msgstr "Nel file XML, includere il file di codice in un tag <sgmltag>xi:include</sgmltag>"
 
@@ -136,7 +136,7 @@ msgstr ""
 "&lt;/programlistingco&gt;"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "Note the <tag>&lt;area&gt;</tag> elements that define the position of the callouts that will appear on the code sample. The <literal>coords</literal> attributes specify a line number and a column number separated by a space. In this example, callouts are applied to lines 4 and 12 of the code, lined up with each other in column 75. Although this approach means that you might have to adjust <literal>coords</literal> attributes if you ever modify the code to which they apply, it avoids mixing XML <tag>&lt;coords&gt;</tag> tags into the code itself."
 msgstr "Notare gli elementi <sgmltag>&lt;area&gt;</sgmltag> che definiscono la posizione dei callout che compaiono nel codice. Gli attributi in <literal>coords</literal> specificano un numero di riga ed un numero di colonna, separati da uno spazio. In questo esempio, i callout sono applicati alle righe 4 e 12 del codice, entrambi allineati sulla colonna 75. Anche se questo approccio prevede di adattare gli attributi <literal>coords</literal> ad ogni modifica apportata al codice, ciò evita di combinare tag <sgmltag>&lt;coords&gt;</sgmltag> nel codice."
 

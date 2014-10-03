@@ -62,7 +62,7 @@ msgid "<filename>opds.xml</filename> — an Open Publication Distribution System
 msgstr "<filename>opds.xml</filename> — un catalogo OPDS (Open Publication Distribution System) per permettere ai lettori di eBook compatibili di individuare facilmente i documenti sul sito."
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "<filename>Sitemap</filename> — A Sitemap is a list of the URLs from your website and metadata about them, like update history, change frequency, and importance relative to other URLs in the site. A Sitemap can be supplied to many major search engines, where it is used to help their crawlers index your site more intelligently. A Sitemap does not guarantee that your site will be ranked higher in search results. However, it does help search engines to return the most relevant results from your website in response to user queries. For more information on Sitemaps, visit <link xlink:href=\"http://www.sitemaps.org/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">sitemaps.org</link>."
 msgstr ""
 
@@ -87,7 +87,7 @@ msgid "<filename>opds.xml</filename> — an OPDS catalog of EPUB documents in th
 msgstr "<filename>opds.xml</filename> — un catalogo OPDS di documenti EPUB in questa lingua."
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "<filename>opds-<replaceable>product</replaceable>.xml</filename> — an OPDS catalog of EPUB documents for each product for which you publish documentation in this language. Within each product catalog, documentation is divided into <tag>&lt;category&gt;</tag>s for different versions of the same product."
 msgstr "<filename>opds-<replaceable>prodotto</replaceable>.xml</filename> — un catalogo OPDS di documenti EPUB per ogni prodotto da pubblicare in questa lingua. All'interno di ogni catalogo, per versioni differenti dello stesso prodotto, la documentazione è suddivisa in <sgmltag>&lt;category&gt;</sgmltag>."
 
@@ -102,7 +102,7 @@ msgid "A subdirectory for each product for which you publish documentation in th
 msgstr "Una sotto-cartella per ciascun prodotto da pubblicare in questa lingua."
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "Optionally, the site structure might also include a <firstterm>dump file</firstterm> — an XML file that provides complete site content details for delivery of other services, such as web feeds or customised search pages. The site structure might also contain a zipped version of the dump file. Refer to <xref linkend=\"sect-Publican-Users_Guide-Creating_the_website_structure\" /> and <xref linkend=\"sect-Publican-Users_Guide-Creating_the_website_structure\" /> for details of creating a dump file, and to <xref linkend=\"appe-Publican-Users_Guide-Contents_of_the_website_dump_file\" /> for a description of the dump file contents."
 msgstr "Opzionalmente, la struttura del sito può contenere anche un <firstterm>file dump</firstterm> — un file XML che fornisce il dettaglio completo sul contenuto del sito per servire altri servizi, come feed web o ricerca personalizzata di pagine. La struttura potrebbe contenere anche una versione zippata del file dump. Fare riferimento alla <xref linkend=\"sect-Users_Guide-Website-structure-cfg_and_db-manual\" /> ed alla <xref linkend=\"sect-Users_Guide-Website-structure-cfg_and_db-rpm\" /> per i dettagli sulla creazione di un file dump; mentre per una descrizione del contenuto di un file dump, vedere l'<xref linkend=\"dump_file\" />."
 
@@ -137,12 +137,12 @@ msgid "To Submit Your Sitemap to Google:"
 msgstr ""
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "Sign up for a Google account at <link xlink:href=\"http://www.google.com/webmasters/tools/home\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Google Webmaster Tools</link>. If you already have a Google account, you can use it."
 msgstr ""
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "Sign in to your Google Webmaster Tools account at this URL: <link xlink:href=\"http://www.google.com/webmasters/tools/home\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">http://www.google.com/webmasters/tools/home</link>."
 msgstr ""
 
@@ -207,12 +207,12 @@ msgid "To Submit Your Sitemap to Bing:"
 msgstr ""
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "Sign up for a Bing Webmaster Tools account at <link xlink:href=\"http://www.bing.com/toolbox/webmaster/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Bing Webmaster Tools</link>. If you already have a Windows LiveID account, you can use it."
 msgstr ""
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "Sign in to your Bing Webmaster Tools account at this URL: <link xlink:href=\"http://www.bing.com/toolbox/webmaster/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">http://www.bing.com/toolbox/webmaster/</link>."
 msgstr ""
 

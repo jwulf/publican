@@ -310,8 +310,8 @@ msgid "skips DTD validation when building a document."
 msgstr "n'effectue pas la validation par rapport au DTD lors de la construction du document."
 
 #. Tag: term
-#, no-c-format
-msgid "--src_dir=<replaceable>SRC_DIR</replaceable>"
+#, no-c-format, fuzzy
+msgid "--pub_dir=<replaceable>PUB_DIR</replaceable>"
 msgstr "--src_dir=<replaceable>RÉPERTOIRE_SOURCE</replaceable>"
 
 #. Tag: para
@@ -330,8 +330,8 @@ msgid "Override the tool to use when creating PDFs. Valid options are wkhtmltopd
 msgstr ""
 
 #. Tag: term
-#, no-c-format
-msgid "--src_dir=<replaceable>SRC_DIR</replaceable>"
+#, no-c-format, fuzzy
+msgid "--pub_dir=<replaceable>PUB_DIR</replaceable>"
 msgstr "--src_dir=<replaceable>RÉPERTOIRE_SOURCE</replaceable>"
 
 #. Tag: para
@@ -575,8 +575,8 @@ msgid "the brand to copy."
 msgstr ""
 
 #. Tag: term
-#, no-c-format, fuzzy
-msgid "--site_config=<replaceable>site_config</replaceable>"
+#, no-c-format
+msgid "--old_site_config=<replaceable>site_config</replaceable>"
 msgstr "--site_config=<replaceable>configuration_site</replaceable>"
 
 #. Tag: para
@@ -585,8 +585,8 @@ msgid "website configuration file to copy brand web content from."
 msgstr ""
 
 #. Tag: term
-#, no-c-format, fuzzy
-msgid "--site_config=<replaceable>site_config</replaceable>"
+#, no-c-format
+msgid "--old_site_config=<replaceable>site_config</replaceable>"
 msgstr "--site_config=<replaceable>configuration_site</replaceable>"
 
 #. Tag: para
@@ -990,28 +990,8 @@ msgstr "publican update_db --del --lang en-US --name Foo --version 0.1 --product
 
 #. Tag: term
 #, no-c-format
-#~ msgid "<command>publican package</command>"
-#~ msgstr "<command>publican package</command>"
-
-#. Tag: term
-#, no-c-format
-#~ msgid "<command>publican create</command>"
-#~ msgstr "<command>publican create</command>"
-
-#. Tag: term
-#, no-c-format
-#~ msgid "<command>publican --man</command>"
-#~ msgstr "<command>publican --man</command>"
-
-#. Tag: term
-#, no-c-format
-#~ msgid "<command>publican --v</command>"
-#~ msgstr "<command>publican --v</command>"
-
-#. Tag: term
-#, no-c-format
-#~ msgid "<command>publican rename</command>"
-#~ msgstr "<command>publican rename</command>"
+#~ msgid "<command>publican build</command>"
+#~ msgstr "<command>publican build</command>"
 
 #. Tag: term
 #, no-c-format
@@ -1020,6 +1000,26 @@ msgstr "publican update_db --del --lang en-US --name Foo --version 0.1 --product
 
 #. Tag: term
 #, no-c-format
-#~ msgid "<command>publican build</command>"
-#~ msgstr "<command>publican build</command>"
+#~ msgid "<command>publican --v</command>"
+#~ msgstr "<command>publican --v</command>"
+
+#. Tag: term
+#, no-c-format
+#~ msgid "<command>publican --man</command>"
+#~ msgstr "<command>publican --man</command>"
+
+#. Tag: term
+#, no-c-format
+#~ msgid "<command>publican create</command>"
+#~ msgstr "<command>publican create</command>"
+
+#. Tag: term
+#, no-c-format
+#~ msgid "<command>publican rename</command>"
+#~ msgstr "<command>publican rename</command>"
+
+#. Tag: term
+#, no-c-format
+#~ msgid "<command>publican package</command>"
+#~ msgstr "<command>publican package</command>"
 

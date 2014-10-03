@@ -260,7 +260,7 @@ msgid "<parameter>dt_requires</parameter>"
 msgstr "<parameter>dt_requires</parameter>"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "a package that the desktop package requires, for example, a documentation menu package. Refer to <xref linkend=\"sect-Publican-Users_Guide-Desktop_menu_entries_for_documents\" />."
 msgstr "un paquet requis par le paquet bureau, par exemple, un paquet de menu de documentation. Voyez la <xref linkend=\"desktop_menus\" />."
 
@@ -330,13 +330,13 @@ msgid "the provider name for an <application>Eclipse</application> help plugin (
 msgstr "le nom du fournisseur du greffon d'aide <application>Eclipse</application> (défaut : <replaceable>Publican</replaceable>-<replaceable>version Publican</replaceable>)"
 
 #. Tag: term
-#, no-c-format, fuzzy
-msgid "<parameter>rev_file</parameter>"
-msgstr "<parameter>rev_file</parameter>"
+#, no-c-format
+msgid "<parameter>img_dir</parameter>"
+msgstr "<parameter>tmp_dir</parameter>"
 
 #. Tag: para
-#, no-c-format, fuzzy
-msgid "the directory for <application>Publican</application> output. (Default: <literal>tmp</literal>)"
+#, no-c-format
+msgid "the directory <application>Publican</application> will process images from. (Default: <literal>images</literal>)"
 msgstr "le répertoire pour la sortie de <application>Publican</application>. (Défaut : <literal>tmp</literal>)"
 
 #. Tag: term
@@ -360,13 +360,13 @@ msgid "translations to ignore."
 msgstr "traductions à ignorer."
 
 #. Tag: term
-#, no-c-format, fuzzy
-msgid "<parameter>tmp_dir</parameter>"
+#, no-c-format
+msgid "<parameter>img_dir</parameter>"
 msgstr "<parameter>tmp_dir</parameter>"
 
 #. Tag: para
-#, no-c-format, fuzzy
-msgid "the directory for <application>Publican</application> output. (Default: <literal>tmp</literal>)"
+#, no-c-format
+msgid "the directory <application>Publican</application> will process images from. (Default: <literal>images</literal>)"
 msgstr "le répertoire pour la sortie de <application>Publican</application>. (Défaut : <literal>tmp</literal>)"
 
 #. Tag: term
@@ -420,7 +420,7 @@ msgid "<parameter>menu_category</parameter>"
 msgstr "<parameter>menu_category</parameter>"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "the desktop menu category (as defined by a corresponding <filename>.menu</filename> file) in which a document should appear when installed from a desktop RPM package. Refer to <xref linkend=\"sect-Publican-Users_Guide-Desktop_menu_entries_for_documents\" />."
 msgstr "la catégorie de menu de bureau (telle que définie par un fichier <filename>.menu</filename> correspondant) dans lequel un document doit apparaître quand il est installé à partir d'un paquet RPM bureau. Voyez la <xref linkend=\"desktop_menus\" />."
 
@@ -465,8 +465,8 @@ msgid "the repository from which to fetch remote books that form part of a distr
 msgstr "le dépôt dont sont extraits les ouvrages distants formant une partie d'un ensemble distribué."
 
 #. Tag: term
-#, no-c-format, fuzzy
-msgid "<parameter>rev_file</parameter>"
+#, no-c-format
+msgid "<parameter>rev_dir</parameter>"
 msgstr "<parameter>rev_file</parameter>"
 
 #. Tag: para
@@ -475,8 +475,8 @@ msgid "override the default Revision History file direction. By default <applica
 msgstr ""
 
 #. Tag: term
-#, no-c-format, fuzzy
-msgid "<parameter>rev_file</parameter>"
+#, no-c-format
+msgid "<parameter>rev_dir</parameter>"
 msgstr "<parameter>rev_file</parameter>"
 
 #. Tag: para
@@ -525,13 +525,13 @@ msgid "URL at which to find tarballs of source files."
 msgstr "URL où trouver les archives tar des fichiers sources."
 
 #. Tag: term
-#, no-c-format, fuzzy
-msgid "<parameter>tmp_dir</parameter>"
+#, no-c-format
+msgid "<parameter>img_dir</parameter>"
 msgstr "<parameter>tmp_dir</parameter>"
 
 #. Tag: para
-#, no-c-format, fuzzy
-msgid "the directory for <application>Publican</application> output. (Default: <literal>tmp</literal>)"
+#, no-c-format
+msgid "the directory <application>Publican</application> will process images from. (Default: <literal>images</literal>)"
 msgstr "le répertoire pour la sortie de <application>Publican</application>. (Défaut : <literal>tmp</literal>)"
 
 #. Tag: term
@@ -640,7 +640,7 @@ msgid "<parameter>web_type</parameter>"
 msgstr "<parameter>web_type</parameter>"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "specifies that the document is descriptive content for a <application>Publican</application>-managed website rather than product documentation. This content includes the home page of the website (<literal>web_type:&nbsp;home</literal>), product description pages (<literal>web_type:&nbsp;product</literal>), and version description pages (<literal>web_type:&nbsp;version</literal>). Refer to <xref linkend=\"chap-Publican-Users_Guide-Building_a_website_with_Publican\" />."
 msgstr "indique que le document est la description du contenu d'un site Web géré par <application>Publican</application> et non une documentation de produit. Ce contenu comprend la page d'accueil du site Web (<literal>web_type:&nbsp;home</literal>), des pages de description du produit (<literal>web_type:&nbsp;product</literal>) et des pages de description de la version (<literal>web_type:&nbsp;version</literal>). Voyez la <xref linkend=\"sect-Users_Guide-Website\" />."
 
@@ -665,9 +665,9 @@ msgid "Extra options to pass to <application>wkhtmltopdf</application>. e.g. <li
 msgstr ""
 
 #. Tag: para
-#, no-c-format, fuzzy
-#~ msgid "a comma-separated list of formats to include in the web RPM package. Refer to <xref linkend=\"\" />."
-#~ msgstr "une liste, avec une virgule comme séparateur, des formats à inclure dans le paquet RPM Web. Voyez la <xref linkend=\"sect-Users_Guide-Packaging_a_book-The_publican_package_command\" />."
+#, no-c-format
+#~ msgid "the operating system for which to build packages. (Default: <literal>.el5</literal> — Red Hat Enterprise Linux 5)"
+#~ msgstr "le système d'exploitation pour lequel les paquets sont construits. (Défaut : <literal>.el5</literal> — Red Hat Enterprise Linux 5)"
 
 #. Tag: para
 #, no-c-format
@@ -676,11 +676,11 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-#~ msgid "the operating system for which to build packages. (Default: <literal>.el5</literal> — Red Hat Enterprise Linux 5)"
-#~ msgstr "le système d'exploitation pour lequel les paquets sont construits. (Défaut : <literal>.el5</literal> — Red Hat Enterprise Linux 5)"
-
-#. Tag: para
-#, no-c-format
 #~ msgid "<emphasis role=\"strikethrough\">use <firstterm>strict mode</firstterm> (Default: <literal>0</literal> — not strict)</emphasis> Strict mode is not currently enforced."
 #~ msgstr "<emphasis role=\"strikethrough\">utilise le <firstterm>mode strict</firstterm> (Défaut : <literal>0</literal> — pas de mode strict)</emphasis> Le mode strict n'est pas forcé actuellement."
+
+#. Tag: para
+#, no-c-format, fuzzy
+#~ msgid "a comma-separated list of formats to include in the web RPM package. Refer to <xref linkend=\"\" />."
+#~ msgstr "une liste, avec une virgule comme séparateur, des formats à inclure dans le paquet RPM Web. Voyez la <xref linkend=\"sect-Users_Guide-Packaging_a_book-The_publican_package_command\" />."
 

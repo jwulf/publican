@@ -32,7 +32,7 @@ msgid "<application>Publican</application> makes it easy to manage differences b
 msgstr "<application>Publican</application> semplifica la gestione delle differenze tra versioni multiple di un libro, permettendo di usare una sorgente unica per tutte le versioni. Il <firstterm>tagging condizionale</firstterm> garantisce che il contenuto di una versione specifica, compaia soltanto nella versione stabilita; ossia, permette di <firstterm>condizionare</firstterm> il contenuto."
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "To conditionalize content in a book, use the tag attribute <command>condition</command>. For example, let's say the book <citetitle>How To Use Product Foo</citetitle> has an \"upstream\", \"enterprise\", and \"beta\" version:"
 msgstr "Per condizionare il contenuto di un libro, usare il tag <command>condition</command>. Per esempio, si supponga che il libro <citetitle>How To Use Product Foo</citetitle> abbia una versione \"upstream\", una versione \"enterprise\" e una versione \"beta\"."
 
@@ -72,7 +72,7 @@ msgstr ""
 "&lt;/para&gt;"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "To build a specific version (and thereby capture all content conditionalized for that version), add the <command>condition: <replaceable>version</replaceable></command> parameter to the <filename>publican.cfg</filename> file and run the <prompt>$</prompt> <command>publican build</command> command as normal. For example, if you add <literal>condition: upstream</literal> to the <filename>publican.cfg</filename> file of <citetitle>How To Use Product Foo</citetitle> and run:"
 msgstr "Per compilare una versione specifica (e quindi catturare solo il contenuto relativo a questa versione), aggiungere il parametro <command>condition: <replaceable>versione</replaceable></command> al file <filename>publican.cfg</filename> ed eseguire il comando <command>publican build</command>, ormai noto. Per esempio, aggiungendo <command>condition: upstream</command> al file <filename>publican.cfg</filename> dell'HOWTO <citetitle>How To Use Product Foo</citetitle>, e poi eseguendo:"
 
@@ -107,7 +107,7 @@ msgid "Conditional tagging creates difficulty for translators in two ways: it ob
 msgstr "Il tagging condizionale crea difficoltà ai traduttori in due modi: oscura il contesto nei file <firstterm>PO</firstterm> (Portable Object) e rende più ardua la rilettura/correzione del documento, a quei traduttori non molto familiari con i tag condizionali."
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "The PO files for the document contain the full set of tags from the XML files, regardless of any conditions set. When translators open the PO file for the example from <citetitle>How To Use Product Foo</citetitle> in <xref linkend=\"sect-Publican-Users_Guide-Conditional_tagging\" />, they see:"
 msgstr "I file PO includono tutti i tag presenti in XML, a prescindere dalle condizioni. Per esempio, se un traduttore apre il file PO, relativo all'<citetitle>How To Use Product Foo</citetitle> della <xref linkend=\"sect-Users_Guide-Conditional_tagging\" />, egli vede:"
 

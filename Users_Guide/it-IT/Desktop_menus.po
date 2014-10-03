@@ -147,27 +147,27 @@ msgstr "&lt;!DOCTYPE Menu PUBLIC \"-//freedesktop//DTD Menu 1.0//EN\"\n"
 "\"http://www.freedesktop.org/standards/menu-spec/1.0/menu.dtd\"&gt;"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "a <firstterm>root element</firstterm>, <tag>&lt;Menu&gt;</tag>, that contains:"
 msgstr "un <firstterm>elemento radice</firstterm>, <sgmltag>&lt;Menu&gt;</sgmltag>, contenente:"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "a <tag>&lt;Name&gt;</tag> element with the content <literal>Documentation</literal>"
 msgstr "un elemento <sgmltag>&lt;Name&gt;</sgmltag> contenente <literal>Documentation</literal>"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "another <tag>&lt;Menu&gt;</tag> element that in turn contains:"
 msgstr "un altro elemento <sgmltag>&lt;Menu&gt;</sgmltag> che a sua volta, contiene:"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "a <tag>&lt;Name&gt;</tag> element with the content <literal>Documentation</literal> (just like the root element)"
 msgstr "un elemento <sgmltag>&lt;Name&gt;</sgmltag> contenente <literal>Documentation</literal> (come l'elemento radice)"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "a <tag>&lt;Directory&gt;</tag> element with its content the name of the desktop entry file you created, for example:"
 msgstr "un elemento <sgmltag>&lt;Directory&gt;</sgmltag> contenente il nome del file di desktop entry creato, per esempio:"
 
@@ -177,7 +177,7 @@ msgid "&lt;Directory&gt;menu-example.directory&lt;/Directory&gt;"
 msgstr "&lt;Directory&gt;menu-example.directory&lt;/Directory&gt;"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "an <tag>&lt;Includes&gt;</tag> element with the content <literal>X-<replaceable>category_name</replaceable></literal>, where <replaceable>category_name</replaceable> is an identifier for the documents that will be grouped together under this menu entry. For example:"
 msgstr "un elemento <sgmltag>&lt;Includes&gt;</sgmltag> contenente <literal>X-<replaceable>nome_categoria</replaceable></literal>, dove <replaceable>nome_categoria</replaceable> è un identificatore per i documenti da raggruppare  nel sotto-menu. Per esempio:"
 
@@ -215,7 +215,7 @@ msgid "Setting a desktop menu category"
 msgstr "Impostare un categoria di desktop menu"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "To place a document in a submenu of <menuchoice><guimenu>System</guimenu><guisubmenu>Documentation</guisubmenu></menuchoice>, set the <parameter>menu_category</parameter> parameter in its <filename>publican.cfg</filename> file to match the content of the <tag>&lt;Includes&gt;</tag> element in the corresponding desktop menu file. For example, consider a desktop menu file that contains the element:"
 msgstr "Per posizionare un documento in un sotto-menu di <menuchoice><guimenu>Sistema</guimenu><guisubmenu>Documentazione</guisubmenu></menuchoice>, impostare il parametro <parameter>menu_category</parameter> nel proprio file <filename>publican.cfg</filename>, in modo da corrispondere al contenuto dell'elemento <sgmltag>&lt;Includes&gt;</sgmltag> nel relativo file di desktop menu. Per esempio, si consideri il file di desktop menu, contenente l'elemento:"
 

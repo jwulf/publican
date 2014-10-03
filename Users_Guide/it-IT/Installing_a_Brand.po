@@ -250,6 +250,11 @@ msgstr "Notare, nel brand common, la differenza di licenza tra i file di common 
 
 #. Tag: entry
 #, no-c-format
+#~ msgid "<ulink url=\"http://creativecommons.org/licenses/by-sa/3.0/\">CC-BY-SA 3.0</ulink>"
+#~ msgstr "<ulink url=\"http://creativecommons.org/licenses/by-sa/3.0/\">CC-BY-SA 3.0</ulink>"
+
+#. Tag: entry
+#, no-c-format
 #~ msgid "<ulink url=\"http://www.opencontent.org/openpub/\">OPL 1.0</ulink>"
 #~ msgstr "<ulink url=\"http://www.opencontent.org/openpub/\">OPL 1.0</ulink>"
 
@@ -262,9 +267,4 @@ msgstr "Notare, nel brand common, la differenza di licenza tra i file di common 
 #, no-c-format
 #~ msgid "<ulink url=\"http://creativecommons.org/publicdomain/zero/1.0/\">CC0 1.0</ulink>"
 #~ msgstr "<ulink url=\"http://creativecommons.org/publicdomain/zero/1.0/\">CC0 1.0</ulink>"
-
-#. Tag: entry
-#, no-c-format
-#~ msgid "<ulink url=\"http://creativecommons.org/licenses/by-sa/3.0/\">CC-BY-SA 3.0</ulink>"
-#~ msgstr "<ulink url=\"http://creativecommons.org/licenses/by-sa/3.0/\">CC-BY-SA 3.0</ulink>"
 

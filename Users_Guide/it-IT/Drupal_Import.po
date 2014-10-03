@@ -153,7 +153,7 @@ msgid "Drupal Import Guide"
 msgstr ""
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "Before you can import a book, you need to install a module call <application>'Node Import'</application> in Drupal. This module allows Drupal to import and update content from CSV or TSV files. To install this module, simply go to <link xlink:href=\"http://drupal.org/sandbox/hyu/1819292\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">drupal site</link> and follow the instructions on the website to download it. Once this is done, then you need to copy the downloaded module to the 'modules' directory on the Drupal server. For example if your Drupal is located in <filename>/var/www/html/drupal/</filename> directory, then you should copy the module to <filename>/var/www/html/drupal/sites/all/modules/</filename> directory. To enable the installed module, login to the Drupal site and go to <guilabel>Administer -&gt; Site building -&gt; Modules </guilabel>. In the Development section, tick the <guibutton>checkbox</guibutton> and click <guibutton>Save configuration</guibutton> button to activate the <application>Node Import</application> Module."
 msgstr ""
 
@@ -286,7 +286,7 @@ msgid "Upload the CSV file to <filename>import Directory</filename> in the Drupa
 msgstr ""
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "Upload <filename>en-US</filename> directory to the <filename>\"sites/default/files/\"</filename> directory in the Drupal server. This value can be overriden in the <filename>publican.cfg</filename>. For more details, please read <xref linkend=\"sect-Publican-Users_Guide-Import_book_into_Drupal-The_publican.cfg_file\" />"
 msgstr ""
 
@@ -325,12 +325,12 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format, fuzzy
-#~ msgid "Follow the steps in <xref linkend=\"\" />"
+#~ msgid "Simply repeat the steps in <xref linkend=\"\" /> to update the book."
 #~ msgstr ""
 
 #. Tag: para
 #, no-c-format, fuzzy
-#~ msgid "Simply repeat the steps in <xref linkend=\"\" /> to update the book."
+#~ msgid "Follow the steps in <xref linkend=\"\" />"
 #~ msgstr ""
 
 #. Tag: para

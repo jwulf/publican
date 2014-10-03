@@ -38,7 +38,7 @@ msgid "Use with caution"
 msgstr ""
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "As with conditional tagging more generally, <literal>arch</literal> can cause great difficulties when translating documents. Refer to <xref linkend=\"sect-Publican-Users_Guide-Conditional_tagging-Conditional_tagging_and_translation\" /> for an explanation of the issues."
 msgstr ""
 
@@ -94,7 +94,7 @@ msgid "<parameter>books</parameter>"
 msgstr ""
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "specifies a space-separated list of books used in a remote set. Refer to <xref linkend=\"sect-Publican-Users_Guide-Using_sets-Distributed_sets\" /> for more information on distributed sets."
 msgstr ""
 
@@ -104,7 +104,7 @@ msgid "<parameter>brand</parameter>"
 msgstr ""
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "sets the <firstterm>brand</firstterm> of the document, for example, <computeroutput>RedHat</computeroutput>, <computeroutput>fedora</computeroutput>, <computeroutput>JBoss</computeroutput>, <computeroutput>oVirt</computeroutput> or <computeroutput>GIMP</computeroutput> , as set by the <option>--brand</option> option for <prompt>$</prompt> <command>publican create</command>. If you do not specify a brand, <application>Publican</application> uses its default brand. Refer to <xref linkend=\"chap-Publican-Users_Guide-Branding\" /> for more information."
 msgstr ""
 
@@ -114,7 +114,7 @@ msgid "<parameter>brew_dist</parameter>"
 msgstr ""
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "specifies the build target to use for building the desktop RPM package in <application>Brew</application>, Red Hat's internal build system. This parameter defaults to <literal>docs-5E</literal>. Refer to <xref linkend=\"sect-Publican-Users_Guide-Packaging_a_document-The_publican_package_command\" /> and <xref linkend=\"sect-Publican-Users_Guide-Packaging_a_brand\" /> for more information on building RPM packages."
 msgstr ""
 
@@ -239,7 +239,7 @@ msgid "<parameter>condition</parameter>"
 msgstr ""
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "specifies conditions on which to prune XML before transformation. Refer to <xref linkend=\"sect-Publican-Users_Guide-Conditional_tagging\" /> for more information."
 msgstr ""
 
@@ -279,7 +279,7 @@ msgid "<parameter>def_lang</parameter>"
 msgstr ""
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "sets the default language for a <application>Publican</application>-managed website. Tables of contents for languages other than the default language will link to documents in the default language when translations are not available. Refer to <xref linkend=\"sect-Publican-Users_Guide-Packaging_a_document\" />."
 msgstr ""
 
@@ -319,7 +319,7 @@ msgid "<parameter>dt_requires</parameter>"
 msgstr ""
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "a package that the desktop package requires, for example, a documentation menu package. Refer to <xref linkend=\"sect-Publican-Users_Guide-Desktop_menu_entries_for_documents\" />."
 msgstr ""
 
@@ -479,7 +479,7 @@ msgid "<parameter>ignored_translations</parameter>"
 msgstr ""
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "specifies translations to ignore as comma-separated XML language codes; for example, <literal>es-ES,it-IT</literal>. If you build or package a book for a language filtered by this parameter, <application>Publican</application> ignores any translations that exist for this language, and builds or packages the book in the language of the original XML instead. Refer to <xref linkend=\"sect-Publican-Users_Guide-Preparing_a_document_for_translation\" />, and to <xref linkend=\"appe-Publican-Users_Guide-Language_codes\" />."
 msgstr ""
 
@@ -509,7 +509,7 @@ msgid "<parameter>license</parameter>"
 msgstr ""
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "specifies the license this package uses. By default, <application>Publican</application> selects the GNU Free Documentation License (GFDL). Refer to <xref linkend=\"sect-Publican-Users_Guide-Packaging_a_document\" />."
 msgstr ""
 
@@ -519,7 +519,7 @@ msgid "<parameter>max_image_width</parameter>"
 msgstr ""
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "specifies the maximum width allowable for images in the document in pixels. By default, <application>Publican</application> scales down any images wider than 444 pixels so that they fit within this limit. Keeping images no wider than 444 pixels ensures that they present no wider than the right-hand margin of the text in HTML output and that they fit within the pages of PDF output. Refer to <xref linkend=\"sect-Publican-Users_Guide-Adding_images\" /> for more information on using images."
 msgstr ""
 
@@ -544,7 +544,7 @@ msgid "<parameter>menu_category</parameter>"
 msgstr ""
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "the desktop menu category (as defined by a corresponding <filename>.menu</filename> file) in which a document should appear when installed from a desktop RPM package. Refer to <xref linkend=\"sect-Publican-Users_Guide-Desktop_menu_entries_for_documents\" />."
 msgstr ""
 
@@ -554,7 +554,7 @@ msgid "<parameter>os_ver</parameter>"
 msgstr ""
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "specifies the operating system for which to build packages. <application>Publican</application> appends the value that you provide here to the RPM packages that it builds. For example, <literal>.fc15</literal> for Fedora&nbsp;15. The default value is <literal>.el5</literal>, which signifies Red Hat Enterprise Linux 5 and operating systems derived from it. Refer to <xref linkend=\"sect-Publican-Users_Guide-Packaging_a_document\" /> and <xref linkend=\"sect-Publican-Users_Guide-Packaging_a_brand\" />."
 msgstr ""
 
@@ -594,7 +594,7 @@ msgid "<parameter>repo</parameter>"
 msgstr ""
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "specifies the repository from which to fetch remote books that form part of a distributed set. Refer to <xref linkend=\"sect-Publican-Users_Guide-Using_sets-Distributed_sets\" />."
 msgstr ""
 
@@ -624,7 +624,7 @@ msgid "<parameter>scm</parameter>"
 msgstr ""
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "specifies the version control (or <firstterm>source code management</firstterm>) system used in the repository in that stores the remote books in a distributed set. At present, <application>Publican</application> can use only <application>Subversion</application> (SVN), and therefore uses <literal>SVN</literal> as its default setting. Refer to <xref linkend=\"sect-Publican-Users_Guide-Using_sets-Distributed_sets\" />."
 msgstr ""
 
@@ -654,7 +654,7 @@ msgid "<parameter>src_url</parameter>"
 msgstr ""
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "specifies the URL at which to find tarballs of source files. This parameter provides the <literal>Source:</literal> field in the header of an RPM spec file. Refer to <xref linkend=\"sect-Publican-Users_Guide-Packaging_a_document\" />."
 msgstr ""
 
@@ -769,7 +769,7 @@ msgid "<parameter>web_brew_dist</parameter>"
 msgstr ""
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "specifies the <application>brew</application> build target to use for building the web RPM packages. <application>Brew</application> is the internal build system used by Red Hat. By default, this value is set to <literal>docs-5E</literal>, representing documentation packages for Red Hat Enterprise Linux 5. Refer to <xref linkend=\"sect-Publican-Users_Guide-Packaging_a_document\" />."
 msgstr ""
 
@@ -789,7 +789,7 @@ msgid "<parameter>web_home</parameter>"
 msgstr ""
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "specifies that the document is the home page of a documentation website, not a standard document. Refer to <xref linkend=\"chap-Publican-Users_Guide-Building_a_website_with_Publican\" />."
 msgstr ""
 
@@ -809,7 +809,7 @@ msgid "<parameter>web_name_label</parameter>"
 msgstr ""
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "overrides the book name as it appears on the menu of a <application>Publican</application>-managed website. Refer to <xref linkend=\"chap-Publican-Users_Guide-Building_a_website_with_Publican\" />."
 msgstr ""
 
@@ -829,7 +829,7 @@ msgid "<parameter>web_product_label</parameter>"
 msgstr ""
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "overrides the product name as it appears on the menu of a <application>Publican</application>-managed website. Refer to <xref linkend=\"chap-Publican-Users_Guide-Building_a_website_with_Publican\" />."
 msgstr ""
 
@@ -849,7 +849,7 @@ msgid "<parameter>web_type</parameter>"
 msgstr ""
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "specifies that the document is descriptive content for a <application>Publican</application>-managed website rather than product documentation. This content includes the home page of the website (<literal>web_type:&nbsp;home</literal>), product description pages (<literal>web_type:&nbsp;product</literal>), and version description pages (<literal>web_type:&nbsp;version</literal>). Refer to <xref linkend=\"chap-Publican-Users_Guide-Building_a_website_with_Publican\" />."
 msgstr ""
 
@@ -859,7 +859,7 @@ msgid "<parameter>web_version_label</parameter>"
 msgstr ""
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "overrides the version number as it appears on the menu of a <application>Publican</application>-managed website. Set this value to <literal>UNUSED</literal> for general documentation that does not apply to any particular version of a product. Refer to <xref linkend=\"chap-Publican-Users_Guide-Building_a_website_with_Publican\" />."
 msgstr ""
 
@@ -885,11 +885,11 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-#~ msgid "a comma-separated list of formats to include in the web RPM package. Refer to <xref linkend=\"\" />."
+#~ msgid "specifies packages that the web RPM obsoletes. Refer to <xref linkend=\"\" />."
 #~ msgstr ""
 
 #. Tag: para
 #, no-c-format
-#~ msgid "specifies packages that the web RPM obsoletes. Refer to <xref linkend=\"\" />."
+#~ msgid "a comma-separated list of formats to include in the web RPM package. Refer to <xref linkend=\"\" />."
 #~ msgstr ""
 

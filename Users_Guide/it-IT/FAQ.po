@@ -97,7 +97,7 @@ msgid "Important"
 msgstr "Importante"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "The <filename>files</filename> directory will not be available during the validation process so you can not <tag>xi:include</tag> or otherwise embed any files in this directory in your XML."
 msgstr "La cartella <filename>files</filename> non è disponibile durante la fase di validazione, per cui non è possibile <sgmltag>xi:include</sgmltag> o inglobare diversamente, i file contenuti in questa cartella nell'XML."
 
@@ -206,17 +206,17 @@ msgid "I get an error <computeroutput>Exception in thread \"main\" java.lang.Out
 msgstr "Creando un file PDF si solleva un'eccezione <computeroutput>Exception in thread \"main\" java.lang.OutOfMemoryError: Java heap space</computeroutput>. Cos'è che non va?"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "The default memory allocated for Java is not big enough to build your PDF. You need to increase the memory allocated to <application>FOP</application>. Before running <prompt>$</prompt> <command>publican build</command> run <command>echo \"FOP_OPTS='-Xms50m -Xmx700m'\" &gt; ~/.foprc</command>. This sets the initial heap space to 50 MB and allows it to grow to a maximum of 700 MB."
 msgstr "La memoria allocata per Java, in modo predefinito, è insufficiente a creare il PDF. Occorre aumentare la memoria allocata per <application>FOP</application>. Prima di eseguire <command>publican build</command>, eseguire <command>echo \"FOP_OPTS='-Xms50m -Xmx700m'\" &gt; ~/.foprc</command>. Ciò imposta lo spazio iniziale della memoria heap a 50&nbsp;MB e permette di aumentare fino ad un massimo di 700&nbsp;MB."
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "Previous versions of <application>Publican</application> removed empty <tag>&lt;para&gt;</tag> tags. Does <application>Publican</application> still do this?"
 msgstr "Versioni precedenti di <application>Publican</application> rimuovevano i tag <sgmltag>&lt;para&gt;</sgmltag> vuoti. E le versioni di <application>Publican</application> correnti?"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "No. <application>Publican</application> previously removed empty <tag>&lt;para&gt;</tag> tags while it transformed XML because empty <tag>&lt;para&gt;</tag> tags broke earlier translation toolchains used within Red Hat and the Fedora Project. Empty <tag>&lt;para&gt;</tag> tags are valid DocBook XML, and <application>Publican</application> no longer removes them."
 msgstr "No. <application>Publican</application> nel passato, rimuoveva i tag <sgmltag>&lt;para&gt;</sgmltag> vuoti durante la trasformazione dei file XML, in quanto i tag <sgmltag>&lt;para&gt;</sgmltag> vuoti creavano problemi agli strumenti di traduzione usati in precedenza in Red Hat e nel Fedora Project. Tag <sgmltag>&lt;para&gt;</sgmltag> vuoti, sono tag validi in DocBook XML ed ora non vengono più rimossi da <application>Publican</application>."
 
@@ -236,17 +236,17 @@ msgid "Run the following bash script in the root directory of your document to c
 msgstr "Eseguire il seguente script bash nella cartella radice del documento, per controllare l'ortografia nei file XML con <application>aspell</application>, un controllore ortografico da riga di comando."
 
 #. Tag: programlisting
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "<xi:include href=\"extras/proof.sh\" parse=\"text\" xmlns:xi=\"http://www.w3.org/2001/XInclude\" />"
 msgstr "<xi:include href=\"extras/proof.sh\" parse=\"text\" xmlns:xi=\"http://www.w3.org/2001/XInclude\" />\n"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "Why don't <tag>&lt;segmentedlist&gt;</tag>s work when I build PDFs?"
 msgstr "Perché quando si creano file PDF, i tag <sgmltag>&lt;segmentedlist&gt;</sgmltag> non funzionano?"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "Check the number of columns in your <tag>&lt;segmentedlist&gt;</tag>s. When <tag>&lt;segmentedlist&gt;</tag>s are formatted as tables, the DocBook XSL limits the number of columns to two, and <application>Publican</application> formats <tag>&lt;segmentedlist&gt;</tag>s as tables."
 msgstr "Contare il numero di colonne presenti nei tag <sgmltag>&lt;segmentedlist&gt;</sgmltag>. Se i <sgmltag>&lt;segmentedlist&gt;</sgmltag> sono formattati come tabelle, l'XSL di DocBook limita il numero delle colonne a due soltanto, e <application>Publican</application> formatta i <sgmltag>&lt;segmentedlist&gt;</sgmltag> come tabelle."
 
@@ -261,12 +261,12 @@ msgid "This is the result of a bug in <application>FOP</application> that distor
 msgstr "Ciò è dovuto ad un bug in <application>FOP</application> che distorce i colori nelle immagini PNG a 24-bit. Convertire le immagini, in immagini PNG a 32-bit per circuire questo problema."
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "When I build my document, I get an error about an ‘undefined language’ — what's wrong?"
 msgstr "Creando un documento, si ottiene un errore del tipo &lsquo;undefined language&rsquo; — cos'è che non va?"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "Code highlighting in <application>Publican</application> is generated with the <application>Syntax::Highlight::Engine::Kate</application> Perl module. If you specify a language in a <tag>&lt;programlisting&gt;</tag> tag that <application>Syntax::Highlight::Engine::Kate</application> does not recognize, you receive an error when you build your book. The first lines of the error message are similar to:"
 msgstr "In <application>Publican</application> l'evidenza del codice è generato con il modulo Perl, <application>Syntax::Highlight::Engine::Kate</application>. Se in un tag <sgmltag>&lt;programlisting&gt;</sgmltag> si specifica un linguaggio non riconosciuto da <application>Syntax::Highlight::Engine::Kate</application>, in fase di creazione del libro si riceve un errore. Le prime righe del messaggio d'errore sono simili a:"
 
@@ -282,7 +282,7 @@ msgstr ""
 "<computeroutput>cannot create plugin for language 'JAVA'</computeroutput>\n"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "Note that <application>Syntax::Highlight::Engine::Kate</application> is very strict about names of languages and is case sensitive. Therefore, <tag>&lt;programlisting language=\"Java\"&gt;</tag> works, but <tag>&lt;programlisting language=\"java\"&gt;</tag> and <tag>&lt;programlisting language=\"JAVA\"&gt;</tag> do not. The error message that you receive identifies the problematic language attribute."
 msgstr "Notare che il modulo <application>Syntax::Highlight::Engine::Kate</application> è molto rigoroso con i nomi dei linguaggi ed è case sensitive. Quindi, <sgmltag>&lt;programlisting language=\"Java\"&gt;</sgmltag> funziona, ma <sgmltag>&lt;programlisting language=\"java\"&gt;</sgmltag> e <sgmltag>&lt;programlisting language=\"JAVA\"&gt;</sgmltag> non funzionano. Il messaggio d'errore specifica il problema relativo all'attributo del linguaggio."
 
@@ -295,7 +295,7 @@ msgid "How do I enable bash command-line completion for Publican?"
 msgstr "Come abilitare il completamento dei comandi bash per Publican?"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "Support for bash command-line completion is a new feature in <application>Publican 2.2</application>. To enable this feature:"
 msgstr "Supporto al completamento dei comandi bash è una nuova funzionalità presente in <application>Publican&nbsp;2.2</application>. Per abilitarla:"
 
@@ -310,7 +310,7 @@ msgid "Add the following to your <filename>~/.bashrc</filename> file:"
 msgstr "Aggiungere al proprio file <filename>~/.bashrc</filename>:"
 
 #. Tag: programlisting
-#, no-c-format, fuzzy
+#, no-c-format
 msgid ""
 "# Use bash-completion, if available\n"
 "if [ -f /etc/bash_completion ]; then\n"
@@ -344,7 +344,7 @@ msgid "To make this permanent, open <filename>/etc/security/limits.conf</filenam
 msgstr ""
 
 #. Tag: screen
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "*                 soft    nofile          8192\n"
 "*                 hard    nofile          8192"
 msgstr ""
@@ -355,7 +355,7 @@ msgid "Then save, and log in again for the changes to take effect."
 msgstr ""
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "Why does Jeff call Isaac ‘Ivan’?"
 msgstr "Perché Jeff chiama Isaac &lsquo;Ivan&rsquo;?"
 
@@ -365,9 +365,9 @@ msgid "Because Jeff's memory is pants!"
 msgstr "Perché la memoria di Jeff è in mutande!"
 
 #. Tag: para
-#, no-c-format
-#~ msgid "<emphasis role=\"strikethrough\">Currently the Red Hat and JBoss brands enable strict mode.</emphasis>"
-#~ msgstr "<emphasis role=\"strikethrough\">Al momento i brand Red Hat e JBoss abilitano la modalità strict.</emphasis>"
+#, no-c-format, fuzzy
+#~ msgid "Refer to <ulink url=\"http://search.cpan.org/dist/Syntax-Highlight-Engine-Kate/lib/Syntax/Highlight/Engine/Kate.pm#PLUGINS\" /> for the full list of languages that <application>Syntax::Highlight::Engine::Kate</application> supports, including their expected capitalization and punctuation."
+#~ msgstr "Fare riferimento a <ulink url=\"http://search.cpan.org/~szabgab/Syntax-Highlight-Engine-Kate-0.06/lib/Syntax/Highlight/Engine/Kate.pm#PLUGINS\" /> per l'elenco completo dei linguaggi supportati da <application>Syntax::Highlight::Engine::Kate</application>, insieme al corretto uso delle lettere maiuscole e della punteggiatura."
 
 #. Tag: para
 #, no-c-format
@@ -375,7 +375,7 @@ msgstr "Perché la memoria di Jeff è in mutande!"
 #~ msgstr "<emphasis role=\"strikethrough\">Quali brand abilitano la modalità strict?</emphasis> Al momento la modalità strict non è applicata."
 
 #. Tag: para
-#, no-c-format, fuzzy
-#~ msgid "Refer to <ulink url=\"http://search.cpan.org/dist/Syntax-Highlight-Engine-Kate/lib/Syntax/Highlight/Engine/Kate.pm#PLUGINS\" /> for the full list of languages that <application>Syntax::Highlight::Engine::Kate</application> supports, including their expected capitalization and punctuation."
-#~ msgstr "Fare riferimento a <ulink url=\"http://search.cpan.org/~szabgab/Syntax-Highlight-Engine-Kate-0.06/lib/Syntax/Highlight/Engine/Kate.pm#PLUGINS\" /> per l'elenco completo dei linguaggi supportati da <application>Syntax::Highlight::Engine::Kate</application>, insieme al corretto uso delle lettere maiuscole e della punteggiatura."
+#, no-c-format
+#~ msgid "<emphasis role=\"strikethrough\">Currently the Red Hat and JBoss brands enable strict mode.</emphasis>"
+#~ msgstr "<emphasis role=\"strikethrough\">Al momento i brand Red Hat e JBoss abilitano la modalità strict.</emphasis>"
 

@@ -52,12 +52,12 @@ msgid "To create that mark do the following:"
 msgstr "Per creare il contrassegno, seguire la seguente procedura:"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "Add the software's pre-release version number, or equivalent state information, to the <tag>&lt;subtitle&gt;</tag> tag in your <filename>Book_Info.xml</filename> file. Place this additional text in <tag>&lt;remark&gt;</tag> tags. For example:"
 msgstr "Aggiungere il numero di versione del software pre-release, o un informazione di stato equivalente, al tag <sgmltag>&lt;subtitle&gt;</sgmltag> nel file <filename>Book_Info.xml</filename>. Inserire questa informazione tra tag <sgmltag>&lt;remark&gt;</sgmltag>. Per esempio:"
 
 #. Tag: programlisting
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "&lt;subtitle&gt;Using Red Hat Enterprise Warp Drive&lt;remark&gt; Version 1.1, Beta 2&lt;/remark&gt;&lt;/subtitle&gt;"
 msgstr ""
 "&lt;subtitle&gt;Using Red Hat Enterprise Warp Drive&lt;remark&gt; Version 1.1, Beta 2&lt;/remark&gt;&lt;/subtitle&gt;\n"
@@ -69,14 +69,14 @@ msgid "add <varname>show_remarks</varname> to the <filename>publican.cfg</filena
 msgstr "Aggiungere <varname>show_remarks</varname> al file <filename>publican.cfg</filename> ed impostarlo ad '1':"
 
 #. Tag: programlisting
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "show_remarks: 1"
 msgstr ""
 "show_remarks: 1\n"
 "\n"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "When you build your book with this <tag>&lt;remark&gt;</tag> tag and the <varname>show_remarks</varname> setting in place, the pre-release nature of the software is displayed clearly and unmistakably. PDF builds display the remark on their cover and title pages. HTML builds (both single-page HTML and multiple-page HTML) display the remark near the beginning of <filename>index.html</filename>."
 msgstr "Compilando il libro con questo tag <sgmltag>&lt;remark&gt;</sgmltag> e con l'impostazione <varname>show_remarks</varname>, si definisce in modo chiaro ed inequivocabile la natura pre-release del software. Le compilazioni PDF visualizzano il contrassegno sulla copertina e sulla pagina del titolo. Le compilazioni HTML (sia su pagina singola sia su pagine multiple), visualizzano il contrassegno sulla pagina iniziale del file <filename>index.html</filename>."
 
@@ -97,7 +97,7 @@ msgid "Important"
 msgstr "Importante"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "It is the writer's responsibility to remove the <tag>&lt;remark&gt;</tag> tag and its contents and remove or turn off <varname>show_remarks</varname> when documentation is updated for use with the release version of the software."
 msgstr "Rimane una responsabilità del redattore rimuovere il tag <sgmltag>&lt;remark&gt;</sgmltag> con il suo contenuto e rimuovere o disattivare l'attributo <varname>show_remarks</varname> quando la documentazione viene aggiornata con la versione di release del software."
 
@@ -112,24 +112,24 @@ msgid "Unfinished documentation made available to others for review should be la
 msgstr "La documentazione incompleta resa disponibile per revisione dovrebbe essere indicata chiaramente come tale."
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "To add the draft watermark to your documentation add the <userinput>status=\"draft\"</userinput> attribute to the <tag>&lt;article&gt;</tag>, <tag>&lt;book&gt;</tag> or <tag>&lt;set&gt;</tag> tag in your document's root node. For example:"
 msgstr "Per far comparire il contrassegno <emphasis>draft</emphasis> ad un documento, aggiungere l'attributo <userinput>status=\"draft\"</userinput> al tag <sgmltag>&lt;article&gt;</sgmltag>, <sgmltag>&lt;book&gt;</sgmltag> o <sgmltag>&lt;set&gt;</sgmltag> nel nodo radice del documento. Per esempio:"
 
 #. Tag: programlisting
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "&lt;book status=\"draft\"&gt;"
 msgstr ""
 "&lt;book status=\"draft\"&gt;\n"
 "\n"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "By default, your root node is the <tag>&lt;book&gt;</tag> tag in your <filename><replaceable>Doc_Name</replaceable>.xml</filename> file."
 msgstr "Per impostazione, il nodo radice coincide con il tag <sgmltag>&lt;book&gt;</sgmltag> nel file <filename><replaceable>Nome_Doc</replaceable>.xml</filename>."
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "If you are working on an article or set, the root node is the <tag>&lt;article&gt;</tag> or <tag>&lt;set&gt;</tag> tag in <filename><replaceable>Doc_Name</replaceable>.xml</filename>."
 msgstr "Nel caso di un articolo o set di volumi, il nodo radice coincide con il tag <sgmltag>&lt;article&gt;</sgmltag> o <sgmltag>&lt;set&gt;</sgmltag>, rispettivamente, nel file <filename><replaceable>Nome_Doc</replaceable>.xml</filename>."
 

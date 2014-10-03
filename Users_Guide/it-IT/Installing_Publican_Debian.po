@@ -59,7 +59,7 @@ msgid "Important — Installing more recent packages using Apt-Pinning"
 msgstr ""
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "If you need a more recent release of <package>publican</package> than installed by the procedure above, you can query if there other versions available: <uri xlink:href=\"http://packages.debian.org/publican\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">http://packages.debian.org/publican</uri>."
 msgstr ""
 

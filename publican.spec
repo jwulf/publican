@@ -299,7 +299,6 @@ if [ "$1" = 0 ]; then
   CATALOG=%{_sysconfdir}/xml/catalog
   %{_bindir}/xmlcatalog --noout --del \
   "-//OASIS//ENTITIES DocBook Character Entities V4.5//EN" $CATALOG
-
 fi
 
 %clean

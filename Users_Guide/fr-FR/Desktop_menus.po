@@ -145,27 +145,27 @@ msgstr "&lt;!DOCTYPE Menu PUBLIC \"-//freedesktop//DTD Menu 1.0//EN\"\n"
 "\"http://www.freedesktop.org/standards/menu-spec/1.0/menu.dtd\"&gt;"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "a <firstterm>root element</firstterm>, <tag>&lt;Menu&gt;</tag>, that contains:"
 msgstr "un <firstterm>élément racine</firstterm>, <sgmltag>&lt;Menu&gt;</sgmltag>, contenant :"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "a <tag>&lt;Name&gt;</tag> element with the content <literal>Documentation</literal>"
 msgstr "un élément <sgmltag>&lt;Name&gt;</sgmltag> de contenu <literal>Documentation</literal>"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "another <tag>&lt;Menu&gt;</tag> element that in turn contains:"
 msgstr "un autre élément <sgmltag>&lt;Menu&gt;</sgmltag> qui, à son tour, contient :"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "a <tag>&lt;Name&gt;</tag> element with the content <literal>Documentation</literal> (just like the root element)"
 msgstr "un élément <sgmltag>&lt;Name&gt;</sgmltag> avec le contenu <literal>Documentation</literal> (exactement comme l'élément racine)."
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "a <tag>&lt;Directory&gt;</tag> element with its content the name of the desktop entry file you created, for example:"
 msgstr "un élément <sgmltag>&lt;Directory&gt;</sgmltag> dont le contenu est le nom du fichier d'entrée de bureau qui vient d'être créé, par exemple :"
 
@@ -175,7 +175,7 @@ msgid "&lt;Directory&gt;menu-example.directory&lt;/Directory&gt;"
 msgstr "&lt;Directory&gt;menu-example.directory&lt;/Directory&gt;"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "an <tag>&lt;Includes&gt;</tag> element with the content <literal>X-<replaceable>category_name</replaceable></literal>, where <replaceable>category_name</replaceable> is an identifier for the documents that will be grouped together under this menu entry. For example:"
 msgstr "un élément <sgmltag>&lt;Includes&gt;</sgmltag> avec le contenu <literal>X-<replaceable>nom_catégorie</replaceable></literal>, où <replaceable>nom_catégorie</replaceable> est un identifiant des documents à regrouper sous cette entrée de menu. Par exemple :"
 
@@ -213,7 +213,7 @@ msgid "Setting a desktop menu category"
 msgstr "Définition de la catégorie d'un menu de bureau"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "To place a document in a submenu of <menuchoice><guimenu>System</guimenu><guisubmenu>Documentation</guisubmenu></menuchoice>, set the <parameter>menu_category</parameter> parameter in its <filename>publican.cfg</filename> file to match the content of the <tag>&lt;Includes&gt;</tag> element in the corresponding desktop menu file. For example, consider a desktop menu file that contains the element:"
 msgstr "Pour placer un document dans un sous-menu de <menuchoice><guimenu>Outils système</guimenu><guisubmenu>Documentation</guisubmenu></menuchoice>, définissez le paramètre <parameter>menu_category</parameter> dans le fichier <filename>publican.cfg</filename> de façon à ce qu'il corresponde au contenu de l'élément <sgmltag>&lt;Includes&gt;</sgmltag> du fichier menu de bureau associé. Par exemple, voyez un fichier menu de bureau contenant l'élément :"
 
@@ -259,11 +259,11 @@ msgstr "Notez que vous pouvez inclure ce paramètre dans le fichier <filename>de
 
 #. Tag: para
 #, no-c-format
-#~ msgid "For a full description of how desktop entries work, refer to the <citetitle>Desktop Entry Specification</citetitle>, available from <ulink url=\"http://standards.freedesktop.org/entry-spec/latest/\" />"
-#~ msgstr "Pour une description complète du mode de fonctionnement des entrées de bureau, reportez-vous à la page <citetitle>Desktop Entry Specification</citetitle> (Définition des entrées pour bureau), disponible à l'adresse <ulink url=\"http://standards.freedesktop.org/entry-spec/latest/\" />"
+#~ msgid "For a full description of how desktop menus work, refer to the <citetitle>Desktop Menu Specification</citetitle>, available from <ulink url=\"http://standards.freedesktop.org/desktop-menu-spec/latest/\" />"
+#~ msgstr "Pour une description complète du fonctionnement des menus bureau, reportez-vous à la page <citetitle>Desktop Menu Specification</citetitle> (Définition d'un menu de bureau), disponible à l'adresse <ulink url=\"http://standards.freedesktop.org/desktop-menu-spec/latest/\" />."
 
 #. Tag: para
 #, no-c-format
-#~ msgid "For a full description of how desktop menus work, refer to the <citetitle>Desktop Menu Specification</citetitle>, available from <ulink url=\"http://standards.freedesktop.org/desktop-menu-spec/latest/\" />"
-#~ msgstr "Pour une description complète du fonctionnement des menus bureau, reportez-vous à la page <citetitle>Desktop Menu Specification</citetitle> (Définition d'un menu de bureau), disponible à l'adresse <ulink url=\"http://standards.freedesktop.org/desktop-menu-spec/latest/\" />."
+#~ msgid "For a full description of how desktop entries work, refer to the <citetitle>Desktop Entry Specification</citetitle>, available from <ulink url=\"http://standards.freedesktop.org/entry-spec/latest/\" />"
+#~ msgstr "Pour une description complète du mode de fonctionnement des entrées de bureau, reportez-vous à la page <citetitle>Desktop Entry Specification</citetitle> (Définition des entrées pour bureau), disponible à l'adresse <ulink url=\"http://standards.freedesktop.org/entry-spec/latest/\" />"
 

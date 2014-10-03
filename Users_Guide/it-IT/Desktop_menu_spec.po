@@ -21,7 +21,7 @@ msgid "Sample spec file for desktop menu package"
 msgstr "File spec d'esempio per il pacchetto desktop-menu"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "The following spec file is an example of how you could package a <firstterm>desktop entry</firstterm> (<filename>.directory</filename>) file and a <firstterm>desktop menu</firstterm> (<filename>.menu</filename>) file in an RPM package for shipping. Refer to <xref linkend=\"sect-Publican-Users_Guide-Desktop_menu_entries_for_documents\" /> for the structure of these files."
 msgstr "Il seguente file spec è un esempio di come creare un pacchetto RPM contenente un file di <firstterm>>desktop entry</firstterm> (file <filename>.directory</filename>) ed un file di <firstterm>desktop menu</firstterm> (file <filename>.menu</filename>). Fare riferimento alla <xref linkend=\"desktop_menus\" />, per la struttura di questi file."
 

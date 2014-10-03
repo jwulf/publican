@@ -20,7 +20,7 @@ msgid "Packaging a brand"
 msgstr "Empaquetage d'une marque"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "After you create a brand (as described in <xref linkend=\"sect-Publican-Users_Guide-Creating_a_brand\" />), <application>Publican</application> can help you to distribute the brand to members of your documentation project as <firstterm>RPM packages</firstterm>. RPM packages are used to distribute software to computers with Linux operating systems that use the <application>RPM Package Manager</application>. These operating systems include Red Hat Enterprise Linux, Fedora, Mandriva Linux, SUSE Linux Enterprise, openSUSE, Turbolinux, and Yellow Dog Linux, to name just a few."
 msgstr "Après avoir créé une marque (comme décrit dans la <xref linkend=\"sect-Users_Guide-Creating_a_brand\" />), <application>Publican</application> facilite sa distribution aux membres du projet de documentation sous forme de <firstterm>paquet RPM</firstterm>. Les paquets RPM s'utilisent pour distribuer des logiciels pour les ordinateurs avec le système d'exploitation Linux utilisant le <application>Gestionnaire de paquets RPM</application>. Parmi ces systèmes d'exploitation, indiquons :  Red Hat Enterprise Linux, Fedora, Mandriva Linux, SUSE Linux Enterprise, openSUSE, Turbolinux et Yellow Dog Linux, pour ne citer que quelques uns."
 
@@ -75,7 +75,7 @@ msgid "when used together with the <option>--brew</option> option, specifies tha
 msgstr "utilisée conjointement avec l'option <option>--brew</option>, indique que le paquet SRPM doit avoir été construit <firstterm>à partir de zéro</firstterm> lorsqu'il est envoyé à <application>Brew</application>. Les reconstructions complètes, sans mise à jour de la base de données du paquet à utiliser pour le paquet résultant, s'utilisent pour s'assurer que le paquet SRPM est correctement structuré."
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "The <option>--lang</option>, <option>--desktop</option> and <option>--short_sighted</option> options that apply when you package books (described in <xref linkend=\"sect-Publican-Users_Guide-Packaging_a_document\" />) are meaningless when you package brands. In particular, note that although the <option>--lang</option> option is mandatory when you package a book, you do not need to use it when you package a brand."
 msgstr "Les options <option>--lang</option>, <option>--desktop</option> et <option>--short_sighted</option>, s'appliquant à l'empaquetage d'ouvrages ( et décrit dans la <xref linkend=\"sect-Users_Guide-Packaging_a_book\" />) sont sans signification quand vous empaquetez des marques. En particulier, alors que l'option <option>--lang</option> est obligatoire lors de l'empaquetage d'un ouvrage, notez qu'il n'est pas nécessaire de l'utiliser pour empaqueter une marque."
 
@@ -90,7 +90,7 @@ msgid "<filename>publican-<replaceable>brand</replaceable>-<replaceable>version<
 msgstr "<filename>publican-<replaceable>marque</replaceable>-<replaceable>version</replaceable>-<replaceable>parution</replaceable>.<replaceable>cible_construction</replaceable>.noarch.<replaceable>extension</replaceable></filename>."
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "<application>Publican</application> uses the information in the <filename>publican.cfg</filename> file to supply the various parameters in the file name. Refer to <xref linkend=\"sect-Publican-Users_Guide-Files_in_the_brand_directory-The_publican.cfg_file\" /> for details of configuring this file. Additionally:"
 msgstr "<application>Publican</application> utilise les informations contenues dans le fichier <filename>publican.cfg</filename> pour renseigner divers paramètres du nom de fichier. Reportez-vous à la <xref linkend=\"sect-Users_Guide-Files_in_the_brand_directory-The_publican.cfg_file\" /> pour plus de précisions à propos de la configuration de ce fichier. En outre :"
 

@@ -19,7 +19,7 @@ msgid "Creating, installing, and updating product pages and version pages"
 msgstr "Création, installation et mise à jour des pages du produit et des pages des versions"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "<application>Publican</application>-generated product pages and version pages are the localizable pages that provide a general overview of a product or version respectively. Visitors access these pages by clicking on a product or version in the navigation menu. The pages are structured as DocBook <tag>&lt;article&gt;</tag>s with an extra <parameter>web_type: product</parameter> or <parameter>web_type: version</parameter> parameter in their <filename>publican.cfg</filename> files. In their structure and presentation, product pages and version pages are the same as any other article that you produce with <application>Publican</application> and are packaged the same way."
 msgstr "Les pages de produit et les pages des versions créées par <application>Publican</application> sont des pages adaptables à la langue du lecteur donnant une vue générale du produit ou de la version. Les visiteurs ont accès à ces pages en cliquant sur un produit ou une version dans le menu de navigation. Les pages sont structurées de la même manière que les <sgmltag>&lt;article&gt;</sgmltag> DocBook avec des paramètres <parameter>web_type:&nbsp;product</parameter> ou <parameter>web_type:&nbsp;version</parameter> supplémentaires dans leurs fichiers <filename>publican.cfg</filename>. Dans leur structure ou présentation, les pages produit ou version sont identiques à n'importe quel autre article que vous auriez créé avec <application>Publican</application> et empaqueté de même."
 
@@ -47,7 +47,7 @@ msgid "Either upload the package to the webserver and install it with the <comma
 msgstr "Soit téléverser le paquet sur le serveur Web et l'installer avec la commande <command>rpm -i</command> ou <command>yum localinstall</command>, soit placer le paquet dans un dépôt et configurer le serveur Web pour l'installer à partir de ce dépôt en lançant la commande <command>yum install</command>."
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "To update the product page or version page, build a new package with a higher <tag>&lt;edition&gt;</tag> number or <tag>&lt;pubsnumber&gt;</tag> in the <filename>Article_Info.xml</filename>. <application>Publican</application> uses these values to set the version and release numbers for the RPM package. When you install this package on your webserver, <application>yum</application> can replace the old version with the new when you run <command>yum localinstall</command> for a local package, or <command>yum update</command> for a package fetched from a repository."
 msgstr "Pour mettre à jour la page du produit ou la page de la version, construire un paquet avec un numéro <sgmltag>&lt;edition&gt;</sgmltag> ou <sgmltag>&lt;pubsnumber&gt;</sgmltag> plus grand dans <filename>Article_Info.xml</filename>. <application>Publican</application> utilise ces valeurs pour définir les numéros de version ou de parution du paquet RPM. Quand vous installez ce paquet sur le serveur Web, <application>yum</application> peut remplacer l'ancienne version par la nouvelle quand vous lancez <command>yum localinstall</command> pour un paquet local, ou bien <command>yum update</command> pour un paquet extrait d'un dépôt."
 

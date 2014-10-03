@@ -50,12 +50,12 @@ msgid "To create that mark do the following:"
 msgstr "Pour créer ce marquage, effectuez les opérations suivantes :"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "Add the software's pre-release version number, or equivalent state information, to the <tag>&lt;subtitle&gt;</tag> tag in your <filename>Book_Info.xml</filename> file. Place this additional text in <tag>&lt;remark&gt;</tag> tags. For example:"
 msgstr "ajouter le numéro de version de pré-parution du logiciel, ou une information équivalent sur son état, sous la balise <sgmltag>&lt;subtitle&gt;</sgmltag> dans le fichier <filename>Book_Info.xml</filename>. Mettre un texte complémentaire dans des balises <sgmltag>&lt;remark&gt;</sgmltag>. Par exemple :"
 
 #. Tag: programlisting
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "&lt;subtitle&gt;Using Red Hat Enterprise Warp Drive&lt;remark&gt; Version 1.1, Beta 2&lt;/remark&gt;&lt;/subtitle&gt;"
 msgstr ""
 "&lt;subtitle&gt;Using Red Hat Enterprise Warp Drive&lt;remark&gt; Version 1.1, Beta 2&lt;/remark&gt;&lt;/subtitle&gt;\n"
@@ -67,14 +67,14 @@ msgid "add <varname>show_remarks</varname> to the <filename>publican.cfg</filena
 msgstr "ajouter le paramètre <varname>show_remarks</varname> dans le fichier <filename>publican.cfg</filename> et égaler sa valeur à « 1 » :"
 
 #. Tag: programlisting
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "show_remarks: 1"
 msgstr ""
 "show_remarks: 1\n"
 "\n"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "When you build your book with this <tag>&lt;remark&gt;</tag> tag and the <varname>show_remarks</varname> setting in place, the pre-release nature of the software is displayed clearly and unmistakably. PDF builds display the remark on their cover and title pages. HTML builds (both single-page HTML and multiple-page HTML) display the remark near the beginning of <filename>index.html</filename>."
 msgstr "Quand vous construisez l'ouvrage avec la balise <sgmltag>&lt;remark&gt;</sgmltag>, complétée du paramétrage de <varname>show_remarks</varname>, la nature de l'état de pré-parution du logiciel est affichée clairement et sans erreur possible. Un PDF ainsi construit affiche la remarque sur la couverture et les pages titre. Un HTML ainsi construit (page unique ou pages multiples) affichera la remarque au début de <filename>index.html</filename>."
 
@@ -95,7 +95,7 @@ msgid "Important"
 msgstr "Important"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "It is the writer's responsibility to remove the <tag>&lt;remark&gt;</tag> tag and its contents and remove or turn off <varname>show_remarks</varname> when documentation is updated for use with the release version of the software."
 msgstr "Il est de la responsabilité de l'auteur de supprimer la balise <sgmltag>&lt;remark&gt;</sgmltag> et son contenu, ainsi que de supprimer ou désactiver le paramètre <varname>show_remarks</varname> quand la documentation est mise à jour pour être utilisée avec la version de la parution finale du logiciel."
 
@@ -110,24 +110,24 @@ msgid "Unfinished documentation made available to others for review should be la
 msgstr "Un documentation non terminée rendue disponible aux autres pour revue doit être clairement étiquetée comme telle."
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "To add the draft watermark to your documentation add the <userinput>status=\"draft\"</userinput> attribute to the <tag>&lt;article&gt;</tag>, <tag>&lt;book&gt;</tag> or <tag>&lt;set&gt;</tag> tag in your document's root node. For example:"
 msgstr "Pour ajouter le filigrane « draft » ajoutez l'attribut <userinput>status=\"draft\"</userinput> à la balise <sgmltag>&lt;article&gt;</sgmltag>, <sgmltag>&lt;book&gt;</sgmltag> ou <sgmltag>&lt;set&gt;</sgmltag> dans le nœud racine du document. Par exemple :"
 
 #. Tag: programlisting
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "&lt;book status=\"draft\"&gt;"
 msgstr ""
 "&lt;book status=\"draft\"&gt;\n"
 "\n"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "By default, your root node is the <tag>&lt;book&gt;</tag> tag in your <filename><replaceable>Doc_Name</replaceable>.xml</filename> file."
 msgstr "Par défaut, le nœud racine est la balise <sgmltag>&lt;book&gt;</sgmltag> dans le fichier <filename><replaceable>Nom_document</replaceable>.xml</filename>."
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "If you are working on an article or set, the root node is the <tag>&lt;article&gt;</tag> or <tag>&lt;set&gt;</tag> tag in <filename><replaceable>Doc_Name</replaceable>.xml</filename>."
 msgstr "Si vous travaillez à un article ou à un ensemble, le nœud racine est la balise <sgmltag>&lt;article&gt;</sgmltag> ou <sgmltag>&lt;set&gt;</sgmltag> dans le fichier <filename><replaceable>Nom_document</replaceable>.xml</filename>."
 

@@ -42,7 +42,7 @@ msgid "Either upload the document packages to the webserver and install them wit
 msgstr "Caricare il pacchetto sul server web ed installarlo con <command>rpm -i</command> o <command>yum localinstall</command>, oppure salvare il pacchetto in un repository e configurare il server perché possa installarlo dal repository eseguendo il comando <command>yum install</command>."
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "To update a document, build a new package with a higher <tag>&lt;edition&gt;</tag> number or <tag>&lt;pubsnumber&gt;</tag> in the <filename>Book_Info.xml</filename> or <filename>Article_Info.xml</filename>. <application>Publican</application> uses these values to set the version and release numbers for the RPM package. When you install this package on your webserver, <application>yum</application> can replace the old version with the new when you run <command>yum localinstall</command> for a local package, or <command>yum update</command> for a package fetched from a repository."
 msgstr "Per aggiornare un documento, creare un nuovo pacchetto con un numero più alto di <sgmltag>&lt;edition&gt;</sgmltag> o di <sgmltag>&lt;pubsnumber&gt;</sgmltag>, presenti in <filename>Book_Info.xml</filename> o in <filename>Article_Info.xml</filename>. <application>Publican</application> usa questi valori per impostare i numeri di versione e di release del pacchetto RPM. In tal modo, quando si installa il pacchetto sul server, <application>yum</application> può sostituire la versione precedente con la nuova, sia usando <command>yum localinstall</command> per un pacchetto locale, sia <command>yum update</command> per un pacchetto scaricato da un repository."
 
@@ -52,7 +52,7 @@ msgid "Remove a document from the webserver with the <command>rpm -e</command> o
 msgstr "Rimuovere un documento dal server web, con il comando <command>rpm -e</command> o <command>yum erase</command>."
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "On large or busy sites, we recommend that you set the <parameter>manual_toc_update</parameter> parameter in the site's configuration file. With this parameter set, you must run the <prompt>$</prompt> <command>publican update_site</command> command after installing, updating, or removing documents. Refer to <xref linkend=\"sect-Publican-Users_Guide-Creating_the_website_structure\" /> for more information."
 msgstr "Su siti di grandi dimensioni o molto occupati, si raccomanda di impostare il parametro <parameter>manual_toc_update</parameter> nel file di configurazione. Una volta settato, occorre eseguire il comando <command>publican update_site</command> dopo aver installato, aggiornato o rimosso documenti. Fare riferimento alla <xref linkend=\"sect-Users_Guide-Website-structure-cfg_and_db-manual\" />, per maggiori informazioni."
 

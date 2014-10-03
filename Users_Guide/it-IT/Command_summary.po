@@ -311,8 +311,8 @@ msgid "skips DTD validation when building a document."
 msgstr "salta il controllo di vaidità DTD durante la creazione di un documento"
 
 #. Tag: term
-#, no-c-format
-msgid "--src_dir=<replaceable>SRC_DIR</replaceable>"
+#, no-c-format, fuzzy
+msgid "--pub_dir=<replaceable>PUB_DIR</replaceable>"
 msgstr ""
 
 #. Tag: para
@@ -331,8 +331,8 @@ msgid "Override the tool to use when creating PDFs. Valid options are wkhtmltopd
 msgstr ""
 
 #. Tag: term
-#, no-c-format
-msgid "--src_dir=<replaceable>SRC_DIR</replaceable>"
+#, no-c-format, fuzzy
+msgid "--pub_dir=<replaceable>PUB_DIR</replaceable>"
 msgstr ""
 
 #. Tag: para
@@ -576,8 +576,8 @@ msgid "the brand to copy."
 msgstr ""
 
 #. Tag: term
-#, no-c-format, fuzzy
-msgid "--site_config=<replaceable>site_config</replaceable>"
+#, no-c-format
+msgid "--old_site_config=<replaceable>site_config</replaceable>"
 msgstr ""
 
 #. Tag: para
@@ -586,8 +586,8 @@ msgid "website configuration file to copy brand web content from."
 msgstr ""
 
 #. Tag: term
-#, no-c-format, fuzzy
-msgid "--site_config=<replaceable>site_config</replaceable>"
+#, no-c-format
+msgid "--old_site_config=<replaceable>site_config</replaceable>"
 msgstr ""
 
 #. Tag: para
@@ -985,26 +985,6 @@ msgstr ""
 
 #. Tag: term
 #, no-c-format
-#~ msgid "<command>publican package</command>"
-#~ msgstr "<command>publican package</command>"
-
-#. Tag: term
-#, no-c-format
-#~ msgid "<command>publican --v</command>"
-#~ msgstr "<command>publican --v</command>"
-
-#. Tag: term
-#, no-c-format
-#~ msgid "<command>publican --help</command>"
-#~ msgstr "<command>publican --help</command>"
-
-#. Tag: term
-#, no-c-format
-#~ msgid "<command>publican --man</command>"
-#~ msgstr "<command>publican --man</command>"
-
-#. Tag: term
-#, no-c-format
 #~ msgid "<command>publican create</command>"
 #~ msgstr ""
 
@@ -1015,8 +995,28 @@ msgstr ""
 
 #. Tag: term
 #, no-c-format
+#~ msgid "<command>publican --v</command>"
+#~ msgstr "<command>publican --v</command>"
+
+#. Tag: term
+#, no-c-format
+#~ msgid "<command>publican --man</command>"
+#~ msgstr "<command>publican --man</command>"
+
+#. Tag: term
+#, no-c-format
+#~ msgid "<command>publican --help</command>"
+#~ msgstr "<command>publican --help</command>"
+
+#. Tag: term
+#, no-c-format
 #~ msgid "<command>publican build</command>"
 #~ msgstr "<command>publican build</command>"
+
+#. Tag: term
+#, no-c-format
+#~ msgid "<command>publican package</command>"
+#~ msgstr "<command>publican package</command>"
 
 #. Tag: term
 #, no-c-format

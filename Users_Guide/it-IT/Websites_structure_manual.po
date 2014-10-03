@@ -118,7 +118,7 @@ msgid "<application>Publican</application> uses the value set for <parameter>hos
 msgstr "<application>Publican</application> usa il valore impostato in <parameter>host</parameter> per costruire gli URL nel file XML, <filename>Sitemap</filename>, usato dai motori di ricerca e per limitare le ricerche dalla casella relativa nel menu di navigazione, soltanto ai documenti presenti nel sito."
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "Optionally, construct a search engine query to use with the search box in the navigation menu and specify the entire content of a HTML <tag>&lt;form&gt;</tag> with the <parameter>search</parameter> parameter. If you do not specify a custom web search, <application>Publican</application> creates a Google search limited to the host that you specified in the <parameter>host</parameter> parameter."
 msgstr "Opzionalmente, costruire un motore di ricerca da usare con la casella di ricerca nel menu di navigazione, e specificare l'intero contenuto del <sgmltag>&lt;form&gt;</sgmltag> HTML con il parametro <parameter>search</parameter>. Se non si specifica alcun criterio di ricerca, <application>Publican</application> crea una ricerca basata su Google, limitando la ricerca all'host specificato dal parametro <parameter>host</parameter>."
 
@@ -216,7 +216,7 @@ msgid "web_style: 1"
 msgstr ""
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "The website resembles those produced by Publican 2, with a list of products displayed in a navigation pane at the left of the page. (Default)"
 msgstr ""
 
@@ -231,7 +231,7 @@ msgid "The website includes a breadcrumb-like navigation bar across the top of t
 msgstr ""
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "The web style set for your site must match the web style set for your content. For example, if you set <literal>web_style: 2</literal> for your website, you need to have <literal>web_style: 2</literal> set in each of the books that you want to install on the site. Consider setting this parameter in the <filename>defaults.cfg</filename> or <filename>overrides.cfg</filename> files of the brands that you intend to use with this site."
 msgstr ""
 
@@ -266,7 +266,7 @@ msgid "This file will be symlinked as <parameter>toc_path</parameter>/toc.js wit
 msgstr ""
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "Create an empty file named <filename>site_overrides.css</filename> in the directory that you specified with <option>doc_path</option> (the directory that contains <filename>interactive.css</filename> and the various language directories). If you want to use site-specific styles to override those provided by <filename>interactive.css</filename>, you can add a <filename>site_overrides.css</filename> to the document that provides the site <firstterm>home page</firstterm> — refer to <xref linkend=\"sect-Publican-Users_Guide-Creating_installing_and_updating_the_home_page\" />. If you do not want to use site-specific styles, the empty file you add here will prevent 404 errors on your server. On a Linux system, change into the directory that you specified with <option>doc_path</option> and run:"
 msgstr "Creare un file vuoto di nome  <filename>site_overrides.css</filename> nella cartella specificata con l'opzione <option>doc_path</option> (la cartella che contiene il foglio di stile <filename>interactive.css</filename> e le cartelle linguistiche). Se si desidera usare degli stili specifici alternativi a quelli forniti da <filename>interactive.css</filename>, aggiungere un file <filename>site_overrides.css</filename> al documento che fornisce la <firstterm>home page</firstterm>  del sito — vedere la <xref linkend=\"sect-Users_Guide-Website-homepage-manual\" />. Se non si usa uno stile specifico, il file vuoto aggiunto impedirà la comparsa dell'errore 404 sul server. Su un sistema Linux, spostarsi nella cartella specificata con l'opzione <option>doc_path</option> ed eseguire:"
 
@@ -337,13 +337,13 @@ msgstr "<command>publican update_site --site_config <replaceable>percorso_al_fil
 
 #. Tag: para
 #, no-c-format
-#~ msgid "Refer to <xref linkend=\"dump_file\" /> for a description of the contents of the dump file."
-#~ msgstr "Fare riferimento all'<xref linkend=\"dump_file\" /> per una descrizione del contenuto del file dump."
+#~ msgid "Refer to <xref linkend=\"\" /> for a description of the contents of the dump file."
+#~ msgstr ""
 
 #. Tag: para
 #, no-c-format
-#~ msgid "Refer to <xref linkend=\"\" /> for a description of the contents of the dump file."
-#~ msgstr ""
+#~ msgid "Refer to <xref linkend=\"dump_file\" /> for a description of the contents of the dump file."
+#~ msgstr "Fare riferimento all'<xref linkend=\"dump_file\" /> per una descrizione del contenuto del file dump."
 
 #. Tag: screen
 #, no-c-format

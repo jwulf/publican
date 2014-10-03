@@ -185,7 +185,7 @@ msgid "The defaults.cfg file and overrides.cfg file"
 msgstr "Le fichier defaults.cfg et le fichier overrides.cfg"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "Every document built in <application>Publican</application> has a <filename>publican.cfg</filename> file in its root directory, which configures build options for the document. Refer to <xref linkend=\"sect-Publican-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file\" /> for a full description of these options. The <filename>defaults.cfg</filename> file and <filename>overrides.cfg</filename> file in a brand supply default values for any of the parameters that you can otherwise set with a document's <filename>publican.cfg</filename> file."
 msgstr "Tout document construit dans <application>Publican</application> possède dans son répertoire racine un fichier <filename>publican.cfg</filename> qui sert à définir les options de construction du document. Reportez-vous à la <xref linkend=\"sect-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file\" /> pour une description complète de ces options. Les fichiers <filename>defaults.cfg</filename> et <filename>overrides.cfg</filename> dans une marque donnent les valeurs par défaut à utiliser pour tout paramètre qui pourrait être par ailleurs défini dans le fichier <filename>publican.cfg</filename> du document."
 
@@ -220,7 +220,7 @@ msgid "Some Linux operating systems use the <application>RPM Package Manager</ap
 msgstr "Certains systèmes d'exploitation utilisent l'application <application>Gestionnaire de paquets RPM</application> pour distribuer des logiciels sous forme de <firstterm>paquets RPM</firstterm>. En termes généraux, un paquet RPM contient les fichiers du logiciel compressés dans une archive, accompagnés d'un fichier <firstterm>spec</firstterm> qui indique au <application>Gestionnaire de paquets RPM</application> comment et où installer ces fichiers."
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "When you create a brand, <application>Publican</application> generates the outline of an RPM spec file for the brand. The automatically generated spec file provides you with a starting point from which to create an RPM package to distribute your brand. Refer to <xref linkend=\"sect-Publican-Users_Guide-Packaging_a_brand\" /> to learn how to configure the spec file and use it to produce an RPM package."
 msgstr "Quand vous créez une marque, <application>Publican</application> génère les grandes lignes d'un fichier spec RPM pour la marque. Ce fichier automatiquement généré vous donne un point de départ pour créer le paquet RPM à distribuer avec votre marque. Reportez-vous à la <xref linkend=\"sect-Users_Guide-Packaging_a_brand\" /> pour savoir comment configurer le fichier spec et comment l'utiliser pour produire un paquet RPM."
 
@@ -340,7 +340,7 @@ msgid "<filename>warning</filename>"
 msgstr "<filename>warning</filename>"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "are icons that accompany the XML admonitions <tag>&lt;note&gt;</tag>, <tag>&lt;important&gt;</tag>, and <tag>&lt;warning&gt;</tag>."
 msgstr "sont des icônes accompagnant les avertissements XML <sgmltag>&lt;note&gt;</sgmltag>, <sgmltag>&lt;important&gt;</sgmltag> et <sgmltag>&lt;warning&gt;</sgmltag>."
 
@@ -355,7 +355,7 @@ msgid "<filename>dot2</filename>"
 msgstr "<filename>dot2</filename>"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "are bullets used for <tag>&lt;listitem&gt;</tag>s in <tag>&lt;itemizedlist&gt;</tag>s."
 msgstr "sont des puces utilisées pour les éléments <sgmltag>&lt;listitem&gt;</sgmltag> d'une liste <sgmltag>&lt;itemizedlist&gt;</sgmltag>s."
 
@@ -423,12 +423,12 @@ msgid "Brands with custom XSLT need to change the relative path of referencing X
 msgstr ""
 
 #. Tag: para
-#, no-c-format, fuzzy
-#~ msgid "is a watermark that appears on pages of draft documentation. Refer to <xref linkend=\"\" />."
-#~ msgstr "est un filigrane qui apparaît sur les pages des brouillons de documentation. Voyez la <xref linkend=\"sect-Users_Guide-Pre_release_software_and_draft_documentation-Denoting_draft_documentation\" />."
-
-#. Tag: para
 #, no-c-format
 #~ msgid "Brands that supply XSL files need to change the relative path to a URI."
 #~ msgstr "Les marques qui fournissent leurs fichiers XSL doivent modifier le chemin relatif en URI."
+
+#. Tag: para
+#, no-c-format, fuzzy
+#~ msgid "is a watermark that appears on pages of draft documentation. Refer to <xref linkend=\"\" />."
+#~ msgstr "est un filigrane qui apparaît sur les pages des brouillons de documentation. Voyez la <xref linkend=\"sect-Users_Guide-Pre_release_software_and_draft_documentation-Denoting_draft_documentation\" />."
 

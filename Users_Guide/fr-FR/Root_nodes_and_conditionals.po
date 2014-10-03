@@ -24,7 +24,7 @@ msgid "If the root node of an XML file is excluded with a conditional, your docu
 msgstr "Si le nœud racine d'un fichier XML est exclu par une condition, la construction du document échouera, car les fichiers vides ne sont pas des XML valides. Par exemple, si <filename>Installation_and_configuration_on_Fedora.xml</filename> ne contient qu'un seul chapitre :"
 
 #. Tag: programlisting
-#, no-c-format, fuzzy
+#, no-c-format
 msgid ""
 "&lt;?xml version='1.0' encoding='utf-8' ?&gt;\n"
 "&lt;!DOCTYPE chapter PUBLIC \"-//OASIS//DTD DocBook XML V4.5//EN\" \"http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd\" [\n"
@@ -49,12 +49,12 @@ msgstr ""
 "\n"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "and this chapter is included in <filename>User_Guide.xml</filename> with an <tag>&lt;xi:include&gt;</tag> tag, the document will not build with <prompt>$</prompt> <command>condition: Ubuntu</command> set in the <filename>publican.cfg</filename> file."
 msgstr "et que ce chapitre est inclus dans <filename>User_Guide.xml</filename> avec une balise <sgmltag>&lt;xi:include&gt;</sgmltag>, le document ne pourra pas être construit si <command>condition: Ubuntu</command> est défini dans le fichier <filename>publican.cfg</filename>."
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "To exclude this chapter, add a condition to the <tag>&lt;xi:include&gt;</tag> tag in <filename>User_Guide.xml</filename>, not to the <tag>&lt;chapter&gt;</tag> tag in <filename>Installation_and_configuration_on_Fedora.xml</filename>."
 msgstr "Pour exclure ce chapitre, ajoutez une condition à la balise <sgmltag>&lt;xi:include&gt;</sgmltag> dans <filename>User_Guide.xml</filename>, et non dans la balise <sgmltag>&lt;chapter&gt;</sgmltag> dans <filename>Installation_and_configuration_on_Fedora.xml</filename>."
 

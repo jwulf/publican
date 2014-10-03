@@ -61,8 +61,8 @@ msgid "Document use of \"sortas\" for indexes and glossaries"
 msgstr ""
 
 #. Tag: firstname
-#, no-c-format, fuzzy
-msgid "Norman"
+#, no-c-format
+msgid "Roman"
 msgstr "Norman"
 
 #. Tag: surname
@@ -76,8 +76,8 @@ msgid "Clarify where relative paths are used in brand instructions - BZ#1028815"
 msgstr ""
 
 #. Tag: firstname
-#, no-c-format, fuzzy
-msgid "Norman"
+#, no-c-format
+msgid "Roman"
 msgstr "Norman"
 
 #. Tag: surname
@@ -141,8 +141,8 @@ msgid "Updated web site instructions - BZ#979224"
 msgstr ""
 
 #. Tag: member
-#, no-c-format, fuzzy
-msgid "Publican 3.0"
+#, no-c-format
+msgid "Publican 3.2.0"
 msgstr "Publican 3.0"
 
 #. Tag: member
@@ -166,8 +166,8 @@ msgid "Add Section on Installing Publican on OpenSuse 12"
 msgstr "Ajout du paragraphe concernant l'installation de Publican sur OpenSuse 12"
 
 #. Tag: member
-#, no-c-format, fuzzy
-msgid "Publican 3.0"
+#, no-c-format
+msgid "Publican 3.2.0"
 msgstr "Publican 3.0"
 
 #. Tag: firstname

@@ -90,7 +90,7 @@ msgid "Install the dependencies that are available from various online repositor
 msgstr "Installer les dépendances disponibles à partir des divers dépôts en ligne — nombres de celles-ci ne sont pas présentes dans le dépôt du DVD d'installation."
 
 #. Tag: screen
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "<prompt>$</prompt> <command>sudo zypper install perl-Config-Simple perl-DateTime \\ perl-DateTime-Format-DateParse perl-DBD-SQLite perl-DBI \\ perl-File-Find-Rule perl-File-Which perl-HTML-Format \\ perl-Locale-MakeText-Gettext perl-Template-Toolkit \\ perl-Test-Deep perl-Test-Pod perl-XML-LibXSLT \\ perl-YAML liberation-fonts</command>"
 msgstr ""
 "<command>sudo zypper install perl-Config-Simple perl-DateTime \\\n"
@@ -111,7 +111,7 @@ msgid "Use <application>cpan</application> to install the remaining dependencies
 msgstr "Utiliser <application>cpan</application> pour installer les dépendances restantes qui ne peuvent pas être installées à l'aide de <application>zypper</application> :"
 
 #. Tag: screen
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "<prompt>$</prompt> <command>sudo sh cpan File::pushd File::Copy::Recursive Locale::PO pp \\ Syntax::Highlight::Engine::Kate XML::TreeBuilder exit </command>"
 msgstr ""
 "<command>sudo sh\n"
@@ -126,7 +126,7 @@ msgid "Download the source code:"
 msgstr "Télécharger le code source :"
 
 #. Tag: screen
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "<prompt>$</prompt> <command>cd ~ mkdir -p SourceCode/publican cd SourceCode/publican svn checkout http://svn.fedorahosted.org/svn/publican/branches/publican-2x ./ </command>"
 msgstr ""
 "<command>cd ~\n"
@@ -141,7 +141,7 @@ msgid "Build the <application>Publican</application> build script:"
 msgstr "Créer le script de construction de <application>Publican</application> :"
 
 #. Tag: screen
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "<prompt>$</prompt> <command>perl Build.PL </command>"
 msgstr ""
 
@@ -151,7 +151,7 @@ msgid "If all the dependencies are installed, you should see the following:"
 msgstr "Si toutes les dépendances sont installées, vous devriez voir ceci :"
 
 #. Tag: screen
-#, no-c-format, fuzzy
+#, no-c-format
 msgid ""
 "<computeroutput>WARNING: the following files are missing in your kit:</computeroutput>\n"
 "<computeroutput> META.yml</computeroutput>\n"
@@ -167,7 +167,7 @@ msgid "If not, then use <application>cpan</application> (as root) to install the
 msgstr "Si ce n'est pas le cas, utiliser <application>cpan</application> (en tant qu'administrateur) pour installer les modules manquants et lancer la construction à nouveau. Remplacez toute barre inclinée « / » par deux fois deux-points « :: » et faites attention à utiliser exactement la même casse pour les lettres, par exemple : si <filename>File/pushd.pm</filename> est signalé manquant, utiliser ceci pour l'installer :"
 
 #. Tag: screen
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "<prompt>$</prompt> <command>sudo sh cpan File::pushd exit </command>"
 msgstr ""
 "<command>sudo sh\n"
@@ -181,7 +181,7 @@ msgid "Assuming all went well, the <filename>Build.PL</filename> script will hav
 msgstr "En supposant que tout a bien fonctionné, le script <filename>Build.PL</filename> doit avoir créé un nouveau script nommé <filename>Build</filename> à utiliser pour créer, tester et installer <application>Publican</application> 2.9."
 
 #. Tag: screen
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "<prompt>$</prompt> <command>./Build </command>"
 msgstr ""
 
@@ -201,7 +201,7 @@ msgid "Test the build:"
 msgstr "Tester la construction :"
 
 #. Tag: screen
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "<prompt>$</prompt> <command>./Build test </command>"
 msgstr ""
 
@@ -211,7 +211,7 @@ msgid "Again, lots of scrolling text at the end of which you may see the followi
 msgstr "À nouveau, déroulement de texte à l'écran, puis vous devriez voir :"
 
 #. Tag: screen
-#, no-c-format, fuzzy
+#, no-c-format
 msgid ""
 "<computeroutput>Test Summary Report</computeroutput>\n"
 "<computeroutput>-------------------</computeroutput>\n"
@@ -252,7 +252,7 @@ msgid "If you intend to create indices in your generated pdf documents, you are 
 msgstr "Si vous avez l'intention de créer des index dans les documents pdf générés, nous vous recommandons d'utiliser <application>Apache FOP</application> plutôt que <application>wkhtmltopdf</application>. Avec <application>FOP</application>, vous obtenez les bons numéros de page, ce qui est préférable pour un document imprimé."
 
 #. Tag: screen
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "<prompt>$</prompt> <command>JFEARN=http://jfearn.fedorapeople.org/wkhtmltopdf/f15 MYSYSTEM=i686 ## For 64bit system use MYSYSTEM=x86_64 instead. wget $JFEARN/$MYSYSTEM/wkhtmltopdf-qt-4.7.1-1.git20110804.fc15.i686.rpm wget $JFEARN/$MYSYSTEM/wkhtmltopdf-0.10.0_rc2-1.fc15.i686.rpm </command>"
 msgstr ""
 "<command>JFEARN=http://jfearn.fedorapeople.org/wkhtmltopdf/f15\n"
@@ -273,7 +273,7 @@ msgid "Once downloaded, install both rpms as follows:"
 msgstr "Une fois téléchargés, installer les deux RPM ainsi :"
 
 #. Tag: screen
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "<prompt>$</prompt> <command>sudo sh rpm -ivh wkhtmltopdf-qt* rpm -ivh --nodeps wkhtmltopdf-0* exit </command>"
 msgstr ""
 "<command>sudo sh\n"
@@ -298,7 +298,7 @@ msgid "The final stage is to install Publican, even though the testing stage had
 msgstr "La dernière étape consiste à installer Publican, même si la phase de tests a échoué pour les deux sous-tests."
 
 #. Tag: screen
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "<prompt>$</prompt> <command>sudo sh ./Build test exit </command>"
 msgstr ""
 "<command>sudo sh\n"
@@ -317,7 +317,7 @@ msgid "Test the installed <application>Publican</application> build:"
 msgstr "Tester la construction du <application>Publican</application> installé :"
 
 #. Tag: screen
-#, no-c-format, fuzzy
+#, no-c-format
 msgid ""
 "<prompt>$</prompt> <command>publican create --type=book --product=testing --version=1.2.3 --name=TestPublican</command>\n"
 "  Processing file en-US/Author_Group.xml -&gt; en-US/Author_Group.xml\n"
@@ -376,49 +376,8 @@ msgstr "Avec le gestionnaire de fichiers <application>Dolphin</application>, vou
 
 #. Tag: screen
 #, no-c-format
-#~ msgid ""
-"Test Summary Report\n"
-"-------------------\n"
-"t/910.publican.Users_Guide.t (Wstat: 256 Tests: 5 Failed: 1)\n"
-"  Failed test:  5\n"
-"  Non-zero exit status: 1\n"
-"t/pod-coverage.t            (Wstat: 256 Tests: 9 Failed: 1)\n"
-"  Failed test:  7\n"
-"  Non-zero exit status: 1\n"
-"Files=10, Tests=68, 420 wallclock secs ( 0.31 usr  0.17 sys + 246.87 cusr 18.73 csys = 266.08 CPU)\n"
-"Result: FAIL\n"
-"Failed 2/10 test programs. 2/68 subtests failed.\n"
-#~ msgstr ""
-"Test Summary Report\n"
-"-------------------\n"
-"t/910.publican.Users_Guide.t (Wstat: 256 Tests: 5 Failed: 1)\n"
-"  Failed test:  5\n"
-"  Non-zero exit status: 1\n"
-"t/pod-coverage.t            (Wstat: 256 Tests: 9 Failed: 1)\n"
-"  Failed test:  7\n"
-"  Non-zero exit status: 1\n"
-"Files=10, Tests=68, 420 wallclock secs ( 0.31 usr  0.17 sys + 246.87 cusr 18.73 csys = 266.08 CPU)\n"
-"Result: FAIL\n"
-"Failed 2/10 test programs. 2/68 subtests failed.\n"
-
-#. Tag: screen
-#, no-c-format
-#~ msgid ""
-"perl Build.PL\n"
-"WARNING: the following files are missing in your kit:\n"
-"        META.yml\n"
-"Please inform the author.\n"
-"\n"
-"Created MYMETA.yml and MYMETA.json\n"
-"Creating new 'Build' script for 'Publican' version '2.9'"
-#~ msgstr ""
-"perl Build.PL\n"
-"WARNING: the following files are missing in your kit:\n"
-"        META.yml\n"
-"Please inform the author.\n"
-"\n"
-"Created MYMETA.yml and MYMETA.json\n"
-"Creating new 'Build' script for 'Publican' version '2.9'"
+#~ msgid "DEBUG: Publican::Builder: end of build"
+#~ msgstr "DEBUG: Publican::Builder: end of build"
 
 #. Tag: screen
 #, no-c-format
@@ -426,6 +385,33 @@ msgstr "Avec le gestionnaire de fichiers <application>Dolphin</application>, vou
 "</command>"
 #~ msgstr "<command>perl Build.PL\n"
 "</command>"
+
+#. Tag: screen
+#, no-c-format
+#~ msgid ""
+"Test Summary Report\n"
+"-------------------\n"
+"t/910.publican.Users_Guide.t (Wstat: 256 Tests: 5 Failed: 1)\n"
+"  Failed test:  5\n"
+"  Non-zero exit status: 1\n"
+"t/pod-coverage.t            (Wstat: 256 Tests: 9 Failed: 1)\n"
+"  Failed test:  7\n"
+"  Non-zero exit status: 1\n"
+"Files=10, Tests=68, 420 wallclock secs ( 0.31 usr  0.17 sys + 246.87 cusr 18.73 csys = 266.08 CPU)\n"
+"Result: FAIL\n"
+"Failed 2/10 test programs. 2/68 subtests failed.\n"
+#~ msgstr ""
+"Test Summary Report\n"
+"-------------------\n"
+"t/910.publican.Users_Guide.t (Wstat: 256 Tests: 5 Failed: 1)\n"
+"  Failed test:  5\n"
+"  Non-zero exit status: 1\n"
+"t/pod-coverage.t            (Wstat: 256 Tests: 9 Failed: 1)\n"
+"  Failed test:  7\n"
+"  Non-zero exit status: 1\n"
+"Files=10, Tests=68, 420 wallclock secs ( 0.31 usr  0.17 sys + 246.87 cusr 18.73 csys = 266.08 CPU)\n"
+"Result: FAIL\n"
+"Failed 2/10 test programs. 2/68 subtests failed.\n"
 
 #. Tag: screen
 #, no-c-format
@@ -443,6 +429,20 @@ msgstr "Avec le gestionnaire de fichiers <application>Dolphin</application>, vou
 
 #. Tag: screen
 #, no-c-format
-#~ msgid "DEBUG: Publican::Builder: end of build"
-#~ msgstr "DEBUG: Publican::Builder: end of build"
+#~ msgid ""
+"perl Build.PL\n"
+"WARNING: the following files are missing in your kit:\n"
+"        META.yml\n"
+"Please inform the author.\n"
+"\n"
+"Created MYMETA.yml and MYMETA.json\n"
+"Creating new 'Build' script for 'Publican' version '2.9'"
+#~ msgstr ""
+"perl Build.PL\n"
+"WARNING: the following files are missing in your kit:\n"
+"        META.yml\n"
+"Please inform the author.\n"
+"\n"
+"Created MYMETA.yml and MYMETA.json\n"
+"Creating new 'Build' script for 'Publican' version '2.9'"
 

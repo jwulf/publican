@@ -40,7 +40,7 @@ msgid "<prompt>$</prompt> <command>publican rename --name \"Server Deployment Gu
 msgstr "<command>publican rename --name \"Guide de déploiement du serveur\"</command>"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "Specifically, the command changes the content of the <tag>&lt;title&gt;</tag> tag in the <filename>Article_Info.xml</filename>, <filename>Book_Info.xml</filename>, or <filename>Set_Info.xml</filename> file, and sets a value for the <parameter>mainfile</parameter> parameter in the <filename>publican.cfg</filename> file so that <application>Publican</application> can still find the root XML node and the entities for the document."
 msgstr "Plus précisément, la commande change le contenu de la balise <sgmltag>&lt;title&gt;</sgmltag> dans le fichier <filename>Article_Info.xml</filename>, <filename>Book_Info.xml</filename> ou <filename>Set_Info.xml</filename> et donne une valeur au paramètre <parameter>mainfile</parameter> du fichier <filename>publican.cfg</filename> de façon à ce que <application>Publican</application> puisse toujours trouver le nœud racine XML et les entités du document. "
 
@@ -65,7 +65,7 @@ msgid "<prompt>$</prompt> <command>publican rename --product PendantFarm</comman
 msgstr "<command>publican rename --product PendantFarm</command>"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "The command changes the content of the <tag>&lt;productname&gt;</tag> tag in the <filename>Article_Info.xml</filename>, <filename>Book_Info.xml</filename>, or <filename>Set_Info.xml</filename> file."
 msgstr "La commande modifie le contenu de la balise <sgmltag>&lt;productname&gt;</sgmltag> dans le fichier <filename>Article_Info.xml</filename>, <filename>Book_Info.xml</filename> ou <filename>Set_Info.xml</filename>."
 
@@ -85,7 +85,7 @@ msgid "<prompt>$</prompt> <command>publican rename --version 2.0</command>"
 msgstr "<command>publican rename --version 2.0</command>"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "The command changes the content of the <tag>&lt;productnumber&gt;</tag> tag in the <filename>Article_Info.xml</filename>, <filename>Book_Info.xml</filename>, or <filename>Set_Info.xml</filename> file."
 msgstr "La commande change le contenu de la balise <sgmltag>&lt;productnumber&gt;</sgmltag> dans le fichier <filename>Article_Info.xml</filename>, <filename>Book_Info.xml</filename> ou <filename>Set_Info.xml</filename>."
 

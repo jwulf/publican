@@ -71,11 +71,11 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-#~ msgid "Download and install the <application>svendowideit/publican</application> container from <ulink url=\"https://index.docker.io/u/svendowideit/publican/\" />:"
+#~ msgid "This installation procedure assumes you have already installed a working docker (see <ulink url=\"http://docker.io\" />) environment."
 #~ msgstr ""
 
 #. Tag: para
 #, no-c-format
-#~ msgid "This installation procedure assumes you have already installed a working docker (see <ulink url=\"http://docker.io\" />) environment."
+#~ msgid "Download and install the <application>svendowideit/publican</application> container from <ulink url=\"https://index.docker.io/u/svendowideit/publican/\" />:"
 #~ msgstr ""
 

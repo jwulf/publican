@@ -25,7 +25,7 @@ msgid "Store images in the <filename>images</filename> subdirectory in the direc
 msgstr "Mettez les images dans le sous-répertoire <filename>images</filename> du dossier qui contient vos fichiers XML. Utilisez <computeroutput>./images/<replaceable>nom_image</replaceable></computeroutput> pour insérer des images dans un ouvrage. Voici un exemple d'insertion de l'image <filename>testimage.png</filename> :"
 
 #. Tag: programlisting
-#, no-c-format, fuzzy
+#, no-c-format
 msgid ""
 "&lt;mediaobject&gt;\n"
 "&lt;imageobject&gt;\n"
@@ -43,7 +43,7 @@ msgstr ""
 "\n"
 
 #. Tag: para
-#, no-c-format, fuzzy
+#, no-c-format
 msgid "Ensure that you supply a <tag>&lt;textobject&gt;</tag> so that your content remains accessible to people with visual impairments. In certain jurisdictions, you might have a legal responsibility to provide this accessibility — for example, if you or your organization must comply with Section 508 of the United States <citetitle>Rehabilitation Act of 1973</citetitle>.<footnote> <para> Refer to <link xlink:href=\"http://www.section508.gov/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">http://www.section508.gov/</link> </para> </footnote>"
 msgstr "Assurez-vous de ne pas avoir oublié de définir un <sgmltag>&lt;textobject&gt;</sgmltag> de façon à ce que le contenu reste accessible aux personnes mal-voyantes. Selon certaines juridictions, vous pourriez avoir obligation légale à permettre ce type d'accès — par exemple, si votre société doit se conformer à la section 508 de la <citetitle>Loi sur la réhabilitation de 1973</citetitle><footnote> <para> Voyez la page <ulink url=\"http://www.section508.gov/\" /></para> </footnote> des États-Unis."
 
@@ -67,6 +67,16 @@ msgstr "<application>Publican</application> n'utilise que les images du sous-ré
 #~ msgid "If you notice that <application>Publican</application> produces a PDF file that contains images with incorrect colors, convert the original PNG files to 32-bit PNG format by adding an <firstterm>alpha channel</firstterm> to the image and rebuild the book. If your chosen image manipulation software does not include an option specifically labeled <literal>Add alpha channel</literal>, the option might be labeled <literal>Add transparency</literal> instead."
 #~ msgstr "Si vous remarquez que <application>Publican</application> produit un fichier PDF contenant des images avec des couleurs incorrectes, convertissez le fichier PNG d'origine au format PNG sur 32 bits en ajoutant un <firstterm>canal alpha</firstterm> à l'image et reconstruisez l'ouvrage. Si le logiciel de manipulation des images que vous avez choisi ne comporte pas une option précisément étiquetée <literal>Ajouter un canal alpha</literal>, notez que cette option peut avoir été nommée <literal>Ajouter une transparence</literal>."
 
+#. Tag: title
+#, no-c-format
+#~ msgid "PNG files in PDF documents"
+#~ msgstr "Fichiers PNG dans des documents PDF"
+
+#. Tag: para
+#, no-c-format
+#~ msgid "Large images present poorly in HTML because they often go beyond the right margin of the text. Similarly, images wider than 444 pixels often go beyond the right margin of PDF pages and are cropped so that only the left side of the image is visible. Therefore, by default, <application>Publican</application> creates HTML and PDF output that instructs web browsers and PDF viewers to scale down any images larger than 444 pixels wide. Note, however, that images lose quality significantly when scaled in this way. For best results, scale or crop your images in image editing software so that they are no more than 444 pixels wide before you place them in a document."
+#~ msgstr "Les grandes images ont un rendu pauvre en HTML car elle vont souvent au-delà de la marge de droite du texte. De même, les images de plus de 444 pixels font souvent de même dans des pages PDF ; elles sont rognées, et seule la partie gauche de l'image reste visible. Néanmoins, par défaut, <application>Publican</application> crée des sorties HTML et PDF demandant aux navigateurs Web et visionneurs PDF de réduire l'échelle de toute image dépassant 444 pixels de large. Notez cependant que ces images perdent significativement de la qualité quand elles sont mises à l'échelle de cette façon. Pour de meilleurs résultats, mettez à l'échelle ou rognez vos images dans un logiciel d'édition d'image de façon à ce qu'elles ne dépassent pas 444 pixels de large avant de les placer dans un document."
+
 #. Tag: para
 #, no-c-format
 #~ msgid "<application>Publican</application> depends on an external application, <application>FOP</application>, to render documents as PDF files. At present, some versions of <application>FOP</application> contain a bug that alters the colors in certain images in PNG format. Specifically, 32-bit PNG images are rendered correctly, while 24-bit PNG images are not."
@@ -77,20 +87,10 @@ msgstr "<application>Publican</application> n'utilise que les images du sous-ré
 #~ msgid "To override <application>Publican</application> limiting the image width to 444&nbsp;px, specify an image width in the <sgmltag>&lt;imagedata&gt;</sgmltag> tag. For example, to set an image width to 670 pixels:"
 #~ msgstr "Pour passer outre la limitation de largeur des images de <application>Publican</application> à 444&nbsp;px, définissez une largeur d'image dans la balise <sgmltag>&lt;imagedata&gt;</sgmltag>. Par exemple, pour placer une image de 670 pixels de large :"
 
-#. Tag: title
-#, no-c-format
-#~ msgid "PNG files in PDF documents"
-#~ msgstr "Fichiers PNG dans des documents PDF"
-
 #. Tag: para
 #, no-c-format
 #~ msgid "If you override the default maximum image width, take care to review your output to ensure that quality standards are met."
 #~ msgstr "Si vous dépassez la largeur d'image par défaut, revoyez la sortie pour vous assurer que les normes de qualité sont toujours respectées."
-
-#. Tag: para
-#, no-c-format
-#~ msgid "Large images present poorly in HTML because they often go beyond the right margin of the text. Similarly, images wider than 444 pixels often go beyond the right margin of PDF pages and are cropped so that only the left side of the image is visible. Therefore, by default, <application>Publican</application> creates HTML and PDF output that instructs web browsers and PDF viewers to scale down any images larger than 444 pixels wide. Note, however, that images lose quality significantly when scaled in this way. For best results, scale or crop your images in image editing software so that they are no more than 444 pixels wide before you place them in a document."
-#~ msgstr "Les grandes images ont un rendu pauvre en HTML car elle vont souvent au-delà de la marge de droite du texte. De même, les images de plus de 444 pixels font souvent de même dans des pages PDF ; elles sont rognées, et seule la partie gauche de l'image reste visible. Néanmoins, par défaut, <application>Publican</application> crée des sorties HTML et PDF demandant aux navigateurs Web et visionneurs PDF de réduire l'échelle de toute image dépassant 444 pixels de large. Notez cependant que ces images perdent significativement de la qualité quand elles sont mises à l'échelle de cette façon. Pour de meilleurs résultats, mettez à l'échelle ou rognez vos images dans un logiciel d'édition d'image de façon à ce qu'elles ne dépassent pas 444 pixels de large avant de les placer dans un document."
 
 #. Tag: programlisting
 #, no-c-format
