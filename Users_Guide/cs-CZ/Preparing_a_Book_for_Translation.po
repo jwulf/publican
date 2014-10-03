@@ -1,0 +1,218 @@
+# peartown <josef.hruska@upcmail.cz>, 2014. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: 0\n"
+"POT-Creation-Date: 2014-05-06 14:10+1000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2014-09-30 12:44-0400\n"
+"Last-Translator: peartown <josef.hruska@upcmail.cz>\n"
+"Language-Team: Czech\n"
+"Language: cs\n"
+"X-Generator: Zanata 3.4.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Translating a document"
+msgstr "Překlad dokumentu"
+
+#. Tag: para
+#, no-c-format
+msgid "Support for localization of documents was a key consideration in the design of <application>Publican</application>. The general translation workflow for documents developed in <application>Publican</application> is as follows:"
+msgstr "Podpora lokalizace dokumentů byla v návrhu <application>Publican</application> klíčovou otázkou. Obecné překladatelské workflow pro dokument vyvinuté v <application>Publicanu</application> je následující:"
+
+#. Tag: para
+#, no-c-format
+msgid "Complete the XML of a document."
+msgstr "Dokončete XML dokumentu."
+
+#. Tag: para
+#, no-c-format
+msgid "The XML for this version of the document should now be considered ‘frozen’. If your document is stored in a version-controlled repository, you should now move this version into a separate directory or branch. This allows writers to begin work on subsequent versions of the document in one branch, while providing a stable base for translation in another branch."
+msgstr "XML by se pro tuto verzi dokumentu nemělo považovat za &lsquo;zmražené&rsquo;. Máte-li svůj dokument uložen v repozitáři se správou verzí, měli byste tuto verzi umístit do odděleného adresáře nebo větve. To umožní autorům zahájit práci na následujících verzích dokumentu ve větvi jedné, zatímco se poskytne stabilní základna pro překlad ve větvi jiné."
+
+#. Tag: para
+#, no-c-format
+msgid "Optional but recommended: <firstterm>drop</firstterm> the document to translation. Run:"
+msgstr "Volitelné ale doporučené: pusťte, neboli <firstterm>dropněte</firstterm>, dokument pro překlad. Spusťte:"
+
+#. Tag: screen
+#, no-c-format
+msgid "<prompt>$</prompt> <command>publican trans_drop</command>"
+msgstr "<prompt>$</prompt> <command>publican trans_drop</command>"
+
+#. Tag: para
+#, no-c-format
+msgid "<application>Publican</application> creates a new subdirectory, named <filename>trans_drop/</filename>. The <filename>trans_drop/</filename> subdirectory contains a snapshot of the source files of the document. When the <filename>trans_drop/</filename> directory is present in a documentation project, <application>Publican</application> uses its content as the basis for the commands documented later in this procedure."
+msgstr "<application>Publican</application> vytvoří nový podadresář, nazvaný <filename>trans_drop/</filename>. Podadresář <filename>trans_drop/</filename> obsahuje momentální snímek zdrojových souborů dokument. Když se adresář <filename>trans_drop/</filename> nachází v dokumentačním projektu, <application>Publican</application> používá jeho obsah jako základnu pro příkazy zdokumentované dále v tomto postupu."
+
+#. Tag: para
+#, no-c-format
+msgid "Generate <firstterm>portable object template</firstterm> (POT) files from the XML files:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "<prompt>$</prompt> <command>publican update_pot</command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "If this is the first time that POT files have been created for this document, <application>Publican</application> creates a new subdirectory, named <filename>pot</filename>. The <filename>pot</filename> subdirectory holds a POT file for each XML file in the document. If <application>Publican</application> has created POT files for this document previously, <application>Publican</application> updates the existing POT files to reflect any changes in the XML since the POT files were last updated."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Remove unused XML files"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<application>Publican</application> generates a POT file for every XML file in the XML directory, whether the XML file is used in the document or not. If you transform unused XML files into POT files, you waste the time and effort of volunteer translators, and waste money if you are paying for translations."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Use the <prompt>$</prompt> <command>publican print_unused</command> command to generate a list of XML files that are not used in your document."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Generate <firstterm>portable object</firstterm> (PO) files from the POT files to begin translation into a particular language:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "<prompt>$</prompt> <command>publican update_po --langs=<replaceable>language_code</replaceable></command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "where <replaceable>language_code</replaceable> is the code for the target language. Refer to <xref linkend=\"appe-Publican-Users_Guide-Language_codes\" /> for more information about language codes. You can provide multiple language codes, separated by commas, to generate PO files for more than one language at a time. For example:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "<prompt>$</prompt> <command>publican update_po --langs=hi-IN,pt-BR,ru-RU,zh-CN</command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "If this is the first time that PO files have been created for a particular language, <application>Publican</application> creates a new subdirectory, named with the language code that you specified with the <option>--langs=</option> option. This subdirectory holds a PO file for each POT file in <filename>pot</filename> subdirectory, plus a <filename>Revision_History.xml</filename> file that tracks the history of this particular translation. When created for the first time, the <filename>Revision_History.xml</filename> file records the date on which the PO files for this translation were created, and the version of the source language XML (taken from the source language's <filename>Revision_History.xml</filename> file) on which this translation is therefore based."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "If <application>Publican</application> has created PO files for this language previously, <application>Publican</application> updates the existing PO files to reflect any changes in the POT files since the PO files were last updated, and adds a new entry to the translation's <filename>Revision_History.xml</filename> file to record the date on which the PO files for this translation were refreshed, and the version of the source language XML on which the revision is based. You can update existing PO files in every subdirectory with the <option>--langs=all</option> option:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "<prompt>$</prompt> <command>publican update_po --langs=all</command>"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Remove unused POT files"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "<application>Publican</application> generates a PO file for every POT file in the <filename>pot</filename> directory, whether the POT file is based on a corresponding XML file that is used in the document or not, or whether a corresponding XML file even exists. If you transform POT files for unused or deleted XML files into PO files, you waste the time and effort of volunteer translators, and waste money if you are paying for translations."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "When you generate PO files, <application>Publican</application> presents you with a warning for any POT files that do not have corresponding XML files, but will generate the PO file nevertheless. However, <application>Publican</application> will not warn you if a POT file exists for an XML file that is not used in the document."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Translate the <firstterm>strings</firstterm> contained in the PO files."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "If you are updating a previously published translation <emphasis>of this revision in the source language</emphasis>, use <application>Publican</application>'s <command>publican add_revision</command> command to describe your changes or corrections. <application>Publican</application> updates the <filename>Revision_History.xml</filename> file for you."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "If the document has changed in its original language, use the <command>publican trans_drop</command>, <command>publican update_pot</command>, and <command>publican update_po</command> commands as described earlier in this procedure instead."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Build the document in the target language, for example:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "<prompt>$</prompt> <command>publican build --formats=html,html-single,pdf --langs=is-IS,nb-NO</command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "or package it in the target language, for example:"
+msgstr ""
+
+#. Tag: screen
+#, no-c-format
+msgid "<prompt>$</prompt> <command>publican package --lang=is-IS</command>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "You can build the document in all languages for which you have translations with the <option>--langs=all</option> option, but note that you must package each language individually. Refer to <xref linkend=\"sect-Publican-Users_Guide-Building_a_document\" /> for more information on building a document, and <xref linkend=\"sect-Publican-Users_Guide-Packaging_a_document\" /> on packaging a document."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Translation Author Group"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Translation takes place after a book has been finalized. You do not need to know who will translate your book in order to give them credit. Create <filename>$translation/Author_Group.xml</filename> and add a valid DocBook authorgroup. The translator can add their details to this file and <application>Publican</application> will append it to <filename>$source_lang/Author_Group.xml</filename> when the book is build. This allows authors to finalize the original text without needing to know who will translate the book."
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Translating Indexes and Glossaries"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "DocBook automatically collates and sorts <tag>&lt;glossentry&gt;</tag> elements into a book's glossary; and <tag>&lt;primary&gt;</tag>, <tag>&lt;secondary&gt;</tag>, and <tag>&lt;tertiary&gt;</tag> <tag>&lt;indexterm&gt;</tag> elements into a book's index. Entries are sorted automatically, and although this system works well for languages written with an alphabet, abugida, or syllabic script, languages written with logograms sort less well."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "To manually adjust the sort order of a glossary entry or index entry, manually add DocBook's <tag>sortas</tag> attribute to the XML element. For example, to ensure that the Japanese word 暗号化 sorts correctly in an index, specify:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"#. Tag: indexterm\n"
+"#, no-c-format\n"
+"msgid \"&lt;primary&gt;encryption&lt;/primary&gt;\"\n"
+"msgstr \"&lt;primary sortas=\"あんごうか\"&gt;暗号化&lt;/primary&gt;\""
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Similarly, to ensure that the Japanese word 暗号化 sorts correctly in a glossary, specify:"
+msgstr ""
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"#. Tag: glossentry\n"
+"#, no-c-format\n"
+"msgid \"&lt;glossterm&gt;encryption&lt;/glossterm&gt;\"\n"
+"msgstr \"&lt;glossterm sortas=\"あんごうか\"&gt;暗号化&lt;/glossterm&gt;\""
+msgstr ""
+

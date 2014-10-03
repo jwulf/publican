@@ -78,12 +78,6 @@
 <xsl:param name="section.label.includes.component.label" select="0"/>
 
 <xsl:param name="local.l10n.xml" select="document('')"/>
-<l:i18n xmlns:l="http://docbook.sourceforge.net/xmlns/l10n/1.0">
-    <l:l10n language="en">
-        <l:gentext key="showall" text="Show All"/>
-        <l:gentext key="hide" text="Hide"/>
-    </l:l10n>
-</l:i18n>
 
 <xsl:param name="generate.toc">
 set toc
@@ -1183,16 +1177,6 @@ Version: 1.72.0
   <xsl:param name="set-id" select="'0'"/>
 
   <xsl:call-template name="anchor"/>
-  <xsl:variable name="showall">
-    <xsl:call-template name="gentext">
-        <xsl:with-param name="key" select="'showall'"/>
-    </xsl:call-template>
-  </xsl:variable>
-  <xsl:variable name="hide">
-    <xsl:call-template name="gentext">
-        <xsl:with-param name="key" select="'hide'"/>
-    </xsl:call-template>
-  </xsl:variable>
   
   <xsl:variable name="div.element">pre</xsl:variable>
   <xsl:choose>
@@ -1224,7 +1208,7 @@ Version: 1.72.0
           </xsl:attribute>
         </xsl:if>
         <xsl:if test="@role = 'popper' and $poper.as.dl = '0'">
-        <a href="#" onclick="pop(this);return false;" class="show">[<xsl:value-of select="$showall"/>]</a><a href="#" onclick="unpop(this);return false;" class="hide">[<xsl:value-of select="$hide"/>]</a>
+        <a href="#" onclick="pop(this);return false;" class="show">[Show All]</a><a href="#" onclick="unpop(this);return false;" class="hide">[Hide]</a>
         </xsl:if>
         <xsl:call-template name="number.rtf.lines">
           <xsl:with-param name="rtf" select="$rtf"/>
@@ -1254,7 +1238,7 @@ Version: 1.72.0
           </xsl:attribute>
         </xsl:if>
         <xsl:if test="@role = 'popper' and $poper.as.dl = '0'">
-        <a href="#" onclick="pop(this);return false;" class="show">[<xsl:value-of select="$showall"/>]</a><a href="#" onclick="unpop(this);return false;" class="hide">[<xsl:value-of select="$hide"/>]</a>
+        <a href="#" onclick="pop(this);return false;" class="show">[Show All]</a><a href="#" onclick="unpop(this);return false;" class="hide">[Hide]</a>
         </xsl:if>
         <xsl:choose>
           <xsl:when test="$highlight.source != 0">

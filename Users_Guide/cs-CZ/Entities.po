@@ -1,0 +1,385 @@
+# peartown <josef.hruska@upcmail.cz>, 2014. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: 0\n"
+"POT-Creation-Date: 2014-05-06 14:10+1000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2014-09-24 10:07-0400\n"
+"Last-Translator: peartown <josef.hruska@upcmail.cz>\n"
+"Language-Team: Czech\n"
+"Language: cs\n"
+"X-Generator: Zanata 3.4.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Entities and translation"
+msgstr "Entity a překlad"
+
+#. Tag: title
+#, no-c-format
+msgid "Use entities with extreme caution"
+msgstr "Entity používejte s maximální opatrností"
+
+#. Tag: para
+#, no-c-format
+msgid "Entities offer convenience but they should be used with extreme caution in documents that will be translated. Writing (for example) <tag>&amp;FDS;</tag> instead of <application>Fedora Directory Server</application> saves the writer time but transformed entities do not appear in the <firstterm>portable object</firstterm> (PO) files that translators use. Complete translations of documents containing entities are, as a consequence, impossible."
+msgstr "Entity nabízejí pohodlí, ale měly by být používány s velkou opatrností v dokumentech určených k překladu. Napsání (na příklad) <sgmltag>&amp;FDS&semi;</sgmltag> místo <application>Fedora Directory Server</application> šetří autorovi čas, ale převedené entity se nezobrazí v souborech <firstterm>portable object</firstterm> (PO), které používají překladatelé. Úplné překlady dokumentů, jež obsahují entity, jsou tak v konečném důsledku nemožné."
+
+#. Tag: para
+#, no-c-format
+msgid "Entities present special obstacles to translators and can preclude the production of high-quality translations. The very nature of an entity is that the word or phrase represented by the entity is rendered exactly the same way every time that it occurs in the document, in every language. This inflexibility means that the word or word group represented by the entity might be illegible or incomprehensible in the target language and that the word or word group represented by the entity cannot change when the grammatical rules of the target language require them to change. Furthermore, because entities are not transformed when XML is converted to PO, translators cannot select the correct words that surround the entity, as required by the grammatical rules of the target language."
+msgstr "Entity zavádějí zvláštní překážky pro překladatele a mohou vyloučit vytvoření vysoce kvalitního překladu. Základní povahou entity je skutečnost, že slovo nebo fráze zastoupená entitou se renderuje v dokumentu pokaždé zcela stejně, v každém jazyce. Tato nepřizpůsobivost znamená, že slovo nebo skupina slov zastoupená entitou může být pro cílový jazyk nečitelná nebo nesrozumitelná a že zastoupené slovo nebo skupina slov se nemohou změnit, pokud gramatická pravidla cílového jazyka vyžadují jejich změnu. Navíc protože entity nejsou převedeny, když je XML převáděn na PO, překladatelé nedokáží vybrat správná slova, která entitu obklopují, jak vyžadují gramatická pravidla cílového jazyka."
+
+#. Tag: para
+#, no-c-format
+msgid "If you define an entity — <tag>&lt;!ENTITY LIFT \"Liberty Installation and Formatting Tome\"&gt;</tag> — you can enter <literal>&amp;LIFT;</literal> in your XML and it will appear as <literal>Liberty Installation and Formatting Tome</literal> every time the book is built as HTML, PDF or text."
+msgstr "Definujete-li entitu — <sgmltag>&lt;!ENTITY LIFT \"Liberty Installation and Formatting Tome\"&gt;</sgmltag> — lze do XML vložit <literal>&amp;LIFT&semi;</literal> a to se vždy, když je kniha sestavena do HTML, PDF nebo textového souboru, zobrazí jako <literal>Liberty Installation and Formatting Tome</literal>."
+
+#. Tag: para
+#, no-c-format
+msgid "Entities are not transformed when XML is converted to PO, however. Consequently, translators never see <literal>Liberty Installation and Formatting Tome</literal>. Instead they see <literal>&amp;LIFT;</literal>, which they cannot translate."
+msgstr "Avšak entity nejsou při převádění XML do PO převedeny. Překladatelé proto nikdy neuvidí <literal>Liberty Installation and Formatting Tome</literal>. Místo toho uvidí <literal>&amp;LIFT&semi;</literal>, což nelze přeložit."
+
+#. Tag: para
+#, no-c-format
+msgid "Consider something as simple as the following English sentence fragment being translated into a related language: German."
+msgstr "Zvažte něco tak jednoduchého, jako je následující část věty v angličtině přeložená do souvisejícího jazyka: němčiny."
+
+#. Tag: para
+#, no-c-format
+msgid "As noted in the <citetitle>Liberty Installation and Formatting Tome</citetitle>, Chapter 3…"
+msgstr "As noted in the <citetitle>Liberty Installation and Formatting Tome</citetitle>, Chapter 3&hellip;"
+
+#. Tag: para
+#, no-c-format
+msgid "A translation of this might be as follows:"
+msgstr "Její překlad může být následující:"
+
+#. Tag: para
+#, no-c-format
+msgid "<foreignphrase>Wie in dem <citetitle>Wälzer für die Installation und Formatierung von Liberty</citetitle>, Kapitel 3, erwähnt…</foreignphrase>"
+msgstr "<foreignphrase>Wie in dem <citetitle>Wälzer für die Installation und Formatierung von Liberty</citetitle>, Kapitel 3, erwähnt&hellip;</foreignphrase>"
+
+#. Tag: para
+#, no-c-format
+msgid "Because there is no text missing, the title can be translated into elegant German. Also, note the use of <foreignphrase>‘dem’</foreignphrase>, the correct form of the definite article ('the') when referring to a <foreignphrase>Wälzer</foreignphrase> ('tome') in this grammatical context."
+msgstr "Jelikož zde žádný text nechybí, název lze přeložit do elegantní němčiny. Rovněž si všimněte použití <foreignphrase>&lsquo;dem&rsquo;</foreignphrase>, v těchto gramatických souvislostech správného tvaru určitého členu ('the') ve vztahu k <foreignphrase>Wälzer</foreignphrase> ('tome')."
+
+#. Tag: para
+#, no-c-format
+msgid "By contrast, if entities are used, the entry in the PO file says:"
+msgstr "Naproti tomu užívají-li se entity, položka v souboru PO praví:"
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"#. Tag: para\n"
+"#, no-c-format\n"
+"msgid \"As noted in the &lt;citetitle&gt;&amp;LIFT;&lt;/citetitle&gt;, Chapter 3…\"\n"
+"msgstr \"\""
+msgstr ""
+"\n"
+"#. Tag: para\n"
+"#, no-c-format\n"
+"msgid \"As noted in the &lt;citetitle&gt;&amp;LIFT&semi;&lt;/citetitle&gt;, Chapter 3&hellip;\"\n"
+"msgstr \"\"\n"
+"\n"
+
+#. Tag: para
+#, no-c-format
+msgid "The translation of this would probably run thus:"
+msgstr "Překlad by pravděpodobně vypadal takto:"
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"#. Tag: para\n"
+"#, no-c-format\n"
+"msgid \"As noted in the &lt;citetitle&gt;&amp;LIFT;&lt;/citetitle&gt;, Chapter 3…\"\n"
+"msgstr \"Wie in &lt;citetitle&gt;&amp;LIFT;&lt;/citetitle&gt;, Kapitel 3, erwähnt…\""
+msgstr ""
+"\n"
+"#. Tag: para\n"
+"#, no-c-format\n"
+"msgid \"As noted in the &lt;citetitle&gt;&amp;LIFT&semi;&lt;/citetitle&gt;, Chapter 3&hellip;\"\n"
+"msgstr \"Wie in &lt;citetitle&gt;&amp;LIFT&semi;&lt;/citetitle&gt;, Kapitel 3, erwähnt&hellip;\"\n"
+"\n"
+
+#. Tag: para
+#, no-c-format
+msgid "And the presentation would be thus:"
+msgstr "A výsledná podoba testu bude tato:"
+
+#. Tag: para
+#, no-c-format
+msgid "<foreignphrase>Wie in <citetitle>Liberty Installation and Formatting Tome</citetitle>, Kapitel 3, erwähnt…</foreignphrase>"
+msgstr "<foreignphrase>Wie in <citetitle>Liberty Installation and Formatting Tome</citetitle>, Kapitel 3, erwähnt&hellip;</foreignphrase>"
+
+#. Tag: para
+#, no-c-format
+msgid "This, of course, leaves the title in English, including words like 'Tome' and 'Formatting' that readers are unlikely to understand. Also, the translator is forced to omit the definite article ‘dem’, a more general construction that comes close to a hybrid of English and German that German speakers call <foreignphrase>Denglisch</foreignphrase> or <foreignphrase>Angleutsch</foreignphrase>. Many German speakers consider this approach incorrect and almost all consider it inelegant."
+msgstr "Název samozřejmě zůstane v angličtině, včetně slov jako 'Tome' a 'Formatting', kterým čtenáři nejspíš nebudou rozumět. Překladatel je také přinucen vynechat určitý člen &lsquo;dem&rsquo;, obecnější stavba připomínající hybrid angličtiny a němčiny, kterou němečtí mluvčí nazývají <foreignphrase>Denglisch</foreignphrase> nebo <foreignphrase>Angleutsch</foreignphrase>. Mnoho německých mluvčích považuje tento přístup za špatný a prakticky všichni ho považují za neelegantní."
+
+#. Tag: para
+#, no-c-format
+msgid "Equivalent problems emerge with a fragment such as this:"
+msgstr "Prakticky stejné problémy vznikají s úryvkem, jako je tento:"
+
+#. Tag: para
+#, no-c-format
+msgid "However, a careful reading of the <citetitle>Liberty Installation and Formatting Tome</citetitle> afterword shows that…"
+msgstr "However, a careful reading of the <citetitle>Liberty Installation and Formatting Tome</citetitle> afterword shows that&hellip;"
+
+#. Tag: para
+#, no-c-format
+msgid "With no text hidden behind an entity, a German translation of this might be:"
+msgstr "S textem, který není zakryt entitou, by německý překlad mohl vypadat takto:"
+
+#. Tag: para
+#, no-c-format
+msgid "<foreignphrase>Jedoch ergibt ein sorgfältiges Lesen des Nachworts für den <citetitle>Wälzer für die Installation und Formatierung von Liberty</citetitle>, dass…</foreignphrase>"
+msgstr "<foreignphrase>Jedoch ergibt ein sorgfältiges Lesen des Nachworts für den <citetitle>Wälzer für die Installation und Formatierung von Liberty</citetitle>, dass&hellip;</foreignphrase>"
+
+#. Tag: para
+#, no-c-format
+msgid "If an entity was used to save the writer time, the translator has to deal with this:"
+msgstr "Kdyby byla použita entita, aby se ušetřil čas autora, překladatel by se musel poprat s tímto:"
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"#. Tag: para\n"
+"#, no-c-format\n"
+"msgid \"However, a careful reading of the &lt;citetitle&gt;&amp;LIFT;&lt;/citetitle&gt; afterword shows that…\"\n"
+"msgstr \"\""
+msgstr ""
+"\n"
+"#. Tag: para\n"
+"#, no-c-format\n"
+"msgid \"However, a careful reading of the &lt;citetitle&gt;&amp;LIFT&semi;&lt;/citetitle&gt; afterword shows that&hellip;\"\n"
+"msgstr \"\"\n"
+"\n"
+
+#. Tag: para
+#, no-c-format
+msgid "And the translation would be subtly but importantly different:"
+msgstr "A překlad by byl sice lehce, zato významně odlišný:"
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"#. Tag: para\n"
+"#, no-c-format\n"
+"msgid \"However, a careful reading of the &lt;citetitle&gt;&amp;LIFT;&lt;/citetitle&gt; afterword shows that…\"\n"
+"msgstr \"Jedoch ergibt ein sorgfältiges Lesen des Nachworts für &lt;citetitle&gt;&amp;LIFT;&lt;/citetitle&gt;, dass…\""
+msgstr ""
+"\n"
+"#. Tag: para\n"
+"#, no-c-format\n"
+"msgid \"However, a careful reading of the &lt;citetitle&gt;&amp;LIFT&semi;&lt;/citetitle&gt; afterword shows that&hellip;\"\n"
+"msgstr \"Jedoch ergibt ein sorgfältiges Lesen des Nachworts für &lt;citetitle&gt;&amp;LIFT&semi;&lt;/citetitle&gt;, dass&hellip;\"\n"
+"\n"
+
+#. Tag: para
+#, no-c-format
+msgid "When presented to a reader, this would appear as follows:"
+msgstr "Při prezentaci čtenářovi by se pak zobrazilo následující:"
+
+#. Tag: para
+#, no-c-format
+msgid "<foreignphrase>Jedoch ergibt ein sorgfältiges Lesen des Nachworts für <citetitle>Liberty Installation and Formatting Tome</citetitle>, dass…</foreignphrase>"
+msgstr "<foreignphrase>Jedoch ergibt ein sorgfältiges Lesen des Nachworts für <citetitle>Liberty Installation and Formatting Tome</citetitle>, dass&hellip;</foreignphrase>"
+
+#. Tag: para
+#, no-c-format
+msgid "Again, note the missing definite article (<foreignphrase>den</foreignphrase> in this grammatical context). This is inelegant but necessary since the translator can otherwise only guess which form of the definite article (<foreignphrase>den</foreignphrase>, <foreignphrase>die</foreignphrase> or <foreignphrase>das</foreignphrase>) to use, which would inevitably lead to error."
+msgstr "Opět si všimněte chybějícího určitého členu (v této gramatické souvislosti <foreignphrase>den</foreignphrase>). Je to sice neelegantní, ale nezbytné, neboť překladatel jinak může pouze odhadovat, kterou podobu určitého členu (<foreignphrase>den</foreignphrase>, <foreignphrase>die</foreignphrase> or <foreignphrase>das</foreignphrase>) použít, což by mohlo vést nevyhnutelně k chybě."
+
+#. Tag: para
+#, no-c-format
+msgid "Finally, consider that although a particular word never changes its form in English, this is not necessarily true of other languages, even when the word is a <firstterm>proper noun</firstterm> such as the name of a product. In many languages, nouns change (<firstterm>inflect</firstterm>) their form according to their role in a sentence (their grammatical <firstterm>case</firstterm>). An XML entity set to represent an English noun or noun phrase therefore makes correct translation impossible in such languages."
+msgstr "A závěrem si uvědomte, že ačkoliv se v angličtině tvar určitého slova nikdy nemění, toto nutně neplatí v jiných jazycích, a to i když se u slova jedná o <firstterm>jméno vlastní</firstterm>, jako např. název produktu. V mnoha jazycích mění (<firstterm>skloňují se</firstterm>) podstatná jména svůj tvar dle jejich úlohy (mluvnického <firstterm>pádu</firstterm>) ve větě. Entita XML je nastavena tak, aby zastupovala slovo nebo slovní frázi anglickou, proto činí správný překlad v takovýchto jazycích nemožným."
+
+#. Tag: para
+#, no-c-format
+msgid "For example, if you write a document that could apply to more than one product, you might be tempted to set an entity such as <tag>&amp;PRODUCT;</tag>. The advantage of this approach is that by simply changing this value in the <filename><replaceable>Doc_Name</replaceable>.ent</filename> file, you could easily adjust the book to document (for example) Red Hat Enterprise Linux, Fedora, or CentOS. However, while the proper noun <literal>Fedora</literal> never varies in English, it has multiple forms in other languages. For example, in Czech the name <literal>Fedora</literal> has six different forms, depending on one of seven ways in which you can use it in a sentence:"
+msgstr "Na příklad napíšete-li dokument, který se vztahuje na více než jeden produkt, bude vás lákat použití entity jako je např. <sgmltag>&amp;PRODUCT&semi;</sgmltag>. Výhoda tohoto přístupu spočívá v tom, že jednoduchou změnou této hodnoty v souboru <filename><replaceable>Doc_Name</replaceable>.ent</filename> lze jednoduše přizpůsobit knihu pro zdokumentování (na příklad) Red Hat Enterprise Linuxu, Fedory nebo CentOS. Ovšem zatímco vlastní jméno <literal>Fedora</literal> se v angličtině nikdy nemění, má několik tvarů v jiných jazycích. Na příklad v češtině má název <literal>Fedora</literal> šest různých tvarů, v záležitosti na sedmi způsobech, ve kterých ho můžete ve větě použít:"
+
+#. Tag: title
+#, no-c-format
+msgid "'Fedora' in Czech"
+msgstr "'Fedora' v češtině"
+
+#. Tag: entry
+#, no-c-format
+msgid "Case"
+msgstr "Pád"
+
+#. Tag: entry
+#, no-c-format
+msgid "Usage"
+msgstr "Užití"
+
+#. Tag: entry
+#, no-c-format
+msgid "Form"
+msgstr "Tvar"
+
+#. Tag: entry
+#, no-c-format
+msgid "Nominative"
+msgstr "1. Nominativ"
+
+#. Tag: entry
+#, no-c-format
+msgid "the subject of a sentence"
+msgstr "podmět věty"
+
+#. Tag: entry
+#, no-c-format
+msgid "<foreignphrase>Fedora</foreignphrase>"
+msgstr "<foreignphrase>Fedora</foreignphrase>"
+
+#. Tag: entry
+#, no-c-format
+msgid "Genitive"
+msgstr "2. Genitiv"
+
+#. Tag: entry
+#, no-c-format
+msgid "indicates possession"
+msgstr "naznačuje vlastnictví"
+
+#. Tag: entry
+#, no-c-format
+msgid "<foreignphrase>Fedory</foreignphrase>"
+msgstr "<foreignphrase>Fedory</foreignphrase>"
+
+#. Tag: entry
+#, no-c-format
+msgid "Accusative"
+msgstr "3. Dativ"
+
+#. Tag: entry
+#, no-c-format
+msgid "the direct object of a sentence"
+msgstr "nepřímý předmět věty"
+
+#. Tag: entry
+#, no-c-format
+msgid "<foreignphrase>Fedoru</foreignphrase>"
+msgstr "<foreignphrase>Fedoře</foreignphrase>"
+
+#. Tag: entry
+#, no-c-format
+msgid "Dative"
+msgstr "4. Akuzativ"
+
+#. Tag: entry
+#, no-c-format
+msgid "the indirect object of a sentence"
+msgstr "přímý předmět věty"
+
+#. Tag: entry
+#, no-c-format
+msgid "<foreignphrase>Fedoře</foreignphrase>"
+msgstr "<foreignphrase>Fedoru</foreignphrase>"
+
+#. Tag: entry
+#, no-c-format
+msgid "Vocative"
+msgstr "5. Vokativ"
+
+#. Tag: entry
+#, no-c-format
+msgid "the subject of direct address"
+msgstr "oslovení"
+
+#. Tag: entry
+#, no-c-format
+msgid "<foreignphrase>Fedoro</foreignphrase>"
+msgstr "<foreignphrase>Fedoro</foreignphrase>"
+
+#. Tag: entry
+#, no-c-format
+msgid "Locative"
+msgstr "6. Lokál"
+
+#. Tag: entry
+#, no-c-format
+msgid "relates to a location"
+msgstr "plní funkci příslovečného určení (místa,...)"
+
+#. Tag: entry
+#, no-c-format
+msgid "Instrumental"
+msgstr "7. Instrumentál"
+
+#. Tag: entry
+#, no-c-format
+msgid "relates to a method"
+msgstr "vztahuje se k metodě"
+
+#. Tag: entry
+#, no-c-format
+msgid "<foreignphrase>Fedorou</foreignphrase>"
+msgstr "<foreignphrase>Fedorou</foreignphrase>"
+
+#. Tag: para
+#, no-c-format
+msgid "For example:"
+msgstr "Na příklad:"
+
+#. Tag: para
+#, no-c-format
+msgid "<foreignphrase>Fedora je linuxová distribuce.</foreignphrase> — Fedora is a Linux distribution."
+msgstr "<foreignphrase>Fedora je linuxová distribuce.</foreignphrase> — Fedora is a Linux distribution."
+
+#. Tag: para
+#, no-c-format
+msgid "<foreignphrase>Inštalácia Fedory</foreignphrase> — Installation of Fedora"
+msgstr "<foreignphrase>Instalace Fedory</foreignphrase> — Installation of Fedora"
+
+#. Tag: para
+#, no-c-format
+msgid "<foreignphrase>Stáhnout Fedoru</foreignphrase> — Get Fedora"
+msgstr "<foreignphrase>Přispějte Fedoře</foreignphrase> — Contribute to Fedora"
+
+#. Tag: para
+#, no-c-format
+msgid "<foreignphrase>Přispějte Fedoře</foreignphrase> — Contribute to Fedora"
+msgstr "<foreignphrase>Stáhnout Fedoru</foreignphrase> — Get Fedora"
+
+#. Tag: para
+#, no-c-format
+msgid "<foreignphrase>Ahoj, Fedoro!</foreignphrase> — Hello Fedora!"
+msgstr "<foreignphrase>Ahoj, Fedoro!</foreignphrase> — Hello Fedora!"
+
+#. Tag: para
+#, no-c-format
+msgid "<foreignphrase>Ve Fedoře 10…</foreignphrase> — In Fedora 10…"
+msgstr "<foreignphrase>Ve Fedoře 10&hellip;</foreignphrase> — In Fedora 10&hellip;"
+
+#. Tag: para
+#, no-c-format
+msgid "<foreignphrase>S Fedorou získáváte nejnovější…</foreignphrase> — With Fedora, you get the latest…"
+msgstr "<foreignphrase>S Fedorou získáváte nejnovější&hellip;</foreignphrase> — With Fedora, you get the latest&hellip;"
+
+#. Tag: para
+#, no-c-format
+msgid "A sentence that begins <foreignphrase>S Fedora získáváte nejnovější…</foreignphrase> remains comprehensible to Czech readers, but the result is not grammatically correct. The same effect can be simulated in English, because although English nouns lost their case endings during the Middle Ages, English pronouns are still inflected. The sentence, 'Me see she' is completely comprehensible to English speakers, but is not what they expect to read, because the form of the pronouns <literal>me</literal> and <literal>she</literal> is not correct. <literal>Me</literal> is the accusative form of the pronoun, but because it is the subject of the sentence, the pronoun should take the nominative form, <literal>I</literal>. Similarly, <literal>she</literal> is nominative case, but as the direct object of the sentence the pronoun should take its accusative form, <literal>her</literal>."
+msgstr "Věta, která začíná <foreignphrase>S Fedora získáváte nejnovější&hellip;</foreignphrase>, zůstává českým čtenářům srozumitelná, ale výsledek je gramaticky chybný. Stejný efekt lze simulovat v angličtině, neboť ačkoliv anglická podstatná jména ztratila své pádové koncovky za dob středověku, anglická zájmena se stále skloňují. Věta 'Me see she' je pro anglické čtenáře zcela srozumitelná, ale není tím, co očekávají, neboť tvary zájmen <literal>me</literal> a <literal>she</literal> nejsou správné. <literal>Me</literal> je tvar zájmena ve 4. pádu, ale protože je podmětem věty, zájmeno by mělo být ve tvaru 1. pádu, <literal>I</literal>. Podobně <literal>she</literal> je v 1. pádu, ale jako přímý předmět věty by mělo zájmeno být v pádu 4., <literal>her</literal>."
+
+#. Tag: para
+#, no-c-format
+msgid "Nouns in most Slavic languages like Russian, Ukrainian, Czech, Polish, Serbian, and Croatian have seven different cases. Nouns in Finno–Ugaric languages such as Finnish, Hungarian, and Estonian have between fifteen and seventeen cases. Other languages alter nouns for other reasons. For example, Scandinavian languages inflect nouns to indicate <firstterm>definiteness</firstterm> — whether the noun refers to '<emphasis>a</emphasis> thing' or '<emphasis>the</emphasis> thing' — and some dialects of those languages inflect nouns both for definiteness <emphasis>and</emphasis> for grammatical case."
+msgstr "Podstatná jména mají ve většině slovanských jazyků, jako ruština, ukrajinština, čeština, polština, srbština a chorvatština, sedm různých pádů. Podstatná jména v ugrofinských jazycích, jako je finština, maďarština a estonština, mají mezi patnácti až sedmnácti pády. Skandinávské jazyky na příklad skloňují podstatná jména, aby naznačili <firstterm>určitost</firstterm> — zda se podstatné jméno vztahuje na '<emphasis>a</emphasis> thing' (nějakou věc) nebo '<emphasis>the</emphasis> thing' (tu věc) — a některá nářečí těchto jazyků skloňují podstatná jména jak pro určitost, tak pro gramatické pády."
+
+#. Tag: para
+#, no-c-format
+msgid "Now multiply such problems by the more than 40 languages that <application>Publican</application> currently supports. Other than the few non-translated strings that <application>Publican</application> specifies by default in the <filename><replaceable>Doc_Name</replaceable>.ent</filename> file, entities might prove useful for version numbers of products. Beyond that, the use of entities is tantamount to a conscious effort to inhibit and reduce the quality of translations. Furthermore, readers of your document in a language that inflects nouns (whether for case, definiteness, or other reasons) will not know that the bad grammar is the result of XML entities that you set — they will probably assume that the translator is incompetent."
+msgstr "Nyní vynásobte tyto problémy více než 40 jazyky, jež <application>Publican</application> v současnosti podporuje. Kromě několika málo nepřekládaných řetězců, které <application>Publican</application> standardně uvádí v souboru <filename><replaceable>Dok_Nazev</replaceable>.ent</filename>, se entity mohou ukázat jako užitečné pro čísla verzí produktů. Cokoliv mimo tyto důvody užívání entit se rovná vědomému pokusu jak ztížit a omezit kvalitu překladů. Navíc čtenáři vašeho dokumentu v jazyce, který skloňuje podstatná jména (až již pro pády, určitost nebo jiné důvody), nebudou vědět, že špatná gramatike je výsledkem vámi nastavených entit XML — budou nejspíš předpokládat, že neschopným je zde překladatel."
+

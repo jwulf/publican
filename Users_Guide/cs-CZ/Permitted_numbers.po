@@ -1,0 +1,19 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: 0\n"
+"POT-Creation-Date: 2014-10-03 13:09+1000\n"
+"PO-Revision-Date: 2014-10-03 13:09+1000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: None\n"
+"Language: en-US \n"
+"MIME-Version: 1.0\n"
+"Content-Type: application/x-publican; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Publican v4.2.2\n"
+
+msgid "Permitted characters"
+msgstr ""
+
+msgid "<application>Publican</application> uses data in this tag to generate part of the file name for RPM packages, unless overridden by data in the <filename>publican.cfg</filename> file. If you do not override this tag in the <filename>publican.cfg</filename> file, this tag must only contain numbers and the period (‘0–9’ and ‘.’) if you plan to build packages with <application>Publican</application>."
+msgstr ""
+

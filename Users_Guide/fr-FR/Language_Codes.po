@@ -1,18 +1,18 @@
 # Gé Baylard <<Geodebay@gmail.com>>, 2013.
 #
-# Gérard Baylard <geodebay@gmail.com>, 2013. #zanata
+# Gérard Baylard <geodebay@gmail.com>, 2014. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2013-03-08T03:26:30\n"
-"PO-Revision-Date: 2013-09-11 01:09-0400\n"
-"Last-Translator: Gérard Baylard <geodebay@gmail.com>\n"
-"Language-Team: français <<trans-fr@lists.fedoraproject.org>>\n"
+"POT-Creation-Date: 2014-05-06 14:10+1000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2014-05-15 08:22-0400\n"
+"Last-Translator: Gérard Baylard <geodebay@gmail.com>\n"
+"Language-Team: français <<trans-fr@lists.fedoraproject.org>>\n"
 "Language: fr\n"
-"X-Generator: Zanata 3.3.2\n"
+"X-Generator: Zanata 3.4.2\n"
 "Plural-Forms: nplurals=2; plural=n>1;\n"
 
 #. Tag: title
@@ -28,7 +28,7 @@ msgstr "Descripteurs de région"
 #. Tag: para
 #, no-c-format
 msgid "The only part of the XML language tag that is mandatory in <application>Publican</application> is the <firstterm>language subtag</firstterm>. However, <application>Publican</application> is designed with the assumption that you will routinely include the <firstterm>region subtag</firstterm> when you identify languages. In many languages, spelling and vocabulary vary significantly from region to region. If you do not specify the regional variety of a language in which your document is authored or into which it is translated, you might obtain unexpected results when you build the document in <application>Publican</application>."
-msgstr "La seule partie de la balise de langue XML qui soit obligatoire dans <application>Publican</application> est le <firstterm>descripteur de la langue</firstterm>. Toutefois, <application>Publican</application> a été conçu en supposant la précision coutumière du <firstterm>descripteur de région</firstterm> pour identifier des langues. Dans de nombreuses langues, l'orthographe et le vocabulaire varient de façon significative d'une région à l'autre. Si vous ne précisez pas le type régional de la langue dans lequel le document est rédigé ou dans lequel il est traduit, vous pourriez obtenir des résultats imprévisibles quand vous construirez le document avec <application>Publican</application>."
+msgstr "La seule partie de la balise de langue XML qui soit obligatoire dans <application>Publican</application> est le <firstterm>descripteur de langue</firstterm>. Toutefois, <application>Publican</application> a été conçu en supposant que vous préciserez, selon la coutume, le <firstterm>descripteur de région</firstterm> pour l'identification de la langue. Dans de nombreuses langues, l'orthographe et le vocabulaire varient de façon significative d'une région à l'autre. Si vous ne précisez pas le type régional de la langue dans lequel le document est rédigé ou dans lequel il est traduit, vous pourriez obtenir des résultats imprévisibles quand vous construirez le document avec <application>Publican</application>."
 
 #. Tag: title
 #, no-c-format
@@ -38,7 +38,7 @@ msgstr "Autres codifications de langues"
 #. Tag: para
 #, no-c-format
 msgid "The system of codes used to identify languages in the XML standard is not the only system of languages codes in use in the world today. However, because <application>Publican</application> strives to comply with the XML standard, these are the only codes that <application>Publican</application> supports. In particular, note that the codes used in the GNU tools (identified by their use of underscores and the <literal>@</literal> symbol to separate elements — for example, <literal>en_GB</literal> or <literal>sr_RS@latin</literal>) do not comply with the XML standard and therefore do not work with <application>Publican</application>."
-msgstr "Le système de codage utilisé pour identifier les langues dans la norme XML n'est pas le seul utilisé dans le monde aujourd'hui. Néanmoins, comme <application>Publican</application> s'attache à respecter la norme XML, ce sont les seuls pris en charge par l'application. En particulier, notez que les codes utilisés dans les outils GNU (reconnaissables par l'utilisation de soulignés et du symbole <literal>@</literal> arobas pour séparer les éléments — par exemple, <literal>en_GB</literal> ou <literal>sr_RS@latin</literal>) ne respectent pas la norme XML et, donc, ne fonctionnent pas avec <application>Publican</application>."
+msgstr "Le système de codage utilisé pour identifier les langues dans la norme XML n'est pas le seul utilisé dans le monde aujourd'hui. Néanmoins, comme l'application <application>Publican</application> s'attache à respecter la norme XML, ce sont les seuls pris en charge par <application>Publican</application>. En particulier, notez que les codes utilisés dans les outils GNU (reconnaissables par l'utilisation de soulignés et du symbole <literal>@</literal> (arobas) pour séparer les éléments — par exemple, <literal>en_GB</literal> ou <literal>sr_RS@latin</literal>) ne respectent pas la norme XML et, donc, ne fonctionnent pas avec <application>Publican</application>."
 
 #. Tag: para
 #, no-c-format
@@ -58,12 +58,12 @@ msgstr "<literal><replaceable>langue</replaceable>-<replaceable>écriture</repla
 #. Tag: para
 #, no-c-format
 msgid "BCP 47 also allows for considerable customization of language tags for special purposes through the use of <firstterm>extension subtags</firstterm> and <firstterm>private-use subtags</firstterm>. Extension subtags allow for finer-tuning of existing subtags, but must be registered with the IETF (none are currently registered). Private-use subtags are introduced by <literal>x-</literal> and do not need to be registered. Private-use subtags aside, a subtag is valid if it appears in the registry of subtags maintained by the IETF through the Internet Assigned Numbers Authority (IANA).<footnote> <para> <link xlink:href=\"http://www.iana.org/assignments/language-subtag-registry\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">http://www.iana.org/assignments/language-subtag-registry</link> </para> </footnote> Although <application>Publican</application> will accept any language tag that is valid under the rules presented in BCP 47, it is designed around the assumption that language tags for documents will most usually take the form <literal><replaceable>language</replaceable>-<replaceable>region</replaceable></literal>. A brief description of subtags follows:"
-msgstr "La norme BCP&nbsp;47 permet aussi, pour une personnalisation accrue des codes de langues pour des utilisations particulières, l'utilisation de <firstterm>descripteurs d'extension</firstterm> ou de <firstterm>descripteurs à utilisation privée</firstterm>. Les descripteurs d'extension permettent des ajustements affinés de descripteurs existants, mais doivent être enregistrés auprès de l'IETF (aucun n'est enregistré à ce jour). Les descripteurs à utilisation privée sont précédés par <literal>x-</literal> et n'ont pas besoin d'être enregistrés. À côté des descripteurs à utilisation privée, un descripteur est valable s'il apparaît dans le registre des descripteurs tenu par l'IETF par l'intermédiaire de l'« Internet Assigned Numbers Authority (IANA) »<footnote> <para> <ulink url=\"http://www.iana.org/assignments/language-subtag-registry\">http://www.iana.org/assignments/language-subtag-registry</ulink> </para> </footnote>. Même si <application>Publican</application> accepte tout code de langue valide par rapport aux règles définies dans BCP&nbsp;47, il a été conçu en supposant que les codes de langue étaient habituellement de la forme <literal><replaceable>langue</replaceable>-<replaceable>région</replaceable></literal>. Voici un bref aperçu des descripteurs :"
+msgstr "La norme BCP&nbsp;47 permet aussi, pour une personnalisation accrue des codes de langues pour des utilisations particulières, l'utilisation de <firstterm>descripteurs d'extension</firstterm> ou de <firstterm>descripteurs à utilisation privée</firstterm>. Les descripteurs d'extension permettent des ajustements fins de descripteurs existants, mais doivent être enregistrés auprès de l'IETF (aucun n'est enregistré à ce jour). Les descripteurs à utilisation privée sont précédés par <literal>x-</literal> et n'ont pas besoin d'être enregistrés. À côté des descripteurs à utilisation privée, un descripteur est valable s'il apparaît dans le registre des descripteurs tenu par l'IETF par l'intermédiaire de l'« Internet Assigned Numbers Authority (IANA) »<footnote> <para> <ulink url=\"http://www.iana.org/assignments/language-subtag-registry\">http://www.iana.org/assignments/language-subtag-registry</ulink> </para> </footnote>. Même si <application>Publican</application> accepte tout code de langue valide par rapport aux règles définies dans BCP&nbsp;47, il a été conçu en supposant que les codes de langue étaient habituellement de la forme <literal><replaceable>langue</replaceable>-<replaceable>région</replaceable></literal>. Voici un bref aperçu des descripteurs :"
 
 #. Tag: term
 #, no-c-format
 msgid "language subtag"
-msgstr "descripteur de la langue"
+msgstr "Descripteur de langue"
 
 #. Tag: para
 #, no-c-format
@@ -83,7 +83,7 @@ msgstr "La norme <citetitle>RFC&nbsp;5646: Tags for Identifying Languages</citet
 #. Tag: term
 #, no-c-format
 msgid "script subtag"
-msgstr "descripteur d'écriture"
+msgstr "Descripteur d'écriture"
 
 #. Tag: para
 #, no-c-format
@@ -93,7 +93,7 @@ msgstr "Le descripteur d'écriture comprend quatre lettres — la première en 
 #. Tag: term
 #, no-c-format
 msgid "region subtag"
-msgstr "descripteur de région"
+msgstr "Descripteur de région"
 
 #. Tag: para
 #, no-c-format
@@ -373,5 +373,5 @@ msgstr "zh-CN — chinois (République populaire de Chine, implicitement écritu
 #. Tag: para
 #, no-c-format
 msgid "zh-TW — Chinese (Republic of China, implicitly traditional Han script)"
-msgstr "zh-CN — chinois (République de Chine, implicitement écriture Han traditionnelle)"
+msgstr "zh-TW — chinois (République de Chine, implicitement écriture Han traditionnelle)"
 

@@ -1,0 +1,265 @@
+# peartown <josef.hruska@upcmail.cz>, 2014. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: 0\n"
+"POT-Creation-Date: 2014-05-06 14:10+1000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2014-08-14 12:13-0400\n"
+"Last-Translator: peartown <josef.hruska@upcmail.cz>\n"
+"Language-Team: Czech\n"
+"Language: cs\n"
+"X-Generator: Zanata 3.4.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Introduction"
+msgstr "Úvod"
+
+#. Tag: indexterm
+#, no-c-format
+msgid "<primary>Introduction 1</primary>"
+msgstr "<primary>Úvod 1</primary>"
+
+#. Tag: para
+#, no-c-format
+msgid "<indexterm><primary>Introduction 2</primary></indexterm> <application>Publican</application> <indexterm><primary>Introduction 3</primary> <secondary>Introduction 3</secondary></indexterm> \\ \\n \\p is a tool for publishing material authored in DocBook XML. This guide explains how to create and build books and articles using <application>Publican</application>. It is not a general DocBook XML tutorial; refer to <citetitle>DocBook: The Definitive Guide</citetitle> by Norman Walsh and Leonard Muellner, available at <uri xlink:href=\"http://www.docbook.org/tdg/en/html/docbook.html\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">http://www.docbook.org/tdg/en/html/docbook.html</uri> for more general help with DocBook XML."
+msgstr "<indexterm><primary>Úvod 2</primary></indexterm> <application>Publican</application> <indexterm><primary>Úvod 3</primary> <secondary>Úvod 3</secondary></indexterm> je nástroj pro zveřejňování materiálu napsaného v DocBook XML. Tato příručka vysvětluje, jak pomocí <application>Publican</application> vytvořit a sestavit knihy a články. Nejedná se o obecnou učebnici DocBook XML; pro pomoc s DocBook XML využijte <citetitle>DocBook: The Definitive Guide</citetitle> od Normana Walshe a Leonarda Muellnera, dostupné online: <ulink url=\"&DOCBOOK-URL;\" />."
+
+#. Tag: para
+#, no-c-format
+msgid "<application>Publican</application> began life as an internal tool used by Red Hat's Documentation Group (now known as Engineering Content Services). On occasion, this legacy is visible."
+msgstr "<application>Publican</application> zahájil svou existenci jako interní nástroj Dokumentační skupiny Red Hat (jejíž současný název je Engineering Content Services). Občas se tato historie projevuje."
+
+#. Tag: title
+#, no-c-format
+msgid "Design"
+msgstr "Návrh"
+
+#. Tag: para
+#, no-c-format
+msgid "<application>Publican</application> is a publication system, not just a DocBook processing tool. As well as ensuring your DocBook XML is valid, <application>Publican</application> works to ensure your XML is up to publishable standard."
+msgstr "<application>Publican</application> je publikační systém, nikoliv jen nástroj pro zpracování DocBook. Stejně jako zajistí validitu vašeho DocBook XML, <application>Publican</application> funguje rovněž tak, že zajistí, aby vaše XML odpovídalo publikační normě."
+
+#. Tag: para
+#, no-c-format
+msgid "The branding functionality allows you to create your own presentation rules and look, overriding many parts of the default style to meet your publishing needs. Choices executed in code, however, are not changeable."
+msgstr "Funkce grafické úpravy vám umožní vytvořit vlastní pravidla a vzhled své prezentace potlačením mnoha částí výchozího stylu, a dosáhnout tak svých publikačních potřeb. Avšak volby učiněné v kódu nelze změnit."
+
+#. Tag: para
+#, no-c-format
+msgid "Entities, for example, can be validly defined in any XML file. However, to ensure the DTD declaration is present, valid and standardized, <application>Publican</application> rewrites the declaration in every XML file before it builds a book or article. Consequently, all entities declared in all XML files are lost. <application>Publican</application>, therefore, requires you define entities in the <filename><replaceable>Doc_Name</replaceable>.ent</filename> file (refer to <xref linkend=\"sect-Publican-Users_Guide-Files_in_the_book_directory-Doc_Name.ent\" />)."
+msgstr "Entity lze na příklad definovat validně v kterémkoliv souboru XML. Nicméně <application>Publican</application> přepíše deklaraci v každém souboru XML před tím, než sestaví knihu nebo článek, aby zajistil, že deklarace DTD je přítomna, validní a normovaná. Důsledkem je ztráta všech entit deklarovaných ve všech souborech XML. Proto po vás <application>Publican</application> vyžaduje, abyste definovali entity v souboru <filename><replaceable>Doc_Nazev</replaceable>.ent</filename> (viz <xref linkend=\"sect-Publican-Users_Guide-Files_in_the_book_directory-Doc_Name.ent\" />)."
+
+#. Tag: para
+#, no-c-format
+msgid "As publishing workflows grow, unrestrained entity definition leads to entity duplication and other practices that cause maintenance difficulties. Consolidating entity definitions in a single, predictable place alleviates these maintenance issues and helps the automation of the build process stay robust."
+msgstr "Tak jak narůstají pracovní toky u zveřejňování, neomezená definice entit vede k duplicitám a dalším postupům, které způsobují obtíže s údržbou. Sjednocení definice entit do jednoho, předvídatelného místa zjednoduší tyto záležitosti údržby a je nápomocno zachování robustní automatizace sestavovacího procesu."
+
+#. Tag: para
+#, no-c-format
+msgid "Entities also present an essentially insurmountable obstacle to quality translation (refer to <xref linkend=\"sect-Publican-Users_Guide-Entities_and_translation\" />). Consequently, while we are not reducing the <filename><replaceable>Doc_Name</replaceable>.ent</filename> file's functionality, we are no longer considering requests to add functionality or features associated with entity use."
+msgstr "Entity rovněž představují nepřekonatelnou překážku pro kvalitu překladu (viz <xref linkend=\"sect-Publican-Users_Guide-Entities_and_translation\" />). Proto sice nijak neomezujeme funkční vybavenost souboru <filename><replaceable>Doc_Nazev</replaceable>.ent</filename>, ale také již neodpovídáme na žádosti o přidání funkcí nebo vlastností spojených s používáním entit."
+
+msgid "This section is for testing the output and doesn't ship in the production docs"
+msgstr ""
+
+msgid "Testing BZ #1092351 Code Switcher"
+msgstr ""
+
+msgid ""
+"#!/usr/bin/perl\n"
+"use strict; \\\n"
+"use warnings;\n"
+"\n"
+"print \"Hello, World!\\n\";"
+msgstr ""
+
+msgid ""
+"<![CDATA[#include <iostream>\n"
+"\n"
+"int main()\n"
+"{\n"
+"  std::cout << \"Hello World!\"; &lies;\n"
+"}]]>"
+msgstr ""
+
+msgid "Testing BZ #1088051 Code Popper"
+msgstr ""
+
+msgid ""
+"<prompt>$</prompt> <command>apt-get search libxslt</command>\n"
+"<computeroutput>gambas3-gb-xml-xslt - Gambas XSLT component</computeroutput>\n"
+"<computeroutput>libidzebra-2.0-mod-alvis - IDZebra filter alvis (XSLT filter for XML)</computeroutput>\n"
+"<computeroutput>libidzebra-2.0-mod-dom - IDZebra filter 'dom' (XML DOM internal document model with XSLT)</computeroutput>\n"
+"<computeroutput>libical-parser-html-perl - generates HTML calendars from iCalendars</computeroutput>\n"
+"<computeroutput>libxsltc-java - XSL Transformations (XSLT) compiler from Xalan-Java</computeroutput>\n"
+"<computeroutput>libxml-filter-xslt-perl - Perl module for XSLT as a SAX Filter</computeroutput>\n"
+"<computeroutput>libxml-libxslt-perl - Perl interface to the GNOME libxslt library</computeroutput>\n"
+"<computeroutput>libxslt1-dbg - XSLT 1.0 processing library - debugging symbols</computeroutput>\n"
+"<computeroutput>libxslt1-dev - XSLT 1.0 processing library - development kit</computeroutput>\n"
+"<computeroutput>libxslt1.1 - XSLT 1.0 processing library - runtime library</computeroutput>\n"
+"<computeroutput>python-libxslt1 - Python bindings for libxslt1</computeroutput>\n"
+"<computeroutput>python-libxslt1-dbg - Python bindings for libxslt1 (debug extension)</computeroutput>\n"
+"<computeroutput>python-lxml - pythonic binding for the libxml2 and libxslt libraries</computeroutput>\n"
+"<computeroutput>python-lxml-dbg - pythonic binding for the libxml2 and libxslt libraries (debug extension)</computeroutput>\n"
+"<computeroutput>python-lxml-doc - pythonic binding for the libxml2 and libxslt libraries (documentation)</computeroutput>\n"
+"<computeroutput>python3-lxml - pythonic binding for the libxml2 and libxslt libraries</computeroutput>\n"
+"<computeroutput>python3-lxml-dbg - pythonic binding for the libxml2 and libxslt libraries (debug extension)</computeroutput>\n"
+"<computeroutput>php5-xsl - XSL module for php5</computeroutput>\n"
+"<computeroutput>libsp-gxmlcpp-dev - S+P C++ wrapper for Gnome libxml2/libxslt</computeroutput>\n"
+"<computeroutput>libsp-gxmlcpp1 - S+P C++ wrapper for Gnome libxml2/libxslt</computeroutput>\n"
+"<computeroutput>swfmill - xml2swf and swf2xml processor</computeroutput>\n"
+"<computeroutput>libxslthl-java - XSLT syntax highlighting</computeroutput>"
+msgstr ""
+
+msgid "&nbsp;"
+msgstr ""
+
+msgid "Testing BZ #1112899 Callouts and BZ #1101050 Entities in CDATA"
+msgstr ""
+
+msgid "Test a programlisting with a calloutlist"
+msgstr ""
+
+msgid "\"Hello world!\" in C++"
+msgstr ""
+
+msgid ""
+"<![CDATA[\n"
+"#include <qpid/messaging/Connection.h>\n"
+"#include <qpid/messaging/Message.h>\n"
+"#include <qpid/messaging/Receiver.h>\n"
+"#include <qpid/messaging/Sender.h>\n"
+"#include <qpid/messaging/Session.h> &BZ1101050;\n"
+"\n"
+"#include <iostream>]]>\n"
+"\n"
+"using namespace qpid::messaging;\n"
+"\n"
+"int main(int argc, char** argv) {\n"
+"    std::string broker = argc &gt; 1 ? argv[1] : \"localhost:5672\";\n"
+"    std::string address = argc &gt; 2 ? argv[2] : \"amq.topic\";\n"
+"    Connection connection(broker); \n"
+"    try {\n"
+"        connection.open();  <co id=\"hello-cpp-open\" linkends=\"callout-cpp-open\"></co>\n"
+"        Session session = connection.createSession(); <co id=\"hello-cpp-session\" linkends=\"callout-cpp-session\"></co>\n"
+"\n"
+"        Receiver receiver = session.createReceiver(address); <co id=\"hello-cpp-receiver\" linkends=\"callout-cpp-receiver\"></co>\n"
+"        Sender sender = session.createSender(address); <co id=\"hello-cpp-sender\" linkends=\"callout-cpp-sender\"></co>\n"
+"\n"
+"        sender.send(Message(\"Hello world!\"));\n"
+"\n"
+"        Message message = receiver.fetch(Duration::SECOND * 1); <co id=\"hello-cpp-fetch\" linkends=\"callout-cpp-fetch\"></co>\n"
+"        <![CDATA[std::cout << message.getContent() << std::endl;]]>\n"
+"        session.acknowledge(); <co id=\"hello-cpp-acknowledge\" linkends=\"callout-cpp-acknowledge\"></co>\n"
+"\n"
+"        connection.close(); <co id=\"hello-cpp-close\" linkends=\"callout-cpp-close\"></co>\n"
+"        return 0;\n"
+"    } catch(const std::exception&amp; error) {\n"
+"        <![CDATA[std::cerr << error.what() << std::endl;]]>\n"
+"        connection.close();\n"
+"        return 1;   \n"
+"    }\n"
+"  }"
+msgstr ""
+
+msgid "Establishes the connection with the messaging broker."
+msgstr ""
+
+msgid "Creates a session object, which maintains the state of all interactions with the messaging broker, and manages senders and receivers."
+msgstr ""
+
+msgid "Creates a receiver that reads from the given address."
+msgstr ""
+
+msgid "Creates a sender that sends to the given address."
+msgstr ""
+
+msgid "Reads the next message. The duration is optional, if omitted, will wait indefinitely for the next message."
+msgstr ""
+
+msgid "Acknowledges messages that have been read. To guarantee delivery, a message remains on the messaging broker until it is acknowledged by a client. session.acknowledge() acknowledges all unacknowledged messages for the given session&mdash;this allows acknowledgements to be batched, which is more efficient than acknowledging messages individually."
+msgstr ""
+
+msgid "Closes the connection, all sessions managed by the connection, and all senders and receivers managed by each session."
+msgstr ""
+
+msgid "And now we test a programlistingco with an areaspec"
+msgstr ""
+
+msgid ""
+"  &lt;list-index \n"
+"        column=\"column_name\"\n"
+"        base=\"0|1|...\"/&gt;"
+msgstr ""
+
+msgid "<literal>column_name</literal> (required): the name of the column holding the collection index values."
+msgstr ""
+
+msgid "<literal>base</literal> (optional - defaults to <literal>0</literal>): the value of the index column that corresponds to the first element of the list or array."
+msgstr ""
+
+msgid "Testing BZ #752021 Cross-Browser embed external video"
+msgstr ""
+
+msgid "Testing BZ #1110611 A line break is automatically inserted after cdata in code."
+msgstr ""
+
+msgid "Is there a newline inserted after this <code><![CDATA[CDATA]]></code>?"
+msgstr ""
+
+msgid "Testing BZ #1117561 CDATA tags"
+msgstr ""
+
+msgid "<![CDATA[=, >, >=, <, <=, <>]]>"
+msgstr ""
+
+msgid "<![CDATA[!=]]>"
+msgstr ""
+
+msgid "<![CDATA[<>]]>"
+msgstr ""
+
+msgid "Testing BZ #1135827 Single line comment being highlighted in a callout."
+msgstr ""
+
+msgid ""
+"\n"
+"package com.sample;\n"
+"\n"
+"import org.kie.api.runtime.process.WorkItem;\n"
+"import org.kie.api.runtime.process.WorkItemHandler;\n"
+"import org.kie.api.runtime.process.WorkItemManager;\n"
+"\n"
+"public class NotificationWorkItemHandler implements WorkItemHandler {\n"
+"\n"
+"  public void executeWorkItem(WorkItem workItem, WorkItemManager manager) {\n"
+"    String from = (String) workItem.getParameter(\"From\");\n"
+"    String to = (String) workItem.getParameter(\"To\");\n"
+"    String message = (String) workItem.getParameter(\"Message\");\n"
+"    String priority = (String) workItem.getParameter(\"Priority\");\n"
+"\n"
+"    // send email\n"
+"    EmailService service = ServiceRegistry.getInstance().getEmailService();\n"
+"    service.sendEmail(from, to, \"Notification\", message);\n"
+"\n"
+"    // notify manager that work item has been completed\n"
+"    manager.completeWorkItem(workItem.getId(), null);\n"
+"  }\n"
+"\n"
+"  public void abortWorkItem(WorkItem workItem, WorkItemManager manager) {\n"
+"  // Do nothing, notifications cannot be aborted\n"
+"  }\n"
+"\n"
+"}"
+msgstr ""
+
+msgid "The <code>ServiceRegistry</code> class is an example class implementing the task business logic."
+msgstr ""
+
+msgid "The <function>completeWorkItem()</function> call completes the work item execution."
+msgstr ""
+

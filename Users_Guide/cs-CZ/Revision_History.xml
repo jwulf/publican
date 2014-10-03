@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE appendix [
+<!ENTITY % sgml.features "IGNORE">
+<!ENTITY % xml.features "INCLUDE">
+<!ENTITY % DOCBOOK_ENTS PUBLIC "-//OASIS//ENTITIES DocBook Character Entities V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/dbcentx.mod">
+%DOCBOOK_ENTS;
+]>
+<appendix version="5.0" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>Přehled revizí</title>
+	 <simpara>
+		<revhistory>
+			<revision>
+				<revnumber>4.2-0.3</revnumber>
+				<date>Fri Oct 3 2014</date>
+				<author>
+					<firstname>Jeff</firstname>
+					<surname>Fearn</surname>
+					<email>jfearn@redhat.com</email>
+				</author>
+				<revdescription>
+					<simplelist>
+						<member>Soubory překladů synchronizovány s XML zdroji 4.2-0</member>
+					</simplelist>
+				</revdescription>
+			</revision>
+			 <revision>
+				<revnumber>4.2-0.2</revnumber>
+				 <date>Fri Oct 3 2014</date>
+				 <author>
+					<firstname>Jeff</firstname>
+					 <surname>Fearn</surname>
+					 <email>jfearn@redhat.com</email>
+				</author>
+				 <revdescription>
+					<simplelist>
+						<member>Soubory překladů synchronizovány s XML zdroji 4.2-0</member>
+
+					</simplelist>
+
+				</revdescription>
+
+			</revision>
+			 <revision>
+				<revnumber>4.2-0.1</revnumber>
+				 <date>Fri Oct 3 2014</date>
+				 <author>
+					<firstname>Jeff</firstname>
+					 <surname>Fearn</surname>
+					 <email>jfearn@redhat.com</email>
+				</author>
+				 <revdescription>
+					<simplelist>
+						<member>Soubory překladů synchronizovány s XML zdroji 4.2-0</member>
+
+					</simplelist>
+
+				</revdescription>
+
+			</revision>
+
+		</revhistory>
+
+	</simpara>
+</appendix>
+

@@ -1,0 +1,400 @@
+# peartown <josef.hruska@upcmail.cz>, 2014. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: 0\n"
+"POT-Creation-Date: 2014-05-06 14:10+1000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2014-08-14 12:11-0400\n"
+"Last-Translator: peartown <josef.hruska@upcmail.cz>\n"
+"Language-Team: Czech\n"
+"Language: cs\n"
+"X-Generator: Zanata 3.4.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Installing Publican"
+msgstr "Instalace Publicanu"
+
+#. Tag: title
+#, no-c-format
+msgid "Linux operating systems"
+msgstr "Operační systémy Linux"
+
+#. Tag: title
+#, no-c-format
+msgid "Important — Availability in repositories"
+msgstr "Důležité — Dostupnost v repositářích"
+
+#. Tag: para
+#, no-c-format
+msgid "The procedures documented in this section assume that <application>Publican</application> and its various dependencies are available in repositories to which your system has access."
+msgstr "Postupy zdokumentované v tomto oddílu předpokládají, že jsou <application>Publican</application> a jeho různé závislosti dostupné v repositářích, k nimž má váš systém přístup."
+
+msgid "Fedora &amp; Red Hat Enterprise Linux 6"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Open a terminal."
+msgstr "Otevřete terminál."
+
+#. Tag: para
+#, no-c-format
+msgid "Change to the root user: <command> su - </command>"
+msgstr "Přihlaste se jako uživatel root: <command> su - </command>"
+
+#. Tag: para
+#, no-c-format
+msgid "Run the following command to install the <package>publican</package> package and the <package>publican-doc</package> documentation package:"
+msgstr "Spusťe následující příkaz, abyste nainstalovali balíček <package>publican</package> a dokumentační balíček <package>publican-doc</package>:"
+
+msgid "<prompt>$</prompt> yum install publican\\*"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Several brand packages are available for use with <application>Publican</application>. Run the following command as the root user to install packages for building branded books:"
+msgstr "Je k dispozici několik balíčků grafické úpravy, které lze využít s <application>Publicanem</application>. Spusťte následující příkaz jako uživatel root, abyste nainstalovali balíčky pro sestavení knih s grafickými úpravami."
+
+#. Tag: screen
+#, no-c-format
+msgid "<prompt>$</prompt> <command> yum install publican-<replaceable>brand</replaceable></command>"
+msgstr "<prompt>$</prompt> <command> yum install publican-<replaceable>grafuprava</replaceable></command>"
+
+#. Tag: para
+#, no-c-format
+msgid "Replace <replaceable>brand</replaceable> with, for example, <literal>redhat</literal>, <literal>fedora</literal>, <literal>jboss</literal>, <literal>ovirt</literal>, or <literal>gimp</literal>. Refer to <xref linkend=\"chap-Publican-Users_Guide-Branding\" /> for more information on branding."
+msgstr "Nahraďte <replaceable>grafupravu</replaceable> na příklad slovem <literal>redhat</literal>, <literal>fedora</literal>, <literal>jboss</literal>, <literal>ovirt</literal> nebo <literal>gimp</literal>. Více informací o grafických úpravách viz <xref linkend=\"chap-Publican-Users_Guide-Branding\" />."
+
+#. Tag: title
+#, no-c-format
+msgid "Ubuntu"
+msgstr "Ubuntu"
+
+#. Tag: para
+#, no-c-format, fuzzy
+msgid "Run the following commands to checkout the <package>publican</package> source from GIT:"
+msgstr "Spusťte následující příkaz, abyste nainstalovali balíček <package>publican</package>:"
+
+#. Tag: screen
+#, no-c-format
+msgid "<prompt>$</prompt> <command>sudo apt-get install publican</command>"
+msgstr "<prompt>$</prompt> <command>sudo apt-get install publican</command>"
+
+msgid "Running publican from a GIT checkout"
+msgstr ""
+
+msgid "It is possible to run publican from a <application>GIT</application> checkout, without installing it, if the dependencies are installed."
+msgstr ""
+
+msgid "To checkout the source from GIT open a terminal."
+msgstr ""
+
+#. Tag: para
+#, no-c-format, fuzzy
+msgid "Run the following commands to checkout the <package>publican</package> source from GIT:"
+msgstr "Spusťte následující příkaz, abyste nainstalovali balíček <package>publican</package>:"
+
+msgid "<prompt>$</prompt> cd <replaceable>PATH TO PLACE SOURCE</replaceable>\n"
+"<prompt>$</prompt> git clone git://git.fedorahosted.org/publican.git publican"
+msgstr ""
+
+msgid "To run publican from this checkout run the following commands:"
+msgstr ""
+
+msgid "<prompt>$</prompt> PUBLICAN_PATH=\"<replaceable>PATH TO PLACE SOURCE</replaceable>/publican\"\n"
+"<prompt>$</prompt> perl -CDAS -I $PUBLICAN_PATH/lib $PUBLICAN_PATH/bin/publican build  --brand_dir $PUBLICAN_PATH/datadir/Common_Content/common --formats html"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "Windows operating systems"
+msgstr "Operační systémy Windows"
+
+msgid "Download the Publican installer from <uri xlink:href=\"https://fedorahosted.org/releases/p/u/publican/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">https://fedorahosted.org/releases/p/u/publican/</uri>."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Browse to the folder to which you downloaded <filename>Publican-Installer-<replaceable>version</replaceable>.exe</filename>."
+msgstr "Přejděte do adresáře, do kterého jste stáhli soubor <filename>Publican-Installer-<replaceable>verze</replaceable>.exe</filename>."
+
+#. Tag: para
+#, no-c-format
+msgid "Double-click the <filename>Publican-Installer-<replaceable>version</replaceable>.exe</filename> file."
+msgstr "Poklepejte na soubor <filename>Publican-Installer-<replaceable>version</replaceable>.exe</filename>."
+
+#. Tag: para
+#, no-c-format
+msgid "The installer presents you with a series of license agreements. All of the files that constitute a <application>Publican</application> installation are available under a free license. However, because different licenses are more suitable for certain parts of <application>Publican</application> than others, the <application>Publican</application> files are not all available under the same free license. Each license grants you a different set of rights and responsibilities when you copy or modify the files in your <application>Publican</application> installation. We chose this combination of licenses to allow you to use <application>Publican</application> as freely as possible and to allow you to choose whatever license you prefer for the documents that you publish with <application>Publican</application>."
+msgstr "Instalační program vám zobrazí sadu licenčních smluv. Všechny soubory, které představují instalaci <application>Publicanu</application>, jsou k dispozici pod svobodnou licencí. Nicméně protože jsou různé licence vhodnější pro určité části <application>Publicanu</application> než jiné, soubory <application>Publicanu</application> nejsou k dispozici pod jednou svobodnou licencí. Každá licence vám dává různou sadu práv a odpovědností, pokud rozmnožujete nebo měníte soubory ve své instalaci <application>Publicanu</application>. Zvolili jsme tuto kombinaci licencí, abychom vám umožnili používat <application>Publican</application> jak nejsvobodněji lze a zvolit si jakoukoliv licenci, kterou upřednostňuje pro dokumenty, které <application>Publicanem</application> zveřejníte."
+
+#. Tag: para
+#, no-c-format
+msgid "Read the terms of the various license agreements. If you agree to their terms, click <guibutton>I Agree</guibutton> on each of them, otherwise, click <guibutton>Cancel</guibutton>."
+msgstr "Přečtěte si ustanovení těchto různých licenčních smluv. Pokud s jejich zněním souhlasíte, stiskněte na každé tlačítko <guibutton>Souhlasím</guibutton>, jinak stiskněte <guibutton>Zrušit</guibutton>."
+
+#. Tag: para
+#, no-c-format
+msgid "The installer offers to install several components: <application>Publican</application> itself (labeled <literal>Main</literal> in the installer window), a number of <firstterm>brands</firstterm> (including <literal>RedHat</literal>, <literal>JBoss</literal>, and <literal>fedora</literal>), and two DocBook components (the DocBook <firstterm>Data Type Definition</firstterm> (DTD) and DocBook <firstterm>Extensible Stylesheet Language</firstterm> (XSL) stylesheets). The three brands are grouped under the collapsible heading <literal>Brands</literal> and the DocBook components are grouped under the collapsible heading <literal>DocBook</literal> in the installer window. Refer to <xref linkend=\"chap-Publican-Users_Guide-Branding\" /> for an explanation of brands in <application>Publican</application>. <application>Publican</application> uses the DTD and the XSL stylesheets to render XML documents in other presentation formats (such as HTML and PDF). If you do not install these components, <application>Publican</application> must download this data from the Internet every time it processes a document, which creates lengthy delays."
+msgstr "Instalační program vám nabídne instalaci několika součástí: samotný <application>Publican</application> (v okně instalace označený <literal>Hlavní</literal>), několik <firstterm>grafických úprav</firstterm> (včetně <literal>RedHat</literal>, <literal>JBoss</literal> a <literal>fedora</literal>) a dvě součásti DocBook (<firstterm>definici typu dokumentu</firstterm> (DTD) DocBook a styly <firstterm>rozšiřitelného stylového jazyka</firstterm> (XSL) DocBook). Tyto tři grafické úpravy jsou v okně instalace shromážděny pod rozbalovacím nadpisem <literal>Grafické úpravy</literal> a součásti DocBook pod rozbalovacím nadpisem <literal>DocBook</literal>. Vysvětlení grafických úprav v <application>Publicanu</application> viz <xref linkend=\"chap-Publican-Users_Guide-Branding\" />. <application>Publican</application> využívá DTD a styly XSL k renderování dokumentů XML do jiných prezentačních formátů (jako např. HTML a PDF). Vynecháte-li tyto součásti z instalace, <application>Publican</application> musí vždy při zpracovávání dokumentu tyto údaje stáhnout z Internetu, což vytváří velká zpoždění."
+
+#. Tag: para
+#, no-c-format
+msgid "All components are selected by default. Click the checkboxes to deselect any components that you do <emphasis>not</emphasis> require and click <guibutton>Next</guibutton> to continue."
+msgstr "Všechny součásti jsou standardně zaškrtnuty. Klepněte na zaškrtávací pole, abyste odstranili kterékoliv součásti z výběru, které  <emphasis>nevyžadujete</emphasis> a pro pokračování klepněte na <guibutton>Další</guibutton>."
+
+#. Tag: para
+#, no-c-format
+msgid "By default, the installer software creates a folder named <filename>Publican</filename> within the <filename><replaceable>%ProgramFiles%</replaceable></filename> folder of your computer — typically <filename>C:\\Program Files\\Publican</filename>. You can manually edit the path displayed in the <guilabel>Destination Folder</guilabel> box to select a different folder."
+msgstr "Software instalačního programu standardně vytvoří ve vašem počítači adresář nazvaný <filename>Publican</filename> v adresáři<filename><replaceable>%ProgramFiles%</replaceable></filename> — nejčastěji <filename>C:\\Program Files\\Publican</filename>. Ručně lze tuto cestu upravit v okně <guilabel>Cílový adresář</guilabel>, abyste zvolili jiný adresář."
+
+#. Tag: para
+#, no-c-format
+msgid "When you are satisfied with the destination folder, click <guibutton>Install</guibutton>."
+msgstr "Jste-li spokojení s cílovým adresářem, klepněte na <guibutton>Instalovat</guibutton>."
+
+#. Tag: para
+#, no-c-format
+msgid "The installer displays a progress bar as it installs <application>Publican</application>. To see more detailed information about the progress of the installation, click <guibutton>Show details</guibutton>."
+msgstr "Instalační program, jak instaluje <application>Publican</application>,  zobrazí ukazatel průběhu. Chcete-li zobrazit podrobnější informace z průběhu instalace, klepněte na <guibutton>Zobrazit podrobnosti</guibutton>."
+
+#. Tag: para
+#, no-c-format
+msgid "When the process finishes, the installer notifies you with the message <computeroutput>Completed</computeroutput>."
+msgstr "Když tento proces skončí, instalační program vás upozorní zprávou <computeroutput>Dokončeno</computeroutput>."
+
+#. Tag: para
+#, no-c-format
+msgid "Click <guibutton>Close</guibutton> to close the installer."
+msgstr "Klepněte na <guibutton>Zavřít</guibutton>, čímž ukončíte instalační program."
+
+#. Tag: title
+#, no-c-format
+msgid "OSX Lion"
+msgstr "OSX Lion"
+
+#. Tag: para
+#, no-c-format
+msgid "Install <application>Xcode</application> from Mac App store."
+msgstr "Nainstalujte <application>Xcode</application> z obchodu Mac App Store."
+
+#. Tag: para
+#, no-c-format
+msgid "<application>Xcode</application> is about 4GB. Be prepared to wait. It has things you need, though."
+msgstr "<application>Xcode</application> má velikost asi 4GB, proto se obrňte trpělivostí. Nicméně obsahuje potřebné věci."
+
+msgid "Install <application>Macports</application> from <uri xlink:href=\"http://guide.macports.org/chunked/installing.macports.html\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">http://guide.macports.org/chunked/installing.macports.html</uri>. Everything you install with it goes into <filename>/opt/local</filename>, away from your normal OS files."
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Install dependencies for publican, which are available as ports:"
+msgstr "Nainstalujte závislosti pro publican, které jsou k dispozici jako porty:"
+
+#. Tag: screen
+#, no-c-format
+msgid "<prompt>$</prompt><command>sudo port install</command> <option>docbook-xml docbook-xsl docbook-sgml-4.2 perl5 bash-completion p5-file-pushd p5-config-simple p5-file-find-rule p5-file-slurp p5-class-trigger p5-time-hires p5-list-moreutils p5-ipc-run3 p5-class-accessor p5-test-perl-critic p5-xml-libxslt p5-locale-gettext p5-image-size p5-file-copy-recursive p5-datetime p5-archive-zip p5-timedate p5-html-format p5-dbd-sqlite p5-xml-simple p5-devel-cover p5-test-pod p5-test-pod-coverage p5-template-toolkit</option>"
+msgstr "<prompt>$</prompt><command>sudo port install</command><option>docbook-xml docbook-xsl docbook-sgml-4.2 perl5 bash-completion p5-file-pushd p5-config-simple p5-file-find-rule p5-file-slurp p5-class-trigger p5-time-hires p5-list-moreutils p5-ipc-run3 p5-class-accessor p5-test-perl-critic p5-xml-libxslt p5-locale-gettext p5-image-size p5-file-copy-recursive p5-datetime p5-archive-zip p5-timedate p5-html-format p5-dbd-sqlite p5-xml-simple p5-devel-cover p5-test-pod p5-test-pod-coverage p5-template-toolkit</option> \n"
+
+#. Tag: para
+#, no-c-format
+msgid "Install CPAN modules for dependencies which can't be satisfied with ports. Note: this step will generate lots of messages, including warnings. Don't worry about them."
+msgstr "Nainstalujte moduly CPAN pro závislosti, které nemohou být vyřešeny porty. Poznámka: tento krok bude příčinou mnoha zpráv, včetně varování. Nedějte si však s nimi starosti."
+
+#. Tag: screen
+#, no-c-format
+msgid "<prompt>$</prompt><command>sudo cpan</command><option>Locale::Maketext::Gettext Locale::PO DateTime::Format::DateParse Syntax::Highlight::Engine::Kate XML::TreeBuilder File::Inplace String::Similarity HTML::FormatText::WithLinks::AndTables</option>"
+msgstr "<prompt>$</prompt><command>sudo cpan</command><option>Locale::Maketext::Gettext Locale::PO DateTime::Format::DateParse Syntax::Highlight::Engine::Kate XML::TreeBuilder File::Inplace String::Similarity HTML::FormatText::WithLinks::AndTables</option>"
+
+#. Tag: para
+#, no-c-format
+msgid "Install FOP if you want PDFs to work:"
+msgstr "Nainstalujte FOP, chcete-li, aby fungovaly PDF:"
+
+#. Tag: screen
+#, no-c-format
+msgid "<prompt>$</prompt> <command>sudo port install</command> <option>fop</option>"
+msgstr "<prompt>$</prompt> <command>sudo port install</command> <option>fop</option>"
+
+#. Tag: screen
+#, no-c-format
+msgid "<prompt>$</prompt> <command>echo</command> <option>\"FOP_OPTS='-Xms50m -Xmx700m'\" &gt; ~/.foprc</option>"
+msgstr "<prompt>$</prompt> <command>echo</command> <option>\"FOP_OPTS='-Xms50m -Xmx700m'\" &gt; ~/.foprc</option>"
+
+#. Tag: para
+#, no-c-format
+msgid "Check out Publican Main branch. This command should be run from your user home directory, for instance <filename>/Users/yourusername</filename>"
+msgstr "Přejděte (checkout) do hlavní větve Publicanu. Tento příkaz by měl být spuštěn z vašeho domácího adresáře, na příklad <filename>/Uživatelé/vašeuživatelskéjméno</filename>"
+
+#. Tag: screen
+#, no-c-format
+msgid "<prompt>$</prompt> <command>git clone</command> <option>git://git.fedorahosted.org/publican.git</option>"
+msgstr "<prompt>$</prompt> <command>git clone</command> <option>git://git.fedorahosted.org/publican.git</option>"
+
+#. Tag: para
+#, no-c-format
+msgid "Change directories:"
+msgstr "Změňte adresáře:"
+
+#. Tag: screen
+#, no-c-format
+msgid "<prompt>$</prompt> <command>cd</command> <option>publican/publican</option>"
+msgstr "<prompt>$</prompt> <command>cd</command> <option>publican/publican</option>"
+
+#. Tag: para
+#, no-c-format
+msgid "This directory should contain a file named <filename>Build.pl</filename>. Verify that you are in the correct directory, then run the following command. Ignore all the messages you get."
+msgstr "Tento adresář by měl obsahovat soubor s názvem <filename>Build.pl</filename>. Ověřte, zda se nacházíte ve správném adresáři, poté spusťte následující příkaz. Všechny vypsané zprávy ignorujte."
+
+#. Tag: screen
+#, no-c-format
+msgid "<prompt>$</prompt> <command>perl ./Build.PL</command>"
+msgstr "<prompt>$</prompt> <command>perl ./Build.PL</command>"
+
+#. Tag: screen
+#, no-c-format
+msgid "<prompt>$</prompt> <command>./Build</command>"
+msgstr "<prompt>$</prompt> <command>./Build</command>"
+
+#. Tag: para
+#, no-c-format
+msgid "Run the following command to install <application>Publican</application> and put all of its bits into <filename>/opt/local</filename>:"
+msgstr "Spusťte následující příkaz, abyste nainstalovali <application>Publican</application>, a uložte všechny jeho části do adresáře <filename>/opt/local</filename>:"
+
+#. Tag: screen
+#, no-c-format
+msgid "<prompt>$</prompt> <command>sudo ./Build install</command>"
+msgstr "<prompt>$</prompt> <command>sudo ./Build install</command>"
+
+#. Tag: title
+#, no-c-format
+msgid "Create and build a book"
+msgstr "Vytvořte a sestavte knihu"
+
+#. Tag: screen
+#, no-c-format
+msgid "<prompt>$</prompt> <command>publican create</command> <option>--name=testbook</option>"
+msgstr "<prompt>$</prompt> <command>publican create</command> <option>--name=testbook</option>"
+
+#. Tag: screen
+#, no-c-format
+msgid "<prompt>$</prompt> <command>cd testbook</command>"
+msgstr "<prompt>$</prompt> <command>cd testbook</command>"
+
+#. Tag: screen
+#, no-c-format
+msgid "<prompt>$</prompt> <command>publican build</command> <option>--formats=html --langs=en-US</option>"
+msgstr "<prompt>$</prompt> <command>publican build</command> <option>--formats=html --langs=en-US</option>"
+
+#. Tag: para
+#, no-c-format
+msgid "Open the <filename>tmp/en-US/html/index.html</filename> file in a browser to prove that it built correctly."
+msgstr "Otevřete soubor <filename>tmp/en-US/html/index.html</filename> v prohlížeči, abyste zjistili, zda se kniha sestavila bezchybně."
+
+#. Tag: title
+#, no-c-format
+msgid "Install a brand"
+msgstr "Nainstalujte grafickou úpravu"
+
+#. Tag: para
+#, no-c-format
+msgid "Fix the permissions of the Commons Brand. You have to do this only once. This is a bug that will be addressed eventually."
+msgstr "Opravte oprávnění grafické úpravy Commons Brand. To bude nutné pouze jednou. Jedná se o chybu, která bude příležitostně řešena."
+
+#. Tag: screen
+#, no-c-format
+msgid "<prompt>$</prompt> <command>find /opt/local/share/publican</command> <option>-type f</option> |<command>xargs sudo chmod 644</command>"
+msgstr "<prompt>$</prompt> <command>find /opt/local/share/publican</command> <option>-type f</option> |<command>xargs sudo chmod 644</command>"
+
+#. Tag: para
+#, no-c-format
+msgid "Either check out the SVN for your brand, or get a pre-built brand from a friend."
+msgstr "Zkontrolujte SVN vámi vybrané grafické úpravy, nebo získejte předsestavenou grafickou úpravu od přítele."
+
+msgid "The SVN location for the brands supplied by Red Hat is <uri xlink:href=\"http://svn.fedorahosted.org/svn/publican\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">http://svn.fedorahosted.org/svn/publican</uri>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "If you use a pre-built brand, extract it as necessary."
+msgstr "Použijete-li předsestavenou grafickou úpravu, rozbalte ji jak je třeba."
+
+#. Tag: para
+#, no-c-format
+msgid "If you got the brand from SVN, build it."
+msgstr "Získáte-li grafickou úpravu z SVN, sestavte ji."
+
+#. Tag: screen
+#, no-c-format
+msgid "<prompt>$</prompt> <command>cd publican/publican-jboss</command>"
+msgstr "<prompt>$</prompt> <command>cd publican/publican-jboss</command>"
+
+#. Tag: screen
+#, no-c-format
+msgid "<prompt>$</prompt> <command>publican build</command> <option>--formats=xml --langs=all --publish</option>"
+msgstr "<prompt>$</prompt> <command>publican build</command> <option>--formats=xml --langs=all --publish</option>"
+
+#. Tag: para
+#, no-c-format
+msgid "Install the brand."
+msgstr "Nainstalujte grafickou úpravu."
+
+#. Tag: screen
+#, no-c-format
+msgid "<prompt>$</prompt> <command>sudo publican install_brand</command> <option>--path=/opt/local/share/publican/Common_Content</option>"
+msgstr "<prompt>$</prompt> <command>sudo publican install_brand</command> <option>--path=/opt/local/share/publican/Common_Content</option>"
+
+#. Tag: para
+#, no-c-format
+msgid "You can now use the brand in your books by editing your book's <filename>publican.cfg</filename> file or specifying the <option>--brand</option> option when creating your book."
+msgstr "Nyní můžete využívat grafickou úpravu ve svých knihách, úpravou souboru <filename>publican.cfg</filename> své knihy nebo uvedením volby <option>--brand</option> při vytváření knihy."
+
+#. Tag: para
+#, no-c-format
+#~ msgid "Download the Publican installer from <ulink url=\"https://fedorahosted.org/releases/p/u/publican/\" />."
+#~ msgstr "Stáhněte si instalační program Publicanu ze stránky <ulink url=\"https://fedorahosted.org/releases/p/u/publican/\" />."
+
+#. Tag: para
+#, no-c-format
+#~ msgid "Install <application>Macports</application> from <ulink url=\"http://guide.macports.org/chunked/installing.macports.html\" />. Everything you install with it goes into <filename>/opt/local</filename>, away from your normal OS files."
+#~ msgstr "Nainstalujte <application>Macports</application> ze stránky <ulink url=\"http://guide.macports.org/chunked/installing.macports.html\" />. Vše co nainstalujete, naleznete v <filename>/opt/local</filename>, tedy mimo své normální soubory OS."
+
+#. Tag: para
+#, no-c-format
+#~ msgid "The SVN location for the brands supplied by Red Hat is <ulink url=\"http://svn.fedorahosted.org/svn/publican\" />"
+#~ msgstr "Adresa SVN pro grafické úpravy poskytované společností Red Hat je <ulink url=\"http://svn.fedorahosted.org/svn/publican\" />"
+
+#. Tag: title
+#, no-c-format
+#~ msgid "Fedora"
+#~ msgstr "Fedora"
+
+#. Tag: title
+#, no-c-format
+#~ msgid "Important — Dependencies available only internally to Red Hat"
+#~ msgstr "Důležité — Závislosti dostupné pouze interně společnosti Red Hat"
+
+#. Tag: para
+#, no-c-format
+#~ msgid "Installing <application>Publican</application> on Red Hat Enterprise Linux 5 requires a number of dependencies that are presently available only in yum repositories that are internal to Red Hat."
+#~ msgstr "Instalace <application>Publicanu</application> na Red Hat Enterprise Linux 5 vyžaduje několik závislostí, které jsou v současnosti dostupné pouze v interních repositářích yum společnosti Red Hat."
+
+#. Tag: para
+#, no-c-format
+#~ msgid "<application>Publican</application> is not part of the Red Hat Enterprise Linux distribution. Therefore, Red Hat does not offer support for <application>Publican</application>."
+#~ msgstr "<application>Publican</application> není součástí distribuce Red Hat Enterprise Linux. Proto společnost Red Hat nenabízí pro <application>Publican</application> podporu."
+
+#. Tag: title
+#, no-c-format
+#~ msgid "Red Hat Enterprise Linux 5"
+#~ msgstr "Red Hat Enterprise Linux 5"
+
+#. Tag: title
+#, no-c-format
+#~ msgid "Important — Unsupported software"
+#~ msgstr "Důležité — Nepodporovaný software"
+

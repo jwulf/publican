@@ -1,0 +1,139 @@
+# peartown <josef.hruska@upcmail.cz>, 2014. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: 0\n"
+"POT-Creation-Date: 2014-05-06 14:10+1000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2014-09-25 01:55-0400\n"
+"Last-Translator: peartown <josef.hruska@upcmail.cz>\n"
+"Language-Team: Czech\n"
+"Language: cs\n"
+"X-Generator: Zanata 3.4.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Adding code samples"
+msgstr "Přidání příkladů kódu"
+
+#. Tag: para
+#, no-c-format
+msgid "If your book contains code samples, place them in a directory named <filename>extras/</filename> in your source language directory and use an <tag>&lt;xi:include&gt;</tag> to pull the code file into the XML structure of your document. <application>Publican</application> does not parse any files that it finds in the <filename>extras/</filename> directory as XML."
+msgstr "Obsahuje-li vaše kniha příklady programových kódů, umístěte je do adresáře <filename>extras/</filename> v adresáři svého zdrojového jazyka, a pro načtení souboru s kódem do struktury XML dokumentu používejte <sgmltag>&lt;xi:include&gt;</sgmltag>. <application>Publican</application> neprovádí syntaktickou analýzu žádného souboru jako XML, který nalezne v adresáři <filename>extras/</filename>."
+
+#. Tag: para
+#, no-c-format
+msgid "Certain characters are reserved in XML, in particular, <literal>&amp;</literal> and <literal>&lt;</literal>. If you insert code samples directly into the XML of your document, you must escape these characters, either by marking them as <literal>CDATA</literal> or by replacing them with entities (&amp;amp; and &amp;lt; respectively).<footnote> <para> Refer to section 2.4 \"Character Data and Markup\" in the XML 1.0 standard, available from <uri xlink:href=\"http://www.w3.org/TR/2008/REC-xml-20081126/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">http://www.w3.org/TR/2008/REC-xml-20081126/</uri>. </para> </footnote> If you place these files in the <filename>extras/</filename> directory, you do not need to escape these characters. This approach saves time, reduces the chances of introducing errors into either the document XML or the code itself, and makes future maintenance of the document and the code easier."
+msgstr "Některé znaky jsou v XML rezervované, zejména <literal>&amp;</literal> a <literal>&lt;</literal>. Vložíte-li příklady kódu přímo do XML svého dokumentu, musíte tyto znaky escapovat buď jejich označením jako <literal>CDATA</literal>, nebo nahrazením entitami (&amp;amp&semi;, resp. &amp;lt&semi;). <footnote> <para> Viz kap. 2.4 \"Character Data and Markup\" normy XML&nbsp;1.0, dostupná on-line <ulink url=\"http://www.w3.org/TR/2008/REC-xml-20081126/\" />. </para> </footnote> Umístíte-li tyto soubory do adresáře <filename>extras/</filename>, není nutné tyto znaky escapovat. Tento přístup šetří čas, snižuje šanci na zavedení chyb jak do XML dokumentu, tak do kódu samotného, a zjednodušuje budoucí údržbu dokumentu i kódu."
+
+#. Tag: para
+#, no-c-format
+msgid "To include a code sample from the <filename>extras/</filename> directory in your document, follow this procedure:"
+msgstr "Chcete-li vložit příklad kódu z adresáře <filename>extras/</filename> do dokumentu, dodržujte tento postup:"
+
+#. Tag: para
+#, no-c-format
+msgid "Create the extras directory"
+msgstr "Vytvořte adresář extras"
+
+#. Tag: screen
+#, no-c-format
+msgid "<prompt>$</prompt> <command>mkdir <filename>en-US/extras</filename></command>"
+msgstr "<prompt>$</prompt> <command>mkdir <filename>cs-CZ/extras</filename></command>"
+
+#. Tag: para
+#, no-c-format
+msgid "Copy the code file to the extras directory"
+msgstr "Zkopírujte soubor s kódem do adresáře extras"
+
+#. Tag: screen
+#, no-c-format
+msgid "<prompt>$</prompt> <command>cp <filename>~/samples/foo.c en-US/extras/.</filename></command>"
+msgstr "<prompt>$</prompt> <command>cp <filename>~/priklady/foo.c en-US/extras/.</filename></command>"
+
+#. Tag: para
+#, no-c-format
+msgid "<tag>xi:include</tag> the sample file in your xml file"
+msgstr "vložte ukázkový soubor do svého souboru XML pomocí <sgmltag>xi:include</sgmltag>"
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"&lt;programlisting&gt;\n"
+"&lt;xi:include parse=\"text\" href=\"extras/foo.c\" xmlns:xi=\"http://www.w3.org/2001/XInclude\" /&gt;\n"
+"&lt;/programlisting&gt;"
+msgstr ""
+"&lt;programlisting&gt;\n"
+"&lt;xi:include parse=\"text\" href=\"extras/foo.c\" xmlns:xi=\"http://www.w3.org/2001/XInclude\" /&gt;\n"
+"&lt;/programlisting&gt;"
+
+#. Tag: para
+#, no-c-format
+msgid "You can now edit <filename>en-US/extras/foo.c</filename> in your favorite editor without having to be concerned about how it will affect the XML."
+msgstr "Nyní můžete upravovat <filename>cs-CZ/extras/foo.c</filename> ve svém oblíbeném editoru bez ohledu na to, jaký bude mít vliv na XML."
+
+#. Tag: para
+#, no-c-format
+msgid "The same approach works when you want to annotate your code with callouts. For example:"
+msgstr "Stejný přístup funguje, chcete-li popsat svůj kód popisky. Na příklad:"
+
+#. Tag: programlisting
+#, no-c-format
+msgid ""
+"&lt;programlistingco&gt;\n"
+"	&lt;areaspec&gt;\n"
+"		&lt;area id=\"orbit-for-parameter\" coords='4 75'/&gt;\n"
+"		&lt;area id=\"orbit-for-magnitude\" coords='12 75'/&gt;\n"
+"	&lt;/areaspec&gt;\n"
+"	&lt;programlisting language=\"Fortran\"&gt;&lt;xi:include parse=\"text\" href=\"extras/orbit.for\"\n"
+"	xmlns:xi=\"http://www.w3.org/2001/XInclude\" /&gt;&lt;/programlisting&gt;\n"
+"	&lt;calloutlist&gt;\n"
+"		&lt;callout id=\"callout-for-parameter\" arearefs=\"orbit-for-parameter\"&gt;\n"
+"			&lt;para&gt;\n"
+"				The &lt;firstterm&gt;standard gravitational parameter&lt;/firstterm&gt;\n"
+"				(μ) is a derived value, the product of Newton's gravitational \n"
+"				constant (G) and the mass of the primary body.\n"
+"			&lt;/para&gt;\n"
+"		&lt;/callout&gt;\n"
+"		&lt;callout id=\"callout-for-magnitude\" arearefs=\"orbit-for-magnitude\"&gt;\n"
+"			&lt;para&gt;\n"
+"				Since the mass of the orbiting body is many orders of magnitude \n"
+"				smaller than the mass of the primary body, the mass of the \n"
+"				orbiting body is ignored in this calculation.\n"
+"			&lt;/para&gt;\n"
+"		&lt;/callout&gt;\n"
+"	&lt;/calloutlist&gt;\n"
+"&lt;/programlistingco&gt;"
+msgstr ""
+"&lt;programlistingco&gt;\n"
+"\t&lt;areaspec&gt;\n"
+"\t\t&lt;area id=\"bublina-pro-parametr\" coords='4 75'/&gt;\n"
+"\t\t&lt;area id=\"bublina-pro-magnitudu\" coords='12 75'/&gt;\n"
+"\t&lt;/areaspec&gt;\n"
+"\t&lt;programlisting language=\"Fortran\"&gt;&lt;xi:include parse=\"text\" href=\"extras/orbit.for\"\n"
+"\txmlns:xi=\"http://www.w3.org/2001/XInclude\" /&gt;&lt;/programlisting&gt;\n"
+"\t&lt;calloutlist&gt;\n"
+"\t\t&lt;callout id=\"popisek-pro-parametr\" arearefs=\"bublina-pro-parametr\"&gt;\n"
+"\t\t\t&lt;para&gt;\n"
+"\t\t\t\t&lt;firstterm&gt;Standardní gravitační parametr&lt;/firstterm&gt;\n"
+"\t\t\t\t(μ) je veličina, která se rovná součinu univerzální gravitační \n"
+"\t\t\t\tkonstanty (G) a hmotnosti přirozeného kosmického tělesa.\n"
+"\t\t\t&lt;/para&gt;\n"
+"\t\t&lt;/callout&gt;\n"
+"\t\t&lt;callout id=\"popisek-pro-magnitudu\" arearefs=\"bublina-pro-magnitudu\"&gt;\n"
+"\t\t\t&lt;para&gt;\n"
+"\t\t\t\tJelikož hmotnost obíhajícího tělesa je o několik řádů \n"
+"\t\t\t\tmenší než hmotnost primárního tělesa, hmotnost \n"
+"\t\t\t\tobíhajícího tělesa není do výpočtu zahrnuta.\n"
+"\t\t\t&lt;/para&gt;\n"
+"\t\t&lt;/callout&gt;\n"
+"\t&lt;/calloutlist&gt;\n"
+"&lt;/programlistingco&gt;"
+
+#. Tag: para
+#, no-c-format
+msgid "Note the <tag>&lt;area&gt;</tag> elements that define the position of the callouts that will appear on the code sample. The <literal>coords</literal> attributes specify a line number and a column number separated by a space. In this example, callouts are applied to lines 4 and 12 of the code, lined up with each other in column 75. Although this approach means that you might have to adjust <literal>coords</literal> attributes if you ever modify the code to which they apply, it avoids mixing XML <tag>&lt;coords&gt;</tag> tags into the code itself."
+msgstr "Všimněte si, že elementy  <sgmltag>&lt;area&gt;</sgmltag> určují pozici popisků, které se zobrazí nad příkladem kódu. Atributy <literal>coords</literal> uvádějí číslo řádku a sloupce oddělené mezerou. V této ukázce jsou popisky použity na řádky 4 a 12, zarovnané na sloupec 75. Ačkoliv tento přístup značí, že byste museli upravit atributy <literal>coords</literal>, změnili-li byste někdy kód, na který se vztahují, zabraňuje mísení tagů <sgmltag>&lt;area&gt;</sgmltag> XML do samotného kódu."
+

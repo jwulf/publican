@@ -10,7 +10,7 @@
 	 <simpara>
 		<revhistory>
 			<revision>
-				<revnumber>4.2-0.2</revnumber>
+				<revnumber>4.2-0.5</revnumber>
 				<date>Fri Oct 3 2014</date>
 				<author>
 					<firstname>Jeff</firstname>
@@ -22,6 +22,57 @@
 						<member>Fichiers de traduction synchronisés avec les sources XML 4.2-0</member>
 					</simplelist>
 				</revdescription>
+			</revision>
+			 <revision>
+				<revnumber>4.2-0.4</revnumber>
+				 <date>Fri Oct 3 2014</date>
+				 <author>
+					<firstname>Jeff</firstname>
+					 <surname>Fearn</surname>
+					 <email>jfearn@redhat.com</email>
+				</author>
+				 <revdescription>
+					<simplelist>
+						<member>Fichiers de traduction synchronisés avec les sources XML 4.2-0</member>
+
+					</simplelist>
+
+				</revdescription>
+
+			</revision>
+			 <revision>
+				<revnumber>4.2-0.3</revnumber>
+				 <date>Fri Oct 3 2014</date>
+				 <author>
+					<firstname>Jeff</firstname>
+					 <surname>Fearn</surname>
+					 <email>jfearn@redhat.com</email>
+				</author>
+				 <revdescription>
+					<simplelist>
+						<member>Fichiers de traduction synchronisés avec les sources XML 4.2-0</member>
+
+					</simplelist>
+
+				</revdescription>
+
+			</revision>
+			 <revision>
+				<revnumber>4.2-0.2</revnumber>
+				 <date>Fri Oct 3 2014</date>
+				 <author>
+					<firstname>Jeff</firstname>
+					 <surname>Fearn</surname>
+					 <email>jfearn@redhat.com</email>
+				</author>
+				 <revdescription>
+					<simplelist>
+						<member>Fichiers de traduction synchronisés avec les sources XML 4.2-0</member>
+
+					</simplelist>
+
+				</revdescription>
+
 			</revision>
 			 <revision>
 				<revnumber>4.2-0.1</revnumber>

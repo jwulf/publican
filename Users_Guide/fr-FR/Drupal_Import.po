@@ -1,18 +1,19 @@
 # Gé Baylard <<Geodebay@gmail.com>>, 2013.
-# Gérard Baylard <geodebay@gmail.com>, 2013. #zanata
+# Gé Baylard <geodebay@gmail.com>, 2013.
+# Gérard Baylard <geodebay@gmail.com>, 2014. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2013-03-08T03:26:30\n"
-"PO-Revision-Date: 2013-09-08 12:52-0400\n"
-"Last-Translator: Gérard Baylard <geodebay@gmail.com>\n"
-"Language-Team: français <<trans-fr@lists.fedoraproject.org>>\n"
+"POT-Creation-Date: 2014-05-06 14:10+1000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2014-05-12 12:52-0400\n"
+"Last-Translator: Gérard Baylard <geodebay@gmail.com>\n"
+"Language-Team: français <>\n"
 "Language: fr\n"
-"X-Generator: Zanata 3.3.2\n"
-"Plural-Forms: nplurals=2; plural=n>1;\n"
+"X-Generator: Zanata 3.4.2\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #. Tag: title
 #, no-c-format
@@ -22,34 +23,34 @@ msgstr "Importer un ouvrage dans Drupal"
 #. Tag: para
 #, no-c-format
 msgid "<application>Publican 3.1</application> has a new functionality which allow user to create and import a book into Drupal. All xml files in a book are transformed into a single CSV file which will later be used to import into Drupal."
-msgstr "<application>Publican 3.1</application> possède une nouvelle fonctionnalité qui permet à l'utilisateur de créer et d'importer des contenus dans Drupal. Tous les fichiers XML d'un ouvrage sont transformés en un fichier CSV unique qui sera plus tard utilisé pour une importation dans Drupal."
+msgstr "<application>Publican 3.1</application> possède une nouvelle fonctionnalité qui permet à l'utilisateur de créer et d'importer un ouvrage dans Drupal. Tous les fichiers XML de l'ouvrage sont transformés en un fichier CSV unique utilisé plus tard pour l'importation dans Drupal."
 
 #. Tag: title
 #, no-c-format
 msgid "How to build a CSV file for Drupal import"
-msgstr "Comment construire un fichier CSV pour importation dans Drupal"
+msgstr "Comment construire un fichier CSV pour importation dans Drupal ?"
 
 #. Tag: para
 #, no-c-format
 msgid "The CSV File consists of information that tells Drupal how to import the book. Each row in the CSV file represents a html page."
-msgstr "Le fichier CSV donne l'information indiquant à Drupal la manière d'importer l'ouvrage. Chaque ligne du fichier CSV représente une page html."
+msgstr "Le fichier CSV indique à Drupal la manière d'importer l'ouvrage. Chaque ligne du fichier CSV représente une page html."
 
 #. Tag: para
 #, no-c-format
 msgid "Use the <prompt>$</prompt> <command>publican build</command> command to create the CSV file for Drupal import. Before running the command, use the cd command to change into the directory where your book is located. For example, if you have a book call \"User_Guide\" in your home directory, then run the following command."
-msgstr "Utilisez la commande <command>publican build</command> pour créer le fichier CSV d'importation dans Drupal. Avant de lancer la commande, utilisez cd pour vous déplacer dans le répertoire où votre ouvrage est situé. Par exemple, si vous avez un ouvrage nommé « Guide utilisateur » dans votre répertoire personnel, exécutez la commande :"
+msgstr "Utilisez la commande <prompt>$</prompt> <command>publican build</command> pour créer le fichier CSV d'importation dans Drupal. Avant de lancer la commande, utilisez « cd » pour vous déplacer dans le répertoire où votre ouvrage est situé. Par exemple, si vous avez un ouvrage nommé « Guide utilisateur » dans votre répertoire personnel, exécutez la commande :"
 
 #. Tag: screen
 #, no-c-format
 msgid "<prompt>$</prompt> <command>cd User_Guide/</command>\n"
 "<prompt>$</prompt> <command>publican build --langs en-US --formats=drupal-book</command>"
-msgstr "<command>cd Guide_utilisateur/</command>\n"
-"<command>publican build --langs en-US --formats=drupal-book</command>"
+msgstr "<prompt>$</prompt> <command>cd Guide_utilisateur/</command>\n"
+"<prompt>$</prompt> <command>publican build --langs en-US --formats=drupal-book</command>"
 
 #. Tag: para
 #, no-c-format
 msgid "After running the command, you will see CSV file is created in the <filename>tmp/en-US/drupal-book/</filename> directory."
-msgstr "Une fois la commande exécutée, vous constaterez qu'un fichier CVS a été créé dans le répertoire <filename>tmp/en-US/drupal-book/</filename>."
+msgstr "Une fois la commande exécutée, vous constatez qu'un fichier CVS a été créé dans le répertoire <filename>tmp/en-US/drupal-book/</filename>."
 
 #. Tag: para
 #, no-c-format
@@ -79,7 +80,7 @@ msgstr "Important — Utiliser le système de contrôle de version"
 #. Tag: para
 #, no-c-format
 msgid "After running the <prompt>$</prompt> <command>publican build --langs en-US --formats=drupal-book</command> command, you will notice that the xml files in the <filename>en-US</filename> directory had been changed. This is because <application>Publican</application> added a <parameter>'Conformance'</parameter> attribute for every xml tag that has id. This attribute contains a number which is unique across xml files in the book. If you are using a version control system like <application>git</application> for your xml files, then you need to commit the changes so that the number won't get reset when other users run it. These unique numbers are very important, because they are use as the url path in drupal. Besides, <application>Publican</application> also created a database file name <filename>max_unique_id.db</filename> in the <filename>en-US</filename> directory. This database file is use to track the current maximum unique number in the book, so that <application>Publican</application> can know where you are up to and add a new unique number for your newly created Chapter or Section. Therefore, it is very important to add the database file to the version control and commit it if there is any change. If you add a new section in the xml, don't set the <parameter>'Comformance'</parameter> attribute yourself as that will make the database outdated. Just leave it for <application>publican</application> to set it."
-msgstr "Après avoir exécuté la commande <command>publican build --langs en-US --formats=drupal-book</command>, vous remarquerez que les fichiers xml dans le répertoire <filename>en-US</filename> ont été modifiés. En effet, <application>Publican</application> a ajouté un attribut de <parameter>« conformité »</parameter> pour chaque balise qu'il a identifiée. Cet attribut contient un nombre unique dans l'ensemble des fichiers xml de l'ouvrage. Si vous utilisez un système de contrôle de version comme <application>git</application> pour le fichiers xml, vous devrez enregistrer les changements de façon à ce que ce nombre ne soit pas réinitialisé quand d'autres utilisateurs exécutent git. Ces nombres uniques sont importants : ils sont utilisés dans le chemin de l'url dans Drupal. Conjointement, <application>Publican</application> a créé un fichier base de données <filename>max_unique_id.db</filename> dans le répertoire <filename>en-US</filename>. Cette base de données s'utilise pour suivre le nombre unique le plus grand dans les documents ; ainsi, <application>Publican</application> sait où vous en êtes pour ajouter un nouveau nombre unique pour les chapitres ou les sections nouvellement créés. Donc, il est important d'ajouter le fichier base de données pour le contrôle de version et de l'enregistrer s'il y a eu un quelconque changement. Si vous ajoutez une nouvelle section dans le xml, ne définissez pas l'attribut du paramètre de <parameter>« conformité »</parameter> vous-même car cela rendrait la base de données caduque. Laissez <application>publican</application> le faire pour vous."
+msgstr "Après avoir exécuté la commande <prompt>$</prompt> <command>publican build --langs en-US --formats=drupal-book</command>, vous remarquerez que les fichiers xml dans le répertoire <filename>en-US</filename> ont été modifiés. En effet, <application>Publican</application> a ajouté un attribut de <parameter>« conformité »</parameter> pour chaque balise qu'il a identifiée. Cet attribut contient un nombre unique dans l'ensemble des fichiers xml de l'ouvrage. Si vous utilisez un système de contrôle de version comme <application>git</application> pour les fichiers xml, vous devrez enregistrer les changements de façon à ce que ce nombre ne soit pas réinitialisé quand d'autres utilisateurs exécutent « git ». Ces nombres uniques sont importants : ils sont utilisés dans le chemin de l'URL dans Drupal. Conjointement, <application>Publican</application> a créé un fichier base de données <filename>max_unique_id.db</filename> dans le répertoire <filename>en-US</filename>. Cette base de données s'utilise pour suivre le plus grand nombre unique dans les documents ; ainsi, <application>Publican</application> sait où vous en êtes pour ajouter un nouveau nombre unique pour les chapitres ou les sections nouvellement créés. Donc, il est important d'ajouter le fichier base de données pour le contrôle de version et de l'enregistrer s'il y a eu un quelconque changement. Si vous ajoutez une nouvelle section dans le xml, ne définissez pas l'attribut du paramètre de <parameter>« conformité »</parameter> vous-même car cela rendrait la base de données caduque. Laissez <application>publican</application> le faire pour vous."
 
 #. Tag: title
 #, no-c-format
@@ -99,7 +100,7 @@ msgstr "<parameter>drupal_author</parameter>"
 #. Tag: para
 #, no-c-format
 msgid "specfies the author who should be shown in drupal book page. The name must be a valid Drupal username. 'Redhat' is the default author. Set this parameter in the <filename>publican.cfg</filename> file to override it."
-msgstr "définit le nom d'auteur qui sera affiché dans les pages de l'ouvrage Drupal. Le nom doit être un nom d'utilisateur Drupal valide. « Redhat » est l'auteur par défaut. Pour l'écraser, définissez une autre valeur pour ce paramètre dans le fichier <filename>publican.cfg</filename>."
+msgstr "définit le nom d'auteur qui sera affiché dans les pages de l'ouvrage Drupal. Le nom doit être un nom d'utilisateur Drupal valide. « Redhat » est l'auteur par défaut. Pour le surcharger, définissez une autre valeur pour ce paramètre dans le fichier <filename>publican.cfg</filename>."
 
 #. Tag: title
 #, no-c-format
@@ -119,7 +120,7 @@ msgstr "<parameter>drupal_menu_title</parameter>"
 #. Tag: para
 #, no-c-format
 msgid "override the bookname that will be shown in the Drupal menu. If nothing is set, <application>publican</application> will use the default value which is \"$product $version $docname\". For example, Publican 3.1 User_Guide."
-msgstr "prend le pas sur le nom d'ouvrage indiqué dans le menu Drupal. Si rien n'est défini, <application>publican</application> utilisera la valeur par défaut qui est « $product $version $docname ». Par exemple,  Publican 3.1 Guide_utilisateur."
+msgstr "renomme l'ouvrage tel qu'il sera affiché dans le menu Drupal. Si rien n'est défini, <application>publican</application> utilisera la valeur par défaut qui est « $product $version $docname ». Par exemple,  Publican 3.1 Guide_utilisateur."
 
 #. Tag: term
 #, no-c-format
@@ -136,8 +137,10 @@ msgstr "définit le bloc de menu que l'ouvrage doit afficher dans Drupal. La val
 msgid "Important — Setting menu block"
 msgstr "Important — Définir le bloc de menu"
 
+#. Tag: para
+#, no-c-format
 msgid "The menu block must exist in Drupal. For more information about adding a menu block in Drupal. Please refer to <xref linkend=\"sect-Publican-Users_Guide-Drupal_Import_Guide-How_to_add_a_menu_block\" />."
-msgstr ""
+msgstr "Le bloc de menu doit exister dans Drupal. Pour plus d'informations à propos de l'ajout d'un bloc de menu dans Drupal, voyez la <xref linkend=\"sect-Publican-Users_Guide-Drupal_Import_Guide-How_to_add_a_menu_block\" />."
 
 #. Tag: term
 #, no-c-format
@@ -167,7 +170,7 @@ msgstr "Important — Activer les modules du cœur de Drupal"
 #. Tag: para
 #, no-c-format
 msgid "You also need to enable the following Drupal core modules:"
-msgstr "Vous devez également activer les modules du cœur de Drupal :"
+msgstr "Vous devez également activer les modules du cœur de Drupal suivants :"
 
 #. Tag: para
 #, no-c-format
@@ -197,7 +200,7 @@ msgstr "Veuillez consulter votre administrateur réseau si vous n'avez pas l'aut
 #. Tag: title
 #, no-c-format
 msgid "How to add a menu block"
-msgstr "Comment ajouter un bloc menu"
+msgstr "Comment ajouter un bloc menu ?"
 
 #. Tag: para
 #, no-c-format
@@ -212,7 +215,7 @@ msgstr "<guilabel>Nom du menu</guilabel> — le nom unique du menu. Cette valeu
 #. Tag: para
 #, no-c-format
 msgid "<guilabel>Title</guilabel> - The title of the menu. It will be displayed on top of the menu block."
-msgstr "<guilabel>Titre</guilabel> — Le titre du menu. Il s'affichera en tête du bloc de menu."
+msgstr "<guilabel>Titre</guilabel> — le titre du menu. Il s'affichera en tête du bloc de menu."
 
 #. Tag: title
 #, no-c-format
@@ -247,7 +250,7 @@ msgstr "Important — Propriété du fichier"
 #. Tag: para
 #, no-c-format
 msgid "Users will only be allowed to use files they have uploaded themselves and files owned by anonymous. If you leave this field blank, all files uploaded by FTP will be owned by anonymous and so all users will see those files as being available for them. If you enter a username here, files that are uploaded using FTP will be owned by that user and only that user will be able to see those uploaded files. It is recommended to leave this field blank."
-msgstr "Les utilisateurs ont uniquement l'autorisation d'utiliser les fichiers téléversés par leur soins ainsi que ceux attribués anonymement. Si vous laissez ce champ en blanc, tous les fichiers téléversés par FTP auront un propriétaire anonyme ; ces fichiers seront donc disponibles pour tout utilisateur. Si vous entrez un nom d'utilisateur ici, les fichiers téléversés avec FTP sont la propriété de cet utilisateur et seul celui-ci sera capable de les voir. Il est recommandé de laisser ce champ en blanc."
+msgstr "Les utilisateurs n'ont l'autorisation d'utiliser que les fichiers téléversés par leurs soins et ceux attribués anonymement. Si vous laissez ce champ en blanc, tous les fichiers téléversés par FTP appartiennent à un anonyme ; ces fichiers sont donc disponibles à tous. Si vous entrez un nom d'utilisateur, les fichiers téléversés avec FTP sont la propriété de celui-ci et il sera le seul susceptible de les voir. Il est recommandé de laisser ce champ en blanc."
 
 #. Tag: para
 #, no-c-format
@@ -272,25 +275,27 @@ msgstr "<guilabel>Première ligne contenant les noms de colonnes</guilabel> —�
 #. Tag: title
 #, no-c-format
 msgid "How to import book"
-msgstr "Comment importer un ouvrage"
+msgstr "Comment importer un ouvrage ?"
 
 #. Tag: title
 #, no-c-format
 msgid "To import book into Drupal:"
 msgstr "Pour importer un ouvrage dans Drupal :"
 
+#. Tag: para
+#, no-c-format
 msgid "Follow the steps in <xref linkend=\"sect-Publican-Users_Guide-Import_book_into_Drupal-How_to_build_a_CSV_file_for_Drupal_import\" />"
-msgstr ""
+msgstr "Parcourir les étapes précisées dans la <xref linkend=\"sect-Publican-Users_Guide-Import_book_into_Drupal-How_to_build_a_CSV_file_for_Drupal_import\" />."
 
 #. Tag: para
 #, no-c-format
 msgid "Upload the CSV file to <filename>import Directory</filename> in the Drupal Server"
-msgstr "Téléverser le fichier CSV dans le <filename>répertoire d'importation</filename> du serveur Drupal."
+msgstr "Téléverser le fichier CSV dans le <filename>répertoire d'importation</filename> du serveur Drupal,"
 
 #. Tag: para
 #, no-c-format
 msgid "Upload <filename>en-US</filename> directory to the <filename>\"sites/default/files/\"</filename> directory in the Drupal server. This value can be overriden in the <filename>publican.cfg</filename>. For more details, please read <xref linkend=\"sect-Publican-Users_Guide-Import_book_into_Drupal-The_publican.cfg_file\" />"
-msgstr "Téléverser le répertoire <filename>en-US</filename> dans le répertoire <filename>« sites/default/files/ »</filename> du serveur Drupal. Cette valeur peut être écrasée avec celle indiquée dans <filename>publican.cfg</filename>. Pour plus de détails, veuillez lire la <xref linkend=\"sect-Users_Guide-Import_book_into_Drupal-The_publican_cfg_file\" />."
+msgstr "Téléverser le répertoire <filename>en-US</filename> dans le répertoire <filename>« sites/default/files/ »</filename> du serveur Drupal. Cette valeur peut être écrasée avec celle indiquée dans <filename>publican.cfg</filename>. Pour plus de détails, veuillez lire la <xref linkend=\"sect-Publican-Users_Guide-Import_book_into_Drupal-The_publican.cfg_file\" />."
 
 #. Tag: para
 #, no-c-format
@@ -310,10 +315,12 @@ msgstr "Un lien vers l'ouvrage est maintenant affiché dans le bloc de menu déf
 #. Tag: title
 #, no-c-format
 msgid "How to update book"
-msgstr "Comment mettre à jour un ouvrage"
+msgstr "Comment mettre à jour un ouvrage ?"
 
+#. Tag: para
+#, no-c-format
 msgid "Simply repeat the steps in <xref linkend=\"sect-Publican-Users_Guide-Drupal_Import_Guide-How_to_import_book\" /> to update the book."
-msgstr ""
+msgstr "Refaites simplement les étapes de la <xref linkend=\"sect-Publican-Users_Guide-Drupal_Import_Guide-How_to_import_book\" /> pour mettre à jour l'ouvrage."
 
 #. Tag: title
 #, no-c-format
@@ -323,20 +330,5 @@ msgstr "Attention — Découpage en sections"
 #. Tag: para
 #, no-c-format
 msgid "If you update the book with smaller chunks, than the missing chunks will be deleted by Drupal and the URL path for the deleted chunks will be deleted as well."
-msgstr "Si vous mettez à jour un ouvrage avec un sectionnement restreint, les sections manquantes seront détruites par Drupal et les URL vers les sections détruites seront également supprimés."
-
-#. Tag: para
-#, no-c-format, fuzzy
-#~ msgid "Simply repeat the steps in <xref linkend=\"\" /> to update the book."
-#~ msgstr "Refaites simplement les étapes de la <xref linkend=\"sect-Users_Guide-Import_book_into_Drupal-Drupal_Import_Guide-How_to_import_book\" /> pour mettre à jour l'ouvrage."
-
-#. Tag: para
-#, no-c-format, fuzzy
-#~ msgid "The menu block must exist in Drupal. For more information about adding a menu block in Drupal. Please refer to <xref linkend=\"\" />."
-#~ msgstr "Le bloc de menu doit exister dans Drupal. Pour plus d'informations à propos de l'ajout d'un bloc de menu dans Drupal, voyez la <xref linkend=\"sect-Users_Guide-Import_book_into_Drupal-Drupal_Import_Guide-How_to_add_a_menu_block\" />."
-
-#. Tag: para
-#, no-c-format, fuzzy
-#~ msgid "Follow the steps in <xref linkend=\"\" />"
-#~ msgstr "Parcourir les étapes précisées dans la <xref linkend=\"sect-Users_Guide-Import_book_into_Drupal-How_to_build_a_CSV_file\" />."
+msgstr "Si vous mettez à jour un ouvrage avec moins de sections, les sections manquantes seront détruites par Drupal et les URL vers les sections détruites seront également supprimés."
 

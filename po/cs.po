@@ -1,11 +1,12 @@
 # josef.hruska <josef.hruska@upcmail.cz>, 2012.
 # peartown <josef.hruska@upcmail.cz>, 2012. #zanata
 # peartown <josef.hruska@upcmail.cz>, 2013. #zanata
+# peartown <josef.hruska@upcmail.cz>, 2014. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2013-12-20 04:14-0500\n"
+"PO-Revision-Date: 2014-08-14 01:08-0400\n"
 "Last-Translator: peartown <josef.hruska@upcmail.cz>\n"
 "Language-Team: American English <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -13,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2\n"
-"X-Generator: Zanata 3.3.2\n"
+"X-Generator: Zanata 3.4.2\n"
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican/TreeView.pm:197
@@ -27,7 +28,7 @@ msgstr ""
 # translation auto-copied from project Publican, version 3, document publican
 #: bin/publican:822
 msgid "$ cd path/to/brand"
-msgstr "$ cd cesta/k/vizualnimu/stylu(brand)"
+msgstr "$ cd cesta/ke/graficke/uprave"
 
 # translation auto-copied from project Publican, version 3, document publican
 #: bin/publican:823
@@ -307,12 +308,12 @@ msgstr "Knihy"
 #. ($brand)
 #: lib/Publican/Builder/DocBook4.pm:423 lib/Publican/Builder/DocBook5.pm:443
 msgid "Brand '%1' had no content to copy."
-msgstr "Vizuální styl '%1' nemá obsah, který lze zkopírovat."
+msgstr "Grafická úprava '%1' nemá obsah, který lze kopírovat."
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican.pm:282
 msgid "Brand option to disable embedding the navigational toc in web packages"
-msgstr "Volba u konfigurace vizuálního stylu, která ve webových balíčcích zakazuje vytvoření obsahu s navigací."
+msgstr "Volba grafické úpravy, která ve webových balíčcích zakazuje vytvoření obsahu s navigací."
 
 #: bin/publican:536
 msgid "Brand options"
@@ -374,7 +375,7 @@ msgstr "Nelze nalézt tag '%1' v souboru '%2'"
 #. ($from,$to,$@)
 #: lib/Publican.pm:1804
 msgid "Can not move directory %1 to %2 due to error: %3"
-msgstr ""
+msgstr "Nelze přesunout adresář %1 do adresáře %2 kvůli chybě: %3"
 
 #. ($from,$to,$@)
 #: lib/Publican.pm:1722
@@ -385,7 +386,7 @@ msgstr "Nelze přesunout soubor %1 do %2 kvůli chybě: %3"
 #. ($name)
 #: lib/Publican/CreateBrand.pm:104
 msgid "Can't create brand, directory 'publican-%1' exists!"
-msgstr "Nelze vytvořit vizuální styl, adresář 'publican-%1' existuje!"
+msgstr "Nelze vytvořit grafickou úpravu, adresář 'publican-%1' existuje!"
 
 # translation auto-copied from project Publican, version 3, document publican
 #. ($@)
@@ -441,7 +442,7 @@ msgstr "Nelze otevřít soubor pro vstup html!"
 #. ($!)
 #: lib/Publican/WebSite.pm:1316
 msgid "Can't open file for html input: %1"
-msgstr ""
+msgstr "Nelze otevřít soubor pro vstup html: %1"
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican/Builder/DocBook.pm:545 lib/Publican/Builder/DocBook.pm:585
@@ -487,7 +488,7 @@ msgstr "Nelze vytvořit zásuvný modul pro jazyk '%1': %2"
 #. ($book)
 #: lib/Publican/Builder.pm:915
 msgid "Cannot find GIT url for book %1"
-msgstr ""
+msgstr "Nelze nalézt url GITu pro knihu %1"
 
 # translation auto-copied from project Publican, version 3, document publican
 #. ("$main_file.xml")
@@ -563,7 +564,7 @@ msgstr "Podmínky, za kterých zredukovat (prune) XML před transformací."
 # translation auto-copied from project Publican, version 3, document publican
 #: bin/publican:770
 msgid "Config file exists, you must supply a non-existent filename."
-msgstr "Konfigurační soubor existuje, je nutné zadat neexistující název souboru."
+msgstr "Konfigurační soubor s tímto názvem již existuje, je nutné zadat jiný název souboru."
 
 # translation auto-copied from project Publican, version 3, document publican
 #. ($configfile)
@@ -593,7 +594,7 @@ msgstr "Korektor"
 
 #: bin/publican:268
 msgid "Copy a brand's installed web content to another site"
-msgstr "Zkopírovat nainstalovaný obsah webu vizuálního stylu do jiné internetové stránky"
+msgstr "Zkopírovat nainstalovaný webový obsah grafické úpravy do jiné internetové stránky"
 
 #. ($lang)
 #: lib/Publican/Translate.pm:316
@@ -683,7 +684,7 @@ msgstr "Vytvořit novou knihu, sadu nebo článek"
 # translation auto-copied from project Publican, version 3, document publican
 #: bin/publican:241
 msgid "Create a new brand"
-msgstr "Vytvořit nový vizuální styl (brand)"
+msgstr "Vytvořit novou grafickou úpravu"
 
 # translation auto-copied from project Publican, version 3, document publican
 #: bin/publican:123
@@ -724,12 +725,12 @@ msgstr "Adresář, do kterého se uloží soubory. Ve výchozím nastavení se j
 # translation auto-copied from project Publican, version 3, document publican
 #: bin/publican:158
 msgid "Directory to source brand files from."
-msgstr "Adresář, který je zdroj pro soubory vizuálního stylu (brand)."
+msgstr "Adresář, který načíst jako zdroj pro soubory grafické úpravy."
 
 # translation auto-copied from project Publican, version 3, document publican
 #: bin/publican:157
 msgid "Directory to source publican files from."
-msgstr "Adresář, který je zdroj pro soubory publican."
+msgstr "Adresář, který načíst jako zdroj pro soubory publican."
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican.pm:361
@@ -758,7 +759,7 @@ msgstr "Zobrazit elementy bridgehead v obsazích?"
 # translation auto-copied from project Publican, version 3, document publican
 #: bin/publican:98
 msgid "Display full man page"
-msgstr "Zobrazit celou stránku man"
+msgstr "Zobrazit celou manuálovou stránku"
 
 # translation auto-copied from project Publican, version 3, document publican
 #: bin/publican:97
@@ -815,13 +816,13 @@ msgstr ""
 #. ($attr)
 #: lib/Publican/XmlClean.pm:664
 msgid "ERROR: Banned attribute (%1) detected. Discuss this with your brands owners if you think this is in error."
-msgstr "CHYBA: Odhalen nepovolený atribut (%1). Prodiskutujte s autory/vlastníky vizuálního stylu, domníváte-li se, že by se nemělo jednat o chybu."
+msgstr "CHYBA: Odhalen nepovolený atribut (%1). Prodiskutujte s vlastníky grafické úpravy, domníváte-li se, že by se mělo jednat o chybu."
 
 # translation auto-copied from project Publican, version 3, document publican
 #. ($tag)
 #: lib/Publican/XmlClean.pm:653
 msgid "ERROR: Banned tag (%1) detected. Discuss this with your brands owners if you think this is in error."
-msgstr "CHYBA: Odhalen nepovolený tag (%1). Prodiskutujte s autory/vlastníky vizuálního stylu domníváte-li se, že by se nemělo jednat o chybu."
+msgstr "CHYBA: Odhalen nepovolený tag (%1). Prodiskutujte s vlastníky grafické úpravy, domníváte-li se, že by se mělo jednat o chybu."
 
 #: lib/Publican/Builder/DocBook4.pm:686 lib/Publican/Builder/DocBook5.pm:681
 msgid "ERROR: Cannot find Author file Author_Group.xml."
@@ -1084,18 +1085,18 @@ msgstr "Načtení modulu Win32::TieRegistry do paměti selhalo. Chyba: %1"
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican.pm:737
 msgid "Failed to load brand defaults.cfg file"
-msgstr "Načtení souboru defaults.cfg vizuálního stylu (brand) selhalo"
+msgstr "Načtení souboru defaults.cfg grafické úpravy selhalo"
 
 # translation auto-copied from project Publican, version 3, document publican
 #. ("$brand_path/publican.cfg")
 #: lib/Publican.pm:770
 msgid "Failed to load brand file: %1"
-msgstr "Načtení souboru vizuálního stylu selhalo: %1"
+msgstr "Selhalo načtení souboru grafické úpravy: %1"
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican.pm:759
 msgid "Failed to load brand overrides.cfg file"
-msgstr "Načtení souboru overrides.cfg vizuálního stylu selhalo"
+msgstr "Načtení souboru overrides.cfg grafické úpravy selhalo"
 
 # translation auto-copied from project Publican, version 3, document publican
 #. ($configfile)
@@ -1118,7 +1119,7 @@ msgstr "Otevření výstupního souboru %1 selhalo. Chyba: %2"
 #. ($book,$?)
 #: lib/Publican/Builder.pm:921
 msgid "Fatal Error: Export failed. Book: %1. Error Number: %2"
-msgstr ""
+msgstr "Kritická chyba: Export selhal. Kniha: %1. Číslo chyby: %2"
 
 # translation auto-copied from project Publican, version 3, document publican
 #. ($pot_file,$po_file)
@@ -1193,7 +1194,7 @@ msgstr ""
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican/Translate.pm:1075
 msgid "Fuzzy"
-msgstr "Zmatečné"
+msgstr "Nepřesný"
 
 #: bin/publican:518
 msgid "General options"
@@ -1229,7 +1230,7 @@ msgstr "Skrýt nabídku"
 #. ($info_file)
 #: lib/Publican/Builder/DocBook.pm:2616
 msgid "Info file missing: %1"
-msgstr ""
+msgstr "Chybí soubor Info: %1"
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican/WebSite.pm:206
@@ -1249,7 +1250,7 @@ msgstr "Instalovat knihu na webovou stránku."
 # translation auto-copied from project Publican, version 3, document publican
 #: bin/publican:263
 msgid "Install a brand to the supplied location"
-msgstr "Instalovat vizuální styl do uvedeného místa"
+msgstr "Instalovat grafickou úpravu do uvedeného místa"
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican.pm:459
@@ -1259,7 +1260,7 @@ msgstr "Cesta pro instalaci nestandardních webových stránek RPM."
 # translation auto-copied from project Publican, version 3, document publican
 #: bin/publican:156
 msgid "Install the web content for a brand."
-msgstr "Instalovat webový obsah pro vizuální styl."
+msgstr "Instalovat webový obsah pro grafickou úpravu."
 
 # translation auto-copied from project Publican, version 3, document publican
 #. ($lang)
@@ -1304,7 +1305,7 @@ msgstr "Jedná se o důvěrný obsah?"
 
 #: bin/publican:174
 msgid "Keep previous msgid when fuzzy matches are detected in PO updates."
-msgstr ""
+msgstr "Zachovat předchozí identifikátor zprávy (msgid), nalézají-li se nepřesné překlady v aktualizovaných PO souborech."
 
 #: lib/Publican/Builder/DocBook.pm:756
 msgid "Keywords"
@@ -1381,7 +1382,7 @@ msgstr "Chybí povinné pole '%1' ve změně."
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican.pm:1435
 msgid "NOTE: These lists of tags and attributes are brand specific and are not part of Publican itself."
-msgstr "POZNÁMKA: Tyto seznamy tagů a atributů jsou specifické pro obchodní značku a nejsou součástí Publicanu jako takového."
+msgstr "POZNÁMKA: Tyto seznamy tagů a atributů jsou specifické pro grafickou úpravu a nejsou součástí samotného Publicanu."
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican/CreateBook.pm:243 lib/Publican/CreateBook.pm:503
@@ -1411,7 +1412,7 @@ msgid ""
 "\n"
 "It is also recommended that you rebuild and reinstall all books to ensure the layout is properly migrated."
 msgstr ""
-"Nyní, kdy je vaše webová stránka převedena, potřebujete opět sestavit své vizuální styly a nainstalovat web payload vizuálních stylů na vaši stránku.\n"
+"Nyní, kdy je vaše webová stránka převedena, potřebujete opět sestavit své grafické úpravy a nainstalovat web payload grafických úprav na vaši stránku.\n"
 "\n"
 "Doporučuje se rovněž, abyste opět sestavili a nainstalovali všechny knihy pro kontrolu, že vzhled byl správně převeden."
 
@@ -1595,7 +1596,7 @@ msgstr "Tisknout seznam nepoužitých souborů XML"
 
 #: bin/publican:339
 msgid "Print a readability report for the source text."
-msgstr ""
+msgstr "Vytisknout zprávu o čitelnosti zdrojového textu."
 
 # translation auto-copied from project Publican, version 3, document publican
 #: bin/publican:214
@@ -1651,7 +1652,7 @@ msgstr ""
 
 #: bin/publican:343
 msgid "Pull translations from Zanata."
-msgstr ""
+msgstr "Načíst překlady ze Zanata."
 
 # translation auto-copied from project Publican, version 3, document publican
 #: bin/publican:102
@@ -1660,7 +1661,7 @@ msgstr "Nahrát balíček SRPM do sestavovacího systému brew"
 
 #: bin/publican:347
 msgid "Push translations to Zanata."
-msgstr ""
+msgstr "Nahrát překlady na Zanata."
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican/Builder/DocBook.pm:1712
@@ -1724,7 +1725,7 @@ msgstr "Spustit čištění id pro zdrojový XML"
 #. ($0)
 #: bin/publican:429
 msgid "Run: '%1 <action> --help' for details on action usage"
-msgstr "Zadejte: '%1 <action> --nápověda' chcete-li zjistit více o použití akce"
+msgstr "Zadejte: '%1 <action> --help' chcete-li zjistit více o použití akce"
 
 # translation auto-copied from project Publican, version 3, document publican
 #: bin/publican:1115
@@ -1738,7 +1739,7 @@ msgstr "Probíhá clean_ids k zamezení kolizí mezi ID knih."
 
 #: lib/Publican/WebSite.pm:220
 msgid "Scroll to category"
-msgstr ""
+msgstr "Odrolovat na kategorii"
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican/WebSite.pm:2229 lib/Publican/WebSite.pm:979
@@ -1746,12 +1747,14 @@ msgid "Search"
 msgstr "Vyhledávání"
 
 #: lib/Publican/WebSite.pm:219
+#, fuzzy
 msgid "Select a category"
-msgstr ""
+msgstr "Odrolovat na kategorii"
 
 #: lib/Publican/WebSite.pm:218
+#, fuzzy
 msgid "Select a version"
-msgstr ""
+msgstr "Zvolte svoji verzi"
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican.pm:277
@@ -1891,17 +1894,17 @@ msgstr "Jméno autora zobrazené v drupalu na stránce knihy. Musí být platné
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican.pm:112
 msgid "The base brand to use for this brand."
-msgstr "Základní vizuální styl, který se má použít pro tuto značku."
+msgstr "Základní grafická úprava, který se má použít pro tuto grafickou úpravu."
 
 # translation auto-copied from project Publican, version 3, document publican
 #: bin/publican:119
 msgid "The brand to use"
-msgstr "Vizuální styl, který se má použít"
+msgstr "Grafická úprava, která se má použít"
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican.pm:117
 msgid "The brand to use when building this package."
-msgstr "Vizuální styl, který se má použít při sestavování tohoto balíčku."
+msgstr "Grafická úprava, která se má použít při sestavování tohoto balíčku."
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican.pm:123
@@ -1935,15 +1938,15 @@ msgstr "Vydání knihy, článku nebo sady"
 
 #: lib/Publican.pm:292
 msgid "The font to use for body text in PDFs."
-msgstr ""
+msgstr "Písmo, které se má v PDF použít pro tělo textu."
 
 #: lib/Publican.pm:296
 msgid "The font to use for mono text in PDFs."
-msgstr ""
+msgstr "Písmo, které se má v PDF použít pro neproporciální text."
 
 #: lib/Publican.pm:213
 msgid "The format to use for the desktop output."
-msgstr ""
+msgstr "Formát, který se použije pro výstup pro desktop."
 
 # translation auto-copied from project Publican, version 3, document publican
 #: bin/publican:120
@@ -1967,7 +1970,7 @@ msgstr ""
 # translation auto-copied from project Publican, version 3, document publican
 #: bin/publican:115
 msgid "The name of the book, article, set, or brand"
-msgstr "Název knihy, článku, sady nebo obchodní značky"
+msgstr "Název knihy, článku, sady nebo grafické úpravy"
 
 #: lib/Publican/WebSite.pm:124
 msgid "The name of the file to dump the publican database to."
@@ -1999,7 +2002,7 @@ msgstr "Text, který je použit k označení důvěrného obsahu."
 # translation auto-copied from project Publican, version 3, document publican
 #: bin/publican:121
 msgid "The type (book, article, or set)"
-msgstr "Typ (knihy, článku nebo sady)"
+msgstr "Typ (book, article nebo set)"
 
 #: bin/publican:167
 msgid "The version number of the book being installed."
@@ -2153,7 +2156,7 @@ msgstr "Druh obsahu, který obsahuje tento balíček. Podporováno: set, book, a
 
 #: lib/Publican.pm:317
 msgid "Type of repository in which books that form part of a remote set are stored. Supported types: SVN, GIT."
-msgstr ""
+msgstr "Typ repositáře, ve kterém jsou uloženy knihy, jenž jsou součástí vzdálené sady. Podporované typy: SVN, GIT."
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican.pm:191
@@ -2173,7 +2176,7 @@ msgstr "URL, kde se nalézá soubor tar se zdrojovými soubory. Použito u soubo
 #. ($tag)
 #: lib/Publican/Builder/DocBook.pm:3314
 msgid "Unknow tag: %1"
-msgstr ""
+msgstr "Neznámý tag: %1"
 
 # translation auto-copied from project Publican, version 3, document publican
 #. ($format)
@@ -2206,7 +2209,7 @@ msgstr "Aktualizovat šablony existujících stránek."
 # translation auto-copied from project Publican, version 3, document publican
 #: bin/publican:256
 msgid "Update the PO files"
-msgstr "Aktualizovat sobory PO"
+msgstr "Aktualizovat soubory PO"
 
 # translation auto-copied from project Publican, version 3, document publican
 #: bin/publican:252
@@ -2369,7 +2372,7 @@ msgstr "Potřebujete změnit entitu HOLDER v souboru %1/%2.ent"
 #. ($result,$!)
 #: bin/publican:1560 bin/publican:1572
 msgid "Zanata call failed, error %1: '[2]'"
-msgstr ""
+msgstr "Volání Zanata selhalo, chyba %1: '[2]'"
 
 #: lib/Publican/WebSite.pm:128
 msgid "Zip up the dump file after dumping it"
@@ -2383,7 +2386,7 @@ msgstr "abstrakt nelze před sestavením vypočítat."
 # translation auto-copied from project Publican, version 3, document publican
 #: bin/publican:1235
 msgid "add_revision does not work for brands."
-msgstr "add_revision pro vizuální styl nefunguje."
+msgstr "add_revision pro grafické úpravy nefunguje."
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican.pm:91
@@ -2518,7 +2521,7 @@ msgstr "format je povinný argument"
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican/Builder/DocBook.pm:97
 msgid "formats is a mandatory argument"
-msgstr "formáty jsou povinný argument"
+msgstr "formats jsou povinný argument"
 
 #: lib/Publican/Builder/DocBook.pm:3458 lib/Publican/Builder/DocBook.pm:3856
 msgid "headings is a mandatory argument"
@@ -2702,7 +2705,7 @@ msgstr "vynechán neexistující adresář: %1"
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican/Builder/DocBook.pm:1460
 msgid "source is a mandatory argument"
-msgstr "zdroj (source) je povinný argument"
+msgstr "source je povinný argument"
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican/Builder.pm:423
@@ -2742,7 +2745,7 @@ msgstr "navigace v obsahu"
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican/CreateBook.pm:100
 msgid "type must be book, set, or article"
-msgstr "typ musí být kniha, sada nebo článek"
+msgstr "typem musí být book, set nebo article"
 
 # translation auto-copied from project Publican, version 3, document publican
 #. (join( ", ", keys %{$args} ))
@@ -2780,7 +2783,7 @@ msgstr "userlevel, na níž se filtruje výstup."
 
 #: lib/Publican/Builder/DocBook.pm:316
 msgid "varlistentry must have it's attribute 'role' set to an integer"
-msgstr ""
+msgstr "varlistentry musí mít svůj atribut 'role' nastaven na celé číslo"
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican.pm:389
@@ -2828,7 +2831,7 @@ msgstr "xsl_file je povinný argument"
 # translation auto-copied from project Publican, version 3, document publican
 #: bin/publican:1041
 msgid "you need to publish the brand first"
-msgstr "potřebujete nejdříve publikovat obchodní značku"
+msgstr "potřebujete nejdříve publikovat grafickou úpravu"
 
 #~ msgid "Could not open %1 for input!"
 #~ msgstr "Nelze otevřít soubor %1 pro vstup!"

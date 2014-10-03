@@ -1,28 +1,28 @@
 # Gé Baylard <<Geodebay@gmail.com>>, 2013.
-# Gérard Baylard <geodebay@gmail.com>, 2013. #zanata
+# Gérard Baylard <geodebay@gmail.com>, 2014. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2013-03-08T03:26:30\n"
-"PO-Revision-Date: 2013-09-02 05:34-0400\n"
-"Last-Translator: Gérard Baylard <geodebay@gmail.com>\n"
-"Language-Team: français <<trans-fr@lists.fedoraproject.org>>\n"
+"POT-Creation-Date: 2014-05-06 14:10+1000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2014-05-15 08:58-0400\n"
+"Last-Translator: Gérard Baylard <geodebay@gmail.com>\n"
+"Language-Team: français <<trans-fr@lists.fedoraproject.org>>\n"
 "Language: fr\n"
-"X-Generator: Zanata 3.3.2\n"
+"X-Generator: Zanata 3.4.2\n"
 "Plural-Forms: nplurals=2; plural=n>1;\n"
 
 #. Tag: title
 #, no-c-format
 msgid "Packaging a brand"
-msgstr "Empaquetage d'une marque"
+msgstr "Empaquetage d'une estampille"
 
 #. Tag: para
 #, no-c-format
 msgid "After you create a brand (as described in <xref linkend=\"sect-Publican-Users_Guide-Creating_a_brand\" />), <application>Publican</application> can help you to distribute the brand to members of your documentation project as <firstterm>RPM packages</firstterm>. RPM packages are used to distribute software to computers with Linux operating systems that use the <application>RPM Package Manager</application>. These operating systems include Red Hat Enterprise Linux, Fedora, Mandriva Linux, SUSE Linux Enterprise, openSUSE, Turbolinux, and Yellow Dog Linux, to name just a few."
-msgstr "Après avoir créé une marque (comme décrit dans la <xref linkend=\"sect-Users_Guide-Creating_a_brand\" />), <application>Publican</application> facilite sa distribution aux membres du projet de documentation sous forme de <firstterm>paquet RPM</firstterm>. Les paquets RPM s'utilisent pour distribuer des logiciels pour les ordinateurs avec le système d'exploitation Linux utilisant le <application>Gestionnaire de paquets RPM</application>. Parmi ces systèmes d'exploitation, indiquons :  Red Hat Enterprise Linux, Fedora, Mandriva Linux, SUSE Linux Enterprise, openSUSE, Turbolinux et Yellow Dog Linux, pour ne citer que quelques uns."
+msgstr "Après avoir créé une estampille (comme décrit dans la <xref linkend=\"sect-Publican-Users_Guide-Creating_a_brand\" />), <application>Publican</application> facilite sa distribution aux membres du projet de documentation sous forme de <firstterm>paquet RPM</firstterm>. Les paquets RPM s'utilisent pour distribuer des logiciels pour les ordinateurs avec le système d'exploitation Linux utilisant le <application>Gestionnaire de paquets RPM</application>. Parmi ces systèmes d'exploitation, indiquons :  Red Hat Enterprise Linux, Fedora, Mandriva Linux, SUSE Linux Enterprise, openSUSE, Turbolinux et Yellow Dog Linux, pour ne citer que quelques uns."
 
 #. Tag: para
 #, no-c-format
@@ -32,17 +32,17 @@ msgstr "<application>Publican</application> produit à la fois des <firstterm>pa
 #. Tag: para
 #, no-c-format
 msgid "SRPM packages contain the source code used to generate software rather than the software itself. To use an SRPM package, a computer must <firstterm>compile</firstterm> the source code into software. SRPM packages of <application>Publican</application> brands contain the configuration files, XML files, and image files that define the brand in its original language, plus the PO files that generate the Common Content files in translated languages. You cannot install documentation directly from SRPM packages with current versions of the <application>RPM Package Manager</application>."
-msgstr "Les paquets SRPM contiennent le code source utilisé pour créer le logiciel au lieu du logiciel lui-même. Pour utiliser un paquet SRPM, l'ordinateur doit <firstterm>compiler</firstterm> le code source en logiciel. Les paquets SRPM des marques <application>Publican</application> contiennent les fichiers de configuration, des fichiers XML et des fichiers image qui définissent la marque dans sa langue d'origine, plus des fichiers PO qui génèrent les fichiers « Common Content » dans les langues traduites. Vous ne pouvez pas installer directement une documentation à partir de paquets SRPM avec des versions actuelles du <application>Gestionnaire de paquets RPM</application>."
+msgstr "Les paquets SRPM contiennent le code source utilisé pour créer le logiciel au lieu du logiciel lui-même. Pour utiliser un paquet SRPM, l'ordinateur doit <firstterm>compiler</firstterm> le code source en logiciel. Les paquets SRPM des marques <application>Publican</application> contiennent les fichiers de configuration, des fichiers XML et des fichiers image qui définissent l'estampille dans sa langue d'origine, plus des fichiers PO qui génèrent les fichiers « Common Content » dans les langues traduites. Vous ne pouvez pas installer directement une documentation à partir de paquets SRPM avec des versions actuelles du <application>Gestionnaire de paquets RPM</application>."
 
 #. Tag: para
 #, no-c-format
 msgid "Conversely, binary RPM packages contain software — in this case, a <application>Publican</application> brand — that is ready to copy to a location in the computer's file system and use immediately. The contents of the binary RPM package do not need to be compiled by the computer onto which they are installed, and therefore, the computer does not need to have <application>Publican</application> installed."
-msgstr "À l'opposé, des paquets RPM binaires contiennent un logiciel — soit dans notre cas, une marque <application>Publican</application> — prêt à être copié à un certain emplacement dans le système de fichiers du l'ordinateur ; il est utilisable immédiatement. Le contenu du paquet RPM binaire n'a pas besoin d'être compilé par l'ordinateur sur lequel il est installé. Donc, il n'est pas nécessaire d'avoir installé <application>Publican</application>."
+msgstr "À l'opposé, des paquets RPM binaires contiennent un logiciel — soit dans notre cas, une estampille <application>Publican</application> — prête à être copiée à un certain emplacement dans le système de fichiers du l'ordinateur ; elle est utilisable immédiatement. Le contenu du paquet RPM binaire n'a pas besoin d'être compilé par l'ordinateur sur lequel il est installé. Donc, il n'est pas nécessaire d'avoir installé <application>Publican</application>."
 
 #. Tag: para
 #, no-c-format
 msgid "To package a brand, use the <prompt>$</prompt> <command>publican package</command> command in the brand directory. When used without any further options, <application>Publican</application> produces an SRPM package. The options for packaging a brand are as follows:"
-msgstr "Pour empaqueter une marque, utilisez la commande <command>publican package</command> dans le répertoire de la marque. Lorsque elle est exécutée sans autre option, <application>Publican</application> crée un paquet SRPM. Les options d'empaquetage d'une marque sont :"
+msgstr "Pour empaqueter une estampille, utilisez la commande <prompt>$</prompt> <command>publican package</command> dans le répertoire de l'estampille. Lorsque elle est exécutée sans autre option, <application>Publican</application> crée un paquet SRPM. Les options d'empaquetage d'une estampille sont :"
 
 #. Tag: term
 #, no-c-format
@@ -77,12 +77,12 @@ msgstr "utilisée conjointement avec l'option <option>--brew</option>, indique q
 #. Tag: para
 #, no-c-format
 msgid "The <option>--lang</option>, <option>--desktop</option> and <option>--short_sighted</option> options that apply when you package books (described in <xref linkend=\"sect-Publican-Users_Guide-Packaging_a_document\" />) are meaningless when you package brands. In particular, note that although the <option>--lang</option> option is mandatory when you package a book, you do not need to use it when you package a brand."
-msgstr "Les options <option>--lang</option>, <option>--desktop</option> et <option>--short_sighted</option>, s'appliquant à l'empaquetage d'ouvrages ( et décrit dans la <xref linkend=\"sect-Users_Guide-Packaging_a_book\" />) sont sans signification quand vous empaquetez des marques. En particulier, alors que l'option <option>--lang</option> est obligatoire lors de l'empaquetage d'un ouvrage, notez qu'il n'est pas nécessaire de l'utiliser pour empaqueter une marque."
+msgstr "Les options <option>--lang</option>, <option>--desktop</option> et <option>--short_sighted</option>, s'appliquant à l'empaquetage d'ouvrages ( elles sont décrites dans la <xref linkend=\"sect-Publican-Users_Guide-Packaging_a_document\" />) n'ont aucun sens quand vous empaquetez des estampilles. En particulier, alors que l'option <option>--lang</option> est obligatoire lors de l'empaquetage d'un ouvrage, notez qu'il n'est pas nécessaire de l'utiliser pour empaqueter une estampille."
 
 #. Tag: para
 #, no-c-format
 msgid "By default, <application>Publican</application> brand packages are named:"
-msgstr "Par défaut, les paquets des marques <application>Publican</application> sont nommés :"
+msgstr "Par défaut, les paquets d'estampilles <application>Publican</application> sont nommés :"
 
 #. Tag: para
 #, no-c-format
@@ -92,7 +92,7 @@ msgstr "<filename>publican-<replaceable>marque</replaceable>-<replaceable>versio
 #. Tag: para
 #, no-c-format
 msgid "<application>Publican</application> uses the information in the <filename>publican.cfg</filename> file to supply the various parameters in the file name. Refer to <xref linkend=\"sect-Publican-Users_Guide-Files_in_the_brand_directory-The_publican.cfg_file\" /> for details of configuring this file. Additionally:"
-msgstr "<application>Publican</application> utilise les informations contenues dans le fichier <filename>publican.cfg</filename> pour renseigner divers paramètres du nom de fichier. Reportez-vous à la <xref linkend=\"sect-Users_Guide-Files_in_the_brand_directory-The_publican.cfg_file\" /> pour plus de précisions à propos de la configuration de ce fichier. En outre :"
+msgstr "<application>Publican</application> utilise les informations contenues dans le fichier <filename>publican.cfg</filename> pour renseigner divers paramètres du nom de fichier. Reportez-vous à la <xref linkend=\"sect-Publican-Users_Guide-Files_in_the_brand_directory-The_publican.cfg_file\" /> pour plus de précisions à propos de la configuration de ce fichier. En outre :"
 
 #. Tag: para
 #, no-c-format

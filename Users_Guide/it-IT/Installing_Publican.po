@@ -5,16 +5,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2010-11-08T20:02:18\n"
-"PO-Revision-Date: 2012-01-22 01:38-0500\n"
-"Last-Translator: Mario Santagiuliana <fedora at marionline.it>\n"
-"Language-Team: Italian <fedora-trans-it at redhat.com>\n"
+"POT-Creation-Date: 2014-05-06 14:10+1000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2012-01-22 01:38-0500\n"
+"Last-Translator: Mario Santagiuliana <fedora at marionline.it>\n"
+"Language-Team: Italian <fedora-trans-it at redhat.com>\n"
 "Language: it\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Zanata 3.3.2\n"
+"X-Generator: Zanata 3.4.2\n"
 
 #. Tag: title
 #, no-c-format
@@ -78,8 +78,8 @@ msgid "Ubuntu"
 msgstr "Ubuntu"
 
 #. Tag: para
-#, no-c-format
-msgid "Run the following command to install the <package>publican</package> package:"
+#, no-c-format, fuzzy
+msgid "Run the following commands to checkout the <package>publican</package> source from GIT:"
 msgstr "Eseguire il seguente comando per installare il pacchetto <package>publican</package>:"
 
 #. Tag: screen
@@ -97,8 +97,8 @@ msgid "To checkout the source from GIT open a terminal."
 msgstr ""
 
 #. Tag: para
-#, no-c-format
-msgid "Run the following command to install the <package>publican</package> package:"
+#, no-c-format, fuzzy
+msgid "Run the following commands to checkout the <package>publican</package> source from GIT:"
 msgstr "Eseguire il seguente comando per installare il pacchetto <package>publican</package>:"
 
 msgid "<prompt>$</prompt> cd <replaceable>PATH TO PLACE SOURCE</replaceable>\n"
@@ -356,99 +356,15 @@ msgstr ""
 msgid "You can now use the brand in your books by editing your book's <filename>publican.cfg</filename> file or specifying the <option>--brand</option> option when creating your book."
 msgstr ""
 
-#. Tag: screen
+#. Tag: title
 #, no-c-format
-#~ msgid "<command>sudo apt-get update</command>\n"
-#~ msgstr "<command>sudo apt-get update</command>\n"
+#~ msgid "Important — Unsupported software"
+#~ msgstr "Importante — Software non supportato"
 
 #. Tag: title
 #, no-c-format
-#~ msgid "Warning — Complete this procedure"
-#~ msgstr "Avviso — Completare questa procedura"
-
-#. Tag: para
-#, no-c-format
-#~ msgid "Installing <application>Publican</application> on Red Hat Enterprise Linux 5 requires a number of dependencies that are presently available only in yum repositories that are internal to Red Hat."
-#~ msgstr "L'installazione di <application>Publican</application> su Red Hat Enterprise Linux 5, richiede un numero di dipendenze che attualmente sono disponibili solo nei repository yum interni a Red Hat."
-
-#. Tag: para
-#, no-c-format
-#~ msgid "Run the following command to update the list of packages available to your computer:"
-#~ msgstr "Eseguire il seguente comando per aggiornare la lista dei pacchetti disponibili nel sistema:"
-
-#. Tag: title
-#, no-c-format
-#~ msgid "Fedora"
-#~ msgstr "Fedora"
-
-#. Tag: screen
-#, no-c-format
-#~ msgid "<command>sudo gedit /etc/apt/sources.list</command>\n"
-#~ msgstr "<command>sudo gedit /etc/apt/sources.list</command>\n"
-
-#. Tag: title
-#, no-c-format
-#~ msgid "Debian"
-#~ msgstr "Debian"
-
-#. Tag: para
-#, no-c-format
-#~ msgid "Open your <filename>/etc/apt/sources.list</filename> file in a text editor. For example, to edit the file in <application>gedit</application> run:"
-#~ msgstr "Con un editor di testo aprire il file <filename>/etc/apt/sources.list</filename>. Per esempio, per modificare il file con <application>gedit</application>, eseguire:"
-
-#. Tag: para
-#, no-c-format
-#~ msgid "Save the file and close the text editor."
-#~ msgstr "Salvare il file e chiudere l'editor."
-
-#. Tag: para
-#, no-c-format
-#~ msgid "When \"Squeeze\" becomes the stable version of Debian, you will not need to enable or disable access to extra repositories to install <application>Publican</application> on systems that run that version of the operating system."
-#~ msgstr "Nel momento in cui \"Squeeze\" diventa la versione stabile di Debian, per installare <application>Publican</application> su sistemi che eseguono questa versione del sistema operativo, non occorre più abilitare o disabilitare l'accesso a repository extra."
-
-#. Tag: para
-#, no-c-format
-#~ msgid "Download the Publican installer from <ulink url=\"https://fedorahosted.org/releases/p/u/publican/\" />."
-#~ msgstr "Scaricare il programma di installazione di Publican da <ulink url=\"https://fedorahosted.org/releases/p/u/publican/\" />."
-
-#. Tag: title
-#, no-c-format
-#~ msgid "Important — Dependencies available only internally to Red Hat"
-#~ msgstr "Importante — Dipendenze disponibili soltanto all'interno di Red Hat"
-
-#. Tag: programlisting
-#, no-c-format
-#~ msgid ""
-"deb http://ftp.debian.org/debian/ squeeze main\n"
-"\n"
-#~ msgstr ""
-"deb http://ftp.debian.org/debian/ squeeze main\n"
-"\n"
-
-#. Tag: para
-#, no-c-format
-#~ msgid "Install <application>Macports</application> from <ulink url=\"http://guide.macports.org/chunked/installing.macports.html\" />. Everything you install with it goes into <filename>/opt/local</filename>, away from your normal OS files."
-#~ msgstr ""
-
-#. Tag: para
-#, no-c-format
-#~ msgid "Add the following line to the end of the file:"
-#~ msgstr "Aggiungere la seguente riga alla fine del file:"
-
-#. Tag: para
-#, no-c-format
-#~ msgid "Note that until the release of \"Squeeze\" as the stable version of Debian, you must manually enable and disable access to the testing repository as described in this procedure whenever a new version of <application>Publican</application> becomes available in the testing repository. You can find up-to-date information about the status of <application>Publican</application> for Debian at <ulink url=\"http://packages.debian.org/squeeze/publican\" />, including the version number of <application>Publican</application> available in the repository (2.1 at the time of writing)."
-#~ msgstr "Notare che finché la release \"Squeeze\" non viene rilasciata come versione stabile di Debian, occorre manualmente abilitare e disabilitare l'accesso al repository di test come fin qui descritto, ogniqualvolta diventa disponibile, nel repository di test, una nuova versione di <application>Publican</application>. Per informazioni aggiornate sullo status di <application>Publican</application> per Debian, visitare <ulink url=\"http://packages.debian.org/squeeze/publican\" />, contenente il numero di versione di <application>Publican</application> disponibile nel repository (versione 2.1 al tempo di scrittura di questo documento)."
-
-#. Tag: para
-#, no-c-format
-#~ msgid "Complete every step of this procedure. If you do not undo the changes that you make to the <filename>/etc/apt/sources.list</filename> file as described, your system might become unstable."
-#~ msgstr "Completare ogni passaggio di questa procedura. Se non si effettuano, come qui indicate, le operazioni di ripristino alle modifiche apportate al file <filename>/etc/apt/sources.list</filename>, il sistema potrebbe diventare instabile."
-
-#. Tag: para
-#, no-c-format
-#~ msgid "<application>Publican</application> is new in Ubuntu 10.4 \"Lucid Lynx\"."
-#~ msgstr "<application>Publican</application> fa il suo ingresso in Ubuntu 10.4 \"Lucid Lynx\"."
+#~ msgid "Red Hat Enterprise Linux 5"
+#~ msgstr "Red Hat Enterprise Linux 5"
 
 #. Tag: para
 #, no-c-format
@@ -457,31 +373,31 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
+#~ msgid "Installing <application>Publican</application> on Red Hat Enterprise Linux 5 requires a number of dependencies that are presently available only in yum repositories that are internal to Red Hat."
+#~ msgstr "L'installazione di <application>Publican</application> su Red Hat Enterprise Linux 5, richiede un numero di dipendenze che attualmente sono disponibili solo nei repository yum interni a Red Hat."
+
+#. Tag: title
+#, no-c-format
+#~ msgid "Important — Dependencies available only internally to Red Hat"
+#~ msgstr "Importante — Dipendenze disponibili soltanto all'interno di Red Hat"
+
+#. Tag: title
+#, no-c-format
+#~ msgid "Fedora"
+#~ msgstr "Fedora"
+
+#. Tag: para
+#, no-c-format
+#~ msgid "Install <application>Macports</application> from <ulink url=\"http://guide.macports.org/chunked/installing.macports.html\" />. Everything you install with it goes into <filename>/opt/local</filename>, away from your normal OS files."
+#~ msgstr ""
+
+#. Tag: para
+#, no-c-format
 #~ msgid "The SVN location for the brands supplied by Red Hat is <ulink url=\"http://svn.fedorahosted.org/svn/publican\" />"
 #~ msgstr ""
 
 #. Tag: para
 #, no-c-format
-#~ msgid "<application>Publican</application> is not available in the current stable version of Debian (version 5.0, \"Lenny\"), but is available in the current testing version (\"Squeeze\"). To install <application>Publican</application> on a computer that runs Debian, temporarily enable access to the <literal>squeeze</literal> repository. When you enable access to this repository, you allow your computer to install newer software and newer versions of existing software than what is available in the current stable version of Debian. However, not all of the software available in the testing repository has completed quality assurance testing yet. If you do not disable access to this repository after you install <application>Publican</application>, the next time that your system updates, it will replace software packages on your system with newer but possibly untested versions of those packages that it downloads from the testing repository."
-#~ msgstr "<application>Publican</application> non è disponibile nella corrente versione stabile di Debian (version 5.0, \"Lenny\"), ma è disponibile nella corrente versione di test (\"Squeeze\"). Per installare <application>Publican</application> su un computer che esegue Debian, occorre abilitare temporaneamente l'accesso al repository <literal>squeeze</literal>. Abilitando l'accesso a questo repository, si autorizza il computer ad installare nuovo software e nuove versioni di software, rispetto alla corrente versione stabile di Debian. Tuttavia, non tutto il software disponibile nel repository di test ha già superato il controllo di qualità. Quindi, se dopo l'installazione di <application>Publican</application> non si disabilita l'accesso a questo repository, al successivo aggiornamento del sistema, i pacchetti software esistenti verranno sostituiti con nuove versioni scaricate dal repository, e molto probabilmente risulteranno essere versioni non ancora testate."
-
-#. Tag: title
-#, no-c-format
-#~ msgid "Red Hat Enterprise Linux 5"
-#~ msgstr "Red Hat Enterprise Linux 5"
-
-#. Tag: title
-#, no-c-format
-#~ msgid "Important — Unsupported software"
-#~ msgstr "Importante — Software non supportato"
-
-#. Tag: title
-#, no-c-format
-#~ msgid "Important — New in 10.4 \"Lucid Lynx\""
-#~ msgstr "Importante — Novità in 10.4 \"Lucid Lynx\""
-
-#. Tag: para
-#, no-c-format
-#~ msgid "Open your <filename>/etc/apt/sources.list</filename> file again, and delete the extra line that you added in this procedure."
-#~ msgstr "Riaprire il file <filename>/etc/apt/sources.list</filename> e rimuovere la riga precedentemente inserita."
+#~ msgid "Download the Publican installer from <ulink url=\"https://fedorahosted.org/releases/p/u/publican/\" />."
+#~ msgstr "Scaricare il programma di installazione di Publican da <ulink url=\"https://fedorahosted.org/releases/p/u/publican/\" />."
 

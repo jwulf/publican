@@ -1,17 +1,18 @@
 # Gé Baylard <<Geodebay@gmail.com>>, 2013.
-# Gérard Baylard <geodebay@gmail.com>, 2013. #zanata
+#
+# Gé Baylard <<Geodebay@gmail.com>>, 2013, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2013-03-08T03:26:29\n"
-"PO-Revision-Date: 2013-09-01 09:49-0400\n"
-"Last-Translator: Gérard Baylard <geodebay@gmail.com>\n"
-"Language-Team: français <<trans-fr@lists.fedoraproject.org>>\n"
+"POT-Creation-Date: 2014-05-06 14:10+1000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2014-05-11 12:59-0400\n"
+"Last-Translator: Gé Baylard <<Geodebay@gmail.com>>\n"
+"Language-Team: français <<trans-fr@lists.fedoraproject.org>>\n"
 "Language: fr\n"
-"X-Generator: Zanata 3.3.2\n"
+"X-Generator: Zanata 3.4.2\n"
 "Plural-Forms: nplurals=2; plural=n>1;\n"
 
 #. Tag: title
@@ -25,18 +26,18 @@ msgid "Publishing books, articles, papers and multi-volume sets with DocBook XML
 msgstr "Publication d'ouvrages, articles, papiers et ensembles en plusieurs tomes avec XML Docbook"
 
 #. Tag: keyword
-#, no-c-format, fuzzy
-msgid "publican"
+#, no-c-format
+msgid "Publican"
 msgstr "publican"
 
 #. Tag: para
 #, no-c-format
 msgid "This book will help you install <application>&PRODUCT;</application>. It also provides instructions for using Publican to create and publish DocBook XML-based books, articles and book sets. This guide assumes that you are already familiar with DocBook XML."
-msgstr "Cet ouvrage vous aide à installer <application>Publican</application>. Il donne aussi des instructions pour l'utilisation de Publican en vue de créer et publier des ouvrages, des articles ou des ensembles de livres à l'aide du XML DocBook. Ce guide suppose que vous connaissez déjà le XML DocBook."
+msgstr "Cet ouvrage vous aide à installer <application>&PRODUCT;</application>. Il donne aussi des instructions pour l'utilisation de Publican en vue de créer et publier des ouvrages, des articles ou des ensembles de livres à l'aide du XML DocBook. Ce guide suppose que vous connaissez déjà le XML DocBook."
 
 #. Tag: keyword
-#, no-c-format, fuzzy
-msgid "publican"
+#, no-c-format
+msgid "Publican"
 msgstr "publican"
 
 #. Tag: keyword
@@ -52,5 +53,5 @@ msgstr "publication"
 #. Tag: productname
 #, no-c-format
 #~ msgid "&PRODUCT;"
-#~ msgstr ""
+#~ msgstr "&PRODUCT;"
 

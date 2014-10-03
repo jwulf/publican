@@ -1,17 +1,17 @@
 # Gé Baylard <<Geodebay@gmail.com>>, 2013.
-# Gérard Baylard <geodebay@gmail.com>, 2013. #zanata
+# Gérard Baylard <geodebay@gmail.com>, 2014. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2013-03-08T03:26:30\n"
-"PO-Revision-Date: 2013-08-31 11:45-0400\n"
-"Last-Translator: Gérard Baylard <geodebay@gmail.com>\n"
-"Language-Team: français <<trans-fr@lists.fedoraproject.org>>\n"
+"POT-Creation-Date: 2014-05-06 14:10+1000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2014-05-15 08:47-0400\n"
+"Last-Translator: Gérard Baylard <geodebay@gmail.com>\n"
+"Language-Team: français <<trans-fr@lists.fedoraproject.org>>\n"
 "Language: fr\n"
-"X-Generator: Zanata 3.3.2\n"
+"X-Generator: Zanata 3.4.2\n"
 "Plural-Forms: nplurals=2; plural=n>1;\n"
 
 #. Tag: title
@@ -27,7 +27,7 @@ msgstr "Note — Personnalisation de la sortie"
 #. Tag: para
 #, no-c-format
 msgid "The parameters set in the document configuration file (by default, <filename>publican.cfg</filename>) allow you to control many aspects of the way in which a document is presented and packaged — refer to <xref linkend=\"sect-Publican-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file\" />."
-msgstr "Les paramètres définis dans le fichier de configuration du document (par défaut, <filename>publican.cfg</filename>) vous permettent de contrôler divers aspects de la manière dont le document est présenté et empaqueté — voyez la <xref linkend=\"sect-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file\" />."
+msgstr "Les paramètres définis dans le fichier de configuration du document (par défaut, <filename>publican.cfg</filename>) vous permettent de contrôler divers aspects de la manière dont le document est présenté et empaqueté — voyez la <xref linkend=\"sect-Publican-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file\" />."
 
 #. Tag: para
 #, no-c-format
@@ -37,7 +37,7 @@ msgstr "Si vous entretenez plusieurs versions d'un document, vous pouvez créer 
 #. Tag: screen
 #, no-c-format
 msgid "<prompt>$</prompt> <command>publican package --lang hi-IN --config community.cfg</command>"
-msgstr "<command>publican package --lang hi-IN --config community.cfg</command>\n"
+msgstr "<prompt>$</prompt> <command>publican package --lang hi-IN --config community.cfg</command>"
 
 #. Tag: para
 #, no-c-format
@@ -67,22 +67,22 @@ msgstr "Les paquets SRPM contiennent le code source utilisé pour créer le logi
 #. Tag: para
 #, no-c-format
 msgid "Conversely, binary RPM packages contain software — or in this case, a document — that is ready to copy to a location in the computer's file system and use immediately. The contents of the binary RPM package do not need to be compiled by the computer onto which they are installed. Therefore, when installing documentation solely for local use the computer does not need to have <application>Publican</application> installed. Installing <application>Publican</application>-generated documentation on a webserver <emphasis>does</emphasis> requires <application>Publican</application> to be installed, but for reasons other than compiling the source code. Refer to <xref linkend=\"sect-Publican-Users_Guide-Types_of_RPM_packages-Desktop_packages_and_web_packages\" /> for a description of the differences between documentation installed for local use (<firstterm>desktop RPMs</firstterm>) and documentation installed to serve as web content (<firstterm>web RPMs</firstterm>)."
-msgstr "À l'opposé, des paquets RPM binaires contiennent un logiciel — dans notre cas, un document — prêt à être copié à un certain emplacement dans le système de fichiers de l'ordinateur ; il est utilisable immédiatement. Le contenu du paquet RPM binaire n'a pas besoin d'être compilé par l'ordinateur sur lequel il est installé. Donc, en installant une documentation uniquement pour un usage local, il n'est pas nécessaire d'avoir installé <application>Publican</application>. Installer une documentation créée avec <application>Publican</application> sur un serveur Web <emphasis>nécessite</emphasis> que <application>Publican</application> soit installé, mais pour des raisons autres que la compilation du code source. Voyez la <xref linkend=\"sect-Users_Guide-Types_of_RPM_packages-Desktop_packages_and_web_packages\" /> pour une description des différences entre une documentation installée pour un usage local (<firstterm>RPM bureau</firstterm>) et une documentation installée pour servir de contenu Web (<firstterm>RPM Web</firstterm>)."
+msgstr "À l'opposé, des paquets RPM binaires contiennent un logiciel — dans notre cas, un document — prêt à être copié à un certain emplacement dans le système de fichiers de l'ordinateur ; il est utilisable immédiatement. Le contenu du paquet RPM binaire n'a pas besoin d'être compilé par l'ordinateur sur lequel il est installé. Donc, en installant une documentation uniquement pour un usage local, il n'est pas nécessaire d'avoir installé <application>Publican</application>. Installer une documentation créée avec <application>Publican</application> sur un serveur Web <emphasis>nécessite</emphasis> que <application>Publican</application> soit installé, mais pour des raisons autres que la compilation du code source. Voyez la <xref linkend=\"sect-Publican-Users_Guide-Types_of_RPM_packages-Desktop_packages_and_web_packages\" /> pour une description des différences entre une documentation installée pour un usage local (<firstterm>RPM bureau</firstterm>) et une documentation installée pour servir de contenu Web (<firstterm>RPM Web</firstterm>)."
 
 #. Tag: title
 #, no-c-format
 msgid "Desktop packages and web packages"
-msgstr "Paquets bureau et paquets Web"
+msgstr "Paquets pour ordinateur de bureau et paquets Web"
 
 #. Tag: para
 #, no-c-format
 msgid "<application>Publican</application> can package documents for reading on a computer workstation (a <firstterm>desktop RPM package</firstterm>) or to install on a web server and publish on the World Wide Web (a <firstterm>web RPM package</firstterm>). The desktop RPM package of a <application>Publican</application> document and the web RPM package of the same document differ in that the desktop RPM package installs documentation only for local use on a computer, while the web RPM installs documentation for local use, but also to be served to the World Wide Web."
-msgstr "<application>Publican</application> peut empaqueter des documents pour une lecture sur station de travail (un <firstterm>paquet RPM bureau</firstterm>) ou pour une installation sur serveur Web et publication sur la Toile (un <firstterm>paquet RPM web</firstterm>). Le paquet RPM bureau d'un document <application>Publican</application> et le paquet RPM Web différent en ce que le paquet RPM bureau n'installe la documentation que pour une utilisation locale sur un ordinateur, alors que le RPM Web l'installe non seulement pour une utilisation locale mais également pour la servir sur la Toile."
+msgstr "<application>Publican</application> peut empaqueter des documents pour une lecture sur station de travail (un <firstterm>paquet RPM pour ordinateur de bureau</firstterm>) ou pour une installation sur serveur Web et publication sur la Toile (un <firstterm>paquet RPM web</firstterm>). Le paquet RPM pour ordinateur de bureau d'un document <application>Publican</application> et le paquet RPM Web sont différents en ce que le paquet RPM pour ordinateur de bureau n'installe la documentation que pour une utilisation locale sur un ordinateur, alors que le RPM Web l'installe non seulement pour une utilisation locale mais également pour la servir sur la Toile."
 
 #. Tag: para
 #, no-c-format
 msgid "Desktop (binary) RPM packages of <application>Publican</application> documents contain the documentation in single-page HTML format. Documents distributed in these packages are installed in a subdirectory of <filename>/usr/share/doc/</filename>, the location specified by the <citetitle>Filesystem Hierarchy Standard</citetitle> (<citetitle>FHS</citetitle>) for ‘Miscellaneous documentation’.<footnote> <para> Refer to <link xlink:href=\"http://www.pathname.com/fhs/pub/fhs-2.3.html#USRSHAREARCHITECTUREINDEPENDENTDATA\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">http://www.pathname.com/fhs/pub/fhs-2.3.html#USRSHAREARCHITECTUREINDEPENDENTDATA</link> </para> </footnote> The desktop RPM package also contains a <firstterm>desktop file</firstterm>, to be placed in <filename>/usr/share/applications/</filename>. This file enables <firstterm>desktop environments</firstterm> to add the installed document to their menus for ease of reference by users. By default, the menu item appears under <menuchoice><guimenu>System</guimenu><guisubmenu>Documentation</guisubmenu></menuchoice> on the GNOME desktop. To customize the placement of the menu item, create a documentation menu package to supply <filename>.directory</filename> and <filename>.menu</filename> files and set the <parameter>dt_requires</parameter> and <parameter>menu_category</parameter> parameters in the <filename>publican.cfg</filename> file to require this package and supply the appropriate menu category. Refer to <xref linkend=\"sect-Publican-Users_Guide-Desktop_menu_entries_for_documents\" />"
-msgstr "Les paquets RPM bureau (binaires) des documents <application>Publican</application> contiennent la documentation au format HTML page unique. Les documents distribués dans ces paquets sont installés dans un sous-répertoire de <filename>/usr/share/doc/</filename>, emplacement défini par la norme sur les hiérarchies dans les systèmes de fichiers (<citetitle>Filesystem Hierarchy Standard</citetitle>) (<citetitle>FHS</citetitle>) pour &lsquo;documentations diverses&rsquo;<footnote> <para> Reportez-vous à la page <ulink url=\"http://www.pathname.com/fhs/pub/fhs-2.3.html#USRSHAREARCHITECTUREINDEPENDENTDATA\">http://www.pathname.com/fhs/pub/fhs-2.3.html#USRSHAREARCHITECTUREINDEPENDENTDATA</ulink> </para> </footnote>. Le paquet RPM bureau contient également un <firstterm>fichier .desktop</firstterm>, à placer dans <filename>/usr/share/applications/</filename>. Ce fichier, activé par l'<firstterm>environnement bureau</firstterm>, ajoute le document installé dans les menus pour faciliter son référencement par les utilisateurs. Par défaut, l'article de menu sera affiché sous <menuchoice><guimenu>Outils système</guimenu><guisubmenu>Documentation</guisubmenu></menuchoice> dans le bureau GNOME. Pour personnaliser l'emplacement de l'article du menu, créez un paquet menu de documentation pour avoir des fichiers <filename>.directory</filename> et <filename>.menu</filename> et définissez des paramètres <parameter>dt_requires</parameter> et <parameter>menu_category</parameter> dans le fichier <filename>publican.cfg</filename> pour demander ce paquet et fournir la catégorie de menu appropriée. Voyez la <xref linkend=\"desktop_menus\" />."
+msgstr "Les paquets RPM ordinateur de bureau (binaires) des documents <application>Publican</application> contiennent la documentation au format HTML page unique. Les documents distribués dans ces paquets sont installés dans un sous-répertoire de <filename>/usr/share/doc/</filename>, emplacement défini par la norme sur les hiérarchies dans les systèmes de fichiers (<citetitle>Filesystem Hierarchy Standard</citetitle>) (<citetitle>FHS</citetitle>) pour &lsquo;documentations diverses&rsquo;<footnote> <para> Reportez-vous à la page <ulink url=\"http://www.pathname.com/fhs/pub/fhs-2.3.html#USRSHAREARCHITECTUREINDEPENDENTDATA\">http://www.pathname.com/fhs/pub/fhs-2.3.html#USRSHAREARCHITECTUREINDEPENDENTDATA</ulink> </para> </footnote>. Le paquet RPM pour ordinateur de bureau contient également un <firstterm>fichier .desktop</firstterm>, à placer dans <filename>/usr/share/applications/</filename>. Ce fichier, activé par l'<firstterm>environnement bureau</firstterm>, ajoute le document installé dans les menus pour faciliter son référencement par les utilisateurs. Par défaut, l'article de menu sera affiché sous <menuchoice><guimenu>Outils système</guimenu><guisubmenu>Documentation</guisubmenu></menuchoice> dans le bureau GNOME. Pour personnaliser l'emplacement de l'article du menu, créez un paquet menu de documentation pour avoir des fichiers <filename>.directory</filename> et <filename>.menu</filename> et définissez des paramètres <parameter>dt_requires</parameter> et <parameter>menu_category</parameter> dans le fichier <filename>publican.cfg</filename> pour demander ce paquet et fournir la catégorie de menu appropriée. Voyez la <xref linkend=\"sect-Publican-Users_Guide-Desktop_menu_entries_for_documents\" />."
 
 #. Tag: para
 #, no-c-format
@@ -97,7 +97,7 @@ msgstr "si vous publiez une documentation dans une langue dans laquelle les sort
 #. Tag: para
 #, no-c-format
 msgid "your book or your brand contains the <parameter>web_formats</parameter> parameter. The value of this parameter overrides the default formats that <application>Publican</application> packages. For example, to publish the document only as single-page HTML, PDF, and text, set <literal>web_formats: \"html-single,pdf,txt\"</literal>"
-msgstr "votre ouvrage ou votre marque de fabrique contient le paramètre <parameter>web_formats</parameter>. La valeur de ce paramètre écrase les formats par défaut des paquets <application>Publican</application>. Par exemple, pour publier le document aux formats HTML page unique, PDF et texte, définissez <literal>web_formats: html-single,pdf,txt</literal>"
+msgstr "votre ouvrage ou votre estampille contient le paramètre <parameter>web_formats</parameter>. La valeur de ce paramètre écrase les formats par défaut des paquets <application>Publican</application>. Par exemple, pour publier le document aux formats HTML page unique, PDF et texte, définissez <literal>web_formats: html-single,pdf,txt</literal>"
 
 #. Tag: para
 #, no-c-format
@@ -107,17 +107,17 @@ msgstr "Le contenu de la construction est installé dans des sous-répertoires d
 #. Tag: title
 #, no-c-format
 msgid "The <prompt>$</prompt> <command>publican package</command> command"
-msgstr "La commande <command>publican package</command>"
+msgstr "La commande <prompt>$</prompt> <command>publican package</command>"
 
 #. Tag: para
 #, no-c-format
 msgid "Use the <prompt>$</prompt> <command>publican package --lang=<replaceable>Language_Code</replaceable></command> command to package documents for distribution in the language that you specify with the <option>--lang</option> option. Refer to <xref linkend=\"appe-Publican-Users_Guide-Language_codes\" /> for more information about language codes."
-msgstr "Utilisez la commande <command>publican package --lang=<replaceable>Code_langue</replaceable></command> pour empaqueter des documents dans la langue définie par l'option <option>--lang</option>. Reportez-vous à l'<xref linkend=\"appe-Users_Guide-Language_codes\" /> pour plus de détails à propos des codes de langues."
+msgstr "Utilisez la commande <prompt>$</prompt> <command>publican package --lang=<replaceable>Code_langue</replaceable></command> pour empaqueter des documents dans la langue définie par l'option <option>--lang</option>. Reportez-vous à l'<xref linkend=\"appe-Publican-Users_Guide-Language_codes\" /> pour plus de détails à propos des codes de langues."
 
 #. Tag: para
 #, no-c-format
 msgid "If you run <prompt>$</prompt> <command>publican package</command> with no options other than the mandatory <option>--lang</option> option, <application>Publican</application> produces a web SRPM package. The full range of options for <command>publican package</command> is as follows:"
-msgstr "Si vous exécutez <command>publican package</command> sans autre option que l'option obligatoire <option>--lang</option>, <application>Publican</application> produit un paquet Web SRPM. Voici la totalité des options disponibles pour <command>publican package</command> :"
+msgstr "Si vous exécutez <prompt>$</prompt> <command>publican package</command> sans autre option que l'option obligatoire <option>--lang</option>, <application>Publican</application> produit un paquet Web SRPM. Voici la totalité des options disponibles pour <command>publican package</command> :"
 
 #. Tag: term
 #, no-c-format
@@ -197,12 +197,12 @@ msgstr "Omission du numéro de version du logiciel"
 #. Tag: para
 #, no-c-format
 msgid "Much software documentation is version-specific. At best, the procedures described in the documentation for one version of a product might not help you to install, configure, or use a different version of the product. At worst, the procedures described in the documentation for one version might be misleading or even harmful when applied to a different version."
-msgstr "Beaucoup de documentations logicielles sont propres à une version. Au mieux, les procédures décrites dans la documentation pour une version du produit peuvent ne vous être d'aucune aide pour installer, configurer ou utiliser une autre version du produit. Au pire, elles peuvent prêter à confusion ou même être nuisibles lorsqu'elles sont appliquées à d'autres versions."
+msgstr "Beaucoup de documentations de logiciels sont propres à une version. Au mieux, les procédures décrites dans la documentation pour une version du produit peuvent ne vous être d'aucune aide pour installer, configurer ou utiliser une autre version du produit. Au pire, elles peuvent prêter à confusion ou même être nuisibles lorsqu'elles sont appliquées à d'autres versions."
 
 #. Tag: para
 #, no-c-format
 msgid "If you distribute documentation as RPM packages without version numbers in the package names, the <application>RPM Package Manager</application> on users' computers will automatically replace any existing documentation with the documentation for the latest version; users will not have access to documentation for more than one version of the software at a time. Be certain you want this outcome."
-msgstr "Si vous distribuez des documentations sous forme de paquets RPM sans numéro de version dans le nom des paquets, le <application>Gestionnaire de paquet RPM</application> de l'ordinateur de l'utilisateur remplace automatiquement toute documentation existante par la documentation pour la dernière version ; les utilisateurs n'auront donc accès qu'à tout au plus une seule documentation pour la dernière version. Assurez-vous bien que vous souhaitez un tel comportement."
+msgstr "Si vous distribuez des documentations sous forme de paquets RPM sans numéro de version dans le nom des paquets, le <application>Gestionnaire de paquet RPM</application> de l'ordinateur de l'utilisateur remplace automatiquement toute documentation existante par la documentation pour la dernière version ; les utilisateurs n'auront donc accès qu'à tout au plus une seule documentation pour la dernière version. Assurez-vous bien que vous souhaitez ce comportement."
 
 #. Tag: term
 #, no-c-format
@@ -217,7 +217,7 @@ msgstr "indique que <application>Publican</application> doit construire le paque
 #. Tag: para
 #, no-c-format
 msgid "After you run the <prompt>$</prompt> <command>publican package</command> command, <application>Publican</application> outputs completed SRPM packages to the document's <filename>tmp/rpm</filename> directory, and completed binary RPM packages to the document's <filename>tmp/rpm/noarch</filename> directory."
-msgstr "Après avoir exécuté la commande <command>publican package</command>, <application>Publican</application> effectue la sortie des paquets SRPM complétés dans le répertoire <filename>tmp/rpm</filename> du document et celle des paquets binaires complétés dans <filename>tmp/rpm/noarch</filename>."
+msgstr "Après avoir exécuté la commande <prompt>$</prompt> <command>publican package</command>, <application>Publican</application> effectue la sortie des paquets SRPM complétés dans le répertoire <filename>tmp/rpm</filename> du document et celle des paquets binaires complétés dans <filename>tmp/rpm/noarch</filename>."
 
 #. Tag: para
 #, no-c-format
@@ -227,13 +227,12 @@ msgstr "Par défaut, les paquets de documentation <application>Publican</applica
 #. Tag: literallayout
 #, no-c-format
 msgid "<filename><replaceable>productname</replaceable>-<replaceable>title</replaceable>-<replaceable>productnumber</replaceable>-<replaceable>[web]-</replaceable><replaceable>language</replaceable>-<replaceable>edition</replaceable>-<replaceable>pubsnumber</replaceable>. <replaceable>[.[build_target].noarch]</replaceable>.<replaceable>file_extension</replaceable></filename>."
-msgstr "<filename><replaceable>nom_produit</replaceable>-<replaceable>titre</replaceable>-<replaceable>numéro_produit</replaceable>-<replaceable>[web]-</replaceable><replaceable>langue</replaceable>-<replaceable>édition</replaceable>-<replaceable>numéro_publication</replaceable>.\n"
-"<replaceable>[.[cible_construction].noarch]</replaceable>.<replaceable>extension_fichier</replaceable></filename>."
+msgstr "<filename><replaceable>nom_produit</replaceable>-<replaceable>titre</replaceable>-<replaceable>numéro_produit</replaceable>-<replaceable>[web]-</replaceable><replaceable>langue</replaceable>-<replaceable>édition</replaceable>-<replaceable>numéro_publication</replaceable>. <replaceable>[.[cible_construction].noarch]</replaceable>.<replaceable>extension_fichier</replaceable></filename>."
 
 #. Tag: para
 #, no-c-format
 msgid "<application>Publican</application> uses the information in the document's configuration file (by default, <filename>publican.cfg</filename>) to supply the various parameters in the file name, and then information in the <filename>Book_Info.xml</filename> file for any parameters missing from the configuration file. Refer to <xref linkend=\"sect-Publican-Users_Guide-Files_in_the_book_directory\" /> for details of the parameters used in these files. Additionally, note that:"
-msgstr "<application>Publican</application> utilise l'information dans le fichier de configuration du document (par défaut, <filename>publican.cfg</filename>) pour définir les divers paramètres du nom du fichier, puis les informations du fichier <filename>Book_Info.xml</filename> pour tout paramètre manquant dans le fichier de configuration. Reportez-vous à la <xref linkend=\"sect-Users_Guide-Files_in_the_book_directory\" /> pour des précisions sur les paramètres utilisés dans ces fichiers. En plus, veuillez noter que :"
+msgstr "<application>Publican</application> utilise l'information dans le fichier de configuration du document (par défaut, <filename>publican.cfg</filename>) pour définir les divers paramètres du nom du fichier, puis les informations du fichier <filename>Book_Info.xml</filename> pour tout paramètre manquant dans le fichier de configuration. Reportez-vous à la <xref linkend=\"sect-Publican-Users_Guide-Files_in_the_book_directory\" /> pour des précisions sur les paramètres utilisés dans ces fichiers. En plus, veuillez noter que :"
 
 #. Tag: para
 #, no-c-format
@@ -263,7 +262,7 @@ msgstr "les paquets des documents traduits prennent leurs numéros de version à
 #. Tag: title
 #, no-c-format
 msgid "The <prompt>$</prompt> <command>publican package</command> command — Example usage"
-msgstr "La commande <command>publican package</command> — exemples d'utilisation"
+msgstr "La commande <prompt>$</prompt> <command>publican package</command> — exemples d'utilisation"
 
 #. Tag: para
 #, no-c-format
@@ -273,7 +272,7 @@ msgstr "Voici des exemples illustrant quelques options courantes pour le <citeti
 #. Tag: term
 #, no-c-format
 msgid "<prompt>$</prompt> <command>publican package --lang=cs-CZ</command>"
-msgstr "<command>publican package --lang=cs-CZ</command>"
+msgstr "<prompt>$</prompt> <command>publican package --lang=cs-CZ</command>"
 
 #. Tag: para
 #, no-c-format
@@ -283,7 +282,7 @@ msgstr "produit un paquet SRPM Web nommé <package>Guide_de_configuration_de_Foo
 #. Tag: term
 #, no-c-format
 msgid "<prompt>$</prompt> <command>publican package --desktop --lang=cs-CZ</command>"
-msgstr "<command>publican package --desktop --lang=cs-CZ</command>"
+msgstr "<prompt>$</prompt> <command>publican package --desktop --lang=cs-CZ</command>"
 
 #. Tag: para
 #, no-c-format
@@ -293,7 +292,7 @@ msgstr "produit un paquet SRPM bureau nommé <package>Guide_de_configuration_de_
 #. Tag: term
 #, no-c-format
 msgid "<prompt>$</prompt> <command>publican package --binary --lang=cs-CZ</command>"
-msgstr "<command>publican package --binary --lang=cs-CZ</command>"
+msgstr "<prompt>$</prompt> <command>publican package --binary --lang=cs-CZ</command>"
 
 #. Tag: para
 #, no-c-format
@@ -303,7 +302,7 @@ msgstr "produit à la fois un paquet RPM web binaire nommé <package>Guide_de_co
 #. Tag: term
 #, no-c-format
 msgid "<prompt>$</prompt> <command>publican package --desktop --binary --lang=cs-CZ</command>"
-msgstr "<command>publican package --desktop --binary --lang=cs-CZ</command>"
+msgstr "<prompt>$</prompt> <command>publican package --desktop --binary --lang=cs-CZ</command>"
 
 #. Tag: para
 #, no-c-format
@@ -313,7 +312,7 @@ msgstr "produit un paquet RPM binaire bureau nommé <package>Guide_de_configurat
 #. Tag: term
 #, no-c-format
 msgid "<prompt>$</prompt> <command>publican package --desktop --short_sighted --lang=cs-CZ</command>"
-msgstr "<command>publican package --desktop --short_sighted --lang=cs-CZ</command>"
+msgstr "<prompt>$</prompt> <command>publican package --desktop --short_sighted --lang=cs-CZ</command>"
 
 #. Tag: para
 #, no-c-format

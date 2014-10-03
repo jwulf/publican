@@ -1,16 +1,17 @@
 # Gé Baylard <<Geodebay@gmail.com>>, 2013.
+# Gérard Baylard <geodebay@gmail.com>, 2014. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2013-03-08T03:26:30\n"
-"PO-Revision-Date: 2013-09-07 12:04-0400\n"
-"Last-Translator: Gé Baylard <<Geodebay@gmail.com>>\n"
-"Language-Team: français <<trans-fr@lists.fedoraproject.org>>\n"
+"POT-Creation-Date: 2014-05-06 14:10+1000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2014-05-23 04:30-0400\n"
+"Last-Translator: Gérard Baylard <geodebay@gmail.com>\n"
+"Language-Team: français <<trans-fr@lists.fedoraproject.org>>\n"
 "Language: fr\n"
-"X-Generator: Zanata 3.3.2\n"
+"X-Generator: Zanata 3.4.2\n"
 "Plural-Forms: nplurals=2; plural=n>1;\n"
 
 #. Tag: title
@@ -27,13 +28,13 @@ msgstr "Pour installer un document sur un site Web construit à la main, placez-
 #, no-c-format
 msgid "<prompt>$</prompt> <command>publican build --embedtoc --formats=<replaceable>list_of_formats</replaceable> --langs=<replaceable>language_codes</replaceable> --publish</command> \n"
 "<prompt>$</prompt> <command>publican install_book --site_config <replaceable>path_to_site_configuration_file</replaceable>.cfg --lang <replaceable>language_code</replaceable></command>"
-msgstr "<command>publican build --embedtoc --formats=<replaceable>liste_de_formats</replaceable> --langs=<replaceable>codes_langue</replaceable> --publish</command> \n"
-"<command>publican install_book --site_config <replaceable>chemin_vers_fichier_de_configuration_du_site</replaceable>.cfg --lang <replaceable>code_langue</replaceable></command>"
+msgstr "<prompt>$</prompt> <command>publican build --embedtoc --formats=<replaceable>liste_de_formats</replaceable> --langs=<replaceable>codes_langues</replaceable> --publish</command> \n"
+"<prompt>$</prompt> <command>publican install_book --site_config <replaceable>chemin_vers_fichier_configuration_site</replaceable>.cfg --lang <replaceable>code_langue</replaceable></command>"
 
 #. Tag: para
 #, no-c-format
 msgid "Note that you can run a single <prompt>$</prompt> <command>publican build</command> command for all languages that you want to publish, but must run a separate <command>publican install_book</command> for each language. You must include <literal>html</literal> as one of the formats in the <command>publican build</command> command; optionally, include any or all of the following formats in a comma-separated list: <literal>html-single</literal>, <literal>pdf</literal>, and <literal>epub</literal>."
-msgstr "Notez que vous pouvez exécuter une seule commande <command>publican build</command> pour l'ensemble des langues que vous souhaitez publier, mais vous devez lancer une commande <command>publican install_book</command> séparée pour chaque langue. Vous devez inclure <literal>html</literal> dans les formats de la commande <command>publican build</command> ; facultativement, ajoutez un ou plusieurs autres formats dans un liste avec la virgule comme sépatateur : <literal>html-single</literal>, <literal>pdf</literal> et <literal>epub</literal>."
+msgstr "Notez que vous pouvez exécuter une seule commande <prompt>$</prompt> <command>publican build</command> pour l'ensemble des langues que vous souhaitez publier, mais vous devez lancer une commande <command>publican install_book</command> séparée pour chaque langue. Vous devez inclure <literal>html</literal> dans les formats de la commande <command>publican build</command> ; facultativement, ajoutez un ou plusieurs autres formats dans un liste avec la virgule comme sépatateur : <literal>html-single</literal>, <literal>pdf</literal> et <literal>epub</literal>."
 
 #. Tag: para
 #, no-c-format
@@ -48,7 +49,7 @@ msgstr "Pour supprimer un document, placez-vous dans le répertoire contenant le
 #. Tag: screen
 #, no-c-format
 msgid "<prompt>$</prompt> <command>publican remove_book --site_config <replaceable>path_to_site_configuration_file</replaceable>.cfg --lang <replaceable>language_code</replaceable></command>"
-msgstr "<command>publican remove_book --site_config <replaceable>chemin_vers_fichier_de_configuration_du_site</replaceable>.cfg --lang <replaceable>code_langue</replaceable></command>"
+msgstr "<prompt>$</prompt> <command>publican remove_book --site_config <replaceable>chemin_vers_fichier_de_configuration_du_site</replaceable>.cfg --lang <replaceable>code_langue</replaceable></command>"
 
 #. Tag: para
 #, no-c-format

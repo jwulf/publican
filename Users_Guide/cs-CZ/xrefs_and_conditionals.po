@@ -1,0 +1,19 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: 0\n"
+"POT-Creation-Date: 2014-10-03 13:09+1000\n"
+"PO-Revision-Date: 2014-10-03 13:09+1000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: None\n"
+"Language: en-US \n"
+"MIME-Version: 1.0\n"
+"Content-Type: application/x-publican; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Publican v4.2.2\n"
+
+msgid "xrefs and conditional tagging"
+msgstr ""
+
+msgid "If an <tag>&lt;xref&gt;</tag> points to content not included in the build due to conditional tagging, the build will fail. For example, with <prompt>$</prompt> <command>condition: upstream</command> set in the <filename>publican.cfg</filename> file, <prompt>$</prompt> <command>publican build --formats=pdf --langs=en-US</command> will fail if the book has the tag <tag>&lt;xref linkend=\"betasection\"&gt;</tag> pointing to <tag>&lt;section id=\"betasection\" condition=\"beta\"&gt;</tag>."
+msgstr ""
+

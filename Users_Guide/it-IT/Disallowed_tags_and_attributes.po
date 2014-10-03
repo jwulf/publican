@@ -5,16 +5,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2010-11-29T18:01:38\n"
-"PO-Revision-Date: 2012-01-22 10:29-0500\n"
-"Last-Translator: Mario Santagiuliana <fedora at marionline.it>\n"
-"Language-Team: Italian <fedora-trans-it at redhat.com>\n"
+"POT-Creation-Date: 2014-05-06 14:10+1000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2012-01-22 10:29-0500\n"
+"Last-Translator: Mario Santagiuliana <fedora at marionline.it>\n"
+"Language-Team: Italian <fedora-trans-it at redhat.com>\n"
 "Language: it\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Zanata 3.3.2\n"
+"X-Generator: Zanata 3.4.2\n"
 
 #. Tag: title
 #, no-c-format
@@ -531,20 +531,35 @@ msgstr "Inoltre, notare che la combinazione della preposizione con l'articolo po
 msgid "Due to the problems that <parameter>endterm</parameter> presents for translation, <application>Publican</application> discourages this attribute."
 msgstr "A causa di queste difficoltà, in fase di traduzione di <parameter>endterm</parameter>, <application>Publican</application> non permette l'uso di questo attributo."
 
-#. Tag: para
+#. Tag: term
 #, no-c-format
-#~ msgid "Nested tables are therefore disallowed at least until they are supported in <application>FOP</application>. If you planned to include a nested table in your document, reconsider your data structure."
-#~ msgstr "L'annidamento delle tabelle è perciò vietato almeno fino a quando non supportato in <application>FOP</application>. Se si prevede di includere una tale tabella, si riconsideri di ristrutturare la struttura dei dati."
+#~ msgid "<sgmltag>&lt;entrytbl&gt;</sgmltag>"
+#~ msgstr "<sgmltag>&lt;entrytbl&gt;</sgmltag>"
 
-#. Tag: para
+#. Tag: term
 #, no-c-format
-#~ msgid "<application>Publican</application> depends on an external application, <application>FOP</application>, to render PDF documents. At present, <application>FOP</application> does not support nested tables, so attempts to build PDF files from <application>Publican</application> documents that contain nested tables fail."
-#~ msgstr "<application>Publican</application> dipende da un'applicazione esterna, <application>FOP</application>, per rendere documenti PDF. Al momento, <application>FOP</application> non supporta l'annidamento delle tabelle (nested tables), quindi ogni tentativo di creare file PDF da documenti <application>Publican</application> contenenti tabelle annidate fallisce."
+#~ msgid "<sgmltag>&lt;caution&gt;</sgmltag>"
+#~ msgstr "<sgmltag>&lt;caution&gt;</sgmltag>"
+
+#. Tag: title
+#, no-c-format
+#~ msgid "Disallowed elements"
+#~ msgstr "Elementi non permessi"
 
 #. Tag: para
 #, no-c-format
 #~ msgid "Use <sgmltag>&lt;note&gt;</sgmltag> instead of <sgmltag>&lt;tip&gt;</sgmltag>, and use either <sgmltag>&lt;important&gt;</sgmltag> or <sgmltag>&lt;warning&gt;</sgmltag> instead of <sgmltag>&lt;caution&gt;</sgmltag>. Some criteria by which you might select a suitable level of severity are presented in the &lsquo;Document Conventions&rsquo; section of the preface of books produced with <application>Publican</application>'s default brand."
 #~ msgstr "Usare <sgmltag>&lt;note&gt;</sgmltag> invece di <sgmltag>&lt;tip&gt;</sgmltag>, ed usare <sgmltag>&lt;important&gt;</sgmltag> o <sgmltag>&lt;warning&gt;</sgmltag> invece di <sgmltag>&lt;caution&gt;</sgmltag>. Alcuni criteri, in base ai quali selezionare i livelli di severità sono indicati nella sezione &lsquo;Convenzioni del Documento&rsquo; della Prefazione dei libri prodotti con il brand predefinito di <application>Publican</application>."
+
+#. Tag: term
+#, no-c-format
+#~ msgid "<sgmltag>&lt;tip&gt;</sgmltag>"
+#~ msgstr "<sgmltag>&lt;tip&gt;</sgmltag>"
+
+#. Tag: para
+#, no-c-format
+#~ msgid "DocBook XML supports five <firstterm>admonitions</firstterm> of varying severity: <sgmltag>&lt;tip&gt;</sgmltag>, <sgmltag>&lt;note&gt;</sgmltag>, <sgmltag>&lt;important&gt;</sgmltag>, <sgmltag>&lt;caution&gt;</sgmltag>, and <sgmltag>&lt;warning&gt;</sgmltag>. Taken together, these represent a very fine-grained set of distinctions. It is unlikely that these fine distinctions can be applied consistently within a document, especially when more than one person writes or maintains the document. Moreover, this level of granularity is meaningless to readers. By design, <application>Publican</application> disallows the <sgmltag>&lt;tip&gt;</sgmltag> and <sgmltag>&lt;caution&gt;</sgmltag> elements, these elements being the two most redundant in the set."
+#~ msgstr "DocBook XML supporta cinque tipi di <firstterm>avvisi</firstterm> per vari di livelli di severità:  <sgmltag>&lt;tip&gt;</sgmltag>, <sgmltag>&lt;note&gt;</sgmltag>, <sgmltag>&lt;important&gt;</sgmltag>, <sgmltag>&lt;caution&gt;</sgmltag> e <sgmltag>&lt;warning&gt;</sgmltag>. Complessivamente, essi rappresentano un insieme di distinzioni a grana molto fine. E' improbabile che queste sottili distinzioni possano applicarsi consistentemente in un documento, in specie quando un documento è redatto o mantenuto da più persone. Inoltre, questo livello di granularità può sembrare insignificante ai lettori. Per progetto, <application>Publican</application> disabilita gli elementi <sgmltag>&lt;tip&gt;</sgmltag> e <sgmltag>&lt;caution&gt;</sgmltag>, essendo gli elementi più ridondanti del gruppo."
 
 #. Tag: para
 #, no-c-format
@@ -553,31 +568,16 @@ msgstr "A causa di queste difficoltà, in fase di traduzione di <parameter>endte
 
 #. Tag: para
 #, no-c-format
-#~ msgid "DocBook XML supports five <firstterm>admonitions</firstterm> of varying severity: <sgmltag>&lt;tip&gt;</sgmltag>, <sgmltag>&lt;note&gt;</sgmltag>, <sgmltag>&lt;important&gt;</sgmltag>, <sgmltag>&lt;caution&gt;</sgmltag>, and <sgmltag>&lt;warning&gt;</sgmltag>. Taken together, these represent a very fine-grained set of distinctions. It is unlikely that these fine distinctions can be applied consistently within a document, especially when more than one person writes or maintains the document. Moreover, this level of granularity is meaningless to readers. By design, <application>Publican</application> disallows the <sgmltag>&lt;tip&gt;</sgmltag> and <sgmltag>&lt;caution&gt;</sgmltag> elements, these elements being the two most redundant in the set."
-#~ msgstr "DocBook XML supporta cinque tipi di <firstterm>avvisi</firstterm> per vari di livelli di severità:  <sgmltag>&lt;tip&gt;</sgmltag>, <sgmltag>&lt;note&gt;</sgmltag>, <sgmltag>&lt;important&gt;</sgmltag>, <sgmltag>&lt;caution&gt;</sgmltag> e <sgmltag>&lt;warning&gt;</sgmltag>. Complessivamente, essi rappresentano un insieme di distinzioni a grana molto fine. E' improbabile che queste sottili distinzioni possano applicarsi consistentemente in un documento, in specie quando un documento è redatto o mantenuto da più persone. Inoltre, questo livello di granularità può sembrare insignificante ai lettori. Per progetto, <application>Publican</application> disabilita gli elementi <sgmltag>&lt;tip&gt;</sgmltag> e <sgmltag>&lt;caution&gt;</sgmltag>, essendo gli elementi più ridondanti del gruppo."
-
-#. Tag: term
-#, no-c-format
-#~ msgid "<sgmltag>&lt;entrytbl&gt;</sgmltag>"
-#~ msgstr "<sgmltag>&lt;entrytbl&gt;</sgmltag>"
-
-#. Tag: term
-#, no-c-format
-#~ msgid "<sgmltag>&lt;tip&gt;</sgmltag>"
-#~ msgstr "<sgmltag>&lt;tip&gt;</sgmltag>"
-
-#. Tag: term
-#, no-c-format
-#~ msgid "<sgmltag>&lt;caution&gt;</sgmltag>"
-#~ msgstr "<sgmltag>&lt;caution&gt;</sgmltag>"
+#~ msgid "<application>Publican</application> depends on an external application, <application>FOP</application>, to render PDF documents. At present, <application>FOP</application> does not support nested tables, so attempts to build PDF files from <application>Publican</application> documents that contain nested tables fail."
+#~ msgstr "<application>Publican</application> dipende da un'applicazione esterna, <application>FOP</application>, per rendere documenti PDF. Al momento, <application>FOP</application> non supporta l'annidamento delle tabelle (nested tables), quindi ogni tentativo di creare file PDF da documenti <application>Publican</application> contenenti tabelle annidate fallisce."
 
 #. Tag: para
 #, no-c-format
 #~ msgid "The <sgmltag>&lt;olink&gt;</sgmltag> tag provides cross-references between XML documents. For <sgmltag>&lt;olink&gt;</sgmltag>s to work outside of documents that are all hosted within the same library of XML files, you must provide a URL for the document to which you are linking. In environments that use <sgmltag>&lt;olink&gt;</sgmltag>s, these URLs can be supplied either as an XML entity or with a server-side script. <application>Publican</application> produces documents intended for wide dissemination in which URLs are always necessary for cross-references. Therefore, the <sgmltag>&lt;olink&gt;</sgmltag> tag offers no advantage over the <sgmltag>&lt;ulink&gt;</sgmltag> tag, and is disallowed due to its redundancy."
 #~ msgstr "Il tag <sgmltag>&lt;olink&gt;</sgmltag> offre riferimenti tra documenti XML. Per usare il tag <sgmltag>&lt;olink&gt;</sgmltag> per riferimenti ai documenti esterni facenti parte della stessa libreria di file XML, occorre fornire l'URL del documento da collegare. In ambienti che usano il tag <sgmltag>&lt;olink&gt;</sgmltag>, questi URL possono essere forniti sia con entità XML sia con script server-side. <application>Publican</application> produce documenti di vasta diffusione in cui gli URL sono sempre indispensabili per riferimenti incrociati. Quindi, il tag <sgmltag>&lt;olink&gt;</sgmltag> non offre alcun vantaggio sul tag <sgmltag>&lt;ulink&gt;</sgmltag> e perciò per ridondanza, è disabilitato."
 
-#. Tag: title
+#. Tag: para
 #, no-c-format
-#~ msgid "Disallowed elements"
-#~ msgstr "Elementi non permessi"
+#~ msgid "Nested tables are therefore disallowed at least until they are supported in <application>FOP</application>. If you planned to include a nested table in your document, reconsider your data structure."
+#~ msgstr "L'annidamento delle tabelle è perciò vietato almeno fino a quando non supportato in <application>FOP</application>. Se si prevede di includere una tale tabella, si riconsideri di ristrutturare la struttura dei dati."
 

@@ -1,28 +1,29 @@
 # Gé Baylard <<Geodebay@gmail.com>>, 2013.
-# Gérard Baylard <geodebay@gmail.com>, 2013. #zanata
+# Gé Baylard <geodebay@gmail.com>, 2013.
+# Gérard Baylard <geodebay@gmail.com>, 2014. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2013-03-08T03:26:30\n"
-"PO-Revision-Date: 2013-09-02 12:12-0400\n"
-"Last-Translator: Gérard Baylard <geodebay@gmail.com>\n"
-"Language-Team: français <<trans-fr@lists.fedoraproject.org>>\n"
+"POT-Creation-Date: 2014-05-06 14:10+1000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2014-05-13 08:18-0400\n"
+"Last-Translator: Gérard Baylard <geodebay@gmail.com>\n"
+"Language-Team: français <>\n"
 "Language: fr\n"
-"X-Generator: Zanata 3.3.2\n"
-"Plural-Forms: nplurals=2; plural=n>1;\n"
+"X-Generator: Zanata 3.4.2\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #. Tag: title
 #, no-c-format
 msgid "Files in the brand directory"
-msgstr "Fichiers dans le répertoire de la marque"
+msgstr "Fichiers dans le répertoire de l'estampille"
 
 #. Tag: para
 #, no-c-format
 msgid "Running the <prompt>$</prompt> <command>publican create_brand --name=<replaceable>brand</replaceable> --lang=<replaceable>language_code</replaceable></command> command creates a directory structure and the required files. The brand directory initially contains:"
-msgstr "Le fait d'exécuter la commande <command>publican create_brand --name=<replaceable>marque</replaceable> --lang=<replaceable>code_langue</replaceable></command> crée une structure de répertoire avec les fichiers requis. Le répertoire de la marque contient initialement :"
+msgstr "Le fait d'exécuter la commande <prompt>$</prompt> <command>publican create_brand --name=<replaceable>estampille</replaceable> --lang=<replaceable>code_langue</replaceable></command> crée une structure de répertoire avec les fichiers requis. Le répertoire de l'estampille contient initialement :"
 
 #. Tag: para
 #, no-c-format
@@ -47,7 +48,7 @@ msgstr "<filename>publican.cfg</filename>"
 #. Tag: para
 #, no-c-format
 msgid "<filename>publican-<replaceable>brand</replaceable>.spec</filename>, where <replaceable>brand</replaceable> is the name of the brand."
-msgstr "<filename>publican-<replaceable>marque</replaceable>.spec</filename>, où <replaceable>marque</replaceable> désigne le nom de la marque."
+msgstr "<filename>publican-<replaceable>estampille</replaceable>.spec</filename>, où <replaceable>estampille</replaceable> est le nom qui la désigne."
 
 #. Tag: para
 #, no-c-format
@@ -57,7 +58,7 @@ msgstr "<filename>README</filename>"
 #. Tag: para
 #, no-c-format
 msgid "a subdirectory for the brand's XML files, CSS stylesheets, and default images. The subdirectory is named with the language code of the original language of the brand (for example, <filename>en-US</filename>). These files are:"
-msgstr "un sous-répertoire pour les fichiers XML de la marque, les feuilles de style CSS et les images par défaut. Le sous-répertoire porte le nom du code de la langue d'origine de la marque (par exemple,  <filename>en-US</filename>). Ces fichiers sont :"
+msgstr "un sous-répertoire pour les fichiers XML de l'estampille, les feuilles de style CSS et les images par défaut. Le sous-répertoire porte le nom du code de la langue d'origine de l'estampille (par exemple,  <filename>en-US</filename>). Ces fichiers sont :"
 
 #. Tag: para
 #, no-c-format
@@ -92,7 +93,7 @@ msgstr "Le fichier publican.cfg"
 #. Tag: para
 #, no-c-format
 msgid "The <filename>publican.cfg</filename> file in a brand serves a similar purpose to the <filename>publican.cfg</filename> file in a document — it configures a number of basic options that define your brand."
-msgstr "Le fichier <filename>publican.cfg</filename> d'une marque a un rôle analogue à celui du fichier <filename>publican.cfg</filename> dans un document — il permet de régler un certain nombre d'options de base pour la définition de la marque."
+msgstr "Le fichier <filename>publican.cfg</filename> d'une estampille a un rôle analogue à celui du fichier <filename>publican.cfg</filename> d'un document — il permet de régler un certain nombre d'options de base pour la définition de l'estampille."
 
 #. Tag: term
 #, no-c-format
@@ -102,12 +103,12 @@ msgstr "<parameter>version</parameter>"
 #. Tag: para
 #, no-c-format
 msgid "specifies the version number for the brand. When you create the brand with <prompt>$</prompt> <command>publican create_brand</command>, the version number is set to <literal>0.1</literal>. Update the version number here in the brand <filename>publican.cfg</filename> file and in the <filename>publican-<replaceable>brand</replaceable>.spec</filename> file when you prepare a new version of the brand."
-msgstr "définit le numéro de version de la marque. Si vous créez la marque avec <command>publican create_brand</command>, le numéro de version est <literal>0.1</literal>. Mettez à jour ce numéro de version ici dans le fichier <filename>publican.cfg</filename> de la marque et dans le fichier <filename>publican-<replaceable>marque</replaceable>.spec</filename> quand vous préparez une nouvelle version de la marque."
+msgstr "définit le numéro de version de l'estampille. Si vous créez celle-ci avec <prompt>$</prompt> <command>publican create_brand</command>, le numéro de version est <literal>0.1</literal>. Mettez à jour le numéro de version dans le fichier <filename>publican.cfg</filename> de l'estampille et dans le fichier <filename>publican-<replaceable>estampille</replaceable>.spec</filename> quand vous préparez une nouvelle version de l'estampille."
 
 #. Tag: para
 #, no-c-format
 msgid "Note that this parameter is unrelated to the version number of documents built with this brand. For example, the <citetitle>Fedora 12 Installation Guide</citetitle> has its version set as <literal>12</literal> in its <filename>publican.cfg</filename> file, but might be built with version 1.0 of the <package>publican-fedora</package> brand."
-msgstr "Notez que ce paramètre n'a aucun rapport avec le numéro de version des documents construits avec cette marque. Par exemple, le <citetitle>Guide d'installation de Fedora 12</citetitle> a son numéro de version fixé à <literal>12</literal> dans son fichier <filename>publican.cfg</filename>, mais il peut très bien avoir été construit avec la version 1.0 de la marque <package>publican-fedora</package>."
+msgstr "Notez que ce paramètre n'a aucun rapport avec le numéro de version des documents construits avec cette estampille. Par exemple, le <citetitle>Guide d'installation de Fedora 12</citetitle> a un numéro de version égal à <literal>12</literal> dans son fichier <filename>publican.cfg</filename>, mais il peut très bien avoir été construit avec la version 1.0 de l'estampille <package>publican-fedora</package>."
 
 #. Tag: term
 #, no-c-format
@@ -117,7 +118,7 @@ msgstr "<parameter>xml_lang</parameter>"
 #. Tag: para
 #, no-c-format
 msgid "specifies the language of the source XML files for the brand's Common Content, for example, <literal>en-US</literal>, as set by the <option>--lang</option> option for <prompt>$</prompt> <command>publican create_brand</command>."
-msgstr "définit la langue des fichiers source XML du répertoire « Common Content » de la marque, par exemple,  <literal>en-US</literal>, comme cela a été précisé par l'option <option>--lang</option> de <command>publican create_brand</command>."
+msgstr "définit la langue des fichiers source XML du répertoire « Common Content » de l'estampille, par exemple,  <literal>en-US</literal>, comme cela a été précisé par l'option <option>--lang</option> de <prompt>$</prompt> <command>publican create_brand</command>."
 
 #. Tag: term
 #, no-c-format
@@ -127,7 +128,7 @@ msgstr "<parameter>release</parameter>"
 #. Tag: para
 #, no-c-format
 msgid "specifies the release number for the brand. When you create the brand with <prompt>$</prompt> <command>publican create_brand</command>, the release number is set to <literal>0</literal>. Update the version number here in the brand <filename>publican.cfg</filename> file and in the <filename>publican-<replaceable>brand</replaceable>.spec</filename> file when you prepare a new release of an existing version of the brand."
-msgstr "indique le numéro de parution de la marque. Quand vous créez un marque avec <command>publican create_brand</command>, le numéro de parution est initialement fixé à <literal>0</literal>. Mettez à jour sa valeur ici dans le fichier <filename>publican.cfg</filename> de la marque et dans le fichier <filename>publican-<replaceable>marque</replaceable>.spec</filename> quand vous préparez une nouvelle parution d'une version existante de la marque."
+msgstr "indique le numéro de parution de l'estampille. Quand vous en créez une avec <prompt>$</prompt> <command>publican create_brand</command>, le numéro de parution est initialement fixé à <literal>0</literal>. Mettez à jour sa valeur dans le fichier <filename>publican.cfg</filename> de l'estampille et dans le fichier <filename>publican-<replaceable>estampille</replaceable>.spec</filename> quand vous préparez une nouvelle parution d'une version existante."
 
 #. Tag: term
 #, no-c-format
@@ -137,7 +138,7 @@ msgstr "<parameter>type</parameter>"
 #. Tag: para
 #, no-c-format
 msgid "when set to <literal>type: brand</literal>, this parameter identifies the contents of this directory as a brand, rather than a book, article, or set."
-msgstr "défini sous la forme <literal>type: brand</literal>, ce paramètre identifie le contenu du répertoire comme étant une marque, et non un ouvrage, un article ou une ensemble de tomes."
+msgstr "défini sous la forme <literal>type: brand</literal>, ce paramètre identifie le contenu du répertoire comme étant une estampille, et non un ouvrage, un article ou une collection."
 
 #. Tag: term
 #, no-c-format
@@ -147,7 +148,7 @@ msgstr "<parameter>brand</parameter>"
 #. Tag: para
 #, no-c-format
 msgid "specifies the name of the brand, as set by the <option>--name</option> option for <prompt>$</prompt> <command>publican create_brand</command>."
-msgstr "définit le nom de la marque, tel qu'indiqué à l'option <option>--name</option> de <command>publican create_brand</command>."
+msgstr "définit le nom de l'estampille, tel qu'indiqué à l'option <option>--name</option> de <prompt>$</prompt> <command>publican create_brand</command>."
 
 #. Tag: term
 #, no-c-format
@@ -167,7 +168,7 @@ msgstr "<parameter>web_dir</parameter>"
 #. Tag: para
 #, no-c-format
 msgid "the full path to where files will be installed. You must also set <replaceable>wwwdir</replaceable> in <filename>publican-<replaceable>brand</replaceable>.spec</filename>."
-msgstr "le chemin complet vers l'emplacement d'installation des fichiers. Vous devez également définir <replaceable>répertoire_www</replaceable> dans <filename>publican-<replaceable>marque</replaceable>.spec</filename>."
+msgstr "le chemin complet vers l'emplacement d'installation des fichiers. Vous devez également définir <replaceable>répertoire_www</replaceable> dans <filename>publican-<replaceable>estampille</replaceable>.spec</filename>."
 
 #. Tag: term
 #, no-c-format
@@ -182,47 +183,47 @@ msgstr "le nom du paquet RPM fournissant le fichier de configuration du site Pub
 #. Tag: title
 #, no-c-format
 msgid "The defaults.cfg file and overrides.cfg file"
-msgstr "Le fichier defaults.cfg et le fichier overrides.cfg"
+msgstr "Les fichiers defaults.cfg et overrides.cfg"
 
 #. Tag: para
 #, no-c-format
 msgid "Every document built in <application>Publican</application> has a <filename>publican.cfg</filename> file in its root directory, which configures build options for the document. Refer to <xref linkend=\"sect-Publican-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file\" /> for a full description of these options. The <filename>defaults.cfg</filename> file and <filename>overrides.cfg</filename> file in a brand supply default values for any of the parameters that you can otherwise set with a document's <filename>publican.cfg</filename> file."
-msgstr "Tout document construit dans <application>Publican</application> possède dans son répertoire racine un fichier <filename>publican.cfg</filename> qui sert à définir les options de construction du document. Reportez-vous à la <xref linkend=\"sect-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file\" /> pour une description complète de ces options. Les fichiers <filename>defaults.cfg</filename> et <filename>overrides.cfg</filename> dans une marque donnent les valeurs par défaut à utiliser pour tout paramètre qui pourrait être par ailleurs défini dans le fichier <filename>publican.cfg</filename> du document."
+msgstr "Tout document construit dans <application>Publican</application> possède dans son répertoire racine un fichier <filename>publican.cfg</filename> qui sert à définir les options de construction du document. Reportez-vous à la <xref linkend=\"sect-Publican-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file\" /> pour une description complète de ces options. Les fichiers <filename>defaults.cfg</filename> et <filename>overrides.cfg</filename> d'une estampille donnent les valeurs par défaut à utiliser pour tout paramètre qui pourrait être par ailleurs défini dans le fichier <filename>publican.cfg</filename> du document."
 
 #. Tag: para
 #, no-c-format
 msgid "When you build a document with a particular brand, <application>Publican</application> first applies the values in the brand's <filename>defaults.cfg</filename> file before it applies the values in the document's <filename>publican.cfg</filename> file. Values in the document's <filename>publican.cfg</filename> file therefore override those in the brand's <filename>defaults.cfg</filename> file."
-msgstr "Quand vous construisez un document avec une marque donnée, <application>Publican</application> applique d'abord les valeurs du fichier <filename>defaults.cfg</filename> de la marque avant d'appliquer celles du fichier <filename>publican.cfg</filename>. Ainsi les valeurs dans le fichier <filename>publican.cfg</filename> du document prennent le pas sur celles du fichier <filename>defaults.cfg</filename>."
+msgstr "Quand vous construisez un document avec une estampille donnée, <application>Publican</application> applique d'abord les valeurs du fichier <filename>defaults.cfg</filename> de l'estampille avant d'appliquer celles du fichier <filename>publican.cfg</filename>. Ainsi les valeurs dans le fichier <filename>publican.cfg</filename> du document surchargent celles du fichier <filename>defaults.cfg</filename>."
 
 #. Tag: para
 #, no-c-format
 msgid "<application>Publican</application> next applies the values in the brand's <filename>overrides.cfg</filename> file, which therefore override any values in the brand's <filename>defaults.cfg</filename> file and the document's <filename>publican.cfg</filename> file."
-msgstr "<application>Publican</application> ensuite applique les valeurs du fichier <filename>overrides.cfg</filename> de la marque, valeurs qui, à leur tour, s'imposent à la place de celles des fichiers <filename>defaults.cfg</filename> et <filename>publican.cfg</filename>."
+msgstr "<application>Publican</application> ensuite applique les valeurs du fichier <filename>overrides.cfg</filename> de l'estampille, valeurs qui, à leur tour, surchargent celles des fichiers <filename>defaults.cfg</filename> et <filename>publican.cfg</filename>."
 
 #. Tag: para
 #, no-c-format
 msgid "Use the <filename>defaults.cfg</filename> file to set values that you routinely apply to your brand but want to allow writers to change in particular books; use the <filename>overrides.cfg</filename> file for values that you do not want to allow writers to change."
-msgstr "Utilisez le fichier <filename>defaults.cfg</filename> pour définir les valeurs couramment appliquées à votre marque, mais pour lesquelles vous voulez autoriser des modifications dans certains livres de la part des auteurs de documentations ; utilisez le fichier <filename>overrides.cfg</filename> pour déterminer les valeurs que vous ne voulez pas voir modifiées."
+msgstr "Utilisez le fichier <filename>defaults.cfg</filename> pour définir les valeurs couramment appliquées à votre estampille, mais pour lesquelles vous voulez autoriser des modifications dans certains ouvrages de la part d'auteurs de documentations ; utilisez le fichier <filename>overrides.cfg</filename> pour définir les valeurs que vous ne voulez pas voir modifiées par ces auteurs."
 
 #. Tag: para
 #, no-c-format
 msgid "You can add a list of banned tags or attributes using <replaceable>banned_tags</replaceable> and <replaceable>banned_attrs</replaceable> respectively to either <filename>defaults.cfg</filename> or <filename>overrides.cfg</filename>. These will be listed by the <application>Publican</application> action <replaceable>print_banned</replaceable>."
-msgstr "Vous pouvez ajouter une liste des balises ou des attributs interdits en les précisant respectivement dans <replaceable>banned_tags</replaceable> et <replaceable>banned_attrs</replaceable>, soit dans <filename>defaults.cfg</filename>, soit dans <filename>overrides.cfg</filename>. <application>Publican</application> en dresse la liste avec l'action <replaceable>print_banned</replaceable>."
+msgstr "Vous pouvez ajouter une liste de balises ou d'attributs interdits en précisant <replaceable>banned_tags</replaceable> et <replaceable>banned_attrs</replaceable> respectivement dans <filename>defaults.cfg</filename> et dans <filename>overrides.cfg</filename>. <application>Publican</application> peut en dresser la liste avec l'action <replaceable>print_banned</replaceable>."
 
 #. Tag: title
 #, no-c-format
 msgid "publican-<replaceable>brand</replaceable>.spec file"
-msgstr "Fichier publican-<replaceable>brand</replaceable>.spec"
+msgstr "Fichier publican-<replaceable>estampille</replaceable>.spec"
 
 #. Tag: para
 #, no-c-format
 msgid "Some Linux operating systems use the <application>RPM Package Manager</application> to distribute software, in the form of <firstterm>RPM packages</firstterm>. In general terms, an RPM package contains software files compressed into an archive, accompanied by a <firstterm>spec file</firstterm> that tells the <application>RPM Package Manager</application> how and where to install those files."
-msgstr "Certains systèmes d'exploitation utilisent l'application <application>Gestionnaire de paquets RPM</application> pour distribuer des logiciels sous forme de <firstterm>paquets RPM</firstterm>. En termes généraux, un paquet RPM contient les fichiers du logiciel compressés dans une archive, accompagnés d'un fichier <firstterm>spec</firstterm> qui indique au <application>Gestionnaire de paquets RPM</application> comment et où installer ces fichiers."
+msgstr "Certains systèmes d'exploitation utilisent l'application <application>Gestionnaire de paquets RPM</application> pour distribuer des logiciels sous forme de <firstterm>paquets RPM</firstterm>. En règle générale, un paquet RPM contient les fichiers du logiciel compressés dans une archive, accompagnés d'un fichier <firstterm>spec</firstterm> qui indique au <application>Gestionnaire de paquets RPM</application> comment et où installer ces fichiers."
 
 #. Tag: para
 #, no-c-format
 msgid "When you create a brand, <application>Publican</application> generates the outline of an RPM spec file for the brand. The automatically generated spec file provides you with a starting point from which to create an RPM package to distribute your brand. Refer to <xref linkend=\"sect-Publican-Users_Guide-Packaging_a_brand\" /> to learn how to configure the spec file and use it to produce an RPM package."
-msgstr "Quand vous créez une marque, <application>Publican</application> génère les grandes lignes d'un fichier spec RPM pour la marque. Ce fichier automatiquement généré vous donne un point de départ pour créer le paquet RPM à distribuer avec votre marque. Reportez-vous à la <xref linkend=\"sect-Users_Guide-Packaging_a_brand\" /> pour savoir comment configurer le fichier spec et comment l'utiliser pour produire un paquet RPM."
+msgstr "Quand vous créez une estampille, <application>Publican</application> génère les grandes lignes d'un fichier spec RPM pour celle-ci. Ce fichier automatiquement généré vous donne un point de départ pour créer le paquet RPM à distribuer avec votre marque. Reportez-vous à la <xref linkend=\"sect-Publican-Users_Guide-Packaging_a_brand\" /> pour savoir comment configurer le fichier spec et comment l'utiliser pour produire un paquet RPM."
 
 #. Tag: title
 #, no-c-format
@@ -232,7 +233,7 @@ msgstr "README"
 #. Tag: para
 #, no-c-format
 msgid "The <filename>README</filename> file contains a brief description of the brand package."
-msgstr "Le fichier <filename>README</filename> contient une courte description du paquet de la marque."
+msgstr "Le fichier <filename>README</filename> contient une courte description du contenu du paquet de l'estampille."
 
 #. Tag: title
 #, no-c-format
@@ -247,17 +248,17 @@ msgstr "Le fichier <filename>COPYING</filename> contient des précisions sur la 
 #. Tag: title
 #, no-c-format
 msgid "Common Content for the brand"
-msgstr "« Common Content » d'une marque"
+msgstr "« Common Content » d'une estampille"
 
 #. Tag: para
 #, no-c-format
 msgid "Inside the brand directory is a subdirectory named after the default XML language for brand, as set with the <option>--lang</option> option when you created the brand. This subdirectory contains XML and image files that override the default Common Content provided with <application>Publican</application>. Customizing these files provides your brand with its distinctive appearance, including its color scheme and logos."
-msgstr "À l'intérieur du répertoire de la marque, il y a un sous-répertoire nommé suivant la langue par défaut de la marque, telle que définie avec l'option <option>--lang</option> à la création de la marque. Ce sous-répertoire contient des fichiers XML et image qui prennent le pas sur le contenu commun par défaut livré avec <application>Publican</application>. Personnaliser ces fichiers donne à la charte graphique de votre marque un aspect distinct, y compris pour le schéma de couleurs et pour le logo."
+msgstr "À l'intérieur du répertoire de l'estampille, il y a un sous-répertoire nommé selon la langue par défaut de cette dernière, langue définie par l'option <option>--lang</option> à sa création. Ce sous-répertoire contient des fichiers XML et image qui surchargent le contenu commun par défaut livré avec <application>Publican</application>. Particulariser ces fichiers personnalise l'aspect de la charte graphique de votre estampille, y compris le thème de couleurs et le logo."
 
 #. Tag: para
 #, no-c-format
 msgid "The <filename>Feedback.xml</filename> file is included by default in the preface of every book produced in <application>Publican</application>. It invites readers to leave feedback about the document. Customize this file with the contact details of your project. If your project uses a bug tracking system such as <application>Bugzilla</application>, <application>JIRA</application>, or <application>Trac</application>, you could include this information here."
-msgstr "Le fichier <filename>Feedback.xml</filename> est incorporé par défaut dans la préface de chaque ouvrage construit avec <application>Publican</application>. Il invite le lecteur à donner son avis à propos du document. Personnalisez ce fichier avec les références des contacts pour le projet. Si votre projet utilise un système de suivi d'anomalies comme <application>Bugzilla</application>, <application>JIRA</application> ou <application>Trac</application>, vous pouvez mettre cette information ici."
+msgstr "Le fichier <filename>Feedback.xml</filename> est incorporé par défaut dans la préface de chaque ouvrage construit avec <application>Publican</application>. Il invite le lecteur à donner un avis à propos du document. Indiquez dans ce fichier la référence des contacts du projet. Si vous utilisez un système de suivi d'anomalies comme <application>Bugzilla</application>, <application>JIRA</application> ou <application>Trac</application>, c'est le bon endroit pour donner cette information."
 
 #. Tag: para
 #, no-c-format
@@ -282,7 +283,7 @@ msgstr "overrides.css"
 #. Tag: para
 #, no-c-format
 msgid "The <filename>overrides.css</filename> file sets the visual style for your brand. Values in this file override those in <application>Publican</application>'s <filename>Common_Content/common/<replaceable>xml_lang</replaceable>/css/common.css</filename> file."
-msgstr "Le fichier <filename>overrides.css</filename> définit le style visuel de la marque. Les valeurs à l'intérieur de ce fichier prennent le pas sur celles du fichier <filename>Common_Content/common/<replaceable>langue_xml</replaceable>/css/common.css</filename> de <application>Publican</application>."
+msgstr "Le fichier <filename>overrides.css</filename> définit le style visuel de l'estampille. Les valeurs à l'intérieur de ce fichier écrasent celles du fichier <filename>Common_Content/common/<replaceable>langue_xml</replaceable>/css/common.css</filename> de <application>Publican</application>."
 
 #. Tag: title
 #, no-c-format
@@ -292,7 +293,7 @@ msgstr "Le sous-répertoire <filename>images</filename>"
 #. Tag: para
 #, no-c-format
 msgid "The <filename>images</filename> subdirectory contains 43 images in both <firstterm>portable network graphics</firstterm> (PNG) and <firstterm>scalable vector graphics</firstterm> (SVG) format. These images are placeholders for various navigation icons, admonition graphics, and brand logos. They include:"
-msgstr "Le sous-répertoire <filename>images</filename> contient 43 images, à la fois au format <firstterm>portable network graphics</firstterm> (PNG) et <firstterm>scalable vector graphics</firstterm> (SVG). Ces images sont des réservations pour diverses icônes de navigation, des graphiques d'avertissements et des logos de marques. Elles comprennent :"
+msgstr "Le sous-répertoire <filename>images</filename> contient 43 images, à la fois au format <firstterm>portable network graphics</firstterm> (PNG) (graphiques portables) et <firstterm>scalable vector graphics</firstterm> (SVG)(graphiques vectorisés). Ces images sont des emplacements réservés pour diverses icônes de navigation, des graphiques pour avertissements et des logos d'estampilles. Elles comprennent :"
 
 #. Tag: term
 #, no-c-format
@@ -302,7 +303,7 @@ msgstr "<filename>image_left</filename>"
 #. Tag: para
 #, no-c-format
 msgid "is a logo for the product to which this document applies. It appears at the top left corner of HTML pages, where it contains a hyperlink to a web page for the product, as defined by <parameter>prod_url</parameter> in the <filename>publican.cfg</filename> file for the document. Consider setting <parameter>prod_url</parameter> in the brand's <filename>defaults.cfg</filename> or <filename>overrides.cfg</filename> file."
-msgstr "est le logo du produit auquel le document s'applique. Il apparaît dans l'angle supérieur gauche des pages HTML ; il contient un lien vers la page Web du produit, telle que définie au paramètre <parameter>prod_url</parameter> dans le fichier <filename>publican.cfg</filename> pour le document. Jugez opportun de paramétrer <parameter>prod_url</parameter> dans le fichier <filename>defaults.cfg</filename> ou le fichier <filename>overrides.cfg</filename> de la marque."
+msgstr "logo du produit auquel le document s'applique. Il apparaît dans l'angle supérieur gauche des pages HTML ; il contient un lien vers la page Web du produit, telle que définie avec le paramètre <parameter>prod_url</parameter> du fichier <filename>publican.cfg</filename> du document. Paramétrez <parameter>prod_url</parameter> dans le fichier <filename>defaults.cfg</filename> ou <filename>overrides.cfg</filename> de l'estampille, comme vous le jugerez opportun."
 
 #. Tag: term
 #, no-c-format
@@ -312,7 +313,7 @@ msgstr "<filename>image_right</filename>"
 #. Tag: para
 #, no-c-format
 msgid "is a logo for the team that produced this documentation. It appears at the top right corner of HTML pages, where it contains a hyperlink to a web page for the documentation team, as defined by <parameter>doc_url</parameter> in the <filename>publican.cfg</filename> file for the document. If all the documentation for this brand is produced by the same team, consider setting <parameter>doc_url</parameter> in the brand's <filename>defaults.cfg</filename> or <filename>overrides.cfg</filename> file."
-msgstr "est le logo de l'équipe auteur de la documentation. Il apparaît dans l'angle supérieur droit des pages HTML ; il contient un lien vers la page Web de l'équipe de documentation, telle que définie au paramètre <parameter>doc_url</parameter> dans le fichier <filename>publican.cfg</filename> du document. Si toute la documentation pour cette marque provient d'une même équipe, envisagez une définition de <parameter>doc_url</parameter> dans le fichier <filename>defaults.cfg</filename> ou <filename>overrides.cfg</filename>."
+msgstr "logo de l'équipe auteur de la documentation. Il apparaît dans l'angle supérieur droit des pages HTML ; il contient un lien vers la page Web de l'équipe de documentation, telle que définie au paramètre <parameter>doc_url</parameter> dans le fichier <filename>publican.cfg</filename> du document. Si toute la documentation pour cette estampille provient d'une même équipe, envisagez une définition de <parameter>doc_url</parameter> dans le fichier <filename>defaults.cfg</filename> ou <filename>overrides.cfg</filename>."
 
 #. Tag: term
 #, no-c-format
@@ -342,7 +343,7 @@ msgstr "<filename>warning</filename>"
 #. Tag: para
 #, no-c-format
 msgid "are icons that accompany the XML admonitions <tag>&lt;note&gt;</tag>, <tag>&lt;important&gt;</tag>, and <tag>&lt;warning&gt;</tag>."
-msgstr "sont des icônes accompagnant les avertissements XML <sgmltag>&lt;note&gt;</sgmltag>, <sgmltag>&lt;important&gt;</sgmltag> et <sgmltag>&lt;warning&gt;</sgmltag>."
+msgstr "sont des icônes accompagnant les avertissements XML <sgmltag>&lt;note&gt;</sgmltag>, <sgmltag>&lt;important&gt;</sgmltag> ou <sgmltag>&lt;warning&gt;</sgmltag>."
 
 #. Tag: term
 #, no-c-format
@@ -357,7 +358,7 @@ msgstr "<filename>dot2</filename>"
 #. Tag: para
 #, no-c-format
 msgid "are bullets used for <tag>&lt;listitem&gt;</tag>s in <tag>&lt;itemizedlist&gt;</tag>s."
-msgstr "sont des puces utilisées pour les éléments <sgmltag>&lt;listitem&gt;</sgmltag> d'une liste <sgmltag>&lt;itemizedlist&gt;</sgmltag>s."
+msgstr "sont des puces utilisées pour les éléments <sgmltag>&lt;listitem&gt;</sgmltag> d'une liste <sgmltag>&lt;itemizedlist&gt;</sgmltag>."
 
 #. Tag: term
 #, no-c-format
@@ -399,8 +400,10 @@ msgstr "représente le fond de l'en-tête contenant le nom du produit, tel qu'il
 msgid "<filename>watermark_draft</filename>"
 msgstr "<filename>watermark_draft</filename>"
 
+#. Tag: para
+#, no-c-format
 msgid "is a watermark that appears on pages of draft documentation. Refer to <xref linkend=\"sect-Publican-Users_Guide-Pre_release_software_and_draft_documentation-Denoting_draft_documentation\" />."
-msgstr ""
+msgstr "est un filigrane qui apparaît sur les pages des brouillons de documentation. Voyez la <xref linkend=\"sect-Publican-Users_Guide-Pre_release_software_and_draft_documentation-Denoting_draft_documentation\" />."
 
 #. Tag: title
 #, no-c-format
@@ -410,25 +413,15 @@ msgstr "L'option brand_dir"
 #. Tag: para
 #, no-c-format
 msgid "The <application>Publican</application> build option brand_dir allows you to specify the location of brand files. These files do not have to be part of an installed brand."
-msgstr "L'option de construction brand_dir de <application>Publican</application> vous permet de définir l'emplacement des fichiers de la marque. Ces fichiers n'ont pas besoin de faire partie d'une marque installée."
+msgstr "L'option de construction brand_dir de <application>Publican</application> vous permet de définir l'emplacement des fichiers de l'estampille. Ces fichiers n'ont pas besoin de faire partie d'une estampille installée."
 
 #. Tag: para
 #, no-c-format
 msgid "You can ship custom XSL in a folder named <filename>xsl</filename> in your brand: it sits at the same level as the various language files for your brand. Publican uses any XSL that it finds in that directory to override the XSL templates that we ship in the common brand (which in turn override the XSL templates that the DocBook project ships)."
-msgstr "Vous pouvez mettre un XSL personnalisé dans le dossier <filename>xsl</filename> de la marque : il se situe au même niveau que les divers fichiers de langue de votre marque. Publican utilise tout XSL trouvé dans ce répertoire pour écraser les modèles d'XSL placés dans la marque commune (qui, eux-même, s'ils existent, ont pris le pas sur les modèles XSL du projet Docbook)."
+msgstr "Vous pouvez mettre un XSL personnalisé dans le dossier <filename>xsl</filename> de l'estampille : il se situe au même niveau que les divers fichiers de langue de votre estampille. Publican utilise tout XSL trouvé dans ce répertoire pour écraser les modèles d'XSL placés dans l'estampille commune (qui, eux-même, s'ils existent, surchargent les modèles XSL du projet Docbook)."
 
 #. Tag: para
 #, no-c-format
 msgid "Brands with custom XSLT need to change the relative path of referencing XSL templates to a URI."
-msgstr ""
-
-#. Tag: para
-#, no-c-format
-#~ msgid "Brands that supply XSL files need to change the relative path to a URI."
-#~ msgstr "Les marques qui fournissent leurs fichiers XSL doivent modifier le chemin relatif en URI."
-
-#. Tag: para
-#, no-c-format, fuzzy
-#~ msgid "is a watermark that appears on pages of draft documentation. Refer to <xref linkend=\"\" />."
-#~ msgstr "est un filigrane qui apparaît sur les pages des brouillons de documentation. Voyez la <xref linkend=\"sect-Users_Guide-Pre_release_software_and_draft_documentation-Denoting_draft_documentation\" />."
+msgstr "Pour des estampilles avec des XSLT personnalisés, il est nécessaire d'échanger le chemin relatif renvoyant aux modèles XLS par un URI. "
 

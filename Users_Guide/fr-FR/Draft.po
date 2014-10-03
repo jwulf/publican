@@ -1,23 +1,24 @@
 # Gé Baylard <<Geodebay@gmail.com>>, 2013.
-# Gérard Baylard <geodebay@gmail.com>, 2013. #zanata
+# Gé Baylard <geodebay@gmail.com>, 2013.
+# Gérard Baylard <geodebay@gmail.com>, 2014. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2013-03-08T03:26:30\n"
-"PO-Revision-Date: 2013-09-12 08:54-0400\n"
-"Last-Translator: Gérard Baylard <geodebay@gmail.com>\n"
-"Language-Team: français <<trans-fr@lists.fedoraproject.org>>\n"
+"POT-Creation-Date: 2014-05-06 14:10+1000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2014-05-12 12:35-0400\n"
+"Last-Translator: Gérard Baylard <geodebay@gmail.com>\n"
+"Language-Team: français <>\n"
 "Language: fr\n"
-"X-Generator: Zanata 3.3.2\n"
-"Plural-Forms: nplurals=2; plural=n>1;\n"
+"X-Generator: Zanata 3.4.2\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #. Tag: title
 #, no-c-format
 msgid "Pre-release software and draft documentation"
-msgstr "Logiciels en pré-parution et brouillons de documentation "
+msgstr "Logiciels en pré-parution et brouillons de documentation"
 
 #. Tag: para
 #, no-c-format
@@ -52,7 +53,7 @@ msgstr "Pour créer ce marquage, effectuez les opérations suivantes :"
 #. Tag: para
 #, no-c-format
 msgid "Add the software's pre-release version number, or equivalent state information, to the <tag>&lt;subtitle&gt;</tag> tag in your <filename>Book_Info.xml</filename> file. Place this additional text in <tag>&lt;remark&gt;</tag> tags. For example:"
-msgstr "ajouter le numéro de version de pré-parution du logiciel, ou une information équivalent sur son état, sous la balise <sgmltag>&lt;subtitle&gt;</sgmltag> dans le fichier <filename>Book_Info.xml</filename>. Mettre un texte complémentaire dans des balises <sgmltag>&lt;remark&gt;</sgmltag>. Par exemple :"
+msgstr "ajoutez le numéro de version de pré-parution du logiciel, ou une information équivalent sur son état, sous la balise <sgmltag>&lt;subtitle&gt;</sgmltag> dans le fichier <filename>Book_Info.xml</filename>. Mettez un texte complémentaire dans des balises <sgmltag>&lt;remark&gt;</sgmltag>. Par exemple :"
 
 #. Tag: programlisting
 #, no-c-format
@@ -64,7 +65,7 @@ msgstr ""
 #. Tag: para
 #, no-c-format
 msgid "add <varname>show_remarks</varname> to the <filename>publican.cfg</filename> file and set it to '1':"
-msgstr "ajouter le paramètre <varname>show_remarks</varname> dans le fichier <filename>publican.cfg</filename> et égaler sa valeur à « 1 » :"
+msgstr "ajoutez le paramètre <varname>show_remarks</varname> dans le fichier <filename>publican.cfg</filename> et fixer sa valeur à « 1 » :"
 
 #. Tag: programlisting
 #, no-c-format
@@ -107,7 +108,7 @@ msgstr "Marquage d'un brouillon de documentation"
 #. Tag: para
 #, no-c-format
 msgid "Unfinished documentation made available to others for review should be labeled clearly as such."
-msgstr "Un documentation non terminée rendue disponible aux autres pour revue doit être clairement étiquetée comme telle."
+msgstr "Un documentation non terminée mise à disposition d'autres personnes pour revue doit être clairement marquée comme telle."
 
 #. Tag: para
 #, no-c-format
@@ -129,12 +130,12 @@ msgstr "Par défaut, le nœud racine est la balise <sgmltag>&lt;book&gt;</sgmlta
 #. Tag: para
 #, no-c-format
 msgid "If you are working on an article or set, the root node is the <tag>&lt;article&gt;</tag> or <tag>&lt;set&gt;</tag> tag in <filename><replaceable>Doc_Name</replaceable>.xml</filename>."
-msgstr "Si vous travaillez à un article ou à un ensemble, le nœud racine est la balise <sgmltag>&lt;article&gt;</sgmltag> ou <sgmltag>&lt;set&gt;</sgmltag> dans le fichier <filename><replaceable>Nom_document</replaceable>.xml</filename>."
+msgstr "Si vous travaillez sur un article ou sur une collection, le nœud racine est la balise <sgmltag>&lt;article&gt;</sgmltag> ou <sgmltag>&lt;set&gt;</sgmltag> dans le fichier <filename><replaceable>Nom_document</replaceable>.xml</filename>."
 
 #. Tag: para
 #, no-c-format
 msgid "Adding the <userinput>status=\"draft\"</userinput> attribute causes each page of the document to show the draft watermark. This is by design."
-msgstr "L'ajout de l'attribut <userinput>status=\"draft\"</userinput> provoque l'apparition du chaque page du document du filigrane « draft ». Par conception."
+msgstr "L'ajout de l'attribut <userinput>status=\"draft\"</userinput> déclenche l'apparition dans chaque page du document du filigrane « draft ». À dessein."
 
 #. Tag: para
 #, no-c-format

@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0\n"
-"X-Generator: Zanata 3.3.2\n"
+"X-Generator: Zanata 3.4.2\n"
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican/TreeView.pm:197
@@ -728,7 +728,7 @@ msgstr ""
 
 #: lib/Publican/WebSite.pm:224
 msgid "EPUB"
-msgstr "EPUB"
+msgstr ""
 
 #. ($attr)
 #: lib/Publican/XmlClean.pm:664
@@ -1065,7 +1065,7 @@ msgstr "グラフィックデザイナー"
 
 #: lib/Publican/WebSite.pm:221
 msgid "HTML (Recommended)"
-msgstr "HTML (推奨)"
+msgstr ""
 
 #: lib/Publican/WebSite.pm:156
 msgid "HTML to inject in to the footer of every page on the website."
@@ -1318,7 +1318,7 @@ msgstr ""
 
 #: lib/Publican/WebSite.pm:223
 msgid "PDF"
-msgstr "PDF"
+msgstr ""
 
 #. ($po_file)
 #: lib/Publican/Builder/DocBook4.pm:202 lib/Publican/Builder/DocBook5.pm:201
@@ -1555,7 +1555,7 @@ msgstr ""
 
 #: lib/Publican/WebSite.pm:222
 msgid "Single-page HTML"
-msgstr "単一 HTML"
+msgstr ""
 
 #: bin/publican:550
 msgid "Site options"

@@ -1,0 +1,301 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: 0\n"
+"POT-Creation-Date: 2014-10-03 13:09+1000\n"
+"PO-Revision-Date: 2014-10-03 13:09+1000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: None\n"
+"Language: en-US \n"
+"MIME-Version: 1.0\n"
+"Content-Type: application/x-publican; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Publican v4.2.2\n"
+
+msgid "Revision History"
+msgstr ""
+
+msgid "Jeff"
+msgstr ""
+
+msgid "Fearn"
+msgstr ""
+
+msgid "Convert to DocBook 5"
+msgstr ""
+
+msgid "Update a lot of content"
+msgstr ""
+
+msgid "Rüdiger"
+msgstr ""
+
+msgid "Landmann"
+msgstr ""
+
+msgid "Corrections to website building instructions"
+msgstr ""
+
+msgid "Improve instructions for translation BZ#1021287"
+msgstr ""
+
+msgid "Document use of \"sortas\" for indexes and glossaries"
+msgstr ""
+
+msgid "Roman"
+msgstr ""
+
+msgid "Joost"
+msgstr ""
+
+msgid "Clarify where relative paths are used in brand instructions - BZ#1028815"
+msgstr ""
+
+msgid "Norman"
+msgstr ""
+
+msgid "Dunbar"
+msgstr ""
+
+msgid "Corrected OpenSUSE installation instructions - BZ#1000534"
+msgstr ""
+
+msgid "Svein"
+msgstr ""
+
+msgid "Dowdeit"
+msgstr ""
+
+msgid "Updated Debian installation instructions - BZ#1013934"
+msgstr ""
+
+msgid "Add Docker installation instructions - BZ#1015943"
+msgstr ""
+
+msgid "Zac"
+msgstr ""
+
+msgid "Dover"
+msgstr ""
+
+msgid "Added command prompts to all commands - BZ#880456"
+msgstr ""
+
+msgid "Added quotes around the web_formats list - BZ#839141"
+msgstr ""
+
+msgid "Replaced a broken link to kate plugins page on CPAN with a working link - BZ#973461"
+msgstr ""
+
+msgid "Updated web site instructions - BZ#979224"
+msgstr ""
+
+msgid "Publican 3.2.0"
+msgstr ""
+
+msgid "Document site config option 'toc_js'"
+msgstr ""
+
+msgid "Document build option --pdftool"
+msgstr ""
+
+msgid "Document build option --pub_dir"
+msgstr ""
+
+msgid "Add Section on Installing Publican on OpenSuse 12"
+msgstr ""
+
+msgid "Publican 3.0"
+msgstr ""
+
+msgid "Rebecca"
+msgstr ""
+
+msgid "Newton"
+msgstr ""
+
+msgid "Improve documentation of standalone &lt;set&gt; usage"
+msgstr ""
+
+msgid "Document new manual_toc_update parameter -- BZ#719573"
+msgstr ""
+
+msgid "Document new update_db action -- BZ#661948"
+msgstr ""
+
+msgid "Document new rename action -- BZ#694698"
+msgstr ""
+
+msgid "Document new mainfile parameter -- BZ#688585"
+msgstr ""
+
+msgid "Include advice about multiple config files for conditionalised books -- BZ#657132"
+msgstr ""
+
+msgid "Fix broken command example -- BZ#663211"
+msgstr ""
+
+msgid "Incorporate proofreading fixes from Luigi Votta <email>lewis41@fedoraproject.org</email> BZ#657576, BZ#663399"
+msgstr ""
+
+msgid "Incorporate proofreading fixes from Luigi Votta <email>lewis41@fedoraproject.org</email> BZ#657576"
+msgstr ""
+
+msgid "Document not shipping PDFs in known broken languages"
+msgstr ""
+
+msgid "Document the web_formats parameter"
+msgstr ""
+
+msgid "Document customising desktop menus"
+msgstr ""
+
+msgid "Document site_overrides.css"
+msgstr ""
+
+msgid "Document website dump files"
+msgstr ""
+
+msgid "Document bump command"
+msgstr ""
+
+msgid "Update image width behaviour"
+msgstr ""
+
+msgid "Update lang_stats to include multiple languages"
+msgstr ""
+
+msgid "Correct details for web_logo.png BZ#638153"
+msgstr ""
+
+msgid "Correct list of characters usable in product names and document titles"
+msgstr ""
+
+msgid "Document new web_type parameter and relocate web_host and web_search parameters to site config file"
+msgstr ""
+
+msgid "Describe OPDS catalogs"
+msgstr ""
+
+msgid "Document product and version pages"
+msgstr ""
+
+msgid "Document man page as an output format"
+msgstr ""
+
+msgid "Document bridgehead_in_toc parameter"
+msgstr ""
+
+msgid "Correction -- def_langs is a site config parameter, not a homepage config file parameter"
+msgstr ""
+
+msgid "Expand on including code samples BZ#604255"
+msgstr ""
+
+msgid "Clarify clean_ids BZ#612819"
+msgstr ""
+
+msgid "Document --novalid BZ#616142"
+msgstr ""
+
+msgid "Correct and clarify website instructions BZ#614259"
+msgstr ""
+
+msgid "Clarify use of Product-Version-Id for packaging"
+msgstr ""
+
+msgid "Update Ubuntu installation instructions"
+msgstr ""
+
+msgid "Revise action and option nomenclature"
+msgstr ""
+
+msgid "Document print_known, print_banned, and print_unused actions"
+msgstr ""
+
+msgid "Correct and expand documentation on installing a brand"
+msgstr ""
+
+msgid "Document max_image_width and confidential_text parameters"
+msgstr ""
+
+msgid "Document Eclipse help plugin format and supporting parameters"
+msgstr ""
+
+msgid "Document --config option"
+msgstr ""
+
+msgid "remove obsolete reference to path to the DocBook catalog files. BZ#565498."
+msgstr ""
+
+msgid "document CVS options."
+msgstr ""
+
+msgid "Add an FAQ entry about code highlighting errors."
+msgstr ""
+
+msgid "Add a section about valid formats."
+msgstr ""
+
+msgid "Update author list."
+msgstr ""
+
+msgid "More specific installation instructions for Ubuntu; add installation instructions for Debian. BZ#542711"
+msgstr ""
+
+msgid "Metadata in the Book_Info.xml file"
+msgstr ""
+
+msgid "Document lang_stats action. BZ#540696."
+msgstr ""
+
+msgid "Fix wrong docs for condition usage. BZ#540691"
+msgstr ""
+
+msgid "Fix various small inconsistencies and general clean up"
+msgstr ""
+
+msgid "Updated for Publican 1.0"
+msgstr ""
+
+msgid "Added appendix on Makefile parameters"
+msgstr ""
+
+msgid "Added entry to FAQ about java heap space."
+msgstr ""
+
+msgid "Brian"
+msgstr ""
+
+msgid "Forté"
+msgstr ""
+
+msgid "Added \"Pre-release and draft documentation\" section."
+msgstr ""
+
+msgid "Don"
+msgstr ""
+
+msgid "Domingo"
+msgstr ""
+
+msgid "Adding \"Conditional Tagging\" section."
+msgstr ""
+
+msgid "General edits and updates related to Publican 0.36 release. Also, new section added to Chapter 3.3."
+msgstr ""
+
+msgid "Murray"
+msgstr ""
+
+msgid "McAllister"
+msgstr ""
+
+msgid "Updated Branding to note addition of oVirt and GIMP brands"
+msgstr ""
+
+msgid "Updated FAQ"
+msgstr ""
+
+msgid "Initial content release"
+msgstr ""
+

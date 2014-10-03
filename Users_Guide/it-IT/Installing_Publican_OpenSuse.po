@@ -2,15 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2013-03-08T03:26:30\n"
-"PO-Revision-Date: \n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: None\n"
+"POT-Creation-Date: 2014-05-06 14:10+1000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: None\n"
 "Language: it\n"
-"X-Generator: Zanata 3.3.2\n"
+"X-Generator: Zanata 3.4.2\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
 #. Tag: title
@@ -316,63 +316,4 @@ msgstr ""
 #, no-c-format
 msgid "Using the <application>Dolphin</application> file manager, you can browse to <filename class=\"directory\">SourceCode/TestPublican/tmp/en-US/</filename> and view the various output formats that you find there."
 msgstr ""
-
-#. Tag: screen
-#, no-c-format
-#~ msgid "<command>./Build\n"
-"</command>"
-#~ msgstr ""
-
-#. Tag: screen
-#, no-c-format
-#~ msgid ""
-"perl Build.PL\n"
-"WARNING: the following files are missing in your kit:\n"
-"        META.yml\n"
-"Please inform the author.\n"
-"\n"
-"Created MYMETA.yml and MYMETA.json\n"
-"Creating new 'Build' script for 'Publican' version '2.9'"
-#~ msgstr ""
-
-#. Tag: screen
-#, no-c-format
-#~ msgid "<command>./Build test\n"
-"</command>"
-#~ msgstr ""
-
-#. Tag: screen
-#, no-c-format
-#~ msgid ""
-"Test Summary Report\n"
-"-------------------\n"
-"t/910.publican.Users_Guide.t (Wstat: 256 Tests: 5 Failed: 1)\n"
-"  Failed test:  5\n"
-"  Non-zero exit status: 1\n"
-"t/pod-coverage.t            (Wstat: 256 Tests: 9 Failed: 1)\n"
-"  Failed test:  7\n"
-"  Non-zero exit status: 1\n"
-"Files=10, Tests=68, 420 wallclock secs ( 0.31 usr  0.17 sys + 246.87 cusr 18.73 csys = 266.08 CPU)\n"
-"Result: FAIL\n"
-"Failed 2/10 test programs. 2/68 subtests failed.\n"
-#~ msgstr ""
-
-#. Tag: screen
-#, no-c-format
-#~ msgid "DEBUG: Publican::Builder: end of build"
-#~ msgstr ""
-
-#. Tag: screen
-#, no-c-format
-#~ msgid ""
-"runtime error: file /usr/share/publican/xsl/epub.xsl element choose\n"
-"Variable 'epub.embedded.fonts' has not been declared.\n"
-" at /usr/lib/perl5/site_perl/5.14.2/Publican/Builder.pm line 915"
-#~ msgstr ""
-
-#. Tag: screen
-#, no-c-format
-#~ msgid "<command>perl Build.PL\n"
-"</command>"
-#~ msgstr ""
 

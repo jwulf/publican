@@ -1,18 +1,18 @@
 # Gé Baylard <<Geodebay@gmail.com>>, 2013.
 #
-# Gérard Baylard <geodebay@gmail.com>, 2013. #zanata
+# Gérard Baylard <geodebay@gmail.com>, 2014. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2013-03-08T03:26:30\n"
-"PO-Revision-Date: 2013-09-06 04:25-0400\n"
-"Last-Translator: Gérard Baylard <geodebay@gmail.com>\n"
-"Language-Team: français <<trans-fr@lists.fedoraproject.org>>\n"
+"POT-Creation-Date: 2014-05-06 14:10+1000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2014-05-23 04:44-0400\n"
+"Last-Translator: Gérard Baylard <geodebay@gmail.com>\n"
+"Language-Team: français <<trans-fr@lists.fedoraproject.org>>\n"
 "Language: fr\n"
-"X-Generator: Zanata 3.3.2\n"
+"X-Generator: Zanata 3.4.2\n"
 "Plural-Forms: nplurals=2; plural=n>1;\n"
 
 #. Tag: title
@@ -28,12 +28,12 @@ msgstr "La page d'accueil créée par <application>Publican</application> est la
 #. Tag: para
 #, no-c-format
 msgid "Change into a convenient directory and run the following <prompt>$</prompt> <command>publican create</command> command:"
-msgstr "Mettez vous dans un répertoire adapté et lancez la commande <command>publican create</command> :"
+msgstr "Mettez vous dans un répertoire adapté et lancez la commande <prompt>$</prompt> <command>publican create</command> :"
 
 #. Tag: screen
 #, no-c-format
 msgid "<prompt>$</prompt> <command>publican create --type Article --name <replaceable>page_name</replaceable></command>"
-msgstr "<command>publican create --type Article --name <replaceable>nom_page</replaceable></command>"
+msgstr "<prompt>$</prompt> <command>publican create --type Article --name <replaceable>nom_page</replaceable></command>"
 
 #. Tag: para
 #, no-c-format
@@ -43,12 +43,12 @@ msgstr "Par exemple :"
 #. Tag: screen
 #, no-c-format
 msgid "<prompt>$</prompt> <command>publican create --type Article --name Home_Page</command>"
-msgstr "<command>publican create --type Article --name Home_Page</command>"
+msgstr "<prompt>$</prompt> <command>publican create --type Article --name Home_Page</command>"
 
 #. Tag: para
 #, no-c-format
 msgid "Most brands (including the <literal>common</literal> brand) present the name of the document in large, coloured letters close to the top of the page, underneath the banner that contains the product name (the <option>--name</option> option sets the <tag>&lt;title&gt;</tag> tag). Therefore, by default, the value that you set with the <option>--name</option> option is presented prominently to visitors to your site; in the above example, visitors are greeted with the words <literal>Home Page</literal> underneath the product banner."
-msgstr "La plupart des chartes graphiques (y compris la charte <literal>common</literal>) présentent le nom du document en grandes lettres de couleur près du haut de la page, au dessous de la bannière comportant le nom du produit (l'option <option>--name</option> définit la balise <sgmltag>&lt;title&gt;</sgmltag>). Ainsi, par défaut, la valeur que vous indiquez avec l'option <option>--name</option> est présentée bien en évidence aux visiteurs du site ; dans l'exemple ci-dessus, les visiteurs sont accueillis par les mots <literal>Home Page</literal> juste au dessous de la bannière du produit."
+msgstr "La plupart des estampillages (y compris l'estampille <literal>common</literal>) présentent le nom du document en grandes lettres de couleur près du haut de la page, au dessous de la bannière comportant le nom du produit (l'option <option>--name</option> définit la balise <sgmltag>&lt;title&gt;</sgmltag>). Ainsi, par défaut, la valeur que vous indiquez avec l'option <option>--name</option> est présentée bien en évidence aux visiteurs du site ; dans l'exemple ci-dessus, les visiteurs sont accueillis par les mots <literal>Home Page</literal> juste au dessous de la bannière du produit."
 
 #. Tag: para
 #, no-c-format
@@ -58,12 +58,12 @@ msgstr "Placez-vous dans le répertoire de l'article :"
 #. Tag: screen
 #, no-c-format
 msgid "<prompt>$</prompt> <command>cd <replaceable>page_name</replaceable></command>"
-msgstr "<command>cd <replaceable>nom_page</replaceable></command>"
+msgstr "<prompt>$</prompt> <command>cd <replaceable>nom_page</replaceable></command>"
 
 #. Tag: screen
 #, no-c-format
 msgid "<prompt>$</prompt> <command>cd Home_Page</command>"
-msgstr ""
+msgstr "<prompt>$</prompt> <command>cd Home_Page</command>"
 
 #. Tag: para
 #, no-c-format
@@ -93,7 +93,7 @@ msgstr "web_type: home"
 #. Tag: para
 #, no-c-format
 msgid "The <parameter>web_type: home</parameter> parameter instructs <application>Publican</application> to process this document differently from product documentation. This is the only mandatory change to the <filename>publican.cfg</filename> file. Other optional changes to the <filename>publican.cfg</filename> file that are frequently useful for <application>Publican</application>-generated websites include:"
-msgstr "Le paramètre <parameter>web_type:&nbsp;home</parameter> indique à <application>Publican</application> de traiter le document différemment d'une documentation de produit. C'est le seul changement obligatoire dans le fichier <filename>publican.cfg</filename>. Voici d'autres modifications facultatives, souvent utiles pour les sites Web créés avec <application>Publican</application> :"
+msgstr "Le paramètre <parameter>web_type:&nbsp;home</parameter> indique à <application>Publican</application> de traiter le document différemment d'une documentation de produit. C'est le seul changement obligatoire dans le fichier <filename>publican.cfg</filename>. Voici d'autres modifications facultatives de <filename>publican.cfg</filename>, souvent utiles pour les sites Web créés avec <application>Publican</application> :"
 
 #. Tag: term
 #, no-c-format
@@ -108,7 +108,7 @@ msgstr "Pour harmoniser le style de la page d'accueil avec vos documents, ajoute
 #. Tag: programlisting
 #, no-c-format
 msgid "brand: <replaceable>name_of_brand</replaceable>"
-msgstr "brand: <replaceable>nom_de_marque</replaceable>"
+msgstr "brand: <replaceable>nom_estampille</replaceable>"
 
 #. Tag: term
 #, no-c-format
@@ -143,7 +143,7 @@ msgstr "&lt;title role=\"producttitle\"&gt;Documentation de FooMaster&lt;/title&
 #. Tag: para
 #, no-c-format
 msgid "If you publish documentation in more than one language, create a set of POT files and a set of PO files for each language with the <prompt>$</prompt> <command>publican update_pot</command> and <command>publican update_po</command> commands."
-msgstr "Si vous publiez la documentation en plus d'une langue, créez un ensemble de fichiers POT et des ensembles de fichiers PO pour chaque langue avec les commandes <command>publican update_pot</command> et <command>publican update_po</command>."
+msgstr "Si vous publiez la documentation en plus d'une langue, créez un ensemble de fichiers POT et des ensembles de fichiers PO pour chaque langue avec les commandes <prompt>$</prompt> <command>publican update_pot</command> et <command>publican update_po</command>."
 
 #. Tag: para
 #, no-c-format
@@ -164,16 +164,11 @@ msgstr "Construisez la page d'accueil au format HTML page unique avec l'option <
 #, no-c-format
 msgid "<prompt>$</prompt> <command>publican build --publish --formats html-single --embedtoc --langs all</command> \n"
 "<prompt>$</prompt> <command>publican install_book --site_config ~/docsite/foomaster.cfg --lang <replaceable>Language_Code</replaceable></command>"
-msgstr "<command>publican build --publish --formats html-single --embedtoc --langs all</command> \n"
-"<command>publican install_book --site_config ~/docsite/foomaster.cfg --lang <replaceable>Code_langue</replaceable></command>"
+msgstr "<prompt>$</prompt> <command>publican build --publish --formats html-single --embedtoc --langs all</command> \n"
+"<prompt>$</prompt> <command>publican install_book --site_config ~/docsite/foomaster.cfg --lang <replaceable>Code_langue</replaceable></command>"
 
 #. Tag: para
 #, no-c-format
 msgid "Note that you can build all languages at the same time, but must install the home page for each language with a separate <prompt>$</prompt> <command>publican install_book</command> command."
-msgstr "Notez que vous pouvez construire toutes les langues simultanément, mais vous devez installer la page d'accueil pour chaque langue à l'aide d'une commande <command>publican install_book</command> distincte."
-
-#. Tag: screen
-#, no-c-format
-#~ msgid "<command>cd Home_Page</command>"
-#~ msgstr "<command>cd Home_Page</command>"
+msgstr "Notez que vous pouvez construire toutes les langues simultanément, mais vous devez installer la page d'accueil pour chaque langue à l'aide d'une commande <prompt>$</prompt> <command>publican install_book</command> distincte."
 

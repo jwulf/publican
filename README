@@ -179,7 +179,6 @@ and to retrieve new translations:
 
 $ mvn zanata:pull
 
-
 TODO:
 
 what about a real list of valid langauges?
@@ -242,4 +241,14 @@ scp Publican-v4.2.2.tar.gz publican.spec tmp/rpm/publican*.src.rpm fedorahosted.
 6: Bug Rudi to do release announcement
 
 Poke him!
+
+Updating pulicans translations on zanata
+
+$ cd po
+$ zanata-cli pull -s . -t . --include-fuzzy
+$ ..
+$ ./Build update_pot
+$ ./Build update_po
+$ cd po
+$ zanata-cli push -s . -t . --push-type both --copy-trans 0
 

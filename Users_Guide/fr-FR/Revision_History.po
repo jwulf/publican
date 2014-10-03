@@ -1,17 +1,17 @@
 # Gé Baylard <<Geodebay@gmail.com>>, 2013.
-# Gérard Baylard <geodebay@gmail.com>, 2013. #zanata
+# Gérard Baylard <geodebay@gmail.com>, 2014. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2013-03-08T03:26:30\n"
-"PO-Revision-Date: 2013-08-29 08:50-0400\n"
-"Last-Translator: Gérard Baylard <geodebay@gmail.com>\n"
-"Language-Team: français <<trans-fr@lists.fedoraproject.org>>\n"
+"POT-Creation-Date: 2014-05-06 14:10+1000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2014-05-21 07:03-0400\n"
+"Last-Translator: Gérard Baylard <geodebay@gmail.com>\n"
+"Language-Team: français <<trans-fr@lists.fedoraproject.org>>\n"
 "Language: fr\n"
-"X-Generator: Zanata 3.3.2\n"
+"X-Generator: Zanata 3.4.2\n"
 "Plural-Forms: nplurals=2; plural=n>1;\n"
 
 #. Tag: title
@@ -48,17 +48,17 @@ msgstr "Landmann"
 #. Tag: member
 #, no-c-format
 msgid "Corrections to website building instructions"
-msgstr ""
+msgstr "Corrections des directives de construction d'un site Web"
 
 #. Tag: member
 #, no-c-format
 msgid "Improve instructions for translation BZ#1021287"
-msgstr ""
+msgstr "Amélioration des directives pour la traduction BZ#1021287"
 
 #. Tag: member
 #, no-c-format
 msgid "Document use of \"sortas\" for indexes and glossaries"
-msgstr ""
+msgstr "Document à propos de l'utilisation du triage pour index et glossaires"
 
 #. Tag: firstname
 #, no-c-format
@@ -68,16 +68,16 @@ msgstr "Norman"
 #. Tag: surname
 #, no-c-format
 msgid "Joost"
-msgstr ""
+msgstr "Joost"
 
 #. Tag: member
 #, no-c-format
 msgid "Clarify where relative paths are used in brand instructions - BZ#1028815"
-msgstr ""
+msgstr "Clarifier l'emploi des chemins relatifs dans les instructions d'estampillage - BZ#1028815"
 
 #. Tag: firstname
 #, no-c-format
-msgid "Roman"
+msgid "Norman"
 msgstr "Norman"
 
 #. Tag: surname
@@ -88,57 +88,57 @@ msgstr "Dunbar"
 #. Tag: member
 #, no-c-format
 msgid "Corrected OpenSUSE installation instructions - BZ#1000534"
-msgstr ""
+msgstr "Correction des directives d'installation sur OpenSUSE - BZ#1000534"
 
 #. Tag: firstname
 #, no-c-format
 msgid "Svein"
-msgstr ""
+msgstr "Svein"
 
 #. Tag: surname
 #, no-c-format
 msgid "Dowdeit"
-msgstr ""
+msgstr "Dowdeit"
 
 #. Tag: member
 #, no-c-format
 msgid "Updated Debian installation instructions - BZ#1013934"
-msgstr ""
+msgstr "Mise à jour des directives d'installation sur Debian - BZ#1013934"
 
 #. Tag: member
 #, no-c-format
 msgid "Add Docker installation instructions - BZ#1015943"
-msgstr ""
+msgstr "Ajout des directives d'installation sur Docker - BZ#1015943"
 
 #. Tag: firstname
 #, no-c-format
 msgid "Zac"
-msgstr ""
+msgstr "Zac"
 
 #. Tag: surname
 #, no-c-format
 msgid "Dover"
-msgstr ""
+msgstr "Dover"
 
 #. Tag: member
 #, no-c-format
 msgid "Added command prompts to all commands - BZ#880456"
-msgstr ""
+msgstr "Ajout des invites de commandes - BZ#880456"
 
 #. Tag: member
 #, no-c-format
 msgid "Added quotes around the web_formats list - BZ#839141"
-msgstr ""
+msgstr "Entourer de guillemets droits les listes des formats Web - BZ#839141"
 
 #. Tag: member
 #, no-c-format
 msgid "Replaced a broken link to kate plugins page on CPAN with a working link - BZ#973461"
-msgstr ""
+msgstr "Remplacement du lien cassé vers la page des greffons kate sur CPAN - BZ#973461"
 
 #. Tag: member
 #, no-c-format
 msgid "Updated web site instructions - BZ#979224"
-msgstr ""
+msgstr "Mise à jour des directives à propos des sites Web - BZ#979224"
 
 #. Tag: member
 #, no-c-format
@@ -148,17 +148,17 @@ msgstr "Publican 3.0"
 #. Tag: member
 #, no-c-format
 msgid "Document site config option 'toc_js'"
-msgstr ""
+msgstr "Option de configuration de document de site « toc_js »"
 
 #. Tag: member
 #, no-c-format
 msgid "Document build option --pdftool"
-msgstr ""
+msgstr "Option de construction de document --pdftool"
 
 #. Tag: member
 #, no-c-format
 msgid "Document build option --pub_dir"
-msgstr ""
+msgstr "Option de construction de document "
 
 #. Tag: member
 #, no-c-format
@@ -167,8 +167,8 @@ msgstr "Ajout du paragraphe concernant l'installation de Publican sur OpenSuse 
 
 #. Tag: member
 #, no-c-format
-msgid "Publican 3.2.0"
-msgstr "Publican 3.0"
+msgid "Publican 3.0"
+msgstr "Publican 3.0"
 
 #. Tag: firstname
 #, no-c-format
@@ -183,7 +183,7 @@ msgstr "Newton"
 #. Tag: member
 #, no-c-format
 msgid "Improve documentation of standalone &lt;set&gt; usage"
-msgstr "Améliorer l'utilisation de la documentation d'un &lt;set&gt; autonome"
+msgstr "Amélioration de la documentation pour l'utilisation d'une &lt;collection&gt; autonome"
 
 #. Tag: member
 #, no-c-format

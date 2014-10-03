@@ -1,17 +1,17 @@
 # Gé Baylard <<Geodebay@gmail.com>>, 2013.
-# Gérard Baylard <geodebay@gmail.com>, 2013. #zanata
+# Gérard Baylard <geodebay@gmail.com>, 2014. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2013-03-08T03:26:30\n"
-"PO-Revision-Date: 2013-08-30 07:42-0400\n"
-"Last-Translator: Gérard Baylard <geodebay@gmail.com>\n"
-"Language-Team: français <<trans-fr@lists.fedoraproject.org>>\n"
+"POT-Creation-Date: 2014-05-06 14:10+1000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2014-05-21 06:44-0400\n"
+"Last-Translator: Gérard Baylard <geodebay@gmail.com>\n"
+"Language-Team: français <<trans-fr@lists.fedoraproject.org>>\n"
 "Language: fr\n"
-"X-Generator: Zanata 3.3.2\n"
+"X-Generator: Zanata 3.4.2\n"
 "Plural-Forms: nplurals=2; plural=n>1;\n"
 
 #. Tag: title
@@ -22,7 +22,7 @@ msgstr "Renommer un document"
 #. Tag: para
 #, no-c-format
 msgid "The <prompt>$</prompt> <command>publican rename</command> command makes it easy for you to rename a document to give it a new title, or to change the name or version of the product to which the document applies. The command accepts up to three options:"
-msgstr "La commande <command>publican rename</command> facilite le renommage d'un document pour lui donner un nouvel intitulé, ou bien, pour changer le nom ou la version du produit auquel le document s'applique. Elle accepte trois options :"
+msgstr "La commande <prompt>$</prompt> <command>publican rename</command> facilite le renommage d'un document pour lui donner un nouvel intitulé, ou bien, pour changer le nom ou la version du produit auquel le document s'applique. Elle accepte trois options :"
 
 #. Tag: term
 #, no-c-format
@@ -37,7 +37,7 @@ msgstr "modifie le titre du document. Par exemple, pour modifier le nom d'un doc
 #. Tag: screen
 #, no-c-format
 msgid "<prompt>$</prompt> <command>publican rename --name \"Server Deployment Guide\"</command>"
-msgstr "<command>publican rename --name \"Guide de déploiement du serveur\"</command>"
+msgstr "<prompt>$</prompt> <command>publican rename --name \"Guide de déploiement du serveur\"</command>"
 
 #. Tag: para
 #, no-c-format
@@ -47,7 +47,7 @@ msgstr "Plus précisément, la commande change le contenu de la balise <sgmltag>
 #. Tag: para
 #, no-c-format
 msgid "Note that the <prompt>$</prompt> <command>publican rename</command> command does not change any file names. Therefore, the root XML node and the document entities are still located in files named after the original title of the document — <filename>Server_Configuration_Guide</filename> in the previous example."
-msgstr "Notez que la commande <command>publican rename</command> ne modifie aucun nom de fichier. Ainsi, le nœud racine XML et les entités du document sont toujours situés dans les fichiers nommés d'après le titre originel du document — <filename>Guide_de_configuration_du_serveur</filename> dans l'exemple précédent."
+msgstr "Notez que la commande <prompt>$</prompt> <command>publican rename</command> ne modifie aucun nom de fichier. Ainsi, le nœud racine XML et les entités du document sont toujours situés dans les fichiers nommés d'après le titre originel du document — <filename>Guide_de_configuration_du_serveur</filename> dans l'exemple précédent."
 
 #. Tag: term
 #, no-c-format
@@ -62,7 +62,7 @@ msgstr "modifie le nom du produit auquel le document s'applique. Par exemple, si
 #. Tag: screen
 #, no-c-format
 msgid "<prompt>$</prompt> <command>publican rename --product PendantFarm</command>"
-msgstr "<command>publican rename --product PendantFarm</command>"
+msgstr "<prompt>$</prompt> <command>publican rename --product PendantFarm</command>"
 
 #. Tag: para
 #, no-c-format
@@ -82,7 +82,7 @@ msgstr "modifie le numéro de version auquel le document s'applique. Par exemple
 #. Tag: screen
 #, no-c-format
 msgid "<prompt>$</prompt> <command>publican rename --version 2.0</command>"
-msgstr "<command>publican rename --version 2.0</command>"
+msgstr "<prompt>$</prompt> <command>publican rename --version 2.0</command>"
 
 #. Tag: para
 #, no-c-format
@@ -97,5 +97,5 @@ msgstr "Vous pouvez regrouper toute combinaison de ces options en une seule comm
 #. Tag: screen
 #, no-c-format
 msgid "<prompt>$</prompt> <command>publican rename --name \"Server Deployment Guide\" --product PendantFarm --version 2.0</command>"
-msgstr "<command>publican rename --name \"Guide de déploiement du serveur\" --product PendantFarm --version 2.0</command>"
+msgstr "<prompt>$</prompt> <command>publican rename --name \"Guide de déploiement du serveur\" --product PendantFarm --version 2.0</command>"
 

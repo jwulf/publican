@@ -1,0 +1,174 @@
+# peartown <josef.hruska@upcmail.cz>, 2014. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: 0\n"
+"POT-Creation-Date: 2014-05-06 14:10+1000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2014-08-14 12:24-0400\n"
+"Last-Translator: peartown <josef.hruska@upcmail.cz>\n"
+"Language-Team: Czech\n"
+"Language: cs\n"
+"X-Generator: Zanata 3.4.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Creating a document"
+msgstr "Tvorba dokumentu"
+
+#. Tag: para
+#, no-c-format
+msgid "This chapter describes creating books and articles: the main configuration files, example document files, and how to build a document."
+msgstr "Tato kapitola popisuje tvorbu knih a článků: hlavní konfigurační soubory, ukázkové soubory dokumentu a jak sestavit dokument."
+
+#. Tag: para
+#, no-c-format
+msgid "Use the <prompt>$</prompt> <command>publican create</command> command to create a new document, including all the necessary files for the document."
+msgstr "Chcete-li vytvořit nový dokument, včetně všech nezbytných souborů dokumentu, použijte příkaz <prompt>$</prompt> <command>publican create</command>."
+
+#. Tag: para
+#, no-c-format
+msgid "The <prompt>$</prompt> <command>publican create</command> command accepts several options, detailed in this chapter. When an option can accept a value, separate the option from the value with a space or an equals sign; for example, <command>publican create --name New_Book</command> or <command>publican create --name=New_Book</command>."
+msgstr "Příkaz <prompt>$</prompt> <command>publican create</command> přijímá několik voleb, podrobně popsaných v této kapitole. Může-li volba přijmout hodnotu, oddělte volbu od hodnoty mezerou nebo rovnítkem, na příklad <command>publican create --name Nova_Kniha</command> nebo <command>publican create --name=Nova_Kniha</command>."
+
+#. Tag: term
+#, no-c-format
+msgid "<option>--help</option>"
+msgstr "<option>--help</option>"
+
+#. Tag: para
+#, no-c-format
+msgid "print a list of all <prompt>$</prompt> <command>publican create</command> command options."
+msgstr "vytiskne seznam všech voleb příkazu <prompt>$</prompt> <command>publican create</command>."
+
+#. Tag: term
+#, no-c-format
+msgid "<option>--name<replaceable> Doc_Name</replaceable></option>"
+msgstr "<option>--name<replaceable> Dok_Nazev</replaceable></option>"
+
+#. Tag: para
+#, no-c-format
+msgid "set <replaceable>Doc_Name</replaceable> as the name of the book or article. This variable must not contain any spaces. For example, the command <prompt>$</prompt> <command>create_book --name Test_Book</command> creates a book named <literal>Test_Book</literal> with all the necessary files to build the book, and sets the <parameter>BOOKID</parameter> in the <filename>Test_Book.ent</filename> file."
+msgstr "nastaví <replaceable>Dok_Nazev</replaceable> jako název knihy nebo článku. Tato proměnná nesmí obsahovat žádné mezery. Na příklad příkaz <prompt>$</prompt> <command>create_book --name Kniha_Test</command> vytvoří knihu s názvem <literal>Kniha_Test</literal>, se všemi nezbytnými soubory, které zajišťují sestavení knihy, a nastaví <parameter>BOOKID</parameter> v souboru <filename>Test_Book.ent</filename>."
+
+#. Tag: term
+#, no-c-format
+msgid "<option>--lang<replaceable> Language_Code</replaceable></option>"
+msgstr "<option>--lang<replaceable> Kod_Jazyka</replaceable></option>"
+
+#. Tag: para
+#, no-c-format
+msgid "set <replaceable>Language_Code</replaceable> as the language code of the language in which the book or article will be authored. If you do not specify a language code, <application>Publican</application> defaults to <literal>en-US</literal> (American English). The <option>--lang</option> option sets the <parameter>xml_lang</parameter> in the <filename>publican.cfg</filename> file and creates a directory with this name in the document directory. When initially created, this directory contains some boilerplate XML files. Refer to <xref linkend=\"sect-Publican-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file\" /> for more information on <filename>publican.cfg</filename> parameters and <xref linkend=\"appe-Publican-Users_Guide-Language_codes\" /> for more detail on language codes."
+msgstr "nastaví <replaceable>Kod_Jazyka</replaceable> jako kód jazyka, ve kterém je kniha nebo článek sepsán. Nezadáte-li kód jazyka, <application>Publican</application> použije standardně <literal>en-US</literal> (Americká Angličtina). Volba <option>--lang</option> nastaví parametr <parameter>xml_lang</parameter> v souboru <filename>publican.cfg</filename> a vytvoří stejně nazvaný adresář v adresáři dokumentu. Při počátečním vytvoření obsahuje tento adresář několik předpřipravených souborů XML. Více informací o parametrech souboru <filename>publican.cfg</filename> viz <xref linkend=\"sect-Publican-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file\" /> a více podrobností o kódech jazyků viz <xref linkend=\"appe-Publican-Users_Guide-Language_codes\" />."
+
+#. Tag: term
+#, no-c-format
+msgid "<option>--version<replaceable> version</replaceable></option>"
+msgstr "<option>--version<replaceable> verze</replaceable></option>"
+
+#. Tag: para
+#, no-c-format
+msgid "set <replaceable>version</replaceable> as the version number of the product that the book describes. For example, for Red Hat Enterprise Linux 5.1 you would use <literal>5.1</literal>. The default version is <literal>0.1</literal>. The <option>--version</option> option sets the <tag>&lt;productnumber&gt;</tag> tag in the <filename>Book_Info.xml</filename> or <filename>Article_Info.xml</filename> file. For more information refer to <xref linkend=\"sect-Publican-Users_Guide-Files_in_the_book_directory-Book_Info.xml\" />."
+msgstr "nastaví <replaceable>verzi</replaceable> jako číslo verze produktu, který kniha popisuje. Na příklad byste pro Red Hat Enterprise Linux&nbsp;5.1 použili <literal>5.1</literal>. Výchozí verze je <literal>0.1</literal>. Volba <option>--version</option> nastaví v souboru <filename>Book_Info.xml</filename> nebo <filename>Article_Info.xml</filename> tag <sgmltag>&lt;productnumber&gt;</sgmltag>. Více informací viz <xref linkend=\"sect-Publican-Users_Guide-Files_in_the_book_directory-Book_Info.xml\" />."
+
+#. Tag: term
+#, no-c-format
+msgid "<option>--edition<replaceable> edition</replaceable></option>"
+msgstr "<option>--edition<replaceable> vydani</replaceable></option>"
+
+#. Tag: para
+#, no-c-format
+msgid "set <replaceable>edition</replaceable> as the edition number of the book. This number indicates to users when a new edition of the book is released. The initial <firstterm>general availability</firstterm> (GA) release of the book should be edition <literal>1.0</literal>. The default value is <literal>0</literal>. The <option>--edition</option> option sets the <tag>&lt;edition&gt;</tag> tag in the <filename>Book_Info.xml</filename> or <filename>Article_Info.xml</filename> file. For more information refer to <xref linkend=\"sect-Publican-Users_Guide-Files_in_the_book_directory-Book_Info.xml\" />."
+msgstr "nastaví <replaceable>vydani</replaceable> jako číslo vydání knihy. Toto číslo upozorňuje uživatele na nové vydání knihy. Úvodní <firstterm>veřejně dostupné</firstterm> (GA) vydání knihy by mělo být vydání <literal>1.0</literal>. Výchozí hodnotou je <literal>0</literal>. Volba <option>--edition</option> nastaví v souboru <filename>Book_Info.xml</filename> nebo <filename>Article_Info.xml</filename> tag <sgmltag>&lt;edition&gt;</sgmltag>. Více informací viz <xref linkend=\"sect-Publican-Users_Guide-Files_in_the_book_directory-Book_Info.xml\" />."
+
+#. Tag: term
+#, no-c-format
+msgid "<option>--product<replaceable> Product_Name</replaceable></option>"
+msgstr "<option>--product<replaceable> Nazev_Produktu</replaceable></option>"
+
+#. Tag: para
+#, no-c-format
+msgid "set <replaceable>Product_Name</replaceable> as the name of the product that the book describes. This variable must not contain any spaces. For example, set this to <literal>Fedora</literal> for core Fedora documentation, and the name of the product for other products, for example, <literal>Fedora_Directory_Server</literal>. The default value is <literal>Documentation</literal>. The <option>--product</option> option sets the <tag>&lt;product name&gt;</tag> tag in the <filename>Book_Info.xml</filename> file or <filename>Article_Info.xml</filename> file and the <parameter>PRODUCT</parameter> entity in the <filename><replaceable>Doc_Name</replaceable>.ent</filename> file."
+msgstr "nastaví <replaceable>Nazev_Produktu</replaceable> jako název produktu, který kniha popisuje. Tato proměnná nesmí obsahovat žádné mezery. Nastavte ji na příklad na <literal>Fedora</literal> v případě hlavní dokumentace Fedory, v případě jiného produktu na jiný název, jako např. <literal>Fedora_Directory_Server</literal>. Výchozí hodnotou je <literal>Documentation</literal>. Volba <option>--product</option> nastaví v souboru <filename>Book_Info.xml</filename> nebo <filename>Article_Info.xml</filename> tag <sgmltag>&lt;product name&gt;</sgmltag> a v souboru <filename><replaceable>Dok_Nazev</replaceable>.ent</filename> entitu <parameter>PRODUCT</parameter>."
+
+#. Tag: term
+#, no-c-format
+msgid "<option>--type Article --name<replaceable> Article_Name</replaceable></option>"
+msgstr "<option>--type Article --name<replaceable> Nazev_Clanku</replaceable></option>"
+
+#. Tag: para
+#, no-c-format
+msgid "create an article instead of a book. Replace <replaceable>Article_Name</replaceable> with the article name. This variable must not contain any spaces. The <option>--type</option> option sets the <parameter>type</parameter> in the <filename>publican.cfg</filename> file. Refer to <xref linkend=\"sect-Publican-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file\" /> for more information on <filename>publican.cfg</filename> parameters."
+msgstr "vytvoří článek, místo knihy. Místo <replaceable>Nazev_Clanku</replaceable> dosadte skutečný název článku. Tato proměnná nesmí obsahovat žádné mezery. Volba <option>--type</option> nastaví v souboru <filename>publican.cfg</filename> parametr <parameter>type</parameter>. Více informací o parametrech <filename>publican.cfg</filename> viz <xref linkend=\"sect-Publican-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file\" />."
+
+#. Tag: term
+#, no-c-format
+msgid "<option>--type Set --name<replaceable> Set_Name</replaceable></option>"
+msgstr "<option>--type Set --name<replaceable> Nazev_Sady</replaceable></option>"
+
+#. Tag: para
+#, no-c-format
+msgid "create a set of documents instead of a book. Replace <replaceable>Set_Name</replaceable> with the set name. This variable must not contain any spaces. The <option>--type</option> option sets the <parameter>type</parameter> in the <filename>publican.cfg</filename> file. Refer to <xref linkend=\"sect-Publican-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file\" /> for more information on <filename>publican.cfg</filename> parameters and to <xref linkend=\"chap-Publican-Users_Guide-Using_sets\" /> for details on using sets."
+msgstr "vytvoří místo knihy sadu dokumentů. Místo <replaceable>Nazev_Sady</replaceable> dosaďte skutečný název sady. Tato proměnná nesmí obsahovat žádné mezery. Volba <option>--type</option> nastaví v souboru <filename>publican.cfg</filename> parametr <parameter>type</parameter>. Více informací o parametrech <filename>publican.cfg</filename> viz <xref linkend=\"sect-Publican-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file\" /> a podrobnosti o používání sad viz <xref linkend=\"chap-Publican-Users_Guide-Using_sets\" />."
+
+#. Tag: term
+#, no-c-format
+msgid "<option>--brand <replaceable>brand</replaceable></option>"
+msgstr "<option>--brand <replaceable>grafuprava</replaceable></option>"
+
+#. Tag: para
+#, no-c-format
+msgid "set <replaceable>brand</replaceable> as the <firstterm>brand</firstterm> to use to style the output of this document, for example, <literal>RedHat</literal>, <literal>fedora</literal>, <literal>JBoss</literal>, <literal>oVirt</literal>, or <literal>GIMP</literal>. The default value is <literal>common</literal>, a default brand shipped with <application>Publican</application>. The <option>--brand</option> option sets the <parameter>brand</parameter> parameter in the <filename>publican.cfg</filename> file. Refer to <xref linkend=\"sect-Publican-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file\" /> for more information on <filename>publican.cfg</filename> parameters. This option requires the appropriate <application>Publican</application> brand package to be installed. For example, to build Red Hat branded books, you must install the <package>publican-redhat</package> package. Refer to <xref linkend=\"sect-Publican-Users_Guide-Installing_a_brand\" /> for instructions on installing brand packages for <application>Publican</application>. If you do not specify a brand, <application>Publican</application> uses its built-in, default brand. Refer to <xref linkend=\"chap-Publican-Users_Guide-Branding\" /> for more information."
+msgstr "nastaví <replaceable>grafupravu</replaceable> jako <firstterm>grafickou úpravu</firstterm>, která se použije ke stylizaci výstupu tohoto dokumentu, na příklad <literal>RedHat</literal>, <literal>fedora</literal>, <literal>JBoss</literal>, <literal>oVirt</literal> nebo <literal>GIMP</literal>. Výchozí hodnotou je <literal>common</literal>, výchozí grafická úprava dodávaná s <application>Publicanem</application>. Volba <option>--brand</option> nastaví v souboru <filename>publican.cfg</filename> parametr <parameter>brand</parameter>. Více informací o parametrech <filename>publican.cfg</filename> viz <xref linkend=\"sect-Publican-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file\" />. Tato volba vyžaduje nainstalovaný příslušný balíček grafické úpravy <application>Publicanu</application>. Na příklad přejete-li si sestavovat knihy s grafickou úpravou Red Hat, musíte nainstalovat balíček <package>publican-redhat</package>. Pokyny k instalaci balíčků grafických úprav pro <application>Publican</application> viz <xref linkend=\"sect-Publican-Users_Guide-Installing_a_brand\" />. Nezadáte-li grafickou úpravu, <application>Publican</application> použije svou vestavěnou, výchozí úpravu. Více informací viz <xref linkend=\"chap-Publican-Users_Guide-Branding\" />"
+
+#. Tag: para
+#, no-c-format
+msgid "Before running the <prompt>$</prompt> <command>publican create</command> command, use the <prompt>$</prompt> <command>cd</command> command to change into the directory where you want the book to be created. For example, to create a book named <literal>Test_Book</literal> in the <filename>my_books/</filename> directory, run the following commands:"
+msgstr "Před spuštěním příkazu <prompt>$</prompt> <command>publican create</command> přejděte pomocí příkazu <command>cd</command> do adresáře, ve kterém si přejete  vytvořit knihu. Na příklad chcete-li vytvořit knihu s názvem <literal>Kniha_Test</literal> v adresáři <filename>mé_knihy</filename>, spusťte tyto příkazy:"
+
+#. Tag: screen
+#, no-c-format
+msgid "<prompt>$</prompt> <command>cd my_books/</command> \n"
+"<prompt>$</prompt> <command>publican create --name Test_Book</command>"
+msgstr "<prompt>$</prompt> <command>cd mé_knihy/</command> \n"
+"<prompt>$</prompt> <command>publican create --name Kniha_Test</command>"
+
+#. Tag: para
+#, no-c-format
+msgid "To see the results of this command on a computer with a Linux operating system, run the following:"
+msgstr "Výsledky tohoto příkazu zobrazíte na počítači s operačním systémem Linux příkazem:"
+
+#. Tag: screen
+#, no-c-format
+msgid "<prompt>$</prompt> <command>ls</command>"
+msgstr "<prompt>$</prompt> <command>ls</command>"
+
+#. Tag: para
+#, no-c-format
+msgid "The output should be similar to the following:"
+msgstr "Výstup by měl být podobný tomuto:"
+
+#. Tag: screen
+#, no-c-format
+msgid "<computeroutput>Test_Book/</computeroutput>"
+msgstr "<computeroutput>Kniha_Test/</computeroutput>"
+
+#. Tag: para
+#, no-c-format
+msgid "To see the contents of the new <filename>Test_Book/</filename> directory on a computer with a Linux operating system, run the following:"
+msgstr "Obsah nového adresáře <filename>Kniha_Test/</filename> zobrazíte na počítači s operačním systémem Linux takto:"
+
+#. Tag: screen
+#, no-c-format
+msgid "<prompt>$</prompt> <command>cd Test_Book/</command>\n"
+"<prompt>$</prompt> <command>ls</command>"
+msgstr "<prompt>$</prompt> <command>cd Kniha_Test/</command>\n"
+"<prompt>$</prompt> <command>ls</command>"
+
+#. Tag: screen
+#, no-c-format
+msgid "<computeroutput>en-US/ publican.cfg</computeroutput>"
+msgstr "<computeroutput>en-US/ publican.cfg</computeroutput>"
+

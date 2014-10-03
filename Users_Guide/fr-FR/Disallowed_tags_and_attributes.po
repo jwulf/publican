@@ -1,17 +1,19 @@
 # Gé Baylard <<Geodebay@gmail.com>>, 2013.
-# Gérard Baylard <geodebay@gmail.com>, 2013. #zanata
+#
+# Gé Baylard <<Geodebay@gmail.com>>, 2013, 2014.
+# Gérard Baylard <geodebay@gmail.com>, 2014. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2013-03-08T03:26:30\n"
-"PO-Revision-Date: 2013-09-09 12:57-0400\n"
-"Last-Translator: Gérard Baylard <geodebay@gmail.com>\n"
-"Language-Team: français <<trans-fr@lists.fedoraproject.org>>\n"
+"POT-Creation-Date: 2014-05-06 14:10+1000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2014-05-12 12:26-0400\n"
+"Last-Translator: Gérard Baylard <geodebay@gmail.com>\n"
+"Language-Team: français <<trans-fr@lists.fedoraproject.org>>\n"
 "Language: fr\n"
-"X-Generator: Zanata 3.3.2\n"
+"X-Generator: Zanata 3.4.2\n"
 "Plural-Forms: nplurals=2; plural=n>1;\n"
 
 #. Tag: title
@@ -27,7 +29,7 @@ msgstr "Pris en charge, non pris en charge et rejetés"
 #. Tag: para
 #, no-c-format
 msgid "Not every <firstterm>element</firstterm> (tag) and attribute that works with <application>Publican</application> is <firstterm>supported</firstterm>. Specifically, not every tag has been tested with regards its effect on the presentation of a document once it has been built in HTML or PDF."
-msgstr "Tout <firstterm>élément</firstterm> (balise) ou attribut n'est pas <firstterm>pris en charge</firstterm> dans le fonctionnement de <application>Publican</application>. Plus particulièrement, toutes les balises n'ont pas été testées quant à leurs effets sur la présentation d'un document une fois celui-ci construit en HTML ou PDF."
+msgstr "Tout <firstterm>élément</firstterm> (balise) ou attribut régulier n'est pas automatiquement <firstterm>pris en charge</firstterm> dans le fonctionnement de <application>Publican</application>. En particulier, toutes les balises n'ont pas été testées quant à leurs effets sur la présentation d'un document une fois celui-ci construit en HTML ou PDF."
 
 #. Tag: para
 #, no-c-format
@@ -47,7 +49,7 @@ msgstr "Enfin, un petit groupe d'éléments et d'attributs sont <firstterm>rejet
 #. Tag: para
 #, no-c-format
 msgid "Use the command <prompt>$</prompt> <command>publican print_known</command> to print a list of tags that <application>Publican</application> supports, and the command <command>publican print_banned</command> to print a list of tags that are banned in <application>Publican</application>."
-msgstr "Utilisez la commande <command>publican print_known</command> pour afficher une liste des balises que <application>Publican</application> prend en charge et la commande <command>publican print_banned</command> pour afficher les balises rejetées."
+msgstr "Utilisez la commande <prompt>$</prompt> <command>publican print_known</command> pour afficher une liste des balises que <application>Publican</application> prend en charge et la commande <prompt>$</prompt> <command>publican print_banned</command> pour afficher les balises rejetées."
 
 msgid "Discouraged elements"
 msgstr ""
@@ -125,7 +127,7 @@ msgstr "<literal>Naranja</literal> — la <firstterm>naranja</firstterm> es&hell
 #. Tag: para
 #, no-c-format
 msgid "<literal>Melocotonero</literal> — el <firstterm>melocotonero</firstterm> es…"
-msgstr "<literal>Melocotonero</literal> — el <firstterm>melocotonero</firstterm> es&hellip;"
+msgstr "<literal>Melocotón</literal> — el <firstterm>melocotón</firstterm> es&hellip;"
 
 #. Tag: para
 #, no-c-format
@@ -140,7 +142,7 @@ msgstr "<sgmltag>&lt;inlinegraphic&gt;</sgmltag>"
 #. Tag: para
 #, no-c-format
 msgid "This element presents information as a graphic rather than as text and does not provide an option to present a text alternative to the graphic. This tag therefore hides information from people with visual impairments. In jurisdictions that have legal requirements for electronic content to be accessible to people with visual impairments, documents that use this tag will not satisfy those requirements. Section 508 of the <citetitle>Rehabilitation Act of 1973</citetitle><footnote> <para> Refer to <link xlink:href=\"http://www.section508.gov/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">http://www.section508.gov/</link> </para> </footnote> is an example of such a requirement for federal agencies in the United States."
-msgstr "Cet élément présente l'information sous forme d'un graphique au lieu d'un texte et ne fournit pas d'option pour offrir une alternative textuelle au graphique. Cette balise cache donc une information aux personnes avec des déficiences visuelles. Dans les sites officiels, qui ont obligation légale de présenter des contenus accessibles aux mal-voyants, des documents qui utiliseraient cette balise ne satisfont pas cette prescription. La section 508 de l'<citetitle>Acte de réhabilitation de 1973</citetitle><footnote> <para> Voyez la page <ulink url=\"http://www.section508.gov/\">http://www.section508.gov/</ulink> </para> </footnote> est un exemple de ces obligations pour les agences fédérales des États-Unis."
+msgstr "Cet élément présente l'information sous forme d'un graphique au lieu d'un texte et ne fournit pas d'option pour offrir une alternative textuelle au graphique. Cette balise cache donc une information aux personnes avec des déficiences visuelles. Dans les sites officiels, qui ont obligation légale de présenter des contenus accessibles aux mal-voyants, des documents qui utiliseraient cette balise ne satisfont pas cette prescription. La section 508 de <citetitle>Rehabilitation Act of 1973</citetitle><footnote> <para> Voyez la page <ulink url=\"http://www.section508.gov/\">http://www.section508.gov/</ulink> </para> </footnote> est un exemple de telles obligations pour des agences fédérales aux États-Unis."
 
 #. Tag: para
 #, no-c-format
@@ -214,12 +216,12 @@ msgstr ""
 #. Tag: para
 #, no-c-format
 msgid "The text contained by the anchor tag is the same as the data in the <tag>&lt;xreflabel&gt;</tag> attribute. In this case, it means that readers of printed copies have less information available to them."
-msgstr "Le texte contenu dans la balise d'ancrage est le même que celui contenu dans l'attribut <sgmltag>&lt;xreflabel&gt;</sgmltag>. Dans ce cas, cela signifie que les lecteurs des copies imprimées disposent de moins d'informations à ce sujet."
+msgstr "Le texte contenu dans la balise d'ancrage est le même que celui contenu dans l'attribut <sgmltag>&lt;xreflabel&gt;</sgmltag>. Dans ce cas, cela signifie que les lecteurs des copies imprimées disposent de moins d'informations à ce propos."
 
 #. Tag: para
 #, no-c-format
 msgid "You could work around this if you make the value of the <tag>&lt;xreflabel&gt;</tag> attribute the same as the text within the <tag>&lt;title&gt;</tag><tag>&lt;/title&gt;</tag> element tags. However, this duplication increases the risk of typo-level errors and otherwise offers no underlying improvement. And it still reduces the amount of information presented to readers of printed copies."
-msgstr "Vous pouvez contourner ce problème si vous faites en sorte que la valeur de l'attribut <sgmltag>&lt;xreflabel&gt;</sgmltag> soit le même que celui entre les balises de l'élément <sgmltag>&lt;title&gt;</sgmltag><sgmltag>&lt;/title&gt;</sgmltag>. Toutefois, cette duplication augmente les risques d'erreurs typographiques et n'apporte aucune amélioration sous-jacente. Et, encore une fois, la quantité d'information présentée aux lecteurs des copies imprimées est réduite."
+msgstr "Vous pouvez contourner ce problème si vous faites en sorte que la valeur de l'attribut <sgmltag>&lt;xreflabel&gt;</sgmltag> soit le même que celui entre les balises de l'élément <sgmltag>&lt;title&gt;</sgmltag><sgmltag>&lt;/title&gt;</sgmltag>. Toutefois, cette duplication augmente les risques d'erreurs typographiques et n'apporte aucune amélioration sous-jacente. Et, encore une fois, la quantité d'information présentée aux lecteurs des copies imprimées en est réduite."
 
 #. Tag: para
 #, no-c-format
@@ -244,7 +246,7 @@ msgstr ""
 "\t&lt;para&gt;The secret to eternal life is&hellip;&lt;/para&gt;\n"
 "&lt;/chapter&gt;\n"
 "\n"
-"[autre prose pour l'éternité ici]\n"
+"[autre prose pour l'éternité ici]     \n"
 "\n"
 "&hellip;see &gt;xref linkend=\"ch03\"&gt; for details.\n"
 "\n"
@@ -265,7 +267,7 @@ msgstr ""
 #. Tag: para
 #, no-c-format
 msgid "This isn't as informative as the text presented to a reader if you do not use an <tag>&lt;xreflabel&gt;</tag> attribute. The following:"
-msgstr "Ce n'est pas aussi porteur d'information que le texte présenté au lecteur si vous n'utilisez pas l'attribut <sgmltag>&lt;xreflabel&gt;</sgmltag>. Ainsi :"
+msgstr "Ce n'est pas autant porteur d'information que le texte présenté au lecteur si vous n'utilisez pas l'attribut <sgmltag>&lt;xreflabel&gt;</sgmltag>. Ainsi :"
 
 #. Tag: programlisting
 #, no-c-format
@@ -285,7 +287,7 @@ msgstr ""
 "\t&lt;para&gt;The secret to eternal life is&hellip;&lt;/para&gt;\n"
 "&lt;/chapter&gt;\n"
 "\n"
-"[autre prose pour l'éternité ici]\t\t\n"
+"[autre prose pour l'éternité ici]     \n"
 "\n"
 "&hellip;see &lt;xref linkend=\"ch03\"&gt; for details.\n"
 "\n"
@@ -326,7 +328,7 @@ msgstr ""
 "\t&lt;para&gt;The secret to eternal life is&hellip;&lt;/para&gt;\n"
 "&lt;/chapter&gt;\n"
 "\n"
-"[autre prose pour l'éternité ici]\t\t\n"
+"[autre prose pour l'éternité ici]     \n"
 "\n"
 "&hellip;see &lt;xref linkend=\"ch03\"&gt; for details.\n"
 "\n"
@@ -339,7 +341,7 @@ msgstr "En anglais, <sgmltag>&lt;xref&gt;</sgmltag> est toujours transformé en 
 #. Tag: para
 #, no-c-format
 msgid "Someone reading the German version, however, will have this as their underlying HTML:"
-msgstr "Mais, quelqu'un lisant la version en allemand, verra ceci avec le HTML sous-jacent :"
+msgstr "Mais, quelqu'un lisant la version en allemand, verra ceci comme HTML sous-jacent :"
 
 #. Tag: programlisting
 #, no-c-format
@@ -414,7 +416,7 @@ msgstr ""
 "\t&lt;para&gt;The secret to eternal life is&hellip;&lt;/para&gt;\n"
 "&lt;/chapter&gt;\n"
 "\n"
-"[autre prose pour l'éternité ici]\n"
+"[autre prose pour l'éternité ici]     \n"
 "\n"
 "The solution is in &lt;xref linkend=\"The_Secret\" endterm=\"final\"/&gt;.\n"
 "\n"
@@ -527,12 +529,12 @@ msgstr "En plus, notez que la préposition combinée et l'article pose aussi le 
 #. Tag: para
 #, no-c-format
 msgid "Due to the problems that <parameter>endterm</parameter> presents for translation, <application>Publican</application> discourages this attribute."
-msgstr "Compte tenu des problèmes que <parameter>endterm</parameter> présente pour la traduction, <application>Publican</application> rejette cet attribut ."
+msgstr "Compte tenu des problèmes que <parameter>endterm</parameter> présente pour la traduction, <application>Publican</application> rejette cet attribut."
 
 #. Tag: para
 #, no-c-format
-#~ msgid "<application>Publican</application> depends on an external application, <application>FOP</application>, to render PDF documents. At present, <application>FOP</application> does not support nested tables, so attempts to build PDF files from <application>Publican</application> documents that contain nested tables fail."
-#~ msgstr "<application>Publican</application> dépend d'une application externe, <application>FOP</application>, pour le rendu PDF des documents. Actuellement, <application>FOP</application> ne prend pas en charge les tableaux imbriqués ; donc toute tentative de créer des fichiers PDF à partir de documents <application>Publican</application> contenant des tableaux imbriqués échouera."
+#~ msgid "The <sgmltag>&lt;olink&gt;</sgmltag> tag provides cross-references between XML documents. For <sgmltag>&lt;olink&gt;</sgmltag>s to work outside of documents that are all hosted within the same library of XML files, you must provide a URL for the document to which you are linking. In environments that use <sgmltag>&lt;olink&gt;</sgmltag>s, these URLs can be supplied either as an XML entity or with a server-side script. <application>Publican</application> produces documents intended for wide dissemination in which URLs are always necessary for cross-references. Therefore, the <sgmltag>&lt;olink&gt;</sgmltag> tag offers no advantage over the <sgmltag>&lt;ulink&gt;</sgmltag> tag, and is disallowed due to its redundancy."
+#~ msgstr "La balise <sgmltag>&lt;olink&gt;</sgmltag> fournit des références croisées entre documents XML. Pour que <sgmltag>&lt;olink&gt;</sgmltag> fonctionne à l'extérieur de documents hébergés au sein d'une même bibliothèque de fichiers XML, vous devez indiquer l'URL du document auquel vous voulez vous lier. Dans des environnements qui utilisent <sgmltag>&lt;olink&gt;</sgmltag>, ces URL peuvent être fournis soit en tant qu'entité XML ou à l'aide d'un script annexe. <application>Publican</application> produit des documents prévus pour une large diffusion dans lesquels des URL sont toujours nécessaires pour les références croisées. Donc, la balise <sgmltag>&lt;olink&gt;</sgmltag> n'offre aucun avantage par rapport à <sgmltag>&lt;ulink&gt;</sgmltag> ; elle est rejetée en raison de cette redondance."
 
 #. Tag: para
 #, no-c-format
@@ -541,13 +543,28 @@ msgstr "Compte tenu des problèmes que <parameter>endterm</parameter> présente 
 
 #. Tag: para
 #, no-c-format
+#~ msgid "<application>Publican</application> depends on an external application, <application>FOP</application>, to render PDF documents. At present, <application>FOP</application> does not support nested tables, so attempts to build PDF files from <application>Publican</application> documents that contain nested tables fail."
+#~ msgstr "<application>Publican</application> dépend d'une application externe, <application>FOP</application>, pour le rendu PDF des documents. Actuellement, <application>FOP</application> ne prend pas en charge les tableaux imbriqués ; donc toute tentative de créer des fichiers PDF à partir de documents <application>Publican</application> contenant des tableaux imbriqués échouera."
+
+#. Tag: para
+#, no-c-format
 #~ msgid "The <sgmltag>&lt;link&gt;</sgmltag> tag provides a general-purpose hyperlink and therefore offers nothing that the <sgmltag>&lt;xref&gt;</sgmltag> and <sgmltag>&lt;ulink&gt;</sgmltag> tags do not, for internal and external hyperlinks respectively. The <sgmltag>&lt;link&gt;</sgmltag> tag is disallowed due to its redundancy."
 #~ msgstr "La balise <sgmltag>&lt;link&gt;</sgmltag> permet un hyper-lien d'utilisation générale et donc n'offre rien de plus que <sgmltag>&lt;xref&gt;</sgmltag> ou <sgmltag>&lt;ulink&gt;</sgmltag>, pour des liens internes et externes respectivement. La balise <sgmltag>&lt;link&gt;</sgmltag> est rejetée en raison de sa redondance."
+
+#. Tag: term
+#, no-c-format
+#~ msgid "<sgmltag>&lt;tip&gt;</sgmltag>"
+#~ msgstr "<sgmltag>&lt;tip&gt;</sgmltag>"
 
 #. Tag: para
 #, no-c-format
 #~ msgid "Use <sgmltag>&lt;note&gt;</sgmltag> instead of <sgmltag>&lt;tip&gt;</sgmltag>, and use either <sgmltag>&lt;important&gt;</sgmltag> or <sgmltag>&lt;warning&gt;</sgmltag> instead of <sgmltag>&lt;caution&gt;</sgmltag>. Some criteria by which you might select a suitable level of severity are presented in the &lsquo;Document Conventions&rsquo; section of the preface of books produced with <application>Publican</application>'s default brand."
 #~ msgstr "Utilisez <sgmltag>&lt;note&gt;</sgmltag> à la place de <sgmltag>&lt;tip&gt;</sgmltag> et, soit <sgmltag>&lt;important&gt;</sgmltag>, soit <sgmltag>&lt;warning&gt;</sgmltag> à la place de <sgmltag>&lt;caution&gt;</sgmltag>. Quelques critères de choix d'un niveau de sévérité cohérent sont présentés dans le paragraphe &lsquo;Conventions d'écriture&rsquo; de la préface des livres créée avec la charte graphique par défaut de <application>Publican</application>."
+
+#. Tag: title
+#, no-c-format
+#~ msgid "Disallowed elements"
+#~ msgstr "Éléments rejetés"
 
 #. Tag: para
 #, no-c-format
@@ -556,26 +573,11 @@ msgstr "Compte tenu des problèmes que <parameter>endterm</parameter> présente 
 
 #. Tag: term
 #, no-c-format
-#~ msgid "<sgmltag>&lt;entrytbl&gt;</sgmltag>"
-#~ msgstr "<sgmltag>&lt;entrytbl&gt;</sgmltag>"
-
-#. Tag: para
-#, no-c-format
-#~ msgid "The <sgmltag>&lt;olink&gt;</sgmltag> tag provides cross-references between XML documents. For <sgmltag>&lt;olink&gt;</sgmltag>s to work outside of documents that are all hosted within the same library of XML files, you must provide a URL for the document to which you are linking. In environments that use <sgmltag>&lt;olink&gt;</sgmltag>s, these URLs can be supplied either as an XML entity or with a server-side script. <application>Publican</application> produces documents intended for wide dissemination in which URLs are always necessary for cross-references. Therefore, the <sgmltag>&lt;olink&gt;</sgmltag> tag offers no advantage over the <sgmltag>&lt;ulink&gt;</sgmltag> tag, and is disallowed due to its redundancy."
-#~ msgstr "La balise <sgmltag>&lt;olink&gt;</sgmltag> fournit des références croisées entre documents XML. Pour que <sgmltag>&lt;olink&gt;</sgmltag> fonctionne à l'extérieur de documents hébergés au sein d'une même bibliothèque de fichiers XML, vous devez indiquer l'URL du document auquel vous voulez vous lier. Dans des environnements qui utilisent <sgmltag>&lt;olink&gt;</sgmltag>, ces URL peuvent être fournis soit en tant qu'entité XML ou à l'aide d'un script annexe. <application>Publican</application> produit des documents prévus pour une large diffusion dans lesquels des URL sont toujours nécessaires pour les références croisées. Donc, la balise <sgmltag>&lt;olink&gt;</sgmltag> n'offre aucun avantage par rapport à <sgmltag>&lt;ulink&gt;</sgmltag> ; elle est rejetée en raison de cette redondance."
-
-#. Tag: term
-#, no-c-format
 #~ msgid "<sgmltag>&lt;caution&gt;</sgmltag>"
 #~ msgstr "<sgmltag>&lt;caution&gt;</sgmltag>"
 
 #. Tag: term
 #, no-c-format
-#~ msgid "<sgmltag>&lt;tip&gt;</sgmltag>"
-#~ msgstr "<sgmltag>&lt;tip&gt;</sgmltag>"
-
-#. Tag: title
-#, no-c-format
-#~ msgid "Disallowed elements"
-#~ msgstr "Éléments rejetés"
+#~ msgid "<sgmltag>&lt;entrytbl&gt;</sgmltag>"
+#~ msgstr "<sgmltag>&lt;entrytbl&gt;</sgmltag>"
 

@@ -1,0 +1,157 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: 0\n"
+"POT-Creation-Date: 2014-10-03 13:09+1000\n"
+"PO-Revision-Date: 2014-10-03 13:09+1000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: None\n"
+"Language: en-US \n"
+"MIME-Version: 1.0\n"
+"Content-Type: application/x-publican; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Publican v4.2.2\n"
+
+msgid "Installing a brand"
+msgstr ""
+
+msgid "<application>Publican</application> brands for Fedora, Genome, and oVirt documents are available as RPM packages in Fedora. Similarly, Red Hat internally distributes RPM packages containing <application>Publican</application> brands for GIMP, JBoss, and Red Hat documents. Providing that you have access to the relevant repositories, you can install these brands on a computer that runs Red Hat Enterprise Linux or Fedora — or an operating system derived from either — with the command <command>yum install publican-<replaceable>brand</replaceable></command> or with a graphical package manager such as <application>PackageKit</application>."
+msgstr ""
+
+msgid "If you use <application>Publican</application> on an operating system that does not use RPM packages, your documentation project might provide its brand in another format. Whatever the format in which the brand is supplied, you must place the brand files in a subdirectory of the <application>Publican</application> <filename>Common_Content</filename> directory. By default, this directory is located at <filename>/usr/share/publican/Common_Content</filename> on Linux operating systems and at <filename>%SystemDrive%/%ProgramFiles%/Publican/Common_Content</filename> on Windows operating systems — typically, <filename>C:/Program Files/Publican/Common_Content</filename>"
+msgstr ""
+
+msgid "Each currently available brand is distributed under a brand-specific license as follows:"
+msgstr ""
+
+msgid "To install the brand:"
+msgstr ""
+
+msgid "If the brand was supplied to you in an archive of some kind, for example, a tarball or ZIP file, unpack the brand into a new directory on your system."
+msgstr ""
+
+msgid "Change into the directory in which you created or unpacked the brand:"
+msgstr ""
+
+msgid "<prompt>$</prompt> <command>cd publican-<replaceable>brand</replaceable></command>"
+msgstr ""
+
+msgid "where <replaceable>brand</replaceable> is the name of the brand."
+msgstr ""
+
+msgid "Build the brand:"
+msgstr ""
+
+msgid "<prompt>$</prompt> <command>publican build --formats xml --langs all --publish</command>"
+msgstr ""
+
+msgid "Install the brand:"
+msgstr ""
+
+msgid "<prompt>$</prompt> <command>sudo publican install_brand --path <replaceable>path</replaceable></command>"
+msgstr ""
+
+msgid "where <replaceable>path</replaceable> is the path to the <application>Publican</application> Common Content files. For example, on a Linux system, run:"
+msgstr ""
+
+msgid "<prompt>$</prompt> <command>sudo publican install_brand --path /usr/share/publican/Common_Content</command>"
+msgstr ""
+
+msgid "or on a Windows system, run"
+msgstr ""
+
+msgid "<prompt>$</prompt> <command>publican install_brand --path \"C:/Program Files/Publican/Common_Content\"</command>"
+msgstr ""
+
+msgid "Current Brands and their packages"
+msgstr ""
+
+msgid "Brand"
+msgstr ""
+
+msgid "License of Common Content files"
+msgstr ""
+
+msgid "Default license for documents"
+msgstr ""
+
+msgid "Package"
+msgstr ""
+
+msgid "Comment"
+msgstr ""
+
+msgid "common"
+msgstr ""
+
+msgid "<link xlink:href=\"http://creativecommons.org/publicdomain/zero/1.0/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">CC0 1.0</link>"
+msgstr ""
+
+msgid "<link xlink:href=\"http://www.gnu.org/licenses/fdl.html\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">GFDL Version 1.2</link>"
+msgstr ""
+
+msgid "publican"
+msgstr ""
+
+msgid "GPL compatible license. No options."
+msgstr ""
+
+msgid "RedHat"
+msgstr ""
+
+msgid "<link xlink:href=\"http://creativecommons.org/licenses/by-sa/3.0/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">CC-BY-SA 3.0</link>"
+msgstr ""
+
+msgid "<phrase>CC-BY-SA 3.0</phrase>"
+msgstr ""
+
+msgid "publican-redhat"
+msgstr ""
+
+msgid "Fedora"
+msgstr ""
+
+msgid "publican-fedora"
+msgstr ""
+
+msgid "JBoss"
+msgstr ""
+
+msgid "publican-jboss"
+msgstr ""
+
+msgid "No Options."
+msgstr ""
+
+msgid "oVirt"
+msgstr ""
+
+msgid "<link xlink:href=\"http://www.opencontent.org/openpub/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">OPL 1.0</link>"
+msgstr ""
+
+msgid "<phrase>OPL 1.0</phrase>"
+msgstr ""
+
+msgid "publican-ovirt"
+msgstr ""
+
+msgid "GIMP"
+msgstr ""
+
+msgid "<phrase>GFDL Version 1.2</phrase>"
+msgstr ""
+
+msgid "publican-gimp"
+msgstr ""
+
+msgid "Matches the license for existing GIMP documentation."
+msgstr ""
+
+msgid "Genome"
+msgstr ""
+
+msgid "publican-genome"
+msgstr ""
+
+msgid "Note the difference in licensing between the common content files provided in the common brand (CC0) and the default license set for books generated with the common brand (GFDL). The CC0 license allows you to redistribute and relicense the files that make up the common brand (including the CSS and image files) to suit your project. <application>Publican</application> suggests the GFDL for documentation by default because <application>Publican</application> is developed primarily to build documentation for software. The GFDL is compatible with the GPL, which is the most commonly used license for open-source software."
+msgstr ""
+

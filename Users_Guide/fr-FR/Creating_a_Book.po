@@ -1,17 +1,18 @@
 # Gé Baylard <<Geodebay@gmail.com>>, 2013.
-# Gérard Baylard <geodebay@gmail.com>, 2013. #zanata
+#
+# Gé Baylard <<Geodebay@gmail.com>>, 2013, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2013-03-08T03:26:30\n"
-"PO-Revision-Date: 2013-08-22 09:28-0400\n"
-"Last-Translator: Gérard Baylard <geodebay@gmail.com>\n"
-"Language-Team: français <<trans-fr@lists.fedoraproject.org>>\n"
+"POT-Creation-Date: 2014-05-06 14:10+1000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2014-05-11 06:47-0400\n"
+"Last-Translator: Gé Baylard <<Geodebay@gmail.com>>\n"
+"Language-Team: français <<trans-fr@lists.fedoraproject.org>>\n"
 "Language: fr\n"
-"X-Generator: Zanata 3.3.2\n"
+"X-Generator: Zanata 3.4.2\n"
 "Plural-Forms: nplurals=2; plural=n>1;\n"
 
 #. Tag: title
@@ -22,17 +23,17 @@ msgstr "Création d'un document"
 #. Tag: para
 #, no-c-format
 msgid "This chapter describes creating books and articles: the main configuration files, example document files, and how to build a document."
-msgstr "Ce chapitre décrit la création de fascicules et d'articles : les principaux fichiers de configuration, des fichiers exemples et comment construire un document."
+msgstr "Ce chapitre décrit comment créer des ouvrages ou des articles : les principaux fichiers de configuration, des fichiers exemples de documents et la construction d'un document."
 
 #. Tag: para
 #, no-c-format
 msgid "Use the <prompt>$</prompt> <command>publican create</command> command to create a new document, including all the necessary files for the document."
-msgstr "Utilisez la commande <command>publican create</command> pour créer un nouveau document comprenant tous les fichiers nécessaires."
+msgstr "Utilisez la commande <prompt>$</prompt> <command>publican create</command> pour créer un nouveau document comprenant tous les fichiers nécessaires."
 
 #. Tag: para
 #, no-c-format
 msgid "The <prompt>$</prompt> <command>publican create</command> command accepts several options, detailed in this chapter. When an option can accept a value, separate the option from the value with a space or an equals sign; for example, <command>publican create --name New_Book</command> or <command>publican create --name=New_Book</command>."
-msgstr "La commande <command>publican create</command> accepte plusieurs options, précisées dans ce chapitre. Quand une option accepte un paramètre, séparez l'option du paramètre avec une espace ou un signe égale ; par exemple, <command>publican create --name Nouveau_livre</command> ou <command>publican create --name=Nouveau_livre</command>."
+msgstr "La commande <prompt>$</prompt> <command>publican create</command> accepte plusieurs options, précisées dans ce chapitre. Quand une option prend une valeur en paramètre, séparer option et valeur avec une espace ou un signe égale ; par exemple, <command>publican create --name Nouveau_livre</command> ou <command>publican create --name=Nouveau_livre</command>."
 
 #. Tag: term
 #, no-c-format
@@ -42,7 +43,7 @@ msgstr "<option>--help</option>"
 #. Tag: para
 #, no-c-format
 msgid "print a list of all <prompt>$</prompt> <command>publican create</command> command options."
-msgstr "affiche la liste de toutes les options de la commande <command>publican create</command>."
+msgstr "affiche la liste de toutes les options de la commande <prompt>$</prompt> <command>publican create</command>."
 
 #. Tag: term
 #, no-c-format
@@ -52,37 +53,37 @@ msgstr "<option>--name <replaceable>Nom_document</replaceable></option>"
 #. Tag: para
 #, no-c-format
 msgid "set <replaceable>Doc_Name</replaceable> as the name of the book or article. This variable must not contain any spaces. For example, the command <prompt>$</prompt> <command>create_book --name Test_Book</command> creates a book named <literal>Test_Book</literal> with all the necessary files to build the book, and sets the <parameter>BOOKID</parameter> in the <filename>Test_Book.ent</filename> file."
-msgstr "donnez <replaceable>Nom_document</replaceable> comme nom du fascicule ou de l'article. Cette variable ne doit comporter aucune espace. Par exemple, la commande <command>create_book --name Livre_test</command> crée un fascicule nommé <literal>Livre_test</literal> avec tous les fichiers nécessaires pour la construction du document et fixe la valeur du paramètre <parameter>BOOKID</parameter> dans le fichier <filename>Livre_test.ent</filename>."
+msgstr "<replaceable>Doc_Name</replaceable> représente le nom de l'ouvrage ou de l'article. Cette variable ne doit comporter aucune espace. Par exemple, la commande <prompt>$</prompt> <command>create_book --name Livre_test</command> crée un fascicule nommé <literal>Livre_test</literal> avec tous les fichiers nécessaires à la construction du document ; elle définit la valeur du paramètre <parameter>BOOKID</parameter> dans le fichier <filename>Livre_test.ent</filename>."
 
 #. Tag: term
 #, no-c-format
 msgid "<option>--lang<replaceable> Language_Code</replaceable></option>"
-msgstr "<option>--lang <replaceable>Code_langue</replaceable></option>"
+msgstr "<option>--lang<replaceable> Language_Code</replaceable></option>"
 
 #. Tag: para
 #, no-c-format
 msgid "set <replaceable>Language_Code</replaceable> as the language code of the language in which the book or article will be authored. If you do not specify a language code, <application>Publican</application> defaults to <literal>en-US</literal> (American English). The <option>--lang</option> option sets the <parameter>xml_lang</parameter> in the <filename>publican.cfg</filename> file and creates a directory with this name in the document directory. When initially created, this directory contains some boilerplate XML files. Refer to <xref linkend=\"sect-Publican-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file\" /> for more information on <filename>publican.cfg</filename> parameters and <xref linkend=\"appe-Publican-Users_Guide-Language_codes\" /> for more detail on language codes."
-msgstr "définit <replaceable>Code_langue</replaceable> comme code de la langue dans lequel le fascicule ou l'article sera publié. Si vous ne précisez pas un code de langue, <application>Publican</application> prend par défaut <literal>en-US</literal> (anglais d'Amérique). L'option <option>--lang</option> fixe le paramètre <parameter>xml_lang</parameter> dans le fichier <filename>publican.cfg</filename> et crée un dossier de ce nom dans le répertoire du document. Lors de sa création initiale, ce répertoire contient quelques textes de paragraphes standards de fichiers XML. Reportez-vous à la <xref linkend=\"sect-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file\" /> pour plus d'informations sur les paramètres de <filename>publican.cfg</filename> et à l'<xref linkend=\"appe-Users_Guide-Language_codes\" /> pour plus de détails à propos des codes de langues."
+msgstr "<replaceable>Language_Code</replaceable> désigne le code de la langue dans lequel l'ouvrage ou l'article sera publié. Si vous ne précisez pas un code de langue, <application>Publican</application> prend par défaut <literal>en-US</literal> (anglais US). L'option <option>--lang</option> fixe le paramètre <parameter>xml_lang</parameter> du fichier <filename>publican.cfg</filename> ; un répertoire à ce nom est créé dans celui du document. À sa création initiale, ce répertoire contient quelques fichiers XML à contenu standardisé. Voyez la <xref linkend=\"sect-Publican-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file\" /> pour plus d'informations sur les paramètres de <filename>publican.cfg</filename> et à l'<xref linkend=\"appe-Publican-Users_Guide-Language_codes\" /> pour plus de détails à propos des codes de langues."
 
 #. Tag: term
 #, no-c-format
 msgid "<option>--version<replaceable> version</replaceable></option>"
-msgstr "<option>--version <replaceable>version</replaceable></option>"
+msgstr "<option>--version<replaceable> version</replaceable></option>"
 
 #. Tag: para
 #, no-c-format
 msgid "set <replaceable>version</replaceable> as the version number of the product that the book describes. For example, for Red Hat Enterprise Linux 5.1 you would use <literal>5.1</literal>. The default version is <literal>0.1</literal>. The <option>--version</option> option sets the <tag>&lt;productnumber&gt;</tag> tag in the <filename>Book_Info.xml</filename> or <filename>Article_Info.xml</filename> file. For more information refer to <xref linkend=\"sect-Publican-Users_Guide-Files_in_the_book_directory-Book_Info.xml\" />."
-msgstr "définit <replaceable>version</replaceable> en tant que numéro de la version du produit que le fascicule décrit. Par exemple, pour Red Hat Enterprise Linux&nbsp;5.1, employez <literal>5.1</literal>. Par défaut, la valeur est <literal>0.1</literal>. L'option <option>--version</option> fixe la valeur de la marque <sgmltag>&lt;productnumber&gt;</sgmltag> dans le fichier <filename>Book_Info.xml</filename> ou <filename>Article_Info.xml</filename>. Pour plus d'informations, reportez-vous à la <xref linkend=\"sect-Users_Guide-Files_in_the_book_directory-Book_Info.xml\" />."
+msgstr "<replaceable>version</replaceable> indique le numéro de version du produit décrit par l'ouvrage. Par exemple, pour Red Hat Enterprise Linux&nbsp;5.1, vous indiquerez <literal>5.1</literal>. Par défaut, la valeur de version est <literal>0.1</literal>. L'option <option>--version</option> fixe la valeur de la balise <sgmltag>&lt;productnumber&gt;</sgmltag> du fichier <filename>Book_Info.xml</filename> ou <filename>Article_Info.xml</filename>. Pour plus d'informations, reportez-vous à la <xref linkend=\"sect-Publican-Users_Guide-Files_in_the_book_directory-Book_Info.xml\" />."
 
 #. Tag: term
 #, no-c-format
 msgid "<option>--edition<replaceable> edition</replaceable></option>"
-msgstr "<option>--edition <replaceable>numéro_parution</replaceable></option>"
+msgstr "<option>--edition<replaceable> edition</replaceable></option>"
 
 #. Tag: para
 #, no-c-format
 msgid "set <replaceable>edition</replaceable> as the edition number of the book. This number indicates to users when a new edition of the book is released. The initial <firstterm>general availability</firstterm> (GA) release of the book should be edition <literal>1.0</literal>. The default value is <literal>0</literal>. The <option>--edition</option> option sets the <tag>&lt;edition&gt;</tag> tag in the <filename>Book_Info.xml</filename> or <filename>Article_Info.xml</filename> file. For more information refer to <xref linkend=\"sect-Publican-Users_Guide-Files_in_the_book_directory-Book_Info.xml\" />."
-msgstr "définit <replaceable>numéro_parution</replaceable> comme le numéro de parution du fascicule. Ce chiffre permet d'indiquer aux utilisateurs qu'une nouvelle édition du fascicule a été publiée. La publication initiale du fascicule avec <firstterm>mise à disposition générale</firstterm> doit être la parution <literal>1.0</literal>. La valeur par défaut est <literal>0</literal>. L'option <option>--edition</option> fixe la valeur de la marque <sgmltag>&lt;edition&gt;</sgmltag> dans le fichier <filename>Book_Info.xml</filename> ou <filename>Article_Info.xml</filename>. Pour plus d'informations, reportez-vous à la <xref linkend=\"sect-Users_Guide-Files_in_the_book_directory-Book_Info.xml\" />."
+msgstr "la valeur de <replaceable>edition</replaceable> indique le numéro de parution de l'ouvrage. Ce nombre indique aux utilisateurs la publication d'une nouvelle édition de l'ouvrage. La première publication de l'ouvrage avec une <firstterm>mise à disposition générale</firstterm> doit être la parution <literal>1.0</literal>. La valeur par défaut est <literal>0</literal>. L'option <option>--edition</option> fixe la valeur de la balise <sgmltag>&lt;edition&gt;</sgmltag> du fichier <filename>Book_Info.xml</filename> ou <filename>Article_Info.xml</filename>. Pour plus d'informations, reportez-vous à la <xref linkend=\"sect-Publican-Users_Guide-Files_in_the_book_directory-Book_Info.xml\" />."
 
 #. Tag: term
 #, no-c-format
@@ -92,49 +93,49 @@ msgstr "<option>--product <replaceable>Nom_produit</replaceable></option>"
 #. Tag: para
 #, no-c-format
 msgid "set <replaceable>Product_Name</replaceable> as the name of the product that the book describes. This variable must not contain any spaces. For example, set this to <literal>Fedora</literal> for core Fedora documentation, and the name of the product for other products, for example, <literal>Fedora_Directory_Server</literal>. The default value is <literal>Documentation</literal>. The <option>--product</option> option sets the <tag>&lt;product name&gt;</tag> tag in the <filename>Book_Info.xml</filename> file or <filename>Article_Info.xml</filename> file and the <parameter>PRODUCT</parameter> entity in the <filename><replaceable>Doc_Name</replaceable>.ent</filename> file."
-msgstr "définit <replaceable>Nom_produit</replaceable> comme nom du produit que le fascicule décrit. Cette variable ne doit comporter aucune espace. Par exemple, paramétrez-la à <literal>Fedora</literal> pour une documentation du cœur de Fedora, et au nom du produit pour les autres produits, par exemple, <literal>Fedora_Directory_Server</literal>. La valeur par défaut est <literal>Documentation</literal>. L'option <option>--product</option> fixe la valeur de la marque <sgmltag>&lt;product name&gt;</sgmltag> dans le fichier <filename>Book_Info.xml</filename> ou <filename>Article_Info.xml</filename> ainsi que l'entité <parameter>PRODUCT</parameter> dans le fichier <filename><replaceable>Nom_document</replaceable>.ent</filename>."
+msgstr "<replaceable>Product_Name</replaceable> est le nom du produit décrit par l'ouvrage. Cette variable ne doit comporter aucune espace. Par exemple, indiquez <literal>Fedora</literal> pour une documentation se rapportant au cœur de Fedora, ou le nom du produit pour d'autres applications, par exemple, <literal>Fedora_Directory_Server</literal>. La valeur par défaut est <literal>Documentation</literal>. L'option <option>--product</option> fixe la valeur de la balise <sgmltag>&lt;product name&gt;</sgmltag> du fichier <filename>Book_Info.xml</filename> ou <filename>Article_Info.xml</filename>, ainsi qu'à l'entité <parameter>PRODUCT</parameter> du fichier <filename><replaceable>Doc_Name</replaceable>.ent</filename>."
 
 #. Tag: term
 #, no-c-format
 msgid "<option>--type Article --name<replaceable> Article_Name</replaceable></option>"
-msgstr "<option>--type Article --name <replaceable>Nom_article</replaceable></option>"
+msgstr "<option>--type Article --name<replaceable> Article_Name</replaceable></option>"
 
 #. Tag: para
 #, no-c-format
 msgid "create an article instead of a book. Replace <replaceable>Article_Name</replaceable> with the article name. This variable must not contain any spaces. The <option>--type</option> option sets the <parameter>type</parameter> in the <filename>publican.cfg</filename> file. Refer to <xref linkend=\"sect-Publican-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file\" /> for more information on <filename>publican.cfg</filename> parameters."
-msgstr "crée un article au lieu d'un fascicule. Remplacez <replaceable>Nom_article</replaceable> par le nom de l'article. Cette variable ne doit comporter aucune espace. L'option <option>--type</option> fixe la valeur du paramètre <parameter>type</parameter> dans le fichier <filename>publican.cfg</filename>. Reportez-vous à la <xref linkend=\"sect-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file\" /> pour plus d'informations à propos des paramètres de <filename>publican.cfg</filename>."
+msgstr "crée un article au lieu d'un ouvrage. Remplacez <replaceable>Article_Name</replaceable> par le nom de l'article. Cette variable ne doit comporter aucune espace. L'option <option>--type</option> fixe la valeur du paramètre <parameter>type</parameter> du fichier <filename>publican.cfg</filename>. Reportez-vous à la <xref linkend=\"sect-Publican-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file\" /> pour plus d'informations à propos des paramètres de <filename>publican.cfg</filename>."
 
 #. Tag: term
 #, no-c-format
 msgid "<option>--type Set --name<replaceable> Set_Name</replaceable></option>"
-msgstr "<option>--type Set --name <replaceable>Nom_ensemble</replaceable></option>"
+msgstr "<option>--type Set --name<replaceable> Set_Name</replaceable></option>"
 
 #. Tag: para
 #, no-c-format
 msgid "create a set of documents instead of a book. Replace <replaceable>Set_Name</replaceable> with the set name. This variable must not contain any spaces. The <option>--type</option> option sets the <parameter>type</parameter> in the <filename>publican.cfg</filename> file. Refer to <xref linkend=\"sect-Publican-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file\" /> for more information on <filename>publican.cfg</filename> parameters and to <xref linkend=\"chap-Publican-Users_Guide-Using_sets\" /> for details on using sets."
-msgstr "crée un ensemble de documents à la place d'un fascicule. Remplacez <replaceable>Nom_ensemble</replaceable> par le nom de l'ensemble. Cette variable ne doit contenir aucune espace. L'option <option>--type</option> fixe la valeur du paramètre <parameter>type</parameter> dans le fichier <filename>publican.cfg</filename>. Reportez-vous à la <xref linkend=\"sect-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file\" /> pour plus d'informations à propos des paramètres de <filename>publican.cfg</filename> et à la <xref linkend=\"chap-Users_Guide-Using_sets\" /> pour ce qui concerne les ensembles."
+msgstr "crée une collection de documents au lieu d'un ouvrage isolé. Remplacez <replaceable>Set_Name</replaceable> par le nom de la collection. Cette variable ne doit contenir aucune espace. L'option <option>--type</option> fixe la valeur du paramètre <parameter>type</parameter> du fichier <filename>publican.cfg</filename>. Reportez-vous à la <xref linkend=\"sect-Publican-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file\" /> pour plus d'informations à propos des paramètres de <filename>publican.cfg</filename> et à la <xref linkend=\"chap-Publican-Users_Guide-Using_sets\" /> pour ce qui concerne les collections."
 
 #. Tag: term
 #, no-c-format
 msgid "<option>--brand <replaceable>brand</replaceable></option>"
-msgstr "<option>--brand <replaceable>signature</replaceable></option>"
+msgstr "<option>--brand <replaceable>brand</replaceable></option>"
 
 #. Tag: para
 #, no-c-format
 msgid "set <replaceable>brand</replaceable> as the <firstterm>brand</firstterm> to use to style the output of this document, for example, <literal>RedHat</literal>, <literal>fedora</literal>, <literal>JBoss</literal>, <literal>oVirt</literal>, or <literal>GIMP</literal>. The default value is <literal>common</literal>, a default brand shipped with <application>Publican</application>. The <option>--brand</option> option sets the <parameter>brand</parameter> parameter in the <filename>publican.cfg</filename> file. Refer to <xref linkend=\"sect-Publican-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file\" /> for more information on <filename>publican.cfg</filename> parameters. This option requires the appropriate <application>Publican</application> brand package to be installed. For example, to build Red Hat branded books, you must install the <package>publican-redhat</package> package. Refer to <xref linkend=\"sect-Publican-Users_Guide-Installing_a_brand\" /> for instructions on installing brand packages for <application>Publican</application>. If you do not specify a brand, <application>Publican</application> uses its built-in, default brand. Refer to <xref linkend=\"chap-Publican-Users_Guide-Branding\" /> for more information."
-msgstr "définit <replaceable>marque</replaceable> comme choix de la <firstterm>marque</firstterm> à utiliser pour le style de sortie du ce document, par exemple, <literal>RedHat</literal>, <literal>fedora</literal>, <literal>JBoss</literal>, <literal>oVirt</literal> ou <literal>GIMP</literal>. La valeur par défaut est <literal>common</literal>, une marque par défaut intégrée à l'application <application>Publican</application>. L'option <option>--brand</option> fixe le paramètre <parameter>brand</parameter> du fichier <filename>publican.cfg</filename>. Reportez-vous à la <xref linkend=\"sect-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file\" /> pour plus d'informations à propos des paramètres <filename>publican.cfg</filename>. Cette option nécessite que le paquet approprié « brand » de <application>Publican</application> soit installé. Par exemple, pour construire des fascicules marqués du sceau Red Hat, vous devez installer le paquet <package>publican-redhat</package>. Reportez-vous à la <xref linkend=\"sect-Users_Guide-Installing_a_brand\" /> pour des directives sur l'installation des paquets de marquage pour <application>Publican</application>. Si vous ne précisez pas de marque, <application>Publican</application> utilise sa marque intégrée par défaut. Voyez le <xref linkend=\"chap-Users_Guide-Branding\" /> pour plus d'informations."
+msgstr "<replaceable>brand</replaceable> désigne l'<firstterm>estampille</firstterm> à utiliser pour la charte graphique de l'affichage du document, par exemple, <literal>RedHat</literal>, <literal>fedora</literal>, <literal>JBoss</literal>, <literal>oVirt</literal> ou <literal>GIMP</literal>. La valeur par défaut est <literal>common</literal>, une estampille par défaut intégrée à <application>Publican</application>. L'option <option>--brand</option> fixe le paramètre <parameter>brand</parameter> du fichier <filename>publican.cfg</filename>. Reportez-vous à la <xref linkend=\"sect-Publican-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file\" /> pour plus d'informations à propos des paramètres de <filename>publican.cfg</filename>. Cette option nécessite que le paquet d'estampillage approprié de <application>Publican</application> soit installé. Par exemple, pour construire des ouvrages estampillés Red Hat, vous devez installer le paquet <package>publican-redhat</package>. Reportez-vous à la <xref linkend=\"sect-Publican-Users_Guide-Installing_a_brand\" /> pour des directives sur l'installation des paquets des estampilles pour <application>Publican</application>. Si vous ne précisez pas d'estampille, <application>Publican</application> utilisera l'estampillage par défaut. Voyez le <xref linkend=\"chap-Publican-Users_Guide-Branding\" /> pour plus d'informations."
 
 #. Tag: para
 #, no-c-format
 msgid "Before running the <prompt>$</prompt> <command>publican create</command> command, use the <prompt>$</prompt> <command>cd</command> command to change into the directory where you want the book to be created. For example, to create a book named <literal>Test_Book</literal> in the <filename>my_books/</filename> directory, run the following commands:"
-msgstr "Avant de lancer la commande <command>publican create</command>, utilisez la commande <command>cd</command> pour vous placer dans le répertoire où vous souhaitez créer le fascicule. Par exemple, pour créer un fascicule nommé <literal>Livre_test</literal> dans le répertoire <filename>mes_livres/</filename>, exécutez les commandes :"
+msgstr "Avant de lancer la commande <prompt>$</prompt> <command>publican create</command>, placez-vous avec la commande <prompt>$</prompt> <command>cd</command> dans le répertoire où vous souhaitez créer l'ouvrage. Par exemple, pour créer un ouvrage nommé <literal>Test_Book</literal> dans le répertoire <filename>my_books/</filename>, exécutez les commandes :"
 
 #. Tag: screen
 #, no-c-format
 msgid "<prompt>$</prompt> <command>cd my_books/</command> \n"
 "<prompt>$</prompt> <command>publican create --name Test_Book</command>"
-msgstr "<command>cd mes_livres/</command> \n"
-"<command>publican create --name Livre_test</command>"
+msgstr "<prompt>$</prompt> <command>cd my_books/</command> \n"
+"<prompt>$</prompt> <command>publican create --name Test_Book</command>"
 
 #. Tag: para
 #, no-c-format
@@ -144,43 +145,32 @@ msgstr "Pour voir le résultat de cette commande sur un ordinateur avec un syst�
 #. Tag: screen
 #, no-c-format
 msgid "<prompt>$</prompt> <command>ls</command>"
-msgstr ""
+msgstr "<prompt>$</prompt> <command>ls</command>"
 
 #. Tag: para
 #, no-c-format
 msgid "The output should be similar to the following:"
-msgstr "La sortie doit ressembler à quelque chose comme :"
+msgstr "La sortie doit ressembler à :"
 
 #. Tag: screen
 #, no-c-format
 msgid "<computeroutput>Test_Book/</computeroutput>"
-msgstr "<computeroutput>Livre_test/</computeroutput>"
+msgstr "<computeroutput>Test_Book/</computeroutput>"
 
 #. Tag: para
 #, no-c-format
 msgid "To see the contents of the new <filename>Test_Book/</filename> directory on a computer with a Linux operating system, run the following:"
-msgstr "Pour voir le contenu du nouveau répertoire <filename>Livre_test/</filename> sur un ordinateur Linux, exécutez :"
+msgstr "Pour voir le contenu du nouveau répertoire <filename>Test_Book/</filename> sur un ordinateur Linux, exécutez :"
 
 #. Tag: screen
 #, no-c-format
 msgid "<prompt>$</prompt> <command>cd Test_Book/</command>\n"
 "<prompt>$</prompt> <command>ls</command>"
-msgstr ""
+msgstr "<prompt>$</prompt> <command>cd Test_Book/</command>\n"
+"<prompt>$</prompt> <command>ls</command>"
 
 #. Tag: screen
 #, no-c-format
 msgid "<computeroutput>en-US/ publican.cfg</computeroutput>"
 msgstr "<computeroutput>en-US/ publican.cfg</computeroutput>"
-
-#. Tag: screen
-#, no-c-format
-#~ msgid "<command>ls</command>"
-#~ msgstr "<command>ls</command>"
-
-#. Tag: screen
-#, no-c-format
-#~ msgid "<command>cd Test_Book/</command>\n"
-"<command>ls</command>"
-#~ msgstr "<command>cd Livre_test/</command>\n"
-"<command>ls</command>"
 

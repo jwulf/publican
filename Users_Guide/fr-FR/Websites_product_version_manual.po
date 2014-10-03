@@ -1,17 +1,17 @@
 # Gé Baylard <<Geodebay@gmail.com>>, 2013.
-# Gérard Baylard <geodebay@gmail.com>, 2013. #zanata
+# Gérard Baylard <geodebay@gmail.com>, 2014. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2013-03-08T03:26:30\n"
-"PO-Revision-Date: 2013-09-07 10:35-0400\n"
-"Last-Translator: Gérard Baylard <geodebay@gmail.com>\n"
-"Language-Team: français <<trans-fr@lists.fedoraproject.org>>\n"
+"POT-Creation-Date: 2014-05-06 14:10+1000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2014-05-23 04:52-0400\n"
+"Last-Translator: Gérard Baylard <geodebay@gmail.com>\n"
+"Language-Team: français <<trans-fr@lists.fedoraproject.org>>\n"
 "Language: fr\n"
-"X-Generator: Zanata 3.3.2\n"
+"X-Generator: Zanata 3.4.2\n"
 "Plural-Forms: nplurals=2; plural=n>1;\n"
 
 #. Tag: title
@@ -27,12 +27,12 @@ msgstr "Les pages du produit créées par <application>Publican</application> et
 #. Tag: para
 #, no-c-format
 msgid "Change into a convenient directory and run the following <prompt>$</prompt> <command>publican create</command> command:"
-msgstr "Placez-vous dans un répertoire adéquat et exécutez la commande <command>publican create</command> comme ceci :"
+msgstr "Placez-vous dans un répertoire adéquat et exécutez la commande <prompt>$</prompt> <command>publican create</command> comme ceci :"
 
 #. Tag: screen
 #, no-c-format
 msgid "<prompt>$</prompt> <command>publican create --type Article --name <replaceable>page_name</replaceable></command>"
-msgstr "<command>publican create --type Article --name <replaceable>nom_page</replaceable></command>"
+msgstr "<prompt>$</prompt> <command>publican create --type Article --name <replaceable>nom_page</replaceable></command>"
 
 #. Tag: para
 #, no-c-format
@@ -42,7 +42,7 @@ msgstr "Par exemple, une page de produit peut être :"
 #. Tag: screen
 #, no-c-format
 msgid "<prompt>$</prompt> <command>publican create --type Article --name FooMaster</command>"
-msgstr "<command>publican create --type Article --name FooMaster</command>"
+msgstr "<prompt>$</prompt> <command>publican create --type Article --name FooMaster</command>"
 
 #. Tag: para
 #, no-c-format
@@ -52,7 +52,7 @@ msgstr "et une page version :"
 #. Tag: screen
 #, no-c-format
 msgid "<prompt>$</prompt> <command>publican create --type Article --name FooMaster_3</command>"
-msgstr "<command>publican create --type Article --name FooMaster_3</command>"
+msgstr "<prompt>$</prompt> <command>publican create --type Article --name FooMaster_3</command>"
 
 #. Tag: para
 #, no-c-format
@@ -62,7 +62,7 @@ msgstr "Placez-vous dans le répertoire de l'article :"
 #. Tag: screen
 #, no-c-format
 msgid "<prompt>$</prompt> <command>cd <replaceable>page_name</replaceable></command>"
-msgstr "<command>cd <replaceable>nom_page</replaceable></command>"
+msgstr "<prompt>$</prompt> <command>cd <replaceable>nom_page</replaceable></command>"
 
 #. Tag: para
 #, no-c-format
@@ -72,7 +72,7 @@ msgstr "Par exemple :"
 #. Tag: screen
 #, no-c-format
 msgid "<prompt>$</prompt> <command>cd FooMaster</command>"
-msgstr ""
+msgstr "<prompt>$</prompt> <command>cd FooMaster</command>"
 
 #. Tag: para
 #, no-c-format
@@ -127,7 +127,7 @@ msgstr "Pour harmoniser le style de la page d'accueil avec vos documents, ajoute
 #. Tag: programlisting
 #, no-c-format
 msgid "brand: <replaceable>name_of_brand</replaceable>"
-msgstr "brand: <replaceable>nom_de_marque</replaceable>"
+msgstr "brand: <replaceable>nom_estampille</replaceable>"
 
 #. Tag: term
 #, no-c-format
@@ -162,7 +162,7 @@ msgstr "&lt;title role=\"producttitle\"&gt;Documentation de FooMaster&lt;/title&
 #. Tag: para
 #, no-c-format
 msgid "If you publish documentation in more than one language, create a set of POT files and a set of PO files for each language with the <prompt>$</prompt> <command>publican update_pot</command> and <command>publican update_po</command> commands."
-msgstr "Si vous publiez la documentation en plus d'une langue, créez un ensemble de fichiers POT et des ensembles de fichiers PO pour chaque langue avec les commandes <command>publican update_pot</command> et <command>publican update_po</command>."
+msgstr "Si vous publiez la documentation en plus d'une langue, créez un ensemble de fichiers POT et des ensembles de fichiers PO pour chaque langue avec les commandes <prompt>$</prompt> <command>publican update_pot</command> et <command>publican update_po</command>."
 
 #. Tag: para
 #, no-c-format
@@ -173,16 +173,11 @@ msgstr "Construisez la page du produit ou la page de version au format HTML page
 #, no-c-format
 msgid "<prompt>$</prompt> <command>publican build --publish --formats html-single --embedtoc --langs all</command> \n"
 "<prompt>$</prompt> <command>publican install_book --site_config ~/docsite/foomaster.cfg --lang <replaceable>Language_Code</replaceable></command>"
-msgstr "<command>publican build --publish --formats html-single --embedtoc --langs all</command> \n"
-"<command>publican install_book --site_config ~/docsite/foomaster.cfg --lang <replaceable>Code_langue</replaceable></command>"
+msgstr "<prompt>$</prompt> <command>publican build --publish --formats html-single --embedtoc --langs all</command> \n"
+"<prompt>$</prompt> <command>publican install_book --site_config ~/docsite/foomaster.cfg --lang <replaceable>Code_langue</replaceable></command>"
 
 #. Tag: para
 #, no-c-format
 msgid "Note that you can build all languages at the same time, but must install the product page or version page for each language with a separate <prompt>$</prompt> <command>publican install_book</command> command."
-msgstr "Notez que vous pouvez construire toutes les langues simultanément, mais vous devez installer la page du produit ou la page de version pour chaque langue à l'aide d'une commande <command>publican install_book</command> distincte."
-
-#. Tag: screen
-#, no-c-format
-#~ msgid "<command>cd FooMaster</command>"
-#~ msgstr "<command>cd FooMaster</command>"
+msgstr "Notez que vous pouvez construire toutes les langues simultanément, mais vous devez installer la page du produit ou la page de version pour chaque langue à l'aide d'une commande <prompt>$</prompt> <command>publican install_book</command> distincte."
 

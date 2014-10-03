@@ -2,15 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2013-03-08T03:26:30\n"
-"PO-Revision-Date: \n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: None\n"
+"POT-Creation-Date: 2014-05-06 14:10+1000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: None\n"
 "Language: it\n"
-"X-Generator: Zanata 3.3.2\n"
+"X-Generator: Zanata 3.4.2\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
 #. Tag: title
@@ -134,6 +134,8 @@ msgstr ""
 msgid "Important — Setting menu block"
 msgstr ""
 
+#. Tag: para
+#, no-c-format
 msgid "The menu block must exist in Drupal. For more information about adding a menu block in Drupal. Please refer to <xref linkend=\"sect-Publican-Users_Guide-Drupal_Import_Guide-How_to_add_a_menu_block\" />."
 msgstr ""
 
@@ -277,6 +279,8 @@ msgstr ""
 msgid "To import book into Drupal:"
 msgstr ""
 
+#. Tag: para
+#, no-c-format
 msgid "Follow the steps in <xref linkend=\"sect-Publican-Users_Guide-Import_book_into_Drupal-How_to_build_a_CSV_file_for_Drupal_import\" />"
 msgstr ""
 
@@ -310,6 +314,8 @@ msgstr ""
 msgid "How to update book"
 msgstr ""
 
+#. Tag: para
+#, no-c-format
 msgid "Simply repeat the steps in <xref linkend=\"sect-Publican-Users_Guide-Drupal_Import_Guide-How_to_import_book\" /> to update the book."
 msgstr ""
 
@@ -322,19 +328,4 @@ msgstr ""
 #, no-c-format
 msgid "If you update the book with smaller chunks, than the missing chunks will be deleted by Drupal and the URL path for the deleted chunks will be deleted as well."
 msgstr ""
-
-#. Tag: para
-#, no-c-format, fuzzy
-#~ msgid "Simply repeat the steps in <xref linkend=\"\" /> to update the book."
-#~ msgstr ""
-
-#. Tag: para
-#, no-c-format, fuzzy
-#~ msgid "Follow the steps in <xref linkend=\"\" />"
-#~ msgstr ""
-
-#. Tag: para
-#, no-c-format, fuzzy
-#~ msgid "The menu block must exist in Drupal. For more information about adding a menu block in Drupal. Please refer to <xref linkend=\"\" />."
-#~ msgstr ""
 

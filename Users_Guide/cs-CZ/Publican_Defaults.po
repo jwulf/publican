@@ -1,0 +1,117 @@
+# peartown <josef.hruska@upcmail.cz>, 2014. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: 0\n"
+"POT-Creation-Date: 2014-05-06 14:10+1000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2014-08-06 12:35-0400\n"
+"Last-Translator: peartown <josef.hruska@upcmail.cz>\n"
+"Language-Team: Czech\n"
+"Language: cs\n"
+"X-Generator: Zanata 3.4.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2\n"
+
+#. Tag: title
+#, no-c-format
+msgid "Publican defaults"
+msgstr "Výchozí hodnoty Publicanu"
+
+#. Tag: para
+#, no-c-format
+msgid "Users can set their own default values for <application>Publican</application> in <filename>~/.publican.cfg</filename>. Currently, <application>Publican</application> supports the following values:"
+msgstr "Uživatelé mohou nastavit pro <application>Publican</application> své vlastní výchozí hodnoty v souboru <filename>~/.publican.cfg</filename>. <application>Publican</application> podporuje v současnosti tyto hodnoty:"
+
+#. Tag: para
+#, no-c-format
+msgid "firstname"
+msgstr "firstname (jméno)"
+
+#. Tag: para
+#, no-c-format
+msgid "surname"
+msgstr "surname (příjmení)"
+
+#. Tag: para
+#, no-c-format
+msgid "email"
+msgstr "email (e-mail)"
+
+#. Tag: para
+#, no-c-format
+msgid "formats"
+msgstr "formats (formáty)"
+
+#. Tag: para
+#, no-c-format
+msgid "lang"
+msgstr "lang (jazyk)"
+
+#. Tag: para
+#, no-c-format
+msgid "langs"
+msgstr "langs (jazyky)"
+
+#. Tag: para
+#, no-c-format
+msgid "This file is completely different to <filename>publican.cfg</filename> that is used to build a book. It does not accept the same parameters."
+msgstr "Tento soubor je zcela jiný než <filename>publican.cfg</filename>, který se užívá k sestavení knihy. Ten stejné parametry nepřijímá."
+
+#. Tag: title
+#, no-c-format
+msgid "Publican default examples"
+msgstr "Příklady výchozích hodnot Publicanu"
+
+#. Tag: para
+#, no-c-format
+msgid "Users can set <replaceable>formats</replaceable>, <replaceable>lang</replaceable>, and <replaceable>langs</replaceable> to their standard build parameters."
+msgstr "Uživatelé mohou nastavit své standardní parametry pro sestavení pomocí <replaceable>formats</replaceable>, <replaceable>lang</replaceable> a <replaceable>langs</replaceable>."
+
+#. Tag: title
+#, no-c-format
+msgid "Setting formats and lang"
+msgstr "Nastavení formátů a jazyka"
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"<prompt>$</prompt> <command>echo 'formats: \"html,html-single,pdf,txt\"' &gt;&gt; ~/.publican.cfg</command>\n"
+"<prompt>$</prompt> <command>echo 'langs: \"en-US\"' &gt;&gt; ~/.publican.cfg</command>\n"
+"<prompt>$</prompt> <command>publican build</command>\n"
+"<computeroutput>Setting up en-US</computeroutput>\n"
+"<computeroutput>[...]</computeroutput>\n"
+"<computeroutput> Finished txt</computeroutput>"
+msgstr ""
+"<prompt>$</prompt> <command>echo 'formats: \"html,html-single,pdf,txt\"' &gt;&gt; ~/.publican.cfg</command>\n"
+"<prompt>$</prompt> <command>echo 'langs: \"en-US\"' &gt;&gt; ~/.publican.cfg</command>\n"
+"<prompt>$</prompt> <command>publican build</command>\n"
+"<computeroutput>Setting up en-US</computeroutput>\n"
+"<computeroutput>[...]</computeroutput>\n"
+"<computeroutput> Finished txt</computeroutput>"
+
+#. Tag: para
+#, no-c-format
+msgid "<application>Publican</application> 3.0 allows you to add a revision history entry from the command line. You can set your user details in <filename>~/.publican.cfg</filename>."
+msgstr "<application>Publican</application> 3.0 umožňuje přidat položku historie revizí z příkazové řádky. Nastavit o sobě podrobnosti jako uživateli lze v <filename>~/.publican.cfg</filename>."
+
+#. Tag: title
+#, no-c-format
+msgid "Setting user details"
+msgstr "Nastavení informací o uživateli"
+
+#. Tag: screen
+#, no-c-format
+msgid ""
+"<prompt>$</prompt> <command>echo 'firstname: \"Dude\"' &gt;&gt; ~/.publican.cfg</command> \n"
+"<prompt>$</prompt> <command>echo 'surname: \"McPants\"' &gt;&gt; ~/.publican.cfg</command> \n"
+"<prompt>$</prompt> <command>echo 'email: \"dude.mcpants@awesome.com\"' &gt;&gt; ~/.publican.cfg</command> \n"
+"<prompt>$</prompt> <command>publican add_revision --member \"Updated examples in chapter 2.\" \\</command>\n"
+"<command>--member \"Removed obsolete example in sect 4.1\"</command>"
+msgstr ""
+"<prompt>$</prompt> <command>echo 'firstname: \"Dude\"' &gt;&gt; ~/.publican.cfg</command> \n"
+"<prompt>$</prompt> <command>echo 'surname: \"McPants\"' &gt;&gt; ~/.publican.cfg</command> \n"
+"<prompt>$</prompt> <command>echo 'email: \"dude.mcpants@awesome.com\"' &gt;&gt; ~/.publican.cfg</command> \n"
+"<prompt>$</prompt> <command>publican add_revision --member \"Updated examples in chapter 2.\" \\</command>\n"
+"<command>--member \"Removed obsolete example in sect 4.1\"</command>"
+

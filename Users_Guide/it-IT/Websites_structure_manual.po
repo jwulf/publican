@@ -5,16 +5,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2011-09-09T14:23:21\n"
-"PO-Revision-Date: 2012-01-22 02:28-0500\n"
-"Last-Translator: Mario Santagiuliana <fedora at marionline.it>\n"
-"Language-Team: Italian <fedora-trans-it at redhat.com>\n"
+"POT-Creation-Date: 2014-05-06 14:10+1000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2012-01-22 02:28-0500\n"
+"Last-Translator: Mario Santagiuliana <fedora at marionline.it>\n"
+"Language-Team: Italian <fedora-trans-it at redhat.com>\n"
 "Language: it\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Zanata 3.3.2\n"
+"X-Generator: Zanata 3.4.2\n"
 
 #. Tag: title
 #, no-c-format
@@ -202,6 +202,8 @@ msgstr "<parameter>zip_dump</parameter>"
 msgid "Set <literal>zip_dump: 1</literal> to specify that <application>Publican</application> should create a zipped version of the XML file together with the XML version. This parameter defaults to <literal>0</literal> (off)."
 msgstr "Impostare <literal>zip_dump: 1</literal> per creare anche una versione zippata del file XML. Il parametro, in modo predefinito, è impostato su <literal>0</literal> (disattivato)."
 
+#. Tag: para
+#, no-c-format
 msgid "Refer to <xref linkend=\"appe-Publican-Users_Guide-Contents_of_the_website_dump_file\" /> for a description of the contents of the dump file."
 msgstr ""
 
@@ -334,21 +336,4 @@ msgstr "Per aggiornare la struttura del sito, eseguire:"
 #, no-c-format
 msgid "<prompt>$</prompt> <command>publican update_site --site_config <replaceable>path_to_site_configuration_file</replaceable>.cfg</command>"
 msgstr "<command>publican update_site --site_config <replaceable>percorso_al_file_di_configuration_del_sito</replaceable>.cfg</command>"
-
-#. Tag: para
-#, no-c-format
-#~ msgid "Refer to <xref linkend=\"\" /> for a description of the contents of the dump file."
-#~ msgstr ""
-
-#. Tag: para
-#, no-c-format
-#~ msgid "Refer to <xref linkend=\"dump_file\" /> for a description of the contents of the dump file."
-#~ msgstr "Fare riferimento all'<xref linkend=\"dump_file\" /> per una descrizione del contenuto del file dump."
-
-#. Tag: screen
-#, no-c-format
-#~ msgid "<command>mkdir ~/docsite</command>\n"
-"<command>cd ~/docsite</command>"
-#~ msgstr "<command>mkdir ~/docsite</command>\n"
-"<command>cd ~/docsite</command>"
 
