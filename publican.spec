@@ -21,8 +21,8 @@
 %define wwwdir /var/www/html/docs
 
 Name:           publican
-Version:        4.2.2
-Release:        2%{?dist}.t3
+Version:        4.2.3
+Release:        0%{?dist}
 Summary:        Common files and scripts for publishing with DocBook XML
 # For a breakdown of the licensing, refer to LICENSE
 License:        (GPLv2+ or Artistic) and CC0
@@ -340,6 +340,13 @@ rm -rf $RPM_BUILD_ROOT
 %{wwwdir}/common-db5
 
 %changelog
+* Tue 7 Oct 2014 Jeff Fearn <jfearn@redhat.com> 4.2.3-0
+- Fix DocBook4 entity text, BZ #1143060
+- Remove extra white space from non-verbatim msgid's. BZ #1143792
+- Fix PDF build using FOP fails with "No numberLines function available." BZ #1143852
+- Add allow_network option. Defaults OFF. BZ #1144949
+- Add hacks to work around BZ #1144220
+
 * Wed Sep 17 2014 Jeff Fearn <jfearn@redhat.com> 4.2.2-2
 - Fix duplicate messages in POT files. BZ #1136133
 - Remove top level directory from drupal tar file. BZ #1139070

@@ -1,4 +1,4 @@
-4.2.3 UNRELEASED
+4.2.3 Tue 7 Oct 2014
 - Fix DocBook4 entity text, BZ #1143060
 - Remove extra white space from non-verbatim msgid's. BZ #1143792
 - Fix PDF build using FOP fails with "No numberLines function available." BZ #1143852
