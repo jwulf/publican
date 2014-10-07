@@ -340,7 +340,7 @@ rm -rf $RPM_BUILD_ROOT
 %{wwwdir}/common-db5
 
 %changelog
-* Tue 7 Oct 2014 Jeff Fearn <jfearn@redhat.com> 4.2.3-0
+* Tue Oct 7 2014 Jeff Fearn <jfearn@redhat.com> 4.2.3-0
 - Fix DocBook4 entity text, BZ #1143060
 - Remove extra white space from non-verbatim msgid's. BZ #1143792
 - Fix PDF build using FOP fails with "No numberLines function available." BZ #1143852
