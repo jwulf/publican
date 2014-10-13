@@ -1,3 +1,7 @@
+4.2.4 UNRELEASED
+- Allow External_Links.xml to be translated. BZ #1150386
+- Change ja-JP person-name style. BZ #1150866
+
 4.2.3 Tue 7 Oct 2014
 - Fix DocBook4 entity text, BZ #1143060
 - Remove extra white space from non-verbatim msgid's. BZ #1143792

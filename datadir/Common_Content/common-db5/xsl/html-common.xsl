@@ -98,6 +98,16 @@ part toc
 <xsl:param name="header.rule" select="0"/>
 <xsl:param name="footer.rule" select="0"/>
 
+<!-- Change Japanese name order to first-last BZ#1150866 -->
+<xsl:param name="local.l10n.xml" select="document('')"/>
+<l:i18n xmlns:l="http://docbook.sourceforge.net/xmlns/l10n/1.0">
+    <l:l10n language="ja">
+      <l:context name="styles">
+        <l:template name="person-name" text="first-last"/>
+      </l:context>
+    </l:l10n>
+</l:i18n>
+
 <xsl:template name="head.content.generator">
   <xsl:param name="node" select="."/>
   <meta name="generator" content="publican {$publican.version}"/>

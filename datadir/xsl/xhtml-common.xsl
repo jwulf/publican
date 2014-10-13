@@ -93,6 +93,16 @@ part toc
 <xsl:param name="ulink.target"/>
 <xsl:param name="table.cell.border.style"/>
 
+<!-- Change Japanese name order to first-last BZ#1150866 -->
+<xsl:param name="local.l10n.xml" select="document('')"/>
+<l:i18n xmlns:l="http://docbook.sourceforge.net/xmlns/l10n/1.0">
+    <l:l10n language="ja">
+      <l:context name="styles">
+        <l:template name="person-name" text="first-last"/>
+      </l:context>
+    </l:l10n>
+</l:i18n>
+     
 <!-- BUGBUG 
 
 	There is a bug where inserting elements in to the body level
