@@ -390,6 +390,9 @@ function loadMenu(){
                                 
 			var html = '<div id="menu">';
 			html = 	html +	'<div id="lang_menu" class="breadcrumb"><a href="' + toc_path + '/index.html">' + labels["site"]["title"] + '</a></div>';
+			if(typeof home_link != "undefined" && home_link != '') {
+				html = 	html +	'<div class="breadcrumb">' + home_link + '</div>';
+            }
 			html = 	html +	'<div id="product_menu" class="breadcrumb" onmouseover="work=1; expand_menu(\'product_menu_list\');" onmouseout="work=1; retract_menu(\'product_menu_list\');">' + prod_label + '</div>';
 			if(typeof current_version != "undefined" && current_version != '') {
 				html = 	html +	'<div id="version_menu" class="breadcrumb" onmouseover="work=1; expand_menu(\'version_menu_list\');" onmouseout="work=1; retract_menu(\'version_menu_list\');">' + current_version + '</div>';
@@ -431,5 +434,39 @@ function loadMenu(){
 			return false;
 		});
 	}); 
+}
+
+function activateElement($elem) {
+    $elem.addClass('active');
+    $elem.siblings().removeClass('active');
+}
+
+function activateElement1(elem) {
+    jQuery('#' +elem).addClass('active');
+    jQuery('#' +elem).removeClass('hidden');
+    jQuery('#' +elem).siblings().addClass('hidden');
+    jQuery('#' +elem).siblings().removeClass('active');
+}
+
+function activateElement2(elem, focus) {
+    jQuery('#' +elem).addClass('active');
+    jQuery('#' +elem).siblings().removeClass('active');
+    if(focus) {
+       jQuery('html,body').animate({scrollTop: jQuery('#' + elem).offset().top},'slow');
+    }
+}
+
+function activateParentElement(elem) {
+    jQuery('#' +elem).parent().addClass('active');
+    jQuery('#' +elem).parent().removeClass('hidden');
+    jQuery('#' +elem).parent().siblings().addClass('hidden');
+    jQuery('#' +elem).parent().siblings().removeClass('active');
+}
+
+function resetCategories(categ, vers, me) {
+    jQuery('#' +categ).children().removeClass('active');
+    jQuery(me).addClass('active');
+    jQuery('#' +vers).children().removeClass('active');
+    jQuery('#' +vers).children().removeClass('hidden');
 }
 

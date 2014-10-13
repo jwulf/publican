@@ -13,89 +13,84 @@ function mycarousel_initCallback(carousel) {
 
 
 function copyClass($section, cls) {
-    var id = $section.attr('id');
-    if (!id) {
-        return;
-    }
-    var has_class = $section.hasClass(cls);
-    $('a[href="#' + id + '"]').toggleClass(cls, has_class);
-    $('.' + id).toggleClass(cls, has_class);
+	var id = $section.attr('id');
+	if (!id) {
+		return;
+	}
+	var has_class = $section.hasClass(cls);
+	$('a[href="#' + id + '"]').toggleClass(cls, has_class);
+	$('.' + id).toggleClass(cls, has_class);
 }
 
 function ensureConsistency() {
 
-    // We specify which classes are okay to clone 
-    // (classes that will never be used as an ID)
-    var classes = ['disabled', 'disabling', 'active', 'alert', 'online'];
-    var copyAllClasses = function() {
-        var $section = $(this);
-        jQuery.each(classes, function(ix, cls) {
-            copyClass($section, cls);
-        });
-    };
+	// We specify which classes are okay to clone 
+	// (classes that will never be used as an ID)
+	var classes = ['disabled', 'disabling', 'active', 'alert', 'online'];
+	var copyAllClasses = function() {
+		var $section = $(this);
+		jQuery.each(classes, function(ix, cls) {
+			copyClass($section, cls);
+		});
+	};
 
-    // We set which elements to listen to the ID/Status of
-    $('.section').each(copyAllClasses);
-    // how can we do this without specifying all elements?
-    $('div').each(copyAllClasses);
-    $('a').each(copyAllClasses);
-    $('span').each(copyAllClasses);
-    $('td').each(copyAllClasses);
-    $('table').each(copyAllClasses); 
+	// We set which elements to listen to the ID/Status of
+	$('.section').each(copyAllClasses);
+	// how can we do this without specifying all elements?
+	$('div').each(copyAllClasses);
+	$('a').each(copyAllClasses);
+	$('span').each(copyAllClasses);
+	$('td').each(copyAllClasses);
+	$('table').each(copyAllClasses); 
 }
 
 ensureConsistency(); // now we pull the trigger
 
 function activateFirstSections($root) {
-    var $sections = $root.children('.section');
-    if ($sections.length === 0) {
-        return;
-    }
-    if ($sections.filter('.active').length > 0) {// BUGBUG need to click here when returning to change URL to match non default tabs
-        return;
-    }
-    var $first_section = $sections.first().addClass('active');
-    activateFirstSections($first_section);
-}
-
-function activateElement($elem) {
-    $elem.addClass('active');
-    $elem.siblings().removeClass('active');
+	var $sections = $root.children('.section');
+	if ($sections.length === 0) {
+		return;
+	}
+	if ($sections.filter('.active').length > 0) {// BUGBUG need to click here when returning to change URL to match non default tabs
+		return;
+	}
+	var $first_section = $sections.first().addClass('active');
+	activateFirstSections($first_section);
 }
 
 function activateTab(id) {
 // This appears to be bogus
-    var $current_section = $('#content');
-    if (id) {
-        var $elem = $('#' + id);
-        activateElement($elem);
-        activateElement($elem.parents('.section'));
+	var $current_section = $('#content');
+	if (id) {
+		var $elem = $('#' + id);
+		activateElement($elem);
+		activateElement($elem.parents('.section'));
 
-        if ($elem[0].tagName === 'SECTION' && $current_section.has($elem).length > 0) {
-            $current_section = $elem;
-        }
+		if ($elem[0].tagName === 'SECTION' && $current_section.has($elem).length > 0) {
+			$current_section = $elem;
+		}
 // but this works
-        activateFirstSections($elem.children('.article:first'));
-    }
+		activateFirstSections($elem.children('.article:first'));
+	}
 
-    if ($current_section.find('.section.active').length === 0) {
-//        activateFirstSections($current_section.children('.article:first'));
-    }
+	if ($current_section.find('.section.active').length === 0) {
+//		activateFirstSections($current_section.children('.article:first'));
+	}
 
-    $('.section.active').removeClass('hidden');
-    $('.section').not('.active').addClass('hidden');
-    ensureConsistency();
+	$('.section.active').removeClass('hidden');
+	$('.section').not('.active').addClass('hidden');
+	ensureConsistency();
 }
 
 $(window).bind('hashchange', function() {
-    if (window.location.hash === "") {
-        // activate the default section
-        activateTab();
-    } else {
-        //Grab what is after the # from the url bar and remove the #
-        var anchorid = window.location.hash.replace("#", "");
-        activateTab(anchorid);
-    }
+	if (window.location.hash === "") {
+		// activate the default section
+		activateTab();
+	} else {
+		//Grab what is after the # from the url bar and remove the #
+		var anchorid = window.location.hash.replace("#", "");
+		activateTab(anchorid);
+	}
 });
 
 $(document).ready(function() {
@@ -118,11 +113,11 @@ $(document).ready(function() {
 </div>
 <div class="main_content">
 	<div class="side_products">
-	    [%- FOREACH  prod = products %]
+		[%- FOREACH  prod = products %]
 		<div class="link">
 			<a href="#[% prod %]">[% labels.${prod}.label %]</a>
 		</div>
-	    [%- END %]
+		[%- END %]
 	</div>
 	<div class="lang_bottom_box">
 
@@ -130,42 +125,87 @@ $(document).ready(function() {
 			<div id="splash" class="splash section active">
 [% splash %]
 			</div>
-		    [%- FOREACH  prod = products %]
+			[%- FOREACH  prod = products %]
 			<div class="bottom_products section" id="[% prod %]">
-				<div class="title">
+				<div class="title hidden">
 					<span><a href="[% host %]/[% lang %]/[% prod %]/index.html">[% labels.${prod}.label %]</a></span>
 				</div>
+				<div id="[% prod %]-splash" class="splash hidden"></div>
+				<!--script type="text/javascript">
+					$("#[% prod %]-splash").load("[% host %]/[% lang %]/[% prod %]/splash.html .para:eq(0)");
+				</script-->
 				<div class="version_tabs">
-				    [%- FOREACH  ver = v_sort(book_list.${prod}) %][% cur_ver = book_list.${prod}.${ver} %]
-					<span class="link"><a href="#[% prod %]-[% ver.replace('\.', '-') %]">[% labels.${prod}.${ver}.label %]</a></span>
-				    [%- END %]
+					[%- FOREACH  ver = v_sort(book_list.${prod}) %][% cur_ver = book_list.${prod}.${ver} %]
+					<span class="link[% IF loop.first %] active[% END %]" id="[% ver.replace('\.', '-') %]-selector" onclick="activateElement1('[% prod %]-[% ver.replace('\.', '-') %]');activateElement2('[% ver.replace('\.', '-') %]-selector');activateElement1('[% ver.replace('\.', '-') %]-categories');return false;">[% labels.${prod}.${ver}.label %]</span>
+					[%- END %]
+						[%- INCLUDE anchor.tmpl uri="${host}/${lang}/opds-${prod}.xml" lang=lang booklang=lang format="rss" text=" " class="link" title=trans_strings.RssProdTitle %]
+				</div>
+				<div class="bottom_versions_list version_tabs">
+[%- FOREACH  ver = v_sort(book_list.${prod}) %][% cur_ver = book_list.${prod}.${ver} %]
+	[%- tmpl_list = {} -%]
+					<div class="groups[% IF loop.first %] active[% ELSE %] hidden[% END %]" id="[% ver.replace('\.', '-') %]-categories">
+						<span class="link active" onclick="resetCategories('[% ver.replace('\.', '-') %]-categories', '[% prod %]-[% ver.replace('\.', '-') %]', this);return false;">All</span>
+	[%- FOREACH  c_book = i_sort(cur_ver) -%][%- booker = book_list.${prod}.${ver}.${c_book} -%]
+		[%- path = "groups/${lang}/${prod}/${booker.sort_order}.tmpl" -%]
+		[%- UNLESS  tmpl_list.${path}  -%]
+			[%- tmpl_list.${path} = 1 -%]
+			[%- TRY -%]
+				[%- PROCESS $path -%]
+						<span class="link" title="[% description %]" id="[% ver.replace('[\s\.]', '-') %]-categories-[% label.replace('[\s\.]', '-') %]" onclick="activateElement2('[% ver.replace('[\s\.]', '-') %]-categories-[% label.replace('[\s\.]', '-') %]');activateParentElement('[% prod %]-[% ver.replace('\\.', '-')%]-[%booker.sort_order%]', 1);return false;">[% label %]</span>
+			[%- CATCH file -%]
+			[%- END -%]
+		[%- END -%]
+	[%- END %]
+					</div>
+[%- END -%]
 				</div>
 				<div class="article">
-				    [%- FOREACH  ver = v_sort(book_list.${prod}) %][% cur_ver = book_list.${prod}.${ver} %]
+					[%- FOREACH  ver = v_sort(book_list.${prod}) %][% cur_ver = book_list.${prod}.${ver} %]
 					<div class="bottom_versions section" id="[% prod %]-[% ver.replace('\.', '-') %]">
+					  <div class="grouper">
 [%- tmpl_list = {} -%]
-					    [%- FOREACH  c_book = i_sort(cur_ver) %][% booker = book_list.${prod}.${ver}.${c_book} %]
-[%- path = "groups/${lang}/${prod}/${booker.sort_order}.tmpl" -%]
-[%- UNLESS  tmpl_list.${path}  %]
-[%- tmpl_list.${path} = 1 %]
-[%- TRY %]
-[% INCLUDE $path %]
-						<div class="group" id="[% product %]-[% ver.replace('\\.', '-')%]-[%booker.sort_order%]">
-							<span>[% label %]</span>
+						[%- FOREACH  c_book = i_sort(cur_ver) %][% booker = book_list.${prod}.${ver}.${c_book} %]
+						[%- path = "groups/${lang}/${prod}/${booker.sort_order}.tmpl" -%]
+						[%- UNLESS  tmpl_list.${path}  %]
+							[%- TRY %]
+								[% PROCESS $path %]
+								[%- IF tmpl_list.size %]
+					  </div><!-- end grouper-->
+					  <div class="grouper">
+								[% END %]
+								[%- tmpl_list.${path} = 1 %]
+						<div class="group" id="[% prod %]-[% ver.replace('\\.', '-')%]-[%booker.sort_order%]">
+							<h2>[% label %]</h2>
 							<span>[% description %]</span>
 						</div>
-[%- CATCH file %]
-[%- END %]
-[%- END %]
+							[%- CATCH file %]
+							[%- END %]
+						[%- END %]
 						<div class="bottom_books[% IF lang != booker.lang %] untranslated [% lang %][% END %]">
-							[% INCLUDE anchor.tmpl host=host lang=lang booklang=booker.lang product=booker.product version=booker.version format=booker.base_format book=booker.book name=booker.book_clean subtitle=booker.subtitle srcnewer=booker.srcnewer %]
+							<div class="titles">
+							[%- IF booker.external -%]
+								[%- INCLUDE anchor.tmpl uri=booker.uri lang=lang booklang=booker.lang name=booker.name subtitle=booker.subtitle format="external" -%]
+							[%- ELSIF subtitles -%]
+								[%- INCLUDE anchor.tmpl host=host lang=lang booklang=booker.lang product=prod version=booker.version format=booker.base_format book=booker.book name=booker.book_clean subtitle=booker.subtitle srcnewer=booker.srcnewer -%]
+							[%- ELSE -%]
+								[% INCLUDE anchor.tmpl host=host lang=lang booklang=booker.lang product=prod version=booker.version format=booker.base_format book=booker.book name=booker.book_clean srcnewer=booker.srcnewer -%]
+							[%- END %]
+							</div>
+							[%- UNLESS booker.external -%]
+				 			<div class="formats">
+								[%- FOREACH  format = booker.formats %]
+								[%- INCLUDE anchor.tmpl short=1 host=host lang=lang booklang=booker.lang product=prod version=booker.version format=format book=booker.book name=format text=" " class=format icon=1 title=format %]
+								[%- END %]
+							</div>
+							[%- END %]
 						</div>
-					    [%- END %]
+						[%- END %]
+					  </div> <!-- end grouper-->
 					</div>
-				    [%- END %]
+					[%- END %]
 				</div>
 			</div>
-	    [%- END %]
+		[%- END %]
 		</div>
 	</div>
 </div>

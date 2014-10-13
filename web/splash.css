@@ -11,6 +11,8 @@ a:focus {
     outline: medium none;
 }
 .lang_top_box {
+    padding-left: 32px;
+    padding-right: 33px;
 }
 .langauge_banner {
     border: 1px solid #C3C3C3;
@@ -35,12 +37,7 @@ body[dir="rtl"] .lang_bottom_box {
     margin-left: 0 !important;
     margin-right: 240px !important;
 }
-.lang_bottom_box:after, .product_bottom_box:after {
-    clear: both !important;
-    content: "";
-    display: block;
-    height: 20px;
-}
+
 .side_products {
     background-color: #F5F5F5;
     color: #555555;
@@ -51,10 +48,6 @@ body[dir="rtl"] .lang_bottom_box {
 }
 body[dir="rtl"] .side_products {
     float: right;
-}
-.side_products:after {
-    clear: both;
-    content: " ";
 }
 .side_products div.link {
     font-size: 12px;
@@ -79,28 +72,14 @@ body[dir="rtl"] .side_products div.link a {
 .side_products div.link a.active {
     color: #EEEEEE;
     position: relative;
+box-shadow: 0 0 2px black;
 }
-.side_products div.link a.active:after {
-    border-color: transparent transparent transparent #333333;
-    border-style: solid;
-    border-width: 1em 0 1em 1em !important;
-    content: "";
-    display: inline-block;
-    left: 100%;
-    margin: -1em 0 0;
-    position: absolute;
-    top: 50%;
-    width: 0;
-    z-index: 9;
-}
-body[dir="rtl"] .side_products div.link a.active:after {
-    border-color: transparent #333333 transparent transparent;
-    border-width: 1em 1em 1em 0 !important;
-}
+
 .main_content {
     clear: both !important;
     position: relative;
 }
+/* BUGBUG removing this breaks the body layout */
 .main_content:after {
     clear: both;
     content: "";
@@ -124,13 +103,15 @@ body[dir="rtl"] .side_products div.link a.active:after {
     display: block;
     padding-bottom: 10px;
     padding-top: 10px;
+    margin-left: 40px;
+    margin-right: 40px;
 }
-.bottom_versions:last-child .bottom_books:after {
-    clear: both !important;
-    content: "";
-    display: block;
-    width: 100%;
+
+.bottom_products .bottom_versions {
+    margin-left: 0px;
+
 }
+
 .product_bottom_box {
 }
 .product_top_box, .version_top_box {
@@ -138,15 +119,11 @@ body[dir="rtl"] .side_products div.link a.active:after {
     font-size: 16px;
     min-height: 100px;
     padding-bottom: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 .version_top_box .para, .product_top_box .para, .product_top_box .formalpara {
     margin-bottom: 10px;
-}
-.product_top_box > *:first-child, .version_top_box > *:first-child {
-    font-size: 18px;
-    text-align: center;
 }
 .product_top_box h5 {
     font-size: 18px;
@@ -237,28 +214,6 @@ body[dir="rtl"] .version_tabs .link {
     display: block;
     padding: 5px 10px;
 }
-.version_tabs .link a.active:before {
-    border-color: transparent transparent #FFFFFF;
-    border-style: solid;
-    border-width: 6px 8px;
-    bottom: 0;
-    content: "";
-    display: inline-block;
-    left: 50%;
-    margin-left: -7px;
-    position: absolute;
-    width: 0;
-    z-index: 9;
-}
-body[dir="rtl"] .version_tabs .link a.active:before {
-    margin-left: 0;
-    margin-right: -10px;
-    right: 50%;
-}
-.version_tabs .link:last-child:after {
-    clear: both;
-    content: "";
-}
 .version_tabs .link a.active {
     background-color: #333333;
     color: #EEEEEE;
@@ -300,16 +255,16 @@ body[dir="rtl"] > #wrapper {
 .bottom_products .title span {
 }
 .bottom_products > .title a {
-    color: #999999 !important;
+    color: #999999;
     font-size: 30px;
     text-decoration: none;
     top: 0 !important;
 }
 .bottom_products > .title a:hover {
-    color: #333333 !important;
+    color: #333333;
 }
 .bottom_versions > .title a {
-    color: #666666 !important;
+    color: #666666;
     font-size: 2em;
     padding-left: 0.5em;
     text-decoration: none;
@@ -325,12 +280,18 @@ body > #wrapper h1 {
     padding-top: 20px;
     text-align: center;
     line-height: 1.1em;
+    margin-top: 0;
 }
+body > #wrapper .product_top_box h1 {
+    font-size: 26px;
+    text-align: left;
+    padding-top: 0px;
+}
+
 body > #wrapper h2 {
     margin-top:2em;
     margin-bottom: 1em;
     font-weight: normal;
-    text-align: center;
 }
 body > #wrapper .book_top_box {
     margin: 2em auto;
@@ -375,15 +336,6 @@ body[dir="rtl"] .book_formats div a {
     position: relative;
     width: 100%;
 }
-.book_formats:after, .book_versions {
-    clear: both;
-    content: "";
-    display: block;
-    width: 100%;
-}
-.book_version:before {
-    content: "Version: ";
-}
 .book_version {
     background-color: #EEEEEE;
     border: medium none;
@@ -391,10 +343,6 @@ body[dir="rtl"] .book_formats div a {
     line-height: 48px;
     margin: 0 !important;
     padding: 0;
-}
-.bottom_versions {
-    margin: 0 !important;
-    padding: 0 !important;
 }
 .bottom_books {
     -moz-box-sizing: border-box !important;
@@ -452,9 +400,6 @@ body[dir="rtl"] .bottom_books a {
 }
 div.version_tabs {
 }
-.version_tabs span:before {
-    border-width: 11px !important;
-}
 .version_tabs {
     margin: 18px 0;
 }
@@ -483,21 +428,13 @@ div.version_tabs {
     padding-bottom: 6px;
     padding-top: 6px;
 }
-.side_products div.link a:after {
-    border-width: 16px !important;
-    right: -31px !important;
-}
-body[dir="rtl"] .side_products div.link a:after {
-    left: -12px !important;
-    right: auto !important;
-}
 #slider {
     display: block;
     height: 100%;
     position: relative;
 }
 .slider_item {
-    background-color: #990000;
+    background-color: orange;
     height: 100%;
     vertical-align: middle;
 }
@@ -661,9 +598,6 @@ body[dir="rtl"] .side_products div.link a:after {
     background-position: -96px 0;
     cursor: default;
 }
-.version_tabs .link:last-child a {
-}
-.version_tabs .link:first-child a {
 }
 .bottom_versions {
     background-color: white;
@@ -703,10 +637,159 @@ body, html {
     display: none !important;
 }
 
-.group span{
-    display: block;
+
+.grouper {
+    margin-bottom: 2em;
 }
-.group span:first-child {
+
+.groups {
+    margin-top: 5px;
+}
+.group {
+}
+
+.group span {
+    font-size: 16px;
+    display: block;
+    float: left;
+    width: 100%;
+}
+body > #wrapper .group h2 {
+    font-size: 18px;
+    text-align: left;
+    display: block;
+    width: 100%;
+    margin: 0px;
     font-weight: bold;
+}
+
+.groups span.link {
+    font-size: 13px;
+    color: #777;
+    background-color: #cccccc;
+    display: inline-block;
+    padding: 0px 5px ;
+    cursor: pointer;
+    margin: 0px;
+}
+
+/* BUGBUG this really needs merging :( */
+
+.version_tabs {
+    font-size: 0;
+    height: auto;
+    margin: 0;
+    text-align: right;
+}
+.version_tabs .link {
+    background-color: #666;
+    color: #EEE;
+    float: none;
+    font-size: 18px;
+    padding: 5px 10px;
+}
+a.rss.link {
+    background: none repeat scroll 0 0 transparent;
+    color: #ff6600;
+}
+#wrapper > a.rss.link {
+    float: right;
+    margin-right: 1em;
+}
+.groups span.active,
+.version_tabs span.active {
+    background-color: #333;
+    box-shadow: 0 0 2px black;
+    color: #EEE;
+}
+.bottom_products .article {
+    margin-top: 2em;
+}
+.bottom_books {
+    border-bottom: 1px solid #e0e0e0;
+    display: block;
+    float: none;
+    height: auto;
+    margin-bottom: 1em;
+    max-width: 100%;
+    padding: 0;
+    width: 100%;
+}
+.formats {
+    color: black;
+    display: inline;
+    float: right;
+    margin: -28px 0 0;
+    padding: 0;
+}
+.bottom_books .titles {
+    padding-bottom: 4px;
+}
+.bottom_books .titles a, .bottom_books a {
+    margin-bottom: 8px;
+    margin-top: 2px;
+}
+.bottom_books .formats a {
+    color: #666;
+    display: inline;
+    font-size: 14px;
+}
+.side_products div.link a.active:after {
+    border: medium none;
+}
+.side_products, .side_products div.link a {
+    background-color: white;
+}
+.side_products div.link a {
+    background-color: #666;
+    color: #EEE;
+}
+.side_products div.link a.active {
+    background-color: 333;
+    box-shadow: 0 0 2px black;
+    color: #EEE;
+}
+.product_bottom_box {
+    padding: 10px;
+}
+.product_bottom_box .bottom_versions {
+    margin-bottom: 40px;
+    margin-left: 40px;
+    padding: 0;
+}
+.product_bottom_box .bottom_versions .title {
+    background-color: #666;
+    color: #EEE;
+    margin-bottom: 20px;
+}
+.menu .bottom_versions .title span, .product_bottom_box .bottom_versions > .title a {
+    background-color: #666;
+    color: #EEE;
+}
+.bottom_versions.section {
+    min-width: 100%;
+    padding: 0;
+}
+.bottom_products .splash {
+    margin: 1em;
+    text-align: center;
+}
+.side_products div.link {
+    font-weight: bold;
+}
+.splash div {
+    margin-bottom: 1em;
+}
+.splash .title {
+    font-weight: bold;
+}
+.splash li div {
+    margin-bottom: 0;
+}
+.formats a {
+    font-family: "FontAwesome";
+}
+body {
+    padding: 32px 0 0;
 }
 

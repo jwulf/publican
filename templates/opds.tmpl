@@ -7,33 +7,19 @@
   <title>[% title %]</title>
   <subtitle>[% title %]</subtitle>
   <updated>[% update_date %]</updated>
-  <!--author>
-    <name>[% site_auth_name %]</name>
-    <uri>[% site_auth_uri %]</uri>
-  </author-->
 
 [%- FOREACH urls %]
   <entry>
     <title>[% title %]</title>
     <id>[% id %]</id>
-    <!--author>
-      <name>[% auth_name %]</name>
-      <uri>[% auth_uri %]</uri>
-    </author-->
     <updated>[% update_date %]</updated>
     <dc:language>[% lang %]</dc:language>
     <category label="[% category %]" scheme="http://lexcycle.com/stanza/header" term="free"/>
-    <!--dc:issued>[% issued %]</dc:issued-->
     <summary>[% summary %]</summary>
     <content type="text">[% content %]</content>
     <link type="application/epub+zip" rel="http://opds-spec.org/acquisition" href="[% url %]">
       <dc:format>application/epub+zip</dc:format>
     </link>      
-    [%- IF img %]
-    <link type="image/png" rel="http://opds-spec.org/image/thumbnail" href="[% img %]"/>
-    <link type="image/png" rel="http://opds-spec.org/cover" href="[% img %]"/>
-    [%- END %]
-    <!--link type="application/atom+xml;type=entry" href="[% full_url %]" rel="alternate" title="Full entry"/-->
  </entry>
 [%- END %]
 </feed>

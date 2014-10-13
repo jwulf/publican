@@ -1,8 +1,8 @@
 <script>
     if(current_version != 'Versions') {
-	$('<div>'+labels[current_product][current_version]["label"]+'</div>').insertBefore("#version_menu_list");
+	$('<div>'+labels[current_product][current_version]["label"]+'<i class="fa fa-caret-down"></i></div>').insertBefore("#version_menu_list");
     } else {
-        $('<div>[% trans_strings.Versions %]</div>').insertBefore("#version_menu_list");
+        $('<div>[% trans_strings.Versions %]<i class="fa fa-caret-down"></i></div>').insertBefore("#version_menu_list");
     }
 </script>
 <ul id="version_menu_list" class="hidden">

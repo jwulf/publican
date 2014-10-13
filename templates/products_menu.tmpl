@@ -1,8 +1,8 @@
 <script>
     if(current_product != 'Products') {
-	$('<div>'+labels[current_product]["label"]+'</div>').insertBefore("#product_menu_list");
+	$('<div>'+labels[current_product]["label"]+'<i class="fa fa-caret-down"></i></div>').insertBefore("#product_menu_list");
     } else {
-        $('<div>[% trans_strings.Products %]</div>').insertBefore("#product_menu_list");
+        $('<div>[% trans_strings.Products %]<i class="fa fa-caret-down"></i></div>').insertBefore("#product_menu_list");
     }
 </script>
 <ul id="product_menu_list" class="hidden">

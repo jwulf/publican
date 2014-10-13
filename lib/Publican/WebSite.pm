@@ -20,6 +20,7 @@ use XML::Simple;
 use Archive::Zip qw( :ERROR_CODES :CONSTANTS );
 use Publican::ConfigData;
 use HTML::TreeBuilder;
+use File::pushd;
 
 my $DB_NAME           = 'books';
 my $DEFAULT_LANG      = 'en-US';
@@ -166,6 +167,10 @@ my %PARAMS = (
             'This field is deprecated and will be removed from Publican in the future.'
         )
     },
+    home_link => {
+        descr => maketext(
+            "HTML anchor to inject in to the start of site navigation menu."),
+    },
 );
 
 # This is required to ensure that the correct localised strings are found when running
@@ -222,6 +227,8 @@ my %tmpl_strings = (
     'html-single_label'   => $locale->maketext('Single-page HTML'),
     pdf_label             => $locale->maketext('PDF'),
     epub_label            => $locale->maketext('EPUB'),
+    RssProdTitle =>
+        $locale->maketext('Subcribe to the RSS feed for this product'),
 );
 
 sub new {
@@ -269,6 +276,7 @@ sub new {
     my $debug             = $config->param('debug')             || 0;
     my $footer            = $config->param('footer')            || "";
     my $web_style         = $config->param('web_style')         || 1;
+    my $home_link         = $config->param('home_link')         || undef;
 
     my $self = bless { db_file => $db_file }, $class;
 
@@ -292,6 +300,7 @@ sub new {
     $self->{manual_toc_update} = $manual_toc_update;
     $self->{debug}             = $debug;
     $self->{web_style}         = $web_style;
+    $self->{home_link}         = $home_link;
 
     my $conf = { INCLUDE_PATH => $tmpl_path, ENCODING => 'utf8', };
 
@@ -857,9 +866,11 @@ sub regen_all_toc {
 
     $self->splash_pages() if ( $self->{web_style} == 2 );
 
-    unlink( $self->{toc_path} . '/toc.js' );
-    symlink( $self->{toc_path} . '/' . $self->{toc_js},
-        $self->{toc_path} . '/toc.js' );
+    my $dir = pushd( $self->{toc_path} );
+    unlink('toc.js');
+    symlink( $self->{toc_js}, 'toc.js' );
+    $dir = undef;
+
     return;
 }
 
@@ -1738,6 +1749,10 @@ SQL
                 },
                 keys(%formats)
             );
+
+            $book_list{$product}{$version}{ $record->{name} }{formats}
+                = $book_ver_list{$product}{ $record->{name} }{$version}
+                {formats};
         }
 
         # write our books_index.tmpl
@@ -1878,6 +1893,7 @@ sub write_version_index {
     $index_vars->{book_ver_list}    = $book_ver_list;
     $index_vars->{splash}           = $self->get_splash(
         { path => $self->{toc_path} . "/$lang/$product/$version" } );
+    $index_vars->{home_link} = $self->{home_link};
 
     $self->{Template}->process(
         'versions_index.tmpl', $index_vars,
@@ -1941,6 +1957,7 @@ sub write_product_index {
         { path => $self->{toc_path} . "/$lang/$product" } );
     $index_vars->{categories}
         = ( -d "$DEFAULT_TMPL_PATH/groups/$lang/$product" );
+    $index_vars->{home_link} = $self->{home_link};
 
     $self->{Template}->process(
         'products_index.tmpl', $index_vars,
@@ -1994,6 +2011,7 @@ sub write_product_menu {
     $index_vars->{trans_strings} = $trans_strings;
     $index_vars->{footer}        = $self->{footer};
     $index_vars->{site_title}    = $self->{title};
+    $index_vars->{home_link}     = $self->{home_link};
 
 ## BUGBUG handle product labels
     $self->{Template}->process(
@@ -2062,6 +2080,7 @@ sub write_language_index {
     $index_vars->{site_title}    = $self->{title};
     $index_vars->{splash}
         = $self->get_splash( { path => $self->{toc_path} . "/$lang" } );
+    $index_vars->{home_link} = $self->{home_link};
 
     $self->{Template}->process(
         'language_index.tmpl', $index_vars,
@@ -2096,6 +2115,7 @@ sub write_language_labels {
     $index_vars->{trans_strings} = $trans_strings;
     $index_vars->{book_list}     = $book_list;
     $index_vars->{site_title}    = $self->{title};
+    $index_vars->{home_link}     = $self->{home_link};
 
 ## BUGBUG handle product labels
     $self->{Template}->process(
@@ -2154,6 +2174,7 @@ sub write_books_index {
                 $index_vars->{trans_strings} = $trans_strings;
                 $index_vars->{footer}        = $self->{footer};
                 $index_vars->{site_title}    = $self->{title};
+                $index_vars->{home_link}     = $self->{home_link};
 
                 $self->{Template}->process(
                     'books_index.tmpl',

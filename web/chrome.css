@@ -1,3 +1,4 @@
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css");
 @import url("site_overrides.css");
 
 .menu .bottom_versions .title span {
@@ -118,35 +119,31 @@ body[dir="rtl"] #book_lang_menu, body[dir="rtl"] #lang_menu_2, body[dir="rtl"] #
     padding-right: 0;
     right: auto;
 }
-#lang_menu_2:before, #book_format_menu:before, #book_lang_menu:before {
-    border-color: #666666 transparent transparent;
-    border-style: solid;
-    border-width: 6px 6px 0;
-    content: "";
-    display: block;
-    height: 0;
-    position: absolute;
-    right: 6px;
-    top: 11px;
-    width: 0;
-}
-body[dir="rtl"] #lang_menu_2:before, body[dir="rtl"] #book_format_menu:before, body[dir="rtl"] #book_lang_menu:before {
-    left: 6px;
-    right: auto;
-}
 #lang_menu_2 div, #book_format_menu div, #book_lang_menu div {
     color: #555555;
     margin: 0 0 -20px;
     padding: 0 20px 0 10px;
 }
+#lang_menu_2 div:hover,
+#book_format_menu div:hover,
+#book_lang_menu div:hover {
+    background-color: #666;
+    color: #EEE;
+}
+#menu .fa.fa-caret-down {
+    font-size: 18px;
+    vertical-align: middle;
+    text-indent: 8px;
+}
+
 body[dir="rtl"] #lang_menu_2 div, body[dir="rtl"] #book_format_menu div, body[dir="rtl"] #book_lang_menu div {
     padding-left: 20px;
     padding-right: 10px;
 }
 #book_lang_menu_list, #lang_menu_list, #book_format_menu_list {
-    background-color: rgba(110, 110, 110, 0.95) !important;
+    background-color: rgba(110, 110, 110, 0.95);
     line-height: 32px;
-    margin-top: 0 !important;
+    margin-top: 0;
     position: absolute;
     text-decoration: none;
     top: 32px;
@@ -179,53 +176,9 @@ body[dir="rtl"] #menu {
 body[dir="rtl"] .breadcrumb {
     float: right;
 }
-.breadcrumb:before {
-    border-color: transparent transparent transparent rgba(0, 0, 0, 0.2);
-    border-style: solid;
-    border-width: 16px 0 16px 16px;
-    content: "";
-    display: block;
-    height: 0;
-    position: absolute;
-    right: -16px;
-    top: 0;
-    width: 0;
-    z-index: 99;
-}
-body[dir="rtl"] .breadcrumb:before {
-    border-color: transparent rgba(0, 0, 0, 0.2) transparent transparent;
-    border-width: 16px 16px 16px 0;
-    left: -16px;
-    right: auto;
-}
-.breadcrumb:after {
-    border-color: transparent transparent transparent #EEEEEE;
-    border-style: solid;
-    border-width: 16px 0 16px 16px;
-    content: "";
-    display: block;
-    height: 0;
-    position: absolute;
-    right: -15px;
-    top: 0;
-    width: 0;
-    z-index: 99;
-}
-body[dir="rtl"] .breadcrumb:after {
-    border-color: transparent #EEEEEE transparent transparent;
-    border-width: 16px 16px 16px 0;
-    left: -15px;
-    right: auto;
-}
 .breadcrumb:hover {
     background-color: #666666 !important;
     color: #FFFFFF;
-}
-.breadcrumb:hover:after {
-    border-color: transparent transparent transparent #666666;
-}
-body[dir="rtl"] .breadcrumb:hover:after {
-    border-color: transparent #666666 transparent transparent;
 }
 .breadcrumb ul {
     background-color: rgba(110, 110, 110, 0.95) !important;
@@ -372,3 +325,50 @@ ul.toc {
     padding: 0;
     margin: 0;
 }
+.sitefooter {
+    background-color: #EEE;
+    box-shadow: 0 0 0 1px #aaaaaa, 0 0 5px 0 #aaaaaa;
+    font-size: 20px;
+    margin-top: 1em;
+    padding: 1em 2em 2em;
+    text-align: right;
+}
+.sitefooter > a {
+    color: #777;
+    font-size: 30px;
+    margin-left: 4px;
+}
+#menu {
+    background-color: #EEE;
+    border-color: #EEE;
+}
+.breadcrumb {
+    background-color: #EEE;
+    color: #666;
+}
+#menu a, #menu ul a {
+    color: #666;
+}
+.breadcrumb ul a {
+    background-color: #EEE;
+    color: #666;
+}
+.breadcrumb:after {
+    border-color: transparent transparent transparent #EEE;
+}
+
+#menu .breadcrumb:hover, #menu a:hover {
+    background-color: #666;
+    color: #EEE;
+}
+#menu .breadcrumb:hover:after {
+    border-color: transparent transparent transparent #666;
+}
+#menu #book_lang_menu_list, #menu #lang_menu_list, #menu #book_format_menu_list {
+    background-color: #EEE;
+    color: #666;
+}
+#lang_menu_2 div, #book_format_menu div, #book_lang_menu div {
+    color: #666;
+}
+

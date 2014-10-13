@@ -1,3 +1,8 @@
+4.2.4 Unreleased
+- Fix web site templates to be more flexable.
+- Tweak default website styles.
+- Allow External_Links.xml to be translated properly. BZ #1150386
+
 4.2.3 Tue 7 Oct 2014
 - Fix DocBook4 entity text, BZ #1143060
 - Remove extra white space from non-verbatim msgid's. BZ #1143792

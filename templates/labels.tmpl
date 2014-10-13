@@ -1,4 +1,8 @@
 var style = "[%- style %]";
+[%- IF home_link %]
+var home_link = '[% home_link %]';
+[%- END %]
+
 var labels = {};
 labels["site"] = {};
 labels["site"]["title"] = "[% site_title %]";

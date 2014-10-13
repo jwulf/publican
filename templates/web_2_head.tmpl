@@ -5,6 +5,7 @@
 <title>[% title %]</title>
 <link rel="stylesheet" href="[% host %]/chrome.css" type="text/css" />
 <link rel="stylesheet" href="[% host %]/splash.css" type="text/css" />
+
 <meta name="generator" content="publican [% publican_version %]" />
 <script type="text/javascript">
     var current_product = "[%- IF product %][% product %][% ELSE %]Products[% END %]";
@@ -18,11 +19,16 @@
 <body class="menu" [%- IF lang.match('(?:he-IL|fa-IR|ar-SA)') %] dir="rtl"[% END %]>
 <div id="wrapper">
 	<div id="menu">
+        [%- IF home_link -%]
+		<div class="breadcrumb">
+			[% home_link %]
+		</div>
+		[% END %]
 		<div id="lang_menu" class="breadcrumb">
 			<a href="[% host %]/[% lang %]/index.html">[% site_title %]</a>
 		</div>
 		<div id="product_menu" class="breadcrumb" onmouseover="work=1; expand_menu('product_menu_list');" onmouseout="work=1; retract_menu('product_menu_list');">
-			Products
+			Products<i class="fa fa-caret-down"></i>
 		</div>
 	    [%- IF ver_menu %]
 		<div id="version_menu" class="breadcrumb" onmouseover="work=1; expand_menu('version_menu_list');" onmouseout="work=1; retract_menu('version_menu_list');">
@@ -31,22 +37,22 @@
 	    [%- END %]
 	    [%- IF book_menu %]
 		<div id="book_menu" class="breadcrumb" onmouseover="work=1; expand_menu('book_menu_list');" onmouseout="work=1; retract_menu('book_menu_list');">
-			Books
+			Books<i class="fa fa-caret-down"></i>
 		</div>
 	    [%- END %]
 	    [%- IF book_lang_menu %]
 		<div id="book_format_menu" onmouseover="work=1; expand_menu('book_format_menu_list');" onmouseout="work=1; retract_menu('book_format_menu_list');">
-			Formats
+			Formats<i class="fa fa-caret-down"></i>
 		</div>
 		<div id="book_lang_menu"  onmouseover="work=1; expand_menu('book_lang_menu_list');" onmouseout="work=1; retract_menu('book_lang_menu_list');">
-			Translations
+			Translations<i class="fa fa-caret-down"></i>
 		</div>
 	    [%- END %]
 	    [%- IF lang_menu %]
 		<div id="lang_menu_2"  onmouseover="work=1; expand_menu('lang_menu_list');" onmouseout="work=1; retract_menu('lang_menu_list');">
 		    [%- FOREACH lang_t = langs %]
 			[%- IF lang_t.lang == lang %]
-			<div>[% lang_t.lang_name %]</div>
+			<div>[% lang_t.lang_name %] <i class="fa fa-caret-down"></i></div>
 			[%- END %]
 		    [%- END %]
 			<ul id="lang_menu_list" class="hidden">

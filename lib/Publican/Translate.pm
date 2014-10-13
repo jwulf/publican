@@ -18,14 +18,14 @@ use Encode qw(is_utf8 decode_utf8 encode_utf8);
 
 # What tags do we translate?
 my $TRANSTAGS
-    = qr/^(?:ackno|bridgehead|caption|conftitle|contrib|entry|firstname|glossentry|indexterm|jobtitle|keyword|label|lastname|lineannotation|lotentry|member|orgdiv|orgname|othername|para|phrase|productname|refclass|refdescriptor|refentrytitle|refmiscinfo|refname|refpurpose|releaseinfo|revremark|screeninfo|secondaryie|seealsoie|seeie|seg|segtitle|simpara|subtitle|surname|td|term|termdef|tertiaryie|textobject|th|title|titleabbrev|screen|programlisting|literallayout)$/;
+    = qr/^(?:ackno|bridgehead|caption|conftitle|contrib|entry|firstname|glossentry|indexterm|jobtitle|keyword|label|lastname|lineannotation|lotentry|member|orgdiv|orgname|othername|para|phrase|productname|refclass|refdescriptor|refentrytitle|refmiscinfo|refname|refpurpose|releaseinfo|revremark|screeninfo|secondaryie|seealsoie|seeie|seg|segtitle|simpara|subtitle|surname|td|term|termdef|tertiaryie|textobject|th|title|titleabbrev|screen|programlisting|literallayout|simplelist)$/;
 
 # Blocks that contain translatable tags that need to be kept inline
 my $IGNOREBLOCKS
     = qr/^(?:footnote|citerefentry|indexterm|orgname|productname|phrase|textobject)$/;
 
 # Preserve white space in these tags
-my $VERBATIM = qr/^(?:screen|programlisting|literallayout)$/;
+my $VERBATIM = qr/^(?:screen|programlisting|literallayout|simplelist)$/;
 
 =head1 NAME
 
@@ -130,8 +130,9 @@ sub update_pot {
         my $pot_file = $xml_file;
         $pot_file =~ s/\.xml/\.pot/;
         $pot_file =~ s/^$source_dir/pot/;
-        $pot_file =~ m|^(.*)/[^/]+$|;
+        $pot_file =~ m|^(.*)/([^/]+)$|;
         my $path = $1;
+        my $filename = $2;
         mkpath($path) if ( !-d $path );
 
         my $xml_doc = Publican::Builder::new_tree();
@@ -141,7 +142,7 @@ sub update_pot {
             maketext( "Can't open file [_1]. Error: [_2]", $xml_file, $@ ) );
         $xml_doc->pos( $xml_doc->root() );
 
-        my $msg_list = $self->get_msgs( { doc => $xml_doc } );
+        my $msg_list = $self->get_msgs( { doc => $xml_doc, filename => $filename } );
 ##debug_msg( "hash: " . $msg_list->content_list() . "\n\n" );
         $self->print_msgs( { msg_list => $msg_list, pot_file => $pot_file } );
 
@@ -568,6 +569,7 @@ Get the strings to translate from an XML::TreeBuilder object
 sub get_msgs {
     my ( $self, $args ) = @_;
     my $doc = delete( $args->{doc} ) || croak("doc is a mandatory argument");
+    my $filename = delete( $args->{filename} ) || croak("filename is a mandatory argument");
 
     if ( %{$args} ) {
         croak(
@@ -608,6 +610,14 @@ sub get_msgs {
                         )
                     );
                 }
+## To allow External_Links to be translatable we need to translate the whole list as 
+## the attributes of then  members need to be translated.
+                elsif($inner->tag() eq 'simplelist') {
+                    $filename eq 'External_Links.pot';
+                }
+                elsif($filename eq 'External_Links.pot'){
+                    0;
+                }
                 else {
 ## Other IGNOREBLOCKS tags are completely ignored for translation structure.
                     not defined(
@@ -618,23 +628,22 @@ sub get_msgs {
         )
         )
     {
-## BUGBUG is this required here?
-##        next if ( $child->attr('processed') );
-##        $child->attr( 'processed', 1 );
-
         next if ( $child->is_empty );
 
         $trans_node = XML::Element->new( $child->tag() );
 
      # Have to be inside a translatable tag here, so don't need to check again
-        my @matches = $child->look_down(
+        my @matches;
+        if($filename ne 'External_Links.pot') {
+         @matches = $child->look_down(
             '_tag',
             qr/$TRANSTAGS/,
             sub { not defined( $_[0]->look_up( '_tag', qr/$IGNOREBLOCKS/ ) ) }
         );
+        }
 
     # No Nesting so push all of this nodes content on to the output trans_tree
-        if ( !$#matches ) {
+        if ( $#matches == -1 ) {
             $trans_node->push_content( $child->content_list() );
         }
         else {
@@ -667,7 +676,7 @@ sub get_msgs {
                         if ( !$trans_node->is_empty );
                     $trans_node = XML::Element->new( $child->tag() );
                     $trans_tree->push_content(
-                        $self->get_msgs( { doc => $nested } )->content_list()
+                        $self->get_msgs( { doc => $nested, filename=> $filename } )->content_list()
                     );
                 }
                 else {

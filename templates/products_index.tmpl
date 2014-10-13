@@ -7,6 +7,7 @@
 	var current_version= "Versions";
 </script>
 <h1>[% labels.${product}.label %]</h1>
+[%- INCLUDE anchor.tmpl uri="${host}/${lang}/opds-${prod}.xml" lang=lang booklang=lang format="rss" text=" " class="link" title=trans_strings.RssProdTitle %]
 <div id="product_top_box" class="product_top_box">
 [% splash %]
 </div>
@@ -27,10 +28,19 @@
 [%- END %]
 [%- END %]
 		<div class="bottom_books[% IF lang != booker.lang %] untranslated [% lang %][% END %]">
+			<div class="titles">
 			[%- IF booker.value.external -%]
 				[% INCLUDE anchor.tmpl uri=booker.uri lang=lang booklang=booker.lang name=booker.book_clean subtitle=booker.subtitle format="external" %]
 			[%- ELSE -%]
 				[% INCLUDE anchor.tmpl host=host lang=lang booklang=booker.lang product=product version=booker.version format=booker.base_format book=booker.book name=booker.book_clean subtitle=booker.subtitle srcnewer=booker.srcnewer subtitle=booker.subtitle %]
+			[%- END %]
+			</div>
+			[%- UNLESS booker.external -%]
+ 			<div class="formats">
+				[%- FOREACH  format = booker.formats %]
+					[%- INCLUDE anchor.tmpl short=1 host=host lang=lang booklang=booker.lang product=product version=booker.version format=format book=booker.book name=format text=" " class=format icon=1 title=format %]
+				[%- END %]
+			</div>
 			[%- END %]
 		</div>
 		[%- END %]
