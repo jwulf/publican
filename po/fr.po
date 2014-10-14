@@ -2,32 +2,30 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# Gérard Baylard <geodebay@gmail.com>, 2013. #zanata
+# Gé Baylard <geodebay@gmail.com>, 2013. #zanata
 # rlandmann <rlandmann@fedoraproject.org>, 2013. #zanata
 # samfreemanz <sfriedma@redhat.com>, 2013. #zanata
-# Gérard Baylard <geodebay@gmail.com>, 2014. #zanata
+# Gé Baylard <geodebay@gmail.com>, 2014. #zanata
 # jcarbone <jcarbone@redhat.com>, 2014. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2014-07-22 12:47-0400\n"
-"Last-Translator: Gérard Baylard <geodebay@gmail.com>\n"
-"Language-Team: French\n"
-"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2014-07-22 12:47-0400\n"
+"Last-Translator: Gé Baylard <geodebay@gmail.com>\n"
+"Language-Team: French\n"
+"Language: fr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1)\n"
 "X-Generator: Zanata 3.4.2\n"
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican/TreeView.pm:197
-msgid ""
-"\n"
+msgid "\n"
 "No unused XML files"
-msgstr ""
-"\n"
+msgstr "\n"
 "Aucun fichier XML inutilisé"
 
 # translation auto-copied from project Publican, version 3, document publican
@@ -66,7 +64,8 @@ msgstr "%1 a quitté avec la valeur %2"
 #. ('lang')
 #. ('filename')
 #. ('title')
-#: lib/Publican/Builder/DocBook.pm:1358 lib/Publican/Builder/DocBook.pm:1361
+#: lib/Publican/Builder/DocBook.pm:1358
+#: lib/Publican/Builder/DocBook.pm:1361
 #: lib/Publican/Builder/DocBook.pm:1364
 #, fuzzy
 msgid "%1 is a mandatory argument for drupal_transform"
@@ -74,15 +73,20 @@ msgstr "lang est un argument obligatoire pour drupal_transform"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #. ('toc_path')
-#: bin/publican:950 bin/publican:963 lib/Publican/WebSite.pm:245
+#: bin/publican:950
+#: bin/publican:963
+#: lib/Publican/WebSite.pm:246
 msgid "%1 is a mandatory field in a site configuration file"
 msgstr "%1 est un champ obligatoire dans un fichier de configuration de site"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #. ('db_file',$site_config)
-#: lib/Publican/WebSite.pm:255
-msgid "%1 is a mandatory field in a site configuration file. Check %2 for validity."
-msgstr "%1 est un champ obligatoire dans un fichier de configuration de site. Vérifiez la validité de %2."
+#: lib/Publican/WebSite.pm:256
+msgid ""
+"%1 is a mandatory field in a site configuration file. Check %2 for validity."
+msgstr ""
+"%1 est un champ obligatoire dans un fichier de configuration de site. "
+"Vérifiez la validité de %2."
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #. ('cmd')
@@ -100,11 +104,25 @@ msgstr "%1 est un champ obligatoire dans un fichier de configuration de site. V�
 #. ('brand')
 #. ('old_site_config')
 #. ('path')
-#: bin/publican:1039 bin/publican:1309 bin/publican:1418 bin/publican:578
-#: bin/publican:665 bin/publican:759 bin/publican:761 bin/publican:763
-#: bin/publican:861 bin/publican:863 bin/publican:868 bin/publican:871
-#: bin/publican:873 bin/publican:883 bin/publican:885 bin/publican:888
-#: bin/publican:935 bin/publican:937 bin/publican:940
+#: bin/publican:1039
+#: bin/publican:1309
+#: bin/publican:1418
+#: bin/publican:578
+#: bin/publican:665
+#: bin/publican:759
+#: bin/publican:761
+#: bin/publican:763
+#: bin/publican:861
+#: bin/publican:863
+#: bin/publican:868
+#: bin/publican:871
+#: bin/publican:873
+#: bin/publican:883
+#: bin/publican:885
+#: bin/publican:888
+#: bin/publican:935
+#: bin/publican:937
+#: bin/publican:940
 msgid "%1 is a required argument"
 msgstr "%1 est un argument requis"
 
@@ -114,8 +132,11 @@ msgstr "%1 est un argument requis"
 #. ('surname')
 #. ('email')
 #. ('lang')
-#: lib/Publican.pm:1468 lib/Publican.pm:1474 lib/Publican.pm:1478
-#: lib/Publican.pm:1481 lib/Publican.pm:1484
+#: lib/Publican.pm:1468
+#: lib/Publican.pm:1474
+#: lib/Publican.pm:1478
+#: lib/Publican.pm:1481
+#: lib/Publican.pm:1484
 msgid "%1 is a required option for add_revision"
 msgstr "%1 est une option requise pour add_revision"
 
@@ -132,21 +153,28 @@ msgstr "'%1' n'est pas un langage valide pour la coloration syntaxique."
 
 #. ($language)
 #: lib/Publican/Builder/DocBook.pm:3764
-msgid "'%1' is not a valid language for highlighting. Language names are case sensitive."
-msgstr "'%1' n'est pas un langage valide pour la coloration syntaxique. Les noms de langages sont sensibles à la casse."
+msgid ""
+"'%1' is not a valid language for highlighting. Language names are case "
+"sensitive."
+msgstr ""
+"'%1' n'est pas un langage valide pour la coloration syntaxique. Les noms de "
+"langages sont sensibles à la casse."
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
-#: lib/Publican/Builder/DocBook.pm:2066 lib/Publican/Builder/DocBook.pm:2081
+#: lib/Publican/Builder/DocBook.pm:2066
+#: lib/Publican/Builder/DocBook.pm:2081
 msgid "'area' requires a 'coords' attribute."
 msgstr "« area » requiert un attribut « coords »"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
-#: lib/Publican/Builder.pm:890 lib/Publican/Builder.pm:951
+#: lib/Publican/Builder.pm:890
+#: lib/Publican/Builder.pm:951
 msgid "'books' is a required configuration parameter for a remote set"
-msgstr "« books » est un paramètre de configuration requis pour un ensemble distant"
+msgstr ""
+"« books » est un paramètre de configuration requis pour un ensemble distant"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
-#: lib/Publican/Translate.pm:1050
+#: lib/Publican/Translate.pm:1059
 msgid "'lang' is a mandatory argument"
 msgstr "« lang » est un argument obligatoire"
 
@@ -163,7 +191,8 @@ msgstr "« path » est un argument obligatoire"
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: lib/Publican/Builder.pm:896
 msgid "'repo' is a required configuration parameter for a remote set"
-msgstr "« repo » est un paramètre de configuration requis pour un ensemble distant"
+msgstr ""
+"« repo » est un paramètre de configuration requis pour un ensemble distant"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: lib/Publican/XmlClean.pm:591
@@ -177,7 +206,8 @@ msgid ""
 "*ERROR: Fatal Table Error* Table (%1) contains invalid data\n"
 "Attribute cols (%2) does not match number of entry elements (%3)"
 msgstr ""
-"*ERREUR : Erreur de tableau fatale* Le tableau (%1) contient des données non valables\n"
+"*ERREUR : Erreur de tableau fatale* Le tableau (%1) contient des données non "
+"valables\n"
 "L'attribut cols (%2) ne correspond pas au nombre d'éléments entrés (%3)"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
@@ -187,7 +217,8 @@ msgid ""
 "*ERROR: Fatal Table Error* Table (%1) contains invalid data\n"
 "Attribute cols is mandatory for tgroup"
 msgstr ""
-"*ERREUR : Erreur de tableau fatale* Le tableau (%1) contient des données non valables\n"
+"*ERREUR : Erreur de tableau fatale* Le tableau (%1) contient des données non "
+"valables\n"
 "L'attribut cols est obligatoire pour tgroup"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
@@ -197,33 +228,60 @@ msgstr "/chemin/vers/emplacement/installation"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: lib/Publican/WebSite.pm:188
-msgid "<p>The Navigation Menu above requires JavaScript to function.</p><p>Enable JavaScript to allow the Navigation Menu to function.</p><p>Disable CSS to view the Navigation options without JavaScript enabled</p>"
-msgstr "<p>Le menu de navigation ci-dessus nécessite JavaScript pour fonctionner.</p><p>Activer JavaScript pour permettre au menu de navigation de fonctionner.</p><p>Désactiver CSS pour voir les options de navigation sans activer JavaScript</p>"
+msgid ""
+"<p>The Navigation Menu above requires JavaScript to function.</p><p>Enable "
+"JavaScript to allow the Navigation Menu to function.</p><p>Disable CSS to "
+"view the Navigation options without JavaScript enabled</p>"
+msgstr ""
+"<p>Le menu de navigation ci-dessus nécessite JavaScript pour fonctionner.</"
+"p><p>Activer JavaScript pour permettre au menu de navigation de fonctionner."
+"</p><p>Désactiver CSS pour voir les options de navigation sans activer "
+"JavaScript</p>"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: lib/Publican.pm:101
-msgid "A comma-separated list of XML attributes that are not permitted in the source."
-msgstr "Une liste, avec la virgule comme séparateur, d'attributs XML non permis dans le source."
+msgid ""
+"A comma-separated list of XML attributes that are not permitted in the "
+"source."
+msgstr ""
+"Une liste, avec la virgule comme séparateur, d'attributs XML non permis dans "
+"le source."
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: lib/Publican.pm:107
-msgid "A comma-separated list of XML tags that are not permitted in the source."
-msgstr "Une liste, avec la virgule comme séparateur, de balises XML non permises dans le source."
+msgid ""
+"A comma-separated list of XML tags that are not permitted in the source."
+msgstr ""
+"Une liste, avec la virgule comme séparateur, de balises XML non permises "
+"dans le source."
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: lib/Publican.pm:404
 msgid "A comma-separated list of the formats to use for the web packages."
-msgstr "Une liste, avec la virgule comme séparateur, des formats à utiliser pour les paquets Web."
+msgstr ""
+"Une liste, avec la virgule comme séparateur, des formats à utiliser pour les "
+"paquets Web."
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
-#: lib/Publican/CreateBook.pm:268 lib/Publican/CreateBook.pm:529
-msgid "A short overview and summary of the book's subject and purpose, traditionally no more than one paragraph long. Note: the abstract will appear in the front matter of your book and will also be placed in the description field of the book's RPM spec file."
-msgstr "Un court aperçu, un résumé du propos de l'ouvrage et ses objectifs, ne dépassant pas en général un paragraphe. Note : le résumé est affiché dans les pages liminaires de l'ouvrage et est également placé  dans le champ « description » du fichier spec du RPM de l'ouvrage."
+#: lib/Publican/CreateBook.pm:268
+#: lib/Publican/CreateBook.pm:529
+msgid ""
+"A short overview and summary of the book's subject and purpose, "
+"traditionally no more than one paragraph long. Note: the abstract will "
+"appear in the front matter of your book and will also be placed in the "
+"description field of the book's RPM spec file."
+msgstr ""
+"Un court aperçu, un résumé du propos de l'ouvrage et ses objectifs, ne "
+"dépassant pas en général un paragraphe. Note : le résumé est affiché dans "
+"les pages liminaires de l'ouvrage et est également placé  dans le champ "
+"« description » du fichier spec du RPM de l'ouvrage."
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: lib/Publican.pm:96
 msgid "A space-separated list of books used in this remote set."
-msgstr "Une liste, avec une espace comme séparateur, des livres utilisés dans cet ensemble distant."
+msgstr ""
+"Une liste, avec une espace comme séparateur, des livres utilisés dans cet "
+"ensemble distant."
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican/Builder/DocBook.pm:755
@@ -252,8 +310,17 @@ msgstr "Ajouter une entrée dans l'historique des révisions"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: bin/publican:303
-msgid "Add or remove database entries. Used for processing pre-build books, such as when building packages."
-msgstr "Ajouter ou supprimer des entrées dans la base de données. Utilisé pour le traitement d'ouvrages partiellement construits, de même que lors de la construction de paquets."
+msgid ""
+"Add or remove database entries. Used for processing pre-build books, such as "
+"when building packages."
+msgstr ""
+"Ajouter ou supprimer des entrées dans la base de données. Utilisé pour le "
+"traitement d'ouvrages partiellement construits, de même que lors de la "
+"construction de paquets."
+
+#: lib/Publican/WebSite.pm:225
+msgid "All"
+msgstr ""
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #. ($lang)
@@ -268,7 +335,8 @@ msgstr ""
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: bin/publican:150
 msgid "An entry to be added to the revision. Can be specified multiple times."
-msgstr "Une entrée à ajouter pour la révision. Peut être précisée plusieurs fois."
+msgstr ""
+"Une entrée à ajouter pour la révision. Peut être précisée plusieurs fois."
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: lib/Publican.pm:87
@@ -276,14 +344,20 @@ msgid "Arch to filter output on."
 msgstr "Architecture à filtrer en sortie."
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
-#: lib/Publican/Builder/DocBook4.pm:715 lib/Publican/Builder/DocBook5.pm:713
+#: lib/Publican/Builder/DocBook4.pm:715
+#: lib/Publican/Builder/DocBook5.pm:713
 msgid "Author’s firstname not found in Author_Group.xml as expected."
-msgstr "Nom de famille de l'auteur non trouvé dans Author_Group.xml contrairement à ce qui est prévu."
+msgstr ""
+"Nom de famille de l'auteur non trouvé dans Author_Group.xml contrairement à "
+"ce qui est prévu."
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
-#: lib/Publican/Builder/DocBook4.pm:724 lib/Publican/Builder/DocBook5.pm:722
+#: lib/Publican/Builder/DocBook4.pm:724
+#: lib/Publican/Builder/DocBook5.pm:722
 msgid "Author’s surname not found in Author_Group.xml as expected."
-msgstr "Prénom de l'auteur non trouvé dans Author_Group.xml contrairement à ce qui est prévu."
+msgstr ""
+"Prénom de l'auteur non trouvé dans Author_Group.xml contrairement à ce qui "
+"est prévu."
 
 #: lib/Publican/Builder/DocBook.pm:336
 msgid "BURP"
@@ -312,14 +386,17 @@ msgstr "Ouvrages"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #. ($brand)
-#: lib/Publican/Builder/DocBook4.pm:423 lib/Publican/Builder/DocBook5.pm:443
+#: lib/Publican/Builder/DocBook4.pm:423
+#: lib/Publican/Builder/DocBook5.pm:443
 msgid "Brand '%1' had no content to copy."
 msgstr "Estampille « %1 » sans contenu à copier."
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: lib/Publican.pm:282
 msgid "Brand option to disable embedding the navigational toc in web packages"
-msgstr "Option d'estampille pour désactiver l'imbrication de la table des matières de navigation dans les paquets Web"
+msgstr ""
+"Option d'estampille pour désactiver l'imbrication de la table des matières "
+"de navigation dans les paquets Web"
 
 #: bin/publican:536
 msgid "Brand options"
@@ -337,18 +414,25 @@ msgid "Building rpms from %1 using %2 in %3"
 msgstr "Construction des RPM à partir de %1 avec %2 dans %3"
 
 #: lib/Publican.pm:322
-msgid "By default Revision History is sorted in descending order. Set this to 'asc' or 'ascending' to reverse the sort."
-msgstr "Par défaut, l'historique de révision est trié dans l'ordre décroissant. Définissez cette valeur à « asc » ou « ascending » pour inverser l'ordre de tri."
+msgid ""
+"By default Revision History is sorted in descending order. Set this to 'asc' "
+"or 'ascending' to reverse the sort."
+msgstr ""
+"Par défaut, l'historique de révision est trié dans l'ordre décroissant. "
+"Définissez cette valeur à « asc » ou « ascending » pour inverser l'ordre de "
+"tri."
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #. ($lang)
-#: lib/Publican/Builder/DocBook4.pm:562 lib/Publican/Builder/DocBook5.pm:583
+#: lib/Publican/Builder/DocBook4.pm:562
+#: lib/Publican/Builder/DocBook5.pm:583
 msgid "Bypassing test for language: %1"
 msgstr "Saut du test pour la langue : %1"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #. ($lang)
-#: lib/Publican/Builder/DocBook4.pm:156 lib/Publican/Builder/DocBook5.pm:155
+#: lib/Publican/Builder/DocBook4.pm:156
+#: lib/Publican/Builder/DocBook5.pm:155
 msgid "Bypassing translation for %1"
 msgstr "Saut de la traduction pour %1"
 
@@ -361,7 +445,8 @@ msgstr "CONFIDENTIEL"
 #. ($from,$to,$@)
 #: lib/Publican.pm:1784
 msgid "Can not copy directory %1 to %2 due to error: %3"
-msgstr "Impossible de copier le répertoire %1 vers %2 en raison de l'erreur : %3"
+msgstr ""
+"Impossible de copier le répertoire %1 vers %2 en raison de l'erreur : %3"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #. ($from,$to,$@)
@@ -371,36 +456,44 @@ msgstr "Impossible de copier le fichier %1 vers %2 en raison de l'erreur : %3"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #. ($from,$to,$@)
-#: lib/Publican.pm:1742 lib/Publican.pm:1764
+#: lib/Publican.pm:1742
+#: lib/Publican.pm:1764
 msgid "Can not copy files %1 to %2 due to error: %3"
-msgstr "Impossible de copier les fichiers %1 vers %2 en raison de l'erreur : %3"
+msgstr ""
+"Impossible de copier les fichiers %1 vers %2 en raison de l'erreur : %3"
 
 #. ('abstract',$info_file)
 #. ('subtitle',$info_file)
-#: lib/Publican/Builder/DocBook.pm:2543 lib/Publican/Builder/DocBook.pm:2629
+#: lib/Publican/Builder/DocBook.pm:2543
+#: lib/Publican/Builder/DocBook.pm:2629
 msgid "Can not locate '%1' tag in file '%2'"
 msgstr "Impossible de localiser la balise  '%1' dans le fichier '%2'"
 
 #. ($from,$to,$@)
 #: lib/Publican.pm:1804
 msgid "Can not move directory %1 to %2 due to error: %3"
-msgstr "Impossible de déplacer le répertoire %1 dans %2 en raison d'une erreur : %3"
+msgstr ""
+"Impossible de déplacer le répertoire %1 dans %2 en raison d'une erreur : %3"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #. ($from,$to,$@)
 #: lib/Publican.pm:1722
 msgid "Can not move file %1 to %2 due to error: %3"
-msgstr "Impossible de déplacer le fichier %1 dans %2 en raison d'une erreur : %3"
+msgstr ""
+"Impossible de déplacer le fichier %1 dans %2 en raison d'une erreur : %3"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #. ($name)
 #: lib/Publican/CreateBrand.pm:104
 msgid "Can't create brand, directory 'publican-%1' exists!"
-msgstr "Création de l'estampille impossible, le répertoire « publican-%1 » existe déjà !"
+msgstr ""
+"Création de l'estampille impossible, le répertoire « publican-%1 » existe "
+"déjà !"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #. ($@)
-#: lib/Publican/CreateBrand.pm:109 lib/Publican/CreateBrand.pm:112
+#: lib/Publican/CreateBrand.pm:109
+#: lib/Publican/CreateBrand.pm:112
 msgid "Can't create directory: %1"
 msgstr "Impossible de créer le répertoire : %1"
 
@@ -408,8 +501,11 @@ msgstr "Impossible de créer le répertoire : %1"
 #. ($info_file)
 #. ($rev_file)
 #. ($xml_file)
-#: bin/publican:1347 lib/Publican.pm:1636 lib/Publican.pm:649
-#: lib/Publican/Builder.pm:555 lib/Publican/Builder/DocBook.pm:2311
+#: bin/publican:1347
+#: lib/Publican.pm:1636
+#: lib/Publican.pm:649
+#: lib/Publican/Builder.pm:555
+#: lib/Publican/Builder/DocBook.pm:2311
 #: lib/Publican/Builder/DocBook.pm:714
 msgid "Can't locate required file: %1"
 msgstr "Impossible de localiser le fichier requis : %1"
@@ -421,7 +517,8 @@ msgstr "Impossible de localiser srpm, empaquetage abandonné"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #. ($@)
-#: bin/db4-2-db5:64 lib/Publican/Builder/DocBook.pm:264
+#: bin/db4-2-db5:64
+#: lib/Publican/Builder/DocBook.pm:264
 msgid "Can't open ad file: %1"
 msgstr "Impossible d'ouvrir le fichier ajouté : %1"
 
@@ -433,13 +530,16 @@ msgstr "Impossible d'ouvrir le répertoire : %1"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #. ($xml_file,$@)
-#: lib/Publican/Translate.pm:141 lib/Publican/Translate.pm:208
+#: lib/Publican/Translate.pm:142
+#: lib/Publican/Translate.pm:209
 msgid "Can't open file %1. Error: %2"
 msgstr "Impossible d'ouvrir le fichier %1. Erreur : %2"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #. ($file,$@)
-#: bin/fix-zanata-map:69 bin/publican:1476 lib/Publican/WebSite.pm:1843
+#: bin/fix-zanata-map:69
+#: bin/publican:1476
+#: lib/Publican/WebSite.pm:1844
 #: lib/Publican/XmlClean.pm:1012
 msgid "Can't open file '%1' %2"
 msgstr "Impossible d'ouvrir le fichier « %1 » %2"
@@ -450,19 +550,21 @@ msgid "Can't open file for html input!"
 msgstr "Impossible d'ouvrir le fichier pour une entrée HTML !"
 
 #. ($!)
-#: lib/Publican/WebSite.pm:1316
+#: lib/Publican/WebSite.pm:1317
 msgid "Can't open file for html input: %1"
 msgstr "Impossible d'ouvrir un fichier pour l'entrée html : %1"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
-#: lib/Publican/Builder/DocBook.pm:545 lib/Publican/Builder/DocBook.pm:585
+#: lib/Publican/Builder/DocBook.pm:545
+#: lib/Publican/Builder/DocBook.pm:585
 msgid "Can't open file for text output!"
 msgstr "Impossible d'ouvrir le fichier pour une sortie texte !"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #. ($in_file,$@)
 #. ($xml_file,$@)
-#: lib/Publican/TreeView.pm:154 lib/Publican/TreeView.pm:235
+#: lib/Publican/TreeView.pm:154
+#: lib/Publican/TreeView.pm:235
 #: lib/Publican/TreeView.pm:82
 msgid "Can't open file: %1: %2"
 msgstr "Impossible d'ouvrir le fichier : %1 : %2"
@@ -492,7 +594,8 @@ msgstr "Impossible d'écrire sur overrides.cfg : %1"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #. ($language,$@)
-#: lib/Publican/Builder/DocBook.pm:1966 lib/Publican/Builder/DocBook.pm:3783
+#: lib/Publican/Builder/DocBook.pm:1966
+#: lib/Publican/Builder/DocBook.pm:3783
 msgid "Cannot create plugin for language '%1': %2"
 msgstr "Impossible de créer de greffon pour la langue « %1 » : %2"
 
@@ -503,7 +606,8 @@ msgstr "Impossible de trouver l'url du GIT pour l'ouvrage %1"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #. ("$main_file.xml")
-#: lib/Publican/Builder/DocBook4.pm:582 lib/Publican/Builder/DocBook5.pm:602
+#: lib/Publican/Builder/DocBook4.pm:582
+#: lib/Publican/Builder/DocBook5.pm:602
 msgid "Cannot locate main XML file: '%1'"
 msgstr "Impossible de localiser le fichier XML principal : « %1 »"
 
@@ -515,7 +619,8 @@ msgstr "Impossible de localiser la balise productname dans le fichier Info !"
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: bin/publican:1509
 msgid "Cannot locate productnumber tag in Info file!"
-msgstr "Impossible de localiser la balise productnumber dans le fichier Info !"
+msgstr ""
+"Impossible de localiser la balise productnumber dans le fichier Info !"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: bin/publican:1491
@@ -525,7 +630,9 @@ msgstr "Impossible de localiser la balise title dans le fichier Info !"
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: lib/Publican.pm:380
 msgid "Choose the formatter to use when creating txt output."
-msgstr "Choisir le générateur de format à utiliser lors de la création de la sortie txt"
+msgstr ""
+"Choisir le générateur de format à utiliser lors de la création de la sortie "
+"txt"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #. ($publican->param('tmp_dir'))
@@ -545,13 +652,19 @@ msgstr "Code"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: bin/publican:109
-msgid "Comma-separated list of formats, for example: html,pdf,html-single,html-desktop,txt,epub"
-msgstr "Liste, avec une virgule comme séparateur, des formats, par exemple : html,pdf,html-single,html-desktop,txt,epub"
+msgid ""
+"Comma-separated list of formats, for example: html,pdf,html-single,html-"
+"desktop,txt,epub"
+msgstr ""
+"Liste, avec une virgule comme séparateur, des formats, par exemple : "
+"html,pdf,html-single,html-desktop,txt,epub"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: bin/publican:112
 msgid "Comma-separated list of languages, for example: en-US,de-DE,all"
-msgstr "Liste, avec une virgule comme séparateur, des langues, par exemple : en-US,de-DE,all"
+msgstr ""
+"Liste, avec une virgule comme séparateur, des langues, par exemple : en-"
+"US,de-DE,all"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: bin/publican:477
@@ -559,13 +672,15 @@ msgstr "Liste, avec une virgule comme séparateur, des langues, par exemple : en
 msgid "Command actions"
 msgstr "Les actions valides sont :"
 
+# translation auto-copied from project Publican Users' Guide, version 3, document Publican_Commands
 #: bin/publican:452
 msgid "Command options"
-msgstr ""
+msgstr "Options de commande"
 
+# translation auto-copied from project Publican Users' Guide, version 3, document Command_summary
 #: bin/publican:447
 msgid "Command summary"
-msgstr ""
+msgstr "Résumé des commandes"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: lib/Publican.pm:162
@@ -575,7 +690,9 @@ msgstr "Conditions pour l'élagage du XML avant transformation."
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: bin/publican:770
 msgid "Config file exists, you must supply a non-existent filename."
-msgstr "Fichier de configuration existant, vous devez fournir un nom de fichier nouveau."
+msgstr ""
+"Fichier de configuration existant, vous devez fournir un nom de fichier "
+"nouveau."
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #. ($configfile)
@@ -586,7 +703,9 @@ msgstr "Fichier de configuration introuvable : %1"
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: lib/Publican/Builder.pm:876
 msgid "Config parameter 'scm' not found; treating set as standalone."
-msgstr "Paramètre de configuration « scm » introuvable ; traitement de l'ensemble comme étant autonome."
+msgstr ""
+"Paramètre de configuration « scm » introuvable ; traitement de l'ensemble "
+"comme étant autonome."
 
 #: bin/publican:513
 msgid "Configuration summary"
@@ -608,7 +727,7 @@ msgstr "Copier le contenu Web installé d'une estampille sur un autre site"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #. ($lang)
-#: lib/Publican/Translate.pm:316
+#: lib/Publican/Translate.pm:317
 msgid "Could not create a Publican::Localise object for language: %1"
 msgstr "Impossible de créer un objet Publican::Localise pour la langue : %1"
 
@@ -621,24 +740,32 @@ msgstr "Impossible de créer un objet Publican::Localise pour la langue : %1"
 #. ("\$tmp_dir/\$lang/\$format/OEBPS/Common_Content/css/lang.css")
 #. ($content_file)
 #. ($file)
-#: bin/fix-zanata-map:75 bin/publican:496 bin/publican:562
-#: lib/Publican.pm:1594 lib/Publican/Builder/DocBook.pm:1152
-#: lib/Publican/Builder/DocBook.pm:1202 lib/Publican/Builder/DocBook4.pm:272
-#: lib/Publican/Builder/DocBook4.pm:324 lib/Publican/Builder/DocBook5.pm:280
-#: lib/Publican/Builder/DocBook5.pm:343 lib/Publican/CreateBook.pm:687
-#: lib/Publican/Translate.pm:248 lib/Publican/XmlClean.pm:546
+#: bin/fix-zanata-map:75
+#: bin/publican:496
+#: bin/publican:562
+#: lib/Publican.pm:1594
+#: lib/Publican/Builder/DocBook.pm:1152
+#: lib/Publican/Builder/DocBook.pm:1202
+#: lib/Publican/Builder/DocBook4.pm:272
+#: lib/Publican/Builder/DocBook4.pm:324
+#: lib/Publican/Builder/DocBook5.pm:280
+#: lib/Publican/Builder/DocBook5.pm:343
+#: lib/Publican/CreateBook.pm:687
+#: lib/Publican/Translate.pm:249
+#: lib/Publican/XmlClean.pm:546
 msgid "Could not open %1 for output!"
 msgstr "Impossible d'ouvrir %1 en sortie !"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #. ($out_file,$@)
-#: lib/Publican/Builder/DocBook.pm:1414 lib/Publican/CreateBrand.pm:127
+#: lib/Publican/Builder/DocBook.pm:1414
+#: lib/Publican/CreateBrand.pm:127
 msgid "Could not open %1 for output: %2"
 msgstr "Impossible d'ouvrir %1 en sortie : %2"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #. ($@)
-#: lib/Publican/WebSite.pm:1422
+#: lib/Publican/WebSite.pm:1423
 msgid "Could not open dump file for output: %1"
 msgstr "Impossible d'ouvrir le fichier de vidage en sortie : %1"
 
@@ -650,7 +777,8 @@ msgstr "Impossible d'ouvrir le fichier des entités. %1"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #. ($out_file)
-#: lib/Publican/CreateBrand.pm:245 lib/Publican/CreateBrand.pm:318
+#: lib/Publican/CreateBrand.pm:245
+#: lib/Publican/CreateBrand.pm:318
 msgid "Could not open file %1 for output!"
 msgstr "Impossible d'ouvrir le fichier %1 en sortie !"
 
@@ -666,7 +794,7 @@ msgstr "Impossible d'ouvrir le fichier README en sortie !"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #. ($@)
-#: lib/Publican/WebSite.pm:1535
+#: lib/Publican/WebSite.pm:1536
 msgid "Could not open footer file for output: %1"
 msgstr "Impossible d'ouvrir le fichier de pied de page en sortie : %1"
 
@@ -678,7 +806,7 @@ msgstr "Impossible d'ouvrir le fichier d'icône. %1"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #. ($@)
-#: lib/Publican/WebSite.pm:1528
+#: lib/Publican/WebSite.pm:1529
 msgid "Could not open search file for output: %1"
 msgstr "Impossible d'ouvrir le fichier de recherche en sortie : %1"
 
@@ -726,7 +854,9 @@ msgstr "Supprimer une entrée de la base de données"
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: lib/Publican.pm:367
 msgid "Depth of sections to include in the main table of contents."
-msgstr "Profondeur de subdivision à incorporer dans la table des matières principale."
+msgstr ""
+"Profondeur de subdivision à incorporer dans la table des matières principale."
+""
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: bin/publican:164
@@ -749,7 +879,8 @@ msgid "Directory to use for building."
 msgstr "Répertoire à utiliser pour la construction."
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
-#: lib/Publican.pm:241 lib/Publican.pm:257
+#: lib/Publican.pm:241
+#: lib/Publican.pm:257
 msgid "Directory where images are located."
 msgstr "Répertoire où sont situées les images."
 
@@ -812,33 +943,43 @@ msgstr "Accueil du document"
 msgid "Document Language"
 msgstr "Langue du document"
 
+# translation auto-copied from project Satellite6 Foreman, version 6.0, document locale/foreman
 #: lib/Publican/WebSite.pm:118
-#, fuzzy
 msgid "Documentation"
-msgstr "Documentation du produitPrise en charge"
+msgstr "Documentation"
 
 #: lib/Publican/WebSite.pm:121
 msgid "Dump the publican database to an XML file."
 msgstr ""
 
+# translation auto-copied from project Publican Users' Guide, version 3, document Dump_File
 #: lib/Publican/WebSite.pm:224
 msgid "EPUB"
-msgstr ""
+msgstr "EPUB"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #. ($attr)
 #: lib/Publican/XmlClean.pm:664
-msgid "ERROR: Banned attribute (%1) detected. Discuss this with your brands owners if you think this is in error."
-msgstr "ERREUR : attribut interdit (%1) détecté. À discuter avec les propriétaires de la marque si vous pensez que c'est à tort."
+msgid ""
+"ERROR: Banned attribute (%1) detected. Discuss this with your brands owners "
+"if you think this is in error."
+msgstr ""
+"ERREUR : attribut interdit (%1) détecté. À discuter avec les propriétaires "
+"de la marque si vous pensez que c'est à tort."
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #. ($tag)
 #: lib/Publican/XmlClean.pm:653
-msgid "ERROR: Banned tag (%1) detected. Discuss this with your brands owners if you think this is in error."
-msgstr "ERREUR : attribut interdit (%1) détecté. À discuter avec les propriétaires de la marque si vous pensez que c'est à tort."
+msgid ""
+"ERROR: Banned tag (%1) detected. Discuss this with your brands owners if you "
+"think this is in error."
+msgstr ""
+"ERREUR : attribut interdit (%1) détecté. À discuter avec les propriétaires "
+"de la marque si vous pensez que c'est à tort."
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
-#: lib/Publican/Builder/DocBook4.pm:686 lib/Publican/Builder/DocBook5.pm:681
+#: lib/Publican/Builder/DocBook4.pm:686
+#: lib/Publican/Builder/DocBook5.pm:681
 msgid "ERROR: Cannot find Author file Author_Group.xml."
 msgstr "ERREUR : Impossible de trouver l'auteur dans Author_Group.xml."
 
@@ -846,7 +987,9 @@ msgstr "ERREUR : Impossible de trouver l'auteur dans Author_Group.xml."
 #. ($revnumber,q|\d[0-9.]*-\d[0-9.]*|)
 #: lib/Publican/Builder/DocBook.pm:2473
 msgid "ERROR: revnumber '%1' does not match required format %2. e.g. '1-1'.\n"
-msgstr "ERREUR : le numéro de révision « %1 » n'a pas le format requis %2. ex. « 1.1 »\n"
+msgstr ""
+"ERREUR : le numéro de révision « %1 » n'a pas le format requis %2. ex. « 1."
+"1 »\n"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: lib/Publican.pm:229
@@ -885,42 +1028,55 @@ msgid "English is newer"
 msgstr "La version anglaise est plus récente"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
-#: lib/Publican/CreateBook.pm:260 lib/Publican/CreateBook.pm:520
+#: lib/Publican/CreateBook.pm:260
+#: lib/Publican/CreateBook.pm:520
 msgid "Enter a short description here."
 msgstr "Entrez ici une courte description."
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
-#: lib/Publican/CreateBook.pm:172 lib/Publican/CreateBook.pm:323
-#: lib/Publican/CreateBook.pm:432 lib/Publican/CreateBook.pm:584
+#: lib/Publican/CreateBook.pm:172
+#: lib/Publican/CreateBook.pm:323
+#: lib/Publican/CreateBook.pm:432
+#: lib/Publican/CreateBook.pm:584
 msgid "Enter your email address here."
 msgstr "Entrez ici votre adresse électronique."
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
-#: lib/Publican/CreateBook.pm:153 lib/Publican/CreateBook.pm:314
-#: lib/Publican/CreateBook.pm:414 lib/Publican/CreateBook.pm:576
+#: lib/Publican/CreateBook.pm:153
+#: lib/Publican/CreateBook.pm:314
+#: lib/Publican/CreateBook.pm:414
+#: lib/Publican/CreateBook.pm:576
 msgid "Enter your first name here."
 msgstr "Entrez ici votre nom."
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
-#: lib/Publican/CreateBook.pm:162 lib/Publican/CreateBook.pm:422
+#: lib/Publican/CreateBook.pm:162
+#: lib/Publican/CreateBook.pm:422
 msgid "Enter your organisation's name here."
 msgstr "Entrez ici le nom de votre Compagnie."
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
-#: lib/Publican/CreateBook.pm:167 lib/Publican/CreateBook.pm:427
+#: lib/Publican/CreateBook.pm:167
+#: lib/Publican/CreateBook.pm:427
 msgid "Enter your organisational division here."
 msgstr "Entrez ici le nom de votre service dans la Compagnie."
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
-#: lib/Publican/CreateBook.pm:156 lib/Publican/CreateBook.pm:318
-#: lib/Publican/CreateBook.pm:417 lib/Publican/CreateBook.pm:580
+#: lib/Publican/CreateBook.pm:156
+#: lib/Publican/CreateBook.pm:318
+#: lib/Publican/CreateBook.pm:417
+#: lib/Publican/CreateBook.pm:580
 msgid "Enter your surname here."
 msgstr "Entrez ici votre prénom."
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: lib/Publican.pm:470
-msgid "Extra options to pass to wkhtmltopdf. e.g. wkhtmltopdf_opts: \"-O landscape -s A3\""
-msgstr "Options supplémentaires à passer à « wkhtmltopdf ». Ex : wkhtmltopdf_opts: \"-O landscape -s A3\""
+msgid ""
+"Extra options to pass to wkhtmltopdf. e.g. wkhtmltopdf_opts: \"-O landscape -"
+"s A3\""
+msgstr ""
+"Options supplémentaires à passer à « wkhtmltopdf ». Ex : wkhtmltopdf_opts: "
+"\"-O landscape -s A3\""
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #. ($@)
@@ -1001,7 +1157,8 @@ msgstr "ERREUR FATALE : %1 : %2 dans %3 à la ligne %4 : %5"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #. ($@)
-#: lib/Publican/Builder/DocBook.pm:551 lib/Publican/Builder/DocBook.pm:591
+#: lib/Publican/Builder/DocBook.pm:551
+#: lib/Publican/Builder/DocBook.pm:591
 #, fuzzy
 msgid "FATAL ERROR 4: %1"
 msgstr "ERREUR FATALE : %1"
@@ -1031,17 +1188,20 @@ msgstr "ERREUR FATALE : %1"
 #. ($xml_file,$@)
 #: lib/Publican/Builder/DocBook.pm:2320
 #, fuzzy
-msgid ""
-"FATAL ERROR 9: opening file %1:\n"
+msgid "FATAL ERROR 9: opening file %1:\n"
 "\t%2"
 msgstr "ERREUR FATALE : %1 : %2"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #. ($@)
-#: bin/db4-2-db5:54 lib/Publican/Builder.pm:562
-#: lib/Publican/Builder/DocBook4.pm:604 lib/Publican/Builder/DocBook5.pm:231
-#: lib/Publican/Builder/DocBook5.pm:236 lib/Publican/Builder/DocBook5.pm:306
-#: lib/Publican/Builder/DocBook5.pm:323 lib/Publican/Builder/DocBook5.pm:624
+#: bin/db4-2-db5:54
+#: lib/Publican/Builder.pm:562
+#: lib/Publican/Builder/DocBook4.pm:604
+#: lib/Publican/Builder/DocBook5.pm:231
+#: lib/Publican/Builder/DocBook5.pm:236
+#: lib/Publican/Builder/DocBook5.pm:306
+#: lib/Publican/Builder/DocBook5.pm:323
+#: lib/Publican/Builder/DocBook5.pm:624
 #: lib/Publican/Builder/DocBook5.pm:688
 msgid "FATAL ERROR: %1"
 msgstr "ERREUR FATALE : %1"
@@ -1051,15 +1211,22 @@ msgstr "ERREUR FATALE : %1"
 #. ($xml_file,$@)
 #. ($xsl_file,$@)
 #. ($rev_file,$@)
-#: lib/Publican.pm:1217 lib/Publican.pm:1240 lib/Publican.pm:1562
-#: lib/Publican.pm:1658 lib/Publican.pm:674
+#: lib/Publican.pm:1217
+#: lib/Publican.pm:1240
+#: lib/Publican.pm:1562
+#: lib/Publican.pm:1658
+#: lib/Publican.pm:674
 msgid "FATAL ERROR: %1: %2"
 msgstr "ERREUR FATALE : %1 : %2"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #. ($@->domain(),$@->code(),$@->file(),$@->line(),$@->message(),)
-#: bin/db4-2-db5:43 lib/Publican.pm:1207 lib/Publican.pm:1230
-#: lib/Publican.pm:1552 lib/Publican.pm:1648 lib/Publican.pm:663
+#: bin/db4-2-db5:43
+#: lib/Publican.pm:1207
+#: lib/Publican.pm:1230
+#: lib/Publican.pm:1552
+#: lib/Publican.pm:1648
+#: lib/Publican.pm:663
 #: lib/Publican/Builder/DocBook4.pm:594
 msgid "FATAL ERROR: %1:%2 in %3 on line %4: %5"
 msgstr "ERREUR FATALE : %1 : %2 dans %3 à la ligne %4 : %5"
@@ -1067,23 +1234,34 @@ msgstr "ERREUR FATALE : %1 : %2 dans %3 à la ligne %4 : %5"
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #. ($attr)
 #: lib/Publican/XmlClean.pm:347
-msgid "FATAL ERROR: profiling would prune root node. Do NOT set attributes to prune on in a root node. Offending attibute: %1"
-msgstr "ERREUR FATALE : le profilage a élagué le nœud racine. NE PAS définir d'attributs à élaguer dans un nœud racine. Attribut concerné : %1"
+msgid ""
+"FATAL ERROR: profiling would prune root node. Do NOT set attributes to prune "
+"on in a root node. Offending attibute: %1"
+msgstr ""
+"ERREUR FATALE : le profilage a élagué le nœud racine. NE PAS définir "
+"d'attributs à élaguer dans un nœud racine. Attribut concerné : %1"
 
 #. ($VR,'^([0-9.]*)-([0-9.]*)$/')
 #: lib/Publican.pm:1677
 msgid "FATAL ERROR: revnumber (%1) does not match the required format of '%2'"
-msgstr "ERREUR FATALE : revnumber (%1) ne correspond pas au format requis par « %2 »"
+msgstr ""
+"ERREUR FATALE : revnumber (%1) ne correspond pas au format requis par « %2 »"
 
 #. ('^([0-9.]*)-([0-9.]*)$/')
 #: lib/Publican.pm:1670
-msgid "FATAL ERROR: revnumber missing or empty, it must match the required format of '%1'"
-msgstr "ERREUR FATALE : revnumber absent ou vide, il doit correspondre le format requis par « %1 »"
+msgid ""
+"FATAL ERROR: revnumber missing or empty, it must match the required format "
+"of '%1'"
+msgstr ""
+"ERREUR FATALE : revnumber absent ou vide, il doit correspondre le format "
+"requis par « %1 »"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: lib/Publican/Builder/DocBook.pm:1117
 msgid "FOP error, PDF generation failed. Check log for details."
-msgstr "Erreur de FOP, échec de la création du PDF. Voir le journal pour des précisions."
+msgstr ""
+"Erreur de FOP, échec de la création du PDF. Voir le journal pour des "
+"précisions."
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #. ($rpmbuild,$!)
@@ -1093,8 +1271,11 @@ msgstr "Échec de l'exécution de %1, erreur n° : %2"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #. ($@)
-#: lib/Publican.pm:1248 lib/Publican.pm:1350 lib/Publican.pm:888
-#: lib/Publican/Builder/DocBook.pm:1063 lib/Publican/Builder/DocBook4.pm:622
+#: lib/Publican.pm:1248
+#: lib/Publican.pm:1350
+#: lib/Publican.pm:888
+#: lib/Publican/Builder/DocBook.pm:1063
+#: lib/Publican/Builder/DocBook4.pm:622
 msgid "Failed to load Win32::TieRegistry module. Error: %1"
 msgstr "Échec du chargement du module Win32::TieRegistry. Erreur : %1"
 
@@ -1128,7 +1309,7 @@ msgstr "Échec du chargement du fichier de configuration utilisateur : %1"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #. ($pot_file,$@)
-#: lib/Publican/Translate.pm:935
+#: lib/Publican/Translate.pm:944
 msgid "Failed to open output file %1. Error: %2"
 msgstr "Échec à l'ouverture du fichier de sortie %1. Erreur : %2"
 
@@ -1139,21 +1320,28 @@ msgstr "ERREUR FATALE : Échec d'exportation. Ouvrage : %1. Erreur n° : %2
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #. ($pot_file,$po_file)
-#: lib/Publican/Translate.pm:359
-msgid "Fatal Error: msgmerge failed to merge updates. POT File: %1. Po File: %2"
-msgstr "Erreur fatale : msgmerge a échoué à fusionner les mises à jour. Fichier POT : %1. Fichier PO : %2"
+#: lib/Publican/Translate.pm:360
+msgid ""
+"Fatal Error: msgmerge failed to merge updates. POT File: %1. Po File: %2"
+msgstr ""
+"Erreur fatale : msgmerge a échoué à fusionner les mises à jour. Fichier POT :"
+" %1. Fichier PO : %2"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #. ($book,$?)
 #: lib/Publican/Builder.pm:982
 msgid "Fatal error: Book failed to build! Book: %1. Error Number: %2"
-msgstr "Erreur fatale : échec lors de la construction de l'ouvrage ! Ouvrage : %1. Erreur n° : %2"
+msgstr ""
+"Erreur fatale : échec lors de la construction de l'ouvrage ! Ouvrage : %1. "
+"Erreur n° : %2"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #. ($book,$?)
 #: lib/Publican/Builder.pm:966
 msgid "Fatal error: Book failed to run clean_ids! Book: %1. Error Number: %2"
-msgstr "Erreur fatale : échec à l'exécution de clean_ids ! Ouvrage : %1. Erreur n° : %2"
+msgstr ""
+"Erreur fatale : échec à l'exécution de clean_ids ! Ouvrage : %1. Erreur n° : "
+"%2"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #. ($book)
@@ -1162,7 +1350,7 @@ msgid "Fetching %1 from scm"
 msgstr "Extraction de %1 à partir de scm"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
-#: lib/Publican/Translate.pm:1073
+#: lib/Publican/Translate.pm:1082
 msgid "File Name"
 msgstr "Nom du fichier"
 
@@ -1173,25 +1361,33 @@ msgid "Finish building %1"
 msgstr "Construction de %1 terminée"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
-#: lib/Publican/Builder/DocBook4.pm:145 lib/Publican/Builder/DocBook5.pm:144
+#: lib/Publican/Builder/DocBook4.pm:145
+#: lib/Publican/Builder/DocBook5.pm:144
 msgid "Finish preprocess\n"
 msgstr "Pré-processus terminé\n"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #. ($format)
-#: lib/Publican/Builder/DocBook.pm:167 lib/Publican/Builder/DocBook.pm:402
+#: lib/Publican/Builder/DocBook.pm:167
+#: lib/Publican/Builder/DocBook.pm:402
 msgid "Finished %1"
 msgstr "%1 terminé"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: lib/Publican.pm:135
 msgid "For HTML, should the first section be on the same page as its parent?"
-msgstr "Pour HTML, le premier paragraphe doit-il être sur la même page que son parent ?"
+msgstr ""
+"Pour HTML, le premier paragraphe doit-il être sur la même page que son "
+"parent ?"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: lib/Publican.pm:142
-msgid "For HTML, what is the deepest level of nesting at which a section should be split onto its own page?"
-msgstr "Pour HTML, quel est le plus grand niveau d'imbrication des découpages de paragraphes dans leurs pages ?"
+msgid ""
+"For HTML, what is the deepest level of nesting at which a section should be "
+"split onto its own page?"
+msgstr ""
+"Pour HTML, quel est le plus grand niveau d'imbrication des découpages de "
+"paragraphes dans leurs pages ?"
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican/WebSite.pm:210
@@ -1200,15 +1396,19 @@ msgstr "Formats"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: lib/Publican.pm:454
-msgid "Full path for the publican site configuration file for non standard RPM websites."
-msgstr "Chemin complet pour le fichier de configuration du site publican pour les sites non standard de RPM."
+msgid ""
+"Full path for the publican site configuration file for non standard RPM "
+"websites."
+msgstr ""
+"Chemin complet pour le fichier de configuration du site publican pour les "
+"sites non standard de RPM."
 
 #: lib/Publican/WebSite.pm:92
 msgid "Full path to the template directory."
 msgstr ""
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
-#: lib/Publican/Translate.pm:1075
+#: lib/Publican/Translate.pm:1084
 msgid "Fuzzy"
 msgstr "Approximatifs"
 
@@ -1219,7 +1419,8 @@ msgstr ""
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: lib/Publican.pm:246
 msgid "Generate table of contents down to the given section depth."
-msgstr "Crée une table des matières jusqu'à la profondeur de subdivision donnée."
+msgstr ""
+"Crée une table des matières jusqu'à la profondeur de subdivision donnée."
 
 #: lib/Publican/WebSite.pm:114
 msgid "Google site search"
@@ -1254,7 +1455,8 @@ msgid "Information"
 msgstr "Information"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
-#: lib/Publican/CreateBook.pm:331 lib/Publican/CreateBook.pm:592
+#: lib/Publican/CreateBook.pm:331
+#: lib/Publican/CreateBook.pm:592
 msgid "Initial creation by publican"
 msgstr "Création initiale par Publican"
 
@@ -1279,15 +1481,21 @@ msgstr "Installer le contenu Web pour une marque."
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #. ($lang)
-#: lib/Publican/Builder/DocBook4.pm:119 lib/Publican/Builder/DocBook5.pm:118
+#: lib/Publican/Builder/DocBook4.pm:119
+#: lib/Publican/Builder/DocBook5.pm:118
 msgid "Invalid build request: language directory %1 does not exist."
-msgstr "Demande de construction non valide : le répertoire de la langue %1 n'existe pas."
+msgstr ""
+"Demande de construction non valide : le répertoire de la langue %1 n'existe "
+"pas."
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #. ($lang)
-#: lib/Publican/Builder/DocBook4.pm:167 lib/Publican/Builder/DocBook5.pm:166
+#: lib/Publican/Builder/DocBook4.pm:167
+#: lib/Publican/Builder/DocBook5.pm:166
 msgid "Invalid build request: no PO files exist for language %1"
-msgstr "Demande de construction non valide : il n'y a aucun fichier PO pour la langue %1"
+msgstr ""
+"Demande de construction non valide : il n'y a aucun fichier PO pour la "
+"langue %1"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #. ($in_date)
@@ -1299,7 +1507,9 @@ msgstr "Date non valide : « %1 » dans l'historique des révisions."
 #. ($key,$value,$constraint)
 #: lib/Publican.pm:824
 msgid "Invalid format for %1. Value (%2) does not conform to constraint (%3)"
-msgstr "Format invalide pour %1. La valeur (%2) n'est pas conforme aux exigences (%3)"
+msgstr ""
+"Format invalide pour %1. La valeur (%2) n'est pas conforme aux exigences "
+"(%3)"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #. ($lang)
@@ -1320,7 +1530,9 @@ msgstr "Le contenu est-il confidentiel ?"
 
 #: bin/publican:174
 msgid "Keep previous msgid when fuzzy matches are detected in PO updates."
-msgstr "Conserver les msgid précédents quand des correspondances approximatives sont détectées dans les mises à jour des PO."
+msgstr ""
+"Conserver les msgid précédents quand des correspondances approximatives sont "
+"détectées dans les mises à jour des PO."
 
 # translation auto-copied from project Publican, version 3, document publican, author samfreemanz
 #: lib/Publican/Builder/DocBook.pm:756
@@ -1345,7 +1557,8 @@ msgstr "Langue dans laquelle le XML est rédigé."
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: lib/Publican.pm:252
 msgid "Languages to replace with xml_lang regardless of translation status."
-msgstr "Langues à remplacer par xml_lang quel que soit l'état de la traduction."
+msgstr ""
+"Langues à remplacer par xml_lang quel que soit l'état de la traduction."
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican/Builder/DocBook.pm:753
@@ -1366,18 +1579,20 @@ msgstr "Licence utilisée par ce paquet."
 #. ("$main_file.xml")
 #: lib/Publican/Builder/DocBook.pm:2858
 msgid "Main XML file (%1) can not be calculated before building."
-msgstr "Le fichier XML principal (%1) ne peut pas être déterminé avant construction."
+msgstr ""
+"Le fichier XML principal (%1) ne peut pas être déterminé avant construction."
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #. ($po_file,$xml_file,$out_file)
-#: lib/Publican/Translate.pm:190
+#: lib/Publican/Translate.pm:191
 msgid "Merging %1 >> %2 -> %3"
 msgstr "Fusionner %1 >> %2 -> %3"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: bin/publican:329
 msgid "Migrate a website DataBase from Publican < 3 to Publican 3."
-msgstr "Migration de la base de données d'un site Web Publican < 3 vers Publican 3."
+msgstr ""
+"Migration de la base de données d'un site Web Publican < 3 vers Publican 3."
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #. ('revision')
@@ -1386,11 +1601,15 @@ msgstr "Migration de la base de données d'un site Web Publican < 3 vers Publica
 #. ('surname')
 #. ('email')
 #. ('revnumber')
-#: lib/Publican/Builder/DocBook.pm:2413 lib/Publican/Builder/DocBook.pm:2423
-#: lib/Publican/Builder/DocBook.pm:2436 lib/Publican/Builder/DocBook.pm:2445
-#: lib/Publican/Builder/DocBook.pm:2454 lib/Publican/Builder/DocBook.pm:2463
+#: lib/Publican/Builder/DocBook.pm:2413
+#: lib/Publican/Builder/DocBook.pm:2423
+#: lib/Publican/Builder/DocBook.pm:2436
+#: lib/Publican/Builder/DocBook.pm:2445
+#: lib/Publican/Builder/DocBook.pm:2454
+#: lib/Publican/Builder/DocBook.pm:2463
 msgid "Missing mandatory field '%1' in revision history."
-msgstr "Il manque le champ obligatoire « %1 » dans l'historique des révisions."
+msgstr ""
+"Il manque le champ obligatoire « %1 » dans l'historique des révisions."
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #. ('member')
@@ -1400,24 +1619,37 @@ msgstr "Il manque le champ obligatoire « %1 » dans la révision."
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: lib/Publican.pm:1435
-msgid "NOTE: These lists of tags and attributes are brand specific and are not part of Publican itself."
-msgstr "NOTE : cette liste de balises et d'attributs est propre aux marques et ne fait pas partie de Publican en soi."
+msgid ""
+"NOTE: These lists of tags and attributes are brand specific and are not part "
+"of Publican itself."
+msgstr ""
+"NOTE : cette liste de balises et d'attributs est propre aux marques et ne "
+"fait pas partie de Publican en soi."
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
-#: lib/Publican/CreateBook.pm:243 lib/Publican/CreateBook.pm:503
+#: lib/Publican/CreateBook.pm:243
+#: lib/Publican/CreateBook.pm:503
 msgid "NOTE: the href does not contain a language! This is CORRECT!"
 msgstr "NOTE : le href ne contient pas de langue ! Ceci est correct !"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: lib/Publican.pm:464
-msgid "Name of site package for non standard RPM websites. Required to ensure the site is installed."
-msgstr "Nom du paquet de site pour sites Web avec RPM non standard. Requis pour s'assurer que le site est installé."
+msgid ""
+"Name of site package for non standard RPM websites. Required to ensure the "
+"site is installed."
+msgstr ""
+"Nom du paquet de site pour sites Web avec RPM non standard. Requis pour "
+"s'assurer que le site est installé."
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: lib/Publican.pm:184
 #, fuzzy
-msgid "Name of this document. Fetched from title tag in xml_lang/TYPE_Info.xml if not set in cfg file."
-msgstr "Nom de ce paquet. Extrait de la balise « title » dans xml_lang/Type_Info.xml s'il n'est pas précisé dans le fichier cfg."
+msgid ""
+"Name of this document. Fetched from title tag in xml_lang/TYPE_Info.xml if "
+"not set in cfg file."
+msgstr ""
+"Nom de ce paquet. Extrait de la balise « title » dans xml_lang/Type_Info.xml "
+"s'il n'est pas précisé dans le fichier cfg."
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: lib/Publican/TreeView.pm:271
@@ -1427,18 +1659,24 @@ msgstr "Pas de fichiers d'images non utilisés"
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: bin/publican:819
 msgid ""
-"Now that your site is migrated you will need to rebuild your brands and install the brands web payload on your site.\n"
+"Now that your site is migrated you will need to rebuild your brands and "
+"install the brands web payload on your site.\n"
 "\n"
-"It is also recommended that you rebuild and reinstall all books to ensure the layout is properly migrated."
+"It is also recommended that you rebuild and reinstall all books to ensure "
+"the layout is properly migrated."
 msgstr ""
-"Maintenant que le site a migré, il est nécessaire de reconstruire les estampilles et installer le chargement Web des estampilles sur le site.\n"
+"Maintenant que le site a migré, il est nécessaire de reconstruire les "
+"estampilles et installer le chargement Web des estampilles sur le site.\n"
 "\n"
-"Il est également recommandé de reconstruire et réinstaller tous les ouvrages pour s'assurer que la disposition a correctement migré."
+"Il est également recommandé de reconstruire et réinstaller tous les ouvrages "
+"pour s'assurer que la disposition a correctement migré."
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: bin/publican:857
 msgid "One of add or del is required when updating the database"
-msgstr "Soit « add », soit « del » est requis lors de la mise à jour de la base de données"
+msgstr ""
+"Soit « add », soit « del » est requis lors de la mise à jour de la base de "
+"données"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: bin/publican:668
@@ -1481,8 +1719,11 @@ msgstr "Surcharge le chemin vers le répertoire Common_Content"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: lib/Publican.pm:439
-msgid "Override the book name, bottom level, menu label on a Publican website."
-msgstr "Remplace l'étiquette de menu du nom de l'ouvrage, niveau bas, sur un site Web Publican."
+msgid ""
+"Override the book name, bottom level, menu label on a Publican website."
+msgstr ""
+"Remplace l'étiquette de menu du nom de l'ouvrage, niveau bas, sur un site "
+"Web Publican."
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: lib/Publican.pm:489
@@ -1506,8 +1747,13 @@ msgstr "Remplace le chemin vers la TOC par défaut."
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: lib/Publican.pm:432
-msgid "Override the default search form for a Publican website. By default this will use Google search and do a site search if web_host is set."
-msgstr "Remplace la forme de recherche par défaut d'un site Web Publican. Par défaut, elle utilise une recherche Google et effectue la recherche sur le site si web_host est défini."
+msgid ""
+"Override the default search form for a Publican website. By default this "
+"will use Google search and do a site search if web_host is set."
+msgstr ""
+"Remplace la forme de recherche par défaut d'un site Web Publican. Par "
+"défaut, elle utilise une recherche Google et effectue la recherche sur le "
+"site si web_host est défini."
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: lib/Publican.pm:350
@@ -1522,25 +1768,37 @@ msgstr "Remplace le chemin du modèle par défaut."
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: lib/Publican.pm:444
 msgid "Override the product, top level, menu label on a Publican website."
-msgstr "Remplace l'étiquette de menu du produit, niveau haut, sur un site Web Publican."
+msgstr ""
+"Remplace l'étiquette de menu du produit, niveau haut, sur un site Web "
+"Publican."
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: bin/publican:161
-msgid "Override the tool to use when creating PDFs. Valid options are wkhtmltopdf and fop."
-msgstr "Remplace l'outil à utiliser pour créer les PDF. Les options valides sont  wkhtmltopdf et fop."
+msgid ""
+"Override the tool to use when creating PDFs. Valid options are wkhtmltopdf "
+"and fop."
+msgstr ""
+"Remplace l'outil à utiliser pour créer les PDF. Les options valides sont  "
+"wkhtmltopdf et fop."
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: lib/Publican.pm:449
-msgid "Override the version, middle level, menu label on a Publican website. To hide this menu item set this to: UNUSED"
-msgstr "Remplace l'étiquette de menu de la version, niveau médian, sur un site Web Publican. Pour cacher cet élément de menu, définissez sa valeur à UNUSED."
+msgid ""
+"Override the version, middle level, menu label on a Publican website. To "
+"hide this menu item set this to: UNUSED"
+msgstr ""
+"Remplace l'étiquette de menu de la version, niveau médian, sur un site Web "
+"Publican. Pour cacher cet élément de menu, définissez sa valeur à UNUSED."
 
+# translation auto-copied from project Publican Users' Guide, version 3, document Dump_File
 #: lib/Publican/WebSite.pm:223
 msgid "PDF"
-msgstr ""
+msgstr "PDF"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #. ($po_file)
-#: lib/Publican/Builder/DocBook4.pm:202 lib/Publican/Builder/DocBook5.pm:201
+#: lib/Publican/Builder/DocBook4.pm:202
+#: lib/Publican/Builder/DocBook5.pm:201
 msgid "PO file '%1' not found! Using base XML!"
 msgstr "Fichier PO « %1 » non trouvé ! Utilisation du XML de base !"
 
@@ -1586,12 +1844,14 @@ msgid "Path to publican content."
 msgstr "Chemin vers le contenu Publican"
 
 # translation auto-copied from project Publican, version 3, document publican
-#: lib/Publican/CreateBook.pm:376 lib/Publican/CreateBook.pm:638
+#: lib/Publican/CreateBook.pm:376
+#: lib/Publican/CreateBook.pm:638
 msgid "Preface"
 msgstr "Préface"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
-#: lib/Publican/Builder/DocBook4.pm:143 lib/Publican/Builder/DocBook5.pm:142
+#: lib/Publican/Builder/DocBook4.pm:143
+#: lib/Publican/Builder/DocBook5.pm:142
 msgid "Preprocessing xml files...\n"
 msgstr "Prétraitement des fichiers xml...\n"
 
@@ -1632,14 +1892,16 @@ msgstr "Afficher des messages supplémentaires ?"
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #. ($file)
 #. ($xml_file)
-#: lib/Publican/Translate.pm:129 lib/Publican/Translate.pm:98
+#: lib/Publican/Translate.pm:129
+#: lib/Publican/Translate.pm:98
 msgid "Processing file %1"
 msgstr "Traitement du fichier %1"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #. ($pot_file,$po_file)
 #. ($file,$out_file)
-#: lib/Publican/Translate.pm:335 lib/Publican/XmlClean.pm:996
+#: lib/Publican/Translate.pm:336
+#: lib/Publican/XmlClean.pm:996
 msgid "Processing file %1 -> %2"
 msgstr "Traitement du fichier %1 -> %2"
 
@@ -1654,8 +1916,12 @@ msgstr "Liste de produits"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: lib/Publican.pm:301
-msgid "Product this package covers. Fetched from productname tag in xml_lang/TYPE_Info.xml"
-msgstr "Produits concernés par ce paquet. Extrait de la balise productname dans xml_lang/TYPE_Info.xml"
+msgid ""
+"Product this package covers. Fetched from productname tag in xml_lang/"
+"TYPE_Info.xml"
+msgstr ""
+"Produits concernés par ce paquet. Extrait de la balise productname dans "
+"xml_lang/TYPE_Info.xml"
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican/Builder/DocBook.pm:2714
@@ -1686,12 +1952,16 @@ msgstr "Téléverser des traductions dans Zanata."
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: lib/Publican/Builder/DocBook.pm:1712
-msgid "Reached the maximum page ordering weight(30) that drupal can support. The rest of the pages will be ordered in alphabetical order\n"
-msgstr "Poids maximal (30) pour le tri des pages, que Drupal peut prendre en charge, atteint. Le reste des pages sera placé dans l'ordre alphabétique.\n"
+msgid ""
+"Reached the maximum page ordering weight(30) that drupal can support. The "
+"rest of the pages will be ordered in alphabetical order\n"
+msgstr ""
+"Poids maximal (30) pour le tri des pages, que Drupal peut prendre en charge, "
+"atteint. Le reste des pages sera placé dans l'ordre alphabétique.\n"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #. ($lang)
-#: lib/Publican/Translate.pm:1152
+#: lib/Publican/Translate.pm:1161
 msgid "Remaining hours for %1"
 msgstr "Nombre d'heures restantes pour %1"
 
@@ -1725,8 +1995,10 @@ msgstr "Rapporter le contenu du site Web"
 msgid "Repository from which to fetch remote set books."
 msgstr "Dépôt d'extraction des ouvrages distants de la collection."
 
-#: lib/Publican.pm:1569 lib/Publican/Builder/DocBook4.pm:240
-#: lib/Publican/Builder/DocBook5.pm:248 lib/Publican/CreateBook.pm:303
+#: lib/Publican.pm:1569
+#: lib/Publican/Builder/DocBook4.pm:240
+#: lib/Publican/Builder/DocBook5.pm:248
+#: lib/Publican/CreateBook.pm:303
 #: lib/Publican/CreateBook.pm:564
 msgid "Revision History"
 msgstr "Historique des versions"
@@ -1745,24 +2017,31 @@ msgstr "Exécuter clean_ids pour le XML source"
 #. ($0)
 #: bin/publican:429
 msgid "Run: '%1 <action> --help' for details on action usage"
-msgstr "Exécuter : « %1 <action> --help » pour des précisions sur l'utilisation d'une action"
+msgstr ""
+"Exécuter : « %1 <action> --help » pour des précisions sur l'utilisation "
+"d'une action"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: bin/publican:1115
-msgid "Running clean process to ensure stale content is not bundled in packages."
-msgstr "Exécution du processus de nettoyage pour s'assurer qu'un contenu dépassé n'est pas incorporé dans les paquets."
+msgid ""
+"Running clean process to ensure stale content is not bundled in packages."
+msgstr ""
+"Exécution du processus de nettoyage pour s'assurer qu'un contenu dépassé "
+"n'est pas incorporé dans les paquets."
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: lib/Publican/Builder.pm:960
 msgid "Running clean_ids to prevent inter-book ID clashes."
-msgstr "Exécution de clean_ids pour prévenir les conflits entre ID d'ouvrages."
+msgstr ""
+"Exécution de clean_ids pour prévenir les conflits entre ID d'ouvrages."
 
 #: lib/Publican/WebSite.pm:220
 msgid "Scroll to category"
 msgstr "Faites défiler jusqu'à catégorie"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
-#: lib/Publican/WebSite.pm:2229 lib/Publican/WebSite.pm:979
+#: lib/Publican/WebSite.pm:2230
+#: lib/Publican/WebSite.pm:980
 msgid "Search"
 msgstr "Rechercher"
 
@@ -1779,7 +2058,9 @@ msgstr "Sélectionnez votre version"
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: lib/Publican.pm:277
 msgid "Semicolon-separated list of menu categories for the desktop package."
-msgstr "Liste, avec point-virgule comme séparateur, des catégories de menu pour le paquet bureau. "
+msgstr ""
+"Liste, avec point-virgule comme séparateur, des catégories de menu pour le "
+"paquet bureau. "
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: bin/publican:122
@@ -1788,14 +2069,19 @@ msgstr "Paramétrer le contenu à construire pour publication"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #. ($lang)
-#: lib/Publican/Builder/DocBook4.pm:115 lib/Publican/Builder/DocBook5.pm:114
+#: lib/Publican/Builder/DocBook4.pm:115
+#: lib/Publican/Builder/DocBook5.pm:114
 msgid "Setting up %1"
 msgstr "Paramétrer %1"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: lib/Publican/Builder.pm:524
-msgid "Short-sighted packages can only be used to make desktop rpms. Add --desktop to your argument list."
-msgstr "Les paquets « myopes » ne peuvent s'utiliser que pour faire des rpm bureau. Ajouter --desktop à la liste d'arguments."
+msgid ""
+"Short-sighted packages can only be used to make desktop rpms. Add --desktop "
+"to your argument list."
+msgstr ""
+"Les paquets « myopes » ne peuvent s'utiliser que pour faire des rpm bureau. "
+"Ajouter --desktop à la liste d'arguments."
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: lib/Publican/WebSite.pm:209
@@ -1831,13 +2117,17 @@ msgstr "Instantané de langue source à utiliser dans la traduction."
 #: lib/Publican.pm:218
 #, fuzzy
 msgid "Space-separated list of packages the desktop RPM obsoletes."
-msgstr "Liste, avec espaces comme séparateur, des paquets que le paquet bureau rend obsolètes."
+msgstr ""
+"Liste, avec espaces comme séparateur, des paquets que le paquet bureau rend "
+"obsolètes."
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: lib/Publican.pm:224
 #, fuzzy
 msgid "Space-separated list of packages the desktop RPM requires."
-msgstr "Liste, avec espaces comme séparateur, des paquets que le paquet bureau requiert."
+msgstr ""
+"Liste, avec espaces comme séparateur, des paquets que le paquet bureau "
+"requiert."
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #. ($book)
@@ -1852,7 +2142,9 @@ msgid "Starting %1"
 msgstr "Démarrage %1"
 
 #: lib/Publican/WebSite.pm:146
-msgid "Stop publican from automatically rebuilding teh web site everytime a book is installed, updated or removed."
+msgid ""
+"Stop publican from automatically rebuilding teh web site everytime a book is "
+"installed, updated or removed."
 msgstr ""
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
@@ -1880,17 +2172,20 @@ msgid "Template to use for generagting the web style 1 toc file."
 msgstr ""
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
-#: lib/Publican/CreateBook.pm:345 lib/Publican/CreateBook.pm:607
+#: lib/Publican/CreateBook.pm:345
+#: lib/Publican/CreateBook.pm:607
 msgid "Test Chapter"
 msgstr "Chapitre de test"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
-#: lib/Publican/CreateBook.pm:348 lib/Publican/CreateBook.pm:610
+#: lib/Publican/CreateBook.pm:348
+#: lib/Publican/CreateBook.pm:610
 msgid "Test Section 1"
 msgstr "Paragraphe 1 de test"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
-#: lib/Publican/CreateBook.pm:355 lib/Publican/CreateBook.pm:617
+#: lib/Publican/CreateBook.pm:355
+#: lib/Publican/CreateBook.pm:617
 msgid "Test Section 2"
 msgstr "Paragraphe 2 de test"
 
@@ -1900,8 +2195,12 @@ msgstr ""
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: lib/Publican/WebSite.pm:185
-msgid "The Navigation Menu below will automatically collapse when pages are loaded. Enable cookies to fix the Navigation Menu functionality."
-msgstr "Le menu de navigation ci-dessous se réduira au chargement des pages. Activer des cookies pour corriger la fonctionnalité du menu de navigation."
+msgid ""
+"The Navigation Menu below will automatically collapse when pages are loaded. "
+"Enable cookies to fix the Navigation Menu functionality."
+msgstr ""
+"Le menu de navigation ci-dessous se réduira au chargement des pages. Activer "
+"des cookies pour corriger la fonctionnalité du menu de navigation."
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: lib/Publican.pm:290
@@ -1910,8 +2209,12 @@ msgstr "Le système d'exploitation pour lequel les paquets sont construits"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: lib/Publican.pm:483
-msgid "The author name to be shown in drupal book page. It must be a valid drupal username."
-msgstr "Le nom de l'auteur à afficher dans la page d'ouvrage Drupal. Il doit être un nom d'utilisateur Drupal valide."
+msgid ""
+"The author name to be shown in drupal book page. It must be a valid drupal "
+"username."
+msgstr ""
+"Le nom de l'auteur à afficher dans la page d'ouvrage Drupal. Il doit être un "
+"nom d'utilisateur Drupal valide."
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: lib/Publican.pm:112
@@ -1931,7 +2234,8 @@ msgstr "L'estampille à utiliser lors de la construction de ce paquet."
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: lib/Publican.pm:123
 msgid "The brew dist to use for building the standalone desktop rpm."
-msgstr "La distribution de brew à utiliser pour construire le RPM bureau autonome."
+msgstr ""
+"La distribution de brew à utiliser pour construire le RPM bureau autonome."
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: lib/Publican.pm:399
@@ -1939,11 +2243,15 @@ msgid "The brew dist to use for building the web rpm."
 msgstr "La distribution de brew à utiliser pour construire le RPM Web."
 
 #: lib/Publican/WebSite.pm:97
-msgid "The default language for this website. Tables of contents for languages other than the default language will link to documents in the default language when translations are not available."
+msgid ""
+"The default language for this website. Tables of contents for languages "
+"other than the default language will link to documents in the default "
+"language when translations are not available."
 msgstr ""
 
 #. ($PARAMS{$key}->{default})
-#: lib/Publican.pm:1847 lib/Publican/WebSite.pm:2284
+#: lib/Publican.pm:1847
+#: lib/Publican/WebSite.pm:2285
 msgid "The default value for this parameter is: %1"
 msgstr ""
 
@@ -1951,7 +2259,9 @@ msgstr ""
 #: lib/Publican.pm:497
 #, fuzzy
 msgid "The directory where the image should be stored in drupal server."
-msgstr "Le répertoire où l'image doit être stockée dans le serveur Drupal. Par défaut, « sites/default/files/ »"
+msgstr ""
+"Le répertoire où l'image doit être stockée dans le serveur Drupal. Par "
+"défaut, « sites/default/files/ »"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: bin/publican:117
@@ -1983,10 +2293,14 @@ msgstr "Langue sur laquelle cette traduction se fonde."
 #: lib/Publican.pm:492
 #, fuzzy
 msgid "The menu where we can find the book."
-msgstr "Le menu dans lequel nous pourrons trouver l'ouvrage. Par défaut : menu-user-guide"
+msgstr ""
+"Le menu dans lequel nous pourrons trouver l'ouvrage. Par défaut : menu-user-"
+"guide"
 
 #: lib/Publican/WebSite.pm:103
-msgid "The name of the SQLite database file for your site, with the filename extension .db"
+msgid ""
+"The name of the SQLite database file for your site, with the filename "
+"extension .db"
 msgstr ""
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
@@ -2000,8 +2314,12 @@ msgstr ""
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: lib/Publican.pm:272
-msgid "The name of the main xml and ent files for this book, sans file extension and language. Fetched from docname if not set."
-msgstr "Le nom des fichiers XML et ENT principaux pour l'ouvrage, sans langue ni extension. Extrait de docname si pas défini."
+msgid ""
+"The name of the main xml and ent files for this book, sans file extension "
+"and language. Fetched from docname if not set."
+msgstr ""
+"Le nom des fichiers XML et ENT principaux pour l'ouvrage, sans langue ni "
+"extension. Extrait de docname si pas défini."
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: bin/publican:118
@@ -2009,7 +2327,8 @@ msgid "The name of the product"
 msgstr "Le nom du produit"
 
 #: lib/Publican/WebSite.pm:87
-msgid "The path to the directory in which to create the top-level index.html file."
+msgid ""
+"The path to the directory in which to create the top-level index.html file."
 msgstr ""
 
 #: lib/Publican/WebSite.pm:141
@@ -2059,70 +2378,111 @@ msgstr "Afficher un message d'aide pour le fichier de configuration"
 msgid "These are set in the sites configuration file."
 msgstr "%1 est un champ obligatoire dans un fichier de configuration de site"
 
-#: lib/Publican.pm:126 lib/Publican/WebSite.pm:136 lib/Publican/WebSite.pm:166
-msgid "This field is deprecated and will be removed from Publican in the future."
+#: lib/Publican.pm:126
+#: lib/Publican/WebSite.pm:136
+#: lib/Publican/WebSite.pm:166
+msgid ""
+"This field is deprecated and will be removed from Publican in the future."
 msgstr ""
 
 #. ($PARAMS{$key}->{not_for})
-#: lib/Publican.pm:1874 lib/Publican/WebSite.pm:2311
+#: lib/Publican.pm:1874
+#: lib/Publican/WebSite.pm:2312
 msgid "This field is not supported for: %1."
 msgstr ""
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: bin/publican:128
-msgid "This flag tells publican the data being processed is a distributed set. Note: do not use distributed_set on the command line. Publican uses this flag when calling itself to process distributed sets. This is the only safe way this flag can be used."
-msgstr "Cette balise indique à Publican que les données traitées font partie d'une collection distribuée. Note : ne pas utiliser distributed_set en ligne de commande. Publican utilise cette balise lorsqu'il s'appelle lui-même pour le traitement des collections distribuées. C'est la seule façon d'utiliser cette balise de manière sûre."
+msgid ""
+"This flag tells publican the data being processed is a distributed set. Note:"
+" do not use distributed_set on the command line. Publican uses this flag "
+"when calling itself to process distributed sets. This is the only safe way "
+"this flag can be used."
+msgstr ""
+"Cette balise indique à Publican que les données traitées font partie d'une "
+"collection distribuée. Note : ne pas utiliser distributed_set en ligne de "
+"commande. Publican utilise cette balise lorsqu'il s'appelle lui-même pour le "
+"traitement des collections distribuées. C'est la seule façon d'utiliser "
+"cette balise de manière sûre."
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: lib/Publican.pm:410
-msgid "This is a home page for a Publican-generated website, not a standard book."
-msgstr "Ceci est une page d'accueil pour un site Web créé par Publican, et non pour un ouvrage standard."
+msgid ""
+"This is a home page for a Publican-generated website, not a standard book."
+msgstr ""
+"Ceci est une page d'accueil pour un site Web créé par Publican, et non pour "
+"un ouvrage standard."
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: lib/Publican.pm:423
-msgid "This is a host name for a Publican-generated website, used for searches and the Sitemap. Be sure to include the full path to your document tree. E.g. if your documents are in the docs directory: http://www.example.com/docs"
-msgstr "Ceci est le nom d'hôte pour un site Web créé par Publican, utilisé pour les recherches et le Sitemap. Assurez-vous d'avoir inclus le chemin complet dans l'arbre du document. Par ex. si vos documents sont dans le répertoire docs :  http://www.example.com/docs"
+msgid ""
+"This is a host name for a Publican-generated website, used for searches and "
+"the Sitemap. Be sure to include the full path to your document tree. E.g. if "
+"your documents are in the docs directory: http://www.example.com/docs"
+msgstr ""
+"Ceci est le nom d'hôte pour un site Web créé par Publican, utilisé pour les "
+"recherches et le Sitemap. Assurez-vous d'avoir inclus le chemin complet dans "
+"l'arbre du document. Par ex. si vos documents sont dans le répertoire docs : "
+" http://www.example.com/docs"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: lib/Publican.pm:417
-msgid "This is a special page for a Publican-generated website, not a standard book. Valid types are home, product, and version."
-msgstr "Ceci est une page spéciale pour un site Web créé par Publican, et non pour un ouvrage standard. Les types valides sont home, product et version."
+msgid ""
+"This is a special page for a Publican-generated website, not a standard book."
+" Valid types are home, product, and version."
+msgstr ""
+"Ceci est une page spéciale pour un site Web créé par Publican, et non pour "
+"un ouvrage standard. Les types valides sont home, product et version."
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
-#: lib/Publican/CreateBook.pm:363 lib/Publican/CreateBook.pm:625
+#: lib/Publican/CreateBook.pm:363
+#: lib/Publican/CreateBook.pm:625
 msgid "This is a test listitem."
 msgstr "Ceci est une liste d'articles de test."
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
-#: lib/Publican/CreateBook.pm:220 lib/Publican/CreateBook.pm:346
-#: lib/Publican/CreateBook.pm:480 lib/Publican/CreateBook.pm:608
+#: lib/Publican/CreateBook.pm:220
+#: lib/Publican/CreateBook.pm:346
+#: lib/Publican/CreateBook.pm:480
+#: lib/Publican/CreateBook.pm:608
 msgid "This is a test paragraph"
 msgstr "Ceci est un paragraphe de test."
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
-#: lib/Publican/CreateBook.pm:358 lib/Publican/CreateBook.pm:620
+#: lib/Publican/CreateBook.pm:358
+#: lib/Publican/CreateBook.pm:620
 msgid "This is a test paragraph in Section 2"
 msgstr "Ceci est un paragraphe de test dans la section 2"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
-#: lib/Publican/CreateBook.pm:351 lib/Publican/CreateBook.pm:613
+#: lib/Publican/CreateBook.pm:351
+#: lib/Publican/CreateBook.pm:613
 msgid "This is a test paragraph in a section"
 msgstr "Ceci est un paragraphe de teste dans une section"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: lib/Publican/WebSite.pm:191
-msgid "This is an iframe, to view it upgrade your browser or enable iframe display."
-msgstr "Ceci est un « iframe », pour l'afficher mettre à jour votre navigateur ou bien activez l'affichage « iframe »."
+msgid ""
+"This is an iframe, to view it upgrade your browser or enable iframe display."
+msgstr ""
+"Ceci est un « iframe », pour l'afficher mettre à jour votre navigateur ou "
+"bien activez l'affichage « iframe »."
 
 #. ($PARAMS{$key}->{constraint})
-#: lib/Publican.pm:1860 lib/Publican/WebSite.pm:2297
-msgid "This parameter is constrained with the following regular expression: %1"
+#: lib/Publican.pm:1860
+#: lib/Publican/WebSite.pm:2298
+msgid ""
+"This parameter is constrained with the following regular expression: %1"
 msgstr ""
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: lib/Publican/WebSite.pm:202
-msgid "This web site requires JavaScript and cookies to be enabled to function correctly."
-msgstr "Ce site Web requiert JavaScript et des cookies pour fonctionner correctement."
+msgid ""
+"This web site requires JavaScript and cookies to be enabled to function "
+"correctly."
+msgstr ""
+"Ce site Web requiert JavaScript et des cookies pour fonctionner correctement."
+""
 
 #: lib/Publican/WebSite.pm:117
 msgid "Title used for all site navigation pages."
@@ -2140,14 +2500,17 @@ msgstr "Total paquets"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #. ($lang)
-#: lib/Publican/Translate.pm:1143
+#: lib/Publican/Translate.pm:1152
 msgid "Total for %1"
 msgstr "Total pour %1"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: bin/publican:191
-msgid "Transform XML to other formats (pdf, html, html-single, drupal-book, etc)"
-msgstr "Transformer XML en d'autres formats (pdf, html, html-single, drupal-book, etc)"
+msgid ""
+"Transform XML to other formats (pdf, html, html-single, drupal-book, etc)"
+msgstr ""
+"Transformer XML en d'autres formats (pdf, html, html-single, drupal-book, "
+"etc)"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #. ($!,$@)
@@ -2156,13 +2519,13 @@ msgid "Transformation error '%1' : %2"
 msgstr "Erreur lors de la transformation de « %1 » : %2"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
-#: lib/Publican/Translate.pm:1076
+#: lib/Publican/Translate.pm:1085
 msgid "Translated"
 msgstr "Traduit"
 
 # translation auto-copied from project Publican, version 3, document publican
 #. ($edition,$release)
-#: lib/Publican/Translate.pm:386
+#: lib/Publican/Translate.pm:387
 msgid "Translation files synchronised with XML sources %1-%2"
 msgstr "Fichiers de traduction synchronisés avec les sources XML %1-%2"
 
@@ -2173,17 +2536,27 @@ msgstr "Traducteur"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: lib/Publican.pm:373
-msgid "Type of content this package contains. Supported: set, book, article, brand"
-msgstr "Type du contenu de ce paquet. Pris en charge : set, book, article, brand"
+msgid ""
+"Type of content this package contains. Supported: set, book, article, brand"
+msgstr ""
+"Type du contenu de ce paquet. Pris en charge : set, book, article, brand"
 
 #: lib/Publican.pm:317
-msgid "Type of repository in which books that form part of a remote set are stored. Supported types: SVN, GIT."
-msgstr "Type de dépôt dans lequel des ouvrages faisant partie d'une collection distribuée sont stockés. Types pris en charge : SVN, GIT."
+msgid ""
+"Type of repository in which books that form part of a remote set are stored. "
+"Supported types: SVN, GIT."
+msgstr ""
+"Type de dépôt dans lequel des ouvrages faisant partie d'une collection "
+"distribuée sont stockés. Types pris en charge : SVN, GIT."
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: lib/Publican.pm:191
-msgid "URL for the documentation team for this package. Used for top right URL on HTML."
-msgstr "URL de l'équipe de documentation du paquet. Utilisé pour l'URL en haut à droite du HTML."
+msgid ""
+"URL for the documentation team for this package. Used for top right URL on "
+"HTML."
+msgstr ""
+"URL de l'équipe de documentation du paquet. Utilisé pour l'URL en haut à "
+"droite du HTML."
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: lib/Publican.pm:308
@@ -2193,7 +2566,9 @@ msgstr "URL du produit. Utilisé en haut à gauche des HTML."
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: lib/Publican.pm:354
 msgid "URL to find tar of source files. Used in RPM Spec files."
-msgstr "URL pour retrouver l'archive tar des fichiers source. Utilisée dans les fichiers spec RPM."
+msgstr ""
+"URL pour retrouver l'archive tar des fichiers source. Utilisée dans les "
+"fichiers spec RPM."
 
 #. ($tag)
 #: lib/Publican/Builder/DocBook.pm:3314
@@ -2219,7 +2594,8 @@ msgid "Unknown width format will be ignored: %1"
 msgstr "Format de largeur inconnu, sera ignoré : %1"
 
 # translation auto-copied from project Publican, version 3, document publican, author rlandmann
-#: lib/Publican/Translate.pm:1074 lib/Publican/WebSite.pm:200
+#: lib/Publican/Translate.pm:1083
+#: lib/Publican/WebSite.pm:200
 msgid "Untranslated"
 msgstr "Non traduit"
 
@@ -2271,8 +2647,12 @@ msgstr "Version du DTD DocBook sur laquelle ce projet se fonde."
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: lib/Publican.pm:394
-msgid "Version of this package. Fetched from productnumber tag in xml_lang/TYPE_Info.xml"
-msgstr "Version de ce paquet. Extraite de la balise productnumber de xml_lang/TYPE_Info.xml"
+msgid ""
+"Version of this package. Fetched from productnumber tag in xml_lang/"
+"TYPE_Info.xml"
+msgstr ""
+"Version de ce paquet. Extraite de la balise productnumber de xml_lang/"
+"TYPE_Info.xml"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: lib/Publican/WebSite.pm:196
@@ -2283,16 +2663,20 @@ msgstr "Versions"
 #. ($xml_file,$!)
 #: lib/Publican/XmlClean.pm:1053
 msgid "WARNING: Could not reset file ownership for %1 because %2"
-msgstr "AVERTISSEMENT : impossible d'affecter la propriété du fichier à %1 en raison de %2"
+msgstr ""
+"AVERTISSEMENT : impossible d'affecter la propriété du fichier à %1 en raison "
+"de %2"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #. ($xml_file,$!)
 #: lib/Publican/XmlClean.pm:1046
 msgid "WARNING: Could not reset file permissions for %1 because %2"
-msgstr "AVERTISSEMENT : Impossible de redéfinir les droits d'accès au fichier pour %1 en raison de %2"
+msgstr ""
+"AVERTISSEMENT : Impossible de redéfinir les droits d'accès au fichier pour "
+"%1 en raison de %2"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
-#: lib/Publican/Translate.pm:883
+#: lib/Publican/Translate.pm:892
 msgid "WARNING: Fuzzy message in PO file."
 msgstr "AVERTISSEMENT : message approximatif dans le fichier PO."
 
@@ -2303,24 +2687,28 @@ msgid "WARNING: Image missing: %1"
 msgstr "AVERTISSEMENT : image manquante : %1"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
-#: lib/Publican/Translate.pm:900
-msgid "WARNING: Message missing from PO file, consider updating your POT and PO files."
-msgstr "AVERTISSEMENT : message manquant dans le fichier PO, envisagez une mise à jour des fichiers POT et PO."
+#: lib/Publican/Translate.pm:909
+msgid ""
+"WARNING: Message missing from PO file, consider updating your POT and PO "
+"files."
+msgstr ""
+"AVERTISSEMENT : message manquant dans le fichier PO, envisagez une mise à "
+"jour des fichiers POT et PO."
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #. ($pot_file)
-#: lib/Publican/Translate.pm:372
+#: lib/Publican/Translate.pm:373
 msgid "WARNING: No source xml file exists for %1"
 msgstr "AVERTISSEMENT : aucun fichier XML source n'existe pour %1"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #. ($lang)
-#: lib/Publican/Translate.pm:306
+#: lib/Publican/Translate.pm:307
 msgid "WARNING: Skipping invalid language: %1"
 msgstr "AVERTISSEMENT : langue invalide sautée : %1"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
-#: lib/Publican/Translate.pm:887
+#: lib/Publican/Translate.pm:896
 msgid "WARNING: Un-translated message in PO file."
 msgstr "AVERTISSEMENT : message non traduit dans le fichier PO"
 
@@ -2332,24 +2720,39 @@ msgstr "AVERTISSEMENT : clé de configuration %1 inconnue, ignorée.\n"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: lib/Publican/Builder.pm:766
-msgid "WARNING: You can not create RPM packages with a blank abstract. Skipping RPM creation.\n"
-msgstr "AVERTISSEMENT : vous ne pouvez pas créer de paquet RPM avec « abstract » laissé en blanc. Création du RPM  sautée.\n"
+msgid ""
+"WARNING: You can not create RPM packages with a blank abstract. Skipping RPM "
+"creation.\n"
+msgstr ""
+"AVERTISSEMENT : vous ne pouvez pas créer de paquet RPM avec « abstract » "
+"laissé en blanc. Création du RPM  sautée.\n"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: lib/Publican/Builder.pm:776
-msgid "WARNING: You can not create RPM packages with a blank subtitle. Skipping RPM creation.\n"
-msgstr "AVERTISSEMENT : vous ne pouvez pas créer de paquet RPM avec « subtitle » laissé en blanc. Création du RPM  sautée.\n"
+msgid ""
+"WARNING: You can not create RPM packages with a blank subtitle. Skipping RPM "
+"creation.\n"
+msgstr ""
+"AVERTISSEMENT : vous ne pouvez pas créer de paquet RPM avec « subtitle » "
+"laissé en blanc. Création du RPM  sautée.\n"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #. ($key)
 #: lib/Publican.pm:599
-msgid "WARNING: config key %1 is not valid for this type of object, ignoring.\n"
-msgstr "AVERTISSEMENT : clé de configuration %1 non valide pour ce type d'objet, ignorée.\n"
+msgid ""
+"WARNING: config key %1 is not valid for this type of object, ignoring.\n"
+msgstr ""
+"AVERTISSEMENT : clé de configuration %1 non valide pour ce type d'objet, "
+"ignorée.\n"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: lib/Publican/XmlClean.pm:938
-msgid "WARNING: table validation failed. Could not determine table for tgroup, column numbers cannot be validated"
-msgstr "AVERTISSEMENT : échec de validation du tableau. Impossible de déterminer le tgroup, le nombre de colonnes ne peut pas être validé."
+msgid ""
+"WARNING: table validation failed. Could not determine table for tgroup, "
+"column numbers cannot be validated"
+msgstr ""
+"AVERTISSEMENT : échec de validation du tableau. Impossible de déterminer le "
+"tgroup, le nombre de colonnes ne peut pas être validé."
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: bin/publican:104
@@ -2363,7 +2766,9 @@ msgstr "Fichier de configuration du site Web à utiliser ou à créer."
 
 #: bin/publican:171
 msgid "WebSite configuration file to use when copying content between sites."
-msgstr "Fichier de configuration du site Web à utiliser lors de la copie du contenu entre sites."
+msgstr ""
+"Fichier de configuration du site Web à utiliser lors de la copie du contenu "
+"entre sites."
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: lib/Publican/WebSite.pm:181
@@ -2395,7 +2800,8 @@ msgid "You need to change the HOLDER entity in the %1/%2.ent file"
 msgstr "Vous devez modifier l'entité HOLDER dans le fichier %1/%2.ent"
 
 #. ($result,$!)
-#: bin/publican:1560 bin/publican:1572
+#: bin/publican:1560
+#: bin/publican:1572
 msgid "Zanata call failed, error %1: '[2]'"
 msgstr "Échec de l'appel à Zanata, erreur %1: « [2] »"
 
@@ -2421,8 +2827,10 @@ msgstr "filtre de public à utiliser pour la sortie."
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #. ($auth_file)
 #. ($trans_file)
-#: lib/Publican/Builder/DocBook4.pm:300 lib/Publican/Builder/DocBook4.pm:313
-#: lib/Publican/Builder/DocBook5.pm:315 lib/Publican/Builder/DocBook5.pm:332
+#: lib/Publican/Builder/DocBook4.pm:300
+#: lib/Publican/Builder/DocBook4.pm:313
+#: lib/Publican/Builder/DocBook5.pm:315
+#: lib/Publican/Builder/DocBook5.pm:332
 msgid "authorgroup not found in %1"
 msgstr "authorgroup non trouvé dans %1"
 
@@ -2460,10 +2868,12 @@ msgstr "filtre de conformité à utiliser pour la sortie"
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: lib/Publican/Builder/DocBook.pm:2688
 msgid "contributor list can not be calculated before building."
-msgstr "la liste des contributeurs ne peut pas être évaluée avant construction."
+msgstr ""
+"la liste des contributeurs ne peut pas être évaluée avant construction."
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
-#: lib/Publican/Builder/DocBook4.pm:703 lib/Publican/Builder/DocBook5.pm:701
+#: lib/Publican/Builder/DocBook4.pm:703
+#: lib/Publican/Builder/DocBook5.pm:701
 msgid "corpauthor can not be converted to text as expected."
 msgstr "corpauthor ne peut pas être converti en texte comme prévu."
 
@@ -2471,17 +2881,19 @@ msgstr "corpauthor ne peut pas être converti en texte comme prévu."
 #. ($_,$@)
 #: lib/Publican/Builder.pm:193
 msgid "couldn't remove unwanted dir '%1', error: %2"
-msgstr "Impossible de supprimer le répertoire non souhaité « %1 », erreur : %2"
+msgstr ""
+"Impossible de supprimer le répertoire non souhaité « %1 », erreur : %2"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #. ($_,$@)
 #: lib/Publican/Builder.pm:213
 msgid "couldn't unlink xml file '%1', error: %2"
-msgstr "Impossible de supprimer le lien sur le fichier XML « %1 », erreur : %2"
+msgstr ""
+"Impossible de supprimer le lien sur le fichier XML « %1 », erreur : %2"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #. ($pot_file)
-#: lib/Publican/Translate.pm:154
+#: lib/Publican/Translate.pm:155
 msgid "deleted empty pot file: %1\n"
 msgstr "suppression du fichier POT vide : %1\n"
 
@@ -2507,12 +2919,12 @@ msgid "dtdver is a mandatory argument"
 msgstr "dtdver est un argument obligatoire"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
-#: lib/Publican/WebSite.pm:1436
+#: lib/Publican/WebSite.pm:1437
 msgid "dump file zip creation failed."
 msgstr "la création du zip du fichier de vidage a échoué."
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
-#: lib/Publican/Translate.pm:280
+#: lib/Publican/Translate.pm:281
 msgid "email is a mandatory argument"
 msgstr "email est un argument obligatoire"
 
@@ -2532,7 +2944,7 @@ msgid "file is a mandatory argument"
 msgstr "file est un argument obligatoire"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
-#: lib/Publican/Translate.pm:276
+#: lib/Publican/Translate.pm:277
 msgid "firstname is a mandatory argument"
 msgstr "firstname est un argument obligatoire"
 
@@ -2551,7 +2963,8 @@ msgstr "format est un argument obligatoire"
 msgid "formats is a mandatory argument"
 msgstr "formats est un argument obligatoire"
 
-#: lib/Publican/Builder/DocBook.pm:3458 lib/Publican/Builder/DocBook.pm:3856
+#: lib/Publican/Builder/DocBook.pm:3458
+#: lib/Publican/Builder/DocBook.pm:3856
 msgid "headings is a mandatory argument"
 msgstr "headings est un argument obligatoire"
 
@@ -2561,12 +2974,18 @@ msgid "keyword list can not be calculated before building."
 msgstr "la liste des mots clés ne peut pas être évaluée avant construction"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
-#: lib/Publican/Builder.pm:509 lib/Publican/Builder/DocBook.pm:2283
-#: lib/Publican/Builder/DocBook.pm:2511 lib/Publican/Builder/DocBook.pm:2584
-#: lib/Publican/Builder/DocBook.pm:2672 lib/Publican/Builder/DocBook.pm:2751
-#: lib/Publican/Builder/DocBook.pm:2797 lib/Publican/Builder/DocBook.pm:2840
-#: lib/Publican/Builder/DocBook.pm:439 lib/Publican/Builder/DocBook4.pm:544
-#: lib/Publican/Builder/DocBook4.pm:671 lib/Publican/Builder/DocBook5.pm:565
+#: lib/Publican/Builder.pm:509
+#: lib/Publican/Builder/DocBook.pm:2283
+#: lib/Publican/Builder/DocBook.pm:2511
+#: lib/Publican/Builder/DocBook.pm:2584
+#: lib/Publican/Builder/DocBook.pm:2672
+#: lib/Publican/Builder/DocBook.pm:2751
+#: lib/Publican/Builder/DocBook.pm:2797
+#: lib/Publican/Builder/DocBook.pm:2840
+#: lib/Publican/Builder/DocBook.pm:439
+#: lib/Publican/Builder/DocBook4.pm:544
+#: lib/Publican/Builder/DocBook4.pm:671
+#: lib/Publican/Builder/DocBook5.pm:565
 #: lib/Publican/Builder/DocBook5.pm:666
 msgid "lang is a mandatory argument"
 msgstr "lang est un argument obligatoire"
@@ -2587,9 +3006,11 @@ msgid "lang to filter output on."
 msgstr "filtre de langue pour la sortie."
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
-#: lib/Publican/Builder.pm:942 lib/Publican/Builder/DocBook.pm:95
-#: lib/Publican/Builder/DocBook4.pm:95 lib/Publican/Builder/DocBook5.pm:95
-#: lib/Publican/Translate.pm:272
+#: lib/Publican/Builder.pm:942
+#: lib/Publican/Builder/DocBook.pm:95
+#: lib/Publican/Builder/DocBook4.pm:95
+#: lib/Publican/Builder/DocBook5.pm:95
+#: lib/Publican/Translate.pm:273
 msgid "langs is a mandatory argument"
 msgstr "langs est un argument obligatoire"
 
@@ -2600,12 +3021,13 @@ msgstr "manifeste introuvable"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #. ($s1,$s2)
-#: lib/Publican/Translate.pm:516
+#: lib/Publican/Translate.pm:517
 msgid "match_strings requires 2 arguments %1, %2."
 msgstr "match_strings nécessite 2 arguments %1, %2"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
-#: bin/publican:704 lib/Publican/CreateBook.pm:81
+#: bin/publican:704
+#: lib/Publican/CreateBook.pm:81
 #: lib/Publican/CreateBrand.pm:62
 msgid "name is a required parameter"
 msgstr "name est un paramètre requis"
@@ -2626,7 +3048,8 @@ msgid "os to filter output on."
 msgstr "filtre de SE pour la sortie."
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
-#: lib/Publican/Translate.pm:177 lib/Publican/XmlClean.pm:455
+#: lib/Publican/Translate.pm:178
+#: lib/Publican/XmlClean.pm:455
 #: lib/Publican/XmlClean.pm:985
 msgid "out_file is a mandatory argument"
 msgstr "out_file est un argument obligatoire"
@@ -2638,12 +3061,14 @@ msgid "pdftool only supports fop or wkhtmltopdf, not: %1"
 msgstr "pdftool n'accepte que fop ou wkhtmltopdf, et non : %1"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
-#: lib/Publican/Translate.pm:175 lib/Publican/Translate.pm:433
+#: lib/Publican/Translate.pm:176
+#: lib/Publican/Translate.pm:434
 msgid "po_file is a mandatory argument"
 msgstr "po_file est un argument obligatoire"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
-#: lib/Publican/Translate.pm:435 lib/Publican/Translate.pm:920
+#: lib/Publican/Translate.pm:436
+#: lib/Publican/Translate.pm:929
 msgid "pot_file is a mandatory argument"
 msgstr "pot_file est un argument obligatoire"
 
@@ -2748,7 +3173,7 @@ msgid "status to filter output on."
 msgstr "filtre « status » pour la sortie."
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
-#: lib/Publican/Translate.pm:278
+#: lib/Publican/Translate.pm:279
 msgid "surname is a mandatory argument"
 msgstr "surname est un argument obligatoire"
 
@@ -2779,29 +3204,54 @@ msgstr "le type doit être book, set ou article"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #. (join( ", ", keys %{$args} ))
-#: lib/Publican.pm:1189 lib/Publican.pm:1337 lib/Publican.pm:558
-#: lib/Publican.pm:872 lib/Publican/Builder.pm:135 lib/Publican/Builder.pm:254
-#: lib/Publican/Builder.pm:312 lib/Publican/Builder.pm:429
-#: lib/Publican/Builder.pm:517 lib/Publican/Builder/DocBook.pm:108
-#: lib/Publican/Builder/DocBook.pm:2290 lib/Publican/Builder/DocBook.pm:2517
-#: lib/Publican/Builder/DocBook.pm:2591 lib/Publican/Builder/DocBook.pm:2677
-#: lib/Publican/Builder/DocBook.pm:2756 lib/Publican/Builder/DocBook.pm:2802
-#: lib/Publican/Builder/DocBook.pm:2845 lib/Publican/Builder/DocBook.pm:2890
-#: lib/Publican/Builder/DocBook.pm:3463 lib/Publican/Builder/DocBook.pm:3626
-#: lib/Publican/Builder/DocBook.pm:3673 lib/Publican/Builder/DocBook.pm:3723
-#: lib/Publican/Builder/DocBook.pm:3818 lib/Publican/Builder/DocBook.pm:3861
-#: lib/Publican/Builder/DocBook.pm:449 lib/Publican/Builder/DocBook4.pm:103
-#: lib/Publican/Builder/DocBook4.pm:549 lib/Publican/Builder/DocBook4.pm:676
-#: lib/Publican/Builder/DocBook5.pm:103 lib/Publican/Builder/DocBook5.pm:570
-#: lib/Publican/Builder/DocBook5.pm:671 lib/Publican/CreateBook.pm:94
-#: lib/Publican/CreateBrand.pm:70 lib/Publican/Translate.pm:1055
-#: lib/Publican/Translate.pm:183 lib/Publican/Translate.pm:286
-#: lib/Publican/Translate.pm:440 lib/Publican/Translate.pm:545
-#: lib/Publican/Translate.pm:575 lib/Publican/Translate.pm:66
-#: lib/Publican/Translate.pm:706 lib/Publican/Translate.pm:835
-#: lib/Publican/Translate.pm:925 lib/Publican/TreeView.pm:131
-#: lib/Publican/TreeView.pm:220 lib/Publican/TreeView.pm:67
-#: lib/Publican/XmlClean.pm:281 lib/Publican/XmlClean.pm:460
+#: lib/Publican.pm:1189
+#: lib/Publican.pm:1337
+#: lib/Publican.pm:558
+#: lib/Publican.pm:872
+#: lib/Publican/Builder.pm:135
+#: lib/Publican/Builder.pm:254
+#: lib/Publican/Builder.pm:312
+#: lib/Publican/Builder.pm:429
+#: lib/Publican/Builder.pm:517
+#: lib/Publican/Builder/DocBook.pm:108
+#: lib/Publican/Builder/DocBook.pm:2290
+#: lib/Publican/Builder/DocBook.pm:2517
+#: lib/Publican/Builder/DocBook.pm:2591
+#: lib/Publican/Builder/DocBook.pm:2677
+#: lib/Publican/Builder/DocBook.pm:2756
+#: lib/Publican/Builder/DocBook.pm:2802
+#: lib/Publican/Builder/DocBook.pm:2845
+#: lib/Publican/Builder/DocBook.pm:2890
+#: lib/Publican/Builder/DocBook.pm:3463
+#: lib/Publican/Builder/DocBook.pm:3626
+#: lib/Publican/Builder/DocBook.pm:3673
+#: lib/Publican/Builder/DocBook.pm:3723
+#: lib/Publican/Builder/DocBook.pm:3818
+#: lib/Publican/Builder/DocBook.pm:3861
+#: lib/Publican/Builder/DocBook.pm:449
+#: lib/Publican/Builder/DocBook4.pm:103
+#: lib/Publican/Builder/DocBook4.pm:549
+#: lib/Publican/Builder/DocBook4.pm:676
+#: lib/Publican/Builder/DocBook5.pm:103
+#: lib/Publican/Builder/DocBook5.pm:570
+#: lib/Publican/Builder/DocBook5.pm:671
+#: lib/Publican/CreateBook.pm:94
+#: lib/Publican/CreateBrand.pm:70
+#: lib/Publican/Translate.pm:1064
+#: lib/Publican/Translate.pm:184
+#: lib/Publican/Translate.pm:287
+#: lib/Publican/Translate.pm:441
+#: lib/Publican/Translate.pm:546
+#: lib/Publican/Translate.pm:577
+#: lib/Publican/Translate.pm:66
+#: lib/Publican/Translate.pm:715
+#: lib/Publican/Translate.pm:844
+#: lib/Publican/Translate.pm:934
+#: lib/Publican/TreeView.pm:131
+#: lib/Publican/TreeView.pm:220
+#: lib/Publican/TreeView.pm:67
+#: lib/Publican/XmlClean.pm:281
+#: lib/Publican/XmlClean.pm:460
 #: lib/Publican/XmlClean.pm:990
 msgid "unknown arguments: %1"
 msgstr "arguments inconnus : %1"
@@ -2813,7 +3263,8 @@ msgstr "filtre « userlevel » pour la sortie."
 
 #: lib/Publican/Builder/DocBook.pm:316
 msgid "varlistentry must have it's attribute 'role' set to an integer"
-msgstr "l'attribut « role » de varlistentry doit être défini avec un nombre entier"
+msgstr ""
+"l'attribut « role » de varlistentry doit être défini avec un nombre entier"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: lib/Publican.pm:389
@@ -2828,7 +3279,9 @@ msgstr "étiquette version pour un ouvrage"
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: lib/Publican/Builder/DocBook.pm:839
 msgid "wkhtmltopdf died, PDF generation failed. Check log for details."
-msgstr " wkhtmltopdf s'est arrêté, échec de la création du PDF. Vérifier le journal pour des précisions."
+msgstr ""
+" wkhtmltopdf s'est arrêté, échec de la création du PDF. Vérifier le journal "
+"pour des précisions."
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: lib/Publican.pm:474
@@ -2836,15 +3289,20 @@ msgid "wordsize to filter output on."
 msgstr "filtre « wordsize » pour la sortie."
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
-#: lib/Publican/Builder/DocBook.pm:2885 lib/Publican/Builder/DocBook.pm:3456
-#: lib/Publican/Builder/DocBook.pm:3621 lib/Publican/Builder/DocBook.pm:3668
-#: lib/Publican/Builder/DocBook.pm:3718 lib/Publican/Builder/DocBook.pm:3813
-#: lib/Publican/Builder/DocBook.pm:3854 lib/Publican/XmlClean.pm:453
+#: lib/Publican/Builder/DocBook.pm:2885
+#: lib/Publican/Builder/DocBook.pm:3456
+#: lib/Publican/Builder/DocBook.pm:3621
+#: lib/Publican/Builder/DocBook.pm:3668
+#: lib/Publican/Builder/DocBook.pm:3718
+#: lib/Publican/Builder/DocBook.pm:3813
+#: lib/Publican/Builder/DocBook.pm:3854
+#: lib/Publican/XmlClean.pm:453
 msgid "xml_doc is a mandatory argument"
 msgstr "xml_doc est un argument obligatoire"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
-#: lib/Publican.pm:1182 lib/Publican/Translate.pm:173
+#: lib/Publican.pm:1182
+#: lib/Publican/Translate.pm:174
 msgid "xml_file is a mandatory argument"
 msgstr "xml_file est un argument obligatoire"
 
@@ -2862,11 +3320,3 @@ msgstr "xsl_file est un argument obligatoire"
 #: bin/publican:1041
 msgid "you need to publish the brand first"
 msgstr "vous devez publier l'estampille d'abord"
-
-# translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
-#~ msgid "Could not open %1 for input!"
-#~ msgstr "Impossible d'ouvrir %1 en entrée !"
-
-# translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
-#~ msgid "Splash pages should be generated to be compatible with this web style. Valid values are 1 and 2."
-#~ msgstr "Les pages d'accueil seront crées pour être compatibles avec ce style Web. Les valeurs valides sont 1 ou 2."

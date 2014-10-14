@@ -222,13 +222,13 @@ perl Build.PL
 
 4: Commit version changes and merge code to master
 
-git commit -a -m"Release version 4.2.3"
+git commit -a -m"Release version 4.2.4"
 git push
 git checkout master
 git pull
 git merge devel
 git push
-git tag -a Release-4.2.3 -m "Release Version 4.2.3"
+git tag -a Release-4.2.4 -m "Release Version 4.2.4"
 git push origin --tags
 perl Build.PL
 ./Build
@@ -236,7 +236,7 @@ perl Build.PL
 
 5: Upload to public site
 
-scp Publican-v4.2.3.tar.gz publican.spec tmp/rpm/publican*.src.rpm fedorahosted.org:publican
+scp Publican-v4.2.4.tar.gz publican.spec tmp/rpm/publican*.src.rpm fedorahosted.org:publican
 
 6: Bug Rudi to do release announcement
 
@@ -246,7 +246,7 @@ Updating pulicans translations on zanata
 
 $ cd po
 $ zanata-cli pull -s . -t . --include-fuzzy
-$ ..
+$ cd ..
 $ ./Build update_pot
 $ ./Build update_po
 $ cd po

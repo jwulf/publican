@@ -222,6 +222,7 @@ my %tmpl_strings = (
     'html-single_label'   => $locale->maketext('Single-page HTML'),
     pdf_label             => $locale->maketext('PDF'),
     epub_label            => $locale->maketext('EPUB'),
+    All                   => $locale->maketext('All'),
 );
 
 sub new {
