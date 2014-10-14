@@ -22,7 +22,7 @@
 
 Name:           publican
 Version:        4.2.4
-Release:        0%{?dist}
+Release:        0%{?dist}.t1
 Summary:        Common files and scripts for publishing with DocBook XML
 # For a breakdown of the licensing, refer to LICENSE
 License:        (GPLv2+ or Artistic) and CC0
@@ -340,6 +340,9 @@ rm -rf $RPM_BUILD_ROOT
 %{wwwdir}/common-db5
 
 %changelog
+* Wed 15 Oct 2014 Jeff Fearn <jfearn@redhat.com> 4.2.5-0
+- Fix DocBook4 epub failing for ja-JP. BZ #1152780
+
 * Tue Oct 14 2014 Jeff Fearn <jfearn@redhat.com> 4.2.4-0
 - Allow External_Links.xml to be translated. BZ #1150386
 - Change ja-JP person-name style. BZ #1150866
