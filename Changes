@@ -1,11 +1,11 @@
-4.2.5 Wed 15 Oct 2014
+4.2.5 Wed Oct 15 2014
 - Fix DocBook4 epub failing for ja-JP. BZ #1152780
 
-4.2.4 Tue 14 Oct 2014
+4.2.4 Tue Oct 14 2014
 - Allow External_Links.xml to be translated. BZ #1150386
 - Change ja-JP person-name style. BZ #1150866
 
-4.2.3 Tue 7 Oct 2014
+4.2.3 Tue Oct 7 2014
 - Fix DocBook4 entity text, BZ #1143060
 - Remove extra white space from non-verbatim msgid's. BZ #1143792
 - Fix PDF build using FOP fails with "No numberLines function available." BZ #1143852

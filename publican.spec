@@ -340,7 +340,7 @@ rm -rf $RPM_BUILD_ROOT
 %{wwwdir}/common-db5
 
 %changelog
-* Wed 15 Oct 2014 Jeff Fearn <jfearn@redhat.com> 4.2.5-0
+* Wed Oct 15 2014 Jeff Fearn <jfearn@redhat.com> 4.2.5-0
 - Fix DocBook4 epub failing for ja-JP. BZ #1152780
 
 * Tue Oct 14 2014 Jeff Fearn <jfearn@redhat.com> 4.2.4-0
