@@ -131,7 +131,7 @@ sub update_pot {
         $pot_file =~ s/\.xml/\.pot/;
         $pot_file =~ s/^$source_dir/pot/;
         $pot_file =~ m|^(.*)/([^/]+)$|;
-        my $path = $1;
+        my $path     = $1;
         my $filename = $2;
         mkpath($path) if ( !-d $path );
 
@@ -142,7 +142,8 @@ sub update_pot {
             maketext( "Can't open file [_1]. Error: [_2]", $xml_file, $@ ) );
         $xml_doc->pos( $xml_doc->root() );
 
-        my $msg_list = $self->get_msgs( { doc => $xml_doc, filename => $filename } );
+        my $msg_list
+            = $self->get_msgs( { doc => $xml_doc, filename => $filename } );
 ##debug_msg( "hash: " . $msg_list->content_list() . "\n\n" );
         $self->print_msgs( { msg_list => $msg_list, pot_file => $pot_file } );
 
@@ -221,7 +222,12 @@ sub po2xml {
     }
 
     $self->merge_msgs(
-        { ent_file => $ent_file, out_doc => $out_doc, msgids => $msgids } );
+        {   out_file => $out_file,
+            ent_file => $ent_file,
+            out_doc  => $out_doc,
+            msgids   => $msgids
+        }
+    );
 
     $out_doc->pos( $out_doc->root() );
     foreach my $node ( $out_doc->look_down( 'processed', 1 ) ) {
@@ -569,7 +575,8 @@ Get the strings to translate from an XML::TreeBuilder object
 sub get_msgs {
     my ( $self, $args ) = @_;
     my $doc = delete( $args->{doc} ) || croak("doc is a mandatory argument");
-    my $filename = delete( $args->{filename} ) || croak("filename is a mandatory argument");
+    my $filename = delete( $args->{filename} )
+        || croak("filename is a mandatory argument");
 
     if ( %{$args} ) {
         croak(
@@ -610,12 +617,13 @@ sub get_msgs {
                         )
                     );
                 }
-## To allow External_Links to be translatable we need to translate the whole list as 
+## To allow External_Links to be translatable we need to translate the whole list as
 ## the attributes of then  members need to be translated.
-                elsif($inner->tag() eq 'simplelist') {
+                elsif ( $inner->tag() eq 'simplelist' ) {
+                    print( STDERR "filename: $filename\n" );
                     $filename eq 'External_Links.pot';
                 }
-                elsif($filename eq 'External_Links.pot'){
+                elsif ( $filename eq 'External_Links.pot' ) {
                     0;
                 }
                 else {
@@ -634,12 +642,15 @@ sub get_msgs {
 
      # Have to be inside a translatable tag here, so don't need to check again
         my @matches;
-        if($filename ne 'External_Links.pot') {
-         @matches = $child->look_down(
-            '_tag',
-            qr/$TRANSTAGS/,
-            sub { not defined( $_[0]->look_up( '_tag', qr/$IGNOREBLOCKS/ ) ) }
-        );
+        if ( $filename ne 'External_Links.pot' ) {
+            @matches = $child->look_down(
+                '_tag',
+                qr/$TRANSTAGS/,
+                sub {
+                    not defined(
+                        $_[0]->look_up( '_tag', qr/$IGNOREBLOCKS/ ) );
+                }
+            );
         }
 
     # No Nesting so push all of this nodes content on to the output trans_tree
@@ -676,7 +687,9 @@ sub get_msgs {
                         if ( !$trans_node->is_empty );
                     $trans_node = XML::Element->new( $child->tag() );
                     $trans_tree->push_content(
-                        $self->get_msgs( { doc => $nested, filename=> $filename } )->content_list()
+                        $self->get_msgs(
+                            { doc => $nested, filename => $filename }
+                        )->content_list()
                     );
                 }
                 else {
@@ -708,6 +721,8 @@ sub merge_msgs {
     my $msgids = delete( $args->{msgids} )
         || croak("msgids is a mandatory argument");
     my $ent_file = delete( $args->{ent_file} );
+    my $out_file = delete( $args->{out_file} )
+        || croak( maketext("out_file is a mandatory argument") );
 
     if ( %{$args} ) {
         croak(
@@ -725,6 +740,10 @@ sub merge_msgs {
                 my $inner = $_[0];
 ## an index term NOT in a translatable tag should be translated as a block.
 ## An indexterm in a translatable tag should be translated inline
+                print(    STDERR "out_file $out_file, tag: "
+                        . $inner->tag()
+                        . "\n" )
+                    if ( $out_file =~ /External_Links/ );
                 if ( $inner->tag() =~ /indexterm|productname|phrase/ ) {
                     not defined(
                         $inner->look_up(
@@ -738,6 +757,14 @@ sub merge_msgs {
                             },
                         )
                     );
+                }
+## To allow External_Links to be translatable we need to translate the whole list as
+## the attributes of then  members need to be translated.
+                elsif ( $inner->tag() eq 'simplelist' ) {
+                    $out_file =~ /External_Links\.xml/;
+                }
+                elsif ( $out_file =~ /External_Links\.xml/ ) {
+                    0;
                 }
                 else {
 ## Other IGNOREBLOCKS tags are completely ignored for translation structure.
@@ -755,14 +782,24 @@ sub merge_msgs {
 
         next if ( $child->is_empty );
 
-        my @matches = $child->look_down(
-            '_tag',
-            qr/$TRANSTAGS/,
-            sub { not defined( $_[0]->look_up( '_tag', qr/$IGNOREBLOCKS/ ) ) }
-        );
+     # Have to be inside a translatable tag here, so don't need to check again
+        my @matches;
+        if ( $out_file !~ /External_Links\.xml/ ) {
+            @matches = $child->look_down(
+                '_tag',
+                qr/$TRANSTAGS/,
+                sub {
+                    not defined(
+                        $_[0]->look_up( '_tag', qr/$IGNOREBLOCKS/ ) );
+                }
+            );
+        }
+        else {
+            print( STDERR "out_file $out_file\n" );
+        }
 
     # No Nesting so push all of this nodes content on to the output trans_tree
-        if ( !$#matches ) {
+        if ( $#matches == -1 ) {
             $self->translate(
                 { ent_file => $ent_file, node => $child, msgids => $msgids }
             );
@@ -800,7 +837,11 @@ sub merge_msgs {
                         $trans_node = XML::Element->new( $child->tag() );
                     }
                     $self->merge_msgs(
-                        { out_doc => $nested, msgids => $msgids } );
+                        {   out_file => $out_file,
+                            out_doc  => $nested,
+                            msgids   => $msgids
+                        }
+                    );
                     $child->push_content($nested);
                 }
                 else {

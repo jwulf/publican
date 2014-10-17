@@ -1,3 +1,6 @@
+4.2.6 UNRELEASED
+- Fix External_Links translation not merging. BZ #1153911
+
 4.2.5 Wed Oct 15 2014
 - Fix DocBook4 epub failing for ja-JP. BZ #1152780
 
