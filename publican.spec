@@ -340,7 +340,7 @@ rm -rf $RPM_BUILD_ROOT
 %{wwwdir}/common-db5
 
 %changelog
-* 4.2.6 Tue Oct 21 2014 Jeff Fearn <jfearn@redhat.com> 4.2.6-0
+* Tue Oct 21 2014 Jeff Fearn <jfearn@redhat.com> 4.2.6-0
 - Fix External_Links translation not merging. BZ #1153911
 
 * Wed Oct 15 2014 Jeff Fearn <jfearn@redhat.com> 4.2.5-0
