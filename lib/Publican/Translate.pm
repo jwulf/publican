@@ -620,7 +620,6 @@ sub get_msgs {
 ## To allow External_Links to be translatable we need to translate the whole list as
 ## the attributes of then  members need to be translated.
                 elsif ( $inner->tag() eq 'simplelist' ) {
-                    print( STDERR "filename: $filename\n" );
                     $filename eq 'External_Links.pot';
                 }
                 elsif ( $filename eq 'External_Links.pot' ) {
@@ -740,10 +739,6 @@ sub merge_msgs {
                 my $inner = $_[0];
 ## an index term NOT in a translatable tag should be translated as a block.
 ## An indexterm in a translatable tag should be translated inline
-                print(    STDERR "out_file $out_file, tag: "
-                        . $inner->tag()
-                        . "\n" )
-                    if ( $out_file =~ /External_Links/ );
                 if ( $inner->tag() =~ /indexterm|productname|phrase/ ) {
                     not defined(
                         $inner->look_up(
@@ -793,9 +788,6 @@ sub merge_msgs {
                         $_[0]->look_up( '_tag', qr/$IGNOREBLOCKS/ ) );
                 }
             );
-        }
-        else {
-            print( STDERR "out_file $out_file\n" );
         }
 
     # No Nesting so push all of this nodes content on to the output trans_tree

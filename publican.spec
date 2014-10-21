@@ -21,8 +21,8 @@
 %define wwwdir /var/www/html/docs
 
 Name:           publican
-Version:        4.2.5
-Release:        0%{?dist}.t1
+Version:        4.2.6
+Release:        0%{?dist}
 Summary:        Common files and scripts for publishing with DocBook XML
 # For a breakdown of the licensing, refer to LICENSE
 License:        (GPLv2+ or Artistic) and CC0
@@ -340,6 +340,9 @@ rm -rf $RPM_BUILD_ROOT
 %{wwwdir}/common-db5
 
 %changelog
+* 4.2.6 Tue Oct 21 2014 Jeff Fearn <jfearn@redhat.com> 4.2.6-0
+- Fix External_Links translation not merging. BZ #1153911
+
 * Wed Oct 15 2014 Jeff Fearn <jfearn@redhat.com> 4.2.5-0
 - Fix DocBook4 epub failing for ja-JP. BZ #1152780
 
