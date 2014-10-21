@@ -229,6 +229,7 @@ my %tmpl_strings = (
     epub_label            => $locale->maketext('EPUB'),
     RssProdTitle =>
         $locale->maketext('Subcribe to the RSS feed for this product'),
+    All                   => $locale->maketext('All'),
 );
 
 sub new {

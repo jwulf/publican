@@ -59,12 +59,12 @@ msgstr ""
 #. ('toc_path')
 #: bin/publican:950
 #: bin/publican:963
-#: lib/Publican/WebSite.pm:245
+#: lib/Publican/WebSite.pm:246
 msgid "%1 is a mandatory field in a site configuration file"
 msgstr ""
 
 #. ('db_file',$site_config)
-#: lib/Publican/WebSite.pm:255
+#: lib/Publican/WebSite.pm:256
 msgid "%1 is a mandatory field in a site configuration file. Check %2 for validity."
 msgstr ""
 
@@ -143,7 +143,7 @@ msgstr ""
 msgid "'books' is a required configuration parameter for a remote set"
 msgstr ""
 
-#: lib/Publican/Translate.pm:1050
+#: lib/Publican/Translate.pm:1059
 msgid "'lang' is a mandatory argument"
 msgstr ""
 
@@ -228,6 +228,10 @@ msgstr ""
 
 #: bin/publican:303
 msgid "Add or remove database entries. Used for processing pre-build books, such as when building packages."
+msgstr ""
+
+#: lib/Publican/WebSite.pm:225
+msgid "All"
 msgstr ""
 
 #. ($lang)
@@ -393,15 +397,15 @@ msgid "Can't open directory: %1"
 msgstr ""
 
 #. ($xml_file,$@)
-#: lib/Publican/Translate.pm:141
-#: lib/Publican/Translate.pm:208
+#: lib/Publican/Translate.pm:142
+#: lib/Publican/Translate.pm:209
 msgid "Can't open file %1. Error: %2"
 msgstr ""
 
 #. ($file,$@)
 #: bin/fix-zanata-map:69
 #: bin/publican:1476
-#: lib/Publican/WebSite.pm:1843
+#: lib/Publican/WebSite.pm:1844
 #: lib/Publican/XmlClean.pm:1012
 msgid "Can't open file '%1' %2"
 msgstr ""
@@ -411,7 +415,7 @@ msgid "Can't open file for html input!"
 msgstr ""
 
 #. ($!)
-#: lib/Publican/WebSite.pm:1316
+#: lib/Publican/WebSite.pm:1317
 msgid "Can't open file for html input: %1"
 msgstr ""
 
@@ -548,7 +552,7 @@ msgid "Copy a brand's installed web content to another site"
 msgstr ""
 
 #. ($lang)
-#: lib/Publican/Translate.pm:316
+#: lib/Publican/Translate.pm:317
 msgid "Could not create a Publican::Localise object for language: %1"
 msgstr ""
 
@@ -571,7 +575,7 @@ msgstr ""
 #: lib/Publican/Builder/DocBook5.pm:280
 #: lib/Publican/Builder/DocBook5.pm:343
 #: lib/Publican/CreateBook.pm:687
-#: lib/Publican/Translate.pm:248
+#: lib/Publican/Translate.pm:249
 #: lib/Publican/XmlClean.pm:546
 msgid "Could not open %1 for output!"
 msgstr ""
@@ -583,7 +587,7 @@ msgid "Could not open %1 for output: %2"
 msgstr ""
 
 #. ($@)
-#: lib/Publican/WebSite.pm:1422
+#: lib/Publican/WebSite.pm:1423
 msgid "Could not open dump file for output: %1"
 msgstr ""
 
@@ -607,7 +611,7 @@ msgid "Could not open file README for output!"
 msgstr ""
 
 #. ($@)
-#: lib/Publican/WebSite.pm:1535
+#: lib/Publican/WebSite.pm:1536
 msgid "Could not open footer file for output: %1"
 msgstr ""
 
@@ -617,7 +621,7 @@ msgid "Could not open icon file. %1"
 msgstr ""
 
 #. ($@)
-#: lib/Publican/WebSite.pm:1528
+#: lib/Publican/WebSite.pm:1529
 msgid "Could not open search file for output: %1"
 msgstr ""
 
@@ -1005,7 +1009,7 @@ msgid "Failed to load user config file: %1"
 msgstr ""
 
 #. ($pot_file,$@)
-#: lib/Publican/Translate.pm:935
+#: lib/Publican/Translate.pm:944
 msgid "Failed to open output file %1. Error: %2"
 msgstr ""
 
@@ -1015,7 +1019,7 @@ msgid "Fatal Error: Export failed. Book: %1. Error Number: %2"
 msgstr ""
 
 #. ($pot_file,$po_file)
-#: lib/Publican/Translate.pm:359
+#: lib/Publican/Translate.pm:360
 msgid "Fatal Error: msgmerge failed to merge updates. POT File: %1. Po File: %2"
 msgstr ""
 
@@ -1034,7 +1038,7 @@ msgstr ""
 msgid "Fetching %1 from scm"
 msgstr ""
 
-#: lib/Publican/Translate.pm:1073
+#: lib/Publican/Translate.pm:1082
 msgid "File Name"
 msgstr ""
 
@@ -1074,7 +1078,7 @@ msgstr ""
 msgid "Full path to the template directory."
 msgstr ""
 
-#: lib/Publican/Translate.pm:1075
+#: lib/Publican/Translate.pm:1084
 msgid "Fuzzy"
 msgstr ""
 
@@ -1214,7 +1218,7 @@ msgid "Main XML file (%1) can not be calculated before building."
 msgstr ""
 
 #. ($po_file,$xml_file,$out_file)
-#: lib/Publican/Translate.pm:190
+#: lib/Publican/Translate.pm:191
 msgid "Merging %1 >> %2 -> %3"
 msgstr ""
 
@@ -1440,7 +1444,7 @@ msgstr ""
 
 #. ($pot_file,$po_file)
 #. ($file,$out_file)
-#: lib/Publican/Translate.pm:335
+#: lib/Publican/Translate.pm:336
 #: lib/Publican/XmlClean.pm:996
 msgid "Processing file %1 -> %2"
 msgstr ""
@@ -1486,7 +1490,7 @@ msgid "Reached the maximum page ordering weight(30) that drupal can support. The
 msgstr ""
 
 #. ($lang)
-#: lib/Publican/Translate.pm:1152
+#: lib/Publican/Translate.pm:1161
 msgid "Remaining hours for %1"
 msgstr ""
 
@@ -1547,8 +1551,8 @@ msgstr ""
 msgid "Scroll to category"
 msgstr ""
 
-#: lib/Publican/WebSite.pm:2229
-#: lib/Publican/WebSite.pm:979
+#: lib/Publican/WebSite.pm:2230
+#: lib/Publican/WebSite.pm:980
 msgid "Search"
 msgstr ""
 
@@ -1702,7 +1706,7 @@ msgstr ""
 
 #. ($PARAMS{$key}->{default})
 #: lib/Publican.pm:1847
-#: lib/Publican/WebSite.pm:2284
+#: lib/Publican/WebSite.pm:2285
 msgid "The default value for this parameter is: %1"
 msgstr ""
 
@@ -1810,7 +1814,7 @@ msgstr ""
 
 #. ($PARAMS{$key}->{not_for})
 #: lib/Publican.pm:1874
-#: lib/Publican/WebSite.pm:2311
+#: lib/Publican/WebSite.pm:2312
 msgid "This field is not supported for: %1."
 msgstr ""
 
@@ -1858,7 +1862,7 @@ msgstr ""
 
 #. ($PARAMS{$key}->{constraint})
 #: lib/Publican.pm:1860
-#: lib/Publican/WebSite.pm:2297
+#: lib/Publican/WebSite.pm:2298
 msgid "This parameter is constrained with the following regular expression: %1"
 msgstr ""
 
@@ -1879,7 +1883,7 @@ msgid "Total Packages"
 msgstr ""
 
 #. ($lang)
-#: lib/Publican/Translate.pm:1143
+#: lib/Publican/Translate.pm:1152
 msgid "Total for %1"
 msgstr ""
 
@@ -1892,12 +1896,12 @@ msgstr ""
 msgid "Transformation error '%1' : %2"
 msgstr ""
 
-#: lib/Publican/Translate.pm:1076
+#: lib/Publican/Translate.pm:1085
 msgid "Translated"
 msgstr ""
 
 #. ($edition,$release)
-#: lib/Publican/Translate.pm:386
+#: lib/Publican/Translate.pm:387
 msgid "Translation files synchronised with XML sources %1-%2"
 msgstr ""
 
@@ -1945,7 +1949,7 @@ msgstr ""
 msgid "Unknown width format will be ignored: %1"
 msgstr ""
 
-#: lib/Publican/Translate.pm:1074
+#: lib/Publican/Translate.pm:1083
 #: lib/Publican/WebSite.pm:200
 msgid "Untranslated"
 msgstr ""
@@ -2005,7 +2009,7 @@ msgstr ""
 msgid "WARNING: Could not reset file permissions for %1 because %2"
 msgstr ""
 
-#: lib/Publican/Translate.pm:883
+#: lib/Publican/Translate.pm:892
 msgid "WARNING: Fuzzy message in PO file."
 msgstr ""
 
@@ -2014,21 +2018,21 @@ msgstr ""
 msgid "WARNING: Image missing: %1"
 msgstr ""
 
-#: lib/Publican/Translate.pm:900
+#: lib/Publican/Translate.pm:909
 msgid "WARNING: Message missing from PO file, consider updating your POT and PO files."
 msgstr ""
 
 #. ($pot_file)
-#: lib/Publican/Translate.pm:372
+#: lib/Publican/Translate.pm:373
 msgid "WARNING: No source xml file exists for %1"
 msgstr ""
 
 #. ($lang)
-#: lib/Publican/Translate.pm:306
+#: lib/Publican/Translate.pm:307
 msgid "WARNING: Skipping invalid language: %1"
 msgstr ""
 
-#: lib/Publican/Translate.pm:887
+#: lib/Publican/Translate.pm:896
 msgid "WARNING: Un-translated message in PO file."
 msgstr ""
 
@@ -2165,7 +2169,7 @@ msgid "couldn't unlink xml file '%1', error: %2"
 msgstr ""
 
 #. ($pot_file)
-#: lib/Publican/Translate.pm:154
+#: lib/Publican/Translate.pm:155
 msgid "deleted empty pot file: %1\n"
 msgstr ""
 
@@ -2186,11 +2190,11 @@ msgstr ""
 msgid "dtdver is a mandatory argument"
 msgstr ""
 
-#: lib/Publican/WebSite.pm:1436
+#: lib/Publican/WebSite.pm:1437
 msgid "dump file zip creation failed."
 msgstr ""
 
-#: lib/Publican/Translate.pm:280
+#: lib/Publican/Translate.pm:281
 msgid "email is a mandatory argument"
 msgstr ""
 
@@ -2206,7 +2210,7 @@ msgstr ""
 msgid "file is a mandatory argument"
 msgstr ""
 
-#: lib/Publican/Translate.pm:276
+#: lib/Publican/Translate.pm:277
 msgid "firstname is a mandatory argument"
 msgstr ""
 
@@ -2263,7 +2267,7 @@ msgstr ""
 #: lib/Publican/Builder/DocBook.pm:95
 #: lib/Publican/Builder/DocBook4.pm:95
 #: lib/Publican/Builder/DocBook5.pm:95
-#: lib/Publican/Translate.pm:272
+#: lib/Publican/Translate.pm:273
 msgid "langs is a mandatory argument"
 msgstr ""
 
@@ -2272,7 +2276,7 @@ msgid "manifest not found"
 msgstr ""
 
 #. ($s1,$s2)
-#: lib/Publican/Translate.pm:516
+#: lib/Publican/Translate.pm:517
 msgid "match_strings requires 2 arguments %1, %2."
 msgstr ""
 
@@ -2294,7 +2298,7 @@ msgstr ""
 msgid "os to filter output on."
 msgstr ""
 
-#: lib/Publican/Translate.pm:177
+#: lib/Publican/Translate.pm:178
 #: lib/Publican/XmlClean.pm:455
 #: lib/Publican/XmlClean.pm:985
 msgid "out_file is a mandatory argument"
@@ -2305,13 +2309,13 @@ msgstr ""
 msgid "pdftool only supports fop or wkhtmltopdf, not: %1"
 msgstr ""
 
-#: lib/Publican/Translate.pm:175
-#: lib/Publican/Translate.pm:433
+#: lib/Publican/Translate.pm:176
+#: lib/Publican/Translate.pm:434
 msgid "po_file is a mandatory argument"
 msgstr ""
 
-#: lib/Publican/Translate.pm:435
-#: lib/Publican/Translate.pm:920
+#: lib/Publican/Translate.pm:436
+#: lib/Publican/Translate.pm:929
 msgid "pot_file is a mandatory argument"
 msgstr ""
 
@@ -2396,7 +2400,7 @@ msgstr ""
 msgid "status to filter output on."
 msgstr ""
 
-#: lib/Publican/Translate.pm:278
+#: lib/Publican/Translate.pm:279
 msgid "surname is a mandatory argument"
 msgstr ""
 
@@ -2454,16 +2458,16 @@ msgstr ""
 #: lib/Publican/Builder/DocBook5.pm:671
 #: lib/Publican/CreateBook.pm:94
 #: lib/Publican/CreateBrand.pm:70
-#: lib/Publican/Translate.pm:1055
-#: lib/Publican/Translate.pm:183
-#: lib/Publican/Translate.pm:286
-#: lib/Publican/Translate.pm:440
-#: lib/Publican/Translate.pm:545
-#: lib/Publican/Translate.pm:575
+#: lib/Publican/Translate.pm:1064
+#: lib/Publican/Translate.pm:184
+#: lib/Publican/Translate.pm:287
+#: lib/Publican/Translate.pm:441
+#: lib/Publican/Translate.pm:546
+#: lib/Publican/Translate.pm:577
 #: lib/Publican/Translate.pm:66
-#: lib/Publican/Translate.pm:706
-#: lib/Publican/Translate.pm:835
-#: lib/Publican/Translate.pm:925
+#: lib/Publican/Translate.pm:715
+#: lib/Publican/Translate.pm:844
+#: lib/Publican/Translate.pm:934
 #: lib/Publican/TreeView.pm:131
 #: lib/Publican/TreeView.pm:220
 #: lib/Publican/TreeView.pm:67
@@ -2509,7 +2513,7 @@ msgid "xml_doc is a mandatory argument"
 msgstr ""
 
 #: lib/Publican.pm:1182
-#: lib/Publican/Translate.pm:173
+#: lib/Publican/Translate.pm:174
 msgid "xml_file is a mandatory argument"
 msgstr ""
 
