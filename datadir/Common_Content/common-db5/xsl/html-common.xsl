@@ -2319,5 +2319,28 @@ valign: <xsl:value-of select="@valign"/></xsl:message>
   </xsl:choose>
 </xsl:template>
 
+<!-- Fix invalid self-closing anchors BZ#1158740 -->
+<xsl:template match="d:indexterm">
+  <!-- this one must have a name, even if it doesn't have an ID -->
+  <xsl:variable name="id">
+    <xsl:call-template name="object.id"/>
+  </xsl:variable>
+
+  <a id="{$id}" class="indexterm"><xsl:comment></xsl:comment></a>
+</xsl:template>
+
+<!-- Fix invalid self-closing caption div BZ#1158740 -->
+<xsl:template match="d:caption">
+  <div>
+    <xsl:apply-templates select="." mode="common.html.attributes"/>
+    <xsl:call-template name="id.attribute"/>
+    <xsl:if test="@align = 'right' or @align = 'left' or @align='center'">
+      <xsl:attribute name="align"><xsl:value-of select="@align"/></xsl:attribute>
+    </xsl:if>
+    <xsl:apply-templates/>
+    <xsl:text> </xsl:text>
+  </div>
+</xsl:template>
+
 </xsl:stylesheet>
 

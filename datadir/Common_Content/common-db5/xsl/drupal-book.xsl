@@ -56,10 +56,7 @@ Version:
   </xsl:param>
 
   <html>
-     <head>
-       <xsl:call-template name="html.head">
-      </xsl:call-template>
-    </head>
+    <xsl:call-template name="html.head"/>
     <body>
       <xsl:call-template name="body.attributes"/>
       <xsl:call-template name="user.header.navigation"/>

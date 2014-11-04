@@ -12,6 +12,7 @@ $next UNRELEASED
 - Removed the titlepage.xsl import from html-single due to breaking the xsl precedence. BZ #1187728
 - Fix Publican doesn't fallback to base_brand xsl files. BZ #1185127
 - Fix <section> elements being stripped in drupal-book builds. BZ #1158747
+- Fix malformed HTML/Drupal XML Feed for DocBook 5 content. BZ #1158740
 
 4.2.6 Tue Oct 21 2014
 - Fix External_Links translation not merging. BZ #1153911
