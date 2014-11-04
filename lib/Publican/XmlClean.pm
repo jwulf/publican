@@ -266,6 +266,7 @@ sub new {
     $config->param( 'update_includes', delete( $args->{update_includes} ) )
         if ( $args->{update_includes} );
     $config->param( 'clean_id', ( delete( $args->{clean_id} ) ) || 0 );
+    $config->param( 'unique_id', ( delete( $args->{unique_id} ) ) || 0 );
     $config->param( 'donotset_lang',
         ( delete( $args->{donotset_lang} ) ) || 0 );
     $config->param( 'distributed_set',
@@ -612,6 +613,7 @@ sub my_as_XML {
     }
 
     my $clean_id = $self->{config}->param('clean_id');
+    my $unique_id  = $self->{config}->param('unique_id');
     my $lang     = $self->{config}->param('lang');
 
     # This flags tags that use  /> instead of end tags IF they are empty.
@@ -714,7 +716,7 @@ sub my_as_XML {
                         $img_file
                             = $self->{publican}->param('xml_lang') . "/"
                             . $img_file
-                            if ($clean_id);
+                            if ($clean_id || $unique_id);
                         if ( -f $img_file ) {
 
                             #nop

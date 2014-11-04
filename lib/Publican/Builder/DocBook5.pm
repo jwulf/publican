@@ -137,7 +137,7 @@ sub setup_xml {
             if ($drupal) {
 
                 # preprocess. set the unique id for every sections
-                my $set_ids = Publican::XmlClean->new();
+                my $set_ids = Publican::XmlClean->new( { unique_id => 1 } );
 
                 logger( maketext("Preprocessing xml files...\n") );
                 $set_ids->set_unique_ids();
