@@ -11,6 +11,7 @@ $next UNRELEASED
 - Removed duplicate IDs from PUG. BZ #1197523
 - Removed the titlepage.xsl import from html-single due to breaking the xsl precedence. BZ #1187728
 - Fix Publican doesn't fallback to base_brand xsl files. BZ #1185127
+- Fix <section> elements being stripped in drupal-book builds. BZ #1158747
 
 4.2.6 Tue Oct 21 2014
 - Fix External_Links translation not merging. BZ #1153911

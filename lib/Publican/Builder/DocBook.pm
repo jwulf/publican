@@ -1587,6 +1587,9 @@ sub build_drupal_book {
             my @csv_row;
             my $tree = HTML::TreeBuilder->new();
 
+            # Fix unknown sections being removed BZ1158747
+            $tree->ignore_unknown(0);
+
             open my $html_file, "<:encoding(utf8)", $file_name
                 or croak "$file_name: $!";
 
