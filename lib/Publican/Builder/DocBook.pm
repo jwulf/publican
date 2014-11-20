@@ -1468,13 +1468,14 @@ sub get_nodes_order {
     my $section_maps = delete( $args->{section_maps} ) || {};
     my $all_nodes    = delete( $args->{all_nodes} )    || {};
     my $check_dups   = delete( $args->{check_dups} )   || {};
+    my $type         = lc( $self->{publican}->param('type') );
 
     my %order;
     my @node_list;
 
     if ( !$node ) {
         @node_list
-            = $source->getElementsByTagName('book')->[0]->childNodes();
+            = $source->getElementsByTagName($type)->[0]->childNodes();
     }
     else {
         @node_list = $node->childNodes();
@@ -1565,6 +1566,7 @@ sub build_drupal_book {
     my $book_title = $self->{publican}->param('drupal_menu_title');
     my $menu_block = $self->{publican}->param('drupal_menu_block');
     my $img_path   = $self->{publican}->param('drupal_image_path');
+    my $type       = lc( $self->{publican}->param('type') );
 
     $menu_block = ($menu_block) ? "menu-$menu_block" : "";
 
@@ -1578,7 +1580,7 @@ sub build_drupal_book {
     foreach my $order_num ( sort { $a <=> $b } keys %{$nodes_order} ) {
 
         my $page
-            = ( $nodes_order->{$order_num}{'id'} =~ /^book\-/ )
+            = ( $nodes_order->{$order_num}{'type'} =~ /^${type}info/ )
             ? 'index'
             : $nodes_order->{$order_num}{'id'};
         my $file_name = "$drupal_dir/$page.html";
