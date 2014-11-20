@@ -1762,7 +1762,7 @@ sub build_drupal_book {
 
             push @csv_row, $title;
             push @csv_row, $book;
-            push @csv_row, $parent;
+            push @csv_row, $parent_alias;
             push @csv_row, $weight;
             push @csv_row, $menu_title;
             push @csv_row, $menu_link;
