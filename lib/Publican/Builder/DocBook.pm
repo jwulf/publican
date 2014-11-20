@@ -1410,6 +1410,11 @@ sub drupal_transform {
     $self->{dbh}->disconnect()
         if ( defined $self->{dbh} );
 
+    # Escape some of the generated content for XML use
+    $title = $self->escape_xml($title);
+    $subtitle = $self->escape_xml($subtitle);
+    $abstract = $self->escape_xml($abstract);
+
     my $out_file
         = "$drupal_dir/$product-$version-$docname-$lang-$edition-$release.xml";
     my $fh;
@@ -1450,6 +1455,21 @@ EOR
     $fh->print("</document>\n");
 
     return;
+}
+
+=head2 escape_xml
+
+Escapes an input string so that it can be used in an XML Element.
+
+=cut
+sub escape_xml {
+    my ($self, $source) = @_;
+    $source =~ s{\&}{\&amp\;};
+    $source =~ s{\<}{\&lt\;};
+    $source =~ s{\>}{\&gt\;};
+    $source =~ s{\'}{\&apos\;};
+    $source =~ s{\"}{\&quot\;};
+    return ($source);
 }
 
 =head2 get_nodes_order
@@ -1593,6 +1613,8 @@ sub build_drupal_book {
 
             # Fix unknown sections being removed BZ1158747
             $tree->ignore_unknown(0);
+            # Fix entities being expanded in the output BZ 1165438
+            $tree->no_expand_entities(1);
 
             open my $html_file, "<:encoding(utf8)", $file_name
                 or croak "$file_name: $!";
@@ -1751,7 +1773,7 @@ sub build_drupal_book {
             }
 
             $title =~ s/\s+/ /g;
-            my $html_string = $tree->as_HTML( '<>&', "", {} );
+            my $html_string = $tree->as_XML();
             $html_string =~ s{^<!DOCTYPE [^>]*>\n*}{};
             $html_string =~ s{<html.*>\s*<body[^>]*>}{};
             $html_string =~ s{</body>}{};
@@ -2258,7 +2280,7 @@ sub numberLines {
 
     my $text      = $content->string_value();
     my $num_lines = () = ( $text =~ /^/mg );
-    my $format    = '%' . length("$num_lines") . 's' . chr(160);
+    my $format    = '%' . length("$num_lines") . 's:' . chr(160);
 
     my $out_string = $text;
     $out_string =~ s/^/sprintf("$format",$count++)/egm;
