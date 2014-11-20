@@ -1503,6 +1503,7 @@ sub get_nodes_order {
                 my $value = $cnode_attr->getValue();
                 $order{ ++$count }{'id'} = $value;
                 $order{$count}{'type'} = $cnode->nodeName();
+                $order{$count}{'parent'} = $cnode->parentNode->nodeName();
                 $section_maps->{$value} = $unique_id || $value;
 
                 if ( defined $unique_id ) {
@@ -1580,7 +1581,8 @@ sub build_drupal_book {
     foreach my $order_num ( sort { $a <=> $b } keys %{$nodes_order} ) {
 
         my $page
-            = ( $nodes_order->{$order_num}{'type'} =~ /^${type}info/ )
+            = ( $nodes_order->{$order_num}{'type'} =~ /^(${type})?info/
+                && $nodes_order->{$order_num}{'parent'} =~ /^$type/ )
             ? 'index'
             : $nodes_order->{$order_num}{'id'};
         my $file_name = "$drupal_dir/$page.html";
