@@ -1,3 +1,6 @@
+4.2.7 UNRELEASED
+- Fix PDF builds ignoring overrides.css and lang.css. BZ #1165005
+
 4.2.6 Tue Oct 21 2014
 - Fix External_Links translation not merging. BZ #1153911
 
