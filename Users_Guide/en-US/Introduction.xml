@@ -284,6 +284,12 @@ public class NotificationWorkItemHandler implements WorkItemHandler {
 				</programlistingco>
 </section>
 
+<section id="1168765">
+<title>Testing BZ #1168765 programlisting no longer support language attribute.</title>
+<programlisting language="XML"><![CDATA[<?xml version="1.0" encoding="UTF-8"?><test></test>]]></programlisting>
+
+</section>
+
 <!--                                 
 <para>
 <equation>

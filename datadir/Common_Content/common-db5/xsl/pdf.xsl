@@ -8,9 +8,8 @@
     xmlns:stbl="http://nwalsh.com/xslt/ext/com.nwalsh.saxon.Table"
     xmlns:xtbl="com.nwalsh.xalan.Table"
     xmlns:ptbl="http://nwalsh.com/xslt/ext/xsltproc/python/Table"
-    xmlns:perl="urn:perl"
     xmlns:exsl="http://exslt.org/common"
-    exclude-result-prefixes="exsl perl ptbl xtbl stbl d"
+    exclude-result-prefixes="exsl ptbl xtbl stbl d"
     extension-element-prefixes="d"
 >
 
@@ -21,6 +20,7 @@
 <xsl:param name="fop1.extensions" select="1"/>
 <xsl:param name="linenumbering.extension" select="0"/>
 <xsl:param name="callouts.extension" select="0"/>
+<xsl:param name="highlight.source" select="0"/>
 
 </xsl:stylesheet>
 
