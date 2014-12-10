@@ -1381,6 +1381,21 @@ sub drupal_transform {
     my $abstract   = $self->get_abstract( { lang => $lang } );
     my $keywords   = join( ',', $self->get_keywords( { lang => $lang } ) );
 
+    my ( $web_product_label, $web_version_label, $web_name_label )
+        = $self->web_labels( { lang => $lang, xml_lang => $xml_lang } );
+
+    my $prod
+        = $web_product_label
+        ? $web_product_label
+        : $product;
+    $prod =~ s/_/ /g;
+
+    my $ver
+        = $web_version_label
+        ? $web_version_label
+        : $version;
+    $ver =~ s/_/ /g;
+
     my $parser = XML::LibXML->new(no_network => !$self->{publican}->{allow_network});
     $parser->expand_xinclude(1);
     $parser->expand_entities(1);
@@ -1412,6 +1427,8 @@ sub drupal_transform {
 
     # Escape some of the generated content for XML use
     $title = $self->escape_xml($title);
+    $prod = $self->escape_xml($prod);
+    $ver = $self->escape_xml($ver);
     $subtitle = $self->escape_xml($subtitle);
     $abstract = $self->escape_xml($abstract);
 
@@ -1426,13 +1443,13 @@ sub drupal_transform {
     $fh->print(<<EOH);
 <?xml version="1.0" encoding="UTF-8"?>
 <document>
-  <name>$product $version $title</name>
+  <name>$prod $ver $title</name>
   <title>$title</title>
   <subtitle>$subtitle</subtitle>
   <lang>$lang</lang>
   <images>$filename</images>
-  <product>$product</product>
-  <version>$version</version>
+  <product>$prod</product>
+  <version>$ver</version>
   <edition>$edition</edition>
   <release>$release</release>
   <abstract>$abstract</abstract>
@@ -1759,7 +1776,6 @@ sub build_drupal_book {
                 : "$product $version $docname";
             if ( $page eq 'index' ) {
                 $alias      = $bookname;
-                $title      = $book;
                 $menu_title = $book;
                 $menu_link  = $menu_block;
                 $book       = "";

@@ -18,6 +18,7 @@ $next UNRELEASED
 - Fix initial title page content being skipped when a user defines a custom bookinfo id. BZ #1165482
 - Fix invalid XML being generated for drupal-book, when titles contain reserved chars. BZ #1165438
 - Changed the drupal feed <parent> field to use the url value instead of the title. BZ #1165724
+- Fix publican.cfg values are used in the feed page <title> tag. BZ #1172402
 
 4.2.6 Tue Oct 21 2014
 - Fix External_Links translation not merging. BZ #1153911
