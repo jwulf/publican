@@ -48,6 +48,29 @@ use vars qw(@ISA @EXPORT @EXPORT_OK);
 
 %HTML::Element::optionalEndTag = ();
 
+our ( %CHUNK_TAGS );
+%CHUNK_TAGS = (
+    book => { format => 'bk%02d', any_level => 1 },
+    article => { format => 'ar%02d', any_level => 1 },
+    chapter => { format => 'ch%02d', any_level => 1 },
+    appendix => { format => 'ap%s', any_level => 1, use_alpha => 1 },
+    part => { format => 'pt%02d', any_level => 1 },
+    preface => { format => 'pr%02d', any_level => 1 },
+    index => { format => 'ix%02d', any_level => 1 },
+    reference => { format => 'rn%02d', any_level => 1 },
+    refentry => { format => 're%02d', any_level => 1 },
+    colophon => { format => 'co%02d', any_level => 1 },
+    bibliography => { format => 'bi%02d', any_level => 1 },
+    glossary => { format => 'go%02d', any_level => 1 },
+    topic => { format => 'to%02d', any_level => 1 },
+    section => { format => 's%02d', use_parent => 1 },
+    sect1 => { format => 's%02d', use_parent => 1 },
+    sect2 => { format => 's%02d', use_parent => 1 },
+    sect3 => { format => 's%02d', use_parent => 1 },
+    sect4 => { format => 's%02d', use_parent => 1 },
+    sect5 => { format => 's%02d', use_parent => 1 },
+);
+
 =head1 NAME
 
 Publican::Builder::DocBook - A module to Convert XML to various output formats
@@ -1507,54 +1530,44 @@ sub get_nodes_order {
     my $check_dups   = delete( $args->{check_dups} )   || {};
     my $type         = lc( $self->{publican}->param('type') );
 
-    my %order;
-    my @node_list;
-
     if ( !$node ) {
-        @node_list
-            = $source->getElementsByTagName($type)->[0]->childNodes();
-    }
-    else {
-        @node_list = $node->childNodes();
+        $node = $source->getElementsByTagName($type)->[0];
     }
 
+    my %order;
+    my @node_list = $node->childNodes();
     my $count = 0;
     foreach my $cnode (@node_list) {
-        if ( $cnode->nodeName() eq 'index' ) {
-            $order{ ++$count }{'id'} = "ix01";
-            $order{$count}{'type'} = "index";
-        }
+        my $tag = $cnode->nodeName();
 
-    # $cnode->attributes will return namespace too, so we need to skip it here
-        next if ( !$cnode->hasAttributes() );
+        # Ignore anything that isn't an element
+        next if ( $cnode->nodeType() != XML_ELEMENT_NODE);
 
         my $unique_id = undef;
-        foreach my $cnode_attr ( $cnode->attributes() ) {
-            if ( $cnode_attr->name() eq "conformance" ) {
-                $unique_id = $cnode_attr->getValue();
+        if ( $cnode->hasAttribute("conformance")) {
+            $unique_id = $cnode->getAttribute("conformance");
+        }
 
-                #print "$unique_id\n";
+        if ( $cnode->hasAttribute( $self->{id_attr} ) ) {
+            my $value = $cnode->getAttribute( $self->{id_attr} );
+            $order{ ++$count }{'id'} = $value;
+            $order{$count}{'type'} = $tag;
+            $order{$count}{'parent'} = $cnode->parentNode->nodeName();
+            $section_maps->{$value} = $unique_id || $value;
+
+            if ( defined $unique_id ) {
+
+                croak(
+                    maketext(
+                        "Duplicate conformance value in section $value which value = $unique_id."
+                    )
+                ) if ( defined $check_dups->{$unique_id} );
+
+                $check_dups->{$unique_id} = 1;
             }
 
-            if ( $cnode_attr && $cnode_attr->name() eq "id" ) {
-                my $value = $cnode_attr->getValue();
-                $order{ ++$count }{'id'} = $value;
-                $order{$count}{'type'} = $cnode->nodeName();
-                $order{$count}{'parent'} = $cnode->parentNode->nodeName();
-                $section_maps->{$value} = $unique_id || $value;
-
-                if ( defined $unique_id ) {
-
-                    croak(
-                        maketext(
-                            "Duplicate conformance value in section $value which value = $unique_id."
-                        )
-                    ) if ( defined $check_dups->{$unique_id} );
-
-                    $check_dups->{$unique_id} = 1;
-                }
-
-#|| croak ( maketext("missing 'conformance' attribute in $order{$count}{type} where id is $value") );
+    #|| croak ( maketext("missing 'conformance' attribute in $order{$count}{type} where id is $value") );
+            if ( $cnode->hasChildNodes() ) {
                 $all_nodes->{$value} = 1;
                 my $child_nodes = $self->get_nodes_order(
                     {   source       => $source,
@@ -1567,9 +1580,100 @@ sub get_nodes_order {
                 $order{$count}{'childs'} = $child_nodes
                     if ( %{$child_nodes} );
             }
+        } elsif ( exists $CHUNK_TAGS{$tag} ) {
+
+            # We need to emulate the filename given to the element when chunked (see chunk-code.xsl). BZ #1173421
+            my $format = $CHUNK_TAGS{$tag}{'format'};
+            my $value = $self->get_chunk_filename($cnode);
+
+            $order{ ++$count }{'id'} = $value;
+            $order{$count}{'type'} = $tag;
+            $order{$count}{'parent'} = $cnode->parentNode->nodeName();
+            $section_maps->{$value} = $unique_id || $value;
+
+            if ( $cnode->hasChildNodes() ) {
+                $all_nodes->{$value} = 1;
+                my $child_nodes = $self->get_nodes_order(
+                    {   source       => $source,
+                        node         => $cnode,
+                        section_maps => $section_maps,
+                        all_nodes    => $all_nodes,
+                        check_dups   => $check_dups,
+                    }
+                );
+                $order{$count}{'childs'} = $child_nodes
+                    if ( %{$child_nodes} );
+            }
+        } elsif ( $node->nodeName() eq $type && $tag =~ /^(${type})?info/ ) {
+
+            # The main info element is generated as the index page. BZ #1173421
+            $order{ ++$count }{'id'} = "index";
+            $order{$count}{'type'} = $tag;
+            $order{$count}{'parent'} = $type;
         }
     }
     return \%order;
+}
+
+=head2 get_chunk_filename
+
+Gets the chunked filename for an LibXML::Node in a tree.
+
+=cut
+
+sub get_chunk_filename {
+    my ( $self, $node ) = @_;
+    my $tag = $node->nodeName();
+
+    # Check to make sure the node can be chunked
+    if ( !exists $CHUNK_TAGS{$tag} ) {
+        return;
+    }
+
+    my $format = $CHUNK_TAGS{$tag}{'format'};
+    my $tag_count;
+    if ( $CHUNK_TAGS{$tag}{'any_level'} ) {
+        $tag_count = $node->findvalue("count(preceding::*[local-name()='${tag}'])") + 1;
+    } else {
+        $tag_count = $node->findvalue("count(preceding-sibling::*[local-name()='${tag}'])") + 1;
+    }
+
+    my $chunk_name;
+    if ( $CHUNK_TAGS{$tag}{'use_alpha'} ) {
+        $chunk_name = sprintf( $format, $self->convert_num_to_alpha( $tag_count ));
+    } else {
+        $chunk_name = sprintf( $format, $tag_count);
+    }
+
+    if ( $CHUNK_TAGS{$tag}{'use_parent'} && $node->parentNode ) {
+        # Get the parents node name and then prefix
+        my $parent_name = $self->get_chunk_filename($node->parentNode);
+        return $parent_name . $chunk_name;
+    } else {
+        return $chunk_name;
+    }
+}
+
+=head2 convert_num_to_alpha
+
+Converts a numeric number to an alpha list item. ie 1 -> a, 27 -> aa
+
+=cut
+
+sub convert_num_to_alpha {
+    my ($self, $num) = @_;
+
+    my $dividend = $num;
+    my $alpha = "";
+    my $mod;
+
+    while( $dividend > 0 ) {
+        $mod = ($dividend - 1) % 26;
+        $alpha = chr(97 + $mod) . $alpha;
+        $dividend = int(($dividend - $mod) / 26);
+    }
+
+    return $alpha;
 }
 
 =head2 build_drupal_book

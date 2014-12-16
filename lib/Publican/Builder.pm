@@ -142,6 +142,7 @@ sub new {
     $self->{publican}   = Publican->new();
     $self->{translator} = Publican::Translate->new({showfuzzy => $showfuzzy});
     $self->{validate}   = !$novalid;
+    $self->{id_attr}    = "id";
     my $common_content = $self->{publican}->param('common_content');
     my $common_config  = $self->{publican}->param('common_config');
     my $brand          = $self->{publican}->param('brand');

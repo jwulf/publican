@@ -75,6 +75,8 @@ sub new {
 
     bless $self, $class;
 
+    $self->{id_attr}    = "xml:id";
+
     return $self;
 }
 
