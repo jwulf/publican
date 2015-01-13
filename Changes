@@ -20,6 +20,7 @@ $next UNRELEASED
 - Changed the drupal feed <parent> field to use the url value instead of the title. BZ #1165724
 - Fix publican.cfg values are used in the feed page <title> tag. BZ #1172402
 - Fix drupal content is dropped, if the element that is chunked has no id. BZ #1173421
+- Adjusted the XML output so anchors to something in the same page doesn't include the page url.
 
 4.2.6 Tue Oct 21 2014
 - Fix External_Links translation not merging. BZ #1153911

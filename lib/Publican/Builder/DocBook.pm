@@ -1797,7 +1797,7 @@ sub build_drupal_book {
                                 if ($old_value);
                         }
 
-                        if ( $tag eq 'a' && defined $node->attr('href') ) {
+                        if ( $tag eq 'a' && defined $node->attr('href')) {
                             my $old_value = $node->attr('href');
                             if ($old_value) {
                                 my @links;
@@ -1807,11 +1807,14 @@ sub build_drupal_book {
                                 for ( my $i = 0; $i < @links; $i++ ) {
                                     next if ( !$links[$i] );
                                     $links[$i] =~ s/\.html$//;
-                                    if (defined $section_maps->{ $links[$i] }
+                                    if ($links[$i] eq $page ) {
+                                        $links[$i] = "";
+                                        $update_link = 1;
+                                    } elsif (defined $section_maps->{ $links[$i] }
                                         )
                                     {
                                         $links[$i]
-                                            = $section_maps->{ $links[$i] };
+                                            = "$bookname-" . $section_maps->{ $links[$i] };
                                         $update_link = 1;
                                     }
 
@@ -1826,15 +1829,14 @@ sub build_drupal_book {
                                     }
 
                                     if ( $links[$i] eq 'ix01' ) {
-                                        $links[$i] = 'index';
+                                        $links[$i] = "$bookname-index";
                                         $update_link = 1;
                                     }
                                 }
 
                                 if ($update_link) {
                                     $old_value = join( '#', @links );
-                                    $node->attr( 'href',
-                                        "$bookname-" . $old_value );
+                                    $node->attr( 'href', $old_value);
                                     $update_link = 0;
                                 }
 
