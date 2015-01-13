@@ -578,7 +578,7 @@ sub _load_config {
         unless ( defined $PARAMS{$key} ) {
             logger(
                 maketext(
-                    "WARNING: Unknow config key [_1], ignoring.\n", $key
+                    "WARNING: Unknown config key [_1], ignoring.\n", $key
                 ),
                 RED
             );
