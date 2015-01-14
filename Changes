@@ -1,6 +1,8 @@
 4.3.0 UNRELEASED
 - Fix web site templates to be more flexable.
 - Tweak default website styles.
+- Remove all FOP customisations. BZ #1168765
+- Use FontAwesome for aswesomeness.
 
 4.2.6 Tue Oct 21 2014
 - Fix External_Links translation not merging. BZ #1153911

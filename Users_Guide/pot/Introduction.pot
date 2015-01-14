@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2014-10-21 12:47+1000\n"
-"PO-Revision-Date: 2014-10-21 12:47+1000\n"
+"POT-Creation-Date: 2015-01-14 11:39+1000\n"
+"PO-Revision-Date: 2015-01-14 11:39+1000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: None\n"
 "Language: en-US \n"
@@ -239,5 +239,11 @@ msgid "The <code>ServiceRegistry</code> class is an example class implementing t
 msgstr ""
 
 msgid "The <function>completeWorkItem()</function> call completes the work item execution."
+msgstr ""
+
+msgid "Testing BZ #1168765 programlisting no longer support language attribute."
+msgstr ""
+
+msgid "<![CDATA[<?xml version=\"1.0\" encoding=\"UTF-8\"?><test></test>]]>"
 msgstr ""
 

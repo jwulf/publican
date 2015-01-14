@@ -497,6 +497,12 @@ my $builder = $class->new(
         'web/db5.css'                 => 'web/db5.css',
         'web/print.css'               => 'web/print.css',
         'web/splash.css'              => 'web/splash.css',
+'web/Font-Awesome-4.2.0/fonts/fontawesome-webfont.ttf' => 'web/Font-Awesome-4.2.0/fonts/fontawesome-webfont.ttf',
+'web/Font-Awesome-4.2.0/fonts/fontawesome-webfont.woff' => 'web/Font-Awesome-4.2.0/fonts/fontawesome-webfont.woff',
+'web/Font-Awesome-4.2.0/fonts/fontawesome-webfont.svg' => 'web/Font-Awesome-4.2.0/fonts/fontawesome-webfont.svg',
+'web/Font-Awesome-4.2.0/fonts/FontAwesome.otf' => 'web/Font-Awesome-4.2.0/fonts/FontAwesome.otf',
+'web/Font-Awesome-4.2.0/fonts/fontawesome-webfont.eot' => 'web/Font-Awesome-4.2.0/fonts/fontawesome-webfont.eot',
+'web/Font-Awesome-4.2.0/css/font-awesome.min.css' => 'web/Font-Awesome-4.2.0/css/font-awesome.min.css',
     },
     templates_files => {
         'templates/anchor.tmpl'      => 'templates/anchor.tmpl',

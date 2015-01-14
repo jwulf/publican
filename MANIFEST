@@ -1138,6 +1138,13 @@ web/chrome.css
 web/db4.css
 web/db5.css
 web/default.js
+web/Font-Awesome-4.2.0/css/font-awesome.css
+web/Font-Awesome-4.2.0/css/font-awesome.min.css
+web/Font-Awesome-4.2.0/fonts/fontawesome-webfont.eot
+web/Font-Awesome-4.2.0/fonts/fontawesome-webfont.svg
+web/Font-Awesome-4.2.0/fonts/fontawesome-webfont.ttf
+web/Font-Awesome-4.2.0/fonts/fontawesome-webfont.woff
+web/Font-Awesome-4.2.0/fonts/FontAwesome.otf
 web/images/arrows.png
 web/images/close.png
 web/images/gradient1.png
@@ -1161,4 +1168,3 @@ windows/publican2.ico
 xt/author/perlcritic.t
 xt/author/pod-coverage.t
 xt/author/pod.t
-META.json

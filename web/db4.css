@@ -631,4 +631,7 @@ dd {
 	background-color: #ff4455;
 	text-decoration: line-through;
 }
+a.left, a.right {
+    display: none;
+}
 
