@@ -501,6 +501,7 @@ sub transform {
     my $main_file           = $self->{publican}->param('mainfile');
     my $brand_path          = $self->{publican}->param('brand_dir')
         || $common_content . "/$brand";
+    my $base_brand          = $self->{publican}->{brand_config}->param('base_brand');
     my $web_type = $self->{publican}->param('web_type') || '';
 
     my $TAR_NAME
@@ -845,6 +846,8 @@ sub transform {
     }
 
     my $xsl_file = $common_config . "/xsl/$format.xsl";
+    $xsl_file = "$common_content/$base_brand/xsl/$format.xsl"
+        if ( defined($base_brand));
     $xsl_file = "$brand_path/xsl/$format.xsl"
         if ( -f "$brand_path/xsl/$format.xsl" );
 
@@ -954,6 +957,8 @@ sub transform {
     }
     elsif ( $format eq 'html-desktop' ) {
         $xsl_file = $common_config . "/xsl/html-single.xsl";
+        $xsl_file = "$common_content/$base_brand/xsl/html-single.xsl"
+            if ( defined($base_brand));
         $xsl_file = "$brand_path/xsl/html-single.xsl"
             if ( -e "$brand_path/xsl/html-single.xsl" );
         $dir = pushd("$tmp_dir/$lang/$format");

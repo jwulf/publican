@@ -10,6 +10,7 @@ $next UNRELEASED
 - Pulled in new/updated translations. BZ #1169605
 - Removed duplicate IDs from PUG. BZ #1197523
 - Removed the titlepage.xsl import from html-single due to breaking the xsl precedence. BZ #1187728
+- Fix Publican doesn't fallback to base_brand xsl files. BZ #1185127
 
 4.2.6 Tue Oct 21 2014
 - Fix External_Links translation not merging. BZ #1153911
