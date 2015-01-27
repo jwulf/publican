@@ -33,7 +33,7 @@
 <xsl:param name="qanda.defaultlabel">qanda</xsl:param>
 <xsl:param name="glossary.sort" select="1"/>
 <xsl:param name="formal.object.break.after">0</xsl:param>
-<xsl:param name="highlight.source" select="1"/>
+<xsl:param name="highlight.source" select="0"/>
 <xsl:param name="draft.mode">maybe</xsl:param>
 <xsl:param name="poper.as.dl"  select="0"/>
 <xsl:param name="callout.list.table" select="0"/>
@@ -60,7 +60,7 @@
     </xsl:choose>
 </xsl:param>
 <xsl:param name="callout.graphics.path"><xsl:value-of select="$admon.graphics.path"/><xsl:text>/</xsl:text></xsl:param>
-<xsl:param name="html.stylesheet"><xsl:if test="$embedtoc = 0 ">Common_Content/css/default.css</xsl:if></xsl:param>
+<xsl:param name="html.stylesheet"></xsl:param>
 <xsl:param name="html.stylesheet.type" select="'text/css'"/>
 <xsl:param name="html.stylesheet.print"><xsl:if test="$embedtoc = 0 ">Common_Content/css/print.css</xsl:if></xsl:param>
 <xsl:param name="html.ext" select="'.html'"/>
@@ -117,10 +117,15 @@ part toc
   <xsl:param name="node" select="."/>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <xsl:if test="$embedtoc = 1">
+    <link rel="stylesheet" type="text/css"><xsl:attribute name="href"><xsl:value-of select="$tocpath"/>/../common-db5/en-US/scripts/highlight.js/styles/docco.css</xsl:attribute></link>
     <link rel="stylesheet" type="text/css"><xsl:attribute name="href"><xsl:value-of select="$tocpath"/>/../chrome.css</xsl:attribute></link>
     <link rel="stylesheet" type="text/css"><xsl:attribute name="href"><xsl:value-of select="$tocpath"/>/../db5.css</xsl:attribute></link>
     <link rel="stylesheet" type="text/css"><xsl:attribute name="href"><xsl:value-of select="$tocpath"/>/../<xsl:value-of select="$brand"/>/<xsl:value-of select="$langpath"/>/css/brand.css</xsl:attribute></link>
     <link rel="stylesheet" type="text/css"><xsl:attribute name="href"><xsl:value-of select="$tocpath"/>/../print.css</xsl:attribute><xsl:attribute name="media">print</xsl:attribute></link>
+    <script type="text/javascript">
+        <xsl:attribute name="src"><xsl:value-of select="$tocpath"/>/../jquery-1.7.1.min.js</xsl:attribute>
+        <xsl:text> </xsl:text>
+    </script>
     <script type="text/javascript">
         <xsl:attribute name="src"><xsl:value-of select="$tocpath"/>/labels.js</xsl:attribute>
         <xsl:text> </xsl:text>
@@ -130,11 +135,11 @@ part toc
         <xsl:text> </xsl:text>
     </script>
     <script type="text/javascript">
-        <xsl:attribute name="src"><xsl:value-of select="$tocpath"/>/../jquery-1.7.1.min.js</xsl:attribute>
+        <xsl:attribute name="src"><xsl:value-of select="$tocpath"/>/../common-db5/en-US/scripts/utils.js</xsl:attribute>
         <xsl:text> </xsl:text>
     </script>
     <script type="text/javascript">
-        <xsl:attribute name="src"><xsl:value-of select="$tocpath"/>/../common-db5/en-US/scripts/utils.js</xsl:attribute>
+        <xsl:attribute name="src"><xsl:value-of select="$tocpath"/>/../common-db5/en-US/scripts/highlight.js/highlight.pack.js</xsl:attribute>
         <xsl:text> </xsl:text>
     </script>
     <script type="text/javascript">
@@ -152,12 +157,18 @@ part toc
     </script>
   </xsl:if>
   <xsl:if test="$embedtoc != 1">
+    <link rel="stylesheet" type="text/css"><xsl:attribute name="href">Common_Content/scripts/highlight.js/styles/docco.css</xsl:attribute></link>
+    <link rel="stylesheet" type="text/css"><xsl:attribute name="href">Common_Content/css/default.css</xsl:attribute></link>
     <script type="text/javascript">
-        <xsl:attribute name="src">Common_Content/scripts/utils.js</xsl:attribute>
+        <xsl:attribute name="src">Common_Content/scripts/jquery-1.7.1.min.js</xsl:attribute>
         <xsl:text> </xsl:text>
     </script>
     <script type="text/javascript">
-        <xsl:attribute name="src">Common_Content/scripts/jquery-1.7.1.min.js</xsl:attribute>
+        <xsl:attribute name="src">Common_Content/scripts/highlight.js/highlight.pack.js</xsl:attribute>
+        <xsl:text> </xsl:text>
+    </script>
+    <script type="text/javascript">
+        <xsl:attribute name="src">Common_Content/scripts/utils.js</xsl:attribute>
         <xsl:text> </xsl:text>
     </script>
   </xsl:if>
@@ -193,7 +204,7 @@ part toc
         <xsl:value-of select="$class"/>
       </xsl:attribute>
     </xsl:if>
-    <xsl:attribute name="onLoad">initSwitchery(); jQuery("#poptoc").load('index.html .toc:eq(0)');</xsl:attribute>
+    <xsl:attribute name="onLoad">initSwitchery(); jQuery("#poptoc").load('index.html .toc:eq(0)'); jQuery('.programlisting').each(function(i, block){hljs.highlightBlock(block);});</xsl:attribute>
     <xsl:attribute name="onClick">hide('poptoc');</xsl:attribute>
 </xsl:template>
 
@@ -1019,51 +1030,6 @@ Version: 1.72.0
    </div>
 </xsl:template>
 
-<xsl:template name="apply-highlighting">
-  <xsl:choose>
-    <!-- Do we want syntax highlighting -->
-    <xsl:when test="$highlight.source != 0 and function-available('perl:highlight')">
-      <xsl:variable name="language">
-        <xsl:call-template name="language.to.xslthl">
-          <xsl:with-param name="context" select="."/>
-        </xsl:call-template>
-      </xsl:variable>
-      <xsl:choose>
-        <xsl:when test="$language != ''">
-          <xsl:variable name="content">
-            <xsl:apply-templates/>
-          </xsl:variable>
-          <xsl:apply-templates select="perl:highlight($language, $content)"/>
-        </xsl:when>
-        <xsl:otherwise>
-          <xsl:apply-templates/>
-        </xsl:otherwise>
-      </xsl:choose>
-    </xsl:when>
-    <!-- No syntax highlighting -->
-    <xsl:otherwise>
-      <xsl:apply-templates/>
-    </xsl:otherwise>
-  </xsl:choose>
-</xsl:template>
-
-<xsl:template name="language.to.xslthl">
-  <xsl:param name="context"/>
-
-  <xsl:choose>
-    <xsl:when test="$context/@language != ''">
-      <xsl:value-of select="$context/@language"/>
-    </xsl:when>
-    <xsl:when test="$highlight.default.language != ''">
-      <xsl:value-of select="$highlight.default.language"/>
-    </xsl:when>
-  </xsl:choose>
-</xsl:template>
-
-<xsl:template match="span">
-    <xsl:copy-of select="."/>
-</xsl:template>
-
 <!-- change <video> to iframe -->
 <xsl:template match="d:videodata">
   <xsl:variable name="filename">
@@ -1189,6 +1155,16 @@ Version: 1.72.0
   <xsl:call-template name="anchor"/>
   
   <xsl:variable name="div.element">pre</xsl:variable>
+  <xsl:variable name="myclass">
+    <xsl:value-of  select="local-name(.)"/>
+    <xsl:if test="@language != ''">
+      <xsl:value-of select="concat(' ', translate(@language, 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'))"/>
+    </xsl:if>
+    <xsl:if test="@role != ''">
+      <xsl:text> </xsl:text><xsl:value-of select="@role"/>
+    </xsl:if>
+  </xsl:variable>
+
   <xsl:choose>
     <xsl:when test="$suppress-numbers = '0'
                 and @linenumbering = 'numbered'
@@ -1205,7 +1181,11 @@ Version: 1.72.0
         </xsl:choose>
       </xsl:variable>
       <xsl:element name="{$div.element}" namespace="http://www.w3.org/1999/xhtml">
-        <xsl:apply-templates select="." mode="common.html.attributes"/>
+        <!--xsl:apply-templates select="." mode="common.html.attributes"/-->
+        <xsl:call-template name="common.html.attributes"/>
+        <xsl:apply-templates select="." mode="class.attribute">
+            <xsl:with-param name="class" select="$myclass"/>
+        </xsl:apply-templates>
         <xsl:call-template name="id.attribute"/>
         <xsl:if test="$set-id != 0">
           <xsl:attribute name="id">
@@ -1228,6 +1208,10 @@ Version: 1.72.0
     <xsl:otherwise>
       <xsl:element name="{$div.element}" namespace="http://www.w3.org/1999/xhtml">
         <xsl:apply-templates select="." mode="common.html.attributes"/>
+        <xsl:call-template name="common.html.attributes"/>
+        <xsl:apply-templates select="." mode="class.attribute">
+            <xsl:with-param name="class" select="$myclass"/>
+        </xsl:apply-templates>
         <xsl:call-template name="id.attribute"/>
         <xsl:if test="$set-id != 0">
           <xsl:attribute name="id">
@@ -1241,10 +1225,7 @@ Version: 1.72.0
         </xsl:if>
         <xsl:if test="@linenumbering = 'numbered'">
           <xsl:attribute name="class">
-            <xsl:value-of select="local-name(.)"/><xsl:text> numbered</xsl:text> 
-			<xsl:if test="@role != ''">
-				<xsl:text> </xsl:text><xsl:value-of select="@role"/>
-        	</xsl:if>
+            <xsl:value-of select="$myclass"/><xsl:text> numbered</xsl:text>
           </xsl:attribute>
         </xsl:if>
         <xsl:if test="@role = 'popper' and $poper.as.dl = '0'">

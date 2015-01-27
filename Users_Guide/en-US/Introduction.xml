@@ -50,7 +50,7 @@
 <title>Testing BZ #1092351 Code Switcher</title>
 	 <informalexample conformance="264" id="switch1" role="switchery">
 <programlisting language="Perl" linenumbering="numbered">#!/usr/bin/perl
-use strict; \
+use strict;
 use warnings;
 
 print "Hello, World!\n";

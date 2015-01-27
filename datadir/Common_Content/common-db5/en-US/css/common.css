@@ -328,6 +328,7 @@ pre.numbered span.line:before{
 
 .switchery select.deflang {
     float: right;
+    margin-top: -7px;
 }
 
 table {
@@ -828,6 +829,14 @@ iframe {
 	padding-top: .5em;
 }
 
+.hljs * {
+  z-index: 1;
+}
+
+a.co span {
+  color: inherit;
+}
+
 a.co,
 dl.calloutlist dt a,
 span.inlinecallout,
@@ -930,4 +939,5 @@ dl.calloutlist dt.active a {
 dl.calloutlist dt.active a {
     background-color: #d00;
 }
+
 
