@@ -68,7 +68,7 @@ is( system(qq{perl -CDAS $coverdb -I $lib $publican lang_stats $common_opts --la
 
 
 is( system(
-        qq{perl -CDAS $coverdb -I $lib $publican build --formats=html,pdf --langs=en-US $common_opts --publish}
+        qq{perl -CDAS $coverdb -I $lib $publican build --formats=html,pdf,eclipse --langs=en-US $common_opts --publish}
     ),
     0,
     'publish a book'
