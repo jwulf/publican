@@ -161,6 +161,7 @@ $(document).ready(function() {
 				</div>
 				<div class="article">
 					[%- FOREACH  ver = v_sort(book_list.${prod}) %][% cur_ver = book_list.${prod}.${ver} %]
+						[%- subtitles = 1 -%]
 					<div class="bottom_versions section" id="[% prod %]-[% ver.replace('\.', '-') %]">
 					  <div class="grouper">
 [%- tmpl_list = {} -%]
