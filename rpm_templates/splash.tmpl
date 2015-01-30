@@ -29,8 +29,8 @@ rm -rf $RPM_BUILD_ROOT
 mkdir -p $RPM_BUILD_ROOT/%{wwwdir}
 cp -rf publish/home/* $RPM_BUILD_ROOT/%{wwwdir}/.
 [%- IF GROUPS %]
-mkdir -p $RPM_BUILD_ROOT/%{_datadir}/publican/templates/groups
-cp -rf publish/datadir/*  $RPM_BUILD_ROOT/%{_datadir}/publican/templates/groups/.
+mkdir -p $RPM_BUILD_ROOT/%{_datadir}/publican/templates/
+cp -rf publish/datadir/templates/*  $RPM_BUILD_ROOT/%{_datadir}/publican/templates/.
 [%- END %]
 
 %clean

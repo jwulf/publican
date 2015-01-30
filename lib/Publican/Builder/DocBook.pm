@@ -273,7 +273,7 @@ sub build {
                         elsif ( $web_type =~ m/^product$/i ) {
                             $path = "$pub_dir/home/$lang/$product";
 
-                            my $tmpl_dir = "$pub_dir/datadir/$lang/$product";
+                            my $tmpl_dir = "$pub_dir/datadir/templates/groups/$lang/$product";
 
                             # Copy External Links
                             if ( -f "$tmp_dir/$lang/xml/External_Links.xml" )

@@ -21,8 +21,8 @@
 %define wwwdir /var/www/html/docs
 
 Name:           publican
-Version:        4.2.6
-Release:        0%{?dist}.t8
+Version:        4.2.9
+Release:        0%{?dist}.t1
 Summary:        Common files and scripts for publishing with DocBook XML
 # For a breakdown of the licensing, refer to LICENSE
 License:        (GPLv2+ or Artistic) and CC0
@@ -33,7 +33,7 @@ BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch:      noarch
 Provides:       publican-common = %{version}
 Provides:       publican-common-db5 = %{version}
-Provides:       publican-API = 4.1
+Provides:       publican-API = 4.2.9
 
 # Get rid of the old packages
 Obsoletes:      perl-Publican-WebSite

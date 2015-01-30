@@ -21,6 +21,8 @@ Publican 4.3
 
 Test web hosting for highlight.js
 
+1186990 - problem is there is no access to templates that are not installed from rpms ...
+
 
 ######################################
 PUG changes
