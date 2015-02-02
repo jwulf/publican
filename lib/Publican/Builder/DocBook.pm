@@ -1301,6 +1301,10 @@ sub transform {
         dircopy( "$tmp_dir/$lang/xml/$images",
             "$tmp_dir/$lang/$format/$content_dir/$images" )
             if ( -d "$tmp_dir/$lang/xml/$images" );
+        dircopy(
+            "$tmp_dir/$lang/xml/Common_Content/images",
+            "$tmp_dir/$lang/$format/$content_dir/Common_Content/images")
+            if ( -d "$tmp_dir/$lang/xml/Common_Content/images" );
 
         dircopy( "$xml_lang/files",
             "$tmp_dir/$lang/$format/$content_dir/files" )
