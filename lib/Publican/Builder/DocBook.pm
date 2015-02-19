@@ -69,6 +69,7 @@ our ( %CHUNK_TAGS );
     sect3 => { format => 's%02d', use_parent => 1 },
     sect4 => { format => 's%02d', use_parent => 1 },
     sect5 => { format => 's%02d', use_parent => 1 },
+    legalnotice => { format => 'ln%02d', any_level => 1 },
 );
 
 =head1 NAME
@@ -1587,7 +1588,6 @@ sub get_nodes_order {
         } elsif ( exists $CHUNK_TAGS{$tag} ) {
 
             # We need to emulate the filename given to the element when chunked (see chunk-code.xsl). BZ #1173421
-            my $format = $CHUNK_TAGS{$tag}{'format'};
             my $value = $self->get_chunk_filename($cnode);
 
             $order{ ++$count }{'id'} = $value;
@@ -1614,6 +1614,19 @@ sub get_nodes_order {
             $order{ ++$count }{'id'} = "index";
             $order{$count}{'type'} = $tag;
             $order{$count}{'parent'} = $type;
+
+            if ( $cnode->hasChildNodes() ) {
+                my $child_nodes = $self->get_nodes_order(
+                    {   source       => $source,
+                        node         => $cnode,
+                        section_maps => $section_maps,
+                        all_nodes    => $all_nodes,
+                        check_dups   => $check_dups,
+                    }
+                );
+                $order{$count}{'childs'} = $child_nodes
+                    if ( %{$child_nodes} );
+            }
         }
     }
     return \%order;
@@ -1635,11 +1648,9 @@ sub get_chunk_filename {
     }
 
     my $format = $CHUNK_TAGS{$tag}{'format'};
-    my $tag_count;
+    my $tag_count = $node->findvalue("count(preceding-sibling::*[local-name()='${tag}'])") + 1;
     if ( $CHUNK_TAGS{$tag}{'any_level'} ) {
-        $tag_count = $node->findvalue("count(preceding::*[local-name()='${tag}'])") + 1;
-    } else {
-        $tag_count = $node->findvalue("count(preceding-sibling::*[local-name()='${tag}'])") + 1;
+        $tag_count += $node->findvalue("count(../preceding::*[local-name()='${tag}'])");
     }
 
     my $chunk_name;
