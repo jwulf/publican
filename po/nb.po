@@ -14,7 +14,7 @@ msgstr ""
 "Language-Team: Norwegian Bokmål\n"
 "Language: nb\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"X-Generator: Zanata 3.5.1\n"
+"X-Generator: Zanata 3.4.2\n"
 
 #: lib/Publican/TreeView.pm:197
 msgid "\n"

@@ -14,12 +14,12 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2014-11-28 12:00-0500\n"
+"PO-Revision-Date: 2014-10-03 01:03-0400\n"
 "Last-Translator: tchuang <tchuang@redhat.com>\n"
 "Language-Team: Chinese (Traditional, Taiwan)\n"
 "Language: zh-Hant-TW\n"
 "Plural-Forms: nplurals=1; plural=0\n"
-"X-Generator: Zanata 3.5.1\n"
+"X-Generator: Zanata 3.4.2\n"
 
 #: lib/Publican/TreeView.pm:197
 msgid "\n"
@@ -110,7 +110,7 @@ msgstr ""
 #: bin/publican:937
 #: bin/publican:940
 msgid "%1 is a required argument"
-msgstr "%1 乃必要的引數"
+msgstr ""
 
 #. ('members')
 #. ('firstname')
@@ -123,7 +123,7 @@ msgstr "%1 乃必要的引數"
 #: lib/Publican.pm:1481
 #: lib/Publican.pm:1484
 msgid "%1 is a required option for add_revision"
-msgstr "%1 乃 add_revision 的一個必要引數"
+msgstr ""
 
 #. ($action)
 #: bin/publican:657
@@ -254,7 +254,7 @@ msgstr ""
 
 #: lib/Publican/WebSite.pm:225
 msgid "All"
-msgstr "所有類別"
+msgstr ""
 
 #. ($lang)
 #: lib/Publican/Builder/DocBook.pm:153
@@ -1639,12 +1639,14 @@ msgid "Search"
 msgstr "搜尋"
 
 #: lib/Publican/WebSite.pm:219
+#, fuzzy
 msgid "Select a category"
-msgstr "選擇類別"
+msgstr "捲動至類別"
 
 #: lib/Publican/WebSite.pm:218
+#, fuzzy
 msgid "Select a version"
-msgstr "選擇版本"
+msgstr "選擇您的版本"
 
 #: lib/Publican.pm:277
 msgid "Semicolon-separated list of menu categories for the desktop package."

@@ -3,7 +3,6 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # ypoyarko <ypoyarko@redhat.com>, 2013. #zanata
-# ypoyarko <ypoyarko@redhat.com>, 2014. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -11,13 +10,13 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2014-11-28 12:15-0500\n"
+"PO-Revision-Date: 2013-03-06 01:20-0500\n"
 "Last-Translator: ypoyarko <ypoyarko@redhat.com>\n"
 "Language-Team: Russian\n"
 "Language: ru\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
-"X-Generator: Zanata 3.5.1\n"
+"X-Generator: Zanata 3.4.2\n"
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican/TreeView.pm:197
@@ -38,7 +37,7 @@ msgstr "$ publican build --formats=xml --langs=all --publish"
 
 #: bin/publican:828
 msgid "$ publican install_brand --web --path=/path/to/site/%{brand}"
-msgstr "$ publican install_brand --web --path=/путь/к/сайту/%{бренд}"
+msgstr ""
 
 #: bin/publican:832
 msgid "$ publican update_site --site_config /path/to/site/config"
@@ -52,7 +51,7 @@ msgstr ""
 #. ($rpmbuild,WEXITSTATUS($?))
 #: lib/Publican/Builder.pm:486
 msgid "%1 exited with value %2"
-msgstr "%1 завершил работу с кодом %2"
+msgstr ""
 
 #. ('lang')
 #. ('filename')
@@ -255,7 +254,7 @@ msgstr ""
 
 #: lib/Publican/WebSite.pm:225
 msgid "All"
-msgstr "Все"
+msgstr ""
 
 #. ($lang)
 #: lib/Publican/Builder/DocBook.pm:153
@@ -720,7 +719,7 @@ msgstr ""
 
 #: bin/publican:131
 msgid "Disable all logging."
-msgstr "Отключить ведение журнала."
+msgstr ""
 
 #: lib/Publican.pm:130
 msgid "Display bridge head elements in the TOCs?"
@@ -1645,11 +1644,11 @@ msgstr "Поиск"
 
 #: lib/Publican/WebSite.pm:219
 msgid "Select a category"
-msgstr "Категория"
+msgstr ""
 
 #: lib/Publican/WebSite.pm:218
 msgid "Select a version"
-msgstr "Версия"
+msgstr ""
 
 #: lib/Publican.pm:277
 msgid "Semicolon-separated list of menu categories for the desktop package."
@@ -1673,7 +1672,7 @@ msgstr ""
 
 #: lib/Publican/WebSite.pm:209
 msgid "Show Menu"
-msgstr "Показать меню"
+msgstr ""
 
 #: bin/publican:175
 msgid "Show fuzzy translation entries in output. Defaults off."
@@ -1690,7 +1689,7 @@ msgstr ""
 #. ($dir)
 #: lib/Publican.pm:1108
 msgid "Skipping unknown language: %1"
-msgstr "Пропускается неизвестный язык: %1"
+msgstr ""
 
 #: bin/publican:334
 msgid "Snapshot the source language for use in translation."
@@ -1817,7 +1816,7 @@ msgstr ""
 
 #: bin/publican:117
 msgid "The edition of the book, article, or set"
-msgstr "Редакция книги, статьи или комплекта"
+msgstr ""
 
 #: lib/Publican.pm:292
 msgid "The font to use for body text in PDFs."

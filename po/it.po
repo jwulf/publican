@@ -12,12 +12,12 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2014-11-23 08:54-0500\n"
+"PO-Revision-Date: 2014-10-03 12:54-0400\n"
 "Last-Translator: fvalen <fvalen@fedoraproject.org>\n"
 "Language-Team: Italian\n"
 "Language: it\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"X-Generator: Zanata 3.5.1\n"
+"X-Generator: Zanata 3.4.2\n"
 
 #: lib/Publican/TreeView.pm:197
 msgid "\n"
@@ -251,7 +251,7 @@ msgstr ""
 
 #: lib/Publican/WebSite.pm:225
 msgid "All"
-msgstr "Tutte"
+msgstr ""
 
 #. ($lang)
 #: lib/Publican/Builder/DocBook.pm:153
@@ -1640,12 +1640,14 @@ msgid "Search"
 msgstr "Cerca"
 
 #: lib/Publican/WebSite.pm:219
+#, fuzzy
 msgid "Select a category"
-msgstr "Seleziona una categoria"
+msgstr "Vai su categoria"
 
 #: lib/Publican/WebSite.pm:218
+#, fuzzy
 msgid "Select a version"
-msgstr "Seleziona una versione"
+msgstr "Seleziona la tua versione"
 
 #: lib/Publican.pm:277
 msgid "Semicolon-separated list of menu categories for the desktop package."

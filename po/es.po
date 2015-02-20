@@ -1,5 +1,4 @@
 # Gladys Guerrero Lozano <gladysguerrerolozano419@gmail.com.disabled>, 2013. #zanata
-# Gladys Guerrero <gguerrer@redhat.com>, 2014. #zanata
 # Gladys Guerrero Lozano <gladysguerrerolozano419@gmail.com.disabled>, 2014. #zanata
 msgid ""
 msgstr ""
@@ -8,12 +7,13 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2014-11-24 12:17-0500\n"
-"Last-Translator: Gladys Guerrero <gguerrer@redhat.com>\n"
+"PO-Revision-Date: 2014-10-03 12:50-0400\n"
+"Last-Translator: Gladys Guerrero Lozano <gladysguerrerolozano419@gmail.com."
+"disabled>\n"
 "Language-Team: Spanish (Spain)\n"
 "Language: es-ES\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"X-Generator: Zanata 3.5.1\n"
+"X-Generator: Zanata 3.4.2\n"
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican/TreeView.pm:197
@@ -61,8 +61,9 @@ msgstr "%1 salió con valor %2"
 #: lib/Publican/Builder/DocBook.pm:1358
 #: lib/Publican/Builder/DocBook.pm:1361
 #: lib/Publican/Builder/DocBook.pm:1364
+#, fuzzy
 msgid "%1 is a mandatory argument for drupal_transform"
-msgstr "%1 es un argumento obligatorio  para drupal_transform"
+msgstr "'lang' es un argumento obligatorio"
 
 # translation auto-copied from project Publican, version 3, document publican
 #. ('toc_path')
@@ -141,8 +142,11 @@ msgstr "'%1' es una acción desconocida"
 
 #. ($language)
 #: lib/Publican/Builder/DocBook.pm:1947
+#, fuzzy
 msgid "'%1' is not a valid language for highlighting."
-msgstr "'%1' no es un lenguaje válido para resaltar."
+msgstr ""
+"'%1' no es un lenguaje válido para resaltar. Los nombres de idiomas son "
+"sensibles a mayúsculas."
 
 # translation auto-copied from project Publican, version 3, document publican
 #. ($language)
@@ -261,10 +265,6 @@ msgid ""
 "appear in the front matter of your book and will also be placed in the "
 "description field of the book's RPM spec file."
 msgstr ""
-"Una corta visión general  y resumen  del tema del libro y el propósito, "
-"suele ser no más que un párrafo largo. Nota: el resumen aparecerá en los "
-"preliminares del libro y también será puesto  en el campo de la descripción "
-"del archivo específico RPM del libro."
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican.pm:96
@@ -275,7 +275,7 @@ msgstr ""
 
 #: lib/Publican/Builder/DocBook.pm:755
 msgid "Abstract"
-msgstr "Resumen"
+msgstr ""
 
 # translation auto-copied from project Publican, version 3, document publican
 #: bin/publican:142
@@ -308,7 +308,7 @@ msgstr ""
 
 #: lib/Publican/WebSite.pm:225
 msgid "All"
-msgstr "Todas"
+msgstr ""
 
 # translation auto-copied from project Publican, version 3, document publican
 #. ($lang)
@@ -319,8 +319,6 @@ msgstr "Todos los formatos de creación se omitirán por idioma: %1"
 #: bin/publican:176
 msgid "Allow the XML and XSLT processing to access the network. Defaults off."
 msgstr ""
-"Permite procesamiento XML y XSLT para acceder a la red. Se predetermina "
-"apagado."
 
 # translation auto-copied from project Publican, version 3, document publican
 #: bin/publican:150
@@ -330,7 +328,7 @@ msgstr ""
 
 #: lib/Publican.pm:87
 msgid "Arch to filter output on."
-msgstr "Arquitectura para filtra salida."
+msgstr ""
 
 #: lib/Publican/Builder/DocBook4.pm:715
 #: lib/Publican/Builder/DocBook5.pm:713
@@ -425,21 +423,24 @@ msgstr ""
 
 #. ($from,$to,$@)
 #: lib/Publican.pm:1702
+#, fuzzy
 msgid "Can not copy file %1 to %2 due to error: %3"
-msgstr "No se puede abrir archivo %1. a %2 debido a error: %3"
+msgstr "No se puede abrir archivo %1. Error: %2"
 
 #. ($from,$to,$@)
 #: lib/Publican.pm:1742
 #: lib/Publican.pm:1764
+#, fuzzy
 msgid "Can not copy files %1 to %2 due to error: %3"
-msgstr "No se puede abrir archivo %1 a %2 debido a error: %3"
+msgstr "No se puede abrir archivo %1. Error: %2"
 
 #. ('abstract',$info_file)
 #. ('subtitle',$info_file)
 #: lib/Publican/Builder/DocBook.pm:2543
 #: lib/Publican/Builder/DocBook.pm:2629
+#, fuzzy
 msgid "Can not locate '%1' tag in file '%2'"
-msgstr "No se puede localizar etiqueta '%1' en archivo '%2'"
+msgstr "No se puede localizar archivo principal XML:'%1'"
 
 #. ($from,$to,$@)
 #: lib/Publican.pm:1804
@@ -448,8 +449,9 @@ msgstr ""
 
 #. ($from,$to,$@)
 #: lib/Publican.pm:1722
+#, fuzzy
 msgid "Can not move file %1 to %2 due to error: %3"
-msgstr "No se puede abrir archivo %1 a %2 debido a error: %3"
+msgstr "No se puede abrir archivo %1. Error: %2"
 
 # translation auto-copied from project Publican, version 3, document publican
 #. ($name)
@@ -562,8 +564,9 @@ msgstr "No se puede sobrescribir a defaults.cfg: %1"
 #. ($language,$@)
 #: lib/Publican/Builder/DocBook.pm:1966
 #: lib/Publican/Builder/DocBook.pm:3783
+#, fuzzy
 msgid "Cannot create plugin for language '%1': %2"
-msgstr "No se puede crear conector para idioma'%1: %2'"
+msgstr "No se puede localizar archivo principal XML:'%1'"
 
 #. ($book)
 #: lib/Publican/Builder.pm:915
@@ -1005,93 +1008,108 @@ msgstr ""
 # translation auto-copied from project Publican, version 3, document publican
 #. ($@)
 #: lib/Publican/Builder/DocBook.pm:2407
+#, fuzzy
 msgid "FATAL ERROR 10: %1"
-msgstr "ERROR FATAL 10: %1"
+msgstr "ERROR FATAL: %1"
 
 # translation auto-copied from project Publican, version 3, document publican
 #. ($@)
 #: lib/Publican/Builder/DocBook.pm:2537
+#, fuzzy
 msgid "FATAL ERROR 11: %1"
-msgstr "ERROR FATAL 11: %1"
+msgstr "ERROR FATAL: %1"
 
 # translation auto-copied from project Publican, version 3, document publican
 #. ($@)
 #: lib/Publican/Builder/DocBook.pm:2623
+#, fuzzy
 msgid "FATAL ERROR 12: %1"
-msgstr "ERROR FATAL 10: %1"
+msgstr "ERROR FATAL: %1"
 
 # translation auto-copied from project Publican, version 3, document publican
 #. ($@)
 #: lib/Publican/Builder/DocBook.pm:2695
+#, fuzzy
 msgid "FATAL ERROR 13: %1"
-msgstr "ERROR FATAL 13: %1"
+msgstr "ERROR FATAL: %1"
 
 # translation auto-copied from project Publican, version 3, document publican
 #. ($@)
 #: lib/Publican/Builder/DocBook.pm:2775
+#, fuzzy
 msgid "FATAL ERROR 14: %1"
-msgstr "ERROR FATAL 14: %1"
+msgstr "ERROR FATAL: %1"
 
 # translation auto-copied from project Publican, version 3, document publican
 #. ($@)
 #: lib/Publican/Builder/DocBook.pm:2819
+#, fuzzy
 msgid "FATAL ERROR 15: %1"
-msgstr "ERROR FATAL 15: %1"
+msgstr "ERROR FATAL: %1"
 
 # translation auto-copied from project Publican, version 3, document publican
 #. ($@)
 #: lib/Publican/Builder/DocBook.pm:2867
+#, fuzzy
 msgid "FATAL ERROR 16: %1"
-msgstr "ERROR FATAL 16: %1"
+msgstr "ERROR FATAL: %1"
 
 # translation auto-copied from project Publican, version 3, document publican
 #. ($@->domain(),$@->code(),$@->file(),$@->line(),$@->message(),)
 #: lib/Publican/Builder/DocBook.pm:234
+#, fuzzy
 msgid "FATAL ERROR 1: %1:%2 in %3 on line %4: %5"
-msgstr "ERROR FATAL 1: %1:%2 in %3 on line %4: %5"
+msgstr "ERROR FATAL: %1:%2 in %3 on line %4: %5"
 
 # translation auto-copied from project Publican, version 3, document publican
 #. ($@)
 #: lib/Publican/Builder/DocBook.pm:246
+#, fuzzy
 msgid "FATAL ERROR 2: %1"
-msgstr "ERROR FATAL 2: %1"
+msgstr "ERROR FATAL: %1"
 
 # translation auto-copied from project Publican, version 3, document publican
 #. ($@)
 #: lib/Publican/Builder/DocBook.pm:303
+#, fuzzy
 msgid "FATAL ERROR 3: %1"
-msgstr "ERROR FATAL 3: %1"
+msgstr "ERROR FATAL: %1"
 
 # translation auto-copied from project Publican, version 3, document publican
 #. ($@->domain(),$@->code(),$@->file(),$@->line(),$@->message(),)
 #: lib/Publican/Builder/DocBook5.pm:614
+#, fuzzy
 msgid "FATAL ERROR 3: %1:%2 in %3 on line %4: %5"
-msgstr "ERROR FATAL 3: %1:%2 en %3 en línea %4: %5"
+msgstr "ERROR FATAL: %1:%2 in %3 on line %4: %5"
 
 # translation auto-copied from project Publican, version 3, document publican
 #. ($@)
 #: lib/Publican/Builder/DocBook.pm:551
 #: lib/Publican/Builder/DocBook.pm:591
+#, fuzzy
 msgid "FATAL ERROR 4: %1"
-msgstr "ERROR FATAL 4: %1"
+msgstr "ERROR FATAL: %1"
 
 # translation auto-copied from project Publican, version 3, document publican
 #. ($@)
 #: lib/Publican/Builder/DocBook.pm:720
+#, fuzzy
 msgid "FATAL ERROR 5: %1"
-msgstr "ERROR FATAL 5: %1"
+msgstr "ERROR FATAL: %1"
 
 # translation auto-copied from project Publican, version 3, document publican
 #. ($@)
 #: lib/Publican/Builder/DocBook.pm:1051
+#, fuzzy
 msgid "FATAL ERROR 7: %1"
-msgstr "ERROR FATAL 7: %1"
+msgstr "ERROR FATAL: %1"
 
 # translation auto-copied from project Publican, version 3, document publican
 #. ($@)
 #: lib/Publican/Builder/DocBook.pm:1590
+#, fuzzy
 msgid "FATAL ERROR 8: %1"
-msgstr "ERROR FATAL 8: %1"
+msgstr "ERROR FATAL: %1"
 
 # translation auto-copied from project Publican, version 3, document publican
 #. ($xml_file,$@)
@@ -1777,7 +1795,7 @@ msgstr ""
 
 #: lib/Publican/WebSite.pm:220
 msgid "Scroll to category"
-msgstr "Vaya a categoría"
+msgstr ""
 
 # translation auto-copied from project subscription-manager, version 1.13.X, document keys
 #: lib/Publican/WebSite.pm:2230
@@ -1787,17 +1805,15 @@ msgstr "Búsqueda"
 
 #: lib/Publican/WebSite.pm:219
 msgid "Select a category"
-msgstr "Seleccione una categoría"
+msgstr ""
 
 #: lib/Publican/WebSite.pm:218
 msgid "Select a version"
-msgstr "Seleccione una versión"
+msgstr ""
 
 #: lib/Publican.pm:277
 msgid "Semicolon-separated list of menu categories for the desktop package."
 msgstr ""
-"Lista separada por punto y coma de categorías de menú para el paquete de "
-"escritorio."
 
 #: bin/publican:122
 msgid "Set up built content for publishing"
@@ -1817,19 +1833,19 @@ msgstr ""
 
 #: lib/Publican/WebSite.pm:209
 msgid "Show Menu"
-msgstr "Mostrar menú"
+msgstr ""
 
 #: bin/publican:175
 msgid "Show fuzzy translation entries in output. Defaults off."
-msgstr "Mostrar entradas de traducción. Se predetermina a apagado."
+msgstr ""
 
 #: lib/Publican/WebSite.pm:222
 msgid "Single-page HTML"
-msgstr "Página  individual HTML"
+msgstr ""
 
 #: bin/publican:550
 msgid "Site options"
-msgstr "Opciones de sitio"
+msgstr ""
 
 #. ($dir)
 #: lib/Publican.pm:1108

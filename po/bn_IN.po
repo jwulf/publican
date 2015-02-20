@@ -12,12 +12,12 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2014-11-24 01:32-0500\n"
-"Last-Translator: bnin <sray@redhat.com>\n"
+"PO-Revision-Date: 2014-10-03 01:00-0400\n"
+"Last-Translator: Runa Bhattacharjee <runab@fedoraproject.org>\n"
 "Language-Team: Bengali (India)\n"
 "Language: bn-IN\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"X-Generator: Zanata 3.5.1\n"
+"X-Generator: Zanata 3.4.2\n"
 
 #: lib/Publican/TreeView.pm:197
 msgid "\n"
@@ -251,7 +251,7 @@ msgstr ""
 
 #: lib/Publican/WebSite.pm:225
 msgid "All"
-msgstr "সমস্ত"
+msgstr ""
 
 #. ($lang)
 #: lib/Publican/Builder/DocBook.pm:153
@@ -1635,11 +1635,11 @@ msgstr "অনুসন্ধান"
 
 #: lib/Publican/WebSite.pm:219
 msgid "Select a category"
-msgstr "একটি বিভাগ নির্বাচন করুন"
+msgstr ""
 
 #: lib/Publican/WebSite.pm:218
 msgid "Select a version"
-msgstr "একটি সংস্করণ নির্বাচন করুন"
+msgstr ""
 
 #: lib/Publican.pm:277
 msgid "Semicolon-separated list of menu categories for the desktop package."
