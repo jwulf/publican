@@ -389,10 +389,10 @@ function loadMenu(){
 			}
                                 
 			var html = '<div id="menu">';
-			html = 	html +	'<div id="lang_menu" class="breadcrumb"><a href="' + toc_path + '/index.html">' + labels["site"]["title"] + '</a></div>';
 			if(typeof home_link != "undefined" && home_link != '') {
 				html = 	html +	'<div class="breadcrumb">' + home_link + '</div>';
             }
+			html = 	html +	'<div id="lang_menu" class="breadcrumb"><a href="' + toc_path + '/index.html">' + labels["site"]["title"] + '</a></div>';
 			html = 	html +	'<div id="product_menu" class="breadcrumb" onmouseover="work=1; expand_menu(\'product_menu_list\');" onmouseout="work=1; retract_menu(\'product_menu_list\');">' + prod_label + '</div>';
 			if(typeof current_version != "undefined" && current_version != '') {
 				html = 	html +	'<div id="version_menu" class="breadcrumb" onmouseover="work=1; expand_menu(\'version_menu_list\');" onmouseout="work=1; retract_menu(\'version_menu_list\');">' + current_version + '</div>';

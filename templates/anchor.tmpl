@@ -17,8 +17,6 @@
         <a [% IF class %]class="[% class %]" [% END %] href="[% host %]/[% booklang %]/[% product %]/[% version %]/[%format %]/[% book %]/[% product %]-[% version %]-[% book %]-[% booklang %].[% format %]" [% IF title %]title="[% title %]"[% END %]>[% text %][% IF icon %]<i class="fa fa-file-pdf-o"></i>[% END %]</a>
      [%- ELSIF format == 'epub' %]
         <a [% IF class %]class="[% class %]" [% END %] href="[% host %]/[% booklang %]/[% product %]/[% version %]/[%format %]/[% book %]/[% product %]-[% version %]-[% book %]-[% booklang %].[% format %]" [% IF title %]title="[% title %]"[% END %]>[% text %][% IF icon %]<i class="fa fa-tablet"></i>[% END %]</a>
-     [%- ELSIF format == 'txt' %]
-        <a [% IF class %]class="[% class %]" [% END %] href="[% host %]/[% booklang %]/[% product %]/[% version %]/[%format %]/[% book %]/[% book %].[% format %]" [% IF title %]title="[% title %]"[% END %]>[% text %][% IF icon %]<i class="fa fa-file-text-o"></i>[% END %]</a>
      [%- ELSIF format == 'external' %]
         <a class="external[% IF class %] [% class %] [% END %]" href="[% uri %]" [% IF title %]title="[% title %]"[% END %]>[% text %][% IF icon %]<i class="fa fa-external-link"></i>[% END %]</a>
      [%- ELSIF format == 'rss' %]
@@ -26,6 +24,15 @@
      [%- ELSIF format == 'html-single' %]
         <a [% IF class %]class="[% class %]" [% END %][% IF onclick %]onclick="[% onclick %]" [% END %]href="[% host %]/[% booklang %]/[% product %]/[% version %]/[%format %]/[% book %]/index.html" [% IF title %]title="[% title %]"[% END %]>[% text %][% IF icon %]<i class="fa fa-file-o"></i>[% END %]</a>
      [%- ELSE %]
-        <a [% IF class %]class="[% class %]" [% END %][% IF onclick %]onclick="[% onclick %]" [% END %]href="[% host %]/[% booklang %]/[% product %]/[% version %]/[%format %]/[% book %]/index.html" [% IF title %]title="[% title %]"[% END %]>[% text %][% IF icon %]<i class="fa fa-files-o"></i>[% END %]</a>
+        [% TRY %]
+			[% USE file("${toc_path}/${booklang}/${product}/${version}/${format}/${book}/index.html") %]
+        	<a [% IF class %]class="[% class %]" [% END %][% IF onclick %]onclick="[% onclick %]" [% END %]href="[% host %]/[% booklang %]/[% product %]/[% version %]/[%format %]/[% book %]/index.html" [% IF title %]title="[% title %]"[% END %]>[% text %][% IF icon %]<i class="fa fa-files-o"></i>[% END %]</a>
+		[%- CATCH File -%]
+	        [% TRY %]
+				[% USE file("${toc_path}/${booklang}/${product}/${version}/${format}/${book}/${book}.txt") %]
+        		<a [% IF class %]class="[% class %]" [% END %] href="[% host %]/[% booklang %]/[% product %]/[% version %]/[%format %]/[% book %]/[% book %].txt" [% IF title %]title="[% title %]"[% END %]>[% text %][% IF icon %]<i class="fa fa-file-text-o"></i>[% END %]</a>
+			[%- CATCH File -%]
+			[%- END -%]
+		[%- END -%]
      [%- END %]
 

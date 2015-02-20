@@ -23,7 +23,8 @@
 [%- UNLESS  tmpl_list.${path}  %]
 [%- tmpl_list.${path} = 1 %]
 [%- TRY %]
-[% INCLUDE $path %]
+[% PROCESS $path %]
+						<span class="link" title="[% description %]" id="[% ver.replace('[\s\.]', '-') %]-categories-[% label.replace('[\s\.]', '-') %]" onclick="activateElement2('[% ver.replace('[\s\.]', '-') %]-categories-[% label.replace('[\s\.]', '-') %]');activateParentElement('[% prod %]-[% ver.replace('\\.', '-')%]-[%booker.sort_order%]', 1);return false;">[% label %]</span>
 [%- CATCH file %]
 [%- END %]
 [%- END %]

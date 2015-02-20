@@ -492,7 +492,7 @@ sub add_entry {
         croak "unknown args: " . join( ", ", keys %{$arg} );
     }
 
-    $formats = lc $formats;
+#    $formats = lc $formats;
     $abstract =~ s/\n/ /gm;
 
     my $sql = <<INSERT_ENTRY;
@@ -537,7 +537,7 @@ sub update_entry {
         croak "unknown args: " . join( ", ", keys %{$arg} );
     }
 
-    $formats = lc $formats;
+#    $formats = lc $formats;
     $abstract =~ s/\n/ /gm;
 
     my $sql = <<INSERT_ENTRY;
@@ -1667,6 +1667,8 @@ SQL
             # write out book_lang_menu.tmpl
             my $book_lang_vars;
             $book_lang_vars->{host}    = $host;
+    $book_lang_vars->{toc_path} = $self->{toc_path};
+            $book_lang_vars->{toc_path} = $self->{toc_path};
             $book_lang_vars->{product} = $record->{product};
             $book_lang_vars->{product_label}
                 = ( $record->{product_label} || $record->{product} );
@@ -1882,6 +1884,7 @@ sub write_version_index {
     $index_vars->{product}          = $product;
     $index_vars->{version}          = $version;
     $index_vars->{host}             = $host;
+    $index_vars->{toc_path} = $self->{toc_path};
     $index_vars->{book_list}        = $book_list;
     $index_vars->{lang}             = $lang;
     $index_vars->{langs}            = $langs;
@@ -1941,7 +1944,9 @@ sub write_product_index {
     my $index_vars;
     $index_vars->{style}         = $self->{web_style};
     $index_vars->{product}       = $product;
+    $index_vars->{toc_path} = $self->{toc_path};
     $index_vars->{host}          = $host;
+    $index_vars->{toc_path} = $self->{toc_path};
     $index_vars->{book_list}     = $book_list;
     $index_vars->{lang}          = $lang;
     $index_vars->{v_sort}        = \&v_sort;
@@ -2003,6 +2008,7 @@ sub write_product_menu {
     my $index_vars;
     $index_vars->{style}         = $self->{web_style};
     $index_vars->{host}          = $host;
+    $index_vars->{toc_path} = $self->{toc_path};
     $index_vars->{book_list}     = $book_list;
     $index_vars->{lang}          = $lang;
     $index_vars->{products}      = \@products;
@@ -2067,6 +2073,7 @@ sub write_language_index {
     my $index_vars;
     $index_vars->{style}         = $self->{web_style};
     $index_vars->{host}          = $host;
+    $index_vars->{toc_path} = $self->{toc_path};
     $index_vars->{book_list}     = $book_list;
     $index_vars->{lang}          = $lang;
     $index_vars->{products}      = \@products;
@@ -2110,6 +2117,7 @@ sub write_language_labels {
     my $host = $self->{host};
 
     my $index_vars;
+    $index_vars->{toc_path} = $self->{toc_path};
     $index_vars->{style}         = $self->{web_style};
     $index_vars->{lang}          = $lang;
     $index_vars->{labels}        = $labels;
@@ -2162,6 +2170,7 @@ sub write_books_index {
                 my $index_vars;
                 $index_vars->{style} = $self->{web_style};
                 $index_vars->{host}  = $host;
+    $index_vars->{toc_path} = $self->{toc_path};
                 $index_vars->{book} = $book_list->{$product}{$version}{$book};
                 $index_vars->{lang} = $lang;
                 $index_vars->{langs}    = $langs;

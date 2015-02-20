@@ -1386,16 +1386,18 @@ if ( $action eq 'install_book' ) {
             unless ( -d $ws->toc_path() . "/$lang" );
         rcopy( "$opts{pub_dir}/$lang/*", $ws->toc_path() . "/$lang/." );
 
-##        my @formats = split( /,/, $publican->param('web_formats') );
-##        foreach my $format (@formats) {
-##            next unless ( -d "publish/$lang/$product/$version/$format" );
+        my @formats;
+        foreach my $format (glob("publish/$lang/$product/$version/*")) {
+            $format =~ s{publish/$lang/$product/$version/}{}g;
+            push(@formats, $format);
+        }
 
         $ws->update_or_add_entry(
             {   language      => $lang,
                 product       => $product,
                 version       => $version,
                 name          => $name,
-                formats       => $publican->param('web_formats'),
+                formats       => join(',',@formats),
                 product_label => $product_label,
                 version_label => $version_label,
                 name_label    => $name_label,
@@ -1404,7 +1406,6 @@ if ( $action eq 'install_book' ) {
                 sort_order    => $sort_order,
             }
         );
-##        }
     }
 
     $ws->regen_all_toc();
@@ -1428,20 +1429,25 @@ if ( $action eq 'remove_book' ) {
         }
     );
 
-## BUGBUG should we fetch formats from DB?
-    my @formats = split( /,/, $publican->param('web_formats') );
-    foreach my $format (@formats) {
-        my $dir = "$ws->{toc_path}/$lang/$product/$version/$format/$name";
-        rmtree($dir);
+    # Since every format uses the name, this finds all the formats even if they aren't in the DB.
+    foreach my $fdir (File::Find::Rule->name($name)->in("$ws->{toc_path}/$lang/$product/$version")) {
+        rmtree($fdir);
+        my $format = $fdir;
+        $format =~ s{$ws->{toc_path}/$lang/$product/$version/}{};
+        $format =~ s{/$name}{};
+        next if($format eq "");
 
-        # delete empty directories
-        $dir = "$ws->{toc_path}/$lang/$product/$version/$format";
+        # if we delete the last of this format, then delete the format dir.
+        # BUGBUG might need to check for non-template created files? e.g. index.html
+        my $dir = "$ws->{toc_path}/$lang/$product/$version/$format";
         unless ( File::Find::Rule->not_name(qr/(\.|\.\.)/)->in($dir) ) {
             rmtree($dir);
             $dir = "$ws->{toc_path}/$lang/$product/$version";
+            # if we delete the last format for this vrerison., delete the version dir.
             unless ( File::Find::Rule->not_name(qr/(\.|\.\.)/)->in($dir) ) {
                 rmtree($dir);
                 $dir = "$ws->{toc_path}/$lang/$product";
+                # if we delete the last version for this product, delete the product dir.
                 unless ( File::Find::Rule->not_name(qr/(\.|\.\.)/)->in($dir) )
                 {
                     rmtree($dir);
@@ -1449,6 +1455,8 @@ if ( $action eq 'remove_book' ) {
             }
         }
     }
+
+    # Have to regenerate all languages as translations have untranslated and source newer tags.
     $ws->regen_all_toc();
 }
 
