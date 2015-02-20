@@ -1788,13 +1788,6 @@ sub build_drupal_book {
                             $delete_first_header = 0;
                         }
 
-                        if (   defined $node->attr('id')
-                            && defined $section_maps->{ $node->attr('id') } )
-                        {
-                            my $id = $node->attr('id');
-                            $node->attr( 'id', $section_maps->{$id} );
-                        }
-
                         if ( $tag eq 'img' && defined $node->attr('src') ) {
                             my $old_value = $node->attr('src');
                             $node->attr( 'src',
@@ -1817,39 +1810,38 @@ sub build_drupal_book {
                             if ($old_value) {
                                 my @links;
                                 my $update_link = 0;
-                                @links = split( '#', $old_value );
+                                @links = split( '#', $old_value, 2 );
+                                my $link_filename = $links[0];
 
-                                for ( my $i = 0; $i < @links; $i++ ) {
-                                    next if ( !$links[$i] );
-                                    $links[$i] =~ s/\.html$//;
-                                    if ($links[$i] eq $page ) {
-                                        $links[$i] = "";
-                                        $update_link = 1;
-                                    } elsif (defined $section_maps->{ $links[$i] }
+                                $link_filename =~ s/\.html$//;
+                                if ($link_filename eq $page ) {
+                                    $link_filename = "";
+                                    $update_link = 1;
+                                } elsif (defined $section_maps->{ $link_filename }
+                                    )
+                                {
+                                    $link_filename
+                                        = "$bookname-" . $section_maps->{ $link_filename };
+                                    $update_link = 1;
+                                }
+
+                                unless ($update_link) {
+
+                                    # check if it is internal page
+                                    if (defined $all_nodes->{ $link_filename }
                                         )
                                     {
-                                        $links[$i]
-                                            = "$bookname-" . $section_maps->{ $links[$i] };
-                                        $update_link = 1;
-                                    }
-
-                                    unless ($update_link) {
-
-                                        # check if it is internal page
-                                        if (defined $all_nodes->{ $links[$i] }
-                                            )
-                                        {
-                                            $update_link = 1;
-                                        }
-                                    }
-
-                                    if ( $links[$i] eq 'ix01' ) {
-                                        $links[$i] = "$bookname-index";
                                         $update_link = 1;
                                     }
                                 }
 
+                                if ( $link_filename eq 'ix01' ) {
+                                    $link_filename = "$bookname-index";
+                                    $update_link = 1;
+                                }
+
                                 if ($update_link) {
+                                    $links[0] = $link_filename;
                                     $old_value = join( '#', @links );
                                     $node->attr( 'href', $old_value);
                                     $update_link = 0;
