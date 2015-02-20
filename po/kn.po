@@ -2,7 +2,7 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# rlandmann <rlandmann@fedoraproject.org>, 2013. #zanata
+# shanky <shanky@fedoraproject.org>, 2014. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -10,12 +10,12 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2013-03-18 02:01-0400\n"
-"Last-Translator: rlandmann <rlandmann@fedoraproject.org>\n"
+"PO-Revision-Date: 2014-12-05 02:17-0500\n"
+"Last-Translator: shanky <shanky@fedoraproject.org>\n"
 "Language-Team: Kannada\n"
 "Language: kn\n"
 "Plural-Forms: nplurals=2; plural=(n!=1)\n"
-"X-Generator: Zanata 3.4.2\n"
+"X-Generator: Zanata 3.5.1\n"
 
 #: lib/Publican/TreeView.pm:197
 msgid "\n"
@@ -249,7 +249,7 @@ msgstr ""
 
 #: lib/Publican/WebSite.pm:225
 msgid "All"
-msgstr ""
+msgstr "ಎಲ್ಲವೂ"
 
 #. ($lang)
 #: lib/Publican/Builder/DocBook.pm:153
@@ -1633,11 +1633,11 @@ msgstr "ಹುಡುಕು"
 
 #: lib/Publican/WebSite.pm:219
 msgid "Select a category"
-msgstr ""
+msgstr "ಒಂದು ಗುಂಪನ್ನು ಆರಿಸಿ"
 
 #: lib/Publican/WebSite.pm:218
 msgid "Select a version"
-msgstr ""
+msgstr "ಒಂದು ಆವೃತ್ತಿಯನ್ನು ಆರಿಸಿ"
 
 #: lib/Publican.pm:277
 msgid "Semicolon-separated list of menu categories for the desktop package."
@@ -2070,7 +2070,7 @@ msgstr ""
 #: lib/Publican/Translate.pm:1083
 #: lib/Publican/WebSite.pm:200
 msgid "Untranslated"
-msgstr "ಅನುವಾದವಾಗಿರದ"
+msgstr "ಅನುವಾದಗೊಂಡಿಲ್ಲ"
 
 #: bin/publican:286
 msgid "Update an existing sites templates."

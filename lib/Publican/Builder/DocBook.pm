@@ -764,8 +764,8 @@ sub transform {
             monofont => $monofont,
             monoface =>
                 ( -f "$tmp_dir/$lang/html-pdf/$monofont-font-faces.css" ),
-            overrides_css => ( -f "$tmp_dir/$lang/html-pdf/overrides.css" ),
-            lang_css      => ( -f "$tmp_dir/$lang/html-pdf/lang.css" ),
+            overrides_css => ( -f "$tmp_dir/$lang/html-pdf/Common_Content/css/overrides.css" ),
+            lang_css      => ( -f "$tmp_dir/$lang/html-pdf/Common_Content/css/lang.css" ),
         };
 
         if (@keywords) {

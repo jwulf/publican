@@ -1,4 +1,4 @@
-4.3.0 UNRELEASED
+$NEXT UNRELEASED
 - Fix web site templates to be more flexable.
 - Tweak default website styles.
 - Remove all FOP customisations. BZ #1168765
@@ -6,6 +6,8 @@
 - Switch DocBook-5 HTML to highlight.js.
 - Change splash page group publish directory structure so it can be used directly. BZ #1186990
 - Fix duplicate link in Website docs. BZ #1188384
+- Fix PDF builds ignoring overrides.css and lang.css. BZ #1165005
+- Pulled in new/updated translations. BZ #1169605
 
 4.2.6 Tue Oct 21 2014
 - Fix External_Links translation not merging. BZ #1153911
