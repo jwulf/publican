@@ -77,6 +77,8 @@
 <xsl:param name="section.autolabel" select="1"/>
 <xsl:param name="section.label.includes.component.label" select="0"/>
 
+<xsl:param name="local.l10n.xml" select="document('')"/>
+
 <xsl:param name="generate.toc">
 set toc
 book toc
@@ -97,53 +99,11 @@ part toc
 <xsl:param name="footer.rule" select="0"/>
 
 <!-- Change Japanese name order to first-last BZ#1150866 -->
-<!-- Change German quotes BZ#1165940 -->
 <xsl:param name="local.l10n.xml" select="document('')"/>
 <l:i18n xmlns:l="http://docbook.sourceforge.net/xmlns/l10n/1.0">
     <l:l10n language="ja">
       <l:context name="styles">
         <l:template name="person-name" text="first-last"/>
-      </l:context>
-    </l:l10n>
-    <l:l10n language="de">
-      <l:dingbat key="startquote" text="»"/>
-      <l:dingbat key="endquote" text="«"/>
-      <l:context name="xref">
-        <l:template name="bridgehead" text="»%t«"/>
-        <l:template name="refsection" text="»%t«"/>
-        <l:template name="refsect1" text="»%t«"/>
-        <l:template name="refsect2" text="»%t«"/>
-        <l:template name="refsect3" text="»%t«"/>
-        <l:template name="sect1" text="»%t«"/>
-        <l:template name="sect2" text="»%t«"/>
-        <l:template name="sect3" text="»%t«"/>
-        <l:template name="sect4" text="»%t«"/>
-        <l:template name="sect5" text="»%t«"/>
-        <l:template name="section" text="»%t«"/>
-        <l:template name="simplesect" text="»%t«"/>
-      </l:context>
-      <l:context name="xref-number-and-title">
-        <l:template name="bridgehead" text="Abschnitt %n, »%t«"/>
-        <l:template name="chapter" text="Kapitel %n, %t"/>
-        <l:template name="equation" text="Gleichung %n, »%t«"/>
-        <l:template name="example" text="Beispiel %n, »%t«"/>
-        <l:template name="figure" text="Abbildung %n, »%t«"/>
-        <l:template name="part" text="Teil %n, »%t«"/>
-        <l:template name="procedure" text="Prozedur %n, »%t«"/>
-        <l:template name="productionset" text="Produktion %n, »%t«"/>
-        <l:template name="qandadiv" text="F &amp; A %n, »%t«"/>
-        <l:template name="refsect1" text="der Abschnitt namens »%t«"/>
-        <l:template name="refsect2" text="der Abschnitt namens »%t«"/>
-        <l:template name="refsect3" text="der Abschnitt namens »%t«"/>
-        <l:template name="refsection" text="der Abschnitt namens »%t«"/>
-        <l:template name="sect1" text="Abschnitt %n, »%t«"/>
-        <l:template name="sect2" text="Abschnitt %n, »%t«"/>
-        <l:template name="sect3" text="Abschnitt %n, »%t«"/>
-        <l:template name="sect4" text="Abschnitt %n, »%t«"/>
-        <l:template name="sect5" text="Abschnitt %n, »%t«"/>
-        <l:template name="section" text="Abschnitt %n, »%t«"/>
-        <l:template name="simplesect" text="der Abschnitt namens »%t«"/>
-        <l:template name="table" text="Tabelle %n, »%t«"/>
       </l:context>
     </l:l10n>
 </l:i18n>
