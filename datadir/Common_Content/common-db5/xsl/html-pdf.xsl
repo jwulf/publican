@@ -22,6 +22,18 @@
 <xsl:template name="book.titlepage.recto">
 </xsl:template>
 
+<xsl:template name="book.titlepage.separator">
+</xsl:template>
+
+<xsl:template name="reference.titlepage.separator">
+</xsl:template>
+
+<xsl:template name="article.titlepage.separator">
+</xsl:template>
+
+<xsl:template name="set.titlepage.separator">
+</xsl:template>
+
 <!--
 From: html/component.xsl
 Reason: Override Chapter H2 to H1 for PDF titles
