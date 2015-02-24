@@ -1,6 +1,6 @@
 <div>[% lang_name %]<i class="fa fa-caret-down"></i></div>
 [%- IF langs.size > 0 %]
-<ul id="book_lang_menu_list" class="hidden">
+<ul id="book_lang_menu_list">
 [%- FOREACH langs %]
   <li>
     [% INCLUDE anchor.tmpl subtitle=0 host=host lang=lang booklang=lang product=product version=version format=base_format book=book name=lang_name srcnewer=srcnewer %]

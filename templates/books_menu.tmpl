@@ -5,7 +5,7 @@
         $('<div>[% trans_strings.Books %]<i class="fa fa-caret-down"></i></div>').insertBefore("#book_menu_list");
     }
 </script>
-<ul id="book_menu_list" class="hidden">
+<ul id="book_menu_list">
 [%- FOREACH book_name = books %]
   <li [% IF lang != book_list.${book_name}.lang %]class="untranslated [% lang %]"[% END %]>
 	[% INCLUDE anchor.tmpl host=host lang=lang booklang=book_list.${book_name}.lang product=product version=book_list.${book_name}.version format=book_list.${book_name}.base_format book=book_list.${book_name}.book name=book_list.${book_name}.book_clean srcnewer=book_list.${book_name}.srcnewer %]

@@ -5,7 +5,7 @@
         $('<div>[% trans_strings.Versions %]<i class="fa fa-caret-down"></i></div>').insertBefore("#version_menu_list");
     }
 </script>
-<ul id="version_menu_list" class="hidden">
+<ul id="version_menu_list">
 [%- FOREACH ver = versions %]
   <li><a href="[% host %]/[% lang %]/[% product %]/[% ver %]/index.html">[% labels.${product}.${ver}.label %]</a></li>
 [%- END %]

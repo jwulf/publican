@@ -1,5 +1,5 @@
 <div>[% trans_strings.Formats %]<i class="fa fa-caret-down"></i></div>
-<ul id="book_format_menu_list" class="hidden">
+<ul id="book_format_menu_list">
 [%- FOREACH  format = formats %]
     <li>
 	[% INCLUDE anchor.tmpl short=1 host=host lang=lang booklang=book.lang product=book.product version=book.version format=format book=book.book name=format %]

@@ -1,6 +1,33 @@
 @import url("Font-Awesome-4.2.0/css/font-awesome.min.css");
 @import url("site_overrides.css");
 
+body {
+    padding-top: 37px !important;
+}
+
+#menu {
+    color: #EEEEEE;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    border-bottom: none !important;
+}
+
+#menu:after {
+    content: "";
+    background-color: #c4d0e3;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.15);
+}
+
+/* What is this? */
 .menu .bottom_versions .title span {
     background-color: #EEEEEE;
     display: inline-block;
@@ -11,26 +38,22 @@
     position: relative;
     width: 100%;
 }
+
 body[dir="rtl"] .menu .bottom_versions .title span {
     right: -20px;
 }
+
+body[dir="rtl"] #menu,
+body[dir="rtl"] #langauge_menu {
+    right: 0;
+}
+
+/* Not sure what this is for
 .menu span a, #menu span a {
     color: white;
 }
-#menu {
-    background-color: #666666;
-    color: #EEEEEE;
-    font-size: 13px;
-    height: 30px !important;
-    left: 0;
-    line-height: 30px;
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
-body[dir="rtl"] #menu {
-    right: 0;
-}
+*/
+
 #menu ul {
     list-style: none outside none !important;
     margin: 0;
@@ -38,192 +61,118 @@ body[dir="rtl"] #menu {
     padding: 0;
 }
 
-#menu ul li {
-    margin-top: 0em;
-    margin-left: 0;
-    margin-right: 0;
-    text-indent: 25px;
-}
-#menu a {
-    border: medium none !important;
-    color: #444444;
+#menu a,
+.breadcrumb > div,
+#lang_menu_2 > div,
+#book_format_menu > div,
+#book_lang_menu > div {
     display: block;
+    padding: 6px 12px;
     text-decoration: none;
-    white-space: pre;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all .2s ease-out !important;
 }
 
-#menu ul a {
-    color: #DDDDDD;
+#menu a:hover,
+.breadcrumb:hover > div,
+#lang_menu_2:hover > div,
+#book_format_menu:hover > div,
+#book_lang_menu:hover > div {
+    background-color: #3c6eb4 !important;
+    color: #fff !important;
 }
+
 #menu a:hover {
-    background-color: #666666;
-    color: #FFFFFF !important;
+  color: #FFFFFF !important;
 }
 
-.breadcrumb {
-    padding-left: 10px;
-    padding-right: 10px;
-}
-#langauge_menu {
-    background-color: red;
-    left: 0;
-    position: absolute;
-    width: 50px;
-    z-index: 9;
-}
-body[dir="rtl"] #langauge_menu {
-    right: 0;
-}
-#product_menu {
-    display: inline-block;
-    z-index: 19;
-}
-#product_menu_list {
-    position: absolute;
-    top: 10px;
-    z-index: 99;
-}
-#version_menu {
-    display: inline-block;
-    z-index: 18;
-}
-#version_menu_list {
-    position: absolute;
-    top: 10px;
-    z-index: 98;
-}
-#book_menu {
-    display: inline-block;
-    z-index: 17;
-}
-#book_menu_list {
-    position: absolute;
-    top: 10px;
-    z-index: 97;
-}
-#book_lang_menu, #lang_menu_2, #book_format_menu {
-    background-color: transparent;
-    border-left: 1px solid rgba(0, 0, 0, 0.2);
-    border-right: 1px solid rgba(0, 0, 0, 0.2);
-    float: right;
-    height: 100%;
-    padding-right: 10px;
-    position: relative;
-/*    right: 240px; */
-    z-index: 19;
-}
-body[dir="rtl"] #book_lang_menu, body[dir="rtl"] #lang_menu_2, body[dir="rtl"] #book_format_menu {
-    float: left;
-    left: 240px;
-    padding-left: 10px;
-    padding-right: 0;
-    right: auto;
-}
-#lang_menu_2 div, #book_format_menu div, #book_lang_menu div {
-    color: #555555;
-    margin: 0 0 -20px;
-    padding: 0 20px 0 10px;
-}
-#lang_menu_2 div:hover,
-#book_format_menu div:hover,
-#book_lang_menu div:hover {
-    background-color: #666;
-    color: #EEE;
-}
+/* Breadcrumb & Other Menus */
+
 #menu .fa.fa-caret-down {
     font-size: 18px;
     vertical-align: middle;
-    text-indent: 8px;
+    text-indent: 6px;
 }
 
-body[dir="rtl"] #lang_menu_2 div, body[dir="rtl"] #book_format_menu div, body[dir="rtl"] #book_lang_menu div {
-    padding-left: 20px;
-    padding-right: 10px;
-}
-#book_lang_menu_list, #lang_menu_list, #book_format_menu_list {
-    background-color: rgba(110, 110, 110, 0.95);
-    line-height: 32px;
-    margin-top: 0;
-    position: absolute;
-    text-decoration: none;
-    top: 32px;
-    z-index: 99;
-}
-#book_lang_menu_list a, #lang_menu_list a, #book_format_menu_list a {
-    text-decoration: none;
-}
-#book_lang_menu, #menu, .breadcrumb, #book_format_menu {
-    height: 32px !important;
-}
-#menu {
-    background-color: #EEEEEE;
-    box-shadow: 0 -1px 8px #888888, 0 -30px 30px -20px #CCCCCC inset;
-    z-index: 999;
-}
-body[dir="rtl"] #menu {
-    box-shadow: 0 -1px 8px #888888, 0 -20px 30px -30px #CCCCCC inset;
-}
 .breadcrumb {
-    background-color: #EEEEEE;
-    color: #444444;
-    cursor: pointer !important;
-    display: block;
     float: left;
-    line-height: 32px;
     position: relative;
-    text-indent: 32px;
 }
+
 body[dir="rtl"] .breadcrumb {
     float: right;
 }
-.breadcrumb:hover {
-    background-color: #666666 !important;
-    color: #FFFFFF;
+
+#book_lang_menu,
+#lang_menu_2,
+#book_format_menu {
+    float: right;
+    margin-right: 10px;
+    position: relative;
 }
-.breadcrumb ul {
-    background-color: rgba(110, 110, 110, 0.95) !important;
+
+body[dir="rtl"] #book_lang_menu,
+body[dir="rtl"] #lang_menu_2,
+body[dir="rtl"] #book_format_menu {
+    float: left;
+    margin-left: 10px;
+    margin-right: 0;
+}
+
+.breadcrumb > a,
+.breadcrumb > div,
+#lang_menu_2 > div,
+#book_format_menu > div,
+#book_lang_menu > div {
+    position: relative;
+    z-index: 2;
+}
+
+.breadcrumb > ul,
+#lang_menu_2 > ul,
+#book_format_menu > ul,
+#book_lang_menu > ul {
+    z-index: -1 !important;
+    margin: 0;
+    margin-top: -20px !important;
+    padding-top: 20px !important;
+    background-color: #c4d0e3 !important;
     left: 0;
-    margin: 22px 0 !important;
-    text-indent: 16px;
-    top: 0;
+    position: absolute;
+    top: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-50%);
+    text-indent: 0;
+    transition: all 1s cubic-bezier(.175, .885, .320, 1.275);
+    transition-delay: .1s;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.15);
 }
+
+#lang_menu_2 > ul,
+#book_format_menu > ul,
+#book_lang_menu > ul {
+    left: auto;
+    right: 0;
+}
+
+.breadcrumb:hover > ul,
+#lang_menu_2:hover > ul,
+#book_format_menu:hover > ul,
+#book_lang_menu:hover > ul {
+    visibility: visible;
+    transform: translateY(0);
+    opacity: 1;
+}
+
 body[dir="rtl"] .breadcrumb ul {
     left: auto;
     right: 0;
 }
-.breadcrumb ul li {
-    margin: 0;
-    padding: 0;
-}
-.breadcrumb ul a {
-    display: block;
-    height: 32px;
-    line-height: 32px;
-    padding-right: 16px;
-    text-decoration: none;
-}
-body[dir="rtl"] .breadcrumb ul a {
-    padding-left: 16px;
-    padding-right: 0;
-}
-.breadcrumb ul a:hover {
-    background-color: #333333;
-}
 
+/* Search Box */
 
-#book_menu, #product_menu, #version_menu {
-}
-#book_lang_menu, #book_format_menu {
-    background-color: #EEEEEE;
-}
-#book_lang_menu > div, #book_format_menu > div {
-    color: #444444;
-    text-indent: 8px;
-}
-#book_lang_menu:hover, #book_lang_menu:hover > div, #book_format_menu:hover > div, #book_format_menu:hover {
-    background-color: #666666;
-    color: white;
-}
 #search_box {
     background-color: transparent;
     padding: 0;
@@ -236,6 +185,7 @@ body[dir="rtl"] #search_box {
     left: 40px;
     right: auto;
 }
+
 #search_box input[type="text"] {
     background-color: #FFFFFF;
     border: 1px solid #CCCCCC;
@@ -246,32 +196,20 @@ body[dir="rtl"] #search_box {
     padding: 0;
     width: 190px;
 }
+
 #search_box input[type="text"] {
     float: right;
 }
+
 #search_box input[type="submit"] {
     display: none;
 }
+
 #search_box:hover input[type="text"] {
     background-color: #FFFFFF;
     border-color: #444444;
 }
-#menu {
-    border-bottom: 1px solid #CCCCCC;
-    box-shadow: none;
-    position: fixed;
-}
-#book_lang_menu, #lang_menu_2, #book_format_menu {
-    background-color: transparent;
-    border: medium none !important;
-}
-.breadcrumb {
-    text-indent: 1em;
-}
-#book_lang_menu, #lang_menu_2, #book_format_menu {
-/*    right: 140px; */
-    z-index: 0;
-}
+
 #search_box, #search_box input[type="text"] {
     text-indent: 0.5em;
     transition: all 0.25s ease 0s;
@@ -280,35 +218,9 @@ body[dir="rtl"] #search_box {
 #search_box input[type="text"]:focus, #search_box input[type="text"]:hover {
     width: 320px;
 }
-body #menu {
-    top: 0 !important;
-}
-#book_lang_menu:hover, #book_lang_menu:hover > div, #book_format_menu:hover > div, #book_format_menu:hover {
-    cursor: pointer;
-}
-#product_menu a {
-    font-size: 0.85em !important;
-    height: 2em;
-    line-height: 2em;
-}
-#product_menu ul, #book_menu ul, #version_menu ul, #lang_menu_2 ul {
-    background-color: pink;
-    display: block;
-    left: inherit;
-    margin-left: -0.9em !important;
-    max-height: 90%;
-    max-width: 70em !important;
-    min-width: 200px !important;
-    overflow: auto;
-    position: fixed !important;
-    top: 10px !important;
-}
-#lang_menu_2 ul {
-    top: 32px !important;
-}
-#lang_menu_list {
-    right: 2em;
-}
+
+/* Footer */
+
 body.menu_embeded {
     margin: 0 auto;
     padding-left: 0;
@@ -338,37 +250,3 @@ ul.toc {
     font-size: 30px;
     margin-left: 4px;
 }
-#menu {
-    background-color: #EEE;
-    border-color: #EEE;
-}
-.breadcrumb {
-    background-color: #EEE;
-    color: #666;
-}
-#menu a, #menu ul a {
-    color: #666;
-}
-.breadcrumb ul a {
-    background-color: #EEE;
-    color: #666;
-}
-.breadcrumb:after {
-    border-color: transparent transparent transparent #EEE;
-}
-
-#menu .breadcrumb:hover, #menu a:hover {
-    background-color: #666;
-    color: #EEE;
-}
-#menu .breadcrumb:hover:after {
-    border-color: transparent transparent transparent #666;
-}
-#menu #book_lang_menu_list, #menu #lang_menu_list, #menu #book_format_menu_list {
-    background-color: #EEE;
-    color: #666;
-}
-#lang_menu_2 div, #book_format_menu div, #book_lang_menu div {
-    color: #666;
-}
-
