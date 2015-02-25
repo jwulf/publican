@@ -31,13 +31,6 @@ msgstr "本書の表記規則"
 msgid "This manual uses several conventions to highlight certain words and phrases and draw attention to specific pieces of information."
 msgstr "本ガイドでは、一部の単語や語句を強調して、特定の情報に対する読者の注意を促すために、以下のような表記規則を採用しています。"
 
-# translation auto-copied from project Publican Common, version 3, document
-# Conventions, author ykatabam
-#. Tag: para
-#, no-c-format
-msgid "In PDF and paper editions, this manual uses typefaces drawn from the <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Liberation Fonts</link> set. The Liberation Fonts set is also used in HTML editions if the set is installed on your system. If not, alternative but equivalent typefaces are displayed. Note: Red Hat Enterprise Linux 5 and later include the Liberation Fonts set by default."
-msgstr "本ガイドの PDF および紙書籍版では、<link xlink:href=\"https://fedorahosted.org/liberation-fonts/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Liberation フォント</link>セットの書体を使用しています。また、Liberation フォントセットがご使用のシステムにインストールされている場合には、HTML 版もこの書体で表示されます。インストールされていない場合には、別の対応する書体で表示されます。なお、Red Hat Enterprise Linux 5 以降のバージョンでは、Liberation フォントセットがデフォルトでインストールされる点に注意してください。"
-
 # translation auto-copied from project Publican Common, version 3, document Conventions, author ykatabam
 #. Tag: title
 #, no-c-format
@@ -208,11 +201,9 @@ msgstr "端末に送信される出力は、<computeroutput>ローマン体の�
 # translation auto-copied from project Publican Common, version 3, document Conventions, author ykatabam
 #. Tag: screen
 #, no-c-format
-msgid ""
-"books        Desktop   documentation  drafts  mss    photos   stuff  svn\n"
+msgid "books        Desktop   documentation  drafts  mss    photos   stuff  svn\n"
 "books_tests  Desktop1  downloads      images  notes  scripts  svgs"
-msgstr ""
-"books        Desktop   documentation  drafts  mss    photos   stuff  svn\n"
+msgstr "books        Desktop   documentation  drafts  mss    photos   stuff  svn\n"
 "books_tests  Desktop1  downloads      images  notes  scripts  svgs"
 
 # translation auto-copied from project Publican Common, version 3, document Conventions, author ykatabam
@@ -221,11 +212,8 @@ msgstr ""
 msgid "Source-code listings are also set in <computeroutput>mono-spaced roman</computeroutput> but add syntax highlighting as follows:"
 msgstr "ソースコードの表示にも <computeroutput>ローマン体の等幅フォント</computeroutput> が使用されますが、以下のような構文強調表示が追加されます。"
 
-# translation auto-copied from project Publican Common, version 3, document Conventions
-#. Tag: title
-#, no-c-format
-msgid "Notes and Warnings"
-msgstr "注記および警告"
+msgid "Admonitions"
+msgstr ""
 
 # translation auto-copied from project Publican Common, version 3, document Conventions, author miey
 #. Tag: para
@@ -235,8 +223,14 @@ msgstr "本ガイドでは、見落としがちな情報に注意を促すため
 
 # translation auto-copied from project Publican Common, version 3, document Conventions, author miey
 #. Tag: para
-#, no-c-format
-msgid "Notes are tips, shortcuts or alternative approaches to the task at hand. Ignoring a note should have no negative consequences, but you might miss out on a trick that makes your life easier."
+#, no-c-format, fuzzy
+msgid "Tips are tips, shortcuts or alternative approaches to the task at hand. Ignoring a tip should have no negative consequences, but you might miss out on a trick that makes your life easier."
+msgstr "注記には、対象のタスクに関するヒント、ショートカット、その他のアプローチなどを記載しています。注記を無視しても、悪影響はありませんが、作業を効率的に行うためのコツを見逃してしまう可能性があります。"
+
+# translation auto-copied from project Publican Common, version 3, document Conventions, author miey
+#. Tag: para
+#, no-c-format, fuzzy
+msgid "Tips are tips, shortcuts or alternative approaches to the task at hand. Ignoring a tip should have no negative consequences, but you might miss out on a trick that makes your life easier."
 msgstr "注記には、対象のタスクに関するヒント、ショートカット、その他のアプローチなどを記載しています。注記を無視しても、悪影響はありませんが、作業を効率的に行うためのコツを見逃してしまう可能性があります。"
 
 # translation auto-copied from project Publican Common, version 3, document Conventions, author ykatabam
@@ -250,4 +244,17 @@ msgstr "重要の欄には、現行セッションのみに適用される設定
 #, no-c-format
 msgid "Warnings should not be ignored. Ignoring warnings will most likely cause data loss."
 msgstr "警告は、無視しないでください。警告を無視すると、データ損失が発生する可能性が非常に高くなります。"
+
+# translation auto-copied from project Publican Common, version 3, document Conventions
+#. Tag: title
+#, no-c-format
+#~ msgid "Notes and Warnings"
+#~ msgstr "注記および警告"
+
+# translation auto-copied from project Publican Common, version 3, document
+# Conventions, author ykatabam
+#. Tag: para
+#, no-c-format
+#~ msgid "In PDF and paper editions, this manual uses typefaces drawn from the <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Liberation Fonts</link> set. The Liberation Fonts set is also used in HTML editions if the set is installed on your system. If not, alternative but equivalent typefaces are displayed. Note: Red Hat Enterprise Linux 5 and later include the Liberation Fonts set by default."
+#~ msgstr "本ガイドの PDF および紙書籍版では、<link xlink:href=\"https://fedorahosted.org/liberation-fonts/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Liberation フォント</link>セットの書体を使用しています。また、Liberation フォントセットがご使用のシステムにインストールされている場合には、HTML 版もこの書体で表示されます。インストールされていない場合には、別の対応する書体で表示されます。なお、Red Hat Enterprise Linux 5 以降のバージョンでは、Liberation フォントセットがデフォルトでインストールされる点に注意してください。"
 

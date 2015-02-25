@@ -32,13 +32,6 @@ msgstr "Criteris del document"
 msgid "This manual uses several conventions to highlight certain words and phrases and draw attention to specific pieces of information."
 msgstr "Aquest manual utilitza diversos convenis per ressaltar certes paraules i frases, i cridar l'atenció sobre elements específics d'informació."
 
-# translation auto-copied from project Publican Common, version 3, document
-# Conventions
-#. Tag: para
-#, no-c-format
-msgid "In PDF and paper editions, this manual uses typefaces drawn from the <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Liberation Fonts</link> set. The Liberation Fonts set is also used in HTML editions if the set is installed on your system. If not, alternative but equivalent typefaces are displayed. Note: Red Hat Enterprise Linux 5 and later include the Liberation Fonts set by default."
-msgstr "En edicions PDF i impreses, aquest manual utilitza la tipografia extreta del conjunt <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Liberation</link>. El conjunt Liberation també s'utilitza en edicions HTML, si aquest estigués instal·lat al vostre sistema. Si no fos així, es mostraria amb tipografies equivalents. Nota: En RHEL (Red Hat Enterprise Linux) 5 i en posteriors s'inclouen de forma predeterminada el conjunt Liberation."
-
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: title
 #, no-c-format
@@ -202,11 +195,9 @@ msgstr "La sortida enviada a un terminal està establerta a <computeroutput>Roma
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: screen
 #, no-c-format
-msgid ""
-"books        Desktop   documentation  drafts  mss    photos   stuff  svn\n"
+msgid "books        Desktop   documentation  drafts  mss    photos   stuff  svn\n"
 "books_tests  Desktop1  downloads      images  notes  scripts  svgs"
-msgstr ""
-"llibres           Escriptori   documentació  borradors  mss    fotos   coses  svn\n"
+msgstr "llibres           Escriptori   documentació  borradors  mss    fotos   coses  svn\n"
 "llibres_peroves  Escriptori1  descàrregues      imatges  notes  scripts  svgs"
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
@@ -215,11 +206,8 @@ msgstr ""
 msgid "Source-code listings are also set in <computeroutput>mono-spaced roman</computeroutput> but add syntax highlighting as follows:"
 msgstr "El llistats de codi font també s'estableixen amb <computeroutput>Romana mono-espaiada</computeroutput> però es presenten i ressalten de la següent forma:"
 
-# translation auto-copied from project Publican Common, version 3, document Conventions
-#. Tag: title
-#, no-c-format
-msgid "Notes and Warnings"
-msgstr "Notes i Advertències"
+msgid "Admonitions"
+msgstr ""
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: para
@@ -229,8 +217,14 @@ msgstr "Finalment, utilitzarem tres estils visuals per a cridar l'atenció sobre
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: para
-#, no-c-format
-msgid "Notes are tips, shortcuts or alternative approaches to the task at hand. Ignoring a note should have no negative consequences, but you might miss out on a trick that makes your life easier."
+#, no-c-format, fuzzy
+msgid "Tips are tips, shortcuts or alternative approaches to the task at hand. Ignoring a tip should have no negative consequences, but you might miss out on a trick that makes your life easier."
+msgstr "Una Nota és un suggeriment, drecera o enfocament alternatiu per a la tasca que teniu entre mans. Ignorar una nota no hauria de provocar conseqüències negatives, però us podríeu perdre un truc que us faria la vida més fàcil."
+
+# translation auto-copied from project Publican Common, version 3, document Conventions
+#. Tag: para
+#, no-c-format, fuzzy
+msgid "Tips are tips, shortcuts or alternative approaches to the task at hand. Ignoring a tip should have no negative consequences, but you might miss out on a trick that makes your life easier."
 msgstr "Una Nota és un suggeriment, drecera o enfocament alternatiu per a la tasca que teniu entre mans. Ignorar una nota no hauria de provocar conseqüències negatives, però us podríeu perdre un truc que us faria la vida més fàcil."
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
@@ -244,4 +238,17 @@ msgstr "Podeu passar per alt detalls dels requadres importats: canvis a la confi
 #, no-c-format
 msgid "Warnings should not be ignored. Ignoring warnings will most likely cause data loss."
 msgstr "No s'han d'ignorar les advertències. Ignorar-les molt probablement provocarà pèrdua de dades."
+
+# translation auto-copied from project Publican Common, version 3, document Conventions
+#. Tag: title
+#, no-c-format
+#~ msgid "Notes and Warnings"
+#~ msgstr "Notes i Advertències"
+
+# translation auto-copied from project Publican Common, version 3, document
+# Conventions
+#. Tag: para
+#, no-c-format
+#~ msgid "In PDF and paper editions, this manual uses typefaces drawn from the <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Liberation Fonts</link> set. The Liberation Fonts set is also used in HTML editions if the set is installed on your system. If not, alternative but equivalent typefaces are displayed. Note: Red Hat Enterprise Linux 5 and later include the Liberation Fonts set by default."
+#~ msgstr "En edicions PDF i impreses, aquest manual utilitza la tipografia extreta del conjunt <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Liberation</link>. El conjunt Liberation també s'utilitza en edicions HTML, si aquest estigués instal·lat al vostre sistema. Si no fos així, es mostraria amb tipografies equivalents. Nota: En RHEL (Red Hat Enterprise Linux) 5 i en posteriors s'inclouen de forma predeterminada el conjunt Liberation."
 

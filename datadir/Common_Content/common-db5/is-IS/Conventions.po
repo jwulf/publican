@@ -28,13 +28,6 @@ msgstr "Framsetning skjalsins"
 msgid "This manual uses several conventions to highlight certain words and phrases and draw attention to specific pieces of information."
 msgstr "Þessi handbók styðst við nokkrar venjur við framsetningu á ákveðnum gerðum texta til að gefa áherslur og að draga athyglina að sérstökum gerðum upplýsinga."
 
-# translation auto-copied from project Publican Common, version 3, document
-# Conventions
-#. Tag: para
-#, no-c-format
-msgid "In PDF and paper editions, this manual uses typefaces drawn from the <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Liberation Fonts</link> set. The Liberation Fonts set is also used in HTML editions if the set is installed on your system. If not, alternative but equivalent typefaces are displayed. Note: Red Hat Enterprise Linux 5 and later include the Liberation Fonts set by default."
-msgstr "Í PDF og pappírsútgáfum notar handbókin leturgerðir sem koma úr seríunni <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Liberation Fonts</link>. Leturfjölskyldan Liberation er einnig notuð í HTML vefútgáfum ef letrið er uppsett á kerfinu. Ef svo er ekki, þá er reynt að nota aðrar sambærilegar leturgerðir sem finnast. Athugið: Red Hat Enterprise Linux 5 og síðari dreifingar eru sjálfgefið með Liberation letrið uppsett."
-
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: title
 #, no-c-format
@@ -189,11 +182,9 @@ msgstr ""
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: screen
 #, no-c-format
-msgid ""
-"books        Desktop   documentation  drafts  mss    photos   stuff  svn\n"
+msgid "books        Desktop   documentation  drafts  mss    photos   stuff  svn\n"
 "books_tests  Desktop1  downloads      images  notes  scripts  svgs"
-msgstr ""
-"bækur        Desktop   drasl  myndir    skriftur  uppkast    tilraunir\n"
+msgstr "bækur        Desktop   drasl  myndir    skriftur  uppkast    tilraunir\n"
 "bækur_prufa  Desktop1  mss    niðurhal  svn       vinnugogn  is.svg"
 
 #. Tag: para
@@ -201,11 +192,8 @@ msgstr ""
 msgid "Source-code listings are also set in <computeroutput>mono-spaced roman</computeroutput> but add syntax highlighting as follows:"
 msgstr ""
 
-# translation auto-copied from project Publican Common, version 3, document Conventions
-#. Tag: title
-#, no-c-format
-msgid "Notes and Warnings"
-msgstr "Athugasemdir og viðvaranir"
+msgid "Admonitions"
+msgstr ""
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: para
@@ -214,8 +202,13 @@ msgid "Finally, we use three visual styles to draw attention to information that
 msgstr "Að lokum eru hér sýndar þrjár mismunandi gerðir sjónrænna merkinga sem við notum til að draga athyglina að upplýsingum sem annars gætu farið framhjá fólki."
 
 #. Tag: para
-#, no-c-format
-msgid "Notes are tips, shortcuts or alternative approaches to the task at hand. Ignoring a note should have no negative consequences, but you might miss out on a trick that makes your life easier."
+#, no-c-format, fuzzy
+msgid "Tips are tips, shortcuts or alternative approaches to the task at hand. Ignoring a tip should have no negative consequences, but you might miss out on a trick that makes your life easier."
+msgstr ""
+
+#. Tag: para
+#, no-c-format, fuzzy
+msgid "Tips are tips, shortcuts or alternative approaches to the task at hand. Ignoring a tip should have no negative consequences, but you might miss out on a trick that makes your life easier."
 msgstr ""
 
 #. Tag: para
@@ -227,4 +220,17 @@ msgstr ""
 #, no-c-format
 msgid "Warnings should not be ignored. Ignoring warnings will most likely cause data loss."
 msgstr ""
+
+# translation auto-copied from project Publican Common, version 3, document Conventions
+#. Tag: title
+#, no-c-format
+#~ msgid "Notes and Warnings"
+#~ msgstr "Athugasemdir og viðvaranir"
+
+# translation auto-copied from project Publican Common, version 3, document
+# Conventions
+#. Tag: para
+#, no-c-format
+#~ msgid "In PDF and paper editions, this manual uses typefaces drawn from the <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Liberation Fonts</link> set. The Liberation Fonts set is also used in HTML editions if the set is installed on your system. If not, alternative but equivalent typefaces are displayed. Note: Red Hat Enterprise Linux 5 and later include the Liberation Fonts set by default."
+#~ msgstr "Í PDF og pappírsútgáfum notar handbókin leturgerðir sem koma úr seríunni <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Liberation Fonts</link>. Leturfjölskyldan Liberation er einnig notuð í HTML vefútgáfum ef letrið er uppsett á kerfinu. Ef svo er ekki, þá er reynt að nota aðrar sambærilegar leturgerðir sem finnast. Athugið: Red Hat Enterprise Linux 5 og síðari dreifingar eru sjálfgefið með Liberation letrið uppsett."
 

@@ -28,13 +28,6 @@ msgstr "Dokumentkonventioner"
 msgid "This manual uses several conventions to highlight certain words and phrases and draw attention to specific pieces of information."
 msgstr "Denna manual använder flera konventioner för att markera vissa ord och fraser och dra uppmärksamheten till speciella delar av information."
 
-# translation auto-copied from project Publican Common, version 3, document
-# Conventions
-#. Tag: para
-#, no-c-format
-msgid "In PDF and paper editions, this manual uses typefaces drawn from the <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Liberation Fonts</link> set. The Liberation Fonts set is also used in HTML editions if the set is installed on your system. If not, alternative but equivalent typefaces are displayed. Note: Red Hat Enterprise Linux 5 and later include the Liberation Fonts set by default."
-msgstr "I PDF- och pappersutgåvor använder denna manual typsnitt tagna från uppsättningen <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Liberation Fonts</link>.  Uppsättningen Liberation Fonts används också i HTML-utgåvor om uppsättningen är installerad på ditt system.  Om inte visas alternativa men likvärdiga typsnitt.  Observera: Red Hat Enterprise Linux 5 och senare innehåller uppsättningen Liberation Fonts som standard."
-
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: title
 #, no-c-format
@@ -189,11 +182,9 @@ msgstr ""
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: screen
 #, no-c-format
-msgid ""
-"books        Desktop   documentation  drafts  mss    photos   stuff  svn\n"
+msgid "books        Desktop   documentation  drafts  mss    photos   stuff  svn\n"
 "books_tests  Desktop1  downloads      images  notes  scripts  svgs"
-msgstr ""
-"bilder  böcker-tester  foton   mss         saker   Skrivbord   svgs  utkast\n"
+msgstr "bilder  böcker-tester  foton   mss         saker   Skrivbord   svgs  utkast\n"
 "böcker  dokumentation  hämtat  noteringar  skript  Skrivbord1  svn"
 
 #. Tag: para
@@ -201,11 +192,8 @@ msgstr ""
 msgid "Source-code listings are also set in <computeroutput>mono-spaced roman</computeroutput> but add syntax highlighting as follows:"
 msgstr ""
 
-# translation auto-copied from project Publican Common, version 3, document Conventions
-#. Tag: title
-#, no-c-format
-msgid "Notes and Warnings"
-msgstr "Noter och varningar"
+msgid "Admonitions"
+msgstr ""
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: para
@@ -214,8 +202,13 @@ msgid "Finally, we use three visual styles to draw attention to information that
 msgstr "Slutligen använder vi tre visuella stilar för att dra uppmärksamheten till infomation som annars kanske förbises."
 
 #. Tag: para
-#, no-c-format
-msgid "Notes are tips, shortcuts or alternative approaches to the task at hand. Ignoring a note should have no negative consequences, but you might miss out on a trick that makes your life easier."
+#, no-c-format, fuzzy
+msgid "Tips are tips, shortcuts or alternative approaches to the task at hand. Ignoring a tip should have no negative consequences, but you might miss out on a trick that makes your life easier."
+msgstr ""
+
+#. Tag: para
+#, no-c-format, fuzzy
+msgid "Tips are tips, shortcuts or alternative approaches to the task at hand. Ignoring a tip should have no negative consequences, but you might miss out on a trick that makes your life easier."
 msgstr ""
 
 #. Tag: para
@@ -227,4 +220,17 @@ msgstr ""
 #, no-c-format
 msgid "Warnings should not be ignored. Ignoring warnings will most likely cause data loss."
 msgstr ""
+
+# translation auto-copied from project Publican Common, version 3, document Conventions
+#. Tag: title
+#, no-c-format
+#~ msgid "Notes and Warnings"
+#~ msgstr "Noter och varningar"
+
+# translation auto-copied from project Publican Common, version 3, document
+# Conventions
+#. Tag: para
+#, no-c-format
+#~ msgid "In PDF and paper editions, this manual uses typefaces drawn from the <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Liberation Fonts</link> set. The Liberation Fonts set is also used in HTML editions if the set is installed on your system. If not, alternative but equivalent typefaces are displayed. Note: Red Hat Enterprise Linux 5 and later include the Liberation Fonts set by default."
+#~ msgstr "I PDF- och pappersutgåvor använder denna manual typsnitt tagna från uppsättningen <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Liberation Fonts</link>.  Uppsättningen Liberation Fonts används också i HTML-utgåvor om uppsättningen är installerad på ditt system.  Om inte visas alternativa men likvärdiga typsnitt.  Observera: Red Hat Enterprise Linux 5 och senare innehåller uppsättningen Liberation Fonts som standard."
 

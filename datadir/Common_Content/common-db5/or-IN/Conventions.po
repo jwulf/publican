@@ -29,13 +29,6 @@ msgstr "ଦଲିଲକରଣ ନିୟମ"
 msgid "This manual uses several conventions to highlight certain words and phrases and draw attention to specific pieces of information."
 msgstr "ଏହି ହସ୍ତପୁସ୍ତକ କିଛି ଶବ୍ଦ ଏବଂ ବାକ୍ୟାଂଶକୁ ଆଲୋକିତ କରିବା ପାଇଁ ଅନେକ ନିୟମକୁ ବ୍ୟବହାର କରିଥାଏ ଏବଂ କିଛି ନିର୍ଦ୍ଦିଷ୍ଟ ସୂଚନା ଆଡ଼କୁ ଦୃଷ୍ଟି ଦେଇଥାଏ।"
 
-# translation auto-copied from project Publican Common, version 3, document
-# Conventions
-#. Tag: para
-#, no-c-format
-msgid "In PDF and paper editions, this manual uses typefaces drawn from the <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Liberation Fonts</link> set. The Liberation Fonts set is also used in HTML editions if the set is installed on your system. If not, alternative but equivalent typefaces are displayed. Note: Red Hat Enterprise Linux 5 and later include the Liberation Fonts set by default."
-msgstr "PDF ଏବଂ କାଗଜ ସମ୍ପାଦନରେ, ଏହି ହସ୍ତପୁସ୍ତକ <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\"> Liberation Fonts</link> ସେଟରୁ କଢ଼ାଯାଉଥିବା typefaces କୁ ବ୍ୟବହାର କରିଥାଏ। ମୁକ୍ତି ଅକ୍ଷରରୂପ ସେଟକୁ HTML ସମ୍ପାଦନରେ ମଧ୍ଯରେ ବ୍ବହାର କରାଯାଇଥାଏ, ଯଦି ସେହି ସେଟକୁ ଆପଣଙ୍କ ତନ୍ତ୍ରରେ ସ୍ଥାପନ କରାଯାଇଥାଏ। ଯଦି ହୋଇନଥାଏ, ତେବେ ବୈକଳ୍ପିକ ତଥା ସମାନ ପ୍ରକାର typefaces ଗୁଡ଼ିକୁ ଦର୍ଶାଯାଇଥାଏ। ଟିପ୍ପଣୀ: Red Hat Enterprise Linux 5 ଏବଂ ପରେ ପୂର୍ବନିର୍ଦ୍ଧାରିତ ଭାବରେ ସେଟ କରାଯାଇଥିବା ମୁକ୍ତ ଅକ୍ଷରରୂପକୁ ଅନ୍ତର୍ଭୁକ୍ତ କରିଥାଏ।"
-
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: title
 #, no-c-format
@@ -205,11 +198,9 @@ msgstr "ଟର୍ମିନାଲକୁ ପଠାଯାଉଥିବା ଫଳା�
 # translation auto-copied from project Publican Common, version 3, document Conventions, author mgiri
 #. Tag: screen
 #, no-c-format
-msgid ""
-"books        Desktop   documentation  drafts  mss    photos   stuff  svn\n"
+msgid "books        Desktop   documentation  drafts  mss    photos   stuff  svn\n"
 "books_tests  Desktop1  downloads      images  notes  scripts  svgs"
-msgstr ""
-"ପୁସ୍ତକ        ଡେସ୍କଟପ   ଦଲିଲିକରଣ  ଡ୍ରାଫ୍ଟ  mss    ଫୋଟୋ   ବସ୍ତୁ  svn\n"
+msgstr "ପୁସ୍ତକ        ଡେସ୍କଟପ   ଦଲିଲିକରଣ  ଡ୍ରାଫ୍ଟ  mss    ଫୋଟୋ   ବସ୍ତୁ  svn\n"
 "books_tests  ଡେସ୍କଟପ1  ଆହରଣ      ପ୍ରତିଛବି  ଟିପ୍ପଣୀ  ସ୍କ୍ରିପ୍ଟ  svgs"
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
@@ -218,11 +209,8 @@ msgstr ""
 msgid "Source-code listings are also set in <computeroutput>mono-spaced roman</computeroutput> but add syntax highlighting as follows:"
 msgstr "ଉତ୍ସ-ସଂକେତ ତାଲିକାକୁ <computeroutput>mono-spaced roman</computeroutput> ରେ ସେଟ କରାହୋଇଛି କିନ୍ତୁ ନିମ୍ନଲିଖିତ ଭାବରେ ସାଙ୍କେତିକ ଆଲୋକିତ ଯୋଗକରାହୋଇଥାଏ:"
 
-# translation auto-copied from project Publican Common, version 3, document Conventions
-#. Tag: title
-#, no-c-format
-msgid "Notes and Warnings"
-msgstr "ଟିପ୍ପଣୀ ଏବଂ ଚେତାବନୀ"
+msgid "Admonitions"
+msgstr ""
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: para
@@ -232,8 +220,14 @@ msgstr "ଶେଷରେ, ଆମେମାନେ ତିନୋଟି ଦୃଶ୍�
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: para
-#, no-c-format
-msgid "Notes are tips, shortcuts or alternative approaches to the task at hand. Ignoring a note should have no negative consequences, but you might miss out on a trick that makes your life easier."
+#, no-c-format, fuzzy
+msgid "Tips are tips, shortcuts or alternative approaches to the task at hand. Ignoring a tip should have no negative consequences, but you might miss out on a trick that makes your life easier."
+msgstr "ଟିପ୍ପଣୀଗୁଡିକ ହେଉଛି ପ୍ରାକ ସୂଚନା, ସଂକ୍ଷିପ୍ତ ପଥ ଅଥବା ହାତରେ ଥିବା କାର୍ଯ୍ୟର ବୈକଳ୍ପିକ ଆବେଦନ। ଟିପ୍ପଣୀକୁ ନ ମାନିଲେ କିଛି ଅସୁବିଧା ନାହିଁ, କିନ୍ତୁ ଆପଣ ହୁଏତଃ ଗୋଟିଏ କୌଶଳକୁ ହରାଇ ପାରନ୍ତି ଯାହାକି ଆପଣଙ୍କ ଜୀବନକୁ ସହଜମୟ କରିପାରେ।"
+
+# translation auto-copied from project Publican Common, version 3, document Conventions
+#. Tag: para
+#, no-c-format, fuzzy
+msgid "Tips are tips, shortcuts or alternative approaches to the task at hand. Ignoring a tip should have no negative consequences, but you might miss out on a trick that makes your life easier."
 msgstr "ଟିପ୍ପଣୀଗୁଡିକ ହେଉଛି ପ୍ରାକ ସୂଚନା, ସଂକ୍ଷିପ୍ତ ପଥ ଅଥବା ହାତରେ ଥିବା କାର୍ଯ୍ୟର ବୈକଳ୍ପିକ ଆବେଦନ। ଟିପ୍ପଣୀକୁ ନ ମାନିଲେ କିଛି ଅସୁବିଧା ନାହିଁ, କିନ୍ତୁ ଆପଣ ହୁଏତଃ ଗୋଟିଏ କୌଶଳକୁ ହରାଇ ପାରନ୍ତି ଯାହାକି ଆପଣଙ୍କ ଜୀବନକୁ ସହଜମୟ କରିପାରେ।"
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
@@ -247,4 +241,17 @@ msgstr "ଆବଶ୍ୟକୀୟ ବାକ୍ସ ବିବରଣୀ ବସ୍ତ
 #, no-c-format
 msgid "Warnings should not be ignored. Ignoring warnings will most likely cause data loss."
 msgstr "ଚେତାବନୀକୁ ଅଗ୍ରାହ୍ୟ କରିବା ଉଚିତ ନୁହଁ। ଚେତାବନୀକୁ ଅଗ୍ରାହ୍ୟ କରିବା ଫଳରେ ତଥ୍ୟ ନଷ୍ଟ ହୋଇଥାଏ।"
+
+# translation auto-copied from project Publican Common, version 3, document Conventions
+#. Tag: title
+#, no-c-format
+#~ msgid "Notes and Warnings"
+#~ msgstr "ଟିପ୍ପଣୀ ଏବଂ ଚେତାବନୀ"
+
+# translation auto-copied from project Publican Common, version 3, document
+# Conventions
+#. Tag: para
+#, no-c-format
+#~ msgid "In PDF and paper editions, this manual uses typefaces drawn from the <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Liberation Fonts</link> set. The Liberation Fonts set is also used in HTML editions if the set is installed on your system. If not, alternative but equivalent typefaces are displayed. Note: Red Hat Enterprise Linux 5 and later include the Liberation Fonts set by default."
+#~ msgstr "PDF ଏବଂ କାଗଜ ସମ୍ପାଦନରେ, ଏହି ହସ୍ତପୁସ୍ତକ <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\"> Liberation Fonts</link> ସେଟରୁ କଢ଼ାଯାଉଥିବା typefaces କୁ ବ୍ୟବହାର କରିଥାଏ। ମୁକ୍ତି ଅକ୍ଷରରୂପ ସେଟକୁ HTML ସମ୍ପାଦନରେ ମଧ୍ଯରେ ବ୍ବହାର କରାଯାଇଥାଏ, ଯଦି ସେହି ସେଟକୁ ଆପଣଙ୍କ ତନ୍ତ୍ରରେ ସ୍ଥାପନ କରାଯାଇଥାଏ। ଯଦି ହୋଇନଥାଏ, ତେବେ ବୈକଳ୍ପିକ ତଥା ସମାନ ପ୍ରକାର typefaces ଗୁଡ଼ିକୁ ଦର୍ଶାଯାଇଥାଏ। ଟିପ୍ପଣୀ: Red Hat Enterprise Linux 5 ଏବଂ ପରେ ପୂର୍ବନିର୍ଦ୍ଧାରିତ ଭାବରେ ସେଟ କରାଯାଇଥିବା ମୁକ୍ତ ଅକ୍ଷରରୂପକୁ ଅନ୍ତର୍ଭୁକ୍ତ କରିଥାଏ।"
 

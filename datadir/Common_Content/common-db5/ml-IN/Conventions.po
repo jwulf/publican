@@ -28,13 +28,6 @@ msgstr "രേഖയിലെ കീഴ്‌വഴക്കങ്ങള്‍"
 msgid "This manual uses several conventions to highlight certain words and phrases and draw attention to specific pieces of information."
 msgstr "ഈ മാനുവലില്‍ ചില വാക്കുകള്‍, വാചകങ്ങള്‍, പ്രത്യേക ചില വിവരങ്ങള്‍ എന്നിവ നിങ്ങളുടെ ശ്രദ്ധയില്‍പ്പെടുത്തുന്നതിനായി അനവധി കീഴ്‌വഴക്കങ്ങള്‍ ഉപയോഗിച്ചിരിക്കുന്നു."
 
-# translation auto-copied from project Publican Common, version 3, document
-# Conventions
-#. Tag: para
-#, no-c-format
-msgid "In PDF and paper editions, this manual uses typefaces drawn from the <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Liberation Fonts</link> set. The Liberation Fonts set is also used in HTML editions if the set is installed on your system. If not, alternative but equivalent typefaces are displayed. Note: Red Hat Enterprise Linux 5 and later include the Liberation Fonts set by default."
-msgstr "പിഡിഎഫിലും പേപ്പര്‍ പതിപ്പുകളിലും, <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\"> ലിബറേഷന്‍ അക്ഷരസഞ്ചയങ്ങളുടെ</link> സെറ്റില്‍ നിന്നുമുള്ള ടൈപ്പ്ഫെയിസുകള്‍ ഈ മാനുവലില്‍ ഉപയോഗിക്കുന്നു. ലിബറേഷന്‍ അക്ഷരസഞ്ചയങ്ങള്‍ നിങ്ങളുടെ സിസ്റ്റമില്‍ ഇന്‍സ്റ്റോള്‍ ചെയ്തിട്ടുണ്ടെങ്കില്‍ അവ എച്ടിഎംഎല്‍ പതിപ്പുകളിലും ഉപയോഗിക്കുന്നതാണു്. ഇവ ഇല്ലെങ്കില്‍, പകരമായുള്ള ടൈപ്പ്ഫെയിസുകള്‍ ലഭ്യമാകുന്നു. കുറിപ്പു്: Red Hat Enterprise Linux 5-ഉം അതിനു് ശേഷമുള്ളവയിലും സ്വതവേ ഈ ലിബറേഷന്‍ അക്ഷരസഞ്ചയം ഉള്‍പ്പെടുത്തിയിരിക്കുന്നു."
-
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: title
 #, no-c-format
@@ -205,11 +198,9 @@ msgstr "ഒരു ടെര്‍മിനലിലേക്കുള്ള ഔ�
 # translation auto-copied from project Publican Common, version 3, document Conventions, author anipeter
 #. Tag: screen
 #, no-c-format
-msgid ""
-"books        Desktop   documentation  drafts  mss    photos   stuff  svn\n"
+msgid "books        Desktop   documentation  drafts  mss    photos   stuff  svn\n"
 "books_tests  Desktop1  downloads      images  notes  scripts  svgs"
-msgstr ""
-"books        Desktop   documentation  drafts  mss    photos   stuff  svn\n"
+msgstr "books        Desktop   documentation  drafts  mss    photos   stuff  svn\n"
 "books_tests  Desktop1  downloads      images  notes  scripts  svgs"
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
@@ -218,11 +209,8 @@ msgstr ""
 msgid "Source-code listings are also set in <computeroutput>mono-spaced roman</computeroutput> but add syntax highlighting as follows:"
 msgstr "സോഴ്സ്-കോഡ് ലിസ്റ്റിങും <computeroutput>മോണോ-സ്പെയിസ്ഡ് റോമനില്‍</computeroutput> ക്രമികരിച്ചിട്ടുണ്ടു്, പക്ഷേ അവ ലഭ്യമാകുന്നതു് താഴെ പറയുന്ന രീതിയിലാണു്:"
 
-# translation auto-copied from project Publican Common, version 3, document Conventions
-#. Tag: title
-#, no-c-format
-msgid "Notes and Warnings"
-msgstr "കുറിപ്പുകളും മുന്നറിയിപ്പുകളും"
+msgid "Admonitions"
+msgstr ""
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: para
@@ -232,8 +220,14 @@ msgstr "Finally, we use three visual styles to draw attention to information tha
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: para
-#, no-c-format
-msgid "Notes are tips, shortcuts or alternative approaches to the task at hand. Ignoring a note should have no negative consequences, but you might miss out on a trick that makes your life easier."
+#, no-c-format, fuzzy
+msgid "Tips are tips, shortcuts or alternative approaches to the task at hand. Ignoring a tip should have no negative consequences, but you might miss out on a trick that makes your life easier."
+msgstr "നിങ്ങള്‍ ചെയ്യുന്ന ജോലിയ്ക്കാവശ്യമുള്ള ഒരു സൂചന അല്ലെങ്കില്‍ ഒരു കുറുക്കുവഴി ആണു് കുറിപ്പുകള്‍. ഇവ അവഗണിക്കുന്നതു് വിവരങ്ങള്‍ നഷ്ടമാക്കുന്നില്ല എങ്കിലും നിങ്ങളുടെ ജോലി എളുപ്പമാക്കുന്ന ഒരു കുറുക്കുവഴി നിങ്ങള്‍ക്കു് നഷ്ടപ്പെട്ടേക്കാം."
+
+# translation auto-copied from project Publican Common, version 3, document Conventions
+#. Tag: para
+#, no-c-format, fuzzy
+msgid "Tips are tips, shortcuts or alternative approaches to the task at hand. Ignoring a tip should have no negative consequences, but you might miss out on a trick that makes your life easier."
 msgstr "നിങ്ങള്‍ ചെയ്യുന്ന ജോലിയ്ക്കാവശ്യമുള്ള ഒരു സൂചന അല്ലെങ്കില്‍ ഒരു കുറുക്കുവഴി ആണു് കുറിപ്പുകള്‍. ഇവ അവഗണിക്കുന്നതു് വിവരങ്ങള്‍ നഷ്ടമാക്കുന്നില്ല എങ്കിലും നിങ്ങളുടെ ജോലി എളുപ്പമാക്കുന്ന ഒരു കുറുക്കുവഴി നിങ്ങള്‍ക്കു് നഷ്ടപ്പെട്ടേക്കാം."
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
@@ -247,4 +241,17 @@ msgstr "നിലവിലുള്ള സെഷനു് മാത്രമു�
 #, no-c-format
 msgid "Warnings should not be ignored. Ignoring warnings will most likely cause data loss."
 msgstr "മുന്നറിയിപ്പുകള്‍ അവഗണിക്കുന്നതു് വിവരങ്ങള്‍ നഷ്ടപ്പെടുന്നതിനിടയാക്കുന്നു. അതിനാല്‍ അവ പ്രത്യേകം ശ്രദ്ധിക്കുക."
+
+# translation auto-copied from project Publican Common, version 3, document Conventions
+#. Tag: title
+#, no-c-format
+#~ msgid "Notes and Warnings"
+#~ msgstr "കുറിപ്പുകളും മുന്നറിയിപ്പുകളും"
+
+# translation auto-copied from project Publican Common, version 3, document
+# Conventions
+#. Tag: para
+#, no-c-format
+#~ msgid "In PDF and paper editions, this manual uses typefaces drawn from the <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Liberation Fonts</link> set. The Liberation Fonts set is also used in HTML editions if the set is installed on your system. If not, alternative but equivalent typefaces are displayed. Note: Red Hat Enterprise Linux 5 and later include the Liberation Fonts set by default."
+#~ msgstr "പിഡിഎഫിലും പേപ്പര്‍ പതിപ്പുകളിലും, <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\"> ലിബറേഷന്‍ അക്ഷരസഞ്ചയങ്ങളുടെ</link> സെറ്റില്‍ നിന്നുമുള്ള ടൈപ്പ്ഫെയിസുകള്‍ ഈ മാനുവലില്‍ ഉപയോഗിക്കുന്നു. ലിബറേഷന്‍ അക്ഷരസഞ്ചയങ്ങള്‍ നിങ്ങളുടെ സിസ്റ്റമില്‍ ഇന്‍സ്റ്റോള്‍ ചെയ്തിട്ടുണ്ടെങ്കില്‍ അവ എച്ടിഎംഎല്‍ പതിപ്പുകളിലും ഉപയോഗിക്കുന്നതാണു്. ഇവ ഇല്ലെങ്കില്‍, പകരമായുള്ള ടൈപ്പ്ഫെയിസുകള്‍ ലഭ്യമാകുന്നു. കുറിപ്പു്: Red Hat Enterprise Linux 5-ഉം അതിനു് ശേഷമുള്ളവയിലും സ്വതവേ ഈ ലിബറേഷന്‍ അക്ഷരസഞ്ചയം ഉള്‍പ്പെടുത്തിയിരിക്കുന്നു."
 

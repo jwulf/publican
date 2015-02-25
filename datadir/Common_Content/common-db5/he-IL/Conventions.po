@@ -27,13 +27,6 @@ msgstr "מוסכמות לתיעוד"
 msgid "This manual uses several conventions to highlight certain words and phrases and draw attention to specific pieces of information."
 msgstr "מדריך זה משתמש במספר מוסכמות לצורך הדגשת חלק מהמילים והמשפטים ובכדי להסב את תשומת הלב לפרטי מידע מסוימים."
 
-# translation auto-copied from project Publican Common, version 3, document
-# Conventions
-#. Tag: para
-#, no-c-format
-msgid "In PDF and paper editions, this manual uses typefaces drawn from the <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Liberation Fonts</link> set. The Liberation Fonts set is also used in HTML editions if the set is installed on your system. If not, alternative but equivalent typefaces are displayed. Note: Red Hat Enterprise Linux 5 and later include the Liberation Fonts set by default."
-msgstr "בגרסאות המסמך המודפסות או השמורות בפורמט PDF, המדריך משתמש בגופנים הנלקחים מתוך <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Liberation Fonts</link>. אם גופנים אלו מותקנים במערכת, אזי גם גרסת ה-HTML משתמשת בהם לתצוגה. במידה ואין הדבר כך, המסמך מוצג בגופנים שקולים אחרים. הערה: גופני Liberation Fonts כלולים כברירת מחדל במערכת Red Hat Enterprise Linux מגרסה 5 והלאה."
-
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: title
 #, no-c-format
@@ -187,8 +180,7 @@ msgstr ""
 
 #. Tag: screen
 #, no-c-format
-msgid ""
-"books        Desktop   documentation  drafts  mss    photos   stuff  svn\n"
+msgid "books        Desktop   documentation  drafts  mss    photos   stuff  svn\n"
 "books_tests  Desktop1  downloads      images  notes  scripts  svgs"
 msgstr ""
 
@@ -197,11 +189,8 @@ msgstr ""
 msgid "Source-code listings are also set in <computeroutput>mono-spaced roman</computeroutput> but add syntax highlighting as follows:"
 msgstr ""
 
-# translation auto-copied from project Publican Common, version 3, document Conventions
-#. Tag: title
-#, no-c-format
-msgid "Notes and Warnings"
-msgstr "הערות ואזהרות"
+msgid "Admonitions"
+msgstr ""
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: para
@@ -210,8 +199,13 @@ msgid "Finally, we use three visual styles to draw attention to information that
 msgstr "לבסוף, אנו משתמשים בשלושה סימנים חזותיים לצורך הסבת תשומת הלב למידע חשוב."
 
 #. Tag: para
-#, no-c-format
-msgid "Notes are tips, shortcuts or alternative approaches to the task at hand. Ignoring a note should have no negative consequences, but you might miss out on a trick that makes your life easier."
+#, no-c-format, fuzzy
+msgid "Tips are tips, shortcuts or alternative approaches to the task at hand. Ignoring a tip should have no negative consequences, but you might miss out on a trick that makes your life easier."
+msgstr ""
+
+#. Tag: para
+#, no-c-format, fuzzy
+msgid "Tips are tips, shortcuts or alternative approaches to the task at hand. Ignoring a tip should have no negative consequences, but you might miss out on a trick that makes your life easier."
 msgstr ""
 
 #. Tag: para
@@ -223,4 +217,17 @@ msgstr ""
 #, no-c-format
 msgid "Warnings should not be ignored. Ignoring warnings will most likely cause data loss."
 msgstr ""
+
+# translation auto-copied from project Publican Common, version 3, document Conventions
+#. Tag: title
+#, no-c-format
+#~ msgid "Notes and Warnings"
+#~ msgstr "הערות ואזהרות"
+
+# translation auto-copied from project Publican Common, version 3, document
+# Conventions
+#. Tag: para
+#, no-c-format
+#~ msgid "In PDF and paper editions, this manual uses typefaces drawn from the <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Liberation Fonts</link> set. The Liberation Fonts set is also used in HTML editions if the set is installed on your system. If not, alternative but equivalent typefaces are displayed. Note: Red Hat Enterprise Linux 5 and later include the Liberation Fonts set by default."
+#~ msgstr "בגרסאות המסמך המודפסות או השמורות בפורמט PDF, המדריך משתמש בגופנים הנלקחים מתוך <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Liberation Fonts</link>. אם גופנים אלו מותקנים במערכת, אזי גם גרסת ה-HTML משתמשת בהם לתצוגה. במידה ואין הדבר כך, המסמך מוצג בגופנים שקולים אחרים. הערה: גופני Liberation Fonts כלולים כברירת מחדל במערכת Red Hat Enterprise Linux מגרסה 5 והלאה."
 

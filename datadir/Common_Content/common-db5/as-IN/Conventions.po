@@ -29,13 +29,6 @@ msgstr "তথ্যচিত্ৰৰ বিধিসমূহ"
 msgid "This manual uses several conventions to highlight certain words and phrases and draw attention to specific pieces of information."
 msgstr "এই হাতপুথিয়ে কিছু শব্দ আৰু খণ্ডবাক্য আৰু তথ্যৰ কিছুমান বিশেষ অংশক উজ্জ্বল কৰিবলৈ বহুতো বিধি ব্যৱহাৰ কৰে।"
 
-# translation auto-copied from project Publican Common, version 3, document
-# Conventions
-#. Tag: para
-#, no-c-format
-msgid "In PDF and paper editions, this manual uses typefaces drawn from the <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Liberation Fonts</link> set. The Liberation Fonts set is also used in HTML editions if the set is installed on your system. If not, alternative but equivalent typefaces are displayed. Note: Red Hat Enterprise Linux 5 and later include the Liberation Fonts set by default."
-msgstr "PDF আৰু কাগজৰ সংস্কৰণত, এই হাতপুথিয়ে <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Liberation Fonts</link> সংহতিৰ পৰা আঁকি থোৱা typeface সমূহ ব্যৱহাৰ কৰে। আপোনাৰ চিস্টেমত ইনস্টল্ড হলে Liberation Fonts ৰ গোটক HTML সংস্কৰণত ব্যৱহাৰ কৰা হয়। নহলে, বৈকল্পিক বা একে ধৰণৰ typeface সমূহক প্ৰদৰ্শন কৰা হয়। মন কৰিব: Red Hat Enterprise Linux 5 আৰু তাৰ পিছৰ সংস্কৰণে অবিকল্পিত ভাবে Liberation Fonts ৰ গোট ব্যৱহাৰ কৰে।"
-
 # translation auto-copied from project Publican Common, version 3, document Conventions, author ngoswami
 #. Tag: title
 #, no-c-format
@@ -206,11 +199,9 @@ msgstr "এটা টাৰ্মিনেললৈ আগবঢ়োৱা আউ
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: screen
 #, no-c-format
-msgid ""
-"books        Desktop   documentation  drafts  mss    photos   stuff  svn\n"
+msgid "books        Desktop   documentation  drafts  mss    photos   stuff  svn\n"
 "books_tests  Desktop1  downloads      images  notes  scripts  svgs"
-msgstr ""
-"books        Desktop   documentation  drafts  mss    photos   stuff  svn\n"
+msgstr "books        Desktop   documentation  drafts  mss    photos   stuff  svn\n"
 "books_tests  Desktop1  downloads      images  notes  scripts  svgs"
 
 # translation auto-copied from project Publican Common, version 3, document Conventions, author ngoswami
@@ -219,11 +210,8 @@ msgstr ""
 msgid "Source-code listings are also set in <computeroutput>mono-spaced roman</computeroutput> but add syntax highlighting as follows:"
 msgstr "উৎস-ক'ডৰ তালিকাও <computeroutput>mono-spaced roman</computeroutput> ত নিৰ্ধাৰিত কৰা হয় কিন্তু এনে ধৰণে দেখুৱা আৰু উজ্জ্বল কৰা হয়:"
 
-# translation auto-copied from project Publican Common, version 3, document Conventions
-#. Tag: title
-#, no-c-format
-msgid "Notes and Warnings"
-msgstr "টোকা আৰু সঁকিয়নী"
+msgid "Admonitions"
+msgstr ""
 
 # translation auto-copied from project Publican Common, version 3, document Conventions, author ngoswami
 #. Tag: para
@@ -233,8 +221,14 @@ msgstr "অৱশেষত, সাধাৰণতে আওকাণ কৰা �
 
 # translation auto-copied from project Publican Common, version 3, document Conventions, author ngoswami
 #. Tag: para
-#, no-c-format
-msgid "Notes are tips, shortcuts or alternative approaches to the task at hand. Ignoring a note should have no negative consequences, but you might miss out on a trick that makes your life easier."
+#, no-c-format, fuzzy
+msgid "Tips are tips, shortcuts or alternative approaches to the task at hand. Ignoring a tip should have no negative consequences, but you might miss out on a trick that makes your life easier."
+msgstr "সঙ্কেত, চমু পথ বা কাম সম্পূৰ্ণ এটা বৈকল্পিক প্ৰৱেশ হৈছে এটা টোকা। এটা টোকা আওকাণ কৰিলে কোনো ক্ষতি হ'ব নালাগে, কিন্তু আপোনাৰ জীৱন সহজ কৰা এটা কায়দা আপুনি এৰি যাব পাৰে।"
+
+# translation auto-copied from project Publican Common, version 3, document Conventions, author ngoswami
+#. Tag: para
+#, no-c-format, fuzzy
+msgid "Tips are tips, shortcuts or alternative approaches to the task at hand. Ignoring a tip should have no negative consequences, but you might miss out on a trick that makes your life easier."
 msgstr "সঙ্কেত, চমু পথ বা কাম সম্পূৰ্ণ এটা বৈকল্পিক প্ৰৱেশ হৈছে এটা টোকা। এটা টোকা আওকাণ কৰিলে কোনো ক্ষতি হ'ব নালাগে, কিন্তু আপোনাৰ জীৱন সহজ কৰা এটা কায়দা আপুনি এৰি যাব পাৰে।"
 
 # translation auto-copied from project Publican Common, version 3, document Conventions, author ngoswami
@@ -248,4 +242,17 @@ msgstr "গুৰুত্বপূৰ্ণ বাকচত সহজে এৰ
 #, no-c-format
 msgid "Warnings should not be ignored. Ignoring warnings will most likely cause data loss."
 msgstr "সতৰ্কবাণীক আওকাণ কৰিব নালাগে। সতৰ্কবাণী আওকাণ কৰিলে অতি সম্ভৱ তথ্য হেৰুৱাব পাৰে।"
+
+# translation auto-copied from project Publican Common, version 3, document Conventions
+#. Tag: title
+#, no-c-format
+#~ msgid "Notes and Warnings"
+#~ msgstr "টোকা আৰু সঁকিয়নী"
+
+# translation auto-copied from project Publican Common, version 3, document
+# Conventions
+#. Tag: para
+#, no-c-format
+#~ msgid "In PDF and paper editions, this manual uses typefaces drawn from the <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Liberation Fonts</link> set. The Liberation Fonts set is also used in HTML editions if the set is installed on your system. If not, alternative but equivalent typefaces are displayed. Note: Red Hat Enterprise Linux 5 and later include the Liberation Fonts set by default."
+#~ msgstr "PDF আৰু কাগজৰ সংস্কৰণত, এই হাতপুথিয়ে <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Liberation Fonts</link> সংহতিৰ পৰা আঁকি থোৱা typeface সমূহ ব্যৱহাৰ কৰে। আপোনাৰ চিস্টেমত ইনস্টল্ড হলে Liberation Fonts ৰ গোটক HTML সংস্কৰণত ব্যৱহাৰ কৰা হয়। নহলে, বৈকল্পিক বা একে ধৰণৰ typeface সমূহক প্ৰদৰ্শন কৰা হয়। মন কৰিব: Red Hat Enterprise Linux 5 আৰু তাৰ পিছৰ সংস্কৰণে অবিকল্পিত ভাবে Liberation Fonts ৰ গোট ব্যৱহাৰ কৰে।"
 

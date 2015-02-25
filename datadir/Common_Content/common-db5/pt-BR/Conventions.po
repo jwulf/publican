@@ -28,13 +28,6 @@ msgstr "Convenções de Documentos"
 msgid "This manual uses several conventions to highlight certain words and phrases and draw attention to specific pieces of information."
 msgstr "Este manual usa diversas convenções para destacar certas palavras e frases e chamar a atenção para informações específicas."
 
-# translation auto-copied from project Publican Common, version 3, document
-# Conventions
-#. Tag: para
-#, no-c-format
-msgid "In PDF and paper editions, this manual uses typefaces drawn from the <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Liberation Fonts</link> set. The Liberation Fonts set is also used in HTML editions if the set is installed on your system. If not, alternative but equivalent typefaces are displayed. Note: Red Hat Enterprise Linux 5 and later include the Liberation Fonts set by default."
-msgstr "Em PDF e edições de texto, este manual usa tipos de letras retiradas do conjunto <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Liberation Fonts</link>. O conjunto de Fontes Liberation Fonts, também é usado em formato HTML, caso o conjunto esteja instalado em seu sistema. Caso ainda não esteja, como forma alternativa, estão disponíveis tipos de letras equivalentes. Nota: O Red Hat Enterprise Linux 5 e versões mais recentes do mesmo, incluem o conjunto Liberation Fonts por padrão."
-
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: title
 #, no-c-format
@@ -207,11 +200,9 @@ msgstr "O resultado enviado à um terminal é configurado em <computeroutput>Rom
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: screen
 #, no-c-format
-msgid ""
-"books        Desktop   documentation  drafts  mss    photos   stuff  svn\n"
+msgid "books        Desktop   documentation  drafts  mss    photos   stuff  svn\n"
 "books_tests  Desktop1  downloads      images  notes  scripts  svgs"
-msgstr ""
-"books        Desktop   documentation  drafts  mss    photos   stuff  svn\n"
+msgstr "books        Desktop   documentation  drafts  mss    photos   stuff  svn\n"
 "books_tests  Desktop1  downloads      images  notes  scripts  svgs"
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
@@ -220,11 +211,8 @@ msgstr ""
 msgid "Source-code listings are also set in <computeroutput>mono-spaced roman</computeroutput> but add syntax highlighting as follows:"
 msgstr "As listas de código fonte também são configuradas em <computeroutput>Romano de Espaço Único (Mono-spaced Roman)</computeroutput>, porém são apresentadas e realçadas como a seguir:"
 
-# translation auto-copied from project Publican Common, version 3, document Conventions
-#. Tag: title
-#, no-c-format
-msgid "Notes and Warnings"
-msgstr "Notas e Avisos"
+msgid "Admonitions"
+msgstr ""
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: para
@@ -234,8 +222,14 @@ msgstr "E por fim, usamos três estilos visuais para chamar a atenção para inf
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: para
-#, no-c-format
-msgid "Notes are tips, shortcuts or alternative approaches to the task at hand. Ignoring a note should have no negative consequences, but you might miss out on a trick that makes your life easier."
+#, no-c-format, fuzzy
+msgid "Tips are tips, shortcuts or alternative approaches to the task at hand. Ignoring a tip should have no negative consequences, but you might miss out on a trick that makes your life easier."
+msgstr "Uma nota é uma dica ou símbolo, ou ainda uma opção alternativa para a tarefa em questão. Se você ignorar uma nota, provavelmente não resultará em más consequências, porém poderá deixar passar uma dica importante que tornará sua vida mais fácil. "
+
+# translation auto-copied from project Publican Common, version 3, document Conventions
+#. Tag: para
+#, no-c-format, fuzzy
+msgid "Tips are tips, shortcuts or alternative approaches to the task at hand. Ignoring a tip should have no negative consequences, but you might miss out on a trick that makes your life easier."
 msgstr "Uma nota é uma dica ou símbolo, ou ainda uma opção alternativa para a tarefa em questão. Se você ignorar uma nota, provavelmente não resultará em más consequências, porém poderá deixar passar uma dica importante que tornará sua vida mais fácil. "
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
@@ -249,4 +243,17 @@ msgstr "Caixas importantes detalham coisas que são geralmente fáceis de passar
 #, no-c-format
 msgid "Warnings should not be ignored. Ignoring warnings will most likely cause data loss."
 msgstr "Um Aviso não deve ser ignorado. Se você ignorar avisos, muito provavelmente perderá dados. "
+
+# translation auto-copied from project Publican Common, version 3, document Conventions
+#. Tag: title
+#, no-c-format
+#~ msgid "Notes and Warnings"
+#~ msgstr "Notas e Avisos"
+
+# translation auto-copied from project Publican Common, version 3, document
+# Conventions
+#. Tag: para
+#, no-c-format
+#~ msgid "In PDF and paper editions, this manual uses typefaces drawn from the <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Liberation Fonts</link> set. The Liberation Fonts set is also used in HTML editions if the set is installed on your system. If not, alternative but equivalent typefaces are displayed. Note: Red Hat Enterprise Linux 5 and later include the Liberation Fonts set by default."
+#~ msgstr "Em PDF e edições de texto, este manual usa tipos de letras retiradas do conjunto <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Liberation Fonts</link>. O conjunto de Fontes Liberation Fonts, também é usado em formato HTML, caso o conjunto esteja instalado em seu sistema. Caso ainda não esteja, como forma alternativa, estão disponíveis tipos de letras equivalentes. Nota: O Red Hat Enterprise Linux 5 e versões mais recentes do mesmo, incluem o conjunto Liberation Fonts por padrão."
 

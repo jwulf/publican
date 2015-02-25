@@ -29,13 +29,6 @@ msgstr "اسناد کنوانسیون"
 msgid "This manual uses several conventions to highlight certain words and phrases and draw attention to specific pieces of information."
 msgstr "این راهنما برای چندین پیمان نامه ها جهت برجسته کردن برخی واژگان خاص و عبارت ها برای جلب توجه بخش خاصی از اطلاعات به کار می رود"
 
-# translation auto-copied from project Publican Common, version 3, document
-# Conventions
-#. Tag: para
-#, no-c-format
-msgid "In PDF and paper editions, this manual uses typefaces drawn from the <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Liberation Fonts</link> set. The Liberation Fonts set is also used in HTML editions if the set is installed on your system. If not, alternative but equivalent typefaces are displayed. Note: Red Hat Enterprise Linux 5 and later include the Liberation Fonts set by default."
-msgstr "در نسخ کاغذی و پی‌دی‌اف این راهنما از نوع نوشتاری که از مجموعه ی <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Liberation Fonts</link> استفاده می کند.  مجموعه ی قلم های لیبراسیون همچنین در نسخ اچ‌تی‌ام‌ال  استفاده می شود اگر مجموعه در سیستم شما نصب شده باشند. اگر نه نوع نوشتارهای جایگزین استفاده می شوند. نکته: لینوکس ردهت اینترپرایز ۵ و بعدی قلم های لیبراسیون را به طور پیش فرض دارند."
-
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: title
 #, no-c-format
@@ -198,8 +191,7 @@ msgstr "خروجی ارسال شده به ترمینال با <computeroutput>mo
 
 #. Tag: screen
 #, no-c-format
-msgid ""
-"books        Desktop   documentation  drafts  mss    photos   stuff  svn\n"
+msgid "books        Desktop   documentation  drafts  mss    photos   stuff  svn\n"
 "books_tests  Desktop1  downloads      images  notes  scripts  svgs"
 msgstr ""
 
@@ -209,11 +201,8 @@ msgstr ""
 msgid "Source-code listings are also set in <computeroutput>mono-spaced roman</computeroutput> but add syntax highlighting as follows:"
 msgstr "لیست کردن های کد-منبع همچنین در <computeroutput>mono-spaced roman</computeroutput> موجود می باشند اما نحو پررنگ سازی مانند ذیل اضافه خواهد شد:"
 
-# translation auto-copied from project Publican Common, version 3, document Conventions
-#. Tag: title
-#, no-c-format
-msgid "Notes and Warnings"
-msgstr "یادداشت ها و اخطارها"
+msgid "Admonitions"
+msgstr ""
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: para
@@ -223,8 +212,14 @@ msgstr "سرانجام، ما از سه روش بصری برای جلب توجه
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: para
-#, no-c-format
-msgid "Notes are tips, shortcuts or alternative approaches to the task at hand. Ignoring a note should have no negative consequences, but you might miss out on a trick that makes your life easier."
+#, no-c-format, fuzzy
+msgid "Tips are tips, shortcuts or alternative approaches to the task at hand. Ignoring a tip should have no negative consequences, but you might miss out on a trick that makes your life easier."
+msgstr "یادداشت ها  نکته ها، میانبرها و رویکردهای جایگزین برای وظیفه می باشد. نادیده گرفتن یک یادداشت نه باید تنیجه ی منفی داشته باشد اما شاید باعث از دست رفتن روش ساده جهت انجام کار شما شود."
+
+# translation auto-copied from project Publican Common, version 3, document Conventions
+#. Tag: para
+#, no-c-format, fuzzy
+msgid "Tips are tips, shortcuts or alternative approaches to the task at hand. Ignoring a tip should have no negative consequences, but you might miss out on a trick that makes your life easier."
 msgstr "یادداشت ها  نکته ها، میانبرها و رویکردهای جایگزین برای وظیفه می باشد. نادیده گرفتن یک یادداشت نه باید تنیجه ی منفی داشته باشد اما شاید باعث از دست رفتن روش ساده جهت انجام کار شما شود."
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
@@ -238,4 +233,17 @@ msgstr "جعبه های جزییات مهم که به آسانی گم می شو�
 #, no-c-format
 msgid "Warnings should not be ignored. Ignoring warnings will most likely cause data loss."
 msgstr "هشدارها نه باید نادیده گرفته شوند. نادیده گرفتن هشدارها شاید باعث از دست رفتن اطلاعات شود."
+
+# translation auto-copied from project Publican Common, version 3, document Conventions
+#. Tag: title
+#, no-c-format
+#~ msgid "Notes and Warnings"
+#~ msgstr "یادداشت ها و اخطارها"
+
+# translation auto-copied from project Publican Common, version 3, document
+# Conventions
+#. Tag: para
+#, no-c-format
+#~ msgid "In PDF and paper editions, this manual uses typefaces drawn from the <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Liberation Fonts</link> set. The Liberation Fonts set is also used in HTML editions if the set is installed on your system. If not, alternative but equivalent typefaces are displayed. Note: Red Hat Enterprise Linux 5 and later include the Liberation Fonts set by default."
+#~ msgstr "در نسخ کاغذی و پی‌دی‌اف این راهنما از نوع نوشتاری که از مجموعه ی <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Liberation Fonts</link> استفاده می کند.  مجموعه ی قلم های لیبراسیون همچنین در نسخ اچ‌تی‌ام‌ال  استفاده می شود اگر مجموعه در سیستم شما نصب شده باشند. اگر نه نوع نوشتارهای جایگزین استفاده می شوند. نکته: لینوکس ردهت اینترپرایز ۵ و بعدی قلم های لیبراسیون را به طور پیش فرض دارند."
 

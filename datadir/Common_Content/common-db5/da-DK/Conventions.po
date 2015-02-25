@@ -27,13 +27,6 @@ msgstr "Dokumentkonventioner"
 msgid "This manual uses several conventions to highlight certain words and phrases and draw attention to specific pieces of information."
 msgstr "Denne manual bruger flere konventioner til at fremhæve visse ord og sætninger og gør opmærksom på specifikke stykker af information."
 
-# translation auto-copied from project Publican Common, version 3, document
-# Conventions
-#. Tag: para
-#, no-c-format
-msgid "In PDF and paper editions, this manual uses typefaces drawn from the <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Liberation Fonts</link> set. The Liberation Fonts set is also used in HTML editions if the set is installed on your system. If not, alternative but equivalent typefaces are displayed. Note: Red Hat Enterprise Linux 5 and later include the Liberation Fonts set by default."
-msgstr "I PDF og papirversionerne, bruger denne manual skriftsnit tegnet fra <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Liberation Skrifttype</link> sættet. Liberation skrifttypesættet bliver også brugt i HTML-versionerne hvis sættet er installeret på dit system. Hvis ikke, vises et alernativt, men tilsvarende skriftsnit. Bemærk: Red Hat Enterprise Linux 5 og nyere inkluderer Liberation skrifttypesættet som standard."
-
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: title
 #, no-c-format
@@ -197,11 +190,9 @@ msgstr "Output sendt til en terminal er vist i <computeroutput>fastbredde roman<
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: screen
 #, no-c-format
-msgid ""
-"books        Desktop   documentation  drafts  mss    photos   stuff  svn\n"
+msgid "books        Desktop   documentation  drafts  mss    photos   stuff  svn\n"
 "books_tests  Desktop1  downloads      images  notes  scripts  svgs"
-msgstr ""
-"bøger\t\tSkrivebord\tdokumentation\tkladder\t\tmss\tfotos\t\tting\tsvn\n"
+msgstr "bøger\t\tSkrivebord\tdokumentation\tkladder\t\tmss\tfotos\t\tting\tsvn\n"
 "bøger_tests\tSkrivebord1\thentet\t\tbilleder\tnoter\tskripter\tsvgs"
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
@@ -210,11 +201,8 @@ msgstr ""
 msgid "Source-code listings are also set in <computeroutput>mono-spaced roman</computeroutput> but add syntax highlighting as follows:"
 msgstr "Kildekodevisninger er også vist med <computeroutput>fastbredde roman</computeroutput>, men tilføjer syntaksfremhævning således:"
 
-# translation auto-copied from project Publican Common, version 3, document Conventions
-#. Tag: title
-#, no-c-format
-msgid "Notes and Warnings"
-msgstr "Noter og advarsler"
+msgid "Admonitions"
+msgstr ""
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: para
@@ -224,8 +212,14 @@ msgstr "Til sidst, bruger vi tre visuelle stile til at fange opmærksomheden på
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: para
-#, no-c-format
-msgid "Notes are tips, shortcuts or alternative approaches to the task at hand. Ignoring a note should have no negative consequences, but you might miss out on a trick that makes your life easier."
+#, no-c-format, fuzzy
+msgid "Tips are tips, shortcuts or alternative approaches to the task at hand. Ignoring a tip should have no negative consequences, but you might miss out on a trick that makes your life easier."
+msgstr "En note er et tip, en genvej eller en alternativ tilgang til opgaven. At ignorere en note bør ikke have nogen negative konsekvenser, men du går måske glip af et trick, der gør dit liv nemmere."
+
+# translation auto-copied from project Publican Common, version 3, document Conventions
+#. Tag: para
+#, no-c-format, fuzzy
+msgid "Tips are tips, shortcuts or alternative approaches to the task at hand. Ignoring a tip should have no negative consequences, but you might miss out on a trick that makes your life easier."
 msgstr "En note er et tip, en genvej eller en alternativ tilgang til opgaven. At ignorere en note bør ikke have nogen negative konsekvenser, men du går måske glip af et trick, der gør dit liv nemmere."
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
@@ -239,4 +233,17 @@ msgstr "Vigtigt-bokse forklarer ting der er let at overse: konfigurationsændrin
 #, no-c-format
 msgid "Warnings should not be ignored. Ignoring warnings will most likely cause data loss."
 msgstr "En advarsel bør ikke ignoreres. At ignorere advarsler vil højst sandsynligt medføre datatab."
+
+# translation auto-copied from project Publican Common, version 3, document Conventions
+#. Tag: title
+#, no-c-format
+#~ msgid "Notes and Warnings"
+#~ msgstr "Noter og advarsler"
+
+# translation auto-copied from project Publican Common, version 3, document
+# Conventions
+#. Tag: para
+#, no-c-format
+#~ msgid "In PDF and paper editions, this manual uses typefaces drawn from the <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Liberation Fonts</link> set. The Liberation Fonts set is also used in HTML editions if the set is installed on your system. If not, alternative but equivalent typefaces are displayed. Note: Red Hat Enterprise Linux 5 and later include the Liberation Fonts set by default."
+#~ msgstr "I PDF og papirversionerne, bruger denne manual skriftsnit tegnet fra <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Liberation Skrifttype</link> sættet. Liberation skrifttypesættet bliver også brugt i HTML-versionerne hvis sættet er installeret på dit system. Hvis ikke, vises et alernativt, men tilsvarende skriftsnit. Bemærk: Red Hat Enterprise Linux 5 og nyere inkluderer Liberation skrifttypesættet som standard."
 

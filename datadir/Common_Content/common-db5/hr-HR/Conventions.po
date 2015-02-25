@@ -27,13 +27,6 @@ msgstr "Konvencije dokumenta"
 msgid "This manual uses several conventions to highlight certain words and phrases and draw attention to specific pieces of information."
 msgstr "Ovaj priručnik koristi nekoliko konvencija za isticanje pojedinih riječi i fraza te za privlačenje pozornosti na pojedine dijelove informacija."
 
-# translation auto-copied from project Publican Common, version 3, document
-# Conventions
-#. Tag: para
-#, no-c-format
-msgid "In PDF and paper editions, this manual uses typefaces drawn from the <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Liberation Fonts</link> set. The Liberation Fonts set is also used in HTML editions if the set is installed on your system. If not, alternative but equivalent typefaces are displayed. Note: Red Hat Enterprise Linux 5 and later include the Liberation Fonts set by default."
-msgstr "U PDF i tiskanim izdanjima, ovaj priručnik koristi oblike pisma preuzete sa <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Liberation·Fonts</link> seta. Liberation·Fonts set je također korišten i u HTML izdanjima, ako su Liberation·Fonts instalirani na vašem sistemu. Ako nisu, alternativno ali isto, bit će prikazani sa osnovnim oblicima pisma. Napomena: Red Hat Enterprise Linux 5 i kasniji sadrže Liberation Fonts u standardnom paketu."
-
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: title
 #, no-c-format
@@ -197,11 +190,9 @@ msgstr "Izlazni podaci sa terminala su postavljeni u <computeroutput>Mono-spaced
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: screen
 #, no-c-format
-msgid ""
-"books        Desktop   documentation  drafts  mss    photos   stuff  svn\n"
+msgid "books        Desktop   documentation  drafts  mss    photos   stuff  svn\n"
 "books_tests  Desktop1  downloads      images  notes  scripts  svgs"
-msgstr ""
-"knjige             Radna_površina     dokumentacija     skice  mss     fotografije  stvari  svn\n"
+msgstr "knjige             Radna_površina     dokumentacija     skice  mss     fotografije  stvari  svn\n"
 "testovi_knjiga  Radna_površina1   preuzeti_podaci   slike   biljške  zapisi         svg"
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
@@ -210,11 +201,8 @@ msgstr ""
 msgid "Source-code listings are also set in <computeroutput>mono-spaced roman</computeroutput> but add syntax highlighting as follows:"
 msgstr "Zapisi izvornog koda su također stavljeni u <computeroutput>Mono-spaced Roman</computeroutput>, ali su prikazani i istaknuti na sljedeći način:"
 
-# translation auto-copied from project Publican Common, version 3, document Conventions
-#. Tag: title
-#, no-c-format
-msgid "Notes and Warnings"
-msgstr "Napomene i upozorenja"
+msgid "Admonitions"
+msgstr ""
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: para
@@ -224,8 +212,14 @@ msgstr "Napokon, koristimo tri vizualna stila za odvlačenje pozornosti na infor
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: para
-#, no-c-format
-msgid "Notes are tips, shortcuts or alternative approaches to the task at hand. Ignoring a note should have no negative consequences, but you might miss out on a trick that makes your life easier."
+#, no-c-format, fuzzy
+msgid "Tips are tips, shortcuts or alternative approaches to the task at hand. Ignoring a tip should have no negative consequences, but you might miss out on a trick that makes your life easier."
+msgstr "Napomena je činjenica, prečica ili alternativa standardnom pristupu. Ignoriranje napomene ne bi smjelo imati negativne posljedice, ali ako je pročitate, život vam može postati jednostavniji."
+
+# translation auto-copied from project Publican Common, version 3, document Conventions
+#. Tag: para
+#, no-c-format, fuzzy
+msgid "Tips are tips, shortcuts or alternative approaches to the task at hand. Ignoring a tip should have no negative consequences, but you might miss out on a trick that makes your life easier."
 msgstr "Napomena je činjenica, prečica ili alternativa standardnom pristupu. Ignoriranje napomene ne bi smjelo imati negativne posljedice, ali ako je pročitate, život vam može postati jednostavniji."
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
@@ -239,4 +233,17 @@ msgstr "Kućice sa oznakom 'Važno' daju opširnije detalje koje nije lako zapaz
 #, no-c-format
 msgid "Warnings should not be ignored. Ignoring warnings will most likely cause data loss."
 msgstr "Upozorenja se ne bi trebala ignorirati. Ignoriranje upozorenja će u većini slučajeva dovesti do gubitka podataka."
+
+# translation auto-copied from project Publican Common, version 3, document Conventions
+#. Tag: title
+#, no-c-format
+#~ msgid "Notes and Warnings"
+#~ msgstr "Napomene i upozorenja"
+
+# translation auto-copied from project Publican Common, version 3, document
+# Conventions
+#. Tag: para
+#, no-c-format
+#~ msgid "In PDF and paper editions, this manual uses typefaces drawn from the <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Liberation Fonts</link> set. The Liberation Fonts set is also used in HTML editions if the set is installed on your system. If not, alternative but equivalent typefaces are displayed. Note: Red Hat Enterprise Linux 5 and later include the Liberation Fonts set by default."
+#~ msgstr "U PDF i tiskanim izdanjima, ovaj priručnik koristi oblike pisma preuzete sa <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Liberation·Fonts</link> seta. Liberation·Fonts set je također korišten i u HTML izdanjima, ako su Liberation·Fonts instalirani na vašem sistemu. Ako nisu, alternativno ali isto, bit će prikazani sa osnovnim oblicima pisma. Napomena: Red Hat Enterprise Linux 5 i kasniji sadrže Liberation Fonts u standardnom paketu."
 

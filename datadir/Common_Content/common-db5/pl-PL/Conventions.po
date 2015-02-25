@@ -28,13 +28,6 @@ msgstr "Konwencje dokumentu"
 msgid "This manual uses several conventions to highlight certain words and phrases and draw attention to specific pieces of information."
 msgstr "Ten podręcznik używa kilku konwencji, aby wyróżnić niektóre słowa i frazy, a także zwrócić uwagę na określone części informacji."
 
-# translation auto-copied from project Publican Common, version 3, document
-# Conventions
-#. Tag: para
-#, no-c-format
-msgid "In PDF and paper editions, this manual uses typefaces drawn from the <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Liberation Fonts</link> set. The Liberation Fonts set is also used in HTML editions if the set is installed on your system. If not, alternative but equivalent typefaces are displayed. Note: Red Hat Enterprise Linux 5 and later include the Liberation Fonts set by default."
-msgstr "W wydaniach PDF i papierowych ten podręcznik używa czcionek z zestawu <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Liberation</link>. Czcionki Liberation są używane także w wydaniach HTML, jeśli zestaw jest zainstalowany w systemie. Jeśli nie, wyświetlone zostaną alternatywne, ale odpowiadające im czcionki. Uwaga: system Red Hat Enterprise Linux 5 i późniejsze domyślnie zawierają zestaw czcionek Liberation."
-
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: title
 #, no-c-format
@@ -205,11 +198,9 @@ msgstr "Wyjście wysłane do terminala jest wyświetlane za pomocą <computerout
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: screen
 #, no-c-format
-msgid ""
-"books        Desktop   documentation  drafts  mss    photos   stuff  svn\n"
+msgid "books        Desktop   documentation  drafts  mss    photos   stuff  svn\n"
 "books_tests  Desktop1  downloads      images  notes  scripts  svgs"
-msgstr ""
-"książki         Pulpit    dokumentacja   szkice  mss      zdjęcia  coś  svn\n"
+msgstr "książki         Pulpit    dokumentacja   szkice  mss      zdjęcia  coś  svn\n"
 "książki_testowe Pulpit1   pobrane        obrazy  notatki  skrypty  svg"
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
@@ -218,11 +209,8 @@ msgstr ""
 msgid "Source-code listings are also set in <computeroutput>mono-spaced roman</computeroutput> but add syntax highlighting as follows:"
 msgstr "Kod źródłowy jest także wyświetlany za pomocą <computeroutput>czcionki antykwowej o stałej szerokości</computeroutput>, ale wygląda i wyróżniony jest następująco:"
 
-# translation auto-copied from project Publican Common, version 3, document Conventions
-#. Tag: title
-#, no-c-format
-msgid "Notes and Warnings"
-msgstr "Uwagi i ostrzeżenia"
+msgid "Admonitions"
+msgstr ""
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: para
@@ -232,8 +220,14 @@ msgstr "Używane są trzy style wizualne, aby zwrócić uwagę na informacje, kt
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: para
-#, no-c-format
-msgid "Notes are tips, shortcuts or alternative approaches to the task at hand. Ignoring a note should have no negative consequences, but you might miss out on a trick that makes your life easier."
+#, no-c-format, fuzzy
+msgid "Tips are tips, shortcuts or alternative approaches to the task at hand. Ignoring a tip should have no negative consequences, but you might miss out on a trick that makes your life easier."
+msgstr "Uwaga jest wskazówką, skrótem lub innym podejściem do omawianego zadania. Zignorowanie uwagi nie powinno mieć żadnych negatywnych konsekwencji, ale można pominąć ułatwiającą życie sztuczkę."
+
+# translation auto-copied from project Publican Common, version 3, document Conventions
+#. Tag: para
+#, no-c-format, fuzzy
+msgid "Tips are tips, shortcuts or alternative approaches to the task at hand. Ignoring a tip should have no negative consequences, but you might miss out on a trick that makes your life easier."
 msgstr "Uwaga jest wskazówką, skrótem lub innym podejściem do omawianego zadania. Zignorowanie uwagi nie powinno mieć żadnych negatywnych konsekwencji, ale można pominąć ułatwiającą życie sztuczkę."
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
@@ -247,4 +241,17 @@ msgstr "Pole \"Ważne\" przedstawiają szczegóły, które mogłyby zostać łat
 #, no-c-format
 msgid "Warnings should not be ignored. Ignoring warnings will most likely cause data loss."
 msgstr "Ostrzeżenia nie powinny być ignorowane. Zignorowanie ostrzeżeń najprawdopodobniej spowoduje utratę danych."
+
+# translation auto-copied from project Publican Common, version 3, document Conventions
+#. Tag: title
+#, no-c-format
+#~ msgid "Notes and Warnings"
+#~ msgstr "Uwagi i ostrzeżenia"
+
+# translation auto-copied from project Publican Common, version 3, document
+# Conventions
+#. Tag: para
+#, no-c-format
+#~ msgid "In PDF and paper editions, this manual uses typefaces drawn from the <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Liberation Fonts</link> set. The Liberation Fonts set is also used in HTML editions if the set is installed on your system. If not, alternative but equivalent typefaces are displayed. Note: Red Hat Enterprise Linux 5 and later include the Liberation Fonts set by default."
+#~ msgstr "W wydaniach PDF i papierowych ten podręcznik używa czcionek z zestawu <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Liberation</link>. Czcionki Liberation są używane także w wydaniach HTML, jeśli zestaw jest zainstalowany w systemie. Jeśli nie, wyświetlone zostaną alternatywne, ale odpowiadające im czcionki. Uwaga: system Red Hat Enterprise Linux 5 i późniejsze domyślnie zawierają zestaw czcionek Liberation."
 

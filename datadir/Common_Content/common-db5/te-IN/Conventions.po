@@ -28,13 +28,6 @@ msgstr "పత్రము విధానాలు"
 msgid "This manual uses several conventions to highlight certain words and phrases and draw attention to specific pieces of information."
 msgstr "కొన్ని పదాలను మరియు మాటలను యెత్తిచూపుటకు మరియు కొన్నింటి సమాచారముపై దృష్టిసారించుటకు మాన్యువల్ చాలా విధానాలను వుపయోగిస్తుంది."
 
-# translation auto-copied from project Publican Common, version 3, document
-# Conventions
-#. Tag: para
-#, no-c-format
-msgid "In PDF and paper editions, this manual uses typefaces drawn from the <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Liberation Fonts</link> set. The Liberation Fonts set is also used in HTML editions if the set is installed on your system. If not, alternative but equivalent typefaces are displayed. Note: Red Hat Enterprise Linux 5 and later include the Liberation Fonts set by default."
-msgstr "PDF మరియు కాగితపు కూర్పులనందు, ఈ మాన్యువల్ <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Liberation Fonts</link> సమితినుండి తెచ్చిన టైప్‌ఫేసెస్‌ను వుపయోగిస్తుంది. ఆ లిబరేషన్ ఫాంట్స్‍ సమితి మీసిస్టమ్‌నందు సంస్థాపించివుంటే అది HTML కూర్పులనందుకూడా వుపయోగించబడుతుంది. లేకపోతే, సరితూగు ప్రత్యామ్నాయ టైప్‌ఫేసెస్ ప్రదర్శింపబడతాయి. గమనిక: Red Hat Enterprise Linux 5 మరియు తరువాతివి లిబరేషన్ ఫాంట్స్‍ సమితిని అప్రమేయంగా చేర్చుతాయి."
-
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: title
 #, no-c-format
@@ -205,11 +198,9 @@ msgstr "టెర్మినల్‌కు పంపిన అవుట్‌�
 # translation auto-copied from project Publican Common, version 3, document Conventions, author kkrothap
 #. Tag: screen
 #, no-c-format
-msgid ""
-"books        Desktop   documentation  drafts  mss    photos   stuff  svn\n"
+msgid "books        Desktop   documentation  drafts  mss    photos   stuff  svn\n"
 "books_tests  Desktop1  downloads      images  notes  scripts  svgs"
-msgstr ""
-"books        Desktop   documentation  drafts  mss    photos   stuff  svn\n"
+msgstr "books        Desktop   documentation  drafts  mss    photos   stuff  svn\n"
 "books_tests  Desktop1  downloads      images  notes  scripts  svgs"
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
@@ -218,11 +209,8 @@ msgstr ""
 msgid "Source-code listings are also set in <computeroutput>mono-spaced roman</computeroutput> but add syntax highlighting as follows:"
 msgstr "సోర్సు-కోడ్ జాబితాలు కూడా <computeroutput>Mono-spaced Roman</computeroutput> నందు అమర్చబడినవి అయితే జతచేయు సిన్టాక్స్ ఈక్రిందివింధంగా వుద్దీపనం చేయబడుతుంది:"
 
-# translation auto-copied from project Publican Common, version 3, document Conventions
-#. Tag: title
-#, no-c-format
-msgid "Notes and Warnings"
-msgstr "గమనికలు మరియు హెచ్చరికలు"
+msgid "Admonitions"
+msgstr ""
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: para
@@ -232,8 +220,14 @@ msgstr "చూడకుండా వదిలివేయటుకు ఆస్�
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: para
-#, no-c-format
-msgid "Notes are tips, shortcuts or alternative approaches to the task at hand. Ignoring a note should have no negative consequences, but you might miss out on a trick that makes your life easier."
+#, no-c-format, fuzzy
+msgid "Tips are tips, shortcuts or alternative approaches to the task at hand. Ignoring a tip should have no negative consequences, but you might miss out on a trick that makes your life easier."
+msgstr "గమనిక అనునది చేతిలోవున్న కర్తవ్యమునకు చిట్కా లేదా లఘువు లేదా ప్రత్యామ్నాయ అనుసరింపు వంటిది. గమనికను పట్టించుకొకపోవుట వలన యెటువంటి చెడ్డపరిణామాలు తలెత్తవు, అయితే మీకు సుఖవంతమగు చిట్కాను మీరు కొల్పోవచ్చు."
+
+# translation auto-copied from project Publican Common, version 3, document Conventions
+#. Tag: para
+#, no-c-format, fuzzy
+msgid "Tips are tips, shortcuts or alternative approaches to the task at hand. Ignoring a tip should have no negative consequences, but you might miss out on a trick that makes your life easier."
 msgstr "గమనిక అనునది చేతిలోవున్న కర్తవ్యమునకు చిట్కా లేదా లఘువు లేదా ప్రత్యామ్నాయ అనుసరింపు వంటిది. గమనికను పట్టించుకొకపోవుట వలన యెటువంటి చెడ్డపరిణామాలు తలెత్తవు, అయితే మీకు సుఖవంతమగు చిట్కాను మీరు కొల్పోవచ్చు."
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
@@ -247,4 +241,17 @@ msgstr "సులువుగా తప్పిపోవు విషయాల�
 #, no-c-format
 msgid "Warnings should not be ignored. Ignoring warnings will most likely cause data loss."
 msgstr "హెచ్చరికలను పట్టించుకొనకుండా వుండకూడదు. హెచ్చరికలను పట్టించుకొనక పోవుటవలన డాటానష్టం సంభవిస్తుంది."
+
+# translation auto-copied from project Publican Common, version 3, document Conventions
+#. Tag: title
+#, no-c-format
+#~ msgid "Notes and Warnings"
+#~ msgstr "గమనికలు మరియు హెచ్చరికలు"
+
+# translation auto-copied from project Publican Common, version 3, document
+# Conventions
+#. Tag: para
+#, no-c-format
+#~ msgid "In PDF and paper editions, this manual uses typefaces drawn from the <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Liberation Fonts</link> set. The Liberation Fonts set is also used in HTML editions if the set is installed on your system. If not, alternative but equivalent typefaces are displayed. Note: Red Hat Enterprise Linux 5 and later include the Liberation Fonts set by default."
+#~ msgstr "PDF మరియు కాగితపు కూర్పులనందు, ఈ మాన్యువల్ <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Liberation Fonts</link> సమితినుండి తెచ్చిన టైప్‌ఫేసెస్‌ను వుపయోగిస్తుంది. ఆ లిబరేషన్ ఫాంట్స్‍ సమితి మీసిస్టమ్‌నందు సంస్థాపించివుంటే అది HTML కూర్పులనందుకూడా వుపయోగించబడుతుంది. లేకపోతే, సరితూగు ప్రత్యామ్నాయ టైప్‌ఫేసెస్ ప్రదర్శింపబడతాయి. గమనిక: Red Hat Enterprise Linux 5 మరియు తరువాతివి లిబరేషన్ ఫాంట్స్‍ సమితిని అప్రమేయంగా చేర్చుతాయి."
 

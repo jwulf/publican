@@ -13,8 +13,7 @@ msgstr ""
 "Last-Translator: Shantha kumar <shkumar@redhat.com>\n"
 "Language-Team: American English <kde-i18n-doc@kde.org>\n"
 "Language: ta-IN\n"
-"Plural-Forms: nplurals=2; plural=(n!=1);\\n"
-";\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\\n;\n"
 "X-Generator: Zanata 3.0.3\n"
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
@@ -28,13 +27,6 @@ msgstr "ஆவண பெயரிடல்கள்"
 #, no-c-format
 msgid "This manual uses several conventions to highlight certain words and phrases and draw attention to specific pieces of information."
 msgstr "இந்த கையேடு பல்வேறு பெயரிடல்களை சில வார்த்தைகள் மற்றும் வாக்கியங்களை முன்னிலைப்படுத்தவும் குறிப்பிட்ட தகவலுக்கு கவனம் கொடுக்கவும் பயன்படுகிறது."
-
-# translation auto-copied from project Publican Common, version 3, document
-# Conventions
-#. Tag: para
-#, no-c-format
-msgid "In PDF and paper editions, this manual uses typefaces drawn from the <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Liberation Fonts</link> set. The Liberation Fonts set is also used in HTML editions if the set is installed on your system. If not, alternative but equivalent typefaces are displayed. Note: Red Hat Enterprise Linux 5 and later include the Liberation Fonts set by default."
-msgstr "PDF மற்றும் தாள் பதிப்புகளில், இந்த கையேடு <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\">லிபரேஷன் எழுத்துருக்களை</link> செட்டிலிருந்து வரையப்பட்ட எழுத்துருக்களை பயன்படுத்துகிறது. இந்த செட் உங்கள் கணினியில் நிறுவப்பட்டிருந்தால், லிபரேஷன் எழுத்துருக்கள் செட் HTML பதிப்புகளிலும் பயன்படுத்தப்படும். அப்படி இல்லையெனில், மாற்றாக ஆனால் அதற்கு சமமான எழுத்துருக்கள் காட்டப்படும். குறிப்பு: Red Hat Enterprise Linux 5 மற்றும் அதற்கு அடுத்த பதிப்பில் முன்னிருப்பாக லிபரேஷன் எழுத்துருக்கள் சேர்க்கப்பட்டுள்ளன."
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: title
@@ -206,11 +198,9 @@ msgstr "ஒரு முனையத்திற்கு அனுப்பப�
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: screen
 #, no-c-format
-msgid ""
-"books        Desktop   documentation  drafts  mss    photos   stuff  svn\n"
+msgid "books        Desktop   documentation  drafts  mss    photos   stuff  svn\n"
 "books_tests  Desktop1  downloads      images  notes  scripts  svgs"
-msgstr ""
-"books        Desktop   documentation  drafts  mss    photos   stuff  svn\n"
+msgstr "books        Desktop   documentation  drafts  mss    photos   stuff  svn\n"
 "books_tests  Desktop1  downloads      images  notes  scripts  svgs"
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
@@ -219,11 +209,8 @@ msgstr ""
 msgid "Source-code listings are also set in <computeroutput>mono-spaced roman</computeroutput> but add syntax highlighting as follows:"
 msgstr "மூலக்குறியீடு பட்டியலிடப்பட்டிருப்பதும் <computeroutput>Mono-spaced Roman</computeroutput>இல் அமைக்கப்பட்டிருக்கும் ஆனால் பின்வருவது போல இலக்கண முன்னிலைப்படுத்தப்பட்டிருக்கும்:"
 
-# translation auto-copied from project Publican Common, version 3, document Conventions
-#. Tag: title
-#, no-c-format
-msgid "Notes and Warnings"
-msgstr "குறிப்புகள் மற்றும் எச்சரிக்கைகள்"
+msgid "Admonitions"
+msgstr ""
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: para
@@ -233,8 +220,14 @@ msgstr "கடைசியாக, நாம் மூன்று விசு�
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: para
-#, no-c-format
-msgid "Notes are tips, shortcuts or alternative approaches to the task at hand. Ignoring a note should have no negative consequences, but you might miss out on a trick that makes your life easier."
+#, no-c-format, fuzzy
+msgid "Tips are tips, shortcuts or alternative approaches to the task at hand. Ignoring a tip should have no negative consequences, but you might miss out on a trick that makes your life easier."
+msgstr "ஒரு குறிப்பு என்பது ஒரு துணுக்கு அல்லது குறுக்குவழி அல்லது பணிக்கான மாற்று வழியாகும். ஒரு குறிப்பை தவிர்த்தால் எந்த பாதிப்பும் ஏற்படாது ஆனால் எளிதாக செய்ய வேண்டியதை இழக்க வேண்டியதிருக்கும்."
+
+# translation auto-copied from project Publican Common, version 3, document Conventions
+#. Tag: para
+#, no-c-format, fuzzy
+msgid "Tips are tips, shortcuts or alternative approaches to the task at hand. Ignoring a tip should have no negative consequences, but you might miss out on a trick that makes your life easier."
 msgstr "ஒரு குறிப்பு என்பது ஒரு துணுக்கு அல்லது குறுக்குவழி அல்லது பணிக்கான மாற்று வழியாகும். ஒரு குறிப்பை தவிர்த்தால் எந்த பாதிப்பும் ஏற்படாது ஆனால் எளிதாக செய்ய வேண்டியதை இழக்க வேண்டியதிருக்கும்."
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
@@ -248,4 +241,17 @@ msgstr "முக்கியமான பெட்டிகள் விவர 
 #, no-c-format
 msgid "Warnings should not be ignored. Ignoring warnings will most likely cause data loss."
 msgstr "ஒரு எச்சரிக்கை தவிர்க்கப்படக் கூடாது. எச்சரிக்கைகள் தவிர்த்தல் தரவு இழத்தலை ஏற்படுத்தும்."
+
+# translation auto-copied from project Publican Common, version 3, document Conventions
+#. Tag: title
+#, no-c-format
+#~ msgid "Notes and Warnings"
+#~ msgstr "குறிப்புகள் மற்றும் எச்சரிக்கைகள்"
+
+# translation auto-copied from project Publican Common, version 3, document
+# Conventions
+#. Tag: para
+#, no-c-format
+#~ msgid "In PDF and paper editions, this manual uses typefaces drawn from the <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Liberation Fonts</link> set. The Liberation Fonts set is also used in HTML editions if the set is installed on your system. If not, alternative but equivalent typefaces are displayed. Note: Red Hat Enterprise Linux 5 and later include the Liberation Fonts set by default."
+#~ msgstr "PDF மற்றும் தாள் பதிப்புகளில், இந்த கையேடு <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\">லிபரேஷன் எழுத்துருக்களை</link> செட்டிலிருந்து வரையப்பட்ட எழுத்துருக்களை பயன்படுத்துகிறது. இந்த செட் உங்கள் கணினியில் நிறுவப்பட்டிருந்தால், லிபரேஷன் எழுத்துருக்கள் செட் HTML பதிப்புகளிலும் பயன்படுத்தப்படும். அப்படி இல்லையெனில், மாற்றாக ஆனால் அதற்கு சமமான எழுத்துருக்கள் காட்டப்படும். குறிப்பு: Red Hat Enterprise Linux 5 மற்றும் அதற்கு அடுத்த பதிப்பில் முன்னிருப்பாக லிபரேஷன் எழுத்துருக்கள் சேர்க்கப்பட்டுள்ளன."
 

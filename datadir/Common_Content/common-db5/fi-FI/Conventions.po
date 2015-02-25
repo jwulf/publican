@@ -27,13 +27,6 @@ msgstr "Dokumentointikäytännöt"
 msgid "This manual uses several conventions to highlight certain words and phrases and draw attention to specific pieces of information."
 msgstr "Tämä opas käyttää useita käytäntöjä tiettyjen sanojen ja lauseiden korostamiseksi sekä huomion kiinnittämiseksi joihinkin dokumentin osiin."
 
-# translation auto-copied from project Publican Common, version 3, document
-# Conventions
-#. Tag: para
-#, no-c-format
-msgid "In PDF and paper editions, this manual uses typefaces drawn from the <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Liberation Fonts</link> set. The Liberation Fonts set is also used in HTML editions if the set is installed on your system. If not, alternative but equivalent typefaces are displayed. Note: Red Hat Enterprise Linux 5 and later include the Liberation Fonts set by default."
-msgstr "PDF- ja paperiversioissa tämä opas käyttää <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Liberation-kirjasimista</link> otettuja kirjasinlajeja. Liberation-kirjasimia käytetään myös HTML-versioissa, jos ne on asennettu järjestelmään. Jos niitä ei ole asennettu, käytetään vaihtoehtoisia mutta vastaavia kirjasinlajeja. Huomaa että Red Hat Enterprise Linux 5 ja myöhemmät sisältävät Liberation-kirjasimet oletuksena."
-
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: title
 #, no-c-format
@@ -197,11 +190,9 @@ msgstr "Päätteelle lähetettävä tuloste esitetään <computeroutput>tasaväl
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: screen
 #, no-c-format
-msgid ""
-"books        Desktop   documentation  drafts  mss    photos   stuff  svn\n"
+msgid "books        Desktop   documentation  drafts  mss    photos   stuff  svn\n"
 "books_tests  Desktop1  downloads      images  notes  scripts  svgs"
-msgstr ""
-"kirjat        Työpöytä   dokumentaatio  vedokset  mss    kuvat   juttuja  svn\n"
+msgstr "kirjat        Työpöytä   dokumentaatio  vedokset  mss    kuvat   juttuja  svn\n"
 "kirjat_testit  Työpöytä1  lataukset      kuvat  muistiinpanot  skriptit  svgt"
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
@@ -210,11 +201,8 @@ msgstr ""
 msgid "Source-code listings are also set in <computeroutput>mono-spaced roman</computeroutput> but add syntax highlighting as follows:"
 msgstr "Lähdekoodilistauksissa käytetään myös <computeroutput>tasavälistä pystykirjasinta</computeroutput> mutta niihin lisätään syntaksin korostus seuraavasti:"
 
-# translation auto-copied from project Publican Common, version 3, document Conventions
-#. Tag: title
-#, no-c-format
-msgid "Notes and Warnings"
-msgstr "Huomautukset ja varoitukset"
+msgid "Admonitions"
+msgstr ""
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: para
@@ -224,8 +212,14 @@ msgstr "Kolmea visuaalista tyyliä käytetään kiinnittämään lukijan huomio 
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: para
-#, no-c-format
-msgid "Notes are tips, shortcuts or alternative approaches to the task at hand. Ignoring a note should have no negative consequences, but you might miss out on a trick that makes your life easier."
+#, no-c-format, fuzzy
+msgid "Tips are tips, shortcuts or alternative approaches to the task at hand. Ignoring a tip should have no negative consequences, but you might miss out on a trick that makes your life easier."
+msgstr "Huomautus on vinkki, oikopolku tai erilainen lähestymistapa kyseiseen tehtävään. Huomautuksen ohittamisella ei pitäisi olla ikäviä seurauksia, mutta silloin saattaa ohittaa elämää helpottavan tempun."
+
+# translation auto-copied from project Publican Common, version 3, document Conventions
+#. Tag: para
+#, no-c-format, fuzzy
+msgid "Tips are tips, shortcuts or alternative approaches to the task at hand. Ignoring a tip should have no negative consequences, but you might miss out on a trick that makes your life easier."
 msgstr "Huomautus on vinkki, oikopolku tai erilainen lähestymistapa kyseiseen tehtävään. Huomautuksen ohittamisella ei pitäisi olla ikäviä seurauksia, mutta silloin saattaa ohittaa elämää helpottavan tempun."
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
@@ -239,4 +233,17 @@ msgstr "Tärkeää-laatikot kertovat tarkkoja tietoja asioista, jotka on helppoa
 #, no-c-format
 msgid "Warnings should not be ignored. Ignoring warnings will most likely cause data loss."
 msgstr "Varoitusta ei pitäisi ohittaa. Varoitusten ohittaminen aiheuttaa todennäköisesti tietojen katoamista."
+
+# translation auto-copied from project Publican Common, version 3, document Conventions
+#. Tag: title
+#, no-c-format
+#~ msgid "Notes and Warnings"
+#~ msgstr "Huomautukset ja varoitukset"
+
+# translation auto-copied from project Publican Common, version 3, document
+# Conventions
+#. Tag: para
+#, no-c-format
+#~ msgid "In PDF and paper editions, this manual uses typefaces drawn from the <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Liberation Fonts</link> set. The Liberation Fonts set is also used in HTML editions if the set is installed on your system. If not, alternative but equivalent typefaces are displayed. Note: Red Hat Enterprise Linux 5 and later include the Liberation Fonts set by default."
+#~ msgstr "PDF- ja paperiversioissa tämä opas käyttää <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Liberation-kirjasimista</link> otettuja kirjasinlajeja. Liberation-kirjasimia käytetään myös HTML-versioissa, jos ne on asennettu järjestelmään. Jos niitä ei ole asennettu, käytetään vaihtoehtoisia mutta vastaavia kirjasinlajeja. Huomaa että Red Hat Enterprise Linux 5 ja myöhemmät sisältävät Liberation-kirjasimet oletuksena."
 

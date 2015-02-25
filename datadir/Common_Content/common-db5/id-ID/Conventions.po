@@ -26,13 +26,6 @@ msgstr "Konvensi Dokumen"
 msgid "This manual uses several conventions to highlight certain words and phrases and draw attention to specific pieces of information."
 msgstr "Manual ini menggunakan beberapa konvensi untuk menyorot kata-kata dan frasa tertentu dan menarik perhatian pada informasi spesifik."
 
-# translation auto-copied from project Publican Common, version 3, document
-# Conventions
-#. Tag: para
-#, no-c-format
-msgid "In PDF and paper editions, this manual uses typefaces drawn from the <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Liberation Fonts</link> set. The Liberation Fonts set is also used in HTML editions if the set is installed on your system. If not, alternative but equivalent typefaces are displayed. Note: Red Hat Enterprise Linux 5 and later include the Liberation Fonts set by default."
-msgstr "Dalam edisi PDF dan kertas, manual ini menggunakan tipografi yang diambil dari set <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\">Fonta Liberation</link>. Set Fonta Liberation juga digunakan dalam edisi HTML jika set tersebut terinstal pada sistem anda. Jika tidak, tipografi alternatif yang setara akan ditampilkan. Catatan: Red Hat Enterprise Linux 5 dan selanjutnya menyertakan Fonta Liberation secara default."
-
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: title
 #, no-c-format
@@ -195,8 +188,7 @@ msgstr "Keluaran yang dikirim ke terminal diset dalam <computeroutput>roman bers
 
 #. Tag: screen
 #, no-c-format
-msgid ""
-"books        Desktop   documentation  drafts  mss    photos   stuff  svn\n"
+msgid "books        Desktop   documentation  drafts  mss    photos   stuff  svn\n"
 "books_tests  Desktop1  downloads      images  notes  scripts  svgs"
 msgstr ""
 
@@ -206,11 +198,8 @@ msgstr ""
 msgid "Source-code listings are also set in <computeroutput>mono-spaced roman</computeroutput> but add syntax highlighting as follows:"
 msgstr "Tampilan kode sumber juga diset dalam <computeroutput>roman berspasi tunggal</computeroutput> tetapi ditambahkan penyorotan sintaks sebagai berikut:"
 
-# translation auto-copied from project Publican Common, version 3, document Conventions
-#. Tag: title
-#, no-c-format
-msgid "Notes and Warnings"
-msgstr "Catatan dan Peringatan"
+msgid "Admonitions"
+msgstr ""
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: para
@@ -220,8 +209,14 @@ msgstr "Akhirnya, kami menggunakan tiga gaya visual untuk menarik perhatian pada
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: para
-#, no-c-format
-msgid "Notes are tips, shortcuts or alternative approaches to the task at hand. Ignoring a note should have no negative consequences, but you might miss out on a trick that makes your life easier."
+#, no-c-format, fuzzy
+msgid "Tips are tips, shortcuts or alternative approaches to the task at hand. Ignoring a tip should have no negative consequences, but you might miss out on a trick that makes your life easier."
+msgstr "Catatan adalah tips, cara pintas atau pendekatan alternatif untuk sebuah pekerjaan. Mengabaikan catatan  tidak memiliki konsekuensi negatif, tetapi anda mungkin kehilangan trik yang membuat hidup anda lebih mudah."
+
+# translation auto-copied from project Publican Common, version 3, document Conventions
+#. Tag: para
+#, no-c-format, fuzzy
+msgid "Tips are tips, shortcuts or alternative approaches to the task at hand. Ignoring a tip should have no negative consequences, but you might miss out on a trick that makes your life easier."
 msgstr "Catatan adalah tips, cara pintas atau pendekatan alternatif untuk sebuah pekerjaan. Mengabaikan catatan  tidak memiliki konsekuensi negatif, tetapi anda mungkin kehilangan trik yang membuat hidup anda lebih mudah."
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
@@ -235,4 +230,17 @@ msgstr "Kotak penting menjelaskan hal-hal yang mudah terlewatkan: perubahan konf
 #, no-c-format
 msgid "Warnings should not be ignored. Ignoring warnings will most likely cause data loss."
 msgstr "Peringatan tidak boleh diabaikan. Mengabaikan peringatan kemungkinan besar akan menyebabkan kehilangan data."
+
+# translation auto-copied from project Publican Common, version 3, document Conventions
+#. Tag: title
+#, no-c-format
+#~ msgid "Notes and Warnings"
+#~ msgstr "Catatan dan Peringatan"
+
+# translation auto-copied from project Publican Common, version 3, document
+# Conventions
+#. Tag: para
+#, no-c-format
+#~ msgid "In PDF and paper editions, this manual uses typefaces drawn from the <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Liberation Fonts</link> set. The Liberation Fonts set is also used in HTML editions if the set is installed on your system. If not, alternative but equivalent typefaces are displayed. Note: Red Hat Enterprise Linux 5 and later include the Liberation Fonts set by default."
+#~ msgstr "Dalam edisi PDF dan kertas, manual ini menggunakan tipografi yang diambil dari set <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\">Fonta Liberation</link>. Set Fonta Liberation juga digunakan dalam edisi HTML jika set tersebut terinstal pada sistem anda. Jika tidak, tipografi alternatif yang setara akan ditampilkan. Catatan: Red Hat Enterprise Linux 5 dan selanjutnya menyertakan Fonta Liberation secara default."
 

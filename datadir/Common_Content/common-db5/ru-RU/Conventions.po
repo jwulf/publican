@@ -30,13 +30,6 @@ msgstr "Соглашения документа"
 msgid "This manual uses several conventions to highlight certain words and phrases and draw attention to specific pieces of information."
 msgstr "В этом руководстве используются различные стили для выделения текста."
 
-# translation auto-copied from project Publican Common, version 3, document
-# Conventions
-#. Tag: para
-#, no-c-format
-msgid "In PDF and paper editions, this manual uses typefaces drawn from the <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Liberation Fonts</link> set. The Liberation Fonts set is also used in HTML editions if the set is installed on your system. If not, alternative but equivalent typefaces are displayed. Note: Red Hat Enterprise Linux 5 and later include the Liberation Fonts set by default."
-msgstr "В PDF и печатной версии документа используются шрифты <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Liberation</link>. Эти же шрифты используются для отображения HTML, если они установлены в системе. В противном случае вместо них используются похожие шрифты. Red Hat Enterprise Linux 5 и более поздние версии включают в свой состав комплект шрифтов Liberation по умолчанию."
-
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: title
 #, no-c-format
@@ -208,11 +201,9 @@ msgstr "Для отображения текста, выводимого на т
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: screen
 #, no-c-format
-msgid ""
-"books        Desktop   documentation  drafts  mss    photos   stuff  svn\n"
+msgid "books        Desktop   documentation  drafts  mss    photos   stuff  svn\n"
 "books_tests  Desktop1  downloads      images  notes  scripts  svgs"
-msgstr ""
-"books        Desktop   documentation  drafts  mss    photos   stuff  svn\n"
+msgstr "books        Desktop   documentation  drafts  mss    photos   stuff  svn\n"
 "books_tests  Desktop1  downloads      images  notes  scripts  svgs"
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
@@ -221,12 +212,8 @@ msgstr ""
 msgid "Source-code listings are also set in <computeroutput>mono-spaced roman</computeroutput> but add syntax highlighting as follows:"
 msgstr "Исходный код программ тоже показывается с помощью <computeroutput>прямого моноширинного шрифта</computeroutput>, но с выделением синтаксических конструкций:"
 
-# translation auto-copied from project Publican Common, version 3, document
-# Conventions
-#. Tag: title
-#, no-c-format
-msgid "Notes and Warnings"
-msgstr "Примечания и предупреждения"
+msgid "Admonitions"
+msgstr ""
 
 # translation auto-copied from project Publican Common, version 3, document
 # Conventions
@@ -237,8 +224,14 @@ msgstr "Наконец, в документе используются три с
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: para
-#, no-c-format
-msgid "Notes are tips, shortcuts or alternative approaches to the task at hand. Ignoring a note should have no negative consequences, but you might miss out on a trick that makes your life easier."
+#, no-c-format, fuzzy
+msgid "Tips are tips, shortcuts or alternative approaches to the task at hand. Ignoring a tip should have no negative consequences, but you might miss out on a trick that makes your life easier."
+msgstr "Примечания обычно содержат советы, описания приемов или альтернативных подходов к решению задач. Игнорирование примечаний не несет негативных последствий, но при этом можно не узнать о существовании какого-то способа, который существенно облегчает выполнение работы."
+
+# translation auto-copied from project Publican Common, version 3, document Conventions
+#. Tag: para
+#, no-c-format, fuzzy
+msgid "Tips are tips, shortcuts or alternative approaches to the task at hand. Ignoring a tip should have no negative consequences, but you might miss out on a trick that makes your life easier."
 msgstr "Примечания обычно содержат советы, описания приемов или альтернативных подходов к решению задач. Игнорирование примечаний не несет негативных последствий, но при этом можно не узнать о существовании какого-то способа, который существенно облегчает выполнение работы."
 
 # translation auto-copied from project Publican Common, version 3, document
@@ -253,4 +246,18 @@ msgstr "Важные замечания выделяют то, что легко
 #, no-c-format
 msgid "Warnings should not be ignored. Ignoring warnings will most likely cause data loss."
 msgstr "Не стоит игнорировать предупреждения, так как они содержат важную информацию, которая позволит избежать потери данных."
+
+# translation auto-copied from project Publican Common, version 3, document
+# Conventions
+#. Tag: title
+#, no-c-format
+#~ msgid "Notes and Warnings"
+#~ msgstr "Примечания и предупреждения"
+
+# translation auto-copied from project Publican Common, version 3, document
+# Conventions
+#. Tag: para
+#, no-c-format
+#~ msgid "In PDF and paper editions, this manual uses typefaces drawn from the <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Liberation Fonts</link> set. The Liberation Fonts set is also used in HTML editions if the set is installed on your system. If not, alternative but equivalent typefaces are displayed. Note: Red Hat Enterprise Linux 5 and later include the Liberation Fonts set by default."
+#~ msgstr "В PDF и печатной версии документа используются шрифты <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Liberation</link>. Эти же шрифты используются для отображения HTML, если они установлены в системе. В противном случае вместо них используются похожие шрифты. Red Hat Enterprise Linux 5 и более поздние версии включают в свой состав комплект шрифтов Liberation по умолчанию."
 

@@ -31,13 +31,6 @@ msgstr "Conventions d'écriture"
 msgid "This manual uses several conventions to highlight certain words and phrases and draw attention to specific pieces of information."
 msgstr "Ce manuel utilise plusieurs conventions pour souligner l'importance de certains mots ou expressions, mais aussi en vue d'attirer l'attention sur certains passages d'informations précis."
 
-# translation auto-copied from project Publican Common, version 3, document
-# Conventions
-#. Tag: para
-#, no-c-format
-msgid "In PDF and paper editions, this manual uses typefaces drawn from the <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Liberation Fonts</link> set. The Liberation Fonts set is also used in HTML editions if the set is installed on your system. If not, alternative but equivalent typefaces are displayed. Note: Red Hat Enterprise Linux 5 and later include the Liberation Fonts set by default."
-msgstr "Pour les éditions sur support papier et numérique (PDF), ce manuel utilise des caractères issus de <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Liberation Fonts</link>. La police de caractères Liberation Fonts est également utilisée pour les éditions HTML si elle est installée sur votre système. Sinon, des polices de caractères alternatives équivalentes sont utilisées. Notez que Red Hat Enterprise Linux 5 et versions supérieures contiennent la police Liberation Fonts par défaut."
-
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: title
 #, no-c-format
@@ -208,11 +201,9 @@ msgstr "Les sorties envoyées vers un terminal sont en caractères <computeroutp
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: screen
 #, no-c-format
-msgid ""
-"books        Desktop   documentation  drafts  mss    photos   stuff  svn\n"
+msgid "books        Desktop   documentation  drafts  mss    photos   stuff  svn\n"
 "books_tests  Desktop1  downloads      images  notes  scripts  svgs"
-msgstr ""
-"books        Desktop   documentation  drafts  mss    photos   stuff  svn\n"
+msgstr "books        Desktop   documentation  drafts  mss    photos   stuff  svn\n"
 "books_tests  Desktop1  downloads      images  notes  scripts  svgs"
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
@@ -221,11 +212,8 @@ msgstr ""
 msgid "Source-code listings are also set in <computeroutput>mono-spaced roman</computeroutput> but add syntax highlighting as follows:"
 msgstr "Les citations de code source sont également présentées en <computeroutput>romains à espacement fixe</computeroutput> mais sont présentés et surlignés comme suit :"
 
-# translation auto-copied from project Publican Common, version 3, document Conventions
-#. Tag: title
-#, no-c-format
-msgid "Notes and Warnings"
-msgstr "Notes et avertissements"
+msgid "Admonitions"
+msgstr ""
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: para
@@ -235,8 +223,14 @@ msgstr "Enfin, nous utilisons trois styles visuels pour attirer l'attention sur 
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: para
-#, no-c-format
-msgid "Notes are tips, shortcuts or alternative approaches to the task at hand. Ignoring a note should have no negative consequences, but you might miss out on a trick that makes your life easier."
+#, no-c-format, fuzzy
+msgid "Tips are tips, shortcuts or alternative approaches to the task at hand. Ignoring a tip should have no negative consequences, but you might miss out on a trick that makes your life easier."
+msgstr "Une remarque est une forme de conseil, un raccourci ou une approche alternative par rapport à une tâche à entreprendre. L'ignorer ne devrait pas provoquer de conséquences négatives, mais vous pourriez passer à côté d'une astuce qui vous aurait simplifiée la vie."
+
+# translation auto-copied from project Publican Common, version 3, document Conventions
+#. Tag: para
+#, no-c-format, fuzzy
+msgid "Tips are tips, shortcuts or alternative approaches to the task at hand. Ignoring a tip should have no negative consequences, but you might miss out on a trick that makes your life easier."
 msgstr "Une remarque est une forme de conseil, un raccourci ou une approche alternative par rapport à une tâche à entreprendre. L'ignorer ne devrait pas provoquer de conséquences négatives, mais vous pourriez passer à côté d'une astuce qui vous aurait simplifiée la vie."
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
@@ -250,4 +244,17 @@ msgstr "Les blocs d'informations importantes détaillent des éléments qui pour
 #, no-c-format
 msgid "Warnings should not be ignored. Ignoring warnings will most likely cause data loss."
 msgstr "Un avertissement ne devrait pas être ignoré. Ignorer des avertissements risque fortement d'entrainer des pertes de données."
+
+# translation auto-copied from project Publican Common, version 3, document Conventions
+#. Tag: title
+#, no-c-format
+#~ msgid "Notes and Warnings"
+#~ msgstr "Notes et avertissements"
+
+# translation auto-copied from project Publican Common, version 3, document
+# Conventions
+#. Tag: para
+#, no-c-format
+#~ msgid "In PDF and paper editions, this manual uses typefaces drawn from the <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Liberation Fonts</link> set. The Liberation Fonts set is also used in HTML editions if the set is installed on your system. If not, alternative but equivalent typefaces are displayed. Note: Red Hat Enterprise Linux 5 and later include the Liberation Fonts set by default."
+#~ msgstr "Pour les éditions sur support papier et numérique (PDF), ce manuel utilise des caractères issus de <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Liberation Fonts</link>. La police de caractères Liberation Fonts est également utilisée pour les éditions HTML si elle est installée sur votre système. Sinon, des polices de caractères alternatives équivalentes sont utilisées. Notez que Red Hat Enterprise Linux 5 et versions supérieures contiennent la police Liberation Fonts par défaut."
 

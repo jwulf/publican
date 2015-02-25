@@ -30,13 +30,6 @@ msgstr "文件規範"
 msgid "This manual uses several conventions to highlight certain words and phrases and draw attention to specific pieces of information."
 msgstr "本指南使用了幾種規範，以強調特定文字與詞組，並提示讀者注意特定的資訊。"
 
-# translation auto-copied from project Publican Common, version 3, document
-# Conventions
-#. Tag: para
-#, no-c-format
-msgid "In PDF and paper editions, this manual uses typefaces drawn from the <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Liberation Fonts</link> set. The Liberation Fonts set is also used in HTML editions if the set is installed on your system. If not, alternative but equivalent typefaces are displayed. Note: Red Hat Enterprise Linux 5 and later include the Liberation Fonts set by default."
-msgstr "在 PDF 和書面版本中，本指南使用了來自於 <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Liberation Fonts</link> 字體組的 typefaces。倘若 Liberation Fonts 字體已安裝在您系統上的話，該字體也會被使用於 HTML 版本中。若是沒有的話，本指南便會顯示其它相對應的 typefaces 字體。請注意：預設上 Red Hat Enterprise Linux 5 以上的版本已包含 Liberation Fonts 字體。"
-
 # translation auto-copied from project Publican Common, version 3, document Conventions, author snowlet
 #. Tag: title
 #, no-c-format
@@ -207,11 +200,9 @@ msgstr "傳送至終端機的輸出設置為 <computeroutput>mono-spaced roman</
 # translation auto-copied from project Publican Common, version 3, document Conventions, author snowlet
 #. Tag: screen
 #, no-c-format
-msgid ""
-"books        Desktop   documentation  drafts  mss    photos   stuff  svn\n"
+msgid "books        Desktop   documentation  drafts  mss    photos   stuff  svn\n"
 "books_tests  Desktop1  downloads      images  notes  scripts  svgs"
-msgstr ""
-"books        Desktop   documentation  drafts  mss    photos   stuff  svn\n"
+msgstr "books        Desktop   documentation  drafts  mss    photos   stuff  svn\n"
 "books_tests  Desktop1  downloads      images  notes  scripts  svgs"
 
 # translation auto-copied from project Publican Common, version 3, document Conventions, author snowlet
@@ -220,11 +211,8 @@ msgstr ""
 msgid "Source-code listings are also set in <computeroutput>mono-spaced roman</computeroutput> but add syntax highlighting as follows:"
 msgstr "原始碼排列亦設置為 <computeroutput>mono-spaced roman</computeroutput>（固定寬度 roman 字型），並以彩色強調語法："
 
-# translation auto-copied from project Publican Common, version 3, document Conventions, author snowlet
-#. Tag: title
-#, no-c-format
-msgid "Notes and Warnings"
-msgstr "注意和警告"
+msgid "Admonitions"
+msgstr ""
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: para
@@ -234,8 +222,14 @@ msgstr "最後，我們將使用三種視覺上的形式，來強調可能會被
 
 # translation auto-copied from project Publican Common, version 3, document Conventions, author snowlet
 #. Tag: para
-#, no-c-format
-msgid "Notes are tips, shortcuts or alternative approaches to the task at hand. Ignoring a note should have no negative consequences, but you might miss out on a trick that makes your life easier."
+#, no-c-format, fuzzy
+msgid "Tips are tips, shortcuts or alternative approaches to the task at hand. Ignoring a tip should have no negative consequences, but you might miss out on a trick that makes your life easier."
+msgstr "「注意」代表某些作業上的提示、捷徑或是其它完成工作的方式。忽略「注意」並不會帶來太大的負面影響，不過您可能會忽略掉某些能夠較輕鬆完成工作的方式。"
+
+# translation auto-copied from project Publican Common, version 3, document Conventions, author snowlet
+#. Tag: para
+#, no-c-format, fuzzy
+msgid "Tips are tips, shortcuts or alternative approaches to the task at hand. Ignoring a tip should have no negative consequences, but you might miss out on a trick that makes your life easier."
 msgstr "「注意」代表某些作業上的提示、捷徑或是其它完成工作的方式。忽略「注意」並不會帶來太大的負面影響，不過您可能會忽略掉某些能夠較輕鬆完成工作的方式。"
 
 # translation auto-copied from project Publican Common, version 3, document Conventions, author snowlet
@@ -249,4 +243,17 @@ msgstr "「重要」方塊會將容易遺漏掉的項目詳細列出：例如變
 #, no-c-format
 msgid "Warnings should not be ignored. Ignoring warnings will most likely cause data loss."
 msgstr "讀者不該忽略任何「警告」。忽略「警告」很有可能會造成資料遺失。"
+
+# translation auto-copied from project Publican Common, version 3, document Conventions, author snowlet
+#. Tag: title
+#, no-c-format
+#~ msgid "Notes and Warnings"
+#~ msgstr "注意和警告"
+
+# translation auto-copied from project Publican Common, version 3, document
+# Conventions
+#. Tag: para
+#, no-c-format
+#~ msgid "In PDF and paper editions, this manual uses typefaces drawn from the <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Liberation Fonts</link> set. The Liberation Fonts set is also used in HTML editions if the set is installed on your system. If not, alternative but equivalent typefaces are displayed. Note: Red Hat Enterprise Linux 5 and later include the Liberation Fonts set by default."
+#~ msgstr "在 PDF 和書面版本中，本指南使用了來自於 <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Liberation Fonts</link> 字體組的 typefaces。倘若 Liberation Fonts 字體已安裝在您系統上的話，該字體也會被使用於 HTML 版本中。若是沒有的話，本指南便會顯示其它相對應的 typefaces 字體。請注意：預設上 Red Hat Enterprise Linux 5 以上的版本已包含 Liberation Fonts 字體。"
 

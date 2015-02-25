@@ -26,11 +26,6 @@ msgstr "Conventiones del documento"
 msgid "This manual uses several conventions to highlight certain words and phrases and draw attention to specific pieces of information."
 msgstr "Iste manual utilisa varie conventiones pro accentuar alicun parolas e phrases e attraher le attention a certe partes specific de information."
 
-#. Tag: para
-#, no-c-format
-msgid "In PDF and paper editions, this manual uses typefaces drawn from the <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Liberation Fonts</link> set. The Liberation Fonts set is also used in HTML editions if the set is installed on your system. If not, alternative but equivalent typefaces are displayed. Note: Red Hat Enterprise Linux 5 and later include the Liberation Fonts set by default."
-msgstr "Iste manual in su editiones PDF e de papiro usa typos de litteras del familia <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Liberation</link>. Illo es anque utilisate per le editiones HTML si le familia Liberation es installate in le systema. In caso contrari, similar typos de litteras se monstra. Nota que Red Hat Enterprise Linux 5 e versiones plus recente contine le familia Liberation per predefinition."
-
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: title
 #, no-c-format
@@ -201,11 +196,9 @@ msgstr "Le texto inviate a un terminal es monstrate in <computeroutput>romano mo
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: screen
 #, no-c-format
-msgid ""
-"books        Desktop   documentation  drafts  mss    photos   stuff  svn\n"
+msgid "books        Desktop   documentation  drafts  mss    photos   stuff  svn\n"
 "books_tests  Desktop1  downloads      images  notes  scripts  svgs"
-msgstr ""
-"libros  Scriptorio   documentation   schizzos  mss    photos    cosas  svn\n"
+msgstr "libros  Scriptorio   documentation   schizzos  mss    photos    cosas  svn\n"
 "probas  Scriptorio1  discargamentos  imagines  notas  scripts   svg"
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
@@ -214,11 +207,8 @@ msgstr ""
 msgid "Source-code listings are also set in <computeroutput>mono-spaced roman</computeroutput> but add syntax highlighting as follows:"
 msgstr "Le citationes de codice fonte es equalmente presentate in <computeroutput>romano monospatial</computeroutput> ma illos ha le coloration syntactic:"
 
-# translation auto-copied from project Publican Common, version 3, document Conventions
-#. Tag: title
-#, no-c-format
-msgid "Notes and Warnings"
-msgstr "Notas e advertimentos"
+msgid "Admonitions"
+msgstr ""
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: para
@@ -228,8 +218,14 @@ msgstr "Al fin, tres stilos visual es utilisate pro attraher le attention a info
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: para
-#, no-c-format
-msgid "Notes are tips, shortcuts or alternative approaches to the task at hand. Ignoring a note should have no negative consequences, but you might miss out on a trick that makes your life easier."
+#, no-c-format, fuzzy
+msgid "Tips are tips, shortcuts or alternative approaches to the task at hand. Ignoring a tip should have no negative consequences, but you might miss out on a trick that makes your life easier."
+msgstr "Notas es avisos, accessos directe o manieras alternative de complir le carga determinate. Ignorar un nota non deberea haber consequentias negative, ma tu poterea perder un truco que facilita le cosas."
+
+# translation auto-copied from project Publican Common, version 3, document Conventions
+#. Tag: para
+#, no-c-format, fuzzy
+msgid "Tips are tips, shortcuts or alternative approaches to the task at hand. Ignoring a tip should have no negative consequences, but you might miss out on a trick that makes your life easier."
 msgstr "Notas es avisos, accessos directe o manieras alternative de complir le carga determinate. Ignorar un nota non deberea haber consequentias negative, ma tu poterea perder un truco que facilita le cosas."
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
@@ -243,4 +239,15 @@ msgstr "Le quadros \"Importante\" detalia cosas que pote esser facilemente negli
 #, no-c-format
 msgid "Warnings should not be ignored. Ignoring warnings will most likely cause data loss."
 msgstr "Le advertimentos non debe esser ignorate. Ignorar los multo probabilemente occasionara un perdita de datos. "
+
+# translation auto-copied from project Publican Common, version 3, document Conventions
+#. Tag: title
+#, no-c-format
+#~ msgid "Notes and Warnings"
+#~ msgstr "Notas e advertimentos"
+
+#. Tag: para
+#, no-c-format
+#~ msgid "In PDF and paper editions, this manual uses typefaces drawn from the <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Liberation Fonts</link> set. The Liberation Fonts set is also used in HTML editions if the set is installed on your system. If not, alternative but equivalent typefaces are displayed. Note: Red Hat Enterprise Linux 5 and later include the Liberation Fonts set by default."
+#~ msgstr "Iste manual in su editiones PDF e de papiro usa typos de litteras del familia <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Liberation</link>. Illo es anque utilisate per le editiones HTML si le familia Liberation es installate in le systema. In caso contrari, similar typos de litteras se monstra. Nota que Red Hat Enterprise Linux 5 e versiones plus recente contine le familia Liberation per predefinition."
 

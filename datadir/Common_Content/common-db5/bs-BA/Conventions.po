@@ -27,13 +27,6 @@ msgstr "Konvencije dokumenta"
 msgid "This manual uses several conventions to highlight certain words and phrases and draw attention to specific pieces of information."
 msgstr "Ovaj priručnik koristi nekoliko konvencija radi isticanja izvjesnih riječi i izraza te se tako skrenula pažnja na određene dijelove informacije."
 
-# translation auto-copied from project Publican Common, version 3, document
-# Conventions
-#. Tag: para
-#, no-c-format
-msgid "In PDF and paper editions, this manual uses typefaces drawn from the <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Liberation Fonts</link> set. The Liberation Fonts set is also used in HTML editions if the set is installed on your system. If not, alternative but equivalent typefaces are displayed. Note: Red Hat Enterprise Linux 5 and later include the Liberation Fonts set by default."
-msgstr "U PDF i papirnim izdanjima, ovaj priručnik koristi slogove izvučene iz skupa <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Liberation fontova</link>. Skup Liberation fontova se takođe koristi u HTML izdanjima ako je skup instaliran na vašem sistemu. Ako nije, alternativni ali ekvivalentni slogovi će se prikazivati. Napomena: Red Hat Enterprise Linux 5 i kasniji automatski uključuju skup Liberation fontova."
-
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: title
 #, no-c-format
@@ -197,11 +190,9 @@ msgstr "Ispis u terminalu se vrši <computeroutput>uspravno istoširinski</compu
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: screen
 #, no-c-format
-msgid ""
-"books        Desktop   documentation  drafts  mss    photos   stuff  svn\n"
+msgid "books        Desktop   documentation  drafts  mss    photos   stuff  svn\n"
 "books_tests  Desktop1  downloads      images  notes  scripts  svgs"
-msgstr ""
-"knjige        Radna_Površina   dokumentacija  draftovi  mss    fotografije   stvari  svn\n"
+msgstr "knjige        Radna_Površina   dokumentacija  draftovi  mss    fotografije   stvari  svn\n"
 "knjige_testovi  Radna_Površina1  snimljeno      slike  bilješke  skripte  svg-ovi"
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
@@ -210,11 +201,8 @@ msgstr ""
 msgid "Source-code listings are also set in <computeroutput>mono-spaced roman</computeroutput> but add syntax highlighting as follows:"
 msgstr "Ispis izvornog koda je također postavljen <computeroutput>uspravno istoširinski</computeroutput> ali se predstavlja i ističe na sljedeći način: "
 
-# translation auto-copied from project Publican Common, version 3, document Conventions
-#. Tag: title
-#, no-c-format
-msgid "Notes and Warnings"
-msgstr "Bilješke i upozorenja"
+msgid "Admonitions"
+msgstr ""
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: para
@@ -224,8 +212,14 @@ msgstr "Konačno, koristimo tri vizuelna stila da bismo privukli pažnju na info
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: para
-#, no-c-format
-msgid "Notes are tips, shortcuts or alternative approaches to the task at hand. Ignoring a note should have no negative consequences, but you might miss out on a trick that makes your life easier."
+#, no-c-format, fuzzy
+msgid "Tips are tips, shortcuts or alternative approaches to the task at hand. Ignoring a tip should have no negative consequences, but you might miss out on a trick that makes your life easier."
+msgstr "Bilješka je savjet ili prečica ili alternativan pristup trenutnom zadatku. Zanemarivanje bilješke ne bi trebalo da ima negativnih posljedica, ali možete propustiti neki trik koji bi vam život učinio lakšim. "
+
+# translation auto-copied from project Publican Common, version 3, document Conventions
+#. Tag: para
+#, no-c-format, fuzzy
+msgid "Tips are tips, shortcuts or alternative approaches to the task at hand. Ignoring a tip should have no negative consequences, but you might miss out on a trick that makes your life easier."
 msgstr "Bilješka je savjet ili prečica ili alternativan pristup trenutnom zadatku. Zanemarivanje bilješke ne bi trebalo da ima negativnih posljedica, ali možete propustiti neki trik koji bi vam život učinio lakšim. "
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
@@ -239,4 +233,17 @@ msgstr "Važni okviri detaljno opisuju stvari koje se teško primjete: izmjene u
 #, no-c-format
 msgid "Warnings should not be ignored. Ignoring warnings will most likely cause data loss."
 msgstr "Upozorenje se nebi smjelo zanemariti. Zanemarivanje upozorenja će vjerovatno izazvati gubitak podataka. "
+
+# translation auto-copied from project Publican Common, version 3, document Conventions
+#. Tag: title
+#, no-c-format
+#~ msgid "Notes and Warnings"
+#~ msgstr "Bilješke i upozorenja"
+
+# translation auto-copied from project Publican Common, version 3, document
+# Conventions
+#. Tag: para
+#, no-c-format
+#~ msgid "In PDF and paper editions, this manual uses typefaces drawn from the <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Liberation Fonts</link> set. The Liberation Fonts set is also used in HTML editions if the set is installed on your system. If not, alternative but equivalent typefaces are displayed. Note: Red Hat Enterprise Linux 5 and later include the Liberation Fonts set by default."
+#~ msgstr "U PDF i papirnim izdanjima, ovaj priručnik koristi slogove izvučene iz skupa <link xlink:href=\"https://fedorahosted.org/liberation-fonts/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Liberation fontova</link>. Skup Liberation fontova se takođe koristi u HTML izdanjima ako je skup instaliran na vašem sistemu. Ako nije, alternativni ali ekvivalentni slogovi će se prikazivati. Napomena: Red Hat Enterprise Linux 5 i kasniji automatski uključuju skup Liberation fontova."
 
