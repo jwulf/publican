@@ -12,7 +12,7 @@ msgstr ""
 "Language-Team: Greek <fedora-trans-el@redhat.com>\n"
 "Language: el\n"
 "Plural-Forms: 2\n"
-"X-Generator: Zanata 3.0.3\n"
+"X-Generator: Zanata 3.5.1\n"
 "X-Poedit-Country: GREECE\n"
 "X-Poedit-Language: Greek\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -26,33 +26,8 @@ msgstr "Συνθήκες εγγράφου"
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: para
 #, no-c-format
-msgid ""
-"This manual uses several conventions to highlight certain words and phrases "
-"and draw attention to specific pieces of information."
-msgstr ""
-"Ο παρών οδηγός διαθέτει πολλές συνθήκες για προβολή με έντονα χαρακτηριστικά "
-"συγκεκριμένων λέξεων και φράσεων και για εστίαση της προσοχής σε "
-"συγκεκριμένα τμήματα πληροφοριών."
-
-# translation auto-copied from project Publican Common, version 3, document
-# Conventions
-#. Tag: para
-#, no-c-format
-msgid ""
-"In PDF and paper editions, this manual uses typefaces drawn from the <ulink "
-"url=\"https://fedorahosted.org/liberation-fonts/\">Liberation Fonts</ulink> "
-"set. The Liberation Fonts set is also used in HTML editions if the set is "
-"installed on your system. If not, alternative but equivalent typefaces are "
-"displayed. Note: Red Hat Enterprise Linux 5 and later include the Liberation "
-"Fonts set by default."
-msgstr ""
-"Σε εκδόσεις PDF και χαρτιού, αυτός ο οδηγός χρησιμοποιεί τύπους χαρακτήρων "
-"επιλεγμένων από το σετ <ulink url=\"https://fedorahosted.org/liberation-"
-"fonts/\">Liberation Fonts</ulink>. Το σετ χαρακτήρων Liberation Fonts επίσης "
-"χρησιμοποιείται σε εκδόσεις HTML αν το σετ είναι εγκατεστημένο στο σύστημά "
-"σας. Αν όχι, εμφανίζονται εναλλακτικοί αλλά παρόμοιοι τύποι χαρακτήρων. "
-"Σημείωση: η Red Hat Enterprise Linux 5 και νεότερες κυκλοφορίες "
-"περιλαμβάνουν το σετ χαρακτήρων Liberation Fonts ως προεπιλογή."
+msgid "This manual uses several conventions to highlight certain words and phrases and draw attention to specific pieces of information."
+msgstr "Ο παρών οδηγός διαθέτει πολλές συνθήκες για προβολή με έντονα χαρακτηριστικά συγκεκριμένων λέξεων και φράσεων και για εστίαση της προσοχής σε συγκεκριμένα τμήματα πληροφοριών."
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: title
@@ -63,14 +38,8 @@ msgstr "Τυπογραφικές συνθήκες"
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: para
 #, no-c-format
-msgid ""
-"Four typographic conventions are used to call attention to specific words "
-"and phrases. These conventions, and the circumstances they apply to, are as "
-"follows."
-msgstr ""
-"Τέσσερις τυπογραφικές συνθήκες χρησιμοποιούνται για εστίαση της προσοχής σε "
-"συγκεκριμένες λέξεις και φράσεις. Αυτές οι συμβάσεις και οι περιστάσεις στις "
-"οποίες εφορμόζονται, παρουσιάζονται παρακάτω."
+msgid "Four typographic conventions are used to call attention to specific words and phrases. These conventions, and the circumstances they apply to, are as follows."
+msgstr "Τέσσερις τυπογραφικές συνθήκες χρησιμοποιούνται για εστίαση της προσοχής σε συγκεκριμένες λέξεις και φράσεις. Αυτές οι συμβάσεις και οι περιστάσεις στις οποίες εφορμόζονται, παρουσιάζονται παρακάτω."
 
 #. Tag: para
 #, no-c-format
@@ -79,38 +48,23 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid ""
-"Used to highlight system input, including shell commands, file names and "
-"paths. Also used to highlight keys and key combinations. For example:"
+msgid "Used to highlight system input, including shell commands, file names and paths. Also used to highlight keys and key combinations. For example:"
 msgstr ""
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: para
 #, no-c-format
-msgid ""
-"To see the contents of the file <filename>my_next_bestselling_novel</"
-"filename> in your current working directory, enter the <command>cat "
-"my_next_bestselling_novel</command> command at the shell prompt and press "
-"<keycap>Enter</keycap> to execute the command."
-msgstr ""
-"Για την παρουσίαση των περιεχομένων του αρχείου "
-"<filename>my_next_bestselling_novel</filename> στον τρέχοντα φάκελο "
-"εργασίας, εισάγετε την εντολή <command>cat my_next_bestselling_novel</"
-"command> στη γραμμή εντολών και πιέστε <keycap>Enter</keycap> για την "
-"εκτέλεση της εντολής."
+msgid "To see the contents of the file <filename>my_next_bestselling_novel</filename> in your current working directory, enter the <command>cat my_next_bestselling_novel</command> command at the shell prompt and press <keycap>Enter</keycap> to execute the command."
+msgstr "Για την παρουσίαση των περιεχομένων του αρχείου <filename>my_next_bestselling_novel</filename> στον τρέχοντα φάκελο εργασίας, εισάγετε την εντολή <command>cat my_next_bestselling_novel</command> στη γραμμή εντολών και πιέστε <keycap>Enter</keycap> για την εκτέλεση της εντολής."
 
 #. Tag: para
 #, no-c-format
-msgid ""
-"The above includes a file name, a shell command and a key, all presented in "
-"mono-spaced bold and all distinguishable thanks to context."
+msgid "The above includes a file name, a shell command and a key, all presented in mono-spaced bold and all distinguishable thanks to context."
 msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid ""
-"Key combinations can be distinguished from an individual key by the plus "
-"sign that connects each part of a key combination. For example:"
+msgid "Key combinations can be distinguished from an individual key by the plus sign that connects each part of a key combination. For example:"
 msgstr ""
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
@@ -121,39 +75,24 @@ msgstr "Επιλέξτε <keycap>Enter</keycap> για την εκτέλεση �
 
 #. Tag: para
 #, no-c-format
-msgid ""
-"Press <keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap><keycap>F2</"
-"keycap></keycombo> to switch to a virtual terminal."
+msgid "Press <keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap><keycap>F2</keycap></keycombo> to switch to a virtual terminal."
 msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid ""
-"The first example highlights a particular key to press. The second example "
-"highlights a key combination: a set of three keys pressed simultaneously."
+msgid "The first example highlights a particular key to press. The second example highlights a key combination: a set of three keys pressed simultaneously."
 msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid ""
-"If source code is discussed, class names, methods, functions, variable names "
-"and returned values mentioned within a paragraph will be presented as above, "
-"in <literal>mono-spaced bold</literal>. For example:"
+msgid "If source code is discussed, class names, methods, functions, variable names and returned values mentioned within a paragraph will be presented as above, in <literal>mono-spaced bold</literal>. For example:"
 msgstr ""
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: para
 #, no-c-format
-msgid ""
-"File-related classes include <classname>filesystem</classname> for file "
-"systems, <classname>file</classname> for files, and <classname>dir</"
-"classname> for directories. Each class has its own associated set of "
-"permissions."
-msgstr ""
-"Κλάσεις συσχετιζόμενες με αρχεία περιλαμβάνουν <classname>filesystem</"
-"classname> για συστήματα αρχείων, <classname>file</classname> για αρχεία, "
-"και <classname>dir</classname> για καταλόγους. Κάθε κλάση διαθέτει το δικό "
-"του σετ προνομίων σε αντιστοιχία."
+msgid "File-related classes include <classname>filesystem</classname> for file systems, <classname>file</classname> for files, and <classname>dir</classname> for directories. Each class has its own associated set of permissions."
+msgstr "Κλάσεις συσχετιζόμενες με αρχεία περιλαμβάνουν <classname>filesystem</classname> για συστήματα αρχείων, <classname>file</classname> για αρχεία, και <classname>dir</classname> για καταλόγους. Κάθε κλάση διαθέτει το δικό του σετ προνομίων σε αντιστοιχία."
 
 #. Tag: para
 #, no-c-format
@@ -162,137 +101,63 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid ""
-"This denotes words or phrases encountered on a system, including application "
-"names; dialog-box text; labeled buttons; check-box and radio-button labels; "
-"menu titles and submenu titles. For example:"
+msgid "This denotes words or phrases encountered on a system, including application names; dialog-box text; labeled buttons; check-box and radio-button labels; menu titles and submenu titles. For example:"
 msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid ""
-"Choose <menuchoice><guimenu>System</guimenu><guisubmenu>Preferences</"
-"guisubmenu><guimenuitem>Mouse</guimenuitem></menuchoice> from the main menu "
-"bar to launch <application>Mouse Preferences</application>. In the "
-"<guilabel>Buttons</guilabel> tab, select the <guilabel>Left-handed mouse</"
-"guilabel> check box and click <guibutton>Close</guibutton> to switch the "
-"primary mouse button from the left to the right (making the mouse suitable "
-"for use in the left hand)."
+msgid "Choose <menuchoice><guimenu>System</guimenu><guisubmenu>Preferences</guisubmenu><guimenuitem>Mouse</guimenuitem></menuchoice> from the main menu bar to launch <application>Mouse Preferences</application>. In the <guilabel>Buttons</guilabel> tab, select the <guilabel>Left-handed mouse</guilabel> check box and click <guibutton>Close</guibutton> to switch the primary mouse button from the left to the right (making the mouse suitable for use in the left hand)."
 msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid ""
-"To insert a special character into a <application>gedit</application> file, "
-"choose <menuchoice><guimenu>Applications</guimenu><guisubmenu>Accessories</"
-"guisubmenu><guimenuitem>Character Map</guimenuitem></menuchoice> from the "
-"main menu bar. Next, choose <menuchoice><guimenu>Search</"
-"guimenu><guimenuitem>Find…</guimenuitem></menuchoice> from the "
-"<application>Character Map</application> menu bar, type the name of the "
-"character in the <guilabel>Search</guilabel> field and click "
-"<guibutton>Next</guibutton>. The character you sought will be highlighted in "
-"the <guilabel>Character Table</guilabel>. Double-click this highlighted "
-"character to place it in the <guilabel>Text to copy</guilabel> field and "
-"then click the <guibutton>Copy</guibutton> button. Now switch back to your "
-"document and choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Paste</"
-"guimenuitem></menuchoice> from the <application>gedit</application> menu bar."
-""
+msgid "To insert a special character into a <application>gedit</application> file, choose <menuchoice><guimenu>Applications</guimenu><guisubmenu>Accessories</guisubmenu><guimenuitem>Character Map</guimenuitem></menuchoice> from the main menu bar. Next, choose <menuchoice><guimenu>Search</guimenu><guimenuitem>Find…</guimenuitem></menuchoice> from the <application>Character Map</application> menu bar, type the name of the character in the <guilabel>Search</guilabel> field and click <guibutton>Next</guibutton>. The character you sought will be highlighted in the <guilabel>Character Table</guilabel>. Double-click this highlighted character to place it in the <guilabel>Text to copy</guilabel> field and then click the <guibutton>Copy</guibutton> button. Now switch back to your document and choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Paste</guimenuitem></menuchoice> from the <application>gedit</application> menu bar."
 msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid ""
-"The above text includes application names; system-wide menu names and items; "
-"application-specific menu names; and buttons and text found within a GUI "
-"interface, all presented in proportional bold and all distinguishable by "
-"context."
+msgid "The above text includes application names; system-wide menu names and items; application-specific menu names; and buttons and text found within a GUI interface, all presented in proportional bold and all distinguishable by context."
 msgstr ""
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: para
 #, no-c-format
-msgid ""
-"<command><replaceable>Mono-spaced Bold Italic</replaceable></command> or "
-"<application><replaceable>Proportional Bold Italic</replaceable></"
-"application>"
-msgstr ""
-"<command><replaceable>Πλάγιοι έντονοι χαρακτήρες προκαθορισμένου πλάτους</"
-"replaceable></command> ή <application><replaceable>Πλάγιοι έντονοι "
-"χαρακτήρες αναλογικού πλάτους</replaceable></application>"
+msgid "<command><replaceable>Mono-spaced Bold Italic</replaceable></command> or <application><replaceable>Proportional Bold Italic</replaceable></application>"
+msgstr "<command><replaceable>Πλάγιοι έντονοι χαρακτήρες προκαθορισμένου πλάτους</replaceable></command> ή <application><replaceable>Πλάγιοι έντονοι χαρακτήρες αναλογικού πλάτους</replaceable></application>"
 
 #. Tag: para
 #, no-c-format
-msgid ""
-"Whether mono-spaced bold or proportional bold, the addition of italics "
-"indicates replaceable or variable text. Italics denotes text you do not "
-"input literally or displayed text that changes depending on circumstance. "
-"For example:"
+msgid "Whether mono-spaced bold or proportional bold, the addition of italics indicates replaceable or variable text. Italics denotes text you do not input literally or displayed text that changes depending on circumstance. For example:"
 msgstr ""
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: para
 #, no-c-format
-msgid ""
-"To connect to a remote machine using ssh, type <command>ssh "
-"<replaceable>username</replaceable>@<replaceable>domain.name</replaceable></"
-"command> at a shell prompt. If the remote machine is <filename>example.com</"
-"filename> and your username on that machine is john, type <command>ssh "
-"john@example.com</command>."
-msgstr ""
-"Για σύνδεση σε ένα απομακρυσμένο σύστημα χρησιμοποιώντας ssh, "
-"πληκτρολογείστε <command>ssh <replaceable>όνομα-χρήστη</"
-"replaceable>@<replaceable>όνομα.τομέα</replaceable></command> στη γραμμή "
-"εντολών. Αν το απομακρυσμένο σύστημα είναι <filename>example.com</filename> "
-"και το όνομα χρήστη σας σε εκείνο το μηχάνημα είναι giannis, πληκτρολογείστε "
-"<command>ssh giannis@example.com</command>."
+msgid "To connect to a remote machine using ssh, type <command>ssh <replaceable>username</replaceable>@<replaceable>domain.name</replaceable></command> at a shell prompt. If the remote machine is <filename>example.com</filename> and your username on that machine is john, type <command>ssh john@example.com</command>."
+msgstr "Για σύνδεση σε ένα απομακρυσμένο σύστημα χρησιμοποιώντας ssh, πληκτρολογείστε <command>ssh <replaceable>όνομα-χρήστη</replaceable>@<replaceable>όνομα.τομέα</replaceable></command> στη γραμμή εντολών. Αν το απομακρυσμένο σύστημα είναι <filename>example.com</filename> και το όνομα χρήστη σας σε εκείνο το μηχάνημα είναι giannis, πληκτρολογείστε <command>ssh giannis@example.com</command>."
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: para
 #, no-c-format
-msgid ""
-"The <command>mount -o remount <replaceable>file-system</replaceable></"
-"command> command remounts the named file system. For example, to remount the "
-"<filename>/home</filename> file system, the command is <command>mount -o "
-"remount /home</command>."
-msgstr ""
-"Η εντολή <command>mount -o remount <replaceable>σύστημα-αρχείων</"
-"replaceable></command> επαναπροσαρτεί το συγκεκριμένο σύστημα αρχείων. Για "
-"παράδειγμα, για την επαναπροσάρτηση του συστήματος αρχείων <filename>/home</"
-"filename>, η εντολή είναι  <command>mount -o remount /home</command>."
+msgid "The <command>mount -o remount <replaceable>file-system</replaceable></command> command remounts the named file system. For example, to remount the <filename>/home</filename> file system, the command is <command>mount -o remount /home</command>."
+msgstr "Η εντολή <command>mount -o remount <replaceable>σύστημα-αρχείων</replaceable></command> επαναπροσαρτεί το συγκεκριμένο σύστημα αρχείων. Για παράδειγμα, για την επαναπροσάρτηση του συστήματος αρχείων <filename>/home</filename>, η εντολή είναι  <command>mount -o remount /home</command>."
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: para
 #, no-c-format
-msgid ""
-"To see the version of a currently installed package, use the <command>rpm -q "
-"<replaceable>package</replaceable></command> command. It will return a "
-"result as follows: <command><replaceable>package-version-release</"
-"replaceable></command>."
-msgstr ""
-"Για εμφάνιση της έκδοσης ενός πρόσφατα εγκατεστημένου πακέτου, "
-"χρησιμοποιείστε την εντολή <command>rpm -q <replaceable>πακέτο</"
-"replaceable></command>. Το αποτέλεσμα που θα εμφανιστεί θα είναι όπως "
-"παρακάτω: <command><replaceable>package-version-release</replaceable></"
-"command>."
+msgid "To see the version of a currently installed package, use the <command>rpm -q <replaceable>package</replaceable></command> command. It will return a result as follows: <command><replaceable>package-version-release</replaceable></command>."
+msgstr "Για εμφάνιση της έκδοσης ενός πρόσφατα εγκατεστημένου πακέτου, χρησιμοποιείστε την εντολή <command>rpm -q <replaceable>πακέτο</replaceable></command>. Το αποτέλεσμα που θα εμφανιστεί θα είναι όπως παρακάτω: <command><replaceable>package-version-release</replaceable></command>."
 
 #. Tag: para
 #, no-c-format
-msgid ""
-"Note the words in bold italics above: username, domain.name, file-system, "
-"package, version and release. Each word is a placeholder, either for text "
-"you enter when issuing a command or for text displayed by the system."
+msgid "Note the words in bold italics above: username, domain.name, file-system, package, version and release. Each word is a placeholder, either for text you enter when issuing a command or for text displayed by the system."
 msgstr ""
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: para
 #, no-c-format
-msgid ""
-"Aside from standard usage for presenting the title of a work, italics "
-"denotes the first use of a new and important term. For example:"
-msgstr ""
-"Πέρα από την κανονική χρήση για παρουσίαση του τίτλου μιας εργασίας, πλάγιοι "
-"χαρακτήρες δηλώνουν την πρώτη χρήση ενός νέου και σημαντικού όρου. Για "
-"παράδειγμα:"
+msgid "Aside from standard usage for presenting the title of a work, italics denotes the first use of a new and important term. For example:"
+msgstr "Πέρα από την κανονική χρήση για παρουσίαση του τίτλου μιας εργασίας, πλάγιοι χαρακτήρες δηλώνουν την πρώτη χρήση ενός νέου και σημαντικού όρου. Για παράδειγμα:"
 
 #. Tag: para
 #, no-c-format
@@ -307,35 +172,25 @@ msgstr "Συνθήκες εστίασης σε αναφορές"
 
 #. Tag: para
 #, no-c-format
-msgid ""
-"Terminal output and source code listings are set off visually from the "
-"surrounding text."
+msgid "Terminal output and source code listings are set off visually from the surrounding text."
 msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid ""
-"Output sent to a terminal is set in <computeroutput>mono-spaced roman</"
-"computeroutput> and presented thus:"
+msgid "Output sent to a terminal is set in <computeroutput>mono-spaced roman</computeroutput> and presented thus:"
 msgstr ""
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: screen
 #, no-c-format
-msgid ""
-"books        Desktop   documentation  drafts  mss    photos   stuff  svn\n"
+msgid "books        Desktop   documentation  drafts  mss    photos   stuff  svn\n"
 "books_tests  Desktop1  downloads      images  notes  scripts  svgs"
-msgstr ""
-"βιβλία       Επιφάνεια εργασίας   τεκμηρίωση πρόχειρα mss    φωτογραφίες   "
-"διάφορα svn\n"
-"δοκιμές_βιβλίων Επιφάνεια εργασίας1 λήψεις      εικόνες σημειώσεις σενάρια "
-"svgs"
+msgstr "βιβλία       Επιφάνεια εργασίας   τεκμηρίωση πρόχειρα mss    φωτογραφίες   διάφορα svn\n"
+"δοκιμές_βιβλίων Επιφάνεια εργασίας1 λήψεις      εικόνες σημειώσεις σενάρια svgs"
 
 #. Tag: para
 #, no-c-format
-msgid ""
-"Source-code listings are also set in <computeroutput>mono-spaced roman</"
-"computeroutput> but add syntax highlighting as follows:"
+msgid "Source-code listings are also set in <computeroutput>mono-spaced roman</computeroutput> but add syntax highlighting as follows:"
 msgstr ""
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
@@ -347,33 +202,28 @@ msgstr "Σημειώσεις και προειδοποιήσεις"
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: para
 #, no-c-format
-msgid ""
-"Finally, we use three visual styles to draw attention to information that "
-"might otherwise be overlooked."
-msgstr ""
-"Τελικά, χρησιμοποιούνται τρεις εικονικές μορφές για να τραβήξουν την προσοχή "
-"σε πληροφορίες που διαφορετικά θα μπορούσαν να περάσουν απαρατήρητες."
+msgid "Finally, we use three visual styles to draw attention to information that might otherwise be overlooked."
+msgstr "Τελικά, χρησιμοποιούνται τρεις εικονικές μορφές για να τραβήξουν την προσοχή σε πληροφορίες που διαφορετικά θα μπορούσαν να περάσουν απαρατήρητες."
 
 #. Tag: para
 #, no-c-format
-msgid ""
-"Notes are tips, shortcuts or alternative approaches to the task at hand. "
-"Ignoring a note should have no negative consequences, but you might miss out "
-"on a trick that makes your life easier."
+msgid "Notes are tips, shortcuts or alternative approaches to the task at hand. Ignoring a note should have no negative consequences, but you might miss out on a trick that makes your life easier."
 msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid ""
-"Important boxes detail things that are easily missed: configuration changes "
-"that only apply to the current session, or services that need restarting "
-"before an update will apply. Ignoring a box labeled “Important” will not "
-"cause data loss but may cause irritation and frustration."
+msgid "Important boxes detail things that are easily missed: configuration changes that only apply to the current session, or services that need restarting before an update will apply. Ignoring a box labeled “Important” will not cause data loss but may cause irritation and frustration."
 msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid ""
-"Warnings should not be ignored. Ignoring warnings will most likely cause "
-"data loss."
+msgid "Warnings should not be ignored. Ignoring warnings will most likely cause data loss."
 msgstr ""
+
+# translation auto-copied from project Publican Common, version 3, document
+# Conventions
+#. Tag: para
+#, no-c-format
+#~ msgid "In PDF and paper editions, this manual uses typefaces drawn from the <ulink url=\"https://fedorahosted.org/liberation-fonts/\">Liberation Fonts</ulink> set. The Liberation Fonts set is also used in HTML editions if the set is installed on your system. If not, alternative but equivalent typefaces are displayed. Note: Red Hat Enterprise Linux 5 and later include the Liberation Fonts set by default."
+#~ msgstr "Σε εκδόσεις PDF και χαρτιού, αυτός ο οδηγός χρησιμοποιεί τύπους χαρακτήρων επιλεγμένων από το σετ <ulink url=\"https://fedorahosted.org/liberation-fonts/\">Liberation Fonts</ulink>. Το σετ χαρακτήρων Liberation Fonts επίσης χρησιμοποιείται σε εκδόσεις HTML αν το σετ είναι εγκατεστημένο στο σύστημά σας. Αν όχι, εμφανίζονται εναλλακτικοί αλλά παρόμοιοι τύποι χαρακτήρων. Σημείωση: η Red Hat Enterprise Linux 5 και νεότερες κυκλοφορίες περιλαμβάνουν το σετ χαρακτήρων Liberation Fonts ως προεπιλογή."
+

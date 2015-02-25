@@ -1,5 +1,5 @@
 # AUTHOR <EMAIL@ADDRESS>, YEAR.
-# peartown <josef.hruska@upcmail.cz>, 2012. #zanata
+# Josef Hruška <josef.hruska@upcmail.cz>, 2012. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
@@ -8,11 +8,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "PO-Revision-Date: 2012-09-19 03:06-0400\n"
-"Last-Translator: peartown <josef.hruska@upcmail.cz>\n"
+"Last-Translator: Josef Hruška <josef.hruska@upcmail.cz>\n"
 "Language-Team: None\n"
 "Language: cs\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2\n"
-"X-Generator: Zanata 3.0.3\n"
+"X-Generator: Zanata 3.5.1\n"
 
 # translation auto-copied from project Publican Common, version 3, document Feedback, author peartown
 #. Tag: title
@@ -23,17 +23,12 @@ msgstr "Potřebujeme zpětnou vazbu!"
 # translation auto-copied from project Publican Common, version 3, document Feedback, author peartown
 #. Tag: indexterm
 #, no-c-format
-msgid ""
-"<primary>feedback</primary> <secondary>contact information for this manual</"
-"secondary>"
-msgstr ""
-"<primary>zpětná vazba</primary> <secondary>kontaktní informace pro tento "
-"manuál</secondary>"
+msgid "<primary>feedback</primary> <secondary>contact information for this manual</secondary>"
+msgstr "<primary>zpětná vazba</primary> <secondary>kontaktní informace pro tento manuál</secondary>"
 
 # translation auto-copied from project Publican Common, version 3, document Feedback, author peartown
 #. Tag: para
 #, no-c-format
-msgid ""
-"You should over ride this by creating your own local Feedback.xml file."
-msgstr ""
-"Toto byste měli přepsat vaším vlastním lokálním souborem Feedback.xml."
+msgid "You should over ride this by creating your own local Feedback.xml file."
+msgstr "Toto byste měli přepsat vaším vlastním lokálním souborem Feedback.xml."
+

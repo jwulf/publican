@@ -37,6 +37,7 @@
     <locale map-from="lv-LV">lv</locale>
     <locale map-from="ml-IN">ml</locale>
     <locale map-from="mr-IN">mr</locale>
+    <locale map-from="ms-MY">ms</locale>
     <locale map-from="nb-NO">nb</locale>
     <locale map-from="nl-NL">nl</locale>
     <locale map-from="or-IN">or</locale>
@@ -53,6 +54,7 @@
     <locale>ta-IN</locale>
     <locale map-from="te-IN">te</locale>
     <locale map-from="th-TH">th</locale>
+    <locale map-from="tr-TR">tr</locale>
     <locale map-from="uk-UA">uk</locale>
     <locale map-from="zh-CN">zh-Hans-CN</locale>
     <locale map-from="zh-TW">zh-Hant-TW</locale>

@@ -1,5 +1,5 @@
 # AUTHOR <EMAIL@ADDRESS>, YEAR.
-# peartown <josef.hruska@upcmail.cz>, 2012. #zanata
+# Josef Hruška <josef.hruska@upcmail.cz>, 2012. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
@@ -8,11 +8,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "PO-Revision-Date: 2012-09-18 05:21-0400\n"
-"Last-Translator: peartown <josef.hruska@upcmail.cz>\n"
+"Last-Translator: Josef Hruška <josef.hruska@upcmail.cz>\n"
 "Language-Team: None\n"
 "Language: cs\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2\n"
-"X-Generator: Zanata 3.0.3\n"
+"X-Generator: Zanata 3.5.1\n"
 
 # translation auto-copied from project Publican Common, version 3, document Program_Listing, author peartown
 #. Tag: programlisting
@@ -57,3 +57,4 @@ msgstr ""
 "      System.out.println(\"Echo.echo('Hello') = \" + echo.echo(\"Hello\"));\n"
 "   }\n"
 "}"
+

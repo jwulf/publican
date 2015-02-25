@@ -14,7 +14,7 @@ msgstr ""
 "Language-Team: American English <kde-i18n-doc@kde.org>\n"
 "Language: ta-IN\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\\n;\n"
-"X-Generator: Zanata 3.0.3\n"
+"X-Generator: Zanata 3.5.1\n"
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: title
@@ -25,33 +25,8 @@ msgstr "ஆவண பெயரிடல்கள்"
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: para
 #, no-c-format
-msgid ""
-"This manual uses several conventions to highlight certain words and phrases "
-"and draw attention to specific pieces of information."
-msgstr ""
-"இந்த கையேடு பல்வேறு பெயரிடல்களை சில வார்த்தைகள் மற்றும் வாக்கியங்களை "
-"முன்னிலைப்படுத்தவும் குறிப்பிட்ட தகவலுக்கு கவனம் கொடுக்கவும் பயன்படுகிறது."
-
-# translation auto-copied from project Publican Common, version 3, document
-# Conventions
-#. Tag: para
-#, no-c-format
-msgid ""
-"In PDF and paper editions, this manual uses typefaces drawn from the <ulink "
-"url=\"https://fedorahosted.org/liberation-fonts/\">Liberation Fonts</ulink> "
-"set. The Liberation Fonts set is also used in HTML editions if the set is "
-"installed on your system. If not, alternative but equivalent typefaces are "
-"displayed. Note: Red Hat Enterprise Linux 5 and later include the Liberation "
-"Fonts set by default."
-msgstr ""
-"PDF மற்றும் தாள் பதிப்புகளில், இந்த கையேடு <ulink url=\"https://fedorahosted."
-"org/liberation-fonts/\">லிபரேஷன் எழுத்துருக்களை</ulink> செட்டிலிருந்து "
-"வரையப்பட்ட எழுத்துருக்களை பயன்படுத்துகிறது. இந்த செட் உங்கள் கணினியில் "
-"நிறுவப்பட்டிருந்தால், லிபரேஷன் எழுத்துருக்கள் செட் HTML பதிப்புகளிலும் "
-"பயன்படுத்தப்படும். அப்படி இல்லையெனில், மாற்றாக ஆனால் அதற்கு சமமான "
-"எழுத்துருக்கள் காட்டப்படும். குறிப்பு: Red Hat Enterprise Linux 5 மற்றும் "
-"அதற்கு அடுத்த பதிப்பில் முன்னிருப்பாக லிபரேஷன் எழுத்துருக்கள் "
-"சேர்க்கப்பட்டுள்ளன."
+msgid "This manual uses several conventions to highlight certain words and phrases and draw attention to specific pieces of information."
+msgstr "இந்த கையேடு பல்வேறு பெயரிடல்களை சில வார்த்தைகள் மற்றும் வாக்கியங்களை முன்னிலைப்படுத்தவும் குறிப்பிட்ட தகவலுக்கு கவனம் கொடுக்கவும் பயன்படுகிறது."
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: title
@@ -62,14 +37,8 @@ msgstr "டைப்போகிராஃபிக் பெயரிடல்�
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: para
 #, no-c-format
-msgid ""
-"Four typographic conventions are used to call attention to specific words "
-"and phrases. These conventions, and the circumstances they apply to, are as "
-"follows."
-msgstr ""
-"நான்கு டைப்போகிராபி பெயரிடல்கள் குறிப்பிட்ட வார்த்தைகள் அல்லது வாக்கியங்களை "
-"குறிப்பிட அழைக்க பயன்படுகிறது. இந்த பெயரிடல்கள் மற்றும் சூழ்நிலைகள் "
-"பின்வரும் இருக்கும்."
+msgid "Four typographic conventions are used to call attention to specific words and phrases. These conventions, and the circumstances they apply to, are as follows."
+msgstr "நான்கு டைப்போகிராபி பெயரிடல்கள் குறிப்பிட்ட வார்த்தைகள் அல்லது வாக்கியங்களை குறிப்பிட அழைக்க பயன்படுகிறது. இந்த பெயரிடல்கள் மற்றும் சூழ்நிலைகள் பின்வரும் இருக்கும்."
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: para
@@ -80,49 +49,26 @@ msgstr "<literal>மோனோ-இடைவெளி தடிமன்</literal>
 # translation auto-copied from project Publican Common, version 3, document Conventions, author Shantha kumar
 #. Tag: para
 #, no-c-format
-msgid ""
-"Used to highlight system input, including shell commands, file names and "
-"paths. Also used to highlight keys and key combinations. For example:"
-msgstr ""
-"ஷெல் கட்டளைகள், கோப்புப் பெயர்கள் மற்றும் பாதைகள் உள்ளிட்ட கணினி உள்ளீட்டைத் "
-"தனிப்படுத்தப் பயன்படுவது. பின்வரும் உதாரணத்தில் உள்ளது போன்ற விசைகள் மற்றும் "
-"விசைச் சேர்க்கைகளைத் தனிப்படுத்தவும் பயன்படுவது:"
+msgid "Used to highlight system input, including shell commands, file names and paths. Also used to highlight keys and key combinations. For example:"
+msgstr "ஷெல் கட்டளைகள், கோப்புப் பெயர்கள் மற்றும் பாதைகள் உள்ளிட்ட கணினி உள்ளீட்டைத் தனிப்படுத்தப் பயன்படுவது. பின்வரும் உதாரணத்தில் உள்ளது போன்ற விசைகள் மற்றும் விசைச் சேர்க்கைகளைத் தனிப்படுத்தவும் பயன்படுவது:"
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: para
 #, no-c-format
-msgid ""
-"To see the contents of the file <filename>my_next_bestselling_novel</"
-"filename> in your current working directory, enter the <command>cat "
-"my_next_bestselling_novel</command> command at the shell prompt and press "
-"<keycap>Enter</keycap> to execute the command."
-msgstr ""
-" உங்கள் நடப்பு வேலை செய்யும் அடைவில் <filename>my_next_bestselling_novel</"
-"filename> கோப்பு உள்ளடக்கத்தைப் பார்க்க <command>cat "
-"my_next_bestselling_novel</command> கட்டளையை கட்டளைவரியில் உள்ளிட்டு "
-"<keycap>Enter</keycap> ஐ அழுத்தி இதனை இயக்கவும். "
+msgid "To see the contents of the file <filename>my_next_bestselling_novel</filename> in your current working directory, enter the <command>cat my_next_bestselling_novel</command> command at the shell prompt and press <keycap>Enter</keycap> to execute the command."
+msgstr " உங்கள் நடப்பு வேலை செய்யும் அடைவில் <filename>my_next_bestselling_novel</filename> கோப்பு உள்ளடக்கத்தைப் பார்க்க <command>cat my_next_bestselling_novel</command> கட்டளையை கட்டளைவரியில் உள்ளிட்டு <keycap>Enter</keycap> ஐ அழுத்தி இதனை இயக்கவும். "
 
 # translation auto-copied from project Publican Common, version 3, document Conventions, author Shantha kumar
 #. Tag: para
 #, no-c-format
-msgid ""
-"The above includes a file name, a shell command and a key, all presented in "
-"mono-spaced bold and all distinguishable thanks to context."
-msgstr ""
-"மேலே குறிப்பிட்டதில், கோப்பின் பெயர், ஷெல் கட்டளை, விசை ஆகியவை அடங்கியுள்ளன. "
-"அனைத்தும் ஒற்றை இடைவெளியில் தடித்த எழுத்தில் தனிப்படுத்தி அறியக்கூடிய "
-"வகையில் அமைந்துள்ளது, உள்ளடக்கச் சூழலுக்கு நன்றி."
+msgid "The above includes a file name, a shell command and a key, all presented in mono-spaced bold and all distinguishable thanks to context."
+msgstr "மேலே குறிப்பிட்டதில், கோப்பின் பெயர், ஷெல் கட்டளை, விசை ஆகியவை அடங்கியுள்ளன. அனைத்தும் ஒற்றை இடைவெளியில் தடித்த எழுத்தில் தனிப்படுத்தி அறியக்கூடிய வகையில் அமைந்துள்ளது, உள்ளடக்கச் சூழலுக்கு நன்றி."
 
 # translation auto-copied from project Publican Common, version 3, document Conventions, author Shantha kumar
 #. Tag: para
 #, no-c-format
-msgid ""
-"Key combinations can be distinguished from an individual key by the plus "
-"sign that connects each part of a key combination. For example:"
-msgstr ""
-"விசைச் சேர்க்கையின் ஒவ்வொரு பகுதியையும் இணைக்கும் கூட்டல் குறியைக் கொண்டு, "
-"விசைச் சேர்க்கையை தனித்த விசையிலிருந்து வேறுபடுத்தி அறியலாம். "
-"எடுத்துக்காட்டு:"
+msgid "Key combinations can be distinguished from an individual key by the plus sign that connects each part of a key combination. For example:"
+msgstr "விசைச் சேர்க்கையின் ஒவ்வொரு பகுதியையும் இணைக்கும் கூட்டல் குறியைக் கொண்டு, விசைச் சேர்க்கையை தனித்த விசையிலிருந்து வேறுபடுத்தி அறியலாம். எடுத்துக்காட்டு:"
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: para
@@ -133,51 +79,26 @@ msgstr "<keycap>Enter</keycap>ஐ அழுத்தி கட்டளையை
 # translation auto-copied from project Publican Common, version 3, document Conventions, author Shantha kumar
 #. Tag: para
 #, no-c-format
-msgid ""
-"Press <keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap><keycap>F2</"
-"keycap></keycombo> to switch to a virtual terminal."
-msgstr ""
-"மெய்நிகர் சாதன முனைக்கு மாற <keycombo><keycap>Ctrl</keycap><keycap>Alt</"
-"keycap><keycap>F2</keycap></keycombo> ஐ அழுத்தவும்."
+msgid "Press <keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap><keycap>F2</keycap></keycombo> to switch to a virtual terminal."
+msgstr "மெய்நிகர் சாதன முனைக்கு மாற <keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap><keycap>F2</keycap></keycombo> ஐ அழுத்தவும்."
 
 # translation auto-copied from project Publican Common, version 3, document Conventions, author Shantha kumar
 #. Tag: para
 #, no-c-format
-msgid ""
-"The first example highlights a particular key to press. The second example "
-"highlights a key combination: a set of three keys pressed simultaneously."
-msgstr ""
-"முதல் எடுத்துக்காட்டு குறிப்பாக அழுத்த வேண்டிய விசையைத் தனிப்படுத்திக் "
-"காண்பிக்கிறது. இரண்டாம் எடுத்துக்காட்டு ஒரு விசைச் சேர்க்கையைத் "
-"தனிப்படுத்திக் காண்பிக்கிறது: அதாவது ஒரே சமயத்தில் அழுத்த வேண்டிய மூன்று "
-"விசைகளின் தொகுப்பு."
+msgid "The first example highlights a particular key to press. The second example highlights a key combination: a set of three keys pressed simultaneously."
+msgstr "முதல் எடுத்துக்காட்டு குறிப்பாக அழுத்த வேண்டிய விசையைத் தனிப்படுத்திக் காண்பிக்கிறது. இரண்டாம் எடுத்துக்காட்டு ஒரு விசைச் சேர்க்கையைத் தனிப்படுத்திக் காண்பிக்கிறது: அதாவது ஒரே சமயத்தில் அழுத்த வேண்டிய மூன்று விசைகளின் தொகுப்பு."
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: para
 #, no-c-format
-msgid ""
-"If source code is discussed, class names, methods, functions, variable names "
-"and returned values mentioned within a paragraph will be presented as above, "
-"in <literal>mono-spaced bold</literal>. For example:"
-msgstr ""
-"மூலக்குறியீடு விவாதிக்கப்பட்டால், வகுப்பு பெயர்கள், முறைகள், செயல்பாடுகள், "
-"மாறி பெயர்கள் மற்றும் கொடுக்கப்பட்ட மதிப்புகள் ஒரு பத்திக்குள் மேல் "
-"<literal>ஒற்றை இடைவெளி தடிமனில்</literal> குறிப்பிட்டது போல "
-"கொடுக்கப்பட்டிருக்கும். எடுத்துக்காட்டாக: "
+msgid "If source code is discussed, class names, methods, functions, variable names and returned values mentioned within a paragraph will be presented as above, in <literal>mono-spaced bold</literal>. For example:"
+msgstr "மூலக்குறியீடு விவாதிக்கப்பட்டால், வகுப்பு பெயர்கள், முறைகள், செயல்பாடுகள், மாறி பெயர்கள் மற்றும் கொடுக்கப்பட்ட மதிப்புகள் ஒரு பத்திக்குள் மேல் <literal>ஒற்றை இடைவெளி தடிமனில்</literal> குறிப்பிட்டது போல கொடுக்கப்பட்டிருக்கும். எடுத்துக்காட்டாக: "
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: para
 #, no-c-format
-msgid ""
-"File-related classes include <classname>filesystem</classname> for file "
-"systems, <classname>file</classname> for files, and <classname>dir</"
-"classname> for directories. Each class has its own associated set of "
-"permissions."
-msgstr ""
-"கோப்பு தொடர்பான வகுப்புகள் <classname>filesystem</classname> ஐ கோப்பு "
-"முறைமைக்கும், <classname>file</classname> ஐ கோப்புகளுக்கும் மற்றும் "
-"<classname>dir</classname>ஐ அடைவுகளுக்கும் கொண்டிருக்கும். ஒவ்வொரு வகுப்பும் "
-"அதன் சொந்த செட் அனுமதிகளை கொண்டிருக்கும்."
+msgid "File-related classes include <classname>filesystem</classname> for file systems, <classname>file</classname> for files, and <classname>dir</classname> for directories. Each class has its own associated set of permissions."
+msgstr "கோப்பு தொடர்பான வகுப்புகள் <classname>filesystem</classname> ஐ கோப்பு முறைமைக்கும், <classname>file</classname> ஐ கோப்புகளுக்கும் மற்றும் <classname>dir</classname>ஐ அடைவுகளுக்கும் கொண்டிருக்கும். ஒவ்வொரு வகுப்பும் அதன் சொந்த செட் அனுமதிகளை கொண்டிருக்கும்."
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: para
@@ -188,179 +109,67 @@ msgstr "<application>விகிதபடி தடிமன்</application>"
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: para
 #, no-c-format
-msgid ""
-"This denotes words or phrases encountered on a system, including application "
-"names; dialog-box text; labeled buttons; check-box and radio-button labels; "
-"menu titles and submenu titles. For example:"
-msgstr ""
-"இது ஒரு கணினியிலுள்ள வார்த்தைகள் அல்லது வாக்கியங்களை குறிக்கும், இது "
-"பயன்பாடு பெயர்கள்; உரையாடல் பெட்டி உரை; பெயரிடப்பட்ட பொத்தான்கள்; சோதனை "
-"பெட்டி மற்றும் ரேடியோ பொத்தான் பெயர்கள் மெனு தலைப்புகள் மற்றும் துணை மெனு "
-"தலைப்புகளை கொண்டிருக்கும். எடுத்துக்காட்டாக:"
+msgid "This denotes words or phrases encountered on a system, including application names; dialog-box text; labeled buttons; check-box and radio-button labels; menu titles and submenu titles. For example:"
+msgstr "இது ஒரு கணினியிலுள்ள வார்த்தைகள் அல்லது வாக்கியங்களை குறிக்கும், இது பயன்பாடு பெயர்கள்; உரையாடல் பெட்டி உரை; பெயரிடப்பட்ட பொத்தான்கள்; சோதனை பெட்டி மற்றும் ரேடியோ பொத்தான் பெயர்கள் மெனு தலைப்புகள் மற்றும் துணை மெனு தலைப்புகளை கொண்டிருக்கும். எடுத்துக்காட்டாக:"
 
 #. Tag: para
 #, no-c-format
-msgid ""
-"Choose <menuchoice><guimenu>System</guimenu><guisubmenu>Preferences</"
-"guisubmenu><guimenuitem>Mouse</guimenuitem></menuchoice> from the main menu "
-"bar to launch <application>Mouse Preferences</application>. In the "
-"<guilabel>Buttons</guilabel> tab, select the <guilabel>Left-handed mouse</"
-"guilabel> check box and click <guibutton>Close</guibutton> to switch the "
-"primary mouse button from the left to the right (making the mouse suitable "
-"for use in the left hand)."
-msgstr ""
-" <application>சொடுக்கி முன்னுரிமைகளை</application> தொடங்குவதற்காக பிரதான "
-"மெனுப்பட்டியிலிருந்து <menuchoice><guimenu>கணினி</"
-"guimenu><guisubmenu>முன்னுரிமைகள்</guisubmenu><guimenuitem>சொடுக்கி</"
-"guimenuitem></menuchoice> என்பதைத் தேர்ந்தெடுக்கவும். பிரதான சொடுக்கி "
-"பொத்தானை இடது புறத்திலிருந்து வலது புறத்திற்கு மாற்ற <guilabel>பொத்தான்கள்</"
-"guilabel> தாவலில் <guilabel>Leftஇடதுகை சொடுக்கி</guilabel> என்ற தேர்வுப் "
-"பெட்டியைத் தேர்ந்தெடுத்து <guibutton>மூடு</guibutton> என்பதைச் சொடுக்கவும் "
-"(இதனால் சொடுக்கியை இடதுகையால் பயன்படுத்துவது ஏதுவாகும்)."
+msgid "Choose <menuchoice><guimenu>System</guimenu><guisubmenu>Preferences</guisubmenu><guimenuitem>Mouse</guimenuitem></menuchoice> from the main menu bar to launch <application>Mouse Preferences</application>. In the <guilabel>Buttons</guilabel> tab, select the <guilabel>Left-handed mouse</guilabel> check box and click <guibutton>Close</guibutton> to switch the primary mouse button from the left to the right (making the mouse suitable for use in the left hand)."
+msgstr " <application>சொடுக்கி முன்னுரிமைகளை</application> தொடங்குவதற்காக பிரதான மெனுப்பட்டியிலிருந்து <menuchoice><guimenu>கணினி</guimenu><guisubmenu>முன்னுரிமைகள்</guisubmenu><guimenuitem>சொடுக்கி</guimenuitem></menuchoice> என்பதைத் தேர்ந்தெடுக்கவும். பிரதான சொடுக்கி பொத்தானை இடது புறத்திலிருந்து வலது புறத்திற்கு மாற்ற <guilabel>பொத்தான்கள்</guilabel> தாவலில் <guilabel>Leftஇடதுகை சொடுக்கி</guilabel> என்ற தேர்வுப் பெட்டியைத் தேர்ந்தெடுத்து <guibutton>மூடு</guibutton> என்பதைச் சொடுக்கவும் (இதனால் சொடுக்கியை இடதுகையால் பயன்படுத்துவது ஏதுவாகும்)."
 
 # translation auto-copied from project Publican Common, version 3, document Conventions, author Shantha kumar
 #. Tag: para
 #, no-c-format
-msgid ""
-"To insert a special character into a <application>gedit</application> file, "
-"choose <menuchoice><guimenu>Applications</guimenu><guisubmenu>Accessories</"
-"guisubmenu><guimenuitem>Character Map</guimenuitem></menuchoice> from the "
-"main menu bar. Next, choose <menuchoice><guimenu>Search</"
-"guimenu><guimenuitem>Find…</guimenuitem></menuchoice> from the "
-"<application>Character Map</application> menu bar, type the name of the "
-"character in the <guilabel>Search</guilabel> field and click "
-"<guibutton>Next</guibutton>. The character you sought will be highlighted in "
-"the <guilabel>Character Table</guilabel>. Double-click this highlighted "
-"character to place it in the <guilabel>Text to copy</guilabel> field and "
-"then click the <guibutton>Copy</guibutton> button. Now switch back to your "
-"document and choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Paste</"
-"guimenuitem></menuchoice> from the <application>gedit</application> menu bar."
-""
-msgstr ""
-"ஒரு <application>gedit</application> கோப்பில் ஒரு சிறப்பு எழுத்துக்குறியைச் "
-"செருக பிரதான மெனுப் பட்டியில் இருந்து <menuchoice><guimenu>பயன்பாடுகள்</"
-"guimenu><guisubmenu>துணைக்கருவிகள்</guisubmenu><guimenuitem>எழுத்துக்குறி "
-"மேப்</guimenuitem></menuchoice> எனபதைத் தேர்வு செய்யவும். பிறகு  "
-"<application>எழுத்துக்குறி மேப்</application> மெனுப் பட்டியில் இருந்து "
-"<menuchoice><guimenu>தேடு</guimenu><guimenuitem>கண்டறி…</guimenuitem></"
-"menuchoice> என்பதைத் தேர்வு செய்து <guilabel>தேடு</guilabel> புலத்தில் "
-"எழுத்துக்குறியின் பெயரைத் தட்டச்சு செய்து <guibutton>அடுத்து</guibutton> "
-"என்பதைக் கிளிக் செய்யவும். நீங்கள் தேடிய எழுத்துக்குறி "
-"<guilabel>எழுத்துக்குறி அட்டவணையில்</guilabel> தனிப்படுத்திக் "
-"காண்பிக்கப்படும். <guilabel>நகலெடுக்க வேண்டிய உரை</guilabel> புலத்தில் அந்த "
-"எழுத்துக்குறியைச் செருக தனிப்படுத்திக் காண்பிக்கப்பட்ட எழுத்துக்குறியை "
-"இருகிளிக் செய்து பிறகு <guibutton>நகலெடு</guibutton> பொத்தானைக் கிளிக் "
-"செய்யவும். இப்போது மீண்டும் உங்கள் ஆவணத்திற்குச் சென்று <application>gedit</"
-"application> மெனுப்பட்டியில் இருந்து <menuchoice><guimenu>திருத்து</"
-"guimenu><guimenuitem>ஒட்டு</guimenuitem></menuchoice> என்பதைத் தேர்வு "
-"செய்யவும்."
+msgid "To insert a special character into a <application>gedit</application> file, choose <menuchoice><guimenu>Applications</guimenu><guisubmenu>Accessories</guisubmenu><guimenuitem>Character Map</guimenuitem></menuchoice> from the main menu bar. Next, choose <menuchoice><guimenu>Search</guimenu><guimenuitem>Find…</guimenuitem></menuchoice> from the <application>Character Map</application> menu bar, type the name of the character in the <guilabel>Search</guilabel> field and click <guibutton>Next</guibutton>. The character you sought will be highlighted in the <guilabel>Character Table</guilabel>. Double-click this highlighted character to place it in the <guilabel>Text to copy</guilabel> field and then click the <guibutton>Copy</guibutton> button. Now switch back to your document and choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Paste</guimenuitem></menuchoice> from the <application>gedit</application> menu bar."
+msgstr "ஒரு <application>gedit</application> கோப்பில் ஒரு சிறப்பு எழுத்துக்குறியைச் செருக பிரதான மெனுப் பட்டியில் இருந்து <menuchoice><guimenu>பயன்பாடுகள்</guimenu><guisubmenu>துணைக்கருவிகள்</guisubmenu><guimenuitem>எழுத்துக்குறி மேப்</guimenuitem></menuchoice> எனபதைத் தேர்வு செய்யவும். பிறகு  <application>எழுத்துக்குறி மேப்</application> மெனுப் பட்டியில் இருந்து <menuchoice><guimenu>தேடு</guimenu><guimenuitem>கண்டறி…</guimenuitem></menuchoice> என்பதைத் தேர்வு செய்து <guilabel>தேடு</guilabel> புலத்தில் எழுத்துக்குறியின் பெயரைத் தட்டச்சு செய்து <guibutton>அடுத்து</guibutton> என்பதைக் கிளிக் செய்யவும். நீங்கள் தேடிய எழுத்துக்குறி <guilabel>எழுத்துக்குறி அட்டவணையில்</guilabel> தனிப்படுத்திக் காண்பிக்கப்படும். <guilabel>நகலெடுக்க வேண்டிய உரை</guilabel> புலத்தில் அந்த எழுத்துக்குறியைச் செருக தனிப்படுத்திக் காண்பிக்கப்பட்ட எழுத்துக்குறியை இருகிளிக் செய்து பிறகு <guibutton>நகலெடு</guibutton> பொத்தானைக் கிளிக் செய்யவும். இப்போது மீண்டும் உங்கள் ஆவணத்திற்குச் சென்று <application>gedit</application> மெனுப்பட்டியில் இருந்து <menuchoice><guimenu>திருத்து</guimenu><guimenuitem>ஒட்டு</guimenuitem></menuchoice> என்பதைத் தேர்வு செய்யவும்."
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: para
 #, no-c-format
-msgid ""
-"The above text includes application names; system-wide menu names and items; "
-"application-specific menu names; and buttons and text found within a GUI "
-"interface, all presented in proportional bold and all distinguishable by "
-"context."
-msgstr ""
-"மேலே உள்ள உரை பயன்பாடு பெயர்கள்; கணினி மெனு பெயர்கள் மற்றும் உருப்படிகள்; "
-"பயன்பாடு குறிப்பிடும் மெனு பெயர்கள் மற்றும் பொத்தான்கள் மற்றும் வரைகலை "
-"முகப்பில் இருக்கும் உரைகள் ஆகியவற்றை கொண்டிருக்கும், அனைத்தும் விகிதப்படி "
-"தடிமன் மற்றும் சூழலில் மாறுப்பட்டிருக்கும். "
+msgid "The above text includes application names; system-wide menu names and items; application-specific menu names; and buttons and text found within a GUI interface, all presented in proportional bold and all distinguishable by context."
+msgstr "மேலே உள்ள உரை பயன்பாடு பெயர்கள்; கணினி மெனு பெயர்கள் மற்றும் உருப்படிகள்; பயன்பாடு குறிப்பிடும் மெனு பெயர்கள் மற்றும் பொத்தான்கள் மற்றும் வரைகலை முகப்பில் இருக்கும் உரைகள் ஆகியவற்றை கொண்டிருக்கும், அனைத்தும் விகிதப்படி தடிமன் மற்றும் சூழலில் மாறுப்பட்டிருக்கும். "
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: para
 #, no-c-format
-msgid ""
-"<command><replaceable>Mono-spaced Bold Italic</replaceable></command> or "
-"<application><replaceable>Proportional Bold Italic</replaceable></"
-"application>"
-msgstr ""
-"<command><replaceable>Mono-spaced Bold Italic</replaceable></command> அல்லது "
-"<application><replaceable>Proportional Bold Italic</replaceable></"
-"application>"
+msgid "<command><replaceable>Mono-spaced Bold Italic</replaceable></command> or <application><replaceable>Proportional Bold Italic</replaceable></application>"
+msgstr "<command><replaceable>Mono-spaced Bold Italic</replaceable></command> அல்லது <application><replaceable>Proportional Bold Italic</replaceable></application>"
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: para
 #, no-c-format
-msgid ""
-"Whether mono-spaced bold or proportional bold, the addition of italics "
-"indicates replaceable or variable text. Italics denotes text you do not "
-"input literally or displayed text that changes depending on circumstance. "
-"For example:"
-msgstr ""
-"மோனோ இடைவெளியிடப்பட்ட தடிமன் அல்லது விகிதப்படி தடிமன், சாய்வு மாற்றக்கூடிய "
-"அல்லது மாறி உரையை குறிக்கிறது. சாய்வு நீங்கள் உள்ளிடும் உரையை அல்லது "
-"சூழ்நிலைக்கு ஏற்றவாறு காட்டப்படும் உரையை குறிக்கிறது. எடுத்துக்காட்டாக:"
+msgid "Whether mono-spaced bold or proportional bold, the addition of italics indicates replaceable or variable text. Italics denotes text you do not input literally or displayed text that changes depending on circumstance. For example:"
+msgstr "மோனோ இடைவெளியிடப்பட்ட தடிமன் அல்லது விகிதப்படி தடிமன், சாய்வு மாற்றக்கூடிய அல்லது மாறி உரையை குறிக்கிறது. சாய்வு நீங்கள் உள்ளிடும் உரையை அல்லது சூழ்நிலைக்கு ஏற்றவாறு காட்டப்படும் உரையை குறிக்கிறது. எடுத்துக்காட்டாக:"
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: para
 #, no-c-format
-msgid ""
-"To connect to a remote machine using ssh, type <command>ssh "
-"<replaceable>username</replaceable>@<replaceable>domain.name</replaceable></"
-"command> at a shell prompt. If the remote machine is <filename>example.com</"
-"filename> and your username on that machine is john, type <command>ssh "
-"john@example.com</command>."
-msgstr ""
-"sshஐ பயன்படுத்தி தொலை கணினியை இணைக்க, <command>ssh <replaceable>username</"
-"replaceable>@<replaceable>domain.name</replaceable></command> என கட்டளை "
-"வரியில் தட்டச்சு செய்யவும். தொலை கணினி <filename>example.com</filename> "
-"என்றும் பயனர் பெயல் john என்றால், <command>ssh john@example.com</command> என "
-"தட்டச்சு செய்யவும்."
+msgid "To connect to a remote machine using ssh, type <command>ssh <replaceable>username</replaceable>@<replaceable>domain.name</replaceable></command> at a shell prompt. If the remote machine is <filename>example.com</filename> and your username on that machine is john, type <command>ssh john@example.com</command>."
+msgstr "sshஐ பயன்படுத்தி தொலை கணினியை இணைக்க, <command>ssh <replaceable>username</replaceable>@<replaceable>domain.name</replaceable></command> என கட்டளை வரியில் தட்டச்சு செய்யவும். தொலை கணினி <filename>example.com</filename> என்றும் பயனர் பெயல் john என்றால், <command>ssh john@example.com</command> என தட்டச்சு செய்யவும்."
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: para
 #, no-c-format
-msgid ""
-"The <command>mount -o remount <replaceable>file-system</replaceable></"
-"command> command remounts the named file system. For example, to remount the "
-"<filename>/home</filename> file system, the command is <command>mount -o "
-"remount /home</command>."
-msgstr ""
-"<command>mount -o remount <replaceable>file-system</replaceable></command> "
-"கட்டளை பெயரிடப்பட்ட கோப்பு முறைமையை மறு ஏற்றம் செய்யும். எடுத்துக்காட்டாக, "
-"<filename>/home</filename> கோப்பு முறைமையை மறு ஏற்றம் செய்ய <command>mount -"
-"o remount /home</command> கட்டளையாகும்."
+msgid "The <command>mount -o remount <replaceable>file-system</replaceable></command> command remounts the named file system. For example, to remount the <filename>/home</filename> file system, the command is <command>mount -o remount /home</command>."
+msgstr "<command>mount -o remount <replaceable>file-system</replaceable></command> கட்டளை பெயரிடப்பட்ட கோப்பு முறைமையை மறு ஏற்றம் செய்யும். எடுத்துக்காட்டாக, <filename>/home</filename> கோப்பு முறைமையை மறு ஏற்றம் செய்ய <command>mount -o remount /home</command> கட்டளையாகும்."
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: para
 #, no-c-format
-msgid ""
-"To see the version of a currently installed package, use the <command>rpm -q "
-"<replaceable>package</replaceable></command> command. It will return a "
-"result as follows: <command><replaceable>package-version-release</"
-"replaceable></command>."
-msgstr ""
-"தற்போது நிறுவப்பட்ட தொகுப்புகளின் பதிப்பை பார்க்க,<command>rpm -q "
-"<replaceable>package</replaceable></command> கட்டளையை பயன்படுத்தவும். இது "
-"பின்வரும் தீர்வை கொடுக்கும்: <command><replaceable>package-version-release</"
-"replaceable></command>."
+msgid "To see the version of a currently installed package, use the <command>rpm -q <replaceable>package</replaceable></command> command. It will return a result as follows: <command><replaceable>package-version-release</replaceable></command>."
+msgstr "தற்போது நிறுவப்பட்ட தொகுப்புகளின் பதிப்பை பார்க்க,<command>rpm -q <replaceable>package</replaceable></command> கட்டளையை பயன்படுத்தவும். இது பின்வரும் தீர்வை கொடுக்கும்: <command><replaceable>package-version-release</replaceable></command>."
 
 # translation auto-copied from project Publican Common, version 3, document Conventions, author Shantha kumar
 #. Tag: para
 #, no-c-format
-msgid ""
-"Note the words in bold italics above: username, domain.name, file-system, "
-"package, version and release. Each word is a placeholder, either for text "
-"you enter when issuing a command or for text displayed by the system."
-msgstr ""
-"மேலே தடித்த எழுத்திலும் சாய்ந்த எழுத்திலும் உள்ள சொற்களைக் கவனிக்கவும் — "
-"பயனர் பெயர், ஆட்களப் பெயர், கோப்பு-முறைமை, தொகுப்பு, பதிப்பு மற்றும் "
-"வெளியீடு. ஒவ்வொரு சொல்லும் ஒரு பதிலீட்டிடமாகும், அவை நீங்கள் ஒரு கட்டளையை "
-"அல்லது உரையை உள்ளிடும் போது அல்லது கணினி ஏதேனும் உரையைக் காண்பிக்கும் போது "
-"பயனப்டுத்தப் போகும் சொற்களுக்கு பதிலாக இடம்பெற்றுள்ளன."
+msgid "Note the words in bold italics above: username, domain.name, file-system, package, version and release. Each word is a placeholder, either for text you enter when issuing a command or for text displayed by the system."
+msgstr "மேலே தடித்த எழுத்திலும் சாய்ந்த எழுத்திலும் உள்ள சொற்களைக் கவனிக்கவும் — பயனர் பெயர், ஆட்களப் பெயர், கோப்பு-முறைமை, தொகுப்பு, பதிப்பு மற்றும் வெளியீடு. ஒவ்வொரு சொல்லும் ஒரு பதிலீட்டிடமாகும், அவை நீங்கள் ஒரு கட்டளையை அல்லது உரையை உள்ளிடும் போது அல்லது கணினி ஏதேனும் உரையைக் காண்பிக்கும் போது பயனப்டுத்தப் போகும் சொற்களுக்கு பதிலாக இடம்பெற்றுள்ளன."
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: para
 #, no-c-format
-msgid ""
-"Aside from standard usage for presenting the title of a work, italics "
-"denotes the first use of a new and important term. For example:"
-msgstr ""
-"தரப்படுத்தப்பட்ட பயன்பாட்டிலிருந்து ஒரு வேலைக்கு தலைப்பு, சாய்வாக "
-"குறிக்கப்படுவது ஒரு புதிய மற்றும் முக்கியமான சொல்லாகும். எடுத்துக்காட்டாக:"
+msgid "Aside from standard usage for presenting the title of a work, italics denotes the first use of a new and important term. For example:"
+msgstr "தரப்படுத்தப்பட்ட பயன்பாட்டிலிருந்து ஒரு வேலைக்கு தலைப்பு, சாய்வாக குறிக்கப்படுவது ஒரு புதிய மற்றும் முக்கியமான சொல்லாகும். எடுத்துக்காட்டாக:"
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: para
@@ -377,43 +186,28 @@ msgstr "புல்-கோட் பெயரிடல்கள்"
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: para
 #, no-c-format
-msgid ""
-"Terminal output and source code listings are set off visually from the "
-"surrounding text."
-msgstr ""
-"முனைய வெளிப்பாடு மற்றும் மூலக்குறியீடு பட்டியல்கள் சுற்றியுள்ள உரையிலிருந்து "
-"பார்வை நீக்கப்படுகிறது."
+msgid "Terminal output and source code listings are set off visually from the surrounding text."
+msgstr "முனைய வெளிப்பாடு மற்றும் மூலக்குறியீடு பட்டியல்கள் சுற்றியுள்ள உரையிலிருந்து பார்வை நீக்கப்படுகிறது."
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: para
 #, no-c-format
-msgid ""
-"Output sent to a terminal is set in <computeroutput>mono-spaced roman</"
-"computeroutput> and presented thus:"
-msgstr ""
-"ஒரு முனையத்திற்கு அனுப்பப்பட்ட வெளிப்பாடு <computeroutput>Mono-spaced Roman</"
-"computeroutput> இல் அமைப்பட்ட அங்கிருக்கும்:"
+msgid "Output sent to a terminal is set in <computeroutput>mono-spaced roman</computeroutput> and presented thus:"
+msgstr "ஒரு முனையத்திற்கு அனுப்பப்பட்ட வெளிப்பாடு <computeroutput>Mono-spaced Roman</computeroutput> இல் அமைப்பட்ட அங்கிருக்கும்:"
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: screen
 #, no-c-format
-msgid ""
-"books        Desktop   documentation  drafts  mss    photos   stuff  svn\n"
+msgid "books        Desktop   documentation  drafts  mss    photos   stuff  svn\n"
 "books_tests  Desktop1  downloads      images  notes  scripts  svgs"
-msgstr ""
-"books        Desktop   documentation  drafts  mss    photos   stuff  svn\n"
+msgstr "books        Desktop   documentation  drafts  mss    photos   stuff  svn\n"
 "books_tests  Desktop1  downloads      images  notes  scripts  svgs"
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: para
 #, no-c-format
-msgid ""
-"Source-code listings are also set in <computeroutput>mono-spaced roman</"
-"computeroutput> but add syntax highlighting as follows:"
-msgstr ""
-"மூலக்குறியீடு பட்டியலிடப்பட்டிருப்பதும் <computeroutput>Mono-spaced Roman</"
-"computeroutput>இல் அமைக்கப்பட்டிருக்கும் ஆனால் பின்வருவது போல இலக்கண "
-"முன்னிலைப்படுத்தப்பட்டிருக்கும்:"
+msgid "Source-code listings are also set in <computeroutput>mono-spaced roman</computeroutput> but add syntax highlighting as follows:"
+msgstr "மூலக்குறியீடு பட்டியலிடப்பட்டிருப்பதும் <computeroutput>Mono-spaced Roman</computeroutput>இல் அமைக்கப்பட்டிருக்கும் ஆனால் பின்வருவது போல இலக்கண முன்னிலைப்படுத்தப்பட்டிருக்கும்:"
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: title
@@ -424,45 +218,31 @@ msgstr "குறிப்புகள் மற்றும் எச்சர�
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: para
 #, no-c-format
-msgid ""
-"Finally, we use three visual styles to draw attention to information that "
-"might otherwise be overlooked."
-msgstr ""
-"கடைசியாக, நாம் மூன்று விசுவல் தோற்றங்களை ஒரு தகவலை பெற கவனம் செலுத்த "
-"வேண்டும் அல்லது அது தவிர்க்கப்படும்."
+msgid "Finally, we use three visual styles to draw attention to information that might otherwise be overlooked."
+msgstr "கடைசியாக, நாம் மூன்று விசுவல் தோற்றங்களை ஒரு தகவலை பெற கவனம் செலுத்த வேண்டும் அல்லது அது தவிர்க்கப்படும்."
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: para
 #, no-c-format
-msgid ""
-"Notes are tips, shortcuts or alternative approaches to the task at hand. "
-"Ignoring a note should have no negative consequences, but you might miss out "
-"on a trick that makes your life easier."
-msgstr ""
-"ஒரு குறிப்பு என்பது ஒரு துணுக்கு அல்லது குறுக்குவழி அல்லது பணிக்கான மாற்று "
-"வழியாகும். ஒரு குறிப்பை தவிர்த்தால் எந்த பாதிப்பும் ஏற்படாது ஆனால் எளிதாக "
-"செய்ய வேண்டியதை இழக்க வேண்டியதிருக்கும்."
+msgid "Notes are tips, shortcuts or alternative approaches to the task at hand. Ignoring a note should have no negative consequences, but you might miss out on a trick that makes your life easier."
+msgstr "ஒரு குறிப்பு என்பது ஒரு துணுக்கு அல்லது குறுக்குவழி அல்லது பணிக்கான மாற்று வழியாகும். ஒரு குறிப்பை தவிர்த்தால் எந்த பாதிப்பும் ஏற்படாது ஆனால் எளிதாக செய்ய வேண்டியதை இழக்க வேண்டியதிருக்கும்."
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: para
 #, no-c-format
-msgid ""
-"Important boxes detail things that are easily missed: configuration changes "
-"that only apply to the current session, or services that need restarting "
-"before an update will apply. Ignoring a box labeled “Important” will not "
-"cause data loss but may cause irritation and frustration."
-msgstr ""
-"முக்கியமான பெட்டிகள் விவர பொருட்கள் எளிதாக விடுப்பட்டது: கட்டமைப்பு "
-"மாற்றங்கள் மட்டுமே நடப்பு அமர்வில் செயல்படுத்தப்படும் அல்லது சேவைகள் "
-"மேம்படுத்துவதற்கு முன் மறுதுவக்கப்பட வேண்டும். 'முக்கியமான' பெட்டிகளை "
-"தவிர்த்தல் தரவு இழப்பை ஏற்படுத்தாது ஆனால் மன உளச்சலை ஏற்படுத்தும்."
+msgid "Important boxes detail things that are easily missed: configuration changes that only apply to the current session, or services that need restarting before an update will apply. Ignoring a box labeled “Important” will not cause data loss but may cause irritation and frustration."
+msgstr "முக்கியமான பெட்டிகள் விவர பொருட்கள் எளிதாக விடுப்பட்டது: கட்டமைப்பு மாற்றங்கள் மட்டுமே நடப்பு அமர்வில் செயல்படுத்தப்படும் அல்லது சேவைகள் மேம்படுத்துவதற்கு முன் மறுதுவக்கப்பட வேண்டும். 'முக்கியமான' பெட்டிகளை தவிர்த்தல் தரவு இழப்பை ஏற்படுத்தாது ஆனால் மன உளச்சலை ஏற்படுத்தும்."
 
 # translation auto-copied from project Publican Common, version 3, document Conventions
 #. Tag: para
 #, no-c-format
-msgid ""
-"Warnings should not be ignored. Ignoring warnings will most likely cause "
-"data loss."
-msgstr ""
-"ஒரு எச்சரிக்கை தவிர்க்கப்படக் கூடாது. எச்சரிக்கைகள் தவிர்த்தல் தரவு இழத்தலை "
-"ஏற்படுத்தும்."
+msgid "Warnings should not be ignored. Ignoring warnings will most likely cause data loss."
+msgstr "ஒரு எச்சரிக்கை தவிர்க்கப்படக் கூடாது. எச்சரிக்கைகள் தவிர்த்தல் தரவு இழத்தலை ஏற்படுத்தும்."
+
+# translation auto-copied from project Publican Common, version 3, document
+# Conventions
+#. Tag: para
+#, no-c-format
+#~ msgid "In PDF and paper editions, this manual uses typefaces drawn from the <ulink url=\"https://fedorahosted.org/liberation-fonts/\">Liberation Fonts</ulink> set. The Liberation Fonts set is also used in HTML editions if the set is installed on your system. If not, alternative but equivalent typefaces are displayed. Note: Red Hat Enterprise Linux 5 and later include the Liberation Fonts set by default."
+#~ msgstr "PDF மற்றும் தாள் பதிப்புகளில், இந்த கையேடு <ulink url=\"https://fedorahosted.org/liberation-fonts/\">லிபரேஷன் எழுத்துருக்களை</ulink> செட்டிலிருந்து வரையப்பட்ட எழுத்துருக்களை பயன்படுத்துகிறது. இந்த செட் உங்கள் கணினியில் நிறுவப்பட்டிருந்தால், லிபரேஷன் எழுத்துருக்கள் செட் HTML பதிப்புகளிலும் பயன்படுத்தப்படும். அப்படி இல்லையெனில், மாற்றாக ஆனால் அதற்கு சமமான எழுத்துருக்கள் காட்டப்படும். குறிப்பு: Red Hat Enterprise Linux 5 மற்றும் அதற்கு அடுத்த பதிப்பில் முன்னிருப்பாக லிபரேஷன் எழுத்துருக்கள் சேர்க்கப்பட்டுள்ளன."
+

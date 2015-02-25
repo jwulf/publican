@@ -15,7 +15,7 @@ msgstr ""
 "Language-Team: Japanese <fedora-trans-ja@redhat.com>\n"
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0\n"
-"X-Generator: Zanata 3.0.3\n"
+"X-Generator: Zanata 3.5.1\n"
 
 # translation auto-copied from project Publican Common, version 3, document Feedback
 #. Tag: title
@@ -26,14 +26,12 @@ msgstr "フィードバック"
 # translation auto-copied from project Publican Common, version 3, document Feedback, author ykatabam
 #. Tag: indexterm
 #, no-c-format
-msgid ""
-"<primary>feedback</primary> <secondary>contact information for this manual</"
-"secondary>"
+msgid "<primary>feedback</primary> <secondary>contact information for this manual</secondary>"
 msgstr "<primary>フィードバック</primary> <secondary>本ガイドについてのご連絡先</secondary>"
 
 # translation auto-copied from project Publican Common, version 3, document Feedback, author ykatabam
 #. Tag: para
 #, no-c-format
-msgid ""
-"You should over ride this by creating your own local Feedback.xml file."
+msgid "You should over ride this by creating your own local Feedback.xml file."
 msgstr "ローカルの Feedback.xml ファイルを作成して、このファイルを上書きする必要があります。"
+

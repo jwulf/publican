@@ -15,7 +15,7 @@ msgstr ""
 "Language-Team: Assamese\n"
 "Language: as\n"
 "Plural-Forms: nplurals=2; plural=(n!=1)\n"
-"X-Generator: Zanata 3.0.3\n"
+"X-Generator: Zanata 3.5.1\n"
 
 # translation auto-copied from project Publican Common, version 3, document Feedback, author ngoswami
 #. Tag: title
@@ -26,18 +26,12 @@ msgstr "আমাক সহাঁৰিৰ প্ৰয়োজন!"
 # translation auto-copied from project Publican Common, version 3, document Feedback, author ngoswami
 #. Tag: indexterm
 #, no-c-format
-msgid ""
-"<primary>feedback</primary> <secondary>contact information for this manual</"
-"secondary>"
-msgstr ""
-"<primary>সহাঁৰি</primary> <secondary>এই হাতপুথিৰ বাবে যোগাযোগৰ তথ্য</"
-"secondary>"
+msgid "<primary>feedback</primary> <secondary>contact information for this manual</secondary>"
+msgstr "<primary>সহাঁৰি</primary> <secondary>এই হাতপুথিৰ বাবে যোগাযোগৰ তথ্য</secondary>"
 
 # translation auto-copied from project Publican Common, version 3, document Feedback, author ngoswami
 #. Tag: para
 #, no-c-format
-msgid ""
-"You should over ride this by creating your own local Feedback.xml file."
-msgstr ""
-"আপুনি ইয়াক আপোনাৰ নিজৰ স্থানীয় Feedback.xml ফাইল সৃষ্টি কৰি অভাৰৰাইড কৰিব "
-"লাগে।"
+msgid "You should over ride this by creating your own local Feedback.xml file."
+msgstr "আপুনি ইয়াক আপোনাৰ নিজৰ স্থানীয় Feedback.xml ফাইল সৃষ্টি কৰি অভাৰৰাইড কৰিব লাগে।"
+

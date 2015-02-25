@@ -12,7 +12,7 @@ msgstr ""
 "Language-Team: Fedora Indonesia <trans-id@lists.fedoraproject.org>\n"
 "Language: id\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Zanata 3.0.3\n"
+"X-Generator: Zanata 3.5.1\n"
 
 # translation auto-copied from project Publican Common, version 3, document Feedback
 #. Tag: title
@@ -22,16 +22,12 @@ msgstr "Kami Membutuhkan Umpan Balik!"
 
 #. Tag: indexterm
 #, no-c-format
-msgid ""
-"<primary>feedback</primary> <secondary>contact information for this manual</"
-"secondary>"
+msgid "<primary>feedback</primary> <secondary>contact information for this manual</secondary>"
 msgstr ""
 
 # translation auto-copied from project Publican Common, version 3, document Feedback
 #. Tag: para
 #, no-c-format
-msgid ""
-"You should over ride this by creating your own local Feedback.xml file."
-msgstr ""
-"Anda lebih baik menimpanya dengan membuat berkas Feedback.xml lokal anda "
-"sendiri."
+msgid "You should over ride this by creating your own local Feedback.xml file."
+msgstr "Anda lebih baik menimpanya dengan membuat berkas Feedback.xml lokal anda sendiri."
+

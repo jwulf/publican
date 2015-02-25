@@ -14,7 +14,7 @@ msgstr ""
 "Language-Team: Oriya <oriya-it@googlegroups.com>\n"
 "Language: or\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
-"X-Generator: Zanata 3.0.3\n"
+"X-Generator: Zanata 3.5.1\n"
 
 # translation auto-copied from project Publican Common, version 3, document Feedback
 #. Tag: title
@@ -25,16 +25,12 @@ msgstr "ଆମେ ପ୍ରତିକ୍ରିୟା ଆବଶ୍ଯକ କରୁ
 # translation auto-copied from project Publican Common, version 3, document Feedback
 #. Tag: indexterm
 #, no-c-format
-msgid ""
-"<primary>feedback</primary> <secondary>contact information for this manual</"
-"secondary>"
-msgstr ""
-"<primary>ପ୍ରତିକ୍ରିୟା</primary> <secondary>ଏହି ମେନ୍ଯୁଆଲ ପାଇଁ ଯୋଗାଯୋଗ ସୂଚନା</"
-"secondary>"
+msgid "<primary>feedback</primary> <secondary>contact information for this manual</secondary>"
+msgstr "<primary>ପ୍ରତିକ୍ରିୟା</primary> <secondary>ଏହି ମେନ୍ଯୁଆଲ ପାଇଁ ଯୋଗାଯୋଗ ସୂଚନା</secondary>"
 
 # translation auto-copied from project Publican Common, version 3, document Feedback
 #. Tag: para
 #, no-c-format
-msgid ""
-"You should over ride this by creating your own local Feedback.xml file."
+msgid "You should over ride this by creating your own local Feedback.xml file."
 msgstr "ଆପଣ ନିଜର Feedback.xml file ନିର୍ମାଣ କରି ଏହାକୁ ନବଲିଖନ କରିପାରିବେ।"
+

@@ -13,7 +13,7 @@ msgstr ""
 "Language-Team: Bulgarian <>\n"
 "Language: bg\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"X-Generator: Zanata 3.0.3\n"
+"X-Generator: Zanata 3.5.1\n"
 
 # translation auto-copied from project Publican Common, version 3, document Feedback
 #. Tag: title
@@ -24,17 +24,12 @@ msgstr "Нуждаем се от обратна връзка!"
 # translation auto-copied from project Publican Common, version 3, document Feedback
 #. Tag: indexterm
 #, no-c-format
-msgid ""
-"<primary>feedback</primary> <secondary>contact information for this manual</"
-"secondary>"
-msgstr ""
-"<primary>обратна връзка</primary> <secondary>информация за връзка относно "
-"този наръчник</secondary>"
+msgid "<primary>feedback</primary> <secondary>contact information for this manual</secondary>"
+msgstr "<primary>обратна връзка</primary> <secondary>информация за връзка относно този наръчник</secondary>"
 
 # translation auto-copied from project Publican Common, version 3, document Feedback
 #. Tag: para
 #, no-c-format
-msgid ""
-"You should over ride this by creating your own local Feedback.xml file."
-msgstr ""
-"Трябва да презапишете това като създадете свой собствен Feedback.xml файл."
+msgid "You should over ride this by creating your own local Feedback.xml file."
+msgstr "Трябва да презапишете това като създадете свой собствен Feedback.xml файл."
+

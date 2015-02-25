@@ -15,7 +15,7 @@ msgstr ""
 "Language-Team: German <i18@redhat.com>\n"
 "Language: de-CH\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"X-Generator: Zanata 3.0.3\n"
+"X-Generator: Zanata 3.5.1\n"
 
 # translation auto-copied from project Publican Common, version 3, document Feedback
 #. Tag: title
@@ -26,18 +26,12 @@ msgstr "Wir freuen uns auf Ihr Feedback!"
 # translation auto-copied from project Publican Common, version 3, document Feedback
 #. Tag: indexterm
 #, no-c-format
-msgid ""
-"<primary>feedback</primary> <secondary>contact information for this manual</"
-"secondary>"
-msgstr ""
-"<primary>Feedback</primary> <secondary>Kontaktinformationen für dieses "
-"Handbuch</secondary>"
+msgid "<primary>feedback</primary> <secondary>contact information for this manual</secondary>"
+msgstr "<primary>Feedback</primary> <secondary>Kontaktinformationen für dieses Handbuch</secondary>"
 
 # translation auto-copied from project Publican Common, version 3, document Feedback
 #. Tag: para
 #, no-c-format
-msgid ""
-"You should over ride this by creating your own local Feedback.xml file."
-msgstr ""
-"Sie sollten dies durch die Erstellung Ihrer eigenen lokalen Feedback.xml -"
-"Datei überschreiben."
+msgid "You should over ride this by creating your own local Feedback.xml file."
+msgstr "Sie sollten dies durch die Erstellung Ihrer eigenen lokalen Feedback.xml -Datei überschreiben."
+

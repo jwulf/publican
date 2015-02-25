@@ -13,7 +13,7 @@ msgstr ""
 "Language-Team: Sinhala <en@li.org>\n"
 "Language: si\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Zanata 3.0.3\n"
+"X-Generator: Zanata 3.5.1\n"
 
 # translation auto-copied from project Publican Common, version 3, document Feedback
 #. Tag: title
@@ -24,15 +24,11 @@ msgstr "අපට ප්‍රථිචාර අවශ්‍යයි!"
 # translation auto-copied from project Publican Common, version 3, document Feedback
 #. Tag: indexterm
 #, no-c-format
-msgid ""
-"<primary>feedback</primary> <secondary>contact information for this manual</"
-"secondary>"
-msgstr ""
-"<primary>ප්‍රථිචාරය</primary> <secondary>මෙම අත්පොත සඳහා සම්බන්ධතා තොරතුරු</"
-"secondary>"
+msgid "<primary>feedback</primary> <secondary>contact information for this manual</secondary>"
+msgstr "<primary>ප්‍රථිචාරය</primary> <secondary>මෙම අත්පොත සඳහා සම්බන්ධතා තොරතුරු</secondary>"
 
 #. Tag: para
 #, no-c-format
-msgid ""
-"You should over ride this by creating your own local Feedback.xml file."
+msgid "You should over ride this by creating your own local Feedback.xml file."
 msgstr ""
+

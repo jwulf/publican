@@ -13,7 +13,7 @@ msgstr ""
 "Language-Team: Bengali INDIA <fedora-trans-bn_IN@redhat.com>\n"
 "Language: bn-IN\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Zanata 3.0.3\n"
+"X-Generator: Zanata 3.5.1\n"
 
 # translation auto-copied from project Publican Common, version 3, document Feedback
 #. Tag: title
@@ -24,16 +24,12 @@ msgstr "আপনার মতামত আমাদের নিশ্চয় �
 # translation auto-copied from project Publican Common, version 3, document Feedback
 #. Tag: indexterm
 #, no-c-format
-msgid ""
-"<primary>feedback</primary> <secondary>contact information for this manual</"
-"secondary>"
-msgstr ""
-"<primary>মতামত</primary> <secondary>এই সহায়ক-পুস্তিকা সম্বন্ধে যোগাযোগের "
-"তথ্য</secondary>"
+msgid "<primary>feedback</primary> <secondary>contact information for this manual</secondary>"
+msgstr "<primary>মতামত</primary> <secondary>এই সহায়ক-পুস্তিকা সম্বন্ধে যোগাযোগের তথ্য</secondary>"
 
 # translation auto-copied from project Publican Common, version 3, document Feedback
 #. Tag: para
 #, no-c-format
-msgid ""
-"You should over ride this by creating your own local Feedback.xml file."
+msgid "You should over ride this by creating your own local Feedback.xml file."
 msgstr "এই ফাইলটি অগ্রাহ্য করার জন্য নিজস্ব Feedback.xml ফাইল নির্মাণ করুন।"
+

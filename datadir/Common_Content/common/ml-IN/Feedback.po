@@ -13,7 +13,7 @@ msgstr ""
 "Language-Team: <en@li.org>\n"
 "Language: ml\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"X-Generator: Zanata 3.0.3\n"
+"X-Generator: Zanata 3.5.1\n"
 
 # translation auto-copied from project Publican Common, version 3, document Feedback
 #. Tag: title
@@ -24,17 +24,12 @@ msgstr "നിങ്ങളുടെ അഭിപ്രായം ദയവായ�
 # translation auto-copied from project Publican Common, version 3, document Feedback
 #. Tag: indexterm
 #, no-c-format
-msgid ""
-"<primary>feedback</primary> <secondary>contact information for this manual</"
-"secondary>"
-msgstr ""
-"<primary>അഭിപ്രായം</primary> <secondary>ഈ മാനുവലിലേക്കു് ബന്ധപ്പെടുവാനുള്ള "
-"വിവരങ്ങള്‍</secondary>"
+msgid "<primary>feedback</primary> <secondary>contact information for this manual</secondary>"
+msgstr "<primary>അഭിപ്രായം</primary> <secondary>ഈ മാനുവലിലേക്കു് ബന്ധപ്പെടുവാനുള്ള വിവരങ്ങള്‍</secondary>"
 
 # translation auto-copied from project Publican Common, version 3, document Feedback
 #. Tag: para
 #, no-c-format
-msgid ""
-"You should over ride this by creating your own local Feedback.xml file."
-msgstr ""
-"നിങ്ങള്‍ സ്വന്തമായി ഒരു Feedback.xml ഫയല്‍ ഉണ്ടാക്കി ഇതിനെ മാറ്റി എഴുതുക."
+msgid "You should over ride this by creating your own local Feedback.xml file."
+msgstr "നിങ്ങള്‍ സ്വന്തമായി ഒരു Feedback.xml ഫയല്‍ ഉണ്ടാക്കി ഇതിനെ മാറ്റി എഴുതുക."
+

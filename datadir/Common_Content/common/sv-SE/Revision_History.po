@@ -11,7 +11,7 @@ msgstr ""
 "Language-Team: None\n"
 "Language: sv\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"X-Generator: Zanata 3.0.3\n"
+"X-Generator: Zanata 3.5.1\n"
 
 # translation auto-copied from project Publican Common, version 3, document Revision_History
 #. Tag: title
@@ -33,3 +33,4 @@ msgstr ""
 #, no-c-format
 msgid "Publican 3.0"
 msgstr ""
+

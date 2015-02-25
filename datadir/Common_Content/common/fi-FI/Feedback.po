@@ -12,7 +12,7 @@ msgstr ""
 "Language-Team: Finnish <gnome-fi-laatu@lists.sourceforge.net>\n"
 "Language: fi\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Zanata 3.0.3\n"
+"X-Generator: Zanata 3.5.1\n"
 
 # translation auto-copied from project Publican Common, version 3, document Feedback
 #. Tag: title
@@ -23,16 +23,12 @@ msgstr "Tarvitsemme palautetta!"
 # translation auto-copied from project Publican Common, version 3, document Feedback
 #. Tag: indexterm
 #, no-c-format
-msgid ""
-"<primary>feedback</primary> <secondary>contact information for this manual</"
-"secondary>"
-msgstr ""
-"<primary>palaute</primary> <secondary>tämän oppaan tekijöiden yhteystiedot</"
-"secondary>"
+msgid "<primary>feedback</primary> <secondary>contact information for this manual</secondary>"
+msgstr "<primary>palaute</primary> <secondary>tämän oppaan tekijöiden yhteystiedot</secondary>"
 
 # translation auto-copied from project Publican Common, version 3, document Feedback
 #. Tag: para
 #, no-c-format
-msgid ""
-"You should over ride this by creating your own local Feedback.xml file."
+msgid "You should over ride this by creating your own local Feedback.xml file."
 msgstr "Tämä kannattaa korvata tekemällä oma Feedback.xml-tiedosto."
+

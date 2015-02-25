@@ -11,7 +11,7 @@ msgstr ""
 "Language-Team: None\n"
 "Language: lv\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : 2)\n"
-"X-Generator: Zanata 3.0.3\n"
+"X-Generator: Zanata 3.5.1\n"
 
 #. Tag: programlisting
 #, no-c-format
@@ -36,3 +36,4 @@ msgid ""
 "   }\n"
 "}"
 msgstr ""
+

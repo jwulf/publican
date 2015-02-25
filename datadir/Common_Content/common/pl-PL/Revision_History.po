@@ -11,9 +11,8 @@ msgstr ""
 "Last-Translator: raven <piotrdrag@gmail.com>\n"
 "Language-Team: None\n"
 "Language: pl\n"
-"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
-"|| n%100>=20) ? 1 : 2)\n"
-"X-Generator: Zanata 3.0.3\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+"X-Generator: Zanata 3.5.1\n"
 
 # translation auto-copied from project Publican Common, version 3, document Revision_History
 #. Tag: title
@@ -38,3 +37,4 @@ msgstr "Fearn"
 #, no-c-format
 msgid "Publican 3.0"
 msgstr "Publican 3.0"
+

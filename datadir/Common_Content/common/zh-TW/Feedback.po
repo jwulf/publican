@@ -3,6 +3,7 @@
 # Terry Chuang <terry.chuang@redhat.com>, 2007.
 # Terry Chuang <tchuang@redhat.com>, 2008, 2009.
 # translation of Feedback.po to
+# Chester Cheng <ccheng@redhat.com>, 2014. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
@@ -10,12 +11,12 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2009-12-02 10:17-0500\n"
-"Last-Translator: Terry Chuang <tchuang@redhat.com>\n"
+"PO-Revision-Date: 2014-10-02 11:37-0400\n"
+"Last-Translator: Chester Cheng <ccheng@redhat.com>\n"
 "Language-Team: Traditional Chinese <zh@li.org>\n"
 "Language: zh-Hant-TW\n"
 "Plural-Forms: nplurals=1; plural=0\n"
-"X-Generator: Zanata 3.0.3\n"
+"X-Generator: Zanata 3.5.1\n"
 
 # translation auto-copied from project Publican Common, version 3, document Feedback
 #. Tag: title
@@ -26,14 +27,12 @@ msgstr "我們需要您的意見！"
 # translation auto-copied from project Publican Common, version 3, document Feedback
 #. Tag: indexterm
 #, no-c-format
-msgid ""
-"<primary>feedback</primary> <secondary>contact information for this manual</"
-"secondary>"
+msgid "<primary>feedback</primary> <secondary>contact information for this manual</secondary>"
 msgstr "<primary>意見</primary> <secondary>本指南的連絡人資訊</secondary>"
 
 # translation auto-copied from project Publican Common, version 3, document Feedback
 #. Tag: para
 #, no-c-format
-msgid ""
-"You should over ride this by creating your own local Feedback.xml file."
-msgstr "您應該透過建立您自己的本機 Feedback.xml 檔案來將其覆寫。"
+msgid "You should over ride this by creating your own local Feedback.xml file."
+msgstr "您應該透過建立您自己的本機 <filename>Feedback.xml</filename> 檔案來將其覆寫。"
+

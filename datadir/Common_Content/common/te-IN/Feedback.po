@@ -13,7 +13,7 @@ msgstr ""
 "Language-Team: Telugu <en@li.org>\n"
 "Language: te\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
-"X-Generator: Zanata 3.0.3\n"
+"X-Generator: Zanata 3.5.1\n"
 
 # translation auto-copied from project Publican Common, version 3, document Feedback
 #. Tag: title
@@ -24,18 +24,12 @@ msgstr "మాకు మీ ప్రతిస్పందన అవసరం!"
 # translation auto-copied from project Publican Common, version 3, document Feedback
 #. Tag: indexterm
 #, no-c-format
-msgid ""
-"<primary>feedback</primary> <secondary>contact information for this manual</"
-"secondary>"
-msgstr ""
-"<primary>ప్రతిస్పందన</primary> <secondary>ఈ మాన్యువల్ కొరకు సంప్రదింపు "
-"సమాచారం</secondary>"
+msgid "<primary>feedback</primary> <secondary>contact information for this manual</secondary>"
+msgstr "<primary>ప్రతిస్పందన</primary> <secondary>ఈ మాన్యువల్ కొరకు సంప్రదింపు సమాచారం</secondary>"
 
 # translation auto-copied from project Publican Common, version 3, document Feedback
 #. Tag: para
 #, no-c-format
-msgid ""
-"You should over ride this by creating your own local Feedback.xml file."
-msgstr ""
-"మీరు మీస్వంత స్థానిక Feedback.xml ఫైలును సృష్టించుట ద్వారా దీనిని ఓవర్‌రైడ్ "
-"చేయాలి."
+msgid "You should over ride this by creating your own local Feedback.xml file."
+msgstr "మీరు మీస్వంత స్థానిక Feedback.xml ఫైలును సృష్టించుట ద్వారా దీనిని ఓవర్‌రైడ్ చేయాలి."
+
