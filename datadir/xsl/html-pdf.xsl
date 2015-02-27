@@ -6,7 +6,6 @@
 				exclude-result-prefixes="exsl">
 
 <xsl:import href="http://docbook.sourceforge.net/release/xsl/current/xhtml/docbook.xsl"/>
-<xsl:import href="http://docbook.sourceforge.net/release/xsl/current/xhtml/titlepage.xsl"/>
 <xsl:import href="defaults.xsl"/>
 <xsl:import href="xhtml-common.xsl"/>
 
