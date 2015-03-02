@@ -115,7 +115,7 @@
 					Yes. If you make a directory named <filename>files</filename> in your source language directory it will be included in any tarballs or SRPM packages that <application>Publican</application> creates.
 				</para>
 				 <important>
-					<info xml:id="info-Publican-Users_Guide-Important">
+					<info>
 						<title>Important</title>
 
 					</info>
