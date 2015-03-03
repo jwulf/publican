@@ -9,6 +9,7 @@ $next UNRELEASED
 - Fix PDF builds ignoring overrides.css and lang.css. BZ #1165005
 - Pulled in new/updated translations. BZ #1169605
 - Removed duplicate IDs from PUG. BZ #1197523
+- Removed the titlepage.xsl import from html-single due to breaking the xsl precedence. BZ #1187728
 
 4.2.6 Tue Oct 21 2014
 - Fix External_Links translation not merging. BZ #1153911
