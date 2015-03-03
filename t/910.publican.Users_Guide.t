@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 
-use Test::More tests => 5;
+use Test::More tests => 3;
 use File::pushd;
 use Cwd qw(abs_path cwd);
 
@@ -31,19 +31,7 @@ my $result;
 $result = system( @perl_args, $publican, 'print_tree', @common_opts );
 is( $result, 0, 'Run print_tree' );
 
-$result = system( @perl_args, $publican, 'update_pot', @common_opts );
-is( $result, 0, 'Update POT file' );
-
-# TODO rebuild all translation when we get some
-$result = system(
-    @perl_args,  $publican,    'update_po',   '--langs',
-    'de-DE',     @common_opts, '--firstname', 'Dude',
-    '--surname', 'McPants',    '--email',     'dudeM@example.com'
-);
-
-is( $result, 0, 'Update German PO files' );
-
-$result = system( @perl_args, $publican, 'build', '--formats', 'html', '--langs', 'de-DE',
+$result = system( @perl_args, $publican, 'build', '--formats', 'html', '--langs', 'en-US',
     @common_opts );
 
 is( $result, 0, 'build the Users Guide' );

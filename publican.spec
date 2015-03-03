@@ -53,7 +53,7 @@ BuildRequires:  perl(Archive::Tar) => 1.84
 BuildRequires:  perl(Archive::Zip)
 # Not reall required, but sometimes koji pulls in a conflicting dep...
 BuildRequires:  perl(Compress::Zlib) => 2.030
-BuildRequires:  perl(Locale::Maketext::Gettext) >= 1.27-1.2
+BuildRequires:  perl-Locale-Maketext-Gettext >= 1.27-1.2
 BuildRequires:  perl(Carp)
 BuildRequires:  perl(Config::Simple)
 BuildRequires:  perl(Cwd)
@@ -115,7 +115,7 @@ BuildRequires:  rpm-build libicu-devel
 
 # Most of these are handled automatically
 Requires:       perl(:MODULE_COMPAT_%(eval "`%{__perl} -V:version`"; echo $version))
-Requires:       perl(Locale::Maketext::Gettext)  >= 1.27-1.2
+Requires:       perl-Locale-Maketext-Gettext  >= 1.27-1.2
 Requires:       rpm-build
 Requires:       docbook-style-xsl >= 1.77.1
 Requires:       perl(XML::LibXML)  >=  1.70
@@ -251,10 +251,10 @@ find $RPM_BUILD_ROOT -depth -type d -exec rmdir {} 2>/dev/null \;
 
 %{_fixperms} $RPM_BUILD_ROOT/*
 
-sed -i -e 's|@@FILE@@|%{_docdir}/%{name}-doc-%{version}/en-US/index.html|' %{name}.desktop
-sed -i -e 's|@@ICON@@|%{_docdir}/%{name}-doc-%{version}/en-US/images/icon.svg|' %{name}.desktop
-sed -i -e 's|@@FILE@@|%{_docdir}/%{name}-releasenotes-%{version}/en-US/index.html|' %{name}-releasenotes.desktop
-sed -i -e 's|@@ICON@@|%{_docdir}/%{name}-releasenotes-%{version}/en-US/images/icon.svg|' %{name}-releasenotes.desktop
+sed -i -e 's|@@FILE@@|%{_docdir}/%{name}-doc%{!?_docdir_fmt:-%{version}}/en-US/index.html|' %{name}.desktop
+sed -i -e 's|@@ICON@@|%{_docdir}/%{name}-doc%{!?_docdir_fmt:-%{version}}/en-US/images/icon.svg|' %{name}.desktop
+sed -i -e 's|@@FILE@@|%{_docdir}/%{name}-releasenotes%{!?_docdir_fmt:-%{version}}/en-US/index.html|' %{name}-releasenotes.desktop
+sed -i -e 's|@@ICON@@|%{_docdir}/%{name}-releasenotes%{!?_docdir_fmt:-%{version}}/en-US/images/icon.svg|' %{name}-releasenotes.desktop
 
 desktop-file-install --vendor="%{my_vendor}" --dir=$RPM_BUILD_ROOT%{_datadir}/applications %{name}.desktop
 desktop-file-install --vendor="%{my_vendor}" --dir=$RPM_BUILD_ROOT%{_datadir}/applications %{name}-releasenotes.desktop

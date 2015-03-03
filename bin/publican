@@ -81,7 +81,7 @@ my $bash_comp    = undef;
 my $ver = $VERSION;
 $ver =~ s/v//g;
 my @pod_paths
-    = ( './pod1', Publican::ConfigData->config('docdir') . "/publican-$ver" );
+    = ( './pod1', Publican::ConfigData->config('docdir') . "/publican-$ver", Publican::ConfigData->config('docdir') . "/publican" );
 
 # Global options
 my %opts = (
