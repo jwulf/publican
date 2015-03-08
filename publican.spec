@@ -33,7 +33,7 @@ BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch:      noarch
 Provides:       publican-common = %{version}
 Provides:       publican-common-db5 = %{version}
-Provides:       publican-API = 4.2.9
+Provides:       publican-API = 4.1
 
 # Get rid of the old packages
 Obsoletes:      perl-Publican-WebSite

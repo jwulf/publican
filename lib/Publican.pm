@@ -33,7 +33,7 @@ $VERSION = version->declare('v4.2.9');
     = qw(dir_list debug_msg get_all_langs logger help_config maketext new_tree dtd_string rcopy dircopy fcopy rcopy_glob fmove dirmove params_as_docbook);
 
 # Track when the SPEC file generation is incompatible.
-$SPEC_VERSION = '4.2.9';
+$SPEC_VERSION = '4.1';
 
 my $DEFAULT_CONFIG_FILE = 'publican.cfg';
 my $DEBUG               = undef;
