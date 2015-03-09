@@ -1,10 +1,6 @@
 @import url("Font-Awesome-4.2.0/css/font-awesome.min.css");
 @import url("site_overrides.css");
 
-body {
-    padding-top: 37px !important;
-}
-
 #menu {
     color: #EEEEEE;
     left: 0;
@@ -12,7 +8,7 @@ body {
     top: 0;
     width: 100%;
     z-index: 999;
-    border-bottom: none !important;
+    border-bottom: none;
 }
 
 #menu:after {
@@ -55,7 +51,7 @@ body[dir="rtl"] #langauge_menu {
 */
 
 #menu ul {
-    list-style: none outside none !important;
+    list-style: none outside none;
     margin: 0;
     min-width: 100%;
     padding: 0;
@@ -71,7 +67,7 @@ body[dir="rtl"] #langauge_menu {
     text-decoration: none;
     white-space: nowrap;
     cursor: pointer;
-    transition: all .2s ease-out !important;
+    transition: all .2s ease-out;
 }
 
 #menu a:hover,
@@ -79,12 +75,12 @@ body[dir="rtl"] #langauge_menu {
 #lang_menu_2:hover > div,
 #book_format_menu:hover > div,
 #book_lang_menu:hover > div {
-    background-color: #3c6eb4 !important;
-    color: #fff !important;
+    background-color: #3c6eb4;
+    color: #fff;
 }
 
 #menu a:hover {
-  color: #FFFFFF !important;
+  color: #FFFFFF;
 }
 
 /* Breadcrumb & Other Menus */
@@ -133,11 +129,11 @@ body[dir="rtl"] #book_format_menu {
 #lang_menu_2 > ul,
 #book_format_menu > ul,
 #book_lang_menu > ul {
-    z-index: -1 !important;
+    z-index: -1;
     margin: 0;
-    margin-top: -20px !important;
-    padding-top: 20px !important;
-    background-color: #c4d0e3 !important;
+    margin-top: -20px;
+    padding-top: 20px;
+    background-color: #c4d0e3;
     left: 0;
     position: absolute;
     top: 100%;
@@ -192,7 +188,7 @@ body[dir="rtl"] #search_box {
     display: block;
     float: left;
     height: 26px;
-    margin: 2px 3px !important;
+    margin: 2px 3px;
     padding: 0;
     width: 190px;
 }
@@ -231,7 +227,7 @@ body.menu_embeded {
 }
 .untranslated, .srcnewer {
     font-style: italic;
-    background: none !important;
+    background: none;
 } 
 ul.toc {
     padding: 0;
