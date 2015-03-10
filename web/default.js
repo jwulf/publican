@@ -393,13 +393,13 @@ function loadMenu(){
 				html = 	html +	'<div class="breadcrumb">' + home_link + '</div>';
             }
 			html = 	html +	'<div id="lang_menu" class="breadcrumb"><a href="' + toc_path + '/index.html">' + labels["site"]["title"] + '</a></div>';
-			html = 	html +	'<div id="product_menu" class="breadcrumb" onmouseover="work=1; expand_menu(\'product_menu_list\');" onmouseout="work=1; retract_menu(\'product_menu_list\');">' + prod_label + '</div>';
+			html = 	html +	'<div id="product_menu" class="breadcrumb">' + prod_label + '</div>';
 			if(typeof current_version != "undefined" && current_version != '') {
-				html = 	html +	'<div id="version_menu" class="breadcrumb" onmouseover="work=1; expand_menu(\'version_menu_list\');" onmouseout="work=1; retract_menu(\'version_menu_list\');">' + current_version + '</div>';
+				html = 	html +	'<div id="version_menu" class="breadcrumb">' + current_version + '</div>';
 				if(typeof current_book != "undefined" && current_book != '') {
-					html = 	html +	'<div id="book_menu" class="breadcrumb" onmouseover="work=1; expand_menu(\'book_menu_list\');" onmouseout="work=1; retract_menu(\'book_menu_list\');">' + current_book + '</div>';
-					html = 	html +	'<div id="book_format_menu" onmouseover="work=1; expand_menu(\'book_format_menu_list\');" onmouseout="work=1; retract_menu(\'book_format_menu_list\');"></div>';
-					html = 	html +	'<div id="book_lang_menu" onmouseover="work=1; expand_menu(\'book_lang_menu_list\');" onmouseout="work=1; retract_menu(\'book_lang_menu_list\');"></div>';
+					html = 	html +	'<div id="book_menu" class="breadcrumb">' + current_book + '</div>';
+					html = 	html +	'<div id="book_format_menu"></div>';
+					html = 	html +	'<div id="book_lang_menu"></div>';
 				}
 			}
 			html = 	html +	'<div id="search_box"></div>';

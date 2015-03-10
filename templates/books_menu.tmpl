@@ -8,7 +8,11 @@
 <ul id="book_menu_list">
 [%- FOREACH book_name = books %]
   <li [% IF lang != book_list.${book_name}.lang %]class="untranslated [% lang %]"[% END %]>
-	[% INCLUDE anchor.tmpl host=host lang=lang booklang=book_list.${book_name}.lang product=product version=book_list.${book_name}.version format=book_list.${book_name}.base_format book=book_list.${book_name}.book name=book_list.${book_name}.book_clean srcnewer=book_list.${book_name}.srcnewer %]
+	[%- IF book_list.${book_name}.external -%]
+		[%- INCLUDE anchor.tmpl uri=book_list.${book_name}.uri lang=lang booklang=book_list.${book_name}.lang name=book_list.${book_name}.book_clean format="external"subtitle=book_list.${book_name}.subtitle icon=1 -%]
+	[%- ELSE -%]
+		[% INCLUDE anchor.tmpl host=host lang=lang booklang=book_list.${book_name}.lang product=product version=book_list.${book_name}.version format=book_list.${book_name}.base_format book=book_list.${book_name}.book name=book_list.${book_name}.book_clean srcnewer=book_list.${book_name}.srcnewer %]
+	[%- END %]
   </li>
 [%- END %]
 </ul>

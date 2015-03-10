@@ -25,7 +25,7 @@
     <div class="bottom_books[% IF lang != booker.value.lang %] untranslated [% lang %][% END %]">
 		<div class="titles">
       [%- IF booker.value.external -%]
-	      [% INCLUDE anchor.tmpl uri=booker.value.uri lang=lang booklang=booker.value.lang name=booker.value.name subtitle=booker.value.subtitle format="external" %]
+	      [% INCLUDE anchor.tmpl uri=booker.value.uri lang=lang booklang=booker.value.lang name=booker.value.name subtitle=booker.value.subtitle format="external" icon=1 %]
       [%- ELSE -%]
 	      [% INCLUDE anchor.tmpl host=host lang=lang booklang=booker.value.lang product=product version=booker.value.version format=booker.value.base_format book=booker.value.book name=booker.value.book_clean subtitle=booker.value.subtitle srcnewer=booker.value.srcnewer %]
       [%- END -%]

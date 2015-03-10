@@ -9,7 +9,11 @@
 	[% text = text _ " <span class='srcnewer'>${trans_strings.SrcIsNewer}</span>" %]
 [% END %]
 [% IF subtitle %]
-	[% text = text _ " <span class='subtitle'>${subtitle}</span>" %]
+    [%- IF format == 'external' %]
+		[% text = text _ " <span class='subtitle'>${subtitle} <i class=\"fa fa-external-link\"></i></span>" %]
+    [%- ELSE %]
+		[% text = text _ " <span class='subtitle'>${subtitle}</span>" %]
+	[% END %]
 [% END %]
 [% END %]
 
@@ -18,7 +22,7 @@
      [%- ELSIF format == 'epub' %]
         <a [% IF class %]class="[% class %]" [% END %] href="[% host %]/[% booklang %]/[% product %]/[% version %]/[%format %]/[% book %]/[% product %]-[% version %]-[% book %]-[% booklang %].[% format %]" [% IF title %]title="[% title %]"[% END %]>[% text %][% IF icon %]<i class="fa fa-tablet"></i>[% END %]</a>
      [%- ELSIF format == 'external' %]
-        <a class="external[% IF class %] [% class %] [% END %]" href="[% uri %]" [% IF title %]title="[% title %]"[% END %]>[% text %][% IF icon %]<i class="fa fa-external-link"></i>[% END %]</a>
+        <a class="external[% IF class %] [% class %] [% END %]" href="[% uri %]" [% IF title %]title="[% title %]"[% END %]>[% text %][% IF icon and not subtitle %] <i class="fa fa-external-link"></i>[% END %]</a>
      [%- ELSIF format == 'rss' %]
         <a class="rss[% IF class %] [% class %][% END %]" href="[% uri %]" [% IF title %]title="[% title %]"[% END %]>[% text %]<i class="fa fa-rss"></i></a>
      [%- ELSIF format == 'html-single' %]

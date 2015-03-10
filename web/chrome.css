@@ -91,6 +91,15 @@ body[dir="rtl"] #langauge_menu {
     text-indent: 6px;
 }
 
+#menu li {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+#menu li a {
+	padding-top: 0.75em;
+}
+
 .breadcrumb {
     float: left;
     position: relative;

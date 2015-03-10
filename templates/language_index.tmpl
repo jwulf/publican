@@ -185,7 +185,7 @@ $(document).ready(function() {
 						<div class="bottom_books[% IF lang != booker.lang %] untranslated [% lang %][% END %]">
 							<div class="titles">
 							[%- IF booker.external -%]
-								[%- INCLUDE anchor.tmpl uri=booker.uri lang=lang booklang=booker.lang name=booker.name subtitle=booker.subtitle format="external" -%]
+								[%- INCLUDE anchor.tmpl uri=booker.uri lang=lang booklang=booker.lang name=booker.name subtitle=booker.subtitle format="external" icon=1 -%]
 							[%- ELSIF subtitles -%]
 								[%- INCLUDE anchor.tmpl host=host lang=lang booklang=booker.lang product=prod version=booker.version format=booker.base_format book=booker.book name=booker.book_clean subtitle=booker.subtitle srcnewer=booker.srcnewer -%]
 							[%- ELSE -%]
