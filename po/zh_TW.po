@@ -7,6 +7,7 @@
 # Chester Cheng <ccheng@redhat.com>, 2014. #zanata
 # snowlet <snowlet@fedoraproject.org>, 2014. #zanata
 # tchuang <tchuang@redhat.com>, 2014. #zanata
+# Chester Cheng <ccheng@redhat.com>, 2015. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -14,12 +15,12 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2014-10-03 01:03-0400\n"
-"Last-Translator: tchuang <tchuang@redhat.com>\n"
+"PO-Revision-Date: 2015-01-12 07:44-0500\n"
+"Last-Translator: Chester Cheng <ccheng@redhat.com>\n"
 "Language-Team: Chinese (Traditional, Taiwan)\n"
 "Language: zh-Hant-TW\n"
 "Plural-Forms: nplurals=1; plural=0\n"
-"X-Generator: Zanata 3.4.2\n"
+"X-Generator: Zanata 3.5.1\n"
 
 #: lib/Publican/TreeView.pm:197
 msgid "\n"
@@ -110,7 +111,7 @@ msgstr ""
 #: bin/publican:937
 #: bin/publican:940
 msgid "%1 is a required argument"
-msgstr ""
+msgstr "%1 乃必要的引數"
 
 #. ('members')
 #. ('firstname')
@@ -123,7 +124,7 @@ msgstr ""
 #: lib/Publican.pm:1481
 #: lib/Publican.pm:1484
 msgid "%1 is a required option for add_revision"
-msgstr ""
+msgstr "%1 乃 add_revision 的一個必要引數"
 
 #. ($action)
 #: bin/publican:657
@@ -254,7 +255,7 @@ msgstr ""
 
 #: lib/Publican/WebSite.pm:225
 msgid "All"
-msgstr ""
+msgstr "所有類別"
 
 #. ($lang)
 #: lib/Publican/Builder/DocBook.pm:153
@@ -773,7 +774,7 @@ msgstr ""
 
 #: lib/Publican/WebSite.pm:224
 msgid "EPUB"
-msgstr ""
+msgstr "EPUB"
 
 #. ($attr)
 #: lib/Publican/XmlClean.pm:664
@@ -1011,7 +1012,7 @@ msgstr ""
 
 #: lib/Publican/Builder/DocBook.pm:1117
 msgid "FOP error, PDF generation failed. Check log for details."
-msgstr ""
+msgstr "FOP 發生錯誤，產生 PDF 失敗。詳情請檢查日誌檔。"
 
 #. ($rpmbuild,$!)
 #: lib/Publican/Builder.pm:476
@@ -1151,7 +1152,7 @@ msgstr "美術編輯"
 
 #: lib/Publican/WebSite.pm:221
 msgid "HTML (Recommended)"
-msgstr ""
+msgstr "HTML（建議）"
 
 #: lib/Publican/WebSite.pm:156
 msgid "HTML to inject in to the footer of every page on the website."
@@ -1426,7 +1427,7 @@ msgstr ""
 
 #: lib/Publican/WebSite.pm:223
 msgid "PDF"
-msgstr ""
+msgstr "PDF"
 
 #. ($po_file)
 #: lib/Publican/Builder/DocBook4.pm:202
@@ -1639,14 +1640,12 @@ msgid "Search"
 msgstr "搜尋"
 
 #: lib/Publican/WebSite.pm:219
-#, fuzzy
 msgid "Select a category"
-msgstr "捲動至類別"
+msgstr "選擇類別"
 
 #: lib/Publican/WebSite.pm:218
-#, fuzzy
 msgid "Select a version"
-msgstr "選擇您的版本"
+msgstr "選擇版本"
 
 #: lib/Publican.pm:277
 msgid "Semicolon-separated list of menu categories for the desktop package."
@@ -1678,7 +1677,7 @@ msgstr ""
 
 #: lib/Publican/WebSite.pm:222
 msgid "Single-page HTML"
-msgstr ""
+msgstr "單頁 HTML"
 
 #: bin/publican:550
 msgid "Site options"
@@ -1818,7 +1817,7 @@ msgstr ""
 
 #: lib/Publican.pm:292
 msgid "The font to use for body text in PDFs."
-msgstr ""
+msgstr "用於 PDF 本文中的字體。"
 
 #: lib/Publican.pm:296
 msgid "The font to use for mono text in PDFs."

@@ -4,6 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # rlandmann <rlandmann@fedoraproject.org>, 2013. #zanata
 # anipeter <anipeter@fedoraproject.org>, 2014. #zanata
+# anipeter <anipeter@fedoraproject.org>, 2015. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -11,43 +12,44 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2014-10-03 12:51-0400\n"
+"PO-Revision-Date: 2015-01-13 04:57-0500\n"
 "Last-Translator: anipeter <anipeter@fedoraproject.org>\n"
 "Language-Team: Malayalam\n"
 "Language: ml\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"X-Generator: Zanata 3.4.2\n"
+"X-Generator: Zanata 3.5.1\n"
 
 #: lib/Publican/TreeView.pm:197
 msgid "\n"
 "No unused XML files"
-msgstr ""
+msgstr "\n"
+"ഉപയോഗിയ്ക്കാത്ത എക്സ്എംഎല്‍ ഫയലുകളില്ല"
 
 #: bin/publican:822
 msgid "$ cd path/to/brand"
-msgstr ""
+msgstr "$ cd path/to/brand"
 
 #: bin/publican:823
 msgid "$ publican build --formats=xml --langs=all --publish"
-msgstr ""
+msgstr "$ publican build --formats=xml --langs=all --publish"
 
 #: bin/publican:828
 msgid "$ publican install_brand --web --path=/path/to/site/%{brand}"
-msgstr ""
+msgstr "$ publican install_brand --web --path=/path/to/site/%{brand}"
 
 #: bin/publican:832
 msgid "$ publican update_site --site_config /path/to/site/config"
-msgstr ""
+msgstr "$ publican update_site --site_config /path/to/site/config"
 
 #. ($rpmbuild,WTERMSIG($?))
 #: lib/Publican/Builder.pm:481
 msgid "%1 died with signal %2"
-msgstr ""
+msgstr "%1 ഇല്ലാതായി, സിഗ്നല്‍ %2"
 
 #. ($rpmbuild,WEXITSTATUS($?))
 #: lib/Publican/Builder.pm:486
 msgid "%1 exited with value %2"
-msgstr ""
+msgstr "%1 പുറത്തു് കടന്നു, മൂല്ല്യം %2"
 
 #. ('lang')
 #. ('filename')
@@ -56,20 +58,22 @@ msgstr ""
 #: lib/Publican/Builder/DocBook.pm:1361
 #: lib/Publican/Builder/DocBook.pm:1364
 msgid "%1 is a mandatory argument for drupal_transform"
-msgstr ""
+msgstr "drupal_transform-നു്  %1 നിര്‍ബന്ധമായൊരു ആര്‍ഗ്യുമെന്റാണു്"
 
 #. ('toc_path')
 #: bin/publican:950
 #: bin/publican:963
 #: lib/Publican/WebSite.pm:246
 msgid "%1 is a mandatory field in a site configuration file"
-msgstr ""
+msgstr "സൈറ്റ് ക്രമീകരണ ഫയലില്‍ %1 നിര്‍ബന്ധമായ ഫീള്‍ഡാണു്"
 
 #. ('db_file',$site_config)
 #: lib/Publican/WebSite.pm:256
 msgid ""
 "%1 is a mandatory field in a site configuration file. Check %2 for validity."
 msgstr ""
+"സൈറ്റ് ക്രമീകരണ ഫയലില്‍ %1 നിര്‍ബന്ധമായ ഫീള്‍ഡാണു്. ഉറക്കിയ്ക്കുന്നതിനു് %2 "
+"പരിശോധിയ്ക്കുക."
 
 #. ('cmd')
 #. ('site_config')
@@ -106,7 +110,7 @@ msgstr ""
 #: bin/publican:937
 #: bin/publican:940
 msgid "%1 is a required argument"
-msgstr ""
+msgstr "%1 ആവശ്യമുള്ള ആര്‍ഗ്യുമെന്റാണു്"
 
 #. ('members')
 #. ('firstname')
@@ -119,17 +123,17 @@ msgstr ""
 #: lib/Publican.pm:1481
 #: lib/Publican.pm:1484
 msgid "%1 is a required option for add_revision"
-msgstr ""
+msgstr "add_revision-നു് ആവശ്യമായ ഐച്ഛികമാണു് %1"
 
 #. ($action)
 #: bin/publican:657
 msgid "'%1' is an unknown action!"
-msgstr ""
+msgstr "അപരിചിതമായ പ്രവര്‍ത്തിയാണു് '%1' !"
 
 #. ($language)
 #: lib/Publican/Builder/DocBook.pm:1947
 msgid "'%1' is not a valid language for highlighting."
-msgstr ""
+msgstr "എടുത്തു് കാണിയ്ക്കുന്നതിനു് ഉചിതമായ ഭാഷയല്ല '%1'."
 
 #. ($language)
 #: lib/Publican/Builder/DocBook.pm:3764
@@ -137,11 +141,13 @@ msgid ""
 "'%1' is not a valid language for highlighting. Language names are case "
 "sensitive."
 msgstr ""
+"എടുത്തു് കാണിയ്ക്കുന്നതിനു് ഉചിതമായ ഭാഷയല്ല '%1'. ഭാഷയുടെ പേരുകള്‍ കേസ് "
+"സന്‍സിറ്റീവാണു്."
 
 #: lib/Publican/Builder/DocBook.pm:2066
 #: lib/Publican/Builder/DocBook.pm:2081
 msgid "'area' requires a 'coords' attribute."
-msgstr ""
+msgstr "'area'-യ്ക്കു്  'coords' വിശേഷത ആവശ്യമാണു്."
 
 #: lib/Publican/Builder.pm:890
 #: lib/Publican/Builder.pm:951
@@ -250,7 +256,7 @@ msgstr ""
 
 #: lib/Publican/WebSite.pm:225
 msgid "All"
-msgstr ""
+msgstr "എല്ലാം"
 
 #. ($lang)
 #: lib/Publican/Builder/DocBook.pm:153
@@ -769,7 +775,7 @@ msgstr ""
 
 #: lib/Publican/WebSite.pm:224
 msgid "EPUB"
-msgstr ""
+msgstr "ഈപബ്"
 
 #. ($attr)
 #: lib/Publican/XmlClean.pm:664
@@ -1146,7 +1152,7 @@ msgstr "ഗ്രാഫിക് ഡിസൈനര്‍"
 
 #: lib/Publican/WebSite.pm:221
 msgid "HTML (Recommended)"
-msgstr ""
+msgstr "എചിടിഎംഎല്‍ (ഉചിതം)"
 
 #: lib/Publican/WebSite.pm:156
 msgid "HTML to inject in to the footer of every page on the website."
@@ -1420,7 +1426,7 @@ msgstr ""
 
 #: lib/Publican/WebSite.pm:223
 msgid "PDF"
-msgstr ""
+msgstr "പിഡിഎഫ്"
 
 #. ($po_file)
 #: lib/Publican/Builder/DocBook4.pm:202
@@ -1634,11 +1640,11 @@ msgstr "തെരച്ചില്‍"
 
 #: lib/Publican/WebSite.pm:219
 msgid "Select a category"
-msgstr ""
+msgstr "വിഭാഗം തെരഞ്ഞെടുക്കൂ"
 
 #: lib/Publican/WebSite.pm:218
 msgid "Select a version"
-msgstr ""
+msgstr "പതിപ്പ് തെരഞ്ഞെടുക്കൂ"
 
 #: lib/Publican.pm:277
 msgid "Semicolon-separated list of menu categories for the desktop package."
@@ -1670,7 +1676,7 @@ msgstr ""
 
 #: lib/Publican/WebSite.pm:222
 msgid "Single-page HTML"
-msgstr ""
+msgstr "ഒറ്റ-താളില്‍ എച്ടിഎംഎല്‍"
 
 #: bin/publican:550
 msgid "Site options"

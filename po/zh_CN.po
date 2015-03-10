@@ -6,6 +6,8 @@
 # leahliu <lliu@redhat.com>, 2014. #zanata
 # samxli <samxli@hotmail.com>, 2014. #zanata
 # xhuang <xhuang@redhat.com>, 2014. #zanata
+# leahliu <lliu@redhat.com>, 2015. #zanata
+# xhuang <xhuang@redhat.com>, 2015. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -13,38 +15,39 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2014-10-03 01:10-0400\n"
+"PO-Revision-Date: 2015-01-12 11:50-0500\n"
 "Last-Translator: leahliu <lliu@redhat.com>\n"
 "Language-Team: Chinese (Simplified, China)\n"
 "Language: zh-Hans-CN\n"
 "Plural-Forms: nplurals=1; plural=0\n"
-"X-Generator: Zanata 3.4.2\n"
+"X-Generator: Zanata 3.5.1\n"
 
 #: lib/Publican/TreeView.pm:197
 msgid "\n"
 "No unused XML files"
-msgstr ""
+msgstr "\n"
+"无未使用的 XML 文件"
 
 #: bin/publican:822
 msgid "$ cd path/to/brand"
-msgstr ""
+msgstr "$ cd path/to/brand"
 
 #: bin/publican:823
 msgid "$ publican build --formats=xml --langs=all --publish"
-msgstr ""
+msgstr "$ publican build --formats=xml --langs=all --publish"
 
 #: bin/publican:828
 msgid "$ publican install_brand --web --path=/path/to/site/%{brand}"
-msgstr ""
+msgstr "$ publican install_brand --web --path=/path/to/site/%{brand}"
 
 #: bin/publican:832
 msgid "$ publican update_site --site_config /path/to/site/config"
-msgstr ""
+msgstr "$ publican update_site --site_config /path/to/site/config"
 
 #. ($rpmbuild,WTERMSIG($?))
 #: lib/Publican/Builder.pm:481
 msgid "%1 died with signal %2"
-msgstr ""
+msgstr "%1 失败，信号为 %2"
 
 #. ($rpmbuild,WEXITSTATUS($?))
 #: lib/Publican/Builder.pm:486
@@ -186,7 +189,7 @@ msgstr ""
 
 #: bin/publican:126
 msgid "/path/to/install/to"
-msgstr ""
+msgstr "/path/to/install/to"
 
 #: lib/Publican/WebSite.pm:188
 msgid ""
@@ -252,7 +255,7 @@ msgstr ""
 
 #: lib/Publican/WebSite.pm:225
 msgid "All"
-msgstr ""
+msgstr "全部"
 
 #. ($lang)
 #: lib/Publican/Builder/DocBook.pm:153
@@ -771,7 +774,7 @@ msgstr ""
 
 #: lib/Publican/WebSite.pm:224
 msgid "EPUB"
-msgstr ""
+msgstr "EPUB"
 
 #. ($attr)
 #: lib/Publican/XmlClean.pm:664
@@ -1148,7 +1151,7 @@ msgstr "美术编辑"
 
 #: lib/Publican/WebSite.pm:221
 msgid "HTML (Recommended)"
-msgstr ""
+msgstr "HTML（推荐）"
 
 #: lib/Publican/WebSite.pm:156
 msgid "HTML to inject in to the footer of every page on the website."
@@ -1636,14 +1639,12 @@ msgid "Search"
 msgstr "搜索"
 
 #: lib/Publican/WebSite.pm:219
-#, fuzzy
 msgid "Select a category"
-msgstr "滚动至类别"
+msgstr "选择类别"
 
 #: lib/Publican/WebSite.pm:218
-#, fuzzy
 msgid "Select a version"
-msgstr "选择您的版本"
+msgstr "选择版本"
 
 #: lib/Publican.pm:277
 msgid "Semicolon-separated list of menu categories for the desktop package."
@@ -1675,7 +1676,7 @@ msgstr ""
 
 #: lib/Publican/WebSite.pm:222
 msgid "Single-page HTML"
-msgstr ""
+msgstr "单页 HTML"
 
 #: bin/publican:550
 msgid "Site options"

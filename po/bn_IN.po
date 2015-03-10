@@ -5,6 +5,7 @@
 # rlandmann <rlandmann@fedoraproject.org>, 2013. #zanata
 # Runa Bhattacharjee <runab@fedoraproject.org>, 2014. #zanata
 # bnin <sray@redhat.com>, 2014. #zanata
+# bnin <sray@redhat.com>, 2015. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -12,12 +13,12 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2014-10-03 01:00-0400\n"
-"Last-Translator: Runa Bhattacharjee <runab@fedoraproject.org>\n"
+"PO-Revision-Date: 2015-01-13 12:57-0500\n"
+"Last-Translator: bnin <sray@redhat.com>\n"
 "Language-Team: Bengali (India)\n"
 "Language: bn-IN\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"X-Generator: Zanata 3.4.2\n"
+"X-Generator: Zanata 3.5.1\n"
 
 #: lib/Publican/TreeView.pm:197
 msgid "\n"
@@ -251,7 +252,7 @@ msgstr ""
 
 #: lib/Publican/WebSite.pm:225
 msgid "All"
-msgstr ""
+msgstr "সমস্ত"
 
 #. ($lang)
 #: lib/Publican/Builder/DocBook.pm:153
@@ -770,7 +771,7 @@ msgstr ""
 
 #: lib/Publican/WebSite.pm:224
 msgid "EPUB"
-msgstr ""
+msgstr "EPUB"
 
 #. ($attr)
 #: lib/Publican/XmlClean.pm:664
@@ -1147,7 +1148,7 @@ msgstr "চিত্র শিল্পী"
 
 #: lib/Publican/WebSite.pm:221
 msgid "HTML (Recommended)"
-msgstr ""
+msgstr "HTML (প্রস্তাবিত)"
 
 #: lib/Publican/WebSite.pm:156
 msgid "HTML to inject in to the footer of every page on the website."
@@ -1421,7 +1422,7 @@ msgstr ""
 
 #: lib/Publican/WebSite.pm:223
 msgid "PDF"
-msgstr ""
+msgstr "PDF"
 
 #. ($po_file)
 #: lib/Publican/Builder/DocBook4.pm:202
@@ -1635,11 +1636,11 @@ msgstr "অনুসন্ধান"
 
 #: lib/Publican/WebSite.pm:219
 msgid "Select a category"
-msgstr ""
+msgstr "একটি বিভাগ নির্বাচন করুন"
 
 #: lib/Publican/WebSite.pm:218
 msgid "Select a version"
-msgstr ""
+msgstr "একটি সংস্করণ নির্বাচন করুন"
 
 #: lib/Publican.pm:277
 msgid "Semicolon-separated list of menu categories for the desktop package."
@@ -1671,7 +1672,7 @@ msgstr ""
 
 #: lib/Publican/WebSite.pm:222
 msgid "Single-page HTML"
-msgstr ""
+msgstr "এক-পৃষ্ঠার HTML"
 
 #: bin/publican:550
 msgid "Site options"

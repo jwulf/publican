@@ -2,6 +2,8 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Sandeep Shedmake <sshedmak@redhat.com>, 2014.
+# Sandeep Shedmake <sshedmak@redhat.com>, 2014, 2015.
 # rlandmann <rlandmann@fedoraproject.org>, 2013. #zanata
 # sandeeps <sandeeps@fedoraproject.org>, 2014. #zanata
 msgid ""
@@ -11,12 +13,12 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2014-10-03 12:53-0400\n"
-"Last-Translator: sandeeps <sandeeps@fedoraproject.org>\n"
-"Language-Team: Marathi\n"
+"PO-Revision-Date: 2015-01-12 11:38-0500\n"
+"Last-Translator: Sandeep Shedmake <sshedmak@redhat.com>\n"
+"Language-Team: Marathi <sshedmak@redhat.com>\n"
 "Language: mr\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"X-Generator: Zanata 3.4.2\n"
+"X-Generator: Zanata 3.5.1\n"
 
 #: lib/Publican/TreeView.pm:197
 msgid "\n"
@@ -250,7 +252,7 @@ msgstr ""
 
 #: lib/Publican/WebSite.pm:225
 msgid "All"
-msgstr ""
+msgstr "सर्व"
 
 #. ($lang)
 #: lib/Publican/Builder/DocBook.pm:153
@@ -759,9 +761,8 @@ msgstr "दस्तऐवजाची भाषा"
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican/WebSite.pm:118
-#, fuzzy
 msgid "Documentation"
-msgstr "उत्पादन दस्तऐवजीकरण"
+msgstr "दस्तऐवजीकरण"
 
 #: lib/Publican/WebSite.pm:121
 msgid "Dump the publican database to an XML file."
@@ -769,7 +770,7 @@ msgstr ""
 
 #: lib/Publican/WebSite.pm:224
 msgid "EPUB"
-msgstr ""
+msgstr "EPUB"
 
 #. ($attr)
 #: lib/Publican/XmlClean.pm:664
@@ -1146,7 +1147,7 @@ msgstr "ग्राफिक्स् डिजाइनर"
 
 #: lib/Publican/WebSite.pm:221
 msgid "HTML (Recommended)"
-msgstr ""
+msgstr "HTML (शिफारसीय)"
 
 #: lib/Publican/WebSite.pm:156
 msgid "HTML to inject in to the footer of every page on the website."
@@ -1420,7 +1421,7 @@ msgstr ""
 
 #: lib/Publican/WebSite.pm:223
 msgid "PDF"
-msgstr ""
+msgstr "PDF"
 
 #. ($po_file)
 #: lib/Publican/Builder/DocBook4.pm:202
@@ -1634,11 +1635,11 @@ msgstr "शोध"
 
 #: lib/Publican/WebSite.pm:219
 msgid "Select a category"
-msgstr ""
+msgstr "प्रवर्ग पसंत करा"
 
 #: lib/Publican/WebSite.pm:218
 msgid "Select a version"
-msgstr ""
+msgstr "आवृत्ती पसंत करा"
 
 #: lib/Publican.pm:277
 msgid "Semicolon-separated list of menu categories for the desktop package."
@@ -1670,7 +1671,7 @@ msgstr ""
 
 #: lib/Publican/WebSite.pm:222
 msgid "Single-page HTML"
-msgstr ""
+msgstr "एक-पृष्ठीय HTML"
 
 #: bin/publican:550
 msgid "Site options"

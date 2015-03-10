@@ -7,6 +7,8 @@
 # samfreemanz <sfriedma@redhat.com>, 2013. #zanata
 # Gé Baylard <geodebay@gmail.com>, 2014. #zanata
 # jcarbone <jcarbone@redhat.com>, 2014. #zanata
+# samfreemanz <sfriedma@redhat.com>, 2014. #zanata
+# jcarbone <jcarbone@redhat.com>, 2015. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -14,12 +16,12 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2014-07-22 12:47-0400\n"
-"Last-Translator: Gé Baylard <geodebay@gmail.com>\n"
+"PO-Revision-Date: 2015-01-12 07:51-0500\n"
+"Last-Translator: jcarbone <jcarbone@redhat.com>\n"
 "Language-Team: French\n"
 "Language: fr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1)\n"
-"X-Generator: Zanata 3.4.2\n"
+"X-Generator: Zanata 3.5.1\n"
 
 # translation auto-copied from project Publican, version 3, document publican
 #: lib/Publican/TreeView.pm:197
@@ -320,7 +322,7 @@ msgstr ""
 
 #: lib/Publican/WebSite.pm:225
 msgid "All"
-msgstr ""
+msgstr "Toutes"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #. ($lang)
@@ -1433,7 +1435,7 @@ msgstr "Graphiste"
 
 #: lib/Publican/WebSite.pm:221
 msgid "HTML (Recommended)"
-msgstr ""
+msgstr "HTML (recommandé)"
 
 #: lib/Publican/WebSite.pm:156
 msgid "HTML to inject in to the footer of every page on the website."
@@ -1907,7 +1909,7 @@ msgstr "Traitement du fichier %1 -> %2"
 
 #: lib/Publican/WebSite.pm:215
 msgid "Product Documentation"
-msgstr "Documentation du produitPrise en charge"
+msgstr "Documentation du produit"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: lib/Publican/WebSite.pm:207
@@ -2037,7 +2039,7 @@ msgstr ""
 
 #: lib/Publican/WebSite.pm:220
 msgid "Scroll to category"
-msgstr "Faites défiler jusqu'à catégorie"
+msgstr "Faire défiler jusqu'à catégorie"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: lib/Publican/WebSite.pm:2230
@@ -2046,14 +2048,12 @@ msgid "Search"
 msgstr "Rechercher"
 
 #: lib/Publican/WebSite.pm:219
-#, fuzzy
 msgid "Select a category"
-msgstr "Faites défiler jusqu'à catégorie"
+msgstr "Sélectionner une catégorie"
 
 #: lib/Publican/WebSite.pm:218
-#, fuzzy
 msgid "Select a version"
-msgstr "Sélectionnez votre version"
+msgstr "Sélectionner une version"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: lib/Publican.pm:277
@@ -2094,7 +2094,7 @@ msgstr ""
 
 #: lib/Publican/WebSite.pm:222
 msgid "Single-page HTML"
-msgstr ""
+msgstr "HTML à page unique"
 
 # translation auto-copied from project Publican, version 3, document publican, author Gérard Baylard
 #: bin/publican:550
