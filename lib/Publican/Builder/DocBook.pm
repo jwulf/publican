@@ -2409,7 +2409,7 @@ sub numberLines {
 
     my $text      = $content->string_value();
     my $num_lines = () = ( $text =~ /^/mg );
-    my $format    = '%' . length("$num_lines") . 's:' . chr(160);
+    my $format    = '%' . length("$num_lines") . 's' . chr(160);
 
     my $out_string = $text;
     $out_string =~ s/^/sprintf("$format",$count++)/egm;
