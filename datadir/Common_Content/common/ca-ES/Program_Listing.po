@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2013-11-13 16:27+1000\n"
+"POT-Creation-Date: 2015-02-25 14:40+1000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -11,10 +11,8 @@ msgstr ""
 "Language-Team: None\n"
 "Language: ca\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"X-Generator: Zanata 3.5.1\n"
+"X-Generator: Zanata 3.6.0\n"
 
-#. Tag: programlisting
-#, no-c-format
 msgid ""
 "package org.jboss.book.jca.ex1;\n"
 "\n"

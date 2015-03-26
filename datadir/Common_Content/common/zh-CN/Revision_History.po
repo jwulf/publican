@@ -1,41 +1,33 @@
 # AUTHOR <EMAIL@ADDRESS>, YEAR.
 # leahliu <lliu@redhat.com>, 2012. #zanata
-# samxli <samxli@hotmail.com>, 2012. #zanata
+# leahliu <lliu@redhat.com>, 2015. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2013-11-13 16:27+1000\n"
+"POT-Creation-Date: 2015-02-25 14:40+1000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2012-08-29 08:50-0400\n"
+"PO-Revision-Date: 2015-03-02 05:12-0500\n"
 "Last-Translator: leahliu <lliu@redhat.com>\n"
 "Language-Team: None\n"
 "Language: zh-Hans-CN\n"
 "Plural-Forms: nplurals=1; plural=0\n"
-"X-Generator: Zanata 3.5.1\n"
+"X-Generator: Zanata 3.6.0\n"
 
 # translation auto-copied from project Publican Common, version 3, document Revision_History, author samxli
-#. Tag: title
-#, no-c-format
 msgid "Revision History"
-msgstr "修订历史"
+msgstr "修订记录"
 
 # translation auto-copied from project Publican Common, version 3, document Revision_History, author leahliu
-#. Tag: firstname
-#, no-c-format
 msgid "Jeff"
 msgstr "Jeff"
 
 # translation auto-copied from project Publican Common, version 3, document Revision_History, author leahliu
-#. Tag: surname
-#, no-c-format
 msgid "Fearn"
 msgstr "Fearn"
 
 # translation auto-copied from project Publican Common, version 3, document Revision_History, author leahliu
-#. Tag: member
-#, no-c-format
 msgid "Publican 3.0"
 msgstr "Publican 3.0"
 
