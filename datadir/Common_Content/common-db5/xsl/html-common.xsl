@@ -75,7 +75,7 @@
 <xsl:param name="email.delimiters.enabled">0</xsl:param>
 
 <xsl:param name="section.autolabel" select="1"/>
-<xsl:param name="section.label.includes.component.label" select="0"/>
+<xsl:param name="section.label.includes.component.label" select="1"/>
 
 <xsl:param name="local.l10n.xml" select="document('')"/>
 
