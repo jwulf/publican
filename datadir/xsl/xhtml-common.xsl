@@ -457,6 +457,7 @@ Version: 1.72.0
 			</xsl:choose>
 		</xsl:with-param>
 		<xsl:with-param name="content">
+                        <xsl:call-template name="anchor"/>
 			<xsl:apply-templates/>
 		</xsl:with-param>
 	</xsl:call-template>
