@@ -244,11 +244,11 @@ Poke him!
 
 Updating pulicans translations on zanata
 
-$ cd po
-$ zanata-cli pull -s . -t . --include-fuzzy
-$ cd ..
-$ ./Build update_pot
-$ ./Build update_po
-$ cd po
-$ zanata-cli push -s . -t . --push-type both --copy-trans 0
+ cd po
+ zanata-cli pull -s . -t . --include-fuzzy
+ cd ..
+ ./Build update_pot
+ ./Build update_po
+ cd po
+ zanata-cli push -s . -t . --push-type both --copy-trans 0
 

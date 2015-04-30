@@ -457,8 +457,10 @@ sub setup_xml {
             foreach my $xml_file ( sort(@com_xml_files) ) {
                 my $out_file = $xml_file;
                 chmod( 0664, $out_file );
-                $cleaner->process_file(
-                    { file => $xml_file, out_file => $out_file } );
+                if ( !$self->{publican}->{'no_clean'} ) {
+                    $cleaner->process_file(
+                        { file => $xml_file, out_file => $out_file } );
+                }
             }
         }
 
@@ -485,8 +487,13 @@ sub setup_xml {
                 my $out_file = $xml_file;
                 $out_file =~ s/xml_tmp/xml/;
 
-                $cleaner->process_file(
-                    { file => $xml_file, out_file => $out_file } );
+                if ( $self->{publican}->{'no_clean'} ) {
+                    rcopy( $xml_file, $out_file );
+                }
+                else {
+                    $cleaner->process_file(
+                        { file => $xml_file, out_file => $out_file } );
+                }
             }
         }
         finddepth( \&del_unwanted_dirs, $tmp_dir );
@@ -574,7 +581,7 @@ sub validate_xml {
             suppress_warnings => 1,
             line_numbers      => 1,
             expand_xinclude   => 1,
-            no_network => !$self->{publican}->{allow_network}
+            no_network        => !$self->{publican}->{allow_network}
         }
     );
 

@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2014-05-06 14:10+1000\n"
+"POT-Creation-Date: 2014-10-03 13:17+1000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -12,86 +12,54 @@ msgstr ""
 "Last-Translator: Gé Baylard <<Geodebay@gmail.com>>\n"
 "Language-Team: français <<trans-fr@lists.fedoraproject.org>>\n"
 "Language: fr\n"
-"X-Generator: Zanata 3.4.2\n"
+"X-Generator: Zanata 3.6.2\n"
 "Plural-Forms: nplurals=2; plural=n>1;\n"
 
-#. Tag: title
-#, no-c-format
 msgid "OpenSuse 12"
 msgstr "OpenSuse 12"
 
-#. Tag: para
-#, no-c-format
 msgid "<application>Publican</application> has not been usable on OpenSuse up until release 12.1. Certain dependencies were missing and could not be found in any known OpenSuse repository. This is not the case with OpenSuse 12.1 as all dependencies can now be found and installed."
 msgstr "<application>Publican</application> ne pouvait pas être utilisé sur OpenSuse avant la parution de sa version 12.1. Certaines dépendances manquaient et n'étaient disponibles dans aucun dépôt OpenSuse connu. Ce n'est plus le cas avec OpenSuse 12.1 ; toutes les dépendances sont maintenant disponibles et peuvent être installées."
 
-#. Tag: para
-#, no-c-format
 msgid "The following instructions describe installing <application>Publican</application> from source because, as yet, there is no <application>Publican</application> RPM for OpenSuse 12.1. The version of <application>Publican</application> is 2.9 taken directly from the source repository - previous versions have not been tested but may work."
 msgstr "Les directives suivantes décrivent l'installation de <application>Publican</application> à partir des sources, car, jusqu'à ce jour, il n'y a pas de RPM de <application>Publican</application> pour OpenSuse 12.1. La version de <application>Publican</application> est la 2.9, directement prise dans le dépôt source — les versions antérieures n'ont pas été testées, mais pourraient fonctionner."
 
-#. Tag: para
-#, no-c-format
 msgid "At the time of writing, Publican 2.8 was the release version and work on 2.9 was still ongoing. For this reason the following instructions are subject to change."
 msgstr "Au moment de la rédaction de ce guide, Publican 2.8 était la version publiée et les travaux sur la 2.9 étaient encore en cours. Pour cette raison, les instructions ci-après sont sujettes à modifications."
 
-#. Tag: para
-#, no-c-format
 msgid "The OpenSuse install was a default one with the following software categories added at install time:"
 msgstr "L'installation de OpenSuse est celle par défaut avec, en plus, l'ajout des catégories de logiciels suivantes au moment de l'installation :"
 
-#. Tag: para
-#, no-c-format
 msgid "Technical Writing - for the Docbook tools etc."
 msgstr "Technical Writing — pour les outils Docbook etc."
 
-#. Tag: para
-#, no-c-format
 msgid "Perl Development"
 msgstr "Perl Development"
 
-#. Tag: para
-#, no-c-format
 msgid "Web and LAMP Server"
 msgstr "Serveur Web et LAMP"
 
-#. Tag: para
-#, no-c-format
 msgid "The system used had KDE installed which shouldn't make a difference. The following KDE specific categories were also installed:"
 msgstr "Le système utilisé avait KDE installé ; cela ne doit pas amener de différences. Les familles suivantes de logiciels propres à KDE étaient également installées :"
 
-#. Tag: para
-#, no-c-format
 msgid "KDE Development"
 msgstr "KDE Development"
 
-#. Tag: para
-#, no-c-format
 msgid "Desktop Effects"
 msgstr "Desktop Effects"
 
-#. Tag: para
-#, no-c-format
 msgid "Finally, the entire Games category was removed."
 msgstr "Enfin, la catégorie Jeux avait été supprimée."
 
-#. Tag: para
-#, no-c-format
 msgid "After OpenSuse had completed installing, and all current updates had been applied, the following steps were followed to install <application>Publican</application>."
 msgstr "Une fois l'installation de OpenSuse terminée, et toutes les mises à jour disponibles appliquées, les étapes suivantes ont été suivies pour installer <application>Publican</application>."
 
-#. Tag: para
-#, no-c-format
 msgid "Open a terminal session."
 msgstr "Ouvrir une session de terminal."
 
-#. Tag: para
-#, no-c-format
 msgid "Install the dependencies that are available from various online repositories - many of these are not present in the installation DVD repository."
 msgstr "Installer les dépendances disponibles à partir des divers dépôts en ligne — nombres de celles-ci ne sont pas présentes dans le dépôt du DVD d'installation."
 
-#. Tag: screen
-#, no-c-format
 msgid "<prompt>$</prompt> <command>sudo zypper install perl-Config-Simple perl-DateTime \\ perl-DateTime-Format-DateParse perl-DBD-SQLite perl-DBI \\ perl-File-Find-Rule perl-File-Which perl-HTML-Format \\ perl-Locale-MakeText-Gettext perl-Template-Toolkit \\ perl-Test-Deep perl-Test-Pod perl-XML-LibXSLT \\ perl-YAML liberation-fonts</command>"
 msgstr ""
 "<prompt>$</prompt> <command>sudo zypper install perl-Config-Simple perl-DateTime \\\n"
@@ -101,18 +69,12 @@ msgstr ""
 "perl-Test-Deep perl-Test-Pod perl-XML-LibXSLT \\\n"
 "perl-YAML liberation-fonts</command>"
 
-#. Tag: para
-#, no-c-format
 msgid "<filename>Liberation-fonts</filename> is most likely already installed, but it is required. <application>Zypper</application> will not reinstall it if it is already present."
 msgstr "<filename>Liberation-fonts</filename> est très vraisemblablement déjà installé, mais il est nécessaire. <application>Zypper</application> ne le réinstallera pas si c'est déjà fait."
 
-#. Tag: para
-#, no-c-format
 msgid "Use <application>cpan</application> to install the remaining dependencies which cannot be installed by <application>zypper</application>:"
 msgstr "Utiliser <application>cpan</application> pour installer les dépendances restantes qui ne peuvent pas être installées à l'aide de <application>zypper</application> :"
 
-#. Tag: screen
-#, no-c-format
 msgid "<prompt>$</prompt> <command>sudo sh cpan File::pushd File::Copy::Recursive Locale::PO pp \\ Syntax::Highlight::Engine::Kate XML::TreeBuilder exit </command>"
 msgstr ""
 "<prompt>$</prompt> <command>sudo sh\n"
@@ -121,13 +83,9 @@ msgstr ""
 "exit\n"
 "</command>"
 
-#. Tag: para
-#, no-c-format
 msgid "Download the source code:"
 msgstr "Télécharger le code source :"
 
-#. Tag: screen
-#, no-c-format
 msgid "<prompt>$</prompt> <command>cd ~ mkdir -p SourceCode/publican cd SourceCode/publican svn checkout http://svn.fedorahosted.org/svn/publican/branches/publican-2x ./ </command>"
 msgstr ""
 "<prompt>$</prompt> <command>cd ~\n"
@@ -136,24 +94,16 @@ msgstr ""
 "svn checkout http://svn.fedorahosted.org/svn/publican/branches/publican-2x ./\n"
 "</command>"
 
-#. Tag: para
-#, no-c-format
 msgid "Build the <application>Publican</application> build script:"
 msgstr "Créer le script de construction de <application>Publican</application> :"
 
-#. Tag: screen
-#, no-c-format
 msgid "<prompt>$</prompt> <command>perl Build.PL </command>"
 msgstr "<prompt>$</prompt> <command>perl Build.PL\n"
 "</command>"
 
-#. Tag: para
-#, no-c-format
 msgid "If all the dependencies are installed, you should see the following:"
 msgstr "Si toutes les dépendances ont été installées, vous devez voir ceci :"
 
-#. Tag: screen
-#, no-c-format
 msgid ""
 "<computeroutput>WARNING: the following files are missing in your kit:</computeroutput>\n"
 "<computeroutput> META.yml</computeroutput>\n"
@@ -169,13 +119,9 @@ msgstr ""
 "<computeroutput>Created MYMETA.yml and MYMETA.json</computeroutput>\n"
 "<computeroutput>Creating new 'Build' script for 'Publican' version '2.9'</computeroutput>"
 
-#. Tag: para
-#, no-c-format
 msgid "If not, then use <application>cpan</application> (as root) to install the missing modules and run the build again. Replace any forward slashes '/' by a double colon '::' and make sure you use exactly the same letter case, for example: If <filename>File/pushd.pm</filename> is reported as missing, you would use this to install it:"
 msgstr "Si ce n'est pas le cas, utiliser <application>cpan</application> (en tant qu'administrateur) pour installer les modules manquants et lancer la construction à nouveau. Remplacez toute barre inclinée « / » par deux fois deux-points « :: » et faites attention à utiliser exactement la même casse pour les lettres, par exemple : si <filename>File/pushd.pm</filename> est signalé manquant, utiliser ceci pour l'installer :"
 
-#. Tag: screen
-#, no-c-format
 msgid "<prompt>$</prompt> <command>sudo sh cpan File::pushd exit </command>"
 msgstr ""
 "<prompt>$</prompt> <command>sudo sh\n"
@@ -183,45 +129,29 @@ msgstr ""
 "exit\n"
 "</command>"
 
-#. Tag: para
-#, no-c-format
 msgid "Assuming all went well, the <filename>Build.PL</filename> script will have created a new script named <filename>Build</filename> which we will use to create, test and install <application>Publican</application> 2.9."
 msgstr "En supposant que tout a bien fonctionné, le script <filename>Build.PL</filename> doit avoir créé un nouveau script nommé <filename>Build</filename> à utiliser pour créer, tester et installer <application>Publican</application> 2.9."
 
-#. Tag: screen
-#, no-c-format
 msgid "<prompt>$</prompt> <command>./Build </command>"
 msgstr "<prompt>$</prompt> <command>./Build\n"
 "</command>"
 
-#. Tag: para
-#, no-c-format
 msgid "There will be lots of text scrolling up the screen for a few minutes, you should eventually see the following:"
 msgstr "Une bonne quantité de textes vont dérouler à l'écran pendant quelques minutes ; vous verrez éventuellement :"
 
-#. Tag: screen
-#, no-c-format
 msgid "<computeroutput>DEBUG: Publican::Builder: end of build</computeroutput>"
 msgstr "<computeroutput>DEBUG: Publican::Builder: end of build</computeroutput>"
 
-#. Tag: para
-#, no-c-format
 msgid "Test the build:"
 msgstr "Testez la construction :"
 
-#. Tag: screen
-#, no-c-format
 msgid "<prompt>$</prompt> <command>./Build test </command>"
 msgstr "<prompt>$</prompt> <command>./Build test\n"
 "</command>"
 
-#. Tag: para
-#, no-c-format
 msgid "Again, lots of scrolling text at the end of which you may see the following:"
 msgstr "À nouveau, déroulement de texte à l'écran, puis vous devez voir :"
 
-#. Tag: screen
-#, no-c-format
 msgid ""
 "<computeroutput>Test Summary Report</computeroutput>\n"
 "<computeroutput>-------------------</computeroutput>\n"
@@ -247,33 +177,21 @@ msgstr ""
 "<computeroutput>Result: FAIL</computeroutput>\n"
 "<computeroutput>Failed 2/10 test programs. 2/68 subtests failed.</computeroutput>"
 
-#. Tag: para
-#, no-c-format
 msgid "Don't worry. This is because of a missing <application>wkhtmltopdf</application> utility which is undergoing tests to be added to <application>Publican</application> in the future to replace Apache <application>FOP</application> as the pdf generation tool of choice. If <application>Publican</application> finds <application>wkhtmltopdf</application> it will use it, otherwise it uses <application>FOP</application>."
 msgstr "Pas de souci. Ceci est dû à l'absence de l'utilitaire <application>wkhtmltopdf</application> ; ces tests préparatoires ont été ajoutés à <application>Publican</application> en prévision du remplacement de l'application <application>FOP</application> de Apache comme outil de création des pdf. Si <application>Publican</application> trouve <application>wkhtmltopdf</application>, il l'utilise, sinon il se sert de <application>FOP</application>."
 
-#. Tag: para
-#, no-c-format
 msgid "Unfortunately, at the time of writing, because OpenSuse names one of the dependencies of <application>wkhtmltopdf</application> differently (<filename>ghostscript-fonts-std</filename> as opposed to <filename>ghostscript-fonts</filename>) <application>wkhtmltopdf</application> will not run even if force installed with no dependency checks."
 msgstr "Malheureusement, au moment de la rédaction, comme OpenSuse désigne une des dépendances de <application>wkhtmltopdf</application> sous un nom différent (<filename>ghostscript-fonts-std</filename> vs <filename>ghostscript-fonts</filename>), <application>wkhtmltopdf</application> ne fonctionnera pas même en cas d'installation forcée sans vérification des dépendances."
 
-#. Tag: para
-#, no-c-format
 msgid "Install <application>wkhtmltopdf</application>."
 msgstr "Installer <application>wkhtmltopdf</application>."
 
-#. Tag: para
-#, no-c-format
 msgid "This step is optional. At the time of writing <application>wkhtmltopdf</application> did not work on OpenSuse 12.1 However, as the problems which prevent it working correctly from <application>Publican</application> may have been resolved, the following instructions give details on installing <application>wkhtmltopdf</application>."
 msgstr "Cette étape est facultative. Au moment de la rédaction, <application>wkhtmltopdf</application> ne fonctionne pas sur OpenSuse 12.1. Toutefois, comme les problèmes qui l'empêchent de fonctionner correctement à partir de <application>Publican</application> auront peut-être été résolus, les instructions suivantes vous apportent des précisions sur l'installation de <application>wkhtmltopdf</application>."
 
-#. Tag: para
-#, no-c-format
 msgid "If you intend to create indices in your generated pdf documents, you are advised to use <application>Apache FOP</application> rather than <application>wkhtmltopdf</application>. With <application>FOP</application> you get actual page numbers which is better in a printed document."
 msgstr "Si vous avez l'intention de créer des index dans les documents pdf générés, nous vous recommandons d'utiliser <application>Apache FOP</application> plutôt que <application>wkhtmltopdf</application>. Avec <application>FOP</application>, vous obtenez les bons numéros de page, ce qui est préférable pour un document imprimé."
 
-#. Tag: screen
-#, no-c-format
 msgid "<prompt>$</prompt> <command>JFEARN=http://jfearn.fedorapeople.org/wkhtmltopdf/f15 MYSYSTEM=i686 ## For 64bit system use MYSYSTEM=x86_64 instead. wget $JFEARN/$MYSYSTEM/wkhtmltopdf-qt-4.7.1-1.git20110804.fc15.i686.rpm wget $JFEARN/$MYSYSTEM/wkhtmltopdf-0.10.0_rc2-1.fc15.i686.rpm </command>"
 msgstr ""
 "<prompt>$</prompt> <command>JFEARN=http://jfearn.fedorapeople.org/wkhtmltopdf/f15\n"
@@ -283,18 +201,12 @@ msgstr ""
 "wget $JFEARN/$MYSYSTEM/wkhtmltopdf-0.10.0_rc2-1.fc15.i686.rpm\n"
 "</command>"
 
-#. Tag: para
-#, no-c-format
 msgid "If you use a 64 bit system, make sure to set <envar>MYSYSTEM</envar> appropriately."
 msgstr "Si vous travaillez sur un système 64 bits, soyez attentif à définir <envar>MYSYSTEM</envar> de manière correcte."
 
-#. Tag: para
-#, no-c-format
 msgid "Once downloaded, install both rpms as follows:"
 msgstr "Une fois téléchargés, installer les deux RPM ainsi :"
 
-#. Tag: screen
-#, no-c-format
 msgid "<prompt>$</prompt> <command>sudo sh rpm -ivh wkhtmltopdf-qt* rpm -ivh --nodeps wkhtmltopdf-0* exit </command>"
 msgstr ""
 "<prompt>$</prompt> <command>sudo sh\n"
@@ -303,23 +215,15 @@ msgstr ""
 "exit\n"
 "</command>"
 
-#. Tag: para
-#, no-c-format
 msgid "You have to use the option to ignore dependencies on the latter rpm due to the <filename>ghostscript-fonts</filename> problem described above."
 msgstr "Vous devez utiliser l'option ad-hoc pour ignorer les dépendances dans le dernier RPM en raison du problème posé par <filename>ghostscript-fonts</filename> décrit plus haut."
 
-#. Tag: para
-#, no-c-format
 msgid "Install <application>Publican</application>."
 msgstr "Installez <application>Publican</application>."
 
-#. Tag: para
-#, no-c-format
 msgid "The final stage is to install Publican, even though the testing stage had a couple of sub-tests which failed."
 msgstr "La dernière étape consiste à installer Publican, même si la phase de tests a échoué pour les deux sous-tests."
 
-#. Tag: screen
-#, no-c-format
 msgid "<prompt>$</prompt> <command>sudo sh ./Build test exit </command>"
 msgstr ""
 "<prompt>$</prompt> <command>sudo sh\n"
@@ -327,18 +231,12 @@ msgstr ""
 "exit\n"
 "</command>"
 
-#. Tag: para
-#, no-c-format
 msgid "The following steps are optional but it's a good idea to test that everything is working before you spend time on your own documents."
 msgstr "Les étapes suivantes sont facultatives, mais nous recommandons de vérifier que tout fonctionne bien avant de passer du temps sur vos documents."
 
-#. Tag: para
-#, no-c-format
 msgid "Test the installed <application>Publican</application> build:"
 msgstr "Testez la construction du <application>Publican</application> installé :"
 
-#. Tag: screen
-#, no-c-format
 msgid ""
 "<prompt>$</prompt> <command>publican create --type=book --product=testing --version=1.2.3 --name=TestPublican</command>\n"
 "  Processing file en-US/Author_Group.xml -&gt; en-US/Author_Group.xml\n"
@@ -361,13 +259,9 @@ msgstr ""
 "<prompt>$</prompt> <command>cd TestPublican/\n"
 "publican build --lang=all --formats=html,html-single,html-desktop,txt,pdf,epub</command>\n"
 
-#. Tag: para
-#, no-c-format
 msgid "At the time of writing, creating epubs with <application>Publican</application> 2.9 on OpenSuse gave the following error:"
 msgstr "Au moment de la rédaction de ce guide, la création des epubs avec <application>Publican</application> 2.9 sur OpenSuse déclenche les erreurs suivantes :"
 
-#. Tag: screen
-#, no-c-format
 msgid ""
 "<computeroutput>runtime error: file /usr/share/publican/xsl/epub.xsl element choose</computeroutput>\n"
 "<computeroutput>Variable 'epub.embedded.fonts' has not been declared.</computeroutput>\n"
@@ -377,13 +271,9 @@ msgstr ""
 "<computeroutput>Variable 'epub.embedded.fonts' has not been declared.</computeroutput>\n"
 "<computeroutput> at /usr/lib/perl5/site_perl/5.14.2/Publican/Builder.pm line 915</computeroutput>"
 
-#. Tag: para
-#, no-c-format
 msgid "No epub file was created. The individual working files were however, and can be built into an epub book using <application>Sigil</application>, if desired."
 msgstr "Aucun fichier epub n'est créé. Toutefois, les fichiers de travail individuels existent et peuvent être construits en ouvrage epub avec <application>Sigil</application>, si vous le souhaitez."
 
-#. Tag: para
-#, no-c-format
 msgid "Using the <application>Dolphin</application> file manager, you can browse to <filename class=\"directory\">SourceCode/TestPublican/tmp/en-US/</filename> and view the various output formats that you find there."
 msgstr "Avec le gestionnaire de fichiers <application>Dolphin</application>, vous pouvez vous déplacer dans le répertoire <filename class=\"directory\">SourceCode/TestPublican/tmp/en-US/</filename> et voir là les divers formats de sortie."
 

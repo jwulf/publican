@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2014-05-06 14:10+1000\n"
+"POT-Creation-Date: 2014-10-03 13:17+1000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -10,111 +10,78 @@ msgstr ""
 "Last-Translator: Automatically generated\n"
 "Language-Team: None\n"
 "Language: it\n"
-"X-Generator: Zanata 3.4.2\n"
+"X-Generator: Zanata 3.6.2\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
-#. Tag: title
-#, no-c-format
+# translation auto-copied from project Publican Users' Guide, version 3, document pot/Installing_Publican
 msgid "Debian"
-msgstr ""
+msgstr "Debian"
 
-#. Tag: para
-#, no-c-format
 msgid "This procedure will install the <application>publican</application> version that is in your default Debian repository. It will also install a large number of packages that <application>publican</application> depends on, like Java, XML and image processing libraries and many ancillary Perl modules."
 msgstr ""
 
-#. Tag: para
-#, no-c-format
+# translation auto-copied from project Publican Users' Guide, version 3, document Installing_Publican
 msgid "Open a terminal."
-msgstr ""
+msgstr "Aprire un terminale"
 
-#. Tag: para
-#, no-c-format
+# translation auto-copied from project Publican Users' Guide, version 3, document Installing_Publican
 msgid "Change to the root user: <command> su - </command>"
-msgstr ""
+msgstr "Diventare utente root: <command> su - </command>"
 
-#. Tag: para
-#, no-c-format
+# translation auto-copied from project Publican Users' Guide, version 3, document Installing_Publican
 msgid "Run the following command to install the <package>publican</package> package:"
-msgstr ""
+msgstr "Eseguire il seguente comando per installare il pacchetto <package>publican</package>:"
 
-#. Tag: screen
-#, no-c-format
 msgid "<prompt>$</prompt> <command>apt-get install publican</command>"
 msgstr ""
 
-#. Tag: para
-#, no-c-format
 msgid "Run the following command to determine what version of <package>publican</package> is installed:"
 msgstr ""
 
-#. Tag: screen
-#, no-c-format
 msgid "<prompt>$</prompt> <command>publican -v</command>\n"
 "<computeroutput>version=2.8</computeroutput>"
 msgstr ""
 
-#. Tag: title
-#, no-c-format
 msgid "Important — Installing more recent packages using Apt-Pinning"
 msgstr ""
 
-#. Tag: para
-#, no-c-format
 msgid "If you need a more recent release of <package>publican</package> than installed by the procedure above, you can query if there other versions available: <uri xlink:href=\"http://packages.debian.org/publican\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">http://packages.debian.org/publican</uri>."
 msgstr ""
 
 msgid "To date, there has not been any backport (<uri xlink:href=\"http://backports.debian.org/Instructions/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">http://backports.debian.org/Instructions/</uri>) available for <application>publican</application>, so we need to use Apt Pinning <uri xlink:href=\"https://wiki.debian.org/AptPreferences\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">https://wiki.debian.org/AptPreferences</uri>"
 msgstr ""
 
-#. Tag: para
-#, no-c-format
 msgid "Alternatively, you could run Debian testing or unstable in a virtual machine, chroot or linux container."
 msgstr ""
 
-#. Tag: para
-#, no-c-format
 msgid "Assuming there is a more recent version of <application>publican</application> available in the testing repository, and that you are running the current stable, then you can upgrade by:"
 msgstr ""
 
-#. Tag: para
-#, no-c-format
+# translation auto-copied from project Publican Users' Guide, version 3, document pot/Installing_Publican
 msgid "Open your <filename>/etc/apt/sources.list</filename> file in a text editor. For example, to edit the file in <application>gedit</application> run:"
-msgstr ""
+msgstr "Con un editor di testo aprire il file <filename>/etc/apt/sources.list</filename>. Per esempio, per modificare il file con <application>gedit</application>, eseguire:"
 
-#. Tag: screen
-#, no-c-format
 msgid "<prompt>$</prompt> <command>gedit /etc/apt/sources.list</command>"
 msgstr ""
 
-#. Tag: para
-#, no-c-format
+# translation auto-copied from project Publican Users' Guide, version 3, document pot/Installing_Publican
 msgid "Add the following line to the end of the file:"
-msgstr ""
+msgstr "Aggiungere la seguente riga alla fine del file:"
 
-#. Tag: programlisting
-#, no-c-format
 msgid "#### testing  #########\n"
 "deb http://ftp.us.debian.org/debian testing main contrib non-free"
 msgstr ""
 
-#. Tag: para
-#, no-c-format
+# translation auto-copied from project Publican Users' Guide, version 3, document pot/Installing_Publican
 msgid "Save the file and close the text editor."
-msgstr ""
+msgstr "Salvare il file e chiudere l'editor."
 
-#. Tag: para
-#, no-c-format
 msgid "Open (or create) your <filename>/etc/apt/preferences</filename> file in a text editor. For example, to edit the file in <application>gedit</application> run:"
 msgstr ""
 
-#. Tag: screen
-#, no-c-format
 msgid "<prompt>$</prompt> <command>gedit /etc/apt/preferences</command>"
 msgstr ""
 
-#. Tag: programlisting
-#, no-c-format
 msgid ""
 "Package: *\n"
 "Pin: release a=stable\n"
@@ -129,33 +96,22 @@ msgid ""
 "Pin-Priority: -10"
 msgstr ""
 
-#. Tag: para
-#, no-c-format
+# translation auto-copied from project Publican Users' Guide, version 3, document pot/Installing_Publican
 msgid "Run the following command to update the list of packages available to your computer:"
-msgstr ""
+msgstr "Eseguire il seguente comando per aggiornare la lista dei pacchetti disponibili nel sistema:"
 
-#. Tag: screen
-#, no-c-format
 msgid "<prompt>$</prompt> <command>apt-get update</command>"
 msgstr ""
 
-#. Tag: para
-#, no-c-format
 msgid "Run the following command to try to install the testing version of <package>publican</package> package, and any updated dependancies:"
 msgstr ""
 
-#. Tag: screen
-#, no-c-format
 msgid "<prompt>$</prompt> <command>apt-get -t testing install publican</command>"
 msgstr ""
 
-#. Tag: para
-#, no-c-format
 msgid "Because Apt Pinning mixes 2 different debian streams in an un-tested way, incompatibilities may happen. For example, you may get a warning like:"
 msgstr ""
 
-#. Tag: screen
-#, no-c-format
 msgid ""
 "<prompt>$</prompt> <command>publican</command>\n"
 "<computeroutput>Warning: program compiled against libxml 209 using older 208</computeroutput>\n"
@@ -165,13 +121,9 @@ msgid ""
 "<computeroutput>Can't open publican: No such file or directory at /usr/bin/publican line 430.</computeroutput>"
 msgstr ""
 
-#. Tag: para
-#, no-c-format
 msgid "Which indicates that you might need to upgrade libxml2 and libxslt to the testing repository version too. This can be done by searching to find the likely library:"
 msgstr ""
 
-#. Tag: screen
-#, no-c-format
 msgid ""
 "<prompt>$</prompt> <command>apt-get search libxslt</command>\n"
 "<computeroutput>gambas3-gb-xml-xslt - Gambas XSLT component</computeroutput>\n"
@@ -198,23 +150,12 @@ msgid ""
 "<computeroutput>libxslthl-java - XSLT syntax highlighting</computeroutput>"
 msgstr ""
 
-#. Tag: para
-#, no-c-format
 msgid "(and the same again for libxml2)"
 msgstr ""
 
-#. Tag: para
-#, no-c-format
 msgid "And then upgrading those packages to testing."
 msgstr ""
 
-#. Tag: screen
-#, no-c-format
 msgid "<prompt>$</prompt> <command>apt-get -t testing upgrade libxml2 libxslt1.1</command>"
 msgstr ""
-
-#. Tag: para
-#, no-c-format
-#~ msgid "To date, there has not been any backport (<ulink url=\"http://backports.debian.org/Instructions/\" />) available for <application>publican</application>, so we need to use Apt Pinning <ulink url=\"https://wiki.debian.org/AptPreferences\" />"
-#~ msgstr ""
 

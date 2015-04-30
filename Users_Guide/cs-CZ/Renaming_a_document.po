@@ -1,100 +1,66 @@
-# peartown <josef.hruska@upcmail.cz>, 2014. #zanata
+# Josef Hruška <josef.hruska@upcmail.cz>, 2014. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2014-05-06 14:10+1000\n"
+"POT-Creation-Date: 2014-10-03 13:17+1000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "PO-Revision-Date: 2014-09-30 12:15-0400\n"
-"Last-Translator: peartown <josef.hruska@upcmail.cz>\n"
+"Last-Translator: Josef Hruška <josef.hruska@upcmail.cz>\n"
 "Language-Team: Czech\n"
 "Language: cs\n"
-"X-Generator: Zanata 3.4.2\n"
+"X-Generator: Zanata 3.6.2\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2\n"
 
-#. Tag: title
-#, no-c-format
 msgid "Renaming a document"
 msgstr "Změna názvu dokumentu"
 
-#. Tag: para
-#, no-c-format
 msgid "The <prompt>$</prompt> <command>publican rename</command> command makes it easy for you to rename a document to give it a new title, or to change the name or version of the product to which the document applies. The command accepts up to three options:"
 msgstr "Příkaz <prompt>$</prompt> <command>publican rename</command> zjednoduší přejmenování dokumentu na nový název, nebo změnu názvu verze produktu, na který se dokument vztahuje. Příkaz přijímá až tři volby:"
 
-#. Tag: term
-#, no-c-format
 msgid "<option>--name</option> <replaceable>new_title</replaceable>"
 msgstr "<option>--name</option> <replaceable>novy_nazev</replaceable>"
 
-#. Tag: para
-#, no-c-format
 msgid "changes the title of the document. For example, to rename a document from <citetitle>Server Configuration Guide</citetitle> to <citetitle>Server Deployment Guide</citetitle>, change into the document's root directory and run:"
 msgstr "změní název dokumentu. Na příklad chcete-li přejmenovat dokument z <citetitle>Server Configuration Guide</citetitle> na <citetitle>Server Deployment Guide</citetitle>, přejděte do kořenového adresáře dokumentu a spusťte:"
 
-#. Tag: screen
-#, no-c-format
 msgid "<prompt>$</prompt> <command>publican rename --name \"Server Deployment Guide\"</command>"
 msgstr "<prompt>$</prompt> <command>publican rename --name \"Server Deployment Guide\"</command>"
 
-#. Tag: para
-#, no-c-format
 msgid "Specifically, the command changes the content of the <tag>&lt;title&gt;</tag> tag in the <filename>Article_Info.xml</filename>, <filename>Book_Info.xml</filename>, or <filename>Set_Info.xml</filename> file, and sets a value for the <parameter>mainfile</parameter> parameter in the <filename>publican.cfg</filename> file so that <application>Publican</application> can still find the root XML node and the entities for the document."
 msgstr "Konkrétně příkaz změní obsah tagu <sgmltag>&lt;title&gt;</sgmltag> v souboru <filename>Article_Info.xml</filename>, <filename>Book_Info.xml</filename> nebo <filename>Set_Info.xml</filename> a nastaví hodnotu parametru <parameter>mainfile</parameter> v souboru <filename>publican.cfg</filename>, aby <application>Publican</application> stále mohl nelézt kořenový uzel XML a entity dokumentu."
 
-#. Tag: para
-#, no-c-format
 msgid "Note that the <prompt>$</prompt> <command>publican rename</command> command does not change any file names. Therefore, the root XML node and the document entities are still located in files named after the original title of the document — <filename>Server_Configuration_Guide</filename> in the previous example."
 msgstr "Všimněte si, že příkaz <prompt>$</prompt> <command>publican rename</command> nezmění název žádného souboru. Proto jsou kořenový uzel XML a všechny entity dokumentu stále umístěny v souborech pojmenovaných dle původního názvu dokumentu — v předchozím příkladu tedy <filename>Server_Configuration_Guide</filename>."
 
-#. Tag: term
-#, no-c-format
 msgid "<option>--product</option> <replaceable>new_product</replaceable>"
 msgstr "<option>--product</option> <replaceable>novy_produkt</replaceable>"
 
-#. Tag: para
-#, no-c-format
 msgid "changes the name of the product to which the document applies. For example, if the product was previously named <productname>ForceRivet</productname> but is now called <productname>PendantFarm</productname>, change into the document's root directory and run:"
 msgstr "změní název produktu, na který se dokument vztahuje. Na příklad byl-li předchozí název produktu <productname>ForceRivet</productname>, ale nyní se nazývá <productname>PendantFarm</productname>, přejděte do kořenového adresáře dokumentu a spusťte:"
 
-#. Tag: screen
-#, no-c-format
 msgid "<prompt>$</prompt> <command>publican rename --product PendantFarm</command>"
 msgstr "<prompt>$</prompt> <command>publican rename --product PendantFarm</command>"
 
-#. Tag: para
-#, no-c-format
 msgid "The command changes the content of the <tag>&lt;productname&gt;</tag> tag in the <filename>Article_Info.xml</filename>, <filename>Book_Info.xml</filename>, or <filename>Set_Info.xml</filename> file."
 msgstr "Příkaz změní obsah tagu <sgmltag>&lt;productname&gt;</sgmltag> v souboru <filename>Article_Info.xml</filename>, <filename>Book_Info.xml</filename> nebo <filename>Set_Info.xml</filename>."
 
-#. Tag: term
-#, no-c-format
 msgid "<option>--version</option> <replaceable>new_version</replaceable>"
 msgstr "<option>--version</option> <replaceable>nova_verze</replaceable>"
 
-#. Tag: para
-#, no-c-format
 msgid "changes the product version to which the document applies. For example, if the product version was previously <productnumber>1.0</productnumber> but is now <productnumber>2.0</productnumber> , change into the document's root directory and run:"
 msgstr "změní verzi produktu, na kterou se dokument vztahuje. Byla-li na příklad předchozí verze produktu verze <productnumber>1.0</productnumber> a nyní je <productnumber>2.0</productnumber>, přejděte do kořenového adresáře dokumentu a spusťte:"
 
-#. Tag: screen
-#, no-c-format
 msgid "<prompt>$</prompt> <command>publican rename --version 2.0</command>"
 msgstr "<prompt>$</prompt> <command>publican rename --version 2.0</command>"
 
-#. Tag: para
-#, no-c-format
 msgid "The command changes the content of the <tag>&lt;productnumber&gt;</tag> tag in the <filename>Article_Info.xml</filename>, <filename>Book_Info.xml</filename>, or <filename>Set_Info.xml</filename> file."
 msgstr "Příkaz změní obsah tagu <sgmltag>&lt;productnumber&gt;</sgmltag> v souboru <filename>Article_Info.xml</filename>, <filename>Book_Info.xml</filename> nebo <filename>Set_Info.xml</filename>."
 
-#. Tag: para
-#, no-c-format
 msgid "You can combine any combination of these options into a single command. For example:"
 msgstr "Všechny tyto volby lze použít v jednom příkazu. Na příklad:"
 
-#. Tag: screen
-#, no-c-format
 msgid "<prompt>$</prompt> <command>publican rename --name \"Server Deployment Guide\" --product PendantFarm --version 2.0</command>"
 msgstr "<prompt>$</prompt> <command>publican rename --name \"Server Deployment Guide\" --product PendantFarm --version 2.0</command>"
 

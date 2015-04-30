@@ -1,206 +1,211 @@
+# Josef Hruška <josef.hruska@upcmail.cz>, 2014. #zanata
+# Josef Hruška <josef.hruska@upcmail.cz>, 2015. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2014-10-03 13:09+1000\n"
-"PO-Revision-Date: 2014-10-03 13:09+1000\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: None\n"
-"Language: en-US \n"
+"POT-Creation-Date: 2014-10-03 13:17+1000\n"
 "MIME-Version: 1.0\n"
-"Content-Type: application/x-publican; charset=UTF-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Publican v4.2.2\n"
+"PO-Revision-Date: 2015-02-11 10:20-0500\n"
+"Last-Translator: Josef Hruška <josef.hruska@upcmail.cz>\n"
+"Language-Team: None\n"
+"Language: cs\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2\n"
 
 msgid "Creating the website structure"
-msgstr ""
+msgstr "Vytvoření struktury webových stránek"
 
 msgid "To build the website structure:"
-msgstr ""
+msgstr "Chcete-li vystavět strukturu webových stránek:"
 
 msgid "On your workstation, create a new directory and change into it. For example, on a Linux system, run:"
-msgstr ""
+msgstr "Na své pracovní stanici vytvořte nový adresář a přejděte do něj. Na příklad na linuxovém systému spusťte:"
 
 msgid "<prompt>$</prompt> <command>mkdir ~/docsite</command>\n"
 "<prompt>$</prompt> <command>cd ~/docsite</command>"
-msgstr ""
+msgstr "<prompt>$</prompt> <command>mkdir ~/docsite</command>\n"
+"<prompt>$</prompt> <command>cd ~/docsite</command>"
 
 msgid "Run <command>publican create_site</command>, specifying the following parameters:"
-msgstr ""
+msgstr "Spusťte <command>publican create_site</command> s uvedením těchto parametrů:"
 
 msgid "<option>--site_config</option> — the name of the configuration file for your site, with the filename extension <filename>.cfg</filename>"
-msgstr ""
+msgstr "<option>--site_config</option> — název konfiguračního souboru webových stránek, s příponou <filename>.cfg</filename>"
 
 msgid "<option>--db_file</option> — the name of the SQLite database file for your site, with the filename extension <filename>.db</filename>"
-msgstr ""
+msgstr "<option>--db_file</option> — název souboru databáze SQLite pro stránky, s příponou <filename>.db</filename>"
 
 msgid "<option>--toc_path</option> — the path to the directory in which you will place your documents"
-msgstr ""
+msgstr "<option>--toc_path</option> — cesta k adresáři, do kterého budete ukládat své dokumenty"
 
 msgid "On a computer with an operating system other than Linux, also set:"
-msgstr ""
+msgstr "Na počítači s jiným operačním systémem než je Linux také nastavte:"
 
 msgid "<option>--tmpl_path</option> — the path to the <filename>templates/</filename> directory of your <application>Publican</application> installation. On computers with Windows operating systems, this is typically <filename><replaceable>%SystemDrive%</replaceable>\\<replaceable>%ProgramFiles%</replaceable>\\Publican\templates</filename>."
-msgstr ""
+msgstr "<option>--tmpl_path</option> — cesta k adresáři <filename>templates/</filename> vaší instalace <application>Publicanu</application>. Na počítačích s operačními systémy Windows má obvykle cesta podobu <filename><replaceable>%SystemDrive%</replaceable>\\<replaceable>%ProgramFiles%</replaceable>\\Publican\templates</filename>."
 
+# translation auto-copied from project Publican Users' Guide, version 3, document Websites_product_version_manual, author peartown
 msgid "For example:"
-msgstr ""
+msgstr "Na příklad:"
 
 msgid "<prompt>$</prompt> <command>publican create_site --site_config foomaster.cfg --db_file foomaster.db --toc_path html/docs</command>"
-msgstr ""
+msgstr "<prompt>$</prompt> <command>publican create_site --site_config foomaster.cfg --db_file foomaster.db --toc_path html/docs</command>"
 
 msgid "You might give names to the site configuration file and database file that help you to recognize the site to which they belong. For example, for the <application>FooMaster</application> documentation site, you might call these files <filename>foomaster.cfg</filename> and <filename>foomaster.db</filename>. You can set <parameter>--toc_path</parameter> to whatever you choose."
-msgstr ""
+msgstr "Názvy konfiguračnímu souboru a souboru databáze webových stránek lze přidělit tak, aby bylo možné snadno rozlišit, ke kterým webovým stránkám patří. Na příklad pro webové stránky dokumentace <application>FooMaster</application> lze tyto soubory nazvat <filename>foomaster.cfg</filename> a <filename>foomaster.db</filename>. <parameter>--toc_path</parameter> lze nastavit dle vlastního uvážení."
 
 msgid "Edit the site configuration file to specify the name of the site, the web host, and optionally, search parameters, default language, dump file settings, and update settings for the site:"
-msgstr ""
+msgstr "Konfigurační soubor webových stránek upravte tak, aby obsahoval název webových stránek, hostitelský počítač webu a volitelně parametry vyhledávání, výchozí jazyk, nastavení souboru dump a nastavení aktualizací pro webové stránky."
 
 msgid "Specify the title with the <parameter>title</parameter> parameter, for example:"
-msgstr ""
+msgstr "Název uveďte v parametru <parameter>title</parameter>, na příklad:"
 
 msgid "title: \"Foomaster Documentation\""
-msgstr ""
+msgstr "title: \"Foomaster Dokumentace\""
 
 msgid "Normally, visitors to your website do not see this title because the site's JavaScript redirects them to a homepage. However, this title is likely to be found and indexed by search engines."
-msgstr ""
+msgstr "Obvykle návštěvníci webových stránek tento název nevidí, neboť JavaScript stránek je přesměruje na domovskou stránku. Nicméně tento název bude k nalezení a oindexován vyhledávači."
 
 msgid "Specify the web host with the <parameter>host</parameter> parameter as a full URL, including the protocol (for example, <literal>http://</literal>). For example:"
-msgstr ""
+msgstr "Hostitelský počítač webových stránek uveďte v podobě úplné URL v parametru <parameter>host</parameter>, včetně protokolu (na příklad <literal>http://</literal>). Na příklad:"
 
 msgid "host: http://docs.example.com"
-msgstr ""
+msgstr "host: http://docs.example.com"
 
 msgid "<application>Publican</application> uses the value set for <parameter>host</parameter> to construct the URLs in the XML <filename>Sitemap</filename> that it creates for search engine crawlers, and to limit searches submitted through the search box in the navigation menu to results on your site only."
-msgstr ""
+msgstr "<application>Publican</application> využívá hodnotu nastavenou v <parameter>host</parameter> k sestavení adres URL v souboru XML <filename>Sitemap</filename>, který vytváří pro indexovací automaty (crawlers) vyhledávačů a omezení vyhledávacích dotazů učiněných přes vyhledávací okno v navigační nabídce na výsledky pouze z vašich webových stránek."
 
 msgid "Optionally, construct a search engine query to use with the search box in the navigation menu and specify the entire content of a HTML <tag>&lt;form&gt;</tag> with the <parameter>search</parameter> parameter. If you do not specify a custom web search, <application>Publican</application> creates a Google search limited to the host that you specified in the <parameter>host</parameter> parameter."
-msgstr ""
+msgstr "Volitelně sestavte dotaz pro vyhledávač, který použijete ve vyhledávacím okně navigační nabídky a uveďte parametrem <parameter>search</parameter> celý obsah <tag>&lt;form&gt;</tag> HTML. Neuvedete-li své přizpůsobené vyhledávání na webu, <application>Publican</application> vytvoří vyhledávání Google omezené na hosta, který jste uvedli v parametru <parameter>host</parameter>."
 
 msgid "For example, to construct a Yahoo! search limited to <literal>docs.example.com</literal>, set:"
-msgstr ""
+msgstr "Na příklad chcete-li sestavit vyhledávání Yahoo! omezené na <literal>docs.example.com</literal>, nastavte:"
 
 msgid "search: '&lt;form target=\"_top\" method=\"get\" action=\"http://search.yahoo.com/search\"&gt; &lt;div class=\"search\"&gt; &lt;input type=\"text\" name=\"p\" value=\"\" /&gt; &lt;input type=\"hidden\" name=\"vs\" value=\"docs.example.com\" /&gt; &lt;input type=\"submit\" value=\"###Search###\" /&gt; &lt;/div&gt; &lt;/form&gt;'"
-msgstr ""
+msgstr "search: '&lt;form target=\"_top\" method=\"get\" action=\"http://search.yahoo.com/search\"&gt; &lt;div class=\"search\"&gt; &lt;input type=\"text\" name=\"p\" value=\"\" /&gt; &lt;input type=\"hidden\" name=\"vs\" value=\"docs.example.com\" /&gt; &lt;input type=\"submit\" value=\"###Search###\" /&gt; &lt;/div&gt; &lt;/form&gt;'"
 
 msgid "Refer to the documentation of your chosen search engine for details of how to construct custom searches."
-msgstr ""
+msgstr "Podrobnosti o sestavování zákaznicky přizpůsobených vyhledávání naleznete v dokumentaci vybraného vyhledávače."
 
 msgid "If you set <literal>value=\"###Search###\"</literal> in the code for a submit button, <application>Publican</application> uses the word <literal>Search</literal> on the button, localized into any language that <application>Publican</application> supports."
-msgstr ""
+msgstr "Nastavíte-li v kódu tlačítka pro odeslání <literal>value=\"###Search###\"</literal>, <application>Publican</application> použije slovo <literal>Search</literal> pro tlačítko, lokalizované do kteréhokoliv jazyka, který <application>Publican</application> podporuje."
 
 msgid "Important — the search parameter is not validated"
-msgstr ""
+msgstr "Důležité — u vyhledávacího parametru není provázena validace"
 
 msgid "<application>Publican</application> does not validate the <parameter>search</parameter> parameter, but builds the value of this parameter into the navigation menu exactly as you specify it. Be especially careful when you use this feature."
-msgstr ""
+msgstr "<application>Publican</application> neprovádí validaci u parametru <parameter>search</parameter>, ale zabuduje hodnotu parametru do navigační nabídky zcela tak, jak jste ho uvedli. Buďte obzvláště opatrní, když tuto vlastnost využíváte."
 
 msgid "Optionally, set the default language of the website. <application>Publican</application> creates a separate, translatable navigation menu for each language in which you publish documentation. However, if a document is not available in a particular language, <application>Publican</application> links visitors to the untranslated version of that document. To specify the default, untranslated language for the site, set <parameter>def_lang</parameter> with a language code. For example:"
-msgstr ""
+msgstr "Volitelně nastavte výchozí jazyk webových stránek. <application>Publican</application> vytváří samostatnou, přeložitelnou navigační nabídku pro každý jazyk, ve kterém zveřejňujete dokumentaci. Pokud dokument není v daném jazyce k dispozici, <application>Publican</application> přesměruje návštěvníky na nepřeloženou verzi dokumentu. Chcete-li nastavit výchozí, nepřekládaný jazyk webových stránek, nastavte v <parameter>def_lang</parameter> kód jazyka. Na příklad:"
 
 msgid "def_lang: fr-FR"
-msgstr ""
+msgstr "def_lang: fr-FR"
 
 msgid "With <parameter>def_lang</parameter> set to <literal>fr-FR</literal>, visitors viewing the navigation menu in (for example) Spanish are presented with a link to the original French version of the document if the document has not yet been translated into Spanish."
-msgstr ""
+msgstr "S nastaveným <parameter>def_lang</parameter> na <literal>fr-FR</literal> jsou návštěvníci při prohlížení navigační nabídky (na příklad) ve španělštině odkázáni na originální francouzskou verzi dokumentu, pokud dokument ještě nebyl do španělštiny přeložen."
 
 msgid "Optionally, configure a <firstterm>dump file</firstterm> for the website. <application>Publican</application> can output an XML file that provides complete site content details for delivery of other services, such as web feeds or customised search pages. The file is updated whenever a book is installed or removed from the site, or the <prompt>$</prompt> <command>publican update_site</command> command is run. Configure the <parameter>dump</parameter>, <parameter>dump_file</parameter>, and <parameter>zip_dump</parameter> parameters as follows:"
-msgstr ""
+msgstr "Volitelně nastavte pro webové stránky <firstterm>soubor dump</firstterm>. <application>Publican</application> může vypsat soubor XML, který poskytuje podrobnosti o celém obsahu webových stránek a který lze využít pro doručování dalších služeb, jako např. webové zdroje/kanály nebo přizpůsobené prohledávání stránek. Tento soubor je aktualizován kdykoliv je nainstalována nebo odstraněna z webových stránek kniha, nebo je spuštěn příkaz <prompt>$</prompt> <command>publican update_site</command>. Nastavte parametry <parameter>dump</parameter>, <parameter>dump_file</parameter> a <parameter>zip_dump</parameter> takto:"
 
 msgid "<parameter>dump</parameter>"
-msgstr ""
+msgstr "<parameter>dump</parameter>"
 
 msgid "Set <literal>dump: 1</literal> to enable the dump file function. This parameter defaults to <literal>0</literal> (off)."
-msgstr ""
+msgstr "Nastavte <literal>dump: 1</literal>, pokud chcete, aby soubor dump fungoval. Výchozí hodnotou parametru je <literal>0</literal> (vypnuto)."
 
 msgid "<parameter>dump_file</parameter>"
-msgstr ""
+msgstr "<parameter>dump_file</parameter>"
 
 msgid "Set <literal>dump_file: <replaceable>name</replaceable></literal> to specify the name of the dump file and the directory in which <application>Publican</application> stores it. This parameter defaults to <literal>/var/www/html/DUMP.xml</literal>."
-msgstr ""
+msgstr "Nastavte <literal>dump_file: <replaceable>nazev</replaceable></literal> uvedením názvu souboru dump a adresáře, do něhož ho <application>Publican</application> ukládá. Výchozí hodnotou parametru je <literal>/var/www/html/DUMP.xml</literal>."
 
 msgid "<parameter>zip_dump</parameter>"
-msgstr ""
+msgstr "<parameter>zip_dump</parameter>"
 
 msgid "Set <literal>zip_dump: 1</literal> to specify that <application>Publican</application> should create a zipped version of the XML file together with the XML version. This parameter defaults to <literal>0</literal> (off)."
-msgstr ""
+msgstr "Nastavení <literal>zip_dump: 1</literal> způsobí, že <application>Publican</application> bude tohoto souboru XML vytvářet také jeho zazipovanou verzi. Výchozí hodnotou parametru je <literal>0</literal> (vypnuto)."
 
 msgid "Refer to <xref linkend=\"appe-Publican-Users_Guide-Contents_of_the_website_dump_file\" /> for a description of the contents of the dump file."
-msgstr ""
+msgstr "Popis obsahu souboru dump viz <xref linkend=\"appe-Publican-Users_Guide-Contents_of_the_website_dump_file\" />."
 
 msgid "Optionally, specify the web style with the <parameter>web_style</parameter>."
-msgstr ""
+msgstr "Volitelně uveďte webový styl s <parameter>web_style</parameter>."
 
 msgid "web_style: 1"
-msgstr ""
+msgstr "web_style: 1"
 
 msgid "The website resembles those produced by Publican 2, with a list of products displayed in a navigation pane at the left of the page. (Default)"
-msgstr ""
+msgstr "Webové stránky připomínají ty, které byly vytvářeny Publicanem 2, se seznamem produktů zobrazovaným v navigačním okně po levé straně stránky. (Výchozí)"
 
 msgid "web_style: 2"
-msgstr ""
+msgstr "web_style: 2"
 
 msgid "The website includes a breadcrumb-like navigation bar across the top of the documentation."
-msgstr ""
+msgstr "Webové stránky obsahují drobečkovou navigační lištu na vrchu dokumentace."
 
 msgid "The web style set for your site must match the web style set for your content. For example, if you set <literal>web_style: 2</literal> for your website, you need to have <literal>web_style: 2</literal> set in each of the books that you want to install on the site. Consider setting this parameter in the <filename>defaults.cfg</filename> or <filename>overrides.cfg</filename> files of the brands that you intend to use with this site."
-msgstr ""
+msgstr "Webový styl nastavený pro webové stránky se musí shodovat se stylem nastaveným pro obsah. Na příklad nastavíte-li pro své stránky <literal>web_style: 2</literal>, potřebujte mít <literal>web_style: 2</literal> nastaven v každé knize, kterou chcete nainstalovat na stránky. Zvažte nastavení tohoto parametru v souborech <filename>defaults.cfg</filename> či <filename>overrides.cfg</filename> grafických úprav, jež zamýšlíte na stránkách využívat."
 
 msgid "Optionally, specify that the site tables of contents will be updated manually with the <parameter>manual_toc_update</parameter> parameter, for example:"
-msgstr ""
+msgstr "Volitelně uveďte parametrem <parameter>manual_toc_update</parameter>, že obsahy na stránkách jsou aktualizovány ručně, na příklad:"
 
 msgid "manual_toc_update: 1"
-msgstr ""
+msgstr "manual_toc_update: 1"
 
 msgid "Normally, <application>Publican</application> updates the site's tables of contents every time a documentation package is added or removed. On a site with a large number of documents on it (more than a few hundred), or where documents are updated very frequently (dozens of updates per week), this process is very demanding on a server. On a large or busy site, we recommend that you set this parameter and then periodically update the tables of contents with the <prompt>$</prompt> <command>publican update_site</command> command."
-msgstr ""
+msgstr " <application>Publican</application> obvykle aktualizuje obsahy na webových stránkách pokaždé, kdy je přidán nebo odstraněn balíček s dokumentací. Na stránkách s velkým množství dokumentů (více než několik stovek), nebo tam, kde jsou dokumenty aktualizovány častěji (desítky aktualizací týdně), může tento proces velmi zatěžovat server. Na velkých nebo často navštěvovaných stránkách doporučujeme, abyste nastavili tento parametr a poté pravidelně aktualizovali obsahy příkazem <prompt>$</prompt> <command>publican update_site</command>."
 
 msgid "Optionally, override the default JavaScript for the site with the <parameter>toc_js</parameter> parameter, for example:"
-msgstr ""
+msgstr "Volitelně potlačte výchozí JavaScript pro webové stránky parametrem <parameter>toc_js</parameter>, na příklad:"
 
 msgid "toc_js: \"mybrand/scripts/megafoo.js\""
-msgstr ""
+msgstr "toc_js: \"mojegrafuprava/scripty/megafoo.js\""
 
 msgid "This file will be symlinked as <parameter>toc_path</parameter>/toc.js with the <prompt>$</prompt> <command>publican update_site</command> command. This path should be relative to the <parameter>toc_path</parameter> parameter."
-msgstr ""
+msgstr "Na tento soubor bude příkazem <prompt>$</prompt> <command>publican update_site</command> vytvořen symbolický odkaz <parameter>toc_path</parameter>/toc.js. Tato cesta by měla být vůči parametru <parameter>toc_path</parameter> relativní."
 
 msgid "Create an empty file named <filename>site_overrides.css</filename> in the directory that you specified with <option>doc_path</option> (the directory that contains <filename>interactive.css</filename> and the various language directories). If you want to use site-specific styles to override those provided by <filename>interactive.css</filename>, you can add a <filename>site_overrides.css</filename> to the document that provides the site <firstterm>home page</firstterm> — refer to <xref linkend=\"sect-Publican-Users_Guide-Creating_installing_and_updating_the_home_page\" />. If you do not want to use site-specific styles, the empty file you add here will prevent 404 errors on your server. On a Linux system, change into the directory that you specified with <option>doc_path</option> and run:"
-msgstr ""
+msgstr "Vytvořte prázdný soubor s názvem <filename>site_overrides.css</filename> v adresáři, který jste uvedli v <option>doc_path</option> (adresář, jenž obsahuje <filename>interactive.css</filename> a různé jazykové adresáře). Chcete-li používat na webové stránky aplikovat zvláštní styly, které potlačí styly poskytované v <filename>interactive.css</filename>, lze přidat <filename>site_overrides.css</filename> do dokumentu, který poskytuje <firstterm>domovskou stránku</firstterm> webových stránek — viz <xref linkend=\"sect-Publican-Users_Guide-Creating_installing_and_updating_the_home_page\" />. Nechcete-li používat zvláštní styly, prázdný soubor, který jste sem přidali, bude předcházet chybám 404 na vašem serveru. Na linuxovém systému se přesuňte do adresáře uvedeném v <option>doc_path</option> a spusťte:"
 
 msgid "<prompt>$</prompt> <command>touch site_overrides.css</command>"
-msgstr ""
+msgstr "<prompt>$</prompt> <command>touch site_overrides.css</command>"
 
 msgid "Build and install each brand, including the <application>Publican</application> <literal>common</literal> brand."
-msgstr ""
+msgstr "Sestavte a nainstalujte každou grafickou úpravu, včetně grafické úpravy <literal>common</literal> <application>Publicanu</application>."
 
 msgid "Change into the directory that holds the source for the brand."
-msgstr ""
+msgstr "Přejděte do adresáře, v němž se nachází zdrojové soubory grafické úpravy."
 
 msgid "<prompt>$</prompt> <command>cd</command> <replaceable>brandsrc_dir</replaceable>"
-msgstr ""
+msgstr "<prompt>$</prompt> <command>cd</command> <replaceable>brandsrc_dir</replaceable>"
 
 msgid "Build the brand."
-msgstr ""
+msgstr "Sestavte grafickou úpravu."
 
 msgid "<prompt>$</prompt> <command>publican build --formats=xml --langs=all --publish</command>"
-msgstr ""
+msgstr "<prompt>$</prompt> <command>publican build --formats=xml --langs=all --publish</command>"
 
 msgid "Install the brand on your website."
-msgstr ""
+msgstr "Nainstalujte grafickou úpravu na webové stránky."
 
 msgid "<prompt>$</prompt> <command>publican install_brand --web --path=</command><replaceable>path_to_site_root_dir</replaceable>"
-msgstr ""
+msgstr "<prompt>$</prompt> <command>publican install_brand --web --path=</command><replaceable>cesta_ke_korenovemu_adresari_webstranek</replaceable>"
 
 msgid "Perform these steps for all brands."
-msgstr ""
+msgstr "Tyto kroky proveďte u všech grafických úprav."
 
 msgid "Update the site."
-msgstr ""
+msgstr "Aktualizujte webové stránky."
 
 msgid "<prompt>$</prompt> <command>publican update_site</command>"
-msgstr ""
+msgstr "<prompt>$</prompt> <command>publican update_site</command>"
 
 msgid "To make <application>Publican</application> refresh the site structure at any time, run:"
-msgstr ""
+msgstr "Aby <application>Publican</application> aktualizoval strukturu stránek  kdykoliv, spusťte:"
 
 msgid "<prompt>$</prompt> <command>publican update_site --site_config <replaceable>path_to_site_configuration_file</replaceable>.cfg</command>"
-msgstr ""
+msgstr "<prompt>$</prompt> <command>publican update_site --site_config <replaceable>cesta_ke_konfiguracnimu_souboru_webstranek</replaceable>.cfg</command>"
 

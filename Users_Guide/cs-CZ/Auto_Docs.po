@@ -1,550 +1,638 @@
+# Josef Hruška <josef.hruska@upcmail.cz>, 2014. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2014-10-03 13:09+1000\n"
-"PO-Revision-Date: 2014-10-03 13:09+1000\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: None\n"
-"Language: en-US \n"
+"POT-Creation-Date: 2014-10-03 13:17+1000\n"
 "MIME-Version: 1.0\n"
-"Content-Type: application/x-publican; charset=UTF-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Publican v4.2.2\n"
+"PO-Revision-Date: 2014-10-07 12:38-0400\n"
+"Last-Translator: Josef Hruška <josef.hruska@upcmail.cz>\n"
+"Language-Team: None\n"
+"Language: cs\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2\n"
 
 msgid "Command summary"
-msgstr ""
+msgstr "Shrnutí příkazů"
 
+# translation auto-copied from project Publican Users' Guide, version 3, document Publican_Commands, author peartown
 msgid "Command options"
-msgstr ""
+msgstr "Volby příkazu"
 
 msgid "--allow_network"
-msgstr ""
+msgstr "--allow_network"
 
 msgid "Allow the XML and XSLT processing to access the network. Defaults off."
-msgstr ""
+msgstr "Povolí přístup k síti při zpracování XML a XSLT. Výchozí stav je vypnuto."
 
 msgid "--brand_dir=s"
-msgstr ""
+msgstr "--brand_dir=s"
 
+# translation auto-copied from project Publican, version 4, document publican, author peartown
 msgid "Directory to source brand files from."
-msgstr ""
+msgstr "Adresář, ze kterého se načtou soubory grafické úpravy."
 
 msgid "--common_config=s"
-msgstr ""
+msgstr "--common_config=s"
 
+# translation auto-copied from project Publican, version 4, document publican, author peartown
 msgid "Override path to Common_Config directory"
-msgstr ""
+msgstr "Potlačí (uvádí novou) cestu k adresáři Common_Config"
 
 msgid "--common_content=s"
-msgstr ""
+msgstr "--common_content=s"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "Override path to Common_Content directory"
-msgstr ""
+msgstr "Potlačí (uvádí novou) cestu k adresáři Common_Content"
 
 msgid "--config=s"
-msgstr ""
+msgstr "--config=s"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "Use a nonstandard config file"
-msgstr ""
+msgstr "Použít nestandardní konfigurační soubor"
 
 msgid "--help"
-msgstr ""
+msgstr "--help"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "Display help message"
-msgstr ""
+msgstr "Zobrazit zprávu nápovědy"
 
 msgid "--nocolours"
-msgstr ""
+msgstr "--nocolours"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "Disable ANSI colourisation of logging."
-msgstr ""
+msgstr "Zakázat barevné zvýrazňování protokolu/-ů dle ANSI."
 
 msgid "--quiet"
-msgstr ""
+msgstr "--quiet"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "Disable all logging."
-msgstr ""
+msgstr "Zakázat tvorbu protokolů."
 
 msgid "Command actions"
-msgstr ""
+msgstr "Akce příkazu"
 
 msgid "<prompt>$</prompt><command> publican</command> add_revision"
-msgstr ""
+msgstr "<prompt>$</prompt><command> publican</command> add_revision"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "Add an entry to the revision history"
-msgstr ""
+msgstr "Přidá záznam do historie revizí"
 
 msgid "--date=<replaceable>DATE</replaceable>"
-msgstr ""
+msgstr "--date=<replaceable>DATE</replaceable>"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "Date to use for a revision."
-msgstr ""
+msgstr "Datum revize."
 
 msgid "--email=<replaceable>EMAIL</replaceable>"
-msgstr ""
+msgstr "--email=<replaceable>EMAIL</replaceable>"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "email to use for a revision."
-msgstr ""
+msgstr "e-mail, který se má u revize použít."
 
 msgid "--firstname=<replaceable>FIRSTNAME</replaceable>"
-msgstr ""
+msgstr "--firstname=<replaceable>JMENO</replaceable>"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "firstname to use for a revision."
-msgstr ""
+msgstr "křestní jméno, které se má u revize použít."
 
 msgid "--lang=<replaceable>LANG</replaceable>"
-msgstr ""
+msgstr "--lang=<replaceable>JAZYK</replaceable>"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "The language the XML will be written in"
-msgstr ""
+msgstr "Jazyk, ve kterém bude napsáno XML"
 
 msgid "--member=<replaceable>MEMBER</replaceable>"
-msgstr ""
+msgstr "--member=<replaceable>CLEN</replaceable>"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "An entry to be added to the revision. Can be specified multiple times."
-msgstr ""
+msgstr "Záznam, který se přidá do historie revizí. Lze ho uvést vícekrát."
 
 msgid "--revnumber=<replaceable>REVNUMBER</replaceable>"
-msgstr ""
+msgstr "--revnumber=<replaceable>CISLOREVIZE</replaceable>"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "Revision number to use for a revision."
-msgstr ""
+msgstr "Číslo revize, které se u revize použije."
 
 msgid "--surname=<replaceable>SURNAME</replaceable>"
-msgstr ""
+msgstr "--surname=<replaceable>PRIJMENI</replaceable>"
 
+# translation auto-copied from project Publican, version 4, document publican, author peartown
 msgid "surname to use for a revision."
-msgstr ""
+msgstr "příjmení, které se u revize použije."
 
 msgid "<prompt>$</prompt><command> publican</command> build"
-msgstr ""
+msgstr "<prompt>$</prompt><command> publican</command> build"
 
+# translation auto-copied from project Publican, version 4, document publican, author peartown
 msgid "Transform XML to other formats (pdf, html, html-single, drupal-book, etc)"
-msgstr ""
+msgstr "Převede XML do jiných formátů (pdf, html, html-single, drupal-book atd.)"
 
 msgid "--distributed_set"
-msgstr ""
+msgstr "--distributed_set"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "This flag tells publican the data being processed is a distributed set. Note: do not use distributed_set on the command line. Publican uses this flag when calling itself to process distributed sets. This is the only safe way this flag can be used."
-msgstr ""
+msgstr "Tento příznak říká publicanu, že zpracovávané údaje jsou distribuovanou sadou. Poznámka: nepoužívejte distributed_set na příkazové řádce. Publican používá tento příznak při svém vlastním volání, aby zpracoval distribuovanou sadu. Toto je ten jediný bezpečný způsob použití, kterým lze tento příznak použít."
 
 msgid "--embedtoc"
-msgstr ""
+msgstr "--embedtoc"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "Embed the web site TOC object in the generated HTML"
-msgstr ""
+msgstr "Vestavit objekt obsahu webové stránky do generovaného HTML"
 
 msgid "--formats=<replaceable>FORMATS</replaceable>"
-msgstr ""
+msgstr "--formats=<replaceable>FORMATY</replaceable>"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "Comma-separated list of formats, for example: html,pdf,html-single,html-desktop,txt,epub"
-msgstr ""
+msgstr "Čárkou oddělený seznam formátů, např. html,pdf,html-single,html-desktop,txt,epub"
 
 msgid "--langs=<replaceable>LANGS</replaceable>"
-msgstr ""
+msgstr "--langs=<replaceable>JAZYKY</replaceable>"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "Comma-separated list of languages, for example: en-US,de-DE,all"
-msgstr ""
+msgstr "Čárkou oddělený seznam jazyků, např. en-US,de-DE,all"
 
 msgid "--novalid"
-msgstr ""
+msgstr "--novalid"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "Do not run the DTD validation"
-msgstr ""
+msgstr "Neprovádět validaci DTD"
 
 msgid "--pdftool=<replaceable>PDFTOOL</replaceable>"
-msgstr ""
+msgstr "--pdftool=<replaceable>PDFTOOL</replaceable>"
 
+# translation auto-copied from project Publican, version 4, document publican, author peartown
 msgid "Override the tool to use when creating PDFs. Valid options are wkhtmltopdf and fop."
-msgstr ""
+msgstr "Potlačí (uvádí jiný) nástroj, který se použije pro tvorbu PDF. Platné volby jsou wkhtmltopdf nebo fop."
 
 msgid "--pub_dir=<replaceable>PUB_DIR</replaceable>"
-msgstr ""
+msgstr "--pub_dir=<replaceable>PUB_DIR</replaceable>"
 
+# translation auto-copied from project Publican, version 4, document publican, author peartown
 msgid "Directory to publish files to. Defaults to publish."
-msgstr ""
+msgstr "Adresář, do kterého se uloží soubory určené ke zveřejnění. Ve výchozím nastavení se jedná o adresář publish."
 
 msgid "--publish"
-msgstr ""
+msgstr "--publish"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "Set up built content for publishing"
-msgstr ""
+msgstr "Připravit sestavený obsah ke zveřejnění"
 
 msgid "--showfuzzy"
-msgstr ""
+msgstr "--showfuzzy"
 
 msgid "Show fuzzy translation entries in output. Defaults off."
-msgstr ""
+msgstr "Ve výstupu se zobrazí položky, jejichž překlad je neúplný. Výchozí hodnotou je off."
 
 msgid "--src_dir=<replaceable>SRC_DIR</replaceable>"
-msgstr ""
+msgstr "--src_dir=<replaceable>ZDROJOVYADRESAR</replaceable>"
 
+# translation auto-copied from project Publican, version 4, document publican, author peartown
 msgid "Directory to source publican files from."
-msgstr ""
+msgstr "Adresář, ze kterého se načtou soubory publicanu."
 
 msgid "<prompt>$</prompt><command> publican</command> clean"
-msgstr ""
+msgstr "<prompt>$</prompt><command> publican</command> clean"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "Remove all temporary files and directories"
-msgstr ""
+msgstr "Odstraní všechny dočasné soubory a adresáře"
 
 msgid "<prompt>$</prompt><command> publican</command> clean_ids"
-msgstr ""
+msgstr "<prompt>$</prompt><command> publican</command> clean_ids"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "Run clean ids for source XML"
-msgstr ""
+msgstr "Spustí pro zdrojový XML vyčištění identifikátorů"
 
 msgid "<prompt>$</prompt><command> publican</command> clean_set"
-msgstr ""
+msgstr "<prompt>$</prompt><command> publican</command> clean_set"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "Remove local copies of remote set books"
-msgstr ""
+msgstr "Odstraní místní kopie vzdálených sad knih"
 
 msgid "<prompt>$</prompt><command> publican</command> copy_web_brand"
-msgstr ""
+msgstr "<prompt>$</prompt><command> publican</command> copy_web_brand"
 
+# translation auto-copied from project Publican, version 4, document publican, author peartown
 msgid "Copy a brand's installed web content to another site"
-msgstr ""
+msgstr "Zkopíruje nainstalovaný webový obsah grafické úpravy do jiné internetové stránky"
 
 msgid "--brand=<replaceable>BRAND</replaceable>"
-msgstr ""
+msgstr "--brand=<replaceable>GRAFICKAUPRAVA</replaceable>"
 
+# translation auto-copied from project Publican, version 4, document publican, author peartown
 msgid "The brand to use"
-msgstr ""
+msgstr "Grafická úprava, která se má použít"
 
 msgid "--old_site_config=<replaceable>OLD_SITE_CONFIG</replaceable>"
-msgstr ""
+msgstr "--old_site_config=<replaceable>OLD_SITE_CONFIG</replaceable>"
 
+# translation auto-copied from project Publican, version 4, document publican, author peartown
 msgid "WebSite configuration file to use when copying content between sites."
-msgstr ""
+msgstr "Konfigurační soubor webových stránek, který se má použít při kopírování obsahu mezi webovými stránkami."
 
 msgid "--site_config=<replaceable>SITE_CONFIG</replaceable>"
-msgstr ""
+msgstr "--site_config=<replaceable>SITE_CONFIG</replaceable>"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "WebSite configuration file to use or create."
-msgstr ""
+msgstr "Konfigurační soubor webových stránek, který má být použit nebo vytvořen."
 
 msgid "<prompt>$</prompt><command> publican</command> create"
-msgstr ""
+msgstr "<prompt>$</prompt><command> publican</command> create"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "Create a new book, set, or article"
-msgstr ""
+msgstr "Vytvoří novou knihu, sadu nebo článek"
 
 msgid "--dtdver=<replaceable>DTDVER</replaceable>"
-msgstr ""
+msgstr "--dtdver=<replaceable>VERZEDTD</replaceable>"
 
+# translation auto-copied from project Publican, version 4, document publican, author peartown
 msgid "The version of the DocBook DTD to use"
-msgstr ""
+msgstr "Verze DocBook DTD, která se má použít."
 
 msgid "--edition=<replaceable>EDITION</replaceable>"
-msgstr ""
+msgstr "--edition=<replaceable>VYDANI</replaceable>"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "The edition of the book, article, or set"
-msgstr ""
+msgstr "Číslo vydání knihy, článku nebo sady"
 
 msgid "--name=<replaceable>NAME</replaceable>"
-msgstr ""
+msgstr "--name=<replaceable>NAZEV</replaceable>"
 
+# translation auto-copied from project Publican, version 4, document publican, author peartown
 msgid "The name of the book, article, set, or brand"
-msgstr ""
+msgstr "Název knihy, článku, sady nebo grafické úpravy"
 
 msgid "--product=<replaceable>PRODUCT</replaceable>"
-msgstr ""
+msgstr "--product=<replaceable>PRODUKT</replaceable>"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "The name of the product"
-msgstr ""
+msgstr "Název produktu"
 
 msgid "--type=<replaceable>TYPE</replaceable>"
-msgstr ""
+msgstr "--type=<replaceable>TYP</replaceable>"
 
+# translation auto-copied from project Publican, version 4, document publican, author peartown
 msgid "The type (book, article, or set)"
-msgstr ""
+msgstr "Typ (book, article nebo set)"
 
 msgid "--version=<replaceable>VERSION</replaceable>"
-msgstr ""
+msgstr "--version=<replaceable>VERZE</replaceable>"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "The version of the product"
-msgstr ""
+msgstr "Verze produktu"
 
 msgid "<prompt>$</prompt><command> publican</command> create_brand"
-msgstr ""
+msgstr "<prompt>$</prompt><command> publican</command> create_brand"
 
+# translation auto-copied from project Publican, version 4, document publican, author peartown
 msgid "Create a new brand"
-msgstr ""
+msgstr "Vytvoří novou grafickou úpravu"
 
 msgid "<prompt>$</prompt><command> publican</command> create_site"
-msgstr ""
+msgstr "<prompt>$</prompt><command> publican</command> create_site"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "Create a new WebSite in the supplied location."
-msgstr ""
+msgstr "Vytvoří nové webové stránky v zadaném umístění."
 
 msgid "--db_file=<replaceable>DB_FILE</replaceable>"
-msgstr ""
+msgstr "--db_file=<replaceable>SOUBOR_DB</replaceable>"
 
+# translation auto-copied from project Publican, version 4, document publican, author peartown
 msgid "Override default database file."
-msgstr ""
+msgstr "Potlačí (uvede jiný) výchozí databázový soubor."
 
 msgid "--tmpl_path=<replaceable>TMPL_PATH</replaceable>"
-msgstr ""
+msgstr "--tmpl_path=<replaceable>CESTA_K_SABLONE</replaceable>"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "Override the default template path."
-msgstr ""
+msgstr "Potlačí (uvede jinou) výchozí cestu k šabloně."
 
 msgid "--toc_path=<replaceable>TOC_PATH</replaceable>"
-msgstr ""
+msgstr "--toc_path=<replaceable>CESTA_K_OBSAHU</replaceable>"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "Override the default TOC path."
-msgstr ""
+msgstr "Potlačí (uvede jinou) výchozí cestu k obsahu."
 
 msgid "<prompt>$</prompt><command> publican</command> help_config"
-msgstr ""
+msgstr "<prompt>$</prompt><command> publican</command> help_config"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "Display help text for the configuration file"
-msgstr ""
+msgstr "Zobrazí text nápovědy pro konfigurační soubor"
 
 msgid "<prompt>$</prompt><command> publican</command> install_book"
-msgstr ""
+msgstr "<prompt>$</prompt><command> publican</command> install_book"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "Install a book in to a WebSite."
-msgstr ""
+msgstr "Nainstalovat knihu do webových stránek."
 
 msgid "<prompt>$</prompt><command> publican</command> install_brand"
-msgstr ""
+msgstr "<prompt>$</prompt><command> publican</command> install_brand"
 
+# translation auto-copied from project Publican, version 4, document publican, author peartown
 msgid "Install a brand to the supplied location"
-msgstr ""
+msgstr "Nainstalovat grafickou úpravu do uvedeného místa"
 
 msgid "--path=<replaceable>PATH</replaceable>"
-msgstr ""
+msgstr "--path=<replaceable>CESTA</replaceable>"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "/path/to/install/to"
-msgstr ""
+msgstr "/cesta/kam/se/nainstaluje"
 
 msgid "--web"
-msgstr ""
+msgstr "--web"
 
+# translation auto-copied from project Publican, version 4, document publican, author peartown
 msgid "Install the web content for a brand."
-msgstr ""
+msgstr "Nainstalovat webový obsah pro grafickou úpravu."
 
 msgid "<prompt>$</prompt><command> publican</command> lang_stats"
-msgstr ""
+msgstr "<prompt>$</prompt><command> publican</command> lang_stats"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "report PO statistics"
-msgstr ""
+msgstr "připraví zprávu o statistice souborů PO"
 
 msgid "<prompt>$</prompt><command> publican</command> migrate_site"
-msgstr ""
+msgstr "<prompt>$</prompt><command> publican</command> migrate_site"
 
 msgid "Migrate a website DataBase from Publican &lt; 3 to Publican 3."
-msgstr ""
+msgstr "Převede databázi webových stránek z verze Publican &lt; 3 na verzi Publican 3."
 
 msgid "<prompt>$</prompt><command> publican</command> package"
-msgstr ""
+msgstr "<prompt>$</prompt><command> publican</command> package"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "Package a language for shipping"
-msgstr ""
+msgstr "Zabalí jazyk k expedici"
 
 msgid "--binary"
-msgstr ""
+msgstr "--binary"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "Build binary rpm when running package"
-msgstr ""
+msgstr "Při běhu balíčku sestaví binární rpm."
 
 msgid "--brew"
-msgstr ""
+msgstr "--brew"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "Push SRPM to brew"
-msgstr ""
+msgstr "Nahraje balíček SRPM do sestavovacího systému brew"
 
 msgid "--desktop"
-msgstr ""
+msgstr "--desktop"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "Create desktop instead of web package"
-msgstr ""
+msgstr "Namísto webového vytvoří balíček pro stolní počítač"
 
 msgid "--scratch"
-msgstr ""
+msgstr "--scratch"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "Use scratch instead of tag build"
-msgstr ""
+msgstr "Použít scratch sestavení namísto tagovaného"
 
 msgid "--short_sighted"
-msgstr ""
+msgstr "--short_sighted"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "Create package without using version in package name"
-msgstr ""
+msgstr "Vytvořit balíček bez uvedení verze v jeho názvu"
 
 msgid "--wait"
-msgstr ""
+msgstr "--wait"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "Wait for brew to finish building"
-msgstr ""
+msgstr "Vyčkat, než brew dokončí sestavení"
 
 msgid "<prompt>$</prompt><command> publican</command> print_banned"
-msgstr ""
+msgstr "<prompt>$</prompt><command> publican</command> print_banned"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "Print a list of banned DocBook tags"
-msgstr ""
+msgstr "Vytiskne seznam nepovolených tagů DocBook"
 
 msgid "<prompt>$</prompt><command> publican</command> print_known"
-msgstr ""
+msgstr "<prompt>$</prompt><command> publican</command> print_known"
 
+# translation auto-copied from project Publican, version 4, document publican, author peartown
 msgid "Print a list of QA'd DocBook tags"
-msgstr ""
+msgstr "Vytiskne seznam tagů DocBook s kontrolou kvality."
 
 msgid "<prompt>$</prompt><command> publican</command> print_tree"
-msgstr ""
+msgstr "<prompt>$</prompt><command> publican</command> print_tree"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "Print a tree of the xi:includes"
-msgstr ""
+msgstr "Vytisknout strom xi:includes"
 
 msgid "<prompt>$</prompt><command> publican</command> print_unused"
-msgstr ""
+msgstr "<prompt>$</prompt><command> publican</command> print_unused"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "Print a list of unused XML files"
-msgstr ""
+msgstr "Vytiskne seznam nepoužitých souborů XML"
 
 msgid "<prompt>$</prompt><command> publican</command> print_unused_images"
-msgstr ""
+msgstr "<prompt>$</prompt><command> publican</command> print_unused_images"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "Print a list of unused Image files"
-msgstr ""
+msgstr "Vytiskne seznam nepoužitých grafických souborů"
 
 msgid "<prompt>$</prompt><command> publican</command> remove_book"
-msgstr ""
+msgstr "<prompt>$</prompt><command> publican</command> remove_book"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "Remove a book from a WebSite."
-msgstr ""
+msgstr "Odstraní knihu z webových stránek."
 
 msgid "<prompt>$</prompt><command> publican</command> rename"
-msgstr ""
+msgstr "<prompt>$</prompt><command> publican</command> rename"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "Rename a publican book"
-msgstr ""
+msgstr "Přejmenuje knihu v publicanu"
 
 msgid "<prompt>$</prompt><command> publican</command> report"
-msgstr ""
+msgstr "<prompt>$</prompt><command> publican</command> report"
 
+# translation auto-copied from project Publican, version 4, document publican, author peartown
 msgid "Print a readability report for the source text."
-msgstr ""
+msgstr "Vytiskne zprávu o čitelnosti zdrojového textu."
 
 msgid "<prompt>$</prompt><command> publican</command> site_stats"
-msgstr ""
+msgstr "<prompt>$</prompt><command> publican</command> site_stats"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "Report on the contents of a WebSite"
-msgstr ""
+msgstr "Připraví zprávu o obsahu na webových stránkách"
 
 msgid "<prompt>$</prompt><command> publican</command> trans_drop"
-msgstr ""
+msgstr "<prompt>$</prompt><command> publican</command> trans_drop"
 
+# translation auto-copied from project Publican, version 4, document publican, author peartown
 msgid "Snapshot the source language for use in translation."
-msgstr ""
+msgstr "Vytvoří okamžitý snímek zdrojového jazyka pro použití v překladu."
 
 msgid "<prompt>$</prompt><command> publican</command> update_db"
-msgstr ""
+msgstr "<prompt>$</prompt><command> publican</command> update_db"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "Add or remove database entries. Used for processing pre-build books, such as when building packages."
-msgstr ""
+msgstr "Přidá nebo odstraní záznamy z databáze. Užívá se pro zpracování předsestavených (pre-build) knih, jako např. při sestavování balíčků."
 
 msgid "--abstract=<replaceable>ABSTRACT</replaceable>"
-msgstr ""
+msgstr "--abstract=<replaceable>ABSTRAKT</replaceable>"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "Abstract for a book"
-msgstr ""
+msgstr "Abstrakt knihy"
 
 msgid "--add"
-msgstr ""
+msgstr "--add"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "Add a database entry"
-msgstr ""
+msgstr "Přidá záznam do databáze"
 
 msgid "--book_src_lang=<replaceable>BOOK_SRC_LANG</replaceable>"
-msgstr ""
+msgstr "--book_src_lang=<replaceable>ZDROJOVY_JAZYK_KNIHY</replaceable>"
 
+# translation auto-copied from project Publican, version 4, document publican, author peartown
 msgid "The language this translation is based on."
-msgstr ""
+msgstr "Jazyk, na němž je tento překlad založen."
 
 msgid "--book_version=<replaceable>BOOK_VERSION</replaceable>"
-msgstr ""
+msgstr "--book_version=<replaceable>VERZE_KNIHY</replaceable>"
 
+# translation auto-copied from project Publican, version 4, document publican, author peartown
 msgid "The version number of the book being installed."
-msgstr ""
+msgstr "Číslo verze knihy, která je instalována."
 
 msgid "--del"
-msgstr ""
+msgstr "--del"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "Delete a database entry"
-msgstr ""
+msgstr "Smazat databázový záznam"
 
 msgid "--name_label=<replaceable>NAME_LABEL</replaceable>"
-msgstr ""
+msgstr "--name_label=<replaceable>POPISEK_NAZVU</replaceable>"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "name label for a book"
-msgstr ""
+msgstr "popisek názvu knihy"
 
 msgid "--product_label=<replaceable>PRODUCT_LABEL</replaceable>"
-msgstr ""
+msgstr "--product_label=<replaceable>POPIS_PRODUKTU</replaceable>"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "product label for a book"
-msgstr ""
+msgstr "popisek produktu knihy"
 
 msgid "--sort_order=<replaceable>SORT_ORDER</replaceable>"
-msgstr ""
+msgstr "--sort_order=<replaceable>SMER_RAZENI</replaceable>"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "Order to sort a book"
-msgstr ""
+msgstr "Směr seřazení knihy"
 
 msgid "--subtitle=<replaceable>SUBTITLE</replaceable>"
-msgstr ""
+msgstr "--subtitle=<replaceable>PODTITUL</replaceable>"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "Sub title for a book"
-msgstr ""
+msgstr "Podtitul knihy"
 
 msgid "--version_label=<replaceable>VERSION_LABEL</replaceable>"
-msgstr ""
+msgstr "--version_label=<replaceable>POPISEK_VERZE</replaceable>"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "version label for a book"
-msgstr ""
+msgstr "popisek verze knihy"
 
 msgid "<prompt>$</prompt><command> publican</command> update_po"
-msgstr ""
+msgstr "<prompt>$</prompt><command> publican</command> update_po"
 
+# translation auto-copied from project Publican, version 4, document publican, author peartown
 msgid "Update the PO files"
-msgstr ""
+msgstr "Aktualizovat soubory PO"
 
 msgid "--msgmerge"
-msgstr ""
+msgstr "--msgmerge"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "Use gettext's msgmerge for POT/PO merging."
-msgstr ""
+msgstr "Použít msgmerge gettextu pro sloučení POT/PO."
 
 msgid "--previous"
-msgstr ""
+msgstr "--previous"
 
+# translation auto-copied from project Publican, version 4, document publican, author peartown
 msgid "Keep previous msgid when fuzzy matches are detected in PO updates."
-msgstr ""
+msgstr "Zachovat předchozí identifikátory zpráv (msgid), nalézají-li se nepřesné překlady v aktualizovaných PO souborech."
 
 msgid "<prompt>$</prompt><command> publican</command> update_pot"
-msgstr ""
+msgstr "<prompt>$</prompt><command> publican</command> update_pot"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "Update the POT files"
-msgstr ""
+msgstr "Aktualizovat soubory POT"
 
 msgid "<prompt>$</prompt><command> publican</command> update_site"
-msgstr ""
+msgstr "<prompt>$</prompt><command> publican</command> update_site"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "Update an existing sites templates."
-msgstr ""
+msgstr "Aktualizovat šablony existujících stránek."
 
 msgid "<prompt>$</prompt><command> publican</command> zt_pull"
-msgstr ""
+msgstr "<prompt>$</prompt><command> publican</command> zt_pull"
 
+# translation auto-copied from project Publican, version 4, document publican, author peartown
 msgid "Pull translations from Zanata."
-msgstr ""
+msgstr "Načíst překlady ze systému Zanata."
 
 msgid "<prompt>$</prompt><command> publican</command> zt_push"
-msgstr ""
+msgstr "<prompt>$</prompt><command> publican</command> zt_push"
 
+# translation auto-copied from project Publican, version 4, document publican, author peartown
 msgid "Push translations to Zanata."
-msgstr ""
+msgstr "Nahrát překlady do systému Zanata."
 

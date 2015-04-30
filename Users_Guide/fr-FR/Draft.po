@@ -1,86 +1,60 @@
 # Gé Baylard <<Geodebay@gmail.com>>, 2013.
 # Gé Baylard <geodebay@gmail.com>, 2013.
-# Gérard Baylard <geodebay@gmail.com>, 2014. #zanata
+# Gé Baylard <geodebay@gmail.com>, 2014. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2014-05-06 14:10+1000\n"
+"POT-Creation-Date: 2014-10-03 13:17+1000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "PO-Revision-Date: 2014-05-12 12:35-0400\n"
-"Last-Translator: Gérard Baylard <geodebay@gmail.com>\n"
+"Last-Translator: Gé Baylard <geodebay@gmail.com>\n"
 "Language-Team: français <>\n"
 "Language: fr\n"
-"X-Generator: Zanata 3.4.2\n"
+"X-Generator: Zanata 3.6.2\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#. Tag: title
-#, no-c-format
 msgid "Pre-release software and draft documentation"
 msgstr "Logiciels en pré-parution et brouillons de documentation"
 
-#. Tag: para
-#, no-c-format
 msgid "Completed documentation for pre-release software is not the same thing as draft documentation."
 msgstr "Une documentation complète pour un logiciel en pré-parution n'est pas la même chose qu'un brouillon de documentation."
 
-#. Tag: para
-#, no-c-format
 msgid "Drafts are unfinished versions of a book or article, and their unfinished state is unrelated to the status of the software they document."
 msgstr "Des brouillons sont des versions non terminées d'un ouvrage ou d'un article, et leur statut d'incomplétude n'est pas lié à l'état du logiciel qu'ils documentent."
 
-#. Tag: para
-#, no-c-format
 msgid "In both circumstances, however, it is important to make the status of the software, documentation or both clear to users, developers, readers and reviewers."
 msgstr "Dans les deux circonstances, toutefois, il est important de définir clairement l'état du logiciel, de la documentation ou des deux auprès des utilisateurs, des développeurs, des lecteurs et des réviseurs."
 
-#. Tag: title
-#, no-c-format
 msgid "Denoting pre-release software"
 msgstr "Marquage d'un logiciel en pré-parution"
 
-#. Tag: para
-#, no-c-format
 msgid "Documentation for pre-release software, especially pre-release software being distributed to testers, customers and partners, should carry a clear mark denoting the beta-status of the software."
 msgstr "Une documentation pour un logiciel en pré-parution, et particulièrement pour celui venant d'être distribué aux testeurs, utilisateurs et partenaires, doit porter clairement un marquage indiquant l'état de bêta-test du logiciel."
 
-#. Tag: para
-#, no-c-format
 msgid "To create that mark do the following:"
 msgstr "Pour créer ce marquage, effectuez les opérations suivantes :"
 
-#. Tag: para
-#, no-c-format
 msgid "Add the software's pre-release version number, or equivalent state information, to the <tag>&lt;subtitle&gt;</tag> tag in your <filename>Book_Info.xml</filename> file. Place this additional text in <tag>&lt;remark&gt;</tag> tags. For example:"
 msgstr "ajoutez le numéro de version de pré-parution du logiciel, ou une information équivalent sur son état, sous la balise <sgmltag>&lt;subtitle&gt;</sgmltag> dans le fichier <filename>Book_Info.xml</filename>. Mettez un texte complémentaire dans des balises <sgmltag>&lt;remark&gt;</sgmltag>. Par exemple :"
 
-#. Tag: programlisting
-#, no-c-format
 msgid "&lt;subtitle&gt;Using Red Hat Enterprise Warp Drive&lt;remark&gt; Version 1.1, Beta 2&lt;/remark&gt;&lt;/subtitle&gt;"
 msgstr ""
 "&lt;subtitle&gt;Using Red Hat Enterprise Warp Drive&lt;remark&gt; Version 1.1, Beta 2&lt;/remark&gt;&lt;/subtitle&gt;\n"
 "\n"
 
-#. Tag: para
-#, no-c-format
 msgid "add <varname>show_remarks</varname> to the <filename>publican.cfg</filename> file and set it to '1':"
 msgstr "ajoutez le paramètre <varname>show_remarks</varname> dans le fichier <filename>publican.cfg</filename> et fixer sa valeur à « 1 » :"
 
-#. Tag: programlisting
-#, no-c-format
 msgid "show_remarks: 1"
 msgstr ""
 "show_remarks: 1\n"
 "\n"
 
-#. Tag: para
-#, no-c-format
 msgid "When you build your book with this <tag>&lt;remark&gt;</tag> tag and the <varname>show_remarks</varname> setting in place, the pre-release nature of the software is displayed clearly and unmistakably. PDF builds display the remark on their cover and title pages. HTML builds (both single-page HTML and multiple-page HTML) display the remark near the beginning of <filename>index.html</filename>."
 msgstr "Quand vous construisez l'ouvrage avec la balise <sgmltag>&lt;remark&gt;</sgmltag>, complétée du paramétrage de <varname>show_remarks</varname>, la nature de l'état de pré-parution du logiciel est affichée clairement et sans erreur possible. Un PDF ainsi construit affiche la remarque sur la couverture et les pages titre. Un HTML ainsi construit (page unique ou pages multiples) affichera la remarque au début de <filename>index.html</filename>."
 
-#. Tag: para
-#, no-c-format
 msgid "Because this approach makes no changes to the information in <filename>Book_Info.xml</filename> used to generate RPMs, it also ensures there is no ambiguity in the RPM subsystem's operation."
 msgstr "Comme cette approche n'effectue aucune modification de l'information dans le fichier <filename>Book_Info.xml</filename> utilisée pour générer le RPM, elle assure également qu'il n'y a aucune ambiguïté dans une opération avec le sous-système RPM."
 
@@ -90,55 +64,35 @@ msgstr ""
 msgid "Here is an <application role=\"remark\">example</application> of an inline remark."
 msgstr ""
 
-#. Tag: title
-#, no-c-format
 msgid "Important"
 msgstr "Important"
 
-#. Tag: para
-#, no-c-format
 msgid "It is the writer's responsibility to remove the <tag>&lt;remark&gt;</tag> tag and its contents and remove or turn off <varname>show_remarks</varname> when documentation is updated for use with the release version of the software."
 msgstr "Il est de la responsabilité de l'auteur de supprimer la balise <sgmltag>&lt;remark&gt;</sgmltag> et son contenu, ainsi que de supprimer ou désactiver le paramètre <varname>show_remarks</varname> quand la documentation est mise à jour pour être utilisée avec la version de la parution finale du logiciel."
 
-#. Tag: title
-#, no-c-format
 msgid "Denoting draft documentation"
 msgstr "Marquage d'un brouillon de documentation"
 
-#. Tag: para
-#, no-c-format
 msgid "Unfinished documentation made available to others for review should be labeled clearly as such."
 msgstr "Un documentation non terminée mise à disposition d'autres personnes pour revue doit être clairement marquée comme telle."
 
-#. Tag: para
-#, no-c-format
 msgid "To add the draft watermark to your documentation add the <userinput>status=\"draft\"</userinput> attribute to the <tag>&lt;article&gt;</tag>, <tag>&lt;book&gt;</tag> or <tag>&lt;set&gt;</tag> tag in your document's root node. For example:"
 msgstr "Pour ajouter le filigrane « draft » ajoutez l'attribut <userinput>status=\"draft\"</userinput> à la balise <sgmltag>&lt;article&gt;</sgmltag>, <sgmltag>&lt;book&gt;</sgmltag> ou <sgmltag>&lt;set&gt;</sgmltag> dans le nœud racine du document. Par exemple :"
 
-#. Tag: programlisting
-#, no-c-format
 msgid "&lt;book status=\"draft\"&gt;"
 msgstr ""
 "&lt;book status=\"draft\"&gt;\n"
 "\n"
 
-#. Tag: para
-#, no-c-format
 msgid "By default, your root node is the <tag>&lt;book&gt;</tag> tag in your <filename><replaceable>Doc_Name</replaceable>.xml</filename> file."
 msgstr "Par défaut, le nœud racine est la balise <sgmltag>&lt;book&gt;</sgmltag> dans le fichier <filename><replaceable>Nom_document</replaceable>.xml</filename>."
 
-#. Tag: para
-#, no-c-format
 msgid "If you are working on an article or set, the root node is the <tag>&lt;article&gt;</tag> or <tag>&lt;set&gt;</tag> tag in <filename><replaceable>Doc_Name</replaceable>.xml</filename>."
 msgstr "Si vous travaillez sur un article ou sur une collection, le nœud racine est la balise <sgmltag>&lt;article&gt;</sgmltag> ou <sgmltag>&lt;set&gt;</sgmltag> dans le fichier <filename><replaceable>Nom_document</replaceable>.xml</filename>."
 
-#. Tag: para
-#, no-c-format
 msgid "Adding the <userinput>status=\"draft\"</userinput> attribute causes each page of the document to show the draft watermark. This is by design."
 msgstr "L'ajout de l'attribut <userinput>status=\"draft\"</userinput> déclenche l'apparition dans chaque page du document du filigrane « draft ». À dessein."
 
-#. Tag: para
-#, no-c-format
 msgid "Even if you change only a portion of a work before sending it out for review, marking every page as draft will encourage reviewers to report errors or typos they spot in passing. It will also ensure non-reviewers who encounter the work do not mistake a draft for a finished version."
 msgstr "Même si vous modifiez uniquement une partie de votre travail avant de l'adresser pour revue, le fait de marquer chaque page comme étant « draft » (brouillon) va inciter les réviseurs à rapporter les erreurs ou les fautes de frappe qu'ils auront remarquées au passage. De plus cela prévient les simples lecteurs de l'ouvrage de ne pas confondre un brouillon avec une version achevée."
 
@@ -159,13 +113,9 @@ msgid ""
 "Isn't it pretty!"
 msgstr ""
 
-#. Tag: title
-#, no-c-format
 msgid "Denoting draft documentation of pre-release software"
 msgstr "Marquage d'un brouillon de documentation pour un logiciel en pré-parution"
 
-#. Tag: para
-#, no-c-format
 msgid "To denote unfinished documentation of pre-release software properly, do both previously noted procedures."
 msgstr "Pour marquer proprement une documentation inachevée pour un logiciel en pré-parution, effectuez les deux procédures de marquage ci-dessus."
 

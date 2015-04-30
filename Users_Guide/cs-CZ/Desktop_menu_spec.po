@@ -1,28 +1,30 @@
+# Josef Hruška <josef.hruska@upcmail.cz>, 2015. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2014-10-03 13:09+1000\n"
-"PO-Revision-Date: 2014-10-03 13:09+1000\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: None\n"
-"Language: en-US \n"
+"POT-Creation-Date: 2014-10-03 13:17+1000\n"
 "MIME-Version: 1.0\n"
-"Content-Type: application/x-publican; charset=UTF-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Publican v4.2.2\n"
+"PO-Revision-Date: 2015-04-06 09:17-0400\n"
+"Last-Translator: Josef Hruška <josef.hruska@upcmail.cz>\n"
+"Language-Team: None\n"
+"Language: cs\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2\n"
 
 msgid "Sample spec file for desktop menu package"
-msgstr ""
+msgstr "Ukázkový soubor spec balíčku nabídky pro stolní počítač"
 
 msgid "The following spec file is an example of how you could package a <firstterm>desktop entry</firstterm> (<filename>.directory</filename>) file and a <firstterm>desktop menu</firstterm> (<filename>.menu</filename>) file in an RPM package for shipping. Refer to <xref linkend=\"sect-Publican-Users_Guide-Desktop_menu_entries_for_documents\" /> for the structure of these files."
-msgstr ""
+msgstr "Následující soubor spec poskytuje příklad, jak lze zabalit soubor <firstterm>položky pracovní plochy</firstterm> (<filename>.directory</filename>) a soubor <firstterm>nabídky pracovní plochy</firstterm> (<filename>.menu</filename>) do balíčku RPM, který lze dále šířit. Struktura těchto souborů viz <xref linkend=\"sect-Publican-Users_Guide-Desktop_menu_entries_for_documents\" />."
 
 msgid "This example assumes a desktop entry file named <filename>menu-example.directory</filename>, a desktop menu file named <filename>menu-example.menu</filename>, and a readme file named <filename>README</filename> are located in a directory named <filename>menu-example-0</filename> that is archived as <filename>menu-example-0.tgz</filename>."
-msgstr ""
+msgstr "V tomto příkladu se předpokládá, že soubor položky pracovní plochy nazvaný  <filename>menu-example.directory</filename>, soubor nabídky pracovní plochy nazvaný <filename>menu-example.menu</filename> a soubor readme nazvaný <filename>README</filename> jsou uloženy v adresáři s názvem <filename>menu-example-0</filename>, který je zaarchivován jako <filename>menu-example-0.tgz</filename>."
 
 msgid "When built, this results in a package named <package>menu-example</package>."
-msgstr ""
+msgstr "Výsledkem sestavení je balíček s názvem <package>menu-example</package>."
 
 msgid "<xi:include href=\"extras/menu-example.spec\" parse=\"text\" xmlns:xi=\"http://www.w3.org/2001/XInclude\" />"
-msgstr ""
+msgstr "<xi:include href=\"extras/menu-example.spec\" parse=\"text\" xmlns:xi=\"http://www.w3.org/2001/XInclude\" />"
 

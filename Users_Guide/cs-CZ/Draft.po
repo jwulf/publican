@@ -1,93 +1,97 @@
+# Josef Hruška <josef.hruska@upcmail.cz>, 2014. #zanata
+# Josef Hruška <josef.hruska@upcmail.cz>, 2015. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2014-10-03 13:09+1000\n"
-"PO-Revision-Date: 2014-10-03 13:09+1000\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: None\n"
-"Language: en-US \n"
+"POT-Creation-Date: 2014-10-03 13:17+1000\n"
 "MIME-Version: 1.0\n"
-"Content-Type: application/x-publican; charset=UTF-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Publican v4.2.2\n"
+"PO-Revision-Date: 2015-01-20 12:23-0500\n"
+"Last-Translator: Josef Hruška <josef.hruska@upcmail.cz>\n"
+"Language-Team: None\n"
+"Language: cs\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2\n"
 
 msgid "Pre-release software and draft documentation"
-msgstr ""
+msgstr "Software před oficiálním zveřejněním a návrh dokumentace"
 
 msgid "Completed documentation for pre-release software is not the same thing as draft documentation."
-msgstr ""
+msgstr "Dokončená dokumentace pro software, který se nachází ve stavu před svým oficiálním zveřejněním (pre-release), není to samé, jako je dokumentace v návrhu."
 
 msgid "Drafts are unfinished versions of a book or article, and their unfinished state is unrelated to the status of the software they document."
-msgstr ""
+msgstr "Návrhy dokumentace jsou nedokončené verze knihy nebo článku a jejich nedokončený stav nemá nic společného se stavem softwaru, který dokumentují."
 
 msgid "In both circumstances, however, it is important to make the status of the software, documentation or both clear to users, developers, readers and reviewers."
-msgstr ""
+msgstr "V obou případech je však důležité stav softwaru, dokumentace nebo obojího jasně vysvětlit uživatelům, vývojářům, čtenářům či recenzentům."
 
 msgid "Denoting pre-release software"
-msgstr ""
+msgstr "Označování softwaru před oficiálním zveřejněním"
 
 msgid "Documentation for pre-release software, especially pre-release software being distributed to testers, customers and partners, should carry a clear mark denoting the beta-status of the software."
-msgstr ""
+msgstr "Dokumentace pro software před jeho oficiálním zveřejněním, zejména takový, který je šířen těm, kdo ho testují, zákazníkům nebo partnerům, by měla nosit jasný znak, který upozorní na stav beta softwaru."
 
 msgid "To create that mark do the following:"
-msgstr ""
+msgstr "Pro vytvoření tohoto znaku proveďte následující:"
 
 msgid "Add the software's pre-release version number, or equivalent state information, to the <tag>&lt;subtitle&gt;</tag> tag in your <filename>Book_Info.xml</filename> file. Place this additional text in <tag>&lt;remark&gt;</tag> tags. For example:"
-msgstr ""
+msgstr "Přidejte číslo neoficiální verze softwaru, popř. jinou odpovídající informaci o jeho stavu, do tagu <tag>&lt;subtitle&gt;</tag> v souboru <filename>Book_Info.xml</filename>. Tento doplňující text umístěte mezi tagy <tag>&lt;remark&gt;</tag>. Na příklad:"
 
 msgid "&lt;subtitle&gt;Using Red Hat Enterprise Warp Drive&lt;remark&gt; Version 1.1, Beta 2&lt;/remark&gt;&lt;/subtitle&gt;"
-msgstr ""
+msgstr "&lt;subtitle&gt;Používání Red Hat Enterprise Warp Drive&lt;remark&gt; Verze 1.1, Beta 2&lt;/remark&gt;&lt;/subtitle&gt;"
 
 msgid "add <varname>show_remarks</varname> to the <filename>publican.cfg</filename> file and set it to '1':"
-msgstr ""
+msgstr "přidejte <varname>show_remarks</varname> do souboru <filename>publican.cfg</filename>  a nastavte ho na '1':"
 
 msgid "show_remarks: 1"
-msgstr ""
+msgstr "show_remarks: 1"
 
 msgid "When you build your book with this <tag>&lt;remark&gt;</tag> tag and the <varname>show_remarks</varname> setting in place, the pre-release nature of the software is displayed clearly and unmistakably. PDF builds display the remark on their cover and title pages. HTML builds (both single-page HTML and multiple-page HTML) display the remark near the beginning of <filename>index.html</filename>."
-msgstr ""
+msgstr "Je-li kniha sestavena s tímto tagem <tag>&lt;remark&gt;</tag> a nastavením <varname>show_remarks</varname>, je neoficiální povaha softwaru zřetelně a nezaměnitelně zobrazena. Sestavení PDF zobrazí poznámku na obálce a titulních stranách. Sestavení HTML (jak jedno- tak vícestránkové HTML) zobrazí poznámku blízko začátku <filename>index.html</filename>."
 
 msgid "Because this approach makes no changes to the information in <filename>Book_Info.xml</filename> used to generate RPMs, it also ensures there is no ambiguity in the RPM subsystem's operation."
-msgstr ""
+msgstr "Jelikož tento přístup nikterak nemění informace v <filename>Book_Info.xml</filename> využívaném pro tvorbu balíčků RPM, zajišťuje rovněž, že se ve fungování subsystému RPM nevyskytují nejednoznačnosti."
 
 msgid "An example of an inline remark"
-msgstr ""
+msgstr "Příklad inline poznámky"
 
 msgid "Here is an <application role=\"remark\">example</application> of an inline remark."
-msgstr ""
+msgstr "Zde máme <application role=\"remark\">příklad</application> inline poznámky."
 
+# translation auto-copied from project Publican Users' Guide, version 3, document Files_in_the_Book_Directory, author peartown
 msgid "Important"
-msgstr ""
+msgstr "Důležité"
 
 msgid "It is the writer's responsibility to remove the <tag>&lt;remark&gt;</tag> tag and its contents and remove or turn off <varname>show_remarks</varname> when documentation is updated for use with the release version of the software."
-msgstr ""
+msgstr "Odstranění tagu <tag>&lt;remark&gt;</tag> a jeho obsahu a odstranění či vypnutí <varname>show_remarks</varname> je na odpovědnosti autora při aktualizaci dokumentace, jež má být používána s veřejnou (oficiální) verzí softwaru."
 
 msgid "Denoting draft documentation"
-msgstr ""
+msgstr "Označování návrhu dokumentace"
 
 msgid "Unfinished documentation made available to others for review should be labeled clearly as such."
-msgstr ""
+msgstr "Nedokončená dokumentace, která je dána k dispozici druhým k recenzi, by tak měla být označena. "
 
 msgid "To add the draft watermark to your documentation add the <userinput>status=\"draft\"</userinput> attribute to the <tag>&lt;article&gt;</tag>, <tag>&lt;book&gt;</tag> or <tag>&lt;set&gt;</tag> tag in your document's root node. For example:"
-msgstr ""
+msgstr "Vodoznak návrhu přidáte do dokumentace přidáním atributu <userinput>status=\"draft\"</userinput> do tagu <tag>&lt;article&gt;</tag>, <tag>&lt;book&gt;</tag> či <tag>&lt;set&gt;</tag> v kořenovém uzlu dokumentu. Na příklad:"
 
 msgid "&lt;book status=\"draft\"&gt;"
-msgstr ""
+msgstr "&lt;book status=\"draft\"&gt;"
 
 msgid "By default, your root node is the <tag>&lt;book&gt;</tag> tag in your <filename><replaceable>Doc_Name</replaceable>.xml</filename> file."
-msgstr ""
+msgstr "Ve výchozím nastavení je kořenovým uzlem tag <tag>&lt;book&gt;</tag> v souboru <filename><replaceable>Nazev_Dok</replaceable>.xml</filename>."
 
 msgid "If you are working on an article or set, the root node is the <tag>&lt;article&gt;</tag> or <tag>&lt;set&gt;</tag> tag in <filename><replaceable>Doc_Name</replaceable>.xml</filename>."
-msgstr ""
+msgstr "Pracujete-li na článku nebo sadě, kořenovým uzlem je tag <tag>&lt;article&gt;</tag> či <tag>&lt;set&gt;</tag> v <filename><replaceable>Nazev_Dok</replaceable>.xml</filename>."
 
 msgid "Adding the <userinput>status=\"draft\"</userinput> attribute causes each page of the document to show the draft watermark. This is by design."
-msgstr ""
+msgstr "Přidání atributu <userinput>status=\"draft\"</userinput> způsobí, že každá stránka dokumentu zobrazí vodoznak návrhu. Takto je Publican navržen."
 
 msgid "Even if you change only a portion of a work before sending it out for review, marking every page as draft will encourage reviewers to report errors or typos they spot in passing. It will also ensure non-reviewers who encounter the work do not mistake a draft for a finished version."
-msgstr ""
+msgstr "I pokud změníte před odesláním k recenzi pouze část díla, označení každé stránky jako návrh povzbudí recenzenty k hlášení chyb nebo překlepů, které zaznamenají při čtení. Zajistí také to, že ti, kdo se nepodílí na recenzi, a tudíž kontrole, a přesto dílo zaznamenají, si návrh nezamění za dokončenou verzi."
 
 msgid "An example of a block marked up as draft"
-msgstr ""
+msgstr "Příklad bloku označeného za návrh"
 
 msgid ""
 "This is an example of a block that is marked as draft\n"
@@ -102,34 +106,45 @@ msgid ""
 "\n"
 "Isn't it pretty!"
 msgstr ""
+"Toto je příklad bloku textu, který je označen za návrh\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"Není to krása?!"
 
 msgid "Denoting draft documentation of pre-release software"
-msgstr ""
+msgstr "Označování návrhu dokumentace softwaru před oficiálním zveřejněním"
 
 msgid "To denote unfinished documentation of pre-release software properly, do both previously noted procedures."
-msgstr ""
+msgstr "Chcete-li označit nedokončenou dokumentaci softwaru, který se nachází ve stavu před oficiálním zveřejněním, postupujte podle výše uvedených postupů."
 
 msgid "Denoting changed content <remark>New section</remark>"
-msgstr ""
+msgstr "Označování upraveného obsahu <remark>New section</remark>"
 
 msgid "DocBook allows setting the <tag>revisionflag</tag> on many elements to allow easier reviewing on changed documents. <application>Publican</application>, as of version 4.1, will add highlighting to these elements if the book is in draft mode. e.g. <userinput>revisionflag=\"added\"</userinput>"
-msgstr ""
+msgstr "DocBook umožňuje u mnoha prvků nastavit přiznak v podobě atributu <tag>revisionflag</tag>, který slouží k snadnější revizi změněných dokumentů. <application>Publican</application> od verze 4.1 tyto prvky zvýrazňuje, nachází-li se kniha v režimu návrhu. Např.  <userinput>revisionflag=\"added\"</userinput>."
 
 msgid "added"
-msgstr ""
+msgstr "added"
 
 msgid "This is how an element that has been added to a new revision is marked-up."
-msgstr ""
+msgstr "Takto by měl být označkován prvek, který byl v nové revizi přidán."
 
 msgid "changed"
-msgstr ""
+msgstr "changed"
 
 msgid "This is how an element that has been changed in a new revision is marked-up."
-msgstr ""
+msgstr "Takto by měl být označkován prvek, který byl v nové revizi upraven/změněn."
 
 msgid "deleted"
-msgstr ""
+msgstr "deleted"
 
 msgid "This is how an element that has been marked for deletion from a new revision is marked-up. Publican will not automatically delete or hide this content, you have to ensure this is done before publication."
-msgstr ""
+msgstr "Takto by měl být označkován prvek, který je označen pro výmaz z nové revize. Publican tento obsah automaticky neodstraní ani neskryje, musíte zajistit vy, aby se tak stalo před zveřejněním."
 

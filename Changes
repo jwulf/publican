@@ -24,6 +24,7 @@ $next UNRELEASED
 - Make legalnotice chunk in a similar way as chapters for drupal builds, so it's included in the feed.
 - Enable section.label.includes.component.label for common-db5. BZ #1205952
 - Fix formalpara ids being dropped for DocBook 4.5. BZ #1209344
+- Add --no_clean option to allow custom entity files. BZ #1208069
 
 4.2.6 Tue Oct 21 2014
 - Fix External_Links translation not merging. BZ #1153911

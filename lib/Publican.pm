@@ -865,6 +865,7 @@ sub new {
         $NOCOLOURS = delete( $args->{NOCOLOURS} );
         my $brand_dir = delete( $args->{brand_dir} );
         my $allow_network =  delete( $args->{allow_network} );
+        my $no_clean =  delete( $args->{no_clean} );
 
         if ( %{$args} ) {
             croak(
@@ -879,6 +880,7 @@ sub new {
         $SINGLETON = $self;
 
         $self->{allow_network} = $allow_network;
+        $self->{no_clean} = $no_clean;
 
         # BUGBUG this should be replaced by Publican::Config
         if ( $^O eq 'MSWin32' ) {

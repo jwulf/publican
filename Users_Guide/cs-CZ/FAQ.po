@@ -1,81 +1,86 @@
+# Josef Hruška <josef.hruska@upcmail.cz>, 2014. #zanata
+# Josef Hruška <josef.hruska@upcmail.cz>, 2015. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2014-10-03 13:09+1000\n"
-"PO-Revision-Date: 2014-10-03 13:09+1000\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: None\n"
-"Language: en-US \n"
+"POT-Creation-Date: 2014-10-03 13:17+1000\n"
 "MIME-Version: 1.0\n"
-"Content-Type: application/x-publican; charset=UTF-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Publican v4.2.2\n"
+"PO-Revision-Date: 2015-04-03 11:22-0400\n"
+"Last-Translator: Josef Hruška <josef.hruska@upcmail.cz>\n"
+"Language-Team: None\n"
+"Language: cs\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2\n"
 
+# translation auto-copied from project DocBook locales, version 1, document locale
 msgid "Frequently Asked Questions"
-msgstr ""
+msgstr "Často kladené dotazy"
 
 msgid "How do I add a language to my book?"
-msgstr ""
+msgstr "Jak do své knihy přidám jazyk?"
 
 msgid "Run <prompt>$</prompt> <command>publican update_po --langs=<replaceable>language</replaceable></command>, where <replaceable>language</replaceable> is the code for the new language that you want to add. You can add more than one language at a time, with the language codes separated by commas. For example, <command>publican update_po --langs=ja-JP</command> creates the Japanese language directory and Japanese PO files, and <command>publican update_po --langs=ja-JP,ko-KR</command> creates directories and PO files for both Japanese and Korean."
-msgstr ""
+msgstr "Spusťte <prompt>$</prompt> <command>publican update_po --langs=<replaceable>jazyk</replaceable></command>, kde <replaceable>jazyk</replaceable> je kód nového jazyka, který chcete přidat. Lze přidat více než jeden jazyk najednou, s jazykovými kódy oddělenými čárkami. Například <command>publican update_po --langs=ja-JP</command> vytvoří adresář a soubory PO pro japonský jazyk a <command>publican update_po --langs=ja-JP,ko-KR</command> vytvoří adresáře a soubory PO pro japonštinu i korejštinu."
 
 msgid "What if I do not want to use the country code? For example, can I run <prompt>$</prompt> <command>publican update_po --langs=es,de,fr</command>?"
-msgstr ""
+msgstr "A pokud nechci používat kódy zemí? Mohu například spustit <prompt>$</prompt> <command>publican update_po --langs=es,de,fr</command>?"
 
 msgid "Yes — this command works. However, if you omit the country code, the output might be unpredictable when <application>Publican</application> or a brand has definitions for more than one regional variety of a language — for example, <literal>zh-CN</literal> (Simplified Chinese as used in the People's Republic of China) and <literal>zh-TW</literal> (Traditional Chinese as used in the Republic of China, on Taiwan). Even when only one variety is currently defined, it is always safest to include the country code so that, for example, a future update of <application>Publican</application> does not suddenly cause your German (<literal>de-DE</literal>) documents to switch to Schweizerdeutsch (Swiss German, <literal>de-CH</literal>) Common Content and headings."
-msgstr ""
+msgstr "Ano — tento příkaz funguje také. Ale vynecháte-li kód země, výstup může být nepředvídatelný, pokud <application>Publican</application> či grafická úprava obsahuje více než jednu definici regionální varianty jazyka — například <literal>zh-CN</literal> (zjednodušená čínština používaná v Čínské lidové republice) a <literal>zh-TW</literal> (tradiční čínština používaná v Čínské republice, na Tchaj-wanu). Dokonce i pokud je definována pouze jedna varianta, je vždy bezpečnější použít kód země, proto aby například budoucí aktualizace <application>Publicanu</application> nezpůsobila, že by se na vaše německé (<literal>de-DE</literal>) dokumenty aplikoval švýcarský (švýcarská němčina, <literal>de-CH</literal> Common Content a nadpisy."
 
 msgid "How do I update all po files?"
-msgstr ""
+msgstr "Jak aktualizuji všechny soubory po?"
 
 msgid "Run the <prompt>$</prompt> <command>publican update_po --langs=all</command> command."
-msgstr ""
+msgstr "Spusťte příkaz <prompt>$</prompt> <command>publican update_po --langs=all</command>."
 
 msgid "Where can I get a complete list of <application>Publican</application>'s build options?"
-msgstr ""
+msgstr "Kde mohu získat úplný seznam možností pro příkaz build <application>Publicanu</application>?"
 
 msgid "Run the <prompt>$</prompt> <command>publican build --help</command> command."
-msgstr ""
+msgstr "Spusťte příkaz <prompt>$</prompt> <command>publican build --help</command>."
 
 msgid "Where can I get a complete list of parameters that can be set in the <filename>publican.cfg</filename>?"
-msgstr ""
+msgstr "Kde mohu získat úplný seznam parametrů, které lze nastavit v <filename>publican.cfg</filename>?"
 
 msgid "Run the <prompt>$</prompt> <command>publican help_config</command> command in a directory that holds any <application>Publican</application> document."
-msgstr ""
+msgstr "Spusťte příkaz <prompt>$</prompt> <command>publican help_config</command> v adresáři, kde se nachází kterýkoliv dokument  vytvořený v <application>Publicanu</application>."
 
 msgid "Where are the <application>Publican</application> common files located?"
-msgstr ""
+msgstr "Kde se nachází společné soubory <application>Publicanu</application>?"
 
 msgid "By default, they are in <filename>/usr/share/publican/</filename> on Linux operating systems and in <filename>%SystemDrive%/%ProgramFiles%/publican/Common_Content</filename> on Windows operating systems — typically, <filename>C:/Program Files/publican/Common_Content</filename>."
-msgstr ""
+msgstr "Na operačních systémech Linux se standardě nachází v <filename>/usr/share/publican/</filename> a na Windows v <filename>%SystemDrive%/%ProgramFiles%/publican/Common_Content</filename>  — obvykle <filename>C:/Program Files/publican/Common_Content</filename>."
 
 msgid "Is it possible to include arbitrary files in tarballs and RPM packages?"
-msgstr ""
+msgstr "Lze zahrnout do balíčků archivu nebo RPM libovolné soubory?"
 
 msgid "Yes. If you make a directory named <filename>files</filename> in your source language directory it will be included in any tarballs or SRPM packages that <application>Publican</application> creates."
-msgstr ""
+msgstr "Ano. Vytvoříte-li v adresáři zdrojového jazyka adresář nazvaný <filename>files</filename>, bude zahrnut do kteréhokoliv balíčku archivu či balíčku SRPM, který <application>Publican</application> vytvoří."
 
+# translation auto-copied from project Publican Users' Guide, version 3, document Draft, author peartown
 msgid "Important"
-msgstr ""
+msgstr "Důležité"
 
 msgid "The <filename>files</filename> directory will not be available during the validation process so you can not <tag>xi:include</tag> or otherwise embed any files in this directory in your XML."
-msgstr ""
+msgstr "Adresář <filename>files</filename> nebude dostupný během validačního procesu, proto nelze zahrnout pomocí <tag>xi:include</tag> či jiným způsobem žádné soubory v tomto adresáři do svého XML."
 
 msgid "Why does <application>Publican</application> give me warnings about unknown tags?"
-msgstr ""
+msgstr "Proč mi <application>Publican</application> poskytuje varovaná hlášení o neznámých tazích? "
 
 msgid "This warning informs you that you are using a tag whose output has not been tested for attractiveness, XHTML 1.0 Strict compliance, or Section 508 (Accessibility) compliance."
-msgstr ""
+msgstr "Toto varovné hlášení vás informuje o tom, že používáte tag, jehož výstup nebyl testován z hlediska atraktivity, souladu se specifikací XHTML 1.0 Strict nebo Sekce 508 (Přístupnost)."
 
 msgid "I can build HTML documents fine, but when I try to build PDF documents, I get errors like <computeroutput>java.lang.NullPointerException</computeroutput> and no PDF file is produced. What is wrong?"
-msgstr ""
+msgstr "Mohu bez problému sestavit dokumenty HTML, ale pokud zkusím sestavit dokumenty PDF, dostanu chybová hlášení jako <computeroutput>java.lang.NullPointerException</computeroutput> a žádný soubor PDF nevznikne. Co je špatně?"
 
 msgid "Try building a PDF version of a different document — perhaps a fresh one that you create with the <prompt>$</prompt> <command>publican create</command> command. If the problem is not just with one particular document, you probably have a mismatch between the <application>Java Runtime Environment</application> (JRE) and the <application>Java Development Kit</application> (JDK) in use on your system. If you have a JDK installed, <application>FOP</application> requires that the JDK is of the same version as the JRE. Furthermore, <application>FOP</application> cannot use the <application>GNU Compiler for Java</application> (GCJ)."
-msgstr ""
+msgstr "Zkuste sestavit verzi PDF jiného dokumentu — nejlépe nejnovějšího, který jste vytvořili příkazem <prompt>$</prompt> <command>publican create</command>. Netýká-li se problém pouze jednoho dokumentu, pravděpodobně si neodpovídají <application>Java Runtime Environment</application> (JRE) a <application>Java Development Kit</application> (JDK), jež používáte na svém systému. Máte-li JDK nainstalován, <application>FOP</application> vyžaduje, aby se verze JDK a JRE shodovaly. Navíc <application>FOP</application> neumí používat <application>GNU Compiler for Java</application> (GCJ)."
 
 msgid "Run <command>alternatives --config java</command> and <command>alternatives --config javac</command> to determine which JRE and JDK are in use, then select versions that match and which do not have <literal>gcj</literal> in their name. For example, the following Java configuration shows a matching JRE and JDK that allow PDFs to build:"
-msgstr ""
+msgstr "Spusťte <command>alternatives --config java</command> a <command>alternatives --config javac</command>, abyste zjistili, které JRE a JDK se používá, poté vyberte verze, které se shodují a nemají ve svých názvech <literal>gcj</literal>. Například následující nastavení Java zobrazuje shodné JRE a JDK, které umožní sestavení PDF:"
 
 msgid ""
 "<prompt>$</prompt> <command>alternatives --config java</command>\n"
@@ -90,6 +95,17 @@ msgid ""
 "\n"
 "Enter to keep the current selection[+], or type selection number:"
 msgstr ""
+"<prompt>$</prompt> <command>alternatives --config java</command>\n"
+"\n"
+"There are 3 programs which provide 'java'.\n"
+"\n"
+"  Selection    Command\n"
+"-----------------------------------------------\n"
+"   1           /usr/lib/jvm/jre-1.5.0-gcj/bin/java\n"
+"*  2           /usr/lib/jvm/jre-1.6.0-openjdk/bin/java\n"
+" + 3           /usr/lib/jvm/jre-1.6.0-openjdk.x86_64/bin/java\n"
+"\n"
+"Enter to keep the current selection[+], or type selection number:"
 
 msgid ""
 "<prompt>$</prompt> <command>alternatives --config javac</command>\n"
@@ -104,84 +120,98 @@ msgid ""
 "\n"
 "Enter to keep the current selection[+], or type selection number:"
 msgstr ""
+"<prompt>$</prompt> <command>alternatives --config javac</command>\n"
+"\n"
+"There are 3 programs which provide 'javac'.\n"
+"\n"
+"  Selection    Command\n"
+"-----------------------------------------------\n"
+"*+ 1           /usr/lib/jvm/java-1.6.0-openjdk.x86_64/bin/javac\n"
+"   2           /usr/lib/jvm/java-1.6.0-openjdk/bin/javac\n"
+"   3           /usr/lib/jvm/java-1.5.0-gcj/bin/javac\n"
+"\n"
+"Enter to keep the current selection[+], or type selection number:"
 
 msgid "You might need to install an extra JDK if you do not have a JDK on your system that matches any of the JREs."
-msgstr ""
+msgstr "Můžete potřebovat nainstalovat další JDK, nemáte-li na svém systému JDK, který odpovídá JRE. "
 
 msgid "Some Java installations do not set up the <command>alternatives</command> environment correctly. No fix has been determined for this situation."
-msgstr ""
+msgstr "Některé instalace Java nenastavují prostředí <command>alternatives</command> správně. Pro tuto situaci však náprava/oprava ještě určena není."
 
 msgid "I get an error saying <application>Batik</application> is not in the classpath but <application>Batik</application> is installed! What is wrong?"
-msgstr ""
+msgstr "Dostávám chybovou zprávu, že <application>Batik</application> se nenachází v classpath, přitom však <application>Batik</application> nainstalován je. Co je špatně?"
 
 msgid "We believe this is due to classpath issues caused by having different JRE and JDK versions in use. Refer to the previous question in this FAQ about <computeroutput>java.lang.NullPointerException</computeroutput> errors and using the <command>alternatives</command> command to ensure that the JRE and JDK match."
-msgstr ""
+msgstr "Věříme, že se tak děje kvůli problému s classpath způsobeném užitím různých verzí JRE a JDK. Přečtěte si, prosíme, předchozí dotaz o chybách <computeroutput>java.lang.NullPointerException</computeroutput> a použití příkazů <command>alternatives</command>, kterými zajistíte, že JRE a JDK se shodují."
 
 msgid "I get an error <computeroutput>Exception in thread \"main\" java.lang.OutOfMemoryError: Java heap space</computeroutput> when trying to build PDF. What is wrong?"
-msgstr ""
+msgstr "Dostávám chybovou zprávu <computeroutput>Exception in thread \"main\" java.lang.OutOfMemoryError: Java heap space</computeroutput>, když zkouším sestavit PDF. Co je špatně?"
 
 msgid "The default memory allocated for Java is not big enough to build your PDF. You need to increase the memory allocated to <application>FOP</application>. Before running <prompt>$</prompt> <command>publican build</command> run <command>echo \"FOP_OPTS='-Xms50m -Xmx700m'\" &gt; ~/.foprc</command>. This sets the initial heap space to 50 MB and allows it to grow to a maximum of 700 MB."
-msgstr ""
+msgstr "Výchozí velikost paměti alokovaná pro Javu není dostatečně velká, aby se sestavil váš PDF. Potřebujete navýšit paměť alokovanou pro <application>FOP</application>. Před spuštěním <prompt>$</prompt> <command>publican build</command> spusťte <command>echo \"FOP_OPTS='-Xms50m -Xmx700m'\" &gt; ~/.foprc</command>. To nastaví prostor na hromadě (heap) na 50 MB a umožní mu růst do maxima 700 MB."
 
 msgid "Previous versions of <application>Publican</application> removed empty <tag>&lt;para&gt;</tag> tags. Does <application>Publican</application> still do this?"
-msgstr ""
+msgstr "Předchozí verze <application>Publicanu</application> odstraňovaly prázdné tagy <tag>&lt;para&gt;</tag>. Odstraňuje je <application>Publican</application> stále?"
 
 msgid "No. <application>Publican</application> previously removed empty <tag>&lt;para&gt;</tag> tags while it transformed XML because empty <tag>&lt;para&gt;</tag> tags broke earlier translation toolchains used within Red Hat and the Fedora Project. Empty <tag>&lt;para&gt;</tag> tags are valid DocBook XML, and <application>Publican</application> no longer removes them."
-msgstr ""
+msgstr "Ne. <application>Publican</application> dříve odstraňoval prázdné tagy <tag>&lt;para&gt;</tag> při převodu XML, neboť tyto prázdné tagy rozbíjely dřívější řetězce nástrojů pro překlad používané společností Red Hat a Projektem Fedora. Prázdné tagy <tag>&lt;para&gt;</tag> jsou validním DocBook XML a <application>Publican</application> je již neodstraňuje."
 
 msgid "What happened to the spell check?"
-msgstr ""
+msgstr "Co stalo s kontrolou pravopisu?"
 
 msgid "Early versions of <application>Publican</application> (up to and including 0.45) ran a spell check while transforming a document's XML. Due to negative feedback from users, this feature was dropped."
-msgstr ""
+msgstr "Rané verze <application>Publicanu</application> (do verze 0.45 včetně) spouštěly kontrolu pravopisu při převodu XML dokumentu. Tato vlastnost však byla odstraněna kvůli zápornému ohlasu uživatelů."
 
 msgid "Run the following bash script in the root directory of your document to check spellings in your XML files with the <application>aspell</application> command-line spell checker."
-msgstr ""
+msgstr "V kořenovém adresáři svého dokumentu spusťte následující bash skript, chcete-li provést kontrolu pravopisu svých souborů XML nástrojem příkazové řádky <application>aspell</application>."
 
 msgid "<xi:include href=\"extras/proof.sh\" parse=\"text\" xmlns:xi=\"http://www.w3.org/2001/XInclude\" />"
-msgstr ""
+msgstr "<xi:include href=\"extras/proof.sh\" parse=\"text\" xmlns:xi=\"http://www.w3.org/2001/XInclude\" />"
 
 msgid "Why don't <tag>&lt;segmentedlist&gt;</tag>s work when I build PDFs?"
-msgstr ""
+msgstr "Proč nefungují <tag>&lt;segmentedlist&gt;</tag>, když sestavuji PDF?"
 
 msgid "Check the number of columns in your <tag>&lt;segmentedlist&gt;</tag>s. When <tag>&lt;segmentedlist&gt;</tag>s are formatted as tables, the DocBook XSL limits the number of columns to two, and <application>Publican</application> formats <tag>&lt;segmentedlist&gt;</tag>s as tables."
-msgstr ""
+msgstr "Zkontrolujte počet sloupců ve svých <tag>&lt;segmentedlist&gt;</tag>. Jsou-li <tag>&lt;segmentedlist&gt;</tag> formátovány jako tabulky, DocBook XSL omezuje počet sloupců na dva a <application>Publican</application> formátuje <tag>&lt;segmentedlist&gt;</tag> jako tabulky."
 
 msgid "What happened to the colors in my images in this PDF?"
-msgstr ""
+msgstr "Co se stalo s barvami u mých obrázků v tomto PDF?"
 
 msgid "This is the result of a bug in <application>FOP</application> that distorts colors in 24-bit PNG images. Convert your images to 32-bit PNG images to work around the problem."
-msgstr ""
+msgstr "Toto je výsledek chyby ve <application>FOP</application>, která narušuje barvy v obrazových souborech 24bitového PNG. Abyste obešli tento problém, převeďte své obrazy na obrazy 32bitového PNG."
 
 msgid "When I build my document, I get an error about an ‘undefined language’ — what's wrong?"
-msgstr ""
+msgstr "Při sestavování svého dokumentu dostávám chybová hlášení o 'undefined language' (nedefinovaném jazyku) - co je špatně?"
 
 msgid "Code highlighting in <application>Publican</application> is generated with the <application>Syntax::Highlight::Engine::Kate</application> Perl module. If you specify a language in a <tag>&lt;programlisting&gt;</tag> tag that <application>Syntax::Highlight::Engine::Kate</application> does not recognize, you receive an error when you build your book. The first lines of the error message are similar to:"
-msgstr ""
+msgstr "Zvýrazňování kódu v <application>Publicanu</application> je generováno modulem <application>Syntax::Highlight::Engine::Kate</application> jazyka Perl. Uvedete-li jazyk v tagu <tag>&lt;programlisting&gt;</tag>, který <application>Syntax::Highlight::Engine::Kate</application> nerozpozná, obdržíte při sestavování knihy chybové hlášení. První řádky chybové zprávy vypadají:"
 
 msgid ""
 "<computeroutput>undefined language: JAVA at /usr/lib/perl5/vendor_perl/5.10.0/Syntax/Highlight/Engine/Kate.pm</computeroutput>\n"
 "<computeroutput>line 615.</computeroutput>\n"
 "<computeroutput>cannot create plugin for language 'JAVA'</computeroutput>"
 msgstr ""
+"<computeroutput>undefined language: JAVA at /usr/lib/perl5/vendor_perl/5.10.0/Syntax/Highlight/Engine/Kate.pm</computeroutput>\n"
+"<computeroutput>line 615.</computeroutput>\n"
+"<computeroutput>cannot create plugin for language 'JAVA'</computeroutput>"
 
 msgid "Note that <application>Syntax::Highlight::Engine::Kate</application> is very strict about names of languages and is case sensitive. Therefore, <tag>&lt;programlisting language=\"Java\"&gt;</tag> works, but <tag>&lt;programlisting language=\"java\"&gt;</tag> and <tag>&lt;programlisting language=\"JAVA\"&gt;</tag> do not. The error message that you receive identifies the problematic language attribute."
-msgstr ""
+msgstr "Všimněte si, že <application>Syntax::Highlight::Engine::Kate</application> je velmi striktní s ohledem na názvy jazyků a rozlišuje velikost písmen. Proto <tag>&lt;programlisting language=\"Java\"&gt;</tag> funguje, avšak <tag>&lt;programlisting language=\"java\"&gt;</tag> či <tag>&lt;programlisting language=\"JAVA\"&gt;</tag> nikoliv. Chybová zpráva, kterou jste obdrželi, identifikuje problémový jazykový atribut."
 
 msgid "Refer to <uri xlink:href=\"http://search.cpan.org/dist/Syntax-Highlight-Engine-Kate/lib/Syntax/Highlight/Engine/Kate.pm#PLUGINS\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">http://search.cpan.org/dist/Syntax-Highlight-Engine-Kate/lib/Syntax/Highlight/Engine/Kate.pm#PLUGINS</uri> for the full list of languages that <application>Syntax::Highlight::Engine::Kate</application> supports, including their expected capitalization and punctuation."
-msgstr ""
+msgstr "Úplný seznam jazyků, které <application>Syntax::Highlight::Engine::Kate</application> podporuje, včetně jejich očekávané kapitalizace a interpunkce, viz <uri xlink:href=\"http://search.cpan.org/dist/Syntax-Highlight-Engine-Kate/lib/Syntax/Highlight/Engine/Kate.pm#PLUGINS\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">http://search.cpan.org/dist/Syntax-Highlight-Engine-Kate/lib/Syntax/Highlight/Engine/Kate.pm#PLUGINS</uri>."
 
 msgid "How do I enable bash command-line completion for Publican?"
-msgstr ""
+msgstr "Jak povolím dokončování příkazů příkazové řádky pro Publican?"
 
 msgid "Support for bash command-line completion is a new feature in <application>Publican 2.2</application>. To enable this feature:"
-msgstr ""
+msgstr "Podpora pro dokončování příkazů příkazové řádky bash je nová vlastnost v <application>Publicanu 2.2</application>. Chcete-li povolit vlastnost:"
 
 msgid "Install the package or packages that provide bash completion for your operating system. For example, on Fedora, run <command>sudo yum install bash-completion</command>."
-msgstr ""
+msgstr "Nainstalujte balíček nebo balíčky, které poskytují dokončování příkazů v bash pro vás operační systém. Například na Fedoře spusťte <command>sudo yum install bash-completion</command>."
 
 msgid "Add the following to your <filename>~/.bashrc</filename> file:"
-msgstr ""
+msgstr "Přidejte toto do svého souboru <filename>~/.bashrc</filename>:"
 
 msgid ""
 "# Use bash-completion, if available\n"
@@ -189,29 +219,34 @@ msgid ""
 "        . /etc/bash_completion\n"
 "fi"
 msgstr ""
+"# Use bash-completion, if available\n"
+"if [ -f /etc/bash_completion ]; then\n"
+"        . /etc/bash_completion\n"
+"fi"
 
 msgid "Restart your terminal or run <command>source ~/.bashrc</command>."
-msgstr ""
+msgstr "Restartujte svůj terminál nebo spusťte <command>source ~/.bashrc</command>."
 
 msgid "Why am I having trouble building my large book?"
-msgstr ""
+msgstr "Proč mám problém se sestavením své obsáhlé knihy?"
 
 msgid "Probably because the kernel can deal with only a certain number of file handles at a time, and you have exceeded that number. On some linuxes you can run <command>ulimit -n 8192</command> to change the limit for the current shell."
-msgstr ""
+msgstr "Pravděpodobně protože kernel dokáže pracovat pouze s určitým počtem handlů na soubory najednou a vy jste toto číslo překročili. Na některých linuxech lze spustit <command>ulimit -n 8192</command>, čímž změníte limit pro současný shell."
 
 msgid "To make this permanent, open <filename>/etc/security/limits.conf</filename> and add these two lines:"
-msgstr ""
+msgstr "Chcete-li tuto změnu provést trvale, otevřete <filename>/etc/security/limits.conf</filename> a přidejte tyto dva řádky:"
 
 msgid "*                 soft    nofile          8192\n"
 "*                 hard    nofile          8192"
-msgstr ""
+msgstr "*                 soft    nofile          8192\n"
+"*                 hard    nofile          8192"
 
 msgid "Then save, and log in again for the changes to take effect."
-msgstr ""
+msgstr "Poté soubor uložte a znovu se přihlaste, aby se promítly změny."
 
 msgid "Why does Jeff call Isaac ‘Ivan’?"
-msgstr ""
+msgstr "Proč Jeff oslovuje Isaaca 'Ivane'?"
 
 msgid "Because Jeff's memory is pants!"
-msgstr ""
+msgstr "Protože Jeffova paměť se zadrhává!"
 

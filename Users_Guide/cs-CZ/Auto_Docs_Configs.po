@@ -1,766 +1,850 @@
+# Josef Hruška <josef.hruska@upcmail.cz>, 2014. #zanata
+# Josef Hruška <josef.hruska@upcmail.cz>, 2015. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2014-10-03 13:09+1000\n"
-"PO-Revision-Date: 2014-10-03 13:09+1000\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: None\n"
-"Language: en-US \n"
+"POT-Creation-Date: 2014-10-03 13:17+1000\n"
 "MIME-Version: 1.0\n"
-"Content-Type: application/x-publican; charset=UTF-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Publican v4.2.2\n"
+"PO-Revision-Date: 2015-01-11 06:47-0500\n"
+"Last-Translator: Josef Hruška <josef.hruska@upcmail.cz>\n"
+"Language-Team: None\n"
+"Language: cs\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2\n"
 
 msgid "Configuration summary"
-msgstr ""
+msgstr "Přehled nastavení"
 
 msgid "General options"
-msgstr ""
+msgstr "Obecné možnosti"
 
 msgid "These are set in the books or brands configuration files."
-msgstr ""
+msgstr "Ty jsou nastaveny v konfiguračních souborech knih nebo grafických úprav."
 
 msgid "arch"
-msgstr ""
+msgstr "arch"
 
+# translation auto-copied from project Publican, version 4, document publican, author peartown
 msgid "Arch to filter output on."
-msgstr ""
+msgstr "Architektura, na níž se filtruje výstup."
 
+# translation auto-copied from project DocBook locales, version 1, document locale
 msgid "audience"
-msgstr ""
+msgstr "audience"
 
+# translation auto-copied from project Publican, version 4, document publican, author peartown
 msgid "audience to filter output on."
-msgstr ""
+msgstr "Cílová skupina, na níž se filtruje výstup."
 
 msgid "books"
-msgstr ""
+msgstr "books"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "A space-separated list of books used in this remote set."
-msgstr ""
+msgstr "Čárkou oddělený seznam knih, které se použijí v této vzdálené sadě."
 
 msgid "brand"
-msgstr ""
+msgstr "brand"
 
+# translation auto-copied from project Publican, version 4, document publican, author peartown
 msgid "The brand to use when building this package."
-msgstr ""
+msgstr "Grafická úprava, která se má použít při sestavování tohoto balíčku."
 
 msgid "The default value for this parameter is: common"
-msgstr ""
+msgstr "Výchozí hodnotou tohoto parametru je: common"
 
 msgid "brew_dist"
-msgstr ""
+msgstr "brew_dist"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "The brew dist to use for building the standalone desktop rpm."
-msgstr ""
+msgstr "Distribuce sestavovacího systému brew, která se má použít k sestavení samostatného rpm pro desktop."
 
 msgid "The default value for this parameter is: docs-5E"
-msgstr ""
+msgstr "Výchozí hodnotou tohoto parametru je: docs-5E"
 
 msgid "This field is deprecated and will be removed from Publican in the future."
-msgstr ""
+msgstr "Toto pole je označeno za zastaralé a v budoucnu bude z Publicanu odstraněno."
 
 msgid "bridgehead_in_toc"
-msgstr ""
+msgstr "bridgehead_in_toc"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "Display bridge head elements in the TOCs?"
-msgstr ""
+msgstr "Zobrazit elementy bridgehead v obsazích?"
 
 msgid "The default value for this parameter is: 0"
-msgstr ""
+msgstr "Výchozí hodnotou tohoto parametru je: 0."
 
 msgid "chunk_first"
-msgstr ""
+msgstr "chunk_first"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "For HTML, should the first section be on the same page as its parent?"
-msgstr ""
+msgstr "Má být, u formátu HTML, první oddíl umístěn na stránce svého rodiče?"
 
 msgid "chunk_section_depth"
-msgstr ""
+msgstr "chunk_section_depth"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "For HTML, what is the deepest level of nesting at which a section should be split onto its own page?"
-msgstr ""
+msgstr "Jaká je, pro formát HTML, nejhlubší úroveň vhnízdění, na které má být oddíl umístěn na svou vlastní stránku? "
 
 msgid "The default value for this parameter is: 4"
-msgstr ""
+msgstr "Výchozí hodnotou tohoto parametru je: 4"
 
 msgid "classpath"
-msgstr ""
+msgstr "classpath"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "Path to jar files for FOP."
-msgstr ""
+msgstr "Cesta k souborům jar pro FOP."
 
 msgid "The default value for this parameter is: /usr/share/java/ant/ant-trax-1.7.0.jar:/usr/share/java/xmlgraphics-commons.jar:/usr/share/java/batik-all.jar:/usr/share/java/xml-commons-apis.jar:/usr/share/java/xml-commons-apis-ext.jar"
-msgstr ""
+msgstr "Výchozí hodnotou tohoto parametru je: /usr/share/java/ant/ant-trax-1.7.0.jar:/usr/share/java/xmlgraphics-commons.jar:/usr/share/java/batik-all.jar:/usr/share/java/xml-commons-apis.jar:/usr/share/java/xml-commons-apis-ext.jar"
 
 msgid "common_config"
-msgstr ""
+msgstr "common_config"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "Path to publican content."
-msgstr ""
+msgstr "Cesta k obsahu publicanu."
 
 msgid "The default value for this parameter is: /usr/share/publican"
-msgstr ""
+msgstr "Výchozí hodnotou tohoto parametru je: /usr/share/publican"
 
 msgid "common_content"
-msgstr ""
+msgstr "common_content"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "Path to publican common content."
-msgstr ""
+msgstr "Cesta ke společnému obsahu publicanu."
 
 msgid "The default value for this parameter is: /usr/share/publican/Common_Content"
-msgstr ""
+msgstr "Výchozí hodnotou tohoto parametru je: /usr/share/publican/Common_Content"
 
 msgid "condition"
-msgstr ""
+msgstr "condition"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "Conditions on which to prune XML before transformation."
-msgstr ""
+msgstr "Podmínky, za kterých zredukovat (prune) XML před transformací."
 
 msgid "confidential"
-msgstr ""
+msgstr "confidential"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "Is the content confidential?"
-msgstr ""
+msgstr "Jedná se o důvěrný obsah?"
 
 msgid "confidential_text"
-msgstr ""
+msgstr "confidential_text"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "The text used to indicate content is confidential."
-msgstr ""
+msgstr "Text, který je použit k označení důvěrného obsahu."
 
 msgid "The default value for this parameter is: CONFIDENTIAL"
-msgstr ""
+msgstr "Výchozí hodnotou tohoto parametru je: CONFIDENTIAL"
 
 msgid "conformance"
-msgstr ""
+msgstr "conformance"
 
+# translation auto-copied from project Publican, version 4, document publican, author peartown
 msgid "conformance to filter output on."
-msgstr ""
+msgstr "Conformance, na níž se filtruje výstup."
 
 msgid "debug"
-msgstr ""
+msgstr "debug"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "Print out extra messages?"
-msgstr ""
+msgstr "Vytisknout zvláštní zprávy?"
 
 msgid "doc_url"
-msgstr ""
+msgstr "doc_url"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "URL for the documentation team for this package. Used for top right URL on HTML."
-msgstr ""
+msgstr "URL dokumentačního týmu pro tento balíček. Použito u HTML v horním pravém URL."
 
 msgid "The default value for this parameter is: https://fedorahosted.org/publican"
-msgstr ""
+msgstr "Výchozí hodnotou tohoto parametru je: https://fedorahosted.org/publican"
 
 msgid "docname"
-msgstr ""
+msgstr "docname"
 
 msgid "Name of this document. Fetched from title tag in xml_lang/TYPE_Info.xml if not set in cfg file."
-msgstr ""
+msgstr "Název tohoto dokumentu. Získán z tagu title v xml_lang/TYPE_Info.xml, není-li nastaven v konfiguračním souboru."
 
 msgid "This parameter is constrained with the following regular expression: ^[0-9a-zA-Z_\\-\\.\\+]+$"
-msgstr ""
+msgstr "Tento parametr se omezuje na tento regulární výraz: ^[0-9a-zA-Z_\\-\\.\\+]+$"
 
 msgid "This field is not supported for: brand."
-msgstr ""
+msgstr "Toto pole není podporováno pro: brand"
 
 msgid "drupal_author"
-msgstr ""
+msgstr "drupal_author"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "The author name to be shown in drupal book page. It must be a valid drupal username."
-msgstr ""
+msgstr "Jméno autora zobrazené v drupalu na stránce knihy. Musí být platné uživatelské jméno drupalu."
 
 msgid "The default value for this parameter is: Publican"
-msgstr ""
+msgstr "Výchozí hodnotou tohoto parametru je: Publican"
 
 msgid "drupal_image_path"
-msgstr ""
+msgstr "drupal_image_path"
 
 msgid "The directory where the image should be stored in drupal server."
-msgstr ""
+msgstr "Adresář na serveru drupal, ve kterém by měl být uložen obraz."
 
 msgid "The default value for this parameter is: /sites/default/files/documentation/"
-msgstr ""
+msgstr "Výchozí hodnotou tohoto parametru je: /sites/default/files/documentation"
 
 msgid "drupal_menu_block"
-msgstr ""
+msgstr "drupal_menu_block"
 
 msgid "The menu where we can find the book."
-msgstr ""
+msgstr "Nabídka, ve které se kniha nachází."
 
 msgid "The default value for this parameter is: user-guide"
-msgstr ""
+msgstr "Výchozí hodnotou tohoto parametru je: user-guide (uživatelská příručka)"
 
 msgid "drupal_menu_title"
-msgstr ""
+msgstr "drupal_menu_title"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "Override the bookname that will be shown in the drupal menu."
-msgstr ""
+msgstr "Potlačuje název knihy (bookname), který bude zobrazen v nabídce drupalu."
 
 msgid "dt_format"
-msgstr ""
+msgstr "dt_format"
 
+# translation auto-copied from project Publican, version 4, document publican, author peartown
 msgid "The format to use for the desktop output."
-msgstr ""
+msgstr "Formát, který se použije pro výstup pro desktop."
 
 msgid "The default value for this parameter is: html-desktop"
-msgstr ""
+msgstr "Výchozí hodnotou tohoto parametru je: html-desktop"
 
 msgid "dt_obsoletes"
-msgstr ""
+msgstr "dt_obsoletes"
 
 msgid "Space-separated list of packages the desktop RPM obsoletes."
-msgstr ""
+msgstr "Seznam balíčků oddělený mezerami, které budou desktopovým balíčkem označeny za zastaralé."
 
 msgid "dt_requires"
-msgstr ""
+msgstr "dt_requires"
 
 msgid "Space-separated list of packages the desktop RPM requires."
-msgstr ""
+msgstr "Seznam balíčků oddělený mezerami, které vyžaduje desktopový balíček."
 
 msgid "dtdver"
-msgstr ""
+msgstr "dtdver"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "Version of the DocBook DTD on which this project is based."
-msgstr ""
+msgstr "Verze DocBook DTD, na které je založen tento projekt."
 
 msgid "The default value for this parameter is: 4.5"
-msgstr ""
+msgstr "Výchozí hodnotou tohoto parametru je: 4.5"
 
 msgid "ec_id"
-msgstr ""
+msgstr "ec_id"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "Eclipse plugin ID. Defaults to \"$product.$docname\""
-msgstr ""
+msgstr "ID zásuvného modulu Eclipse. Standardně \"$product.$docname\""
 
 msgid "ec_name"
-msgstr ""
+msgstr "ec_name"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "Eclipse plugin name. Defaults to \"$product $docname\""
-msgstr ""
+msgstr "Název zásuvného modulu Eclipse. Standardně \"$product $docname\""
 
 msgid "ec_provider"
-msgstr ""
+msgstr "ec_provider"
 
 msgid "Eclipse plugin provider. Defaults to \"Publican-v4.2.2\""
-msgstr ""
+msgstr "Poskytovatel zásuvného modulu Eclipse. Standardně \"Publican-v4.2.2\""
 
 msgid "extras_dir"
-msgstr ""
+msgstr "extras_dir"
 
+# translation auto-copied from project Publican, version 4, document publican, author peartown
 msgid "Directory where images are located."
-msgstr ""
+msgstr "Adresář s obrazy."
 
 msgid "The default value for this parameter is: extras"
-msgstr ""
+msgstr "Výchozí hodnotou tohoto parametru je: extras"
 
 msgid "generate_section_toc_level"
-msgstr ""
+msgstr "generate_section_toc_level"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "Generate table of contents down to the given section depth."
-msgstr ""
+msgstr "Vytvářet obsah do uvedené hloubky oddílů."
 
 msgid "ignored_translations"
-msgstr ""
+msgstr "ignored_translations"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "Languages to replace with xml_lang regardless of translation status."
-msgstr ""
+msgstr "Jazyky, které se nahradí parametrem xml_lang bez ohledu na stav překladu."
 
 msgid "img_dir"
-msgstr ""
+msgstr "img_dir"
 
 msgid "The default value for this parameter is: images"
-msgstr ""
+msgstr "Výchozí hodnotou tohoto parametru je: images"
 
 msgid "info_file"
-msgstr ""
+msgstr "info_file"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "Override the default Info file."
-msgstr ""
+msgstr "Potlačuje výchozí soubor Info."
 
+# translation auto-copied from project Publican Users' Guide, version 3, document Publican_Defaults, author peartown
 msgid "lang"
-msgstr ""
+msgstr "lang"
 
+# translation auto-copied from project Publican, version 4, document publican, author peartown
 msgid "lang to filter output on."
-msgstr ""
+msgstr "Jazyk, na nějž se filtruje výstup."
 
 msgid "license"
-msgstr ""
+msgstr "license"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "License this package uses."
-msgstr ""
+msgstr "Licence, kterou tento balíček používá."
 
 msgid "The default value for this parameter is: GFDL"
-msgstr ""
+msgstr "Výchozí hodnotou tohoto parametru je: GFDL"
 
 msgid "mainfile"
-msgstr ""
+msgstr "mainfile"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "The name of the main xml and ent files for this book, sans file extension and language. Fetched from docname if not set."
-msgstr ""
+msgstr "Název hlavního souboru xml a ent pro tuto knihu, rozšíření souboru sans a jazyk. Získáno z docname, není-li nastaveno."
 
 msgid "menu_category"
-msgstr ""
+msgstr "menu_category"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "Semicolon-separated list of menu categories for the desktop package."
-msgstr ""
+msgstr "Seznam kategorií nabídek oddělený středníkem pro balíček desktopu."
 
 msgid "os"
-msgstr ""
+msgstr "os"
 
+# translation auto-copied from project Publican, version 4, document publican, author peartown
 msgid "os to filter output on."
-msgstr ""
+msgstr "operační systém, na nějž se filtruje výstup."
 
 msgid "os_ver"
-msgstr ""
+msgstr "os_ver"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "The OS for which to build packages."
-msgstr ""
+msgstr "OS, pro který se mají balíčky sestavit."
 
 msgid "pdf_body_font"
-msgstr ""
+msgstr "pdf_body_font"
 
+# translation auto-copied from project Publican, version 4, document publican, author peartown
 msgid "The font to use for body text in PDFs."
-msgstr ""
+msgstr "Písmo, které se má v PDF použít pro tělo textu."
 
 msgid "The default value for this parameter is: Liberation Sans"
-msgstr ""
+msgstr "Výchozí hodnotou tohoto parametru je: Liberation Sans"
 
 msgid "pdf_mono_font"
-msgstr ""
+msgstr "pdf_mono_font"
 
+# translation auto-copied from project Publican, version 4, document publican, author peartown
 msgid "The font to use for mono text in PDFs."
-msgstr ""
+msgstr "Písmo, které se má v PDF použít pro neproporciální text."
 
 msgid "The default value for this parameter is: Liberation Mono"
-msgstr ""
+msgstr "Výchozí hodnotou tohoto parametru je: Liberation Mono"
 
 msgid "prod_url"
-msgstr ""
+msgstr "prod_url"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "URL for the product. Used in top left URL in HTML."
-msgstr ""
+msgstr "URL pro produkt. Použito u HTML v horním levém URL."
 
 msgid "product"
-msgstr ""
+msgstr "product"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "Product this package covers. Fetched from productname tag in xml_lang/TYPE_Info.xml"
-msgstr ""
+msgstr "Produkt, který je pokryt tímto balíčkem. Získán z tagu productname v souboru xml_lang/TYPE_Info.xml"
 
 msgid "repo"
-msgstr ""
+msgstr "repo"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "Repository from which to fetch remote set books."
-msgstr ""
+msgstr "Úložiště (repository), ze kterého získat vzdálenou sadu knih."
 
 msgid "rev_dir"
-msgstr ""
+msgstr "rev_dir"
 
+# translation auto-copied from project Publican, version 4, document publican, author peartown
 msgid "By default Revision History is sorted in descending order. Set this to 'asc' or 'ascending' to reverse the sort."
-msgstr ""
+msgstr "Standardně je přehled revizí řazen sestupně. Nastavením na 'asc' nebo 'ascending' obrátí směr řazení na vzestupné."
 
 msgid "rev_file"
-msgstr ""
+msgstr "rev_file"
 
+# translation auto-copied from project Publican, version 4, document publican, author peartown
 msgid "Override the default Revision History file."
-msgstr ""
+msgstr "Potlačuje výchozí soubor Revision History (Přehled revizí)."
 
+# translation auto-copied from project DocBook locales, version 1, document locale
 msgid "revision"
-msgstr ""
+msgstr "revision"
 
+# translation auto-copied from project Publican, version 4, document publican, author peartown
 msgid "revision to filter output on."
-msgstr ""
+msgstr "Revize, na níž se filtruje výstup."
 
 msgid "revisionflag"
-msgstr ""
+msgstr "revisionflag"
 
+# translation auto-copied from project Publican, version 4, document publican, author peartown
 msgid "revisionflag to filter output on."
-msgstr ""
+msgstr "příznak revize, na nějž se filtruje výstup."
 
 msgid "role"
-msgstr ""
+msgstr "role"
 
+# translation auto-copied from project Publican, version 4, document publican, author peartown
 msgid "role to filter output on."
-msgstr ""
+msgstr "role, na níž se filtruje výstup."
 
 msgid "scm"
-msgstr ""
+msgstr "scm"
 
+# translation auto-copied from project Publican, version 4, document publican, author peartown
 msgid "Type of repository in which books that form part of a remote set are stored. Supported types: SVN, GIT."
-msgstr ""
+msgstr "Typ repozitáře, ve kterém jsou uloženy knihy, jenž jsou součástí vzdálené sady. Podporované typy: SVN, GIT."
 
 msgid "security"
-msgstr ""
+msgstr "security"
 
+# translation auto-copied from project Publican, version 4, document publican, author peartown
 msgid "security to filter output on."
-msgstr ""
+msgstr "bezpečnost, na níž se filtruje výstup."
 
 msgid "show_remarks"
-msgstr ""
+msgstr "show_remarks"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "Display remarks in transformed output."
-msgstr ""
+msgstr "Zobrazit poznámky v převedeném výstupu."
 
 msgid "sort_order"
-msgstr ""
+msgstr "sort_order"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "Override the default sort weighting. Defaults to 50."
-msgstr ""
+msgstr "Potlačuje výchozí váhy řazení. Standardně má hodnotu 50."
 
 msgid "src_url"
-msgstr ""
+msgstr "src_url"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "URL to find tar of source files. Used in RPM Spec files."
-msgstr ""
+msgstr "URL, kde se nalézá soubor tar se zdrojovými soubory. Použito u souborů RPM Spec."
 
 msgid "status"
-msgstr ""
+msgstr "status"
 
+# translation auto-copied from project Publican, version 4, document publican, author peartown
 msgid "status to filter output on."
-msgstr ""
+msgstr "status, na nějž se filtruje výstup."
 
 msgid "tmp_dir"
-msgstr ""
+msgstr "tmp_dir"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "Directory to use for building."
-msgstr ""
+msgstr "Adresář, který se použije pro sestavení."
 
 msgid "The default value for this parameter is: tmp"
-msgstr ""
+msgstr "Výchozí hodnotou tohto parametru je: tmp"
 
 msgid "toc_section_depth"
-msgstr ""
+msgstr "toc_section_depth"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "Depth of sections to include in the main table of contents."
-msgstr ""
+msgstr "Hloubka oddílů (podkapitol), které budou uvedeny v obsahu."
 
 msgid "The default value for this parameter is: 2"
-msgstr ""
+msgstr "Výchozí hodnotou tohto parametru je: 2"
 
 msgid "txt_formater"
-msgstr ""
+msgstr "txt_formater"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "Choose the formatter to use when creating txt output."
-msgstr ""
+msgstr "Vybere generátor formátu (formatter), který se má použít při tvorbě výstupu txt."
 
 msgid "The default value for this parameter is: default"
-msgstr ""
+msgstr "Výchozí hodnotou tohoto parametru je: default"
 
 msgid "This parameter is constrained with the following regular expression: ^(links{1}|tables{1}|default)$"
-msgstr ""
+msgstr "Tento parametr se omezuje na tento regulární výraz: ^(links{1}|tables{1}|default)$"
 
 msgid "type"
-msgstr ""
+msgstr "type"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "Type of content this package contains. Supported: set, book, article, brand"
-msgstr ""
+msgstr "Druh obsahu, který obsahuje tento balíček. Podporováno: set, book, article, brand"
 
 msgid "The default value for this parameter is: Book"
-msgstr ""
+msgstr "Výchozí hodnotou tohoto parametru je: Book"
 
 msgid "userlevel"
-msgstr ""
+msgstr "userlevel"
 
+# translation auto-copied from project Publican, version 4, document publican, author peartown
 msgid "userlevel to filter output on."
-msgstr ""
+msgstr "userlevel (úroveň uživatele), na níž se filtruje výstup."
 
 msgid "vendor"
-msgstr ""
+msgstr "vendor"
 
+# translation auto-copied from project Publican, version 4, document publican, author peartown
 msgid "vendor to filter output on."
-msgstr ""
+msgstr "vendor (prodejce, výrobce), na nějž se filtruje výstup."
 
 msgid "version"
-msgstr ""
+msgstr "version"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "Version of this package. Fetched from productnumber tag in xml_lang/TYPE_Info.xml"
-msgstr ""
+msgstr "Verze tohoto balíčku. Získána z tagu productnumber v xml_lang/TYPE_Info.xml"
 
 msgid "This parameter is constrained with the following regular expression: ^[0-9][^\\p{IsSpace}]*$"
-msgstr ""
+msgstr "Tento parametr se omezuje na tento regulární výraz: ^[0-9][^\\p{IsSpace}]*$"
 
 msgid "web_brew_dist"
-msgstr ""
+msgstr "web_brew_dist"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "The brew dist to use for building the web rpm."
-msgstr ""
+msgstr "Distribuce sestavovacího systému brew, která se má použít k sestavení webového rpm."
 
 msgid "web_formats"
-msgstr ""
+msgstr "web_formats"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "A comma-separated list of the formats to use for the web packages."
-msgstr ""
+msgstr "Čárkou oddělený seznam formátů, které se použijí pro webové balíčky."
 
 msgid "The default value for this parameter is: html,html-single,pdf,epub"
-msgstr ""
+msgstr "Výchozí hodnotou tohoto parametru je: html,html-single,pdf,epub"
 
 msgid "web_home"
-msgstr ""
+msgstr "web_home"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "This is a home page for a Publican-generated website, not a standard book."
-msgstr ""
+msgstr "Toto je domovská stránka webové stránky vygenerované Publicanem, nikoliv standardní kniha."
 
 msgid "web_home is deprecated and will be removed from Publican in the future. Use \"web_type: home\" instead."
-msgstr ""
+msgstr "web_home je označen za zastaralý a v budoucích verzích Publicanu bude odstraněn. Misto něj používejte \"web_type: home\"."
 
 msgid "web_host"
-msgstr ""
+msgstr "web_host"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "This is a host name for a Publican-generated website, used for searches and the Sitemap. Be sure to include the full path to your document tree. E.g. if your documents are in the docs directory: http://www.example.com/docs"
-msgstr ""
+msgstr "Toto je název hosta pro webovou stránku vygenerovanou Publicanem, používá se pro vyhledávání a mapu stránek. Ujistěte se, že jste zadali celou cestu ke stromu dokumentu. Např. pokud jsou vaše dokumenty v adresáři docs: http://www.example.com/docs"
 
 msgid "web_host is deprecated and will be removed from Publican in the future. Use \"host\" in the web site configuration file instead."
-msgstr ""
+msgstr "web_host je označen az zastaralý a v budoucích verzích Publicanu bude odstraněn. Místo něj pužívejte \"host\" v konfiguračním souboru webové stránky."
 
 msgid "web_name_label"
-msgstr ""
+msgstr "web_name_label"
 
+# translation auto-copied from project Publican, version 4, document publican, author peartown
 msgid "Override the book name, bottom level, menu label on a Publican website."
-msgstr ""
+msgstr "Potlačuje název knihy, spodní úroveň, popisek nabídky na webové stránce Publicanu."
 
 msgid "web_obsoletes"
-msgstr ""
+msgstr "web_obsoletes"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "Packages to obsolete in web RPM."
-msgstr ""
+msgstr "Balíčky k označení za zastaralé ve webovém RPM."
 
 msgid "web_product_label"
-msgstr ""
+msgstr "web_product_label"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "Override the product, top level, menu label on a Publican website."
-msgstr ""
+msgstr "Potlačuje produkt, horní úroveň, popisek nabídky na webové stránce Publicanu."
 
 msgid "web_search"
-msgstr ""
+msgstr "web_search"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "Override the default search form for a Publican website. By default this will use Google search and do a site search if web_host is set."
-msgstr ""
+msgstr "Potlačuje výchozí vyhledávací formulář pro webovou stránku Publicanu. Ve výchozím nastavení je použit vyhledávač Google a vyhledá se stránka, je-li nastaven web_host."
 
 msgid "web_search is deprecated and will be removed from Publican in the future. Use \"search\" in the web site configuration file instead."
-msgstr ""
+msgstr "web_search je označen az zastaralý a v budoucích verzích Publicanu bude odstraněn. Místo něj pužívejte \"search\" v konfiguračním souboru webové stránky."
 
 msgid "web_type"
-msgstr ""
+msgstr "web_type"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "This is a special page for a Publican-generated website, not a standard book. Valid types are home, product, and version."
-msgstr ""
+msgstr "Toto je zvláštní stránka pro webovou stránku vygenerovanou Publicanem, nikoliv standardní kniha. Platné typy jsou home, product a version."
 
 msgid "This parameter is constrained with the following regular expression: ^(home|product|version)$"
-msgstr ""
+msgstr "Tento parametr se omezuje na tento regulární výraz: ^(home|product|version)$"
 
 msgid "web_version_label"
-msgstr ""
+msgstr "web_version_label"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "Override the version, middle level, menu label on a Publican website. To hide this menu item set this to: UNUSED"
-msgstr ""
+msgstr "Potlačuje verzi, střední úroveň, popisek nabídky na webové stránce Publican. Chcete-li tuto položku nabídky skrýt, nastavte na: UNUSED"
 
 msgid "wkhtmltopdf_opts"
-msgstr ""
+msgstr "wkhtmltopdf_opts"
 
+# translation auto-copied from project Publican, version 4, document publican, author peartown
 msgid "Extra options to pass to wkhtmltopdf. e.g. wkhtmltopdf_opts: \"-O landscape -s A3\""
-msgstr ""
+msgstr "Zvláštní volby předávané do wkhtmltopdf. Např. wkhtmltopdf_opts: \"-O landscape -s A3\""
 
 msgid "wordsize"
-msgstr ""
+msgstr "wordsize"
 
+# translation auto-copied from project Publican, version 4, document publican, author peartown
 msgid "wordsize to filter output on."
-msgstr ""
+msgstr "wordsize (velikost slova), na níž se filtruje výstup."
 
 msgid "xml_lang"
-msgstr ""
+msgstr "xml_lang"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "Language in which XML is authored."
-msgstr ""
+msgstr "Jazyk v němž je XML napsán."
 
 msgid "The default value for this parameter is: en-US"
-msgstr ""
+msgstr "Výchozí hodnotou tohoto parametru je: en-US"
 
 msgid "Brand options"
-msgstr ""
+msgstr "Možnosti grafické úpravy"
 
 msgid "These are set in the brands configuration files."
-msgstr ""
+msgstr "Tyto parametry jsou nastavovány v konfiguračních souborech grafických úprav."
 
 msgid "banned_attrs"
-msgstr ""
+msgstr "banned_attrs"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "A comma-separated list of XML attributes that are not permitted in the source."
-msgstr ""
+msgstr "Čárkou oddělený seznam atributů XML, které nejsou ve zdroji povoleny."
 
 msgid "banned_tags"
-msgstr ""
+msgstr "banned_tags"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "A comma-separated list of XML tags that are not permitted in the source."
-msgstr ""
+msgstr "Čárkou oddělený seznam tagů XML, které nejsou ve zdroji povoleny."
 
 msgid "base_brand"
-msgstr ""
+msgstr "base_brand"
 
+# translation auto-copied from project Publican, version 4, document publican, author peartown
 msgid "The base brand to use for this brand."
-msgstr ""
+msgstr "Základní grafická úprava, která se má použít pro tuto grafickou úpravu."
 
 msgid "dtd_type"
-msgstr ""
+msgstr "dtd_type"
 
+# translation auto-copied from project Publican Users' Guide, version 3, document Files_in_the_Book_Directory, author peartown
 msgid "Override Type for DocType. Must be a complete string."
-msgstr ""
+msgstr "Potlačuje Type pro DocType. Musí mít formu celého řetězce."
 
 msgid "dtd_uri"
-msgstr ""
+msgstr "dtd_uri"
 
+# translation auto-copied from project Publican Users' Guide, version 3, document Files_in_the_Book_Directory, author peartown
 msgid "Override URI for DocType. Must be a complete string."
-msgstr ""
+msgstr "Potlačuje URI pro DocType. Musí mít podobu celého řetězce."
 
 msgid "no_embedtoc"
-msgstr ""
+msgstr "no_embedtoc"
 
+# translation auto-copied from project Publican, version 4, document publican, author peartown
 msgid "Brand option to disable embedding the navigational toc in web packages"
-msgstr ""
+msgstr "Volba grafické úpravy, která ve webových balíčcích zakazuje vytvoření obsahu s navigací."
 
 msgid "web_cfg"
-msgstr ""
+msgstr "web_cfg"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "Full path for the publican site configuration file for non standard RPM websites."
-msgstr ""
+msgstr "Úplná cesta ke konfiguračnímu souboru stránky publicanu pro nestandardní webové stránky RPM."
 
 msgid "web_dir"
-msgstr ""
+msgstr "web_dir"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "Install path for non standard RPM websites."
-msgstr ""
+msgstr "Cesta pro instalaci nestandardních webových stránek RPM."
 
 msgid "web_req"
-msgstr ""
+msgstr "web_req"
 
+# translation auto-copied from project Publican, version 4, document publican
 msgid "Name of site package for non standard RPM websites. Required to ensure the site is installed."
-msgstr ""
+msgstr "Název balíčku webové stránky pro nestandardní stránky RPM. Vyžaduje se k zajištění, že stránka je nainstalována."
 
 msgid "Site options"
-msgstr ""
+msgstr "Možnosti webových stránek (site):"
 
 msgid "These are set in the sites configuration file."
-msgstr ""
+msgstr "Nastavují se v konfiguračním souboru webové stránky."
 
 msgid "db_file"
-msgstr ""
+msgstr "db_file"
 
 msgid "The name of the SQLite database file for your site, with the filename extension .db"
-msgstr ""
+msgstr "Název souboru databáze SQLite pro vaši webovou stránku, s příponou souboru .db"
 
 msgid "Output extra messages when running publican."
-msgstr ""
+msgstr "Při běhu publicanu vypisovat zvláštní zprávy."
 
 msgid "def_lang"
-msgstr ""
+msgstr "def_lang"
 
 msgid "The default language for this website. Tables of contents for languages other than the default language will link to documents in the default language when translations are not available."
-msgstr ""
+msgstr "Výchozí jazyk pro tuto webovou stránku. Obsahy u jazyků jiných, než je výchozí jazyk, budou odkazovat na  dokumenty ve výchozím jazyce, pokud nejsou k dispozici jejich překlady."
 
 msgid "dump"
-msgstr ""
+msgstr "dump"
 
 msgid "Dump the publican database to an XML file."
-msgstr ""
+msgstr "Vypsat databázi publicanu do souboru XML."
 
 msgid "dump_file"
-msgstr ""
+msgstr "dump_file"
 
 msgid "The name of the file to dump the publican database to."
-msgstr ""
+msgstr "Název souboru, do kterého vypsat databázi publicanu."
 
 msgid "The default value for this parameter is: /var/www/html/DUMP.xml"
-msgstr ""
+msgstr "Výchozí hodnotou tohoto parametru je: /var/www/html/DUMP.xml"
 
 msgid "footer"
-msgstr ""
+msgstr "footer"
 
 msgid "HTML to inject in to the footer of every page on the website."
-msgstr ""
+msgstr "HTML, které se má vložit do patičky každé stránky webové stránky."
 
 msgid "The default value for this parameter is:"
-msgstr ""
+msgstr "Výchozí hodnotou tohoto parametru je:"
 
 msgid "host"
-msgstr ""
+msgstr "host"
 
 msgid "The web host, may be a full URI or a relative path."
-msgstr ""
+msgstr "Host webové stránky, může být úplná URI nebo relativní cesta."
 
 msgid "The default value for this parameter is: /docs"
-msgstr ""
+msgstr "Výchozí hodnotou tohoto parametru je: /docs"
 
 msgid "manual_toc_update"
-msgstr ""
+msgstr "manual_toc_update"
 
 msgid "Stop publican from automatically rebuilding teh web site everytime a book is installed, updated or removed."
-msgstr ""
+msgstr "Zamezuje publicanu automaticky znovu sestavovat webovou stránku pokaždé, kdy je instalována, aktualizována nebo odstněna kniha."
 
 msgid "search"
-msgstr ""
+msgstr "search"
 
 msgid "The HTML to inject in as the site serach."
-msgstr ""
+msgstr "HTML, které se vloží jako vyhledávání na webové stránce."
 
 msgid "The default value for this parameter is: Google site search"
-msgstr ""
+msgstr "Výchozí hodnotou tohoto parametru je: Google site search"
 
 msgid "title"
-msgstr ""
+msgstr "title"
 
 msgid "Title used for all site navigation pages."
-msgstr ""
+msgstr "Název, který se použije u všech navigačních stránek webové stránky."
 
 msgid "The default value for this parameter is: Documentation"
-msgstr ""
+msgstr "Výchozí hodnotu tohto parametru je: Documentation"
 
 msgid "tmpl_path"
-msgstr ""
+msgstr "tmpl_path"
 
 msgid "Full path to the template directory."
-msgstr ""
+msgstr "Úplný cesta k adresáři šablon."
 
 msgid "The default value for this parameter is: /usr/share/publican/templates"
-msgstr ""
+msgstr "Výchozí hodnotou thoto parametru je: /usr/share/publican/templates"
 
 msgid "toc_js"
-msgstr ""
+msgstr "toc_js"
 
 msgid "The source file to use for JavaScript functionality."
-msgstr ""
+msgstr "Zdrojový soubor, který se má použít pro funkcionalitu JavaScript."
 
 msgid "The default value for this parameter is: default.js"
-msgstr ""
+msgstr "Výchozí hodnotou tohoto parametru je: default.js"
 
 msgid "toc_path"
-msgstr ""
+msgstr "toc_path"
 
 msgid "The path to the directory in which to create the top-level index.html file."
-msgstr ""
+msgstr "Cesta k adresáři, ve kterém se vytvoří sobor index.html nejvyšší úrovně."
 
 msgid "toc_type"
-msgstr ""
+msgstr "toc_type"
 
 msgid "Template to use for generagting the web style 1 toc file."
-msgstr ""
+msgstr "Šablona, která se má použít pro vygenerování souboru s obsahem webového stylu 1."
 
 msgid "The default value for this parameter is: toc"
-msgstr ""
+msgstr "Výchozí hodnotou tohoto parametru je: toc"
 
 msgid "web_style"
-msgstr ""
+msgstr "web_style"
 
 msgid "Publican supports mutliple base styles for websites, this picks one."
-msgstr ""
+msgstr "Publican podporuje vícenásobné základní styly pro webové stránky, toto některý z nich vybere."
 
 msgid "The default value for this parameter is: 1"
-msgstr ""
+msgstr "Výchozí hodnotou tohoto parametru je: 1"
 
 msgid "This parameter is constrained with the following regular expression: [1-2]"
-msgstr ""
+msgstr "Tento parametr je omezen tínmto regulárním výrazem: [1-2]"
 
 msgid "zip_dump"
-msgstr ""
+msgstr "zip_dump"
 
 msgid "Zip up the dump file after dumping it"
-msgstr ""
+msgstr "Zabalit soubor výpisu (dump) po dokončení zápisu do formátu zip."
 

@@ -1,15 +1,18 @@
+# Gé Baylard <geodebay@gmail.com>, 2014. #zanata
+# samfreemanz <sfriedma@redhat.com>, 2014. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2014-09-30 07:39+1000\n"
-"PO-Revision-Date: 2014-09-30 07:39+1000\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: None\n"
-"Language: en-US \n"
+"POT-Creation-Date: 2014-10-03 13:17+1000\n"
 "MIME-Version: 1.0\n"
-"Content-Type: application/x-publican; charset=UTF-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Publican v4.2.2\n"
+"PO-Revision-Date: 2014-10-03 01:19-0400\n"
+"Last-Translator: Gé Baylard <geodebay@gmail.com>\n"
+"Language-Team: None\n"
+"Language: fr\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=2; plural=(n > 1)\n"
 
 msgid "Configuration summary"
 msgstr ""
@@ -23,26 +26,31 @@ msgstr ""
 msgid "arch"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Arch to filter output on."
-msgstr ""
+msgstr "Architecture à filtrer en sortie."
 
+# translation auto-copied from project DocBook locales, version 1, document locale
 msgid "audience"
-msgstr ""
+msgstr "Public visé"
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "audience to filter output on."
-msgstr ""
+msgstr "filtre de public à utiliser pour la sortie."
 
 msgid "books"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "A space-separated list of books used in this remote set."
-msgstr ""
+msgstr "Une liste, avec une espace comme séparateur, des livres utilisés dans cet ensemble distant."
 
 msgid "brand"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "The brand to use when building this package."
-msgstr ""
+msgstr "L'estampille à utiliser lors de la construction de ce paquet."
 
 msgid "The default value for this parameter is: common"
 msgstr ""
@@ -50,8 +58,9 @@ msgstr ""
 msgid "brew_dist"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "The brew dist to use for building the standalone desktop rpm."
-msgstr ""
+msgstr "La distribution de brew à utiliser pour construire le RPM bureau autonome."
 
 msgid "The default value for this parameter is: docs-5E"
 msgstr ""
@@ -62,8 +71,9 @@ msgstr ""
 msgid "bridgehead_in_toc"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Display bridge head elements in the TOCs?"
-msgstr ""
+msgstr "Afficher les éléments « bridgehead » dans les TM ?"
 
 msgid "The default value for this parameter is: 0"
 msgstr ""
@@ -71,14 +81,16 @@ msgstr ""
 msgid "chunk_first"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "For HTML, should the first section be on the same page as its parent?"
-msgstr ""
+msgstr "Pour HTML, le premier paragraphe doit-il être sur la même page que son parent ?"
 
 msgid "chunk_section_depth"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "For HTML, what is the deepest level of nesting at which a section should be split onto its own page?"
-msgstr ""
+msgstr "Pour HTML, quel est le plus grand niveau d'imbrication des découpages de paragraphes dans leurs pages ?"
 
 msgid "The default value for this parameter is: 4"
 msgstr ""
@@ -86,8 +98,9 @@ msgstr ""
 msgid "classpath"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Path to jar files for FOP."
-msgstr ""
+msgstr "Chemin vers les fichiers jar pour FOP."
 
 msgid "The default value for this parameter is: /usr/share/java/ant/ant-trax-1.7.0.jar:/usr/share/java/xmlgraphics-commons.jar:/usr/share/java/batik-all.jar:/usr/share/java/xml-commons-apis.jar:/usr/share/java/xml-commons-apis-ext.jar"
 msgstr ""
@@ -95,8 +108,9 @@ msgstr ""
 msgid "common_config"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Path to publican content."
-msgstr ""
+msgstr "Chemin vers le contenu Publican"
 
 msgid "The default value for this parameter is: /usr/share/publican"
 msgstr ""
@@ -104,8 +118,9 @@ msgstr ""
 msgid "common_content"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Path to publican common content."
-msgstr ""
+msgstr "Chemin vers les contenus communs de Publican"
 
 msgid "The default value for this parameter is: /usr/share/publican/Common_Content"
 msgstr ""
@@ -113,20 +128,23 @@ msgstr ""
 msgid "condition"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Conditions on which to prune XML before transformation."
-msgstr ""
+msgstr "Conditions pour l'élagage du XML avant transformation."
 
 msgid "confidential"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Is the content confidential?"
-msgstr ""
+msgstr "Le contenu est-il confidentiel ?"
 
 msgid "confidential_text"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "The text used to indicate content is confidential."
-msgstr ""
+msgstr "Le texte utilisé pour indiquer que le contenu est confidentiel."
 
 msgid "The default value for this parameter is: CONFIDENTIAL"
 msgstr ""
@@ -134,20 +152,23 @@ msgstr ""
 msgid "conformance"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "conformance to filter output on."
-msgstr ""
+msgstr "filtre de conformité à utiliser pour la sortie"
 
 msgid "debug"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Print out extra messages?"
-msgstr ""
+msgstr "Afficher des messages supplémentaires ?"
 
 msgid "doc_url"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "URL for the documentation team for this package. Used for top right URL on HTML."
-msgstr ""
+msgstr "URL de l'équipe de documentation du paquet. Utilisé pour l'URL en haut à droite du HTML."
 
 msgid "The default value for this parameter is: https://fedorahosted.org/publican"
 msgstr ""
@@ -167,8 +188,9 @@ msgstr ""
 msgid "drupal_author"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "The author name to be shown in drupal book page. It must be a valid drupal username."
-msgstr ""
+msgstr "Le nom de l'auteur à afficher dans la page d'ouvrage Drupal. Il doit être un nom d'utilisateur Drupal valide."
 
 msgid "The default value for this parameter is: Publican"
 msgstr ""
@@ -194,14 +216,16 @@ msgstr ""
 msgid "drupal_menu_title"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Override the bookname that will be shown in the drupal menu."
-msgstr ""
+msgstr "Remplace le nom de l'ouvrage affiché dans le menu Drupal"
 
 msgid "dt_format"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "The format to use for the desktop output."
-msgstr ""
+msgstr "Le format à utiliser pour une sortie sur ordinateur de bureau."
 
 msgid "The default value for this parameter is: html-desktop"
 msgstr ""
@@ -221,8 +245,9 @@ msgstr ""
 msgid "dtdver"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Version of the DocBook DTD on which this project is based."
-msgstr ""
+msgstr "Version du DTD DocBook sur laquelle ce projet se fonde."
 
 msgid "The default value for this parameter is: 4.5"
 msgstr ""
@@ -230,14 +255,16 @@ msgstr ""
 msgid "ec_id"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Eclipse plugin ID. Defaults to \"$product.$docname\""
-msgstr ""
+msgstr "ID du greffon Eclipse. Par défaut, « $product.$docname »"
 
 msgid "ec_name"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Eclipse plugin name. Defaults to \"$product $docname\""
-msgstr ""
+msgstr "Nom du greffon Eclipse. Par défaut, « $product.$docname »"
 
 msgid "ec_provider"
 msgstr ""
@@ -248,8 +275,9 @@ msgstr ""
 msgid "extras_dir"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Directory where images are located."
-msgstr ""
+msgstr "Répertoire où sont situées les images."
 
 msgid "The default value for this parameter is: extras"
 msgstr ""
@@ -257,14 +285,16 @@ msgstr ""
 msgid "generate_section_toc_level"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Generate table of contents down to the given section depth."
-msgstr ""
+msgstr "Crée une table des matières jusqu'à la profondeur de subdivision donnée."
 
 msgid "ignored_translations"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Languages to replace with xml_lang regardless of translation status."
-msgstr ""
+msgstr "Langues à remplacer par xml_lang quel que soit l'état de la traduction."
 
 msgid "img_dir"
 msgstr ""
@@ -275,20 +305,24 @@ msgstr ""
 msgid "info_file"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Override the default Info file."
-msgstr ""
+msgstr "Remplace le fichier Info par défaut."
 
+# translation auto-copied from project Publican Users' Guide, version 3, document Publican_Defaults
 msgid "lang"
-msgstr ""
+msgstr "lang"
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "lang to filter output on."
-msgstr ""
+msgstr "filtre de langue pour la sortie."
 
 msgid "license"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "License this package uses."
-msgstr ""
+msgstr "Licence utilisée par ce paquet."
 
 msgid "The default value for this parameter is: GFDL"
 msgstr ""
@@ -296,32 +330,38 @@ msgstr ""
 msgid "mainfile"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "The name of the main xml and ent files for this book, sans file extension and language. Fetched from docname if not set."
-msgstr ""
+msgstr "Le nom des fichiers XML et ENT principaux pour l'ouvrage, sans langue ni extension. Extrait de docname si pas défini."
 
 msgid "menu_category"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Semicolon-separated list of menu categories for the desktop package."
-msgstr ""
+msgstr "Liste, avec point-virgule comme séparateur, des catégories de menu pour le paquet bureau. "
 
+# translation auto-copied from project Satellite6 Foreman, version 6.0, document foreman
 msgid "os"
-msgstr ""
+msgstr "OS"
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "os to filter output on."
-msgstr ""
+msgstr "filtre de SE pour la sortie."
 
 msgid "os_ver"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "The OS for which to build packages."
-msgstr ""
+msgstr "Le système d'exploitation pour lequel les paquets sont construits"
 
 msgid "pdf_body_font"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "The font to use for body text in PDFs."
-msgstr ""
+msgstr "La police à utiliser pour le corps du texte dans des PDF."
 
 msgid "The default value for this parameter is: Liberation Sans"
 msgstr ""
@@ -329,8 +369,9 @@ msgstr ""
 msgid "pdf_mono_font"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "The font to use for mono text in PDFs."
-msgstr ""
+msgstr "La police monospace à utiliser pour du texte dans des PDF."
 
 msgid "The default value for this parameter is: Liberation Mono"
 msgstr ""
@@ -338,92 +379,110 @@ msgstr ""
 msgid "prod_url"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "URL for the product. Used in top left URL in HTML."
-msgstr ""
+msgstr "URL du produit. Utilisé en haut à gauche des HTML."
 
+# translation auto-copied from project Satellite6 Katello, version Sam-1.3.0, document katello, author samfreemanz
 msgid "product"
-msgstr ""
+msgstr "produit"
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Product this package covers. Fetched from productname tag in xml_lang/TYPE_Info.xml"
-msgstr ""
+msgstr "Produits concernés par ce paquet. Extrait de la balise productname dans xml_lang/TYPE_Info.xml"
 
 msgid "repo"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Repository from which to fetch remote set books."
-msgstr ""
+msgstr "Dépôt d'extraction des ouvrages distants de la collection."
 
 msgid "rev_dir"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "By default Revision History is sorted in descending order. Set this to 'asc' or 'ascending' to reverse the sort."
-msgstr ""
+msgstr "Par défaut, l'historique de révision est trié dans l'ordre décroissant. Définissez cette valeur à « asc » ou « ascending » pour inverser l'ordre de tri."
 
 msgid "rev_file"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Override the default Revision History file."
-msgstr ""
+msgstr "Remplace le fichier Revision_History par défaut."
 
+# translation auto-copied from project DocBook locales, version 1, document locale
 msgid "revision"
-msgstr ""
+msgstr "Version"
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "revision to filter output on."
-msgstr ""
+msgstr "filtre « revision » pour la sortie."
 
 msgid "revisionflag"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "revisionflag to filter output on."
-msgstr ""
+msgstr "filtre « revisionflag » pour la sortie."
 
 msgid "role"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "role to filter output on."
-msgstr ""
+msgstr "filtre « role » pour la sortie."
 
 msgid "scm"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Type of repository in which books that form part of a remote set are stored. Supported types: SVN, GIT."
-msgstr ""
+msgstr "Type de dépôt dans lequel des ouvrages faisant partie d'une collection distribuée sont stockés. Types pris en charge : SVN, GIT."
 
 msgid "security"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "security to filter output on."
-msgstr ""
+msgstr "filtre « sécurity » pour la sortie."
 
 msgid "show_remarks"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Display remarks in transformed output."
-msgstr ""
+msgstr "Afficher les « remark » dans la sortie traitée"
 
 msgid "sort_order"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Override the default sort weighting. Defaults to 50."
-msgstr ""
+msgstr "Remplace le poids de tri par défaut. Valeur par défaut : 50."
 
 msgid "src_url"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "URL to find tar of source files. Used in RPM Spec files."
-msgstr ""
+msgstr "URL pour retrouver l'archive tar des fichiers source. Utilisée dans les fichiers spec RPM."
 
+# translation auto-copied from project Satellite6 Foreman, version 6.0, document foreman
 msgid "status"
-msgstr ""
+msgstr "status"
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "status to filter output on."
-msgstr ""
+msgstr "filtre « status » pour la sortie."
 
 msgid "tmp_dir"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Directory to use for building."
-msgstr ""
+msgstr "Répertoire à utiliser pour la construction."
 
 msgid "The default value for this parameter is: tmp"
 msgstr ""
@@ -431,8 +490,9 @@ msgstr ""
 msgid "toc_section_depth"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Depth of sections to include in the main table of contents."
-msgstr ""
+msgstr "Profondeur de subdivision à incorporer dans la table des matières principale."
 
 msgid "The default value for this parameter is: 2"
 msgstr ""
@@ -440,8 +500,9 @@ msgstr ""
 msgid "txt_formater"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Choose the formatter to use when creating txt output."
-msgstr ""
+msgstr "Choisir le générateur de format à utiliser lors de la création de la sortie txt"
 
 msgid "The default value for this parameter is: default"
 msgstr ""
@@ -452,8 +513,9 @@ msgstr ""
 msgid "type"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Type of content this package contains. Supported: set, book, article, brand"
-msgstr ""
+msgstr "Type du contenu de ce paquet. Pris en charge : set, book, article, brand"
 
 msgid "The default value for this parameter is: Book"
 msgstr ""
@@ -461,20 +523,23 @@ msgstr ""
 msgid "userlevel"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "userlevel to filter output on."
-msgstr ""
+msgstr "filtre « userlevel » pour la sortie."
 
 msgid "vendor"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "vendor to filter output on."
-msgstr ""
+msgstr "filtre « vendor » pour la sortie."
 
 msgid "version"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Version of this package. Fetched from productnumber tag in xml_lang/TYPE_Info.xml"
-msgstr ""
+msgstr "Version de ce paquet. Extraite de la balise productnumber de xml_lang/TYPE_Info.xml"
 
 msgid "This parameter is constrained with the following regular expression: ^[0-9][^\\p{IsSpace}]*$"
 msgstr ""
@@ -482,14 +547,16 @@ msgstr ""
 msgid "web_brew_dist"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "The brew dist to use for building the web rpm."
-msgstr ""
+msgstr "La distribution de brew à utiliser pour construire le RPM Web."
 
 msgid "web_formats"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "A comma-separated list of the formats to use for the web packages."
-msgstr ""
+msgstr "Une liste, avec la virgule comme séparateur, des formats à utiliser pour les paquets Web."
 
 msgid "The default value for this parameter is: html,html-single,pdf,epub"
 msgstr ""
@@ -497,8 +564,9 @@ msgstr ""
 msgid "web_home"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "This is a home page for a Publican-generated website, not a standard book."
-msgstr ""
+msgstr "Ceci est une page d'accueil pour un site Web créé par Publican, et non pour un ouvrage standard."
 
 msgid "web_home is deprecated and will be removed from Publican in the future. Use \"web_type: home\" instead."
 msgstr ""
@@ -506,8 +574,9 @@ msgstr ""
 msgid "web_host"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "This is a host name for a Publican-generated website, used for searches and the Sitemap. Be sure to include the full path to your document tree. E.g. if your documents are in the docs directory: http://www.example.com/docs"
-msgstr ""
+msgstr "Ceci est le nom d'hôte pour un site Web créé par Publican, utilisé pour les recherches et le Sitemap. Assurez-vous d'avoir inclus le chemin complet dans l'arbre du document. Par ex. si vos documents sont dans le répertoire docs :  http://www.example.com/docs"
 
 msgid "web_host is deprecated and will be removed from Publican in the future. Use \"host\" in the web site configuration file instead."
 msgstr ""
@@ -515,26 +584,30 @@ msgstr ""
 msgid "web_name_label"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Override the book name, bottom level, menu label on a Publican website."
-msgstr ""
+msgstr "Remplace l'étiquette de menu du nom de l'ouvrage, niveau bas, sur un site Web Publican."
 
 msgid "web_obsoletes"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Packages to obsolete in web RPM."
-msgstr ""
+msgstr "Paquets à déclarer obsolètes dans le RPM Web."
 
 msgid "web_product_label"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Override the product, top level, menu label on a Publican website."
-msgstr ""
+msgstr "Remplace l'étiquette de menu du produit, niveau haut, sur un site Web Publican."
 
 msgid "web_search"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Override the default search form for a Publican website. By default this will use Google search and do a site search if web_host is set."
-msgstr ""
+msgstr "Remplace la forme de recherche par défaut d'un site Web Publican. Par défaut, elle utilise une recherche Google et effectue la recherche sur le site si web_host est défini."
 
 msgid "web_search is deprecated and will be removed from Publican in the future. Use \"search\" in the web site configuration file instead."
 msgstr ""
@@ -542,8 +615,9 @@ msgstr ""
 msgid "web_type"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "This is a special page for a Publican-generated website, not a standard book. Valid types are home, product, and version."
-msgstr ""
+msgstr "Ceci est une page spéciale pour un site Web créé par Publican, et non pour un ouvrage standard. Les types valides sont home, product et version."
 
 msgid "This parameter is constrained with the following regular expression: ^(home|product|version)$"
 msgstr ""
@@ -551,26 +625,30 @@ msgstr ""
 msgid "web_version_label"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Override the version, middle level, menu label on a Publican website. To hide this menu item set this to: UNUSED"
-msgstr ""
+msgstr "Remplace l'étiquette de menu de la version, niveau médian, sur un site Web Publican. Pour cacher cet élément de menu, définissez sa valeur à UNUSED."
 
 msgid "wkhtmltopdf_opts"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Extra options to pass to wkhtmltopdf. e.g. wkhtmltopdf_opts: \"-O landscape -s A3\""
-msgstr ""
+msgstr "Options supplémentaires à passer à « wkhtmltopdf ». Ex : wkhtmltopdf_opts: \"-O landscape -s A3\""
 
 msgid "wordsize"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "wordsize to filter output on."
-msgstr ""
+msgstr "filtre « wordsize » pour la sortie."
 
 msgid "xml_lang"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Language in which XML is authored."
-msgstr ""
+msgstr "Langue dans laquelle le XML est rédigé."
 
 msgid "The default value for this parameter is: en-US"
 msgstr ""
@@ -584,56 +662,65 @@ msgstr ""
 msgid "banned_attrs"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "A comma-separated list of XML attributes that are not permitted in the source."
-msgstr ""
+msgstr "Une liste, avec la virgule comme séparateur, d'attributs XML non permis dans le source."
 
 msgid "banned_tags"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "A comma-separated list of XML tags that are not permitted in the source."
-msgstr ""
+msgstr "Une liste, avec la virgule comme séparateur, de balises XML non permises dans le source."
 
 msgid "base_brand"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "The base brand to use for this brand."
-msgstr ""
+msgstr "La marque de base à utiliser pour cette estampille."
 
 msgid "dtd_type"
 msgstr ""
 
+# translation auto-copied from project Publican Users' Guide, version 3, document Publican_cfg_parameters_order_by_alpha
 msgid "Override Type for DocType. Must be a complete string."
-msgstr ""
+msgstr "Surcharge le type du Document Type. Doit être une chaîne complète."
 
 msgid "dtd_uri"
 msgstr ""
 
+# translation auto-copied from project Publican Users' Guide, version 3, document Publican_cfg_parameters_order_by_alpha
 msgid "Override URI for DocType. Must be a complete string."
-msgstr ""
+msgstr "surcharge l'URI du Document Type. Doit être une chaîne complète."
 
 msgid "no_embedtoc"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Brand option to disable embedding the navigational toc in web packages"
-msgstr ""
+msgstr "Option d'estampille pour désactiver l'imbrication de la table des matières de navigation dans les paquets Web"
 
 msgid "web_cfg"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Full path for the publican site configuration file for non standard RPM websites."
-msgstr ""
+msgstr "Chemin complet pour le fichier de configuration du site publican pour les sites non standard de RPM."
 
 msgid "web_dir"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Install path for non standard RPM websites."
-msgstr ""
+msgstr "Chemin d'installation pour les sites Web de RPM non standards."
 
 msgid "web_req"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Name of site package for non standard RPM websites. Required to ensure the site is installed."
-msgstr ""
+msgstr "Nom du paquet de site pour sites Web avec RPM non standard. Requis pour s'assurer que le site est installé."
 
 msgid "Site options"
 msgstr ""
@@ -656,8 +743,9 @@ msgstr ""
 msgid "The default language for this website. Tables of contents for languages other than the default language will link to documents in the default language when translations are not available."
 msgstr ""
 
+# translation auto-copied from project oVirt, version ovirt-3.5, document frontend/webadmin/modules/uicompat/src/main/resources/org/ovirt/engine/ui/uicompat/LocalizedEnums
 msgid "dump"
-msgstr ""
+msgstr "dump"
 
 msgid "Dump the publican database to an XML file."
 msgstr ""

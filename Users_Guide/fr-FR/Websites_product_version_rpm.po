@@ -1,56 +1,40 @@
 # Gé Baylard <<Geodebay@gmail.com>>, 2013.
-# Gérard Baylard <geodebay@gmail.com>, 2014. #zanata
+# Gé Baylard <geodebay@gmail.com>, 2014. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2014-05-06 14:10+1000\n"
+"POT-Creation-Date: 2014-10-03 13:17+1000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "PO-Revision-Date: 2014-05-23 04:57-0400\n"
-"Last-Translator: Gérard Baylard <geodebay@gmail.com>\n"
+"Last-Translator: Gé Baylard <geodebay@gmail.com>\n"
 "Language-Team: français <<trans-fr@lists.fedoraproject.org>>\n"
 "Language: fr\n"
-"X-Generator: Zanata 3.4.2\n"
+"X-Generator: Zanata 3.6.2\n"
 "Plural-Forms: nplurals=2; plural=n>1;\n"
 
-#. Tag: title
-#, no-c-format
 msgid "Creating, installing, and updating product pages and version pages"
 msgstr "Création, installation et mise à jour des pages du produit et des pages des versions"
 
-#. Tag: para
-#, no-c-format
 msgid "<application>Publican</application>-generated product pages and version pages are the localizable pages that provide a general overview of a product or version respectively. Visitors access these pages by clicking on a product or version in the navigation menu. The pages are structured as DocBook <tag>&lt;article&gt;</tag>s with an extra <parameter>web_type: product</parameter> or <parameter>web_type: version</parameter> parameter in their <filename>publican.cfg</filename> files. In their structure and presentation, product pages and version pages are the same as any other article that you produce with <application>Publican</application> and are packaged the same way."
 msgstr "Les pages de produit et les pages des versions créées par <application>Publican</application> sont des pages adaptables à la langue du lecteur donnant une vue générale du produit ou de la version. Les visiteurs ont accès à ces pages en cliquant sur un produit ou une version dans le menu de navigation. Les pages sont structurées de la même manière que les <sgmltag>&lt;article&gt;</sgmltag> DocBook avec des paramètres <parameter>web_type:&nbsp;product</parameter> ou <parameter>web_type:&nbsp;version</parameter> supplémentaires dans leurs fichiers <filename>publican.cfg</filename>. Dans leur structure ou présentation, les pages produit ou version sont identiques à n'importe quel autre article que vous auriez créé avec <application>Publican</application> et empaqueté de même."
 
-#. Tag: para
-#, no-c-format
 msgid "On a workstation, create a product or version page using the procedure described in <xref linkend=\"sect-Publican-Users_Guide-Creating_installing_and_updating_product_pages_and_version_pages\" />."
 msgstr "Sur une station de travail, créez une page produit ou version en suivant la procédure décrite à la <xref linkend=\"sect-Publican-Users_Guide-Creating_installing_and_updating_product_pages_and_version_pages\" />."
 
-#. Tag: para
-#, no-c-format
 msgid "In the directory in which you created the product page or version page, run:"
 msgstr "Dans le répertoire dans lequel vous avez créé la page du produit ou la page de la version, exécutez :"
 
-#. Tag: screen
-#, no-c-format
 msgid "<prompt>$</prompt> <command>publican package --binary</command>"
 msgstr "<prompt>$</prompt> <command>publican package --binary</command>"
 
-#. Tag: para
-#, no-c-format
 msgid "<application>Publican</application> builds an RPM package and places it in the <filename>/tmp/rpms/noarch/</filename> directory of the product page or version page. By default, <application>Publican</application> builds the RPM package for the operating system within which you are running <application>Publican</application>. To build an RPM package to install on a server that runs a different operating system, set the <parameter>os_ver</parameter> parameter in the <filename>publican.cfg</filename> file of the product page or version page."
 msgstr "<application>Publican</application> construit un paquet RPM et le place dans le répertoire <filename>/tmp/rpms/noarch/</filename> de la page du produit ou de la page de la version. Par défaut, <application>Publican</application> crée un paquet RPM à installer sur un serveur s'exécutant sous le même système d'exploitation que celui sous lequel tourne <application>Publican</application>. Pour construire un paquet RPM à installer sur un serveur avec un système d'exploitation autre, définir le paramètre <parameter>os_ver</parameter> dans le fichier <filename>publican.cfg</filename> de la page du produit ou de la page de la version."
 
-#. Tag: para
-#, no-c-format
 msgid "Either upload the package to the webserver and install it with the <command>rpm -i</command> or <command>yum localinstall</command> command, or place the package in a repository and configure the webserver to install from that repository when you run <command>yum install</command>."
 msgstr "Soit téléverser le paquet sur le serveur Web et l'installer avec la commande <command>rpm -i</command> ou <command>yum localinstall</command>, soit placer le paquet dans un dépôt et configurer le serveur Web pour l'installer à partir de ce dépôt en lançant la commande <command>yum install</command>."
 
-#. Tag: para
-#, no-c-format
 msgid "To update the product page or version page, build a new package with a higher <tag>&lt;edition&gt;</tag> number or <tag>&lt;pubsnumber&gt;</tag> in the <filename>Article_Info.xml</filename>. <application>Publican</application> uses these values to set the version and release numbers for the RPM package. When you install this package on your webserver, <application>yum</application> can replace the old version with the new when you run <command>yum localinstall</command> for a local package, or <command>yum update</command> for a package fetched from a repository."
 msgstr "Pour mettre à jour la page du produit ou la page de la version, construire un paquet avec un numéro <sgmltag>&lt;edition&gt;</sgmltag> ou <sgmltag>&lt;pubsnumber&gt;</sgmltag> plus grand dans <filename>Article_Info.xml</filename>. <application>Publican</application> utilise ces valeurs pour définir les numéros de version ou de parution du paquet RPM. Quand vous installez ce paquet sur le serveur Web, <application>yum</application> peut remplacer l'ancienne version par la nouvelle quand vous lancez <command>yum localinstall</command> pour un paquet local, ou bien <command>yum update</command> pour un paquet extrait d'un dépôt."
 

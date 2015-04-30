@@ -10,8 +10,8 @@
 	 <simpara>
 		<revhistory>
 			<revision>
-				<revnumber>4.2-0.5</revnumber>
-				<date>Fri Oct 3 2014</date>
+				<revnumber>4.2-0.6</revnumber>
+				<date>Thu Apr 30 2015</date>
 				<author>
 					<firstname>Jeff</firstname>
 					<surname>Fearn</surname>
@@ -22,6 +22,23 @@
 						<member>I file della traduzione sono sincronizzati con con le versioni 4.2-0 dei sorgenti XML</member>
 					</simplelist>
 				</revdescription>
+			</revision>
+			 <revision>
+				<revnumber>4.2-0.5</revnumber>
+				 <date>Fri Oct 3 2014</date>
+				 <author>
+					<firstname>Jeff</firstname>
+					 <surname>Fearn</surname>
+					 <email>jfearn@redhat.com</email>
+				</author>
+				 <revdescription>
+					<simplelist>
+						<member>I file della traduzione sono sincronizzati con con le versioni 4.2-0 dei sorgenti XML</member>
+
+					</simplelist>
+
+				</revdescription>
+
 			</revision>
 			 <revision>
 				<revnumber>4.2-0.4</revnumber>

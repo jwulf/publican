@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2014-05-06 14:10+1000\n"
+"POT-Creation-Date: 2014-10-03 13:17+1000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -10,16 +10,12 @@ msgstr ""
 "Last-Translator: Gé Baylard <<Geodebay@gmail.com>>\n"
 "Language-Team: français <<trans-fr@lists.fedoraproject.org>>\n"
 "Language: fr\n"
-"X-Generator: Zanata 3.4.2\n"
+"X-Generator: Zanata 3.6.2\n"
 "Plural-Forms: nplurals=2; plural=n>1;\n"
 
-#. Tag: title
-#, no-c-format
 msgid "Branding"
 msgstr "Estampillage"
 
-#. Tag: para
-#, no-c-format
 msgid "<firstterm>Brands</firstterm> are collections of files that <application>Publican</application> uses to apply a consistent look and style to HTML and PDF output. They provide boilerplate text that appears at the beginning of documents, images such as logos, and stylistic elements such as color schemes. <application>Publican</application> ships with one brand, <filename>common/</filename>. Documentation projects can produce and distribute brands to their contributors, either as a package (for example, an RPM package) or as an archive (for example, a tarball or ZIP file)."
 msgstr "Les <firstterm>estampilles</firstterm> sont composées d'un ensemble de fichiers que <application>Publican</application> utilise pour donner un aspect et un style en accord avec le produit ou la distribution dans ses sorties HTML ou PDF. Ces fichiers indiquent le texte standard à afficher en tête des documents, les images comme les logos et des éléments stylistiques comme les schémas de couleurs. <application>Publican</application> est livré avec l'estampille, <filename>common/</filename>. Des projets de documentation peuvent produire et distribuer leur propre estampille aux contributeurs, soit sous forme d'un paquet (RPM, par exemple) ou d'une archive (par exemple, un fichier « .tar » ou ZIP)."
 

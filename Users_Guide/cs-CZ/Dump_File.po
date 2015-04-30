@@ -1,163 +1,165 @@
+# Josef Hruška <josef.hruska@upcmail.cz>, 2015. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2014-10-03 13:09+1000\n"
-"PO-Revision-Date: 2014-10-03 13:09+1000\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: None\n"
-"Language: en-US \n"
+"POT-Creation-Date: 2014-10-03 13:17+1000\n"
 "MIME-Version: 1.0\n"
-"Content-Type: application/x-publican; charset=UTF-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Publican v4.2.2\n"
+"PO-Revision-Date: 2015-04-06 10:10-0400\n"
+"Last-Translator: Josef Hruška <josef.hruska@upcmail.cz>\n"
+"Language-Team: None\n"
+"Language: cs\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2\n"
 
 msgid "Contents of the website dump file"
-msgstr ""
+msgstr "Obsah souboru s výpisem webových stránek"
 
 msgid "The dump file for a <application>Publican</application>-generated website contains some basic site configuration details, together with details of every document published on the site. The site configuration details are:"
-msgstr ""
+msgstr "Soubor výpisu (dump) webových stránek vytvořených v <application>Publicanu</application> obsahuje některé základní podrobnosti o nastavení webových stránek, společně s podrobnostmi o každém dokumentu na nich zveřejněném. Těmito podrobnostmi nastavení jsou:"
 
 msgid "<tag>&lt;host&gt;</tag>"
-msgstr ""
+msgstr "<tag>&lt;host&gt;</tag>"
 
 msgid "The URL to the root of the documentation site, as set by the <parameter>host</parameter> parameter in the site configuration file."
-msgstr ""
+msgstr "URL kořenu webových stránek dokumentace, jak je nastaven parametrem <parameter>host</parameter> v konfiguračním souboru webových stránek."
 
 msgid "<tag>&lt;def_lang&gt;</tag>"
-msgstr ""
+msgstr "<tag>&lt;def_lang&gt;</tag>"
 
 msgid "The default language of the documentation on the website, as set by the <parameter>def_lang</parameter> parameter in the site configuration file."
-msgstr ""
+msgstr "Výchozí jazyk dokumentace na webových stránkách, jak je nastaven parametrem <parameter>def_lang</parameter>  v konfiguračním souboru webových stránek."
 
 msgid "Each document, in each language, in each format has a separate record. These records contain the following data:"
-msgstr ""
+msgstr "Každý dokument, v každém jazyku, v každém formátu má svůj vlastní záznam. Tyto záznamy obsahují tyto údaje:"
 
 msgid "<tag>&lt;name&gt;</tag>"
-msgstr ""
+msgstr "<tag>&lt;name&gt;</tag>"
 
 msgid "The title of the document, generated from the <tag>&lt;title&gt;</tag> tag in the <literal>Book_Info.xml</literal>, <literal>Article_Info.xml</literal>, or <literal>Set_Info.xml</literal> file unless overridden by the <parameter>docname</parameter> parameter in the <filename>publican.cfg</filename> file. Any spaces in the title are replaced by underscores."
-msgstr ""
+msgstr "Název dokumentu, získaný z tagu <tag>&lt;title&gt;</tag> v souboru <literal>Book_Info.xml</literal>, <literal>Article_Info.xml</literal> či <literal>Set_Info.xml</literal>, pokud není potlačen (přenastaven) parametrem <parameter>docname</parameter> v souboru <filename>publican.cfg</filename>. Mezery v názvu jsou nahrazeny podtržítkem."
 
 msgid "<tag>&lt;ID&gt;</tag>"
-msgstr ""
+msgstr "<tag>&lt;ID&gt;</tag>"
 
 msgid "A unique ID number for this document, in this format, in this language."
-msgstr ""
+msgstr "Jedinečné číslo ID pro daný dokument, v daném formátu, v daném jazyku."
 
 msgid "<tag>&lt;abstract&gt;</tag>"
-msgstr ""
+msgstr "<tag>&lt;abstract&gt;</tag>"
 
 msgid "A brief summary of the content of the document, generated from the <tag>&lt;abstract&gt;</tag> tag in the <literal>Book_Info.xml</literal>, <literal>Article_Info.xml</literal>, or <literal>Set_Info.xml</literal> file. <application>Publican</application> uses this same content to generate the <literal>%description</literal> section of the spec file when it packages a document. If the <tag>&lt;abstract&gt;</tag> is translated, this field contains the translated text."
-msgstr ""
+msgstr "Krátké shrnutí obsahu dokumentu, získané z tagu <tag>&lt;abstract&gt;</tag> v souboru <literal>Book_Info.xml</literal>, <literal>Article_Info.xml</literal> či <literal>Set_Info.xml</literal>. Stejný obsah používá <application>Publican</application> k vytvoření oddílu <literal>%description</literal> souboru spec při balení dokumentu. Je-li <tag>&lt;abstract&gt;</tag> přeložen, toto pole obsahuje přeložený text."
 
 msgid "<tag>&lt;format&gt;</tag>"
-msgstr ""
+msgstr "<tag>&lt;format&gt;</tag>"
 
 msgid "The format in which the document is produced — <literal>html</literal> for multi-page html, <literal>html-single</literal> for single-page html, <literal>pdf</literal> for PDF, and <literal>epub</literal> for EPUB."
-msgstr ""
+msgstr "Formát, v němž je dokument vytvořen — <literal>html</literal> pro vícestránkové html, <literal>html-single</literal> pro jednostránkové html, <literal>pdf</literal> pro PDF a <literal>epub</literal> pro EPUB."
 
 msgid "<tag>&lt;language&gt;</tag>"
-msgstr ""
+msgstr "<tag>&lt;language&gt;</tag>"
 
 msgid "The language code for the document. Refer to <xref linkend=\"appe-Publican-Users_Guide-Language_codes\" /> for more information about language codes in XML."
-msgstr ""
+msgstr "Kód jazyka dokumentu. Více informací o jazykových kódech v XML viz <xref linkend=\"appe-Publican-Users_Guide-Language_codes\" />."
 
 msgid "<tag>&lt;name_label&gt;</tag>"
-msgstr ""
+msgstr "<tag>&lt;name_label&gt;</tag>"
 
 msgid "The name of the document as it appears in the site table of contents. This label can be set with the <parameter>web_name_label</parameter> parameter in the document's <filename>publican.cfg</filename> file. Otherwise, the field is empty for a document in its original language, or uses the translated title of the document in a translated language. Any spaces in the name label are replaced by underscores."
-msgstr ""
+msgstr "Název dokumentu, který je zobrazen v obsahu webových stránek. Tento popisek lze nastavit parametrem <parameter>web_name_label</parameter> v souboru <filename>publican.cfg</filename> dokumentu. V opačném případě zůstává pole prázdné pro dokument ve svém originálním jazyce, nebo se použije přeložený název dokumentu v přeloženém jazyce. Všechny mezery v popisku názvu jsou nahrazeny podtržítkem."
 
 msgid "<tag>&lt;product&gt;</tag>"
-msgstr ""
+msgstr "<tag>&lt;product&gt;</tag>"
 
 msgid "The product that the document describes, generated from the <tag>&lt;productname&gt;</tag> tag in the <literal>Book_Info.xml</literal>, <literal>Article_Info.xml</literal>, or <literal>Set_Info.xml</literal> file unless overridden by the <parameter>product</parameter> parameter in the <filename>publican.cfg</filename> file. Any spaces in the product name are replaced by underscores."
-msgstr ""
+msgstr "Produkt, o němž pojednává dokument, získaný z tagu <tag>&lt;productname&gt;</tag> v souboru <literal>Book_Info.xml</literal>, <literal>Article_Info.xml</literal> či <literal>Set_Info.xml</literal>, pokud není potlačen parametrem <parameter>product</parameter> v souboru <filename>publican.cfg</filename>. Všechny mezery v názvu produktu jsou nahrazeny podtržítkem."
 
 msgid "<tag>&lt;product_label&gt;</tag>"
-msgstr ""
+msgstr "<tag>&lt;product_label&gt;</tag>"
 
 msgid "The name of the product as it appears in the site table of contents. This label can be set with the <parameter>web_product_label</parameter> parameter in the document's <filename>publican.cfg</filename> file. Otherwise, the field is empty for a document in its original language, or uses the translated title of the document in a translated language. Any spaces in the name label are replaced by underscores."
-msgstr ""
+msgstr "Název produktu, který je zobrazen v obsahu webových stránek. Tento popisek lze nastavit parametrem <parameter>web_product_label</parameter> v souboru <filename>publican.cfg</filename> dokumentu. V opačném případě zůstává pole prázdné pro dokument ve svém originálním jazyce, nebo se použije přeložený název dokumentu v přeloženém jazyce. Všechny mezery v popisku názvu jsou nahrazeny podtržítkem."
 
 msgid "If the product label is set to <literal>UNUSED</literal>, no heading for this product appears in the website tables of contents."
-msgstr ""
+msgstr "Je-li popisek názvu produktu nastaven na <literal>UNUSED</literal>, pro tento produkt se v obsahu webových stránek nezobrazí žádný nadpis (položka obsahu)."
 
 msgid "<tag>&lt;subtitle&gt;</tag>"
-msgstr ""
+msgstr "<tag>&lt;subtitle&gt;</tag>"
 
 msgid "A one-line description of the content of the document, generated from the <tag>&lt;subtitle&gt;</tag> tag in the <literal>Book_Info.xml</literal>, <literal>Article_Info.xml</literal>, or <literal>Set_Info.xml</literal> file. <application>Publican</application> uses this same content to generate the <literal>Summary</literal> section of the spec file when it packages a document. If the <tag>&lt;subtitle&gt;</tag> is translated, this field contains the translated text."
-msgstr ""
+msgstr "Jednořádkový popis obsahu dokumentu, získaný z tagu <tag>&lt;subtitle&gt;</tag> v souboru <literal>Book_Info.xml</literal>, <literal>Article_Info.xml</literal> či <literal>Set_Info.xml</literal>. Stejný obsah používá <application>Publican</application> k vytvoření oddílu <literal>Summary</literal> souboru spec při balení dokumentu. Je-li <tag>&lt;subtitle&gt;</tag> přeložen, toto pole obsahuje přeložený text."
 
 msgid "<tag>&lt;update_date&gt;</tag>"
-msgstr ""
+msgstr "<tag>&lt;update_date&gt;</tag>"
 
 msgid "The date that the document was most recently installed on the site, in the format YYYY-MM-DD."
-msgstr ""
+msgstr "Datum, kdy byl dokument nejnověji nainstalován na webové stránky, ve formátu RRRR-MM-DD."
 
 msgid "<tag>&lt;version&gt;</tag>"
-msgstr ""
+msgstr "<tag>&lt;version&gt;</tag>"
 
 msgid "The version of the product that the document describes (<emphasis>not</emphasis> the version of the document itself), generated from the <tag>&lt;productnumber&gt;</tag> tag in the <literal>Book_Info.xml</literal>, <literal>Article_Info.xml</literal>, or <literal>Set_Info.xml</literal> file unless overridden by the <parameter>version</parameter> parameter in the <filename>publican.cfg</filename> file."
-msgstr ""
+msgstr "Verze produktu, o němž pojednává dokument (<emphasis>nikoliv</emphasis> verze samotného dokumentu), získaná z tagu <tag>&lt;productnumber&gt;</tag> v souboru <literal>Book_Info.xml</literal>, <literal>Article_Info.xml</literal> či <literal>Set_Info.xml</literal>, pokud není potlačen parametrem <parameter>version</parameter> v souboru <filename>publican.cfg</filename>."
 
 msgid "<tag>&lt;version_label&gt;</tag>"
-msgstr ""
+msgstr "<tag>&lt;version_label&gt;</tag>"
 
 msgid "The version of the product as it appears in the site table of contents. This label can be set with the <parameter>web_version_label</parameter> parameter in the document's <filename>publican.cfg</filename> file."
-msgstr ""
+msgstr "Verze produktu, jak je zobrazena v obsahu webových stránek. Tento popisek lze nastavit parametrem <parameter>web_version_label</parameter> v souboru <filename>publican.cfg</filename> dokumentu."
 
 msgid "If the version label is set to <literal>UNUSED</literal>, no heading for this version of the product appears in the website tables of contents."
-msgstr ""
+msgstr "Je-li popisek verze produktu nastaven na <literal>UNUSED</literal>, pro tuto verzi se v obsahu webových stránek nezobrazí žádný nadpis (položka obsahu)."
 
 msgid "Sample records from a <filename>DUMP.xml</filename> file"
-msgstr ""
+msgstr "Ukázkové záznamy ze souboru <filename>DUMP.xml</filename>"
 
 msgid "These two records from a <filename>DUMP.xml</filename> file show the same book, the <citetitle>Red Hat Enterprise Linux 5 Installation Guide</citetitle>, in two different formats and two different languages — an English PDF version and a French multi-page HTML version."
-msgstr ""
+msgstr "Tyto dva záznamy ze souboru <filename>DUMP.xml</filename> ukazují stejnou knihu, <citetitle>Red Hat Enterprise Linux 5 Installation Guide</citetitle>, ve dvou různých formátech a dvou různých jazycích — anglickém v PDF a francouzském ve vícestránkovém HTML."
 
 msgid "<xi:include href=\"extras/DUMP.xmlt\" parse=\"text\" xmlns:xi=\"http://www.w3.org/2001/XInclude\" />"
-msgstr ""
+msgstr "<xi:include href=\"extras/DUMP.xmlt\" parse=\"text\" xmlns:xi=\"http://www.w3.org/2001/XInclude\" />"
 
 msgid "Computing URLs from the dump file"
-msgstr ""
+msgstr "Zpracování URL ze souboru výpisu"
 
 msgid "Using the following fields, you can compute the URL of any document on the site:"
-msgstr ""
+msgstr "Použitím těchto polí lze zpracovat URL kteréhokoliv dokumentu na webových stránkách:"
 
 msgid "muti-page HTML"
-msgstr ""
+msgstr "vícestránkové HTML"
 
 msgid "<tag>&lt;host&gt;</tag>/<tag>&lt;language&gt;</tag>/<tag>&lt;product&gt;</tag>/<tag>&lt;version&gt;</tag>/<tag>&lt;format&gt;</tag>/<tag>&lt;name&gt;</tag>/<filename>index.html</filename>"
-msgstr ""
+msgstr "<tag>&lt;host&gt;</tag>/<tag>&lt;language&gt;</tag>/<tag>&lt;product&gt;</tag>/<tag>&lt;version&gt;</tag>/<tag>&lt;format&gt;</tag>/<tag>&lt;name&gt;</tag>/<filename>index.html</filename>"
 
 msgid "For example, <filename>http://docs.fedoraproject.org/en-US/Fedora/14/html/Accessibility_Guide/index.html</filename>"
-msgstr ""
+msgstr "Například <filename>http://docs.fedoraproject.org/en-US/Fedora/14/html/Accessibility_Guide/index.html</filename>."
 
 msgid "single-page HTML"
-msgstr ""
+msgstr "jednostránkové HTML"
 
 msgid "For example, <filename>http://docs.fedoraproject.org/en-US/Fedora/14/html-single/Accessibility_Guide/index.html</filename>"
-msgstr ""
+msgstr "Například <filename>http://docs.fedoraproject.org/en-US/Fedora/14/html-single/Accessibility_Guide/index.html</filename>"
 
 msgid "PDF"
-msgstr ""
+msgstr "PDF"
 
 msgid "<tag>&lt;host&gt;</tag>/<tag>&lt;language&gt;</tag>/<tag>&lt;product&gt;</tag>/<tag>&lt;version&gt;</tag>/<tag>&lt;format&gt;</tag>/<tag>&lt;name&gt;</tag>/<tag>&lt;product&gt;</tag>-<tag>&lt;version&gt;</tag>-<tag>&lt;name&gt;</tag>-<tag>&lt;language&gt;</tag>.<filename>pdf</filename>"
-msgstr ""
+msgstr "<tag>&lt;host&gt;</tag>/<tag>&lt;language&gt;</tag>/<tag>&lt;product&gt;</tag>/<tag>&lt;version&gt;</tag>/<tag>&lt;format&gt;</tag>/<tag>&lt;name&gt;</tag>/<tag>&lt;product&gt;</tag>-<tag>&lt;version&gt;</tag>-<tag>&lt;name&gt;</tag>-<tag>&lt;language&gt;</tag>.<filename>pdf</filename>"
 
 msgid "For example, <filename>http://docs.fedoraproject.org/en-US/Fedora/14/pdf/Accessibility_Guide/Fedora-14-Accessibility_Guide-en-US.pdf</filename>"
-msgstr ""
+msgstr "Například <filename>http://docs.fedoraproject.org/en-US/Fedora/14/pdf/Accessibility_Guide/Fedora-14-Accessibility_Guide-en-US.pdf</filename>"
 
 msgid "EPUB"
-msgstr ""
+msgstr "EPUB"
 
 msgid "<tag>&lt;host&gt;</tag>/<tag>&lt;language&gt;</tag>/<tag>&lt;product&gt;</tag>/<tag>&lt;version&gt;</tag>/<tag>&lt;format&gt;</tag>/<tag>&lt;name&gt;</tag>/<tag>&lt;product&gt;</tag>-<tag>&lt;version&gt;</tag>-<tag>&lt;name&gt;</tag>-<tag>&lt;language&gt;</tag>.<filename>epub</filename>"
-msgstr ""
+msgstr "<tag>&lt;host&gt;</tag>/<tag>&lt;language&gt;</tag>/<tag>&lt;product&gt;</tag>/<tag>&lt;version&gt;</tag>/<tag>&lt;format&gt;</tag>/<tag>&lt;name&gt;</tag>/<tag>&lt;product&gt;</tag>-<tag>&lt;version&gt;</tag>-<tag>&lt;name&gt;</tag>-<tag>&lt;language&gt;</tag>.<filename>epub</filename>"
 
 msgid "For example, <filename>http://docs.fedoraproject.org/en-US/Fedora/14/pdf/Accessibility_Guide/Fedora-14-Accessibility_Guide-en-US.epub</filename>"
-msgstr ""
+msgstr "Například <filename>http://docs.fedoraproject.org/en-US/Fedora/14/pdf/Accessibility_Guide/Fedora-14-Accessibility_Guide-en-US.epub</filename>"
 
 msgid "Note that the <tag>&lt;product_label&gt;</tag>, <tag>&lt;version_label&gt;</tag>, and <tag>&lt;name_label&gt;</tag> fields have no significance for URLs, even when these fields are suppressed in tables of contents by the <literal>UNUSED</literal> setting."
-msgstr ""
+msgstr "Všimněte si, že pole <tag>&lt;product_label&gt;</tag>, <tag>&lt;version_label&gt;</tag> a <tag>&lt;name_label&gt;</tag> nemají pro URL žádný význam, ani když jsou potlačeny v obsahu nastavením <literal>UNUSED</literal>."
 

@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2014-05-06 14:10+1000\n"
+"POT-Creation-Date: 2014-10-03 13:17+1000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -11,113 +11,73 @@ msgstr ""
 "Last-Translator: Gé Baylard <<Geodebay@gmail.com>>\n"
 "Language-Team: français <<trans-fr@lists.fedoraproject.org>>\n"
 "Language: fr\n"
-"X-Generator: Zanata 3.4.2\n"
+"X-Generator: Zanata 3.6.2\n"
 "Plural-Forms: nplurals=2; plural=n>1;\n"
 
-#. Tag: title
-#, no-c-format
 msgid "Debian"
 msgstr "Debian"
 
-#. Tag: para
-#, no-c-format
 msgid "This procedure will install the <application>publican</application> version that is in your default Debian repository. It will also install a large number of packages that <application>publican</application> depends on, like Java, XML and image processing libraries and many ancillary Perl modules."
 msgstr "Cette procédure installe la version de <application>publican</application> dans votre dépôt Debian par défaut. Elle installe aussi un grand nombre de paquets dont <application>publican</application> dépend, comme Java, XML et les librairies de traitement de l'image, de même que des modules Perl auxiliaires."
 
-#. Tag: para
-#, no-c-format
 msgid "Open a terminal."
 msgstr "Ouvrez un terminal."
 
-#. Tag: para
-#, no-c-format
 msgid "Change to the root user: <command> su - </command>"
 msgstr "Devenez administrateur : <command> su - </command>"
 
-#. Tag: para
-#, no-c-format
 msgid "Run the following command to install the <package>publican</package> package:"
 msgstr "Pour installer le paquet <package>publican</package>, lancez la commande :"
 
-#. Tag: screen
-#, no-c-format
 msgid "<prompt>$</prompt> <command>apt-get install publican</command>"
 msgstr "<prompt>$</prompt> <command>apt-get install publican</command>"
 
-#. Tag: para
-#, no-c-format
 msgid "Run the following command to determine what version of <package>publican</package> is installed:"
 msgstr "Pour déterminer la version de <package>publican</package> installée, exécutez :"
 
-#. Tag: screen
-#, no-c-format
 msgid "<prompt>$</prompt> <command>publican -v</command>\n"
 "<computeroutput>version=2.8</computeroutput>"
 msgstr "<prompt>$</prompt> <command>publican -v</command>\n"
 "<computeroutput>version=2.8</computeroutput>"
 
-#. Tag: title
-#, no-c-format
 msgid "Important — Installing more recent packages using Apt-Pinning"
 msgstr "Important — Installation des paquets les plus récents avec « Apt-Pinning »"
 
-#. Tag: para
-#, no-c-format
 msgid "If you need a more recent release of <package>publican</package> than installed by the procedure above, you can query if there other versions available: <uri xlink:href=\"http://packages.debian.org/publican\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">http://packages.debian.org/publican</uri>."
 msgstr "Si vous avez besoin d'un version plus récente de <package>publican</package> que celle installée par la procédure ci-dessus, vous pouvez rechercher s'il y a d'autres versions disponibles : <ulink url=\"http://packages.debian.org/publican\" />."
 
 msgid "To date, there has not been any backport (<uri xlink:href=\"http://backports.debian.org/Instructions/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">http://backports.debian.org/Instructions/</uri>) available for <application>publican</application>, so we need to use Apt Pinning <uri xlink:href=\"https://wiki.debian.org/AptPreferences\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">https://wiki.debian.org/AptPreferences</uri>"
 msgstr ""
 
-#. Tag: para
-#, no-c-format
 msgid "Alternatively, you could run Debian testing or unstable in a virtual machine, chroot or linux container."
 msgstr "Autrement, vous pouvez lancer Debian en test ou instable dans une machine virtuelle, à partir d'une nouvelle racine (chroot) ou dans un conteneur Linux."
 
-#. Tag: para
-#, no-c-format
 msgid "Assuming there is a more recent version of <application>publican</application> available in the testing repository, and that you are running the current stable, then you can upgrade by:"
 msgstr "En supposant qu'il y ait une version plus récente de <application>publican</application> disponible dans le dépôt de test, et que vous utilisez la version stable actuelle, vous pouvez alors la mettre à niveau ainsi :"
 
-#. Tag: para
-#, no-c-format
 msgid "Open your <filename>/etc/apt/sources.list</filename> file in a text editor. For example, to edit the file in <application>gedit</application> run:"
 msgstr "Ouvrez le fichier <filename>/etc/apt/sources.list</filename> dans un traitement de texte. Par exemple, pour modifier le fichier dans <application>gedit</application>, exécutez :"
 
-#. Tag: screen
-#, no-c-format
 msgid "<prompt>$</prompt> <command>gedit /etc/apt/sources.list</command>"
 msgstr "<prompt>$</prompt> <command>gedit /etc/apt/sources.list</command>"
 
-#. Tag: para
-#, no-c-format
 msgid "Add the following line to the end of the file:"
 msgstr "Ajoutez la ligne ci-après à la fin du fichier :"
 
-#. Tag: programlisting
-#, no-c-format
 msgid "#### testing  #########\n"
 "deb http://ftp.us.debian.org/debian testing main contrib non-free"
 msgstr "#### testing  #########\n"
 "deb http://ftp.us.debian.org/debian testing main contrib non-free"
 
-#. Tag: para
-#, no-c-format
 msgid "Save the file and close the text editor."
 msgstr "Sauvegardez le fichier et fermez le logiciel de traitement de texte."
 
-#. Tag: para
-#, no-c-format
 msgid "Open (or create) your <filename>/etc/apt/preferences</filename> file in a text editor. For example, to edit the file in <application>gedit</application> run:"
 msgstr "Ouvrez (ou créez) le fichier <filename>/etc/apt/preferences</filename> dans un traitement de texte. Par exemple, pour modifier le fichier dans <application>gedit</application>, exécutez :"
 
-#. Tag: screen
-#, no-c-format
 msgid "<prompt>$</prompt> <command>gedit /etc/apt/preferences</command>"
 msgstr "<prompt>$</prompt> <command>gedit /etc/apt/preferences</command>"
 
-#. Tag: programlisting
-#, no-c-format
 msgid ""
 "Package: *\n"
 "Pin: release a=stable\n"
@@ -143,33 +103,21 @@ msgstr ""
 "Pin: release o=Debian\n"
 "Pin-Priority: -10"
 
-#. Tag: para
-#, no-c-format
 msgid "Run the following command to update the list of packages available to your computer:"
 msgstr "Lancez la commande suivante pour mettre à jour la liste des paquets disponibles pour votre ordinateur :"
 
-#. Tag: screen
-#, no-c-format
 msgid "<prompt>$</prompt> <command>apt-get update</command>"
 msgstr "<prompt>$</prompt> <command>apt-get update</command>"
 
-#. Tag: para
-#, no-c-format
 msgid "Run the following command to try to install the testing version of <package>publican</package> package, and any updated dependancies:"
 msgstr "Lancez la commande suivant pour essayer d'installer la version en test du paquet <package>publican</package>, ainsi que toutes les dépendances mises à jour :"
 
-#. Tag: screen
-#, no-c-format
 msgid "<prompt>$</prompt> <command>apt-get -t testing install publican</command>"
 msgstr "<prompt>$</prompt> <command>apt-get -t testing install publican</command>"
 
-#. Tag: para
-#, no-c-format
 msgid "Because Apt Pinning mixes 2 different debian streams in an un-tested way, incompatibilities may happen. For example, you may get a warning like:"
 msgstr "Comme Apt Pinning mélange 2 flux Debian différents de manière non-testée, des incompatibilités peuvent survenir. Par exemple, vous pouvez obtenir un avertissement comme :"
 
-#. Tag: screen
-#, no-c-format
 msgid ""
 "<prompt>$</prompt> <command>publican</command>\n"
 "<computeroutput>Warning: program compiled against libxml 209 using older 208</computeroutput>\n"
@@ -185,13 +133,9 @@ msgstr ""
 "<computeroutput>Warning: XML::LibXSLT compiled against libxslt 10128, but runtime libxslt is older 10126</computeroutput>\n"
 "<computeroutput>Can't open publican: No such file or directory at /usr/bin/publican line 430.</computeroutput>"
 
-#. Tag: para
-#, no-c-format
 msgid "Which indicates that you might need to upgrade libxml2 and libxslt to the testing repository version too. This can be done by searching to find the likely library:"
 msgstr "ce qui indique que vous aurez peut-être besoin de mettre à jour libxml2 et libxslt avec la version du dépôt de test également. Ce qui s'effectue en recherchant la bibliothèque possible :"
 
-#. Tag: screen
-#, no-c-format
 msgid ""
 "<prompt>$</prompt> <command>apt-get search libxslt</command>\n"
 "<computeroutput>gambas3-gb-xml-xslt - Gambas XSLT component</computeroutput>\n"
@@ -241,23 +185,12 @@ msgstr ""
 "<computeroutput>swfmill - xml2swf and swf2xml processor</computeroutput>\n"
 "<computeroutput>libxslthl-java - XSLT syntax highlighting</computeroutput>"
 
-#. Tag: para
-#, no-c-format
 msgid "(and the same again for libxml2)"
 msgstr "(et à nouveau la même chose pour libxml2)"
 
-#. Tag: para
-#, no-c-format
 msgid "And then upgrading those packages to testing."
 msgstr "puis en mettant à jour ces paquets pour le test."
 
-#. Tag: screen
-#, no-c-format
 msgid "<prompt>$</prompt> <command>apt-get -t testing upgrade libxml2 libxslt1.1</command>"
 msgstr "<prompt>$</prompt> <command>apt-get -t testing upgrade libxml2 libxslt1.1</command>"
-
-#. Tag: para
-#, no-c-format
-#~ msgid "To date, there has not been any backport (<ulink url=\"http://backports.debian.org/Instructions/\" />) available for <application>publican</application>, so we need to use Apt Pinning <ulink url=\"https://wiki.debian.org/AptPreferences\" />"
-#~ msgstr "Actuellement, il n'y a aucun rétroportage (<ulink url=\"http://backports.debian.org/Instructions/\" />) disponible pour <application>publican</application> ; nous avons donc besoin d'utiliser Apt Pinning <ulink url=\"https://wiki.debian.org/AptPreferences\" />"
 

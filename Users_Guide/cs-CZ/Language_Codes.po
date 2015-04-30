@@ -1,229 +1,231 @@
+# Josef Hruška <josef.hruska@upcmail.cz>, 2015. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2014-10-03 13:09+1000\n"
-"PO-Revision-Date: 2014-10-03 13:09+1000\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: None\n"
-"Language: en-US \n"
+"POT-Creation-Date: 2014-10-03 13:17+1000\n"
 "MIME-Version: 1.0\n"
-"Content-Type: application/x-publican; charset=UTF-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Publican v4.2.2\n"
+"PO-Revision-Date: 2015-04-19 09:57-0400\n"
+"Last-Translator: Josef Hruška <josef.hruska@upcmail.cz>\n"
+"Language-Team: None\n"
+"Language: cs\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2\n"
 
 msgid "Language codes"
-msgstr ""
+msgstr "Jazykové kódy"
 
 msgid "Region subtags"
-msgstr ""
+msgstr "Regionální subtag"
 
 msgid "The only part of the XML language tag that is mandatory in <application>Publican</application> is the <firstterm>language subtag</firstterm>. However, <application>Publican</application> is designed with the assumption that you will routinely include the <firstterm>region subtag</firstterm> when you identify languages. In many languages, spelling and vocabulary vary significantly from region to region. If you do not specify the regional variety of a language in which your document is authored or into which it is translated, you might obtain unexpected results when you build the document in <application>Publican</application>."
-msgstr ""
+msgstr "Jediná povinná část tagu language v XML v <application>Publicanu</application> je <firstterm>subtag jazyka</firstterm>. Avšak <application>Publican</application> je navržen s předpokladem, že budete rutinně zahrnovat při uvádění jazyka i <firstterm>subtag regionální</firstterm>. V mnoha jazycích se hláskování a slovník významně liší dle regionu. Neuvedete-li regionální variantu jazyka, ve kterém je váš dokument napsán nebo přeložen, můžete po sestavení dokumentu v <application>Publicanu</application> obdržet neočekávané výsledky."
 
 msgid "Other language codes"
-msgstr ""
+msgstr "Další jazykové kódy"
 
 msgid "The system of codes used to identify languages in the XML standard is not the only system of languages codes in use in the world today. However, because <application>Publican</application> strives to comply with the XML standard, these are the only codes that <application>Publican</application> supports. In particular, note that the codes used in the GNU tools (identified by their use of underscores and the <literal>@</literal> symbol to separate elements — for example, <literal>en_GB</literal> or <literal>sr_RS@latin</literal>) do not comply with the XML standard and therefore do not work with <application>Publican</application>."
-msgstr ""
+msgstr "Kódový systém používaný pro identifikaci jazyků v normě XML není jediným systémem jazykových kódů, který se dnes na světě používá. Protože však <application>Publican</application> usiluje o soulad se standardem XML, jedná se o jediné kódy, které <application>Publican</application> podporuje. Zejména si uvědomte, že kódy používané v nástrojích GNU (identifikovatelné užíváním podtržítek a symbolu <literal>@</literal> k oddělení svých prvků — například <literal>en_GB</literal> nebo <literal>sr_RS@latin</literal>) nejsou v souladu se standardem XML, a proto v <application>Publicanu</application> nefungují."
 
 msgid "<application>Publican</application> is an XML publication tool and therefore is designed to use the language codes — or <firstterm>tags</firstterm> — that the World Wide Web Consortium (W3C) designated in the XML specification.<footnote> <para> <link xlink:href=\"http://www.w3.org/TR/REC-xml/#sec-lang-tag\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">http://www.w3.org/TR/REC-xml/#sec-lang-tag</link> </para> </footnote> These codes are defined in the Internet Engineering Task Force (IETF) document <citetitle>BCP 47: Tags for Identifying Languages</citetitle>.<footnote> <para> <link xlink:href=\"http://tools.ietf.org/html/bcp47\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">http://tools.ietf.org/html/bcp47</link> </para> </footnote>"
-msgstr ""
+msgstr "<application>Publican</application> je nástroj pro publikování v XML, a proto je navržen tak, aby využíval jazykové kódy — neboli <firstterm>tagy</firstterm> — které vymezilo World Wide Web Consortium (W3C) ve specifikaci XML.<footnote> <para> <link xlink:href=\"http://www.w3.org/TR/REC-xml/#sec-lang-tag\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">http://www.w3.org/TR/REC-xml/#sec-lang-tag</link> </para> </footnote> Tyto kódy jsou definovány v dokumentu <citetitle>BCP 47: Tags for Identifying Languages</citetitle><footnote> <para> <link xlink:href=\"http://tools.ietf.org/html/bcp47\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">http://tools.ietf.org/html/bcp47</link> </para> </footnote> Internet Engineering Task Force (IETF)."
 
 msgid "Language tags are built from one of more <firstterm>subtags</firstterm>, separated from one another by hyphens. In order of appearance within a language tag, these subtags are:"
-msgstr ""
+msgstr "Jazykové tagy (značky) se skládají z jednoho z mnoha <firstterm>subtagů</firstterm> (podznaček), oddělených od sebe navzájem pomlčkami. Jejich pořadí v  jazykové značce je následující:"
 
 msgid "<literal><replaceable>language</replaceable>-<replaceable>script</replaceable>-<replaceable>region</replaceable>-<replaceable>variant</replaceable></literal>"
-msgstr ""
+msgstr "<literal><replaceable>language</replaceable>-<replaceable>script</replaceable>-<replaceable>region</replaceable>-<replaceable>variant</replaceable></literal>"
 
 msgid "BCP 47 also allows for considerable customization of language tags for special purposes through the use of <firstterm>extension subtags</firstterm> and <firstterm>private-use subtags</firstterm>. Extension subtags allow for finer-tuning of existing subtags, but must be registered with the IETF (none are currently registered). Private-use subtags are introduced by <literal>x-</literal> and do not need to be registered. Private-use subtags aside, a subtag is valid if it appears in the registry of subtags maintained by the IETF through the Internet Assigned Numbers Authority (IANA).<footnote> <para> <link xlink:href=\"http://www.iana.org/assignments/language-subtag-registry\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">http://www.iana.org/assignments/language-subtag-registry</link> </para> </footnote> Although <application>Publican</application> will accept any language tag that is valid under the rules presented in BCP 47, it is designed around the assumption that language tags for documents will most usually take the form <literal><replaceable>language</replaceable>-<replaceable>region</replaceable></literal>. A brief description of subtags follows:"
-msgstr ""
+msgstr "BCP 47 rovněž umožňuje podstatnou úpravu jazykových značek pro zvláštní účely pomocí <firstterm>rozšiřujících podznaček</firstterm> (extension subtags) a <firstterm>privátních podznaček</firstterm> (private-use subtags). Rozšiřující podznačky umožňují vyladit současné podznačky, ale musí být registrovány u IETF (v současnosti není registrována žádná). Privátní podznačky jsou uvozeny <literal>x-</literal> a nemusí být registrovány. Kromě privátních podznaček je podznačka platná, pokud je zanesena do registru podznaček udržovaného IETF skrze Internet Assigned Numbers Authority (IANA).<footnote> <para> <link xlink:href=\"http://www.iana.org/assignments/language-subtag-registry\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">http://www.iana.org/assignments/language-subtag-registry</link> </para> </footnote> Ačkoliv <application>Publican</application> přijme kteroukoliv jazykovou značku, která je platná dle pravidel představených v BCP 47, je navržen s předpokladem, že jazykové značky pro dokumenty budou nejčastěji využívat formát <literal><replaceable>language</replaceable>-<replaceable>region</replaceable></literal>. Následuje krátké shrnutí podznaček:"
 
 msgid "language subtag"
-msgstr ""
+msgstr "subtag language"
 
 msgid "The language subtag comprises two or more lower-case letters and is the only mandatory part of the language tag. For most widely spoken languages, the language subtag is a two-letter code identical with the language codes specified in ISO 639-1, <footnote> <para> <link xlink:href=\"http://www.infoterm.info/standardization/iso_639_1_2002.php\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">http://www.infoterm.info/standardization/iso_639_1_2002.php</link> </para> </footnote> for example, <literal>zh</literal> (Chinese), <literal>hi</literal> (Hindi), <literal>es</literal> (Spanish), and <literal>en</literal> (English). Where no two-letter code exists in ISO 639-1, the language subtag is usually a three-letter code identical with the codes specified in ISO 639-2,<footnote> <para> <link xlink:href=\"http://www.loc.gov/standards/iso639-2/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">http://www.loc.gov/standards/iso639-2/</link> </para> </footnote> for example, <literal>bal</literal> (Balochi), <literal>apk</literal> (Kiowa Apache), and <literal>tpi</literal> (Tok Pisin). Finally, a small number of language subtags appear in the IANA registry that have no ISO 639-1 or ISO 639-2 equivalent, such as subtags for the constructed languages <literal>qya</literal> (Quenya) and <literal>tlh</literal> (Klingon), and for the occult language <literal>i-enochian</literal> (Enochian). This last example also illustrates a small number of language subtags <firstterm>grandfathered</firstterm> into the registry that do not match the two-letter or three-letter pattern of codes derived from the ISO 639 standards."
-msgstr ""
+msgstr "Podznačka jazyka se skládá z dvou nebo více malých písmen a je jedinou povinnou částí jazykové značky. U nejrozšířenějších jazyků je podznačkou jazyka dvoupísmenný kód, který se shoduje s jazykovými kódy specifikovanými v ISO 639-1<footnote> <para> <link xlink:href=\"http://www.infoterm.info/standardization/iso_639_1_2002.php\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">http://www.infoterm.info/standardization/iso_639_1_2002.php</link> </para> </footnote>, např. <literal>zh</literal> (čínština), <literal>hi</literal> (hindština), <literal>es</literal> (španělština) a <literal>en</literal> (angličtina). Kde v ISO 639-1 neexistuje dvoupísmenný kód, podznačka jazyka má obvykle kód třípísmenný dle ISO 639-2<footnote> <para> <link xlink:href=\"http://www.loc.gov/standards/iso639-2/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">http://www.loc.gov/standards/iso639-2/</link> </para> </footnote>, např.  <literal>bal</literal> (balúčština), <literal>apk</literal> (Kiowa Apache) a <literal>tpi</literal> (Tok Pisin). A konečně malé množství podznaček jazyka, které nemají zastoupení v ISO 639-1 ani ISO 639-2, je v registru IANA, jako např. podznačky pro umělý jazyk <literal>qya</literal> (vznešená elfština) nebo <literal>tlh</literal> (klingonština) a okultní jazyk <literal>i-enochian</literal> (Enochian). Tento poslední příklad rovněž ilustruje malé množství podznaček jazyka v registru, zařazených na základě <firstterm>dědečkovské klauzule</firstterm>, které neodpovídají dvou- či třípísmenné formě kódů odvozené z norem ISO 639."
 
 msgid "Extended language subtags"
-msgstr ""
+msgstr "Rozšiřující podznačky jazyka"
 
 msgid "<citetitle>RFC 5646: Tags for Identifying Languages</citetitle><footnote> <para> <link xlink:href=\"http://tools.ietf.org/html/rfc5646\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">http://tools.ietf.org/html/rfc5646</link> </para> </footnote> issued in September 2009 allows for <firstterm>extended language subtags</firstterm> to follow the language subtag. Extended language subtags are three-letter codes that represent languages that share a close relationship with a language already represented by a language subtag. For example, <literal>yue</literal> represents Cantonese, but this subtag must always be used with the language subtag associated with it (Chinese), thus: <literal>zh-yue</literal>. The IETF does not yet recognize RFC 5646 as \"Best Common Practice\", nor are these subtags part of the XML standard yet."
-msgstr ""
+msgstr "<citetitle>RFC 5646: Tags for Identifying Languages</citetitle><footnote> <para> <link xlink:href=\"http://tools.ietf.org/html/rfc5646\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">http://tools.ietf.org/html/rfc5646</link> </para> </footnote> vydané v září 2009 povoluje <firstterm>rozšiřující podznačky jazyka</firstterm>, který se umisťují za podznačku jazyka. Rozšířující podznačky jazyka jsou třípísmenné kódy, které představují jazyky, jež sdílí blízký vztah s jazykem uvedené podznačky jazyka. Například <literal>yue</literal> představuje kantonštinu, ale tato podznačka musí být vždy použita s podznačkou jazyka, se kterou souvisí (čínština), proto: <literal>zh-yue</literal>. IETF zatím ještě neuznává RFC 5646 jako \"nejlepší současnou praxi\", a tyto podznačky nejsou dosud ani součástí normy XML."
 
 msgid "script subtag"
-msgstr ""
+msgstr "subtag script"
 
 msgid "The script subtag comprises four letters — the first one in upper case, the other three in lower case — and defines a writing system. These codes are identical with the four-letter codes specified in ISO 15924.<footnote> <para> <link xlink:href=\"http://www.unicode.org/iso15924/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">http://www.unicode.org/iso15924/</link> </para> </footnote> The script subtag is used to identify languages that are commonly written with more than one writing system; the subtag is omitted when it adds no distinguishing value to the language tag overall. For example, <literal>sr-Latn</literal> represents Serbian written with the Latin alphabet and <literal>sr-Cyrl</literal> represents Serbian written with the Cyrillic alphabet; <literal>az-Arab</literal> represents Azerbaijani written in Arabic script and <literal>az-Cyrl</literal> represents Azerbaijani written with the Cyrillic alphabet. Conversely, French should not be represented as <literal>fr-Latn</literal>, because French is not commonly written in any script other than the Latin alphabet anywhere in the world."
-msgstr ""
+msgstr "Podznačkta písma se skládá ze čtyřech písmen — první velké, ostatní tři malá — a určuje písmo. Kódy jsou shodné se čtyřpísmennými kódy specifikovanými v ISO 15924.<footnote> <para> <link xlink:href=\"http://www.unicode.org/iso15924/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">http://www.unicode.org/iso15924/</link> </para> </footnote> Podznačka písma se používá k identifikaci jazyků, u nichž je obvyklé, že jsou zaznamenávány více než jedním písmem; podznačka je vynechána, pokud celé jazykové značce nepřidává rozlišující hodnotu. Například <literal>sr-Latn</literal> představuje srbštinu psanou latinskou abecedou a <literal>sr-Cyrl</literal> psanou azbukou; <literal>az-Arab</literal> představuje ázerbájdžánštinu psanou arabským písmem a <literal>az-Cyrl</literal> azbukou. Naopak Francouzština by neměla být uváděna jako  <literal>fr-Latn</literal>, neboť ta  není obvykle zapisována v jiné než latinské abecedě po celém světě."
 
 msgid "region subtag"
-msgstr ""
+msgstr "Subtag region"
 
 msgid "The region subtag comprises either two upper-case letters (for regions that conform to national boundaries) or three digits (for other areas, such as trans-national regions). The two-letter subtags are identical with those from ISO 3166-1<footnote> <para> <link xlink:href=\"http://www.iso.org/iso/country_codes.htm\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">http://www.iso.org/iso/country_codes.htm</link> </para> </footnote>, for example, <literal>AT</literal> (Austria), <literal>TZ</literal> (Tanzania), and <literal>VE</literal> (Venezuela). The three-digit region subtags are based on those in UN M.49, <footnote> <para> <link xlink:href=\"http://unstats.un.org/unsd/methods/m49/m49.htm\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">http://unstats.un.org/unsd/methods/m49/m49.htm</link> </para> </footnote> for example, <literal>015</literal> (Northern Africa), <literal>061</literal> (Polynesia), and <literal>419</literal> (Latin America and the Caribbean)."
-msgstr ""
+msgstr "Podnačka regionu se skládá buď ze dvou velkých písmen (pro regiony, které odpovídají státním hranicím), nebo tří číslic (pro ostatní oblasti, jako např. přeshraniční regiony). Dvoupísmenné podznačky jsou shodné s ISO 3166-1<footnote> <para> <link xlink:href=\"http://www.iso.org/iso/country_codes.htm\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">http://www.iso.org/iso/country_codes.htm</link> </para> </footnote>, např.  <literal>AT</literal> (Rakousko), <literal>TZ</literal> (Tanzánie) a <literal>VE</literal> (Venezuela). Tříčíslicové regionální podznačky jsou založené na UN M.49<footnote> <para> <link xlink:href=\"http://unstats.un.org/unsd/methods/m49/m49.htm\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">http://unstats.un.org/unsd/methods/m49/m49.htm</link> </para> </footnote>, např. <literal>015</literal> (Severní Afrika), <literal>061</literal> (Polynézie) a <literal>419</literal> (Latinská Amerika a Karibik)."
 
 msgid "variant subtag"
-msgstr ""
+msgstr "Subtag variant"
 
 msgid "Variant subtags identify well-defined, recognizable variants of a language or script and can include upper-case letters, lower-case letters, and numerals. Variant subtags that start with a letter must be at least five characters long, and those that start with a numeral must be at least four characters long. Most variant subtags can only be used in combination with specific subtags or combinations of subtags. Variant subtags do not harmonize with any other standard; they are each the result of a separate registration with the IETF by an interested person or group."
-msgstr ""
+msgstr "Podznačka varianty identifikuje dobře definovanou, uznávanou variantu jazyka nebo písma a může obsahovat velká písmena, malá písmena a číslice. Podznačky varianty, které začínají písmenem, musí mít délku alespoň pět znaků a které začínají číslicí, musí být dlouhé alespoň čtyři znaky. Většinu podznaček varianty lze používat pouze v kombinaci se specifickými podznačkami nebo kombinacemi podznaček. Podznačky varianty nesledují soulad s žádnou normou; jsou výsledkem oddělené registrace u IETF zájmovými osobami nebo skupinami."
 
 msgid "Under the present standard, dialects of several languages are designated with variant subtags, for example, <literal>nedis</literal> denotes Nadiza (also known as Natisone), a dialect of Slovenian. This tag must be used in conjunction with the language subtag for Slovenian, thus: <literal>sl-nedis</literal>. In September 2009, the IETF issued a Request for Comments (RFC) that (amongst other things) proposes that dialects be represented by language extension subtags attached to language subtags.<footnote> <para> <link xlink:href=\"http://tools.ietf.org/html/rfc5646\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">http://tools.ietf.org/html/rfc5646</link> </para> </footnote>"
-msgstr ""
+msgstr "Dle současné normy jsou dialekty několika jazyků určeny podznačkou varianty, např. <literal>nedis</literal> označuje nadižu (též Natisone), slovinský dialekt. Tato podznačka musí být užita ve spojení s podznačkou jazyka slovinštiny, proto: <literal>sl-nedis</literal>. V září 2009 vydalo IETF výzvu k připomínkám (RFC), která (mimo jiné) navrhuje, aby byly dialekty reprezentované rozšiřujícími podznačkami jazyka připojeny k podznačkám jazyka.<footnote> <para> <link xlink:href=\"http://tools.ietf.org/html/rfc5646\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">http://tools.ietf.org/html/rfc5646</link> </para> </footnote>"
 
 msgid "Most variant subtags mark a particular orthography, most usually as a result of an official spelling reform or a significant work documenting the language. Examples (with their required language subtags) include: <literal>fr-1606nicot</literal> (French as documented by Jean Nicot in 1606), <literal>de-1901</literal> (German spelling codified by the 2nd Orthographic Conference in 1901) and <literal>be-1959acad</literal> (Belarusian as codified by the Orthography Commission in 1959)."
-msgstr ""
+msgstr "Většina podznaček varianty značí konkrétní pravopis (ortografii), nejčastěji jako výsledek zvláštní reformy hláskování nebo významného díla dokumentujícího jazyk. Mezi tyto příklady patří (s jejich povinnými jazykovými podznačkami): <literal>fr-1606nicot</literal> (francouzština zdokumentovaná Jeanem Nicotem roku 1606), <literal>de-1901</literal> (německý pravopis kodifikovaný 2. Ortografickou konferencí v roce 1901) a <literal>be-1959acad</literal> (běloruština kodifikovaná Ortografickou komisí v roce 1959)."
 
 msgid "Finally, some variant subtags denote a particular variant of a system of writing or transliteration. For example, <literal>zh-Latn-wadegile</literal> is Chinese written in the Latin alphabet, according to the transliteration system developed by Thomas Wade and Herbert Giles; <literal>ja-Latn-hepburn</literal> is Japanese written in the Latin alphabet using the transliteration system of James Curtis Hepburn."
-msgstr ""
+msgstr "Konečně některé podznačky variant značí zvláštní variantu písma nebo transliterace. Například <literal>zh-Latn-wadegile</literal> je čínština zapsaná v latinské abecedě, dle systému transliterace vyvinutého Thomasem Wadem a Herbertem Gilesem; <literal>ja-Latn-hepburn</literal> je japonština zapsaná v latinské abecedě užitím systému transliterace Jamese Curtise Hepburna."
 
 msgid "<application>Publican</application> includes support for the following languages:"
-msgstr ""
+msgstr "<application>Publican</application> obsahuje podporu pro následující jazyky:"
 
 msgid "ar-SA — Arabic"
-msgstr ""
+msgstr "ar-SA — arabština"
 
 msgid "as-IN — Assamese"
-msgstr ""
+msgstr "as-IN — ásámština"
 
 msgid "ast-ES — Asturian"
-msgstr ""
+msgstr "ast-ES — asturština"
 
 msgid "bg-BG — Bulgarian"
-msgstr ""
+msgstr "bg-BG — bulharština"
 
 msgid "bn-IN — Bengali (India)"
-msgstr ""
+msgstr "bn-IN — bengálština (Indie)"
 
 msgid "bs-BA — Bosnian"
-msgstr ""
+msgstr "bs-BA — bosenština"
 
 msgid "ca-ES — Catalan"
-msgstr ""
+msgstr "ca-ES — katalánština"
 
 msgid "cs-CZ — Czech"
-msgstr ""
+msgstr "cs-CZ — čeština"
 
 msgid "da-DK — Danish"
-msgstr ""
+msgstr "da-DK — dánština"
 
 msgid "de-CH — German (Switzerland)"
-msgstr ""
+msgstr "de-CH — němčina (Švýcarsko)"
 
 msgid "de-DE — German (Germany)"
-msgstr ""
+msgstr "de-DE — němčina (Německo)"
 
 msgid "el-GR — Greek"
-msgstr ""
+msgstr "el-GR — řečtina"
 
 msgid "es-ES — Spanish"
-msgstr ""
+msgstr "es-ES — španělština"
 
 msgid "fa-IR — Persian"
-msgstr ""
+msgstr "fa-IR — perština"
 
 msgid "fi-FI — Finnish"
-msgstr ""
+msgstr "fi-FI — finština"
 
 msgid "fr-FR — French"
-msgstr ""
+msgstr "fr-FR — francouzština"
 
 msgid "gu-IN — Gujarati"
-msgstr ""
+msgstr "gu-IN — gudžarátština"
 
 msgid "he-IL — Hebrew"
-msgstr ""
+msgstr "he-IL — hebrejština"
 
 msgid "hi-IN — Hindi"
-msgstr ""
+msgstr "hi-IN — hindština"
 
 msgid "hr-HR — Croatian"
-msgstr ""
+msgstr "hr-HR — chorvatština"
 
 msgid "hu-HU — Hungarian"
-msgstr ""
+msgstr "hu-HU — maďarština"
 
 msgid "id-ID — Indonesian"
-msgstr ""
+msgstr "id-ID — indonéština"
 
 msgid "is-IS — Icelandic"
-msgstr ""
+msgstr "is-IS — islandština"
 
 msgid "it-IT — Italian"
-msgstr ""
+msgstr "it-IT — italština"
 
 msgid "ja-JP — Japanese"
-msgstr ""
+msgstr "ja-JP — japonština"
 
 msgid "kn-IN — Kannada"
-msgstr ""
+msgstr "kn-IN — kannadština"
 
 msgid "ko-KR — Korean"
-msgstr ""
+msgstr "ko-KR — korejština"
 
 msgid "lv-LV — Latvian"
-msgstr ""
+msgstr "lv-LV — lotyština"
 
 msgid "ml-IN — Malayalam"
-msgstr ""
+msgstr "ml-IN — malajálamština"
 
 msgid "mr-IN — Marathi"
-msgstr ""
+msgstr "mr-IN — maráthština"
 
 msgid "nb-NO — Norwegian (Bokmål orthography)"
-msgstr ""
+msgstr "nb-NO — norština (Bokmål ortografie)"
 
 msgid "nl-NL — Dutch"
-msgstr ""
+msgstr "nl-NL — nizozemština"
 
 msgid "or-IN — Oriya"
-msgstr ""
+msgstr "or-IN — urijština"
 
 msgid "pa-IN — Punjabi"
-msgstr ""
+msgstr "pa-IN — paňdžábština"
 
 msgid "pl-PL — Polish"
-msgstr ""
+msgstr "pl-PL — polština"
 
 msgid "pt-BR — Portuguese (Brazil)"
-msgstr ""
+msgstr "pt-BR — portugalština (Brazílie)"
 
 msgid "pt-PT — Portuguese (Portugal)"
-msgstr ""
+msgstr "pt-PT — portugalština (Portugalsko)"
 
 msgid "ru-RU — Russian"
-msgstr ""
+msgstr "ru-RU — ruština"
 
 msgid "si-LK — Sinhalese"
-msgstr ""
+msgstr "si-LK — sinhálština"
 
 msgid "sk-SK — Slovak"
-msgstr ""
+msgstr "sk-SK — slovenština"
 
 msgid "sr-Cyrl-RS — Serbian (Cyrillic script)"
-msgstr ""
+msgstr "sr-Cyrl-RS — srbština (azbuka)"
 
 msgid "sr-Latn-RS — Serbian (Latin script)"
-msgstr ""
+msgstr "sr-Latn-RS — srbština (latinka)"
 
 msgid "sv-SE — Swedish"
-msgstr ""
+msgstr "sv-SE — švédština"
 
 msgid "ta-IN — Tamil"
-msgstr ""
+msgstr "ta-IN — tamilština"
 
 msgid "te-IN — Telugu"
-msgstr ""
+msgstr "te-IN — telugština"
 
 msgid "th-TH — Thai"
-msgstr ""
+msgstr "th-TH — thaijština"
 
 msgid "uk-UA — Ukrainian"
-msgstr ""
+msgstr "uk-UA — ukrajinština"
 
 msgid "zh-CN — Chinese (People's Republic of China, implicitly simplified Han script)"
-msgstr ""
+msgstr "zh-CN — čínština (Čínská lidová republika, implicitně zjednodušené písmo Han)"
 
 msgid "zh-TW — Chinese (Republic of China, implicitly traditional Han script)"
-msgstr ""
+msgstr "zh-TW — čínština (Čínská republika, implicitně tradiční písmo Han)"
 

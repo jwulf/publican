@@ -1,161 +1,164 @@
+# Josef Hruška <josef.hruska@upcmail.cz>, 2015. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2014-10-03 13:09+1000\n"
-"PO-Revision-Date: 2014-10-03 13:09+1000\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: None\n"
-"Language: en-US \n"
+"POT-Creation-Date: 2014-10-03 13:17+1000\n"
 "MIME-Version: 1.0\n"
-"Content-Type: application/x-publican; charset=UTF-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Publican v4.2.2\n"
+"PO-Revision-Date: 2015-04-08 12:16-0400\n"
+"Last-Translator: Josef Hruška <josef.hruska@upcmail.cz>\n"
+"Language-Team: None\n"
+"Language: cs\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2\n"
 
 msgid "Desktop menu entries for documents"
-msgstr ""
+msgstr "Položky nabídky pracovní plochy pro dokumenty"
 
 msgid "By default, RPM packages of <application>Publican</application> documents for desktop use appear on the GNOME desktop under the <menuchoice><guimenu>System</guimenu><guisubmenu>Documentation</guisubmenu></menuchoice> menu. When users have large numbers of documents installed on their systems, this menu becomes very cluttered and difficult to navigate. Documentation for many different products and perhaps different languages becomes intermixed, adding to the confusion."
-msgstr ""
+msgstr "Ve výchozím nastavení se balíčky RPM dokumentů pro použití na stolním počítači vytvořené v <application>Publicanu</application> zobrazují na ploše pracovního prostředí GNOME pod nabídkou <menuchoice><guimenu>Systém</guimenu><guisubmenu>Dokumentace</guisubmenu></menuchoice>. Pokud mají uživatelé na svém systému nainstalováno příliš mnoho dokumentů, tato nabídka začne být nepřehledná. Smíchává se dokumentace pro mnoho různých produktů a možná i v různých jazycích, to vše přispívá ke zmatečnosti."
 
 msgid "To group documentation for your product under a separate submenu within the GNOME <menuchoice><guimenu>System</guimenu><guisubmenu>Documentation</guisubmenu></menuchoice> menu, you must:"
-msgstr ""
+msgstr "Chcete-li v nabídce <menuchoice><guimenu>Systém</guimenu><guisubmenu>Dokumentace</guisubmenu></menuchoice> GNOME seskupit dokumentaci pro svůj produkt do samostatné podnabídky, musíte:"
 
 msgid "create and distribute a desktop menu package that creates the new submenu."
-msgstr ""
+msgstr "vytvořit a šířit balíček nabídky pro pracovní plochu stolního počítače, který vytvoří novou podnabídku,"
 
 msgid "specify the menu <firstterm>category</firstterm> in the document, and optionally, have the documentation package <firstterm>require</firstterm> the desktop menu package."
-msgstr ""
+msgstr "uvést <firstterm>kategorii</firstterm> nabídky v dokumentu a volitelně popřípadě zajistit, aby balíček s dokumentací <firstterm>vyžadoval</firstterm> balíček nabídky."
 
 msgid "Note that the <guimenu>Documentation</guimenu> menu does not group entries under a submenu until two or more documents are installed that belong on that submenu. The first document appears under <menuchoice><guimenu>System</guimenu><guisubmenu>Documentation</guisubmenu></menuchoice>."
-msgstr ""
+msgstr "Všimněte si, že nabídka <guimenu>Dokumentace</guimenu> neseskupuje položky do podnabídky dokud nejsou nainstalovány dva nebo více dokumentů, které patří do podnabídky. První dokument se zobrazí pod  <menuchoice><guimenu>Systém</guimenu><guisubmenu>Dokumentace</guisubmenu></menuchoice>."
 
 msgid "Creating an desktop menu package"
-msgstr ""
+msgstr "Vytvoření balíčku nabídky pracovní plochy"
 
 msgid "A desktop menu package consists of:"
-msgstr ""
+msgstr "Balíček nabídky pracovní plochy se skládá z:"
 
 msgid "a <firstterm>desktop entry</firstterm> (<filename>.directory</filename>) file that provides metadata about the new submenu."
-msgstr ""
+msgstr "souboru <firstterm>položky pracovní plochy</firstterm> (<filename>.directory</filename>), který poskytuje metadata o nové podnabídce,"
 
 msgid "a <firstterm>desktop menu</firstterm> (<filename>.menu</filename>) file that defines the position of the new submenu within the <guimenu>Documentation</guimenu> menu."
-msgstr ""
+msgstr "souboru <firstterm>nabídky pracovní plochy</firstterm> (<filename>.menu</filename>), který určuje pozici nové podnabídky v nabídce <guimenu>Dokumentace</guimenu>."
 
 msgid "The structure for the <filename>.directory</filename> file for <application>Publican</application>-generated documentation is as follows:"
-msgstr ""
+msgstr "Soubor <filename>.directory</filename> pro dokumentaci vytvořenou v <application>Publicanu</application> má tuto strukturu:"
 
 msgid "the <firstterm>group header</firstterm> <literal>[Desktop Entry]</literal>"
-msgstr ""
+msgstr "<firstterm>nadpis skupiny</firstterm> <literal>[Desktop Entry]</literal>,"
 
 msgid "the <parameter>Name</parameter> parameter, set to the name of the submenu that you want to place under the <guimenu>Documentation</guimenu> menu."
-msgstr ""
+msgstr "parametr <parameter>Name</parameter>, nastaven na název podnabídky, kterou chcete umístit pod nabídku <guimenu>Dokumentace</guimenu>,"
 
 msgid "optionally, localizations of the <parameter>Name</parameter> parameter, in the format <parameter>Name[<replaceable>language_code</replaceable>]</parameter> where <replaceable>language_code</replaceable> is a language code in glibc format, <emphasis>not</emphasis> the XML format that <application>Publican</application> uses for language codes."
-msgstr ""
+msgstr "volitelně lokalizace parametru <parameter>Name</parameter> ve formátu <parameter>Name[<replaceable>kod_jazyka</replaceable>]</parameter>, kde <replaceable>kod_jazyka</replaceable> je kód jazyka ve formátu knihovny glibc, <emphasis>nikoliv</emphasis> ve formátu XML, který používá pro jazykové kódy <application>Publican</application>,"
 
 msgid "the <parameter>Comment</parameter> parameter, set to a description of the new submenu."
-msgstr ""
+msgstr "parametr <parameter>Comment</parameter>, nastaven na krátký popis  nové podnabídky,"
 
 msgid "optionally, localizations of the <parameter>Comment</parameter> parameter, in the format <parameter>Comment[<replaceable>language_code</replaceable>]</parameter> where <replaceable>language_code</replaceable> is a language code in glibc format, <emphasis>not</emphasis> the XML format that <application>Publican</application> uses for language codes."
-msgstr ""
+msgstr "volitelně lokalizace parametru <parameter>Comment</parameter> ve formátu <parameter>Comment[<replaceable>kod_jazyka</replaceable>]</parameter>, kde <replaceable>kod_jazyka</replaceable> je kód jazyka ve formátu knihovny glibc, <emphasis>nikoliv</emphasis> ve formátu XML, který používá pro jazykové kódy <application>Publican</application>,"
 
 msgid "the <parameter>Type</parameter> parameter, set to <literal>Directory</literal>."
-msgstr ""
+msgstr "parametr <parameter>Type</parameter>, nastaven na <literal>Directory</literal>,"
 
 msgid "the <parameter>Encoding</parameter> parameter, set to <literal>UTF-8</literal>."
-msgstr ""
+msgstr "parametr <parameter>Encoding</parameter>, nastaven na <literal>UTF-8</literal>,"
 
 msgid "Example .directory file"
-msgstr ""
+msgstr "Příklad souboru .directory"
 
 msgid "The following file, <filename>menu-example.directory</filename> illustrates the structure of a desktop entry file."
-msgstr ""
+msgstr "Následující soubor <filename>menu-example.directory</filename> je ukázkou struktury souboru položky pracovní plochy."
 
 msgid "<xi:include href=\"extras/menu-example.directory\" parse=\"text\" xmlns:xi=\"http://www.w3.org/2001/XInclude\" />"
-msgstr ""
+msgstr "<xi:include href=\"extras/menu-example.directory\" parse=\"text\" xmlns:xi=\"http://www.w3.org/2001/XInclude\" />"
 
 msgid "The desktop entry file is placed in <filename>/usr/share/desktop-directories/</filename>"
-msgstr ""
+msgstr "Soubor položky pracovní plochy je umístěn v <filename>/usr/share/desktop-directories/</filename>"
 
 msgid "For a full description of how desktop entries work, refer to the <citetitle>Desktop Entry Specification</citetitle>, available from <uri xlink:href=\"http://standards.freedesktop.org/entry-spec/latest/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">http://standards.freedesktop.org/entry-spec/latest/</uri>"
-msgstr ""
+msgstr "Úplný popis fungování položek pracovní plochy viz <citetitle>Desktop Entry Specification</citetitle>, dostupné on-line na adrese  <uri xlink:href=\"http://standards.freedesktop.org/entry-spec/latest/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">http://standards.freedesktop.org/entry-spec/latest/</uri>"
 
 msgid "A desktop menu file is an XML file that contains:"
-msgstr ""
+msgstr "Soubor nabídky pracovní plochy je soubor XML, který obsahuje:"
 
 msgid "a document type declaration for the freedesktop.org Desktop Menu Specification:"
-msgstr ""
+msgstr "deklaraci typu dokumentu pro freedesktop.org Desktop Menu Specification:"
 
 msgid "&lt;!DOCTYPE Menu PUBLIC \"-//freedesktop//DTD Menu 1.0//EN\"\n"
 "\"http://www.freedesktop.org/standards/menu-spec/1.0/menu.dtd\"&gt;"
-msgstr ""
+msgstr "&lt;!DOCTYPE Menu PUBLIC \"-//freedesktop//DTD Menu 1.0//EN\"\n"
+"\"http://www.freedesktop.org/standards/menu-spec/1.0/menu.dtd\"&gt;"
 
 msgid "a <firstterm>root element</firstterm>, <tag>&lt;Menu&gt;</tag>, that contains:"
-msgstr ""
+msgstr "<firstterm>kořenový prvek</firstterm> <tag>&lt;Menu&gt;</tag>"
 
 msgid "a <tag>&lt;Name&gt;</tag> element with the content <literal>Documentation</literal>"
-msgstr ""
+msgstr "prvek <tag>&lt;Name&gt;</tag> a v něm text <literal>Documentation</literal> "
 
 msgid "another <tag>&lt;Menu&gt;</tag> element that in turn contains:"
-msgstr ""
+msgstr "další prvek <tag>&lt;Menu&gt;</tag>, který naopak obsahuje:"
 
 msgid "a <tag>&lt;Name&gt;</tag> element with the content <literal>Documentation</literal> (just like the root element)"
-msgstr ""
+msgstr "prvek <tag>&lt;Name&gt;</tag> s textem <literal>Documentation</literal> (stejně jako kořenový prvek),"
 
 msgid "a <tag>&lt;Directory&gt;</tag> element with its content the name of the desktop entry file you created, for example:"
-msgstr ""
+msgstr "prvek <tag>&lt;Directory&gt;</tag>, jehož obsahem je název souboru položky pracovní plochy, kterou jste vytvořili, např.:"
 
 msgid "&lt;Directory&gt;menu-example.directory&lt;/Directory&gt;"
-msgstr ""
+msgstr "&lt;Directory&gt;menu-example.directory&lt;/Directory&gt;,"
 
 msgid "an <tag>&lt;Includes&gt;</tag> element with the content <literal>X-<replaceable>category_name</replaceable></literal>, where <replaceable>category_name</replaceable> is an identifier for the documents that will be grouped together under this menu entry. For example:"
-msgstr ""
+msgstr "prvek <tag>&lt;Includes&gt;</tag>, jehož obsah je <literal>X-<replaceable>nazev_kategorie</replaceable></literal>, kde <replaceable>nazev_kategorie</replaceable> je identifikátor pro dokumenty, které budou pod touto položkou nabídky seskupeny. Například:"
 
 msgid "&lt;Includes&gt;X-Example-Docs&lt;/Includes&gt;"
-msgstr ""
+msgstr "&lt;Includes&gt;X-Example-Docs&lt;/Includes&gt;"
 
 msgid "Example .menu file"
-msgstr ""
+msgstr "Příklad souboru .menu"
 
 msgid "The following file, <filename>menu-example.menu</filename> illustrates the structure of a desktop menu file."
-msgstr ""
+msgstr "Následující soubor <filename>menu-example.menu</filename> je ukázkou struktury souboru nabídky pracovní plochy."
 
 msgid "<xi:include href=\"extras/menu-example.menu\" parse=\"text\" xmlns:xi=\"http://www.w3.org/2001/XInclude\" />"
-msgstr ""
+msgstr "<xi:include href=\"extras/menu-example.menu\" parse=\"text\" xmlns:xi=\"http://www.w3.org/2001/XInclude\" />"
 
 msgid "The desktop menu file is placed in <filename>/etc/xdg/menus/settings-merged/</filename>"
-msgstr ""
+msgstr "Soubor nabídky pracovní plochy je umístěn v <filename>/etc/xdg/menus/settings-merged/</filename>"
 
 msgid "For a full description of how desktop menus work, refer to the <citetitle>Desktop Menu Specification</citetitle>, available from <uri xlink:href=\"http://standards.freedesktop.org/desktop-menu-spec/latest/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">http://standards.freedesktop.org/desktop-menu-spec/latest/</uri>"
-msgstr ""
+msgstr "Úplný popis fungování nabídek pracovní plochy viz <citetitle>Desktop Menu Specification</citetitle>, dostupné on-line na adrese <uri xlink:href=\"http://standards.freedesktop.org/desktop-menu-spec/latest/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">http://standards.freedesktop.org/desktop-menu-spec/latest/</uri>"
 
 msgid "Setting a desktop menu category"
-msgstr ""
+msgstr "Nastavení kategorie nabídky pracovní plochy"
 
 msgid "To place a document in a submenu of <menuchoice><guimenu>System</guimenu><guisubmenu>Documentation</guisubmenu></menuchoice>, set the <parameter>menu_category</parameter> parameter in its <filename>publican.cfg</filename> file to match the content of the <tag>&lt;Includes&gt;</tag> element in the corresponding desktop menu file. For example, consider a desktop menu file that contains the element:"
-msgstr ""
+msgstr "Dokument umístíte do podnabídky nabídky <menuchoice><guimenu>Systém</guimenu><guisubmenu>Dokumentace</guisubmenu></menuchoice> nastavením parametru <parameter>menu_category</parameter> v jeho souboru <filename>publican.cfg</filename> tak, aby se jeho obsah shodoval s prvkem <tag>&lt;Includes&gt;</tag> v příslušném souboru nabídky pracovní plochy. Například zvažte soubor nabídky pracovní plochy, který obsahuje prvek:"
 
 msgid "To place a document in the submenu defined by this desktop menu file, the document's <filename>publican.cfg</filename> file should contain:"
-msgstr ""
+msgstr "Chcete-li umístit dokument do podnabídky definované tímto souborem nabídky pracovní plochy, soubor <filename>publican.cfg</filename> dokumentu by měl obsahovat:"
 
 msgid "menu_category: X-Example-Docs"
-msgstr ""
+msgstr "menu_category: X-Example-Docs"
 
 msgid "Publican will process the string in menu_category and replace <literal>__LANG__</literal> with the current language. This allows menus to be customized on a per language basis."
-msgstr ""
+msgstr "Publican zpracuje řetězec v menu_category a nahradí <literal>__LANG__</literal> současným jazykem. To umožňuje nabídkám, aby byly upraveny na jazykovém základě."
 
 msgid "menu_category: X-Example-Docs-__LANG__"
-msgstr ""
+msgstr "menu_category: X-Example-Docs-__LANG__"
 
 msgid "Note that you can include this parameter in the <filename>defaults.cfg</filename> file or <filename>overrides.cfg</filename> file of a brand so that all documents built with that brand are grouped into this submenu automatically without you having to set the <parameter>menu_category</parameter> parameter in each document."
-msgstr ""
+msgstr "Všimněte si, že tento parametr lze zahrnout do souboru <filename>defaults.cfg</filename> nebo <filename>overrides.cfg</filename> grafické úpravy, aby všechny dokumenty sestavené s touto grafickou úpravou byly seskupeny do dané podnabídky automaticky, bez nutnosti nastavovat parametr <parameter>menu_category</parameter> v každém dokumentu."
 
 msgid "If you ship the desktop menu and desktop entry files in an RPM package, you can make RPM packages of documentation <firstterm>require</firstterm> the desktop menu package. With this dependency set, the desktop menu package is installed automatically on users' systems when they install a documentation package, which ensures that the documentation appears under the submenu you have created for your project. Set the dependency with the <parameter>dt_requires</parameter> parameter in the document's <filename>publican.cfg</filename> file. For example, if you ship a desktop menu package named <package>foodocs-menu</package>, set:"
-msgstr ""
+msgstr "Šíříte-li soubory nabídky a položky pracovní plochy jako balíček RPM, můžete zajistit, aby balíčky RPM dokumentace <firstterm>vyžadovaly</firstterm> balíčky nabídky pracovní plochy. S takto nastavenou závislostí se balíčky nabídky pracovní plochy nainstalují na systémy uživatelů automaticky při instalaci balíčku dokumentace, což zajistí, aby se dokumentace zobrazovala pod podnabídkou, kterou jste vytvořili pro svůj projekt. Závislost nastavíte parametrem <parameter>dt_requires</parameter> v souboru <filename>publican.cfg</filename> dokumentu. Například šíříte-li balíček nabídky pracovní plochy nazvaný <package>foodocs-menu</package>, nastavte:"
 
 msgid "dt_requires: foodocs-menu"
-msgstr ""
+msgstr "dt_requires: foodocs-menu"
 
 msgid "Note that you can include this parameter in the <filename>defaults.cfg</filename> file or <filename>overrides.cfg</filename> file of a brand so that all documents built with that brand require the same desktop menu package."
-msgstr ""
+msgstr "Všimněte si, že tento parametr lze zahrnout do souboru <filename>defaults.cfg</filename> nebo <filename>overrides.cfg</filename> grafické úpravy, aby všechny dokumenty sestavené s touto grafickou úpravou vyžadovaly stejný balíček nabídky pracovní plochy."
 

@@ -174,6 +174,7 @@ my %options = (
         'Keep previous msgid when fuzzy matches are detected in PO updates.'),
     showfuzzy     => maketext('Show fuzzy translation entries in output. Defaults off.'),
     'allow_network' => maketext(q|Allow the XML and XSLT processing to access the network. Defaults off.|),
+    no_clean => maketext(q|Do not use the XML cleaner, use the XML as provided. WARNING: Will be ignored for translations!|),
 );
 
 # Options all actions use
@@ -193,7 +194,7 @@ my %actions = (
         'options' => [
             'formats',         'langs',   'publish', 'embedtoc',
             'distributed_set', 'novalid', 'src_dir', 'pdftool',
-            'pub_dir', 'showfuzzy'
+            'pub_dir', 'showfuzzy', 'no_clean'
         ],
     },
     'clean' => {
@@ -995,6 +996,7 @@ my $publican = Publican->new(
         NOCOLOURS      => $opts{nocolours},
         brand_dir      => $opts{brand_dir},
         allow_network  => $opts{allow_network},
+        no_clean        => $opts{no_clean},
     }
 );
 

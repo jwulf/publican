@@ -75,7 +75,7 @@ sub new {
 
     bless $self, $class;
 
-    $self->{id_attr}    = "xml:id";
+    $self->{id_attr} = "xml:id";
 
     return $self;
 }
@@ -110,7 +110,8 @@ sub setup_xml {
     my $extras    = $self->{publican}->param('extras_dir');
     my $main_file = $self->{publican}->param('mainfile');
     my $ent_file  = undef;
-    $ent_file = "$main_file.ent" if ( defined($main_file) && -e "$xml_lang/$main_file.ent" );
+    $ent_file = "$main_file.ent"
+        if ( defined($main_file) && -e "$xml_lang/$main_file.ent" );
 
     foreach my $lang ( split( /,/, $langs ) ) {
         logger( maketext( "Setting up [_1]", $lang ) . "\n" );
@@ -178,7 +179,7 @@ sub setup_xml {
 
             my @xml_files = dir_list( $source_dir, '*.xml' );
             rcopy( "$xml_lang/$ent_file", "$tmp_dir/$lang/xml_tmp/." )
-                if ( $ent_file &&  -e "$xml_lang/$ent_file" );
+                if ( $ent_file && -e "$xml_lang/$ent_file" );
             rcopy( "$lang/$ent_file", "$tmp_dir/$lang/xml_tmp/." )
                 if ( $ent_file && -e "$lang/$ent_file" );
 
@@ -403,7 +404,9 @@ sub setup_xml {
             rcopy_glob(
                 $common_content . "/$base_brand/en-US/*",
                 "$tmp_dir/$lang/xml/Common_Content"
-            ) unless(($brand eq $base_brand) && ( $brand_path ne $common_content . "/$brand" ));
+                )
+                unless ( ( $brand eq $base_brand )
+                && ( $brand_path ne $common_content . "/$brand" ) );
 
             if ( $lang ne 'en-US' ) {
                 if ( -d $common_content . "/$base_brand/$lang" ) {
@@ -479,8 +482,10 @@ sub setup_xml {
             foreach my $xml_file ( sort(@com_xml_files) ) {
                 my $out_file = $xml_file;
                 chmod( 0664, $out_file );
-                $cleaner->process_file(
-                    { file => $xml_file, out_file => $out_file } );
+                if ( !$self->{publican}->{'no_clean'} ) {
+                    $cleaner->process_file(
+                        { file => $xml_file, out_file => $out_file } );
+                }
             }
         }
 
@@ -507,8 +512,13 @@ sub setup_xml {
                 my $out_file = $xml_file;
                 $out_file =~ s/xml_tmp/xml/;
 
-                $cleaner->process_file(
-                    { file => $xml_file, out_file => $out_file } );
+                if ( $self->{publican}->{'no_clean'} ) {
+                    rcopy( $xml_file, $out_file );
+                }
+                else {
+                    $cleaner->process_file(
+                        { file => $xml_file, out_file => $out_file } );
+                }
             }
         }
         finddepth( \&del_unwanted_dirs, $tmp_dir );
@@ -596,7 +606,7 @@ sub validate_xml {
             suppress_warnings => 0,
             line_numbers      => 1,
             expand_xinclude   => 1,
-            no_network => !$self->{publican}->{allow_network}
+            no_network        => !$self->{publican}->{allow_network}
         }
     );
 

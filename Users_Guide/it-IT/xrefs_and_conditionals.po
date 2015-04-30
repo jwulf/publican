@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2014-05-06 14:10+1000\n"
+"POT-Creation-Date: 2014-10-03 13:17+1000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -12,16 +12,12 @@ msgstr ""
 "Last-Translator: <lewis41@fedoraproject.org>\n"
 "Language-Team: Italian <trans-it@lists-fedoraproject.org>\n"
 "Language: it\n"
-"X-Generator: Zanata 3.4.2\n"
+"X-Generator: Zanata 3.6.2\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
-#. Tag: title
-#, no-c-format
 msgid "xrefs and conditional tagging"
 msgstr "xref e tag condizionale"
 
-#. Tag: para
-#, no-c-format
 msgid "If an <tag>&lt;xref&gt;</tag> points to content not included in the build due to conditional tagging, the build will fail. For example, with <prompt>$</prompt> <command>condition: upstream</command> set in the <filename>publican.cfg</filename> file, <prompt>$</prompt> <command>publican build --formats=pdf --langs=en-US</command> will fail if the book has the tag <tag>&lt;xref linkend=\"betasection\"&gt;</tag> pointing to <tag>&lt;section id=\"betasection\" condition=\"beta\"&gt;</tag>."
 msgstr "Se un <sgmltag>&lt;xref&gt;</sgmltag> punta ad un contenuto escluso nella compilazione da un tag condizionale, la compilazione fallisce. Per esempio, con l'impostazione <command>condition: upstream</command> nel file <filename>publican.cfg</filename>, il comando <command>publican build --formats=pdf --langs=en-US</command> fallisce se il libro ha un tag <sgmltag>&lt;xref linkend=\"betasection\"&gt;</sgmltag> che punta alla <sgmltag>&lt;section id=\"betasection\" condition=\"beta\"&gt;</sgmltag>."
 

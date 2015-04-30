@@ -2,11 +2,11 @@
 # Gé Baylard <geodebay@gmail.com>, 2013.
 #
 # Gé Baylard <<Geodebay@gmail.com>>, 2013, 2014.
-# Gérard Baylard <geodebay@gmail.com>, 2014. #zanata
+# Gé Baylard <geodebay@gmail.com>, 2014. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2014-05-06 14:10+1000\n"
+"POT-Creation-Date: 2014-10-03 13:17+1000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -14,56 +14,36 @@ msgstr ""
 "Last-Translator: Gérard Baylard <geodebay@gmail.com>\n"
 "Language-Team: français <<trans-fr@lists.fedoraproject.org>>\n"
 "Language: fr\n"
-"X-Generator: Zanata 3.4.2\n"
+"X-Generator: Zanata 3.6.2\n"
 "Plural-Forms: nplurals=2; plural=n>1;\n"
 
-#. Tag: title
-#, no-c-format
 msgid "Adding code samples"
 msgstr "Ajout d'exemples de code"
 
-#. Tag: para
-#, no-c-format
 msgid "If your book contains code samples, place them in a directory named <filename>extras/</filename> in your source language directory and use an <tag>&lt;xi:include&gt;</tag> to pull the code file into the XML structure of your document. <application>Publican</application> does not parse any files that it finds in the <filename>extras/</filename> directory as XML."
 msgstr "Si votre ouvrage comporte des exemples de code, placez-les dans un répertoire nommé <filename>extras/</filename> de votre dossier de langue source et utilisez une balise <sgmltag>&lt;xi:include&gt;</sgmltag> pour mettre le fichier de code dans la structure XML du document. <application>Publican</application> ne fait pas d'analyse de la sémantique XML des fichiers situés dans le répertoire <filename>extras/</filename>."
 
-#. Tag: para
-#, no-c-format
 msgid "Certain characters are reserved in XML, in particular, <literal>&amp;</literal> and <literal>&lt;</literal>. If you insert code samples directly into the XML of your document, you must escape these characters, either by marking them as <literal>CDATA</literal> or by replacing them with entities (&amp;amp; and &amp;lt; respectively).<footnote> <para> Refer to section 2.4 \"Character Data and Markup\" in the XML 1.0 standard, available from <uri xlink:href=\"http://www.w3.org/TR/2008/REC-xml-20081126/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">http://www.w3.org/TR/2008/REC-xml-20081126/</uri>. </para> </footnote> If you place these files in the <filename>extras/</filename> directory, you do not need to escape these characters. This approach saves time, reduces the chances of introducing errors into either the document XML or the code itself, and makes future maintenance of the document and the code easier."
 msgstr "En XML, certains caractères sont réservés, en particulier, <literal>&amp;</literal> et <literal>&lt;</literal>. Si vous insérez des exemples de code directement dans le XML du document, vous devez « échapper » à ces caractères, soit en les marquant <literal>CDATA</literal>, soit en les remplaçant par des entités (&amp;amp&semi; et &amp;lt&semi; respectivement)<footnote><para>Reportez-vous au paragraphe 2.4 de « Character Data and Markup » (Marques et données caractère)  de la norme XML&nbsp;1.0, disponible à l'adresse <ulink url=\"http://www.w3.org/TR/2008/REC-xml-20081126/\" />.</para></footnote>. Si vous placez ces fichiers dans le répertoire <filename>extras/</filename>, il n'est pas nécessaire d'échapper à ces caractères. Cette approche économise du temps, réduit les risques d'introduction d'erreurs, soit dans le document XML, soit dans le code lui-même ; cela facilite également la maintenance du document et du code."
 
-#. Tag: para
-#, no-c-format
 msgid "To include a code sample from the <filename>extras/</filename> directory in your document, follow this procedure:"
 msgstr "Voici la procédure pour incorporer un exemple de code dans le document à partir du répertoire <filename>extras/</filename> :"
 
-#. Tag: para
-#, no-c-format
 msgid "Create the extras directory"
 msgstr "créer le répertoire « extras »"
 
-#. Tag: screen
-#, no-c-format
 msgid "<prompt>$</prompt> <command>mkdir <filename>en-US/extras</filename></command>"
 msgstr "<prompt>$</prompt> <command>mkdir <filename>en-US/extras</filename></command>"
 
-#. Tag: para
-#, no-c-format
 msgid "Copy the code file to the extras directory"
 msgstr "copier le fichier de code dans le répertoire « extras »"
 
-#. Tag: screen
-#, no-c-format
 msgid "<prompt>$</prompt> <command>cp <filename>~/samples/foo.c en-US/extras/.</filename></command>"
 msgstr "<prompt>$</prompt> <command>cp <filename>~/samples/foo.c en-US/extras/.</filename></command>"
 
-#. Tag: para
-#, no-c-format
 msgid "<tag>xi:include</tag> the sample file in your xml file"
 msgstr "incorporer avec la balise <sgmltag>xi:include</sgmltag> le fichier exemple dans le xml"
 
-#. Tag: programlisting
-#, no-c-format
 msgid ""
 "&lt;programlisting&gt;\n"
 "&lt;xi:include parse=\"text\" href=\"extras/foo.c\" xmlns:xi=\"http://www.w3.org/2001/XInclude\" /&gt;\n"
@@ -73,18 +53,13 @@ msgstr ""
 "&lt;xi:include parse=\"text\" href=\"extras/foo.c\" xmlns:xi=\"http://www.w3.org/2001/XInclude\" /&gt;\n"
 "&lt;/programlisting&gt;"
 
-#. Tag: para
-#, no-c-format
 msgid "You can now edit <filename>en-US/extras/foo.c</filename> in your favorite editor without having to be concerned about how it will affect the XML."
 msgstr "vous pouvez maintenant modifier le fichier <filename>en-US/extras/foo.c</filename> dans votre éditeur préféré sans vous soucier de la façon dont il affecte le XML."
 
-#. Tag: para
-#, no-c-format
 msgid "The same approach works when you want to annotate your code with callouts. For example:"
 msgstr "La même approche fonctionne quand vous souhaitez légender le code par des annotations externes. Par exemple :"
 
-#. Tag: programlisting
-#, no-c-format
+#, fuzzy
 msgid ""
 "&lt;programlistingco&gt;\n"
 "	&lt;areaspec&gt;\n"
@@ -136,8 +111,6 @@ msgstr ""
 "\t&lt;/calloutlist&gt;\n"
 "&lt;/programlistingco&gt;"
 
-#. Tag: para
-#, no-c-format
 msgid "Note the <tag>&lt;area&gt;</tag> elements that define the position of the callouts that will appear on the code sample. The <literal>coords</literal> attributes specify a line number and a column number separated by a space. In this example, callouts are applied to lines 4 and 12 of the code, lined up with each other in column 75. Although this approach means that you might have to adjust <literal>coords</literal> attributes if you ever modify the code to which they apply, it avoids mixing XML <tag>&lt;coords&gt;</tag> tags into the code itself."
 msgstr "Notez les éléments <sgmltag>&lt;area&gt;</sgmltag> qui définissent la position des repères d'annotation apparaissant dans l'exemple de code. Les attributs <literal>coords</literal> définissent un numéro de ligne et de colonne séparés par une espace. Dans cet exemple, les repères d'annotation sont placés sur les lignes 4 et 12 du code, à l'aplomb de la colonne 75. Même si cette approche implique que vous aurez à ajuster les attributs <literal>coords</literal> si vous modifiez le code auquel ces annotations s'appliquent, elle évite le mélange des balises XML <sgmltag>&lt;coords&gt;</sgmltag> avec le code lui-même."
 

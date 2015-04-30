@@ -1,66 +1,46 @@
 # Gé Baylard <<Geodebay@gmail.com>>, 2013.
-# Gérard Baylard <geodebay@gmail.com>, 2014. #zanata
+# Gé Baylard <geodebay@gmail.com>, 2014. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2014-05-06 14:10+1000\n"
+"POT-Creation-Date: 2014-10-03 13:17+1000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "PO-Revision-Date: 2014-05-15 08:05-0400\n"
-"Last-Translator: Gérard Baylard <geodebay@gmail.com>\n"
+"Last-Translator: Gé Baylard <geodebay@gmail.com>\n"
 "Language-Team: français <<trans-fr@lists.fedoraproject.org>>\n"
 "Language: fr\n"
-"X-Generator: Zanata 3.4.2\n"
+"X-Generator: Zanata 3.6.2\n"
 "Plural-Forms: nplurals=2; plural=n>1;\n"
 
-#. Tag: title
-#, no-c-format
 msgid "Introduction"
 msgstr "Introduction"
 
-#. Tag: indexterm
-#, no-c-format
 msgid "<primary>Introduction 1</primary>"
 msgstr "<primary>Introduction 1</primary>"
 
-#. Tag: para
-#, no-c-format
 msgid "<indexterm><primary>Introduction 2</primary></indexterm> <application>Publican</application> <indexterm><primary>Introduction 3</primary> <secondary>Introduction 3</secondary></indexterm> \\ \\n \\p is a tool for publishing material authored in DocBook XML. This guide explains how to create and build books and articles using <application>Publican</application>. It is not a general DocBook XML tutorial; refer to <citetitle>DocBook: The Definitive Guide</citetitle> by Norman Walsh and Leonard Muellner, available at <uri xlink:href=\"http://www.docbook.org/tdg/en/html/docbook.html\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">http://www.docbook.org/tdg/en/html/docbook.html</uri> for more general help with DocBook XML."
 msgstr "<indexterm> <primary>Introduction 2</primary> </indexterm> <application>Publican</application> <indexterm> <primary>Introduction 3</primary> <secondary>Introduction 3</secondary> </indexterm> est un outil pour publier des documents créés en XML DocBook. Ce guide explique comment créer et construire des ouvrages et des articles en utilisant <application>Publican</application>. Ce guide n'est pas un tutoriel général concernant le XML DocBook ; reportez-vous à <citetitle>DocBook: The Definitive Guide</citetitle> (Docbook : un guide décisif) par Norman Walsh et Leonard Muellner, disponible à l'adresse <ulink url=\"&DOCBOOK-URL;\" /> pour une aide plus générale à propos du XML DocBook."
 
-#. Tag: para
-#, no-c-format
 msgid "<application>Publican</application> began life as an internal tool used by Red Hat's Documentation Group (now known as Engineering Content Services). On occasion, this legacy is visible."
 msgstr "<application>Publican</application> a débuté en tant qu'outil interne utilisé par le Groupe Documentation de Red Hat (connu aujourd'hui sous le nom de « Engineering Content Services » (Services d'ingénierie des contenus documentaires). Parfois, cet héritage est encore apparent."
 
-#. Tag: title
-#, no-c-format
 msgid "Design"
 msgstr "Conception"
 
-#. Tag: para
-#, no-c-format
 msgid "<application>Publican</application> is a publication system, not just a DocBook processing tool. As well as ensuring your DocBook XML is valid, <application>Publican</application> works to ensure your XML is up to publishable standard."
 msgstr "<application>Publican</application> est un système de publication, pas seulement un outil de traitement du Docbook. De même que <application>Publican</application> s'assure que votre XML Docbook est valide, il travaille à garantir que votre XML satisfasse à des normes de parution."
 
-#. Tag: para
-#, no-c-format
 msgid "The branding functionality allows you to create your own presentation rules and look, overriding many parts of the default style to meet your publishing needs. Choices executed in code, however, are not changeable."
 msgstr "La fonctionnalité estampillage permet de créer vos propres standards de présentation et d'affichage ; ils prennent le pas sur les nombreux styles par défaut pour satisfaire vos besoins en matière de publication. Les choix fixés dans le code ne sont, toutefois, pas modifiables."
 
-#. Tag: para
-#, no-c-format
 msgid "Entities, for example, can be validly defined in any XML file. However, to ensure the DTD declaration is present, valid and standardized, <application>Publican</application> rewrites the declaration in every XML file before it builds a book or article. Consequently, all entities declared in all XML files are lost. <application>Publican</application>, therefore, requires you define entities in the <filename><replaceable>Doc_Name</replaceable>.ent</filename> file (refer to <xref linkend=\"sect-Publican-Users_Guide-Files_in_the_book_directory-Doc_Name.ent\" />)."
 msgstr "Des entités, par exemple, peuvent être valablement définies dans tout fichier XML. Mais, pour s'assurer que la déclaration de DTD est présente, valide et normalisée, <application>Publican</application> réécrit cette déclaration dans chaque fichier XML avant de construire l'ouvrage ou l'article. Par conséquent, toute entité déclarée dans n'importe quel fichier XML est perdue. Ainsi, <application>Publican</application> demande que vous définissiez les entités dans le fichier <filename><replaceable>Nom_document</replaceable>.ent</filename> (reportez-vous à la <xref linkend=\"sect-Publican-Users_Guide-Files_in_the_book_directory-Doc_Name.ent\" />)."
 
-#. Tag: para
-#, no-c-format
 msgid "As publishing workflows grow, unrestrained entity definition leads to entity duplication and other practices that cause maintenance difficulties. Consolidating entity definitions in a single, predictable place alleviates these maintenance issues and helps the automation of the build process stay robust."
 msgstr "Au fur et à mesure de l'avancement du travail de rédaction, la définition incontrôlée d'entités conduit à des doublons ou autres pratiques à l'origine de difficultés de maintenance. Rassembler les définitions d'entité dans un seul et même endroit bien identifié prévient ces problèmes de maintenance et favorise la robustesse du processus de construction."
 
-#. Tag: para
-#, no-c-format
 msgid "Entities also present an essentially insurmountable obstacle to quality translation (refer to <xref linkend=\"sect-Publican-Users_Guide-Entities_and_translation\" />). Consequently, while we are not reducing the <filename><replaceable>Doc_Name</replaceable>.ent</filename> file's functionality, we are no longer considering requests to add functionality or features associated with entity use."
 msgstr "Les entités sont également un obstacle quelquefois insurmontable pour des traductions de qualité (reportez-vous à la <xref linkend=\"sect-Publican-Users_Guide-Entities_and_translation\" />). En conséquence, sans vouloir restreindre les fonctionnalités associés au fichier <filename><replaceable>Nom_document</replaceable>.ent</filename>, nous ne prenons plus en considération les demandes d'ajout de fonctionnalités ou particularités en liaison avec l'utilisation des entités."
 
@@ -70,9 +50,10 @@ msgstr ""
 msgid "Testing BZ #1092351 Code Switcher"
 msgstr ""
 
+#, fuzzy
 msgid ""
 "#!/usr/bin/perl\n"
-"use strict; \\\n"
+"use strict;\n"
 "use warnings;\n"
 "\n"
 "print \"Hello, World!\\n\";"
@@ -90,6 +71,7 @@ msgstr ""
 msgid "Testing BZ #1088051 Code Popper"
 msgstr ""
 
+# translation auto-copied from project Publican Users' Guide, version 3, document Installing_Publican_Debian
 msgid ""
 "<prompt>$</prompt> <command>apt-get search libxslt</command>\n"
 "<computeroutput>gambas3-gb-xml-xslt - Gambas XSLT component</computeroutput>\n"
@@ -115,9 +97,33 @@ msgid ""
 "<computeroutput>swfmill - xml2swf and swf2xml processor</computeroutput>\n"
 "<computeroutput>libxslthl-java - XSLT syntax highlighting</computeroutput>"
 msgstr ""
+"<prompt>$</prompt> <command>apt-get search libxslt</command>\n"
+"<computeroutput>gambas3-gb-xml-xslt - Gambas XSLT component</computeroutput>\n"
+"<computeroutput>libidzebra-2.0-mod-alvis - IDZebra filter alvis (XSLT filter for XML)</computeroutput>\n"
+"<computeroutput>libidzebra-2.0-mod-dom - IDZebra filter 'dom' (XML DOM internal document model with XSLT)</computeroutput>\n"
+"<computeroutput>libical-parser-html-perl - generates HTML calendars from iCalendars</computeroutput>\n"
+"<computeroutput>libxsltc-java - XSL Transformations (XSLT) compiler from Xalan-Java</computeroutput>\n"
+"<computeroutput>libxml-filter-xslt-perl - Perl module for XSLT as a SAX Filter</computeroutput>\n"
+"<computeroutput>libxml-libxslt-perl - Perl interface to the GNOME libxslt library</computeroutput>\n"
+"<computeroutput>libxslt1-dbg - XSLT 1.0 processing library - debugging symbols</computeroutput>\n"
+"<computeroutput>libxslt1-dev - XSLT 1.0 processing library - development kit</computeroutput>\n"
+"<computeroutput>libxslt1.1 - XSLT 1.0 processing library - runtime library</computeroutput>\n"
+"<computeroutput>python-libxslt1 - Python bindings for libxslt1</computeroutput>\n"
+"<computeroutput>python-libxslt1-dbg - Python bindings for libxslt1 (debug extension)</computeroutput>\n"
+"<computeroutput>python-lxml - pythonic binding for the libxml2 and libxslt libraries</computeroutput>\n"
+"<computeroutput>python-lxml-dbg - pythonic binding for the libxml2 and libxslt libraries (debug extension)</computeroutput>\n"
+"<computeroutput>python-lxml-doc - pythonic binding for the libxml2 and libxslt libraries (documentation)</computeroutput>\n"
+"<computeroutput>python3-lxml - pythonic binding for the libxml2 and libxslt libraries</computeroutput>\n"
+"<computeroutput>python3-lxml-dbg - pythonic binding for the libxml2 and libxslt libraries (debug extension)</computeroutput>\n"
+"<computeroutput>php5-xsl - XSL module for php5</computeroutput>\n"
+"<computeroutput>libsp-gxmlcpp-dev - S+P C++ wrapper for Gnome libxml2/libxslt</computeroutput>\n"
+"<computeroutput>libsp-gxmlcpp1 - S+P C++ wrapper for Gnome libxml2/libxslt</computeroutput>\n"
+"<computeroutput>swfmill - xml2swf and swf2xml processor</computeroutput>\n"
+"<computeroutput>libxslthl-java - XSLT syntax highlighting</computeroutput>"
 
+# translation auto-copied from project oVirt, version ovirt-3.5, document frontend/webadmin/modules/webadmin/src/main/resources/org/ovirt/engine/ui/frontend/org.ovirt.engine.ui.webadmin.ApplicationConstants
 msgid "&nbsp;"
-msgstr ""
+msgstr "&nbsp;"
 
 msgid "Testing BZ #1112899 Callouts and BZ #1101050 Entities in CDATA"
 msgstr ""
@@ -262,5 +268,11 @@ msgid "The <code>ServiceRegistry</code> class is an example class implementing t
 msgstr ""
 
 msgid "The <function>completeWorkItem()</function> call completes the work item execution."
+msgstr ""
+
+msgid "Testing BZ #1168765 programlisting no longer support language attribute."
+msgstr ""
+
+msgid "<![CDATA[<?xml version=\"1.0\" encoding=\"UTF-8\"?><test></test>]]>"
 msgstr ""
 

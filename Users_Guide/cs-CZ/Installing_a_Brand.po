@@ -1,157 +1,165 @@
+# Josef Hruška <josef.hruska@upcmail.cz>, 2014. #zanata
+# Michal Vaněk <mvanek@redhat.com>, 2014. #zanata
+# Josef Hruška <josef.hruska@upcmail.cz>, 2015. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2014-10-03 13:09+1000\n"
-"PO-Revision-Date: 2014-10-03 13:09+1000\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: None\n"
-"Language: en-US \n"
+"POT-Creation-Date: 2014-10-03 13:17+1000\n"
 "MIME-Version: 1.0\n"
-"Content-Type: application/x-publican; charset=UTF-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Publican v4.2.2\n"
+"PO-Revision-Date: 2015-01-20 01:23-0500\n"
+"Last-Translator: Josef Hruška <josef.hruska@upcmail.cz>\n"
+"Language-Team: None\n"
+"Language: cs\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2\n"
 
 msgid "Installing a brand"
-msgstr ""
+msgstr "Instalace grafické úpravy"
 
 msgid "<application>Publican</application> brands for Fedora, Genome, and oVirt documents are available as RPM packages in Fedora. Similarly, Red Hat internally distributes RPM packages containing <application>Publican</application> brands for GIMP, JBoss, and Red Hat documents. Providing that you have access to the relevant repositories, you can install these brands on a computer that runs Red Hat Enterprise Linux or Fedora — or an operating system derived from either — with the command <command>yum install publican-<replaceable>brand</replaceable></command> or with a graphical package manager such as <application>PackageKit</application>."
-msgstr ""
+msgstr "Grafické úpravy <application>Publicanu</application> pro dokumenty Fedory, Genome a oVirt jsou ve Fedoře k dispozici v podobě balíčků RPM. Podobně Red Hat interně šíří balíčky RPM, které obsahují grafické úpravy <application>Publicanu</application> pro dokumenty GIMP, JBoss a Red Hat. Máte-li přístup k příslušným repozitářům, lze tyto grafické úpravy nainstalovat na počítač, kde běží Red Hat Enterprise Linux nebo Fedora — nebo operační systémy na nich založené — příkazem <command>yum install publican-<replaceable>grafickauprava</replaceable></command> nebo grafickým správcem balíčků, jako např. <application>PackageKit</application>."
 
 msgid "If you use <application>Publican</application> on an operating system that does not use RPM packages, your documentation project might provide its brand in another format. Whatever the format in which the brand is supplied, you must place the brand files in a subdirectory of the <application>Publican</application> <filename>Common_Content</filename> directory. By default, this directory is located at <filename>/usr/share/publican/Common_Content</filename> on Linux operating systems and at <filename>%SystemDrive%/%ProgramFiles%/Publican/Common_Content</filename> on Windows operating systems — typically, <filename>C:/Program Files/Publican/Common_Content</filename>"
-msgstr ""
+msgstr "Používáte-li <application>Publican</application> na operačním systému, který nepoužívá balíčky RPM, váš dokumentační projekt může poskytovat svou grafickou úpravu v jiném formátu. Ať již je formát, ve kterém se grafická úprava poskytuje, jakýkoliv, musíte soubory grafické úpravy umístit do podadresáře adresáře <filename>Common_Content</filename> <application>Publicanu</application>. Standardně se tento adresář na operačních systémech Linux nachází v <filename>/usr/share/publican/Common_Content</filename>, u operačních systémů Windows v <filename>%SystemDrive%/%ProgramFiles%/Publican/Common_Content</filename> — obvykle tedy <filename>C:/Program Files/Publican/Common_Content</filename>"
 
 msgid "Each currently available brand is distributed under a brand-specific license as follows:"
-msgstr ""
+msgstr "Jak je uvedeno níže, každá v současnosti dostupná grafická úprava je šířena pod svojí vlastní licencí:"
 
 msgid "To install the brand:"
-msgstr ""
+msgstr "Chcete-li nainstalovat grafickou úpravu:"
 
 msgid "If the brand was supplied to you in an archive of some kind, for example, a tarball or ZIP file, unpack the brand into a new directory on your system."
-msgstr ""
+msgstr "Byla-li vám grafická úprava poskytnuta jako archiv některého druhu, na příklad tarball nebo soubor ZIP, rozbalte grafickou úpravu na svém systému do nového adresáře."
 
 msgid "Change into the directory in which you created or unpacked the brand:"
-msgstr ""
+msgstr "Přejděte do adresáře, ve kterém jste vytvořili, nebo do něhož jste rozbalili grafickou úpravu:"
 
 msgid "<prompt>$</prompt> <command>cd publican-<replaceable>brand</replaceable></command>"
-msgstr ""
+msgstr "<prompt>$</prompt> <command>cd publican-<replaceable>grafickauprava</replaceable></command>"
 
 msgid "where <replaceable>brand</replaceable> is the name of the brand."
-msgstr ""
+msgstr "kde <replaceable>grafickauprava</replaceable> je název grafické úpravy."
 
 msgid "Build the brand:"
-msgstr ""
+msgstr "Sestavte grafickou úpravu:"
 
 msgid "<prompt>$</prompt> <command>publican build --formats xml --langs all --publish</command>"
-msgstr ""
+msgstr "<prompt>$</prompt> <command>publican build --formats xml --langs all --publish</command>"
 
 msgid "Install the brand:"
-msgstr ""
+msgstr "Nainstalujte grafickou úpravu:"
 
 msgid "<prompt>$</prompt> <command>sudo publican install_brand --path <replaceable>path</replaceable></command>"
-msgstr ""
+msgstr "<prompt>$</prompt> <command>sudo publican install_brand --path <replaceable>cesta</replaceable></command>"
 
 msgid "where <replaceable>path</replaceable> is the path to the <application>Publican</application> Common Content files. For example, on a Linux system, run:"
-msgstr ""
+msgstr "kde <replaceable>cesta</replaceable> je cesta k souborům Common Content <application>Publicanu</application>. Na příklad na Linuxovém systému spusťte:"
 
 msgid "<prompt>$</prompt> <command>sudo publican install_brand --path /usr/share/publican/Common_Content</command>"
-msgstr ""
+msgstr "<prompt>$</prompt> <command>sudo publican install_brand --path /usr/share/publican/Common_Content</command>"
 
 msgid "or on a Windows system, run"
-msgstr ""
+msgstr "nebo na systému Windows spusťte:"
 
 msgid "<prompt>$</prompt> <command>publican install_brand --path \"C:/Program Files/Publican/Common_Content\"</command>"
-msgstr ""
+msgstr "<prompt>$</prompt> <command>publican install_brand --path \"C:/Program Files/Publican/Common_Content\"</command>"
 
 msgid "Current Brands and their packages"
-msgstr ""
+msgstr "Současné grafické úpravy a jejich balíčky"
 
 msgid "Brand"
-msgstr ""
+msgstr "Grafická úprava"
 
 msgid "License of Common Content files"
-msgstr ""
+msgstr "Licence souborů Common Content"
 
 msgid "Default license for documents"
-msgstr ""
+msgstr "Výchozí licence pro dokumenty"
 
 msgid "Package"
-msgstr ""
+msgstr "Balíček"
 
+# translation auto-copied from project Zanata editor, version master, document org/zanata/webtrans/client/resources/WebTransMessages, author peartown
 msgid "Comment"
-msgstr ""
+msgstr "Poznámka"
 
 msgid "common"
-msgstr ""
+msgstr "common"
 
 msgid "<link xlink:href=\"http://creativecommons.org/publicdomain/zero/1.0/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">CC0 1.0</link>"
-msgstr ""
+msgstr "<link xlink:href=\"http://creativecommons.org/publicdomain/zero/1.0/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">CC0 1.0</link>"
 
 msgid "<link xlink:href=\"http://www.gnu.org/licenses/fdl.html\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">GFDL Version 1.2</link>"
-msgstr ""
+msgstr "<link xlink:href=\"http://www.gnu.org/licenses/fdl.html\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">GFDL Version 1.2</link>"
 
+# translation auto-copied from project Publican Users' Guide, version 3, document Book_Info, author peartown
 msgid "publican"
-msgstr ""
+msgstr "publican"
 
 msgid "GPL compatible license. No options."
-msgstr ""
+msgstr "Licence kompatibilní s GPL. Žádné možnosti."
 
 msgid "RedHat"
-msgstr ""
+msgstr "RedHat"
 
 msgid "<link xlink:href=\"http://creativecommons.org/licenses/by-sa/3.0/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">CC-BY-SA 3.0</link>"
-msgstr ""
+msgstr "<link xlink:href=\"http://creativecommons.org/licenses/by-sa/3.0/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">CC-BY-SA 3.0</link>"
 
 msgid "<phrase>CC-BY-SA 3.0</phrase>"
-msgstr ""
+msgstr "<phrase>CC-BY-SA 3.0</phrase>"
 
 msgid "publican-redhat"
-msgstr ""
+msgstr "publican-redhat"
 
+# translation auto-copied from project Publican Users' Guide, version 3, document Installing_Publican, author peartown
 msgid "Fedora"
-msgstr ""
+msgstr "Fedora"
 
 msgid "publican-fedora"
-msgstr ""
+msgstr "publican-fedora"
 
+# translation auto-copied from project Zanata Quickstart Guide, version 1.0, document Redhat_Quickstart, author Michal Vaněk
 msgid "JBoss"
-msgstr ""
+msgstr "JBoss"
 
 msgid "publican-jboss"
-msgstr ""
+msgstr "publican-jboss"
 
 msgid "No Options."
-msgstr ""
+msgstr "Žádné možnosti."
 
 msgid "oVirt"
-msgstr ""
+msgstr "oVirt"
 
 msgid "<link xlink:href=\"http://www.opencontent.org/openpub/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">OPL 1.0</link>"
-msgstr ""
+msgstr "<link xlink:href=\"http://www.opencontent.org/openpub/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">OPL 1.0</link>"
 
 msgid "<phrase>OPL 1.0</phrase>"
-msgstr ""
+msgstr "<phrase>OPL 1.0</phrase>"
 
 msgid "publican-ovirt"
-msgstr ""
+msgstr "publican-ovirt"
 
 msgid "GIMP"
-msgstr ""
+msgstr "GIMP"
 
 msgid "<phrase>GFDL Version 1.2</phrase>"
-msgstr ""
+msgstr "<phrase>GFDL Version 1.2</phrase>"
 
 msgid "publican-gimp"
-msgstr ""
+msgstr "publican-gimp"
 
 msgid "Matches the license for existing GIMP documentation."
-msgstr ""
+msgstr "Odpovídá licenci pro existující dokumentaci GIMPu."
 
 msgid "Genome"
-msgstr ""
+msgstr "Genome"
 
 msgid "publican-genome"
-msgstr ""
+msgstr "publican-genome"
 
 msgid "Note the difference in licensing between the common content files provided in the common brand (CC0) and the default license set for books generated with the common brand (GFDL). The CC0 license allows you to redistribute and relicense the files that make up the common brand (including the CSS and image files) to suit your project. <application>Publican</application> suggests the GFDL for documentation by default because <application>Publican</application> is developed primarily to build documentation for software. The GFDL is compatible with the GPL, which is the most commonly used license for open-source software."
-msgstr ""
+msgstr "Všimněte si rozdílů v licencování mezi soubory common content poskytovaných v grafické úpravě common (CC0) a výchozí licencí nastavenou pro knihy vytvořené s touto grafickou úpravou (GFDL). CC0 licence povoluje další šíření a přelicencování souborů tvořících tuto grafickou úpravu (včetně obrazových a CSS souborů) dle potřeb vašeho projektu. <application>Publican</application> navrhuje používat pro dokumentaci jako výchozí licenci GFDL, neboť <application>Publican</application> je především vyvíjen pro sestavování dokumentace k softwaru. Licence GFDL je kompatibilní s licencí GPL, která je nejčastěji běžně používanou licencí pro open-source software."
 

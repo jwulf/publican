@@ -1,37 +1,39 @@
+# Josef Hruška <josef.hruska@upcmail.cz>, 2015. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2014-10-03 13:09+1000\n"
-"PO-Revision-Date: 2014-10-03 13:09+1000\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: None\n"
-"Language: en-US \n"
+"POT-Creation-Date: 2014-10-03 13:17+1000\n"
 "MIME-Version: 1.0\n"
-"Content-Type: application/x-publican; charset=UTF-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Publican v4.2.2\n"
+"PO-Revision-Date: 2015-03-09 12:56-0400\n"
+"Last-Translator: Josef Hruška <josef.hruska@upcmail.cz>\n"
+"Language-Team: None\n"
+"Language: cs\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2\n"
 
 msgid "Installing, updating and removing documents"
-msgstr ""
+msgstr "Instalace, aktualizace a odstranění dokumentů"
 
 msgid "On your workstation, change into the directory that contains the source for the document and run:"
-msgstr ""
+msgstr "Na pracovní stanici přejděte do adresáře se zdrojem dokumentu a spusťte:"
 
 msgid "<prompt>$</prompt> <command>publican package --binary --lang <replaceable>language_code</replaceable></command>"
-msgstr ""
+msgstr "<prompt>$</prompt> <command>publican package --binary --lang <replaceable>kod_jazyka</replaceable></command>"
 
 msgid "<application>Publican</application> builds an RPM package and places it in the <filename>/tmp/rpms/noarch/</filename> directory of the document. By default, <application>Publican</application> builds the RPM package for the operating system within which you are running <application>Publican</application>. To build an RPM package to install on a server that runs a different operating system, set the <parameter>os_ver</parameter> parameter in the document's <filename>publican.cfg</filename> file."
-msgstr ""
+msgstr "<application>Publican</application> sestaví balíček RPM a umístí ho do adresáře <filename>/tmp/rpms/noarch/</filename> dokumentu. Standardně <application>Publican</application> sestaví balíček RPM pro operační systém, na němž <application>Publican</application> běží. Chcete-li sestavit balíček RPM, který se instaluje na server, kde běží jiný operační systém, nastavte parametr <parameter>os_ver</parameter> v souboru <filename>publican.cfg</filename> dokumentu."
 
 msgid "Either upload the document packages to the webserver and install them with the <command>rpm -i</command> or <command>yum localinstall</command> command, or place the packages in a repository and configure the webserver to install from that repository when you run <command>yum install</command>."
-msgstr ""
+msgstr "Nahrajte balíčky dokumentů na webový server a nainstalujte je příkazem <command>rpm -i</command> či <command>yum localinstall</command>, nebo balíčky umístěte do repozitáře a nakonfigurujte webserver tak, aby při spuštění <command>yum install</command> instaloval z repozitáře."
 
 msgid "To update a document, build a new package with a higher <tag>&lt;edition&gt;</tag> number or <tag>&lt;pubsnumber&gt;</tag> in the <filename>Book_Info.xml</filename> or <filename>Article_Info.xml</filename>. <application>Publican</application> uses these values to set the version and release numbers for the RPM package. When you install this package on your webserver, <application>yum</application> can replace the old version with the new when you run <command>yum localinstall</command> for a local package, or <command>yum update</command> for a package fetched from a repository."
-msgstr ""
+msgstr "Chcete-li dokument zaktualizovat, sestavte nový balíček s vyšším číslem <tag>&lt;edition&gt;</tag> nebo <tag>&lt;pubsnumber&gt;</tag> v <filename>Book_Info.xml</filename> či <filename>Article_Info.xml</filename>. <application>Publican</application> využívá tyto hodnoty k nastavení verze a čísla vydání balíčku RPM. Když tento balíček instalujete na webový server, <application>yum</application> dokáže nahradit starou verzi verzí novou, spustíte-li <command>yum localinstall</command> pro místní balíček, nebo <command>yum update</command> pro balíček získaný z repozitáře."
 
 msgid "Remove a document from the webserver with the <command>rpm -e</command> or <command>yum erase</command> command."
-msgstr ""
+msgstr "Dokument z webového serveru odstraníte příkazem <command>rpm -e</command> nebo <command>yum erase</command>."
 
 msgid "On large or busy sites, we recommend that you set the <parameter>manual_toc_update</parameter> parameter in the site's configuration file. With this parameter set, you must run the <prompt>$</prompt> <command>publican update_site</command> command after installing, updating, or removing documents. Refer to <xref linkend=\"sect-Publican-Users_Guide-Creating_the_website_structure\" /> for more information."
-msgstr ""
+msgstr "Na velkých nebo často navštěvovaných webových stránkách vám doporučujeme, abyste v konfiguračním souboru webových stránek nastavili parametr <parameter>manual_toc_update</parameter>. Při tomto nastaveném parametru je nutné spustit příkaz <prompt>$</prompt> <command>publican update_site</command> po nainstalování, aktualizaci či odstranění dokumentů. Více informací viz <xref linkend=\"sect-Publican-Users_Guide-Creating_the_website_structure\" />."
 

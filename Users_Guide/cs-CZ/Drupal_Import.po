@@ -1,203 +1,208 @@
+# Josef Hruška <josef.hruska@upcmail.cz>, 2014. #zanata
+# Josef Hruška <josef.hruska@upcmail.cz>, 2015. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2014-10-03 13:09+1000\n"
-"PO-Revision-Date: 2014-10-03 13:09+1000\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: None\n"
-"Language: en-US \n"
+"POT-Creation-Date: 2014-10-03 13:17+1000\n"
 "MIME-Version: 1.0\n"
-"Content-Type: application/x-publican; charset=UTF-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Publican v4.2.2\n"
+"PO-Revision-Date: 2015-04-01 02:03-0400\n"
+"Last-Translator: Josef Hruška <josef.hruska@upcmail.cz>\n"
+"Language-Team: None\n"
+"Language: cs\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2\n"
 
 msgid "Import book into Drupal"
-msgstr ""
+msgstr "Import knihy do Drupalu"
 
 msgid "<application>Publican 3.1</application> has a new functionality which allow user to create and import a book into Drupal. All xml files in a book are transformed into a single CSV file which will later be used to import into Drupal."
-msgstr ""
+msgstr "<application>Publican 3.1</application> obsahuje nové funkce, které umožní uživatelů vytvořit a naimportovat knihu do Drupalu. Všechny soubory xml v knize jsou převedeny do jediného souboru CSV, který se později použije pro import do Drupalu."
 
 msgid "How to build a CSV file for Drupal import"
-msgstr ""
+msgstr "Jak sestavit soubor CSV pro import do Drupalu"
 
 msgid "The CSV File consists of information that tells Drupal how to import the book. Each row in the CSV file represents a html page."
-msgstr ""
+msgstr "Soubor CSV sestává z infomací, které poskytnou Drupalu instrukce, jak knihu importovat. Každý řádek v souboru CSV představuje stránku HTML."
 
 msgid "Use the <prompt>$</prompt> <command>publican build</command> command to create the CSV file for Drupal import. Before running the command, use the cd command to change into the directory where your book is located. For example, if you have a book call \"User_Guide\" in your home directory, then run the following command."
-msgstr ""
+msgstr "Chcete-li vytvořit soubor CSV pro import do Drupalu, použijte příkaz <prompt>$</prompt> <command>publican build</command>. Před spuštěním příkazu přejděte pomocí příkazu cd do adresáře, kde se nachází kniha. Například máte-li ve svém domovském adresáři knihu s názvem \"Prirucka_Uzivatele\", pak spusťte následující příkaz."
 
 msgid "<prompt>$</prompt> <command>cd User_Guide/</command>\n"
 "<prompt>$</prompt> <command>publican build --langs en-US --formats=drupal-book</command>"
-msgstr ""
+msgstr "<prompt>$</prompt> <command>cd Prirucka_Uzivatele/</command>\n"
+"<prompt>$</prompt> <command>publican build --langs en-US --formats=drupal-book</command>"
 
 msgid "After running the command, you will see CSV file is created in the <filename>tmp/en-US/drupal-book/</filename> directory."
-msgstr ""
+msgstr "Po spuštění příkazu budete moci nalézt vytvořený soubor CSV v adresáři <filename>tmp/en-US/drupal-book/</filename>."
 
 msgid "<application>Publican</application> stores all the output files in <filename>/tmp/en-US/drupal-book/</filename> directory. This directory contains the following files:"
-msgstr ""
+msgstr "<application>Publican</application> ukládá všechny výstupní soubory do adresáře <filename>/tmp/en-US/drupal-book/</filename>. Tento adresář obsahuje následující soubory:"
 
 msgid "CSV file - The naming convention of the file is <filename>$product-$version-$docname-$lang-$edition.csv</filename>"
-msgstr ""
+msgstr "soubor CSV - konvence názvu souboru je <filename>$product-$version-$docname-$lang-$edition.csv</filename>"
 
 msgid "en-US directory - contains all the html images."
-msgstr ""
+msgstr "adresář en-US - obsahuje všechny obrázky html"
 
 msgid "tar.gz file - the archive of both CSV file and en-US directory."
-msgstr ""
+msgstr "soubor tar.gz - archiv jak souboru CSV, tak adresáře en-US."
 
 msgid "Important — Use version control system"
-msgstr ""
+msgstr "Důležité — Používejte systém pro správu verzí"
 
 msgid "After running the <prompt>$</prompt> <command>publican build --langs en-US --formats=drupal-book</command> command, you will notice that the xml files in the <filename>en-US</filename> directory had been changed. This is because <application>Publican</application> added a <parameter>'Conformance'</parameter> attribute for every xml tag that has id. This attribute contains a number which is unique across xml files in the book. If you are using a version control system like <application>git</application> for your xml files, then you need to commit the changes so that the number won't get reset when other users run it. These unique numbers are very important, because they are use as the url path in drupal. Besides, <application>Publican</application> also created a database file name <filename>max_unique_id.db</filename> in the <filename>en-US</filename> directory. This database file is use to track the current maximum unique number in the book, so that <application>Publican</application> can know where you are up to and add a new unique number for your newly created Chapter or Section. Therefore, it is very important to add the database file to the version control and commit it if there is any change. If you add a new section in the xml, don't set the <parameter>'Comformance'</parameter> attribute yourself as that will make the database outdated. Just leave it for <application>publican</application> to set it."
-msgstr ""
+msgstr "Po spuštění příkazu <prompt>$</prompt> <command>publican build --langs en-US --formats=drupal-book</command> si můžete všimnout, že soubory XML v adresáři <filename>en-US</filename> byly změněny. Stalo se tak proto, že <application>Publican</application> přidal do každého tagu xml, který má id, atribut <parameter>'Conformance'</parameter>. Tento atribut obsahuje číslo, které je unikátní napříč soubory xml knihy. Používáte-li pro své soubory xml systém pro správu verzí jako <application>git</application>, pak potřebujete přiznat (commit) změny, aby se číslo nenastavilo znovu při spuštění jinými uživateli. Tato unikátní čísla jsou velmi důležitá, neboť se v Drupalu používají jako cesta url. Kromě toho <application>Publican</application> rovněž vytvořil v adresáři <filename>en-US</filename> soubor databáze nazvaný <filename>max_unique_id.db</filename>. Tento soubor se používá ke sledování současného maximálního unikátního čísla v knize, proto může <application>Publican</application> poznat pokud aktualizujete a přidat nové unikátní číslo pro vaši novou kapitolu či oddíl. A proto je velmi důležité přidat soubor databáze pod správu verzí a přiznat ho kdykoliv u něj proběhne změna. Přidáte-li do xml nový oddíl, nenastavujte atribut <parameter>'Comformance'</parameter> sami, jelikož by to učinilo databázi zastaralou. Jednoduše ponechte jeho nastavení na starosti <application>Publicanu</application>."
 
+# translation auto-copied from project Publican Users' Guide, version 3, document Files_in_the_Book_Directory, author peartown
 msgid "The publican.cfg file"
-msgstr ""
+msgstr "Soubor publican.cfg"
 
 msgid "Below are some parameters that can be configure in the publican.cfg file for Drupal import:"
-msgstr ""
+msgstr "Níže se nachází několik parametrů, které lze nastavit v souboru publican.cfg pro import do Drupalu:"
 
 msgid "<parameter>drupal_author</parameter>"
-msgstr ""
+msgstr "<parameter>drupal_author</parameter>"
 
 msgid "specfies the author who should be shown in drupal book page. The name must be a valid Drupal username. 'Redhat' is the default author. Set this parameter in the <filename>publican.cfg</filename> file to override it."
-msgstr ""
+msgstr "uvádí autora, který by měl být zobrazen na stánce knihy v drupalu. Jméno musí být platné uživatelské jméno Drupalu. Výchozím autorem je 'Redhat'. Chcete-li potlačit hodnotu tohoto parametru, nastavte ji v souboru <filename>publican.cfg</filename>."
 
 msgid "Important — Setting Author"
-msgstr ""
+msgstr "Důležité — Nastavení autora"
 
 msgid "The author must have permission to manage (create, update, delete) nodes in Drupal. If the default author is used, make sure you had created an account with username 'Redhat' in Drupal."
-msgstr ""
+msgstr "Autor musí mít oprávnění v Drupalu pro řízení (tvorbu, aktualizaci a výmaz) uzlů. Je-li použit výchozí autor, ujistěte se, že jste v Drupalu vytvořili účet s uživatelským jménem 'Redhat'."
 
 msgid "<parameter>drupal_menu_title</parameter>"
-msgstr ""
+msgstr "<parameter>drupal_menu_title</parameter>"
 
 msgid "override the bookname that will be shown in the Drupal menu. If nothing is set, <application>publican</application> will use the default value which is \"$product $version $docname\". For example, Publican 3.1 User_Guide."
-msgstr ""
+msgstr "potlačte název knihy (bookname), který bude zobrazen v nabídce Drupalu. Není-li nastaveno nic, <application>publican</application> použije výchozí hodnotu, kterou je \"$product $version $docname\". Tedy například Publican 3.1 User_Guide."
 
 msgid "<parameter>drupal_menu_block</parameter>"
-msgstr ""
+msgstr "<parameter>drupal_menu_block</parameter>"
 
 msgid "specfies which menu block the book should show in Drupal. The default value is <parameter>\"user-guide\"</parameter>."
-msgstr ""
+msgstr "uvádí, který blok nabídky by kniha měla v Drupalu zobrazit. Výchozí hodnotou je <parameter>\"user-guide\"</parameter>."
 
 msgid "Important — Setting menu block"
-msgstr ""
+msgstr "Důležité — Nastavení bloku nabídky"
 
 msgid "The menu block must exist in Drupal. For more information about adding a menu block in Drupal. Please refer to <xref linkend=\"sect-Publican-Users_Guide-Drupal_Import_Guide-How_to_add_a_menu_block\" />."
-msgstr ""
+msgstr "Blok nabídky musí v Drupalu existovat. Více informací o přidávání bloků nabídky v Drupalu viz <xref linkend=\"sect-Publican-Users_Guide-Drupal_Import_Guide-How_to_add_a_menu_block\" />."
 
 msgid "<parameter>drupal_image_path</parameter>"
-msgstr ""
+msgstr "<parameter>drupal_image_path</parameter>"
 
 msgid "specfies the directory where the images should be stored in drupal server. The default value is <filename>\"sites/default/files/\"</filename>."
-msgstr ""
+msgstr "uvádí adresář s uloženými obrazovými soubory na serveru drupal. Výchozí hodnotou je <filename>\"sites/default/files/\"</filename>."
 
 msgid "Drupal Import Guide"
-msgstr ""
+msgstr "Příručka pro import do Drupalu"
 
 msgid "Before you can import a book, you need to install a module call <application>'Node Import'</application> in Drupal. This module allows Drupal to import and update content from CSV or TSV files. To install this module, simply go to <link xlink:href=\"http://drupal.org/sandbox/hyu/1819292\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">drupal site</link> and follow the instructions on the website to download it. Once this is done, then you need to copy the downloaded module to the 'modules' directory on the Drupal server. For example if your Drupal is located in <filename>/var/www/html/drupal/</filename> directory, then you should copy the module to <filename>/var/www/html/drupal/sites/all/modules/</filename> directory. To enable the installed module, login to the Drupal site and go to <guilabel>Administer -&gt; Site building -&gt; Modules </guilabel>. In the Development section, tick the <guibutton>checkbox</guibutton> and click <guibutton>Save configuration</guibutton> button to activate the <application>Node Import</application> Module."
-msgstr ""
+msgstr "Předtím než lze naimportovat knihu, potřebujete do Drupalu nainstalovat modul s názvem <application>'Node Import'</application>. Tento modul povoluje Drupalu importovat a aktualizovat obsah ze souboru CSV nebo TSV. Chcete-li modul nainstalovat, přejděte jednoduše na <link xlink:href=\"http://drupal.org/sandbox/hyu/1819292\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">stránky Drupalu</link> a postupujte k jeho stažení dle pokynů. Poté zkopírujte stažený modul do adresáře 'modules' na serveru Drupal. Například máte-li svůj Drupal umístěn v adresáři <filename>/var/www/html/drupal/</filename>, pak byste měli modul zkopírovat do adresáře <filename>/var/www/html/drupal/sites/all/modules/</filename>. Nainstalovaný modul povolíte přihlášením se na stránky serveru a přejděte do <guilabel>Administer -&gt; Site building -&gt; Modules </guilabel>. V oddílu Vývoj zatrhněte <guibutton>zaškrtávací pole</guibutton> a stiskněte tlačítko <guibutton>Uložit nastavení</guibutton>, abyste aktivovali modul <application>Node Import</application>."
 
 msgid "Important — Enable Drupal Core Modules"
-msgstr ""
+msgstr "Důležité — Povolte core moduly Drupalu"
 
 msgid "You also need to enable the following Drupal core modules:"
-msgstr ""
+msgstr "Potřebujete rovněž povolit následující core moduly Drupalu:"
 
 msgid "<application>Book</application>"
-msgstr ""
+msgstr "<application>Book</application>"
 
 msgid "<application>Menu</application>"
-msgstr ""
+msgstr "<application>Menu</application>"
 
 msgid "<application>Path</application>"
-msgstr ""
+msgstr "<application>Path</application>"
 
 msgid "Permission to install Module"
-msgstr ""
+msgstr "Oprávnění pro instalaci modulu"
 
 msgid "Please consult your web adminstrator if you don't have permission to install module in drupal."
-msgstr ""
+msgstr "Nemáte-li oprávnění pro instalaci modulu v Drupalu, obraťte se prosím na svého správce webu."
 
 msgid "How to add a menu block"
-msgstr ""
+msgstr "Jak přidat blok nabídky"
 
 msgid "You can specify which menu the book should be showing in Drupal. If the specified menu block doesn't exist, Drupal will throw all the imported contents in the primary link. Therefore, if you wish to list your book in a menu block, make sure you create one before importing the book. To add a new menu block, simply login to your Drupal site and go to <guilabel>Administer -&gt; Menus -&gt; Add menu </guilabel>."
-msgstr ""
+msgstr "Lze určit, kterou nabídku má kniha v Drupalu zobrazit. Pokud uvedený blok nabídky neexistuje, Drupal zahrne všechny importované obsahy do primárního odkazu. Proto, přejete-li si zobrazit svou knihu v bloku nabídky, se ujistěte, že jste blok vytvořili před importem knihy. Chcete-li přidat nový blok nabídky, jednoduše se přihlaste na svých stránkách Drupal a přejděte do <guilabel>Administer -&gt; Menus -&gt; Add menu </guilabel>. "
 
 msgid "<guilabel>Menu name</guilabel> - The unique name for the menu. This is the value that you should set for the <parameter>drupal_menu_block</parameter> parameter in <filename>publican.cfg</filename>."
-msgstr ""
+msgstr "<guilabel>Menu name</guilabel> - jedinečný název nabídky. Jedná se o hodnotu, kterou byste měli nastavit v parametru <parameter>drupal_menu_block</parameter> v <filename>publican.cfg</filename>."
 
 msgid "<guilabel>Title</guilabel> - The title of the menu. It will be displayed on top of the menu block."
-msgstr ""
+msgstr "<guilabel>Title</guilabel> - název nabídky. Bude zobrazen navrchu bloku nabídky."
 
 msgid "Setting up Node import"
-msgstr ""
+msgstr "Nastavení Node import"
 
 msgid "<guilabel>Import directory</guilabel> - Where the CSV files to be imported are stored. The default path is <filename>sites/default/files/imports/</filename> ."
-msgstr ""
+msgstr "<guilabel>Import directory</guilabel> - adresář, kam budou ukládány importované soubory CSV. Výchozí cesta je <filename>sites/default/files/imports/</filename>."
 
 msgid "<guilabel>FTP settings</guilabel>"
-msgstr ""
+msgstr "<guilabel>FTP settings</guilabel>"
 
 msgid "<guilabel>Allow FTP uploads</guilabel> - Make sure the checkbox is checked, so that the new CSV file can be auto-detected when it is uploaded into the <filename>import directory</filename>."
-msgstr ""
+msgstr "<guilabel>Allow FTP uploads</guilabel> - Ujistěte se, že zaškrtávací pole je zatržené, aby nový soubor CSV mohl být autodetekován, když je nahrán do <filename>import directory</filename>."
 
 msgid "<guilabel>File owner</guilabel> - The CSV file that you uploaded to the <filename>import directory</filename> will be assigned ownership to this user."
-msgstr ""
+msgstr "<guilabel>File owner</guilabel> - Tomuto uživateli bude přiděleno vlastnictví souboru CSV nahraného do <filename>import directory</filename>."
 
 msgid "Important — File Ownership"
-msgstr ""
+msgstr "Důležité — Vlastnictví souboru"
 
 msgid "Users will only be allowed to use files they have uploaded themselves and files owned by anonymous. If you leave this field blank, all files uploaded by FTP will be owned by anonymous and so all users will see those files as being available for them. If you enter a username here, files that are uploaded using FTP will be owned by that user and only that user will be able to see those uploaded files. It is recommended to leave this field blank."
-msgstr ""
+msgstr "Uživatelům bude polovelno používat soubory, které sami nahráli, a soubory vlastněné anonymně. Ponecháte-li toto pole prázdné, všechny soubory nahrané přes FTP budou vlastněné anonymně, a tedy budou viditelné a použitelné všemi uživateli. Zadáte-li do pole uživatelské jméno, soubory nahrané pomocí FTP budou vlastněny tímto uživatelem a pouze tento uživatel bude moci zobrazit tyto nahrané soubory. Doporučuje se ponechat toto pole prázdné."
 
 msgid "<guilabel>Allowed extensions</guilabel> - The allowed import file's extension. Other extensions will be ignore by the module."
-msgstr ""
+msgstr "<guilabel>Allowed extensions</guilabel> - povolená přípona importovaného souboru. Ostatní přípony budou modulem ignorovány."
 
 msgid "<guilabel>Default settings</guilabel>"
-msgstr ""
+msgstr "<guilabel>Default settings</guilabel>"
 
 msgid "<guilabel>Content type</guilabel> - The default content type that will be used for quick import. Make sure the <parameter>Book Page content type</parameter> is checked."
-msgstr ""
+msgstr "<guilabel>Content type</guilabel> - Výchozí typ obsahu, který se bude používat pro rychlý import. Ujistěte se, že je vybrán <parameter>Book Page content type</parameter>."
 
 msgid "<guilabel>First row contains column names</guilabel> - This tells the node import module that the first row of the csv file is the headers."
-msgstr ""
+msgstr "<guilabel>First row contains column names</guilabel> - dává modulu Node import instrukci, že v prvním řádku souboru CSV se nachází názvy sloupců."
 
 msgid "How to import book"
-msgstr ""
+msgstr "Jak importovat knihu"
 
 msgid "To import book into Drupal:"
-msgstr ""
+msgstr "Chcete-li importovat knihu do Drupalu:"
 
 msgid "Follow the steps in <xref linkend=\"sect-Publican-Users_Guide-Import_book_into_Drupal-How_to_build_a_CSV_file_for_Drupal_import\" />"
-msgstr ""
+msgstr "Postupujte dle kroků v <xref linkend=\"sect-Publican-Users_Guide-Import_book_into_Drupal-How_to_build_a_CSV_file_for_Drupal_import\" />."
 
 msgid "Upload the CSV file to <filename>import Directory</filename> in the Drupal Server"
-msgstr ""
+msgstr "Nahrajte soubor CSV do <filename>import directory</filename> na serveru Drupal."
 
 msgid "Upload <filename>en-US</filename> directory to the <filename>\"sites/default/files/\"</filename> directory in the Drupal server. This value can be overriden in the <filename>publican.cfg</filename>. For more details, please read <xref linkend=\"sect-Publican-Users_Guide-Import_book_into_Drupal-The_publican.cfg_file\" />"
-msgstr ""
+msgstr "Nahrajte adresář <filename>en-US</filename> do adresáře <filename>\"sites/default/files/\"</filename> na serveru Drupal. Tuto hodnotu lze polačit v <filename>publican.cfg</filename>. Více informací si prosím přečtěte v <xref linkend=\"sect-Publican-Users_Guide-Import_book_into_Drupal-The_publican.cfg_file\" />."
 
 msgid "Login to the Drupal website, and go to <guilabel>Administer -&gt; Content management -&gt; Import content</guilabel>. You will see the CSV file that you just uploaded is showing in the 'Pending Tasks\" table and it is ready to import."
-msgstr ""
+msgstr "Přihlaste se na své stránky Drupal a přejděte do <guilabel>Administer -&gt; Content management -&gt; Import content</guilabel>. Soubor CSV, který jste právě nahráli, se zobrazí v tabulce 'Pending Tasks' a je připraven pro import. "
 
 msgid "Click <guibutton>Import now</guibutton> to start importing book. You will be redirect to the next page which is showing the import progress. When the progress bar hit 100%, that means the import is done!"
-msgstr ""
+msgstr "Stiskněte <guibutton>Import now</guibutton> pro zahájení importu knihy. Budete přesměrováni na další stránku, která zobrazuje průběh importu."
 
 msgid "The book link should be showing in the specified menu block now."
-msgstr ""
+msgstr "Odkaz na knihu by se měl nyní zobrazovat v uvedeném bloku nabídky."
 
 msgid "How to update book"
-msgstr ""
+msgstr "Jak zaktualizovat knihu"
 
 msgid "Simply repeat the steps in <xref linkend=\"sect-Publican-Users_Guide-Drupal_Import_Guide-How_to_import_book\" /> to update the book."
-msgstr ""
+msgstr "Chcete-li knihu aktualizovat, jednoduše zopakujte kroky v <xref linkend=\"sect-Publican-Users_Guide-Drupal_Import_Guide-How_to_import_book\" />."
 
 msgid "Warning — Section Chunking"
-msgstr ""
+msgstr "Varování — stránkování oddílů"
 
 msgid "If you update the book with smaller chunks, than the missing chunks will be deleted by Drupal and the URL path for the deleted chunks will be deleted as well."
-msgstr ""
+msgstr "Aktualizujete-li knihu s nižší úrovní stránkování oddílů (ve smyslu umístění na samostatnou stránku), pak chybějící stánky samostatných oddílů budou Drupalem odstraněny a cesty URL odstraněných stránek budou odstraněny rovněž."
 

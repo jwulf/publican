@@ -851,6 +851,7 @@ po/cs.po
 po/da.po
 po/de-CH.po
 po/de.po
+po/de_CH.po
 po/el.po
 po/es.po
 po/fa.po
@@ -1225,4 +1226,3 @@ windows/publican2.ico
 xt/author/perlcritic.t
 xt/author/pod-coverage.t
 xt/author/pod.t
-META.json

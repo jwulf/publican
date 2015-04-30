@@ -1,40 +1,42 @@
+# Josef Hruška <josef.hruska@upcmail.cz>, 2015. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2014-10-03 13:09+1000\n"
-"PO-Revision-Date: 2014-10-03 13:09+1000\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: None\n"
-"Language: en-US \n"
+"POT-Creation-Date: 2014-10-03 13:17+1000\n"
 "MIME-Version: 1.0\n"
-"Content-Type: application/x-publican; charset=UTF-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Publican v4.2.2\n"
+"PO-Revision-Date: 2015-01-23 09:09-0500\n"
+"Last-Translator: Josef Hruška <josef.hruska@upcmail.cz>\n"
+"Language-Team: None\n"
+"Language: cs\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2\n"
 
 msgid "Creating a brand"
-msgstr ""
+msgstr "Vytvoření grafické úpravy"
 
 msgid "Use the <prompt>$</prompt> <command>create_brand</command> action to create a new brand. When you create a new brand, you must give it a name and specify the original language for the brand's XML files. The <option>--name</option> option provides the name, and the <option>--lang</option> option specifies the language. The complete command is therefore:"
-msgstr ""
+msgstr "Novou grafickou úpravu vytvoříte pomocí akce <prompt>$</prompt> <command>create_brand</command>. Při vytváření nové grafické úpravy ji musíte pojmenovat a pro její soubory XML určit původní jazyk. Volba <option>--name</option> poskytuje název a volba <option>--lang</option> určuje jazyk. Celý příkaz tedy vypadá takto:"
 
 msgid "<prompt>$</prompt> <command>publican create_brand --name=<replaceable>brand</replaceable> --lang=<replaceable>language_code</replaceable></command>"
-msgstr ""
+msgstr "<prompt>$</prompt> <command>publican create_brand --name=<replaceable>grafickauprava</replaceable> --lang=<replaceable>kod_jazyka</replaceable></command>"
 
 msgid "<application>Publican</application> creates a new subdirectory named <filename>publican-<replaceable>brand</replaceable></filename>, where <replaceable>brand</replaceable> is the brand that you specified with the <option>--name</option> option."
-msgstr ""
+msgstr "<application>Publican</application> vytvoří nový podadresář nazvaný <filename>publican-<replaceable>grafickauprava</replaceable></filename>, kde <replaceable>grafickauprava</replaceable> je graficka uprava, kterou jste uvedli ve volbě  <option>--name</option>."
 
 msgid "For example, to create a brand called <literal>Acme</literal>, which will have its Common Content XML files written originally in American English, run:"
-msgstr ""
+msgstr "Chcete-li na příklad vytvořit grafickou úpravu nazvanou <literal>Acme</literal>, jejíž soubory XML Common Content jsou napsány původně v americké angličtině, spusťte:"
 
 msgid "<prompt>$</prompt> <command>publican create_brand --name=Acme --lang=en-US</command>"
-msgstr ""
+msgstr "<prompt>$</prompt> <command>publican create_brand --name=Acme --lang=en-US</command>"
 
 msgid "<application>Publican</application> creates the brand in a subdirectory named <filename>publican-Acme</filename>."
-msgstr ""
+msgstr "<application>Publican</application> vytvoří grafickou úpravu v podadresáři nazvaném <filename>publican-Acme</filename>."
 
 msgid "To configure your new brand, search for the word <literal>SETUP</literal> in the default files that <application>Publican</application> creates and edit the files to provide the missing details. On Linux operating systems, you can search for the word <literal>SETUP</literal> in these files with the command:"
-msgstr ""
+msgstr "Chcete-li měnit nastavení své grafické úpravy, hledejte ve výchozích souborech vytvořených <application>Publicanem</application> slovo <literal>SETUP</literal> a upravte tyto soubory doplněním chybějících údajů. Na linuxových operačních systémech lze vyhledávat příkazem:"
 
 msgid "<prompt>$</prompt> <command>grep -r 'SETUP' *</command>"
-msgstr ""
+msgstr "<prompt>$</prompt> <command>grep -r 'SETUP' *</command>"
 

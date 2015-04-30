@@ -1,163 +1,168 @@
+# Michal Vaněk <mvanek@redhat.com>, 2014. #zanata
+# Josef Hruška <josef.hruska@upcmail.cz>, 2015. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2014-10-03 13:09+1000\n"
-"PO-Revision-Date: 2014-10-03 13:09+1000\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: None\n"
-"Language: en-US \n"
+"POT-Creation-Date: 2014-10-03 13:17+1000\n"
 "MIME-Version: 1.0\n"
-"Content-Type: application/x-publican; charset=UTF-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Publican v4.2.2\n"
+"PO-Revision-Date: 2015-02-05 01:57-0500\n"
+"Last-Translator: Josef Hruška <josef.hruska@upcmail.cz>\n"
+"Language-Team: None\n"
+"Language: cs\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2\n"
 
 msgid "Building a website with Publican"
-msgstr ""
+msgstr "Sestavování webových stránek Publicanem"
 
 msgid "<application>Publican</application> not only builds documents for publication but can build and manage a documentation website as well. For a suite of documents that you maintain by yourself, you can use <application>Publican</application> to build a site on your local system; you can then upload the site to a webserver by whatever means you choose. This approach does not scale well, however, so for team-based documentation projects, <application>Publican</application> can generate RPM packages of documentation to install on the webserver. To install <application>Publican</application>-generated RPM packages on a webserver, <application>Publican</application> (version 2.1 or higher) and <application>rpm</application> must be installed on the server. If you build and maintain the website on a workstation and upload it to a webserver for publication, <application>Publican</application> and <application>rpm</application> do not need to be installed on the webserver."
-msgstr ""
+msgstr "<application>Publican</application> nesestavuje ke zveřejnění pouze dokumenty, ale dokáže rovněž sestavit a spravovat webové stránky dokumentace. <application>Publican</application> lze použít k sestavení webových stránek na místním systému pro řadu dokumentů, které si udržujete; poté lze webové stránky nahrát na webový server způsobem dle své volby. Tento přístup však neškáluje nejlépe pro tzv. týmově založené dokumentační projekty, <application>Publican</application> dokáže generovat balíčky RPM dokumentace, které lze instalovat na webový server. Aby bylo možné instalovat balíčky RPM generované <application>Publicanem</application> na webový server, musí být na serveru nainstalován <application>Publican</application> (verze 2.1 nebo vyšší) a <application>rpm</application>. Sestavíte-li a udržujete-li webové stránky na pracovní stanici a nahrajete je ke zveřejnění na webový server, <application>Publican</application> a <application>rpm</application> nejsou na webovém serveru potřeba."
 
 msgid "The websites that <application>Publican</application> creates consist of four parts: the website structure, a home page, product and version description pages, and the documents published on the site. The website structure itself consists of:"
-msgstr ""
+msgstr "Webové stránky, které vytváří <application>Publican</application>, se skládají ze čtyř částí: struktura webových stránek, domovská stránka, stránky popisující produkt a verzi a (na webových stránkách) zveřejněné dokumenty. Struktura webových stránek se skládá z:"
 
 msgid "a configuration file."
-msgstr ""
+msgstr "konfiguračního souboru,"
 
 msgid "an SQLite database file."
-msgstr ""
+msgstr "souboru databáze SQLite,"
 
 msgid "a subdirectory for the published documents, which contains:"
-msgstr ""
+msgstr "podadresáře zveřejněných dokumentů, který obsahuje:"
 
 msgid "<filename>index.html</filename> — an index page that redirects to localized versions of a home page for the site."
-msgstr ""
+msgstr "<filename>index.html</filename> — stránku indexu, která přesměrovává na lokalizované verze domovské stránky webových stránek,"
 
 msgid "<filename>interactive.css</filename> — a CSS stylesheet that contains styles for the navigation menu."
-msgstr ""
+msgstr "<filename>interactive.css</filename> — styl CSS, který obsahuje styly navigační nabídky,"
 
 msgid "<filename>opds.xml</filename> — an Open Publication Distribution System (OPDS) catalog to allow compliant eBook readers to find EPUB documents on your site easily."
-msgstr ""
+msgstr "<filename>opds.xml</filename> — katalog Open Publication Distribution System (OPDS), který umožňuje odpovídajícím čtečkám e-knih nalézt jednoduše dokumenty EPUB na webových stránkách,"
 
 msgid "<filename>Sitemap</filename> — A Sitemap is a list of the URLs from your website and metadata about them, like update history, change frequency, and importance relative to other URLs in the site. A Sitemap can be supplied to many major search engines, where it is used to help their crawlers index your site more intelligently. A Sitemap does not guarantee that your site will be ranked higher in search results. However, it does help search engines to return the most relevant results from your website in response to user queries. For more information on Sitemaps, visit <link xlink:href=\"http://www.sitemaps.org/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">sitemaps.org</link>."
-msgstr ""
+msgstr "<filename>Sitemap</filename> — mapa webových stránek je seznam adres URL stránek na webových stránkách a jejich metadat, jako např. historie aktualizací, frekvence změn a relativní důležitost vůči jiným URL na webových stránkách. Mapu stránek lze poskytovat mnoha významným vyhledávačům, kde se používá pro jejich snazší a inteligentnější indexaci indexovacími automaty (crawlers). Mapa stránek nezaručuje, že vaše webové stránky budou ve vyhledávacích výsledcích umisťovány výše. Nicméně pomáhá vyhledávacím strojům vracet nejpodstatnější výsledky z webových stránek jako odpověď na dotazy uživatelů. Více informací o mapách stránek je k dispozici na <link xlink:href=\"http://www.sitemaps.org/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">sitemaps.org</link>,"
 
 msgid "<filename>site_overrides.css</filename> — a CSS stylesheet that overrides the styles contained in <filename>interactive.css</filename> to provide site-specific styles. This file is not created by the site creation process, but must be added manually later, or supplied by the site <firstterm>home page</firstterm>."
-msgstr ""
+msgstr "<filename>site_overrides.css</filename> — styl CSS, který potlačuje styly obsažené v <filename>interactive.css</filename> a poskytuje specifické styly webových stránek. Tento soubor není vytvořen při procesu vytvoření webových stránek, musí být přidán ručně později, nebo poskytnut  <firstterm>domovskou stránkou</firstterm> webových stránek,"
 
 msgid "<filename>default.js</filename> — a JavaScript script that directs visitors to localized content based on the locale set in their browser and which controls the presentation of the navigation menu."
-msgstr ""
+msgstr "<filename>default.js</filename> — skript JavaScript, který směruje návštěvníky na lokalizovaný obsah na základě nastavení národního prostředí v jejich prohlížeči a který řídí prezentaci navigační nabídky,"
 
 msgid "subdirectories for each language in which you publish. Initially, this contains <filename>opds.xml</filename> and <filename>toc.html</filename>. Later it also contains <filename>opds-<replaceable>product</replaceable>.xml</filename>:"
-msgstr ""
+msgstr "podadresáře každé zveřejněné jazykové verze. Zpočátku obsahují <filename>opds.xml</filename> a <filename>toc.html</filename>. Později obsahují rovněž <filename>opds-<replaceable>produkt</replaceable>.xml</filename>:"
 
 msgid "<filename>opds.xml</filename> — an OPDS catalog of EPUB documents in this language."
-msgstr ""
+msgstr "<filename>opds.xml</filename> — katalog dokumentů EPUB OPDS v daném jazyce,"
 
 msgid "<filename>opds-<replaceable>product</replaceable>.xml</filename> — an OPDS catalog of EPUB documents for each product for which you publish documentation in this language. Within each product catalog, documentation is divided into <tag>&lt;category&gt;</tag>s for different versions of the same product."
-msgstr ""
+msgstr "<filename>opds-<replaceable>produkt</replaceable>.xml</filename> — katalog dokumentu EPUB OPDS pro každý produkt, pro který v daném jazyce publikujete dokumentaci. V rámci každého produktového katalogu je dokumentace rozdělena do kategorií <tag>&lt;category&gt;</tag> pro různé verze téhož produktu,"
 
 msgid "<filename>toc.html</filename> — the table of contents for that language, initially without links to any documents."
-msgstr ""
+msgstr "<filename>toc.html</filename> — obsah v daném jazyce, nejprve bez odkazů na dokumenty,"
 
 msgid "A subdirectory for each product for which you publish documentation in this language."
-msgstr ""
+msgstr "podadresář pro každý produkt, pro který publikujete v daném jazyce dokumentaci."
 
-msgid "Optionally, the site structure might also include a <firstterm>dump file</firstterm> — an XML file that provides complete site content details for delivery of other services, such as web feeds or customised search pages. The site structure might also contain a zipped version of the dump file. Refer to <xref linkend=\"sect-Publican-Users_Guide-Creating_the_website_structure\" /> and <xref linkend=\"sect-Publican-Users_Guide-Creating_the_website_structure\" /> for details of creating a dump file, and to <xref linkend=\"appe-Publican-Users_Guide-Contents_of_the_website_dump_file\" /> for a description of the dump file contents."
-msgstr ""
+#, fuzzy
+msgid "Optionally, the site structure might also include a <firstterm>dump file</firstterm> — an XML file that provides complete site content details for delivery of other services, such as web feeds or customised search pages. The site structure might also contain a zipped version of the dump file. Refer to <xref linkend=\"sect-Publican-Users_Guide-Building_a_website_with_Publican-Building_a_website_manually\" /> and <xref linkend=\"sect-Publican-Users_Guide-Building_a_website_with_Publican-Building_a_website_using_RPM_packages\" /> for details of creating a dump file, and to <xref linkend=\"appe-Publican-Users_Guide-Contents_of_the_website_dump_file\" /> for a description of the dump file contents."
+msgstr "Volitelně může struktura webových stránek obsahovat rovněž <firstterm>soubor dump</firstterm> — soubor XML, který poskytuje úplné podrobnosti o obsahu webových stránek, za účelem doručovaní dalších služeb, jako např. webové zdroje/kanály (feeds) nebo zákaznicky upravené stránky vyhledávání. Struktura může také obsahovat soubor dump ve formátu archivu zip. Podrobnosti o vytváření souboru dump viz <xref linkend=\"sect-Publican-Users_Guide-Creating_the_website_structure\" /> a <xref linkend=\"sect-Publican-Users_Guide-Creating_the_website_structure\" />, popis obsahu souboru dump viz <xref linkend=\"appe-Publican-Users_Guide-Contents_of_the_website_dump_file\" />."
 
 msgid "Building a website manually"
-msgstr ""
+msgstr "Ruční sestavování webových stránek"
 
 msgid "Building a website using RPM packages"
-msgstr ""
+msgstr "Sestavování webových stránek za použití balíčků RPM"
 
 msgid "Submitting Your Sitemap to Search Engines"
-msgstr ""
+msgstr "Předložení mapy stránek vyhledávacím strojům"
 
 msgid "A Publican website includes an XML Sitemap file. The Sitemap can be submitted to many major search engines, in order to help them index your website more intelligently and thoroughly. Each search engine has its own submission procedure. This section includes documentation on how to submit a Sitemap to Google and Bing."
-msgstr ""
+msgstr "Webové stránky vytvořené Publicanem obsahují soubor XML mapy stránek. Mapu stránek lze předložit mnoha významným vyhledávacím strojům, s cílem pomoci jim oindexovat vaše stránky inteligentněji a podrobněji. Každý vyhledávací stroj má svůj vlastní předkládací postup. Tento oddíl obsahuje dokumentaci jak předložit mapu stránek vyhledávačům Google a Bing."
 
 msgid "Submitting Your Sitemap to Google."
-msgstr ""
+msgstr "Předložení mapy stránek vyhledávači Google"
 
 msgid "To Submit Your Sitemap to Google:"
-msgstr ""
+msgstr "Chcete-li předložit mapu stránek Googlu:"
 
 msgid "Sign up for a Google account at <link xlink:href=\"http://www.google.com/webmasters/tools/home\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Google Webmaster Tools</link>. If you already have a Google account, you can use it."
-msgstr ""
+msgstr "Zaregistrujte si účet Google na stránce <link xlink:href=\"http://www.google.com/webmasters/tools/home\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Nástroje Google pro webmastery</link>. Máte-li již účet Google vytvořen, lze ho použít."
 
 msgid "Sign in to your Google Webmaster Tools account at this URL: <link xlink:href=\"http://www.google.com/webmasters/tools/home\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">http://www.google.com/webmasters/tools/home</link>."
-msgstr ""
+msgstr "Přihlaste se do svého účtu pro Nástroje Google pro webmastery na této URL: <link xlink:href=\"http://www.google.com/webmasters/tools/home\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">http://www.google.com/webmasters/tools/home</link>."
 
 msgid "First you must verify you are the owner of your Publican site. Click the <guibutton>Add A Site</guibutton> button."
-msgstr ""
+msgstr "Nejprve musíte ověřit, že jste vlastníkem vlastních webových stránek vytvořených v Publicanu. Klepněte na tlačítka <guibutton>Přidat stránky</guibutton>."
 
 msgid "A dialog box is displayed for you to <guilabel>Add a site</guilabel> with. Enter the URL of your Publican site in the text entry field and click <guibutton>Continue</guibutton>."
-msgstr ""
+msgstr "Stránku přidáte ve zobrazeném dialogovém okně. Do textového pole zadejte URL svých stránek a klepněte na <guibutton>Pokračovat</guibutton>."
 
 msgid "Follow the instructions that display and upload the HTML file that Google provides to the document root of your website."
-msgstr ""
+msgstr "Postupujte podle pokynů, které se zobrazí, a uložte soubor HTML poskytnutý Googlem do dokumentačního kořenu (document root) svých stránek."
 
 msgid "When you have confirmed that the provided HTML file has been uploaded to the required location by accessing it in a web browser, click the <guibutton>Verify</guibutton> button."
-msgstr ""
+msgstr "Až potvrdíte, že poskytnutý soubor HTML byl nahrán do požadovaného umístění tím, že k němu přistoupíte přes webový prohlížeč, klepněte na tlačítko <guibutton>Ověřit</guibutton>."
 
 msgid "When you have successfully verified the ownership of your Publican website to Google, return to the Webmaster Tools home page. Your Publican site is listed. Click on it."
-msgstr ""
+msgstr "Pokud jste úspěšně ověřili Googlu vlastnictví svých webových stránek, vraťte se zpět na domovskou stránku Nástrojů Google pro webmastery. Vaše stránky jsou zobrazeny na seznamu. Klepněte na ně."
 
 msgid "You are taken to the Webmaster Tools configuration page for your Publican site. On the left side of the page there is a menu. Click on the <guilabel>Site configuration</guilabel> menu entry to expand it. Its expanded contents includes a <guilabel>Sitemaps</guilabel> entry. Click it."
-msgstr ""
+msgstr "Jste přeneseni na konfigurační stránku Nástrojů pro webmastery svých webových stránek. Po levé straně stránky se nachází nabídka. Klepněte na nabídku <guilabel>Konfigurace stránek</guilabel>, aby se rozbalila. Rozbalená nabídka obsahuje položku <guilabel>Mapa stránek</guilabel>. Klepněte na ni."
 
 msgid "You are taken to a Sitemap submission page. Click the <guibutton>Submit a Sitemap</guibutton> button."
-msgstr ""
+msgstr "Jste přeneseni na Stránku předložení mapy stránek. Klepněte na tlačítko <guibutton>Předložit mapu stránek</guibutton>."
 
 msgid "A text entry field displays, including the base URL of your Publican site, with room to enter the URL of your Sitemap XML file. Enter its location and click the <guibutton>Submit Sitemap</guibutton> button. The details of the Sitemap are displayed in a table."
-msgstr ""
+msgstr "Zobrazí se textové pole, včetně základní URL vašich stránek, s místem pro zadání URL vašeho souboru XML mapy stránek. Vložte jeho umístění a klepněte na tlačítko <guibutton>Odeslat mapu stránek</guibutton>. Podrobnosti o mapě stránek se zobrazí v tabulce."
 
 msgid "Result"
-msgstr ""
+msgstr "Výsledek"
 
 msgid "The Sitemap for your Publican site has been successfully submitted to Google."
-msgstr ""
+msgstr "Mapa vašich webových stránek vytvořených v Publicanu byla úspěšně předložena Googlu."
 
 msgid "Submitting Your Sitemap to Bing."
-msgstr ""
+msgstr "Předložení mapy stránek vyhledávači Bing"
 
 msgid "To Submit Your Sitemap to Bing:"
-msgstr ""
+msgstr "Chcete-li předložit mapu stránek Bingu:"
 
 msgid "Sign up for a Bing Webmaster Tools account at <link xlink:href=\"http://www.bing.com/toolbox/webmaster/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Bing Webmaster Tools</link>. If you already have a Windows LiveID account, you can use it."
-msgstr ""
+msgstr "Zaregistrujte si účet Bing pro správce webu na <link xlink:href=\"http://www.bing.com/toolbox/webmaster/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">Bing správce webu</link>. Máte-li již účet Windows LiveID zřízen, lze použít tento."
 
 msgid "Sign in to your Bing Webmaster Tools account at this URL: <link xlink:href=\"http://www.bing.com/toolbox/webmaster/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">http://www.bing.com/toolbox/webmaster/</link>."
-msgstr ""
+msgstr "Přihlaste se do svého účtu Bing správce webu na URL: <link xlink:href=\"http://www.bing.com/toolbox/webmaster/\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">http://www.bing.com/toolbox/webmaster/</link>."
 
 msgid "Click the <guibutton>Add Site</guibutton> button."
-msgstr ""
+msgstr "Klepněte na tlačítko <guibutton>Přidat web</guibutton>."
 
 msgid "The <guilabel>Add Site</guilabel> dialog box is displayed. Enter the URL of your Publican site in the text entry field and click <guibutton>Submit</guibutton>."
-msgstr ""
+msgstr "Zobrazí se dialogové okno <guilabel>Přidat web</guilabel>. Do textového pole zadejte URL svých webových stránek vytvořených v Publicanu a klepněte na <guibutton>Odeslat</guibutton>."
 
 msgid "The <guilabel>Verify Ownership</guilabel> dialog displays, with three options. Follow the instructions given when the <guilabel>Option 1: Place an XML file on your web server</guilabel> has been expanded. Upload the <systemitem>BingSiteAuth.xml</systemitem> file that Bing provides to the document root of your website."
-msgstr ""
+msgstr "Zobrazí se dialog <guilabel>Ověřit vlastnictví</guilabel> s třemi možnostmi. Postupujte dle pokynů, když se rozbalí <guilabel>Možnost 1: Umístěte soubor XML na svůj webový server</guilabel>. Nahrajte soubor <systemitem>BingSiteAuth.xml</systemitem> poskytnutý Bingem do dokumentačního kořenu svých webových stránek."
 
 msgid "When you have confirmed that the provided <systemitem>BingSiteAuth.xml</systemitem> file has been uploaded to the required location by accessing it in a web browser, click the <guibutton>Verify</guibutton> button."
-msgstr ""
+msgstr "Až potvrdíte, že poskytnutý soubor <systemitem>BingSiteAuth.xml</systemitem> byl nahrán do požadovaného umístění tím, že k němu přistoupíte ve webovém prohlížeči, klepněte na tlačítko <guibutton>Ověřit</guibutton>."
 
 msgid "When you have successfully verified your ownership of your Publican website to Bing, return to the Bing Webmaster Tools home page. Your Publican site is listed. Click on it."
-msgstr ""
+msgstr "Po úspěšném ověření vlastnictví svých webových stránek se vraťte na domovskou stránku Bing správce webu. Zde by měly být webové stránky uvedeny v seznamu. Klepněte na ně."
 
 msgid "Select the <guibutton>Crawl</guibutton> tab."
-msgstr ""
+msgstr "Zvolte kartu <guibutton>Crawl</guibutton>."
 
 msgid "Select <guilabel>Sitemaps</guilabel> and then <guilabel>Add Feed</guilabel>."
-msgstr ""
+msgstr "Zvolte <guilabel>Mapy stránek</guilabel> a poté <guilabel>Přidat feed</guilabel>."
 
 msgid "The <guilabel>Add Feed</guilabel> dialog displays. Enter the URL of your Sitemap file and click <guibutton>Submit</guibutton>. The details of the Sitemap are displayed."
-msgstr ""
+msgstr "Zobrazí se dialog <guilabel>Přidat feed</guilabel>. Vložte URL souboru mapy svých stránek a klepněte na <guibutton>Odeslat</guibutton>. Zobrazí se podrobnosti o mapě stránek."
 
+# translation auto-copied from project Zanata Quickstart Guide, version 1.0, document Redhat_Quickstart, author Michal Vaněk
 msgid "Result:"
-msgstr ""
+msgstr "Výsledek:"
 
 msgid "The Sitemap for your Publican site has been successfully submitted to Bing."
-msgstr ""
+msgstr "Mapa vašich webových stránek vytvořených v Publicanu byla úspěšně předložena Bingu."
 

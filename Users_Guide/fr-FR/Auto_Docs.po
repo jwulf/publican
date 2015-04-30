@@ -1,21 +1,25 @@
+# Gé Baylard <geodebay@gmail.com>, 2014. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2014-09-30 07:39+1000\n"
-"PO-Revision-Date: 2014-09-30 07:39+1000\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: None\n"
-"Language: en-US \n"
+"POT-Creation-Date: 2014-10-03 13:17+1000\n"
 "MIME-Version: 1.0\n"
-"Content-Type: application/x-publican; charset=UTF-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Publican v4.2.2\n"
+"PO-Revision-Date: 2014-10-03 01:16-0400\n"
+"Last-Translator: Gé Baylard <geodebay@gmail.com>\n"
+"Language-Team: None\n"
+"Language: fr\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=2; plural=(n > 1)\n"
 
+# translation auto-copied from project Publican Users' Guide, version 3, document Command_summary
 msgid "Command summary"
-msgstr ""
+msgstr "Résumé des commandes"
 
+# translation auto-copied from project Publican Users' Guide, version 3, document Publican_Commands
 msgid "Command options"
-msgstr ""
+msgstr "Options de commande"
 
 msgid "--allow_network"
 msgstr ""
@@ -23,47 +27,61 @@ msgstr ""
 msgid "Allow the XML and XSLT processing to access the network. Defaults off."
 msgstr ""
 
+# translation auto-copied from project Publican Users' Guide, version 3, document Command_summary
 msgid "--brand_dir=s"
-msgstr ""
+msgstr "--brand_dir=s"
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Directory to source brand files from."
-msgstr ""
+msgstr "Répertoire pour les fichiers source de la marque."
 
+# translation auto-copied from project Publican Users' Guide, version 3, document Command_summary
 msgid "--common_config=s"
-msgstr ""
+msgstr "--common_config=s"
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Override path to Common_Config directory"
-msgstr ""
+msgstr "Surcharge le chemin vers le répertoire Common_Config"
 
+# translation auto-copied from project Publican Users' Guide, version 3, document Command_summary
 msgid "--common_content=s"
-msgstr ""
+msgstr "--common_content=s"
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Override path to Common_Content directory"
-msgstr ""
+msgstr "Surcharge le chemin vers le répertoire Common_Content"
 
+# translation auto-copied from project Publican Users' Guide, version 3, document Command_summary
 msgid "--config=s"
-msgstr ""
+msgstr "--config=s"
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Use a nonstandard config file"
-msgstr ""
+msgstr "Utiliser un fichier de configuration non standard"
 
+# translation auto-copied from project Publican Users' Guide, version 3, document Command_summary
 msgid "--help"
-msgstr ""
+msgstr "--help"
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Display help message"
-msgstr ""
+msgstr "Afficher un message d'aide"
 
+# translation auto-copied from project Publican Users' Guide, version 3, document Command_summary
 msgid "--nocolours"
-msgstr ""
+msgstr "--nocolours"
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Disable ANSI colourisation of logging."
-msgstr ""
+msgstr "Désactiver la colorisation ANSI de la journalisation."
 
+# translation auto-copied from project Publican Users' Guide, version 3, document Command_summary
 msgid "--quiet"
-msgstr ""
+msgstr "--quiet"
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Disable all logging."
-msgstr ""
+msgstr "Désactiver toute journalisation."
 
 msgid "Command actions"
 msgstr ""
@@ -71,104 +89,134 @@ msgstr ""
 msgid "<prompt>$</prompt><command> publican</command> add_revision"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Add an entry to the revision history"
-msgstr ""
+msgstr "Ajouter une entrée dans l'historique des révisions"
 
+# translation auto-copied from project Publican Users' Guide, version 3, document Command_summary
 msgid "--date=<replaceable>DATE</replaceable>"
-msgstr ""
+msgstr "--date=<replaceable>DATE</replaceable>"
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Date to use for a revision."
-msgstr ""
+msgstr "Date à utiliser pour une révision."
 
+# translation auto-copied from project Publican Users' Guide, version 3, document Command_summary
 msgid "--email=<replaceable>EMAIL</replaceable>"
-msgstr ""
+msgstr "--email=<replaceable>E-MAIL</replaceable>"
 
+# translation auto-copied from project Publican Users' Guide, version 3, document Command_summary
 msgid "email to use for a revision."
-msgstr ""
+msgstr "adresse électronique à utiliser pour la révision."
 
+# translation auto-copied from project Publican Users' Guide, version 3, document Command_summary
 msgid "--firstname=<replaceable>FIRSTNAME</replaceable>"
-msgstr ""
+msgstr "--firstname=<replaceable>PRÉNOM</replaceable>"
 
+# translation auto-copied from project Publican Users' Guide, version 3, document Command_summary
 msgid "firstname to use for a revision."
-msgstr ""
+msgstr "prénom à utiliser pour la révision"
 
+# translation auto-copied from project Publican Users' Guide, version 3, document Command_summary
 msgid "--lang=<replaceable>LANG</replaceable>"
-msgstr ""
+msgstr "--lang=<replaceable>LANGUE</replaceable>"
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "The language the XML will be written in"
-msgstr ""
+msgstr "Langue dans laquelle le XML sera écrit"
 
+# translation auto-copied from project Publican Users' Guide, version 3, document Command_summary
 msgid "--member=<replaceable>MEMBER</replaceable>"
-msgstr ""
+msgstr "--member=<replaceable>MEMBRE</replaceable>"
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "An entry to be added to the revision. Can be specified multiple times."
-msgstr ""
+msgstr "Une entrée à ajouter pour la révision. Peut être précisée plusieurs fois."
 
+# translation auto-copied from project Publican Users' Guide, version 3, document Command_summary
 msgid "--revnumber=<replaceable>REVNUMBER</replaceable>"
-msgstr ""
+msgstr "--revnumber=<replaceable>NUMÉRO_RÉVISION</replaceable>"
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Revision number to use for a revision."
-msgstr ""
+msgstr "Numéro à utiliser pour la révision"
 
+# translation auto-copied from project Publican Users' Guide, version 3, document Command_summary
 msgid "--surname=<replaceable>SURNAME</replaceable>"
-msgstr ""
+msgstr "--surname=<replaceable>NOM_FAMILLE</replaceable>"
 
+# translation auto-copied from project Publican Users' Guide, version 3, document Command_summary
 msgid "surname to use for a revision."
-msgstr ""
+msgstr "nom de famille à utiliser pour la révision."
 
 msgid "<prompt>$</prompt><command> publican</command> build"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Transform XML to other formats (pdf, html, html-single, drupal-book, etc)"
-msgstr ""
+msgstr "Transformer XML en d'autres formats (pdf, html, html-single, drupal-book, etc)"
 
 msgid "--distributed_set"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "This flag tells publican the data being processed is a distributed set. Note: do not use distributed_set on the command line. Publican uses this flag when calling itself to process distributed sets. This is the only safe way this flag can be used."
-msgstr ""
+msgstr "Cette balise indique à Publican que les données traitées font partie d'une collection distribuée. Note : ne pas utiliser distributed_set en ligne de commande. Publican utilise cette balise lorsqu'il s'appelle lui-même pour le traitement des collections distribuées. C'est la seule façon d'utiliser cette balise de manière sûre."
 
+# translation auto-copied from project Publican Users' Guide, version 3, document Command_summary
 msgid "--embedtoc"
-msgstr ""
+msgstr "--embedtoc"
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Embed the web site TOC object in the generated HTML"
-msgstr ""
+msgstr "Imbrique l'objet TOC du site Web dans le HTML créé"
 
+# translation auto-copied from project Publican Users' Guide, version 3, document Command_summary
 msgid "--formats=<replaceable>FORMATS</replaceable>"
-msgstr ""
+msgstr "--formats=<replaceable>FORMATS</replaceable>"
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Comma-separated list of formats, for example: html,pdf,html-single,html-desktop,txt,epub"
-msgstr ""
+msgstr "Liste, avec une virgule comme séparateur, des formats, par exemple : html,pdf,html-single,html-desktop,txt,epub"
 
+# translation auto-copied from project Publican Users' Guide, version 3, document Command_summary
 msgid "--langs=<replaceable>LANGS</replaceable>"
-msgstr ""
+msgstr "--langs=<replaceable>LANGUES</replaceable>"
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Comma-separated list of languages, for example: en-US,de-DE,all"
-msgstr ""
+msgstr "Liste, avec une virgule comme séparateur, des langues, par exemple : en-US,de-DE,all"
 
+# translation auto-copied from project Publican Users' Guide, version 3, document Command_summary
 msgid "--novalid"
-msgstr ""
+msgstr "--novalid"
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Do not run the DTD validation"
-msgstr ""
+msgstr "Ne pas lancer la validation de DTD"
 
 msgid "--pdftool=<replaceable>PDFTOOL</replaceable>"
 msgstr ""
 
+# translation auto-copied from project Publican Users' Guide, version 3, document Command_summary
 msgid "Override the tool to use when creating PDFs. Valid options are wkhtmltopdf and fop."
-msgstr ""
+msgstr "désigne l'outil à utiliser pour la création du PDF. Les options valides sont wkhtmltopdf ou fop."
 
+# translation auto-copied from project Publican Users' Guide, version 3, document Command_summary
 msgid "--pub_dir=<replaceable>PUB_DIR</replaceable>"
-msgstr ""
+msgstr "--pub_dir=<replaceable>RÉPERTOIRE_SOURCE</replaceable>"
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Directory to publish files to. Defaults to publish."
-msgstr ""
+msgstr "Répertoire des fichiers à publier. Par défaut « publish »"
 
+# translation auto-copied from project Publican Users' Guide, version 3, document Command_summary
 msgid "--publish"
-msgstr ""
+msgstr "--publish"
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Set up built content for publishing"
-msgstr ""
+msgstr "Paramétrer le contenu à construire pour publication"
 
 msgid "--showfuzzy"
 msgstr ""
@@ -176,161 +224,188 @@ msgstr ""
 msgid "Show fuzzy translation entries in output. Defaults off."
 msgstr ""
 
+# translation auto-copied from project Publican Users' Guide, version 3, document Command_summary
 msgid "--src_dir=<replaceable>SRC_DIR</replaceable>"
-msgstr ""
+msgstr "--src_dir=<replaceable>SRC_DIR</replaceable>"
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Directory to source publican files from."
-msgstr ""
+msgstr "Répertoire pour les fichiers source de publican."
 
 msgid "<prompt>$</prompt><command> publican</command> clean"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Remove all temporary files and directories"
-msgstr ""
+msgstr "Supprimer tous fichiers et répertoires temporaires"
 
 msgid "<prompt>$</prompt><command> publican</command> clean_ids"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Run clean ids for source XML"
-msgstr ""
+msgstr "Exécuter clean_ids pour le XML source"
 
 msgid "<prompt>$</prompt><command> publican</command> clean_set"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Remove local copies of remote set books"
-msgstr ""
+msgstr "Supprimer les copies locales des collections d'ouvrages distantes"
 
 msgid "<prompt>$</prompt><command> publican</command> copy_web_brand"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Copy a brand's installed web content to another site"
-msgstr ""
+msgstr "Copier le contenu Web installé d'une estampille sur un autre site"
 
 msgid "--brand=<replaceable>BRAND</replaceable>"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "The brand to use"
-msgstr ""
+msgstr "L'estampille à utiliser"
 
 msgid "--old_site_config=<replaceable>OLD_SITE_CONFIG</replaceable>"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "WebSite configuration file to use when copying content between sites."
-msgstr ""
+msgstr "Fichier de configuration du site Web à utiliser lors de la copie du contenu entre sites."
 
 msgid "--site_config=<replaceable>SITE_CONFIG</replaceable>"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "WebSite configuration file to use or create."
-msgstr ""
+msgstr "Fichier de configuration du site Web à utiliser ou à créer."
 
 msgid "<prompt>$</prompt><command> publican</command> create"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Create a new book, set, or article"
-msgstr ""
+msgstr "Créer un nouvel ouvrage, ensemble ou article"
 
 msgid "--dtdver=<replaceable>DTDVER</replaceable>"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "The version of the DocBook DTD to use"
-msgstr ""
+msgstr "La version du DTD Dockbook à utiliser."
 
 msgid "--edition=<replaceable>EDITION</replaceable>"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "The edition of the book, article, or set"
-msgstr ""
+msgstr "L'édition de l'ouvrage, de l'article ou de la collection"
 
 msgid "--name=<replaceable>NAME</replaceable>"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "The name of the book, article, set, or brand"
-msgstr ""
+msgstr "Le nom de l'ouvrage, de l'article, de la collection ou de la marque"
 
 msgid "--product=<replaceable>PRODUCT</replaceable>"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "The name of the product"
-msgstr ""
+msgstr "Le nom du produit"
 
 msgid "--type=<replaceable>TYPE</replaceable>"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "The type (book, article, or set)"
-msgstr ""
+msgstr "Le type (ouvrage, article ou collection)"
 
 msgid "--version=<replaceable>VERSION</replaceable>"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "The version of the product"
-msgstr ""
+msgstr "La version du produit"
 
 msgid "<prompt>$</prompt><command> publican</command> create_brand"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Create a new brand"
-msgstr ""
+msgstr "Créer une nouvelle marque"
 
 msgid "<prompt>$</prompt><command> publican</command> create_site"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Create a new WebSite in the supplied location."
-msgstr ""
+msgstr "Créer un nouveau site Web à l'emplacement indiqué"
 
 msgid "--db_file=<replaceable>DB_FILE</replaceable>"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Override default database file."
-msgstr ""
+msgstr "Surcharge le fichier base de données par défaut."
 
 msgid "--tmpl_path=<replaceable>TMPL_PATH</replaceable>"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Override the default template path."
-msgstr ""
+msgstr "Remplace le chemin du modèle par défaut."
 
 msgid "--toc_path=<replaceable>TOC_PATH</replaceable>"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Override the default TOC path."
-msgstr ""
+msgstr "Remplace le chemin vers la TOC par défaut."
 
 msgid "<prompt>$</prompt><command> publican</command> help_config"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Display help text for the configuration file"
-msgstr ""
+msgstr "Afficher un message d'aide pour le fichier de configuration"
 
 msgid "<prompt>$</prompt><command> publican</command> install_book"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Install a book in to a WebSite."
-msgstr ""
+msgstr "Installer un ouvrage sur un site Web."
 
 msgid "<prompt>$</prompt><command> publican</command> install_brand"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Install a brand to the supplied location"
-msgstr ""
+msgstr "Installer une marque à l'emplacement indiqué"
 
 msgid "--path=<replaceable>PATH</replaceable>"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "/path/to/install/to"
-msgstr ""
+msgstr "/chemin/vers/emplacement/installation"
 
 msgid "--web"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Install the web content for a brand."
-msgstr ""
+msgstr "Installer le contenu Web pour une marque."
 
 msgid "<prompt>$</prompt><command> publican</command> lang_stats"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "report PO statistics"
-msgstr ""
+msgstr "rapport des statistiques PO"
 
 msgid "<prompt>$</prompt><command> publican</command> migrate_site"
 msgstr ""
@@ -341,210 +416,251 @@ msgstr ""
 msgid "<prompt>$</prompt><command> publican</command> package"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Package a language for shipping"
-msgstr ""
+msgstr "Empaquetage d'une langue pour livraison"
 
+# translation auto-copied from project Publican Users' Guide, version 3, document Command_summary
 msgid "--binary"
-msgstr ""
+msgstr "--binary"
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Build binary rpm when running package"
-msgstr ""
+msgstr "Construire le RPM binaire au lancement de l'empaquetage"
 
+# translation auto-copied from project Publican Users' Guide, version 3, document Command_summary
 msgid "--brew"
-msgstr ""
+msgstr "--brew"
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Push SRPM to brew"
-msgstr ""
+msgstr "Pousser le SRPM dans brew"
 
+# translation auto-copied from project Publican Users' Guide, version 3, document Command_summary
 msgid "--desktop"
-msgstr ""
+msgstr "--desktop"
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Create desktop instead of web package"
-msgstr ""
+msgstr "Créer un paquet de bureau au lieu d'un paquet Web"
 
+# translation auto-copied from project Publican Users' Guide, version 3, document Command_summary
 msgid "--scratch"
-msgstr ""
+msgstr "--scratch"
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Use scratch instead of tag build"
-msgstr ""
+msgstr "Utiliser une construction à partir de zéro au lieu d'une reprise"
 
+# translation auto-copied from project Publican Users' Guide, version 3, document Command_summary
 msgid "--short_sighted"
-msgstr ""
+msgstr "--short_sighted"
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Create package without using version in package name"
-msgstr ""
+msgstr "Créer un paquet sans numéro de version dans le nom"
 
 msgid "--wait"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Wait for brew to finish building"
-msgstr ""
+msgstr "En attente de la fin de construction à l'aide de brew"
 
 msgid "<prompt>$</prompt><command> publican</command> print_banned"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Print a list of banned DocBook tags"
-msgstr ""
+msgstr "Afficher une liste des balises DocBook interdites"
 
 msgid "<prompt>$</prompt><command> publican</command> print_known"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Print a list of QA'd DocBook tags"
-msgstr ""
+msgstr "Afficher une liste des balises DocBook QA"
 
 msgid "<prompt>$</prompt><command> publican</command> print_tree"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Print a tree of the xi:includes"
-msgstr ""
+msgstr "Afficher l'arborescence des xi:includes"
 
 msgid "<prompt>$</prompt><command> publican</command> print_unused"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Print a list of unused XML files"
-msgstr ""
+msgstr "Afficher une liste des fichiers XML inutilisés"
 
 msgid "<prompt>$</prompt><command> publican</command> print_unused_images"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Print a list of unused Image files"
-msgstr ""
+msgstr "Afficher la liste des fichiers Image non utilisés"
 
 msgid "<prompt>$</prompt><command> publican</command> remove_book"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Remove a book from a WebSite."
-msgstr ""
+msgstr "Supprimer un ouvrage d'un site Web."
 
 msgid "<prompt>$</prompt><command> publican</command> rename"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Rename a publican book"
-msgstr ""
+msgstr "Renommer un ouvrage Publican"
 
 msgid "<prompt>$</prompt><command> publican</command> report"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Print a readability report for the source text."
-msgstr ""
+msgstr "Afficher un rapport de lisibilité pour le texte source"
 
 msgid "<prompt>$</prompt><command> publican</command> site_stats"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Report on the contents of a WebSite"
-msgstr ""
+msgstr "Rapporter le contenu du site Web"
 
 msgid "<prompt>$</prompt><command> publican</command> trans_drop"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Snapshot the source language for use in translation."
-msgstr ""
+msgstr "Instantané de langue source à utiliser dans la traduction."
 
 msgid "<prompt>$</prompt><command> publican</command> update_db"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Add or remove database entries. Used for processing pre-build books, such as when building packages."
-msgstr ""
+msgstr "Ajouter ou supprimer des entrées dans la base de données. Utilisé pour le traitement d'ouvrages partiellement construits, de même que lors de la construction de paquets."
 
 msgid "--abstract=<replaceable>ABSTRACT</replaceable>"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Abstract for a book"
-msgstr ""
+msgstr "Résumé pour un ouvrage"
 
 msgid "--add"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Add a database entry"
-msgstr ""
+msgstr "Ajouter une entrée de base de données"
 
 msgid "--book_src_lang=<replaceable>BOOK_SRC_LANG</replaceable>"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "The language this translation is based on."
-msgstr ""
+msgstr "Langue sur laquelle cette traduction se fonde."
 
 msgid "--book_version=<replaceable>BOOK_VERSION</replaceable>"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "The version number of the book being installed."
-msgstr ""
+msgstr "Le numéro de version de l'ouvrage installé."
 
 msgid "--del"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Delete a database entry"
-msgstr ""
+msgstr "Supprimer une entrée de la base de données"
 
 msgid "--name_label=<replaceable>NAME_LABEL</replaceable>"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "name label for a book"
-msgstr ""
+msgstr "étiquette du nom pour un ouvrage"
 
 msgid "--product_label=<replaceable>PRODUCT_LABEL</replaceable>"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "product label for a book"
-msgstr ""
+msgstr "étiquette produit pour un ouvrage"
 
 msgid "--sort_order=<replaceable>SORT_ORDER</replaceable>"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Order to sort a book"
-msgstr ""
+msgstr "Ordre de tri d'un ouvrage"
 
 msgid "--subtitle=<replaceable>SUBTITLE</replaceable>"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Sub title for a book"
-msgstr ""
+msgstr "Sous-titre d'un ouvrage"
 
 msgid "--version_label=<replaceable>VERSION_LABEL</replaceable>"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "version label for a book"
-msgstr ""
+msgstr "étiquette version pour un ouvrage"
 
 msgid "<prompt>$</prompt><command> publican</command> update_po"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Update the PO files"
-msgstr ""
+msgstr "Mise à jour des fichiers PO"
 
+# translation auto-copied from project Publican Users' Guide, version 3, document Command_summary
 msgid "--msgmerge"
-msgstr ""
+msgstr "--msgmerge"
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Use gettext's msgmerge for POT/PO merging."
-msgstr ""
+msgstr "Utiliser msgmerge de gettext pour la fusion POT/PO"
 
 msgid "--previous"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Keep previous msgid when fuzzy matches are detected in PO updates."
-msgstr ""
+msgstr "Conserver les msgid précédents quand des correspondances approximatives sont détectées dans les mises à jour des PO."
 
 msgid "<prompt>$</prompt><command> publican</command> update_pot"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Update the POT files"
-msgstr ""
+msgstr "Mise à jour des fichiers POT"
 
 msgid "<prompt>$</prompt><command> publican</command> update_site"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Update an existing sites templates."
-msgstr ""
+msgstr "Mise à jour des modèles de site existants."
 
 msgid "<prompt>$</prompt><command> publican</command> zt_pull"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Pull translations from Zanata."
-msgstr ""
+msgstr "Télécharger des traductions de Zanata."
 
 msgid "<prompt>$</prompt><command> publican</command> zt_push"
 msgstr ""
 
+# translation auto-copied from project Publican, version 4, document publican, author Gérard Baylard
 msgid "Push translations to Zanata."
-msgstr ""
+msgstr "Téléverser des traductions dans Zanata."
 

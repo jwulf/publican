@@ -1,58 +1,42 @@
 # Gé Baylard <<Geodebay@gmail.com>>, 2013.
-# Gérard Baylard <geodebay@gmail.com>, 2014. #zanata
+# Gé Baylard <geodebay@gmail.com>, 2014. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2014-05-06 14:10+1000\n"
+"POT-Creation-Date: 2014-10-03 13:17+1000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "PO-Revision-Date: 2014-05-23 04:30-0400\n"
-"Last-Translator: Gérard Baylard <geodebay@gmail.com>\n"
+"Last-Translator: Gé Baylard <geodebay@gmail.com>\n"
 "Language-Team: français <<trans-fr@lists.fedoraproject.org>>\n"
 "Language: fr\n"
-"X-Generator: Zanata 3.4.2\n"
+"X-Generator: Zanata 3.6.2\n"
 "Plural-Forms: nplurals=2; plural=n>1;\n"
 
-#. Tag: title
-#, no-c-format
 msgid "Installing, updating, and removing documents"
 msgstr "Installation, mise à jour et suppression de documents"
 
-#. Tag: para
-#, no-c-format
 msgid "To install a document on a website that you are building manually, change into the directory that contains the source for the document and run:"
 msgstr "Pour installer un document sur un site Web construit à la main, placez-vous dans le répertoire contenant la source du document et exécutez :"
 
-#. Tag: screen
-#, no-c-format
 msgid "<prompt>$</prompt> <command>publican build --embedtoc --formats=<replaceable>list_of_formats</replaceable> --langs=<replaceable>language_codes</replaceable> --publish</command> \n"
 "<prompt>$</prompt> <command>publican install_book --site_config <replaceable>path_to_site_configuration_file</replaceable>.cfg --lang <replaceable>language_code</replaceable></command>"
 msgstr "<prompt>$</prompt> <command>publican build --embedtoc --formats=<replaceable>liste_de_formats</replaceable> --langs=<replaceable>codes_langues</replaceable> --publish</command> \n"
 "<prompt>$</prompt> <command>publican install_book --site_config <replaceable>chemin_vers_fichier_configuration_site</replaceable>.cfg --lang <replaceable>code_langue</replaceable></command>"
 
-#. Tag: para
-#, no-c-format
 msgid "Note that you can run a single <prompt>$</prompt> <command>publican build</command> command for all languages that you want to publish, but must run a separate <command>publican install_book</command> for each language. You must include <literal>html</literal> as one of the formats in the <command>publican build</command> command; optionally, include any or all of the following formats in a comma-separated list: <literal>html-single</literal>, <literal>pdf</literal>, and <literal>epub</literal>."
 msgstr "Notez que vous pouvez exécuter une seule commande <prompt>$</prompt> <command>publican build</command> pour l'ensemble des langues que vous souhaitez publier, mais vous devez lancer une commande <command>publican install_book</command> séparée pour chaque langue. Vous devez inclure <literal>html</literal> dans les formats de la commande <command>publican build</command> ; facultativement, ajoutez un ou plusieurs autres formats dans un liste avec la virgule comme sépatateur : <literal>html-single</literal>, <literal>pdf</literal> et <literal>epub</literal>."
 
-#. Tag: para
-#, no-c-format
 msgid "To update a document, change into the directory that contains the updated source for the document and run the same commands as if you were installing the document for the first time. <application>Publican</application> replaces the old version with the new version."
 msgstr "Pour mettre à jour un document, placez-vous dans le répertoire contenant le document source mis à jour et lancez les mêmes commande que lors de la première installation. <application>Publican</application> remplace l'ancienne version par la nouvelle."
 
-#. Tag: para
-#, no-c-format
 msgid "To remove a document, change into the directory that contains the source for the document and run:"
 msgstr "Pour supprimer un document, placez-vous dans le répertoire contenant le document source et exécutez :"
 
-#. Tag: screen
-#, no-c-format
 msgid "<prompt>$</prompt> <command>publican remove_book --site_config <replaceable>path_to_site_configuration_file</replaceable>.cfg --lang <replaceable>language_code</replaceable></command>"
 msgstr "<prompt>$</prompt> <command>publican remove_book --site_config <replaceable>chemin_vers_fichier_de_configuration_du_site</replaceable>.cfg --lang <replaceable>code_langue</replaceable></command>"
 
-#. Tag: para
-#, no-c-format
 msgid "When you have installed the documents, the website is ready to upload to your webserver by whatever process you usually use, for example <application>scp</application>, <application>rsync</application>, or an FTP client."
 msgstr "Une fois les documents installés, le site Web est prêt à être téléversé sur le serveur à l'aide du processus que vous utilisez habituellement, par exemple <application>scp</application>, <application>rsync</application> ou un client  FTP."
 

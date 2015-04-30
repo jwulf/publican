@@ -1,21 +1,24 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2014-09-30 07:39+1000\n"
-"PO-Revision-Date: 2014-09-30 07:39+1000\n"
+"POT-Creation-Date: 2014-10-03 13:17+1000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2014-09-29 05:39-0400\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: None\n"
-"Language: en-US \n"
-"MIME-Version: 1.0\n"
-"Content-Type: application/x-publican; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Publican v4.2.2\n"
+"Language: it\n"
+"X-Generator: Zanata 3.6.2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
+# translation auto-copied from project Publican Users' Guide, version 3, document Command_summary
 msgid "Command summary"
-msgstr ""
+msgstr "Sommario dei comandi"
 
+# translation auto-copied from project Publican Users' Guide, version 3, document Publican_Commands
 msgid "Command options"
-msgstr ""
+msgstr "Opzioni di comando"
 
 msgid "--allow_network"
 msgstr ""
@@ -128,8 +131,9 @@ msgstr ""
 msgid "This flag tells publican the data being processed is a distributed set. Note: do not use distributed_set on the command line. Publican uses this flag when calling itself to process distributed sets. This is the only safe way this flag can be used."
 msgstr ""
 
+# translation auto-copied from project Publican Users' Guide, version 3, document Command_summary
 msgid "--embedtoc"
-msgstr ""
+msgstr "--embedtoc"
 
 msgid "Embed the web site TOC object in the generated HTML"
 msgstr ""
@@ -146,8 +150,9 @@ msgstr ""
 msgid "Comma-separated list of languages, for example: en-US,de-DE,all"
 msgstr ""
 
+# translation auto-copied from project Publican Users' Guide, version 3, document Command_summary
 msgid "--novalid"
-msgstr ""
+msgstr "--novalid"
 
 msgid "Do not run the DTD validation"
 msgstr ""
@@ -164,8 +169,9 @@ msgstr ""
 msgid "Directory to publish files to. Defaults to publish."
 msgstr ""
 
+# translation auto-copied from project Publican Users' Guide, version 3, document Command_summary
 msgid "--publish"
-msgstr ""
+msgstr "--publish"
 
 msgid "Set up built content for publishing"
 msgstr ""
@@ -344,32 +350,37 @@ msgstr ""
 msgid "Package a language for shipping"
 msgstr ""
 
+# translation auto-copied from project Publican Users' Guide, version 3, document Command_summary
 msgid "--binary"
-msgstr ""
+msgstr "--binary"
 
 msgid "Build binary rpm when running package"
 msgstr ""
 
+# translation auto-copied from project Publican Users' Guide, version 3, document Command_summary
 msgid "--brew"
-msgstr ""
+msgstr "--brew"
 
 msgid "Push SRPM to brew"
 msgstr ""
 
+# translation auto-copied from project Publican Users' Guide, version 3, document Command_summary
 msgid "--desktop"
-msgstr ""
+msgstr "--desktop"
 
 msgid "Create desktop instead of web package"
 msgstr ""
 
+# translation auto-copied from project Publican Users' Guide, version 3, document Command_summary
 msgid "--scratch"
-msgstr ""
+msgstr "--scratch"
 
 msgid "Use scratch instead of tag build"
 msgstr ""
 
+# translation auto-copied from project Publican Users' Guide, version 3, document Command_summary
 msgid "--short_sighted"
-msgstr ""
+msgstr "--short_sighted"
 
 msgid "Create package without using version in package name"
 msgstr ""
