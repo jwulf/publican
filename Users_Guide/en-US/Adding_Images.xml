@@ -8,7 +8,7 @@
 %DOCBOOK_ENTS;
 ]>
 <section conformance="120" version="5.0" xml:id="sect-Publican-Users_Guide-Adding_images" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
-	<info xml:id="info-Publican-Users_Guide-Adding_images">
+	<info>
 		<title>Adding images</title>
 
 	</info>
@@ -32,7 +32,7 @@
 		If your book contains images that need to be localized — for example, screenshots of a user interface in a language other than the original language of your book — place these images in the <filename>images</filename> subdirectories for each language directory. Make sure that the image file in the translated language has the same name as the image file in the original language. When you build the book in the translated language, <application>Publican</application> uses the file from the <filename>images/</filename> subdirectory of the translated language instead of the file from the <filename>images/</filename> subdirectory of the original language.
 	</para>
 	 <important>
-		<info xml:id="info-Publican-Users_Guide-Image_file_locations">
+		<info>
 			<title>Image file locations</title>
 
 		</info>

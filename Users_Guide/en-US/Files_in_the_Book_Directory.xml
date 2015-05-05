@@ -8,7 +8,7 @@
 %DOCBOOK_ENTS;
 ]>
 <section conformance="157" version="5.0" xml:id="sect-Publican-Users_Guide-Files_in_the_book_directory" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
-	<info xml:id="info-Publican-Users_Guide-Files_in_the_book_directory">
+	<info>
 		<title>Files in the book directory</title>
 
 	</info>
@@ -91,12 +91,12 @@
 
 	</itemizedlist>
 	 <section conformance="158" xml:id="sect-Publican-Users_Guide-Files_in_the_book_directory-The_publican.cfg_file">
-		<info xml:id="info-Publican-Users_Guide-The_publican.cfg_file">
+		<info>
 			<title>The publican.cfg file</title>
 
 		</info>
 		 <note>
-			<info xml:id="info-Publican-Users_Guide-Note_Customizing_output">
+			<info>
 				<title>Note — Customizing output</title>
 
 			</info>
@@ -113,7 +113,7 @@
 		 
 <programlisting><xi:include href="extras/publican.cfg" parse="text" xmlns:xi="http://www.w3.org/2001/XInclude" /></programlisting>
 		 <variablelist conformance="159" xml:id="vari-Publican-Users_Guide-The_publican.cfg_file-Default_parameters">
-			<info xml:id="info-Publican-Users_Guide-Default_parameters">
+			<info>
 				<title>Default parameters</title>
 
 			</info>
@@ -150,7 +150,7 @@
 
 		</variablelist>
 		 <variablelist conformance="160" xml:id="vari-Publican-Users_Guide-The_publican.cfg_file-Advanced_parameters">
-			<info xml:id="info-Publican-Users_Guide-Advanced_parameters">
+			<info>
 				<title>Advanced parameters<remark> Delete me and reference appendix</remark>
 				 </title>
 
@@ -162,7 +162,7 @@
 						filters output by computer <firstterm>architecture</firstterm>. For example, if you set <literal>arch: x86_64</literal> in the <filename>publican.cfg</filename> file, <application>Publican</application> will only include XML elements tagged with the equivalent attribute, such as <tag>&lt;para arch="x86_64"&gt;</tag>.
 					</para>
 					 <warning>
-						<info xml:id="info-Publican-Users_Guide-Use_with_caution">
+						<info>
 							<title>Use with caution</title>
 
 						</info>
@@ -172,7 +172,7 @@
 
 					</warning>
 					 <important>
-						<info xml:id="info-Publican-Users_Guide-arch_set_for_root_nodes">
+						<info>
 							<title>arch set for root nodes</title>
 
 						</info>
@@ -201,7 +201,7 @@
 
 					</important>
 					 <important>
-						<info xml:id="info-Publican-Users_Guide-xrefs_and_the_arch_attribute">
+						<info>
 							<title>xrefs and the arch attribute</title>
 
 						</info>
@@ -261,7 +261,7 @@
 						controls the section depth at which <application>Publican</application> no longer splits sub-subsections onto a new page when rendering HTML. By default, this value is set to <literal>4</literal>.
 					</para>
 					 <example conformance="243" xml:id="exam-Publican-Users_Guide-Advanced_parameters-Controlling_the_section_depth_with_chunk_section_depth">
-						<info xml:id="info-Publican-Users_Guide-Controlling_the_section_depth_with_chunk_section_depth">
+						<info>
 							<title>Controlling the section depth with chunk_section_depth</title>
 
 						</info>
@@ -453,7 +453,7 @@
 						specifies the version of the DocBook XML <firstterm>Document Type Definition</firstterm> (DTD) on which this project is based. <application>Publican</application> defaults to version 4.5. The specification for DocBook XML DTD version 4.5 is available from <uri xlink:href="http://www.docbook.org/specs/docbook-4.5-spec.html" xmlns:xlink="http://www.w3.org/1999/xlink">http://www.docbook.org/specs/docbook-4.5-spec.html</uri>.
 					</para>
 					 <important>
-						<info xml:id="info-Publican-Users_Guide-A_different_DTD_might_slow_your_build">
+						<info>
 							<title>A different DTD might slow your build</title>
 
 						</info>
@@ -571,7 +571,7 @@
 						controls the section depth at which <application>Publican</application> will generate a table of contents. At the default value of <literal>0</literal>, <application>Publican</application> will generate tables of contents at the start of the document and in parts, chapters, and appendixes, but not in sections. If (for example) the value is set to <literal>1</literal>, tables of contents also appear in each "level 1" section, such as sections 1.1, 1.2, 2.1, and 2.2. If set to <literal>2</literal>, tables of contents also appear in "level 2" sections, such as sections 1.1.1, 1.1.2, and 1.2.1.
 					</para>
 					 <example conformance="244" xml:id="exam-Publican-Users_Guide-Advanced_parameters-Setting_the_section_depth_at_which_tables_of_contents_appear">
-						<info xml:id="info-Publican-Users_Guide-Setting_the_section_depth_at_which_tables_of_contents_appear">
+						<info>
 							<title>Setting the section depth at which tables of contents appear</title>
 
 						</info>
@@ -834,7 +834,7 @@
 						controls the depth of sections that <application>Publican</application> includes in the main table of contents. By default, this value is set to <literal>2</literal>. With the default setting, sections 1.1 and 1.1.1 will appear in the main table of contents, but section 1.1.1.1 will not. (Note that the first digit in these examples represents a chapter, not a section).
 					</para>
 					 <example conformance="245" xml:id="exam-Publican-Users_Guide-Advanced_parameters-Controlling_the_depth_of_sections_in_the_main_table_of_contents">
-						<info xml:id="info-Publican-Users_Guide-Controlling_the_depth_of_sections_in_the_main_table_of_contents">
+						<info>
 							<title>Controlling the depth of sections in the main table of contents</title>
 
 						</info>
@@ -914,7 +914,7 @@
 						specifies that the document is the home page of a documentation website, not a standard document. Refer to <xref linkend="chap-Publican-Users_Guide-Building_a_website_with_Publican" />.
 					</para>
 					 <important>
-						<info xml:id="info-Publican-Users_Guide-Important_web_home_is_deprecated">
+						<info>
 							<title>Important — <literal>web_home</literal> is deprecated</title>
 
 						</info>
@@ -1000,7 +1000,7 @@
 
 		</variablelist>
 		 <note>
-			<info xml:id="info-Publican-Users_Guide-Help_from_the_command_line">
+			<info>
 				<title>Help from the command line</title>
 
 			</info>
@@ -1012,12 +1012,12 @@
 
 	</section>
 	 <section conformance="161" xml:id="sect-Publican-Users_Guide-Files_in_the_book_directory-Book_Info.xml">
-		<info xml:id="info-Publican-Users_Guide-Book_Info.xml">
+		<info>
 			<title>Book_Info.xml</title>
 
 		</info>
 		 <note>
-			<info xml:id="info-Publican-Users_Guide-Article_Info.xml_and_Set_Info.xml">
+			<info>
 				<title><filename>Article_Info.xml</filename> and <filename>Set_Info.xml</filename></title>
 
 			</info>
@@ -1226,7 +1226,7 @@
 
 		</variablelist>
 		 <section conformance="162" xml:id="sect-Publican-Users_Guide-Book_Info.xml-RPM_packages_editions_impressions_and_versions">
-			<info xml:id="info-Publican-Users_Guide-RPM_packages_editions_impressions_and_versions">
+			<info>
 				<title>RPM packages, editions, impressions and versions</title>
 
 			</info>
@@ -1268,7 +1268,7 @@
 
 	</section>
 	 <section conformance="163" xml:id="sect-Publican-Users_Guide-Files_in_the_book_directory-Author_Group.xml">
-		<info xml:id="info-Publican-Users_Guide-Author_Group.xml">
+		<info>
 			<title>Author_Group.xml</title>
 
 		</info>
@@ -1283,12 +1283,12 @@
 
 	</section>
 	 <section conformance="164" xml:id="sect-Publican-Users_Guide-Files_in_the_book_directory-Chapter.xml">
-		<info xml:id="info-Publican-Users_Guide-Chapter.xml">
+		<info>
 			<title>Chapter.xml</title>
 
 		</info>
 		 <important>
-			<info xml:id="info-Publican-Users_Guide-Articles_and_chapters">
+			<info>
 				<title>Articles and chapters</title>
 
 			</info>
@@ -1309,7 +1309,7 @@
 			This chapter has two sections, <filename>Section 1 Test</filename> and <filename>Section 2 Test</filename>. Refer to <uri xlink:href="http://docbook.org/tdg/en/html/chapter.html" xmlns:xlink="http://www.w3.org/1999/xlink">http://docbook.org/tdg/en/html/chapter.html</uri> for further information about chapters.
 		</para>
 		 <note>
-			<info xml:id="info-Publican-Users_Guide-Note">
+			<info>
 				<title>Note</title>
 
 			</info>
@@ -1321,7 +1321,7 @@
 
 	</section>
 	 <section conformance="165" xml:id="sect-Publican-Users_Guide-Files_in_the_book_directory-Doc_Name.xml">
-		<info xml:id="info-Publican-Users_Guide-Doc_Name.xml">
+		<info>
 			<title><replaceable>Doc_Name</replaceable>.xml</title>
 
 		</info>
@@ -1332,7 +1332,7 @@
 			The following is an example <filename><replaceable>Doc_Name</replaceable>.xml</filename> file that describes a DocBook book — note the <parameter>DOCTYPE</parameter> is set to <literal>book</literal>.
 		</para>
 		 <example conformance="246" xml:id="exam-Publican-Users_Guide-Doc_Name.xml-A_DocBook_book">
-			<info xml:id="info-Publican-Users_Guide-A_DocBook_book">
+			<info>
 				<title>A DocBook book</title>
 
 			</info>
@@ -1392,7 +1392,7 @@
 
 	</section>
 	 <section conformance="166" xml:id="sect-Publican-Users_Guide-Files_in_the_book_directory-Doc_Name.ent">
-		<info xml:id="info-Publican-Users_Guide-Doc_Name.ent">
+		<info>
 			<title><replaceable>Doc_Name</replaceable>.ent</title>
 
 		</info>
@@ -1408,7 +1408,7 @@
 
 	</section>
 	 <section conformance="167" xml:id="sect-Publican-Users_Guide-Files_in_the_book_directory-Revision_History.xml">
-		<info xml:id="info-Publican-Users_Guide-Revision_History.xml">
+		<info>
 			<title>Revision_History.xml</title>
 
 		</info>

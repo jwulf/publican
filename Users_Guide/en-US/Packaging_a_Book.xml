@@ -8,13 +8,13 @@
 %DOCBOOK_ENTS;
 ]>
 <section conformance="193" version="5.0" xml:id="sect-Publican-Users_Guide-Packaging_a_document" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
-	<info xml:id="info-Publican-Users_Guide-Packaging_a_document">
+	<info>
 		<title>Packaging a document</title>
 
 	</info>
 	 <xi:include href="Applicable_to_RPM_only.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
 	 <note conformance="234">
-		<info xml:id="info-Publican-Users_Guide-Note_Customizing_output">
+		<info>
 			<title>Note — Customizing output</title>
 
 		</info>
@@ -32,7 +32,7 @@
 		<application>Publican</application> not only builds documentation, but it can package built content for distribution to individual workstations and to web servers as <firstterm>RPM packages</firstterm>. RPM packages are used to distribute software to computers with Linux operating systems that use the <application>RPM Package Manager</application>. These operating systems include Red Hat Enterprise Linux, Fedora, Mandriva Linux, SUSE Linux Enterprise, openSUSE, Turbolinux, and Yellow Dog Linux, to name just a few.
 	</para>
 	 <section conformance="194" xml:id="sect-Publican-Users_Guide-Packaging_a_document-Types_of_RPM_packages">
-		<info xml:id="info-Publican-Users_Guide-Types_of_RPM_packages">
+		<info>
 			<title>Types of RPM packages</title>
 
 		</info>
@@ -40,7 +40,7 @@
 			<application>Publican</application> can produce both <firstterm>source RPM packages</firstterm> (<firstterm>SRPM packages</firstterm>) and <firstterm>binary RPM packages</firstterm>. Furthermore, both SRPM packages and binary RPM packages can be configured to deploy to workstations or web servers.
 		</para>
 		 <section conformance="195" xml:id="sect-Publican-Users_Guide-Types_of_RPM_packages-Source_RPM_packages_and_binary_RPM_packages">
-			<info xml:id="info-Publican-Users_Guide-Source_RPM_packages_and_binary_RPM_packages">
+			<info>
 				<title>Source RPM packages and binary RPM packages</title>
 
 			</info>
@@ -53,7 +53,7 @@
 
 		</section>
 		 <section conformance="196" xml:id="sect-Publican-Users_Guide-Types_of_RPM_packages-Desktop_packages_and_web_packages">
-			<info xml:id="info-Publican-Users_Guide-Desktop_packages_and_web_packages">
+			<info>
 				<title>Desktop packages and web packages</title>
 
 			</info>
@@ -93,7 +93,7 @@
 
 	</section>
 	 <section conformance="197" xml:id="sect-Publican-Users_Guide-Packaging_a_document-The_publican_package_command">
-		<info xml:id="info-Publican-Users_Guide-The_publican_package_command">
+		<info>
 			<title>The <prompt>$</prompt> <command>publican package</command> command</title>
 
 		</info>
@@ -111,7 +111,7 @@
 						specifies the language in which to package the documentation.
 					</para>
 					 <note>
-						<info xml:id="info-Publican-Users_Guide-Incomplete_translations">
+						<info>
 							<title>Incomplete translations</title>
 
 						</info>
@@ -171,7 +171,7 @@
 						specifies that <application>Publican</application> should build the package without including the version number of the software (<parameter>version</parameter> in the <filename>publican.cfg</filename> file) in the package name.
 					</para>
 					 <warning>
-						<info xml:id="info-Publican-Users_Guide-Omitting_the_software_version_number">
+						<info>
 							<title>Omitting the software version number</title>
 
 						</info>
@@ -244,7 +244,7 @@
 
 		</itemizedlist>
 		 <section conformance="198" xml:id="sect-Publican-Users_Guide-The_publican_package_command-The_publican_package_command_Example_usage">
-			<info xml:id="info-Publican-Users_Guide-The_publican_package_command_Example_usage">
+			<info>
 				<title>The <prompt>$</prompt> <command>publican package</command> command — Example usage</title>
 
 			</info>

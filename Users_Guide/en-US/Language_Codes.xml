@@ -8,12 +8,12 @@
 %DOCBOOK_ENTS;
 ]>
 <appendix conformance="192" version="5.0" xml:id="appe-Publican-Users_Guide-Language_codes" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
-	<info xml:id="info-Publican-Users_Guide-Language_codes">
+	<info>
 		<title>Language codes</title>
 
 	</info>
 	 <important>
-		<info xml:id="info-Publican-Users_Guide-Region_subtags">
+		<info>
 			<title>Region subtags</title>
 
 		</info>
@@ -23,7 +23,7 @@
 
 	</important>
 	 <important>
-		<info xml:id="info-Publican-Users_Guide-Other_language_codes">
+		<info>
 			<title>Other language codes</title>
 
 		</info>
@@ -67,7 +67,7 @@
 					 </footnote> for example, <literal>bal</literal> (Balochi), <literal>apk</literal> (Kiowa Apache), and <literal>tpi</literal> (Tok Pisin). Finally, a small number of language subtags appear in the IANA registry that have no ISO 639-1 or ISO 639-2 equivalent, such as subtags for the constructed languages <literal>qya</literal> (Quenya) and <literal>tlh</literal> (Klingon), and for the occult language <literal>i-enochian</literal> (Enochian). This last example also illustrates a small number of language subtags <firstterm>grandfathered</firstterm> into the registry that do not match the two-letter or three-letter pattern of codes derived from the ISO 639 standards.
 				</para>
 				 <note>
-					<info xml:id="info-Publican-Users_Guide-Extended_language_subtags">
+					<info>
 						<title>Extended language subtags</title>
 
 					</info>

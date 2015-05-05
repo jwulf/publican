@@ -8,7 +8,7 @@
 %DOCBOOK_ENTS;
 ]>
 <section conformance="188" version="5.0" xml:id="sect-Publican-Users_Guide-Installing_a_brand" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
-	<info xml:id="info-Publican-Users_Guide-Installing_a_brand">
+	<info>
 		<title>Installing a brand</title>
 
 	</info>
@@ -71,7 +71,7 @@
 
 	</procedure>
 	 <table conformance="189" xml:id="tabl-Publican-Users_Guide-Installing_a_brand-Current_Brands_and_their_packages">
-		<info xml:id="info-Publican-Users_Guide-Current_Brands_and_their_packages">
+		<info>
 			<title>Current Brands and their packages</title>
 
 		</info>

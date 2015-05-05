@@ -8,7 +8,7 @@
 %DOCBOOK_ENTS;
 ]>
 <chapter conformance="144" version="5.0" xml:id="chap-Publican-Users_Guide-Import_book_into_Drupal" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
-	<info xml:id="info-Publican-Users_Guide-Import_book_into_Drupal">
+	<info>
 		<title>Import book into Drupal</title>
 
 	</info>
@@ -16,7 +16,7 @@
 		<application>Publican 3.1</application> has a new functionality which allow user to create and import a book into Drupal. All xml files in a book are transformed into a single CSV file which will later be used to import into Drupal.
 	</para>
 	 <section conformance="145" xml:id="sect-Publican-Users_Guide-Import_book_into_Drupal-How_to_build_a_CSV_file_for_Drupal_import">
-		<info xml:id="info-Publican-Users_Guide-How_to_build_a_CSV_file_for_Drupal_import">
+		<info>
 			<title>How to build a CSV file for Drupal import</title>
 
 		</info>
@@ -57,7 +57,7 @@
 
 		</itemizedlist>
 		 <important>
-			<info xml:id="info-Publican-Users_Guide-Important_Use_version_control_system">
+			<info>
 				<title>Important — Use version control system</title>
 
 			</info>
@@ -69,7 +69,7 @@
 
 	</section>
 	 <section conformance="146" xml:id="sect-Publican-Users_Guide-Import_book_into_Drupal-The_publican.cfg_file">
-		<info xml:id="info-Publican-Users_Guide-The_publican.cfg_file">
+		<info>
 			<title>The publican.cfg file</title>
 
 		</info>
@@ -84,7 +84,7 @@
 						specfies the author who should be shown in drupal book page. The name must be a valid Drupal username. 'Redhat' is the default author. Set this parameter in the <filename>publican.cfg</filename> file to override it.
 					</para>
 					 <important>
-						<info xml:id="info-Publican-Users_Guide-Important_Setting_Author">
+						<info>
 							<title>Important — Setting Author</title>
 
 						</info>
@@ -114,7 +114,7 @@
 						specfies which menu block the book should show in Drupal. The default value is <parameter>"user-guide"</parameter>.
 					</para>
 					 <important>
-						<info xml:id="info-Publican-Users_Guide-Important_Setting_menu_block">
+						<info>
 							<title>Important — Setting menu block</title>
 
 						</info>
@@ -142,7 +142,7 @@
 
 	</section>
 	 <section conformance="147" xml:id="sect-Publican-Users_Guide-Import_book_into_Drupal-Drupal_Import_Guide">
-		<info xml:id="info-Publican-Users_Guide-Drupal_Import_Guide">
+		<info>
 			<title>Drupal Import Guide</title>
 
 		</info>
@@ -159,7 +159,7 @@
 
 		</mediaobject>
 		 <important>
-			<info xml:id="info-Publican-Users_Guide-Important_Enable_Drupal_Core_Modules">
+			<info>
 				<title>Important — Enable Drupal Core Modules</title>
 
 			</info>
@@ -190,7 +190,7 @@
 
 		</important>
 		 <note>
-			<info xml:id="info-Publican-Users_Guide-Permission_to_install_Module">
+			<info>
 				<title>Permission to install Module</title>
 
 			</info>
@@ -200,7 +200,7 @@
 
 		</note>
 		 <section conformance="148" xml:id="sect-Publican-Users_Guide-Drupal_Import_Guide-How_to_add_a_menu_block">
-			<info xml:id="info-Publican-Users_Guide-How_to_add_a_menu_block">
+			<info>
 				<title>How to add a menu block</title>
 
 			</info>
@@ -231,7 +231,7 @@
 
 		</section>
 		 <section conformance="149" xml:id="sect-Publican-Users_Guide-Drupal_Import_Guide-Setting_up_Node_import">
-			<info xml:id="info-Publican-Users_Guide-Setting_up_Node_import">
+			<info>
 				<title>Setting up Node import</title>
 
 			</info>
@@ -264,7 +264,7 @@
 								<guilabel>File owner</guilabel> - The CSV file that you uploaded to the <filename>import directory</filename> will be assigned ownership to this user.
 							</para>
 							 <important>
-								<info xml:id="info-Publican-Users_Guide-Important_File_Ownership">
+								<info>
 									<title>Important — File Ownership</title>
 
 								</info>
@@ -311,12 +311,12 @@
 
 		</section>
 		 <section conformance="150" xml:id="sect-Publican-Users_Guide-Drupal_Import_Guide-How_to_import_book">
-			<info xml:id="info-Publican-Users_Guide-How_to_import_book">
+			<info>
 				<title>How to import book</title>
 
 			</info>
 			 <procedure conformance="151" xml:id="proc-Publican-Users_Guide-How_to_import_book-To_import_book_into_Drupal">
-				<info xml:id="info-Publican-Users_Guide-To_import_book_into_Drupal">
+				<info>
 					<title>To import book into Drupal:</title>
 
 				</info>
@@ -378,7 +378,7 @@
 
 		</section>
 		 <section conformance="152" xml:id="sect-Publican-Users_Guide-Drupal_Import_Guide-How_to_update_book">
-			<info xml:id="info-Publican-Users_Guide-How_to_update_book">
+			<info>
 				<title>How to update book</title>
 
 			</info>
@@ -386,7 +386,7 @@
 				Simply repeat the steps in <xref linkend="sect-Publican-Users_Guide-Drupal_Import_Guide-How_to_import_book" /> to update the book.
 			</para>
 			 <warning>
-				<info xml:id="info-Publican-Users_Guide-Warning_Section_Chunking">
+				<info>
 					<title>Warning — Section Chunking</title>
 
 				</info>

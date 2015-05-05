@@ -8,12 +8,12 @@
 %DOCBOOK_ENTS;
 ]>
 <section conformance="123" version="5.0" xml:id="sect-Publican-Users_Guide-Building_a_document" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
-	<info xml:id="info-Publican-Users_Guide-Building_a_document">
+	<info>
 		<title>Building a document</title>
 
 	</info>
 	 <note>
-		<info xml:id="info-Publican-Users_Guide-Note_Customizing_output">
+		<info>
 			<title>Note — Customizing output</title>
 
 		</info>
@@ -67,7 +67,7 @@
 
 	</procedure>
 	 <variablelist conformance="124" xml:id="vari-Publican-Users_Guide-Building_a_document-Formats_for_the_build_action">
-		<info xml:id="info-Publican-Users_Guide-Formats_for_the_build_action">
+		<info>
 			<title>Formats for the <command>build</command> action</title>
 
 		</info>
@@ -233,7 +233,7 @@
 
 	</variablelist>
 	 <section conformance="125" xml:id="sect-Publican-Users_Guide-Building_a_document-Building_a_document_without_validation">
-		<info xml:id="info-Publican-Users_Guide-Building_a_document_without_validation">
+		<info>
 			<title>Building a document without validation</title>
 
 		</info>

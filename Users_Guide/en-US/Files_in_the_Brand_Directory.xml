@@ -8,7 +8,7 @@
 %DOCBOOK_ENTS;
 ]>
 <section conformance="168" version="5.0" xml:id="sect-Publican-Users_Guide-Files_in_the_brand_directory" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
-	<info xml:id="info-Publican-Users_Guide-Files_in_the_brand_directory">
+	<info>
 		<title>Files in the brand directory</title>
 
 	</info>
@@ -98,7 +98,7 @@
 
 	</para>
 	 <section conformance="169" xml:id="sect-Publican-Users_Guide-Files_in_the_brand_directory-The_publican.cfg_file">
-		<info xml:id="info-Publican-Users_Guide-The_publican.cfg_file">
+		<info>
 			<title>The publican.cfg file</title>
 
 		</info>
@@ -194,7 +194,7 @@
 
 	</section>
 	 <section conformance="170" xml:id="sect-Publican-Users_Guide-Files_in_the_brand_directory-The_defaults.cfg_file_and_overrides.cfg_file">
-		<info xml:id="info-Publican-Users_Guide-The_defaults.cfg_file_and_overrides.cfg_file">
+		<info>
 			<title>The defaults.cfg file and overrides.cfg file</title>
 
 		</info>
@@ -216,7 +216,7 @@
 
 	</section>
 	 <section conformance="171" xml:id="sect-Publican-Users_Guide-Files_in_the_brand_directory-publican_brand.spec_file">
-		<info xml:id="info-Publican-Users_Guide-publican_brand.spec_file">
+		<info>
 			<title>publican-<replaceable>brand</replaceable>.spec file</title>
 
 		</info>
@@ -229,7 +229,7 @@
 
 	</section>
 	 <section conformance="172" xml:id="sect-Publican-Users_Guide-Files_in_the_brand_directory-README">
-		<info xml:id="info-Publican-Users_Guide-README">
+		<info>
 			<title>README</title>
 
 		</info>
@@ -239,7 +239,7 @@
 
 	</section>
 	 <section conformance="173" xml:id="sect-Publican-Users_Guide-Files_in_the_brand_directory-COPYING">
-		<info xml:id="info-Publican-Users_Guide-COPYING">
+		<info>
 			<title>COPYING</title>
 
 		</info>
@@ -249,7 +249,7 @@
 
 	</section>
 	 <section conformance="174" xml:id="sect-Publican-Users_Guide-Files_in_the_brand_directory-Common_Content_for_the_brand">
-		<info xml:id="info-Publican-Users_Guide-Common_Content_for_the_brand">
+		<info>
 			<title>Common Content for the brand</title>
 
 		</info>
@@ -257,7 +257,7 @@
 			Inside the brand directory is a subdirectory named after the default XML language for brand, as set with the <option>--lang</option> option when you created the brand. This subdirectory contains XML and image files that override the default Common Content provided with <application>Publican</application>. Customizing these files provides your brand with its distinctive appearance, including its color scheme and logos.
 		</para>
 		 <section conformance="175" xml:id="sect-Publican-Users_Guide-Common_Content_for_the_brand-Feedback.xml">
-			<info xml:id="info-Publican-Users_Guide-Feedback.xml">
+			<info>
 				<title><filename>Feedback.xml</filename></title>
 
 			</info>
@@ -267,7 +267,7 @@
 
 		</section>
 		 <section conformance="176" xml:id="sect-Publican-Users_Guide-Common_Content_for_the_brand-Legal_Notice.xml">
-			<info xml:id="info-Publican-Users_Guide-Legal_Notice.xml">
+			<info>
 				<title><filename>Legal_Notice.xml</filename></title>
 
 			</info>
@@ -279,7 +279,7 @@
 
 	</section>
 	 <section conformance="177" xml:id="sect-Publican-Users_Guide-Files_in_the_brand_directory-The_css_subdirectory">
-		<info xml:id="info-Publican-Users_Guide-The_css_subdirectory">
+		<info>
 			<title>The <filename>css</filename> subdirectory</title>
 
 		</info>
@@ -287,7 +287,7 @@
 			The <filename>css</filename> subdirectory contains a single file: <filename>overrides.css</filename>.
 		</para>
 		 <section conformance="178" xml:id="sect-Publican-Users_Guide-The_css_subdirectory-overrides.css">
-			<info xml:id="info-Publican-Users_Guide-overrides.css">
+			<info>
 				<title>overrides.css</title>
 
 			</info>
@@ -299,7 +299,7 @@
 
 	</section>
 	 <section conformance="179" xml:id="sect-Publican-Users_Guide-Files_in_the_brand_directory-The_images_subdirectory">
-		<info xml:id="info-Publican-Users_Guide-The_images_subdirectory">
+		<info>
 			<title>The <filename>images</filename> subdirectory</title>
 
 		</info>
@@ -398,7 +398,7 @@
 
 	</section>
 	 <section conformance="180" xml:id="sect-Publican-Users_Guide-Files_in_the_brand_directory-The_brand_dir_option">
-		<info xml:id="info-Publican-Users_Guide-The_brand_dir_option">
+		<info>
 			<title>The brand_dir option</title>
 
 		</info>

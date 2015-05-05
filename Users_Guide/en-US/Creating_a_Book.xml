@@ -8,7 +8,7 @@
 %DOCBOOK_ENTS;
 ]>
 <chapter conformance="131" version="5.0" xml:id="chap-Publican-Users_Guide-Creating_a_document" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
-	<info xml:id="info-Publican-Users_Guide-Creating_a_document">
+	<info>
 		<title>Creating a document</title>
 
 	</info>

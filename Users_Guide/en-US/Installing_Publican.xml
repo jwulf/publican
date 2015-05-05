@@ -8,17 +8,17 @@
 %DOCBOOK_ENTS;
 ]>
 <chapter conformance="181" version="5.0" xml:id="chap-Publican-Users_Guide-Installing_Publican" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
-	<info xml:id="info-Publican-Users_Guide-Installing_Publican">
+	<info>
 		<title>Installing Publican</title>
 
 	</info>
 	 <section conformance="182" xml:id="sect-Publican-Users_Guide-Installing_Publican-Linux_operating_systems">
-		<info xml:id="info-Publican-Users_Guide-Linux_operating_systems">
+		<info>
 			<title>Linux operating systems</title>
 
 		</info>
 		 <important>
-			<info xml:id="info-Publican-Users_Guide-Important_Availability_in_repositories">
+			<info>
 				<title>Important — Availability in repositories</title>
 
 			</info>
@@ -28,7 +28,7 @@
 
 		</important>
 		 <section conformance="183" xml:id="sect-Publican-Users_Guide-Linux_operating_systems-Fedora">
-			<info xml:id="info-Publican-Users_Guide-Fedora_amp_Red_Hat_Enterprise_Linux_6">
+			<info>
 				<title>Fedora &amp; Red Hat Enterprise Linux 6</title>
 
 			</info>
@@ -66,7 +66,7 @@
 
 		</section>
 		 <section conformance="185" xml:id="sect-Publican-Users_Guide-Linux_operating_systems-Ubuntu">
-			<info xml:id="info-Publican-Users_Guide-Ubuntu">
+			<info>
 				<title>Ubuntu</title>
 
 			</info>
@@ -93,7 +93,7 @@
 		 <xi:include href="Installing_Publican_OpenSuse.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
 		 <xi:include href="Installing_Publican_Docker.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
 		 <section>
-			<info xml:id="info-Publican-Users_Guide-Running_publican_from_a_GIT_checkout">
+			<info>
 				<title>Running publican from a GIT checkout</title>
 
 			</info>
@@ -132,7 +132,7 @@
 
 	</section>
 	 <section conformance="187" xml:id="sect-Publican-Users_Guide-Installing_Publican-Windows_operating_systems">
-		<info xml:id="info-Publican-Users_Guide-Windows_operating_systems">
+		<info>
 			<title>Windows operating systems</title>
 
 		</info>
@@ -202,7 +202,7 @@
 
 	</section>
 	 <section conformance="235" xml:id="sect-Publican-Users_Guide-Installing_Publican-OSX_Lion">
-		<info xml:id="info-Publican-Users_Guide-OSX_Lion">
+		<info>
 			<title>OSX Lion</title>
 
 		</info>

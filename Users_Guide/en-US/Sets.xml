@@ -8,7 +8,7 @@
 %DOCBOOK_ENTS;
 ]>
 <chapter conformance="212" version="5.0" xml:id="chap-Publican-Users_Guide-Using_sets" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
-	<info xml:id="info-Publican-Users_Guide-Using_sets">
+	<info>
 		<title>Using sets</title>
 
 	</info>
@@ -34,7 +34,7 @@
 
 	</itemizedlist>
 	 <section conformance="213" xml:id="sect-Publican-Users_Guide-Using_sets-Stand_alone_sets">
-		<info xml:id="info-Publican-Users_Guide-Stand_alone_sets">
+		<info>
 			<title>Stand-alone sets</title>
 
 		</info>
@@ -189,7 +189,7 @@
 
 	</section>
 	 <section conformance="215" xml:id="sect-Publican-Users_Guide-Using_sets-Distributed_sets">
-		<info xml:id="info-Publican-Users_Guide-Distributed_sets">
+		<info>
 			<title>Distributed sets</title>
 
 		</info>

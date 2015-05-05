@@ -8,7 +8,7 @@
 %DOCBOOK_ENTS;
 ]>
 <preface conformance="190" version="5.0" xml:id="pref-Publican-Users_Guide-Introduction" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
-	<info xml:id="info-Publican-Users_Guide-Introduction">
+	<info>
 		<title>Introduction</title>
 
 	</info>
@@ -23,7 +23,7 @@
 		<application>Publican</application> began life as an internal tool used by Red Hat's Documentation Group (now known as Engineering Content Services). On occasion, this legacy is visible.
 	</para>
 	 <formalpara conformance="191" xml:id="form-Publican-Users_Guide-Introduction-Design">
-		<info xml:id="info-Publican-Users_Guide-Design">
+		<info>
 			<title>Design</title>
 
 		</info>

@@ -8,7 +8,7 @@
 %DOCBOOK_ENTS;
 ]>
 <appendix conformance="153" version="5.0" xml:id="appe-Publican-Users_Guide-Contents_of_the_website_dump_file" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
-	<info xml:id="info-Publican-Users_Guide-Contents_of_the_website_dump_file">
+	<info>
 		<title>Contents of the website dump file</title>
 
 	</info>
@@ -171,7 +171,7 @@
 
 	</variablelist>
 	 <example conformance="241" xml:id="exam-Publican-Users_Guide-Contents_of_the_website_dump_file-Sample_records_from_a_DUMP.xml_file">
-		<info xml:id="info-Publican-Users_Guide-Sample_records_from_a_DUMP.xml_file">
+		<info>
 			<title>Sample records from a <filename>DUMP.xml</filename> file</title>
 
 		</info>
@@ -183,7 +183,7 @@
 
 	</example>
 	 <section conformance="242" xml:id="sect-Publican-Users_Guide-Contents_of_the_website_dump_file-Computing_URLs_from_the_dump_file">
-		<info xml:id="info-Publican-Users_Guide-Computing_URLs_from_the_dump_file">
+		<info>
 			<title>Computing URLs from the dump file</title>
 
 		</info>

@@ -8,7 +8,7 @@
 %DOCBOOK_ENTS;
 ]>
 <chapter conformance="204" version="5.0" xml:id="chap-Publican-Users_Guide-Publican_commands" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
-	<info xml:id="info-Publican-Users_Guide-Publican_commands">
+	<info>
 		<title>Publican commands</title>
 
 	</info>

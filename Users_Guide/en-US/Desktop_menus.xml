@@ -8,7 +8,7 @@
 %DOCBOOK_ENTS;
 ]>
 <section conformance="134" version="5.0" xml:id="sect-Publican-Users_Guide-Desktop_menu_entries_for_documents" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
-	<info xml:id="info-Publican-Users_Guide-Desktop_menu_entries_for_documents">
+	<info>
 		<title>Desktop menu entries for documents</title>
 
 	</info>
@@ -37,7 +37,7 @@
 		Note that the <guimenu>Documentation</guimenu> menu does not group entries under a submenu until two or more documents are installed that belong on that submenu. The first document appears under <menuchoice><guimenu>System</guimenu><guisubmenu>Documentation</guisubmenu></menuchoice>.
 	</para>
 	 <section conformance="135" xml:id="sect-Publican-Users_Guide-Desktop_menu_entries_for_documents-Creating_an_desktop_menu_package">
-		<info xml:id="info-Publican-Users_Guide-Creating_an_desktop_menu_package">
+		<info>
 			<title>Creating an desktop menu package</title>
 
 		</info>
@@ -108,7 +108,7 @@
 
 		</itemizedlist>
 		 <example conformance="239" xml:id="exam-Publican-Users_Guide-Creating_an_desktop_menu_package-Example_.directory_file">
-			<info xml:id="info-Publican-Users_Guide-Example_.directory_file">
+			<info>
 				<title>Example .directory file</title>
 
 			</info>
@@ -187,7 +187,7 @@
 
 		</itemizedlist>
 		 <example conformance="240" xml:id="exam-Publican-Users_Guide-Creating_an_desktop_menu_package-Example_.menu_file">
-			<info xml:id="info-Publican-Users_Guide-Example_.menu_file">
+			<info>
 				<title>Example .menu file</title>
 
 			</info>
@@ -207,7 +207,7 @@
 
 	</section>
 	 <section conformance="136" xml:id="sect-Publican-Users_Guide-Desktop_menu_entries_for_documents-Setting_a_desktop_menu_category">
-		<info xml:id="info-Publican-Users_Guide-Setting_a_desktop_menu_category">
+		<info>
 			<title>Setting a desktop menu category</title>
 
 		</info>

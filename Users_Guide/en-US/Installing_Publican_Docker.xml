@@ -8,7 +8,7 @@
 %DOCBOOK_ENTS;
 ]>
 <section conformance="249" version="5.0" xml:id="sect-Users_Guide-Linux_operating_systems-Docker" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
-	<info xml:id="info-Publican-Users_Guide-Docker_container">
+	<info>
 		<title>Docker container</title>
 
 	</info>

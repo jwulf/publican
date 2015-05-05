@@ -8,7 +8,7 @@
 %DOCBOOK_ENTS;
 ]>
 <appendix conformance="133" version="5.0" xml:id="appe-Publican-Users_Guide-Sample_spec_file_for_desktop_menu_package" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
-	<info xml:id="info-Publican-Users_Guide-Sample_spec_file_for_desktop_menu_package">
+	<info>
 		<title>Sample spec file for desktop menu package</title>
 
 	</info>

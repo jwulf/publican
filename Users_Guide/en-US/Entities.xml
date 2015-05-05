@@ -8,12 +8,12 @@
 %DOCBOOK_ENTS;
 ]>
 <section conformance="154" version="5.0" xml:id="sect-Publican-Users_Guide-Entities_and_translation" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
-	<info xml:id="info-Publican-Users_Guide-Entities_and_translation">
+	<info>
 		<title>Entities and translation</title>
 
 	</info>
 	 <warning>
-		<info xml:id="info-Publican-Users_Guide-Use_entities_with_extreme_caution">
+		<info>
 			<title>Use entities with extreme caution</title>
 
 		</info>
@@ -133,7 +133,7 @@ msgstr "Jedoch ergibt ein sorgfältiges Lesen des Nachworts für &lt;citetitle&g
 		For example, if you write a document that could apply to more than one product, you might be tempted to set an entity such as <tag>&amp;PRODUCT;</tag>. The advantage of this approach is that by simply changing this value in the <filename><replaceable>Doc_Name</replaceable>.ent</filename> file, you could easily adjust the book to document (for example) Red Hat Enterprise Linux, Fedora, or CentOS. However, while the proper noun <literal>Fedora</literal> never varies in English, it has multiple forms in other languages. For example, in Czech the name <literal>Fedora</literal> has six different forms, depending on one of seven ways in which you can use it in a sentence:
 	</para>
 	 <table conformance="155" frame="all" xml:id="tabl-Publican-Users_Guide-Entities_and_translation-Fedora_in_Czech">
-		<info xml:id="info-Publican-Users_Guide-Fedora_in_Czech">
+		<info>
 			<title>'Fedora' in Czech</title>
 
 		</info>

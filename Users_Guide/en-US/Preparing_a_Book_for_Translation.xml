@@ -8,7 +8,7 @@
 %DOCBOOK_ENTS;
 ]>
 <section conformance="202" version="5.0" xml:id="sect-Publican-Users_Guide-Preparing_a_document_for_translation" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
-	<info xml:id="info-Publican-Users_Guide-Translating_a_document">
+	<info>
 		<title>Translating a document</title>
 
 	</info>
@@ -46,7 +46,7 @@
 				If this is the first time that POT files have been created for this document, <application>Publican</application> creates a new subdirectory, named <filename>pot</filename>. The <filename>pot</filename> subdirectory holds a POT file for each XML file in the document. If <application>Publican</application> has created POT files for this document previously, <application>Publican</application> updates the existing POT files to reflect any changes in the XML since the POT files were last updated.
 			</para>
 			 <important>
-				<info xml:id="info-Publican-Users_Guide-Remove_unused_XML_files">
+				<info>
 					<title>Remove unused XML files</title>
 
 				</info>
@@ -80,7 +80,7 @@
 			 
 <screen><prompt>$</prompt> <command>publican update_po --langs=all</command></screen>
 			 <important>
-				<info xml:id="info-Publican-Users_Guide-Remove_unused_POT_files">
+				<info>
 					<title>Remove unused POT files</title>
 
 				</info>
@@ -128,7 +128,7 @@
 
 	</procedure>
 	 <section conformance="203" xml:id="sect-Publican-Users_Guide-Preparing_a_document_for_translation-Translation_Author_Group">
-		<info xml:id="info-Publican-Users_Guide-Translation_Author_Group">
+		<info>
 			<title>Translation Author Group</title>
 
 		</info>
@@ -138,7 +138,7 @@
 
 	</section>
 	 <section conformance="250" xml:id="sect-Publican-Users_Guide-Preparing_a_document_for_translation-Translating_Glossaries">
-		<info xml:id="info-Publican-Users_Guide-Translating_Indexes_and_Glossaries">
+		<info>
 			<title>Translating Indexes and Glossaries</title>
 
 		</info>

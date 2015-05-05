@@ -8,7 +8,7 @@
 %DOCBOOK_ENTS;
 ]>
 <section conformance="229" version="5.0" xml:id="sect-Publican-Users_Guide-Creating_installing_and_updating_product_pages_and_version_pages" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
-	<info xml:id="info-Publican-Users_Guide-Creating_installing_and_updating_product_pages_and_version_pages">
+	<info>
 		<title>Creating, installing, and updating product pages and version pages</title>
 
 	</info>

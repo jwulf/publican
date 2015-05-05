@@ -8,7 +8,7 @@
 %DOCBOOK_ENTS;
 ]>
 <chapter conformance="207" version="5.0" xml:id="chap-Publican-Users_Guide-Publican_defaults" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
-	<info xml:id="info-Publican-Users_Guide-Publican_defaults">
+	<info>
 		<title>Publican defaults</title>
 
 	</info>
@@ -61,7 +61,7 @@
 
 	</note>
 	 <section conformance="208" xml:id="sect-Publican-Users_Guide-Publican_defaults-Publican_default_examples">
-		<info xml:id="info-Publican-Users_Guide-Publican_default_examples">
+		<info>
 			<title>Publican default examples</title>
 
 		</info>
@@ -69,7 +69,7 @@
 			Users can set <replaceable>formats</replaceable>, <replaceable>lang</replaceable>, and <replaceable>langs</replaceable> to their standard build parameters.
 		</para>
 		 <example conformance="251" xml:id="exam-Publican-Users_Guide-Publican_default_examples-Setting_formats_and_lang">
-			<info xml:id="info-Publican-Users_Guide-Setting_formats_and_lang">
+			<info>
 				<title>Setting formats and lang</title>
 
 			</info>
@@ -86,7 +86,7 @@
 			<application>Publican</application> 3.0 allows you to add a revision history entry from the command line. You can set your user details in <filename>~/.publican.cfg</filename>.
 		</para>
 		 <example conformance="252" xml:id="exam-Publican-Users_Guide-Publican_default_examples-Setting_user_details">
-			<info xml:id="info-Publican-Users_Guide-Setting_user_details">
+			<info>
 				<title>Setting user details</title>
 
 			</info>

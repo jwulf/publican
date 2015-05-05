@@ -8,7 +8,7 @@
 %DOCBOOK_ENTS;
 ]>
 <section conformance="226" version="5.0" xml:id="sect-Publican-Users_Guide-Installing_updating_and_removing_documents-rpm" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
-	<info xml:id="info-Publican-Users_Guide-Installing_updating_and_removing_documents">
+	<info>
 		<title>Installing, updating and removing documents</title>
 
 	</info>

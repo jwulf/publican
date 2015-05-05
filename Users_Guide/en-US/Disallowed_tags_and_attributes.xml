@@ -8,12 +8,12 @@
 %DOCBOOK_ENTS;
 ]>
 <appendix conformance="137" version="5.0" xml:id="appe-Publican-Users_Guide-Discouraged_elements_and_attributes" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
-	<info xml:id="info-Publican-Users_Guide-Discouraged_elements_and_attributes">
+	<info>
 		<title>Discouraged elements and attributes</title>
 
 	</info>
 	 <note>
-		<info xml:id="info-Publican-Users_Guide-Supported_unsupported_and_discouraged">
+		<info>
 			<title>Supported, unsupported, and discouraged</title>
 
 		</info>
@@ -35,7 +35,7 @@
 		Use the command <prompt>$</prompt> <command>publican print_known</command> to print a list of tags that <application>Publican</application> supports, and the command <command>publican print_banned</command> to print a list of tags that are banned in <application>Publican</application>.
 	</para>
 	 <section conformance="138" xml:id="sect-Publican-Users_Guide-Discouraged_elements_and_attributes-Discouraged_elements">
-		<info xml:id="info-Publican-Users_Guide-Discouraged_elements">
+		<info>
 			<title>Discouraged elements</title>
 
 		</info>
@@ -173,7 +173,7 @@
 
 	</section>
 	 <section conformance="139" xml:id="sect-Publican-Users_Guide-Discouraged_elements_and_attributes-Discouraged_attributes">
-		<info xml:id="info-Publican-Users_Guide-Discouraged_attributes">
+		<info>
 			<title>Discouraged attributes</title>
 
 		</info>

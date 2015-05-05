@@ -8,7 +8,7 @@
 %DOCBOOK_ENTS;
 ]>
 <section conformance="140" version="5.0" xml:id="sect-Publican-Users_Guide-Pre_release_software_and_draft_documentation" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
-	<info xml:id="info-Publican-Users_Guide-Pre_release_software_and_draft_documentation">
+	<info>
 		<title>Pre-release software and draft documentation</title>
 
 	</info>
@@ -22,7 +22,7 @@
 		In both circumstances, however, it is important to make the status of the software, documentation or both clear to users, developers, readers and reviewers.
 	</para>
 	 <section conformance="141" xml:id="sect-Publican-Users_Guide-Pre_release_software_and_draft_documentation-Denoting_pre_release_software">
-		<info xml:id="info-Publican-Users_Guide-Denoting_pre_release_software">
+		<info>
 			<title>Denoting pre-release software</title>
 
 		</info>
@@ -77,7 +77,7 @@
 
 	</section>
 	 <section conformance="142" xml:id="sect-Publican-Users_Guide-Pre_release_software_and_draft_documentation-Denoting_draft_documentation">
-		<info xml:id="info-Publican-Users_Guide-Denoting_draft_documentation">
+		<info>
 			<title>Denoting draft documentation</title>
 
 		</info>
@@ -127,7 +127,7 @@ Isn't it pretty!
 
 	</section>
 	 <section conformance="143" xml:id="sect-Publican-Users_Guide-Pre_release_software_and_draft_documentation-Denoting_draft_documentation_of_pre_release_software">
-		<info xml:id="info-Publican-Users_Guide-Denoting_draft_documentation_of_pre_release_software">
+		<info>
 			<title>Denoting draft documentation of pre-release software</title>
 
 		</info>

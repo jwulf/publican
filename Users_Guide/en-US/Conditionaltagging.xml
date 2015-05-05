@@ -8,7 +8,7 @@
 %DOCBOOK_ENTS;
 ]>
 <section conformance="129" version="5.0" xml:id="sect-Publican-Users_Guide-Conditional_tagging" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
-	<info xml:id="info-Publican-Users_Guide-Conditional_tagging">
+	<info>
 		<title>Conditional tagging</title>
 
 	</info>
@@ -48,12 +48,12 @@
 	 <xi:include href="Root_nodes_and_conditionals.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
 	 <xi:include href="xrefs_and_conditionals.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
 	 <section conformance="130" xml:id="sect-Publican-Users_Guide-Conditional_tagging-Conditional_tagging_and_translation">
-		<info xml:id="info-Publican-Users_Guide-Conditional_tagging_and_translation">
+		<info>
 			<title>Conditional tagging and translation</title>
 
 		</info>
 		 <warning>
-			<info xml:id="info-Publican-Users_Guide-Use_conditional_tagging_with_great_caution">
+			<info>
 				<title>Use conditional tagging with great caution</title>
 
 			</info>

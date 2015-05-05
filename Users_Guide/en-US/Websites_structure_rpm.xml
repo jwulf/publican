@@ -8,12 +8,12 @@
 %DOCBOOK_ENTS;
 ]>
 <section conformance="232" version="5.0" xml:id="sect-Publican-Users_Guide-Creating_the_website_structure-rpm" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
-	<info xml:id="info-Publican-Users_Guide-Creating_the_website_structure">
+	<info>
 		<title>Creating the website structure</title>
 
 	</info>
 	 <warning>
-		<info xml:id="info-Publican-Users_Guide-Warning_This_procedure_replaces_files">
+		<info>
 			<title>Warning — This procedure replaces files</title>
 
 		</info>
@@ -83,7 +83,7 @@
 						If you set <literal>value="###Search###"</literal> in the code for a submit button, <application>Publican</application> uses the word <literal>Search</literal> on the button, localized into any language that <application>Publican</application> supports.
 					</para>
 					 <important>
-						<info xml:id="info-Publican-Users_Guide-Important_the_search_parameter_is_not_validated">
+						<info>
 							<title>Important — the search parameter is not validated</title>
 
 						</info>

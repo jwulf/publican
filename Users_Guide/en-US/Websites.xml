@@ -8,7 +8,7 @@
 %DOCBOOK_ENTS;
 ]>
 <chapter conformance="217" version="5.0" xml:id="chap-Publican-Users_Guide-Building_a_website_with_Publican" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
-	<info xml:id="info-Publican-Users_Guide-Building_a_website_with_Publican">
+	<info>
 		<title>Building a website with Publican</title>
 
 	</info>
@@ -115,7 +115,7 @@
 		Optionally, the site structure might also include a <firstterm>dump file</firstterm> — an XML file that provides complete site content details for delivery of other services, such as web feeds or customised search pages. The site structure might also contain a zipped version of the dump file. Refer to <xref linkend="sect-Publican-Users_Guide-Building_a_website_with_Publican-Building_a_website_manually" /> and <xref linkend="sect-Publican-Users_Guide-Building_a_website_with_Publican-Building_a_website_using_RPM_packages" /> for details of creating a dump file, and to <xref linkend="appe-Publican-Users_Guide-Contents_of_the_website_dump_file" /> for a description of the dump file contents.
 	</para>
 	 <section conformance="218" xml:id="sect-Publican-Users_Guide-Building_a_website_with_Publican-Building_a_website_manually">
-		<info xml:id="info-Publican-Users_Guide-Building_a_website_manually">
+		<info>
 			<title>Building a website manually</title>
 
 		</info>
@@ -126,7 +126,7 @@
 
 	</section>
 	 <section conformance="219" xml:id="sect-Publican-Users_Guide-Building_a_website_with_Publican-Building_a_website_using_RPM_packages">
-		<info xml:id="info-Publican-Users_Guide-Building_a_website_using_RPM_packages">
+		<info>
 			<title>Building a website using RPM packages</title>
 
 		</info>
@@ -137,7 +137,7 @@
 
 	</section>
 	 <section conformance="220" xml:id="sect-Publican-Users_Guide-Building_a_website_with_Publican-Submitting_Your_Sitemap_to_Search_Engines">
-		<info xml:id="info-Publican-Users_Guide-Submitting_Your_Sitemap_to_Search_Engines">
+		<info>
 			<title>Submitting Your Sitemap to Search Engines</title>
 
 		</info>
@@ -145,7 +145,7 @@
 			A Publican website includes an XML Sitemap file. The Sitemap can be submitted to many major search engines, in order to help them index your website more intelligently and thoroughly. Each search engine has its own submission procedure. This section includes documentation on how to submit a Sitemap to Google and Bing.
 		</para>
 		 <section conformance="221" xml:id="sect-Publican-Users_Guide-Submitting_Your_Sitemap_to_Search_Engines-Submitting_Your_Sitemap_to_Google.">
-			<info xml:id="info-Publican-Users_Guide-Submitting_Your_Sitemap_to_Google.">
+			<info>
 				<title>Submitting Your Sitemap to Google.</title>
 
 			</info>
@@ -223,7 +223,7 @@
 
 		</section>
 		 <section conformance="223" xml:id="sect-Publican-Users_Guide-Submitting_Your_Sitemap_to_Search_Engines-Submitting_Your_Sitemap_to_Bing.">
-			<info xml:id="info-Publican-Users_Guide-Submitting_Your_Sitemap_to_Bing.">
+			<info>
 				<title>Submitting Your Sitemap to Bing.</title>
 
 			</info>

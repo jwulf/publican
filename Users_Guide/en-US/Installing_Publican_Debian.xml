@@ -8,7 +8,7 @@
 %DOCBOOK_ENTS;
 ]>
 <section conformance="186" version="5.0" xml:id="sect-Publican-Users_Guide-Debian" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
-	<info xml:id="info-Publican-Users_Guide-Debian">
+	<info>
 		<title>Debian</title>
 
 	</info>
@@ -48,7 +48,7 @@
 
 	</procedure>
 	 <important>
-		<info xml:id="info-Publican-Users_Guide-_Important_Installing_more_recent_packages_using_Apt_Pinning">
+		<info>
 			<title> Important — Installing more recent packages using Apt-Pinning</title>
 
 		</info>
