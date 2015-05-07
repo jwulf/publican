@@ -1,4 +1,4 @@
-$next UNRELEASED
+4.3.0 Tue May 5 2015
 - Fix web site templates to be more flexable.
 - Tweak default website styles.
 - Remove all FOP customisations. BZ #1168765

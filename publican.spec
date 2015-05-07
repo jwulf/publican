@@ -21,8 +21,8 @@
 %define wwwdir /var/www/html/docs
 
 Name:           publican
-Version:        4.2.9
-Release:        0%{?dist}.t3
+Version:        4.3.0
+Release:        0%{?dist}
 Summary:        Common files and scripts for publishing with DocBook XML
 # For a breakdown of the licensing, refer to LICENSE
 License:        (GPLv2+ or Artistic) and CC0
@@ -340,6 +340,34 @@ rm -rf $RPM_BUILD_ROOT
 %{wwwdir}/common-db5
 
 %changelog
+* Tue May 5 2015 Jeff Fearn <jfearn@redhat.com> 4..3.0-0
+- Fix web site templates to be more flexable.
+- Tweak default website styles.
+- Remove all FOP customisations. BZ #1168765
+- Use FontAwesome for aswesomeness.
+- Switch DocBook-5 HTML to highlight.js.
+- Change splash page group publish directory structure so it can be used directly. BZ #1186990
+- Fix duplicate link in Website docs. BZ #1188384
+- Fix PDF builds ignoring overrides.css and lang.css. BZ #1165005
+- Pulled in new/updated translations. BZ #1169605
+- Removed duplicate IDs from PUG. BZ #1197523
+- Removed the titlepage.xsl import from html-single due to breaking the xsl precedence. BZ #1187728
+- Fix Publican doesn't fallback to base_brand xsl files. BZ #1185127
+- Fix <section> elements being stripped in drupal-book builds. BZ #1158747
+- Fix malformed HTML/Drupal XML Feed for DocBook 5 content. BZ #1158740
+- Fix incorrect missing image warnings for drupal builds. BZ #1158725
+- Fix articles not building when using the drupal-book format. BZ #1164640
+- Fix initial title page content being skipped when a user defines a custom bookinfo id. BZ #1165482
+- Fix invalid XML being generated for drupal-book, when titles contain reserved chars. BZ #1165438
+- Changed the drupal feed <parent> field to use the url value instead of the title. BZ #1165724
+- Fix publican.cfg values are used in the feed page <title> tag. BZ #1172402
+- Fix drupal content is dropped, if the element that is chunked has no id. BZ #1173421
+- Adjusted the XML output so anchors to something in the same page doesn't include the page url.
+- Make legalnotice chunk in a similar way as chapters for drupal builds, so it's included in the feed.
+- Enable section.label.includes.component.label for common-db5. BZ #1205952
+- Fix formalpara ids being dropped for DocBook 4.5. BZ #1209344
+- Add --no_clean option to allow custom entity files. BZ #1208069
+
 * Tue Oct 21 2014 Jeff Fearn <jfearn@redhat.com> 4.2.6-0
 - Fix External_Links translation not merging. BZ #1153911
 
