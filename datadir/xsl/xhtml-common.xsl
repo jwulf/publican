@@ -2128,7 +2128,7 @@ snip border rubbish. BZ #875967
             <xsl:copy-of select="xverb:insertCallouts(areaspec,$rtf)"/>
           </xsl:when>
           <xsl:when test="function-available('perl:insertCallouts')">
-            <xsl:copy-of select="perl:insertCallouts(areaspec,exsl:node-set($rtf))"/>
+            <xsl:copy-of select="perl:insertCallouts(areaspec,exsl:node-set($rtf),$mode,$callout.graphics.path)"/>
           </xsl:when>
           <xsl:otherwise>
             <xsl:message terminate="yes">
