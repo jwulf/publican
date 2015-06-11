@@ -340,7 +340,7 @@ rm -rf $RPM_BUILD_ROOT
 %{wwwdir}/common-db5
 
 %changelog
-* Tue May 5 2015 Jeff Fearn <jfearn@redhat.com> 4..3.0-0
+* Tue May 5 2015 Jeff Fearn <jfearn@redhat.com> 4.3.0-0
 - Fix web site templates to be more flexable.
 - Tweak default website styles.
 - Remove all FOP customisations. BZ #1168765
