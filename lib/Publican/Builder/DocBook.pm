@@ -2195,7 +2195,7 @@ sub insertCallouts {
     my $graphics_path = shift();
 
     my $embedded = 0;
-    if ( $mode eq 'embedtoc' ) {
+    if ( "$mode" eq 'embedtoc' ) {
         $mode     = 'gfx';
         $embedded = 1;
     }
@@ -2354,7 +2354,7 @@ sub insertCallouts {
             foreach my $index (
                 sort( { $a <=> $b } @{ $callout{$count}{lines} } ) )
             {
-                if ( $mode eq 'gfx' ) {
+                if ( "$mode" eq 'gfx' ) {
                     my $gfx_node;
 
                     if ( $format eq 'HTML' ) {
@@ -2378,7 +2378,7 @@ sub insertCallouts {
                     }
                     $out_string .= $gfx_node->toString();
                 }
-                elsif ( $mode eq 'css' ) {
+                elsif ( "$mode" eq 'css' ) {
                     $out_string
                         .= qq{<span class='inlinecallout'>$index</span> };
                 }
