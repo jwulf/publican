@@ -2189,10 +2189,10 @@ BUGBUG: make sure class is being set
 =cut
 
 sub insertCallouts {
-    my $areaspec = shift();
-    my $verbatim = shift();
-    my $mode     = ( shift() || 'gfx' );
-    my $graphics_path    = ( shift() || undef );
+    my $areaspec      = shift();
+    my $verbatim      = shift();
+    my $mode          = ( shift() || 'gfx' );
+    my $graphics_path = shift();
 
     my $embedded = 0;
     if ( $mode eq 'embedtoc' ) {
