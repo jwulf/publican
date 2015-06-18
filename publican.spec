@@ -21,7 +21,7 @@
 %define wwwdir /var/www/html/docs
 
 Name:           publican
-Version:        4.3.0
+Version:        4.3.1
 Release:        0%{?dist}
 Summary:        Common files and scripts for publishing with DocBook XML
 # For a breakdown of the licensing, refer to LICENSE
@@ -340,6 +340,10 @@ rm -rf $RPM_BUILD_ROOT
 %{wwwdir}/common-db5
 
 %changelog
+* Thu Jun 18 2015 Lee Newson <lnewson@redhat.com> 4.3.1-0
+- Fixed a regression in 4.3.0 that caused TOC's not to be included in wkhtmltopdf PDF's. BZ #1230023
+- Fixed callout image urls being broken. BZ #1222716
+
 * Tue May 5 2015 Jeff Fearn <jfearn@redhat.com> 4.3.0-0
 - Fix web site templates to be more flexable.
 - Tweak default website styles.

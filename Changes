@@ -1,4 +1,4 @@
-Unreleased
+4.3.1 Thu Jun 18 2015
 - Fixed a regression in 4.3.0 that caused TOC's not to be included in wkhtmltopdf PDF's. BZ #1230023
 - Fixed callout image urls being broken. BZ #1222716
 
