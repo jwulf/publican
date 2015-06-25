@@ -1059,15 +1059,15 @@ sub detag {
         chomp($string);
 
         # remove start tag & leading space
-        $string =~ s/^<$name[^>]*>\s*//;
+        $string =~ s/^<$name[^>]*>[ \t]*//;
 
         # remove close tag & trailing
-        $string =~ s/\s*<\/$name>\s*$//;
+        $string =~ s/[ \t]*<\/$name>[ \t]*$//;
 
-        $string =~ s/\n/ /g;     # CR
-        $string =~ s/^\s*//g;    # space at start of line
-        $string =~ s/\s*$//g;    # space at end of line
-        $string =~ s/\s+/ /g;    # collapse spacing
+        $string =~ s/\n/ /g;        # CR
+        $string =~ s/^[ \t]*//g;    # space at start of line
+        $string =~ s/[ \t]*$//g;    # space at end of line
+        $string =~ s/[ \t]+/ /g;    # collapse spacing
     }
 
     $string =~ s/&#38;/&amp;/g;
