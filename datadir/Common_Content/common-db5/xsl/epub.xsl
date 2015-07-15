@@ -40,6 +40,7 @@ part nop
 </xsl:param>
 <xsl:param name="chunk.section.depth" select="0"/>
 <xsl:param name="chunk.first.sections" select="0"/>
+<xsl:param name="use.id.as.filename" select="'1'"/>
 
 <!-- Why is this spammed everywhere? It's not valid in most locations -->
 <xsl:template name="generate.html.lang">
@@ -75,7 +76,7 @@ part nop
         </xsl:element>
       </xsl:if>
 
-      <xsl:if test="/*/*[cover or contains(name(.), 'info')]//mediaobject[@role='cover' or ancestor::cover]"> 
+      <xsl:if test="/*/*[d:cover or contains(name(.), 'info')]//d:mediaobject[@role='cover' or ancestor::d:cover]">
         <xsl:element namespace="http://www.idpf.org/2007/opf" name="item">
           <xsl:attribute name="id"> <xsl:value-of select="$epub.cover.id"/> </xsl:attribute>
           <xsl:attribute name="href"> 
@@ -103,34 +104,36 @@ part nop
       </xsl:choose>
 
       <!-- TODO: be nice to have a id="titlepage" here -->
-      <xsl:apply-templates select="//part|
-                                   //book[*[last()][self::info]]|
-                                   //book[info]|
-                                   /set|
-                                   /set/book|
-                                   //reference|
-                                   //preface|
-                                   //chapter|
-                                   //bibliography|
-                                   //appendix|
-                                   //article|
-                                   //glossary|
-                                   //section|
-                                   //sect1|
-                                   //sect2|
-                                   //sect3|
-                                   //sect4|
-                                   //sect5|
-                                   //refentry|
-                                   //colophon|
-                                   //bibliodiv[title]|
-                                   //index|
-                                   //setindex|
-                                   //graphic|
-                                   //inlinegraphic|
-                                   //mediaobject|
-                                   //mediaobjectco|
-                                   //inlinemediaobject" 
+      <xsl:apply-templates select="//d:part|
+                                   //d:book[*[last()][self::d:bookinfo]]|
+                                   //d:book[d:bookinfo]|
+                                   //d:book[*[last()][self::d:info]]|
+                                   //d:book[d:info]|
+                                   /d:set|
+                                   /d:set/d:book|
+                                   //d:reference|
+                                   //d:preface|
+                                   //d:chapter|
+                                   //d:bibliography|
+                                   //d:appendix|
+                                   //d:article|
+                                   //d:glossary|
+                                   //d:section|
+                                   //d:sect1|
+                                   //d:sect2|
+                                   //d:sect3|
+                                   //d:sect4|
+                                   //d:sect5|
+                                   //d:refentry|
+                                   //d:colophon|
+                                   //d:bibliodiv[d:title]|
+                                   //d:index|
+                                   //d:setindex|
+                                   //d:graphic|
+                                   //d:inlinegraphic|
+                                   //d:mediaobject|
+                                   //d:mediaobjectco|
+                                   //d:inlinemediaobject"
                            mode="opf.manifest"/>
       <xsl:call-template name="opf.calloutlist"/>
     </xsl:element>
