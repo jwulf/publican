@@ -1062,7 +1062,7 @@ sub detag {
         $string =~ s/^<$name[^>]*>[ \t]*//;
 
         # remove close tag & trailing
-        $string =~ s/[ \t]*<\/$name>[ \t]*$//;
+        $string =~ s/[ \t]*<\/$name>\s*$//;
 
         $string =~ s/\n/ /g;        # CR
         $string =~ s/^[ \t]*//g;    # space at start of line
