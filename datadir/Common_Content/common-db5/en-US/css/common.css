@@ -402,8 +402,9 @@ div.navfooter table tr:first-child td {
     font-size: 1em;
 }
 
-.inlinemediaobject  {
-    display: block;
+/* BZ#1222067 */
+.inlinemediaobject {
+    display: inline;
 }
 
 img {
