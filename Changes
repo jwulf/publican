@@ -1,4 +1,4 @@
-Unreleased
+4.3.2 Tue Jul 28 2015
 - Do not replace non-breaking spaces by spaces in msgid of POT files. BZ #1233202
 - Fixed Unwanted line breaks around <inlinemediaobject> images. BZ #1222067
 - Fixed EPUB output of db5 brands can't be viewed. BZ #1241348
